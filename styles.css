@@ -1,0 +1,411 @@
+/* styles.css – púdrovo‑ružová + tmavá šedo‑modrá téma */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #fffafc;
+  --surface: #ffffff;
+  --muted: #7b6f78;
+  --accent-1: #f7c6d6;
+  --accent-2: #f08aa6;
+  --accent-3: #ff6f91;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --card-border: rgba(16,16,16,0.04);
+  --shadow: 0 6px 18px rgba(16,16,16,0.06);
+  --radius: 12px;
+  --text: #2b2b2b;
+  --glass: rgba(240,198,214,0.35);
+}
+
+/* 🌙 DARK THEME */
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --surface: #0f1724;
+  --muted: #9aa6b2;
+  --accent-1: #2b6ea3;
+  --accent-2: #1f4f7a;
+  --accent-3: #0f3a5a;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --card-border: rgba(255,255,255,0.04);
+  --shadow: 0 8px 28px rgba(2,6,23,0.6);
+  --text: #e6eef6;
+  --glass: rgba(20,40,60,0.28);
+}
+
+/* ----------------------------------------------------------
+   GLOBAL
+---------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(255,255,255,0.02) 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  transition: background .22s ease, color .22s ease;
+}
+
+/* ----------------------------------------------------------
+   HEADER
+---------------------------------------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  height: 46px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+:root[data-theme="dark"] .header {
+  background: rgba(12,18,30,0.55);
+  border-bottom-color: rgba(255,255,255,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.55);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--accent-3);
+}
+
+.brand .logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
+  box-shadow: 0 2px 6px rgba(240,138,166,0.18);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 🧑‍⚖️ Avatar – fix veľkosti a pozície */
+#avatarWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#avatarWrap img,
+#userAvatar {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ----------------------------------------------------------
+   BUTTONS
+---------------------------------------------------------- */
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: white;
+  box-shadow: 0 8px 20px rgba(240,138,166,0.12);
+}
+:root[data-theme="dark"] .btn-primary {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  box-shadow: 0 8px 20px rgba(10,30,50,0.18);
+}
+
+/* ----------------------------------------------------------
+   LAYOUT & CARDS
+---------------------------------------------------------- */
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 26px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.left { flex: 1; }
+.right { width: 420px; }
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+/* ----------------------------------------------------------
+   DLÁŽDICE / CHIPS – nový krásny horizontálny gradient
+---------------------------------------------------------- */
+
+.list { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 10px; 
+}
+
+.chip {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(to left, #ffe3ec, #ffffff);
+  border: none;
+  cursor: pointer;
+  color: var(--accent-3);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(240,138,166,0.12);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.chip:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(to left, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(240,138,166,0.35);
+}
+
+/* 🌙 DARK MODE */
+:root[data-theme="dark"] .chip:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(to left, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.65);
+}
+
+:root[data-theme="dark"] .chip:hover {
+  background: linear-gradient(to left, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.6);
+}
+/* ----------------------------------------------------------
+   VÝZVY – jednotná púdrovo‑ružová dlaždica
+---------------------------------------------------------- */
+
+.challenge-card {
+  background: linear-gradient(180deg, #fff5f8 0%, #f7c6d6 100%);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(240,138,166,0.12);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(240,138,166,0.35);
+}
+
+/* 🌙 DARK MODE */
+:root[data-theme="dark"] .challenge-card {
+  background: linear-gradient(180deg, var(--accent-1), rgba(255,255,255,0.03));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+:root[data-theme="dark"] .challenge-card:hover {
+  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.65);
+}
+
+.challenge-card * {
+  transition: color .15s ease;
+}
+
+/* ----------------------------------------------------------
+   ⚖️ SÚDNA SIEŇ
+---------------------------------------------------------- */
+
+#courtroomCard {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.courtroom-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tab-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--accent-1);
+  color: var(--accent-3);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background .12s ease, color .12s ease;
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+}
+
+#courtroom-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(240,138,166,0.18);
+}
+
+#courtroom-detail.hidden {
+  display: none !important;
+}
+
+.case-detail {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+}
+
+#duelPackagesList {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ----------------------------------------------------------
+   DUEL – finálny vizuálny fix
+---------------------------------------------------------- */
+
+.duel-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f8 40%, #f7c6d6 100%);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(240,138,166,0.15);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.duel-card:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(240,138,166,0.35);
+}
+/* ----------------------------------------------------------
+   DUEL – tlačidlo Poslať výzvu (FINÁLNY FIX)
+---------------------------------------------------------- */
+
+.send-challenge-btn {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff, var(--accent-1));
+  border: none;
+  cursor: pointer;
+  color: var(--accent-3);
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(240,138,166,0.08);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.send-challenge-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(240,138,166,0.18);
+}
+/* Fix pre header – nech sa nerozbije */
+.header {
+  height: auto;
+  min-height: 46px;
+  flex-wrap: nowrap;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.header-right {
+  flex-shrink: 0;
+}
+
+.header .nick-box {
+  max-width: 160px;
+  min-width: 140px;
+  margin-left: 10px;
+}
+
+.header .nick-row {
+  flex-wrap: nowrap;
+}
+
+.header #nickname {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+.header #saveNick {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* ----------------------------------------------------------
+   KONIEC
+---------------------------------------------------------- */
