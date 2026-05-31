@@ -33,10 +33,11 @@ const catalog = {
     desc: "Teória k TPH, TPP a veľký kvíz v jednej appke."
   },
 
-  "Pracovné právo": {
-    openExternal: "https://pracovnepravo.vercel.app/",
-    desc: "Kompletná appka pracovného práva (otázky, prípady, definície)."
-  },
+ "Pracovné právo": {
+  openExternal: "/LuluLaw duel Pracovné právo/",
+  desc: "Kompletná appka pracovného práva (otázky, prípady, definície)."
+},
+
 
   /* Placeholdery – zatiaľ bez externých modulov */
   "Občianske právo hmotné": {
