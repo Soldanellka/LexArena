@@ -11,7 +11,7 @@ export function sendChallenge(toNick, packageId) {
     fromNick,
     toNick,
     packageId,
-    status: "pending", // pending | accepted | finished
+    status: "pending",
     createdAt: Date.now(),
     result: {
       fromScore: null,
@@ -27,13 +27,12 @@ export function sendChallenge(toNick, packageId) {
   return challenge;
 }
 
-// Načítanie prijatých výziev podľa tokenu z URL
+// Načítanie prijatých výziev podľa tokenu v URL
 export function getReceivedChallenges() {
   const token = new URLSearchParams(location.search).get("token");
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
 
   if (!token) return [];
-
   return all.filter(ch => ch.packageId === token && ch.status === "pending");
 }
 
@@ -53,21 +52,19 @@ export function acceptChallenge(id) {
   ch.status = "accepted";
   localStorage.setItem("challenges", JSON.stringify(all));
 
-  // uložíme ID aktívnej výzvy pre duel
   sessionStorage.setItem("activeChallengeId", id);
 
-  // 🔥 načítame balík od odosielateľa
+  // načítame balík od odosielateľa
   const pkg = JSON.parse(localStorage.getItem("duel_package_" + ch.packageId));
-
   if (!pkg) {
     alert("Balík pre duel sa nenašiel.");
     return;
   }
 
-  // 🔥 zakódujeme balík do URL
+  // zakódujeme balík do URL
   const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
 
-  // 🔥 presmerovanie do duelu aj s balíkom
+  // presmerovanie do duelu
   window.location.href = `duel.html?token=${ch.packageId}&data=${encoded}`;
 }
 
@@ -91,7 +88,6 @@ export function getDuelLeaderboard() {
   const finished = all.filter(ch => ch.status === "finished");
 
   const stats = {};
-
   finished.forEach(ch => {
     const winner = ch.result.winner;
     if (!stats[winner]) stats[winner] = { wins: 0 };
@@ -118,11 +114,11 @@ window.addEventListener("load", () => {
   const banner = document.getElementById("incoming-challenge");
   const acceptBtn = document.getElementById("accept-challenge");
   const ignoreBtn = document.getElementById("ignore-challenge");
+  const textSlot = document.getElementById("incoming-challenge-text");
 
   if (!banner) return;
 
   const received = getReceivedChallenges();
-
   if (received.length === 0) {
     banner.style.display = "none";
     return;
@@ -130,6 +126,12 @@ window.addEventListener("load", () => {
 
   const challenge = received[0];
   banner.style.display = "block";
+
+  // PERSONALIZOVANÝ TEXT
+  if (textSlot) {
+    const from = challenge.fromNick || "Niekto";
+    textSlot.textContent = `${from} ťa vyzýva na duel v LexArene!`;
+  }
 
   acceptBtn.onclick = () => {
     acceptChallenge(challenge.id);
