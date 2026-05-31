@@ -15,110 +15,41 @@
   <div class="brand">
     <span class="logo-dot"></span>
     <span>LexArena</span>
-
-    <div id="avatarWrap" class="avatar-wrap">
-      <img id="userAvatar" src="assets/avatars/young-lawyer.svg" alt="Avatar používateľa" />
-    </div>
-
-    <div class="nick-box">
-      <label for="nickname">Tvoj nick</label>
-      <div class="nick-row">
-        <input id="nickname" type="text" placeholder="Zadaj nick">
-        <button id="saveNick">Uložiť</button>
-      </div>
-    </div>
-
-    <div id="playerNickDisplay" class="player-nick-display"></div>
-  </div>
-
-  <div class="header-right">
-    <div class="pill">Paragrafy: <strong id="paragrafValue">0</strong></div>
-    <div class="pill small" id="premiumBadge">FREE</div>
-
-    <button class="btn" id="themeToggleBtn">
-      <img id="themeIcon" src="assets/icons/moon.svg" width="18">
-    </button>
-
-    <button class="btn" id="toggleRoleBtn">Role: student</button>
-    <button class="btn" id="togglePremiumBtn">Toggle PREMIUM</button>
   </div>
 </header>
 
 <main class="container">
 
-  <div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
-    <div style="font-size:18px; font-weight:600; margin-bottom:8px;">Bol si vyzvaný na duel!</div>
-    <button id="accept-challenge" class="btn btn-primary">Prijať výzvu</button>
-    <button id="ignore-challenge" class="btn btn-ghost" style="margin-left:8px;">Neskôr</button>
-  </div>
-
   <div class="left">
-
     <div class="card">
-      <h3 id="facultiesTitle">Oblasti</h3>
+      <h3>Oblasti</h3>
       <div class="small">Vyber oblasť</div>
       <div id="facultyList" class="list"></div>
     </div>
 
     <div class="card">
-      <h3 id="appsTitle">Moje appky</h3>
+      <h3>Moje appky</h3>
       <div class="small">Rýchly prístup k tvojim projektom</div>
       <div id="appsList" class="list"></div>
     </div>
 
     <div class="card">
-      <h3 id="duelPackagesTitle">Hry pripravené na výzvu</h3>
+      <h3>Hry pripravené na výzvu</h3>
       <div class="small">Balíky otázok uložené zo študijných appiek</div>
       <div id="duelPackagesList" class="list"></div>
     </div>
-
   </div>
 
   <div class="right">
-
     <div class="card" id="quizCard">
+      <h3>Kvíz</h3>
       <div id="quizIntro">
-        <div class="small">Kvíz</div>
-        <h2 id="quizTitle">Vyber oblasť</h2>
-        <div class="small">Po výbere oblasti sa načíta 10 otázok.</div>
-
-        <div style="margin-top:12px;display:flex;gap:8px">
-          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť kvíz</button>
-          <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
-          <button class="btn" id="helpBtn">
-            <img src="assets/icons/info.svg" width="18">
-          </button>
-        </div>
+        <p>Vyber oblasť</p>
       </div>
-
       <div id="quizArea" style="display:none"></div>
     </div>
-
-    <div class="card">
-      <h3 id="gamesTitle">Hry a prípady</h3>
-      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 id="adminTitle">Admin a garant panel</h3>
-      <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
-    </div>
-
-    <div class="card">
-      <h3 id="shopTitle">Obchod</h3>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
-        <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
-        <button class="btn" id="openShop">
-          <img src="assets/icons/shop.svg" width="18">
-        </button>
-      </div>
-    </div>
-
   </div>
+
 </main>
 
 <!-- jediný externý modul -->
@@ -129,14 +60,9 @@
   import { inicializovatUI } from "./lexarena/ui.js";
   import { initArena } from "./lexarena/arena.js";
 
-  document.addEventListener("DOMContentLoaded", () => {
-    inicializovatUI();
-    initArena();
-  });
+  inicializovatUI();
+  initArena();
 </script>
-
-<!-- TOTO JE DÔLEŽITÉ: init.js MUSÍ BYŤ NAČÍTANÝ -->
-<script type="module" src="init.js"></script>
 
 </body>
 </html>
