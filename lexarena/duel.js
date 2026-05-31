@@ -86,8 +86,8 @@ function startCountdown() {
 function startQuestions() {
   countdownScreen.style.display = "none";
   questionsScreen.style.display = "block";
-function showQuestion();
- }
+  showQuestion();
+}
 function showQuestion() {
   const q = window.duelQuestions[currentQuestionIndex];
 
