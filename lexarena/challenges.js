@@ -54,7 +54,8 @@ export function acceptChallenge(id) {
   sessionStorage.setItem("activeChallengeId", id);
 
   // presmerovanie do duelu
-  window.location.href = "duel.html";
+ window.location.href = "duel.html?token=" + ch.packageId;
+
 }
 
 // Uloženie výsledku duelu
