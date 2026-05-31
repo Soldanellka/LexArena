@@ -99,7 +99,7 @@ document.addEventListener("click", (e) => {
   sendChallenge(toNick, token);
 
   // skopírujeme link
-  const url = `${ONLINE_ORIGIN}/duel.html?token=${token}`;
+ const url = `${ONLINE_ORIGIN}/?token=${token}`;
   navigator.clipboard.writeText(url);
 
   alert("Výzva bola uložená a link skopírovaný. Otvor LexArenu a prijmi výzvu.");
