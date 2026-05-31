@@ -156,3 +156,5 @@ document.getElementById("play-again").onclick = () => {
 document.getElementById("back-home").onclick = () => {
   window.location.href = "index.html";
 };
+// Spustenie duelu po načítaní balíka
+startCountdown();
