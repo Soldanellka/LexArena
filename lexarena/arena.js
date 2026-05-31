@@ -1,5 +1,5 @@
 // =====================================
-// LexArena – Arena Module (opravené)
+// LexArena – Arena Module (finálna verzia)
 // =====================================
 
 // ---------------- PARAGRAFY ----------------
@@ -21,7 +21,6 @@ export function pridatParagrafy(pocet = 1) {
 
 const LS_DUEL_PACKAGES = "duel_packages";
 
-// načítanie uložených balíkov
 export function loadDuelPackages() {
   try {
     return JSON.parse(localStorage.getItem(LS_DUEL_PACKAGES) || "[]");
@@ -30,14 +29,12 @@ export function loadDuelPackages() {
   }
 }
 
-// uloženie jedného balíka
 export function saveDuelPackage(pkg) {
   const all = loadDuelPackages();
-  all.unshift(pkg); // najnovší hore
+  all.unshift(pkg);
   localStorage.setItem(LS_DUEL_PACKAGES, JSON.stringify(all));
 }
 
-// import z lastDuelPackage (zo študijnej apky)
 export function importLastDuelPackage() {
   const pkg = JSON.parse(localStorage.getItem("lastDuelPackage") || "null");
   if (!pkg) return;
@@ -93,10 +90,10 @@ document.addEventListener("click", async (e) => {
   const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
 
   try {
-    // 🔥 uloženie výzvy (toNick = null → anonymný súper)
+    // 🔥 uloženie výzvy
     await sendChallenge(null, token);
 
-    // 🔥 vygenerovanie linku s balíkom
+    // 🔥 vygenerovanie linku
     const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
     await navigator.clipboard.writeText(url);
 
