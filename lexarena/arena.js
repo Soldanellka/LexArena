@@ -112,3 +112,12 @@ export function initArena() {
   importLastDuelPackage();
   renderDuelPackages();
 }
+// import { sendChallenge } from "./challenges.js";
+
+// DOČASNÝ TEST – bez backendu
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".send-challenge-btn");
+  if (!btn) return;
+
+  alert("Klik na Poslať výzvu funguje 🎯");
+});
