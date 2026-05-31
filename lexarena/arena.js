@@ -91,19 +91,20 @@ document.addEventListener("click", (e) => {
   const token = crypto.randomUUID();
   const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
 
-  // uložíme balík pod token
-  localStorage.setItem("duel_package_" + token, JSON.stringify(pkg));
+  // 🔥 1. Zakódujeme balík do URL
+  const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
 
-  // 🔥 uložíme výzvu (prijímateľ = ja, na test)
+  // 🔥 2. Uložíme výzvu (už len token)
   const toNick = localStorage.getItem("playerNick");
   sendChallenge(toNick, token);
 
-  // skopírujeme link
- const url = `${ONLINE_ORIGIN}/?token=${token}`;
+  // 🔥 3. Vygenerujeme link s balíkom
+  const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
   navigator.clipboard.writeText(url);
 
   alert("Výzva bola uložená a link skopírovaný. Otvor LexArenu a prijmi výzvu.");
 });
+
 // ---------------- INIT PRI NAČÍTANÍ STRÁNKY ----------------
 
 export function initArena() {
