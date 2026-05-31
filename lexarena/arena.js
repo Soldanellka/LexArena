@@ -112,12 +112,29 @@ export function initArena() {
   importLastDuelPackage();
   renderDuelPackages();
 }
-// import { sendChallenge } from "./challenges.js";
+import { sendChallenge } from "./challenges.js";
 
-// DOČASNÝ TEST – bez backendu
-document.addEventListener("click", (e) => {
+document.addEventListener("click", async (e) => {
   const btn = e.target.closest(".send-challenge-btn");
   if (!btn) return;
 
-  alert("Klik na Poslať výzvu funguje 🎯");
+  const id = Number(btn.dataset.id);
+  const pkgs = loadDuelPackages();
+  const pkg = pkgs.find(p => p.timestamp === id);
+  if (!pkg) return;
+
+  const token = crypto.randomUUID();
+  const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
+  const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
+
+  try {
+    // 🔥 pokus o odoslanie výzvy
+    await sendChallenge(null, token);
+    const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
+    await navigator.clipboard.writeText(url);
+    alert("Výzva bola vytvorená a link skopírovaný. Pošli ho súperovi.");
+  } catch (err) {
+    console.error("Chyba pri odosielaní výzvy:", err);
+    alert("Nepodarilo sa odoslať výzvu. Skontroluj challenges.js.");
+  }
 });
