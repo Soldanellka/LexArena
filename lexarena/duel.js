@@ -157,4 +157,8 @@ document.getElementById("back-home").onclick = () => {
   window.location.href = "index.html";
 };
 // Spustenie duelu po načítaní balíka
-startCountdown();
+
+// Spusti duel až keď je stránka načítaná
+window.addEventListener("DOMContentLoaded", () => {
+  startCountdown();
+});
