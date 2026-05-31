@@ -1,10 +1,10 @@
 // ===============================
 // duel.js — FINÁLNA VERZIA
 // ===============================
+
 // ===============================
 // Načítanie balíka podľa tokenu
 // ===============================
-
 const token = new URLSearchParams(location.search).get("token");
 const pkg = JSON.parse(localStorage.getItem("duel_package_" + token));
 
@@ -18,14 +18,18 @@ window.duelQuestions = pkg.quiz || [];
 window.duelTiles = pkg.tiles || [];
 window.duelCases = pkg.cases || [];
 
+// Dočasné nastavenia pre právnické duely
+const settings = {
+  questionsCount: 5,
+  enableTiles: true,
+  enableCases: true
+};
+
 // Import odmien z LexAreny
 import {
   rewardChallengeAccepted,
   rewardDuelWin
 } from "./lexarena/rewards.js";
-// Import výziev
-import { saveDuelResult } from "./lexarena/challenges.js";
-
 
 // Nick hráča
 const playerNick = localStorage.getItem("playerNick") || "Hráč";
@@ -33,6 +37,8 @@ const playerNick = localStorage.getItem("playerNick") || "Hráč";
 // --- STAV ---
 let playerScore = 0;
 let opponentScore = 0;
+let currentQuestionIndex = 0;
+let totalQuestions = settings.questionsCount;
 
 // --- ELEMENTY ---
 const matchmakingScreen = document.getElementById("duel-matchmaking");
@@ -46,15 +52,6 @@ if (nickSlot) nickSlot.textContent = playerNick;
 document.getElementById("cancel-matchmaking").onclick = () => {
   window.location.href = "index.html";
 };
-
-// --- SIMULÁCIA NÁJDENIA SÚPERA ---
-setTimeout(() => {
-  // odmena za prijatú výzvu
-  rewardChallengeAccepted();
-
-  // pokračujeme do odpočtu
-  startCountdown();
-}, 1500);
 
 // ===============================
 // ODPOČET 3–2–1
@@ -78,19 +75,48 @@ function startCountdown() {
 }
 
 // ===============================
-// FÁZA 1 – OTÁZKY (SIMULÁCIA)
+// FÁZA 1 – OTÁZKY
 // ===============================
 function startQuestions() {
   countdownScreen.style.display = "none";
   questionsScreen.style.display = "block";
+  showQuestion();
+}
 
-  // Simulácia výsledku po 3 sekundách
-  setTimeout(() => {
-    playerScore = Math.floor(Math.random() * 10) + 5;
-    opponentScore = Math.floor(Math.random() * 10) + 5;
+function showQuestion() {
+  const q = window.duelQuestions[currentQuestionIndex];
 
+  document.getElementById("questions-progress").textContent =
+    `Otázka ${currentQuestionIndex + 1}/${totalQuestions}`;
+
+  document.getElementById("question-text").textContent = q.question;
+
+  const buttons = document.querySelectorAll(".answer-tile");
+  buttons.forEach((btn, i) => {
+    btn.textContent = q.answers[i];
+    btn.onclick = () => handleAnswer(i);
+  });
+}
+
+function handleAnswer(index) {
+  const q = window.duelQuestions[currentQuestionIndex];
+
+  if (index === q.correct) {
+    playerScore++;
+  } else {
+    opponentScore++;
+  }
+
+  document.getElementById("score-a").textContent = `Ty: ${playerScore}`;
+  document.getElementById("score-b").textContent = `Súper: ${opponentScore}`;
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < totalQuestions) {
+    showQuestion();
+  } else {
     finishDuel();
-  }, 3000);
+  }
 }
 
 // ===============================
@@ -105,19 +131,13 @@ function finishDuel() {
 
   if (playerScore > opponentScore) {
     document.getElementById("duel-result-title").textContent = "Vyhral si!";
-    rewardDuelWin(); // odmena za výhru
+    rewardDuelWin();
   } else {
     document.getElementById("duel-result-title").textContent = "Prehral si";
   }
-// Uloženie výsledku do výzvy
-const challengeId = sessionStorage.getItem("activeChallengeId");
-if (challengeId) {
-  saveDuelResult(challengeId, playerScore, opponentScore);
-}
 
-const nickResultSlot = document.getElementById("resultPlayerNick");
-if (nickResultSlot) nickResultSlot.textContent = playerNick;
-
+  const nickResultSlot = document.getElementById("resultPlayerNick");
+  if (nickResultSlot) nickResultSlot.textContent = playerNick;
 }
 
 // ===============================
