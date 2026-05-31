@@ -78,6 +78,8 @@ export function renderDuelPackages() {
 
 // ---------------- ODOŠLANIE VÝZVY ----------------
 
+import { sendChallenge } from "./challenges.js";
+
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("send-challenge-btn")) return;
 
@@ -87,22 +89,21 @@ document.addEventListener("click", (e) => {
   if (!pkg) return;
 
   const token = crypto.randomUUID();
-// 🔥 ONLINE adresa tvojej LexAreny
-const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
+  const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
 
+  // uložíme balík pod token
+  localStorage.setItem("duel_package_" + token, JSON.stringify(pkg));
 
-const url = `${ONLINE_ORIGIN}/duel.html?token=${token}`;
+  // 🔥 uložíme výzvu (prijímateľ = ja, na test)
+  const toNick = localStorage.getItem("playerNick");
+  sendChallenge(toNick, token);
 
-  // uložíme odchádzajúcu výzvu
-  localStorage.setItem("duel_outgoing", JSON.stringify({
-    token,
-    package: pkg
-  }));
-
+  // skopírujeme link
+  const url = `${ONLINE_ORIGIN}/duel.html?token=${token}`;
   navigator.clipboard.writeText(url);
-  alert("Link na výzvu bol skopírovaný. Pošli ho kamarátovi.");
-});
 
+  alert("Výzva bola uložená a link skopírovaný. Otvor LexArenu a prijmi výzvu.");
+});
 // ---------------- INIT PRI NAČÍTANÍ STRÁNKY ----------------
 
 export function initArena() {
