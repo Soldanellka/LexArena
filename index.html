@@ -121,8 +121,10 @@
   </div>
 </main>
 
+<!-- jediný externý modul -->
 <script type="module" src="data.js"></script>
 
+<!-- inicializácia LexAreny -->
 <script type="module">
   import { inicializovatUI } from "./lexarena/ui.js";
   import { initArena } from "./lexarena/arena.js";
@@ -132,6 +134,9 @@
     initArena();
   });
 </script>
+
+<!-- TOTO JE DÔLEŽITÉ: init.js MUSÍ BYŤ NAČÍTANÝ -->
+<script type="module" src="init.js"></script>
 
 </body>
 </html>
