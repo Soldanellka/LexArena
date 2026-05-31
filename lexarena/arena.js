@@ -88,7 +88,8 @@ document.addEventListener("click", (e) => {
 
   const token = crypto.randomUUID();
 // 🔥 ONLINE adresa tvojej LexAreny
-const ONLINE_ORIGIN = "https://lexarena.netlify.app";
+const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
+
 
 const url = `${ONLINE_ORIGIN}/duel.html?token=${token}`;
 
