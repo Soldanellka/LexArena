@@ -8,3 +8,4 @@ export function inicializovatUI() {
     aktualizovatParagrafyUI();
   });
 }
+console.log("LexArena UI sa načítalo");
