@@ -1,0 +1,157 @@
+{
+  "id": "16. Zodpovednosť zamestnanca za škodu",
+  "title": "pracovný čas a jeho úpravy (konto, rozvrhnutie, špecifiká pre tehotné a rodičov)",
+  "schemaVersion": "1.1",
+  "tags": ["zodpovednosť za škodu", "pracovný čas", "konto pracovného času", "tehotné ženy", "rodičia", "Zákonník práce"],
+  "sources": [
+    "Zákonník práce (zákon č. 311/2001 Z. z.) — ustanovenia o zodpovednosti zamestnanca a pracovnom čase.",
+    "Právne komentáre a odborné články o zodpovednosti zamestnanca (AKMV, Ficek).",
+    "Verejná správa SR / oficiálne usmernenia k právam tehotných zamestnankýň a rodičov."
+  ],
+  "quiz": [
+    {
+      "question": "Základná otázka o okruhu A16: Kedy zodpovedá zamestnanec za škodu v pracovnoprávnom vzťahu?",
+      "options": [
+        "Ak škoda vznikla zavineným porušením povinností pri plnení pracovných úloh alebo v priamej súvislosti s nimi",
+        "Len ak škodu prizná písomne",
+        "Zamestnanec nikdy nezodpovedá za škodu"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Zodpovednosť vzniká pri zavinenom porušení povinností v súvislosti s výkonom práce; zamestnávateľ musí preukázať vznik škody, príčinnú súvislosť a zavinenie.",
+        "1": "Nesprávne. Priznanie nie je podmienkou; rozhodujú zákonné predpoklady.",
+        "2": "Nesprávne. Zamestnanec môže niesť zodpovednosť za škodu za splnenia zákonných predpokladov."
+      }
+    },
+    {
+      "question": "Kedy zodpovedá zamestnanec všeobecne za škodu podľa Zákonníka práce?",
+      "options": [
+        "Ak škoda vznikla zavineným porušením povinností pri plnení pracovných úloh alebo v priamej súvislosti s nimi",
+        "Len ak škodu prizná písomne",
+        "Iba ak ide o škodu spôsobenú úmyselne"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Všeobecná pracovnoprávna zodpovednosť vzniká pri zavinenom porušení povinností pri plnení pracovných úloh; zamestnávateľ musí preukázať vznik škody, protiprávnosť, príčinnú súvislosť a zavinenie.",
+        "1": "Nesprávne. Priznanie nie je podmienkou; rozhodujú zákonné predpoklady.",
+        "2": "Nesprávne. Úmysel je jedným z možných dôvodov, ale zodpovednosť môže vzniknúť aj z nedbanlivosti."
+      }
+    },
+    {
+      "question": "Aké obmedzenie platí pri náhrade škody spôsobenej z nedbanlivosti?",
+      "options": [
+        "Náhrada nesmie presiahnuť štvornásobok priemerného mesačného zárobku zamestnanca (s výnimkami podľa zákona)",
+        "Žiadne obmedzenie, zamestnávateľ môže požadovať ľubovoľnú sumu",
+        "Maximálne jedna mesačná mzda vždy"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Pri škode z nedbanlivosti zákon stanovuje limit do výšky štvornásobku priemerného mesačného zárobku, s výnimkami (osobitná zodpovednosť, škoda v opitosti, úmysel).",
+        "1": "Nesprávne. Zákon obsahuje konkrétne obmedzenie.",
+        "2": "Nesprávne. Limit je viazaný na štvornásobok priemernej mzdy, nie vždy len jedna mzda."
+      }
+    },
+    {
+      "question": "Čo je konto pracovného času?",
+      "options": [
+        "Systém evidencie odpracovaných hodín, ktorý umožňuje kumulovať odpracované hodiny a vyrovnávať ich v inom období",
+        "Len synonymum pre dovolenku",
+        "Zákazníkmi riadený rozvrh"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Konto pracovného času slúži na flexibilné rozvrhnutie pracovného času v dlhšom období (vyrovnanie nadčasov a nedostatku hodín) podľa dohody alebo kolektívnej zmluvy.",
+        "1": "Nesprávne. Nie je to dovolenka.",
+        "2": "Nesprávne. Konto je interný režim evidencie a vyrovnávania pracovného času."
+      }
+    },
+    {
+      "question": "Aké úpravy pracovného času sa poskytujú tehotným ženám a rodičom starajúcim sa o deti?",
+      "options": [
+        "Možnosť kratšieho pracovného času, preradenia z nočnej práce na dennú, obmedzenie nadčasov a zvýšená ochrana pri rozvrhovaní",
+        "Žiadne špeciálne úpravy",
+        "Len zákaz práce vôbec"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Tehotné ženy a rodičia majú nárok na primerané úpravy: kratší pracovný čas na žiadosť, preradenie z nočnej práce, obmedzenie nadčasov a osobitnú ochranu pri rozvrhovaní.",
+        "1": "Nesprávne. Zákon poskytuje osobitnú ochranu.",
+        "2": "Nesprávne. Nie je to absolútny zákaz práce, ale sú obmedzenia a práva."
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "id": "tile1",
+      "title": "Všeobecná zodpovednosť zamestnanca",
+      "text": "Zamestnanec zodpovedá za škodu spôsobenú zavineným porušením povinností pri plnení pracovných úloh; zamestnávateľ musí preukázať vznik škody, protiprávnosť, príčinnú súvislosť a zavinenie.",
+      "align": "left"
+    },
+    {
+      "id": "tile2",
+      "title": "Druhy zodpovednosti",
+      "text": "Všeobecná (subjektívna) zodpovednosť, osobitná hmotná zodpovednosť, zodpovednosť za stratu zverených predmetov; rozdiely v rozsahu náhrady (nedbanlivosť vs. úmysel).",
+      "align": "left"
+    },
+    {
+      "id": "tile3",
+      "title": "Pracovný čas a rozvrhnutie",
+      "text": "Základný týždenný a denný pracovný čas, nerovnomerné rozvrhnutie po dohode, povinnosť viesť evidenciu a dodržiavať limity nadčasov; konto pracovného času umožňuje vyrovnávanie v dlhšom období.",
+      "align": "left"
+    },
+    {
+      "id": "tile4",
+      "title": "Pracovný čas tehotných a rodičov",
+      "text": "Tehotné ženy a rodičia majú právo žiadať kratší pracovný čas, preradenie z nočnej práce, obmedzenie nadčasov a ochranu pri rozvrhovaní; zamestnávateľ je povinný prihliadať na tieto žiadosti, ak nebránia vážne prevádzkové dôvody.",
+      "align": "left"
+    },
+    {
+      "id": "tile5",
+      "title": "Prevencia a postup pri škode",
+      "text": "Zamestnávateľ by mal viesť dokumentáciu, preukázať vznik škody a zavinenie; pri spore sa uplatňujú pravidlá premlčania a možnosti regresu podľa miery zavinenia.",
+      "align": "left"
+    }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nárok zamestnávateľa na náhradu škody z nedbanlivosti",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec pri obsluhe stroja nedbal bezpečnostných pokynov a spôsobil škodu. Ako postupuje zamestnávateľ pri vymáhaní náhrady?",
+          "options": [
+            "Preukáže vznik škody, príčinnú súvislosť a zavinenie; určí výšku škody; pri nedbanlivosti sa uplatní limit (max. štvornásobok priemernej mzdy) ak nie sú splnené výnimky.",
+            "Automaticky zráta celú škodu z nasledujúcej mzdy bez dokazovania",
+            "Zamestnávateľ nemôže nič požadovať"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Postup vyžaduje preukázanie a určenie výšky škody; pri nedbanlivosti platí zákonný limit.",
+            "1": "Nesprávne. Zrážky zo mzdy majú právne limity a často vyžadujú dohodu alebo súdne rozhodnutie.",
+            "2": "Nesprávne. Zamestnávateľ má právne možnosti vymáhania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Žiadosť tehotnej zamestnankyne o preradenie z nočnej práce",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Tehotná zamestnankyňa po predložení lekárskeho potvrdenia žiada preradenie na dennú prácu. Ako má zamestnávateľ postupovať?",
+          "options": [
+            "Posúdiť žiadosť, preradiť ju na vhodnú prácu alebo poskytnúť pracovné voľno s náhradou mzdy, ak preradenie nie je možné; zabezpečiť vyrovnávací príspevok pri nižšom zárobku.",
+            "Odmietnuť žiadosť bez posúdenia",
+            "Okamžite skončiť pracovný pomer"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Zákon ukladá zamestnávateľovi povinnosť preradiť alebo poskytnúť pracovné voľno s náhradou mzdy a prípadne vyrovnávací príspevok.",
+            "1": "Nesprávne. Žiadosť treba posúdiť a konať podľa zákona.",
+            "2": "Nesprávne. Skončenie pomeru je v ochranných obdobiach obmedzené."
+          }
+        }
+      ]
+    }
+  ]
+}

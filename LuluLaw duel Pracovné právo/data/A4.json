@@ -1,0 +1,148 @@
+{
+  "id": "2B. Pracovná zmluva",
+  "title": "pojem, forma, obsah; informovanie o pracovných podmienkach",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovná zmluva", "pracovné podmienky", "zamestnávanie"],
+
+  "summary": "Pracovná zmluva je dvojstranný právny úkon, ktorým sa zakladá pracovný pomer medzi zamestnancom a zamestnávateľom. Musí byť uzavretá písomne, inak je zamestnávateľ povinný odstrániť nedostatok formy. Podstatnými náležitosťami pracovnej zmluvy sú druh práce, miesto výkonu práce, deň nástupu do práce a mzdové podmienky. Ďalšie podmienky možno dohodnúť fakultatívne (skúšobná doba, pracovný čas, výpovedné doby, benefity). Zamestnávateľ má povinnosť informovať zamestnanca o pracovných podmienkach a podmienkach zamestnávania podľa § 47a Zákonníka práce, a to najneskôr do 7 dní od vzniku pracovného pomeru. Informácie sa týkajú najmä pracovného času, dovolenky, výpovedných dôb, odmeňovania, kolektívnej zmluvy, orgánu sociálneho zabezpečenia a ďalších náležitostí. Cieľom je transparentnosť pracovného pomeru a ochrana zamestnanca. Pracovná zmluva aj informačná povinnosť musia byť v súlade so smernicami EÚ o transparentných a predvídateľných pracovných podmienkach.",
+
+  "quiz": [
+    {
+      "question": "Ktorá z nasledujúcich náležitostí je podstatnou náležitosťou pracovnej zmluvy?",
+      "options": ["Skúšobná doba", "Druh práce", "Výška odstupného"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Druh práce je jednou zo štyroch podstatných náležitostí pracovnej zmluvy.",
+        "wrong": "Nesprávne. Skúšobná doba ani odstupné nie sú povinnými náležitosťami."
+      }
+    },
+    {
+      "question": "V akej forme musí byť uzavretá pracovná zmluva?",
+      "options": ["Ústne", "Písomne", "Elektronicky bez podpisu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pracovná zmluva musí byť písomná.",
+        "wrong": "Nesprávne. Ústna forma je nedostatočná a elektronická forma musí obsahovať podpis."
+      }
+    },
+    {
+      "question": "Do koľkých dní musí zamestnávateľ informovať zamestnanca o pracovných podmienkach?",
+      "options": ["Do 7 dní", "Do 30 dní", "Ihneď pri podpise zmluvy"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zákonník práce stanovuje lehotu 7 dní od vzniku pracovného pomeru.",
+        "wrong": "Nesprávne. Informácie nemusia byť poskytnuté okamžite ani do 30 dní."
+      }
+    },
+    {
+      "question": "Ktorá z nasledujúcich NIE je podstatnou náležitosťou pracovnej zmluvy?",
+      "options": ["Miesto výkonu práce", "Deň nástupu do práce", "Výška dovolenky"],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Výška dovolenky nie je povinnou náležitosťou pracovnej zmluvy.",
+        "wrong": "Nesprávne. Miesto výkonu práce aj deň nástupu sú povinné náležitosti."
+      }
+    },
+    {
+      "question": "Čo je účelom informačnej povinnosti zamestnávateľa podľa § 47a ZP?",
+      "options": ["Zjednodušiť administratívu zamestnávateľa", "Zabezpečiť transparentnosť pracovného pomeru", "Nahradiť pracovnú zmluvu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Cieľom je transparentnosť a predvídateľnosť pracovných podmienok.",
+        "wrong": "Nesprávne. Informačná povinnosť nenahrádza pracovnú zmluvu."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovná zmluva", "definition": "Dvojstranný právny úkon zakladajúci pracovný pomer medzi zamestnancom a zamestnávateľom." },
+    { "term": "Podstatné náležitosti", "definition": "Druh práce, miesto výkonu práce, deň nástupu do práce a mzdové podmienky." },
+    { "term": "Skúšobná doba", "definition": "Fakultatívne dohodnuté obdobie, počas ktorého možno pracovný pomer ukončiť bez uvedenia dôvodu." },
+    { "term": "Informačná povinnosť", "definition": "Povinnosť zamestnávateľa informovať zamestnanca o pracovných podmienkach do 7 dní." },
+    { "term": "Mzdové podmienky", "definition": "Dohodnutá mzda alebo spôsob jej určovania, povinná náležitosť pracovnej zmluvy." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Chýbajúca písomná forma pracovnej zmluvy",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec nastúpil do práce na základe ústnej dohody. Zamestnávateľ mu písomnú zmluvu nedal ani po týždni.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je pracovná zmluva platná?",
+          "options": ["Áno, ale zamestnávateľ porušil povinnosť", "Nie, je neplatná", "Platí len ak ju zamestnanec podpíše dodatočne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pracovný pomer vzniká aj ústne, ale zamestnávateľ porušil povinnosť písomnej formy.",
+            "wrong": "Nesprávne. Ústna forma nespôsobuje neplatnosť pracovného pomeru."
+          }
+        },
+        {
+          "question": "Krok 2: Ako má zamestnávateľ postupovať?",
+          "options": ["Doplniť písomnú formu bezodkladne", "Ignorovať situáciu", "Požiadať zamestnanca, aby si zmluvu napísal sám"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí odstrániť nedostatok formy.",
+            "wrong": "Nesprávne. Ignorovanie je porušením zákona."
+          }
+        },
+        {
+          "question": "Krok 3: Má zamestnanec nárok na informácie podľa § 47a?",
+          "options": ["Áno", "Nie", "Len ak je zmluva písomná"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Informačná povinnosť platí bez ohľadu na formu zmluvy.",
+            "wrong": "Nesprávne. Písomná forma nie je podmienkou."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Chýbajúce mzdové podmienky v pracovnej zmluve",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ uzavrel pracovnú zmluvu, ale neuviedol v nej mzdové podmienky. Tvrdí, že mzdu určí neskôr internou smernicou.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je pracovná zmluva úplná?",
+          "options": ["Áno", "Nie, chýba podstatná náležitosť", "Áno, ak existuje kolektívna zmluva"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Mzdové podmienky sú povinnou náležitosťou pracovnej zmluvy.",
+            "wrong": "Nesprávne. Interná smernica nemôže nahradiť zákonnú náležitosť."
+          }
+        },
+        {
+          "question": "Krok 2: Ako má právnik postupovať?",
+          "options": [
+            "Požadovať doplnenie mzdových podmienok do pracovnej zmluvy",
+            "Akceptovať internú smernicu",
+            "Odporučiť zamestnancovi, aby pracoval bez mzdy"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mzda musí byť dohodnutá v pracovnej zmluve alebo určiteľná.",
+            "wrong": "Nesprávne. Interná smernica nemôže nahradiť dohodu strán."
+          }
+        },
+        {
+          "question": "Krok 3: Môže zamestnávateľ jednostranne určiť mzdu?",
+          "options": ["Nie, mzda musí byť dohodnutá", "Áno, vždy", "Áno, ak to zamestnanec nepodpíše"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mzda je výsledkom dohody strán, nie jednostranného určenia.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže jednostranne určovať mzdu."
+          }
+        }
+      ]
+    }
+  ]
+}

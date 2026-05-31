@@ -1,0 +1,152 @@
+{
+  "id": "8A. Pracovnoprávne vzťahy",
+  "title": "charakteristika, obsah, druhy",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovnoprávne vzťahy", "pracovný pomer", "kolektívne právo"],
+
+  "summary": "Pracovnoprávne vzťahy sú právne vzťahy vznikajúce pri výkone závislej práce medzi zamestnancom a zamestnávateľom. Ich základom je pracovný pomer, ale zahŕňajú aj dohody o prácach vykonávaných mimo pracovného pomeru, kolektívne pracovnoprávne vzťahy a vzťahy súvisiace s BOZP. Charakteristickým znakom pracovnoprávnych vzťahov je osobný výkon práce, podriadenosť zamestnanca, pokynová právomoc zamestnávateľa a odplatnosť práce. Obsahom pracovnoprávnych vzťahov sú práva a povinnosti účastníkov – napr. povinnosť zamestnávateľa prideľovať prácu, platiť mzdu, zabezpečiť BOZP a povinnosť zamestnanca vykonávať prácu riadne, dodržiavať disciplínu a chrániť majetok zamestnávateľa. Druhy pracovnoprávnych vzťahov zahŕňajú individuálne pracovnoprávne vzťahy (pracovný pomer, dohody), kolektívne pracovnoprávne vzťahy (kolektívne vyjednávanie, kolektívne zmluvy, štrajk a výluka) a vzťahy súvisiace s BOZP. Pracovnoprávne vzťahy sú upravené najmä Zákonníkom práce a osobitnými predpismi.",
+
+  "quiz": [
+    {
+      "question": "Čo je základným pracovnoprávnym vzťahom?",
+      "options": ["Dohoda o brigádnickej práci študentov", "Pracovný pomer", "Mandátna zmluva"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pracovný pomer je základným pracovnoprávnym vzťahom.",
+        "wrong": "Nesprávne. Dohody sú len osobitné formy a mandátna zmluva je občianskoprávna."
+      }
+    },
+    {
+      "question": "Ktorý znak je typický pre pracovnoprávny vzťah?",
+      "options": ["Úplná autonómia pracovníka", "Podriadenosť zamestnanca", "Výkon práce vo vlastnom mene"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podriadenosť je základným znakom závislej práce.",
+        "wrong": "Nesprávne. Autonómia a výkon vo vlastnom mene patria podnikaniu."
+      }
+    },
+    {
+      "question": "Čo tvorí obsah pracovnoprávnych vzťahov?",
+      "options": ["Práva a povinnosti účastníkov", "Len mzda", "Len pracovná zmluva"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Obsahom sú všetky práva a povinnosti zamestnanca a zamestnávateľa.",
+        "wrong": "Nesprávne. Mzda ani samotná zmluva neobsahujú celý obsah vzťahu."
+      }
+    },
+    {
+      "question": "Ktorý z nasledujúcich je kolektívny pracovnoprávny vzťah?",
+      "options": ["Pracovná zmluva", "Kolektívne vyjednávanie", "Dohoda o vykonaní práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívne vyjednávanie je kolektívny pracovnoprávny vzťah.",
+        "wrong": "Nesprávne. Pracovná zmluva a dohody sú individuálne vzťahy."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pracovnoprávne vzťahy sú vždy občianskoprávne", "Pracovnoprávne vzťahy vznikajú pri výkone závislej práce", "Pracovnoprávne vzťahy sa nevzťahujú na BOZP"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pracovnoprávne vzťahy vznikajú pri výkone závislej práce.",
+        "wrong": "Nesprávne. BOZP je súčasťou pracovnoprávnych vzťahov."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovnoprávny vzťah", "definition": "Vzťah medzi zamestnancom a zamestnávateľom pri výkone závislej práce." },
+    { "term": "Individuálne pracovnoprávne vzťahy", "definition": "Vzťahy medzi zamestnancom a zamestnávateľom, napr. pracovný pomer." },
+    { "term": "Kolektívne pracovnoprávne vzťahy", "definition": "Vzťahy medzi odbormi a zamestnávateľom, napr. kolektívne vyjednávanie." },
+    { "term": "Obsah pracovnoprávnych vzťahov", "definition": "Práva a povinnosti účastníkov, napr. mzda, BOZP, pracovná disciplína." },
+    { "term": "Závislá práca", "definition": "Osobný výkon práce v podriadenosti zamestnávateľovi za mzdu." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Je to pracovnoprávny vzťah alebo obchodný vzťah?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Grafik pracuje pre firmu denne od 9:00 do 17:00, podľa pokynov nadriadeného, ale má živnosť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o pracovnoprávny vzťah?",
+          "options": ["Áno, ide o závislú prácu", "Nie, je to obchodný vzťah", "Len ak má pracovnú zmluvu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Faktický výkon práce má znaky závislej práce.",
+            "wrong": "Nesprávne. Forma zmluvy nie je rozhodujúca."
+          }
+        },
+        {
+          "question": "Krok 2: Ako sa posudzuje vzťah?",
+          "options": ["Podľa faktického výkonu práce", "Podľa názvu zmluvy", "Podľa toho, čo chce zamestnávateľ"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozhodujúci je faktický výkon práce.",
+            "wrong": "Nesprávne. Názov zmluvy nie je rozhodujúci."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Navrhnúť preklasifikovanie na pracovný pomer",
+            "Odporučiť pokračovať v živnosti",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak ide o závislú prácu, musí byť uzavretý pracovný pomer.",
+            "wrong": "Nesprávne. Pokračovanie v živnosti je nelegálne."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Obsah pracovnoprávneho vzťahu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ prideľuje zamestnancovi prácu, ale odmieta mu vyplatiť mzdu s odôvodnením, že „firma má finančné problémy“.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Patrí mzda do obsahu pracovnoprávneho vzťahu?",
+          "options": ["Áno", "Nie", "Len pri plnom úväzku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mzda je základným právom zamestnanca.",
+            "wrong": "Nesprávne. Úväzok nie je rozhodujúci."
+          }
+        },
+        {
+          "question": "Krok 2: Môže zamestnávateľ odmietnuť vyplatiť mzdu?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí vyplatiť mzdu bez ohľadu na finančnú situáciu.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nemôže legalizovať porušenie zákona."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na porušenie zákona a odporučiť okamžité doplatenie mzdy",
+            "Odporučiť zamestnancovi, aby počkal niekoľko mesiacov",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nevyplatenie mzdy je závažné porušenie povinností zamestnávateľa.",
+            "wrong": "Nesprávne. Odklad mzdy je nezákonný."
+          }
+        }
+      ]
+    }
+  ]
+}

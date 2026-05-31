@@ -1,0 +1,205 @@
+{
+  "id": "17. Právna úprava odmeňovania",
+  "title": "za prácu v podnikateľskej sfére; dôležité osobné prekážky v práci na strane zamestnanca",
+  "schemaVersion": "1.1",
+  "tags": ["odmeňovanie", "mzda", "právna úprava", "prekážky v práci", "Zákonník práce"],
+  "sources": [
+    "Zákonník práce (zákon č. 311/2001 Z. z.) — ustanovenia o mzde, odmeňovaní za prácu nadčas, nočnú prácu a prácu v sviatok",
+    "Zákon o minimálnej mzde a vykonávacie predpisy — pravidlá minimálnej mzdy a zaručenej mzdy",
+    "Právne komentáre a odborné články o odmeňovaní v podnikateľskej sfére"
+  ],
+  "quiz": [
+    {
+      "question": "Čo tvorí základnú právnu úpravu odmeňovania za prácu v podnikateľskej sfére?",
+      "options": [
+        "Zákonník práce a súvisiace vykonávacie predpisy; kolektívne zmluvy a pracovné zmluvy upravujú konkrétne podmienky",
+        "Len interné pokyny zamestnávateľa bez právnej sily",
+        "Len daňové predpisy"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Základ tvorí Zákonník práce; detaily upravujú kolektívne zmluvy, vnútropodnikové predpisy a pracovné zmluvy.",
+        "1": "Nesprávne. Interné pokyny nesmú byť v rozpore so zákonom.",
+        "2": "Nesprávne. Daňové predpisy upravujú zdanenie, nie primárne obsah mzdy."
+      }
+    },
+    {
+      "question": "Ktoré zložky odmeňovania sú bežné v podnikateľskej sfére?",
+      "options": [
+        "Základná mzda, príplatky (nočná práca, sviatok, nadčas), odmeny za výkon, prémie, naturálne plnenia a náhrady nákladov",
+        "Len základná mzda bez príplatkov",
+        "Len provízie bez základnej mzdy"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Odmeňovanie môže obsahovať viacero zložiek podľa zákona a dohody strán.",
+        "1": "Nesprávne. Zákon upravuje aj príplatky a odmeny.",
+        "2": "Nesprávne. Provízie sú len jednou z možných zložiek."
+      }
+    },
+    {
+      "question": "Ako sa rieši odmena za prácu nadčas v podnikateľskej sfére?",
+      "options": [
+        "Nadčas sa kompenzuje príplatkom alebo náhradným voľnom podľa zákona alebo dohody; existujú limity na rozsah nadčasov",
+        "Nadčas je vždy bez nároku na odmenu",
+        "Nadčas sa rieši len ústnou dohodou"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Zákon stanovuje pravidlá pre nadčasy, príplatky a limity; možné sú aj dohody o náhradnom voľne.",
+        "1": "Nesprávne. Nadčas má právnu úpravu a nároky na kompenzáciu.",
+        "2": "Nesprávne. Ústne dohody nemôžu obchádzať zákonné nároky."
+      }
+    },
+    {
+      "question": "Čo musí obsahovať výplatná páska (výplatné potvrdenie)?",
+      "options": [
+        "Údaje o hrubej mzde, zrážkach, čistom príjme, odpracovaných hodinách a dôvodoch zrážok",
+        "Len celkovú sumu, bez rozpisu",
+        "Len informáciu o daniach"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Zamestnanec musí byť informovaný o zložení mzdy a zrážkach; to chráni jeho práva a zabezpečuje transparentnosť.",
+        "1": "Nesprávne. Len suma nestačí podľa dobrých praktík a často ani podľa predpisov.",
+        "2": "Nesprávne. Výplatná páska obsahuje viac údajov než len dane."
+      }
+    },
+    {
+      "question": "Aké sú základné zásady spravodlivého odmeňovania v podnikateľskej sfére?",
+      "options": [
+        "Zásada rovnakého odmeňovania za rovnakú prácu, transparentnosť, dodržiavanie minimálnej mzdy a kolektívnych dohôd",
+        "Zásada, že zamestnávateľ môže platiť ľubovoľne",
+        "Zásada, že mzda sa určuje len podľa veku"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Právna úprava a zásady EÚ i národné pravidlá podporujú rovnaké odmeňovanie za rovnakú prácu a dodržiavanie minimálnych štandardov.",
+        "1": "Nesprávne. Odmeňovanie je viazané právnymi normami.",
+        "2": "Nesprávne. Vek nie je jediným kritériom."
+      }
+    },
+    {
+      "question": "Ktoré osobné prekážky v práci na strane zamestnanca sú právne významné?",
+      "options": [
+        "Dočasná pracovná neschopnosť, ošetrenie člena rodiny, súdne povinnosti, výkon verejnej funkcie, starostlivosť o dieťa, materská/rodičovská dovolenka",
+        "Len dovolenka na zotavenie",
+        "Len neohlásené neprítomnosti"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Tieto prekážky sú upravené právne a majú vplyv na nároky na náhradu mzdy alebo dávky.",
+        "1": "Nesprávne. Dovolenka je samostatný inštitút, nie všetky prekážky sú dovolenka.",
+        "2": "Nesprávne. Neohlásené neprítomnosti sú disciplinárnou otázkou, nie komplexným právnym titulom pre prekážky."
+      }
+    },
+    {
+      "question": "Ako sa rieši náhrada mzdy pri prekážkach v práci na strane zamestnanca?",
+      "options": [
+        "Závisí od druhu prekážky: niektoré prekážky dávkuje Sociálna poisťovňa (PN), iné zamestnávateľ poskytne náhradu mzdy podľa zákona alebo vnútorných pravidiel",
+        "Zamestnanec nikdy nedostane náhradu",
+        "Zamestnávateľ vždy vypláca plnú mzdu bez ohľadu na dôvod"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Právna úprava rozlišuje prípady, kedy ide o nemocenské dávky, ošetrovné, náhradu mzdy zo strany zamestnávateľa alebo iné režimy.",
+        "1": "Nesprávne. Existujú jasné pravidlá pre náhrady a dávky.",
+        "2": "Nesprávne. Nie vždy je povinnosťou zamestnávateľa platiť plnú mzdu."
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "id": "tile1",
+      "title": "Právny rámec odmeňovania",
+      "text": "Zákonník práce, vykonávacie predpisy, kolektívne zmluvy a pracovné zmluvy tvoria právny základ odmeňovania v podnikateľskej sfére.",
+      "align": "left"
+    },
+    {
+      "id": "tile2",
+      "title": "Zložky mzdy",
+      "text": "Základná mzda, príplatky za nadčas, nočnú prácu a sviatky, odmeny za výkon, prémie a naturálne plnenia.",
+      "align": "left"
+    },
+    {
+      "id": "tile3",
+      "title": "Minimálna mzda a zaručená mzda",
+      "text": "Minimálna mzda a zaručená mzda sú právne stanovené minimá, ktoré zamestnávateľ nesmie obchádzať; kolektívne zmluvy môžu upraviť vyššie štandardy.",
+      "align": "left"
+    },
+    {
+      "id": "tile4",
+      "title": "Osobné prekážky v práci",
+      "text": "Právne významné prekážky: PN, ošetrenie člena rodiny, súdne povinnosti, výkon verejnej funkcie, materská/rodičovská dovolenka a pod.",
+      "align": "left"
+    },
+    {
+      "id": "tile5",
+      "title": "Transparentnosť a výplatná páska",
+      "text": "Výplatná páska musí obsahovať rozpis mzdy, zrážky a čistý príjem; transparentnosť chráni práva zamestnanca.",
+      "align": "left"
+    }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Odmeňovanie za prácu v nepravidelnom režime",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec pracuje v nerovnomernom rozvrhu s nočnými zmenami a príležitostnými nadčasmi. Ako má zamestnávateľ postupovať pri odmeňovaní?",
+          "options": [
+            "Zabezpečiť základnú mzdu, vyplácať príplatky za nočnú prácu a nadčasy alebo dohodnúť náhradné voľno; viesť evidenciu odpracovaných hodín",
+            "Platiť len základnú mzdu bez príplatkov",
+            "Vyplácať príplatky len na konci roka"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Príplatky a kompenzácie musia byť vyplácané podľa zákona alebo dohody; evidencia hodín je nevyhnutná pre preukázanie nárokov.",
+            "1": "Nesprávne. Príplatky sú zákonným nárokom pri nočnej práci a nadčasoch.",
+            "2": "Nesprávne. Odmeňovanie musí byť pravidelné a transparentné."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – PN počas pracovného dňa s plánovaným nasadením",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec ochorel a má PN počas plánovaného pracovného dňa. Ako sa rieši náhrada mzdy a dávky?",
+          "options": [
+            "Zamestnanec predloží PN; nároky na nemocenské dávky rieši Sociálna poisťovňa; zamestnávateľ môže poskytnúť náhradu mzdy len ak to upravuje zákon alebo vnútorné pravidlá",
+            "Zamestnanec dostane plnú mzdu od zamestnávateľa bez ohľadu na PN",
+            "Zamestnávateľ okamžite zráta PN z budúcich výplat"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. PN je titul pre nemocenské dávky; zamestnávateľ má povinnosti podľa zákona a vnútorných pravidiel.",
+            "1": "Nesprávne. Plná mzda nie je automatická pri PN, závisí od právneho režimu.",
+            "2": "Nesprávne. Zrážky a postupy majú právne limity a formu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Starostlivosť o dieťa a skrátený pracovný čas",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Rodič žiada skrátený pracovný čas, aby sa staral o malé dieťa. Ako má zamestnávateľ postupovať?",
+          "options": [
+            "Posúdiť žiadosť podľa zákona a vnútropodnikových možností; ak je to možné, dohodnúť zmenu rozvrhu alebo skrátený úväzok; zvážiť vplyv na mzdu a náležitosti",
+            "Automaticky žiadosť zamietnuť bez posúdenia",
+            "Okamžite prepustiť zamestnanca"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Zamestnávateľ má povinnosť zvážiť žiadosť a primerane reagovať; zmena pracovného času ovplyvní mzdu podľa dohody.",
+            "1": "Nesprávne. Žiadosť treba posúdiť a rokovať.",
+            "2": "Nesprávne. Skončenie pomeru nie je primeranou reakciou."
+          }
+        }
+      ]
+    }
+  ]
+}

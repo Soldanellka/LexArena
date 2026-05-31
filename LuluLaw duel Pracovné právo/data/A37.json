@@ -1,0 +1,148 @@
+{
+  "id": "19A. Výpoveď z pracovného pomeru",
+  "title": "výpovedná doba, zákaz výpovede",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "výpoveď", "výpovedná doba", "zákaz výpovede"],
+
+  "summary": "Výpoveď je jednostranný právny úkon smerujúci k skončeniu pracovného pomeru uplynutím výpovednej doby. Zamestnávateľ môže dať výpoveď len z dôvodov uvedených v Zákonníku práce (§ 63), pričom dôvod musí byť presne skutkovo vymedzený. Zamestnanec môže dať výpoveď z akéhokoľvek dôvodu alebo bez uvedenia dôvodu. Výpovedná doba je najmenej 1 mesiac, pri dlhšom trvaní pracovného pomeru 2 alebo 3 mesiace. Začína plynúť prvým dňom mesiaca nasledujúceho po doručení výpovede. Zákaz výpovede (ochranná doba) chráni zamestnanca v situáciách, keď je sociálne alebo zdravotne zraniteľný – počas PN, tehotenstva, materskej a rodičovskej dovolenky, pri povolaní na výkon mimoriadnej služby a pri nočnej práci tehotných. Zákaz výpovede neplatí pri organizačných dôvodoch, zrušení zamestnávateľa alebo pri dôvodoch, pre ktoré možno okamžite skončiť pracovný pomer. Cieľom úpravy je ochrana zamestnanca a predvídateľnosť skončenia pracovného pomeru.",
+
+  "quiz": [
+    {
+      "question": "Môže zamestnávateľ dať výpoveď bez uvedenia dôvodu?",
+      "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ musí uviesť zákonný dôvod.",
+        "wrong": "Nesprávne. Súhlas zamestnanca nič nemení."
+      }
+    },
+    {
+      "question": "Kedy začína plynúť výpovedná doba?",
+      "options": ["Dňom doručenia výpovede", "Prvým dňom nasledujúceho mesiaca", "Posledným dňom mesiaca"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Výpovedná doba začína prvým dňom nasledujúceho mesiaca.",
+        "wrong": "Nesprávne. Doručenie nie je začiatok plynutia."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnanec musí uviesť dôvod výpovede", "Zamestnanec môže dať výpoveď bez dôvodu", "Zamestnanec môže dať výpoveď len so súhlasom zamestnávateľa"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnanec nemusí uvádzať dôvod.",
+        "wrong": "Nesprávne. Súhlas zamestnávateľa nie je potrebný."
+      }
+    },
+    {
+      "question": "Ktorá situácia patrí do zákazu výpovede?",
+      "options": ["Tehotenstvo", "Dovolenka", "Práca z domu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Tehotenstvo je ochranná doba.",
+        "wrong": "Nesprávne. Dovolenka nie je ochranná doba."
+      }
+    },
+    {
+      "question": "Kedy zákaz výpovede neplatí?",
+      "options": ["Pri PN", "Pri organizačných dôvodoch", "Pri tehotenstve"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri organizačných dôvodoch zákaz výpovede neplatí.",
+        "wrong": "Nesprávne. PN aj tehotenstvo sú chránené."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Výpoveď", "definition": "Jednostranný právny úkon smerujúci k skončeniu pracovného pomeru." },
+    { "term": "Výpovedná doba", "definition": "Najmenej 1 mesiac; začína plynúť prvým dňom nasledujúceho mesiaca." },
+    { "term": "Zákaz výpovede", "definition": "Ochranná doba, počas ktorej nemožno dať výpoveď (PN, tehotenstvo, MD, RD)." },
+    { "term": "Dôvody výpovede", "definition": "Zamestnávateľ môže dať výpoveď len zo zákonných dôvodov." },
+    { "term": "Doručenie výpovede", "definition": "Výpoveď musí byť písomná a preukázateľne doručená." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Výpoveď počas PN",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec je na PN. Zamestnávateľ mu doručil výpoveď z dôvodu porušenia disciplíny.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Platí zákaz výpovede?",
+          "options": ["Áno", "Nie", "Len ak PN trvá viac ako 30 dní"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. PN je ochranná doba.",
+            "wrong": "Nesprávne. Dĺžka PN nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 2: Je výpoveď platná?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výpoveď počas PN je neplatná.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nie je relevantný."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na neplatnosť výpovede a trvať na jej zrušení",
+            "Odporučiť zamestnancovi akceptovať výpoveď",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výpoveď je v rozpore so zákazom výpovede.",
+            "wrong": "Nesprávne. Zamestnanec je chránený."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Organizačný dôvod počas tehotenstva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Tehotná zamestnankyňa dostala výpoveď z dôvodu zrušenia pracovného miesta.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Platí zákaz výpovede?",
+          "options": ["Áno", "Nie", "Len ak zamestnávateľ nevie o tehotenstve"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Tehotenstvo je ochranná doba.",
+            "wrong": "Nesprávne. Zamestnávateľova vedomosť nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 2: Existuje výnimka zo zákazu?",
+          "options": ["Áno, pri organizačných dôvodoch", "Nie", "Len ak zamestnankyňa súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri organizačných dôvodoch zákaz výpovede neplatí.",
+            "wrong": "Nesprávne. Súhlas zamestnankyne nie je relevantný."
+          }
+        },
+        {
+          "question": "Krok 3: Je výpoveď platná?",
+          "options": ["Áno, ak je dôvod skutočný a riadne odôvodnený", "Nie", "Len ak zamestnankyňa podpíše dohodu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Organizačný dôvod je zákonná výnimka.",
+            "wrong": "Nesprávne. Dohoda nie je potrebná."
+          }
+        }
+      ]
+    }
+  ]
+}

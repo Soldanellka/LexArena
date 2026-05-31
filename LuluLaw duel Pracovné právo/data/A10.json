@@ -1,0 +1,148 @@
+{
+  "id": "5B. Kolektívne zmluvy",
+  "title": "charakteristika, druhy, forma, obsah, uzatváranie",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "kolektívne zmluvy", "kolektívne vyjednávanie", "sociálni partneri"],
+
+  "summary": "Kolektívna zmluva je výsledkom kolektívneho vyjednávania medzi odborovou organizáciou a zamestnávateľom alebo zamestnávateľským združením. Ide o autonómny prameň pracovného práva, ktorý môže upravovať pracovné a mzdové podmienky, sociálne výhody, BOZP, pracovný čas, dovolenku, odmeňovanie či sociálny fond. Kolektívna zmluva môže zamestnancom poskytovať výhodnejšie podmienky ako zákon, nikdy však nesmie zhoršovať ich postavenie. Druhy kolektívnych zmlúv sú podniková, vyššieho stupňa a kolektívna zmluva pre verejnú službu. Kolektívna zmluva musí byť písomná a nadobúda účinnosť dňom podpisu alebo neskorším dňom uvedeným v zmluve. Uzatváranie kolektívnych zmlúv prebieha podľa zákona o kolektívnom vyjednávaní a je založené na zásadách dobrovoľnosti, rovnosti strán, dobrej viery a povinnosti rokovať. Ak sa strany nedohodnú, spor sa rieši sprostredkovaním a prípadne rozhodcom. Kolektívna zmluva vyššieho stupňa môže byť rozšírená na ďalších zamestnávateľov rozhodnutím Ministerstva práce.",
+
+  "quiz": [
+    {
+      "question": "Kto môže uzavrieť kolektívnu zmluvu za zamestnancov?",
+      "options": ["Jednotlivý zamestnanec", "Odborová organizácia", "Inšpektorát práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívnu zmluvu môže uzavrieť len odborová organizácia.",
+        "wrong": "Nesprávne. Jednotlivec ani inšpektorát práce nemajú toto oprávnenie."
+      }
+    },
+    {
+      "question": "Ktorá kolektívna zmluva má najširší rozsah pôsobnosti?",
+      "options": ["Podniková kolektívna zmluva", "Kolektívna zmluva vyššieho stupňa", "Individuálna pracovná zmluva"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívna zmluva vyššieho stupňa sa môže vzťahovať na celé odvetvie.",
+        "wrong": "Nesprávne. Podniková zmluva sa vzťahuje len na jedného zamestnávateľa."
+      }
+    },
+    {
+      "question": "Aká forma je potrebná pre kolektívnu zmluvu?",
+      "options": ["Ústna", "Písomná", "Elektronická bez podpisu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívna zmluva musí byť písomná.",
+        "wrong": "Nesprávne. Ústna forma je neplatná."
+      }
+    },
+    {
+      "question": "Čo môže kolektívna zmluva?",
+      "options": ["Zhoršiť podmienky zamestnancov oproti zákonu", "Zlepšiť podmienky zamestnancov oproti zákonu", "Nahradiť Zákonník práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívna zmluva môže poskytovať výhodnejšie podmienky.",
+        "wrong": "Nesprávne. Zhoršenie nie je prípustné."
+      }
+    },
+    {
+      "question": "Ako sa rieši spor o uzavretie kolektívnej zmluvy?",
+      "options": ["Sprostredkovaním", "Okamžitým štrajkom", "Rozhodnutím zamestnávateľa"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Spor sa rieši sprostredkovaním.",
+        "wrong": "Nesprávne. Štrajk je až krajné opatrenie."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Kolektívna zmluva", "definition": "Autonómny prameň pracovného práva upravujúci pracovné a mzdové podmienky." },
+    { "term": "Podniková kolektívna zmluva", "definition": "Zmluva uzatvorená medzi odbormi a konkrétnym zamestnávateľom." },
+    { "term": "Kolektívna zmluva vyššieho stupňa", "definition": "Zmluva uzatvorená medzi odborovým zväzom a zamestnávateľským združením." },
+    { "term": "Sprostredkovanie", "definition": "Povinný krok pri riešení sporu o uzavretie kolektívnej zmluvy." },
+    { "term": "Rozšírenie záväznosti", "definition": "Rozhodnutie ministerstva, ktorým sa kolektívna zmluva vyššieho stupňa rozšíri na ďalších zamestnávateľov." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Neplatná forma kolektívnej zmluvy",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ a odbory sa dohodli na kolektívnej zmluve, ale uzavreli ju len ústne. Odbory tvrdia, že dohoda je záväzná.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je kolektívna zmluva platná?",
+          "options": ["Áno", "Nie", "Len ak ju potvrdí inšpekcia práce"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Kolektívna zmluva musí byť písomná, inak je neplatná.",
+            "wrong": "Nesprávne. Ústna forma nie je prípustná."
+          }
+        },
+        {
+          "question": "Krok 2: Ako má právnik postupovať?",
+          "options": [
+            "Navrhnúť uzavretie písomnej kolektívnej zmluvy",
+            "Akceptovať ústnu dohodu",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Je potrebné uzavrieť písomnú zmluvu.",
+            "wrong": "Nesprávne. Ústna dohoda nemá právne účinky."
+          }
+        },
+        {
+          "question": "Krok 3: Môžu sa strany odvolávať na ústnu dohodu?",
+          "options": ["Nie", "Áno", "Len ak ide o mzdové podmienky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ústna dohoda nemá právnu záväznosť.",
+            "wrong": "Nesprávne. Kolektívna zmluva musí byť vždy písomná."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Spor o obsah kolektívnej zmluvy",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Odbory požadujú zvýšenie príplatkov za nočnú prácu. Zamestnávateľ odmieta a rokovania sa zastavili.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako sa rieši spor o uzavretie kolektívnej zmluvy?",
+          "options": ["Sprostredkovaním", "Okamžitým štrajkom", "Rozhodnutím zamestnávateľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Spor sa rieši sprostredkovaním.",
+            "wrong": "Nesprávne. Štrajk je až krajné opatrenie."
+          }
+        },
+        {
+          "question": "Krok 2: Čo nasleduje, ak sprostredkovanie zlyhá?",
+          "options": ["Rozhodca", "Automatické prijatie návrhu odborov", "Zrušenie vyjednávania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po neúspešnom sprostredkovaní môže spor riešiť rozhodca.",
+            "wrong": "Nesprávne. Návrh odborov sa neprijíma automaticky."
+          }
+        },
+        {
+          "question": "Krok 3: Aké krajné opatrenie môžu zamestnanci využiť?",
+          "options": ["Štrajk", "Hromadné výpovede", "Zrušenie odborovej organizácie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Štrajk je krajné opatrenie pri spore o uzavretie kolektívnej zmluvy.",
+            "wrong": "Nesprávne. Ostatné možnosti nie sú nástrojmi kolektívneho sporu."
+          }
+        }
+      ]
+    }
+  ]
+}

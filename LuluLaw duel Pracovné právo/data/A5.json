@@ -1,0 +1,152 @@
+{
+  "id": "3A. Medzinárodné a európske",
+  "title": "pracovné právo",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "EÚ", "MOP", "medzinárodné právo", "európske pracovné právo"],
+
+  "summary": "Medzinárodné a európske pracovné právo predstavuje súbor noriem, ktoré ovplyvňujú vnútroštátnu pracovnoprávnu úpravu. Medzinárodné pracovné právo tvoria najmä dohovory Medzinárodnej organizácie práce (MOP), ktoré upravujú minimálne štandardy v oblasti pracovných podmienok, BOZP, zákazu detskej práce, rovnakého zaobchádzania a kolektívnych práv. Slovenská republika je viazaná ratifikovanými dohovormi, ktoré majú prednosť pred zákonom. Európske pracovné právo zahŕňa právo Európskej únie – najmä smernice harmonizujúce pracovný čas, rovnaké zaobchádzanie, transparentné pracovné podmienky, vysielanie pracovníkov, BOZP a kolektívne práva. Súdny dvor EÚ zohráva kľúčovú úlohu pri výklade pracovnoprávnych smerníc a zásad, najmä vo veciach rovnakého zaobchádzania, diskriminácie a slobody poskytovania služieb. Európska sociálna charta a Dohovor o ochrane ľudských práv dopĺňajú ochranu pracovných práv. Európske a medzinárodné normy majú významný vplyv na slovenské pracovné právo, ktoré musí byť s nimi v súlade.",
+
+  "quiz": [
+    {
+      "question": "Ktorá organizácia prijíma medzinárodné pracovné štandardy vo forme dohovorov?",
+      "options": ["OSN", "MOP – Medzinárodná organizácia práce", "Interpol"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. MOP prijíma záväzné pracovné štandardy vo forme dohovorov.",
+        "wrong": "Nesprávne. OSN ani Interpol neprijímajú pracovnoprávne dohovory."
+      }
+    },
+    {
+      "question": "Ktorý právny akt EÚ najčastejšie harmonizuje pracovné právo?",
+      "options": ["Smernica", "Nariadenie", "Rozhodnutie Rady"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Smernice sú hlavným nástrojom harmonizácie pracovného práva.",
+        "wrong": "Nesprávne. Nariadenia sa používajú menej často v pracovnom práve."
+      }
+    },
+    {
+      "question": "Ktorý súd zabezpečuje jednotný výklad pracovnoprávnych smerníc EÚ?",
+      "options": ["Súdny dvor EÚ", "Najvyšší súd SR", "Európsky súd pre ľudské práva"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Súdny dvor EÚ zabezpečuje jednotný výklad práva EÚ.",
+        "wrong": "Nesprávne. ESĽP rieši ľudské práva, nie výklad smerníc."
+      }
+    },
+    {
+      "question": "Ktorý dokument chráni sociálne a pracovné práva na európskej úrovni?",
+      "options": ["Európska sociálna charta", "Schengenský kódex", "Zmluva o Euratom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Európska sociálna charta obsahuje sociálne a pracovné práva.",
+        "wrong": "Nesprávne. Ostatné dokumenty sa pracovného práva netýkajú."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Dohovory MOP sú nezáväzné", "Smernice EÚ musia byť transponované do vnútroštátneho práva", "Rozsudky Súdneho dvora EÚ nie sú záväzné"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Smernice musia byť transponované do vnútroštátneho práva.",
+        "wrong": "Nesprávne. Dohovory MOP sú záväzné po ratifikácii a rozsudky SDEÚ sú záväzné."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "MOP", "definition": "Medzinárodná organizácia práce prijímajúca dohovory o pracovných štandardoch." },
+    { "term": "Smernica EÚ", "definition": "Právny akt EÚ, ktorý členské štáty musia transponovať do vnútroštátneho práva." },
+    { "term": "Súdny dvor EÚ", "definition": "Inštitúcia zabezpečujúca jednotný výklad pracovnoprávnych smerníc." },
+    { "term": "Európska sociálna charta", "definition": "Medzinárodný dokument chrániaci sociálne a pracovné práva." },
+    { "term": "Transpozícia", "definition": "Premietnutie smernice EÚ do vnútroštátneho právneho poriadku." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Minimálne požiadavky smernice o pracovnom čase",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ požaduje, aby zamestnanec pracoval 14 hodín denne bez prestávky. Tvrdí, že slovenský zákon to výslovne nezakazuje.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ktorý prameň upravuje maximálny pracovný čas v EÚ?",
+          "options": ["Smernica o pracovnom čase", "Dohovor OSN", "Zákon o sociálnom poistení"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Smernica 2003/88/ES upravuje pracovný čas a odpočinok.",
+            "wrong": "Nesprávne. Ostatné pramene sa pracovného času netýkajú."
+          }
+        },
+        {
+          "question": "Krok 2: Je 14-hodinový pracovný deň v súlade s právom EÚ?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Smernica stanovuje limit 48 hodín týždenne a povinné prestávky.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nemôže obísť smernicu."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na nesúlad s právom EÚ a požadovať úpravu pracovného času",
+            "Akceptovať požiadavku zamestnávateľa",
+            "Odporučiť zamestnancovi, aby si bral neplatené voľno"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právnik musí zabezpečiť súlad s právom EÚ.",
+            "wrong": "Nesprávne. Ostatné možnosti sú v rozpore s právom."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Diskriminácia a právo EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ odmietol prijať uchádzačku s odôvodnením, že „ženy nezvládnu túto prácu“. Uchádzačka sa chce brániť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ktorý prameň EÚ upravuje rovnaké zaobchádzanie?",
+          "options": ["Antidiskriminačné smernice EÚ", "Zmluva o fungovaní EÚ", "Schengenský kódex"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Smernice o rovnakom zaobchádzaní zakazujú diskrimináciu na základe pohlavia.",
+            "wrong": "Nesprávne. Ostatné dokumenty sa diskriminácie netýkajú."
+          }
+        },
+        {
+          "question": "Krok 2: Ide o diskrimináciu?",
+          "options": ["Áno", "Nie", "Len ak to potvrdí odborová organizácia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odmietnutie z dôvodu pohlavia je priamou diskrimináciou.",
+            "wrong": "Nesprávne. Odbory nerozhodujú o diskriminácii."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Odporučiť podanie žaloby a obrátiť sa na inšpektorát práce",
+            "Odporučiť uchádzačke, aby sa vzdala nároku",
+            "Navrhnúť zamestnávateľovi, aby diskrimináciu zakryl"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o porušenie práva EÚ aj vnútroštátneho práva.",
+            "wrong": "Nesprávne. Ostatné možnosti sú neprípustné a protiprávne."
+          }
+        }
+      ]
+    }
+  ]
+}

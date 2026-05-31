@@ -1,0 +1,152 @@
+{
+  "id": "24A. Skončenie pracovného pomeru",
+  "title": "dohoda, skúšobná doba, hromadné prepúšťanie",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "skončenie pracovného pomeru", "dohoda", "skúšobná doba", "hromadné prepúšťanie"],
+
+  "summary": "Pracovný pomer môže skončiť rôznymi spôsobmi. Dohoda o skončení pracovného pomeru je dvojstranný právny úkon, ktorý vyžaduje súhlas oboch strán a musí byť písomná. Skončenie v skúšobnej dobe je jednostranné a môže ho vykonať zamestnanec aj zamestnávateľ bez uvedenia dôvodu, pričom zamestnávateľ nesmie skončiť pracovný pomer diskriminačne alebo počas dočasnej PN zamestnanca. Hromadné prepúšťanie je osobitný režim skončenia pracovného pomeru z organizačných dôvodov, keď zamestnávateľ vo väčšom rozsahu ruší pracovné miesta. Vyžaduje sa prerokovanie so zástupcami zamestnancov, informovanie úradu práce a dodržanie zákonných postupov. Cieľom úpravy je ochrana zamestnanca a predvídateľnosť skončenia pracovného pomeru.",
+
+  "quiz": [
+    {
+      "question": "Čo je dohoda o skončení pracovného pomeru?",
+      "options": ["Jednostranný úkon zamestnávateľa", "Dvojstranný právny úkon", "Rozhodnutie inšpektorátu práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dohoda vyžaduje súhlas oboch strán.",
+        "wrong": "Nesprávne. Dohoda nie je jednostranný úkon."
+      }
+    },
+    {
+      "question": "Môže zamestnávateľ skončiť pracovný pomer v skúšobnej dobe bez uvedenia dôvodu?",
+      "options": ["Áno", "Nie", "Len so súhlasom zamestnanca"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. V skúšobnej dobe sa dôvod nevyžaduje.",
+        "wrong": "Nesprávne. Súhlas zamestnanca nie je potrebný."
+      }
+    },
+    {
+      "question": "Kedy ide o hromadné prepúšťanie?",
+      "options": ["Keď odchádza jeden zamestnanec", "Keď zamestnávateľ prepúšťa väčší počet zamestnancov z organizačných dôvodov", "Keď zamestnanec odchádza do dôchodku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Hromadné prepúšťanie má zákonom stanovené počty.",
+        "wrong": "Nesprávne. Ostatné situácie nie sú hromadné prepúšťanie."
+      }
+    },
+    {
+      "question": "Vyžaduje sa písomná forma dohody o skončení pracovného pomeru?",
+      "options": ["Áno", "Nie", "Len ak to chce zamestnanec"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Dohoda musí byť písomná.",
+        "wrong": "Nesprávne. Ústna dohoda je neplatná."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pri hromadnom prepúšťaní sa neinformuje úrad práce", "Zamestnávateľ musí prerokovať hromadné prepúšťanie so zástupcami zamestnancov", "Skončenie v skúšobnej dobe musí byť odôvodnené"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prerokovanie je povinné.",
+        "wrong": "Nesprávne. Skončenie v skúšobnej dobe sa neodôvodňuje."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Dohoda o skončení", "definition": "Dvojstranný úkon, písomná forma, súhlas oboch strán." },
+    { "term": "Skúšobná doba", "definition": "Možnosť skončiť pracovný pomer bez uvedenia dôvodu." },
+    { "term": "Hromadné prepúšťanie", "definition": "Organizačné skončenie pracovného pomeru vo väčšom rozsahu." },
+    { "term": "Prerokovanie", "definition": "Povinnosť zamestnávateľa rokovať so zástupcami zamestnancov." },
+    { "term": "Informovanie úradu práce", "definition": "Povinné pri hromadnom prepúšťaní." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Sporná dohoda o skončení",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ predložil zamestnancovi dohodu o skončení pracovného pomeru s okamžitou účinnosťou. Tvrdí, že zamestnanec ju musí podpísať.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Musí zamestnanec podpísať dohodu?",
+          "options": ["Nie", "Áno", "Len ak je v skúšobnej dobe"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dohoda je dobrovoľná.",
+            "wrong": "Nesprávne. Zamestnanec nemá povinnosť ju podpísať."
+          }
+        },
+        {
+          "question": "Krok 2: Je dohoda platná bez písomnej formy?",
+          "options": ["Nie", "Áno", "Len ak sú svedkovia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dohoda musí byť písomná.",
+            "wrong": "Nesprávne. Ústna dohoda je neplatná."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť, že dohoda je dobrovoľná a musí byť písomná",
+            "Odporučiť zamestnancovi podpísať ju",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ nesmie nútiť zamestnanca k dohode.",
+            "wrong": "Nesprávne. Podpis nie je povinný."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Skončenie v skúšobnej dobe a PN",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ skončil pracovný pomer v skúšobnej dobe počas PN zamestnanca.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je skončenie počas PN v skúšobnej dobe prípustné?",
+          "options": ["Nie, ak ide o PN zamestnanca", "Áno", "Len ak PN trvá krátko"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ nesmie skončiť pracovný pomer počas PN.",
+            "wrong": "Nesprávne. PN je chránená aj v skúšobnej dobe."
+          }
+        },
+        {
+          "question": "Krok 2: Je potrebné uviesť dôvod skončenia?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec žiada"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Skončenie v skúšobnej dobe sa neodôvodňuje.",
+            "wrong": "Nesprávne. Dôvod sa neuvádza."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Namietať neplatnosť skončenia počas PN",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnancovi ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Skončenie počas PN je neplatné.",
+            "wrong": "Nesprávne. Zamestnanec je chránený."
+          }
+        }
+      ]
+    }
+  ]
+}

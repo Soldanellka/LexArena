@@ -1,0 +1,152 @@
+{
+  "id": "18B. Predpoklady zodpovednosti",
+  "title": "za škodu v pracovnom práve",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "zodpovednosť za škodu", "predpoklady", "zamestnanec", "zamestnávateľ"],
+
+  "summary": "Predpoklady zodpovednosti za škodu v pracovnom práve sú právne podmienky, ktoré musia byť splnené, aby vznikla povinnosť nahradiť škodu. V pracovnom práve sa rozlišuje zodpovednosť zamestnávateľa a zamestnanca, pričom každá má vlastné predpoklady. Všeobecné predpoklady zodpovednosti zamestnanca sú: vznik škody, porušenie pracovnej povinnosti, príčinná súvislosť a zavinenie (úmysel alebo nedbanlivosť). Pri niektorých druhoch zodpovednosti sa zavinenie predpokladá (napr. schodok na zverených hodnotách). Predpoklady zodpovednosti zamestnávateľa sú: vznik škody, pracovný úraz alebo choroba z povolania, príčinná súvislosť a splnenie podmienok objektívnej zodpovednosti. Predpoklady musia byť preukázané – zamestnávateľ preukazuje škodu, porušenie povinnosti a príčinnú súvislosť; zamestnanec preukazuje mieru zavinenia alebo okolnosti vylučujúce zodpovednosť. Cieľom úpravy je rovnováha medzi ochranou majetku zamestnávateľa a ochranou zamestnanca pred neprimeranou zodpovednosťou.",
+
+  "quiz": [
+    {
+      "question": "Ktoré sú základné predpoklady zodpovednosti zamestnanca za škodu?",
+      "options": ["Škoda, porušenie povinnosti, príčinná súvislosť, zavinenie", "Len škoda a zavinenie", "Len porušenie povinnosti"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o štyri základné predpoklady.",
+        "wrong": "Nesprávne. Predpokladov je viac."
+      }
+    },
+    {
+      "question": "Kto preukazuje zavinenie pri všeobecnej zodpovednosti zamestnanca?",
+      "options": ["Zamestnávateľ", "Zamestnanec", "Inšpektorát práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zavinenie preukazuje zamestnanec.",
+        "wrong": "Nesprávne. Zamestnávateľ preukazuje iné predpoklady."
+      }
+    },
+    {
+      "question": "Ktorý predpoklad sa nevyžaduje pri objektívnej zodpovednosti zamestnávateľa?",
+      "options": ["Škoda", "Príčinná súvislosť", "Zavinenie"],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Zavinenie sa pri objektívnej zodpovednosti nevyžaduje.",
+        "wrong": "Nesprávne. Ostatné predpoklady sú potrebné."
+      }
+    },
+    {
+      "question": "Kedy sa zavinenie zamestnanca predpokladá?",
+      "options": ["Pri schodku na zverených hodnotách", "Pri bežnej nedbanlivosti", "Pri meškaní do práce"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Pri schodku sa zavinenie predpokladá.",
+        "wrong": "Nesprávne. Meškanie nie je škoda."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnávateľ nemusí preukazovať vznik škody", "Zamestnávateľ musí preukázať škodu, porušenie povinnosti a príčinnú súvislosť", "Zamestnanec vždy zodpovedá v plnej výške"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o základné predpoklady zodpovednosti.",
+        "wrong": "Nesprávne. Zamestnanec má limity zodpovednosti."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Škoda", "definition": "Majetková ujma, ktorú je možné vyčísliť v peniazoch." },
+    { "term": "Porušenie povinnosti", "definition": "Konanie alebo opomenutie v rozpore s pracovnými povinnosťami." },
+    { "term": "Príčinná súvislosť", "definition": "Priama väzba medzi porušením povinnosti a škodou." },
+    { "term": "Zavinenie", "definition": "Úmysel alebo nedbanlivosť zamestnanca." },
+    { "term": "Objektívna zodpovednosť", "definition": "Zodpovednosť bez ohľadu na zavinenie (napr. pracovné úrazy)." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Poškodenie stroja",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec poškodil stroj pri nesprávnej manipulácii. Tvrdí, že išlo o náhodu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je splnený predpoklad porušenia povinnosti?",
+          "options": ["Áno", "Nie", "Len ak bol stroj nový"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nesprávna manipulácia je porušením povinnosti.",
+            "wrong": "Nesprávne. Stav stroja nie je rozhodujúci."
+          }
+        },
+        {
+          "question": "Krok 2: Kto preukazuje zavinenie?",
+          "options": ["Zamestnanec", "Zamestnávateľ", "Súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri všeobecnej zodpovednosti zavinenie preukazuje zamestnanec.",
+            "wrong": "Nesprávne. Zamestnávateľ preukazuje iné predpoklady."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Vyčísliť škodu a posúdiť mieru zavinenia",
+            "Požadovať plnú náhradu bez skúmania zavinenia",
+            "Ignorovať príčinnú súvislosť"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Treba posúdiť všetky predpoklady zodpovednosti.",
+            "wrong": "Nesprávne. Plná náhrada nie je automatická."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Pracovný úraz a zodpovednosť zamestnávateľa",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec si pri práci poranil ruku. Zamestnávateľ tvrdí, že nezodpovedá, lebo nepochybil.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Vyžaduje sa zavinenie zamestnávateľa?",
+          "options": ["Nie", "Áno", "Len pri ťažkých úrazoch"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri pracovných úrazoch ide o objektívnu zodpovednosť.",
+            "wrong": "Nesprávne. Zavinenie nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 2: Ktoré predpoklady musia byť splnené?",
+          "options": ["Úraz, škoda, príčinná súvislosť", "Len úraz", "Len škoda"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o tri základné predpoklady objektívnej zodpovednosti.",
+            "wrong": "Nesprávne. Úraz sám o sebe nestačí."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Uplatniť nárok na náhradu škody z pracovného úrazu",
+            "Odmietnuť nárok, lebo zamestnávateľ nepochybil",
+            "Požadovať dôkaz o zavinení zamestnávateľa"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zavinenie sa nevyžaduje, nárok vzniká objektívne.",
+            "wrong": "Nesprávne. Zavinenie nie je predpokladom."
+          }
+        }
+      ]
+    }
+  ]
+}

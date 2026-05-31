@@ -1,0 +1,152 @@
+{
+  "id": "20A. Dovolenka",
+  "title": "krátenie dovolenky",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "dovolenka", "krátenie dovolenky", "pracovný pomer"],
+
+  "summary": "Dovolenka je zákonom garantovaný čas odpočinku, na ktorý má zamestnanec nárok po splnení podmienok. Základná výmera dovolenky je najmenej 4 týždne, pri zamestnancoch nad 33 rokov najmenej 5 týždňov. Nárok na dovolenku vzniká po odpracovaní 60 dní v kalendárnom roku. Zamestnanec má nárok aj na pomernú časť dovolenky pri kratšom trvaní pracovného pomeru. Dovolenka sa čerpá podľa plánu dovoleniek, pričom zamestnávateľ musí prihliadať na potreby zamestnanca. Krátenie dovolenky je možné len zo zákonných dôvodov: pri neospravedlnenej absencii, pri dlhodobej PN, pri čerpaní rodičovskej dovolenky a pri prekážkach na strane zamestnanca. Krátenie má presné limity – napr. za každých 21 dní prekážok na strane zamestnanca možno krátiť o 1/12. Dovolenka sa nesmie krátiť za materskú dovolenku. Cieľom úpravy je ochrana práva na odpočinok a spravodlivé pravidlá pri jej krátení.",
+
+  "quiz": [
+    {
+      "question": "Aká je základná výmera dovolenky?",
+      "options": ["3 týždne", "4 týždne", "6 týždňov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Základná výmera je najmenej 4 týždne.",
+        "wrong": "Nesprávne. 3 týždne zákon nepozná."
+      }
+    },
+    {
+      "question": "Kedy vzniká zamestnancovi nárok na celoročnú dovolenku?",
+      "options": ["Po odpracovaní 30 dní", "Po odpracovaní 60 dní", "Ihneď po nástupe"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nárok vzniká po 60 odpracovaných dňoch.",
+        "wrong": "Nesprávne. 30 dní nestačí."
+      }
+    },
+    {
+      "question": "Môže sa dovolenka krátiť za materskú dovolenku?",
+      "options": ["Áno", "Nie", "Len ak to zamestnávateľ určí"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Materská dovolenka sa nepovažuje za prekážku na strane zamestnanca.",
+        "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+      }
+    },
+    {
+      "question": "Za koľko dní prekážok na strane zamestnanca možno krátiť dovolenku o 1/12?",
+      "options": ["21 dní", "30 dní", "60 dní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Krátenie o 1/12 je možné za každých 21 dní.",
+        "wrong": "Nesprávne. 30 ani 60 dní nie sú správne limity."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Dovolenku určuje výlučne zamestnanec", "Dovolenku určuje zamestnávateľ, ale musí prihliadať na zamestnanca", "Dovolenka sa musí vyčerpať do konca mesiaca"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ určuje čerpanie, ale nie svojvoľne.",
+        "wrong": "Nesprávne. Zamestnanec si nemôže určovať dovolenku sám."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Základná výmera", "definition": "Najmenej 4 týždne, nad 33 rokov najmenej 5 týždňov." },
+    { "term": "Nárok po 60 dňoch", "definition": "Celoročná dovolenka vzniká po odpracovaní 60 dní." },
+    { "term": "Pomerná časť", "definition": "Pri kratšom trvaní pracovného pomeru patrí 1/12 za každý mesiac." },
+    { "term": "Krátenie dovolenky", "definition": "Možné len zo zákonných dôvodov, napr. PN, rodičovská, absencia." },
+    { "term": "21-dňové pravidlo", "definition": "Za každých 21 dní prekážok možno krátiť o 1/12." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Krátenie dovolenky pri dlhodobej PN",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec bol PN 90 dní. Zamestnávateľ tvrdí, že môže skrátiť dovolenku o polovicu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je PN dôvodom na krátenie?",
+          "options": ["Áno", "Nie", "Len ak PN presiahne 6 mesiacov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. PN je prekážka na strane zamestnanca.",
+            "wrong": "Nesprávne. PN nemusí trvať 6 mesiacov."
+          }
+        },
+        {
+          "question": "Krok 2: O koľko možno krátiť?",
+          "options": ["O 1/12 za každých 21 dní", "O polovicu", "O 1/12 za každý mesiac"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. 90 dní = 4×21 dní → krátenie o 4/12.",
+            "wrong": "Nesprávne. Polovica nie je zákonný výpočet."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Vyčísliť zákonné krátenie (4/12) a upozorniť zamestnávateľa",
+            "Súhlasiť s krátením o polovicu",
+            "Ignorovať nesprávny výpočet"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Krátenie musí byť presne podľa zákona.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže krátiť svojvoľne."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Krátenie dovolenky pri rodičovskej dovolenke",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnankyňa bola celý rok na rodičovskej dovolenke. Zamestnávateľ tvrdí, že nemá nárok na žiadnu dovolenku.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je rodičovská dovolenka dôvodom na krátenie?",
+          "options": ["Áno", "Nie", "Len ak trvá viac ako 6 mesiacov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rodičovská dovolenka je prekážka na strane zamestnanca.",
+            "wrong": "Nesprávne. Dĺžka nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 2: Má nárok na nejakú dovolenku?",
+          "options": ["Áno, za prvých 100 dní prekážok", "Nie", "Len ak pracovala aspoň 1 mesiac"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Za prvých 100 dní prekážok sa dovolenka nekráti.",
+            "wrong": "Nesprávne. Nárok nevzniká len pri práci."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť, že zamestnankyňa má nárok na pomernú časť dovolenky",
+            "Súhlasiť s tým, že nemá nárok",
+            "Odporučiť zamestnankyni vziať si neplatené voľno"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnankyňa má nárok na časť dovolenky, ktorú nemožno krátiť.",
+            "wrong": "Nesprávne. Zamestnávateľ sa mýli."
+          }
+        }
+      ]
+    }
+  ]
+}

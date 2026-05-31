@@ -1,0 +1,152 @@
+{
+  "id": "22B. Zvyšovanie a prehlbovanie",
+  "title": "kvalifikácie",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "kvalifikácia", "vzdelávanie", "zamestnanec", "zamestnávateľ"],
+
+  "summary": "Zvyšovanie a prehlbovanie kvalifikácie predstavuje odborné vzdelávanie zamestnanca, ktoré súvisí s výkonom práce. Zvyšovanie kvalifikácie je získanie vyššieho stupňa vzdelania (napr. VŠ štúdium), zatiaľ čo prehlbovanie kvalifikácie je dopĺňanie vedomostí v rámci existujúcej kvalifikácie (kurzy, školenia). Zamestnávateľ môže požadovať prehlbovanie kvalifikácie a je povinný ho uhradiť. Pri zvyšovaní kvalifikácie môže zamestnávateľ uzavrieť kvalifikačnú dohodu, v ktorej sa zamestnanec zaviaže zotrvať v pracovnom pomere najviac 5 rokov, inak musí nahradiť náklady. Kvalifikačná dohoda je platná len vtedy, ak zamestnávateľ preukázateľne uhradil náklady a vzdelávanie je v záujme zamestnávateľa. Zamestnanec má počas vzdelávania nárok na pracovné voľno a náhradu mzdy podľa zákona. Cieľom úpravy je podpora odborného rastu zamestnancov a zabezpečenie kvalifikovanej pracovnej sily.",
+
+  "quiz": [
+    {
+      "question": "Čo je zvyšovanie kvalifikácie?",
+      "options": ["Doplnenie vedomostí v rámci existujúcej kvalifikácie", "Získanie vyššieho stupňa vzdelania", "Krátke interné školenie"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zvyšovanie kvalifikácie znamená získanie vyššieho vzdelania.",
+        "wrong": "Nesprávne. Prehlbovanie je dopĺňanie vedomostí."
+      }
+    },
+    {
+      "question": "Kedy môže zamestnávateľ uzavrieť kvalifikačnú dohodu?",
+      "options": ["Pri akomkoľvek školení", "Len pri zvyšovaní kvalifikácie", "Len ak to chce zamestnanec"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kvalifikačná dohoda sa uzatvára len pri zvyšovaní kvalifikácie.",
+        "wrong": "Nesprávne. Prehlbovanie kvalifikácie sa nedohoduje."
+      }
+    },
+    {
+      "question": "Aká je maximálna doba viazanosti v kvalifikačnej dohode?",
+      "options": ["2 roky", "5 rokov", "10 rokov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon stanovuje limit 5 rokov.",
+        "wrong": "Nesprávne. Dlhšia viazanosť je neplatná."
+      }
+    },
+    {
+      "question": "Kto hradí prehlbovanie kvalifikácie?",
+      "options": ["Zamestnanec", "Zamestnávateľ", "Obaja rovnako"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prehlbovanie kvalifikácie je povinnosť zamestnávateľa.",
+        "wrong": "Nesprávne. Zamestnanec nehradí povinné školenia."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Kvalifikačná dohoda je povinná pri každom školení", "Zamestnanec má nárok na pracovné voľno pri zvyšovaní kvalifikácie", "Zamestnávateľ nemusí preukazovať náklady"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri zvyšovaní kvalifikácie patrí pracovné voľno.",
+        "wrong": "Nesprávne. Dohoda nie je povinná a náklady musia byť preukázané."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Zvyšovanie kvalifikácie", "definition": "Získanie vyššieho stupňa vzdelania (napr. VŠ štúdium)." },
+    { "term": "Prehlbovanie kvalifikácie", "definition": "Doplnenie vedomostí v rámci existujúcej kvalifikácie." },
+    { "term": "Kvalifikačná dohoda", "definition": "Dohoda o zotrvaní v pracovnom pomere max. 5 rokov." },
+    { "term": "Náhrada nákladov", "definition": "Zamestnanec ich hradí len pri porušení kvalifikačnej dohody." },
+    { "term": "Pracovné voľno", "definition": "Pri zvyšovaní kvalifikácie patrí voľno a náhrada mzdy." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Neplatná kvalifikačná dohoda",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ uzavrel so zamestnancom kvalifikačnú dohodu na 7 rokov. Uhradil len časť nákladov.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je dohoda platná?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dohoda presahuje zákonný limit 5 rokov.",
+            "wrong": "Nesprávne. Súhlas zamestnanca neodstraňuje neplatnosť."
+          }
+        },
+        {
+          "question": "Krok 2: Musí zamestnanec nahradiť náklady?",
+          "options": ["Nie, ak dohoda je neplatná", "Áno, vždy", "Len ak odíde do 2 rokov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neplatná dohoda nezakladá povinnosť náhrady.",
+            "wrong": "Nesprávne. Povinnosť vzniká len z platnej dohody."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Namietať neplatnosť dohody a odmietnuť náhradu nákladov",
+            "Odporučiť zamestnancovi zaplatiť náklady",
+            "Ignorovať neplatnosť dohody"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dohoda je v rozpore so zákonom.",
+            "wrong": "Nesprávne. Zamestnanec nemá povinnosť plniť neplatnú dohodu."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Povinné školenie ako prehlbovanie kvalifikácie",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ nariadil zamestnancovi povinné školenie BOZP a požaduje, aby si ho uhradil sám.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o prehlbovanie kvalifikácie?",
+          "options": ["Áno", "Nie", "Len ak školenie trvá viac ako 2 dni"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. BOZP je typické prehlbovanie kvalifikácie.",
+            "wrong": "Nesprávne. Dĺžka školenia nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 2: Kto hradí náklady?",
+          "options": ["Zamestnávateľ", "Zamestnanec", "Obaja rovnako"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Povinné školenia hradí zamestnávateľ.",
+            "wrong": "Nesprávne. Zamestnanec nehradí povinné školenia."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa, že náklady musí uhradiť on",
+            "Súhlasiť s úhradou zamestnancom",
+            "Odporučiť zamestnancovi vziať si neplatené voľno"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Povinné školenia sú nákladom zamestnávateľa.",
+            "wrong": "Nesprávne. Zamestnanec nemá povinnosť platiť."
+          }
+        }
+      ]
+    }
+  ]
+}

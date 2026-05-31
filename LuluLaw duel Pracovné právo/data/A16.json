@@ -1,0 +1,152 @@
+{
+  "id": "8B. Postavenie zástupcov zamestnancov",
+  "title": "v pracovnoprávnych vzťahoch",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "zástupcovia zamestnancov", "odborová organizácia", "zamestnanecká rada"],
+
+  "summary": "Zástupcovia zamestnancov sú subjekty, ktoré zastupujú kolektívne záujmy zamestnancov voči zamestnávateľovi. Zákonník práce rozlišuje najmä odborovú organizáciu, zamestnaneckú radu a zamestnaneckého dôverníka. Odborová organizácia má najsilnejšie právomoci – môže viesť kolektívne vyjednávanie, uzatvárať kolektívne zmluvy, kontrolovať dodržiavanie pracovnoprávnych predpisov a zastupovať zamestnancov v konaniach. Zamestnanecká rada a zamestnanecký dôverník pôsobia najmä v oblasti informovania a prerokovania, pričom nemajú právo uzatvárať kolektívne zmluvy. Zamestnávateľ je povinný zástupcov zamestnancov informovať a prerokovať s nimi dôležité otázky, ako sú organizačné zmeny, hromadné prepúšťanie, pracovné podmienky či BOZP. Zástupcovia zamestnancov požívajú osobitnú ochranu – zamestnávateľ im môže dať výpoveď len so súhlasom odborovej organizácie alebo po splnení zákonných podmienok. Ich úlohou je zabezpečiť rovnováhu medzi zamestnávateľom a zamestnancami a podporovať sociálny dialóg.",
+
+  "quiz": [
+    {
+      "question": "Ktorý zástupca zamestnancov má právo uzatvárať kolektívne zmluvy?",
+      "options": ["Zamestnanecká rada", "Odborová organizácia", "Zamestnanecký dôverník"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívne zmluvy môže uzatvárať len odborová organizácia.",
+        "wrong": "Nesprávne. Zamestnanecká rada ani dôverník toto oprávnenie nemajú."
+      }
+    },
+    {
+      "question": "Ktorý zástupca zamestnancov pôsobí najmä v oblasti informovania a prerokovania?",
+      "options": ["Odborová organizácia", "Zamestnanecká rada", "Inšpektorát práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnanecká rada má práva najmä v oblasti informovania a prerokovania.",
+        "wrong": "Nesprávne. Odbory majú širšie právomoci."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zástupcov zamestnancov môže odvolať zamestnávateľ", "Zástupcovia zamestnancov požívajú osobitnú ochranu", "Zástupcovia zamestnancov nemajú právo na informácie"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zástupcovia zamestnancov majú osobitnú ochranu pred výpoveďou.",
+        "wrong": "Nesprávne. Zamestnávateľ ich nemôže odvolať a majú právo na informácie."
+      }
+    },
+    {
+      "question": "Ktorý subjekt je povinný prerokovať organizačné zmeny so zamestnávateľom?",
+      "options": ["Zamestnanci individuálne", "Zástupcovia zamestnancov", "Inšpektorát práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ musí prerokovať zmeny so zástupcami zamestnancov.",
+        "wrong": "Nesprávne. Individuálne prerokovanie nie je postačujúce."
+      }
+    },
+    {
+      "question": "Kto môže zastupovať zamestnancov tam, kde nepôsobia odbory?",
+      "options": ["Zamestnanecká rada alebo dôverník", "Nikto", "Len právnik zamestnávateľa"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ak nepôsobia odbory, zamestnancov zastupuje zamestnanecká rada alebo dôverník.",
+        "wrong": "Nesprávne. Zamestnanci musia mať možnosť zastúpenia."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Odborová organizácia", "definition": "Najsilnejší zástupca zamestnancov s právom kolektívneho vyjednávania a kontroly." },
+    { "term": "Zamestnanecká rada", "definition": "Zástupca zamestnancov s právom na informácie a prerokovanie, bez práva uzatvárať kolektívne zmluvy." },
+    { "term": "Zamestnanecký dôverník", "definition": "Zástupca zamestnancov volený tam, kde nepôsobia odbory ani zamestnanecká rada." },
+    { "term": "Ochrana zástupcov", "definition": "Zástupcovia zamestnancov požívajú zvýšenú ochranu pred výpoveďou." },
+    { "term": "Prerokovanie", "definition": "Povinnosť zamestnávateľa konzultovať so zástupcami zamestnancov dôležité otázky." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Zamestnávateľ ignoruje zamestnaneckú radu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ plánuje organizačnú zmenu, ale odmieta ju prerokovať so zamestnaneckou radou.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je zamestnávateľ povinný prerokovať zmenu?",
+          "options": ["Áno", "Nie", "Len ak rada požiada"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí prerokovať organizačné zmeny so zástupcami zamestnancov.",
+            "wrong": "Nesprávne. Povinnosť nie je podmienená žiadosťou."
+          }
+        },
+        {
+          "question": "Krok 2: Čo môže rada urobiť?",
+          "options": ["Požiadať inšpekciu práce o kontrolu", "Nič", "Požiadať zamestnávateľa o zvýšenie miezd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Inšpekcia práce môže uložiť sankciu za porušenie povinnosti prerokovania.",
+            "wrong": "Nesprávne. Ostatné možnosti neriešia problém."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na zákonnú povinnosť a odporučiť prerokovanie",
+            "Ignorovať situáciu",
+            "Odporučiť zamestnaneckej rade, aby sa nerozprávala so zamestnávateľom"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právnik musí zabezpečiť súlad s právom.",
+            "wrong": "Nesprávne. Ignorovanie je protiprávne."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Ochrana odborového funkcionára",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ chce dať výpoveď odborovému funkcionárovi z dôvodu nadbytočnosti.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže zamestnávateľ dať výpoveď odborovému funkcionárovi?",
+          "options": ["Len so súhlasom odborovej organizácie", "Áno, bez obmedzení", "Nie, nikdy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odborový funkcionár má osobitnú ochranu a výpoveď vyžaduje súhlas odborov.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže konať jednostranne."
+          }
+        },
+        {
+          "question": "Krok 2: Čo ak odbory nesúhlasia?",
+          "options": ["Výpoveď je neplatná", "Zamestnávateľ môže výpoveď aj tak dať", "Rozhoduje inšpektorát práce"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez súhlasu odborov je výpoveď neplatná.",
+            "wrong": "Nesprávne. Inšpektorát o tom nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Odporučiť zamestnávateľovi hľadať iné riešenie ako výpoveď",
+            "Ignorovať nesúhlas odborov",
+            "Odporučiť okamžité skončenie pracovného pomeru"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ochrana odborových funkcionárov je veľmi silná.",
+            "wrong": "Nesprávne. Ignorovanie nesúhlasu je protiprávne."
+          }
+        }
+      ]
+    }
+  ]
+}

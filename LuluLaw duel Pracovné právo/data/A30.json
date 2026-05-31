@@ -1,0 +1,152 @@
+{
+  "id": "15B. Pracovná disciplína",
+  "title": "a sankcie za porušenie pracovnej disciplíny",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovná disciplína", "porušenie povinností", "sankcie"],
+
+  "summary": "Pracovná disciplína je súbor povinností zamestnanca vyplývajúcich zo Zákonníka práce, pracovnej zmluvy, interných predpisov a pokynov zamestnávateľa. Porušenie pracovnej disciplíny môže byť menej závažné, závažné alebo obzvlášť hrubé. Sankcie za porušenie disciplíny zahŕňajú písomné upozornenie, výpoveď zo strany zamestnávateľa a okamžité skončenie pracovného pomeru (len pri obzvlášť hrubom porušení). Zamestnávateľ musí pri hodnotení porušenia zohľadniť intenzitu, následky, okolnosti, doterajšie správanie zamestnanca a mieru zavinenia. Sankcie musia byť primerané a v súlade so zásadou ochrany zamestnanca. Pri výpovedi aj okamžitom skončení musí byť dôvod presne skutkovo vymedzený a písomne doručený. Zamestnávateľ nesmie ukladať sankcie, ktoré zákon nepozná (napr. pokuty).",
+
+  "quiz": [
+    {
+      "question": "Ktoré z nasledujúcich je obzvlášť hrubé porušenie pracovnej disciplíny?",
+      "options": ["Opakované meškanie", "Alkohol na pracovisku", "Nesprávne vyplnený formulár"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Alkohol je typickým príkladom obzvlášť hrubého porušenia.",
+        "wrong": "Nesprávne. Ostatné sú menej závažné porušenia."
+      }
+    },
+    {
+      "question": "Ktorú sankciu môže zamestnávateľ uložiť?",
+      "options": ["Pokutu", "Písomné upozornenie", "Zrážku zo mzdy ako trest"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Písomné upozornenie je zákonná sankcia.",
+        "wrong": "Nesprávne. Pokuty ani zrážky ako trest zákon neumožňuje."
+      }
+    },
+    {
+      "question": "Kedy môže zamestnávateľ dať výpoveď za porušenie disciplíny?",
+      "options": ["Pri závažnom porušení pracovnej disciplíny", "Len pri obzvlášť hrubom porušení", "Pri akomkoľvek porušení"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Výpoveď je možná pri závažnom porušení.",
+        "wrong": "Nesprávne. Obzvlášť hrubé porušenie umožňuje okamžité skončenie."
+      }
+    },
+    {
+      "question": "Kedy je možné okamžité skončenie pracovného pomeru?",
+      "options": ["Pri menej závažnom porušení", "Pri obzvlášť hrubom porušení pracovnej disciplíny", "Pri akomkoľvek porušení interných predpisov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Okamžité skončenie je najprísnejšia sankcia.",
+        "wrong": "Nesprávne. Menej závažné porušenia nestačia."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnávateľ môže ukladať finančné pokuty", "Sankcie musia byť primerané a zákonné", "Zamestnávateľ môže meniť sankcie podľa uváženia"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Sankcie musia byť v súlade so zákonom a primerané.",
+        "wrong": "Nesprávne. Finančné pokuty nie sú dovolené."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovná disciplína", "definition": "Súbor povinností zamestnanca vyplývajúcich zo zákona, zmluvy a pokynov." },
+    { "term": "Menej závažné porušenie", "definition": "Porušenie s nízkou intenzitou, napr. meškanie." },
+    { "term": "Závažné porušenie", "definition": "Porušenie umožňujúce výpoveď." },
+    { "term": "Obzvlášť hrubé porušenie", "definition": "Najzávažnejšie porušenie umožňujúce okamžité skončenie." },
+    { "term": "Písomné upozornenie", "definition": "Najmiernejšia sankcia, často predchádza výpovedi." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Opakované meškanie do práce",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec mešká 10–15 minút takmer každý deň. Zamestnávateľ uvažuje o výpovedi.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o menej závažné porušenie?",
+          "options": ["Áno", "Nie", "Je to obzvlášť hrubé porušenie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Meškanie je typicky menej závažné porušenie.",
+            "wrong": "Nesprávne. Nejde o obzvlášť hrubé porušenie."
+          }
+        },
+        {
+          "question": "Krok 2: Môže zamestnávateľ dať výpoveď?",
+          "options": ["Áno, ak je meškanie sústavné a zamestnanec bol upozornený", "Nie", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sústavné menej závažné porušenia môžu viesť k výpovedi.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nie je potrebný."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Overiť, či bolo zamestnancovi doručené písomné upozornenie",
+            "Odporučiť okamžité skončenie",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Upozornenie je dôležité pre zákonnosť výpovede.",
+            "wrong": "Nesprávne. Okamžité skončenie by bolo neprimerané."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Alkohol na pracovisku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec nastúpil do práce pod vplyvom alkoholu. Zamestnávateľ chce okamžite skončiť pracovný pomer.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o obzvlášť hrubé porušenie?",
+          "options": ["Áno", "Nie", "Len ak zamestnanec pracuje v kancelárii"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Alkohol je typické obzvlášť hrubé porušenie.",
+            "wrong": "Nesprávne. Pracovné zaradenie nie je rozhodujúce."
+          }
+        },
+        {
+          "question": "Krok 2: Môže zamestnávateľ okamžite skončiť pracovný pomer?",
+          "options": ["Áno, ak je skutok riadne preukázaný", "Nie", "Len ak zamestnanec prizná vinu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Okamžité skončenie je možné, ak je skutok preukázaný.",
+            "wrong": "Nesprávne. Priznanie nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Skontrolovať dôkazy (dychová skúška, svedkovia) a pripraviť písomné skončenie",
+            "Odporučiť písomné upozornenie",
+            "Ignorovať skutok"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri obzvlášť hrubom porušení je okamžité skončenie primerané.",
+            "wrong": "Nesprávne. Upozornenie by bolo nedostatočné."
+          }
+        }
+      ]
+    }
+  ]
+}

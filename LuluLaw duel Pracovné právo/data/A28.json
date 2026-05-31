@@ -1,0 +1,152 @@
+{
+  "id": "14B. Prestávky v práci",
+  "title": "nepretržitý denný odpočinok, nepretržitý odpočinok v týždni",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovný čas", "prestávky", "odpočinok"],
+
+  "summary": "Prestávky v práci a odpočinok sú základné inštitúty ochrany zdravia zamestnancov. Prestávka v práci na odpočinok a jedenie musí byť poskytnutá najneskôr po 6 hodinách práce (pri mladistvých po 4,5 hodinách) a trvá najmenej 30 minút. Prestávka sa nezapočítava do pracovného času, okrem prípadov, keď zamestnanec nemôže opustiť pracovisko. Nepretržitý denný odpočinok musí trvať najmenej 12 hodín medzi dvoma zmenami (pri mladistvých 14 hodín). Nepretržitý odpočinok v týždni musí trvať najmenej 24 hodín + denný odpočinok, spravidla v nedeľu. Výnimky sú možné pri nepretržitých prevádzkach, zdravotníctve, doprave a ďalších zákonných prípadoch. Cieľom úpravy je chrániť zdravie zamestnancov, predchádzať preťaženiu a zabezpečiť rovnováhu medzi pracovným a súkromným životom.",
+
+  "quiz": [
+    {
+      "question": "Kedy musí zamestnávateľ poskytnúť prestávku v práci?",
+      "options": ["Po 8 hodinách práce", "Najneskôr po 6 hodinách práce", "Len ak zamestnanec požiada"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prestávka musí byť najneskôr po 6 hodinách.",
+        "wrong": "Nesprávne. Prestávka je povinná aj bez žiadosti."
+      }
+    },
+    {
+      "question": "Ako dlho trvá minimálny denný odpočinok?",
+      "options": ["8 hodín", "10 hodín", "12 hodín"],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Denný odpočinok musí trvať najmenej 12 hodín.",
+        "wrong": "Nesprávne. Kratší odpočinok nie je prípustný."
+      }
+    },
+    {
+      "question": "Ako dlho musí trvať nepretržitý odpočinok v týždni?",
+      "options": ["24 hodín", "24 hodín + denný odpočinok", "48 hodín"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o 24 hodín + denný odpočinok.",
+        "wrong": "Nesprávne. Samotných 24 hodín nestačí."
+      }
+    },
+    {
+      "question": "Započítava sa prestávka v práci do pracovného času?",
+      "options": ["Nie, spravidla nie", "Áno, vždy", "Len ak trvá viac ako 30 minút"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Prestávka sa nezapočítava, okrem výnimočných situácií.",
+        "wrong": "Nesprávne. Dĺžka nie je rozhodujúca."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Mladistvým patrí prestávka po 6 hodinách", "Mladistvým patrí prestávka po 4,5 hodinách", "Mladiství nemajú nárok na prestávku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Mladistvým patrí prestávka skôr.",
+        "wrong": "Nesprávne. Zákon poskytuje mladistvým vyššiu ochranu."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Prestávka v práci", "definition": "Najneskôr po 6 hodinách práce, najmenej 30 minút." },
+    { "term": "Denný odpočinok", "definition": "Minimálne 12 hodín medzi dvoma zmenami." },
+    { "term": "Týždenný odpočinok", "definition": "24 hodín + denný odpočinok, spravidla v nedeľu." },
+    { "term": "Mladiství", "definition": "Prestávka po 4,5 hodinách, denný odpočinok 14 hodín." },
+    { "term": "Nepretržitá prevádzka", "definition": "Možné výnimky z odpočinku pri zachovaní minimálnych limitov." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Zamestnávateľ odmieta poskytnúť prestávku",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec pracuje 7 hodín bez prestávky. Zamestnávateľ tvrdí, že prestávky sa poskytujú len pri dlhších zmenách.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je prestávka povinná?",
+          "options": ["Áno", "Nie", "Len ak zamestnanec požiada"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Prestávka musí byť najneskôr po 6 hodinách.",
+            "wrong": "Nesprávne. Žiadosť nie je potrebná."
+          }
+        },
+        {
+          "question": "Krok 2: Porušil zamestnávateľ zákon?",
+          "options": ["Áno", "Nie", "Len ak ide o mladistvého"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Prestávka je povinná pre všetkých zamestnancov.",
+            "wrong": "Nesprávne. Nejde o výnimku."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na povinnosť poskytnúť prestávku",
+            "Odporučiť zamestnancovi pracovať bez prestávky",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o porušenie pracovnoprávnych predpisov.",
+            "wrong": "Nesprávne. Prestávka je zákonná povinnosť."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nedostatočný denný odpočinok",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec skončil zmenu o 22:00 a zamestnávateľ mu nariadil nástup na ďalšiu zmenu o 6:00.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je dodržaný denný odpočinok?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Denný odpočinok musí byť 12 hodín.",
+            "wrong": "Nesprávne. Súhlas zamestnanca neodstraňuje povinnosť."
+          }
+        },
+        {
+          "question": "Krok 2: Môže zamestnávateľ skrátiť odpočinok?",
+          "options": ["Len vo výnimočných prípadoch podľa zákona", "Áno, kedykoľvek", "Nie, nikdy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Skrátenie je možné len pri výnimkách (napr. zdravotníctvo).",
+            "wrong": "Nesprávne. Skrátenie nie je voľné rozhodnutie."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na porušenie zákona a požadovať úpravu rozvrhu",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnancovi ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Denný odpočinok je povinný a chráni zdravie zamestnanca.",
+            "wrong": "Nesprávne. Porušenie nemožno ignorovať."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "10B. Okamžité skončenie",
+  "title": "pracovného pomeru",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "skončenie pracovného pomeru", "okamžité skončenie"],
+
+  "summary": "Okamžité skončenie pracovného pomeru je najprísnejší spôsob skončenia pracovného pomeru, ktorý možno použiť len vo výnimočných prípadoch stanovených zákonom. Ide o jednostranný právny úkon, ktorý musí byť písomný, doručený a musí obsahovať presné skutkové vymedzenie dôvodu. Zamestnávateľ môže okamžite skončiť pracovný pomer so zamestnancom len v dvoch prípadoch: ak bol zamestnanec právoplatne odsúdený za úmyselný trestný čin alebo ak zamestnanec porušil pracovnú disciplínu obzvlášť hrubým spôsobom. Zamestnanec môže okamžite skončiť pracovný pomer, ak podľa lekárskeho posudku nemôže ďalej vykonávať prácu bez vážneho ohrozenia zdravia a zamestnávateľ mu neumožnil výkon inej vhodnej práce, alebo ak mu zamestnávateľ nevyplatil mzdu do 15 dní po splatnosti. Okamžité skončenie musí byť urobené do dvoch mesiacov odo dňa, keď sa oprávnená strana o dôvode dozvedela. Dôvod nemožno dodatočne meniť ani dopĺňať. Neplatné okamžité skončenie zakladá nárok na náhradu mzdy.",
+
+  "quiz": [
+    {
+      "question": "Ktorý z nasledujúcich dôvodov oprávňuje zamestnávateľa na okamžité skončenie pracovného pomeru?",
+      "options": ["Sústavné menej závažné porušenia disciplíny", "Obzvlášť hrubé porušenie pracovnej disciplíny", "Nesúhlas zamestnanca s nadčasom"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ môže skončiť pracovný pomer okamžite len pri obzvlášť hrubom porušení.",
+        "wrong": "Nesprávne. Menej závažné porušenia ani nesúhlas s nadčasom nestačia."
+      }
+    },
+    {
+      "question": "Kedy môže zamestnanec okamžite skončiť pracovný pomer?",
+      "options": ["Ak mu zamestnávateľ nevyplatil mzdu do 15 dní po splatnosti", "Ak sa mu nepáči pracovná náplň", "Ak chce odísť bez výpovednej doby"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Nevyplatenie mzdy je zákonný dôvod na okamžité skončenie.",
+        "wrong": "Nesprávne. Ostatné dôvody zákon nepozná."
+      }
+    },
+    {
+      "question": "Aká forma je potrebná pri okamžitom skončení pracovného pomeru?",
+      "options": ["Ústna", "Písomná", "Elektronická bez podpisu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Okamžité skončenie musí byť písomné.",
+        "wrong": "Nesprávne. Ústna forma je neplatná."
+      }
+    },
+    {
+      "question": "V akej lehote možno uplatniť okamžité skončenie?",
+      "options": ["Do 2 mesiacov od zistenia dôvodu", "Do 6 mesiacov", "Kedykoľvek"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Lehota je 2 mesiace od zistenia dôvodu.",
+        "wrong": "Nesprávne. Lehota je striktne obmedzená."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Dôvod možno doplniť neskôr", "Dôvod musí byť presne skutkovo vymedzený", "Okamžité skončenie nevyžaduje doručenie"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dôvod musí byť presne uvedený a nemožno ho meniť.",
+        "wrong": "Nesprávne. Doručenie je podmienkou platnosti."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Obzvlášť hrubé porušenie disciplíny", "definition": "Najzávažnejšie porušenie povinností umožňujúce okamžité skončenie." },
+    { "term": "Nevyplatenie mzdy", "definition": "Zákonný dôvod pre okamžité skončenie zo strany zamestnanca." },
+    { "term": "Lehota 2 mesiacov", "definition": "Subjektívna lehota na uplatnenie okamžitého skončenia." },
+    { "term": "Písomná forma", "definition": "Okamžité skončenie musí byť písomné a doručené." },
+    { "term": "Náhrada mzdy", "definition": "Nárok pri neplatnom okamžitom skončení pracovného pomeru." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Zamestnávateľ tvrdí, že zamestnanec porušil disciplínu obzvlášť hrubým spôsobom",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec meškal do práce 3× za mesiac. Zamestnávateľ mu doručil okamžité skončenie pracovného pomeru.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je meškanie obzvlášť hrubým porušením disciplíny?",
+          "options": ["Nie", "Áno", "Len ak zamestnávateľ tak rozhodne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Opakované meškanie je menej závažné porušenie, nie obzvlášť hrubé.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže svojvoľne určovať závažnosť."
+          }
+        },
+        {
+          "question": "Krok 2: Je okamžité skončenie platné?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dôvod nespĺňa zákonné podmienky.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nie je relevantný."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Odporučiť žalobu o neplatnosť skončenia",
+            "Odporučiť zamestnancovi prijať rozhodnutie",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnanec má nárok na ochranu a náhradu mzdy.",
+            "wrong": "Nesprávne. Ignorovanie by bolo v jeho neprospech."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zamestnávateľ nevyplatil mzdu",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ nevyplatil zamestnancovi mzdu ani 20 dní po splatnosti. Zamestnanec chce okamžite skončiť pracovný pomer.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Má zamestnanec zákonný dôvod?",
+          "options": ["Áno", "Nie", "Len ak zamestnávateľ súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nevyplatenie mzdy po 15 dňoch je zákonný dôvod.",
+            "wrong": "Nesprávne. Súhlas zamestnávateľa nie je potrebný."
+          }
+        },
+        {
+          "question": "Krok 2: Musí byť skončenie písomné?",
+          "options": ["Áno", "Nie", "Len ak to chce zamestnávateľ"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Písomná forma je povinná.",
+            "wrong": "Nesprávne. Ústne skončenie je neplatné."
+          }
+        },
+        {
+          "question": "Krok 3: Má zamestnanec nárok na náhradu mzdy?",
+          "options": ["Áno, najmenej za 2 mesiace", "Nie", "Len ak podá žalobu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnanec má nárok na náhradu mzdy najmenej za 2 mesiace.",
+            "wrong": "Nesprávne. Nárok vzniká automaticky zo zákona."
+          }
+        }
+      ]
+    }
+  ]
+}

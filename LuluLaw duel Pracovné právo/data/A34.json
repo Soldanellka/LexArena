@@ -1,0 +1,152 @@
+{
+  "id": "17B. Dôležité osobné prekážky v práci",
+  "title": "na strane zamestnanca",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "prekážky v práci", "osobné prekážky", "zamestnanec"],
+
+  "summary": "Dôležité osobné prekážky v práci sú situácie, keď zamestnanec nemôže vykonávať prácu z osobných dôvodov, ktoré zákon uznáva ako legitímne. Zamestnávateľ je povinný poskytnúť pracovné voľno, niekedy s náhradou mzdy, niekedy bez nej. Prekážky upravuje Zákonník práce a nariadenie vlády č. 76/2005 Z. z. Medzi najčastejšie patria: vyšetrenie alebo ošetrenie zamestnanca, sprevádzanie rodinného príslušníka k lekárovi, svadba, pohreb, narodenie dieťaťa, sťahovanie, darovanie krvi, prekážky súvisiace s plnením občianskych povinností. Náhrada mzdy patrí len pri niektorých prekážkach (napr. vyšetrenie u lekára, pohreb blízkej osoby, svadba zamestnanca). Zamestnanec musí prekážku preukázať a oznámiť bez zbytočného odkladu. Cieľom úpravy je umožniť zamestnancovi riešiť neodkladné osobné situácie bez ohrozenia pracovného pomeru.",
+
+  "quiz": [
+    {
+      "question": "Ktorá z nasledujúcich je dôležitá osobná prekážka v práci?",
+      "options": ["Porucha stroja", "Sprevádzanie dieťaťa k lekárovi", "Nedostatok práce u zamestnávateľa"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Sprevádzanie rodinného príslušníka k lekárovi je zákonná prekážka.",
+        "wrong": "Nesprávne. Ostatné sú prekážky na strane zamestnávateľa."
+      }
+    },
+    {
+      "question": "Patrí náhrada mzdy pri svadbe zamestnanca?",
+      "options": ["Áno", "Nie", "Len ak to zamestnávateľ schváli"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Pri svadbe zamestnanca patrí pracovné voľno s náhradou mzdy.",
+        "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+      }
+    },
+    {
+      "question": "Koľko dní voľna patrí pri úmrtí blízkej osoby?",
+      "options": ["1 deň", "2 dni + 1 deň na pohreb", "5 dní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o zákonnú dôležitú osobnú prekážku.",
+        "wrong": "Nesprávne. Ostatné možnosti nezodpovedajú zákonu."
+      }
+    },
+    {
+      "question": "Kedy zamestnancovi patrí pracovné voľno bez náhrady mzdy?",
+      "options": ["Pri sťahovaní", "Pri pohrebe rodiča", "Pri vyšetrení u lekára"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
+        "wrong": "Nesprávne. Pohreb aj vyšetrenie sú s náhradou."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnanec musí oznámiť prekážku bez zbytočného odkladu", "Zamestnávateľ môže odmietnuť prekážku, ak sa mu nehodí"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnanec musí prekážku oznámiť a preukázať.",
+        "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť zákonnú prekážku."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Vyšetrenie alebo ošetrenie", "definition": "Voľno s náhradou mzdy za nevyhnutný čas." },
+    { "term": "Sprevádzanie k lekárovi", "definition": "Voľno s náhradou mzdy pre blízku osobu." },
+    { "term": "Svadba", "definition": "Zamestnancovi patrí 1 deň voľna s náhradou mzdy." },
+    { "term": "Pohreb", "definition": "2 dni + 1 deň na pohreb blízkej osoby, s náhradou mzdy." },
+    { "term": "Sťahovanie", "definition": "Voľno bez náhrady mzdy." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Sprevádzanie dieťaťa k lekárovi",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnankyňa potrebuje sprevádzať dieťa k lekárovi. Zamestnávateľ tvrdí, že si musí vziať dovolenku.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
+          "options": ["Áno", "Nie", "Len ak ide o hospitalizáciu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sprevádzanie rodinného príslušníka je zákonná prekážka.",
+            "wrong": "Nesprávne. Hospitalizácia nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Áno, za nevyhnutný čas", "Nie", "Len ak to zamestnávateľ schváli"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Náhrada patrí za nevyhnutný čas.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na zákonnú povinnosť poskytnúť voľno",
+            "Odporučiť zamestnankyni vziať si dovolenku",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o zákonnú prekážku s náhradou mzdy.",
+            "wrong": "Nesprávne. Dovolenka nie je potrebná."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Sťahovanie zamestnanca",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec sa sťahuje a žiada o deň voľna. Zamestnávateľ súhlasí, ale bez náhrady mzdy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
+          "options": ["Áno", "Nie", "Len ak ide o služobné sťahovanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sťahovanie je zákonná osobná prekážka.",
+            "wrong": "Nesprávne. Nejde o služobné sťahovanie."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Nie", "Áno", "Len ak zamestnávateľ rozhodne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
+            "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Potvrdiť, že zamestnávateľ postupuje správne",
+            "Trvať na náhrade mzdy",
+            "Odporučiť zamestnancovi vziať si dovolenku"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o zákonnú prekážku bez náhrady mzdy.",
+            "wrong": "Nesprávne. Náhrada mzdy nepatrí."
+          }
+        }
+      ]
+    }
+  ]
+}
