@@ -81,9 +81,10 @@ export function renderDuelPackages() {
 import { sendChallenge } from "./challenges.js";
 
 document.addEventListener("click", (e) => {
-  if (!e.target.classList.contains("send-challenge-btn")) return;
+  const btn = e.target.closest(".send-challenge-btn");
+  if (!btn) return;
 
-  const id = Number(e.target.dataset.id);
+  const id = Number(btn.dataset.id);
   const pkgs = loadDuelPackages();
   const pkg = pkgs.find(p => p.timestamp === id);
   if (!pkg) return;
