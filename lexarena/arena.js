@@ -1,7 +1,6 @@
-// lexarena/arena.js
-// -------------------------------------------------------------
-// Paragrafy + Duel balíky + UI pre "Hry pripravené na výzvu"
-// -------------------------------------------------------------
+// =====================================
+// LexArena – Arena Module (opravené)
+// =====================================
 
 // ---------------- PARAGRAFY ----------------
 
@@ -80,40 +79,6 @@ export function renderDuelPackages() {
 
 import { sendChallenge } from "./challenges.js";
 
-document.addEventListener("click", (e) => {
-  const btn = e.target.closest(".send-challenge-btn");
-  if (!btn) return;
-
-  const id = Number(btn.dataset.id);
-  const pkgs = loadDuelPackages();
-  const pkg = pkgs.find(p => p.timestamp === id);
-  if (!pkg) return;
-
-  const token = crypto.randomUUID();
-  const ONLINE_ORIGIN = "https://lex-arena-seven.vercel.app";
-
-  // 🔥 zakódujeme balík do URL
-  const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
-
-  // 🔥 uložíme výzvu (toNick = null → anonymný súper)
-  sendChallenge(null, token);
-
-  // 🔥 vygenerujeme link s balíkom
-  const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
-  navigator.clipboard.writeText(url);
-
-  alert("Výzva bola vytvorená a link skopírovaný. Pošli ho súperovi.");
-});
-
-// ---------------- INIT PRI NAČÍTANÍ STRÁNKY ----------------
-
-export function initArena() {
-  aktualizovatParagrafyUI();
-  importLastDuelPackage();
-  renderDuelPackages();
-}
-import { sendChallenge } from "./challenges.js";
-
 document.addEventListener("click", async (e) => {
   const btn = e.target.closest(".send-challenge-btn");
   if (!btn) return;
@@ -128,13 +93,24 @@ document.addEventListener("click", async (e) => {
   const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
 
   try {
-    // 🔥 pokus o odoslanie výzvy
+    // 🔥 uloženie výzvy (toNick = null → anonymný súper)
     await sendChallenge(null, token);
+
+    // 🔥 vygenerovanie linku s balíkom
     const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
     await navigator.clipboard.writeText(url);
+
     alert("Výzva bola vytvorená a link skopírovaný. Pošli ho súperovi.");
   } catch (err) {
     console.error("Chyba pri odosielaní výzvy:", err);
     alert("Nepodarilo sa odoslať výzvu. Skontroluj challenges.js.");
   }
 });
+
+// ---------------- INIT PRI NAČÍTANÍ STRÁNKY ----------------
+
+export function initArena() {
+  aktualizovatParagrafyUI();
+  importLastDuelPackage();
+  renderDuelPackages();
+}
