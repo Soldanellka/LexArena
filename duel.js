@@ -1,6 +1,22 @@
 // ===============================
 // duel.js — FINÁLNA VERZIA
 // ===============================
+// ===============================
+// Načítanie balíka podľa tokenu
+// ===============================
+
+const token = new URLSearchParams(location.search).get("token");
+const pkg = JSON.parse(localStorage.getItem("duel_package_" + token));
+
+if (!pkg) {
+  alert("Balík pre tento duel sa nenašiel.");
+  window.location.href = "index.html";
+}
+
+// Balík rozbalíme do globálnych premenných
+window.duelQuestions = pkg.quiz || [];
+window.duelTiles = pkg.tiles || [];
+window.duelCases = pkg.cases || [];
 
 // Import odmien z LexAreny
 import {
@@ -10,34 +26,9 @@ import {
 // Import výziev
 import { saveDuelResult } from "./lexarena/challenges.js";
 
-// Aktívna výzva
-let activeChallenge = null;
-
-// Načítanie výzvy a balíka otázok
-function loadChallenge() {
-  const id = sessionStorage.getItem("activeChallengeId");
-  if (!id) return;
-
-  const all = JSON.parse(localStorage.getItem("challenges") || "[]");
-  activeChallenge = all.find(c => c.id === id);
-
-  if (!activeChallenge) return;
-
-  // načítame balík otázok
-  const allPackages = JSON.parse(localStorage.getItem("duelPackages") || "[]");
-  const pkg = allPackages.find(p => p.id === activeChallenge.packageId);
-
-  if (pkg) {
-    // sem si uložíš otázky, keď ich budeš používať
-    window.duelQuestions = pkg.questions || [];
-    window.duelTiles = pkg.tiles || [];
-    window.duelCases = pkg.cases || [];
-  }
-}
 
 // Nick hráča
 const playerNick = localStorage.getItem("playerNick") || "Hráč";
-loadChallenge();
 
 // --- STAV ---
 let playerScore = 0;
