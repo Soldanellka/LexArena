@@ -76,7 +76,7 @@ export function renderDuelPackages() {
 
 import { sendChallenge } from "./challenges.js";
 
-document.addEventListener("click", async (e) => {
+function handleChallengeClick(e) {
   const btn = e.target.closest(".send-challenge-btn");
   if (!btn) return;
 
@@ -90,19 +90,15 @@ document.addEventListener("click", async (e) => {
   const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
 
   try {
-    // 🔥 uloženie výzvy
-    await sendChallenge(null, token);
-
-    // 🔥 vygenerovanie linku
+    sendChallenge(null, token);
     const url = `${ONLINE_ORIGIN}/?token=${token}&data=${encoded}`;
-    await navigator.clipboard.writeText(url);
-
+    navigator.clipboard.writeText(url);
     alert("Výzva bola vytvorená a link skopírovaný. Pošli ho súperovi.");
   } catch (err) {
     console.error("Chyba pri odosielaní výzvy:", err);
     alert("Nepodarilo sa odoslať výzvu. Skontroluj challenges.js.");
   }
-});
+}
 
 // ---------------- INIT PRI NAČÍTANÍ STRÁNKY ----------------
 
@@ -110,4 +106,7 @@ export function initArena() {
   aktualizovatParagrafyUI();
   importLastDuelPackage();
   renderDuelPackages();
+
+  // 🔥 listener sa pripojí až po načítaní UI
+  document.addEventListener("click", handleChallengeClick);
 }
