@@ -27,7 +27,7 @@ export function sendChallenge(toNick, packageId) {
   return challenge;
 }
 
-// Načítanie prijatých výziev
+// Načítanie prijatých výziev podľa tokenu z URL
 export function getReceivedChallenges() {
   const token = new URLSearchParams(location.search).get("token");
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
@@ -37,7 +37,6 @@ export function getReceivedChallenges() {
   return all.filter(ch => ch.packageId === token && ch.status === "pending");
 }
 
-
 // Načítanie odoslaných výziev
 export function getSentChallenges() {
   const nick = localStorage.getItem("playerNick");
@@ -45,7 +44,7 @@ export function getSentChallenges() {
   return all.filter(ch => ch.fromNick === nick);
 }
 
-// Prijatie výzvy → otvorenie duelu
+// Prijatie výzvy → otvorenie duelu s balíkom v URL
 export function acceptChallenge(id) {
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
   const ch = all.find(c => c.id === id);
@@ -57,9 +56,19 @@ export function acceptChallenge(id) {
   // uložíme ID aktívnej výzvy pre duel
   sessionStorage.setItem("activeChallengeId", id);
 
-  // presmerovanie do duelu
- window.location.href = "duel.html?token=" + ch.packageId;
+  // 🔥 načítame balík od odosielateľa
+  const pkg = JSON.parse(localStorage.getItem("duel_package_" + ch.packageId));
 
+  if (!pkg) {
+    alert("Balík pre duel sa nenašiel.");
+    return;
+  }
+
+  // 🔥 zakódujeme balík do URL
+  const encoded = encodeURIComponent(btoa(JSON.stringify(pkg)));
+
+  // 🔥 presmerovanie do duelu aj s balíkom
+  window.location.href = `duel.html?token=${ch.packageId}&data=${encoded}`;
 }
 
 // Uloženie výsledku duelu
@@ -100,6 +109,7 @@ export function getMyDuels() {
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
   return all.filter(ch => ch.fromNick === nick || ch.toNick === nick);
 }
+
 // =====================================
 // UI – Zobrazenie prijatých výziev
 // =====================================
@@ -109,7 +119,7 @@ window.addEventListener("load", () => {
   const acceptBtn = document.getElementById("accept-challenge");
   const ignoreBtn = document.getElementById("ignore-challenge");
 
-  if (!banner) return; // stránka nemá banner → nič nerobíme
+  if (!banner) return;
 
   const received = getReceivedChallenges();
 
@@ -118,30 +128,14 @@ window.addEventListener("load", () => {
     return;
   }
 
-  // Zoberieme prvú výzvu (neskôr môžeme spraviť zoznam)
   const challenge = received[0];
-
   banner.style.display = "block";
 
   acceptBtn.onclick = () => {
-    // označíme výzvu ako prijatú
     acceptChallenge(challenge.id);
-
-    // načítame balík podľa packageId
-    const pkg = JSON.parse(localStorage.getItem("duel_package_" + challenge.packageId));
-
-    if (!pkg) {
-      alert("Balík pre duel sa nenašiel.");
-      return;
-    }
-
-    // presmerovanie do duelu s tokenom
-   window.location.href = "index.html?token=" + challenge.packageId;
-
   };
 
   ignoreBtn.onclick = () => {
     banner.style.display = "none";
   };
 });
-
