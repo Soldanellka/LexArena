@@ -95,3 +95,47 @@ export function getMyDuels() {
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
   return all.filter(ch => ch.fromNick === nick || ch.toNick === nick);
 }
+// =====================================
+// UI – Zobrazenie prijatých výziev
+// =====================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("incoming-challenge");
+  const acceptBtn = document.getElementById("accept-challenge");
+  const ignoreBtn = document.getElementById("ignore-challenge");
+
+  if (!banner) return; // stránka nemá banner → nič nerobíme
+
+  const received = getReceivedChallenges();
+
+  if (received.length === 0) {
+    banner.style.display = "none";
+    return;
+  }
+
+  // Zoberieme prvú výzvu (neskôr môžeme spraviť zoznam)
+  const challenge = received[0];
+
+  banner.style.display = "block";
+
+  acceptBtn.onclick = () => {
+    // označíme výzvu ako prijatú
+    acceptChallenge(challenge.id);
+
+    // načítame balík podľa packageId
+    const pkg = JSON.parse(localStorage.getItem("duel_package_" + challenge.packageId));
+
+    if (!pkg) {
+      alert("Balík pre duel sa nenašiel.");
+      return;
+    }
+
+    // presmerovanie do duelu s tokenom
+    window.location.href = "duel.html?token=" + challenge.packageId;
+  };
+
+  ignoreBtn.onclick = () => {
+    banner.style.display = "none";
+  };
+});
+
