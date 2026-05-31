@@ -117,7 +117,7 @@ export function getMyDuels() {
 // UI – Zobrazenie prijatých výziev
 // =====================================
 
-window.addEventListener("load", () => {
+export function initChallengesUI() {
   const banner = document.getElementById("incoming-challenge");
   const acceptBtn = document.getElementById("accept-challenge");
   const ignoreBtn = document.getElementById("ignore-challenge");
@@ -147,4 +147,4 @@ window.addEventListener("load", () => {
   ignoreBtn.onclick = () => {
     banner.style.display = "none";
   };
-});
+}
