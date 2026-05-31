@@ -131,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // presmerovanie do duelu s tokenom
-    window.location.href = "duel.html?token=" + challenge.packageId;
+   window.location.href = "index.html?token=" + challenge.packageId;
+
   };
 
   ignoreBtn.onclick = () => {
