@@ -1,5 +1,5 @@
 // =====================================
-// LexArena – Challenges Module
+// LexArena – Challenges Module (opravené)
 // =====================================
 
 // Uloženie výzvy (odoslanie výzvy)
@@ -9,7 +9,7 @@ export function sendChallenge(toNick, packageId) {
   const challenge = {
     id: crypto.randomUUID(),
     fromNick,
-    toNick,
+    toNick: toNick || "Neznámy súper",
     packageId,
     status: "pending",
     createdAt: Date.now(),
@@ -20,9 +20,16 @@ export function sendChallenge(toNick, packageId) {
     }
   };
 
+  // uložíme výzvu
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
   all.push(challenge);
   localStorage.setItem("challenges", JSON.stringify(all));
+
+  // 🔥 uložíme aj balík pre prijatie výzvy
+  const duelPkg = JSON.parse(localStorage.getItem("lastDuelPackage"));
+  if (duelPkg) {
+    localStorage.setItem("duel_package_" + packageId, JSON.stringify(duelPkg));
+  }
 
   return challenge;
 }
