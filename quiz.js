@@ -244,6 +244,20 @@ export function finishQuiz(){
   showRewardToast(`Kvíz dokončený. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. Odmena: +${reward} paragrafov`);
 
   playSound(window.soundWin);
+
+  // 🔥 Vytvoríme duel balík pre LexArenu
+  try {
+    const pkg = {
+      subject: selectedArea ? selectedArea.title : 'Neznáma oblasť',
+      quiz: Array.isArray(quiz.questions) ? quiz.questions : [],
+      cases: [], // ak neskôr pridáš kazuistiky, doplníme sem
+      timestamp: Date.now()
+    };
+
+    localStorage.setItem('lastDuelPackage', JSON.stringify(pkg));
+  } catch(e){
+    console.error('Nepodarilo sa uložiť lastDuelPackage:', e);
+  }
 }
 
 /* =========================
