@@ -2,12 +2,33 @@
 // duel.js — FINÁLNA VERZIA
 // ===============================
 // ===============================
-// Načítanie balíka podľa tokenu
+// Načítanie balíka podľa tokenu alebo URL
 // ===============================
 
-const token = new URLSearchParams(location.search).get("token");
-const pkg = JSON.parse(localStorage.getItem("duel_package_" + token));
+const urlParams = new URLSearchParams(location.search);
+const token = urlParams.get("token");
+const encoded = urlParams.get("data");
 
+let pkg = null;
+
+// 1️⃣ Ak je balík v URL → dekódujeme ho
+if (encoded) {
+  try {
+    pkg = JSON.parse(atob(decodeURIComponent(encoded)));
+
+    // uložíme ho do localStorage, aby duel fungoval ďalej
+    localStorage.setItem("duel_package_" + token, JSON.stringify(pkg));
+  } catch (e) {
+    console.error("Chyba pri dekódovaní balíka:", e);
+  }
+}
+
+// 2️⃣ Ak balík nebol v URL → skúsime localStorage (napr. odosielateľ)
+if (!pkg) {
+  pkg = JSON.parse(localStorage.getItem("duel_package_" + token));
+}
+
+// 3️⃣ Ak stále nič → duel sa nedá spustiť
 if (!pkg) {
   alert("Balík pre tento duel sa nenašiel.");
   window.location.href = "index.html";
