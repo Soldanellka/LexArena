@@ -29,10 +29,14 @@ export function sendChallenge(toNick, packageId) {
 
 // Načítanie prijatých výziev
 export function getReceivedChallenges() {
-  const nick = localStorage.getItem("playerNick");
+  const token = new URLSearchParams(location.search).get("token");
   const all = JSON.parse(localStorage.getItem("challenges") || "[]");
-  return all.filter(ch => ch.toNick === nick && ch.status === "pending");
+
+  if (!token) return [];
+
+  return all.filter(ch => ch.packageId === token && ch.status === "pending");
 }
+
 
 // Načítanie odoslaných výziev
 export function getSentChallenges() {
