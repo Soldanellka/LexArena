@@ -1,0 +1,152 @@
+{
+  "id": "5. A",
+  "title": "Pracovný pomer na neurčitý čas a pracovný pomer na určitú dobu",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovný pomer", "doba určitá", "doba neurčitá"],
+
+  "summary": "\nPracovný pomer na neurčitý čas je základná a preferovaná forma pracovného pomeru, ktorá poskytuje zamestnancovi najvyššiu stabilitu a ochranu. Pracovný pomer na určitú dobu je výnimkou a možno ho dohodnúť len za zákonom stanovených podmienok. Môže trvať najviac 2 roky a v tomto období ho možno predĺžiť alebo opätovne dohodnúť najviac dvakrát. Výnimky existujú pri sezónnych prácach, zastupovaní alebo projektoch. Ak zamestnanec pokračuje vo výkone práce po uplynutí dohodnutej doby s vedomím zamestnávateľa, pracovný pomer sa automaticky mení na neurčitý čas. Cieľom právnej úpravy je zabrániť reťazeniu zmlúv na dobu určitú a chrániť zamestnancov pred neistotou.\n\nPríklad:\nZamestnanec má pracovnú zmluvu na určitú dobu do 31. augusta. Po tomto dátume ďalej pracuje a zamestnávateľ o tom vie. Zo zákona sa pracovný pomer automaticky mení na pracovný pomer na neurčitý čas, aj keď nebol podpísaný nový dokument.\n\nKľúčové slová:\ndoba určitá; doba neurčitá; reťazenie; automatická premena; sezónna práca; stabilita pracovného pomeru.\n\nZapamätaj si:\n- Preferovanou formou je pracovný pomer na neurčitý čas.\n- Pomer na určitú dobu môže trvať najviac 2 roky.\n- V rámci 2 rokov možno pomer predĺžiť alebo opätovne dohodnúť najviac dvakrát.\n- Pokračovanie v práci po uplynutí doby určitej mení pomer na neurčitý čas.\n- Reťazenie zmlúv na dobu určitú je prísne obmedzené.",
+
+  "quiz": [
+    {
+      "question": "Ktorý pracovný pomer je podľa zákona preferovaný?",
+      "options": ["Pracovný pomer na určitú dobu", "Pracovný pomer na neurčitý čas", "Dohoda o pracovnej činnosti"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákonník práce preferuje pracovný pomer na neurčitý čas.",
+        "wrong": "Nesprávne. Pomer na určitú dobu je výnimkou."
+      }
+    },
+    {
+      "question": "Ako dlho môže trvať pracovný pomer na určitú dobu?",
+      "options": ["Najviac 1 rok", "Najviac 2 roky", "Bez obmedzenia"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Maximálna dĺžka je 2 roky.",
+        "wrong": "Nesprávne. Zákon neumožňuje neobmedzené trvanie."
+      }
+    },
+    {
+      "question": "Koľkokrát možno predĺžiť pracovný pomer na určitú dobu v rámci 2 rokov?",
+      "options": ["1-krát", "2-krát", "Neobmedzene"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pomer možno predĺžiť alebo opätovne dohodnúť najviac dvakrát.",
+        "wrong": "Nesprávne. Viac ako dvakrát nie je možné."
+      }
+    },
+    {
+      "question": "Čo sa stane, ak zamestnanec pokračuje v práci po uplynutí doby určitej s vedomím zamestnávateľa?",
+      "options": ["Vzniká nový pracovný pomer na určitú dobu", "Pomer sa mení na neurčitý čas", "Pomer automaticky zaniká"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zo zákona sa mení na pracovný pomer na neurčitý čas.",
+        "wrong": "Nesprávne. Nejde o nový pomer ani automatické zániky."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pracovný pomer na určitú dobu musí byť vždy odôvodnený", "Pracovný pomer na určitú dobu môže byť reťazený neobmedzene", "Pracovný pomer na neurčitý čas je základnou formou pracovného pomeru"],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Základnou formou je pracovný pomer na neurčitý čas.",
+        "wrong": "Nesprávne. Reťazenie je obmedzené a odôvodnenie je potrebné len v niektorých prípadoch."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovný pomer na neurčitý čas", "definition": "Základná forma pracovného pomeru bez časového obmedzenia." },
+    { "term": "Pracovný pomer na určitú dobu", "definition": "Pracovný pomer dohodnutý na konkrétny čas, najviac na 2 roky." },
+    { "term": "Reťazenie", "definition": "Predĺženie alebo opätovné dohodnutie pracovného pomeru na určitú dobu najviac dvakrát." },
+    { "term": "Automatická premena", "definition": "Pokračovanie v práci po uplynutí doby určitej mení pomer na neurčitý čas." },
+    { "term": "Sezónna práca", "definition": "Výnimka umožňujúca flexibilnejšie uzatváranie pomerov na určitú dobu." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Reťazenie pracovných pomerov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ uzavrel so zamestnancom pracovný pomer na určitú dobu na 1 rok. Po roku ho predĺžil o ďalší rok. Teraz chce uzavrieť ďalšie predĺženie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je možné uzavrieť ďalšie predĺženie?",
+          "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Už došlo k dvom dohodám v rámci 2 rokov, ďalšie predĺženie nie je možné.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nezlegalizuje porušenie zákona."
+          }
+        },
+        {
+          "question": "Krok 2: Ako má zamestnávateľ postupovať?",
+          "options": [
+            "Ponúknuť pracovný pomer na neurčitý čas",
+            "Ukončiť pracovný pomer bez dôvodu",
+            "Uzavrieť ďalšiu zmluvu na určitú dobu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po vyčerpaní limitov je jedinou možnosťou ponúknuť pomer na neurčitý čas.",
+            "wrong": "Nesprávne. Ďalšia zmluva na určitú dobu by bola neplatná."
+          }
+        },
+        {
+          "question": "Krok 3: Čo ak zamestnanec pokračuje v práci?",
+          "options": ["Vzniká nový pomer na určitú dobu", "Pomer sa mení na neurčitý čas", "Pomer automaticky zaniká"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Pokračovanie v práci s vedomím zamestnávateľa mení pomer na neurčitý čas.",
+            "wrong": "Nesprávne. Nejde o nový pomer ani o zánik."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Neplatné dohodnutie doby určitej",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ uzavrel pracovnú zmluvu na určitú dobu bez uvedenia dôvodu, hoci ide o pozíciu, ktorá je trvalá a nie sezónna.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je pracovný pomer na určitú dobu dohodnutý platne?",
+          "options": ["Áno", "Nie", "Len ak to zamestnávateľ odôvodní dodatočne"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Ak nie sú splnené podmienky, dohodnutie doby určitej je neplatné.",
+            "wrong": "Nesprávne. Dodatočné odôvodnenie nie je prípustné."
+          }
+        },
+        {
+          "question": "Krok 2: Ako sa posudzuje takýto pracovný pomer?",
+          "options": ["Ako pomer na neurčitý čas", "Ako dohoda o práci", "Ako neplatný pracovný pomer"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neplatné dohodnutie doby určitej sa posudzuje ako pomer na neurčitý čas.",
+            "wrong": "Nesprávne. Nejde o dohodu ani o neplatný pracovný pomer."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na neplatnosť dohodnutia doby určitej a upraviť zmluvu",
+            "Ignorovať chybu",
+            "Odporučiť zamestnancovi, aby prestal pracovať"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmluva musí byť uvedená do súladu so zákonom.",
+            "wrong": "Nesprávne. Ignorovanie chyby je protiprávne."
+          }
+        }
+      ]
+    }
+  ]
+}

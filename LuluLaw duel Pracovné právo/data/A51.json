@@ -1,0 +1,177 @@
+{
+  "id": "15. Pracovnoprávne skutočnosti",
+  "title": "pracovná disciplína a sankcie za porušenie pracovnej disciplíny",
+  "schemaVersion": "1.1",
+  "tags": ["pracovná disciplína", "sankcie", "disciplinárne konanie", "Zákonník práce", "inšpektorát práce"],
+  "sources": [
+    "Zákonník práce (zákon č. 311/2001 Z. z.) — ustanovenia o pracovnej disciplíne a disciplinárnych opatreniach",
+    "Národný inšpektorát práce — usmernenia k disciplinárnym konaniam a právam zamestnancov",
+    "Právne komentáre a judikatúra — výklad zásad disciplinárnej zodpovednosti"
+  ],
+  "quiz": [
+    {
+      "question": "Čo znamená pracovná disciplína?",
+      "options": [
+        "Povinnosť zamestnanca dodržiavať pracovnoprávne povinnosti, vnútorné predpisy a pokyny zamestnávateľa",
+        "Len povinnosť dochádzať do práce bez ďalších pravidiel",
+        "Len pravidlá BOZP bez vplyvu na pracovný pomer"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Pracovná disciplína zahŕňa dodržiavanie pracovných povinností, pracovného poriadku, pokynov nadriadených a vnútorných predpisov zamestnávateľa.",
+        "1": "Nesprávne. Dochádzka je len jedným z aspektov disciplíny.",
+        "2": "Nesprávne. BOZP je súčasťou disciplíny, ale disciplína je širší pojem."
+      }
+    },
+    {
+      "question": "Ktoré sankcie môže zamestnávateľ uložiť za porušenie pracovnej disciplíny?",
+      "options": [
+        "Dôtka, pokarhanie, zníženie mzdy (ak zákon umožňuje), preloženie, dočasné pozastavenie výkonu práce, okamžité skončenie pracovného pomeru (pri závažnom porušení)",
+        "Len pokuta v hotovosti",
+        "Žiadne sankcie, zamestnávateľ nemôže konať"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Zákon a vnútropodnikové predpisy rozlišujú miernejšie a prísnejšie sankcie; pri závažnom porušení môže byť použitý aj inštitút okamžitého skončenia.",
+        "1": "Nesprávne. Priame finančné pokuty zamestnávateľom sú obmedzené právnou úpravou; bežné sú iné disciplinárne opatrenia.",
+        "2": "Nesprávne. Zamestnávateľ má právne možnosti reagovať na porušenie disciplíny v súlade so zákonom."
+      }
+    },
+    {
+      "question": "Aké procesné práva má zamestnanec v disciplinárnom konaní?",
+      "options": [
+        "Právo na poučenie o dôvode, právo vyjadriť sa, právo predložiť dôkazy, právo na obhajobu a právo napadnúť rozhodnutie súdom",
+        "Žiadne práva, zamestnávateľ rozhoduje sám",
+        "Len právo byť prítomný pri rozhodnutí"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Disciplinárne konanie musí rešpektovať práva zamestnanca na obhajobu a postupy stanovené zákonom alebo vnútornými predpismi.",
+        "1": "Nesprávne. Zamestnanec má procesné záruky.",
+        "2": "Nesprávne. Práva sú širšie než len prítomnosť pri rozhodnutí."
+      }
+    },
+    {
+      "question": "Kedy je možné uložiť okamžité skončenie pracovného pomeru z disciplinárnych dôvodov?",
+      "options": [
+        "Iba pri závažnom porušení pracovnej disciplíny alebo pri právoplatnom odsúdení za úmyselný trestný čin, ak to zákon výslovne umožňuje",
+        "Kedykoľvek bez odôvodnenia",
+        "Iba ak zamestnanec súhlasí"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Okamžité skončenie je výnimočný prostriedok; zákon stanovuje taxatívne dôvody a formálne náležitosti.",
+        "1": "Nesprávne. Zákon obmedzuje použitie okamžitého skončenia.",
+        "2": "Nesprávne. Súhlas zamestnanca nie je podmienkou pre okamžité skončenie zo strany zamestnávateľa."
+      }
+    },
+    {
+      "question": "Aký je obvyklý postup pred uložením disciplinárnej sankcie?",
+      "options": [
+        "Zistenie porušenia, poučenie zamestnanca o dôvode, možnosť vyjadriť sa, zhromaždenie dôkazov, písomné rozhodnutie s odôvodnením a poučením o opravnom prostriedku",
+        "Okamžité uplatnenie sankcie bez oznámenia",
+        "Len ústne upozornenie bez záznamu"
+      ],
+      "correct": 0,
+      "explanations": {
+        "0": "Správne. Spravodlivé disciplinárne konanie vyžaduje objektívne zistenie, možnosť obhajoby a písomné rozhodnutie s poučením o právach.",
+        "1": "Nesprávne. Postup musí rešpektovať práva zamestnanca.",
+        "2": "Nesprávne. Ústne upozornenie môže byť súčasťou, ale formálne rozhodnutie je potrebné pri sankciách."
+      }
+    }
+  ],
+  "tiles": [
+    {
+      "id": "tile1",
+      "title": "Definícia pracovnej disciplíny",
+      "text": "Súbor pravidiel a povinností, ktoré zamestnanec musí dodržiavať pri výkone práce; zahŕňa dochádzku, plnenie pracovných úloh, dodržiavanie BOZP a vnútorných predpisov.",
+      "align": "left"
+    },
+    {
+      "id": "tile2",
+      "title": "Druhy disciplinárnych opatrení",
+      "text": "Od miernejších (dôtka, pokarhanie) cez organizačné opatrenia (preloženie, dočasné pozastavenie) až po najprísnejšie (okamžité skončenie pracovného pomeru).",
+      "align": "left"
+    },
+    {
+      "id": "tile3",
+      "title": "Zásady disciplinárneho konania",
+      "text": "Zásada zákonnosti, proporcionality, objektívneho zistenia skutkového stavu, práva na obhajobu a písomného odôvodnenia rozhodnutia.",
+      "align": "left"
+    },
+    {
+      "id": "tile4",
+      "title": "Práva zamestnanca",
+      "text": "Právo byť informovaný o dôvode, právo vyjadriť sa, predložiť dôkazy, mať zastúpenie (napr. odbory) a napadnúť rozhodnutie súdom alebo iným opravným prostriedkom.",
+      "align": "left"
+    },
+    {
+      "id": "tile5",
+      "title": "Dôsledky nezákonného postupu",
+      "text": "Neplatné alebo neprimerané disciplinárne opatrenie môže viesť k súdnemu napadnutiu, náhrade škody, zrušeniu opatrenia a náhrade ušlého príjmu.",
+      "align": "left"
+    }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Opakovaná nedochvíľnosť",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec mešká opakovane do práce napriek ústnym upozorneniam. Aký postup je primeraný?",
+          "options": [
+            "Dôkladné zdokumentovanie meškaní, písomné upozornenie, možnosť vyjadriť sa, pri pokračovaní uloženie primeranej sankcie (dôtka alebo pokarhanie) a poučenie o následkoch",
+            "Okamžité prepustenie bez predchádzajúceho upozornenia",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Postup by mal byť postupný a primeraný: dokumentácia, poučenie, možnosť nápravy a až potom prísnejšie opatrenia pri pretrvávaní porušenia.",
+            "1": "Nesprávne. Okamžité prepustenie by bolo neprimerané pri opakovaných menších porušeniach bez závažného dôvodu.",
+            "2": "Nesprávne. Ignorovanie nevedie k náprave a môže poškodiť prevádzku."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Závažné porušenie (krádež v práci)",
+      "difficulty": "vysoká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec bol prichytený pri krádeži firemného majetku. Aký postup a aké sankcie sú prípustné?",
+          "options": [
+            "Okamžité prerušovanie prístupu k práci, objektívne šetrenie, zabezpečenie dôkazov, disciplinárne konanie s možnosťou okamžitého skončenia pracovného pomeru pri preukázaní závažného porušenia; zamestnanec má právo sa vyjadriť a napadnúť rozhodnutie",
+            "Len ústne upozornenie bez vyšetrovania",
+            "Zamestnávateľ musí zamestnanca okamžite prepustiť bez šetrenia"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Pri závažnom porušení je možné pristúpiť k okamžitému skončeniu, avšak musí prebehnúť objektívne šetrenie a dodržanie procesných práv zamestnanca.",
+            "1": "Nesprávne. Len ústne upozornenie by bolo neprimerané pri závažnom delikte.",
+            "2": "Nesprávne. Aj pri závažnom porušení je potrebné dodržať postupy a preukázať skutkový stav."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Napadnutie disciplinárneho rozhodnutia",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec napadol disciplinárne opatrenie u súdu. Aké sú možné výsledky súdneho prehodnotenia?",
+          "options": [
+            "Súd môže disciplinárne opatrenie zrušiť, upraviť alebo potvrdiť; pri zrušení môže zamestnanec získať náhradu ušlého príjmu a ďalšie nároky",
+            "Súd nemá právomoc zasahovať do disciplinárnych rozhodnutí",
+            "Súd automaticky potvrdí rozhodnutie zamestnávateľa"
+          ],
+          "correct": 0,
+          "explanations": {
+            "0": "Správne. Súd preverí zákonnosť a primeranosť postupu; môže rozhodnutie zrušiť alebo upraviť a priznať nároky zamestnancovi.",
+            "1": "Nesprávne. Súd má právomoc posúdiť zákonnosť disciplinárneho konania.",
+            "2": "Nesprávne. Súd rozhoduje na základe dôkazov a právnych noriem, nie automaticky v prospech zamestnávateľa."
+          }
+        }
+      ]
+    }
+  ]
+}

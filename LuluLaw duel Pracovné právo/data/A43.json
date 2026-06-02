@@ -1,0 +1,152 @@
+{
+  "id": "22. A",
+  "title": "Právna úprava odmeňovania za prácu v nepodnikateľskej sfére",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "odmeňovanie", "nepodnikateľská sféra", "plat", "tarify"],
+
+  "summary": "Odmeňovanie v nepodnikateľskej sfére (štátna služba, verejná služba, rozpočtové a príspevkové organizácie) sa riadi zákonom o odmeňovaní zamestnancov pri výkone práce vo verejnom záujme a osobitnými predpismi. Na rozdiel od podnikateľskej sféry sa neposkytuje mzda, ale plat. Plat je určený podľa platových tried, ktoré zohľadňujú náročnosť práce, a platových stupňov, ktoré zohľadňujú dĺžku započítanej praxe. Zamestnávateľ nemá voľnosť dohodnúť plat individuálne – musí rešpektovať tarifné tabuľky. Súčasťou platu sú aj príplatky, osobné príplatky a odmeny. Odmeňovanie je prísne regulované s cieľom zabezpečiť rovnosť, transparentnosť a predvídateľnosť.\n\nPríklad:\nZamestnávateľ zaradí zamestnanca do nižšej platovej triedy, než zodpovedá jeho pracovnej činnosti, aby ušetril. Takýto postup je nezákonný – trieda musí zodpovedať katalógu pracovných činností.\n\nKľúčové slová:\nplat; tarifný plat; platová trieda; platový stupeň; osobný príplatok; verejný sektor.\n\nZapamätaj si:\n- V nepodnikateľskej sfére sa poskytuje plat, nie mzda.\n- Plat je určený tarifnými tabuľkami, nie dohodou.\n- Platová trieda musí zodpovedať náročnosti práce.\n- Platový stupeň závisí od započítanej praxe.\n- Osobný príplatok je možný, ale musí byť odôvodnený a nediskriminačný.\n- Odmeňovanie vo verejnom sektore musí byť transparentné a rovnaké.",
+
+  "quiz": [
+    {
+      "question": "Ako sa nazýva odmena za prácu v nepodnikateľskej sfére?",
+      "options": ["Mzda", "Plat", "Honorár"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. V nepodnikateľskej sfére sa poskytuje plat.",
+        "wrong": "Nesprávne. Mzda sa používa v podnikateľskej sfére."
+      }
+    },
+    {
+      "question": "Od čoho závisí tarifný plat?",
+      "options": ["Od dohody so zamestnávateľom", "Od platovej triedy a stupňa", "Od kolektívnej zmluvy"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Trieda = náročnosť práce, stupeň = prax.",
+        "wrong": "Nesprávne. Tarifný plat sa neurčuje dohodou."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnávateľ môže určiť plat ľubovoľne", "Plat je určený podľa zákonných tabuliek", "Plat sa určuje podľa trhových podmienok"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Odmeňovanie je regulované zákonom.",
+        "wrong": "Nesprávne. Trhové podmienky sa neuplatňujú."
+      }
+    },
+    {
+      "question": "Ktorý príplatok patrí aj v nepodnikateľskej sfére?",
+      "options": ["Za nočnú prácu", "Za prítomnosť na pracovisku", "Za obed"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Príplatok za nočnú prácu je zákonný.",
+        "wrong": "Nesprávne. Ostatné nie sú zákonné príplatky."
+      }
+    },
+    {
+      "question": "Môže zamestnávateľ poskytnúť osobný príplatok?",
+      "options": ["Áno", "Nie", "Len ak to schváli ministerstvo"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Osobný príplatok je možný, ale musí byť odôvodnený.",
+        "wrong": "Nesprávne. Ministerstvo to neschvaľuje."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Plat", "definition": "Odmena za prácu vo verejnom záujme; určená zákonom." },
+    { "term": "Platová trieda", "definition": "Zohľadňuje náročnosť pracovnej činnosti." },
+    { "term": "Platový stupeň", "definition": "Zohľadňuje dĺžku započítanej praxe." },
+    { "term": "Tarifný plat", "definition": "Základná zložka platu podľa zákonných tabuliek." },
+    { "term": "Osobný príplatok", "definition": "Dobrovoľná zložka platu za mimoriadne výsledky alebo vyššiu záťaž." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nesprávne zaradenie do platovej triedy",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnankyňa vykonáva odbornú činnosť, ale zamestnávateľ ju zaradil do nižšej platovej triedy, aby ušetril.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže zamestnávateľ znížiť triedu podľa uváženia?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Trieda musí zodpovedať náročnosti práce podľa katalógu.",
+            "wrong": "Súhlas zamestnanca nelegalizuje porušenie zákona."
+          }
+        },
+        {
+          "question": "Krok 2: Ako sa určuje trieda?",
+          "options": ["Podľa katalógu pracovných činností", "Podľa rozhodnutia zamestnávateľa", "Podľa kolektívnej zmluvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Katalóg presne určuje zaradenie podľa náročnosti.",
+            "wrong": "Zamestnávateľ nemá voľnú ruku."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Požadovať preradenie do správnej triedy a doplatenie rozdielu",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnankyni prijať nižší plat"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Nesprávne zaradenie je porušením zákona a musí sa napraviť.",
+            "wrong": "Zamestnávateľ musí rešpektovať zákonné pravidlá."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Osobný príplatok a rovnaké zaobchádzanie",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Dvaja zamestnanci vykonávajú rovnakú prácu, ale osobný príplatok dostal len jeden bez odôvodnenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže byť osobný príplatok diferencovaný?",
+          "options": ["Áno, ale musí byť odôvodnený", "Nie, musí byť rovnaký pre všetkých", "Áno, bez obmedzení"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Diferenciácia je možná, ale musí byť objektívna a nediskriminačná.",
+            "wrong": "Osobný príplatok nie je automatický."
+          }
+        },
+        {
+          "question": "Krok 2: Je postup zamestnávateľa v poriadku?",
+          "options": ["Nie, ak neexistuje objektívne kritérium", "Áno", "Len ak zamestnanci súhlasia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Bez kritérií môže ísť o nerovnaké zaobchádzanie.",
+            "wrong": "Súhlas zamestnancov nie je rozhodujúci."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Požadovať zdôvodnenie a nápravu v súlade so zásadou rovnakého odmeňovania",
+            "Súhlasiť s postupom zamestnávateľa",
+            "Odporučiť zamestnancom, aby situáciu ignorovali"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Odmeňovanie musí byť transparentné a spravodlivé.",
+            "wrong": "Ignorovanie by umožnilo pokračovanie diskriminácie."
+          }
+        }
+      ]
+    }
+  ]
+}

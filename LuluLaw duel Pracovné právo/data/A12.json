@@ -1,0 +1,152 @@
+{
+  "id": "6. B",
+  "title": "Druhy pracovného pomeru",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovný pomer", "druhy pracovného pomeru"],
+
+  "summary": "\nDruhy pracovného pomeru sa určujú podľa trvania, rozsahu pracovného času a osobitných podmienok výkonu práce. Základnou formou je pracovný pomer na neurčitý čas, ktorý poskytuje najvyššiu stabilitu. Pracovný pomer na určitú dobu je výnimkou a možno ho dohodnúť len za zákonom stanovených podmienok. Z hľadiska rozsahu pracovného času rozlišujeme plný úväzok a kratší pracovný čas. Osobitné druhy zahŕňajú sezónnu prácu, zastupovanie, domácku prácu a teleprácu. Každý druh má svoje špecifiká pri vzniku, zmene a skončení pracovného pomeru.\n\nPríklad:\nZamestnanec pracuje na neurčitý čas na plný úväzok. Po narodení dieťaťa požiada o kratší pracovný čas. Zamestnávateľ mu musí vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.\n\nKľúčové slová:\nneurčitý čas; určitá doba; kratší pracovný čas; sezónna práca; telepráca.\n\nZapamätaj si:\n- Základnou formou pracovného pomeru je pracovný pomer na neurčitý čas.\n- Pracovný pomer na určitú dobu je výnimkou a jeho reťazenie je obmedzené.\n- Kratší pracovný čas je legálny a zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.\n- Osobitné druhy pracovného pomeru reagujú na špecifické potreby trhu práce.",
+
+  "quiz": [
+    {
+      "question": "Ktorý pracovný pomer je základnou formou podľa Zákonníka práce?",
+      "options": ["Pracovný pomer na určitú dobu", "Pracovný pomer na neurčitý čas", "Pracovný pomer na kratší pracovný čas"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pracovný pomer na neurčitý čas je preferovanou a základnou formou.",
+        "wrong": "Nesprávne. Pomer na určitú dobu je výnimkou a kratší úväzok je len modifikáciou pracovného času."
+      }
+    },
+    {
+      "question": "Ktorý pracovný pomer je časovo obmedzený?",
+      "options": ["Pracovný pomer na neurčitý čas", "Pracovný pomer na určitú dobu", "Pracovný pomer na plný úväzok"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pomer na určitú dobu je viazaný na konkrétny čas alebo udalosť.",
+        "wrong": "Nesprávne. Neurčitý čas ani plný úväzok nie sú časovo obmedzené."
+      }
+    },
+    {
+      "question": "Ktorý pracovný pomer je založený na kratšom rozsahu pracovného času?",
+      "options": ["Pracovný pomer na kratší pracovný čas", "Pracovný pomer na určitú dobu", "Pracovný pomer na sezónnu prácu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Kratší pracovný čas je osobitný druh pracovného pomeru.",
+        "wrong": "Nesprávne. Ostatné možnosti sa netýkajú rozsahu pracovného času."
+      }
+    },
+    {
+      "question": "Ktorý pracovný pomer je typický pre zastupovanie počas materskej dovolenky?",
+      "options": ["Pracovný pomer na neurčitý čas", "Pracovný pomer na určitú dobu", "Pracovný pomer na kratší pracovný čas"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zastupovanie je zákonný dôvod pre pracovný pomer na určitú dobu.",
+        "wrong": "Nesprávne. Neurčitý čas ani kratší úväzok nie sú typické pre zastupovanie."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pracovný pomer na určitú dobu môže byť reťazený neobmedzene", "Pracovný pomer na neurčitý čas poskytuje najvyššiu stabilitu", "Kratší pracovný čas je zakázaný"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Neurčitý čas poskytuje najvyššiu mieru stability.",
+        "wrong": "Nesprávne. Reťazenie je obmedzené a kratší pracovný čas je legálny."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovný pomer na neurčitý čas", "definition": "Základná forma pracovného pomeru bez časového obmedzenia." },
+    { "term": "Pracovný pomer na určitú dobu", "definition": "Pracovný pomer viazaný na konkrétny čas, udalosť alebo potrebu." },
+    { "term": "Kratší pracovný čas", "definition": "Pracovný pomer s rozsahom pracovného času kratším ako 40 hodín týždenne." },
+    { "term": "Sezónna práca", "definition": "Pracovný pomer viazaný na obdobie sezónnych činností." },
+    { "term": "Domácka práca a telepráca", "definition": "Práca vykonávaná mimo pracoviska zamestnávateľa, často s využitím IT prostriedkov." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kratší pracovný čas na žiadosť zamestnanca",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnankyňa žiada o kratší pracovný čas z dôvodu starostlivosti o dieťa. Zamestnávateľ váha, či jej musí vyhovieť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Má zamestnankyňa právo žiadať o kratší pracovný čas?",
+          "options": ["Áno", "Nie", "Len ak pracuje na určitú dobu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnankyňa má právo požiadať o kratší pracovný čas.",
+            "wrong": "Nesprávne. Právo nie je viazané na dobu trvania pracovného pomeru."
+          }
+        },
+        {
+          "question": "Krok 2: Musí zamestnávateľ žiadosti vyhovieť?",
+          "options": ["Áno, ak tomu nebránia vážne prevádzkové dôvody", "Nie, nikdy", "Len ak to schváli odborová organizácia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
+            "wrong": "Nesprávne. Odbory o tom nerozhodujú."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Preskúmať prevádzkové dôvody a pripraviť dodatok k zmluve",
+            "Odporučiť zamestnávateľovi žiadosť ignorovať",
+            "Navrhnúť zamestnankyni, aby si vzala neplatené voľno"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právnik musí zabezpečiť zákonný postup a dokumentáciu.",
+            "wrong": "Nesprávne. Ignorovanie je porušením zákona."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Neplatné reťazenie pracovných pomerov na určitú dobu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ uzavrel so zamestnancom tri po sebe idúce pracovné pomery na určitú dobu v priebehu dvoch rokov. Chce uzavrieť štvrtý.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je možné uzavrieť štvrtý pracovný pomer na určitú dobu?",
+          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon umožňuje maximálne dve predĺženia alebo opätovné dohodnutia v rámci 2 rokov.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nezlegalizuje porušenie zákona."
+          }
+        },
+        {
+          "question": "Krok 2: Ako sa posudzuje ďalší pracovný pomer?",
+          "options": ["Ako pracovný pomer na neurčitý čas", "Ako neplatný pracovný pomer", "Ako dohoda o práci"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neplatné dohodnutie doby určitej sa posudzuje ako pomer na neurčitý čas.",
+            "wrong": "Nesprávne. Nejde o dohodu ani o neplatný pracovný pomer."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na neplatnosť a pripraviť zmluvu na neurčitý čas",
+            "Ignorovať situáciu",
+            "Odporučiť zamestnancovi, aby prestal pracovať"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právnik musí zabezpečiť súlad s právom.",
+            "wrong": "Nesprávne. Ignorovanie je protiprávne."
+          }
+        }
+      ]
+    }
+  ]
+}

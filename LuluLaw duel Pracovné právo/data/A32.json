@@ -1,0 +1,152 @@
+{
+  "id": "16. B",
+  "title": "Pracovný čas, rozvrhnutie pracovného času, konto pracovného času, pracovný čas tehotných žien a rodičov",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovný čas", "rozvrhnutie", "konto pracovného času", "tehotné ženy", "rodičia"],
+
+  "summary": "Pracovný čas je čas, v ktorom je zamestnanec povinný vykonávať prácu podľa pokynov zamestnávateľa. Základná dĺžka pracovného času je najviac 40 hodín týždenne, pričom pri niektorých profesiách môže byť kratšia (napr. zdravotníctvo, dvojzmenná prevádzka). Rozvrhnutie pracovného času určuje zamestnávateľ – rovnomerne alebo nerovnomerne, pričom musí rešpektovať limity prestávok, denného a týždenného odpočinku.\n\nKonto pracovného času je flexibilný systém, ktorý umožňuje nerovnomerné rozvrhovanie pracovného času podľa potrieb zamestnávateľa. Zamestnanec dostáva stabilnú mzdu a rozdiely v odpracovaných hodinách sa vyrovnávajú v rámci vyrovnávacieho obdobia.\n\nTehotné ženy, ženy a muži starajúci sa o deti majú osobitnú ochranu: zákaz nočnej práce pre tehotné, zákaz nadčasov bez súhlasu, právo na preradenie pri rizikovej práci, právo žiadať úpravu pracovného času a povinnosť zamestnávateľa prihliadať na ich rodinné potreby.\n\nCieľom právnej úpravy je ochrana zdravia zamestnancov, podpora rodiny a zabezpečenie rovnováhy medzi pracovným a súkromným životom.\n\nPríklad:\nZamestnávateľ nariadi tehotnej zamestnankyni nočnú zmenu. Takéto nariadenie je v rozpore so zákonom – tehotná žena nesmie pracovať v noci a zamestnávateľ ju musí preradiť na dennú prácu.\n\nKľúčové slová:\npracovný čas; rozvrhnutie; konto pracovného času; tehotné ženy; rodičia; ochrana zdravia.\n\nZapamätaj si:\n- Základná dĺžka pracovného času je najviac 40 hodín týždenne.\n- Rozvrhnutie pracovného času určuje zamestnávateľ.\n- Konto pracovného času zabezpečuje flexibilitu pri stabilnej mzde.\n- Tehotné ženy nesmú pracovať v noci ani nadčas.\n- Rodičia môžu žiadať úpravu pracovného času a zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
+
+  "quiz": [
+    {
+      "question": "Aká je základná dĺžka pracovného času?",
+      "options": ["48 hodín týždenne", "40 hodín týždenne", "35 hodín týždenne"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Základná dĺžka pracovného času je najviac 40 hodín týždenne.",
+        "wrong": "Nesprávne. 48 hodín je maximálny limit s nadčasmi."
+      }
+    },
+    {
+      "question": "Čo je konto pracovného času?",
+      "options": ["Záznam dochádzky", "Flexibilný systém rozvrhovania pracovného času", "Pracovná zmluva na kratší úväzok"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Konto pracovného času umožňuje flexibilné rozvrhnutie podľa potrieb zamestnávateľa.",
+        "wrong": "Nesprávne. Nejde o dochádzku ani o úväzok."
+      }
+    },
+    {
+      "question": "Môže tehotná žena pracovať v noci?",
+      "options": ["Áno, ak súhlasí", "Nie, nočná práca je zakázaná", "Áno, ak to vyžaduje prevádzka"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Tehotné ženy nesmú pracovať v noci bez ohľadu na súhlas.",
+        "wrong": "Nesprávne. Súhlas ani prevádzka zákaz neodstraňujú."
+      }
+    },
+    {
+      "question": "Kto určuje rozvrhnutie pracovného času?",
+      "options": ["Zamestnanec", "Zamestnávateľ", "Inšpektorát práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Rozvrhnutie pracovného času určuje zamestnávateľ.",
+        "wrong": "Nesprávne. Zamestnanec môže žiadať úpravu, ale nerozhoduje o rozvrhu."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Rodič dieťaťa do 15 rokov môže žiadať úpravu pracovného času", "Tehotná žena môže pracovať nadčas bez obmedzení", "Konto pracovného času znižuje mzdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ musí žiadosti rodiča vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
+        "wrong": "Nesprávne. Nadčasy tehotných sú zakázané."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Pracovný čas", "definition": "Čas, v ktorom je zamestnanec povinný vykonávať prácu; spravidla 40 hodín týždenne." },
+    { "term": "Rozvrhnutie pracovného času", "definition": "Určuje zamestnávateľ – rovnomerne alebo nerovnomerne." },
+    { "term": "Konto pracovného času", "definition": "Flexibilný systém s vyrovnávacím obdobím a stabilnou mzdou." },
+    { "term": "Tehotné ženy", "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na preradenie." },
+    { "term": "Rodičia detí", "definition": "Právo žiadať úpravu pracovného času; osobitná ochrana osamelých rodičov." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Tehotná žena a nočná práca",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Tehotná zamestnankyňa pracuje na nočné zmeny. Zamestnávateľ tvrdí, že môže pokračovať, ak podpíše súhlas.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže tehotná žena pracovať v noci?",
+          "options": ["Nie", "Áno, ak súhlasí", "Áno, ak to vyžaduje prevádzka"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nočná práca tehotných je zakázaná.",
+            "wrong": "Nesprávne. Súhlas zákaz neodstraňuje."
+          }
+        },
+        {
+          "question": "Krok 2: Ako má zamestnávateľ postupovať?",
+          "options": ["Preradiť ju na dennú prácu", "Nechať ju pracovať v noci", "Dať jej neplatené voľno"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí preradiť zamestnankyňu na vhodnú dennú prácu.",
+            "wrong": "Nesprávne. Neplatené voľno nie je riešenie."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na povinnosť preradenia a zákaz nočnej práce",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnankyni ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o zákonnú ochranu tehotných žien.",
+            "wrong": "Nesprávne. Ignorovanie by bolo protiprávne."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Konto pracovného času a výkyvy v práci",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ zaviedol konto pracovného času. V niektorých týždňoch zamestnanci pracujú 50 hodín, v iných 30 hodín. Zamestnanci sa sťažujú na kolísanie mzdy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je takéto rozvrhnutie prípustné?",
+          "options": ["Áno, v rámci konta pracovného času", "Nie", "Len ak zamestnanci súhlasia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konto pracovného času umožňuje nerovnomerné rozvrhnutie.",
+            "wrong": "Nesprávne. Súhlas zamestnancov nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 2: Môže mzda kolísať?",
+          "options": ["Nie, mzda musí byť stabilná", "Áno, podľa odpracovaných hodín", "Len pri nadčasoch"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri konte pracovného času je mzda stabilná a rozdiely sa vyrovnávajú neskôr.",
+            "wrong": "Nesprávne. Kolísanie mzdy je v rozpore s účelom konta."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na povinnosť stabilnej mzdy pri konte",
+            "Súhlasiť s kolísaním mzdy",
+            "Odporučiť zamestnancom podať výpoveď"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konto pracovného času nesmie spôsobovať výkyvy mzdy.",
+            "wrong": "Nesprávne. Kolísanie je nezákonné."
+          }
+        }
+      ]
+    }
+  ]
+}

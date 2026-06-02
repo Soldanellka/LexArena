@@ -1,0 +1,152 @@
+{
+  "id": "16. A",
+  "title": "Zodpovednosť zamestnanca za škodu",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "zodpovednosť zamestnanca", "škoda", "pracovná disciplína"],
+
+  "summary": "\nZodpovednosť zamestnanca za škodu je osobitný inštitút pracovného práva, ktorého cieľom je chrániť majetok zamestnávateľa a zároveň zabrániť neprimeranému postihu zamestnanca. Zamestnanec zodpovedá za škodu, ktorú spôsobil zavineným porušením povinností pri plnení pracovných úloh alebo v priamej súvislosti s nimi. Zavinenie môže byť úmyselné alebo z nedbanlivosti.\n\nZákladné druhy zodpovednosti:\n- všeobecná zodpovednosť (limitovaná do výšky štvornásobku priemerného mesačného zárobku),\n- zodpovednosť za schodok na zverených hodnotách (plná zodpovednosť pri dohode o hmotnej zodpovednosti),\n- zodpovednosť za stratu zverených predmetov (plná zodpovednosť),\n- plná zodpovednosť pri úmyselnom konaní alebo konaní pod vplyvom alkoholu.\n\nZamestnávateľ musí preukázať vznik škody, porušenie povinnosti a príčinnú súvislosť. Zamestnanec preukazuje mieru zavinenia alebo okolnosti, ktoré jeho zodpovednosť vylučujú. Cieľom právnej úpravy je rovnováha medzi ochranou majetku zamestnávateľa a ochranou zamestnanca pred neprimeranými sankciami.\n\nPríklad:\nZamestnanec pri cúvaní poškodil služobné auto. Ide o všeobecnú zodpovednosť z nedbanlivosti, preto zodpovedá len do výšky štvornásobku priemerného zárobku.\n\nKľúčové slová:\nzodpovednosť; škoda; schodok; hmotná zodpovednosť; zavinenie.\n\nZapamätaj si:\n- Všeobecná zodpovednosť je limitovaná do 4-násobku priemerného zárobku.\n- Pri schodku a strate zverených predmetov ide o plnú zodpovednosť.\n- Úmysel a alkohol zakladajú plnú zodpovednosť bez limitu.\n- Zamestnávateľ preukazuje škodu, porušenie povinnosti a príčinnú súvislosť.\n- Zamestnanec preukazuje mieru zavinenia alebo okolnosti vylučujúce zodpovednosť.",
+
+  "quiz": [
+    {
+      "question": "Aký typ zavinenia sa vyžaduje pri všeobecnej zodpovednosti zamestnanca?",
+      "options": ["Žiadne, ide o objektívnu zodpovednosť", "Zavinenie úmyselné alebo z nedbanlivosti", "Len úmyselné zavinenie"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Všeobecná zodpovednosť je subjektívna a vyžaduje zavinenie.",
+        "wrong": "Nesprávne. Nejde o objektívnu zodpovednosť."
+      }
+    },
+    {
+      "question": "Aká je maximálna výška náhrady škody pri všeobecnej zodpovednosti?",
+      "options": ["Dvojnásobok priemerného zárobku", "Štvornásobok priemerného zárobku", "Bez limitu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Limit je štvornásobok priemerného mesačného zárobku.",
+        "wrong": "Nesprávne. Bez limitu je len pri úmysle alebo alkohole."
+      }
+    },
+    {
+      "question": "Kedy zamestnanec zodpovedá v plnej výške?",
+      "options": ["Pri schodku na zverených hodnotách", "Pri bežnej nedbanlivosti", "Pri meškaní do práce"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Schodok zakladá plnú zodpovednosť pri dohode o hmotnej zodpovednosti.",
+        "wrong": "Nesprávne. Meškanie nie je škoda."
+      }
+    },
+    {
+      "question": "Čo musí zamestnávateľ preukázať pri všeobecnej zodpovednosti?",
+      "options": ["Len vznik škody", "Vznik škody, porušenie povinnosti a príčinnú súvislosť", "Len zavinenie zamestnanca"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o tri základné predpoklady zodpovednosti.",
+        "wrong": "Nesprávne. Zavinenie preukazuje zamestnanec."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnanec môže dostať pokutu za škodu", "Zodpovednosť za stratu zverených predmetov je plná", "Zodpovednosť je vždy limitovaná"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Strata zverených predmetov zakladá plnú zodpovednosť.",
+        "wrong": "Nesprávne. Pokuty zákon nepozná."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Všeobecná zodpovednosť", "definition": "Zodpovednosť za škodu spôsobenú zavinením; limit 4× priemerný zárobok." },
+    { "term": "Schodok na zverených hodnotách", "definition": "Plná zodpovednosť pri dohode o hmotnej zodpovednosti." },
+    { "term": "Strata zverených predmetov", "definition": "Plná zodpovednosť za predmety zverené na písomné potvrdenie." },
+    { "term": "Úmysel alebo alkohol", "definition": "Zamestnanec zodpovedá v plnej výške bez limitu." },
+    { "term": "Predpoklady zodpovednosti", "definition": "Škoda, porušenie povinnosti, príčinná súvislosť, zavinenie." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Schodok v pokladni",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Pokladníčka má schodok 300 €. Má podpísanú dohodu o hmotnej zodpovednosti.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o schodok na zverených hodnotách?",
+          "options": ["Áno", "Nie", "Len ak schodok presiahne 500 €"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pokladňa je zverená hodnota a schodok zakladá plnú zodpovednosť.",
+            "wrong": "Nesprávne. Výška schodku nie je rozhodujúca."
+          }
+        },
+        {
+          "question": "Krok 2: Zodpovedá zamestnankyňa v plnej výške?",
+          "options": ["Áno", "Nie", "Len do 4-násobku priemerného zárobku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri schodku je zodpovednosť plná.",
+            "wrong": "Nesprávne. Limit sa neuplatňuje."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Overiť platnosť dohody o hmotnej zodpovednosti a vyčísliť škodu",
+            "Odporučiť zamestnávateľovi škodu nepožadovať",
+            "Ignorovať prípad"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dohoda je základom plnej zodpovednosti.",
+            "wrong": "Nesprávne. Zamestnávateľ má zákonný nárok."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Poškodenie služobného auta",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec poškodil služobné auto pri cúvaní. Tvrdí, že išlo o nešťastnú náhodu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o všeobecnú zodpovednosť?",
+          "options": ["Áno", "Nie", "Len ak auto bolo staré"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o škodu spôsobenú nedbanlivosťou pri plnení pracovných úloh.",
+            "wrong": "Nesprávne. Stav auta nie je podstatný."
+          }
+        },
+        {
+          "question": "Krok 2: Je zodpovednosť limitovaná?",
+          "options": ["Áno, do 4-násobku priemerného zárobku", "Nie, ide o plnú zodpovednosť", "Len ak zamestnanec prizná vinu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri nedbanlivosti platí limit všeobecnej zodpovednosti.",
+            "wrong": "Nesprávne. Plná zodpovednosť je len pri úmysle alebo alkohole."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Vyčísliť škodu a uplatniť nárok v rámci zákonného limitu",
+            "Požadovať plnú náhradu škody",
+            "Ignorovať zavinenie"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nárok je limitovaný podľa zákona.",
+            "wrong": "Nesprávne. Plná náhrada by bola nezákonná."
+          }
+        }
+      ]
+    }
+  ]
+}

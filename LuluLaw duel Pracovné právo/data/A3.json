@@ -1,0 +1,152 @@
+{
+  "id": "2. A",
+  "title": "Pramene pracovného práva",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pramene práva", "kolektívne pracovné právo"],
+
+  "summary": "\nPramene pracovného práva predstavujú súbor právnych noriem, ktoré upravujú pracovnoprávne vzťahy medzi zamestnancami a zamestnávateľmi. Základným prameňom je Ústava SR, ktorá garantuje právo na prácu, ochranu práce, spravodlivé pracovné podmienky a právo na štrajk. Najdôležitejším zákonným prameňom je Zákonník práce, ktorý komplexne upravuje individuálne aj kolektívne pracovnoprávne vzťahy. Ďalšími prameňmi sú osobitné zákony (napr. zákon o inšpekcii práce, zákon o BOZP, zákon o kolektívnom vyjednávaní), vykonávacie predpisy, nariadenia vlády a vyhlášky. Autonómnymi prameňmi sú kolektívne zmluvy, ktoré môžu rozširovať práva zamestnancov. Pracovné právo je ovplyvnené aj právom Európskej únie, najmä smernicami v oblasti pracovného času, rovnakého zaobchádzania a BOZP. Medzinárodné pramene zahŕňajú dohovory Medzinárodnej organizácie práce (MOP). Hierarchia prameňov rešpektuje zásadu, že kolektívne zmluvy a pracovné zmluvy nesmú zhoršovať postavenie zamestnanca oproti zákonu.\n\nPríklad:\nZamestnávateľ vydá internú smernicu, ktorá odníma zamestnancom zákonný príplatok za prácu v sobotu. Keďže interná smernica je najnižší prameň pracovného práva, nemôže ísť proti Zákonníku práce. Takéto ustanovenie je neplatné a zamestnanec má nárok na príplatok podľa zákona.\n\nKľúčové slová:\nÚstava SR; Zákonník práce; kolektívna zmluva; autonómne pramene; smernice EÚ; MOP; hierarchia prameňov; zákaz zhoršenia postavenia zamestnanca.\n\nZapamätaj si:\n- Najvyšším prameňom je Ústava SR.\n- Zákonník práce je základný zákonný prameň pracovného práva.\n- Kolektívne zmluvy môžu zlepšovať podmienky zamestnancov, nie zhoršovať.\n- Interné smernice sú podriadené zákonu.\n- Pracovné právo ovplyvňuje aj právo EÚ a dohovory MOP.",
+
+  "quiz": [
+    {
+      "question": "Ktorý právny predpis je základným zákonným prameňom pracovného práva?",
+      "options": ["Občiansky zákonník", "Zákonník práce", "Zákon o službách zamestnanosti"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákonník práce je základný a komplexný prameň pracovného práva.",
+        "wrong": "Nesprávne. Ostatné predpisy nie sú základným prameňom pracovného práva."
+      }
+    },
+    {
+      "question": "Ktorý z nasledujúcich je autonómny prameň pracovného práva?",
+      "options": ["Kolektívna zmluva", "Nariadenie vlády", "Vyhláška ministerstva"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Kolektívna zmluva je autonómny prameň vytvorený sociálnymi partnermi.",
+        "wrong": "Nesprávne. Nariadenia a vyhlášky sú normatívne právne akty štátu."
+      }
+    },
+    {
+      "question": "Ktorý medzinárodný subjekt prijíma dohovory relevantné pre pracovné právo?",
+      "options": ["OSN", "MOP – Medzinárodná organizácia práce", "Interpol"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. MOP prijíma dohovory v oblasti pracovných štandardov.",
+        "wrong": "Nesprávne. OSN ani Interpol neprijímajú pracovnoprávne dohovory."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pracovná zmluva môže zhoršiť postavenie zamestnanca oproti zákonu", "Kolektívna zmluva môže zlepšiť podmienky zamestnancov", "Zákonník práce je podriadený kolektívnej zmluve"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kolektívna zmluva môže poskytovať výhodnejšie podmienky.",
+        "wrong": "Nesprávne. Pracovná zmluva nesmie zhoršiť postavenie zamestnanca a zákon má vyššiu právnu silu."
+      }
+    },
+    {
+      "question": "Ktorý prameň pracovného práva má najvyššiu právnu silu?",
+      "options": ["Kolektívna zmluva", "Ústava SR", "Zákonník práce"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ústava SR je najvyšší právny predpis štátu.",
+        "wrong": "Nesprávne. Kolektívna zmluva ani Zákonník práce nemajú vyššiu právnu silu ako Ústava."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Ústava SR", "definition": "Základný prameň pracovného práva garantujúci právo na prácu, spravodlivé podmienky a štrajk." },
+    { "term": "Zákonník práce", "definition": "Komplexný zákon upravujúci individuálne a kolektívne pracovnoprávne vzťahy." },
+    { "term": "Kolektívna zmluva", "definition": "Autonómny prameň pracovného práva uzatváraný medzi odbormi a zamestnávateľom." },
+    { "term": "MOP", "definition": "Medzinárodná organizácia práce prijímajúca záväzné pracovné štandardy." },
+    { "term": "Smernice EÚ", "definition": "Pramene práva EÚ harmonizujúce pracovné podmienky, rovnosť a BOZP." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kolektívna zmluva vs. Zákonník práce",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Kolektívna zmluva u zamestnávateľa stanovuje kratšiu výpovednú dobu ako Zákonník práce. Zamestnávateľ tvrdí, že kolektívna zmluva má prednosť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže kolektívna zmluva zhoršiť postavenie zamestnanca oproti zákonu?",
+          "options": ["Áno", "Nie", "Len ak s tým zamestnanec súhlasí"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Kolektívna zmluva nesmie zhoršovať postavenie zamestnanca oproti zákonu.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nezlegalizuje zhoršenie práv."
+          }
+        },
+        {
+          "question": "Krok 2: Ktorý prameň má vyššiu právnu silu?",
+          "options": ["Kolektívna zmluva", "Zákonník práce", "Interná smernica zamestnávateľa"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Zákonník práce má vyššiu právnu silu ako kolektívna zmluva.",
+            "wrong": "Nesprávne. Interné smernice sú na najnižšej úrovni."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na neplatnosť ustanovenia kolektívnej zmluvy",
+            "Akceptovať kolektívnu zmluvu",
+            "Ignorovať problém"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ustanovenie odporujúce zákonu je neplatné.",
+            "wrong": "Nesprávne. Akceptácia alebo ignorovanie by bolo protiprávne."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Interná smernica vs. zákon",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ vydal internú smernicu, podľa ktorej zamestnanec nemá nárok na príplatok za prácu v sobotu. Zákonník práce však príplatok priznáva.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže interná smernica obmedziť zákonné práva zamestnanca?",
+          "options": ["Áno", "Nie", "Len ak to zamestnanec podpíše"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Interná smernica nesmie ísť proti zákonu.",
+            "wrong": "Nesprávne. Podpis zamestnanca nezlegalizuje porušenie zákona."
+          }
+        },
+        {
+          "question": "Krok 2: Ktorý prameň má prednosť?",
+          "options": ["Interná smernica", "Zákonník práce", "Kolektívna zmluva"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Zákonník práce má vyššiu právnu silu ako interné predpisy.",
+            "wrong": "Nesprávne. Interné predpisy sú podriadené zákonu."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Navrhnúť zrušenie alebo úpravu smernice",
+            "Akceptovať smernicu",
+            "Odporučiť zamestnancom, aby si príplatky neuplatňovali"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Smernica musí byť uvedená do súladu so zákonom.",
+            "wrong": "Nesprávne. Akceptácia alebo ignorovanie by bolo nezákonné."
+          }
+        }
+      ]
+    }
+  ]
+}
