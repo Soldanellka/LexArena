@@ -1,0 +1,221 @@
+/* -----------------------------------------------------------
+   style.css – modrá + bridlicová moderná téma
+   ----------------------------------------------------------- */
+
+/* --- Farebná paleta --- */
+:root {
+  --bg: #F5F7FA;
+  --card: linear-gradient(180deg,#FFFFFF,#E8ECF2);
+  --primary: #5A6E8C;
+  --primary-2: #6B7D99;
+  --accent: #3F4C63;
+  --muted: #6A7485;
+  --text: #1F2530;
+  --border-subtle: rgba(63,76,99,0.12);
+  --glass: rgba(255,255,255,0.6);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --soft-shadow: 0 12px 36px rgba(63,76,99,0.08);
+  --soft-shadow-2: 0 8px 22px rgba(63,76,99,0.06);
+  --glass-blur: blur(6px);
+  --transition-fast: 180ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* --- Dark mode --- */
+body.dark {
+  --bg: #0F1218;
+  --card: linear-gradient(180deg,#1A1F27,#222834);
+  --primary: #3F4C63;
+  --primary-2: #5A6E8C;
+  --accent: #7C8FA8;
+  --muted: #AEB7C8;
+  --text: #E8ECF2;
+  --border-subtle: rgba(255,255,255,0.08);
+  --soft-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+
+/* --- Global reset --- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.35;
+  transition: background 260ms ease, color 260ms ease;
+}
+
+/* --- Header --- */
+.app-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border-subtle);
+  position: sticky; top: 0; z-index: 40;
+  background: color-mix(in srgb, var(--bg) 88%, #ffffff 12%);
+  backdrop-filter: var(--glass-blur);
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-badge {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(180deg,var(--primary),var(--primary-2));
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--text);
+  box-shadow: var(--soft-shadow-2);
+}
+.logo-text { font-weight: 700; letter-spacing: 0.03em; font-size: 14px; }
+
+/* --- Buttons --- */
+.primary-btn {
+  background: linear-gradient(180deg,var(--primary),var(--primary-2));
+  border: none; padding: 10px 16px; border-radius: 999px;
+  font-weight: 700; cursor: pointer; color: var(--text);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--soft-shadow-2);
+}
+/* --- Back to LexArena button --- */
+.back-to-lex {
+    display: inline-block;
+    margin: 20px 0 10px 0;
+    padding: 10px 16px;
+    background: #1e293b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.back-to-lex:hover {
+    background: #334155;
+}
+
+/* --- Topics grid --- */
+.topics-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+.topic-card {
+  background: linear-gradient(180deg, #FFF7F9, #F8EEF0);
+  padding: 16px; border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(42,31,34,0.06);
+  border: 1px solid rgba(200,162,168,0.22);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  cursor: pointer; display: flex; flex-direction: column; gap: 8px;
+}
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(200,162,168,0.25);
+  border-color: rgba(200,162,168,0.35);
+}
+
+/* --- Quiz --- */
+.quiz-options button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(200,162,168,0.22);
+  background: linear-gradient(180deg, #F5F7FA, #E8ECF2);
+  margin: 8px 0;
+  box-shadow: 0 8px 22px rgba(42,31,34,0.06);
+  color: var(--text);
+}
+.quiz-options button:hover {
+  background: linear-gradient(180deg, #E8ECF2, #DCE2EB);
+  box-shadow: 0 12px 28px rgba(200,162,168,0.25);
+}
+
+/* --- Dark mode quiz --- */
+body.dark .quiz-options button {
+  background: linear-gradient(180deg, #1A1F27 0%, #222834 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #E8ECF2;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+}
+body.dark .quiz-options button:hover {
+  background: linear-gradient(180deg, #3A2E32 0%, #4A3A40 100%);
+  box-shadow: 0 22px 48px rgba(216,180,190,0.25);
+  color: #FFFFFF;
+}
+
+/* --- Tiles --- */
+.tiles-board {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  align-items: start; margin-top: 18px; padding: 6px;
+}
+.tiles-column { display: flex; flex-direction: column; gap: 12px; }
+
+/* zvýraznené dlaždice */
+.tile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #F5F7FA 0%, #E8ECF2 100%);
+  border: 1px solid rgba(200,162,168,0.32);
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(42,31,34,0.08);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background 260ms ease;
+  min-height: 72px;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow overlay – neblokuje kliky */
+.tile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(200,162,168,0.12), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+.tile-card:hover::before { opacity: 1; }
+
+.tile-card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #E8ECF2 0%, #DCE2EB 100%);
+  box-shadow: 0 22px 48px rgba(200,162,168,0.25);
+}
+
+.tile-card.selected {
+  outline: 3px solid rgba(200,162,168,0.38);
+  box-shadow: 0 24px 52px rgba(200,162,168,0.3);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.tile-card.matched {
+  opacity: 0;
+  transform: scale(.94);
+  pointer-events: none;
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.tile-card.shake {
+  animation: tile-shake 420ms;
+  box-shadow: 0 10px 30px rgba(200,162,168,0.10);
+}
+.tile {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.18);
+}
+@keyframes tile-shake
