@@ -1,0 +1,152 @@
+{
+  "id": "23. A",
+  "title": "Prekážky v práci na strane zamestnávateľa",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "prekážky v práci", "zamestnávateľ", "náhrada mzdy"],
+
+  "summary": "Prekážky v práci na strane zamestnávateľa vznikajú vtedy, keď zamestnávateľ nemôže prideľovať zamestnancovi prácu, hoci zamestnanec je pripravený pracovať. Zamestnávateľ je povinný poskytnúť náhradu mzdy, ktorej výška závisí od druhu prekážky. Medzi najčastejšie patria organizačné dôvody, dočasné obmedzenie prevádzky, nepriaznivé poveternostné podmienky pri povolaniach závislých od počasia, prestoje spôsobené poruchou strojov alebo výpadkom surovín a dôležité prevádzkové dôvody, pri ktorých môže zamestnávateľ zamestnanca preradiť na inú prácu. Zamestnávateľ musí prekážky preukázať a nesmie ich zneužívať. Účelom právnej úpravy je chrániť zamestnanca pred stratou príjmu v situáciách, ktoré nemôže ovplyvniť.\n\nPríklad:\nZamestnávateľ nemôže prideľovať prácu kvôli poruche stroja a tvrdí, že zamestnanci nedostanú žiadnu náhradu. Takýto postup je nezákonný – ide o prekážku na strane zamestnávateľa a patrí náhrada mzdy najmenej 60 % priemerného zárobku.\n\nKľúčové slová:\nprekážky v práci; náhrada mzdy; prestoje; nepriaznivé počasie; preradenie; organizačné dôvody.\n\nZapamätaj si:\n- Prekážky vznikajú, keď zamestnávateľ nemôže prideľovať prácu.\n- Minimálna náhrada mzdy je 60 % pri väčšine prekážok.\n- Porucha stroja alebo výpadok surovín sú typické prekážky na strane zamestnávateľa.\n- Pri dôležitých prevádzkových dôvodoch môže zamestnávateľ zamestnanca preradiť.\n- Zamestnávateľ musí prekážku preukázať a nesmie ju zneužívať.",
+
+  "quiz": [
+    {
+      "question": "Kedy ide o prekážku v práci na strane zamestnávateľa?",
+      "options": ["Keď zamestnanec nepríde do práce", "Keď zamestnávateľ nemôže prideľovať prácu", "Keď zamestnanec čerpá dovolenku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ nemôže prideľovať prácu, hoci zamestnanec je pripravený.",
+        "wrong": "Nesprávne. Ostatné sú prekážky na strane zamestnanca."
+      }
+    },
+    {
+      "question": "Aká je minimálna náhrada mzdy pri prekážkach na strane zamestnávateľa?",
+      "options": ["100 % priemerného zárobku", "60 % priemerného zárobku", "20 % priemerného zárobku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon stanovuje minimálne 60 %.",
+        "wrong": "Nesprávne. 100 % patrí len pri niektorých špecifických situáciách."
+      }
+    },
+    {
+      "question": "Ktorá situácia je prekážkou na strane zamestnávateľa?",
+      "options": ["PN zamestnanca", "Porucha stroja", "Svadba zamestnanca"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Porucha stroja je typická prekážka na strane zamestnávateľa.",
+        "wrong": "Nesprávne. Ostatné sú osobné prekážky."
+      }
+    },
+    {
+      "question": "Môže zamestnávateľ preradiť zamestnanca pri prekážkach na inú prácu?",
+      "options": ["Áno, ak ide o dôležité prevádzkové dôvody", "Nie", "Len ak zamestnanec súhlasí"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zákon to umožňuje.",
+        "wrong": "Nesprávne. Súhlas zamestnanca nie je vždy potrebný."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnávateľ nemusí prekážky preukazovať", "Zamestnávateľ musí prekážky preukázať", "Zamestnanec hradí náklady prekážok"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ musí preukázať, že prekážka skutočne existuje.",
+        "wrong": "Nesprávne. Zamestnanec nenesie náklady."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Prekážky na strane zamestnávateľa", "definition": "Zamestnávateľ nemôže prideľovať prácu, hoci zamestnanec je pripravený." },
+    { "term": "Náhrada mzdy 60 %", "definition": "Minimálna náhrada pri väčšine prekážok." },
+    { "term": "Prestoje", "definition": "Porucha stroja, výpadok surovín, technické problémy." },
+    { "term": "Nepriaznivé počasie", "definition": "Prekážka pri prácach závislých od poveternostných podmienok." },
+    { "term": "Preradenie", "definition": "Možné pri dôležitých prevádzkových dôvodoch." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Porucha stroja",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ nemôže prideľovať prácu kvôli poruche stroja. Tvrdí, že zamestnanci nedostanú žiadnu náhradu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o prekážku na strane zamestnávateľa?",
+          "options": ["Áno", "Nie", "Len ak porucha trvá viac ako týždeň"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Porucha stroja je typická prekážka.",
+            "wrong": "Nesprávne. Dĺžka poruchy nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Áno, najmenej 60 %", "Nie", "Len ak zamestnávateľ chce"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Náhrada je povinná.",
+            "wrong": "Nesprávne. Zamestnávateľ nemá voľnú úvahu."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na povinnosť poskytnúť náhradu mzdy",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnancom vziať si dovolenku"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí náhradu poskytnúť.",
+            "wrong": "Nesprávne. Dovolenka nie je riešenie."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nepriaznivé počasie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Stavebná firma nemôže pracovať kvôli silnému vetru. Zamestnávateľ tvrdí, že ide o prekážku bez náhrady.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je nepriaznivé počasie prekážkou?",
+          "options": ["Áno", "Nie", "Len ak trvá viac ako 3 dni"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Počasie je zákonná prekážka.",
+            "wrong": "Nesprávne. Dĺžka nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Áno, podľa zákona", "Nie", "Len ak zamestnávateľ rozhodne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Aj pri počasí patrí náhrada.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na povinnosť poskytnúť náhradu mzdy",
+            "Súhlasiť so zamestnávateľom",
+            "Odporučiť zamestnancom neplatené voľno"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ musí poskytnúť náhradu mzdy.",
+            "wrong": "Nesprávne. Neplatené voľno nie je zákonné riešenie."
+          }
+        }
+      ]
+    }
+  ]
+}

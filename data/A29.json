@@ -1,0 +1,152 @@
+{
+  "id": "15. A",
+  "title": "Pracovnoprávne skutočnosti",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "pracovnoprávne skutočnosti", "právne úkony", "udalosti"],
+
+  "summary": "\nPracovnoprávne skutočnosti sú právne významné okolnosti, s ktorými právny poriadok spája vznik, zmenu alebo zánik pracovnoprávnych vzťahov. Ide o základný stavebný prvok pracovného práva – bez existencie pracovnoprávnej skutočnosti nemôže vzniknúť ani zaniknúť pracovný pomer.\n\nDelia sa na viacero kategórií:\n- **právne úkony** (napr. pracovná zmluva, výpoveď, dohoda),\n- **právne udalosti** (napr. smrť zamestnanca, uplynutie času),\n- **rozhodnutia orgánov** (napr. rozhodnutie súdu, lekársky posudok),\n- **faktické úkony** (napr. výkon práce),\n- **protiprávne úkony** (napr. porušenie pracovnej disciplíny).\n\nPrávne úkony môžu byť jednostranné (výpoveď) alebo dvojstranné (dohoda). Právne udalosti vznikajú bez vôle subjektov. Rozhodnutia orgánov môžu zakladať povinnosti alebo meniť pracovnoprávne vzťahy. Faktické úkony síce nemajú formu právneho úkonu, ale vyvolávajú právne následky. Protiprávne úkony zakladajú zodpovednosť.\n\nPracovnoprávne skutočnosti musia byť v súlade so Zákonníkom práce, dobrými mravmi a zásadou ochrany zamestnanca.\n\nPríklad:\nZamestnávateľ dá zamestnancovi ústnu výpoveď. Hoci ide o prejav vôle, výpoveď je neplatná, pretože nemá písomnú formu. Neplatný právny úkon nespôsobuje zánik pracovného pomeru.\n\nKľúčové slová:\npracovnoprávne skutočnosti; právny úkon; právna udalosť; rozhodnutie orgánu; faktický úkon; protiprávny úkon.\n\nZapamätaj si:\n- Pracovnoprávne skutočnosti zakladajú vznik, zmenu alebo zánik pracovnoprávnych vzťahov.\n- Právne úkony môžu byť jednostranné alebo dvojstranné.\n- Právne udalosti vznikajú bez vôle subjektov.\n- Neplatný právny úkon nemá právne následky.\n- Každá pracovnoprávna skutočnosť musí byť v súlade s dobrými mravmi a zákonom.",
+
+  "quiz": [
+    {
+      "question": "Čo sú pracovnoprávne skutočnosti?",
+      "options": ["Len právne úkony", "Právne významné okolnosti spôsobujúce vznik, zmenu alebo zánik pracovnoprávnych vzťahov", "Len rozhodnutia súdov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o všetky právne relevantné okolnosti.",
+        "wrong": "Nesprávne. Nejde len o právne úkony alebo rozhodnutia."
+      }
+    },
+    {
+      "question": "Ktorá z nasledujúcich je právny úkon?",
+      "options": ["Smrť zamestnanca", "Výpoveď", "Uplynutie času"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Výpoveď je jednostranný právny úkon.",
+        "wrong": "Nesprávne. Smrť a uplynutie času sú právne udalosti."
+      }
+    },
+    {
+      "question": "Ktorá skutočnosť vzniká bez vôle subjektov?",
+      "options": ["Dohoda", "Právna udalosť", "Výpoveď"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Právne udalosti vznikajú nezávisle od vôle.",
+        "wrong": "Nesprávne. Dohoda aj výpoveď sú úkony."
+      }
+    },
+    {
+      "question": "Čo je faktický úkon?",
+      "options": ["Výkon práce", "Výpoveď", "Rozhodnutie súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Faktické úkony sú konania bez právnej formy, ale s právnymi následkami.",
+        "wrong": "Nesprávne. Výpoveď a rozhodnutie sú právne úkony."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Pracovnoprávne skutočnosti musia byť v súlade s dobrými mravmi", "Pracovnoprávne skutočnosti nemajú právne následky", "Pracovnoprávne skutočnosti sú len v Zákonníku práce"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Každý právny úkon musí rešpektovať dobré mravy.",
+        "wrong": "Nesprávne. Skutočnosti majú právne následky a sú aj v osobitných predpisoch."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Právny úkon", "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku pracovnoprávneho vzťahu (napr. výpoveď, dohoda)." },
+    { "term": "Právna udalosť", "definition": "Skutočnosť nezávislá od vôle subjektov (napr. smrť, uplynutie času)." },
+    { "term": "Rozhodnutie orgánu", "definition": "Rozhodnutie súdu, úradu alebo lekársky posudok, ktoré zakladajú právne následky." },
+    { "term": "Faktický úkon", "definition": "Konanie bez právnej formy, ale s právnymi následkami (napr. výkon práce)." },
+    { "term": "Protiprávny úkon", "definition": "Porušenie povinností, ktoré zakladá zodpovednosť (napr. porušenie disciplíny)." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Je výpoveď platná?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnávateľ dal zamestnancovi ústnu výpoveď. Tvrdí, že ide o pracovnoprávnu skutočnosť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je ústna výpoveď právny úkon?",
+          "options": ["Nie, musí byť písomná", "Áno", "Len ak zamestnanec súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výpoveď musí byť písomná, inak je neplatná.",
+            "wrong": "Nesprávne. Súhlas zamestnanca nelegalizuje neplatnosť."
+          }
+        },
+        {
+          "question": "Krok 2: Ide o pracovnoprávnu skutočnosť?",
+          "options": ["Nie, lebo úkon je neplatný", "Áno", "Len ak je v zmluve uvedené inak"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neplatný úkon nemá právne následky.",
+            "wrong": "Nesprávne. Zmluva nemôže meniť zákonnú formu."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť na neplatnosť výpovede a trvať na písomnej forme",
+            "Akceptovať ústnu výpoveď",
+            "Odporučiť zamestnancovi odísť"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Písomná forma je podmienkou platnosti.",
+            "wrong": "Nesprávne. Ústna výpoveď je právne neúčinná."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Smrť zamestnanca a zánik pracovného pomeru",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec zomrel. Zamestnávateľ tvrdí, že musí dať výpoveď, aby pracovný pomer skončil.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o právnu udalosť?",
+          "options": ["Áno", "Nie", "Len ak to potvrdí súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Smrť je právna udalosť nezávislá od vôle.",
+            "wrong": "Nesprávne. Súd nepotvrdzuje zánik pracovného pomeru."
+          }
+        },
+        {
+          "question": "Krok 2: Končí pracovný pomer automaticky?",
+          "options": ["Áno", "Nie", "Len po výpovedi zamestnávateľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pracovný pomer zaniká smrťou zamestnanca zo zákona.",
+            "wrong": "Nesprávne. Výpoveď nie je potrebná."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Informovať rodinu o nárokoch (mzda, nevyčerpaná dovolenka)",
+            "Vypracovať výpoveď",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právnik rieši len nároky, nie výpoveď.",
+            "wrong": "Nesprávne. Výpoveď je zbytočná."
+          }
+        }
+      ]
+    }
+  ]
+}

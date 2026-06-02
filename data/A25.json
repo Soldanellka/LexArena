@@ -1,0 +1,152 @@
+{
+  "id": "13. A",
+  "title": "Prekážky v práci na strane zamestnanca",
+  "schemaVersion": "1.1",
+  "tags": ["pracovné právo", "prekážky v práci", "zamestnanec", "náhrada mzdy"],
+
+  "summary": "\nPrekážky v práci na strane zamestnanca sú situácie, keď zamestnanec nemôže vykonávať prácu z dôvodov, ktoré nesúvisia so zamestnávateľom. Zákonník práce rozlišuje prekážky, pri ktorých zamestnancovi patrí náhrada mzdy (napr. dočasná pracovná neschopnosť, vyšetrenie u lekára, dôležité osobné prekážky, prekážky z dôvodu tehotenstva a materstva), a prekážky, pri ktorých náhrada mzdy nepatrí (napr. neplatené voľno).\n\nZamestnanec je povinný prekážku oznámiť a preukázať bez zbytočného odkladu. Medzi najčastejšie prekážky patria: dočasná pracovná neschopnosť, ošetrovanie člena rodiny, sprevádzanie rodinného príslušníka k lekárovi, svadba, pohreb, sťahovanie, darovanie krvi, výkon verejných funkcií a ďalšie osobné prekážky podľa nariadenia vlády.\n\nPríklad:\nZamestnankyňa potrebuje sprevádzať dieťa k lekárovi. Ide o dôležitú osobnú prekážku, pri ktorej jej patrí pracovné voľno s náhradou mzdy za nevyhnutne potrebný čas.\n\nKľúčové slová:\nprekážky v práci; PN; OČR; osobné prekážky; neplatené voľno; náhrada mzdy.\n\nZapamätaj si:\n- Náhrada mzdy patrí len pri zákonom uznaných prekážkach.\n- PN, OČR, sprevádzanie k lekárovi či pohreb patria medzi prekážky s náhradou mzdy.\n- Sťahovanie je prekážka bez náhrady mzdy.\n- Zamestnanec musí prekážku oznámiť a preukázať.\n- Prekážky chránia zamestnanca v situáciách, keď objektívne nemôže pracovať.",
+
+  "quiz": [
+    {
+      "question": "Kedy patrí zamestnancovi náhrada mzdy pri prekážkach v práci?",
+      "options": ["Len pri neplatenom voľne", "Pri prekážkach uvedených v Zákonníku práce alebo nariadení vlády", "Nikdy"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Náhrada mzdy patrí len pri zákonom uznaných prekážkach.",
+        "wrong": "Nesprávne. Neplatené voľno náhradu neobsahuje."
+      }
+    },
+    {
+      "question": "Ktorá z nasledujúcich je prekážkou v práci na strane zamestnanca?",
+      "options": ["Porucha stroja", "Dočasná pracovná neschopnosť", "Nedostatok práce u zamestnávateľa"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. PN je typickou prekážkou na strane zamestnanca.",
+        "wrong": "Nesprávne. Ostatné sú prekážky na strane zamestnávateľa."
+      }
+    },
+    {
+      "question": "Koľko dní voľna patrí zamestnancovi pri úmrtí blízkej osoby?",
+      "options": ["1 deň", "2 dni + 1 deň na pohreb", "5 dní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o zákonnú dôležitú osobnú prekážku.",
+        "wrong": "Nesprávne. Ostatné možnosti nezodpovedajú zákonu."
+      }
+    },
+    {
+      "question": "Kedy zamestnancovi patrí pracovné voľno bez náhrady mzdy?",
+      "options": ["Pri svadbe", "Pri sťahovaní na vlastnú žiadosť", "Pri PN"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
+        "wrong": "Nesprávne. Svadba aj PN sú prekážky s náhradou."
+      }
+    },
+    {
+      "question": "Ktoré tvrdenie je pravdivé?",
+      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnanec musí oznámiť prekážku bez zbytočného odkladu", "Zamestnávateľ môže odmietnuť PN"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zamestnanec musí prekážku oznámiť a preukázať.",
+        "wrong": "Nesprávne. PN je zákonná prekážka."
+      }
+    }
+  ],
+
+  "tiles": [
+    { "term": "Dočasná pracovná neschopnosť", "definition": "Zamestnanec nemôže pracovať zo zdravotných dôvodov; patrí náhrada príjmu." },
+    { "term": "Ošetrovanie člena rodiny (OČR)", "definition": "Prekážka s nárokom na dávku zo Sociálnej poisťovne." },
+    { "term": "Dôležité osobné prekážky", "definition": "Svadba, pohreb, sprevádzanie k lekárovi, darovanie krvi a iné." },
+    { "term": "Neplatené voľno", "definition": "Voľno bez náhrady mzdy, poskytované na žiadosť zamestnanca." },
+    { "term": "Oznamovacia povinnosť", "definition": "Zamestnanec musí prekážku oznámiť a preukázať." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Sprevádzanie dieťaťa k lekárovi",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnankyňa potrebuje sprevádzať dieťa k lekárovi počas pracovnej doby. Zamestnávateľ tvrdí, že si musí vziať dovolenku.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
+          "options": ["Áno", "Nie", "Len ak ide o hospitalizáciu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sprevádzanie rodinného príslušníka k lekárovi je zákonná prekážka.",
+            "wrong": "Nesprávne. Hospitalizácia nie je podmienkou."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Áno, za nevyhnutne potrebný čas", "Nie", "Len ak to zamestnávateľ schváli"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Náhrada patrí za nevyhnutný čas.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Upozorniť zamestnávateľa na zákonnú povinnosť poskytnúť voľno",
+            "Odporučiť zamestnankyni vziať si dovolenku",
+            "Ignorovať situáciu"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o zákonnú prekážku s náhradou mzdy.",
+            "wrong": "Nesprávne. Dovolenka nie je potrebná."
+          }
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Sťahovanie zamestnanca",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec sa sťahuje do nového bytu a žiada o deň voľna. Zamestnávateľ súhlasí, ale bez náhrady mzdy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o prekážku v práci?",
+          "options": ["Áno", "Nie", "Len ak ide o služobné sťahovanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sťahovanie je dôležitá osobná prekážka.",
+            "wrong": "Nesprávne. Nejde o služobné sťahovanie."
+          }
+        },
+        {
+          "question": "Krok 2: Patrí náhrada mzdy?",
+          "options": ["Nie", "Áno", "Len ak zamestnávateľ rozhodne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
+            "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+          }
+        },
+        {
+          "question": "Krok 3: Ako má právnik postupovať?",
+          "options": [
+            "Potvrdiť, že zamestnávateľ postupuje správne",
+            "Trvať na náhrade mzdy",
+            "Odporučiť zamestnancovi vziať si dovolenku"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o zákonnú prekážku bez náhrady mzdy.",
+            "wrong": "Nesprávne. Náhrada mzdy nepatrí."
+          }
+        }
+      ]
+    }
+  ]
+}
