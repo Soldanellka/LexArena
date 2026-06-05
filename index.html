@@ -2,7 +2,7 @@
 <html lang="sk">
 <head>
   <meta charset="utf-8" />
-  <title>LexArena – právna akadémia</title>
+  <title>LexArena – prototyp</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <!-- FONTY -->
@@ -13,84 +13,53 @@
 </head>
 
 <body>
-
 <header class="header">
   <div class="brand">
     <span class="logo-dot" aria-hidden="true"></span>
     <span>LexArena</span>
 
-    <div id="avatarWrap" class="avatar-wrap" role="button" tabindex="0" aria-label="Profil">
+    <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0">
       <img id="userAvatar" src="assets/avatars/young-lawyer.svg" alt="Avatar používateľa" />
     </div>
 
-    <div class="nick-box" aria-hidden="false">
+    <div class="nick-box">
       <label for="nickname">Tvoj nick</label>
       <div class="nick-row">
-        <input id="nickname" type="text" placeholder="Zadaj nick" />
-        <button id="saveNick" class="btn" type="button">Uložiť</button>
+        <input id="nickname" type="text" placeholder="Zadaj nick">
+        <button id="saveNick">Uložiť</button>
       </div>
     </div>
 
-    <div id="playerNickDisplay" class="player-nick-display" aria-live="polite"></div>
+    <div id="playerNickDisplay" class="player-nick-display"></div>
   </div>
 
-  <div class="header-right">
-    <div class="pill">Paragrafy: <strong id="paragrafValue">0</strong></div>
-    <div class="pill small" id="premiumBadge" aria-hidden="false">FREE</div>
+    <div class="header-right">
+      <div class="pill">Paragrafy: <strong id="paragrafValue">0</strong></div>
 
-    <button class="btn" id="themeToggleBtn" aria-pressed="false" title="Prepni tému">
-      <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Téma">
-    </button>
+      <div class="pill small" id="premiumBadge">FREE</div>
 
-    <button class="btn" id="toggleRoleBtn" type="button">Role: student</button>
-    <button class="btn" id="togglePremiumBtn" type="button">Toggle PREMIUM</button>
-  </div>
-</header>
+      <button class="btn" id="themeToggleBtn">
+        <img id="themeIcon" src="assets/icons/moon.svg" alt="Prepínač témy" width="18" height="18">
+      </button>
 
-<main class="container">
-
-  <!-- MODAL – výzva z externej apky -->
-  <div id="externalChallengeModal" class="avatar-modal" aria-hidden="true" style="display:none;">
-    <div class="avatar-panel" style="max-width:420px;">
-      <h3 id="externalChallengeTitle">Nová výzva</h3>
-      <p class="small">Prišla výzva z externej študijnej apky. Chceš spustiť duel?</p>
-
-      <div style="margin-top:16px; display:flex; justify-content:flex-end; gap:8px;">
-        <button class="btn btn-primary" id="externalChallengeStart" type="button">Začať duel</button>
-        <button class="btn btn-ghost" id="externalChallengeClose" type="button">Zavrieť</button>
-      </div>
+      <button class="btn" id="toggleRoleBtn">Role: student</button>
+      <button class="btn" id="togglePremiumBtn">Toggle PREMIUM</button>
     </div>
-  </div>
+  </header>
 
-  <!-- DUEL UI (karta, inline demo) -->
-  <div id="lexarenaDuelUI" class="card hidden" style="max-width:640px; margin:20px auto;" aria-hidden="true">
-    <div id="lexarenaDuelProgress" class="small" style="margin-bottom:8px;"></div>
-    <div id="lexarenaDuelQuestion" style="font-size:18px; font-weight:600; margin-bottom:12px;"></div>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-      <button class="lexarenaDuelAnswer btn" data-index="0" type="button"></button>
-      <button class="lexarenaDuelAnswer btn" data-index="1" type="button"></button>
-      <button class="lexarenaDuelAnswer btn" data-index="2" type="button"></button>
-      <button class="lexarenaDuelAnswer btn" data-index="3" type="button"></button>
+  <main class="container">
+ 
+<div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
+    <div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+      Bol si vyzvaný na duel!
     </div>
+    <button id="accept-challenge" class="btn btn-primary">Prijať výzvu</button>
+    <button id="ignore-challenge" class="btn btn-ghost" style="margin-left:8px;">Neskôr</button>
   </div>
 
-  <!-- VÝSLEDOK DUELU (karta) -->
-  <div id="lexarenaDuelResult" class="card hidden" style="max-width:420px; margin:20px auto; text-align:center;" aria-hidden="true">
-    <h2 id="lexarenaDuelResultTitle"></h2>
-    <p id="lexarenaDuelScoreA" style="margin:8px 0;"></p>
-    <p id="lexarenaDuelScoreB" style="margin:0 0 16px 0;"></p>
+    <div class="left">
 
-    <div style="display:flex; gap:8px; justify-content:center;">
-      <button class="btn btn-primary" id="duelAgainBtn" type="button">Ďalší duel</button>
-      <button class="btn btn-ghost" id="backToArenaBtn" type="button">Späť do LexAreny</button>
-    </div>
-  </div>
-
-  <div class="layout">
-    <aside class="left">
-
-      <!-- OBLASTI -->
+      <!-- ⭐ OBLASTI -->
       <div class="card">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div>
@@ -98,36 +67,30 @@
             <div class="small">Vyber oblasť</div>
           </div>
           <div style="display:flex;gap:8px;align-items:center">
-            <img src="assets/icons/book.svg" width="28" height="28" alt="">
-            <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
+            <img src="assets/icons/book.svg" width="28" height="28">
+            <img src="assets/icons/gavel.svg" width="28" height="28">
           </div>
         </div>
-        <div id="facultyList" class="list" aria-live="polite"></div>
+        <div id="facultyList" class="list"></div>
       </div>
 
-      <!-- Hry pripravené na výzvu -->
-      <div class="card">
+      <!-- ✨ Moje appky -->
+      <div class="card" role="region" aria-labelledby="appsTitle">
+        <h3 id="appsTitle" style="margin:0">Moje appky</h3>
+        <div class="small">Rýchly prístup k tvojim starším projektom</div>
+        <div id="appsList" class="list" role="list" style="margin-top:10px"></div>
+      </div>
+
+      <!-- ⭐ Hry pripravené na výzvu -->
+      <div class="card" role="region" aria-labelledby="duelPackagesTitle">
         <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
-        <div class="small">Balíky otázok uložené zo študijných apiek</div>
+        <div class="small">Balíky otázok uložené zo študijných appiek</div>
         <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
       </div>
 
-      <!-- Výzva od spoluhráča (presunuté sem) -->
-      <div class="card" id="incomingChallengeCard" style="display:none;">
-        <h3 style="margin:0">Výzva od spoluhráča</h3>
-        <div class="small">Niekto ťa vyzval na duel</div>
+    </div>
 
-        <div style="margin-top:10px; display:flex; gap:8px;">
-          <button class="btn btn-primary" id="acceptIncomingChallenge" type="button">Prijať výzvu</button>
-          <button class="btn btn-ghost" id="ignoreIncomingChallenge" type="button">Neskôr</button>
-        </div>
-      </div>
-
-      <!-- (Moje appky odstránené) -->
-
-    </aside>
-
-    <section class="right">
+    <div class="right">
 
       <!-- Kvíz -->
       <div class="card" id="quizCard">
@@ -137,10 +100,10 @@
           <div class="small">Po výbere oblasti sa načíta 10 otázok. Každý kvíz stojí 5 paragrafov.</div>
 
           <div style="margin-top:12px;display:flex;gap:8px">
-            <button class="btn btn-primary" id="startQuizBtn" disabled type="button">Spustiť kvíz</button>
-            <button class="btn btn-ghost" id="resetBtn" type="button">Zrušiť</button>
-            <button class="btn" id="helpBtn" title="Pomoc" type="button">
-              <img src="assets/icons/info.svg" width="18" height="18" alt="">
+            <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť kvíz</button>
+            <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
+            <button class="btn" id="helpBtn">
+              <img src="assets/icons/info.svg" width="18" height="18">
             </button>
           </div>
         </div>
@@ -164,8 +127,8 @@
             <div class="footer-row">
               <div class="meta">Správne: <span id="correctCount">0</span> • Nesprávne: <span id="wrongCount">0</span></div>
               <div>
-                <button class="btn btn-ghost" id="prevBtn" type="button">Predchádzajúca</button>
-                <button class="btn btn-primary" id="nextBtn" type="button">Ďalšia</button>
+                <button class="btn btn-ghost" id="prevBtn">Predchádzajúca</button>
+                <button class="btn btn-primary" id="nextBtn">Ďalšia</button>
               </div>
             </div>
 
@@ -181,8 +144,8 @@
       <div class="card">
         <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
         <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-          <button class="btn btn-primary" id="openMemoryBtn" type="button">Kartičky (Memory)</button>
-          <button class="btn" id="openCasesBtn" type="button">Prípady z praxe</button>
+          <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
+          <button class="btn" id="openCasesBtn">Prípady z praxe</button>
         </div>
         <div class="small" style="margin-top:10px;color:var(--muted)">
           Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
@@ -199,70 +162,73 @@
       <div class="card">
         <h3 id="shopTitle" style="margin:0">Obchod</h3>
         <div style="display:flex;gap:8px;margin-top:8px">
-          <button class="btn btn-primary" id="buy20" type="button">Kúpiť +20 paragrafov</button>
-          <button class="btn" id="buyPremium" type="button">Kúpiť PREMIUM</button>
-          <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
-            <img src="assets/icons/shop.svg" width="18" height="18" alt="">
+          <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
+          <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
+          <button class="btn" id="openShop">
+            <img src="assets/icons/shop.svg" width="18" height="18">
           </button>
         </div>
       </div>
 
-    </section>
-  </div>
-</main>
-
-<!-- Memory modal -->
-<div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
-  <div class="avatar-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 id="memoryTitle">Kartičky – matching</h3>
-      <button class="btn" id="closeMemory" type="button">Zavrieť</button>
     </div>
-    <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
-    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory" type="button">Reštartovať</button></div>
-  </div>
-</div>
+  </main>
 
-<!-- Cases modal -->
-<div id="casesModal" class="avatar-modal" aria-hidden="true" style="display:none;">
-  <div class="avatar-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 id="casesTitle">Prípady z praxe</h3>
-      <button class="btn" id="closeCases" type="button">Zavrieť</button>
+  <!-- Memory modal -->
+  <div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="memoryTitle">Kartičky – matching</h3>
+        <button class="btn" id="closeMemory">Zavrieť</button>
+      </div>
+      <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
+      <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory">Reštartovať</button></div>
     </div>
-    <div id="caseContainer" style="margin-top:12px"></div>
   </div>
-</div>
 
-<!-- JS moduly -->
-<script src="data.js"></script>
+  <!-- Cases modal -->
+  <div id="casesModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="casesTitle">Prípady z praxe</h3>
+        <button class="btn" id="closeCases">Zavrieť</button>
+      </div>
+      <div id="caseContainer" style="margin-top:12px"></div>
+    </div>
+  </div>
 
-<script type="module">
-  import { inicializovatUI } from "./lexarena/ui.js";
-  import { initArena } from "./lexarena/arena.js";
+  <!-- JS moduly -->
+  <script src="data.js"></script>
 
-  document.addEventListener("DOMContentLoaded", () => {
-    inicializovatUI();
-    initArena();
-  });
-</script>
+  <!-- LexArena UI inicializácia -->
+  <script type="module">
+    import { inicializovatUI } from "./lexarena/ui.js";
+    import { initArena } from "./lexarena/arena.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      inicializovatUI();
+      initArena();
+    });
+  </script>
+
 
 <script type="module" src="lexarena/challenges.js"></script>
 
-<script type="module" src="core.js"></script>
-<script type="module" src="state.js"></script>
-<script type="module" src="ui.js"></script>
-<script type="module" src="theme.js"></script>
-<script type="module" src="audio.js"></script>
-<script type="module" src="avatars.js"></script>
-<script type="module" src="areas.js"></script>
-<script type="module" src="quiz.js"></script>
-<script type="module" src="admin.js"></script>
-<script type="module" src="reports.js"></script>
-<script type="module" src="memory.js"></script>
-<script type="module" src="cases.js"></script>
-<script type="module" src="app.js"></script>
-<script type="module" src="init.js"></script>
+  <!-- Ostatné moduly -->
+  <script type="module" src="core.js"></script>
+  <script type="module" src="state.js"></script>
+  <script type="module" src="ui.js"></script>
+  <script type="module" src="theme.js"></script>
+  <script type="module" src="audio.js"></script>
+  <script type="module" src="avatars.js"></script>
+  <script type="module" src="areas.js"></script>
+  <script type="module" src="quiz.js"></script>
+  <script type="module" src="admin.js"></script>
+  <script type="module" src="reports.js"></script>
+  <script type="module" src="memory.js"></script>
+  <script type="module" src="cases.js"></script>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="init.js"></script>
 
 </body>
+
 </html>
