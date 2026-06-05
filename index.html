@@ -10,6 +10,15 @@
 
   <!-- HLAVNÝ ŠTÝL -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Drobná pomocná štýlová úprava pre quiz v dlaždici */
+    .challenge-item .correct { background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.2); }
+    .challenge-item .wrong { background: rgba(220,53,69,0.06); border: 1px solid rgba(220,53,69,0.12); }
+    #incomingQuizPanel .btn { min-width: 90px; }
+    #incomingQuizPanel .btn { cursor: pointer; }
+    #incomingQuizPanel .btn[disabled] { opacity: 0.6; cursor: default; }
+    #confettiCanvasWrap { pointer-events: none; }
+  </style>
 </head>
 
 <body>
@@ -75,20 +84,43 @@
 
       <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
         <div id="incomingChallengeList" class="list" style="min-height:40px;">
-          <!-- dynamicky vkladané výzvy; príklad položky:
-          <div class="challenge-item">
-            <div class="challenge-text">Jana ťa vyzvala na duel – Pracovné právo</div>
-            <div style="display:flex;gap:8px;margin-top:8px">
-              <button class="btn btn-primary accept-challenge" data-challenge-id="...">Prijať</button>
-              <button class="btn btn-ghost ignore-challenge" data-challenge-id="...">Ignorovať</button>
-            </div>
-          </div>
-          -->
+          <!-- dynamicky vkladané výzvy -->
         </div>
 
         <div style="display:flex; gap:8px;">
           <button id="acceptAnyChallenge" class="btn btn-primary" type="button">Prijať prvú</button>
           <button id="ignoreAllChallenges" class="btn btn-ghost" type="button">Ignorovať všetky</button>
+        </div>
+      </div>
+
+      <!-- INLINE QUIZ PANEL (skryté, zobrazí sa po Prijať) -->
+      <div id="incomingQuizPanel" style="display:none; margin-top:12px; border-top:1px solid var(--muted); padding-top:12px;">
+        <div id="quizHeader" style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-weight:600">Duel – kvíz</div>
+          <div style="font-size:13px" id="quizProgress">Otázka 0/0</div>
+        </div>
+
+        <div id="quizBody" style="margin-top:10px">
+          <div id="quizQuestion" style="font-weight:600; margin-bottom:8px">Otázka text</div>
+          <div id="quizAnswers" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
+
+          <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+            <div style="font-size:13px">
+              Ty: <span id="scoreYou">0</span> • Súper: <span id="scoreOpp">0</span>
+            </div>
+            <div>
+              <button id="quizNextBtn" class="btn btn-primary" type="button" style="display:none">Ďalšia</button>
+              <button id="quizCloseBtn" class="btn btn-ghost" type="button">Zavrieť</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="quizResult" style="display:none; text-align:center; margin-top:12px">
+          <h4 id="quizResultTitle"></h4>
+          <div id="confettiCanvasWrap" style="position:relative;height:120px"></div>
+          <div style="margin-top:8px">
+            <button id="quizFinishBtn" class="btn btn-primary" type="button">Hotovo</button>
+          </div>
         </div>
       </div>
     </div>
@@ -156,8 +188,8 @@
     <div class="card">
       <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
+        <button class="btn btn-primary" id="openMemoryBtn" type="button">Kartičky (Memory)</button>
+        <button class="btn" id="openCasesBtn" type="button">Prípady z praxe</button>
       </div>
       <div class="small" style="margin-top:10px;color:var(--muted)">
         Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
@@ -239,6 +271,227 @@
 <script type="module" src="cases.js"></script>
 <script type="module" src="app.js"></script>
 <script type="module" src="init.js"></script>
+
+<!-- Incoming-challenge in-tile quiz logic -->
+<script>
+/* --- START: Incoming challenge quiz in-tile --- */
+(function(){
+  const listEl = document.getElementById('incomingChallengeList');
+  const acceptAnyBtn = document.getElementById('acceptAnyChallenge');
+  const ignoreAllBtn = document.getElementById('ignoreAllChallenges');
+  const quizPanel = document.getElementById('incomingQuizPanel');
+  const quizQuestionEl = document.getElementById('quizQuestion');
+  const quizAnswersEl = document.getElementById('quizAnswers');
+  const quizProgressEl = document.getElementById('quizProgress');
+  const scoreYouEl = document.getElementById('scoreYou');
+  const scoreOppEl = document.getElementById('scoreOpp');
+  const quizNextBtn = document.getElementById('quizNextBtn');
+  const quizCloseBtn = document.getElementById('quizCloseBtn');
+  const quizResultEl = document.getElementById('quizResult');
+  const quizResultTitle = document.getElementById('quizResultTitle');
+  const quizFinishBtn = document.getElementById('quizFinishBtn');
+  const confettiWrap = document.getElementById('confettiCanvasWrap');
+
+  let currentChallengeItem = null;
+  let questions = [];
+  let qIndex = 0;
+  let scoreYou = 0;
+  let scoreOpp = 0;
+
+  async function fetchQuestionsForChallenge(item) {
+    const url = item?.dataset?.challengeUrl;
+    if (url) {
+      try {
+        const res = await fetch(url, {cache:'no-store'});
+        if (res.ok) {
+          const data = await res.json();
+          return data.questions && data.questions.slice(0,5) || [];
+        }
+      } catch(e) {
+        console.warn('Fetch challenge failed', e);
+      }
+    }
+    // fallback demo questions
+    return [
+      { text: 'Ktoré tvrdenie je správne?', answers:['A','B','C','D'], correctIndex:0 },
+      { text: 'Čo upravuje pracovné právo?', answers:['Zmluvy','Tresty','Dane','Šport'], correctIndex:0 },
+      { text: 'Ktorý inštitút patrí do občianskeho práva?', answers:['Zmluva','Trest','Súd','Parlament'], correctIndex:0 },
+      { text: 'Kedy vzniká zmluva?', answers:['Podpísaním','Narodením','Smrťou','Registráciou'], correctIndex:0 },
+      { text: 'Čo je právna norma?', answers:['Pravidlo správania','Osoba','Budova','Doklad'], correctIndex:0 }
+    ];
+  }
+
+  function renderQuestion() {
+    const q = questions[qIndex];
+    if (!q) return;
+    quizQuestionEl.textContent = q.text;
+    quizAnswersEl.innerHTML = '';
+    q.answers.forEach((a, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'btn';
+      btn.type = 'button';
+      btn.textContent = a;
+      btn.dataset.index = i;
+      btn.style = 'text-align:left;padding:10px';
+      btn.addEventListener('click', () => onAnswerClick(i, btn));
+      quizAnswersEl.appendChild(btn);
+    });
+    quizProgressEl.textContent = `Otázka ${qIndex+1}/${questions.length}`;
+    quizNextBtn.style.display = 'none';
+  }
+
+  function onAnswerClick(selectedIndex, btn) {
+    Array.from(quizAnswersEl.children).forEach(b => b.disabled = true);
+    const q = questions[qIndex];
+    const correct = q.correctIndex === selectedIndex;
+    const opponentCorrect = typeof q.opponentCorrect !== 'undefined' ? !!q.opponentCorrect : (Math.random() < 0.5);
+    if (correct) scoreYou++;
+    if (opponentCorrect) scoreOpp++;
+    if (correct) btn.classList.add('correct'); else btn.classList.add('wrong');
+    const oppNote = document.createElement('div');
+    oppNote.style = 'margin-top:8px;font-size:13px;color:var(--muted,#666)';
+    oppNote.textContent = opponentCorrect ? 'Súper získal bod' : 'Súper nezískal bod';
+    quizAnswersEl.appendChild(oppNote);
+    scoreYouEl.textContent = scoreYou;
+    scoreOppEl.textContent = scoreOpp;
+    if (qIndex < questions.length - 1) {
+      quizNextBtn.style.display = 'inline-block';
+    } else {
+      setTimeout(showResult, 600);
+    }
+  }
+
+  function showResult() {
+    document.getElementById('quizBody').style.display = 'none';
+    quizResultEl.style.display = 'block';
+    if (scoreYou > scoreOpp) {
+      quizResultTitle.textContent = `Vyhrala si! ${scoreYou} : ${scoreOpp}`;
+      launchConfetti();
+    } else if (scoreYou < scoreOpp) {
+      quizResultTitle.textContent = `Prehrala si ${scoreYou} : ${scoreOpp}`;
+    } else {
+      quizResultTitle.textContent = `Remíza ${scoreYou} : ${scoreOpp}`;
+    }
+  }
+
+  function launchConfetti() {
+    confettiWrap.innerHTML = '';
+    const colors = ['#ff4d4f','#ffd666','#73d13d','#40a9ff','#9254de'];
+    for (let i=0;i<40;i++){
+      const el = document.createElement('div');
+      el.style.position = 'absolute';
+      el.style.left = (Math.random()*100) + '%';
+      el.style.top = '-10px';
+      el.style.width = (6 + Math.random()*8) + 'px';
+      el.style.height = (8 + Math.random()*10) + 'px';
+      el.style.background = colors[Math.floor(Math.random()*colors.length)];
+      el.style.opacity = 0.95;
+      el.style.transform = `rotate(${Math.random()*360}deg)`;
+      el.style.borderRadius = '2px';
+      el.style.transition = `transform 2s linear, top 2s linear, opacity 2s linear`;
+      confettiWrap.appendChild(el);
+      setTimeout(()=> {
+        el.style.top = (80 + Math.random()*40) + 'px';
+        el.style.transform = `translateY(0) rotate(${Math.random()*720}deg)`;
+        el.style.opacity = 0.9;
+      }, 20 + i*10);
+      setTimeout(()=> el.remove(), 2600);
+    }
+  }
+
+  async function startQuizForItem(item) {
+    currentChallengeItem = item;
+    questions = await fetchQuestionsForChallenge(item);
+    if (!questions || questions.length === 0) {
+      try { window.open('/duel.html','_blank'); } catch(e) { location.href = '/duel.html'; }
+      return;
+    }
+    qIndex = 0; scoreYou = 0; scoreOpp = 0;
+    scoreYouEl.textContent = '0'; scoreOppEl.textContent = '0';
+    quizResultEl.style.display = 'none';
+    document.getElementById('quizBody').style.display = 'block';
+    quizPanel.style.display = 'block';
+    renderQuestion();
+  }
+
+  // delegated click handler for accept/ignore inside list
+  document.addEventListener('click', (e) => {
+    const acceptBtn = e.target.closest && e.target.closest('.accept-challenge');
+    if (acceptBtn) {
+      const item = acceptBtn.closest('.challenge-item');
+      startQuizForItem(item);
+      return;
+    }
+    const ignoreBtn = e.target.closest && e.target.closest('.ignore-challenge');
+    if (ignoreBtn) {
+      const item = ignoreBtn.closest('.challenge-item');
+      if (item) item.remove();
+      return;
+    }
+  });
+
+  if (acceptAnyBtn) acceptAnyBtn.addEventListener('click', () => {
+    const first = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+    if (first) first.click();
+  });
+  if (ignoreAllBtn) ignoreAllBtn.addEventListener('click', () => {
+    if (listEl) listEl.innerHTML = '';
+  });
+
+  quizNextBtn.addEventListener('click', () => {
+    qIndex++;
+    renderQuestion();
+  });
+  quizCloseBtn.addEventListener('click', () => {
+    quizPanel.style.display = 'none';
+  });
+  quizFinishBtn.addEventListener('click', () => {
+    if (currentChallengeItem) currentChallengeItem.remove();
+    quizPanel.style.display = 'none';
+  });
+
+  // helper to add demo challenge items (for testing)
+  window.__addDemoChallenge = function(text, url) {
+    const wrap = document.createElement('div');
+    wrap.className = 'challenge-item';
+    if (url) wrap.dataset.challengeUrl = url;
+    wrap.style = 'padding:8px;border-radius:6px;background:var(--card-bg,#fff);margin-bottom:8px';
+    const txt = document.createElement('div');
+    txt.className = 'challenge-text';
+    txt.textContent = text || 'Demo výzva';
+    wrap.appendChild(txt);
+    const actions = document.createElement('div');
+    actions.style = 'display:flex;gap:8px;margin-top:8px';
+    const accept = document.createElement('button');
+    accept.className = 'btn btn-primary accept-challenge';
+    accept.type = 'button';
+    accept.textContent = 'Prijať';
+    const ignore = document.createElement('button');
+    ignore.className = 'btn btn-ghost ignore-challenge';
+    ignore.type = 'button';
+    ignore.textContent = 'Ignorovať';
+    actions.appendChild(accept);
+    actions.appendChild(ignore);
+    wrap.appendChild(actions);
+    listEl.appendChild(wrap);
+  };
+
+  // auto-insert demo challenge if none
+  document.addEventListener('DOMContentLoaded', () => {
+    if (listEl && listEl.children.length === 0) {
+      window.__addDemoChallenge('Jana ťa vyzvala na duel – Pracovné právo');
+    }
+  });
+
+  // Expose a simple startDuelFromExternal fallback that accepts the first challenge
+  window.startDuelFromExternal = function() {
+    const firstAccept = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+    if (firstAccept) firstAccept.click();
+  };
+
+})(); 
+/* --- END --- */
+</script>
 
 </body>
 </html>
