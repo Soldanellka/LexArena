@@ -16,18 +16,18 @@
 
 <header class="header">
   <div class="brand">
-    <span class="logo-dot"></span>
+    <span class="logo-dot" aria-hidden="true"></span>
     <span>LexArena</span>
 
-    <div id="avatarWrap" class="avatar-wrap" role="button" tabindex="0">
+    <div id="avatarWrap" class="avatar-wrap" role="button" tabindex="0" aria-label="Profil">
       <img id="userAvatar" src="assets/avatars/young-lawyer.svg" alt="Avatar používateľa" />
     </div>
 
-    <div class="nick-box">
+    <div class="nick-box" aria-hidden="false">
       <label for="nickname">Tvoj nick</label>
       <div class="nick-row">
-        <input id="nickname" type="text" placeholder="Zadaj nick">
-        <button id="saveNick" class="btn">Uložiť</button>
+        <input id="nickname" type="text" placeholder="Zadaj nick" />
+        <button id="saveNick" class="btn" type="button">Uložiť</button>
       </div>
     </div>
 
@@ -36,14 +36,14 @@
 
   <div class="header-right">
     <div class="pill">Paragrafy: <strong id="paragrafValue">0</strong></div>
-    <div class="pill small" id="premiumBadge">FREE</div>
+    <div class="pill small" id="premiumBadge" aria-hidden="false">FREE</div>
 
     <button class="btn" id="themeToggleBtn" aria-pressed="false" title="Prepni tému">
-      <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="">
+      <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Téma">
     </button>
 
-    <button class="btn" id="toggleRoleBtn">Role: student</button>
-    <button class="btn" id="togglePremiumBtn">Toggle PREMIUM</button>
+    <button class="btn" id="toggleRoleBtn" type="button">Role: student</button>
+    <button class="btn" id="togglePremiumBtn" type="button">Toggle PREMIUM</button>
   </div>
 </header>
 
@@ -56,14 +56,14 @@
       <p class="small">Prišla výzva z externej študijnej apky. Chceš spustiť duel?</p>
 
       <div style="margin-top:16px; display:flex; justify-content:flex-end; gap:8px;">
-        <button class="btn btn-primary" id="externalChallengeStart">Začať duel</button>
-        <button class="btn btn-ghost" id="externalChallengeClose">Zavrieť</button>
+        <button class="btn btn-primary" id="externalChallengeStart" type="button">Začať duel</button>
+        <button class="btn btn-ghost" id="externalChallengeClose" type="button">Zavrieť</button>
       </div>
     </div>
   </div>
 
-  <!-- DUEL UI (karta) -->
-  <div id="lexarenaDuelUI" class="card hidden" style="max-width:640px; margin:20px auto;">
+  <!-- DUEL UI (karta, inline demo) -->
+  <div id="lexarenaDuelUI" class="card hidden" style="max-width:640px; margin:20px auto;" aria-hidden="true">
     <div id="lexarenaDuelProgress" class="small" style="margin-bottom:8px;"></div>
     <div id="lexarenaDuelQuestion" style="font-size:18px; font-weight:600; margin-bottom:12px;"></div>
 
@@ -76,137 +76,138 @@
   </div>
 
   <!-- VÝSLEDOK DUELU (karta) -->
-  <div id="lexarenaDuelResult" class="card hidden" style="max-width:420px; margin:20px auto; text-align:center;">
+  <div id="lexarenaDuelResult" class="card hidden" style="max-width:420px; margin:20px auto; text-align:center;" aria-hidden="true">
     <h2 id="lexarenaDuelResultTitle"></h2>
     <p id="lexarenaDuelScoreA" style="margin:8px 0;"></p>
     <p id="lexarenaDuelScoreB" style="margin:0 0 16px 0;"></p>
 
     <div style="display:flex; gap:8px; justify-content:center;">
-      <button class="btn btn-primary" id="duelAgainBtn">Ďalší duel</button>
-      <button class="btn btn-ghost" id="backToArenaBtn">Späť do LexAreny</button>
+      <button class="btn btn-primary" id="duelAgainBtn" type="button">Ďalší duel</button>
+      <button class="btn btn-ghost" id="backToArenaBtn" type="button">Späť do LexAreny</button>
     </div>
   </div>
 
-  <!-- LAYOUT: LEFT + RIGHT -->
-  <div class="left">
+  <div class="layout">
+    <aside class="left">
 
-    <!-- OBLASTI -->
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div>
-          <h3 id="facultiesTitle" style="margin:0">Oblasti</h3>
-          <div class="small">Vyber oblasť</div>
+      <!-- OBLASTI -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h3 id="facultiesTitle" style="margin:0">Oblasti</h3>
+            <div class="small">Vyber oblasť</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <img src="assets/icons/book.svg" width="28" height="28" alt="">
+            <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
+          </div>
         </div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <img src="assets/icons/book.svg" width="28" height="28" alt="">
-          <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
+        <div id="facultyList" class="list" aria-live="polite"></div>
+      </div>
+
+      <!-- Hry pripravené na výzvu -->
+      <div class="card">
+        <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
+        <div class="small">Balíky otázok uložené zo študijných apiek</div>
+        <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
+      </div>
+
+      <!-- Výzva od spoluhráča (presunuté sem) -->
+      <div class="card" id="incomingChallengeCard" style="display:none;">
+        <h3 style="margin:0">Výzva od spoluhráča</h3>
+        <div class="small">Niekto ťa vyzval na duel</div>
+
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button class="btn btn-primary" id="acceptIncomingChallenge" type="button">Prijať výzvu</button>
+          <button class="btn btn-ghost" id="ignoreIncomingChallenge" type="button">Neskôr</button>
         </div>
       </div>
-      <div id="facultyList" class="list" aria-live="polite"></div>
-    </div>
 
-    <!-- Hry pripravené na výzvu -->
-    <div class="card">
-      <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
-      <div class="small">Balíky otázok uložené zo študijných apiek</div>
-      <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
-    </div>
+      <!-- (Moje appky odstránené) -->
 
-    <!-- Výzva od spoluhráča (presunuté sem) -->
-    <div class="card" id="incomingChallengeCard" style="display:none;">
-      <h3 style="margin:0">Výzva od spoluhráča</h3>
-      <div class="small">Niekto ťa vyzval na duel</div>
+    </aside>
 
-      <div style="margin-top:10px; display:flex; gap:8px;">
-        <button class="btn btn-primary" id="acceptIncomingChallenge">Prijať výzvu</button>
-        <button class="btn btn-ghost" id="ignoreIncomingChallenge">Neskôr</button>
+    <section class="right">
+
+      <!-- Kvíz -->
+      <div class="card" id="quizCard">
+        <div id="quizIntro">
+          <div class="small">Kvíz</div>
+          <h2 id="quizTitle">Vyber oblasť</h2>
+          <div class="small">Po výbere oblasti sa načíta 10 otázok. Každý kvíz stojí 5 paragrafov.</div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn btn-primary" id="startQuizBtn" disabled type="button">Spustiť kvíz</button>
+            <button class="btn btn-ghost" id="resetBtn" type="button">Zrušiť</button>
+            <button class="btn" id="helpBtn" title="Pomoc" type="button">
+              <img src="assets/icons/info.svg" width="18" height="18" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div id="quizArea" style="display:none">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="small">Oblasť</div>
+              <h3 id="areaTitle" style="margin:6px 0 0 0"></h3>
+            </div>
+            <div style="text-align:right">
+              <div class="small">Otázka</div>
+              <div id="qIndex" style="font-weight:700">1 / 10</div>
+            </div>
+          </div>
+
+          <div class="question-box">
+            <div class="q-text" id="qText">Text otázky</div>
+            <div class="options" id="options"></div>
+
+            <div class="footer-row">
+              <div class="meta">Správne: <span id="correctCount">0</span> • Nesprávne: <span id="wrongCount">0</span></div>
+              <div>
+                <button class="btn btn-ghost" id="prevBtn" type="button">Predchádzajúca</button>
+                <button class="btn btn-primary" id="nextBtn" type="button">Ďalšia</button>
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <div class="small">Progres</div>
+              <div class="progress"><i id="progBar"></i></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- (Moje appky odstránené) -->
+      <!-- Hry a prípady -->
+      <div class="card">
+        <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
+        <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+          <button class="btn btn-primary" id="openMemoryBtn" type="button">Kartičky (Memory)</button>
+          <button class="btn" id="openCasesBtn" type="button">Prípady z praxe</button>
+        </div>
+        <div class="small" style="margin-top:10px;color:var(--muted)">
+          Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+        </div>
+      </div>
 
-  </div>
+      <!-- Admin -->
+      <div class="card">
+        <h3 id="adminTitle" style="margin:0">Admin a garant panel</h3>
+        <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
+      </div>
 
-  <div class="right">
-
-    <!-- Kvíz -->
-    <div class="card" id="quizCard">
-      <div id="quizIntro">
-        <div class="small">Kvíz</div>
-        <h2 id="quizTitle">Vyber oblasť</h2>
-        <div class="small">Po výbere oblasti sa načíta 10 otázok. Každý kvíz stojí 5 paragrafov.</div>
-
-        <div style="margin-top:12px;display:flex;gap:8px">
-          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť kvíz</button>
-          <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
-          <button class="btn" id="helpBtn" title="Pomoc">
-            <img src="assets/icons/info.svg" width="18" height="18" alt="">
+      <!-- Obchod -->
+      <div class="card">
+        <h3 id="shopTitle" style="margin:0">Obchod</h3>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button class="btn btn-primary" id="buy20" type="button">Kúpiť +20 paragrafov</button>
+          <button class="btn" id="buyPremium" type="button">Kúpiť PREMIUM</button>
+          <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
+            <img src="assets/icons/shop.svg" width="18" height="18" alt="">
           </button>
         </div>
       </div>
 
-      <div id="quizArea" style="display:none">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div class="small">Oblasť</div>
-            <h3 id="areaTitle" style="margin:6px 0 0 0"></h3>
-          </div>
-          <div style="text-align:right">
-            <div class="small">Otázka</div>
-            <div id="qIndex" style="font-weight:700">1 / 10</div>
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="q-text" id="qText">Text otázky</div>
-          <div class="options" id="options"></div>
-
-          <div class="footer-row">
-            <div class="meta">Správne: <span id="correctCount">0</span> • Nesprávne: <span id="wrongCount">0</span></div>
-            <div>
-              <button class="btn btn-ghost" id="prevBtn">Predchádzajúca</button>
-              <button class="btn btn-primary" id="nextBtn">Ďalšia</button>
-            </div>
-          </div>
-
-          <div style="margin-top:10px">
-            <div class="small">Progres</div>
-            <div class="progress"><i id="progBar"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hry a prípady -->
-    <div class="card">
-      <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
-      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
-      </div>
-      <div class="small" style="margin-top:10px;color:var(--muted)">
-        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
-      </div>
-    </div>
-
-    <!-- Admin -->
-    <div class="card">
-      <h3 id="adminTitle" style="margin:0">Admin a garant panel</h3>
-      <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
-    </div>
-
-    <!-- Obchod -->
-    <div class="card">
-      <h3 id="shopTitle" style="margin:0">Obchod</h3>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
-        <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
-        <button class="btn" id="openShop" title="Otvoriť obchod">
-          <img src="assets/icons/shop.svg" width="18" height="18" alt="">
-        </button>
-      </div>
-    </div>
-
+    </section>
   </div>
 </main>
 
@@ -215,10 +216,10 @@
   <div class="avatar-panel">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <h3 id="memoryTitle">Kartičky – matching</h3>
-      <button class="btn" id="closeMemory">Zavrieť</button>
+      <button class="btn" id="closeMemory" type="button">Zavrieť</button>
     </div>
     <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
-    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory">Reštartovať</button></div>
+    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory" type="button">Reštartovať</button></div>
   </div>
 </div>
 
@@ -227,7 +228,7 @@
   <div class="avatar-panel">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <h3 id="casesTitle">Prípady z praxe</h3>
-      <button class="btn" id="closeCases">Zavrieť</button>
+      <button class="btn" id="closeCases" type="button">Zavrieť</button>
     </div>
     <div id="caseContainer" style="margin-top:12px"></div>
   </div>
