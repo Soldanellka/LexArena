@@ -10,21 +10,16 @@
 
   <!-- HLAVNÝ ŠTÝL -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- drobné pomocné štýly pre in-tile duel (nezasahujú do pôvodného dizajnu) -->
   <style>
-    /* Drobná pomocná úprava pre in-tile duel */
-    .challenge-item .correct { background: rgba(34,197,94,0.06); border:1px solid rgba(34,197,94,0.12); }
-    .challenge-item .wrong { background: rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.08); }
-    .challenge-loader { font-size:13px; color:var(--muted,#666); margin-top:6px; }
+    /* len minimum, aby in-tile panel vyzeral korektne bez ďalších zmien */
+    #incomingChallengeCard .challenge-item { padding:8px; border-radius:6px; background:var(--card-bg,#fff); margin-bottom:8px; }
     #incomingQuizPanel .btn { min-width:90px; }
-    #confettiCanvasWrap { pointer-events:none; position:relative; overflow:hidden; }
-    /* Minimal helpers so tile looks OK even without styles.css */
-    .card { padding:12px; border-radius:10px; background:var(--card-bg,#fff); margin-bottom:12px; box-shadow:0 1px 0 rgba(0,0,0,0.04); }
-    .btn { padding:8px 10px; border-radius:8px; border:1px solid transparent; background:#f3f4f6; cursor:pointer; }
-    .btn-primary { background:#2563eb; color:#fff; }
-    .btn-ghost { background:transparent; border:1px solid rgba(0,0,0,0.06); }
-    .small { font-size:13px; color:var(--muted,#666); }
-    .list { display:block; }
-    .challenge-item { padding:8px; border-radius:6px; background:var(--card-bg,#fff); margin-bottom:8px; }
+    .challenge-loader { font-size:13px; color:var(--muted,#666); margin-top:6px; }
+    .correct { background: rgba(34,197,94,0.06); border:1px solid rgba(34,197,94,0.12); }
+    .wrong { background: rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.08); }
+    #confettiCanvasWrap { position:relative; height:120px; overflow:hidden; pointer-events:none; }
   </style>
 </head>
 
@@ -65,7 +60,7 @@
 
   <main class="container">
  
-  <div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
+<div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
     <div style="font-size:18px; font-weight:600; margin-bottom:8px;">
       Bol si vyzvaný na duel!
     </div>
