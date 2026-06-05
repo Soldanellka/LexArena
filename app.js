@@ -179,4 +179,114 @@ if (savedNick) {
   });
 })();
 // --- END ---
+// --- START: Safe accept handler for incoming challenges ---
+(function(){
+  const listEl = document.getElementById('incomingChallengeList');
+  const cardEl = document.getElementById('incomingChallengeCard');
+
+  function updateCardVisibility() {
+    if (!cardEl) return;
+    const has = listEl && listEl.children.length > 0;
+    cardEl.style.display = has ? 'block' : 'none';
+  }
+
+  function isDuelVisible() {
+    const duelEl = document.getElementById('lexarenaDuelUI');
+    if (!duelEl) return false;
+    // check class 'hidden' or computed display
+    const hasHiddenClass = duelEl.classList && duelEl.classList.contains('hidden');
+    const disp = getComputedStyle(duelEl).display;
+    return !hasHiddenClass && disp !== 'none';
+  }
+
+  // show small inline loader on the challenge item while starting duel
+  function showItemLoader(item) {
+    if (!item) return;
+    let loader = item.querySelector('.challenge-loader');
+    if (!loader) {
+      loader = document.createElement('span');
+      loader.className = 'challenge-loader';
+      loader.textContent = ' Spúšťam duel…';
+      loader.style = 'font-size:13px;color:var(--muted,#666);margin-left:8px';
+      item.querySelector('.challenge-text')?.appendChild(loader);
+    }
+    return loader;
+  }
+
+  // delegated click handler for accept buttons
+  document.addEventListener('click', function onDocClick(e){
+    const btn = e.target.closest && e.target.closest('.accept-challenge');
+    if (!btn) return;
+    e.preventDefault();
+
+    const item = btn.closest('.challenge-item');
+    if (!item) return;
+
+    // show loader so user sees action
+    const loader = showItemLoader(item);
+
+    // Try to call startDuelFromExternal if available
+    const startFn = window.startDuelFromExternal;
+    if (typeof startFn === 'function') {
+      try {
+        startFn();
+      } catch(err) {
+        console.error('startDuelFromExternal threw', err);
+      }
+      // poll for duel UI visibility, then remove item
+      let attempts = 0;
+      const poll = setInterval(() => {
+        attempts++;
+        if (isDuelVisible() || attempts > 12) { // ~2.4s timeout
+          clearInterval(poll);
+          item.remove();
+          updateCardVisibility();
+        }
+      }, 200);
+      return;
+    }
+
+    // Fallback: open duel.html in new tab and remove item after short delay
+    const duelUrl = '/duel.html';
+    try {
+      window.open(duelUrl, '_blank');
+    } catch (err) {
+      // if popup blocked, navigate current tab
+      window.location.href = duelUrl;
+    }
+    setTimeout(() => {
+      item.remove();
+      updateCardVisibility();
+    }, 700);
+  });
+
+  // delegated click handler for ignore buttons
+  document.addEventListener('click', function onDocClickIgnore(e){
+    const btn = e.target.closest && e.target.closest('.ignore-challenge');
+    if (!btn) return;
+    e.preventDefault();
+    const item = btn.closest('.challenge-item');
+    if (item) item.remove();
+    updateCardVisibility();
+  });
+
+  // Accept first / Ignore all controls (if present)
+  const acceptAny = document.getElementById('acceptAnyChallenge');
+  if (acceptAny) acceptAny.addEventListener('click', () => {
+    const firstAccept = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+    if (firstAccept) firstAccept.click();
+  });
+
+  const ignoreAll = document.getElementById('ignoreAllChallenges');
+  if (ignoreAll) ignoreAll.addEventListener('click', () => {
+    if (listEl) listEl.innerHTML = '';
+    updateCardVisibility();
+  });
+
+  // ensure card visibility on load
+  document.addEventListener('DOMContentLoaded', updateCardVisibility);
+  // also expose helper for debugging
+  window.__isDuelVisible = isDuelVisible;
+})();
+// --- END: Safe accept handler for incoming challenges ---
 
