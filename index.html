@@ -10,6 +10,22 @@
 
   <!-- HLAVNÝ ŠTÝL -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Drobná pomocná úprava pre in-tile duel */
+    .challenge-item .correct { background: rgba(34,197,94,0.06); border:1px solid rgba(34,197,94,0.12); }
+    .challenge-item .wrong { background: rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.08); }
+    .challenge-loader { font-size:13px; color:var(--muted,#666); margin-top:6px; }
+    #incomingQuizPanel .btn { min-width:90px; }
+    #confettiCanvasWrap { pointer-events:none; position:relative; overflow:hidden; }
+    /* Minimal helpers so tile looks OK even without styles.css */
+    .card { padding:12px; border-radius:10px; background:var(--card-bg,#fff); margin-bottom:12px; box-shadow:0 1px 0 rgba(0,0,0,0.04); }
+    .btn { padding:8px 10px; border-radius:8px; border:1px solid transparent; background:#f3f4f6; cursor:pointer; }
+    .btn-primary { background:#2563eb; color:#fff; }
+    .btn-ghost { background:transparent; border:1px solid rgba(0,0,0,0.06); }
+    .small { font-size:13px; color:var(--muted,#666); }
+    .list { display:block; }
+    .challenge-item { padding:8px; border-radius:6px; background:var(--card-bg,#fff); margin-bottom:8px; }
+  </style>
 </head>
 
 <body>
@@ -38,7 +54,7 @@
 
       <div class="pill small" id="premiumBadge">FREE</div>
 
-      <button class="btn" id="themeToggleBtn">
+      <button class="btn" id="themeToggleBtn" title="Prepni tému">
         <img id="themeIcon" src="assets/icons/moon.svg" alt="Prepínač témy" width="18" height="18">
       </button>
 
@@ -49,7 +65,7 @@
 
   <main class="container">
  
-<div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
+  <div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
     <div style="font-size:18px; font-weight:600; margin-bottom:8px;">
       Bol si vyzvaný na duel!
     </div>
@@ -67,18 +83,59 @@
             <div class="small">Vyber oblasť</div>
           </div>
           <div style="display:flex;gap:8px;align-items:center">
-            <img src="assets/icons/book.svg" width="28" height="28">
-            <img src="assets/icons/gavel.svg" width="28" height="28">
+            <img src="assets/icons/book.svg" width="28" height="28" alt="">
+            <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
           </div>
         </div>
         <div id="facultyList" class="list"></div>
       </div>
 
-      <!-- ✨ Moje appky -->
-      <div class="card" role="region" aria-labelledby="appsTitle">
-        <h3 id="appsTitle" style="margin:0">Moje appky</h3>
-        <div class="small">Rýchly prístup k tvojim starším projektom</div>
-        <div id="appsList" class="list" role="list" style="margin-top:10px"></div>
+      <!-- 🔔 Výzva od spoluhráča (nahrádza "Moje appky") -->
+      <div class="card" id="incomingChallengeCard" style="display:block;">
+        <h3 id="incomingChallengeTitle" style="margin:0">Bol si vyzvaný na duel</h3>
+        <div class="small">Výzvy od spoluhráčov sa zobrazia tu</div>
+
+        <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
+          <div id="incomingChallengeList" class="list" style="min-height:40px;">
+            <!-- dynamicky vkladané výzvy -->
+          </div>
+
+          <div style="display:flex; gap:8px;">
+            <button id="acceptAnyChallenge" class="btn btn-primary" type="button">Prijať prvú</button>
+            <button id="ignoreAllChallenges" class="btn btn-ghost" type="button">Ignorovať všetky</button>
+          </div>
+        </div>
+
+        <!-- INLINE QUIZ PANEL (skryté, zobrazí sa po Prijať) -->
+        <div id="incomingQuizPanel" style="display:none; margin-top:12px; border-top:1px solid var(--muted); padding-top:12px;">
+          <div id="quizHeader" style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:600">Duel – kvíz</div>
+            <div style="font-size:13px" id="quizProgress">Otázka 0/0</div>
+          </div>
+
+          <div id="quizBody" style="margin-top:10px">
+            <div id="quizQuestion" style="font-weight:600; margin-bottom:8px">Otázka text</div>
+            <div id="quizAnswers" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
+
+            <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+              <div style="font-size:13px">
+                Ty: <span id="scoreYou">0</span> • Súper: <span id="scoreOpp">0</span>
+              </div>
+              <div>
+                <button id="quizNextBtn" class="btn btn-primary" type="button" style="display:none">Ďalšia</button>
+                <button id="quizCloseBtn" class="btn btn-ghost" type="button">Zavrieť</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="quizResult" style="display:none; text-align:center; margin-top:12px">
+            <h4 id="quizResultTitle"></h4>
+            <div id="confettiCanvasWrap" style="position:relative;height:120px"></div>
+            <div style="margin-top:8px">
+              <button id="quizFinishBtn" class="btn btn-primary" type="button">Hotovo</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- ⭐ Hry pripravené na výzvu -->
@@ -102,8 +159,8 @@
           <div style="margin-top:12px;display:flex;gap:8px">
             <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť kvíz</button>
             <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
-            <button class="btn" id="helpBtn">
-              <img src="assets/icons/info.svg" width="18" height="18">
+            <button class="btn" id="helpBtn" type="button">
+              <img src="assets/icons/info.svg" width="18" height="18" alt="">
             </button>
           </div>
         </div>
@@ -138,9 +195,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Hry a prípady -->
+      </div><!-- Hry a prípady -->
       <div class="card">
         <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
         <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
@@ -164,8 +219,8 @@
         <div style="display:flex;gap:8px;margin-top:8px">
           <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
           <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
-          <button class="btn" id="openShop">
-            <img src="assets/icons/shop.svg" width="18" height="18">
+          <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
+            <img src="assets/icons/shop.svg" width="18" height="18" alt="">
           </button>
         </div>
       </div>
@@ -210,7 +265,6 @@
     });
   </script>
 
-
 <script type="module" src="lexarena/challenges.js"></script>
 
   <!-- Ostatné moduly -->
@@ -229,6 +283,271 @@
   <script type="module" src="app.js"></script>
   <script type="module" src="init.js"></script>
 
-</body>
+<!-- Incoming-challenge in-tile quiz logic (NO NAVIGATION, SAFE) -->
+<script>
+/* --- START: Incoming challenge quiz in-tile (NO NAVIGATION) --- */
+(function(){
+  const listEl = document.getElementById('incomingChallengeList');
+  const acceptAnyBtn = document.getElementById('acceptAnyChallenge');
+  const ignoreAllBtn = document.getElementById('ignoreAllChallenges');
+  const quizPanel = document.getElementById('incomingQuizPanel');
+  const quizQuestionEl = document.getElementById('quizQuestion');
+  const quizAnswersEl = document.getElementById('quizAnswers');
+  const quizProgressEl = document.getElementById('quizProgress');
+  const scoreYouEl = document.getElementById('scoreYou');
+  const scoreOppEl = document.getElementById('scoreOpp');
+  const quizNextBtn = document.getElementById('quizNextBtn');
+  const quizCloseBtn = document.getElementById('quizCloseBtn');
+  const quizResultEl = document.getElementById('quizResult');
+  const quizResultTitle = document.getElementById('quizResultTitle');
+  const quizFinishBtn = document.getElementById('quizFinishBtn');
+  const confettiWrap = document.getElementById('confettiCanvasWrap');
 
+  let currentChallengeItem = null;
+  let questions = [];
+  let qIndex = 0;
+  let scoreYou = 0;
+  let scoreOpp = 0;
+
+  async function fetchQuestionsForChallenge(item) {
+    const url = item?.dataset?.challengeUrl;
+    if (url) {
+      try {
+        const res = await fetch(url, {cache:'no-store'});
+        if (res.ok) {
+          const data = await res.json();
+          return data.questions && data.questions.slice(0,5) || [];
+        }
+      } catch(e) {
+        console.warn('Fetch challenge failed', e);
+      }
+    }
+    // fallback demo questions
+    return [
+      { text: 'Ktoré tvrdenie je správne?', answers:['A','B','C','D'], correctIndex:0 },
+      { text: 'Čo upravuje pracovné právo?', answers:['Zmluvy','Tresty','Dane','Šport'], correctIndex:0 },
+      { text: 'Ktorý inštitút patrí do občianskeho práva?', answers:['Zmluva','Trest','Súd','Parlament'], correctIndex:0 },
+      { text: 'Kedy vzniká zmluva?', answers:['Podpísaním','Narodením','Smrťou','Registráciou'], correctIndex:0 },
+      { text: 'Čo je právna norma?', answers:['Pravidlo správania','Osoba','Budova','Doklad'], correctIndex:0 }
+    ];
+  }
+
+  function renderQuestion() {
+    const q = questions[qIndex];
+    if (!q) return;
+    if (quizQuestionEl) quizQuestionEl.textContent = q.text;
+    if (!quizAnswersEl) return;
+    quizAnswersEl.innerHTML = '';
+    q.answers.forEach((a, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'btn';
+      btn.type = 'button';
+      btn.textContent = a;
+      btn.dataset.index = i;
+      btn.style = 'text-align:left;padding:10px';
+      btn.addEventListener('click', () => onAnswerClick(i, btn));
+      quizAnswersEl.appendChild(btn);
+    });
+    if (quizProgressEl) quizProgressEl.textContent = `Otázka ${qIndex+1}/${questions.length}`;
+    if (quizNextBtn) quizNextBtn.style.display = 'none';
+  }
+
+  function onAnswerClick(selectedIndex, btn) {
+    if (!quizAnswersEl) return;
+    Array.from(quizAnswersEl.children).forEach(b => b.disabled = true);
+    const q = questions[qIndex];
+    const correct = q.correctIndex === selectedIndex;
+    const opponentCorrect = typeof q.opponentCorrect !== 'undefined' ? !!q.opponentCorrect : (Math.random() < 0.5);
+    if (correct) scoreYou++;
+    if (opponentCorrect) scoreOpp++;
+    if (correct) btn.classList.add('correct'); else btn.classList.add('wrong');
+    const oppNote = document.createElement('div');
+    oppNote.style = 'margin-top:8px;font-size:13px;color:var(--muted,#666)';
+    oppNote.textContent = opponentCorrect ? 'Súper získal bod' : 'Súper nezískal bod';
+    quizAnswersEl.appendChild(oppNote);
+    if (scoreYouEl) scoreYouEl.textContent = scoreYou;
+    if (scoreOppEl) scoreOppEl.textContent = scoreOpp;
+    if (qIndex < questions.length - 1) {
+      if (quizNextBtn) quizNextBtn.style.display = 'inline-block';
+    } else {
+      setTimeout(showResult, 600);
+    }
+  }
+
+  function showResult() {
+    const body = document.getElementById('quizBody');
+    if (body) body.style.display = 'none';
+    if (quizResultEl) quizResultEl.style.display = 'block';
+    if (scoreYou > scoreOpp) {
+      if (quizResultTitle) quizResultTitle.textContent = `Vyhrala si! ${scoreYou} : ${scoreOpp}`;
+      launchConfetti();
+    } else if (scoreYou < scoreOpp) {
+      if (quizResultTitle) quizResultTitle.textContent = `Prehrala si ${scoreYou} : ${scoreOpp}`;
+    } else {
+      if (quizResultTitle) quizResultTitle.textContent = `Remíza ${scoreYou} : ${scoreOpp}`;
+    }
+  }
+
+  function launchConfetti() {
+    if (!confettiWrap) return;
+    confettiWrap.innerHTML = '';
+    const colors = ['#ff4d4f','#ffd666','#73d13d','#40a9ff','#9254de'];
+    for (let i=0;i<40;i++){
+      const el = document.createElement('div');
+      el.style.position = 'absolute';
+      el.style.left = (Math.random()*100) + '%';
+      el.style.top = '-10px';
+      el.style.width = (6 + Math.random()*8) + 'px';
+      el.style.height = (8 + Math.random()*10) + 'px';
+      el.style.background = colors[Math.floor(Math.random()*colors.length)];
+      el.style.opacity = 0.95;
+      el.style.transform = `rotate(${Math.random()*360}deg)`;
+      el.style.borderRadius = '2px';
+      el.style.transition = `transform 2s linear, top 2s linear, opacity 2s linear`;
+      confettiWrap.appendChild(el);
+      setTimeout(()=> {
+        el.style.top = (80 + Math.random()*40) + 'px';
+        el.style.transform = `translateY(0) rotate(${Math.random()*720}deg)`;
+        el.style.opacity = 0.9;
+      }, 20 + i*10);
+      setTimeout(()=> el.remove(), 2600);
+    }
+  }
+
+  async function startQuizForItem(item) {
+    if (!item) return;
+    currentChallengeItem = item;
+    // show loader
+    const loader = document.createElement('div');
+    loader.className = 'challenge-loader';
+    loader.textContent = ' Načítavam otázky…';
+    item.appendChild(loader);
+
+    questions = await fetchQuestionsForChallenge(item);
+
+    loader.remove();
+
+    if (!questions || questions.length === 0) {
+      const err = document.createElement('div');
+      err.style = 'margin-top:8px;color:#b91c1c;font-size:13px';
+      err.textContent = 'Nepodarilo sa načítať otázky. Skús neskôr.';
+      item.appendChild(err);
+      setTimeout(()=> err.remove(), 4000);
+      return;
+    }
+
+    qIndex = 0; scoreYou = 0; scoreOpp = 0;
+    if (scoreYouEl) scoreYouEl.textContent = '0';
+    if (scoreOppEl) scoreOppEl.textContent = '0';
+    if (quizResultEl) quizResultEl.style.display = 'none';
+    const body = document.getElementById('quizBody');
+    if (body) body.style.display = 'block';
+    if (quizPanel) quizPanel.style.display = 'block';
+    renderQuestion();
+  }
+
+  // Delegated click handler: prevent navigation/new tab and handle accept/ignore
+  document.addEventListener('click', (e) => {
+    const acceptBtn = e.target.closest && e.target.closest('.accept-challenge');
+    if (acceptBtn) {
+      e.preventDefault(); e.stopPropagation();
+      const item = acceptBtn.closest('.challenge-item');
+      if (item) startQuizForItem(item);
+      return;
+    }
+
+    const ignoreBtn = e.target.closest && e.target.closest('.ignore-challenge');
+    if (ignoreBtn) {
+      e.preventDefault(); e.stopPropagation();
+      const item = ignoreBtn.closest('.challenge-item');
+      if (item) item.remove();
+      return;
+    }
+
+    // Prevent anchor navigation inside the challenge card
+    const anchor = e.target.closest && e.target.closest('a');
+    if (anchor && anchor.closest && anchor.closest('#incomingChallengeCard')) {
+      e.preventDefault(); e.stopPropagation();
+    }
+  });
+
+  if (acceptAnyBtn) acceptAnyBtn.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    const first = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+    if (first) first.click();
+  });
+  if (ignoreAllBtn) ignoreAllBtn.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    if (listEl) listEl.innerHTML = '';
+  });
+
+  if (quizNextBtn) quizNextBtn.addEventListener('click', () => {
+    qIndex++;
+    renderQuestion();
+  });
+  if (quizCloseBtn) quizCloseBtn.addEventListener('click', () => {
+    if (quizPanel) quizPanel.style.display = 'none';
+  });
+  if (quizFinishBtn) quizFinishBtn.addEventListener('click', () => {
+    if (currentChallengeItem) currentChallengeItem.remove();
+    if (quizPanel) quizPanel.style.display = 'none';
+  });
+
+  // helper to add demo challenge items (for testing)
+  window.__addDemoChallenge = function(text, url) {
+    if (!listEl) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'challenge-item';
+    if (url) wrap.dataset.challengeUrl = url;
+    wrap.style = 'padding:8px;border-radius:6px;background:var(--card-bg,#fff);margin-bottom:8px';
+    const txt = document.createElement('div');
+    txt.className = 'challenge-text';
+    txt.textContent = text || 'Demo výzva';
+    wrap.appendChild(txt);
+    const actions = document.createElement('div');
+    actions.style = 'display:flex;gap:8px;margin-top:8px';
+    const accept = document.createElement('button');
+    accept.className = 'btn btn-primary accept-challenge';
+    accept.type = 'button';
+    accept.textContent = 'Prijať';
+    const ignore = document.createElement('button');
+    ignore.className = 'btn btn-ghost ignore-challenge';
+    ignore.type = 'button';
+    ignore.textContent = 'Ignorovať';
+    actions.appendChild(accept);
+    actions.appendChild(ignore);
+    wrap.appendChild(actions);
+    listEl.appendChild(wrap);
+  };
+
+  // auto-insert demo challenge if none
+  document.addEventListener('DOMContentLoaded', () => {
+    if (listEl && listEl.children.length === 0) {
+      window.__addDemoChallenge('Jana ťa vyzvala na duel – Pracovné právo');
+    }
+  });
+
+  // Ensure startDuelFromExternal triggers in-tile behavior (no new tab)
+  if (window.startDuelFromExternal && typeof window.startDuelFromExternal === 'function') {
+    const original = window.startDuelFromExternal;
+    window.startDuelFromExternal = function() {
+      const firstAccept = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+      if (firstAccept) {
+        firstAccept.click();
+        return;
+      }
+      try { original(); } catch(e){ console.warn('original startDuelFromExternal failed', e); }
+    };
+  } else {
+    window.startDuelFromExternal = function() {
+      const firstAccept = listEl && listEl.querySelector('.challenge-item .accept-challenge');
+      if (firstAccept) firstAccept.click();
+    };
+  }
+
+})();
+</script>
+<!-- --- END --- -->
+
+</body>
 </html>
