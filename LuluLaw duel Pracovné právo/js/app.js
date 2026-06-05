@@ -3,7 +3,22 @@
 // Must be loaded after other modules
 
 (function () {
-  // Lokálne (neglobálne) premenné, aby sa predišlo "already been declared"
+
+  /* ---------------------------------------------------------
+     1) Zachytávanie balíka z externej apky (LexArena ingest)
+  --------------------------------------------------------- */
+  const params = new URLSearchParams(window.location.search);
+  const balik = params.get("balik");
+
+  if (balik) {
+    localStorage.setItem("prijatyBalik", balik);
+    window.history.replaceState({}, document.title, "/");
+    window.dispatchEvent(new Event("balik-prisiel"));
+  }
+
+  /* ---------------------------------------------------------
+     2) Lokálne premenné (aby sa predišlo "already declared")
+  --------------------------------------------------------- */
   let themeToggleBtn = null;
   let modernToggleBtn = null;
   let topicsGridEl = null;
@@ -13,6 +28,9 @@
 
   const LS_COINS = "duel_coins_v1";
 
+  /* ---------------------------------------------------------
+     3) Globálne štýly
+  --------------------------------------------------------- */
   function injectGlobalStyles() {
     const id = "app-global-styles";
     if (document.getElementById(id)) return;
@@ -28,6 +46,9 @@
     document.head.appendChild(s);
   }
 
+  /* ---------------------------------------------------------
+     4) Theme toggle
+  --------------------------------------------------------- */
   function bindThemeToggle() {
     if (!themeToggleBtn) return;
     function setThemeIcon() {
@@ -40,6 +61,9 @@
     setThemeIcon();
   }
 
+  /* ---------------------------------------------------------
+     5) Modern UI toggle
+  --------------------------------------------------------- */
   function bindModernToggle() {
     if (!modernToggleBtn) return;
     function setModernState() {
@@ -52,10 +76,16 @@
     setModernState();
   }
 
+  /* ---------------------------------------------------------
+     6) Coins
+  --------------------------------------------------------- */
   function getCoins() { return Number(localStorage.getItem(LS_COINS) || 0); }
   function addCoins(n) { const v = getCoins() + n; localStorage.setItem(LS_COINS, v); updateCoinUI(); return v; }
   function updateCoinUI() { if (coinCountEl) coinCountEl.textContent = getCoins(); }
 
+  /* ---------------------------------------------------------
+     7) Konfety
+  --------------------------------------------------------- */
   function fireConfetti() {
     if (typeof confetti !== "function") return;
     const duration = 1500;
@@ -67,6 +97,9 @@
     })();
   }
 
+  /* ---------------------------------------------------------
+     8) Debug: double-click na kartu → duel result
+  --------------------------------------------------------- */
   function bindPlayAgainAndGrid() {
     if (playAgainBtn) {
       playAgainBtn.addEventListener("click", () => {
@@ -75,7 +108,6 @@
     }
 
     if (!topicsGridEl) return;
-    // dblclick to show duel result (debug)
     topicsGridEl.addEventListener("dblclick", (e) => {
       const card = e.target.closest(".topic-card");
       if (!card) return;
@@ -84,7 +116,9 @@
     });
   }
 
-  // Safe loader for topics: if loadTopics exists, call it; otherwise try to render topics from data files
+  /* ---------------------------------------------------------
+     9) Bezpečné načítanie tém
+  --------------------------------------------------------- */
   function safeLoadTopics() {
     if (typeof loadTopics === "function") {
       try {
@@ -95,7 +129,6 @@
       }
     }
 
-    // Fallback: try to fetch a list of topics from data folder (A1.json as minimal test)
     fetch("data/A1.json")
       .then(r => {
         if (!r.ok) throw new Error("A1.json not found");
@@ -113,10 +146,20 @@
       });
   }
 
+  /* ---------------------------------------------------------
+     10) UI pre externé balíky (výzvy)
+  --------------------------------------------------------- */
+  function showExternalChallenge(data) {
+    // Toto si môžeš neskôr nahradiť vlastným modalom
+    alert("Prišla výzva z externej apky:\n" + JSON.stringify(data, null, 2));
+  }
+
+  /* ---------------------------------------------------------
+     11) INIT
+  --------------------------------------------------------- */
   function init() {
     injectGlobalStyles();
 
-    // support multiple possible IDs (index.html changed during debugging)
     themeToggleBtn = document.getElementById("themeToggleBtn") || document.getElementById("themeToggle");
     modernToggleBtn = document.getElementById("modernToggleBtn") || document.getElementById("modernToggle");
     topicsGridEl = document.getElementById("topicsGrid") || document.querySelector(".topics-grid") || document.querySelector(".topics");
@@ -129,8 +172,22 @@
     bindPlayAgainAndGrid();
     updateCoinUI();
 
-    // load topics and render (safe)
     safeLoadTopics();
+
+    /* ---------------------------------------------------------
+       12) Listener na externý balík
+    --------------------------------------------------------- */
+    window.addEventListener("balik-prisiel", () => {
+      const raw = localStorage.getItem("prijatyBalik");
+      if (!raw) return;
+
+      try {
+        const data = JSON.parse(raw);
+        showExternalChallenge(data);
+      } catch (e) {
+        console.error("Neviem spracovať balík:", e);
+      }
+    });
   }
 
   // Expose init globally so index.html can call it
