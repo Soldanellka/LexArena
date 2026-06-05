@@ -1,185 +1,134 @@
-// ===============================
-// duel.js — FINÁLNA VERZIA
-// ===============================
-// ===============================
-// Načítanie balíka podľa tokenu alebo URL
-// ===============================
+// ===============================================
+// LexArena — DUEL ENGINE (prijíma balíky z externých apk)
+// ===============================================
 
-const urlParams = new URLSearchParams(location.search);
-const token = urlParams.get("token");
-const encoded = urlParams.get("data");
-
-let pkg = null;
-
-// 1️⃣ Ak je balík v URL → dekódujeme ho
-if (encoded) {
+// 1) Načítanie nicku hráča z LexAreny
+function getPlayerNick() {
   try {
-    pkg = JSON.parse(atob(decodeURIComponent(encoded)));
-
-    // uložíme ho do localStorage, aby duel fungoval ďalej
-    localStorage.setItem("duel_package_" + token, JSON.stringify(pkg));
-  } catch (e) {
-    console.error("Chyba pri dekódovaní balíka:", e);
+    const u = JSON.parse(localStorage.getItem("lexarena_user"));
+    return u?.nick || "Hráč";
+  } catch {
+    return "Hráč";
   }
 }
 
-// 2️⃣ Ak balík nebol v URL → skúsime localStorage (napr. odosielateľ)
-if (!pkg) {
-  pkg = JSON.parse(localStorage.getItem("duel_package_" + token));
+// 2) Uloženie výsledku duelu do LexAreny
+function saveDuelHistory(result) {
+  const key = "lexarena_duel_history";
+  const arr = JSON.parse(localStorage.getItem(key) || "[]");
+  arr.push(result);
+  localStorage.setItem(key, JSON.stringify(arr));
 }
 
-// 3️⃣ Ak stále nič → duel sa nedá spustiť
-if (!pkg) {
-  alert("Balík pre tento duel sa nenašiel.");
-  window.location.href = "index.html";
+// 3) Spustenie duelu po prijatí balíka
+function startDuelFromExternalApp(pkg) {
+  console.log("LexArena prijala balík:", pkg);
+
+  const playerNick = getPlayerNick();
+
+  // UI — zobrazíme modal výzvy
+  const modal = document.getElementById("externalChallengeModal");
+  const modalTitle = document.getElementById("externalChallengeTitle");
+  const modalBtn = document.getElementById("externalChallengeStart");
+
+  if (!modal) {
+    console.error("Chýba modal pre výzvy v LexArene.");
+    return;
+  }
+
+  modalTitle.textContent = `Výzva z externého modulu: ${pkg.topicName || "Neznámy okruh"}`;
+  modal.classList.remove("hidden");
+
+  modalBtn.onclick = () => {
+    modal.classList.add("hidden");
+    launchDuel(pkg, playerNick);
+  };
 }
 
-// Balík rozbalíme do globálnych premenných
-window.duelQuestions = pkg.quiz || [];
-window.duelTiles = pkg.tiles || [];
-window.duelCases = pkg.cases || [];
+// 4) Spustenie duelu (hlavná logika)
+function launchDuel(pkg, playerNick) {
+  console.log("Spúšťam duel v LexArene…");
 
-// Dočasné nastavenia pre právnické duely
-const settings = {
-  questionsCount: 5,
-  enableTiles: true,
-  enableCases: true
-};
+  const questions = pkg.quiz || [];
+  const tiles = pkg.tiles || [];
+  const cases = pkg.cases || [];
 
-// Import odmien z LexAreny
-import {
-  rewardChallengeAccepted,
-  rewardDuelWin
-} from "./lexarena/rewards.js";
+  let index = 0;
+  let scorePlayer = 0;
+  let scoreOpponent = 0;
 
-// Import výziev
-import { saveDuelResult } from "./lexarena/challenges.js";
+  const duelUI = document.getElementById("lexarenaDuelUI");
+  const qText = document.getElementById("lexarenaDuelQuestion");
+  const answers = document.querySelectorAll(".lexarenaDuelAnswer");
+  const progress = document.getElementById("lexarenaDuelProgress");
 
+  duelUI.classList.remove("hidden");
 
-// Nick hráča
-const playerNick = localStorage.getItem("playerNick") || "Hráč";
+  function showQuestion() {
+    const q = questions[index];
+    qText.textContent = q.question;
+    progress.textContent = `Otázka ${index + 1}/${questions.length}`;
 
-// --- STAV ---
-let playerScore = 0;
-let opponentScore = 0;
-let currentQuestionIndex = 0;
-let totalQuestions = settings.questionsCount;
+    answers.forEach((btn, i) => {
+      btn.textContent = q.answers[i];
+      btn.onclick = () => handleAnswer(i);
+    });
+  }
 
-// --- ELEMENTY ---
-const matchmakingScreen = document.getElementById("duel-matchmaking");
-const countdownScreen = document.getElementById("duel-countdown");
-const questionsScreen = document.getElementById("duel-phase-questions");
-const resultScreen = document.getElementById("duel-result");
-const nickSlot = document.getElementById("duelPlayerNick");
-if (nickSlot) nickSlot.textContent = playerNick;
+  function handleAnswer(i) {
+    const q = questions[index];
 
-// --- ZRUŠENIE MATCHMAKINGU ---
-document.getElementById("cancel-matchmaking").onclick = () => {
-  window.location.href = "index.html";
-};
+    if (i === q.correct) scorePlayer++;
+    else scoreOpponent++;
 
-// --- SIMULÁCIA NÁJDENIA SÚPERA ---
+    index++;
 
-// ===============================
-// ODPOČET 3–2–1
-// ===============================
-function startCountdown() {
-  matchmakingScreen.style.display = "none";
-  countdownScreen.style.display = "block";
+    if (index < questions.length) showQuestion();
+    else finishDuel();
+  }
 
-  let n = 3;
-  const el = document.getElementById("countdown-number");
+  function finishDuel() {
+    duelUI.classList.add("hidden");
 
-  const timer = setInterval(() => {
-    n--;
-    el.textContent = n;
+    const resultUI = document.getElementById("lexarenaDuelResult");
+    const title = document.getElementById("lexarenaDuelResultTitle");
+    const scoreA = document.getElementById("lexarenaDuelScoreA");
+    const scoreB = document.getElementById("lexarenaDuelScoreB");
 
-    if (n === 0) {
-      clearInterval(timer);
-      startQuestions();
+    scoreA.textContent = `${playerNick}: ${scorePlayer}`;
+    scoreB.textContent = `Súper: ${scoreOpponent}`;
+
+    if (scorePlayer > scoreOpponent) {
+      title.textContent = "Vyhral si!";
+      addCoins(10); // odmena v LexArene
+    } else {
+      title.textContent = "Prehral si";
     }
-  }, 1000);
-}
 
-// ===============================
-// FÁZA 1 – OTÁZKY (SIMULÁCIA)
-// ===============================
-function startQuestions() {
-  countdownScreen.style.display = "none";
-  questionsScreen.style.display = "block";
+    resultUI.classList.remove("hidden");
+
+    // uloženie výsledku
+    saveDuelHistory({
+      player: playerNick,
+      topic: pkg.topicName,
+      scorePlayer,
+      scoreOpponent,
+      timestamp: Date.now()
+    });
+  }
+
   showQuestion();
 }
-function showQuestion() {
-  const q = window.duelQuestions[currentQuestionIndex];
 
-  document.getElementById("questions-progress").textContent =
-    `Otázka ${currentQuestionIndex + 1}/${totalQuestions}`;
+// 5) Počúvanie na balík z externých apk
+window.addEventListener("balik-prisiel", () => {
+  const raw = localStorage.getItem("prijatyBalik");
+  if (!raw) return;
 
-  document.getElementById("question-text").textContent = q.question;
-
-  const buttons = document.querySelectorAll(".answer-tile");
-  buttons.forEach((btn, i) => {
-    btn.textContent = q.answers[i];
-    btn.onclick = () => handleAnswer(i);
-  });
-}
-function handleAnswer(index) {
-  const q = window.duelQuestions[currentQuestionIndex];
-
-  if (index === q.correct) {
-    playerScore++;
-  } else {
-    opponentScore++;
+  try {
+    const pkg = JSON.parse(raw);
+    startDuelFromExternalApp(pkg);
+  } catch (e) {
+    console.error("Chyba pri spracovaní balíka:", e);
   }
-
-  document.getElementById("score-a").textContent = `Ty: ${playerScore}`;
-  document.getElementById("score-b").textContent = `Súper: ${opponentScore}`;
-
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < totalQuestions) {
-    showQuestion();
-  } else {
-    finishDuel();
-  }
-}
-
-// ===============================
-// VÝSLEDKY
-// ===============================
-function finishDuel() {
-  questionsScreen.style.display = "none";
-  resultScreen.style.display = "block";
-
-  document.getElementById("result-score-a").textContent = playerScore + " bodov";
-  document.getElementById("result-score-b").textContent = opponentScore + " bodov";
-
-  if (playerScore > opponentScore) {
-    document.getElementById("duel-result-title").textContent = "Vyhral si!";
-    rewardDuelWin(); // odmena za výhru
-  } else {
-    document.getElementById("duel-result-title").textContent = "Prehral si";
-  }
-// Uloženie výsledku do výzvy
-
-const nickResultSlot = document.getElementById("resultPlayerNick");
-if (nickResultSlot) nickResultSlot.textContent = playerNick;
-
-}
-
-// ===============================
-// TLAČIDLÁ
-// ===============================
-document.getElementById("play-again").onclick = () => {
-  window.location.reload();
-};
-
-document.getElementById("back-home").onclick = () => {
-  window.location.href = "index.html";
-};
-// Spustenie duelu po načítaní balíka
-
-// Spusti duel až keď je stránka načítaná
-window.addEventListener("DOMContentLoaded", () => {
-  startCountdown();
 });
