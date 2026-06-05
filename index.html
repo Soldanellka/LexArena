@@ -87,15 +87,6 @@
     </div>
   </div>
 
-  <!-- pôvodný incoming challenge banner -->
-  <div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
-    <div style="font-size:18px; font-weight:600; margin-bottom:8px;">
-      Bol si vyzvaný na duel!
-    </div>
-    <button id="accept-challenge" class="btn btn-primary">Prijať výzvu</button>
-    <button id="ignore-challenge" class="btn btn-ghost" style="margin-left:8px;">Neskôr</button>
-  </div>
-
   <div class="left">
 
     <!-- ⭐ OBLASTI -->
@@ -113,11 +104,22 @@
       <div id="facultyList" class="list"></div>
     </div>
 
-    <!-- ⭐ Hry pripravené na výzvu (presunuté vyššie) -->
+    <!-- ⭐ Hry pripravené na výzvu -->
     <div class="card">
       <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
       <div class="small">Balíky otázok uložené zo študijných appiek</div>
       <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
+    </div>
+
+    <!-- ⭐ Výzva od spoluhráča (nová karta) -->
+    <div class="card" id="incomingChallengeCard" style="display:none;">
+      <h3 style="margin:0">Výzva od spoluhráča</h3>
+      <div class="small">Niekto ťa vyzval na duel</div>
+
+      <div style="margin-top:10px; display:flex; gap:8px;">
+        <button class="btn btn-primary" id="acceptIncomingChallenge">Prijať výzvu</button>
+        <button class="btn btn-ghost" id="ignoreIncomingChallenge">Neskôr</button>
+      </div>
     </div>
 
     <!-- ✨ Moje appky -->
