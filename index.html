@@ -11,7 +11,6 @@
   <!-- HLAVNÝ ŠTÝL -->
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Pomocné štýly pre in-tile duel */
     :root { --muted:#6b7280; --card-bg:#ffffff; --primary:#2563eb; }
     body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7fafc; color:#111827; margin:0; }
     .header { display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:#fff; border-bottom:1px solid rgba(0,0,0,0.04); }
@@ -33,13 +32,14 @@
     .wrong { outline:2px solid rgba(239,68,68,0.12); background:rgba(239,68,68,0.03); }
     #confettiCanvasWrap div { will-change: transform, top, opacity; }
     @media (max-width:900px){ .container{flex-direction:column;} .left{flex:1 1 auto;} }
+    .nick-row input { padding:6px 8px; border-radius:6px; border:1px solid rgba(0,0,0,0.08); }
   </style>
 </head>
 
 <body>
 <header class="header">
   <div class="brand">
-    <span class="logo-dot" aria-hidden="true" style="width:10px;height:10px;background:#2563eb;border-radius:50%;display:inline-block"></span>
+    <span class="logo-dot" aria-hidden="true" style="width:10px;height:10px;background:var(--primary);border-radius:50%;display:inline-block"></span>
     <strong>LexArena</strong>
 
     <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0" style="margin-left:12px">
@@ -49,7 +49,7 @@
     <div class="nick-box" style="margin-left:12px">
       <label for="nickname" class="small">Tvoj nick</label>
       <div class="nick-row" style="display:flex;gap:8px;align-items:center;margin-top:6px">
-        <input id="nickname" type="text" placeholder="Zadaj nick" style="padding:6px 8px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)">
+        <input id="nickname" type="text" placeholder="Zadaj nick">
         <button id="saveNick" class="btn" type="button">Uložiť</button>
       </div>
     </div>
@@ -67,10 +67,8 @@
 
 <main class="container">
 
-  <!-- ĽAVÝ STĹPEC -->
   <div class="left">
 
-    <!-- OBLASTI -->
     <div class="card" aria-labelledby="facultiesTitle">
       <div style="display:flex;justify-content:space-between;align-items:center">
         <div>
@@ -85,15 +83,12 @@
       <div id="facultyList" class="list" aria-live="polite"></div>
     </div>
 
-    <!-- Výzva od spoluhráča (nahrádza "Moje appky") -->
     <div class="card" id="incomingChallengeCard" aria-labelledby="incomingChallengeTitle">
       <h3 id="incomingChallengeTitle" style="margin:0">Bol si vyzvaný na duel</h3>
       <div class="small">Výzvy od spoluhráčov sa zobrazia tu</div>
 
       <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
-        <div id="incomingChallengeList" class="list" style="min-height:40px;" role="list">
-          <!-- dynamicky vkladané výzvy -->
-        </div>
+        <div id="incomingChallengeList" class="list" style="min-height:40px;" role="list"></div>
 
         <div style="display:flex; gap:8px;">
           <button id="acceptAnyChallenge" class="btn btn-primary" type="button">Prijať prvú</button>
@@ -101,7 +96,6 @@
         </div>
       </div>
 
-      <!-- INLINE QUIZ PANEL (skryté, zobrazí sa po Prijať) -->
       <div id="incomingQuizPanel" style="display:none; margin-top:12px; border-top:1px solid rgba(0,0,0,0.06); padding-top:12px;">
         <div id="quizHeader" style="display:flex;justify-content:space-between;align-items:center">
           <div style="font-weight:600">Duel – kvíz</div>
@@ -133,7 +127,6 @@
       </div>
     </div>
 
-    <!-- Hry pripravené na výzvu -->
     <div class="card" role="region" aria-labelledby="duelPackagesTitle">
       <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
       <div class="small">Balíky otázok uložené zo študijných appiek</div>
@@ -142,10 +135,8 @@
 
   </div>
 
-  <!-- PRAVÝ STĹPEC -->
   <div class="right">
 
-    <!-- Kvíz (samostatný) -->
     <div class="card" id="quizCard">
       <div id="quizIntro">
         <div class="small">Kvíz</div>
@@ -193,7 +184,6 @@
       </div>
     </div>
 
-    <!-- Hry a prípady -->
     <div class="card">
       <h3 id="gamesTitle" style="margin:0">Hry a prípady</h3>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
@@ -205,13 +195,11 @@
       </div>
     </div>
 
-    <!-- Admin -->
     <div class="card">
       <h3 id="adminTitle" style="margin:0">Admin a garant panel</h3>
       <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
     </div>
 
-    <!-- Obchod -->
     <div class="card">
       <h3 id="shopTitle" style="margin:0">Obchod</h3>
       <div style="display:flex;gap:8px;margin-top:8px">
@@ -320,7 +308,6 @@
         console.warn('Fetch challenge failed', e);
       }
     }
-    // fallback demo questions
     return [
       { text: 'Ktoré tvrdenie je správne?', answers:['A','B','C','D'], correctIndex:0 },
       { text: 'Čo upravuje pracovné právo?', answers:['Zmluvy','Tresty','Dane','Šport'], correctIndex:0 },
@@ -333,7 +320,8 @@
   function renderQuestion() {
     const q = questions[qIndex];
     if (!q) return;
-    quizQuestionEl.textContent = q.text;
+    if (quizQuestionEl) quizQuestionEl.textContent = q.text;
+    if (!quizAnswersEl) return;
     quizAnswersEl.innerHTML = '';
     q.answers.forEach((a, i) => {
       const btn = document.createElement('button');
@@ -345,7 +333,7 @@
       btn.addEventListener('click', () => onAnswerClick(i, btn));
       quizAnswersEl.appendChild(btn);
     });
-    quizProgressEl.textContent = `Otázka ${qIndex+1}/${questions.length}`;
+    if (quizProgressEl) quizProgressEl.textContent = `Otázka ${qIndex+1}/${questions.length}`;
     if (quizNextBtn) quizNextBtn.style.display = 'none';
   }
 
@@ -375,12 +363,12 @@
     if (body) body.style.display = 'none';
     if (quizResultEl) quizResultEl.style.display = 'block';
     if (scoreYou > scoreOpp) {
-      quizResultTitle.textContent = `Vyhrala si! ${scoreYou} : ${scoreOpp}`;
+      if (quizResultTitle) quizResultTitle.textContent = `Vyhrala si! ${scoreYou} : ${scoreOpp}`;
       launchConfetti();
     } else if (scoreYou < scoreOpp) {
-      quizResultTitle.textContent = `Prehrala si ${scoreYou} : ${scoreOpp}`;
+      if (quizResultTitle) quizResultTitle.textContent = `Prehrala si ${scoreYou} : ${scoreOpp}`;
     } else {
-      quizResultTitle.textContent = `Remíza ${scoreYou} : ${scoreOpp}`;
+      if (quizResultTitle) quizResultTitle.textContent = `Remíza ${scoreYou} : ${scoreOpp}`;
     }
   }
 
@@ -413,7 +401,6 @@
   async function startQuizForItem(item) {
     if (!item) return;
     currentChallengeItem = item;
-    // loader
     const loader = document.createElement('div');
     loader.className = 'challenge-loader';
     loader.textContent = ' Načítavam otázky…';
@@ -443,7 +430,6 @@
     renderQuestion();
   }
 
-  // Delegated click handler
   document.addEventListener('click', (e) => {
     const acceptBtn = e.target.closest && e.target.closest('.accept-challenge');
     if (acceptBtn) {
@@ -459,7 +445,6 @@
       if (item) item.remove();
       return;
     }
-    // prevent anchor navigation inside incomingChallengeCard
     const anchor = e.target.closest && e.target.closest('a');
     if (anchor && anchor.closest && anchor.closest('#incomingChallengeCard')) {
       e.preventDefault(); e.stopPropagation();
@@ -488,7 +473,6 @@
     if (quizPanel) quizPanel.style.display = 'none';
   });
 
-  // helper to add demo challenge items (for testing)
   window.__addDemoChallenge = function(text, url) {
     if (!listEl) return;
     const wrap = document.createElement('div');
@@ -515,14 +499,12 @@
     listEl.appendChild(wrap);
   };
 
-  // auto-insert demo challenge if none
   document.addEventListener('DOMContentLoaded', () => {
     if (listEl && listEl.children.length === 0) {
       window.__addDemoChallenge('Jana ťa vyzvala na duel – Pracovné právo');
     }
   });
 
-  // Ensure startDuelFromExternal triggers in-tile behavior
   if (window.startDuelFromExternal && typeof window.startDuelFromExternal === 'function') {
     const original = window.startDuelFromExternal;
     window.startDuelFromExternal = function() {
