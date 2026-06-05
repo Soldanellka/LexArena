@@ -49,7 +49,7 @@
 
 <main class="container">
 
-  <!-- 🔥 NOVÝ MODAL – výzva z externej apky -->
+  <!-- 🔥 MODAL – výzva z externej apky -->
   <div id="externalChallengeModal" class="avatar-modal" aria-hidden="true" style="display:none;">
     <div class="avatar-panel" style="max-width:420px;">
       <h3 id="externalChallengeTitle">Nová výzva</h3>
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <!-- 🔥 NOVÝ DUEL UI -->
+  <!-- 🔥 DUEL UI -->
   <div id="lexarenaDuelUI" class="card hidden" style="max-width:640px; margin:20px auto;">
     <div id="lexarenaDuelProgress" class="small" style="margin-bottom:8px;"></div>
     <div id="lexarenaDuelQuestion" style="font-size:18px; font-weight:600; margin-bottom:12px;"></div>
@@ -75,7 +75,7 @@
     </div>
   </div>
 
-  <!-- 🔥 NOVÝ VÝSLEDOK DUELU -->
+  <!-- 🔥 VÝSLEDOK DUELU -->
   <div id="lexarenaDuelResult" class="card hidden" style="max-width:420px; margin:20px auto; text-align:center;">
     <h2 id="lexarenaDuelResultTitle"></h2>
     <p id="lexarenaDuelScoreA" style="margin:8px 0;"></p>
@@ -87,7 +87,7 @@
     </div>
   </div>
 
-  <!-- pôvodný incoming challenge banner (ponechaný) -->
+  <!-- pôvodný incoming challenge banner -->
   <div id="incoming-challenge" style="display:none; padding:16px; background:#102030; color:white; margin-bottom:16px; border-radius:8px;">
     <div style="font-size:18px; font-weight:600; margin-bottom:8px;">
       Bol si vyzvaný na duel!
@@ -113,18 +113,18 @@
       <div id="facultyList" class="list"></div>
     </div>
 
+    <!-- ⭐ Hry pripravené na výzvu (presunuté vyššie) -->
+    <div class="card">
+      <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
+      <div class="small">Balíky otázok uložené zo študijných appiek</div>
+      <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
+    </div>
+
     <!-- ✨ Moje appky -->
     <div class="card">
       <h3 id="appsTitle" style="margin:0">Moje appky</h3>
       <div class="small">Rýchly prístup k tvojim starším projektom</div>
       <div id="appsList" class="list" style="margin-top:10px"></div>
-    </div>
-
-    <!-- ⭐ Hry pripravené na výzvu -->
-    <div class="card">
-      <h3 id="duelPackagesTitle" style="margin:0">Hry pripravené na výzvu</h3>
-      <div class="small">Balíky otázok uložené zo študijných appiek</div>
-      <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
     </div>
 
   </div>
