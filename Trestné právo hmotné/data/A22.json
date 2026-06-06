@@ -1,0 +1,102 @@
+{
+  "id": "A22",
+  "title": "Trestné činy proti majetku",
+  "schemaVersion": "1.1",
+  "tags": ["majetok", "krádež", "sprenevera", "podvod", "lúpež"],
+  "theory": [
+    {
+      "heading": "Krádež",
+      "text": "Krádež je prisvojenie cudzej veci tým, že sa jej páchateľ zmocní. Ide o najčastejší majetkový trestný čin."
+    },
+    {
+      "heading": "Podvod",
+      "text": "Podvod je konanie, pri ktorom páchateľ uvedie inú osobu do omylu alebo využije jej omyl, aby získal majetkový prospech."
+    },
+    {
+      "heading": "Sprenevera",
+      "text": "Sprenevera je prisvojenie si cudzej veci, ktorá bola páchateľovi zverená."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je krádež?",
+      "options": ["Zmocnenie sa cudzej veci", "Uvedenie do omylu", "Zničenie cudzej veci"],
+      "correct": 0,
+      "explanation_correct": "Správne – krádež je zmocnenie sa cudzej veci.",
+      "explanation_incorrect": "Nie – krádež je zmocnenie sa veci."
+    },
+    {
+      "question": "Čo je podvod?",
+      "options": ["Prisvojenie zverenej veci", "Uvedenie do omylu za účelom prospechu", "Náhodné poškodenie veci"],
+      "correct": 1,
+      "explanation_correct": "Správne – podvod je uvedenie do omylu.",
+      "explanation_incorrect": "Nie – podvod je uvedenie do omylu."
+    },
+    {
+      "question": "Čo je sprenevera?",
+      "options": ["Prisvojenie si zverenej veci", "Krádež z obchodu", "Podvodné konanie"],
+      "correct": 0,
+      "explanation_correct": "Správne – sprenevera je prisvojenie zverenej veci.",
+      "explanation_incorrect": "Nie – ide o zverenú vec."
+    },
+    {
+      "question": "Ktorý čin je majetkový?",
+      "options": ["Krádež", "Ublíženie na zdraví", "Vydieranie"],
+      "correct": 0,
+      "explanation_correct": "Správne – krádež je majetkový čin.",
+      "explanation_incorrect": "Nie – ublíženie nie je majetkový čin."
+    },
+    {
+      "question": "Čo je chráneným objektom pri majetkových činoch?",
+      "options": ["Život", "Majetok", "Sloboda"],
+      "correct": 1,
+      "explanation_correct": "Správne – chránený je majetok.",
+      "explanation_incorrect": "Nie – ide o majetok."
+    }
+  ],
+  "tiles": [
+    { "term": "Krádež", "definition": "Zmocnenie sa cudzej veci." },
+    { "term": "Podvod", "definition": "Uvedenie do omylu za účelom prospechu." },
+    { "term": "Sprenevera", "definition": "Prisvojenie si zverenej veci." },
+    { "term": "Škoda", "definition": "Majetková ujma spôsobená činom." },
+    { "term": "Prospech", "definition": "Výhoda získaná trestným činom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Krádež v obchode",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba si vložila tovar do tašky a odišla bez zaplatenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o krádež?",
+          "options": ["Áno", "Nie", "Len ak tovar bol drahý"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o krádež.",
+          "explanation_incorrect": "Nie – je to krádež."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Sprenevera firemných peňazí",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec použil firemné peniaze na súkromné účely.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o spreneveru?",
+          "options": ["Áno", "Nie", "Len ak to bolo veľa peňazí"],
+          "correct": 0,
+          "explanation_correct": "Správne – peniaze mu boli zverené.",
+          "explanation_incorrect": "Nie – ide o spreneveru."
+        }
+      ]
+    }
+  ]
+}

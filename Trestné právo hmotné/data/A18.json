@@ -1,0 +1,106 @@
+{
+  "id": "A18",
+  "title": "Trestné činy proti zdraviu a trestné činy ohrozujúce život alebo zdravie",
+  "schemaVersion": "1.1",
+  "tags": ["zdravie", "ublíženie na zdraví", "ťažká ujma", "ohrozenie života", "neposkytnutie pomoci"],
+  "theory": [
+    {
+      "heading": "Ublíženie na zdraví",
+      "text": "Spôsobenie poruchy zdravia alebo ochorenia, ktoré si vyžaduje lekárske ošetrenie alebo obmedzuje obvyklý spôsob života poškodeného."
+    },
+    {
+      "heading": "Ťažká ujma na zdraví",
+      "text": "Závažné poškodenie zdravia s dlhodobými následkami, napríklad zmrzačenie, ochromenie, strata pracovnej schopnosti alebo dlhodobé ťažké ochorenie."
+    },
+    {
+      "heading": "Trestné činy ohrozujúce život alebo zdravie",
+      "text": "Ide o konania, ktoré môžu spôsobiť vážne ohrozenie života alebo zdravia, aj keď k ujme ešte nedošlo. Typickým znakom je samotné ohrozenie."
+    },
+    {
+      "heading": "Neposkytnutie pomoci",
+      "text": "Osoba neposkytne pomoc človeku, ktorý je v nebezpečenstve smrti alebo vážnej ujmy na zdraví, hoci tak môže urobiť bez ohrozenia seba alebo iného."
+    },
+    {
+      "heading": "Šírenie nebezpečnej nákazlivej choroby",
+      "text": "Úmyselné alebo nedbanlivostné konanie, ktorým páchateľ spôsobí alebo môže spôsobiť rozšírenie nebezpečnej nákazlivej choroby."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je ublíženie na zdraví?",
+      "options": ["Smrť osoby", "Porucha zdravia vyžadujúca liečenie", "Bežné nachladnutie"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o poruchu zdravia vyžadujúcu ošetrenie.",
+      "explanation_incorrect": "Nie – nejde o smrť ani bežné ochorenie."
+    },
+    {
+      "question": "Čo je ťažká ujma na zdraví?",
+      "options": ["Drobné zranenie", "Závažné poškodenie zdravia s dlhodobými následkami", "Dočasná únava"],
+      "correct": 1,
+      "explanation_correct": "Správne – ťažká ujma má dlhodobé následky.",
+      "explanation_incorrect": "Nie – drobné zranenia nie sú ťažkou ujmou."
+    },
+    {
+      "question": "Kedy ide o trestný čin ohrozujúci život alebo zdravie?",
+      "options": ["Len ak vznikne škoda", "Už pri samotnom ohrození života alebo zdravia", "Len ak ide o úmysel"],
+      "correct": 1,
+      "explanation_correct": "Správne – postačuje samotné ohrozenie.",
+      "explanation_incorrect": "Nie – škoda nie je podmienkou."
+    },
+    {
+      "question": "Kedy je trestné neposkytnutie pomoci?",
+      "options": ["Ak osoba odmietne pomôcť, hoci môže bez rizika", "Ak osoba nemá mobil", "Ak osoba nie je zdravotník"],
+      "correct": 0,
+      "explanation_correct": "Správne – pomoc musí byť poskytnutá, ak nehrozí riziko.",
+      "explanation_incorrect": "Nie – povinnosť pomôcť nevyžaduje odborné vzdelanie."
+    },
+    {
+      "question": "Čo je šírenie nebezpečnej nákazlivej choroby?",
+      "options": ["Bežné prechladnutie", "Konanie spôsobujúce alebo umožňujúce šírenie nebezpečnej choroby", "Odmietnutie očkovania"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o šírenie nebezpečnej choroby.",
+      "explanation_incorrect": "Nie – bežné ochorenia nie sú predmetom tejto skutkovej podstaty."
+    }
+  ],
+  "tiles": [
+    { "term": "Ublíženie na zdraví", "definition": "Porucha zdravia vyžadujúca liečenie." },
+    { "term": "Ťažká ujma na zdraví", "definition": "Závažné poškodenie zdravia s dlhodobými následkami." },
+    { "term": "Ohrozenie života", "definition": "Stav, ktorý môže viesť k smrti alebo ťažkej ujme." },
+    { "term": "Neposkytnutie pomoci", "definition": "Neochota pomôcť osobe v ohrození života." },
+    { "term": "Nebezpečná choroba", "definition": "Choroba schopná spôsobiť vážne ohrozenie zdravia populácie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zlomenina po útoku",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba udrela inú osobu a spôsobila jej zlomeninu ruky.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Ide o ublíženie na zdraví?",
+          "options": ["Áno", "Nie", "Len ak bola hospitalizácia"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Neposkytnutie pomoci",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Vodič videl zraneného cyklistu, ale nezastavil, hoci mohol bezpečne pomôcť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Je to trestné?",
+          "options": ["Áno – ide o neposkytnutie pomoci", "Nie", "Len ak cyklista zomrel"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

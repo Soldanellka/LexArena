@@ -1,0 +1,116 @@
+{
+  "id": "A6",
+  "title": "Subjektívna stránka skutkovej podstaty trestného činu, omyl",
+  "schemaVersion": "1.1",
+  "tags": ["subjektívna stránka", "zavinenie", "omyl"],
+  "theory": [
+    {
+      "heading": "Subjektívna stránka",
+      "text": "Predstavuje vnútorný psychický vzťah páchateľa k trestnému činu. Zahŕňa úmysel, nedbanlivosť a pohnútku."
+    },
+    {
+      "heading": "Formy zavinenia",
+      "text": "Úmysel priamy, úmysel nepriamy, vedomá nedbanlivosť a nevedomá nedbanlivosť."
+    },
+    {
+      "heading": "Omyl v trestnom práve",
+      "text": "Omyl skutkový a omyl právny môžu vylúčiť zavinenie alebo znížiť trestnú zodpovednosť."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je subjektívna stránka trestného činu?",
+      "options": ["Vonkajšie okolnosti činu", "Psychický vzťah páchateľa k činu", "Spôsob spáchania činu"],
+      "correct": 1,
+      "explanation_correct": "Správne – subjektívna stránka je psychický vzťah páchateľa k činu.",
+      "explanation_incorrect": "Nie – ide o psychický vzťah páchateľa."
+    },
+    {
+      "question": "Ktorá forma zavinenia je najzávažnejšia?",
+      "options": ["Nevedomá nedbanlivosť", "Úmysel priamy", "Úmysel nepriamy"],
+      "correct": 1,
+      "explanation_correct": "Správne – priamy úmysel je najzávažnejšia forma zavinenia.",
+      "explanation_incorrect": "Nie – priamy úmysel je najzávažnejší."
+    },
+    {
+      "question": "Čo je skutkový omyl?",
+      "options": ["Omyl o právnej norme", "Omyl o okolnostiach skutku", "Omyl o treste"],
+      "correct": 1,
+      "explanation_correct": "Správne – skutkový omyl sa týka okolností skutku.",
+      "explanation_incorrect": "Nie – omyl o norme je právny omyl."
+    },
+    {
+      "question": "Kedy môže omyl vylúčiť zavinenie?",
+      "options": ["Ak je neodstrániteľný", "Ak je úmyselný", "Ak je spôsobený nepozornosťou"],
+      "correct": 0,
+      "explanation_correct": "Správne – neodstrániteľný omyl môže vylúčiť zavinenie.",
+      "explanation_incorrect": "Nie – úmyselný omyl neexistuje."
+    },
+    {
+      "question": "Ktorá forma nedbanlivosti je menej závažná?",
+      "options": ["Vedomá nedbanlivosť", "Nevedomá nedbanlivosť", "Obe sú rovnako závažné"],
+      "correct": 1,
+      "explanation_correct": "Správne – nevedomá nedbanlivosť je menej závažná.",
+      "explanation_incorrect": "Nie – vedomá nedbanlivosť je závažnejšia."
+    }
+  ],
+  "tiles": [
+    { "term": "Úmysel priamy", "definition": "Páchateľ chcel porušiť alebo ohroziť chránený záujem." },
+    { "term": "Úmysel nepriamy", "definition": "Páchateľ vedel, že môže porušiť záujem, a bol s tým uzrozumený." },
+    { "term": "Vedomá nedbanlivosť", "definition": "Páchateľ vedel, že môže porušiť záujem, ale spoliehal sa, že sa tak nestane." },
+    { "term": "Nevedomá nedbanlivosť", "definition": "Páchateľ nevedel, že môže porušiť záujem, hoci vedieť mal a mohol." },
+    { "term": "Skutkový omyl", "definition": "Omyl o okolnostiach skutku, ktorý môže vylúčiť zavinenie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Omyl o okolnostiach skutku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba si myslí, že berie svoj bicykel, no ide o cudzí. Posúďte omyl.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o skutkový omyl?",
+          "options": ["Áno", "Nie", "Len ak bicykel bol rovnaký typ"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o omyl o okolnostiach skutku.",
+          "explanation_incorrect": "Nie – je to skutkový omyl."
+        },
+        {
+          "question": "Krok 2: Môže omyl vylúčiť zavinenie?",
+          "options": ["Áno – ak je neodstrániteľný", "Nie", "Len pri úmyselných činoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – neodstrániteľný omyl vylučuje zavinenie.",
+          "explanation_incorrect": "Nie – omyl môže vylúčiť zavinenie."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Úmysel vs. nedbanlivosť",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Vodič prekročil rýchlosť a spôsobil nehodu. Posúďte formu zavinenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je to úmysel?",
+          "options": ["Nie", "Áno", "Len ak bol agresívny"],
+          "correct": 0,
+          "explanation_correct": "Správne – nejde o úmysel.",
+          "explanation_incorrect": "Nie – nejde o úmysel."
+        },
+        {
+          "question": "Krok 2: Ide o vedomú alebo nevedomú nedbanlivosť?",
+          "options": ["Vedomú", "Nevedomú", "Ani jednu"],
+          "correct": 0,
+          "explanation_correct": "Správne – vedel, že prekračuje rýchlosť.",
+          "explanation_incorrect": "Nie – je to vedomá nedbanlivosť."
+        }
+      ]
+    }
+  ]
+}

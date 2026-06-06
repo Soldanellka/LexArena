@@ -1,0 +1,102 @@
+{
+  "id": "A13",
+  "title": "Trestná zodpovednosť a trestanie mladistvých",
+  "schemaVersion": "1.1",
+  "tags": ["mladiství", "zodpovednosť", "výchovné opatrenia"],
+  "theory": [
+    {
+      "heading": "Veková hranica trestnej zodpovednosti",
+      "text": "Mladistvý je osoba vo veku 14–18 rokov. Pod 14 rokov nie je trestná zodpovednosť."
+    },
+    {
+      "heading": "Znížená trestná sadzba",
+      "text": "Mladistvým sa ukladajú tresty v zníženom rozpätí, keďže ich osobnostný vývin nie je ukončený."
+    },
+    {
+      "heading": "Výchovné opatrenia",
+      "text": "Preferujú sa výchovné opatrenia – dohľad, obmedzenia, povinnosti, napomenutie."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kto je mladistvý podľa zákona?",
+      "options": ["Osoba do 14 rokov", "Osoba 14–18 rokov", "Osoba nad 18 rokov"],
+      "correct": 1,
+      "explanation_correct": "Správne – mladistvý je vo veku 14–18 rokov.",
+      "explanation_incorrect": "Nie – pod 14 rokov nie je trestná zodpovednosť."
+    },
+    {
+      "question": "Aký je účel trestania mladistvých?",
+      "options": ["Pomsta", "Prevýchova a ochrana spoločnosti", "Zvýšenie príjmov štátu"],
+      "correct": 1,
+      "explanation_correct": "Správne – cieľom je prevýchova.",
+      "explanation_incorrect": "Nie – pomsta nie je účel trestu."
+    },
+    {
+      "question": "Aký trest sa mladistvým neukladá?",
+      "options": ["Trest odňatia slobody", "Domáce väzenie", "Doživotie"],
+      "correct": 2,
+      "explanation_correct": "Správne – doživotie sa mladistvým neukladá.",
+      "explanation_incorrect": "Nie – doživotie je zakázané."
+    },
+    {
+      "question": "Čo je výchovné opatrenie?",
+      "options": ["Trest", "Preventívne opatrenie pre mladistvých", "Zákaz pobytu"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o preventívne opatrenie.",
+      "explanation_incorrect": "Nie – nie je to trest."
+    },
+    {
+      "question": "Kedy možno uložiť trest mladistvému?",
+      "options": ["Pri každom konaní", "Len ak výchovné opatrenia nestačia", "Len pri zločinoch"],
+      "correct": 1,
+      "explanation_correct": "Správne – trest sa ukladá až keď výchovné opatrenia nestačia.",
+      "explanation_incorrect": "Nie – výchovné opatrenia majú prednosť."
+    }
+  ],
+  "tiles": [
+    { "term": "Mladistvý", "definition": "Osoba vo veku 14–18 rokov." },
+    { "term": "Výchovné opatrenie", "definition": "Opatrenie na prevýchovu mladistvého." },
+    { "term": "Znížená sadzba", "definition": "Tresty sa ukladajú v nižšom rozpätí." },
+    { "term": "Dohľad", "definition": "Kontrola správania mladistvého." },
+    { "term": "Napomenutie", "definition": "Najmiernejšie výchovné opatrenie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Prečin mladistvého",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: 15-ročný poškodil majetok. Posúďte zodpovednosť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je trestne zodpovedný?",
+          "options": ["Áno", "Nie", "Len ak ide o zločin"],
+          "correct": 0,
+          "explanation_correct": "Správne – od 14 rokov je zodpovedný.",
+          "explanation_incorrect": "Nie – je zodpovedný."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výchovné opatrenie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: 17-ročný sa dopustil krádeže prvýkrát.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je vhodné napomenutie?",
+          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – napomenutie je primerané.",
+          "explanation_incorrect": "Nie – napomenutie je vhodné."
+        }
+      ]
+    }
+  ]
+}

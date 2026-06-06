@@ -1,0 +1,78 @@
+{
+  "id": "A28",
+  "title": "Trestné činy proti iným právam a slobodám",
+  "schemaVersion": "1.1",
+  "tags": ["práva", "slobody", "diskriminácia", "porušovanie domovej slobody"],
+  "theory": [
+    {
+      "heading": "Porušovanie domovej slobody",
+      "text": "Neoprávnené vniknutie do obydlia alebo zotrvanie v ňom proti vôli oprávnenej osoby."
+    },
+    {
+      "heading": "Obmedzovanie osobnej slobody",
+      "text": "Protiprávne bránenie osobe vo voľnom pohybe."
+    },
+    {
+      "heading": "Diskriminácia",
+      "text": "Znevýhodnenie osoby z dôvodu rasy, národnosti, pohlavia, viery alebo iného chráneného znaku."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je porušovanie domovej slobody?",
+      "options": ["Vstup do cudzieho obydlia bez súhlasu", "Bežná návšteva", "Náhodné zaklopanie"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je obmedzovanie osobnej slobody?",
+      "options": ["Zákonné zadržanie", "Protiprávne bránenie pohybu", "Dobrovoľné zotrvanie"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je diskriminácia?",
+      "options": ["Znevýhodnenie osoby z chráneného dôvodu", "Bežná kritika", "Nesúhlas v diskusii"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je chráneným objektom?",
+      "options": ["Zdravie", "Základné práva a slobody", "Majetok"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý čin patrí medzi tieto trestné činy?",
+      "options": ["Porušovanie domovej slobody", "Krádež", "Podvod"],
+      "correct": 0
+    }
+  ],
+  "tiles": [
+    { "term": "Domová sloboda", "definition": "Právo na nedotknuteľnosť obydlia." },
+    { "term": "Osobná sloboda", "definition": "Právo na voľný pohyb." },
+    { "term": "Diskriminácia", "definition": "Znevýhodnenie osoby z chráneného dôvodu." },
+    { "term": "Slobody", "definition": "Chránené základné práva človeka." },
+    { "term": "Oprávnená osoba", "definition": "Osoba s právom rozhodovať o vstupe do obydlia." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neoprávnený vstup do bytu",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Osoba vošla do cudzieho bytu bez súhlasu majiteľa.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zatvorenie osoby v miestnosti",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Osoba zamkla inú osobu v miestnosti proti jej vôli.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

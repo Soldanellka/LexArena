@@ -1,0 +1,78 @@
+{
+  "id": "A27",
+  "title": "Korupcia",
+  "schemaVersion": "1.1",
+  "tags": ["korupcia", "úplatok", "podplácanie", "verejný činiteľ"],
+  "theory": [
+    {
+      "heading": "Prijímanie úplatku",
+      "text": "Verejný činiteľ alebo iná osoba prijme, žiada alebo si dá sľúbiť úplatok za to, že vykoná alebo nevykoná svoju povinnosť."
+    },
+    {
+      "heading": "Podplácanie",
+      "text": "Poskytnutie, ponúknutie alebo sľúbenie úplatku s cieľom ovplyvniť konanie osoby."
+    },
+    {
+      "heading": "Nepriama korupcia",
+      "text": "Konanie prostredníka, ktorý úplatok sprostredkuje alebo vybavuje."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je úplatok?",
+      "options": ["Len peniaze", "Akákoľvek neoprávnená výhoda", "Darček do 10 €"],
+      "correct": 1
+    },
+    {
+      "question": "Kto môže spáchať prijímanie úplatku?",
+      "options": ["Len verejný činiteľ", "Každý", "Len podnikateľ"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je podplácanie?",
+      "options": ["Ponuka úplatku", "Náhodné darovanie", "Bežná pomoc"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je chráneným objektom korupcie?",
+      "options": ["Majetok štátu", "Dôvera v nestrannosť verejnej moci", "Zdravie"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý čin je korupčný?",
+      "options": ["Podplácanie", "Krádež", "Výtržníctvo"],
+      "correct": 0
+    }
+  ],
+  "tiles": [
+    { "term": "Úplatok", "definition": "Neoprávnená výhoda poskytnutá za protislužbu." },
+    { "term": "Podplácanie", "definition": "Poskytnutie alebo ponuka úplatku." },
+    { "term": "Prijímanie úplatku", "definition": "Žiadanie alebo prijatie úplatku." },
+    { "term": "Nepriama korupcia", "definition": "Sprostredkovanie úplatku." },
+    { "term": "Verejný činiteľ", "definition": "Osoba vykonávajúca verejnú moc." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Úplatok úradníkovi",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Podnikateľ ponúkol úradníkovi peniaze za urýchlenie konania.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Sprostredkovateľ úplatku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Osoba sprostredkovala úplatok medzi podnikateľom a úradníkom.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

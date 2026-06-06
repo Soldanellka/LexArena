@@ -1,0 +1,96 @@
+{
+  "id": "A30",
+  "title": "Trestné činy proti mieru, ľudskosti, terorizmu, extrémizmu a vojnové trestné činy",
+  "schemaVersion": "1.1",
+  "tags": ["mier", "ľudskosť", "terorizmus", "extrémizmus", "vojnové zločiny"],
+  "theory": [
+    {
+      "heading": "Trestné činy proti mieru",
+      "text": "Konania ohrozujúce mier medzi štátmi, napríklad podnecovanie agresívnej vojny alebo podpora ozbrojeného konfliktu."
+    },
+    {
+      "heading": "Zločiny proti ľudskosti",
+      "text": "Systematické alebo rozsiahle útoky proti civilnému obyvateľstvu, ako sú vraždy, deportácie, zotročovanie či mučenie."
+    },
+    {
+      "heading": "Terorizmus",
+      "text": "Úmyselné konanie s cieľom vyvolať strach, destabilizovať štát alebo donútiť orgány verejnej moci konať či nekonať."
+    },
+    {
+      "heading": "Extrémizmus",
+      "text": "Konania motivované nenávisťou voči skupine osôb, napríklad výroba extrémistických materiálov, podpora hnutí smerujúcich k potláčaniu práv."
+    },
+    {
+      "heading": "Vojnové trestné činy",
+      "text": "Závažné porušenia medzinárodného humanitárneho práva počas ozbrojeného konfliktu, napríklad útoky na civilistov, mučenie zajatcov alebo používanie zakázaných zbraní."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je zločin proti ľudskosti?",
+      "options": ["Jednorazový priestupok", "Systematický útok proti civilistom", "Bežná kriminalita"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je cieľom terorizmu?",
+      "options": ["Zlepšenie verejných služieb", "Vyvolanie strachu a destabilizácia štátu", "Zvýšenie daní"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je extrémizmus?",
+      "options": ["Bežná kritika vlády", "Nenávistné konanie proti skupine osôb", "Náhodný konflikt"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy ide o vojnový zločin?",
+      "options": ["Pri porušení humanitárneho práva počas konfliktu", "Pri bežnej krádeži", "Pri dopravnej nehode"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je chráneným objektom týchto trestných činov?",
+      "options": ["Majetok", "Mier, ľudskosť a bezpečnosť štátov", "Verejný poriadok"],
+      "correct": 1
+    }
+  ],
+  "tiles": [
+    { "term": "Mier", "definition": "Stav bez ozbrojeného konfliktu." },
+    { "term": "Zločiny proti ľudskosti", "definition": "Systematické útoky proti civilistom." },
+    { "term": "Terorizmus", "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu." },
+    { "term": "Extrémizmus", "definition": "Nenávistné konanie proti skupine osôb." },
+    { "term": "Vojnový zločin", "definition": "Porušenie humanitárneho práva počas konfliktu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Útok na civilistov počas konfliktu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Ozbrojená skupina úmyselne zaútočila na civilné obyvateľstvo.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Vojnový zločin", "Krádež", "Výtržníctvo"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výroba extrémistických materiálov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Osoba vyrábala a šírila materiály propagujúce nenávistné hnutie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Extrémizmus", "Podvod", "Sprenevera"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

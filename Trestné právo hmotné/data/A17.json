@@ -1,0 +1,102 @@
+{
+  "id": "A17",
+  "title": "Trestné činy proti životu",
+  "schemaVersion": "1.1",
+  "tags": ["život", "vražda", "usmrtenie"],
+  "theory": [
+    {
+      "heading": "Vražda",
+      "text": "Úmyselné usmrtenie inej osoby. Patrí medzi najzávažnejšie trestné činy."
+    },
+    {
+      "heading": "Usmrtenie",
+      "text": "Neúmyselné spôsobenie smrti inej osoby, spravidla z nedbanlivosti."
+    },
+    {
+      "heading": "Úkladná vražda",
+      "text": "Vražda spáchaná s rozmyslom alebo po predchádzajúcej úvahe."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je vražda?",
+      "options": ["Neúmyselné usmrtenie", "Úmyselné usmrtenie", "Náhodná smrť"],
+      "correct": 1,
+      "explanation_correct": "Správne – vražda je úmyselné usmrtenie.",
+      "explanation_incorrect": "Nie – vražda je úmyselná."
+    },
+    {
+      "question": "Čo je usmrtenie?",
+      "options": ["Úmyselné usmrtenie", "Neúmyselné spôsobenie smrti", "Náhodná udalosť"],
+      "correct": 1,
+      "explanation_correct": "Správne – usmrtenie je neúmyselné.",
+      "explanation_incorrect": "Nie – usmrtenie je neúmyselné."
+    },
+    {
+      "question": "Čo je úkladná vražda?",
+      "options": ["Vražda z nedbanlivosti", "Vražda s rozmyslom", "Náhodné usmrtenie"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o vraždu s rozmyslom.",
+      "explanation_incorrect": "Nie – úkladná vražda je plánovaná."
+    },
+    {
+      "question": "Ktorý čin je najzávažnejší?",
+      "options": ["Usmrtenie", "Vražda", "Ublíženie na zdraví"],
+      "correct": 1,
+      "explanation_correct": "Správne – vražda je najzávažnejšia.",
+      "explanation_incorrect": "Nie – vražda je najzávažnejšia."
+    },
+    {
+      "question": "Kedy ide o nedbanlivostné usmrtenie?",
+      "options": ["Pri úmysle", "Pri nepozornosti", "Pri plánovaní"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o nedbanlivosť.",
+      "explanation_incorrect": "Nie – nepozornosť je nedbanlivosť."
+    }
+  ],
+  "tiles": [
+    { "term": "Vražda", "definition": "Úmyselné usmrtenie inej osoby." },
+    { "term": "Úkladná vražda", "definition": "Vražda s rozmyslom alebo plánovaním." },
+    { "term": "Usmrtenie", "definition": "Neúmyselné spôsobenie smrti." },
+    { "term": "Nedbanlivosť", "definition": "Porušenie povinnosti z nepozornosti." },
+    { "term": "Úmysel", "definition": "Vedomé chcenie následku." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Dopravné usmrtenie",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Vodič nevenoval pozornosť a zrazil chodca, ktorý zomrel.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o úmysel?",
+          "options": ["Nie", "Áno", "Len ak bol opitý"],
+          "correct": 0,
+          "explanation_correct": "Správne – nejde o úmysel.",
+          "explanation_incorrect": "Nie – nejde o úmysel."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Úkladná vražda",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Páchateľ si dopredu pripravil zbraň a čakal na obeť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je čin plánovaný?",
+          "options": ["Áno", "Nie", "Nevieme"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o plánovanie.",
+          "explanation_incorrect": "Nie – je to plánované."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "A23",
+  "title": "Trestné činy hospodárske",
+  "schemaVersion": "1.1",
+  "tags": ["hospodárske", "ekonomické", "daňové", "veriteľ", "účtovníctvo"],
+  "theory": [
+    {
+      "heading": "Skresľovanie údajov hospodárskej a obchodnej evidencie",
+      "text": "Páchateľ úmyselne pozmení, zničí alebo zatají účtovné doklady, čím môže spôsobiť škodu alebo zakryť trestnú činnosť."
+    },
+    {
+      "heading": "Poškodzovanie veriteľa",
+      "text": "Dlžník koná tak, aby zmaril uspokojenie svojich veriteľov, napríklad prevodom majetku na inú osobu."
+    },
+    {
+      "heading": "Daňové trestné činy",
+      "text": "Patria sem skrátenie dane, neodvedenie dane a poistného alebo daňový podvod."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je skresľovanie údajov hospodárskej evidencie?",
+      "options": ["Zničenie alebo pozmenenie účtovných dokladov", "Bežná chyba v účtovníctve", "Náhodné stratenie bločku"],
+      "correct": 0,
+      "explanation_correct": "Správne – ide o úmyselné skreslenie údajov.",
+      "explanation_incorrect": "Nie – bežná chyba nie je trestná."
+    },
+    {
+      "question": "Čo je poškodzovanie veriteľa?",
+      "options": ["Zvýhodnenie jedného veriteľa alebo zmenšovanie majetku dlžníka", "Bežné splácanie dlhu", "Zvýšenie majetku dlžníka"],
+      "correct": 0,
+      "explanation_correct": "Správne – ide o konanie na úkor veriteľov.",
+      "explanation_incorrect": "Nie – bežné splácanie nie je trestné."
+    },
+    {
+      "question": "Ktorý čin je daňovým trestným činom?",
+      "options": ["Skrátenie dane", "Krádež", "Výtržníctvo"],
+      "correct": 0,
+      "explanation_correct": "Správne – skrátenie dane je daňový trestný čin.",
+      "explanation_incorrect": "Nie – krádež nie je daňový čin."
+    },
+    {
+      "question": "Čo je chráneným objektom hospodárskych trestných činov?",
+      "options": ["Riadne fungovanie hospodárstva", "Zdravie obyvateľstva", "Verejný poriadok"],
+      "correct": 0,
+      "explanation_correct": "Správne – ide o ochranu hospodárstva a finančných vzťahov.",
+      "explanation_incorrect": "Nie – nejde o zdravie ani poriadok."
+    },
+    {
+      "question": "Kedy je konanie trestné?",
+      "options": ["Pri úmyselnom skreslení údajov alebo poškodzovaní veriteľov", "Pri náhodnej chybe", "Pri dobrovoľnom splnení povinnosti"],
+      "correct": 0,
+      "explanation_correct": "Správne – úmyselné konanie je trestné.",
+      "explanation_incorrect": "Nie – náhodná chyba nie je trestná."
+    }
+  ],
+  "tiles": [
+    { "term": "Skresľovanie údajov", "definition": "Úmyselné pozmenenie alebo zničenie účtovných dokladov." },
+    { "term": "Poškodzovanie veriteľa", "definition": "Konanie dlžníka na úkor veriteľov." },
+    { "term": "Daňový podvod", "definition": "Úmyselné skrátenie dane alebo vylákanie neoprávneného odpočtu." },
+    { "term": "Účtovná evidencia", "definition": "Doklady a záznamy o hospodárskych operáciách." },
+    { "term": "Hospodárstvo", "definition": "Chránený objekt hospodárskych trestných činov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Prevody majetku pred exekúciou",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Dlžník previedol svoj majetok na príbuzného, aby sa vyhol exekúcii.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: O aký čin ide?",
+          "options": ["Poškodzovanie veriteľa", "Krádež", "Sprenevera"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o poškodzovanie veriteľa.",
+          "explanation_incorrect": "Nie – nejde o majetkový čin voči cudzej veci."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Skreslené účtovníctvo",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Konateľ firmy zničil účtovné doklady, aby zakryl nelegálne príjmy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: O aký čin ide?",
+          "options": ["Skresľovanie údajov hospodárskej evidencie", "Podvod", "Výtržníctvo"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o skresľovanie údajov.",
+          "explanation_incorrect": "Nie – nejde o podvod ani výtržníctvo."
+        }
+      ]
+    }
+  ]
+}

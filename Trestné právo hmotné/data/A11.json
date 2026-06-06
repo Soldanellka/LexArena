@@ -1,0 +1,102 @@
+{
+  "id": "A11",
+  "title": "Pojem a účel trestu, jednotlivé druhy trestov",
+  "schemaVersion": "1.1",
+  "tags": ["tresty", "účel trestu", "druhy trestov"],
+  "theory": [
+    {
+      "heading": "Pojem trestu",
+      "text": "Trest je zákonom ustanovené opatrenie uložené páchateľovi za trestný čin."
+    },
+    {
+      "heading": "Účel trestu",
+      "text": "Ochrana spoločnosti, prevencia, výchova páchateľa a spravodlivé odčinenie."
+    },
+    {
+      "heading": "Druhy trestov",
+      "text": "Trest odňatia slobody, domáce väzenie, peňažný trest, zákaz činnosti, vyhostenie, prepadnutie majetku a ďalšie."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je účelom trestu?",
+      "options": ["Pomsta", "Ochrana spoločnosti a prevencia", "Zvýšenie príjmov štátu"],
+      "correct": 1,
+      "explanation_correct": "Správne – účelom je ochrana spoločnosti a prevencia.",
+      "explanation_incorrect": "Nie – pomsta nie je účel trestu."
+    },
+    {
+      "question": "Ktorý trest je najzávažnejší?",
+      "options": ["Peňažný trest", "Zákaz činnosti", "Trest odňatia slobody"],
+      "correct": 2,
+      "explanation_correct": "Správne – trest odňatia slobody je najzávažnejší.",
+      "explanation_incorrect": "Nie – odňatie slobody je najzávažnejšie."
+    },
+    {
+      "question": "Ktorý trest je majetkový?",
+      "options": ["Peňažný trest", "Domáce väzenie", "Zákaz pobytu"],
+      "correct": 0,
+      "explanation_correct": "Správne – peňažný trest je majetkový.",
+      "explanation_incorrect": "Nie – peňažný trest je správny."
+    },
+    {
+      "question": "Čo je zákaz činnosti?",
+      "options": ["Zákaz pracovať", "Zákaz vykonávať určitú profesiu", "Zákaz cestovať"],
+      "correct": 1,
+      "explanation_correct": "Správne – zákaz činnosti sa týka konkrétnej profesie.",
+      "explanation_incorrect": "Nie – nejde o všeobecný zákaz práce."
+    },
+    {
+      "question": "Ktorý trest možno uložiť právnickej osobe?",
+      "options": ["Domáce väzenie", "Peňažný trest", "Trest odňatia slobody"],
+      "correct": 1,
+      "explanation_correct": "Správne – PO možno uložiť peňažný trest.",
+      "explanation_incorrect": "Nie – PO nemožno väzniť."
+    }
+  ],
+  "tiles": [
+    { "term": "Trest odňatia slobody", "definition": "Najzávažnejší trest, vykonávaný vo väzení." },
+    { "term": "Peňažný trest", "definition": "Majetkový trest uložený v peniazoch." },
+    { "term": "Zákaz činnosti", "definition": "Zákaz vykonávať určitú profesiu alebo činnosť." },
+    { "term": "Domáce väzenie", "definition": "Trest vykonávaný v obydlí odsúdeného." },
+    { "term": "Vyhostenie", "definition": "Trest spočívajúci v zákaze pobytu na území štátu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Výber trestu pri krádeži",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Páchateľ spáchal drobnú krádež. Aký trest je primeraný?",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je vhodný trest odňatia slobody?",
+          "options": ["Nie", "Áno", "Len pri recidíve"],
+          "correct": 0,
+          "explanation_correct": "Správne – pri drobnej krádeži sa preferujú miernejšie tresty.",
+          "explanation_incorrect": "Nie – odňatie slobody nie je primerané."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zákaz činnosti",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Lekár spáchal trestný čin súvisiaci s výkonom povolania.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je zákaz činnosti vhodný?",
+          "options": ["Áno", "Nie", "Len ak ide o recidívu"],
+          "correct": 0,
+          "explanation_correct": "Správne – zákaz činnosti je primeraný pri zneužití povolania.",
+          "explanation_incorrect": "Nie – zákaz činnosti je vhodný."
+        }
+      ]
+    }
+  ]
+}

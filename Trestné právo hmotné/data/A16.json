@@ -1,0 +1,116 @@
+{
+  "id": "A16",
+  "title": "Vplyv práva Európskej únie na trestné právo hmotné",
+  "schemaVersion": "1.1",
+  "tags": ["EÚ", "harmonizácia", "eurozatykač", "smernice", "trestné právo"],
+  "theory": [
+    {
+      "heading": "Harmonizácia trestného práva v EÚ",
+      "text": "Európska únia prijíma smernice, ktoré harmonizujú minimálne štandardy trestného práva v členských štátoch. Cieľom je zabezpečiť jednotnú ochranu záujmov EÚ, napríklad v oblasti terorizmu, obchodovania s ľuďmi či ochrany finančných záujmov EÚ."
+    },
+    {
+      "heading": "Eurozatykač (Európsky zatýkací rozkaz)",
+      "text": "Eurozatykač je nástroj justičnej spolupráce, ktorý umožňuje rýchle vydanie osoby medzi členskými štátmi EÚ. Nahrádza klasické vydávacie konanie a funguje na princípe vzájomného uznávania rozhodnutí."
+    },
+    {
+      "heading": "Priamy a nepriamy účinok práva EÚ",
+      "text": "Smernice EÚ nemajú priamy účinok v neprospech jednotlivca v trestnom práve. Majú však nepriamy účinok – vnútroštátne právo sa musí vykladať v súlade s cieľmi smernice. Nariadenia môžu mať priamy účinok."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je cieľom harmonizácie trestného práva v EÚ?",
+      "options": ["Zjednotenie všetkých trestných zákonov", "Minimálne štandardy v určitých oblastiach", "Zrušenie národných trestných kódexov"],
+      "correct": 1,
+      "explanation_correct": "Správne – EÚ harmonizuje len minimálne štandardy.",
+      "explanation_incorrect": "Nie – EÚ neprepisuje národné kódexy."
+    },
+    {
+      "question": "Čo je eurozatykač?",
+      "options": ["Nástroj polície EÚ", "Nástroj na rýchle vydanie osoby medzi štátmi EÚ", "Trestný register EÚ"],
+      "correct": 1,
+      "explanation_correct": "Správne – eurozatykač umožňuje rýchle vydanie osoby.",
+      "explanation_incorrect": "Nie – nejde o policajný nástroj."
+    },
+    {
+      "question": "Majú smernice EÚ priamy účinok v trestnom práve v neprospech jednotlivca?",
+      "options": ["Áno", "Nie", "Len pri zločinoch"],
+      "correct": 1,
+      "explanation_correct": "Správne – smernice nemôžu zhoršiť postavenie jednotlivca.",
+      "explanation_incorrect": "Nie – smernice nemajú takýto účinok."
+    },
+    {
+      "question": "Na akom princípe funguje eurozatykač?",
+      "options": ["Vzájomné uznávanie rozhodnutí", "Centralizované rozhodovanie EÚ", "Rozhodovanie Európskeho parlamentu"],
+      "correct": 0,
+      "explanation_correct": "Správne – eurozatykač funguje na princípe vzájomného uznávania.",
+      "explanation_incorrect": "Nie – nejde o centralizované rozhodovanie."
+    },
+    {
+      "question": "Ktorý dokument EÚ môže mať priamy účinok?",
+      "options": ["Smernica", "Nariadenie", "Odporúčanie"],
+      "correct": 1,
+      "explanation_correct": "Správne – nariadenia môžu mať priamy účinok.",
+      "explanation_incorrect": "Nie – smernice majú nepriamy účinok."
+    }
+  ],
+  "tiles": [
+    { "term": "Harmonizácia", "definition": "Zjednotenie minimálnych štandardov trestného práva v EÚ." },
+    { "term": "Eurozatykač", "definition": "Nástroj na rýchle vydanie osoby medzi členskými štátmi EÚ." },
+    { "term": "Smernica", "definition": "Záväzný cieľ pre členské štáty, nepriamy účinok v trestnom práve." },
+    { "term": "Nariadenie", "definition": "Právny akt EÚ s priamym účinkom." },
+    { "term": "Vzájomné uznávanie", "definition": "Zásada, podľa ktorej si štáty uznávajú súdne rozhodnutia." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Eurozatykač a vydanie osoby",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba je hľadaná v Nemecku a zadržaná na Slovensku. Nemecko vydalo eurozatykač.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je Slovensko povinné osobu vydať?",
+          "options": ["Áno – ak sú splnené podmienky eurozatykača", "Nie – môže odmietnuť bez dôvodu", "Len ak ide o občana SR"],
+          "correct": 0,
+          "explanation_correct": "Správne – eurozatykač je záväzný pri splnení podmienok.",
+          "explanation_incorrect": "Nie – odmietnutie je možné len vo výnimočných prípadoch."
+        },
+        {
+          "question": "Krok 2: Je potrebné klasické vydávacie konanie?",
+          "options": ["Nie", "Áno", "Len pri zločinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – eurozatykač nahrádza klasické vydávanie.",
+          "explanation_incorrect": "Nie – eurozatykač je rýchlejší mechanizmus."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Nepriamy účinok smernice",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Smernica EÚ stanovuje vyššiu ochranu obetí, ale Slovensko ju ešte neimplementovalo.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže sa smernica použiť priamo v neprospech obvineného?",
+          "options": ["Nie", "Áno", "Len pri prečinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – smernica nemôže zhoršiť postavenie obvineného.",
+          "explanation_incorrect": "Nie – smernice nemajú takýto účinok."
+        },
+        {
+          "question": "Krok 2: Musí sa vnútroštátne právo vykladať v súlade so smernicou?",
+          "options": ["Áno – ak je to možné", "Nie", "Len pri zločinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o nepriamy účinok smernice.",
+          "explanation_incorrect": "Nie – vnútroštátne právo sa vykladá eurokonformne."
+        }
+      ]
+    }
+  ]
+}

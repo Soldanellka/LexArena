@@ -1,0 +1,102 @@
+{
+  "id": "A10",
+  "title": "Súbeh trestných činov a recidíva",
+  "schemaVersion": "1.1",
+  "tags": ["súbeh", "recidíva", "viacčinný súbeh", "jednočinný súbeh"],
+  "theory": [
+    {
+      "heading": "Súbeh trestných činov",
+      "text": "Súbeh nastáva, ak páchateľ spácha dva alebo viac trestných činov skôr, než je za niektorý z nich právoplatne odsúdený."
+    },
+    {
+      "heading": "Jednočinný a viacčinný súbeh",
+      "text": "Jednočinný súbeh: jedným konaním sa naplní viac skutkových podstát. Viacčinný súbeh: viaceré konania, viaceré trestné činy."
+    },
+    {
+      "heading": "Recidíva",
+      "text": "Recidíva je opätovné spáchanie trestného činu po predchádzajúcom odsúdení. Môže byť všeobecná alebo špeciálna."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kedy ide o súbeh trestných činov?",
+      "options": ["Keď páchateľ spácha viac činov pred odsúdením", "Keď je čin spáchaný v skupine", "Keď je čin spáchaný v noci"],
+      "correct": 0,
+      "explanation_correct": "Správne – súbeh je viac činov pred odsúdením.",
+      "explanation_incorrect": "Nie – skupina ani čas nerozhodujú."
+    },
+    {
+      "question": "Čo je jednočinný súbeh?",
+      "options": ["Viac činov – jeden trestný čin", "Jedno konanie – viac trestných činov", "Viac konaní – jeden následok"],
+      "correct": 1,
+      "explanation_correct": "Správne – jedným konaním sa naplní viac skutkových podstát.",
+      "explanation_incorrect": "Nie – ide o jedno konanie."
+    },
+    {
+      "question": "Čo je recidíva?",
+      "options": ["Prvé odsúdenie", "Opätovné spáchanie trestného činu po odsúdení", "Náhodné konanie"],
+      "correct": 1,
+      "explanation_correct": "Správne – recidíva je opätovné páchateľstvo.",
+      "explanation_incorrect": "Nie – recidíva je opakovanie."
+    },
+    {
+      "question": "Ktorá recidíva je závažnejšia?",
+      "options": ["Všeobecná", "Špeciálna", "Žiadna"],
+      "correct": 1,
+      "explanation_correct": "Správne – špeciálna recidíva je závažnejšia.",
+      "explanation_incorrect": "Nie – špeciálna recidíva je horšia."
+    },
+    {
+      "question": "Kedy súbeh zaniká?",
+      "options": ["Po právoplatnom odsúdení", "Po výkone trestu", "Po odvolaní"],
+      "correct": 0,
+      "explanation_correct": "Správne – po odsúdení už nejde o súbeh.",
+      "explanation_incorrect": "Nie – rozhoduje právoplatnosť."
+    }
+  ],
+  "tiles": [
+    { "term": "Jednočinný súbeh", "definition": "Jedným konaním sa naplní viac skutkových podstát." },
+    { "term": "Viacčinný súbeh", "definition": "Viaceré konania – viaceré trestné činy." },
+    { "term": "Recidíva", "definition": "Opätovné spáchanie trestného činu po odsúdení." },
+    { "term": "Špeciálna recidíva", "definition": "Opätovné spáchanie rovnakého alebo podobného trestného činu." },
+    { "term": "Všeobecná recidíva", "definition": "Opätovné spáchanie akéhokoľvek trestného činu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Jednočinný súbeh",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba jedným úderom spôsobila ublíženie na zdraví a zároveň poškodila vec.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o jednočinný súbeh?",
+          "options": ["Áno", "Nie", "Len ak bola škoda vysoká"],
+          "correct": 0,
+          "explanation_correct": "Správne – jedným konaním naplnila dve skutkové podstaty.",
+          "explanation_incorrect": "Nie – ide o jednočinný súbeh."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Recidíva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba bola odsúdená za krádež a po roku spáchala ďalšiu krádež.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o recidívu?",
+          "options": ["Áno – špeciálnu", "Áno – všeobecnú", "Nie"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o špeciálnu recidívu.",
+          "explanation_incorrect": "Nie – je to špeciálna recidíva."
+        }
+      ]
+    }
+  ]
+}

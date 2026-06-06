@@ -1,0 +1,102 @@
+{
+  "id": "A14",
+  "title": "Trestná zodpovednosť a trestanie právnických osôb",
+  "schemaVersion": "1.1",
+  "tags": ["právnické osoby", "zodpovednosť", "sankcie"],
+  "theory": [
+    {
+      "heading": "Pojem trestnej zodpovednosti PO",
+      "text": "Právnické osoby môžu byť trestne zodpovedné za činy spáchané v ich mene, v ich prospech alebo v rámci ich činnosti."
+    },
+    {
+      "heading": "Formy konania PO",
+      "text": "Konanie štatutára, zamestnanca, osoby v riadiacej pozícii alebo osoby konajúcej s vedomím PO."
+    },
+    {
+      "heading": "Sankcie pre PO",
+      "text": "Peňažný trest, zákaz činnosti, prepadnutie majetku, zrušenie PO."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Môže byť právnická osoba trestne zodpovedná?",
+      "options": ["Áno", "Nie", "Len v občianskom práve"],
+      "correct": 0,
+      "explanation_correct": "Správne – PO môže byť trestne zodpovedná.",
+      "explanation_incorrect": "Nie – zákon to umožňuje."
+    },
+    {
+      "question": "Ktorý trest nemožno uložiť PO?",
+      "options": ["Peňažný trest", "Zrušenie PO", "Trest odňatia slobody"],
+      "correct": 2,
+      "explanation_correct": "Správne – PO nemožno väzniť.",
+      "explanation_incorrect": "Nie – PO nemôže byť vo väzení."
+    },
+    {
+      "question": "Kto môže konať v mene PO?",
+      "options": ["Štatutár", "Zamestnanec", "Obaja"],
+      "correct": 2,
+      "explanation_correct": "Správne – obaja môžu konať v mene PO.",
+      "explanation_incorrect": "Nie – aj zamestnanec môže konať."
+    },
+    {
+      "question": "Čo je najprísnejšia sankcia pre PO?",
+      "options": ["Zákaz činnosti", "Zrušenie PO", "Peňažný trest"],
+      "correct": 1,
+      "explanation_correct": "Správne – zrušenie PO je najprísnejšie.",
+      "explanation_incorrect": "Nie – zrušenie je najprísnejšie."
+    },
+    {
+      "question": "Kedy nesie PO zodpovednosť?",
+      "options": ["Pri konaní v jej prospech", "Pri súkromnom konaní zamestnanca", "Pri náhodnom konaní"],
+      "correct": 0,
+      "explanation_correct": "Správne – musí ísť o konanie v prospech PO.",
+      "explanation_incorrect": "Nie – súkromné konanie nie je relevantné."
+    }
+  ],
+  "tiles": [
+    { "term": "Právnická osoba", "definition": "Organizácia, ktorá môže niesť trestnú zodpovednosť." },
+    { "term": "Peňažný trest", "definition": "Majetková sankcia uložená PO." },
+    { "term": "Zrušenie PO", "definition": "Najprísnejší trest – zánik právnickej osoby." },
+    { "term": "Zákaz činnosti", "definition": "Zákaz vykonávať určitú činnosť." },
+    { "term": "Prepadnutie majetku", "definition": "Odňatie majetku PO." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Korupcia v mene PO",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Zamestnanec dal úplatok v mene firmy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Nesie PO zodpovednosť?",
+          "options": ["Áno", "Nie", "Len ak o tom vedel štatutár"],
+          "correct": 0,
+          "explanation_correct": "Správne – konanie bolo v mene PO.",
+          "explanation_incorrect": "Nie – PO nesie zodpovednosť."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zrušenie PO",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: PO opakovane pácha závažné hospodárske trestné činy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je zrušenie PO možné?",
+          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – zrušenie je najprísnejší trest.",
+          "explanation_incorrect": "Nie – zrušenie je možné."
+        }
+      ]
+    }
+  ]
+}

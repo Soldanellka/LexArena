@@ -1,0 +1,98 @@
+{
+  "id": "A25",
+  "title": "Trestné činy proti republike",
+  "schemaVersion": "1.1",
+  "tags": ["republika", "vlastizrada", "rozvracanie", "terorizmus"],
+  "theory": [
+    {
+      "heading": "Vlastizrada",
+      "text": "Konanie občana SR v prospech cudzej moci proti suverenite, územnej celistvosti alebo obranyschopnosti štátu."
+    },
+    {
+      "heading": "Rozvracanie republiky",
+      "text": "Úmyselné konanie smerujúce k násilnému narušeniu ústavného zriadenia alebo bezpečnosti štátu."
+    },
+    {
+      "heading": "Terorizmus",
+      "text": "Úmyselné konanie s cieľom vyvolať strach, destabilizovať štát alebo donútiť orgány verejnej moci konať či nekonať."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kto môže spáchať vlastizradu?",
+      "options": ["Každý človek", "Len občan SR", "Len verejný činiteľ"],
+      "correct": 1,
+      "explanation_correct": "Správne – vlastizradu môže spáchať len občan SR.",
+      "explanation_incorrect": "Nie – cudzinci nemôžu spáchať vlastizradu."
+    },
+    {
+      "question": "Čo je cieľom terorizmu?",
+      "options": ["Zvýšenie daní", "Vyvolanie strachu alebo destabilizácia štátu", "Zlepšenie dopravy"],
+      "correct": 1,
+      "explanation_correct": "Správne – cieľom je strach a destabilizácia.",
+      "explanation_incorrect": "Nie – terorizmus nesúvisí s verejnými službami."
+    },
+    {
+      "question": "Čo je rozvracanie republiky?",
+      "options": ["Násilné narušenie ústavného zriadenia", "Bežná kritika vlády", "Náhodné porušenie zákona"],
+      "correct": 0,
+      "explanation_correct": "Správne – ide o útok na ústavné zriadenie.",
+      "explanation_incorrect": "Nie – kritika vlády nie je trestný čin."
+    },
+    {
+      "question": "Čo je chráneným objektom týchto trestných činov?",
+      "options": ["Majetok občanov", "Bezpečnosť a ústavný poriadok SR", "Zdravie jednotlivca"],
+      "correct": 1,
+      "explanation_correct": "Správne – chránený je štát a jeho bezpečnosť.",
+      "explanation_incorrect": "Nie – nejde o majetok ani zdravie."
+    },
+    {
+      "question": "Ktorý čin patrí medzi trestné činy proti republike?",
+      "options": ["Vlastizrada", "Krádež", "Podvod"],
+      "correct": 0,
+      "explanation_correct": "Správne – vlastizrada je trestný čin proti republike.",
+      "explanation_incorrect": "Nie – krádež ani podvod sem nepatria."
+    }
+  ],
+  "tiles": [
+    { "term": "Vlastizrada", "definition": "Konanie občana SR v prospech cudzej moci." },
+    { "term": "Rozvracanie republiky", "definition": "Útok na ústavné zriadenie štátu." },
+    { "term": "Terorizmus", "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu." },
+    { "term": "Ústavné zriadenie", "definition": "Základné pravidlá fungovania štátu." },
+    { "term": "Bezpečnosť štátu", "definition": "Chránený objekt týchto trestných činov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Spolupráca s cudzou mocou",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Občan SR odovzdával utajované informácie cudzej službe.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Je to vlastizrada?",
+          "options": ["Áno", "Nie", "Len ak bol zaplatený"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Plánovanie útoku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Skupina plánovala bombový útok na verejné miesto.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Terorizmus", "Výtržníctvo", "Krádež"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

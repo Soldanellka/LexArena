@@ -1,0 +1,124 @@
+{
+  "id": "A21",
+  "title": "Trestné činy proti rodine a mládeži",
+  "schemaVersion": "1.1",
+  "tags": ["rodina", "mládež", "zanedbanie", "týranie", "výživa"],
+  "theory": [
+    {
+      "heading": "Zanedbanie povinnej výživy",
+      "text": "Páchateľ si neplní zákonnú povinnosť poskytovať výživu osobe, ktorú je povinný živiť. Trestnosť vzniká pri dlhodobom neplnení povinnosti."
+    },
+    {
+      "heading": "Týranie blízkej alebo zverenej osoby",
+      "text": "Ide o dlhodobé alebo opakované fyzické či psychické ubližovanie blízkej alebo zverenej osobe, ktoré spôsobuje utrpenie alebo ponižovanie."
+    },
+    {
+      "heading": "Ohrozovanie mravnej výchovy mládeže",
+      "text": "Konanie, ktoré negatívne ovplyvňuje vývoj maloletého, napríklad umožnenie požívania alkoholu, drog alebo vedenie k nemravnému životu."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kedy ide o zanedbanie povinnej výživy?",
+      "options": ["Pri dlhodobom neplatení výživného", "Pri jednorazovom omeškaní", "Pri dobrovoľnom darovaní peňazí"],
+      "correct": 0,
+      "explanation_correct": "Správne – musí ísť o dlhodobé neplnenie povinnosti.",
+      "explanation_incorrect": "Nie – jednorazové omeškanie nestačí."
+    },
+    {
+      "question": "Čo je týranie blízkej osoby?",
+      "options": ["Jednorazová hádka", "Dlhodobé fyzické alebo psychické ubližovanie", "Náhodné zranenie"],
+      "correct": 1,
+      "explanation_correct": "Správne – týranie musí byť dlhodobé alebo opakované.",
+      "explanation_incorrect": "Nie – jednorazová hádka nie je týranie."
+    },
+    {
+      "question": "Kto je chránený pri ohrozovaní mravnej výchovy?",
+      "options": ["Dospelý", "Maloletý", "Právnická osoba"],
+      "correct": 1,
+      "explanation_correct": "Správne – chránený je maloletý.",
+      "explanation_incorrect": "Nie – ide o ochranu maloletých."
+    },
+    {
+      "question": "Čo je chráneným objektom týchto trestných činov?",
+      "options": ["Rodina a riadna výchova detí", "Majetok", "Verejný poriadok"],
+      "correct": 0,
+      "explanation_correct": "Správne – chránené sú rodinné vzťahy a vývoj maloletých.",
+      "explanation_incorrect": "Nie – nejde o majetok ani verejný poriadok."
+    },
+    {
+      "question": "Kedy ide o týranie zverenej osoby?",
+      "options": ["Pri dlhodobom ubližovaní osobe, ktorá je páchateľovi zverená", "Pri jednorazovom konflikte", "Pri náhodnom zranení"],
+      "correct": 0,
+      "explanation_correct": "Správne – musí ísť o dlhodobé ubližovanie zverenej osobe.",
+      "explanation_incorrect": "Nie – jednorazové konanie nestačí."
+    }
+  ],
+  "tiles": [
+    {
+      "term": "Zanedbanie výživy",
+      "definition": "Dlhodobé neplnenie zákonnej povinnosti výživy."
+    },
+    {
+      "term": "Týranie",
+      "definition": "Opakované alebo dlhodobé fyzické či psychické ubližovanie."
+    },
+    {
+      "term": "Maloletý",
+      "definition": "Osoba mladšia ako 18 rokov."
+    },
+    {
+      "term": "Mravná výchova",
+      "definition": "Správny vývoj dieťaťa po stránke morálnej a sociálnej."
+    },
+    {
+      "term": "Zverená osoba",
+      "definition": "Osoba, o ktorú má páchateľ povinnosť sa starať."
+    }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neplatenie výživného",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Otec neplatil výživné 7 mesiacov, hoci mal príjem.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o zanedbanie povinnej výživy?",
+          "options": ["Áno", "Nie", "Len ak je výživné vysoké"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o dlhodobé neplnenie povinnosti.",
+          "explanation_incorrect": "Nie – výška výživného nie je rozhodujúca."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Psychické týranie dieťaťa",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Dieťa bolo dlhodobo vystavované ponižovaniu a zastrašovaniu zo strany rodiča.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o týranie?",
+          "options": ["Áno", "Nie", "Len ak je fyzické násilie"],
+          "correct": 0,
+          "explanation_correct": "Správne – týranie môže byť aj psychické.",
+          "explanation_incorrect": "Nie – fyzické násilie nie je podmienkou."
+        },
+        {
+          "question": "Krok 2: Je rozhodujúca dlhodobosť?",
+          "options": ["Áno", "Nie", "Len ak je dieťa mladšie ako 10 rokov"],
+          "correct": 0,
+          "explanation_correct": "Správne – týranie musí byť dlhodobé alebo opakované.",
+          "explanation_incorrect": "Nie – vek dieťaťa nie je rozhodujúci."
+        }
+      ]
+    }
+  ]
+}

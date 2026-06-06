@@ -1,0 +1,102 @@
+{
+  "id": "A12",
+  "title": "Ochranné opatrenia a výchovné opatrenia",
+  "schemaVersion": "1.1",
+  "tags": ["ochranné opatrenia", "výchovné opatrenia", "mladiství"],
+  "theory": [
+    {
+      "heading": "Ochranné opatrenia",
+      "text": "Ukladajú sa na ochranu spoločnosti a nápravu páchateľa. Patria sem ochranné liečenia, ochranný dohľad a zabratie veci."
+    },
+    {
+      "heading": "Výchovné opatrenia",
+      "text": "Ukladajú sa mladistvým s cieľom ich prevýchovy. Patria sem napomenutie, dohľad probačného úradníka, obmedzenia a povinnosti."
+    },
+    {
+      "heading": "Rozdiel medzi trestom a opatrením",
+      "text": "Trest je sankcia, opatrenie je preventívne alebo výchovné."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je ochranné liečenie?",
+      "options": ["Trest", "Ochranné opatrenie", "Výchovné opatrenie"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o ochranné opatrenie.",
+      "explanation_incorrect": "Nie – nie je to trest."
+    },
+    {
+      "question": "Komu sa ukladajú výchovné opatrenia?",
+      "options": ["Dospelým", "Mladistvým", "Právnickým osobám"],
+      "correct": 1,
+      "explanation_correct": "Správne – výchovné opatrenia sú pre mladistvých.",
+      "explanation_incorrect": "Nie – sú pre mladistvých."
+    },
+    {
+      "question": "Čo je ochranný dohľad?",
+      "options": ["Kontrola správania po výkone trestu", "Domáce väzenie", "Zákaz činnosti"],
+      "correct": 0,
+      "explanation_correct": "Správne – dohľad sleduje správanie páchateľa.",
+      "explanation_incorrect": "Nie – nejde o trest."
+    },
+    {
+      "question": "Čo je zabratie veci?",
+      "options": ["Prepadnutie majetku", "Ochranné opatrenie", "Výchovné opatrenie"],
+      "correct": 1,
+      "explanation_correct": "Správne – zabratie veci je ochranné opatrenie.",
+      "explanation_incorrect": "Nie – je to ochranné opatrenie."
+    },
+    {
+      "question": "Čo je cieľom výchovných opatrení?",
+      "options": ["Prevencia a prevýchova", "Trestanie", "Zvýšenie príjmov štátu"],
+      "correct": 0,
+      "explanation_correct": "Správne – cieľom je prevýchova mladistvého.",
+      "explanation_incorrect": "Nie – nejde o trestanie."
+    }
+  ],
+  "tiles": [
+    { "term": "Ochranné liečenie", "definition": "Liečba uložená páchateľovi na ochranu spoločnosti." },
+    { "term": "Ochranný dohľad", "definition": "Kontrola správania po výkone trestu." },
+    { "term": "Zabratie veci", "definition": "Ochranné opatrenie spočívajúce v odňatí veci." },
+    { "term": "Napomenutie", "definition": "Výchovné opatrenie pre mladistvých." },
+    { "term": "Dohľad probačného úradníka", "definition": "Kontrola a vedenie mladistvého." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Ochranné liečenie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Páchateľ spáchal čin pod vplyvom závislosti. Posúďte ochranné liečenie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je liečenie vhodné?",
+          "options": ["Áno", "Nie", "Len pri mladistvých"],
+          "correct": 0,
+          "explanation_correct": "Správne – liečenie je vhodné pri závislosti.",
+          "explanation_incorrect": "Nie – liečenie je vhodné."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výchovné opatrenie pre mladistvého",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Mladistvý spáchal prečin. Posúďte vhodné opatrenie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je vhodné napomenutie?",
+          "options": ["Áno", "Nie", "Len pri zločine"],
+          "correct": 0,
+          "explanation_correct": "Správne – napomenutie je primerané pri menej závažných činoch.",
+          "explanation_incorrect": "Nie – napomenutie je vhodné."
+        }
+      ]
+    }
+  ]
+}

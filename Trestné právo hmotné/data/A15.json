@@ -1,0 +1,102 @@
+{
+  "id": "A15",
+  "title": "Dôvody zániku trestnosti a trestu, zahladenie odsúdenia",
+  "schemaVersion": "1.1",
+  "tags": ["zánik trestnosti", "zahladenie", "promlčanie"],
+  "theory": [
+    {
+      "heading": "Zánik trestnosti",
+      "text": "Trestnosť zaniká uplynutím premlčacej doby, účinnou ľútosťou, smrťou páchateľa alebo zmenou zákona."
+    },
+    {
+      "heading": "Zánik trestu",
+      "text": "Trest zaniká výkonom trestu, premlčaním výkonu trestu alebo amnestiou."
+    },
+    {
+      "heading": "Zahladenie odsúdenia",
+      "text": "Zahladením sa na páchateľa hľadí, akoby nebol odsúdený."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kedy zaniká trestnosť?",
+      "options": ["Smrťou páchateľa", "Po výkone trestu", "Po odvolaní"],
+      "correct": 0,
+      "explanation_correct": "Správne – smrťou trestnosť zaniká.",
+      "explanation_incorrect": "Nie – výkon trestu nie je zánik trestnosti."
+    },
+    {
+      "question": "Čo je účinná ľútosť?",
+      "options": ["Ľútosť pred súdom", "Odstránenie následku činu", "Zmena zákona"],
+      "correct": 1,
+      "explanation_correct": "Správne – odstránenie následku môže zrušiť trestnosť.",
+      "explanation_incorrect": "Nie – nejde o emocionálnu ľútosť."
+    },
+    {
+      "question": "Čo je zahladenie odsúdenia?",
+      "options": ["Vymazanie trestného činu zo zákona", "Hľadí sa, akoby nebol odsúdený", "Zmena sudcu"],
+      "correct": 1,
+      "explanation_correct": "Správne – zahladenie ruší následky odsúdenia.",
+      "explanation_incorrect": "Nie – nejde o zmenu zákona."
+    },
+    {
+      "question": "Kedy zaniká trest?",
+      "options": ["Výkonom trestu", "Po podaní odvolania", "Po výsluchu"],
+      "correct": 0,
+      "explanation_correct": "Správne – trest zaniká výkonom.",
+      "explanation_incorrect": "Nie – odvolanie nezaniká trest."
+    },
+    {
+      "question": "Čo je premlčanie výkonu trestu?",
+      "options": ["Zánik trestu po uplynutí času", "Zmena sudcu", "Zmena kvalifikácie"],
+      "correct": 0,
+      "explanation_correct": "Správne – výkon trestu sa premlčí.",
+      "explanation_incorrect": "Nie – ide o časový zánik."
+    }
+  ],
+  "tiles": [
+    { "term": "Premlčanie", "definition": "Zánik trestnosti po uplynutí času." },
+    { "term": "Účinná ľútosť", "definition": "Odstránenie následku činu ruší trestnosť." },
+    { "term": "Zahladenie odsúdenia", "definition": "Hľadí sa, akoby nebol odsúdený." },
+    { "term": "Amnestia", "definition": "Zánik trestu rozhodnutím hlavy štátu." },
+    { "term": "Zmena zákona", "definition": "Novší zákon môže zrušiť trestnosť." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Účinná ľútosť",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Páchateľ doplatil škodu pred začatím konania.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o účinnú ľútosť?",
+          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – odstránenie škody je účinná ľútosť.",
+          "explanation_incorrect": "Nie – ide o účinnú ľútosť."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Premlčanie trestnosti",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Od činu uplynulo 20 rokov.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je trestnosť premlčaná?",
+          "options": ["Áno", "Nie", "Len pri prečinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – trestnosť zaniká uplynutím času.",
+          "explanation_incorrect": "Nie – je premlčaná."
+        }
+      ]
+    }
+  ]
+}

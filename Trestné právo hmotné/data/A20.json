@@ -1,0 +1,131 @@
+{
+  "id": "A20",
+  "title": "Trestné činy proti ľudskej dôstojnosti",
+  "schemaVersion": "1.1",
+  "tags": ["dôstojnosť", "sexuálne trestné činy", "sexuálne násilie", "zneužívanie", "obťažovanie"],
+  "theory": [
+    {
+      "heading": "Sexuálne násilie",
+      "text": "Sexuálne násilie je donútenie inej osoby k sexuálnemu konaniu použitím násilia alebo hrozby bezprostredného násilia. Ide o závažný zásah do sexuálnej slobody a ľudskej dôstojnosti."
+    },
+    {
+      "heading": "Sexuálne zneužívanie",
+      "text": "Sexuálne zneužívanie je konanie voči osobe, ktorá nie je schopná dať platný súhlas, najmä pre vek alebo duševný stav. Osobitne chránené sú deti a mladiství."
+    },
+    {
+      "heading": "Sexuálne obťažovanie",
+      "text": "Nevhodné správanie sexuálnej povahy, ktoré narúša dôstojnosť osoby, vytvára ponižujúce alebo zastrašujúce prostredie."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je sexuálne násilie?",
+      "options": ["Dobrovoľný styk", "Donútenie k sexuálnemu konaniu násilím alebo hrozbou", "Náhodný dotyk"],
+      "correct": 1,
+      "explanation_correct": "Správne – sexuálne násilie je donútenie násilím alebo hrozbou.",
+      "explanation_incorrect": "Nie – dobrovoľný styk nie je sexuálne násilie."
+    },
+    {
+      "question": "Kedy ide o sexuálne zneužívanie?",
+      "options": ["Keď osoba nie je schopná dať platný súhlas", "Keď ide o hádku medzi partnermi", "Keď je osoba dospelá a súhlasí"],
+      "correct": 0,
+      "explanation_correct": "Správne – zneužívanie je konanie voči osobe bez schopnosti súhlasu.",
+      "explanation_incorrect": "Nie – rozhodujúca je neschopnosť dať súhlas."
+    },
+    {
+      "question": "Čo je chráneným objektom týchto trestných činov?",
+      "options": ["Majetok", "Sexuálna sloboda a ľudská dôstojnosť", "Verejný poriadok"],
+      "correct": 1,
+      "explanation_correct": "Správne – chránená je sexuálna sloboda a dôstojnosť.",
+      "explanation_incorrect": "Nie – nejde o majetok ani verejný poriadok."
+    },
+    {
+      "question": "Kedy je súhlas právne irelevantný?",
+      "options": ["Pri dieťati pod zákonným vekom", "Pri dospelej osobe bez nátlaku", "Pri dobrovoľnom vzťahu dvoch dospelých"],
+      "correct": 0,
+      "explanation_correct": "Správne – dieťa nemôže dať platný súhlas.",
+      "explanation_incorrect": "Nie – súhlas dieťaťa je právne irelevantný."
+    },
+    {
+      "question": "Čo je sexuálne obťažovanie?",
+      "options": ["Nevhodné správanie sexuálnej povahy narúšajúce dôstojnosť", "Dobrovoľný flirt", "Bežná komunikácia"],
+      "correct": 0,
+      "explanation_correct": "Správne – ide o správanie narúšajúce dôstojnosť.",
+      "explanation_incorrect": "Nie – flirt nie je trestný čin."
+    }
+  ],
+  "tiles": [
+    {
+      "term": "Sexuálne násilie",
+      "definition": "Donútenie k sexuálnemu konaniu násilím alebo hrozbou."
+    },
+    {
+      "term": "Sexuálne zneužívanie",
+      "definition": "Sexuálne konanie voči osobe neschopnej dať súhlas."
+    },
+    {
+      "term": "Sexuálne obťažovanie",
+      "definition": "Nevhodné správanie sexuálnej povahy narúšajúce dôstojnosť."
+    },
+    {
+      "term": "Sexuálna sloboda",
+      "definition": "Právo rozhodovať o svojom sexuálnom živote bez nátlaku."
+    },
+    {
+      "term": "Dôstojnosť",
+      "definition": "Základná hodnota človeka, ktorá musí byť rešpektovaná."
+    }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Sexuálne násilie s hrozbou",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Páchateľ prinútil obeť k sexuálnemu konaniu tým, že jej hrozil fyzickým útokom.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o sexuálne násilie?",
+          "options": ["Áno", "Nie", "Len ak došlo k zraneniu"],
+          "correct": 0,
+          "explanation_correct": "Správne – hrozba násilia stačí na naplnenie skutkovej podstaty.",
+          "explanation_incorrect": "Nie – zranenie nie je podmienkou."
+        },
+        {
+          "question": "Krok 2: Je súhlas obete platný, ak bol daný zo strachu?",
+          "options": ["Nie", "Áno", "Len ak nebola zranená"],
+          "correct": 0,
+          "explanation_correct": "Správne – súhlas vynútený hrozbou nie je platný.",
+          "explanation_incorrect": "Nie – súhlas musí byť slobodný."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Sexuálne zneužívanie maloletého",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Dospelá osoba mala sexuálny kontakt s 13-ročným dieťaťom, ktoré s tým formálne súhlasilo.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je súhlas dieťaťa právne relevantný?",
+          "options": ["Nie", "Áno", "Len ak rodičia súhlasili"],
+          "correct": 0,
+          "explanation_correct": "Správne – dieťa nemôže dať platný súhlas.",
+          "explanation_incorrect": "Nie – súhlas dieťaťa je právne irelevantný."
+        },
+        {
+          "question": "Krok 2: O aký čin ide?",
+          "options": ["Sexuálne zneužívanie", "Sexuálne násilie", "Obmedzovanie osobnej slobody"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o sexuálne zneužívanie maloletého.",
+          "explanation_incorrect": "Nie – nejde o násilie, ale o zneužitie maloletého."
+        }
+      ]
+    }
+  ]
+}

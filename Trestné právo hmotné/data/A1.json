@@ -1,0 +1,152 @@
+{
+  "id": "A1",
+  "title": "Pojem, funkcie a zásady trestného práva hmotného",
+  "schemaVersion": "1.1",
+  "tags": ["základy", "zásady", "trestné právo"],
+  "theory": [
+    {
+      "heading": "Čo je trestné právo hmotné",
+      "text": "Upravuje, ktoré konania sú trestnými činmi, aké tresty možno uložiť a za akých podmienok vzniká trestná zodpovednosť."
+    },
+    {
+      "heading": "Funkcie TPH",
+      "text": "Ochranná, preventívna, represívna a regulačná funkcia tvoria základný účel trestného práva."
+    },
+    {
+      "heading": "Zásady TPH",
+      "text": "Zásada zákonnosti, subsidiarity trestnej represie, individuálnej viny, humanizmu a proporcionality. Súčasťou zásady zákonnosti je aj zákaz retroaktivity v neprospech páchateľa a výnimka retroaktivity v prospech páchateľa."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Ktorá zásada vyjadruje, že trestnosť činu musí byť ustanovená zákonom?",
+      "options": ["Zásada proporcionality", "Zásada zákonnosti", "Zásada humanizmu"],
+      "correct": 1,
+      "explanation_correct": "Správne – zásada zákonnosti vyžaduje, aby trestnosť bola určená zákonom.",
+      "explanation_incorrect": "Nie – správna je zásada zákonnosti, ktorá vyžaduje, aby trestnosť určoval zákon."
+    },
+    {
+      "question": "Ktorá funkcia TPH chráni spoločnosť pred kriminalitou?",
+      "options": ["Preventívna", "Represívna", "Ochranná"],
+      "correct": 2,
+      "explanation_correct": "Správne – ochranná funkcia chráni spoločnosť pred kriminalitou.",
+      "explanation_incorrect": "Nie – ochranná funkcia je tá, ktorá chráni spoločnosť pred kriminalitou."
+    },
+    {
+      "question": "Čo znamená zásada subsidiarity v trestnom práve?",
+      "options": ["Trestné právo je primárne", "Trestné právo sa použije až po vyčerpaní iných prostriedkov", "Trest musí byť prísny"],
+      "correct": 1,
+      "explanation_correct": "Správne – subsidiarita znamená, že trestné právo sa použije len ak iné prostriedky nestačia.",
+      "explanation_incorrect": "Nesprávne – subsidiarita neznamená prísnosť trestu."
+    },
+    {
+      "question": "Ktorá zásada vyjadruje, že trest musí byť primeraný závažnosti činu?",
+      "options": ["Zásada proporcionality", "Zásada zákonnosti", "Zásada retroaktivity"],
+      "correct": 0,
+      "explanation_correct": "Správne – proporcionalita vyžaduje primeranosť trestu.",
+      "explanation_incorrect": "Nesprávne – proporcionalita je správna odpoveď."
+    },
+    {
+      "question": "Čo je hlavnou výnimkou zo zákazu retroaktivity v neprospech páchateľa?",
+      "options": ["Žiadna výnimka", "Retroaktivita v prospech páchateľa", "Retroaktivita pri vojnovom stave"],
+      "correct": 1,
+      "explanation_correct": "Správne – ak novšia norma je priaznivejšia pre páchateľa, uplatní sa táto norma.",
+      "explanation_incorrect": "Nesprávne – existuje výnimka v prospech páchateľa."
+    }
+  ],
+  "tiles": [
+    { "term": "Zásada zákonnosti", "definition": "Len zákon môže určiť, čo je trestný čin a aký trest možno uložiť." },
+    { "term": "Subsidiarita", "definition": "Trestné právo sa použije až vtedy, keď iné prostriedky nestačia." },
+    { "term": "Humanizmus", "definition": "Trestanie musí rešpektovať ľudskú dôstojnosť." },
+    { "term": "Proporcionalita", "definition": "Trest musí byť primeraný závažnosti činu." },
+    { "term": "Retroaktivita v prospech", "definition": "Novšia norma priaznivejšia pre páchateľa sa môže uplatniť spätne." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Retroaktivita v trestnom práve",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie prípadu: Nový zákon sprísnil trestnosť určitého konania. Páchateľ spáchal konanie pred účinnosťou zákona. Riešte retroaktivitu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký právny problém riešime?",
+          "options": ["Subsidiarita trestnej represie", "Proporcionalita trestu", "Retroaktivita v neprospech páchateľa"],
+          "correct": 2,
+          "explanation_correct": "Správne – ide o zákaz retroaktivity v neprospech páchateľa.",
+          "explanation_incorrect": "Nesprávne – otázka sa týka retroaktivity, nie subsidiarity alebo proporcionality."
+        },
+        {
+          "question": "Krok 2: Ktoré ustanovenie sa použije?",
+          "options": ["Zásada proporcionality", "Zásada zákonnosti (lex praevia)", "Zásada humanizmu"],
+          "correct": 1,
+          "explanation_correct": "Správne – zásada zákonnosti zahŕňa aj zákaz retroaktivity.",
+          "explanation_incorrect": "Nesprávne – proporcionalita ani humanizmus neriešia retroaktivitu."
+        },
+        {
+          "question": "Krok 3: Ako sa norma aplikuje na skutok?",
+          "options": [
+            "Aplikuje sa nová prísnejšia norma",
+            "Aplikuje sa zákon platný v čase skutku",
+            "Aplikuje sa najvýhodnejšia norma pre páchateľa"
+          ],
+          "correct": 2,
+          "explanation_correct": "Správne – ak novší zákon je pre páchateľa priaznivejší, uplatní sa táto novšia norma.",
+          "explanation_incorrect": "Nesprávne – nová prísnejšia norma sa nesmie aplikovať spätne."
+        },
+        {
+          "question": "Krok 4: Aký procesný postup je najvhodnejší?",
+          "options": [
+            "Skrátené konanie bez posúdenia retroaktivity",
+            "Okamžité uplatnenie novej normy",
+            "Klasické vyšetrovanie a posúdenie skutku podľa zákona v čase skutku, s prihliadnutím na výhodnejšiu normu"
+          ],
+          "correct": 2,
+          "explanation_correct": "Správne – treba posúdiť skutok podľa zákona platného v čase jeho spáchania a overiť, či novší zákon nie je priaznivejší.",
+          "explanation_incorrect": "Nesprávne – nemožno obísť posúdenie retroaktivity."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zásada proporcionality pri ukladaní trestu",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie prípadu: Páchateľ spáchal drobnú krádež, no navrhovaný trest je neprimerane prísny. Posúďte proporcionalitu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký právny problém riešime?",
+          "options": ["Retroaktivita", "Subsidiarita trestnej represie", "Proporcionalita trestu"],
+          "correct": 2,
+          "explanation_correct": "Správne – ide o primeranosť trestu.",
+          "explanation_incorrect": "Nesprávne – nejde o retroaktivitu ani subsidiaritu."
+        },
+        {
+          "question": "Krok 2: Ktoré ustanovenie sa použije?",
+          "options": ["Zásada humanizmu", "Zásada proporcionality", "Zásada zákonnosti"],
+          "correct": 1,
+          "explanation_correct": "Správne – proporcionalita je kľúčová pri ukladaní trestu.",
+          "explanation_incorrect": "Nesprávne – humanizmus ani zákonnosť nie sú jadrom problému."
+        },
+        {
+          "question": "Krok 3: Ako sa norma aplikuje na skutok?",
+          "options": ["Uložiť najprísnejší trest", "Uložiť trest primeraný závažnosti a okolnostiam", "Vyhnúť sa trestu úplne"],
+          "correct": 1,
+          "explanation_correct": "Správne – trest musí byť primeraný závažnosti činu a osobným pomerom páchateľa.",
+          "explanation_incorrect": "Nesprávne – extrémy nie sú prípustné."
+        },
+        {
+          "question": "Krok 4: Aký procesný postup je najvhodnejší?",
+          "options": ["Okamžité uvalenie väzby", "Klasické vyšetrovanie a individuálne posúdenie trestu", "Skrátené konanie bez posúdenia okolností"],
+          "correct": 1,
+          "explanation_correct": "Správne – treba individuálne posúdiť všetky okolnosti.",
+          "explanation_incorrect": "Nesprávne – väzba ani skrátené konanie nie sú primerané."
+        }
+      ]
+    }
+  ]
+}

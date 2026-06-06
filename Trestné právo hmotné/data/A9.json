@@ -1,0 +1,116 @@
+{
+  "id": "A9",
+  "title": "Trestná súčinnosť a účastníctvo",
+  "schemaVersion": "1.1",
+  "tags": ["účastníctvo", "organizátor", "návodca", "pomocník", "spolupáchateľ"],
+  "theory": [
+    {
+      "heading": "Pojem účastníctva",
+      "text": "Účastníctvo je úmyselná účasť na trestnom čine inej osoby. Účastník sa podieľa na trestnom čine, hoci ho nemusí vykonať vlastnou rukou."
+    },
+    {
+      "heading": "Formy účastníctva",
+      "text": "Zákon rozlišuje organizátora, návodcu a pomocníka. Každý z nich sa podieľa na trestnom čine iným spôsobom."
+    },
+    {
+      "heading": "Spolupáchateľstvo",
+      "text": "Spolupáchateľstvo je spoločné úmyselné konanie dvoch alebo viacerých osôb, ktoré spoločne naplnia znaky skutkovej podstaty."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kto je organizátor trestného činu?",
+      "options": ["Ten, kto čin vykoná", "Ten, kto zosnuje alebo riadi trestný čin", "Ten, kto poskytne pomoc"],
+      "correct": 1,
+      "explanation_correct": "Správne – organizátor zosnuje alebo riadi trestný čin.",
+      "explanation_incorrect": "Nie – vykonávateľ je páchateľ, nie organizátor."
+    },
+    {
+      "question": "Kto je návodca?",
+      "options": ["Ten, kto navádza inú osobu na spáchanie činu", "Ten, kto čin vykoná", "Ten, kto koná z nedbanlivosti"],
+      "correct": 0,
+      "explanation_correct": "Správne – návodca navádza inú osobu na spáchanie trestného činu.",
+      "explanation_incorrect": "Nie – návodca je ten, kto navádza."
+    },
+    {
+      "question": "Kto je pomocník?",
+      "options": ["Ten, kto poskytne pomoc pri čine", "Ten, kto čin riadi", "Ten, kto čin vykoná"],
+      "correct": 0,
+      "explanation_correct": "Správne – pomocník poskytuje pomoc pri trestnom čine.",
+      "explanation_incorrect": "Nie – pomocník je ten, kto pomáha."
+    },
+    {
+      "question": "Čo je spolupáchateľstvo?",
+      "options": ["Náhodná účasť na čine", "Spoločné úmyselné konanie viacerých osôb", "Konanie z nedbanlivosti"],
+      "correct": 1,
+      "explanation_correct": "Správne – spolupáchateľstvo je spoločné úmyselné konanie.",
+      "explanation_incorrect": "Nie – musí ísť o úmyselné spoločné konanie."
+    },
+    {
+      "question": "Je účastníctvo trestné?",
+      "options": ["Áno", "Nie", "Len pri zločinoch"],
+      "correct": 0,
+      "explanation_correct": "Správne – účastníctvo je trestné rovnako ako samotné vykonanie činu.",
+      "explanation_incorrect": "Nie – účastníctvo je trestné."
+    }
+  ],
+  "tiles": [
+    { "term": "Organizátor", "definition": "Zosnuje alebo riadi trestný čin." },
+    { "term": "Návodca", "definition": "Navádza inú osobu na spáchanie trestného činu." },
+    { "term": "Pomocník", "definition": "Poskytuje pomoc pri spáchaní trestného činu." },
+    { "term": "Spolupáchateľ", "definition": "Spoločne s iným úmyselne vykoná trestný čin." },
+    { "term": "Úmysel", "definition": "Vnútorný psychický vzťah páchateľa k trestnému činu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Návod na krádež",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba presvedčila kamaráta, aby ukradol tovar z obchodu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o návodcu?",
+          "options": ["Áno", "Nie", "Len ak bol prítomný pri čine"],
+          "correct": 0,
+          "explanation_correct": "Správne – presviedčanie je navádzanie.",
+          "explanation_incorrect": "Nie – ide o návod."
+        },
+        {
+          "question": "Krok 2: Je návod trestný?",
+          "options": ["Áno", "Nie", "Len pri zločinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – návod je trestný rovnako ako vykonanie činu.",
+          "explanation_incorrect": "Nie – návod je trestný."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Pomoc pri lúpeži",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba držala dvere, aby páchateľ mohol po lúpeži ujsť.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o pomocníka?",
+          "options": ["Áno", "Nie", "Len ak dostal odmenu"],
+          "correct": 0,
+          "explanation_correct": "Správne – držanie dverí je pomoc pri čine.",
+          "explanation_incorrect": "Nie – ide o pomoc."
+        },
+        {
+          "question": "Krok 2: Je pomoc trestná?",
+          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – pomoc je trestná forma účastníctva.",
+          "explanation_incorrect": "Nie – pomoc je trestná."
+        }
+      ]
+    }
+  ]
+}

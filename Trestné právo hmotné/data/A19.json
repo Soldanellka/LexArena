@@ -1,0 +1,102 @@
+{
+  "id": "A19",
+  "title": "Trestné činy proti slobode",
+  "schemaVersion": "1.1",
+  "tags": ["sloboda", "obmedzovanie osobnej slobody", "vydieranie"],
+  "theory": [
+    {
+      "heading": "Obmedzovanie osobnej slobody",
+      "text": "Protiprávne bránenie osobe vo voľnom pohybe."
+    },
+    {
+      "heading": "Vydieranie",
+      "text": "Nútenie iného konania hrozbou násilia alebo inej ujmy."
+    },
+    {
+      "heading": "Únos",
+      "text": "Protiprávne premiestnenie alebo zadržiavanie osoby."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je obmedzovanie osobnej slobody?",
+      "options": ["Zákonné zadržanie", "Protiprávne bránenie pohybu", "Náhodné zdržanie"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o protiprávne bránenie pohybu.",
+      "explanation_incorrect": "Nie – zákonné zadržanie nie je trestné."
+    },
+    {
+      "question": "Čo je vydieranie?",
+      "options": ["Náhodná hádka", "Nútenie hrozbou", "Ponuka pomoci"],
+      "correct": 1,
+      "explanation_correct": "Správne – vydieranie je nútenie hrozbou.",
+      "explanation_incorrect": "Nie – vydieranie je hrozba."
+    },
+    {
+      "question": "Čo je únos?",
+      "options": ["Dobrovoľné odvedenie osoby", "Protiprávne premiestnenie osoby", "Zadržanie políciou"],
+      "correct": 1,
+      "explanation_correct": "Správne – únos je protiprávne premiestnenie.",
+      "explanation_incorrect": "Nie – polícia koná zákonne."
+    },
+    {
+      "question": "Ktorý čin je najzávažnejší?",
+      "options": ["Vydieranie", "Únos", "Obmedzovanie slobody"],
+      "correct": 1,
+      "explanation_correct": "Správne – únos je najzávažnejší.",
+      "explanation_incorrect": "Nie – únos je najzávažnejší."
+    },
+    {
+      "question": "Čo je hrozba ujmy?",
+      "options": ["Ponuka", "Nátlak", "Náhodný výrok"],
+      "correct": 1,
+      "explanation_correct": "Správne – hrozba je nátlak.",
+      "explanation_incorrect": "Nie – hrozba je nátlak."
+    }
+  ],
+  "tiles": [
+    { "term": "Obmedzovanie slobody", "definition": "Protiprávne bránenie pohybu." },
+    { "term": "Vydieranie", "definition": "Nútenie hrozbou násilia." },
+    { "term": "Únos", "definition": "Protiprávne premiestnenie osoby." },
+    { "term": "Hrozba", "definition": "Nátlak na inú osobu." },
+    { "term": "Násilie", "definition": "Použitie fyzickej sily." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zatvorenie v miestnosti",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba zamkla inú osobu v izbe.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o obmedzovanie slobody?",
+          "options": ["Áno", "Nie", "Len ak bola tma"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o obmedzovanie.",
+          "explanation_incorrect": "Nie – je to obmedzovanie."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vydieranie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba žiadala peniaze pod hrozbou zverejnenia citlivých informácií.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o vydieranie?",
+          "options": ["Áno", "Nie", "Len ak boli informácie nepravdivé"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o vydieranie.",
+          "explanation_incorrect": "Nie – je to vydieranie."
+        }
+      ]
+    }
+  ]
+}

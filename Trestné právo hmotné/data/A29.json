@@ -1,0 +1,96 @@
+{
+  "id": "A29",
+  "title": "Trestné činy proti brannosti, civilnej službe, službe v ozbrojených silách a proti obrane vlasti; Trestné činy vojenské",
+  "schemaVersion": "1.1",
+  "tags": ["brannosť", "civilná služba", "obrana vlasti", "vojenské trestné činy", "dezercia"],
+  "theory": [
+    {
+      "heading": "Trestné činy proti brannosti",
+      "text": "Ide o konania, ktorými sa osoba vyhýba povinnostiam súvisiacim s obranou štátu, napríklad nenastúpenie služby, marenie brannej povinnosti alebo útek do zahraničia."
+    },
+    {
+      "heading": "Trestné činy proti civilnej službe",
+      "text": "Osoba sa vyhýba výkonu civilnej služby, ktorá je zákonnou alternatívou vojenskej služby z dôvodu svedomia alebo náboženského presvedčenia."
+    },
+    {
+      "heading": "Trestné činy proti službe v ozbrojených silách",
+      "text": "Konania narúšajúce disciplínu, pripravenosť a funkčnosť ozbrojených síl, napríklad nenastúpenie služby, neuposlúchnutie rozkazu alebo svojvoľné opustenie jednotky."
+    },
+    {
+      "heading": "Trestné činy proti obrane vlasti",
+      "text": "Konania, ktoré oslabujú obranyschopnosť štátu, napríklad sabotáž alebo úmyselné poškodzovanie vojenského materiálu."
+    },
+    {
+      "heading": "Vojenské trestné činy",
+      "text": "Špecifické trestné činy, ktorých páchateľom môže byť len vojak, napríklad dezercia, neuposlúchnutie rozkazu, urážka nadriadeného alebo porušenie strážnej služby."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Kto môže spáchať vojenský trestný čin?",
+      "options": ["Každý občan", "Len vojak", "Len verejný činiteľ"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je dezercia?",
+      "options": ["Svojvoľné opustenie služby", "Bežné omeškanie", "Zmena pracovného miesta"],
+      "correct": 0
+    },
+    {
+      "question": "Kedy ide o trestný čin proti brannosti?",
+      "options": ["Pri úmyselnom vyhýbaní sa brannej povinnosti", "Pri riadnom nástupe služby", "Pri civilnej službe"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je chráneným objektom týchto trestných činov?",
+      "options": ["Majetok štátu", "Obrana a bezpečnosť štátu", "Verejný poriadok"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je neuposlúchnutie rozkazu?",
+      "options": ["Nesplnenie zákonného rozkazu nadriadeného", "Nesúhlas v diskusii", "Náhodné zabudnutie"],
+      "correct": 0
+    }
+  ],
+  "tiles": [
+    { "term": "Brannosť", "definition": "Povinnosť občanov podieľať sa na obrane štátu." },
+    { "term": "Dezercia", "definition": "Svojvoľné opustenie služby vojakom." },
+    { "term": "Neuposlúchnutie rozkazu", "definition": "Nesplnenie zákonného rozkazu nadriadeného." },
+    { "term": "Civilná služba", "definition": "Alternatíva vojenskej služby z dôvodu svedomia." },
+    { "term": "Obrana vlasti", "definition": "Chránený objekt týchto trestných činov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nenastúpenie služby",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Osoba ignorovala povolávací rozkaz a odišla do zahraničia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Trestný čin proti brannosti", "Krádež", "Výtržníctvo"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Dezercia vojaka",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vojak opustil jednotku počas služby a nevrátil sa.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Dezercia", "Podvod", "Neoprávnené podnikanie"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

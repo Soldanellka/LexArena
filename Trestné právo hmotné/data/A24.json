@@ -1,0 +1,106 @@
+{
+  "id": "A24",
+  "title": "Trestné činy všeobecne nebezpečné a trestné činy proti životnému prostrediu",
+  "schemaVersion": "1.1",
+  "tags": ["všeobecné nebezpečenstvo", "životné prostredie", "odpady", "znečisťovanie", "ohrozenie"],
+  "theory": [
+    {
+      "heading": "Všeobecne nebezpečné trestné činy",
+      "text": "Ide o konania, ktoré môžu spôsobiť rozsiahle ohrozenie života, zdravia alebo majetku. Typické je, že už samotné ohrozenie je trestné, aj bez vzniku škody."
+    },
+    {
+      "heading": "Všeobecné ohrozenie",
+      "text": "Páchateľ spôsobí alebo môže spôsobiť nebezpečenstvo smrti alebo ťažkej ujmy na zdraví viacerých osôb, alebo škodu veľkého rozsahu."
+    },
+    {
+      "heading": "Trestné činy proti životnému prostrediu",
+      "text": "Chránia prírodu, vodu, ovzdušie, pôdu, živočíchy a rastliny pred závažným poškodením alebo zničením. Ide o konania, ktoré ohrozujú ekologickú rovnováhu."
+    },
+    {
+      "heading": "Neoprávnené nakladanie s odpadmi",
+      "text": "Nelegálne ukladanie, preprava alebo likvidácia odpadov, najmä nebezpečných, v rozpore so zákonom."
+    },
+    {
+      "heading": "Znečisťovanie životného prostredia",
+      "text": "Vypúšťanie alebo únik škodlivých látok do vody, pôdy alebo ovzdušia, ktoré môžu spôsobiť vážnu ekologickú ujmu."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je typickým znakom všeobecne nebezpečných trestných činov?",
+      "options": ["Vyžaduje sa skutočná škoda", "Stačí už samotné ohrozenie", "Musí ísť o úmyselné zabitie"],
+      "correct": 1,
+      "explanation_correct": "Správne – pri týchto činoch stačí ohrozenie, nie je potrebná škoda.",
+      "explanation_incorrect": "Nie – škoda nie je podmienkou."
+    },
+    {
+      "question": "Čo je všeobecné ohrozenie?",
+      "options": ["Ohrozenie jednej osoby", "Ohrozenie viacerých osôb alebo veľkého majetku", "Bežný priestupok"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o ohrozenie viacerých osôb alebo veľkého rozsahu.",
+      "explanation_incorrect": "Nie – nejde o malý rozsah."
+    },
+    {
+      "question": "Čo je neoprávnené nakladanie s odpadmi?",
+      "options": ["Triedenie odpadu", "Nelegálne ukladanie alebo preprava odpadov", "Používanie zberného dvora"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o konanie v rozpore so zákonom.",
+      "explanation_incorrect": "Nie – triedenie odpadu nie je trestné."
+    },
+    {
+      "question": "Čo je chráneným objektom trestných činov proti životnému prostrediu?",
+      "options": ["Majetok štátu", "Ekologická rovnováha a zdravie ľudí", "Verejný poriadok"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o ochranu prírody a zdravia.",
+      "explanation_incorrect": "Nie – nejde o verejný poriadok."
+    },
+    {
+      "question": "Kedy ide o znečisťovanie životného prostredia?",
+      "options": ["Pri vypúšťaní škodlivín spôsobujúcich vážnu ujmu", "Pri bežnom používaní vody", "Pri legálnom výrube stromov"],
+      "correct": 0,
+      "explanation_correct": "Správne – musí ísť o škodlivé látky s vážnymi následkami.",
+      "explanation_incorrect": "Nie – bežné používanie prírody nie je trestné."
+    }
+  ],
+  "tiles": [
+    { "term": "Všeobecné ohrozenie", "definition": "Ohrozenie života, zdravia alebo majetku vo veľkom rozsahu." },
+    { "term": "Neoprávnené nakladanie s odpadmi", "definition": "Nelegálne ukladanie alebo preprava odpadov." },
+    { "term": "Znečisťovanie", "definition": "Vypúšťanie škodlivín do prírody." },
+    { "term": "Ekologická ujma", "definition": "Závažné poškodenie životného prostredia." },
+    { "term": "Nebezpečná látka", "definition": "Látka schopná spôsobiť vážne ohrozenie alebo škodu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Únik chemikálií z továrne",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Z továrne unikla toxická látka do rieky, čo spôsobilo úhyn rýb.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Je to trestný čin?",
+          "options": ["Áno – znečisťovanie životného prostredia", "Nie – ide len o priestupok", "Len ak zomreli ľudia"],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Nelegálna skládka odpadu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Podnikateľ vyvážal stavebný odpad na lúku bez povolenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "O aký čin ide?",
+          "options": ["Neoprávnené nakladanie s odpadmi", "Krádež", "Výtržníctvo"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

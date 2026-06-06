@@ -1,0 +1,116 @@
+{
+  "id": "A8",
+  "title": "Vývinové štádiá trestného činu",
+  "schemaVersion": "1.1",
+  "tags": ["štádiá", "príprava", "pokus", "dokonaný čin"],
+  "theory": [
+    {
+      "heading": "Príprava",
+      "text": "Úmyselné vytváranie podmienok na spáchanie obzvlášť závažného zločinu."
+    },
+    {
+      "heading": "Pokus",
+      "text": "Konanie, ktoré bezprostredne smeruje k dokonaniu trestného činu, ale k dokonaniu nedôjde."
+    },
+    {
+      "heading": "Dokonaný trestný čin",
+      "text": "Všetky znaky skutkovej podstaty sú naplnené."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je pokus trestného činu?",
+      "options": ["Dokonanie činu", "Konanie smerujúce k dokonaniu", "Neúmyselné konanie"],
+      "correct": 1,
+      "explanation_correct": "Správne – pokus smeruje k dokonaniu.",
+      "explanation_incorrect": "Nie – pokus nie je dokonanie."
+    },
+    {
+      "question": "Kedy ide o prípravu?",
+      "options": ["Pri úmyselnom vytváraní podmienok", "Pri náhodnom konaní", "Pri nedbanlivosti"],
+      "correct": 0,
+      "explanation_correct": "Správne – príprava je úmyselná.",
+      "explanation_incorrect": "Nie – príprava nie je náhodná."
+    },
+    {
+      "question": "Kedy je čin dokonaný?",
+      "options": ["Keď sú naplnené všetky znaky skutkovej podstaty", "Keď páchateľ začne konať", "Keď páchateľ ujde"],
+      "correct": 0,
+      "explanation_correct": "Správne – dokonanie vyžaduje naplnenie všetkých znakov.",
+      "explanation_incorrect": "Nie – začatie konania nestačí."
+    },
+    {
+      "question": "Je pokus trestný?",
+      "options": ["Áno", "Nie", "Len pri nedbanlivosti"],
+      "correct": 0,
+      "explanation_correct": "Správne – pokus je trestný.",
+      "explanation_incorrect": "Nie – pokus je trestný."
+    },
+    {
+      "question": "Ktoré štádium je najzávažnejšie?",
+      "options": ["Príprava", "Pokus", "Dokonaný čin"],
+      "correct": 2,
+      "explanation_correct": "Správne – dokonaný čin je najzávažnejší.",
+      "explanation_incorrect": "Nie – dokonanie je najzávažnejšie."
+    }
+  ],
+  "tiles": [
+    { "term": "Príprava", "definition": "Úmyselné vytváranie podmienok na spáchanie činu." },
+    { "term": "Pokus", "definition": "Konanie smerujúce k dokonaniu." },
+    { "term": "Dokonanie", "definition": "Naplnenie všetkých znakov skutkovej podstaty." },
+    { "term": "Úmysel", "definition": "Vnútorný vzťah páchateľa k činu." },
+    { "term": "Dobrovoľné upustenie", "definition": "Páchateľ sám zastaví konanie pred dokončením." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pokus krádeže",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba sa pokúsila otvoriť auto, ale neuspela.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o pokus?",
+          "options": ["Áno", "Nie", "Len ak bola škoda"],
+          "correct": 0,
+          "explanation_correct": "Správne – konanie smerovalo k dokonaniu.",
+          "explanation_incorrect": "Nie – ide o pokus."
+        },
+        {
+          "question": "Krok 2: Je pokus trestný?",
+          "options": ["Áno", "Nie", "Len pri zločine"],
+          "correct": 0,
+          "explanation_correct": "Správne – pokus je trestný.",
+          "explanation_incorrect": "Nie – pokus je trestný."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Príprava lúpeže",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba si pripravila zbraň a plán lúpeže.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o prípravu?",
+          "options": ["Áno", "Nie", "Len ak bola zbraň použitá"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o prípravu.",
+          "explanation_incorrect": "Nie – príprava nevyžaduje použitie zbrane."
+        },
+        {
+          "question": "Krok 2: Je príprava trestná?",
+          "options": ["Áno – pri obzvlášť závažných zločinoch", "Nie", "Len pri prečinoch"],
+          "correct": 0,
+          "explanation_correct": "Správne – príprava je trestná pri závažných zločinoch.",
+          "explanation_incorrect": "Nie – príprava môže byť trestná."
+        }
+      ]
+    }
+  ]
+}

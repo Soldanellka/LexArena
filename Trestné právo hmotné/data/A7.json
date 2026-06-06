@@ -1,0 +1,116 @@
+{
+  "id": "A7",
+  "title": "Okolnosti vylučujúce protiprávnosť",
+  "schemaVersion": "1.1",
+  "tags": ["protiprávnosť", "okolnosti", "nutná obrana", "krajná núdza"],
+  "theory": [
+    {
+      "heading": "Pojem okolností vylučujúcich protiprávnosť",
+      "text": "Ide o situácie, v ktorých konanie formálne napĺňa znaky trestného činu, ale nie je protiprávne."
+    },
+    {
+      "heading": "Nutná obrana",
+      "text": "Konanie na odvrátenie priamo hroziaceho alebo trvajúceho útoku, ktoré nie je zjavne neprimerané."
+    },
+    {
+      "heading": "Krajná núdza",
+      "text": "Konanie na odvrátenie nebezpečenstva, ktoré nemožno inak odvrátiť, ak spôsobený následok nie je zjavne závažnejší."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Ktorá okolnosť vylučuje protiprávnosť?",
+      "options": ["Nedbanlivosť", "Nutná obrana", "Recidíva"],
+      "correct": 1,
+      "explanation_correct": "Správne – nutná obrana je okolnosť vylučujúca protiprávnosť.",
+      "explanation_incorrect": "Nie – správna odpoveď je nutná obrana."
+    },
+    {
+      "question": "Kedy ide o krajnú núdzu?",
+      "options": ["Keď útok trvá", "Keď hrozí nebezpečenstvo a nemožno ho inak odvrátiť", "Keď páchateľ koná úmyselne"],
+      "correct": 1,
+      "explanation_correct": "Správne – ide o konanie na odvrátenie nebezpečenstva.",
+      "explanation_incorrect": "Nie – úmysel nie je podstatou krajne núdze."
+    },
+    {
+      "question": "Čo nesmie byť pri nutnej obrane?",
+      "options": ["Zjavná neprimeranosť obrany", "Útok", "Nebezpečenstvo"],
+      "correct": 0,
+      "explanation_correct": "Správne – obrana nesmie byť zjavne neprimeraná.",
+      "explanation_incorrect": "Nie – neprimeranosť je rozhodujúca."
+    },
+    {
+      "question": "Kedy nejde o nutnú obranu?",
+      "options": ["Ak útok už skončil", "Ak útok trvá", "Ak útok hrozí"],
+      "correct": 0,
+      "explanation_correct": "Správne – obrana po skončení útoku nie je nutná obrana.",
+      "explanation_incorrect": "Nie – útok musí trvať alebo hroziť."
+    },
+    {
+      "question": "Ktorá okolnosť NIE je vylučujúca protiprávnosť?",
+      "options": ["Súhlas poškodeného", "Krajná núdza", "Recidíva"],
+      "correct": 2,
+      "explanation_correct": "Správne – recidíva nie je okolnosť vylučujúca protiprávnosť.",
+      "explanation_incorrect": "Nie – recidíva je priťažujúca okolnosť."
+    }
+  ],
+  "tiles": [
+    { "term": "Nutná obrana", "definition": "Odvrátenie útoku, ktoré nie je zjavne neprimerané." },
+    { "term": "Krajná núdza", "definition": "Odvrátenie nebezpečenstva, ktoré nemožno inak odvrátiť." },
+    { "term": "Súhlas poškodeného", "definition": "Poškodený súhlasí s konaním, ktoré by inak bolo protiprávne." },
+    { "term": "Dovolené riziko", "definition": "Konanie v rámci spoločensky prospešnej činnosti." },
+    { "term": "Výkon práva", "definition": "Konanie v súlade so zákonom, ktoré vylučuje protiprávnosť." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nutná obrana pri fyzickom útoku",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba odrazila útočníka, ktorý ju napadol. Posúďte nutnú obranu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Trval útok?",
+          "options": ["Áno", "Nie", "Nie je jasné"],
+          "correct": 0,
+          "explanation_correct": "Správne – útok trval.",
+          "explanation_incorrect": "Nie – útok trval."
+        },
+        {
+          "question": "Krok 2: Bola obrana primeraná?",
+          "options": ["Áno – odvrátenie útoku", "Nie – bola zjavne neprimeraná", "Nedá sa určiť"],
+          "correct": 0,
+          "explanation_correct": "Správne – obrana bola primeraná.",
+          "explanation_incorrect": "Nie – nebola neprimeraná."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Krajná núdza pri požiari",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba rozbila okno auta, aby vytiahla dieťa počas požiaru. Posúďte krajnú núdzu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Hrozilo nebezpečenstvo?",
+          "options": ["Áno", "Nie", "Len mierne"],
+          "correct": 0,
+          "explanation_correct": "Správne – hrozilo bezprostredné nebezpečenstvo.",
+          "explanation_incorrect": "Nie – nebezpečenstvo bolo reálne."
+        },
+        {
+          "question": "Krok 2: Je spôsobená škoda menšia?",
+          "options": ["Áno – rozbité okno je menšie zlo", "Nie", "Záleží na počasí"],
+          "correct": 0,
+          "explanation_correct": "Správne – zachránenie života je nadradené majetku.",
+          "explanation_incorrect": "Nie – škoda je menšia."
+        }
+      ]
+    }
+  ]
+}

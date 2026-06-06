@@ -1,0 +1,116 @@
+{
+  "id": "A2",
+  "title": "Trestný čin a jeho druhy, triedenie trestných činov",
+  "schemaVersion": "1.1",
+  "tags": ["trestný čin", "triedenie", "základy"],
+  "theory": [
+    {
+      "heading": "Definícia trestného činu",
+      "text": "Trestný čin je protiprávne konanie, ktoré zákon označuje za trestný čin a za ktoré možno uložiť trest."
+    },
+    {
+      "heading": "Druhy trestných činov",
+      "text": "Rozlišujeme trestné činy podľa závažnosti (prečin, zločin), podľa predmetu útoku (majetkové, proti životu) a podľa formy viny."
+    },
+    {
+      "heading": "Triedenie trestných činov",
+      "text": "Triedenie pomáha v právnej kvalifikácii a pri určovaní trestov; používa sa aj pri štatistike a prevencii."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Ako sa delia trestné činy podľa závažnosti?",
+      "options": ["Prečin a priestupok", "Prečin a zločin", "Zločin a priestupok"],
+      "correct": 1,
+      "explanation_correct": "Správne – trestné činy sa delia na prečiny a zločiny.",
+      "explanation_incorrect": "Nesprávne – priestupok nie je trestný čin v tomto delení."
+    },
+    {
+      "question": "Ktoré kritérium NIE je bežné pri triedení trestných činov?",
+      "options": ["Závažnosť", "Predmet útoku", "Farba obete"],
+      "correct": 2,
+      "explanation_correct": "Správne – farba obete nie je právne relevantné kritérium.",
+      "explanation_incorrect": "Nesprávne – farba obete nie je kritérium."
+    },
+    {
+      "question": "Čo je právna kvalifikácia?",
+      "options": ["Určenie trestu", "Priradenie skutku k ustanoveniu trestného zákona", "Vyšetrovací postup"],
+      "correct": 1,
+      "explanation_correct": "Správne – právna kvalifikácia priraďuje skutok k ustanoveniu zákona.",
+      "explanation_incorrect": "Nesprávne – nie je to len určenie trestu."
+    },
+    {
+      "question": "Ktorý pojem patrí medzi predmet útoku?",
+      "options": ["Majetok", "Súd", "Obžaloba"],
+      "correct": 0,
+      "explanation_correct": "Správne – majetok môže byť predmetom útoku trestného činu.",
+      "explanation_incorrect": "Nesprávne – súd nie je predmet útoku."
+    },
+    {
+      "question": "Prečo je triedenie trestných činov dôležité?",
+      "options": ["Pre štatistiku a prevenciu", "Pre farbu obálky spisu", "Pre výber sudcu"],
+      "correct": 0,
+      "explanation_correct": "Správne – triedenie pomáha pri štatistike a prevencii.",
+      "explanation_incorrect": "Nesprávne – farba obálky a výber sudcu nie sú dôvody."
+    }
+  ],
+  "tiles": [
+    { "term": "Prečin", "definition": "Menej závažný trestný čin." },
+    { "term": "Zločin", "definition": "Závažnejší trestný čin s prísnejšími trestami." },
+    { "term": "Predmet útoku", "definition": "To, čo je útokom trestného činu (napr. majetok, zdravie)." },
+    { "term": "Právna kvalifikácia", "definition": "Priradenie skutku k ustanoveniu trestného zákona." },
+    { "term": "Recidíva", "definition": "Opakované páchateľstvo po predchádzajúcom odsúdení." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Kvalifikácia krádeže",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba odcudzila mobil z otvorenej tašky. Ako kvalifikovať?",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je to trestný čin proti majetku?",
+          "options": ["Áno", "Nie", "Záleží na hodnote"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o trestný čin proti majetku.",
+          "explanation_incorrect": "Nesprávne – je to trestný čin proti majetku."
+        },
+        {
+          "question": "Krok 2: Aké kritérium rozhoduje medzi prečinom a zločinom?",
+          "options": ["Hmotná škoda a okolnosti", "Farba mobilu", "Počet svedkov"],
+          "correct": 0,
+          "explanation_correct": "Správne – závažnosť a škoda rozhodujú.",
+          "explanation_incorrect": "Nesprávne – farba a svedkovia nie sú rozhodujúce."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Podvod v obchodnom styku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Podnikateľ uviedol nepravdivé údaje, aby získal zákazku. Kvalifikujte.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o hospodársky trestný čin?",
+          "options": ["Áno", "Nie", "Len ak škoda > 1000€"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o hospodársky trestný čin (podvod).",
+          "explanation_incorrect": "Nesprávne – nie je to podmienené len sumou."
+        },
+        {
+          "question": "Krok 2: Aké dôkazy sú kľúčové?",
+          "options": ["Zmluvy, komunikácia, svedkovia", "Farba loga", "Počet zamestnancov"],
+          "correct": 0,
+          "explanation_correct": "Správne – dokumenty a komunikácia sú kľúčové.",
+          "explanation_incorrect": "Nesprávne – farba loga nie je relevantná."
+        }
+      ]
+    }
+  ]
+}

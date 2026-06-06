@@ -1,0 +1,78 @@
+{
+  "id": "A26",
+  "title": "Trestné činy proti poriadku vo verejných veciach",
+  "schemaVersion": "1.1",
+  "tags": ["verejné veci", "verejná moc", "úradné rozhodnutia", "falšovanie"],
+  "theory": [
+    {
+      "heading": "Marenie výkonu úradného rozhodnutia",
+      "text": "Úmyselné sťažovanie alebo znemožnenie výkonu rozhodnutia súdu alebo iného orgánu verejnej moci."
+    },
+    {
+      "heading": "Falšovanie a pozmeňovanie verejnej listiny",
+      "text": "Vyhotovenie alebo úprava listiny tak, aby pôsobila ako pravá, s cieľom jej použitia."
+    },
+    {
+      "heading": "Ohýbanie práva",
+      "text": "Úmyselné rozhodovanie verejného činiteľa v rozpore so zákonom s cieľom poškodiť alebo zvýhodniť osobu."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je marenie výkonu úradného rozhodnutia?",
+      "options": ["Dobrovoľné splnenie povinnosti", "Úmyselné sťažovanie výkonu rozhodnutia", "Náhodné omeškanie"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je falšovanie verejnej listiny?",
+      "options": ["Zničenie starej listiny", "Vyhotovenie alebo úprava listiny ako pravej", "Bežná chyba v dokumente"],
+      "correct": 1
+    },
+    {
+      "question": "Kto môže spáchať ohýbanie práva?",
+      "options": ["Každý občan", "Len verejný činiteľ", "Len právnik"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je chráneným objektom?",
+      "options": ["Majetok", "Riadny výkon verejnej moci", "Zdravie"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý čin patrí medzi trestné činy proti poriadku vo verejných veciach?",
+      "options": ["Falšovanie listiny", "Krádež", "Podvod"],
+      "correct": 0
+    }
+  ],
+  "tiles": [
+    { "term": "Úradné rozhodnutie", "definition": "Rozhodnutie orgánu verejnej moci." },
+    { "term": "Falšovanie listiny", "definition": "Vyhotovenie alebo úprava listiny ako pravej." },
+    { "term": "Ohýbanie práva", "definition": "Úmyselné rozhodovanie v rozpore so zákonom." },
+    { "term": "Verejný činiteľ", "definition": "Osoba vykonávajúca verejnú moc." },
+    { "term": "Verejná moc", "definition": "Chránený objekt týchto trestných činov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Ignorovanie zákazu priblíženia",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Osoba opakovane porušila zákaz priblíženia.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Falošný diplom",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Osoba predložila falošný diplom pri prijímaní do práce.",
+          "options": [],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

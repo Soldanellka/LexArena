@@ -1,0 +1,116 @@
+{
+  "id": "A3",
+  "title": "Skutková podstata – pojem, znaky a triedenie",
+  "schemaVersion": "1.1",
+  "tags": ["skutková podstata", "znaky", "triedenie"],
+  "theory": [
+    {
+      "heading": "Pojem skutkovej podstaty",
+      "text": "Skutková podstata je súhrn znakov, ktoré musia byť splnené, aby bol skutok trestným činom podľa zákona."
+    },
+    {
+      "heading": "Základné znaky",
+      "text": "Objekt, subjekt, objektívna stránka (čin), subjektívna stránka (vina) a následok."
+    },
+    {
+      "heading": "Triedenie skutkových podstát",
+      "text": "Podľa typu útoku, následku alebo formy viny; pomáha pri právnej kvalifikácii."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Čo je súčasťou skutkovej podstaty?",
+      "options": ["Len čin", "Objekt, subjekt, objektívna a subjektívna stránka", "Len následok"],
+      "correct": 1,
+      "explanation_correct": "Správne – skutková podstata zahŕňa objekt, subjekt, objektívnu a subjektívnu stránku.",
+      "explanation_incorrect": "Nesprávne – nie je to len čin alebo následok."
+    },
+    {
+      "question": "Ktorý prvok patrí do objektívnej stránky?",
+      "options": ["Zavinenie", "Konanie alebo opomenutie", "Úmysel"],
+      "correct": 1,
+      "explanation_correct": "Správne – objektívna stránka zahŕňa konanie alebo opomenutie a následok.",
+      "explanation_incorrect": "Nesprávne – úmysel je subjektívna stránka."
+    },
+    {
+      "question": "Čo je subjekt skutkovej podstaty?",
+      "options": ["Obeť", "Páchateľ", "Súd"],
+      "correct": 1,
+      "explanation_correct": "Správne – subjektom je páchateľ (ten, kto koná).",
+      "explanation_incorrect": "Nesprávne – obeť nie je subjektom skutkovej podstaty."
+    },
+    {
+      "question": "Prečo je triedenie skutkových podstát dôležité?",
+      "options": ["Pre právnu kvalifikáciu", "Pre výber sudcu", "Pre farbu spisu"],
+      "correct": 0,
+      "explanation_correct": "Správne – triedenie pomáha pri právnej kvalifikácii skutku.",
+      "explanation_incorrect": "Nesprávne – nie je to o farbe spisu."
+    },
+    {
+      "question": "Ktorý znak NIE je súčasťou skutkovej podstaty?",
+      "options": ["Následok", "Miesto činu", "Subjektívna stránka"],
+      "correct": 1,
+      "explanation_correct": "Správne – miesto činu nie je typickým zákonným znakom skutkovej podstaty.",
+      "explanation_incorrect": "Nesprávne – miesto činu môže byť relevantné, ale nie je zákonným znakom."
+    }
+  ],
+  "tiles": [
+    { "term": "Objekt skutkovej podstaty", "definition": "To, čo je útokom (napr. majetok, zdravie)." },
+    { "term": "Subjekt skutkovej podstaty", "definition": "Páchateľ trestného činu." },
+    { "term": "Objektívna stránka", "definition": "Konanie/opomenutie a následok." },
+    { "term": "Subjektívna stránka", "definition": "Zavinenie – úmysel alebo nedbanlivosť." },
+    { "term": "Následok", "definition": "Škoda alebo iný výsledok spôsobený činom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Posúdenie skutkovej podstaty u ublíženia na zdraví",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba udrela inú osobu, ktorá utrpela zranenie. Posúďte skutkovú podstatu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je splnená objektívna stránka?",
+          "options": ["Áno – konanie a následok sú preukázané", "Nie", "Len čiastočne"],
+          "correct": 0,
+          "explanation_correct": "Správne – konanie (úder) a následok (zranenie) sú splnené.",
+          "explanation_incorrect": "Nesprávne – sú splnené."
+        },
+        {
+          "question": "Krok 2: Ako posúdiť subjektívnu stránku?",
+          "options": ["Skúmať úmysel alebo nedbanlivosť", "Ignorovať", "Len trestný register"],
+          "correct": 0,
+          "explanation_correct": "Správne – treba zistiť, či išlo o úmysel alebo nedbanlivosť.",
+          "explanation_incorrect": "Nesprávne – subjektívna stránka sa nesmie ignorovať."
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Opomenutie pri povinnosti dohľadu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Opatrovateľ opomenul dohľad a došlo k úrazu. Posúďte skutkovú podstatu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o konanie alebo opomenutie?",
+          "options": ["Opomenutie", "Konanie", "Oboje"],
+          "correct": 0,
+          "explanation_correct": "Správne – ide o opomenutie povinnosti dohľadu.",
+          "explanation_incorrect": "Nesprávne – nie je to konanie."
+        },
+        {
+          "question": "Krok 2: Aký prvok je kľúčový pre trestnú zodpovednosť?",
+          "options": ["Zavinenie (nedbanlivosť)", "Farba oblečenia", "Počet svedkov"],
+          "correct": 0,
+          "explanation_correct": "Správne – treba preukázať zavinenie (nedbanlivosť).",
+          "explanation_incorrect": "Nesprávne – farba oblečenia nie je relevantná."
+        }
+      ]
+    }
+  ]
+}
