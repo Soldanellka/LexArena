@@ -11,14 +11,14 @@ const catalog = {
   "Trestné právo hmotné": {
     openExternal: "/Trestné právo hmotné/",
     desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady).",
-  duelCount: 5
-},
+    duelCount: 5
+  },
 
   "Trestné právo procesné": {
     openExternal: "/Trestné právo procesné/",
     desc: "Kompletná TPP appka (zásady, otázky, prípady).",
-  duelCount: 5
-},
+    duelCount: 5
+  },
 
   "Trestné právo – spájačka": {
     openExternal: "/Trestné právo - spájačka/",
@@ -26,24 +26,25 @@ const catalog = {
   },
 
   "Trestné právo – teória a prípady": {
- openExternal: "/Trestné právo - teória a prípady/",
+    openExternal: "/Trestné právo - teória a prípady/",
     desc: "Kompletná appka Teoretické vysvetlenia, prípady a praktické riešenia."
-  }
-};
+  },
+
   "Trestné právo – Veľký kvíz": {
- openExternal: "/TREST Veľký KVÍZ/",
+    openExternal: "/TREST Veľký KVÍZ/",
     desc: "Kompletná appka Kvíz."
   },
+
   "Občan – teória a veľký kvíz": {
     openExternal: "/Občan - teória a veľký kvíz/",
     desc: "Kompletná appka Teória k TPH, TPP a veľký kvíz v jednej appke."
   },
 
- "Pracovné právo": {
-  openExternal: "/LuluLaw duel Pracovné právo/",
-  desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
-  duelCount: 5
- }
+  "Pracovné právo": {
+    openExternal: "/LuluLaw duel Pracovné právo/",
+    desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
+    duelCount: 5
+  },
 
   /* Placeholdery – zatiaľ bez externých modulov */
   "Občianske právo hmotné": {
@@ -57,8 +58,8 @@ const catalog = {
   "Rímske právo": {
     desc: "Základy rímskeho práva – modul vo vývoji."
   }
-};
 
+};
 
 /* ============================
    MEMORY SETS
