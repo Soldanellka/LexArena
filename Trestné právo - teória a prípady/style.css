@@ -359,6 +359,21 @@ body {
 .quiz-end button:hover {
   background: #005f54;
 }
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #5A6E8C;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.back-btn:hover {
+  background: #6C80A0;
+  transform: translateY(-1px);
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
