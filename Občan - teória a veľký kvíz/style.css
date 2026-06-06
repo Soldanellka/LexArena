@@ -258,6 +258,19 @@ body {
 .reset-btn:hover {
   background-color: #C97A8A;
 }
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #0b5fff;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+.back-btn:hover {
+  background: #084ecf;
+}
 
 /* ============================
    PRAVÝ PANEL – DVA STĹPCE (NOVÉ)
