@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- © 2026 Julia – Internal Watermark -->
+  <meta name="watermark" content="Julia-TP-Hash-9f3c1a7e">
+
+  <title>Trestné právo – Štátnice</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- DÁTA (globálne, bez modulov) -->
+  <script src="trestne-data.js"></script>
+
+  <!-- LOGIKA (globálne, bez modulov) -->
+  <script src="app.js"></script>
+</head>
+
+<body>
+
+  <!-- © 2026 Julia – Internal Watermark: index-body -->
+
+  <header class="app-header">
+    <h1>Trestné právo – Štátnice</h1>
+    <div class="app-subtitle">Kompletné okruhy, vysvetlenia, kazuistiky a tréningové prípady</div>
+  </header>
+
+  <main class="app-main">
+
+    <section class="top-tiles">
+
+      <button class="tile" data-section="A">
+        <span class="tile-label">A</span>
+        <span class="tile-title">Trestné právo hmotné</span>
+        <span class="tile-desc">Základné inštitúty, pojmy, zásady</span>
+      </button>
+
+      <button class="tile" data-section="B">
+        <span class="tile-label">B</span>
+        <span class="tile-title">Trestné právo procesné</span>
+        <span class="tile-desc">Konanie, subjekty, opravné prostriedky</span>
+      </button>
+
+      <button class="tile" data-section="C">
+        <span class="tile-label">C</span>
+        <span class="tile-title">Praktické príklady</span>
+        <span class="tile-desc">Kazuistiky a aplikácia práva</span>
+      </button>
+
+      <button class="tile" data-section="TRAINING">
+        <span class="tile-label">T</span>
+        <span class="tile-title">Nácvik riešenia prípadov</span>
+        <span class="tile-desc">Interaktívne rozhodovanie krok za krokom</span>
+      </button>
+
+    </section>
+
+    <section class="bottom-layout">
+
+      <aside class="sidebar">
+        <h2>Otázky</h2>
+        <ul class="questions-list" id="questionsList"></ul>
+      </aside>
+
+      <section class="content">
+        <div id="questionDetail" class="question-detail">
+          <p class="empty-state">Vyber si okruh alebo tréningový prípad…</p>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- © 2026 Julia – Internal Watermark: footer -->
+
+</body>
+</html>
