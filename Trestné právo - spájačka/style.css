@@ -316,3 +316,18 @@ footer{color:var(--muted);font-size:.8rem;margin-top:.25rem}
 .tile, .chip, header, #status-panel, select, button {
   transition: background .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #5A6E8C;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.back-btn:hover {
+  background: #6C80A0;
+  transform: translateY(-1px);
+}
