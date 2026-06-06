@@ -1,0 +1,207 @@
+/* -----------------------------------------------------------
+   style.css – pudrovo ružová + bridlicová moderná téma
+   ----------------------------------------------------------- */
+
+/* --- Farebná paleta --- */
+:root {
+  --bg: #FBF8F9;
+  --card: linear-gradient(180deg,#FFFFFF,#FFF9FB);
+  --primary: #F7EDEE;
+  --primary-2: #F3E4E6;
+  --accent: #C8A2A8;
+  --muted: #7A6E73;
+  --text: #2A1F22;
+  --border-subtle: rgba(36,27,29,0.06);
+  --glass: rgba(255,255,255,0.6);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --soft-shadow: 0 12px 36px rgba(42,31,34,0.06);
+  --soft-shadow-2: 0 8px 22px rgba(42,31,34,0.04);
+  --glass-blur: blur(6px);
+  --transition-fast: 180ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* --- Dark mode --- */
+body.dark {
+  --bg: #141214;
+  --card: linear-gradient(180deg,#1E181A,#251E20);
+  --primary: #3A2E32;
+  --primary-2: #4A3A40;
+  --accent: #D8B4BE;
+  --muted: #BFA8AE;
+  --text: #F8E9EF;
+  --border-subtle: rgba(255,255,255,0.06);
+  --soft-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+
+/* --- Global reset --- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.35;
+  transition: background 260ms ease, color 260ms ease;
+}
+
+/* --- Header --- */
+.app-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border-subtle);
+  position: sticky; top: 0; z-index: 40;
+  background: color-mix(in srgb, var(--bg) 88%, #ffffff 12%);
+  backdrop-filter: var(--glass-blur);
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-badge {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(180deg,var(--primary),var(--primary-2));
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--text);
+  box-shadow: var(--soft-shadow-2);
+}
+.logo-text { font-weight: 700; letter-spacing: 0.03em; font-size: 14px; }
+
+/* --- Buttons --- */
+.primary-btn {
+  background: linear-gradient(180deg,var(--primary),var(--primary-2));
+  border: none; padding: 10px 16px; border-radius: 999px;
+  font-weight: 700; cursor: pointer; color: var(--text);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--soft-shadow-2);
+}
+
+/* --- Topics grid --- */
+.topics-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+.topic-card {
+  background: linear-gradient(180deg, #FFF7F9, #F8EEF0);
+  padding: 16px; border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(42,31,34,0.06);
+  border: 1px solid rgba(200,162,168,0.22);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  cursor: pointer; display: flex; flex-direction: column; gap: 8px;
+}
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(200,162,168,0.25);
+  border-color: rgba(200,162,168,0.35);
+}
+
+/* --- Quiz --- */
+.quiz-options button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(200,162,168,0.22);
+  background: linear-gradient(180deg, #FFF7F9, #F7EDEE);
+  margin: 8px 0;
+  box-shadow: 0 8px 22px rgba(42,31,34,0.06);
+  color: var(--text);
+}
+.quiz-options button:hover {
+  background: linear-gradient(180deg, #F3E4E6, #EFDADF);
+  box-shadow: 0 12px 28px rgba(200,162,168,0.25);
+}
+
+/* --- Dark mode quiz --- */
+body.dark .quiz-options button {
+  background: linear-gradient(180deg, #2A1F25 0%, #1E181A 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #F6E9EB;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+}
+body.dark .quiz-options button:hover {
+  background: linear-gradient(180deg, #3A2E32 0%, #4A3A40 100%);
+  box-shadow: 0 22px 48px rgba(216,180,190,0.25);
+  color: #FFFFFF;
+}
+
+/* --- Tiles --- */
+.tiles-board {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  align-items: start; margin-top: 18px; padding: 6px;
+}
+.tiles-column { display: flex; flex-direction: column; gap: 12px; }
+
+/* zvýraznené dlaždice */
+.tile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #FFF7F9 0%, #F7EDEE 100%);
+  border: 1px solid rgba(200,162,168,0.32);
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(42,31,34,0.08);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background 260ms ease;
+  min-height: 72px;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow overlay – neblokuje kliky */
+.tile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(200,162,168,0.12), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+.tile-card:hover::before { opacity: 1; }
+
+.tile-card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #F8E9EF 0%, #F3E4E6 100%);
+  box-shadow: 0 22px 48px rgba(200,162,168,0.25);
+}
+
+.tile-card.selected {
+  outline: 3px solid rgba(200,162,168,0.38);
+  box-shadow: 0 24px 52px rgba(200,162,168,0.3);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.tile-card.matched {
+  opacity: 0;
+  transform: scale(.94);
+  pointer-events: none;
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.tile-card.shake {
+  animation: tile-shake 420ms;
+  box-shadow: 0 10px 30px rgba(200,162,168,0.10);
+}
+.topic-card {
+  background: var(--card, #fff);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transform: translateY(0);
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+@keyframes tile-shake
