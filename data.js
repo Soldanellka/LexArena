@@ -9,28 +9,32 @@ console.log("DATAJS KOREŇ SA NAČÍTAL"); // diagnostika
 const catalog = {
 
   "Trestné právo hmotné": {
-    openExternal: "https://lululawtphmota.netlify.app/",
+    openExternal: "/Trestné právo hmotné/",
     desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady)."
   },
 
   "Trestné právo procesné": {
-    openExternal: "https://lululawtpproces.netlify.app/",
+    openExternal: "/Trestné právo procesné/",
     desc: "Kompletná TPP appka (zásady, otázky, prípady)."
   },
 
   "Trestné právo – spájačka": {
-    openExternal: "https://lululawtpdlazdice.netlify.app/",
+    openExternal: "/Trestné právo - spájačka/",
     desc: "Hra na spájanie troch prvkov. Ideálne na učenie pojmov."
   },
 
   "Trestné právo – teória a prípady": {
  openExternal: "/Trestné právo - teória a prípady/",
-    desc: "Kompletná aaka Teoretické vysvetlenia, prípady a praktické riešenia."
+    desc: "Kompletná appka Teoretické vysvetlenia, prípady a praktické riešenia."
   },
 
+  "Trestné právo – Veľký kvíz": {
+ openExternal: "/TREST Veľký KVÍZ/",
+    desc: "Kompletná appka Kvíz."
+  },
   "Občan – teória a veľký kvíz": {
-    openExternal: "https://lululawobcan.netlify.app/",
-    desc: "Teória k TPH, TPP a veľký kvíz v jednej appke."
+    openExternal: "/Občan - teória a veľký kvíz/",
+    desc: "Kompletná appka Teória k TPH, TPP a veľký kvíz v jednej appke."
   },
 
  "Pracovné právo": {
