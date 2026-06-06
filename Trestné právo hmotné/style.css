@@ -221,7 +221,7 @@ body.dark .quiz-options button:hover {
 .back-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #4A6F63;
+  background: linear-gradient(180deg, #F4DDDD 0%, #E8C7C7 40%, #CFA5A5 100%);
   color: #ffffff;
   border-radius: 6px;
   font-weight: 600;
@@ -230,9 +230,14 @@ body.dark .quiz-options button:hover {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 .back-btn:hover {
-  background: #5E8A7A;
+  background: linear-gradient(180deg, #3E3A3F 0%, #4A3F46 40%, #6A5A63 100%);
   transform: translateY(-1px);
 }
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(90, 110, 140, 0.25);
+}
+
 @media (prefers-color-scheme: dark) {
   .back-btn {
     background: #3E5C53;
