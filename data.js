@@ -24,8 +24,8 @@ const catalog = {
   },
 
   "Trestné právo – teória a prípady": {
-    openExternal: "https://lululawtppripady.netlify.app/",
-    desc: "Teoretické vysvetlenia, prípady a praktické riešenia."
+ openExternal: "/Trestné právo - teória a prípady/",
+    desc: "Kompletná aaka Teoretické vysvetlenia, prípady a praktické riešenia."
   },
 
   "Občan – teória a veľký kvíz": {
