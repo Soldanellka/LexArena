@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veľký kvíz z trestného práva</title>
+
+  <!-- ŠTÝLY -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-blue">
+
+  <div class="quiz-container">
+
+    <!-- TOP BAR (témy + dark mode) -->
+    <div class="top-bar">
+
+      <div class="left-controls">
+        <div class="theme-switcher">
+          <button data-theme="blue" class="theme-btn active">Modrá</button>
+          <button data-theme="purple" class="theme-btn">Fialová</button>
+          <button data-theme="green" class="theme-btn">Zelená</button>
+        </div>
+      </div>
+
+      <div class="right-controls">
+        <button id="darkToggle" class="dark-toggle">🌙 Dark</button>
+      </div>
+
+    </div>
+
+    <!-- NADPIS -->
+    <h1 class="quiz-title">Veľký kvíz z trestného práva</h1>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- SCORE BAR -->
+    <div id="scoreBar" class="score-bar">
+      <span id="scoreLabel">0 správnych z 0</span>
+    </div>
+
+    <!-- KVÍZOVÝ BOX -->
+    <div id="quizBox" class="quiz-box"></div>
+
+    <!-- VYSVETLENIE -->
+    <div id="explanation" class="explanation hidden"></div>
+
+    <!-- VÝSLEDOK -->
+    <div id="resultScreen" class="result-screen hidden">
+      <h2>Výsledok</h2>
+      <p id="scoreText"></p>
+      <button id="restartBtn">Spustiť znova</button>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTY -->
+  <script src="quiz-data.js" defer></script>
+
+  <!-- confetti knižnica (musí byť načítaná pred quiz.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+
+  <script src="quiz.js" defer></script>
+
+</body>
+</html>

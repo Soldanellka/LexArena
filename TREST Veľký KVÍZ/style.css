@@ -1,0 +1,515 @@
+/* ===========================
+   CSS PREMENNÉ – TÉMY
+=========================== */
+
+:root {
+  --bg-body: #eef1f6;
+  --bg-card: #ffffff;
+  --text-main: #1f2d3d;
+  --accent: #2d6cdf;
+  --accent-soft: #f0f4ff;
+  --border-soft: #d5d9e0;
+}
+
+/* TÉMY */
+body.theme-blue {
+  --accent: #2d6cdf;
+  --accent-soft: #f0f4ff;
+}
+
+body.theme-purple {
+  --accent: #7c3aed;
+  --accent-soft: #f3e8ff;
+}
+
+body.theme-green {
+  --accent: #16a34a;
+  --accent-soft: #e5f9ec;
+}
+
+/* DARK MODE – základné farby */
+body.dark {
+  --bg-body: #0f172a;
+  --bg-card: #111827;
+  --text-main: #ffffff; /* zmenené na bielu pre dark mode */
+  --accent-soft: rgba(255,255,255,0.06);
+  --border-soft: #374151;
+}
+
+/* ===========================
+   ZÁKLADNÝ DIZAJN
+=========================== */
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--bg-body);
+  margin: 0;
+  padding: 0;
+  color: var(--text-main);
+}
+
+.quiz-container {
+  max-width: 720px;
+  margin: 50px auto;
+  background: var(--bg-card);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  color: var(--text-main);
+}
+
+.quiz-container:hover {
+  box-shadow: 0 10px 32px rgba(0,0,0,0.12);
+}
+
+.quiz-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-main);
+}
+
+/* ===========================
+   TOP BAR (témy + dark mode)
+=========================== */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 6px;
+}
+
+.theme-btn {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-main);
+  transition: 0.2s ease;
+}
+
+.theme-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.dark-toggle {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+/* DARK MODE – top bar */
+
+body.dark .theme-btn {
+  color: var(--text-main);
+  border-color: #4b5563;
+}
+
+body.dark .theme-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+body.dark .dark-toggle {
+  color: var(--text-main);
+  border-color: #4b5563;
+}
+
+/* ===========================
+   SCORE BAR
+=========================== */
+
+.score-bar {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+  color: var(--text-main);
+}
+
+/* ===========================
+   ODPovede
+=========================== */
+
+.answer {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-card);
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: 0.25s ease;
+  color: var(--text-main);
+}
+
+.answer:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.correct {
+  background: #d8f8d4 !important;
+  border-color: #2ecc71 !important;
+  color: #1b7f3c;
+  font-weight: 600;
+}
+
+.wrong {
+  background: #ffd6d6 !important;
+  border-color: #e74c3c !important;
+  color: #8b1e1e;
+  font-weight: 600;
+}
+
+/* DARK MODE – odpovede */
+
+body.dark .answer {
+  background: #020617;
+  border-color: #1f2937;
+  color: var(--text-main); /* zabezpečí biele písmo v dark mode */
+}
+
+body.dark .answer:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--accent);
+}
+
+body.dark .correct {
+  background: #1e3a1e !important;
+  border-color: #22c55e !important;
+  color: #bbf7d0 !important;
+}
+
+body.dark .wrong {
+  background: #3a1e1e !important;
+  border-color: #ef4444 !important;
+  color: #fecaca !important;
+}
+
+/* ===========================
+   TLAČIDLO ĎALEJ
+=========================== */
+
+.next-btn {
+  margin-top: 25px;
+  padding: 14px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.next-btn:hover {
+  filter: brightness(0.92);
+  transform: translateY(-2px);
+}
+
+/* POP ANIMÁCIA NEXT BUTTON */
+@keyframes nextBtnPop {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.next-animate {
+  animation: nextBtnPop 0.35s ease-out forwards;
+}
+
+/* DARK MODE – tlačidlá */
+
+body.dark .next-btn,
+body.dark #restartBtn {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+body.dark .next-btn:hover,
+body.dark #restartBtn:hover {
+  filter: brightness(1.15);
+}
+
+/* ===========================
+   VYSVETLENIE
+=========================== */
+
+.explanation {
+  margin-top: 25px;
+  padding: 18px;
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+/* nadpisy vo vysvetlení */
+
+.correct-title {
+  color: #166534;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.wrong-title {
+  color: #b91c1c;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* boxy vo vysvetlení */
+
+.correct-box {
+  padding: 10px;
+  border-radius: 8px;
+  background: #d8f8d4;
+  border-left: 4px solid #22c55e;
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.wrong-box {
+  padding: 10px;
+  border-radius: 8px;
+  background: #fee2e2;
+  border-left: 4px solid #ef4444;
+  color: inherit;
+}
+
+/* DARK MODE – vysvetlenie */
+
+body.dark .explanation {
+  background: rgba(255,255,255,0.06);
+  border-left-color: var(--accent);
+  color: var(--text-main); /* biele písmo */
+}
+
+body.dark .correct-title {
+  color: #bbf7d0;
+}
+
+body.dark .wrong-title {
+  color: #fecaca;
+}
+
+body.dark .correct-box {
+  background: #1e3a1e !important;
+  border-left-color: #22c55e !important;
+  color: #bbf7d0 !important;
+}
+
+body.dark .wrong-box {
+  background: #3a1e1e !important;
+  border-left-color: #ef4444 !important;
+  color: #fecaca !important;
+}
+
+/* SLIDE-IN ANIMÁCIA VYSVETLENIA */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+  animation: slideIn 0.35s ease-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===========================
+   VÝSLEDOK
+=========================== */
+
+.result-screen {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-main);
+}
+
+#restartBtn {
+  padding: 14px 22px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+#restartBtn:hover {
+  filter: brightness(0.92);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+#progressContainer {
+  width: 100%;
+  background: #dfe4ec;
+  border-radius: 10px;
+  height: 14px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #6aa8ff);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* DARK MODE – progress bar */
+
+body.dark #progressContainer {
+  background: #1e293b;
+}
+
+body.dark #progressBar {
+  background: linear-gradient(90deg, var(--accent), #4f83ff);
+}
+
+/* ===========================
+   FLIP ANIMÁCIA
+=========================== */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.flip-start {
+  transform: rotateY(90deg);
+}
+
+.flip-end {
+  transform: rotateY(0deg);
+}
+
+.flip-front {
+  backface-visibility: hidden;
+}
+
+/* ===========================
+   BOUNCE (DUOLINGO ŠTÝL)
+=========================== */
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  80% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+.bounce {
+  animation: bounceIn 0.45s ease forwards;
+}
+
+/* ===========================
+   BLINK SPRÁVNEJ ODPOVEDE
+=========================== */
+
+@keyframes correctBlink {
+  0%   { background-color: #d8f8d4; }
+  50%  { background-color: #b6f2b0; }
+  100% { background-color: #d8f8d4; }
+}
+
+.blink-correct {
+  animation: correctBlink 0.6s ease-in-out;
+}
+
+/* ===========================
+   MOBILNÝ LAYOUT
+=========================== */
+
+@media (max-width: 600px) {
+  .quiz-container {
+    margin: 20px 10px;
+    padding: 22px 16px 28px;
+  }
+
+  .quiz-title {
+    font-size: 22px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .theme-switcher {
+    justify-content: center;
+  }
+
+  .dark-toggle {
+    align-self: flex-end;
+  }
+
+  .answer {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .next-btn,
+  #restartBtn {
+    font-size: 15px;
+  }
+}
+
+/* ===========================
+   DOPLNKOVÉ PRAVIDLÁ PRE KONTRAST
+   (voliteľné, odporúčané)
+=========================== */
+
+/* Ak potrebuješ ešte silnejší kontrast pre malé texty v dark mode */
+body.dark .muted,
+body.dark small,
+body.dark .helper-text {
+  color: #d1d5db;
+}
+
+/* Ak máš ikony alebo inline SVG, zabezpeč, aby zdedili farbu textu */
+body.dark svg,
+body.dark svg * {
+  fill: currentColor;
+  stroke: currentColor;
+}
