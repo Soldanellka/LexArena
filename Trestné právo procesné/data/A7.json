@@ -1,0 +1,112 @@
+{
+  "id": "A7",
+  "title": "Poškodený, obeť a zúčastnená osoba",
+  "schemaVersion": "1.1",
+  "tags": ["poškodený", "obeť", "zúčastnená osoba", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto je poškodeným v trestnom konaní?",
+      "options": ["Osoba, ktorá spáchala trestný čin", "Osoba, ktorej bolo trestným činom ublížené", "Svedok"],
+      "correct": 1
+    },
+    {
+      "question": "Kto je obeťou podľa zákona o obetiach trestných činov?",
+      "options": ["Len fyzická osoba", "Fyzická osoba, ktorej bola spôsobená ujma", "Každý účastník konania"],
+      "correct": 1
+    },
+    {
+      "question": "Kto je zúčastnenou osobou?",
+      "options": ["Osoba, ktorej vec môže byť zhabaná alebo prepadnúť", "Obhajca", "Znalec"],
+      "correct": 0
+    },
+    {
+      "question": "Má poškodený právo navrhovať dôkazy?",
+      "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+      "correct": 0
+    },
+    {
+      "question": "Má obeť právo na odbornú pomoc a podporu?",
+      "options": ["Áno", "Nie", "Len pri násilných trestných činoch"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené a môže uplatniť nárok na náhradu škody." },
+    { "term": "Obeť", "definition": "Fyzická osoba, ktorej bola trestným činom spôsobená ujma na zdraví, majetku alebo dôstojnosti." },
+    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
+    { "term": "Nárok na náhradu škody", "definition": "Poškodený môže žiadať náhradu škody v adhéznom konaní." },
+    { "term": "Práva obete", "definition": "Obeť má právo na informácie, podporu, ochranu a odbornú pomoc." },
+
+    { "term": "Adhézne konanie", "definition": "Konanie, v ktorom súd rozhoduje o náhrade škody spôsobenej trestným činom." },
+    { "term": "Zhabanie veci", "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom." },
+    { "term": "Prepadnutie veci", "definition": "Trest spočívajúci v odňatí veci patriacej páchateľovi." },
+    { "term": "Právo navrhovať dôkazy", "definition": "Poškodený môže navrhovať vykonanie dôkazov v konaní." },
+    { "term": "Právo na informácie", "definition": "Obeť má právo byť informovaná o stave konania a svojich právach." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nárok poškodeného",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Poškodený žiada, aby súd rozhodol o náhrade škody spôsobenej trestným činom.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kde môže poškodený uplatniť nárok na náhradu škody?",
+          "options": ["V adhéznom konaní", "Len v civilnom konaní", "U prokurátora"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kedy musí poškodený uplatniť nárok?",
+          "options": ["Najneskôr na hlavnom pojednávaní pred začatím dokazovania", "Kedykoľvek počas konania", "Až po rozsudku"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Rozhodnúť o nároku, ak sú splnené podmienky",
+            "Odkázať poškodeného na civilné konanie vždy",
+            "Nerozhodovať o nároku"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Postavenie zúčastnenej osoby",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia zaistila vec patriacu osobe, ktorá nie je obvineným. Hrozí jej prepadnutie alebo zhabanie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aké postavenie má táto osoba?",
+          "options": ["Poškodený", "Zúčastnená osoba", "Obeť"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Aké právo má zúčastnená osoba?",
+          "options": ["Navrhovať dôkazy", "Brániť sa proti zhabaní veci", "Podávať obžalobu"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vypočuť zúčastnenú osobu a rozhodnúť o zhabaní alebo prepadnutí veci",
+            "Ignorovať jej námietky",
+            "Postúpiť vec civilnému súdu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

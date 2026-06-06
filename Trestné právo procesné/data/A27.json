@@ -1,0 +1,112 @@
+{
+  "id": "A27",
+  "title": "Osobitné spôsoby konania",
+  "schemaVersion": "1.1",
+  "tags": ["osobitné spôsoby konania", "trestné konanie", "dohoda o vine a treste", "rozsudok na základe vyhlásenia"],
+
+  "quiz": [
+    {
+      "question": "Ktorý z nasledujúcich je osobitným spôsobom konania?",
+      "options": ["Hlavné pojednávanie", "Dohoda o vine a treste", "Odvolacie konanie"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno uzavrieť dohodu o vine a treste?",
+      "options": ["Len po vyhlásení rozsudku", "V prípravnom konaní aj na súde", "Len v odvolacom konaní"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je rozsudok na základe vyhlásenia obžalovaného?",
+      "options": ["Rozsudok po úplnom dokazovaní", "Rozsudok po prijatí vyhlásenia o vine", "Rozsudok bez účasti obžalovaného"],
+      "correct": 1
+    },
+    {
+      "question": "Kto schvaľuje dohodu o vine a treste?",
+      "options": ["Prokurátor", "Súd", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy môže súd odmietnuť schváliť dohodu o vine a treste?",
+      "options": ["Ak je v rozpore so zákonom", "Nikdy", "Len ak nesúhlasí poškodený"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Osobitné spôsoby konania", "definition": "Špeciálne procesné postupy odlišné od hlavného pojednávania." },
+    { "term": "Dohoda o vine a treste", "definition": "Dohoda medzi obvineným a prokurátorom o priznaní viny a treste." },
+    { "term": "Rozsudok na základe vyhlásenia", "definition": "Rozsudok po prijatí vyhlásenia obžalovaného, že je vinný." },
+    { "term": "Konanie proti ušlému", "definition": "Konanie proti obvinenému, ktorý sa vyhýba trestnému stíhaniu." },
+    { "term": "Trestný rozkaz", "definition": "Rozhodnutie bez pojednávania pri menej závažných skutkoch." },
+
+    { "term": "Vyhlásenie o vine", "definition": "Obžalovaný môže vyhlásiť, že je vinný, čo umožňuje skrátené konanie." },
+    { "term": "Schvaľovanie dohody", "definition": "Súd skúma zákonnosť a primeranosť dohody o vine a treste." },
+    { "term": "Zjednodušené dokazovanie", "definition": "V osobitných konaniach sa dokazovanie obmedzuje." },
+    { "term": "Poškodený", "definition": "Má právo vyjadriť sa k dohode o vine a treste." },
+    { "term": "Neprítomnosť obvineného", "definition": "V niektorých osobitných konaniach môže súd konať aj bez obvineného." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Dohoda o vine a treste",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený sa priznal k spáchaniu prečinu a chce uzavrieť dohodu o vine a treste.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kto môže uzavrieť dohodu s obvineným?",
+          "options": ["Súd", "Prokurátor", "Poškodený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto dohodu schvaľuje?",
+          "options": ["Súd", "Polícia", "Poškodený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Kedy súd dohodu neschváli?",
+          "options": [
+            "Ak je v rozpore so zákonom alebo neprimeraná",
+            "Ak sa obvinený priznal",
+            "Ak je skutok prečin"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Rozsudok na základe vyhlásenia obžalovaného",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obžalovaný na hlavnom pojednávaní vyhlási, že je vinný.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Čo musí súd urobiť?",
+          "options": ["Prijať alebo odmietnuť vyhlásenie", "Ihneď vyhlásiť rozsudok", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kedy súd vyhlásenie neprijme?",
+          "options": ["Ak je zjavne nepravdivé alebo vynútené", "Ak je obžalovaný prítomný", "Ak je skutok prečin"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po prijatí vyhlásenia?",
+          "options": [
+            "Súd vykoná len nevyhnutné dôkazy a rozhodne",
+            "Súd vykoná celé dokazovanie",
+            "Súd vec vráti prokurátorovi"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

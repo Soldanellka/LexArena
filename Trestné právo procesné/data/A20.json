@@ -1,0 +1,112 @@
+{
+  "id": "A20",
+  "title": "Dozor a úkony prokurátora v predsúdnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["prokurátor", "dozor", "predsúdne konanie", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto vykonáva dozor nad zákonnosťou predsúdneho konania?",
+      "options": ["Súd", "Prokurátor", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý z nasledujúcich úkonov môže prokurátor vykonať v predsúdnom konaní?",
+      "options": ["Vydanie rozsudku", "Nariadenie doplnenia vyšetrovania", "Uloženie trestu"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie môže prokurátor prijať po skončení vyšetrovania?",
+      "options": ["Podanie obžaloby", "Vydanie trestného rozkazu", "Rozhodnutie o odvolaní"],
+      "correct": 0
+    },
+    {
+      "question": "Môže prokurátor zrušiť nezákonné rozhodnutie policajta?",
+      "options": ["Áno", "Nie", "Len so súhlasom súdu"],
+      "correct": 0
+    },
+    {
+      "question": "Kto rozhoduje o sťažnosti proti rozhodnutiu prokurátora?",
+      "options": ["Nadriadený prokurátor", "Súd", "Polícia"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Dozor prokurátora", "definition": "Dohľad nad zákonnosťou úkonov polície v predsúdnom konaní." },
+    { "term": "Pokyn prokurátora", "definition": "Záväzný pokyn policajtovi na vykonanie úkonu alebo doplnenie dokazovania." },
+    { "term": "Zrušenie rozhodnutia", "definition": "Prokurátor môže zrušiť nezákonné alebo neodôvodnené rozhodnutie polície." },
+    { "term": "Podanie obžaloby", "definition": "Rozhodnutie prokurátora, ktorým sa vec predkladá súdu." },
+    { "term": "Zastavenie trestného stíhania", "definition": "Rozhodnutie prokurátora, ak nie sú splnené podmienky na pokračovanie v stíhaní." },
+
+    { "term": "Doplnenie vyšetrovania", "definition": "Prokurátor môže nariadiť doplnenie dokazovania pred rozhodnutím." },
+    { "term": "Sťažnosť", "definition": "Opravný prostriedok proti rozhodnutiam prokurátora alebo polície." },
+    { "term": "Nadriadený prokurátor", "definition": "Orgán, ktorý rozhoduje o sťažnostiach proti rozhodnutiam prokurátora." },
+    { "term": "Dohľad nad väzbou", "definition": "Prokurátor kontroluje zákonnosť dôvodov väzby v predsúdnom konaní." },
+    { "term": "Zmier", "definition": "Možnosť ukončiť trestné stíhanie pri splnení zákonných podmienok." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezákonné rozhodnutie polície",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia odmietla vykonať dôkaz, ktorý je dôležitý pre objasnenie skutku. Obvinený podal sťažnosť prokurátorovi.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže prokurátor zasiahnuť?",
+          "options": ["Áno, môže zrušiť rozhodnutie polície", "Nie", "Len ak to schváli súd"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ako môže prokurátor postupovať?",
+          "options": ["Nariadiť vykonanie dôkazu", "Ignorovať sťažnosť", "Postúpiť vec obhajcovi"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Prečo je tento postup dôležitý?",
+          "options": [
+            "Na zabezpečenie zákonnosti a úplnosti vyšetrovania",
+            "Na urýchlenie konania",
+            "Na zníženie administratívy"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Doplnenie vyšetrovania",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia ukončila vyšetrovanie, ale prokurátor zistí, že chýbajú dôležité dôkazy.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže prokurátor nariadiť doplnenie vyšetrovania?",
+          "options": ["Áno", "Nie", "Len ak to navrhne poškodený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Čo môže nariadiť?",
+          "options": ["Vykonanie ďalších výsluchov", "Zastavenie konania", "Podanie obžaloby bez doplnenia"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Kedy môže prokurátor podať obžalobu?",
+          "options": [
+            "Až keď je skutkový stav dostatočne objasnený",
+            "Ihneď po ukončení vyšetrovania",
+            "Len ak to schváli obvinený"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

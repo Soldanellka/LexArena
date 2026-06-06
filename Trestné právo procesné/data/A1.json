@@ -1,0 +1,112 @@
+{
+  "id": "A1",
+  "title": "Základné zásady trestného konania",
+  "schemaVersion": "1.1",
+  "tags": ["zásady", "trestné konanie", "proces"],
+
+  "quiz": [
+    {
+      "question": "Ktorá zásada znamená, že obvinený nemusí vypovedať proti sebe?",
+      "options": ["Zásada verejnosti", "Zásada nemo tenetur", "Zásada legality"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorá zásada vyžaduje, aby dokazovanie prebiehalo ústne pred súdom?",
+      "options": ["Zásada ústnosti", "Zásada rýchlosti konania", "Zásada proporcionality"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorá zásada zabezpečuje, že strany môžu reagovať na dôkazy druhej strany?",
+      "options": ["Zásada kontradiktórnosti", "Zásada verejnosti", "Zásada humanity"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorá zásada vyžaduje, aby súd rozhodoval len na základe dôkazov vykonaných pred ním?",
+      "options": ["Zásada bezprostrednosti", "Zásada legality", "Zásada oportunity"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorá zásada znamená, že každý je považovaný za nevinného, kým sa vina nepreukáže?",
+      "options": ["Zásada prezumpcie neviny", "Zásada rýchlosti konania", "Zásada zákonnosti"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Prezumpcia neviny", "definition": "Každý je považovaný za nevinného, kým sa vina nepreukáže." },
+    { "term": "Nemo tenetur", "definition": "Obvinený nemusí vypovedať ani predkladať dôkazy proti sebe." },
+    { "term": "Zásada verejnosti", "definition": "Konanie je spravidla verejné, s možnosťou zákonných výnimiek." },
+    { "term": "Zásada ústnosti", "definition": "Dôkazy sa vykonávajú ústne pred súdom." },
+    { "term": "Zásada bezprostrednosti", "definition": "Súd hodnotí len dôkazy, ktoré sám vykonal." },
+
+    { "term": "Kontradiktórnosť", "definition": "Strany môžu reagovať na dôkazy a tvrdenia druhej strany." },
+    { "term": "Rovnosť strán", "definition": "Strany majú rovnaké procesné možnosti." },
+    { "term": "Zásada legality", "definition": "Orgány musia konať, ak sú splnené podmienky trestného stíhania." },
+    { "term": "Zásada oficiality", "definition": "Konanie sa začína z úradnej povinnosti." },
+    { "term": "Zásada rýchlosti", "definition": "Konanie má prebiehať bez zbytočných prieťahov." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Mlčanie obvineného",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený odmietol vypovedať. Prokurátor tvrdí, že to znamená, že niečo skrýva.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký právny problém riešime?",
+          "options": ["Zásada verejnosti", "Zásada nemo tenetur", "Zásada legality"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Môže súd vyvodiť vinu z mlčania?",
+          "options": ["Áno", "Nie", "Len ak to potvrdí prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Ignorovať mlčanie a hodnotiť len dôkazy",
+            "Považovať mlčanie za priznanie",
+            "Zastaviť konanie"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Vylúčenie verejnosti",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Súd chce vylúčiť verejnosť, lebo ide o citlivé informácie o maloletom.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký právny problém riešime?",
+          "options": ["Zásada verejnosti", "Zásada legality", "Zásada rýchlosti"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Môže súd vylúčiť verejnosť?",
+          "options": ["Áno, ak ide o ochranu maloletých", "Nie, nikdy", "Len so súhlasom obvineného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vylúčiť verejnosť a pokračovať",
+            "Prerušiť konanie",
+            "Vyhlásiť rozsudok neverejne"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "A24",
+  "title": "Verejné a neverejné zasadnutie súdu",
+  "schemaVersion": "1.1",
+  "tags": ["verejné zasadnutie", "neverejné zasadnutie", "súd", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktoré zasadnutie je spravidla prístupné verejnosti?",
+      "options": ["Neverejné zasadnutie", "Verejné zasadnutie", "Žiadne"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy súd koná na neverejnom zasadnutí?",
+      "options": ["Pri rozhodovaní o väzbe", "Pri hlavnom pojednávaní", "Pri prednese obžaloby"],
+      "correct": 0
+    },
+    {
+      "question": "Kto sa zúčastňuje verejného zasadnutia?",
+      "options": ["Len sudca", "Strany konania a verejnosť", "Len prokurátor"],
+      "correct": 1
+    },
+    {
+      "question": "Kto sa zúčastňuje neverejného zasadnutia?",
+      "options": ["Len súd", "Súd a strany, ak to zákon umožňuje", "Verejnosť vždy"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie sa typicky prijíma na neverejnom zasadnutí?",
+      "options": ["Rozsudok o vine", "Rozhodnutie o väzbe", "Prednes obžaloby"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Verejné zasadnutie", "definition": "Zasadnutie súdu prístupné verejnosti, ak zákon neustanovuje inak." },
+    { "term": "Neverejné zasadnutie", "definition": "Zasadnutie bez účasti verejnosti, často pri procesných rozhodnutiach." },
+    { "term": "Vylúčenie verejnosti", "definition": "Možnosť súdu vylúčiť verejnosť z dôvodov ochrany záujmov konania." },
+    { "term": "Rozhodnutie o väzbe", "definition": "Rozhodnutie, ktoré sa prijíma na neverejnom zasadnutí." },
+    { "term": "Záverečné rozhodnutia", "definition": "Niektoré rozhodnutia sa prijímajú na verejnom zasadnutí, napr. odvolacie rozsudky." },
+
+    { "term": "Účasť strán", "definition": "Strany sa môžu zúčastniť verejného aj niektorých neverejných zasadnutí." },
+    { "term": "Procesná ekonomika", "definition": "Dôvod, pre ktorý sa niektoré úkony vykonávajú neverejne." },
+    { "term": "Zverejnenie rozhodnutia", "definition": "Rozhodnutie musí byť oznámené stranám, aj keď bolo prijaté neverejne." },
+    { "term": "Odvolacie verejné zasadnutie", "definition": "Zasadnutie, na ktorom odvolací súd verejne prerokúva odvolanie." },
+    { "term": "Uznesenie", "definition": "Rozhodnutie, ktoré sa často prijíma na neverejnom zasadnutí." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Rozhodovanie o väzbe",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Súd má rozhodnúť o vzatí obvineného do väzby.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Na akom zasadnutí sa rozhoduje o väzbe?",
+          "options": ["Verejnom", "Neverejnom", "Na hlavnom pojednávaní"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto sa môže zúčastniť?",
+          "options": ["Len súd", "Súd, obvinený a obhajca", "Verejnosť"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Prečo je zasadnutie neverejné?",
+          "options": [
+            "Z dôvodu ochrany práv obvineného a procesnej ekonomiky",
+            "Aby sa predišlo mediálnemu záujmu",
+            "Pretože to chce prokurátor"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Odvolacie verejné zasadnutie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený podal odvolanie proti rozsudku a odvolací súd zvažuje formu prerokovania.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kedy odvolací súd nariaďuje verejné zasadnutie?",
+          "options": ["Ak je potrebné prerokovať vec za účasti strán", "Nikdy", "Len pri zločinoch"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto sa môže zúčastniť verejného zasadnutia?",
+          "options": ["Len súd", "Strany konania a verejnosť", "Len prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo môže byť výsledkom verejného zasadnutia?",
+          "options": [
+            "Zmena alebo potvrdenie rozsudku",
+            "Začatie nového vyšetrovania automaticky",
+            "Zastavenie konania bez dôvodu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

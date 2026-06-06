@@ -1,0 +1,108 @@
+{
+  "id": "A19",
+  "title": "Rozhodnutia po skončení prípravného konania",
+  "schemaVersion": "1.1",
+  "tags": ["prípravné konanie", "rozhodnutia", "prokurátor", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktoré rozhodnutie nasleduje po skončení prípravného konania, ak sú dôkazy dostatočné?",
+      "options": ["Zastavenie trestného stíhania", "Podanie obžaloby", "Podanie dovolania"],
+      "correct": 1
+    },
+    {
+      "question": "Kto rozhoduje o podaní obžaloby?",
+      "options": ["Súd", "Prokurátor", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy môže prokurátor zastaviť trestné stíhanie?",
+      "options": ["Ak skutok nie je trestným činom", "Len po hlavnom pojednávaní", "Len so súhlasom obvineného"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je podmienečné zastavenie trestného stíhania?",
+      "options": ["Rozhodnutie súdu o vine", "Dočasné zastavenie stíhania pri splnení podmienok", "Zrušenie obžaloby"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie umožňuje uzavrieť dohodu o vine a treste?",
+      "options": ["Návrh na podanie obžaloby", "Návrh na schválenie dohody", "Uznesenie o zastavení stíhania"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Podanie obžaloby", "definition": "Rozhodnutie prokurátora, ktorým sa vec predkladá súdu." },
+    { "term": "Zastavenie trestného stíhania", "definition": "Rozhodnutie, ktorým sa konanie končí bez rozhodnutia o vine." },
+    { "term": "Podmienečné zastavenie", "definition": "Dočasné zastavenie stíhania pri splnení zákonných podmienok." },
+    { "term": "Dohoda o vine a treste", "definition": "Špeciálne konanie, v ktorom sa obvinený prizná a dohodne sa na treste." },
+    { "term": "Postúpenie veci", "definition": "Rozhodnutie, ktorým sa vec postúpi inému orgánu, ak nejde o trestný čin." },
+
+    { "term": "Zmier", "definition": "Rozhodnutie umožňujúce ukončenie stíhania pri splnení podmienok zmieru." },
+    { "term": "Návrh na schválenie dohody", "definition": "Prokurátor predkladá súdu návrh na schválenie dohody o vine a treste." },
+    { "term": "Doplnenie vyšetrovania", "definition": "Prokurátor môže nariadiť doplnenie dokazovania pred rozhodnutím." },
+    { "term": "Odloženie veci", "definition": "Rozhodnutie polície alebo prokurátora, ak nie je dostatok dôvodov na začatie stíhania." },
+    { "term": "Zrušenie uznesenia", "definition": "Nadriadený prokurátor môže zrušiť rozhodnutie podriadeného." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Podanie obžaloby",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia ukončila vyšetrovanie a prokurátor má dostatok dôkazov o vine obvineného.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aké rozhodnutie má prokurátor prijať?",
+          "options": ["Zastaviť stíhanie", "Podať obžalobu", "Postúpiť vec"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Čo nasleduje po podaní obžaloby?",
+          "options": ["Hlavné pojednávanie", "Odvolacie konanie", "Dovolacie konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Kto rozhoduje o vine a treste?",
+          "options": ["Prokurátor", "Súd", "Polícia"],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Podmienečné zastavenie trestného stíhania",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený sa priznal k činu, ide o menej závažný prečin a nahradil škodu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže prokurátor rozhodnúť o podmienečnom zastavení?",
+          "options": ["Áno", "Nie", "Len so súhlasom poškodeného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Aká je podmienka tohto rozhodnutia?",
+          "options": ["Obvinený musí splniť povinnosti v skúšobnej dobe", "Musí byť oslobodený", "Musí podať odvolanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo sa stane po splnení podmienok?",
+          "options": [
+            "Stíhanie sa definitívne zastaví",
+            "Vec sa vracia na začiatok konania",
+            "Musí sa podať obžaloba"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "A2",
+  "title": "Ochrana základných práv a slobôd v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["ľudské práva", "proces", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktoré právo zaručuje, že obvinený nemusí vypovedať proti sebe?",
+      "options": ["Právo na obhajobu", "Zákaz sebaobviňovania (nemo tenetur)", "Právo na tlmočníka"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré právo zaručuje, že obvinený musí byť informovaný o dôvodoch zadržania?",
+      "options": ["Právo na zákonného sudcu", "Právo na informácie o obvinení", "Právo na náhradu škody"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré právo chráni osobu pred svojvoľným obmedzením osobnej slobody?",
+      "options": ["Právo na osobnú slobodu", "Právo na súkromie", "Právo na obhajcu"],
+      "correct": 0
+    },
+    {
+      "question": "Ktoré právo zaručuje, že obvinený má možnosť obhajovať sa sám alebo prostredníctvom obhajcu?",
+      "options": ["Právo na obhajobu", "Právo na tlmočníka", "Právo na verejné pojednávanie"],
+      "correct": 0
+    },
+    {
+      "question": "Ktoré právo zaručuje, že osoba nemôže byť mučená alebo vystavená neľudskému zaobchádzaniu?",
+      "options": ["Právo na spravodlivý proces", "Zákaz mučenia", "Právo na zákonného sudcu"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Právo na obhajobu", "definition": "Obvinený má právo obhajovať sa sám alebo prostredníctvom obhajcu." },
+    { "term": "Nemo tenetur", "definition": "Nikto nie je povinný usvedčovať sám seba." },
+    { "term": "Právo na osobnú slobodu", "definition": "Zadržanie a väzba musia byť zákonné a odôvodnené." },
+    { "term": "Zákaz mučenia", "definition": "Zakazuje sa mučenie, kruté, neľudské alebo ponižujúce zaobchádzanie." },
+    { "term": "Právo na spravodlivý proces", "definition": "Každý má právo na spravodlivé a verejné prerokovanie veci." },
+
+    { "term": "Právo na tlmočníka", "definition": "Osoba, ktorá nerozumie jazyku konania, má právo na tlmočenie." },
+    { "term": "Právo byť informovaný", "definition": "Obvinený musí byť oboznámený s dôvodmi obvinenia." },
+    { "term": "Právo na zákonného sudcu", "definition": "O veci rozhoduje sudca určený zákonom." },
+    { "term": "Právo na súkromie", "definition": "Zásahy do súkromia musia byť zákonné a nevyhnutné." },
+    { "term": "Právo na opravný prostriedok", "definition": "Obvinený má právo napadnúť rozhodnutie opravným prostriedkom." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezákonné zadržanie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba bola zadržaná bez poučenia o dôvodoch zadržania a bez možnosti kontaktovať obhajcu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ktoré právo je porušené?",
+          "options": ["Právo na obhajobu", "Právo na osobnú slobodu", "Právo na tlmočníka"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Čo musí polícia urobiť pri zadržaní?",
+          "options": ["Ihneď informovať o dôvodoch zadržania", "Počkať na príkaz sudcu", "Zadržať osobu bez vysvetlenia"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má postupovať obvinený?",
+          "options": ["Požiadať o prepustenie alebo preskúmanie zákonnosti zadržania", "Odmietnuť spolupracovať", "Počkať na obžalobu"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Donucovanie pri výsluchu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia počas výsluchu vyvíjala psychický nátlak, aby obvinený priznal skutok.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ktoré právo je porušené?",
+          "options": ["Zákaz mučenia a nátlaku", "Právo na tlmočníka", "Právo na verejné pojednávanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Je takto získaná výpoveď použiteľná?",
+          "options": ["Áno, ak je pravdivá", "Nie, je neprípustná", "Len ak ju potvrdí prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vylúčiť výpoveď z dokazovania",
+            "Použiť výpoveď ako hlavný dôkaz",
+            "Zastaviť konanie"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

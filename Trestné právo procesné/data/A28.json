@@ -1,0 +1,112 @@
+{
+  "id": "A28",
+  "title": "Probácia a mediácia v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["probácia", "mediácia", "alternatívne riešenia", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je cieľom probácie?",
+      "options": ["Potrestať obvineného", "Kontrolovať a podporovať obvineného pri plnení povinností", "Nahradiť súd"],
+      "correct": 1
+    },
+    {
+      "question": "Kto vykonáva mediáciu v trestnom konaní?",
+      "options": ["Sudca", "Probačný a mediačný úradník", "Policajt"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno vykonať mediáciu?",
+      "options": ["Len po rozsudku", "V ktoromkoľvek štádiu trestného konania", "Len v prípravnom konaní"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je výsledkom mediácie?",
+      "options": ["Dohoda medzi obvineným a poškodeným", "Rozsudok", "Uznesenie o zastavení stíhania"],
+      "correct": 0
+    },
+    {
+      "question": "Aký je účel probácie?",
+      "options": ["Prevencia recidívy a podpora resocializácie", "Zvýšenie trestov", "Zrýchlenie konania"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Probácia", "definition": "Kontrola a pomoc obvinenému pri plnení povinností uložených súdom." },
+    { "term": "Mediácia", "definition": "Mimosúdne riešenie konfliktu medzi obvineným a poškodeným." },
+    { "term": "Probačný a mediačný úradník", "definition": "Osoba vykonávajúca probáciu a mediáciu v trestnom konaní." },
+    { "term": "Dohoda o náhrade škody", "definition": "Výsledok mediácie, ktorým sa obvinený zaväzuje nahradiť škodu." },
+    { "term": "Alternatívne riešenie", "definition": "Riešenie trestnej veci bez uloženia nepodmienečného trestu." },
+
+    { "term": "Kontrola povinností", "definition": "Probačný úradník dohliada na plnenie povinností obvineného." },
+    { "term": "Restoratívna justícia", "definition": "Prístup zameraný na obnovu vzťahov medzi obvineným a poškodeným." },
+    { "term": "Podmienečné zastavenie", "definition": "Inštitút, pri ktorom môže mediácia pomôcť splniť podmienky." },
+    { "term": "Zmier", "definition": "Osobitný spôsob ukončenia konania, často spojený s mediáciou." },
+    { "term": "Resocializácia", "definition": "Pomoc obvinenému zaradiť sa späť do spoločnosti." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Mediácia pri náhrade škody",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený poškodil bicykel poškodeného a chce sa dohodnúť na náhrade škody.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kto môže sprostredkovať dohodu?",
+          "options": ["Prokurátor", "Probačný a mediačný úradník", "Súdny znalec"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Čo je cieľom mediácie?",
+          "options": ["Dohoda o náhrade škody", "Uloženie trestu", "Zastavenie konania automaticky"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako môže mediácia ovplyvniť konanie?",
+          "options": [
+            "Môže viesť k zmieru alebo podmienečnému zastaveniu",
+            "Nemá žiadny vplyv",
+            "Nahrádza rozsudok"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Probácia pri podmienečnom odsúdení",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený bol podmienečne odsúdený a súd mu uložil povinnosť absolvovať protialkoholické poradenstvo.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kto dohliada na plnenie tejto povinnosti?",
+          "options": ["Súd", "Probačný úradník", "Polícia"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Čo je cieľom probácie?",
+          "options": ["Podpora obvineného pri plnení povinností", "Zvýšenie trestu", "Zastavenie konania"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo sa stane, ak obvinený povinnosti neplní?",
+          "options": [
+            "Súd môže nariadiť výkon trestu",
+            "Nič sa nestane",
+            "Probačný úradník rozhodne o treste"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

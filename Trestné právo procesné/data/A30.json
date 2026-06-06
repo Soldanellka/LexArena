@@ -1,0 +1,108 @@
+{
+  "id": "A30",
+  "title": "Spolupráca v trestných veciach medzi štátmi Európskej únie",
+  "schemaVersion": "1.1",
+  "tags": ["EÚ", "medzinárodná spolupráca", "trestné konanie", "EAW", "Eurojust", "Europol"],
+
+  "quiz": [
+    {
+      "question": "Čo je základom spolupráce v trestných veciach v EÚ?",
+      "options": ["Zásada vzájomného uznávania", "Zásada suverenity", "Zásada izolácie štátov"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je Európsky zatýkací rozkaz?",
+      "options": ["Žiadosť o právnu pomoc", "Mechanizmus rýchleho odovzdania osoby medzi členskými štátmi", "Rozhodnutie o vyhostení"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorá inštitúcia koordinuje vyšetrovanie medzi štátmi EÚ?",
+      "options": ["Eurojust", "Interpol", "Rada Európy"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je európsky vyšetrovací príkaz?",
+      "options": ["Príkaz na domovú prehliadku v SR", "Nástroj na získanie dôkazov v inom členskom štáte EÚ", "Rozhodnutie o väzbe"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý orgán podporuje výmenu informácií medzi políciami členských štátov?",
+      "options": ["Europol", "Eurostat", "Európska komisia"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Vzájomné uznávanie", "definition": "Zásada, podľa ktorej členské štáty uznávajú rozhodnutia iných štátov." },
+    { "term": "Európsky zatýkací rozkaz", "definition": "Mechanizmus rýchleho odovzdania osoby medzi členskými štátmi EÚ." },
+    { "term": "Eurojust", "definition": "Orgán EÚ koordinujúci vyšetrovanie a stíhanie medzi štátmi." },
+    { "term": "Europol", "definition": "Agentúra EÚ podporujúca policajnú spoluprácu a výmenu informácií." },
+    { "term": "Európsky vyšetrovací príkaz", "definition": "Nástroj na získanie dôkazov v inom členskom štáte." },
+
+    { "term": "Spoločné vyšetrovacie tímy", "definition": "Tímy z viacerých štátov spolupracujúce na jednom prípade." },
+    { "term": "Doručovanie v EÚ", "definition": "Zjednodušené doručovanie písomností medzi členskými štátmi." },
+    { "term": "Výkon rozhodnutí", "definition": "Členské štáty vykonávajú tresty uložené inými štátmi EÚ." },
+    { "term": "Právna pomoc v EÚ", "definition": "Spolupráca pri dokazovaní a procesných úkonoch." },
+    { "term": "Schengenský informačný systém", "definition": "Databáza EÚ obsahujúca informácie o osobách a veciach." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Európsky zatýkací rozkaz",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba podozrivá zo spáchania trestného činu na Slovensku ušla do Nemecka.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako môže Slovensko postupovať?",
+          "options": ["Vydá Európsky zatýkací rozkaz", "Požiada Interpol", "Zastaví konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Čo musí Nemecko urobiť?",
+          "options": ["Preskúmať formálne podmienky a osobu odovzdať", "Vždy odmietnuť", "Vykonať nové vyšetrovanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako rýchlo prebieha odovzdanie?",
+          "options": ["V krátkych lehotách podľa práva EÚ", "Po niekoľkých rokoch", "Len po rozhodnutí Európskej komisie"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Európsky vyšetrovací príkaz",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Slovenská polícia potrebuje získať bankové záznamy z Talianska pre trestné konanie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký nástroj môže použiť?",
+          "options": ["Európsky vyšetrovací príkaz", "Extradíciu", "Žiadosť cez Interpol"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto príkaz vykoná?",
+          "options": ["Príslušné orgány Talianska", "Európsky parlament", "Súkromná banka"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Aký je cieľ tohto nástroja?",
+          "options": [
+            "Zjednodušiť a zrýchliť získavanie dôkazov v EÚ",
+            "Nahradiť trestné konanie",
+            "Zastaviť vyšetrovanie"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

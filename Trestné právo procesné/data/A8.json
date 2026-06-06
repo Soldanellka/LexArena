@@ -1,0 +1,112 @@
+{
+  "id": "A8",
+  "title": "Procesné úkony, poskytovanie informácií v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["procesné úkony", "informácie", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je procesný úkon?",
+      "options": ["Neformálne oznámenie", "Úkon orgánu alebo osoby v trestnom konaní s právnymi účinkami", "Listinný dôkaz"],
+      "correct": 1
+    },
+    {
+      "question": "Kto má právo nahliadať do spisu?",
+      "options": ["Každý občan", "Len obvinený a jeho obhajca", "Len poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy môže byť obmedzené poskytovanie informácií z trestného konania?",
+      "options": ["Nikdy", "Ak by to ohrozilo účel konania", "Len pri mladistvých"],
+      "correct": 1
+    },
+    {
+      "question": "Kto rozhoduje o tom, či sa poskytne informácia médiám?",
+      "options": ["Súd alebo prokurátor", "Policajt na mieste", "Obhajca"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý procesný úkon musí byť vždy vykonaný za účasti obvineného?",
+      "options": ["Rekonštrukcia", "Výsluch obvineného", "Ohliadka miesta činu"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Procesný úkon", "definition": "Úkon orgánu alebo osoby v trestnom konaní, ktorý má právne účinky." },
+    { "term": "Nahliadanie do spisu", "definition": "Právo obvineného a obhajcu oboznámiť sa s obsahom spisu." },
+    { "term": "Poskytovanie informácií", "definition": "Informácie sa poskytujú len v rozsahu, ktorý neohrozí účel konania." },
+    { "term": "Účel trestného konania", "definition": "Zistiť skutkový stav a rozhodnúť spravodlivo a zákonne." },
+    { "term": "Zápisnica", "definition": "Úradný záznam o vykonanom procesnom úkone." },
+
+    { "term": "Úradný záznam", "definition": "Záznam o úkonoch, ktoré sa nezapisujú do zápisnice." },
+    { "term": "Rekonštrukcia", "definition": "Procesný úkon na objasnenie priebehu skutku." },
+    { "term": "Konfrontácia", "definition": "Stret dvoch osôb s rozpornými výpoveďami." },
+    { "term": "Poučenie", "definition": "Orgán musí osobu poučiť o jej právach a povinnostiach." },
+    { "term": "Mlčanlivosť OČTK", "definition": "Orgány musia chrániť informácie, ktoré by mohli ohroziť konanie." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Odmietnuté nahliadnutie do spisu",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený žiada nahliadnuť do spisu, ale polícia mu to odmietla s odôvodnením, že ešte prebieha vyšetrovanie.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Má obvinený právo nahliadnuť do spisu?",
+          "options": ["Áno, ale môže byť obmedzené", "Nie", "Len po podaní obžaloby"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kedy môže byť nahliadanie obmedzené?",
+          "options": ["Ak by to ohrozilo účel konania", "Len pri zločinoch", "Nikdy"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Vydať rozhodnutie o obmedzení a odôvodniť ho",
+            "Odmietnuť bez vysvetlenia",
+            "Odkázať obvineného na súd"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Poskytovanie informácií médiám",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Médiá žiadajú políciu o informácie o prebiehajúcom vyšetrovaní. Polícia chce zverejniť detaily výsluchu obvineného.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže polícia poskytnúť tieto informácie?",
+          "options": ["Áno, vždy", "Nie, ak by to ohrozilo účel konania", "Len ak to schváli obvinený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o poskytovaní informácií?",
+          "options": ["Súd alebo prokurátor", "Každý policajt", "Obhajca"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Poskytnúť len základné informácie bez detailov",
+            "Zverejniť celý obsah výsluchu",
+            "Odmietnuť komunikáciu s médiami úplne"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

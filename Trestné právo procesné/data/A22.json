@@ -1,0 +1,112 @@
+{
+  "id": "A22",
+  "title": "Hlavné pojednávanie",
+  "schemaVersion": "1.1",
+  "tags": ["hlavné pojednávanie", "súd", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto vedie hlavné pojednávanie?",
+      "options": ["Prokurátor", "Samosudca alebo predseda senátu", "Obhajca"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý úkon sa vykonáva na začiatku hlavného pojednávania?",
+      "options": ["Vyhlásenie rozsudku", "Overenie prítomnosti a totožnosti osôb", "Výsluch svedkov"],
+      "correct": 1
+    },
+    {
+      "question": "Kto prednáša obžalobu na hlavnom pojednávaní?",
+      "options": ["Súd", "Prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy sa vykonávajú dôkazy?",
+      "options": ["V prípravnom konaní", "Na hlavnom pojednávaní", "V odvolacom konaní"],
+      "correct": 1
+    },
+    {
+      "question": "Kto má posledné slovo na hlavnom pojednávaní?",
+      "options": ["Prokurátor", "Obhajca", "Obvinený"],
+      "correct": 2
+    }
+  ],
+
+  "tiles": [
+    { "term": "Hlavné pojednávanie", "definition": "Rozhodujúce štádium trestného konania, v ktorom súd rozhoduje o vine a treste." },
+    { "term": "Prednes obžaloby", "definition": "Prokurátor prednesie obžalobu na začiatku pojednávania." },
+    { "term": "Vykonávanie dôkazov", "definition": "Súd vykonáva dôkazy výsluchmi, listinami, znaleckými posudkami a ďalšími prostriedkami." },
+    { "term": "Záverečné reči", "definition": "Prokurátor, poškodený a obhajca prednesú svoje stanoviská pred rozhodnutím." },
+    { "term": "Posledné slovo obvineného", "definition": "Obvinený má právo vyjadriť sa ako posledný pred rozhodnutím." },
+
+    { "term": "Verejnosť pojednávania", "definition": "Hlavné pojednávanie je spravidla verejné, s výnimkami stanovenými zákonom." },
+    { "term": "Predseda senátu", "definition": "Osoba, ktorá riadi priebeh hlavného pojednávania." },
+    { "term": "Procesná disciplína", "definition": "Súd zabezpečuje poriadok a môže ukladať poriadkové opatrenia." },
+    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej po vykonaní dôkazov." },
+    { "term": "Odročenie pojednávania", "definition": "Súd môže pojednávanie odročiť, ak nie je možné pokračovať." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Neprítomnosť obvineného",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený sa nedostavil na hlavné pojednávanie bez ospravedlnenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako môže súd postupovať?",
+          "options": ["Predviesť obvineného", "Pokračovať bez neho vždy", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Môže súd pojednávať v neprítomnosti obvineného?",
+          "options": ["Áno, ak sú splnené zákonné podmienky", "Nie, nikdy", "Len pri prečinoch"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo je potrebné zabezpečiť?",
+          "options": [
+            "Aby boli zachované práva obvineného",
+            "Aby bol rozsudok rýchlo vydaný",
+            "Aby sa konanie ukončilo v ten istý deň"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Rozpor vo výpovediach na pojednávaní",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Na hlavnom pojednávaní vypovedajú dvaja svedkovia rozdielne o tom, kto bol na mieste činu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má súd postupovať?",
+          "options": ["Vykonať konfrontáciu", "Ignorovať výpovede", "Vybrať si kratšiu výpoveď"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ako súd hodnotí dôkazy?",
+          "options": ["Podľa zásady voľného hodnotenia dôkazov", "Podľa poradia výsluchov", "Podľa želania obvineného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po vykonaní dôkazov?",
+          "options": [
+            "Záverečné reči",
+            "Vyhlásenie rozsudku okamžite",
+            "Začatie nového vyšetrovania"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

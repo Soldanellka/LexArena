@@ -1,0 +1,108 @@
+{
+  "id": "A9",
+  "title": "Zaistenie osôb na účely trestného konania",
+  "schemaVersion": "1.1",
+  "tags": ["zaistenie", "osoby", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kedy môže polícia zaistiť osobu?",
+      "options": ["Kedykoľvek", "Len ak sú splnené zákonné dôvody", "Len na pokyn súdu"],
+      "correct": 1
+    },
+    {
+      "question": "Ako dlho môže trvať zaistenie osoby políciou?",
+      "options": ["48 hodín", "24 hodín", "72 hodín"],
+      "correct": 1
+    },
+    {
+      "question": "Kto rozhoduje o ďalšom obmedzení osobnej slobody po zaistení?",
+      "options": ["Polícia", "Prokurátor", "Súd"],
+      "correct": 2
+    },
+    {
+      "question": "Musí byť zaistená osoba poučená o svojich právach?",
+      "options": ["Áno", "Nie", "Len ak ide o mladistvého"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý z nasledujúcich je dôvodom zaistenia?",
+      "options": ["Zabránenie úteku", "Nespolupráca so svedkami", "Nesúhlas s výsluchom"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Zaistenie osoby", "definition": "Dočasné obmedzenie osobnej slobody na účely trestného konania." },
+    { "term": "Dôvody zaistenia", "definition": "Najmä zabránenie úteku, pokračovaniu v trestnej činnosti alebo ovplyvňovaniu svedkov." },
+    { "term": "Poučenie osoby", "definition": "Zaistená osoba musí byť poučená o svojich právach a dôvodoch zaistenia." },
+    { "term": "Maximálna lehota", "definition": "Zaistenie môže trvať najviac 24 hodín, pri mladistvom 48 hodín." },
+    { "term": "Prepustenie", "definition": "Ak dôvody zaistenia pominú, osoba musí byť okamžite prepustená." },
+
+    { "term": "Zadržanie", "definition": "Obmedzenie slobody po vznesení obvinenia, odlišné od zaistenia." },
+    { "term": "Väzba", "definition": "Dlhodobé obmedzenie slobody na základe rozhodnutia súdu." },
+    { "term": "Policajt", "definition": "Orgán oprávnený vykonať zaistenie osoby." },
+    { "term": "Prokurátor", "definition": "Dozoruje zákonnosť zaistenia a môže rozhodnúť o prepustení." },
+    { "term": "Súd", "definition": "Rozhoduje o ďalšom obmedzení slobody, napríklad o väzbe." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezákonné predĺženie zaistenia",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia zaistila osobu na 24 hodín, ale ju neprepustila ani po uplynutí lehoty.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je možné predĺžiť zaistenie nad 24 hodín?",
+          "options": ["Áno", "Nie", "Len so súhlasom obhajcu"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Ako má polícia postupovať po uplynutí lehoty?",
+          "options": ["Prepustiť osobu", "Počkať na pokyn prokurátora", "Presunúť osobu do väzby bez rozhodnutia súdu"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Aké právo má zaistená osoba?",
+          "options": ["Domáhať sa prepustenia", "Požiadať o výsluch svedkov", "Požiadať o zmenu policajta"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zaistenie kvôli obave z úteku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia zaistila osobu, ktorá sa pokúsila utiecť pri kontrole totožnosti. Osoba tvrdí, že zaistenie je nezákonné.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je obava z úteku dôvodom na zaistenie?",
+          "options": ["Áno", "Nie", "Len pri závažných trestných činoch"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Čo musí polícia urobiť po zaistení?",
+          "options": ["Ihneď poučiť osobu o dôvodoch zaistenia", "Počkať na príkaz súdu", "Zaistiť osobu na 48 hodín automaticky"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako sa posudzuje zákonnosť zaistenia?",
+          "options": [
+            "Podľa splnenia zákonných dôvodov a dodržania lehoty",
+            "Podľa názoru policajta",
+            "Podľa závažnosti trestného činu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

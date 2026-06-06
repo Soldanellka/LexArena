@@ -1,0 +1,112 @@
+{
+  "id": "A16",
+  "title": "Rozhodnutia v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["rozhodnutia", "súd", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktorý orgán rozhoduje o vine a treste?",
+      "options": ["Prokurátor", "Súd", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je uznesenie?",
+      "options": ["Rozhodnutie vo veci samej", "Procesné rozhodnutie", "Znalecký posudok"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie končí trestné stíhanie vo veci samej?",
+      "options": ["Uznesenie", "Rozsudok", "Zápisnica"],
+      "correct": 1
+    },
+    {
+      "question": "Kto môže podať odvolanie proti rozsudku?",
+      "options": ["Len obvinený", "Obvinený, prokurátor aj poškodený", "Len súd"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie vydáva prokurátor?",
+      "options": ["Obžaloba", "Rozsudok", "Trestný rozkaz"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej o vine a treste." },
+    { "term": "Uznesenie", "definition": "Procesné rozhodnutie, ktorým sa upravuje priebeh konania." },
+    { "term": "Trestný rozkaz", "definition": "Rozhodnutie súdu bez pojednávania, ak je skutok dostatočne objasnený." },
+    { "term": "Obžaloba", "definition": "Rozhodnutie prokurátora, ktorým sa vec predkladá súdu." },
+    { "term": "Zastavenie trestného stíhania", "definition": "Rozhodnutie, ktorým sa konanie končí bez rozhodnutia o vine." },
+
+    { "term": "Odvolanie", "definition": "Riadny opravný prostriedok proti rozsudku." },
+    { "term": "Sťažnosť", "definition": "Opravný prostriedok proti uzneseniu." },
+    { "term": "Právoplatnosť", "definition": "Stav, keď rozhodnutie už nemožno napadnúť riadnym opravným prostriedkom." },
+    { "term": "Vykonateľnosť", "definition": "Možnosť vykonať rozhodnutie po splnení zákonných podmienok." },
+    { "term": "Odôvodnenie", "definition": "Časť rozhodnutia, v ktorej sa vysvetľujú dôvody rozhodnutia." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nesúhlas s rozsudkom",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený nesúhlasí s rozsudkom okresného súdu a tvrdí, že dôkazy boli nesprávne hodnotené.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký opravný prostriedok môže podať?",
+          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o odvolaní?",
+          "options": ["Okresný súd", "Krajský súd", "Najvyšší súd"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo môže odvolací súd urobiť?",
+          "options": [
+            "Zmeniť rozsudok",
+            "Zrušiť rozsudok a vrátiť vec",
+            "Potvrdiť rozsudok"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Uznesenie o zastavení trestného stíhania",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Prokurátor zastavil trestné stíhanie pre nedostatok dôkazov. Poškodený s tým nesúhlasí.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký opravný prostriedok môže poškodený podať?",
+          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o sťažnosti?",
+          "options": ["Súd", "Nadriadený prokurátor", "Polícia"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo môže nadriadený prokurátor urobiť?",
+          "options": [
+            "Zrušiť uznesenie a prikázať pokračovať v stíhaní",
+            "Potvrdiť uznesenie",
+            "Obe možnosti sú správne"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  ]
+}

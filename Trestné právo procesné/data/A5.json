@@ -1,0 +1,112 @@
+{
+  "id": "A5",
+  "title": "Obvinený, postavenie obvineného v trestnom konaní, výsluch obvineného",
+  "schemaVersion": "1.1",
+  "tags": ["obvinený", "výsluch", "práva obvineného", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kedy sa osoba stáva obvineným?",
+      "options": ["Po vznesení obvinenia", "Po zadržaní políciou", "Po podaní obžaloby"],
+      "correct": 0
+    },
+    {
+      "question": "Ktoré právo je základným právom obvineného?",
+      "options": ["Právo na tlmočníka", "Právo na obhajobu", "Právo na náhradu škody"],
+      "correct": 1
+    },
+    {
+      "question": "Môže obvinený odmietnuť vypovedať?",
+      "options": ["Nie", "Áno, vždy", "Len so súhlasom prokurátora"],
+      "correct": 1
+    },
+    {
+      "question": "Kto vykonáva výsluch obvineného v prípravnom konaní?",
+      "options": ["Súd", "Polícia alebo prokurátor", "Znalec"],
+      "correct": 1
+    },
+    {
+      "question": "Čo musí obsahovať poučenie obvineného pred výsluchom?",
+      "options": ["Povinnosť vypovedať pravdu", "Právo nevypovedať a právo na obhajcu", "Zákaz klamať"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Obvinený", "definition": "Osoba, proti ktorej bolo vznesené obvinenie." },
+    { "term": "Právo na obhajobu", "definition": "Obvinený sa môže obhajovať sám alebo prostredníctvom obhajcu." },
+    { "term": "Nemo tenetur", "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba." },
+    { "term": "Výsluch obvineného", "definition": "Procesný úkon, pri ktorom sa obvinený vyjadruje k skutku a dôkazom." },
+    { "term": "Poučenie obvineného", "definition": "Pred výsluchom musí byť obvinený poučený o svojich právach." },
+
+    { "term": "Zadržanie", "definition": "Dočasné obmedzenie osobnej slobody pred vznesením obvinenia." },
+    { "term": "Obžaloba", "definition": "Podanie prokurátora, ktorým sa vec dostáva pred súd." },
+    { "term": "Väzba", "definition": "Zákonné obmedzenie slobody obvineného z dôvodov úteku, ovplyvňovania alebo pokračovania v trestnej činnosti." },
+    { "term": "Obhajca", "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému." },
+    { "term": "Právo nevypovedať", "definition": "Obvinený môže odmietnuť výpoveď bez uvedenia dôvodu." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Odmietnutie výpovede",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený počas výsluchu odmietol vypovedať. Polícia tvrdí, že to bude hodnotené v jeho neprospech.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže obvinený odmietnuť vypovedať?",
+          "options": ["Áno", "Nie", "Len so súhlasom obhajcu"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Môže byť odmietnutie výpovede použité proti nemu?",
+          "options": ["Áno", "Nie", "Len ak to uvedie prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Rešpektovať právo nevypovedať",
+            "Pokračovať vo výsluchu nátlakom",
+            "Uložiť pokutu"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nesprávne poučenie obvineného",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený bol vypočutý bez toho, aby bol poučený o práve nevypovedať a práve na obhajcu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je výsluch vykonaný zákonne?",
+          "options": ["Áno", "Nie", "Len ak bol prítomný prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Ako sa narába s takouto výpoveďou?",
+          "options": ["Je neprípustná ako dôkaz", "Je použiteľná, ak je pravdivá", "Použije sa len v prípravnom konaní"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať ďalej?",
+          "options": [
+            "Vykonať nový výsluch so správnym poučením",
+            "Ignorovať chybu",
+            "Zastaviť trestné stíhanie"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

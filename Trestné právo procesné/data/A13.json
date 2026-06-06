@@ -1,0 +1,108 @@
+{
+  "id": "A13",
+  "title": "Dokazovanie (pojem, etapy, špeciálne zásady) a dôkazné prostriedky v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["dokazovanie", "dôkazy", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je účelom dokazovania v trestnom konaní?",
+      "options": ["Získať priznanie obvineného", "Zistiť skutkový stav bez dôvodných pochybností", "Potvrdiť verziu polície"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorá zásada znamená, že súd hodnotí dôkazy podľa svojho vnútorného presvedčenia?",
+      "options": ["Zásada zákonnosti", "Zásada voľného hodnotenia dôkazov", "Zásada ústnosti"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý z nasledujúcich je dôkazným prostriedkom?",
+      "options": ["Obžaloba", "Znalecký posudok", "Trestný rozkaz"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorá etapa dokazovania zahŕňa vykonávanie dôkazov pred súdom?",
+      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Odvolacie konanie"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorá zásada zakazuje použitie dôkazov získaných nezákonným spôsobom?",
+      "options": ["Zásada bezprostrednosti", "Zásada zákonnosti dôkazov", "Zásada verejnosti"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Dokazovanie", "definition": "Proces zisťovania skutkového stavu pomocou dôkazov." },
+    { "term": "Dôkazný prostriedok", "definition": "Prostriedok, ktorým sa preukazujú skutočnosti významné pre konanie." },
+    { "term": "Voľné hodnotenie dôkazov", "definition": "Súd hodnotí dôkazy podľa svojho vnútorného presvedčenia." },
+    { "term": "Zákonnosť dôkazov", "definition": "Dôkazy získané nezákonne nemožno použiť." },
+    { "term": "Etapy dokazovania", "definition": "Zabezpečenie dôkazov, vykonanie dôkazov, hodnotenie dôkazov." },
+
+    { "term": "Svedecká výpoveď", "definition": "Výpoveď osoby o skutočnostiach, ktoré vnímal vlastnými zmyslami." },
+    { "term": "Znalecký posudok", "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné vedomosti." },
+    { "term": "Listinný dôkaz", "definition": "Dokumenty, záznamy a iné písomnosti použiteľné ako dôkaz." },
+    { "term": "Ohliadka", "definition": "Prezretie miesta, osoby alebo veci na účely objasnenia skutku." },
+    { "term": "Rekonštrukcia", "definition": "Procesný úkon na objasnenie priebehu skutku jeho napodobnením." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezákonný dôkaz",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia získala dôkaz tak, že vstúpila do bytu bez príkazu a bez súhlasu osoby.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je takto získaný dôkaz zákonný?",
+          "options": ["Áno", "Nie", "Len ak ide o závažný trestný čin"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Ako má súd naložiť s nezákonným dôkazom?",
+          "options": ["Vylúčiť ho z dokazovania", "Použiť ho, ak je dôležitý", "Použiť ho len v prípravnom konaní"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ktorá zásada bola porušená?",
+          "options": ["Zásada verejnosti", "Zásada zákonnosti dôkazov", "Zásada ústnosti"],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Rozpor vo výpovediach svedkov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Dvaja svedkovia vypovedajú rozdielne o tom, kto bol prítomný na mieste činu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má súd postupovať pri rozpore vo výpovediach?",
+          "options": ["Ignorovať výpovede", "Hodnotiť ich podľa zásady voľného hodnotenia dôkazov", "Použiť len výpoveď, ktorá je kratšia"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Môže súd vykonať konfrontáciu?",
+          "options": ["Áno", "Nie", "Len so súhlasom obvineného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo je cieľom konfrontácie?",
+          "options": [
+            "Odstrániť rozpory vo výpovediach",
+            "Prinútiť svedkov priznať sa",
+            "Nahradiť znalecký posudok"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

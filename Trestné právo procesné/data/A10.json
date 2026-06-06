@@ -1,0 +1,108 @@
+{
+  "id": "A10",
+  "title": "Zaistenie vecí pre účely trestného konania",
+  "schemaVersion": "1.1",
+  "tags": ["zaistenie vecí", "dôkazy", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je zaistenie veci v trestnom konaní?",
+      "options": ["Dočasné odňatie veci na účely dokazovania", "Trvalé odňatie veci páchateľovi", "Zničenie veci"],
+      "correct": 0
+    },
+    {
+      "question": "Kto môže rozhodnúť o zaistení veci?",
+      "options": ["Len súd", "Polícia alebo prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno vec zaistiť?",
+      "options": ["Len po vznesení obvinenia", "Ak môže slúžiť ako dôkaz alebo môže prepadnúť", "Len pri násilných trestných činoch"],
+      "correct": 1
+    },
+    {
+      "question": "Ako sa zaistená vec dokumentuje?",
+      "options": ["Ústnym oznámením", "Zápisnicou o zaistení veci", "Nie je potrebné dokumentovať"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy sa musí vec vrátiť?",
+      "options": ["Keď pominú dôvody zaistenia", "Až po rozsudku", "Nikdy"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Zaistenie veci", "definition": "Dočasné odňatie veci, ktorá môže slúžiť ako dôkaz alebo môže prepadnúť." },
+    { "term": "Zápisnica o zaistení", "definition": "Dokument, v ktorom sa uvedie opis veci, dôvod zaistenia a spôsob zaistenia." },
+    { "term": "Dôkazný prostriedok", "definition": "Vec, ktorá môže prispieť k objasneniu skutkového stavu." },
+    { "term": "Prepadnutie veci", "definition": "Trest spočívajúci v odňatí veci páchateľovi." },
+    { "term": "Zhabanie veci", "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom." },
+
+    { "term": "Vydanie veci", "definition": "Osoba môže vec dobrovoľne vydať na výzvu orgánu." },
+    { "term": "Odňatie veci", "definition": "Nútené odobranie veci, ak ju osoba nevydá dobrovoľne." },
+    { "term": "Zaistenie listín", "definition": "Osobitný postup pri zaistení dokumentov a písomností." },
+    { "term": "Zaistenie elektronických dát", "definition": "Postup pri odňatí dátových nosičov alebo ich kópií." },
+    { "term": "Vrátenie veci", "definition": "Vec sa vráti, ak už nie je potrebná pre konanie." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Odmietnutie vydať vec",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia vyzvala osobu, aby vydala mobilný telefón ako dôkaz. Osoba odmietla.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako môže polícia postupovať?",
+          "options": ["Odňať vec", "Ukončiť úkon", "Počkať na súhlas obvineného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Čo musí polícia vyhotoviť?",
+          "options": ["Zápisnicu o odňatí veci", "Len interný záznam", "Nie je potrebné nič dokumentovať"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Kedy sa vec môže vrátiť?",
+          "options": ["Keď pominú dôvody zaistenia", "Až po rozsudku", "Nikdy"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zaistenie veci u tretej osoby",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia zaistila vec u osoby, ktorá nie je obvineným. Tá tvrdí, že vec jej patrí a nechce ju odovzdať.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aké postavenie má táto osoba?",
+          "options": ["Poškodený", "Zúčastnená osoba", "Obvinený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Má táto osoba právo brániť sa proti zaisteniu?",
+          "options": ["Áno", "Nie", "Len ak ide o drahú vec"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Preskúmať vlastníctvo a rozhodnúť o ďalšom osude veci",
+            "Vec automaticky zhabať",
+            "Vrátiť vec bez preverenia"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

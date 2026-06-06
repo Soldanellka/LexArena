@@ -1,0 +1,112 @@
+{
+  "id": "A15",
+  "title": "Odborná činnosť a znalecká činnosť v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["znalec", "odborná činnosť", "dôkazy", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kedy sa vykonáva znalecká činnosť?",
+      "options": ["Keď sú potrebné odborné vedomosti", "Len pri násilných trestných činoch", "Len na žiadosť obvineného"],
+      "correct": 0
+    },
+    {
+      "question": "Kto môže podať znalecký posudok?",
+      "options": ["Každý odborník", "Len znalec zapísaný v zozname znalcov", "Policajt"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je odborné vyjadrenie?",
+      "options": ["Vyjadrenie znalca", "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom", "Výpoveď svedka"],
+      "correct": 1
+    },
+    {
+      "question": "Kto ustanovuje znalca?",
+      "options": ["Obvinený", "Súd alebo orgán činný v trestnom konaní", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Ako sa hodnotí znalecký posudok?",
+      "options": ["Je záväzný pre súd", "Súd ho hodnotí ako každý iný dôkaz", "Musí byť vždy prijatý"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Znalecká činnosť", "definition": "Činnosť vykonávaná znalcom, keď sú potrebné odborné vedomosti." },
+    { "term": "Znalecký posudok", "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné znalosti." },
+    { "term": "Odborné vyjadrenie", "definition": "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom." },
+    { "term": "Ustanovenie znalca", "definition": "Rozhodnutie orgánu konania, ktorým sa ustanoví znalec." },
+    { "term": "Pribratie znalca", "definition": "Postup, keď orgán prizve znalca na vykonanie úkonu." },
+
+    { "term": "Znalecký ústav", "definition": "Inštitúcia oprávnená podávať znalecké posudky." },
+    { "term": "Odborné skúmanie", "definition": "Skúmanie vykonané odborníkom, ktoré nemusí mať formu znaleckého posudku." },
+    { "term": "Hodnotenie posudku", "definition": "Súd hodnotí posudok voľne, ako každý iný dôkaz." },
+    { "term": "Vylúčenie znalca", "definition": "Znalec môže byť vylúčený pre zaujatosť alebo iné dôvody." },
+    { "term": "Doplnenie posudku", "definition": "Možnosť požiadať znalca o doplnenie alebo vysvetlenie posudku." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Potreba znalca",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia rieši dopravnú nehodu a potrebuje určiť rýchlosť vozidla podľa stôp na ceste.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je potrebné pribratie znalca?",
+          "options": ["Áno, ide o odbornú otázku", "Nie, polícia to určí sama", "Len ak to navrhne obvinený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto ustanovuje znalca?",
+          "options": ["Súd alebo OČTK", "Poškodený", "Obhajca"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako sa posudok hodnotí?",
+          "options": [
+            "Ako jeden z dôkazov, voľným hodnotením",
+            "Je záväzný pre súd",
+            "Musí byť prijatý bez výhrad"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zaujatosť znalca",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Znalec, ktorý má vypracovať posudok, je blízkym priateľom poškodeného.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je možné, že je znalec zaujatý?",
+          "options": ["Áno", "Nie", "Len ak to tvrdí obvinený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ako má orgán postupovať?",
+          "options": ["Vylúčiť znalca a ustanoviť iného", "Ignorovať situáciu", "Požiadať poškodeného o súhlas"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Prečo je to dôležité?",
+          "options": [
+            "Aby bol posudok nestranný a dôveryhodný",
+            "Aby sa konanie urýchlilo",
+            "Aby mal znalec viac práce"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

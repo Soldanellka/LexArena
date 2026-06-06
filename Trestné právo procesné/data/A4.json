@@ -1,0 +1,112 @@
+{
+  "id": "A4",
+  "title": "Súdy v trestnom konaní, orgány činné v trestnom konaní a pomocné osoby",
+  "schemaVersion": "1.1",
+  "tags": ["súdy", "OČTK", "pomocné osoby", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktorý orgán rozhoduje o vine a treste v trestnom konaní?",
+      "options": ["Prokurátor", "Súd", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý orgán je oprávnený viesť vyšetrovanie?",
+      "options": ["Súd", "Polícia", "Znalec"],
+      "correct": 1
+    },
+    {
+      "question": "Kto zastupuje štát v trestnom konaní?",
+      "options": ["Obhajca", "Prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kto je pomocnou osobou v trestnom konaní?",
+      "options": ["Znalec", "Prokurátor", "Sudca"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý súd koná ako súd prvého stupňa vo väčšine trestných vecí?",
+      "options": ["Najvyšší súd SR", "Krajský súd", "Okresný súd"],
+      "correct": 2
+    }
+  ],
+
+  "tiles": [
+    { "term": "Súd", "definition": "Rozhoduje o vine, treste a ďalších otázkach v trestnom konaní." },
+    { "term": "Prokurátor", "definition": "Zastupuje štát, podáva obžalobu a dozerá na zákonnosť prípravného konania." },
+    { "term": "Polícia", "definition": "Vykonáva úkony prípravného konania, najmä vyšetrovanie a objasňovanie trestných činov." },
+    { "term": "Znalec", "definition": "Pomocná osoba, ktorá podáva odborný posudok." },
+    { "term": "Tlmočník", "definition": "Zabezpečuje preklad pre osoby, ktoré nerozumejú jazyku konania." },
+
+    { "term": "Okresný súd", "definition": "Súd prvého stupňa vo väčšine trestných vecí." },
+    { "term": "Krajský súd", "definition": "Rozhoduje ako odvolací súd a v závažných veciach aj ako súd prvého stupňa." },
+    { "term": "Najvyšší súd SR", "definition": "Zabezpečuje jednotnosť rozhodovania a rozhoduje o mimoriadnych opravných prostriedkoch." },
+    { "term": "Vyšetrovateľ", "definition": "Policajt oprávnený vykonávať vyšetrovanie v trestných veciach." },
+    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené a ktorá môže uplatniť nárok na náhradu škody." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kto má viesť úkon?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia vykonala domovú prehliadku bez príkazu sudcu, hoci nešlo o neodkladný úkon.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ktorý orgán je oprávnený nariadiť domovú prehliadku?",
+          "options": ["Polícia", "Prokurátor", "Súd"],
+          "correct": 2
+        },
+        {
+          "question": "Krok 2: Je úkon polície zákonný?",
+          "options": ["Áno", "Nie", "Len ak to schváli prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vylúčiť dôkaz z konania",
+            "Použiť dôkaz, ak je dôležitý",
+            "Vrátiť vec polícii"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Postavenie znalca",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Znalec odmietol podať posudok s odôvodnením, že sa necíti odborne spôsobilý.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže znalec odmietnuť podanie posudku?",
+          "options": ["Áno, ak nie je odborne spôsobilý", "Nie, musí posudok podať vždy", "Len so súhlasom prokurátora"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ako má orgán konania postupovať?",
+          "options": ["Uložiť znalcovi pokutu", "Ustanoviť iného znalca", "Zastaviť konanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Aký je význam znaleckého posudku?",
+          "options": [
+            "Je to záväzný dôkaz",
+            "Je to jeden z dôkazov, ktorý súd hodnotí voľne",
+            "Nesmie sa použiť v konaní"
+          ],
+          "correct": 1
+        }
+      ]
+    }
+  ]
+}

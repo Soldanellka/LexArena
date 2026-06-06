@@ -1,0 +1,112 @@
+{
+  "id": "A14",
+  "title": "Svedok v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["svedok", "výpoveď", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto je svedkom v trestnom konaní?",
+      "options": ["Osoba, ktorá spáchala trestný čin", "Osoba, ktorá má vypovedať o skutočnostiach dôležitých pre konanie", "Obhajca"],
+      "correct": 1
+    },
+    {
+      "question": "Má svedok povinnosť vypovedať?",
+      "options": ["Áno, vždy", "Nie, nikdy", "Áno, okrem zákonom stanovených výnimiek"],
+      "correct": 2
+    },
+    {
+      "question": "Kto môže odmietnuť výpoveď?",
+      "options": ["Každý svedok", "Svedok, ktorý by výpoveďou spôsobil trestné stíhanie sebe alebo blízkym", "Len obvinený"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je poučenie svedka?",
+      "options": ["Informovanie o jeho právach a povinnostiach", "Rozhodnutie súdu", "Znalecký posudok"],
+      "correct": 0
+    },
+    {
+      "question": "Kto vykonáva výsluch svedka?",
+      "options": ["Súd alebo orgány činné v trestnom konaní", "Poškodený", "Obhajca samostatne"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Svedok", "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre trestné konanie." },
+    { "term": "Povinnosť vypovedať", "definition": "Svedok musí vypovedať, ak zákon neustanovuje výnimku." },
+    { "term": "Odmietnutie výpovede", "definition": "Možnosť svedka nevypovedať, ak by spôsobil trestné stíhanie sebe alebo blízkym." },
+    { "term": "Poučenie svedka", "definition": "Orgán musí svedka poučiť o jeho právach a povinnostiach." },
+    { "term": "Utajený svedok", "definition": "Svedok, ktorého identita je chránená z dôvodu ohrozenia." },
+
+    { "term": "Konfrontácia", "definition": "Stret dvoch osôb s rozpornými výpoveďami." },
+    { "term": "Svedecká výpoveď", "definition": "Dôkazný prostriedok založený na vnímaní svedka." },
+    { "term": "Predvedenie svedka", "definition": "Prinútenie svedka dostaviť sa, ak sa bez ospravedlnenia nedostaví." },
+    { "term": "Pokuta svedkovi", "definition": "Možno uložiť, ak svedok bezdôvodne odmieta vypovedať alebo sa nedostaví." },
+    { "term": "Zákaz klamavej výpovede", "definition": "Svedok nesmie úmyselne uvádzať nepravdivé skutočnosti." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Odmietnutie výpovede",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Svedok odmietol vypovedať, pretože by výpoveďou usvedčil svojho brata.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže svedok odmietnuť výpoveď?",
+          "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Aký je dôvod odmietnutia?",
+          "options": ["Ochrana blízkej osoby", "Nesúhlas s konaním", "Nedostatok času"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Rešpektovať odmietnutie výpovede",
+            "Uložiť pokutu",
+            "Predviesť svedka"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nepravdivá výpoveď",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Svedok počas výsluchu úmyselne uviedol nepravdivé skutočnosti, aby pomohol obvinenému.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je nepravdivá výpoveď dovolená?",
+          "options": ["Áno", "Nie", "Len ak s tým súhlasí obvinený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Aké následky môže mať svedok?",
+          "options": ["Trestnoprávnu zodpovednosť za krivú výpoveď", "Žiadne", "Len napomenutie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vyhodnotiť výpoveď ako nedôveryhodnú",
+            "Použiť výpoveď ako hlavný dôkaz",
+            "Ignorovať rozpor"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

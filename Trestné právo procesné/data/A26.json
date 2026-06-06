@@ -1,0 +1,112 @@
+{
+  "id": "A26",
+  "title": "Mimoriadne opravné prostriedky",
+  "schemaVersion": "1.1",
+  "tags": ["mimoriadne opravné prostriedky", "dovolanie", "obnova konania", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktorý z nasledujúcich je mimoriadnym opravným prostriedkom?",
+      "options": ["Odvolanie", "Dovolanie", "Sťažnosť"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno podať dovolanie?",
+      "options": ["Proti každému rozhodnutiu", "Len proti právoplatnému rozhodnutiu súdu", "Len v prípravnom konaní"],
+      "correct": 1
+    },
+    {
+      "question": "Kto rozhoduje o dovolaní?",
+      "options": ["Krajský súd", "Najvyšší súd", "Prokurátor"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je obnova konania?",
+      "options": ["Opätovné preskúmanie právoplatného rozhodnutia na základe nových skutočností", "Odvolanie proti rozsudku", "Zrušenie obžaloby"],
+      "correct": 0
+    },
+    {
+      "question": "Kedy možno povoliť obnovu konania?",
+      "options": ["Ak sa objavia nové dôkazy", "Kedykoľvek bez dôvodu", "Len na žiadosť poškodeného"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Mimoriadne opravné prostriedky", "definition": "Prostriedky proti právoplatným rozhodnutiam súdu." },
+    { "term": "Dovolanie", "definition": "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu súdu." },
+    { "term": "Obnova konania", "definition": "Opätovné konanie vo veci na základe nových skutočností alebo dôkazov." },
+    { "term": "Najvyšší súd", "definition": "Súd, ktorý rozhoduje o dovolaní." },
+    { "term": "Dovolacie dôvody", "definition": "Zákonom vymedzené dôvody, pre ktoré možno podať dovolanie." },
+
+    { "term": "Nové dôkazy", "definition": "Skutočnosti alebo dôkazy, ktoré neboli známe v pôvodnom konaní." },
+    { "term": "Zamietnutie dovolania", "definition": "Rozhodnutie, ak dovolanie nie je dôvodné." },
+    { "term": "Zrušenie rozhodnutia", "definition": "Najvyšší súd môže zrušiť napadnuté rozhodnutie." },
+    { "term": "Povolenie obnovy", "definition": "Rozhodnutie súdu, ak sú splnené podmienky obnovy konania." },
+    { "term": "Zastavenie obnovy", "definition": "Rozhodnutie, ak podmienky obnovy nie sú splnené." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Dovolanie proti právoplatnému rozsudku",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený tvrdí, že súd porušil zákon pri rozhodovaní a rozsudok je už právoplatný.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký opravný prostriedok môže podať?",
+          "options": ["Odvolanie", "Dovolanie", "Sťažnosť"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o dovolaní?",
+          "options": ["Krajský súd", "Najvyšší súd", "Prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo môže Najvyšší súd urobiť?",
+          "options": [
+            "Zrušiť rozhodnutie",
+            "Zamietnuť dovolanie",
+            "Obe možnosti"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nové dôkazy po právoplatnom rozsudku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Po právoplatnom odsúdení sa objavil nový svedok, ktorý potvrdzuje alibi obvineného.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Aký opravný prostriedok prichádza do úvahy?",
+          "options": ["Obnova konania", "Odvolanie", "Dovolanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kedy možno obnovu povoliť?",
+          "options": ["Ak nové dôkazy môžu viesť k inému rozhodnutiu", "Kedykoľvek", "Len ak súhlasí prokurátor"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo môže súd urobiť po povolení obnovy?",
+          "options": [
+            "Vykonať nové dokazovanie",
+            "Zrušiť pôvodný rozsudok",
+            "Obe možnosti"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  ]
+}

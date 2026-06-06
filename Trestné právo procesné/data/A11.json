@@ -1,0 +1,112 @@
+{
+  "id": "A11",
+  "title": "Informačno-technické prostriedky v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["ITP", "odpočúvanie", "sledovanie", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktorý orgán môže nariadiť použitie informačno-technických prostriedkov?",
+      "options": ["Polícia", "Súd", "Obhajca"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno použiť odpočúvanie a záznam telekomunikačnej prevádzky?",
+      "options": ["Pri akomkoľvek trestnom čine", "Len pri závažných trestných činoch", "Len so súhlasom obvineného"],
+      "correct": 1
+    },
+    {
+      "question": "Kto vykonáva technické zabezpečenie ITP?",
+      "options": ["Súd", "Polícia", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Ako sa dokumentuje použitie ITP?",
+      "options": ["Ústnym oznámením", "Zápisnicou a technickým záznamom", "Nie je potrebné dokumentovať"],
+      "correct": 1
+    },
+    {
+      "question": "Čo sa stane s nepoužiteľnými alebo nadbytočnými záznamami?",
+      "options": ["Musí sa zničiť", "Ukladajú sa navždy", "Poskytujú sa obvinenému"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Informačno-technické prostriedky", "definition": "Prostriedky používané na odpočúvanie, sledovanie a získavanie údajov v trestnom konaní." },
+    { "term": "Odpočúvanie", "definition": "Získavanie záznamov telekomunikačnej prevádzky na základe príkazu súdu." },
+    { "term": "Sledovanie osôb a vecí", "definition": "Utajený monitoring pohybu osôb alebo vecí." },
+    { "term": "Príkaz súdu", "definition": "Rozhodnutie, ktorým súd povoľuje použitie ITP." },
+    { "term": "Technický záznam", "definition": "Záznam získaný použitím ITP, ktorý sa zakladá do spisu." },
+
+    { "term": "Zničenie záznamov", "definition": "Povinnosť zničiť nepoužiteľné alebo nadbytočné záznamy." },
+    { "term": "Utajený svedok", "definition": "Osoba, ktorej identita je chránená, môže byť monitorovaná ITP." },
+    { "term": "Prevádzkové údaje", "definition": "Údaje o komunikácii, ktoré možno získať od operátora." },
+    { "term": "Policajt", "definition": "Orgán, ktorý technicky vykonáva použitie ITP." },
+    { "term": "Prokurátor", "definition": "Dozoruje zákonnosť použitia ITP a podáva návrh na ich povolenie." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Odpočúvanie bez príkazu súdu",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia odpočúvala podozrivého bez príkazu súdu, s odôvodnením, že išlo o urgentnú situáciu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je možné odpočúvať bez príkazu súdu?",
+          "options": ["Nie", "Áno, pri každom podozrení", "Len ak to schváli obvinený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Je takto získaný dôkaz použiteľný?",
+          "options": ["Nie, je nezákonný", "Áno, ak je pravdivý", "Len v prípravnom konaní"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Vylúčiť dôkaz z dokazovania",
+            "Použiť dôkaz, ak je dôležitý",
+            "Postúpiť vec polícii"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zničenie nadbytočných záznamov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Pri sledovaní osôb vznikli záznamy, ktoré nesúvisia s trestným činom. Polícia ich ponechala v spise.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako sa má naložiť s nepoužiteľnými záznamami?",
+          "options": ["Musí sa zničiť", "Uchovať pre budúce prípady", "Poskytnúť médiám"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o zničení?",
+          "options": ["Súd", "Polícia", "Poškodený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Prečo je to dôležité?",
+          "options": [
+            "Na ochranu súkromia osôb",
+            "Na urýchlenie konania",
+            "Na zníženie administratívy"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

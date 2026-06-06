@@ -1,0 +1,112 @@
+{
+  "id": "A3",
+  "title": "Subjekty a strany trestného konania",
+  "schemaVersion": "1.1",
+  "tags": ["subjekty", "strany", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktorý z nasledujúcich je subjektom trestného konania?",
+      "options": ["Obvinený", "Svedok", "Znalec"],
+      "correct": 0
+    },
+    {
+      "question": "Kto je stranou trestného konania?",
+      "options": ["Prokurátor", "Policajt", "Znalec"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý subjekt rozhoduje o vine a treste?",
+      "options": ["Súd", "Prokurátor", "Obhajca"],
+      "correct": 0
+    },
+    {
+      "question": "Kto zastupuje štát v trestnom konaní?",
+      "options": ["Obhajca", "Prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kto môže byť poškodeným v trestnom konaní?",
+      "options": ["Len fyzická osoba", "Len právnická osoba", "Fyzická aj právnická osoba"],
+      "correct": 2
+    }
+  ],
+
+  "tiles": [
+    { "term": "Obvinený", "definition": "Osoba, proti ktorej bolo vznesené obvinenie." },
+    { "term": "Prokurátor", "definition": "Zastupuje štát a podáva obžalobu." },
+    { "term": "Súd", "definition": "Rozhoduje o vine a treste." },
+    { "term": "Obhajca", "definition": "Zabezpečuje obhajobu obvineného." },
+    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené." },
+
+    { "term": "Svedok", "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre konanie." },
+    { "term": "Znalec", "definition": "Odborník, ktorý podáva znalecký posudok." },
+    { "term": "Policajt", "definition": "Orgán činný v trestnom konaní v prípravnom konaní." },
+    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
+    { "term": "Trestný sudca", "definition": "Sudca špecializovaný na trestné veci." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kto je stranou konania?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Poškodený chce podať návrh na doplnenie dokazovania. Tvrdí, že je stranou konania.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je poškodený stranou trestného konania?",
+          "options": ["Áno", "Nie", "Len v civilnom konaní"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Aké právo má poškodený?",
+          "options": ["Podávať obžalobu", "Navrhovať dôkazy", "Rozhodovať o vine"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má súd postupovať?",
+          "options": [
+            "Zamietnuť návrh bez odôvodnenia",
+            "Zaoberať sa návrhom poškodeného",
+            "Postúpiť vec prokurátorovi"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Postavenie obvineného",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba bola predvolaná ako svedok, ale počas výsluchu sa ukázalo, že existujú dôvody na vznesenie obvinenia.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má polícia postupovať?",
+          "options": ["Pokračovať vo výsluchu ako so svedkom", "Ihneď prerušiť výsluch a poučiť osobu ako obvineného", "Zadržať osobu bez poučenia"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Prečo je to dôležité?",
+          "options": ["Aby sa predišlo prieťahom", "Aby sa zachovalo právo nevypovedať", "Aby sa urýchlilo konanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po poučení?",
+          "options": [
+            "Osoba môže odmietnuť vypovedať",
+            "Musí vypovedať",
+            "Musí podpísať priznanie"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

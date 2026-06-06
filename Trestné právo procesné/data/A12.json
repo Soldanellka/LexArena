@@ -1,0 +1,112 @@
+{
+  "id": "A12",
+  "title": "Prostriedky operatívno-pátracej činnosti v trestnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["operatívno-pátracia činnosť", "OPČ", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je operatívno-pátracia činnosť?",
+      "options": ["Neformálne zisťovanie informácií", "Skrytá činnosť polície na odhaľovanie trestnej činnosti", "Výsluch obvineného"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý z nasledujúcich je prostriedkom OPČ?",
+      "options": ["Domová prehliadka", "Agent", "Rozsudok súdu"],
+      "correct": 1
+    },
+    {
+      "question": "Kto môže nasadiť agenta?",
+      "options": ["Polícia bez obmedzení", "Prokurátor so súhlasom sudcu", "Obhajca"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy možno použiť predstieraný prevod?",
+      "options": ["Pri akomkoľvek trestnom čine", "Len pri závažnej trestnej činnosti", "Len pri priestupkoch"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je sledovanie osôb a vecí?",
+      "options": ["Verejné monitorovanie", "Utajená činnosť polície na získanie informácií", "Výsluch svedkov"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Operatívno-pátracia činnosť", "definition": "Skrytá činnosť polície zameraná na odhaľovanie a dokumentovanie trestnej činnosti." },
+    { "term": "Agent", "definition": "Osoba nasadená na odhaľovanie trestnej činnosti so súhlasom sudcu." },
+    { "term": "Predstieraný prevod", "definition": "Simulovaný prevod veci alebo služby za účelom odhalenia trestnej činnosti." },
+    { "term": "Sledovanie osôb a vecí", "definition": "Utajený monitoring pohybu osôb alebo predmetov." },
+    { "term": "Krycie doklady", "definition": "Doklady umožňujúce utajenú činnosť policajta alebo agenta." },
+
+    { "term": "Kontrolovaná dodávka", "definition": "Dovolenie prepravy nelegálneho tovaru pod kontrolou polície." },
+    { "term": "Operatívne zisťovanie", "definition": "Získavanie informácií z prostredia, ktoré môže súvisieť s trestnou činnosťou." },
+    { "term": "Utajená identita", "definition": "Identita policajta alebo agenta chránená pre účely OPČ." },
+    { "term": "Technické prostriedky", "definition": "Zariadenia používané pri sledovaní alebo dokumentovaní činnosti." },
+    { "term": "Prokurátor", "definition": "Orgán, ktorý povoľuje alebo navrhuje použitie niektorých prostriedkov OPČ." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nasadenie agenta",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia chce nasadiť agenta do skupiny podozrivej z drogovej trestnej činnosti.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Kto môže povoliť nasadenie agenta?",
+          "options": ["Polícia sama", "Prokurátor so súhlasom sudcu", "Obhajca"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kedy možno agenta použiť?",
+          "options": ["Pri každom trestnom čine", "Len pri závažnej trestnej činnosti", "Len pri priestupkoch"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako sa dokumentuje činnosť agenta?",
+          "options": [
+            "Zápisnicou a technickými záznamami",
+            "Nie je potrebné dokumentovať",
+            "Len ústnym oznámením"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Kontrolovaná dodávka",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia sleduje zásielku obsahujúcu nelegálne drogy a chce umožniť jej doručenie, aby identifikovala celú skupinu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako sa nazýva tento postup?",
+          "options": ["Predstieraný prevod", "Kontrolovaná dodávka", "Odpočúvanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto musí schváliť kontrolovanú dodávku?",
+          "options": ["Policajt na mieste", "Prokurátor", "Súd"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Prečo sa tento postup používa?",
+          "options": [
+            "Na odhalenie celej trestnej siete",
+            "Na rýchle ukončenie konania",
+            "Na zníženie administratívy"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

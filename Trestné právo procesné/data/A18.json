@@ -1,0 +1,104 @@
+{
+  "id": "A18",
+  "title": "Predsúdne konanie",
+  "schemaVersion": "1.1",
+  "tags": ["predsúdne konanie", "prípravné konanie", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Čo je predsúdne konanie?",
+      "options": ["Konanie pred odvolacím súdom", "Časť trestného konania pred podaním obžaloby", "Konanie po právoplatnom rozsudku"],
+      "correct": 1
+    },
+    {
+      "question": "Kto vykonáva úkony v predsúdnom konaní?",
+      "options": ["Súd", "Polícia a prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy sa predsúdne konanie končí?",
+      "options": ["Podaním obžaloby", "Začatím hlavného pojednávania", "Vydaním rozsudku"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý úkon patrí do predsúdneho konania?",
+      "options": ["Vykonávanie dôkazov na hlavnom pojednávaní", "Začatie trestného stíhania", "Rozhodnutie o odvolaní"],
+      "correct": 1
+    },
+    {
+      "question": "Kto dozoruje zákonnosť predsúdneho konania?",
+      "options": ["Súd", "Prokurátor", "Obhajca"],
+      "correct": 1
+    }
+  ],
+
+  "tiles": [
+    { "term": "Predsúdne konanie", "definition": "Časť trestného konania pred podaním obžaloby, zahŕňajúca preverovanie a vyšetrovanie." },
+    { "term": "Začatie trestného stíhania", "definition": "Formálny úkon, ktorým sa začína prípravné konanie." },
+    { "term": "Vyšetrovanie", "definition": "Zisťovanie skutkového stavu a zhromažďovanie dôkazov." },
+    { "term": "Dozor prokurátora", "definition": "Prokurátor dohliada na zákonnosť úkonov polície." },
+    { "term": "Podanie obžaloby", "definition": "Úkon, ktorým sa predsúdne konanie končí a vec sa predkladá súdu." },
+
+    { "term": "Objasňovanie", "definition": "Úkony polície pred začatím trestného stíhania." },
+    { "term": "Zaisťovacie úkony", "definition": "Úkony na zabezpečenie osôb a vecí pre účely konania." },
+    { "term": "Výsluch", "definition": "Procesný úkon na získanie informácií od osôb." },
+    { "term": "Dôkazné prostriedky", "definition": "Prostriedky na preukázanie skutočností dôležitých pre konanie." },
+    { "term": "Rozhodnutie o zastavení stíhania", "definition": "Rozhodnutie prokurátora, ktorým sa konanie môže skončiť už v predsúdnom štádiu." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kedy sa končí predsúdne konanie?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia ukončila vyšetrovanie a prokurátor zvažuje ďalší postup.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako sa končí predsúdne konanie?",
+          "options": ["Podaním obžaloby", "Začatím hlavného pojednávania", "Vydaním rozsudku"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto podáva obžalobu?",
+          "options": ["Súd", "Prokurátor", "Obvinený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po podaní obžaloby?",
+          "options": ["Hlavné pojednávanie", "Odvolacie konanie", "Dovolacie konanie"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Zastavenie trestného stíhania v predsúdnom konaní",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Prokurátor zistil, že skutok nie je trestným činom a zvažuje zastavenie trestného stíhania.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Môže prokurátor zastaviť trestné stíhanie v predsúdnom konaní?",
+          "options": ["Áno", "Nie", "Len so súhlasom obvineného"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Aký opravný prostriedok môže podať poškodený?",
+          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Kto rozhoduje o sťažnosti?",
+          "options": ["Nadriadený prokurátor", "Súd", "Polícia"],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

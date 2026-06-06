@@ -1,0 +1,108 @@
+{
+  "id": "A21",
+  "title": "Preskúmanie obžaloby a predbežné prejednanie obžaloby",
+  "schemaVersion": "1.1",
+  "tags": ["obžaloba", "predbežné prejednanie", "súd", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto preskúmava obžalobu po jej podaní?",
+      "options": ["Prokurátor", "Súd", "Polícia"],
+      "correct": 1
+    },
+    {
+      "question": "Čo je cieľom preskúmania obžaloby?",
+      "options": ["Zistiť, či je obžaloba zákonná a úplná", "Rozhodnúť o vine", "Vypočuť svedkov"],
+      "correct": 0
+    },
+    {
+      "question": "Kedy súd nariaďuje predbežné prejednanie obžaloby?",
+      "options": ["Vždy", "Len ak sú pochybnosti o zákonnosti alebo dôvodnosti obžaloby", "Len pri zločinoch"],
+      "correct": 1
+    },
+    {
+      "question": "Kto sa zúčastňuje predbežného prejednania obžaloby?",
+      "options": ["Len súd", "Súd, prokurátor, obvinený a obhajca", "Len prokurátor"],
+      "correct": 1
+    },
+    {
+      "question": "Čo môže súd urobiť po predbežnom prejednaní obžaloby?",
+      "options": ["Vrátiť vec prokurátorovi", "Začať hlavné pojednávanie", "Obe možnosti"],
+      "correct": 2
+    }
+  ],
+
+  "tiles": [
+    { "term": "Preskúmanie obžaloby", "definition": "Kontrola súdu, či je obžaloba zákonná, úplná a odôvodnená." },
+    { "term": "Predbežné prejednanie obžaloby", "definition": "Pojednávanie, na ktorom súd preveruje dôvodnosť obžaloby." },
+    { "term": "Vrátenie veci prokurátorovi", "definition": "Rozhodnutie súdu, ak obžaloba trpí vadami alebo je neúplná." },
+    { "term": "Začatie hlavného pojednávania", "definition": "Súd začne pojednávanie, ak je obžaloba v poriadku." },
+    { "term": "Dôvodnosť obžaloby", "definition": "Posúdenie, či dôkazy odôvodňujú postavenie obvineného pred súd." },
+
+    { "term": "Zákonnosť obžaloby", "definition": "Obžaloba musí spĺňať zákonné náležitosti a byť riadne odôvodnená." },
+    { "term": "Procesné chyby", "definition": "Nedostatky, ktoré môžu viesť k vráteniu veci prokurátorovi." },
+    { "term": "Účasť strán", "definition": "Na predbežnom prejednaní sa zúčastňuje prokurátor, obvinený a obhajca." },
+    { "term": "Rozhodnutie súdu", "definition": "Súd môže vec vrátiť, zastaviť stíhanie alebo nariadiť hlavné pojednávanie." },
+    { "term": "Odstránenie vád", "definition": "Prokurátor môže doplniť alebo opraviť obžalobu po jej vrátení." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Neúplná obžaloba",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Súd zistí, že obžaloba neobsahuje opis skutku v potrebnom rozsahu.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má súd postupovať?",
+          "options": ["Vrátiť obžalobu prokurátorovi", "Začať hlavné pojednávanie", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Čo musí prokurátor urobiť?",
+          "options": ["Doplniť alebo opraviť obžalobu", "Zrušiť obžalobu", "Požiadať o odvolanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po doplnení obžaloby?",
+          "options": ["Opätovné preskúmanie súdom", "Automatické začatie pojednávania", "Zastavenie stíhania"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Pochybnosti o dôvodnosti obžaloby",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Súd má pochybnosti, či dôkazy postačujú na postavenie obvineného pred súd.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Čo môže súd urobiť?",
+          "options": ["Nariadiť predbežné prejednanie obžaloby", "Začať hlavné pojednávanie", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto sa zúčastňuje predbežného prejednania?",
+          "options": ["Len súd", "Súd, prokurátor, obvinený a obhajca", "Len prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Aké rozhodnutie môže súd prijať?",
+          "options": [
+            "Vrátiť vec prokurátorovi",
+            "Začať hlavné pojednávanie",
+            "Obe možnosti"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  ]
+}

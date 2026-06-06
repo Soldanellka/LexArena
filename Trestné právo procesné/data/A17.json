@@ -1,0 +1,112 @@
+{
+  "id": "A17",
+  "title": "Časti a štádiá trestného konania",
+  "schemaVersion": "1.1",
+  "tags": ["štádiá", "trestné konanie", "proces"],
+
+  "quiz": [
+    {
+      "question": "Ktoré je prvé štádium trestného konania?",
+      "options": ["Hlavné pojednávanie", "Prípravné konanie", "Odvolacie konanie"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré štádium konania rozhoduje o vine a treste?",
+      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Dovolacie konanie"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré štádium slúži na preskúmanie rozhodnutia súdu prvého stupňa?",
+      "options": ["Odvolacie konanie", "Prípravné konanie", "Konanie o dohode o vine a treste"],
+      "correct": 0
+    },
+    {
+      "question": "Kto vykonáva úkony v prípravnom konaní?",
+      "options": ["Súd", "Polícia a prokurátor", "Poškodený"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré štádium môže skončiť dohodou o vine a treste?",
+      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Odvolacie konanie"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Prípravné konanie", "definition": "Štádium, v ktorom sa zisťuje skutkový stav a zhromažďujú dôkazy." },
+    { "term": "Hlavné pojednávanie", "definition": "Rozhodujúce štádium, v ktorom súd rozhoduje o vine a treste." },
+    { "term": "Odvolacie konanie", "definition": "Preskúmavanie rozhodnutia súdu prvého stupňa." },
+    { "term": "Dovolacie konanie", "definition": "Mimoriadny opravný prostriedok na preskúmanie právoplatného rozhodnutia." },
+    { "term": "Konanie o dohode o vine a treste", "definition": "Špeciálne konanie umožňujúce uzavretie dohody medzi obvineným a prokurátorom." },
+
+    { "term": "Začatie trestného stíhania", "definition": "Formálny úkon, ktorým sa začína prípravné konanie." },
+    { "term": "Podanie obžaloby", "definition": "Úkon prokurátora, ktorým sa vec predkladá súdu." },
+    { "term": "Vykonávanie dôkazov", "definition": "Kľúčová časť hlavného pojednávania." },
+    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej." },
+    { "term": "Právoplatnosť", "definition": "Stav, keď rozhodnutie už nemožno napadnúť riadnym opravným prostriedkom." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Kedy sa končí prípravné konanie?",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Polícia ukončila vyšetrovanie a prokurátor zvažuje ďalší postup.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako sa končí prípravné konanie?",
+          "options": ["Podaním obžaloby", "Vydaním rozsudku", "Začatím odvolacieho konania"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto podáva obžalobu?",
+          "options": ["Súd", "Prokurátor", "Obvinený"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po podaní obžaloby?",
+          "options": [
+            "Hlavné pojednávanie",
+            "Odvolacie konanie",
+            "Dovolacie konanie"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Nesúhlas s rozsudkom",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obvinený nesúhlasí s rozsudkom súdu prvého stupňa a tvrdí, že dôkazy boli nesprávne hodnotené.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Do ktorého štádia patrí preskúmanie rozsudku?",
+          "options": ["Prípravné konanie", "Odvolacie konanie", "Hlavné pojednávanie"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Kto rozhoduje o odvolaní?",
+          "options": ["Súd prvého stupňa", "Odvolací súd", "Prokurátor"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Čo môže odvolací súd urobiť?",
+          "options": [
+            "Zmeniť rozsudok",
+            "Zrušiť rozsudok a vrátiť vec",
+            "Potvrdiť rozsudok"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

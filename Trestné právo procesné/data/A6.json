@@ -1,0 +1,112 @@
+{
+  "id": "A6",
+  "title": "Obhajca, osoby so samostatnými obhajovacími právami",
+  "schemaVersion": "1.1",
+  "tags": ["obhajca", "obhajoba", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Kto môže byť obhajcom v trestnom konaní?",
+      "options": ["Každá plnoletá osoba", "Len advokát", "Policajt"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy je obhajoba povinná?",
+      "options": ["Pri každom trestnom čine", "Len pri prečinoch", "V zákonom určených prípadoch (napr. väzba, mladistvý)"],
+      "correct": 2
+    },
+    {
+      "question": "Kto má samostatné obhajovacie práva?",
+      "options": ["Poškodený", "Zúčastnená osoba", "Mladistvý obvinený"],
+      "correct": 2
+    },
+    {
+      "question": "Môže obvinený odmietnuť obhajcu, ak ide o povinnú obhajobu?",
+      "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+      "correct": 1
+    },
+    {
+      "question": "Kto vykonáva úkony obhajoby?",
+      "options": ["Obhajca", "Svedok", "Znalec"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Obhajca", "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému." },
+    { "term": "Povinná obhajoba", "definition": "Situácie, keď obvinený musí mať obhajcu zo zákona." },
+    { "term": "Samostatné obhajovacie práva", "definition": "Práva, ktoré môže vykonávať osoba nezávisle od obvineného." },
+    { "term": "Mladistvý obvinený", "definition": "Osoba mladšia ako 18 rokov, ktorá má zvýšenú ochranu." },
+    { "term": "Ustanovený obhajca", "definition": "Obhajca ustanovený súdom, ak si ho obvinený nezvolí." },
+
+    { "term": "Zvolený obhajca", "definition": "Obhajca, ktorého si obvinený vyberie sám." },
+    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
+    { "term": "Právo na obhajobu", "definition": "Základné právo obvineného brániť sa proti obvineniu." },
+    { "term": "Konflikt záujmov", "definition": "Situácia, keď jeden obhajca nemôže zastupovať viacerých obvinených." },
+    { "term": "Právo nevypovedať", "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Povinná obhajoba mladistvého",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Mladistvý obvinený odmieta mať obhajcu a chce vypovedať bez neho.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Je obhajoba povinná?",
+          "options": ["Áno", "Nie", "Len ak ide o zločin"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Môže mladistvý odmietnuť obhajcu?",
+          "options": ["Áno", "Nie", "Len so súhlasom rodiča"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 3: Ako má orgán postupovať?",
+          "options": [
+            "Ustanoviť obhajcu a pokračovať až po jeho príchode",
+            "Vypočuť mladistvého bez obhajcu",
+            "Zastaviť konanie"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Konflikt záujmov obhajcu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Jeden obhajca zastupuje dvoch obvinených, ktorí sa začali navzájom obviňovať.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ide o konflikt záujmov?",
+          "options": ["Áno", "Nie", "Len ak to tvrdí prokurátor"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ako má súd postupovať?",
+          "options": ["Ustanoviť každému obvinenému iného obhajcu", "Pokračovať v konaní", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Prečo je to dôležité?",
+          "options": [
+            "Aby bola zachovaná rovnosť strán a spravodlivý proces",
+            "Aby sa konanie urýchlilo",
+            "Aby mal prokurátor menej práce"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

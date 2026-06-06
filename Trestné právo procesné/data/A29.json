@@ -1,0 +1,108 @@
+{
+  "id": "A29",
+  "title": "Právny styk s cudzinou",
+  "schemaVersion": "1.1",
+  "tags": ["právny styk s cudzinou", "medzinárodná spolupráca", "extradícia", "MLA"],
+
+  "quiz": [
+    {
+      "question": "Čo je právny styk s cudzinou?",
+      "options": ["Spolupráca medzi súdmi a orgánmi rôznych štátov", "Cestovanie do zahraničia", "Obchodné vzťahy medzi firmami"],
+      "correct": 0
+    },
+    {
+      "question": "Ktorý dokument najčastejšie upravuje právny styk s cudzinou?",
+      "options": ["Medzinárodné zmluvy", "Rozhodnutie obce", "Interné predpisy polície"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je vydanie osoby (extradícia)?",
+      "options": ["Odovzdanie osoby medzi štátmi na trestné stíhanie alebo výkon trestu", "Vyhostenie cudzinca", "Zrušenie občianstva"],
+      "correct": 0
+    },
+    {
+      "question": "Čo je právna pomoc v trestných veciach?",
+      "options": ["Poskytovanie právnikov obvineným", "Medzinárodná spolupráca pri dokazovaní", "Pomoc pri písaní zmlúv"],
+      "correct": 1
+    },
+    {
+      "question": "Ktorý orgán je ústredným orgánom pre právny styk s cudzinou v trestných veciach?",
+      "options": ["Ministerstvo spravodlivosti", "Polícia", "Obecný úrad"],
+      "correct": 0
+    }
+  ],
+
+  "tiles": [
+    { "term": "Právny styk s cudzinou", "definition": "Medzinárodná spolupráca orgánov pri trestnom konaní." },
+    { "term": "Medzinárodná právna pomoc", "definition": "Poskytovanie dôkazov, doručovanie a iné úkony medzi štátmi." },
+    { "term": "Extradícia", "definition": "Vydanie osoby do iného štátu na trestné stíhanie alebo výkon trestu." },
+    { "term": "Európsky zatýkací rozkaz", "definition": "Zjednodušená forma odovzdania osoby medzi členskými štátmi EÚ." },
+    { "term": "Doručovanie do cudziny", "definition": "Zasielanie písomností osobám nachádzajúcim sa v inom štáte." },
+
+    { "term": "Právna pomoc", "definition": "Vykonanie procesných úkonov na žiadosť cudzieho štátu." },
+    { "term": "Ústredný orgán", "definition": "Orgán koordinujúci medzinárodnú spoluprácu (napr. Ministerstvo spravodlivosti)." },
+    { "term": "Prenos trestného konania", "definition": "Postúpenie trestnej veci inému štátu." },
+    { "term": "Výkon cudzieho rozhodnutia", "definition": "Uznanie a výkon rozsudku vydaného v inom štáte." },
+    { "term": "Zásada reciprocity", "definition": "Spolupráca sa poskytuje, ak ju poskytuje aj druhý štát." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Žiadosť o právnu pomoc",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Slovenský súd potrebuje vypočuť svedka, ktorý žije v Rakúsku.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako môže súd postupovať?",
+          "options": ["Požiadať Rakúsko o právnu pomoc", "Požiadať svedka, aby prišiel na Slovensko", "Zastaviť konanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Ktorý orgán žiadosť vybavuje?",
+          "options": ["Ministerstvo spravodlivosti ako ústredný orgán", "Obecný úrad", "Polícia bez ďalšieho"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo môže byť výsledkom?",
+          "options": ["Vypočutie svedka v Rakúsku", "Zrušenie obžaloby", "Automatické oslobodenie obvineného"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Extradícia osoby",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Osoba podozrivá zo spáchania trestného činu na Slovensku sa nachádza v Srbsku.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako môže Slovensko postupovať?",
+          "options": ["Požiadať Srbsko o vydanie osoby (extradíciu)", "Zatknúť osobu bez súhlasu Srbska", "Zastaviť trestné stíhanie"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Kto žiadosť podáva?",
+          "options": ["Ministerstvo spravodlivosti", "Obecný úrad", "Poškodený"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo môže Srbsko urobiť?",
+          "options": [
+            "Vydanie povoliť alebo odmietnuť",
+            "Musí osobu vydať vždy",
+            "Nemôže o tom rozhodovať"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "A23",
+  "title": "Meritórne rozhodnutia súdu na hlavnom pojednávaní",
+  "schemaVersion": "1.1",
+  "tags": ["meritórne rozhodnutia", "hlavné pojednávanie", "súd", "trestné konanie"],
+
+  "quiz": [
+    {
+      "question": "Ktoré rozhodnutie je meritórnym rozhodnutím súdu?",
+      "options": ["Uznesenie o odročení pojednávania", "Rozsudok o vine a treste", "Uznesenie o predvedení svedka"],
+      "correct": 1
+    },
+    {
+      "question": "Kedy súd vyhlasuje rozsudok?",
+      "options": ["Po vykonaní dôkazov a záverečných rečiach", "Na začiatku pojednávania", "Po podaní obžaloby"],
+      "correct": 0
+    },
+    {
+      "question": "Ktoré rozhodnutie môže súd prijať, ak nebolo dokázané, že skutok spáchal obžalovaný?",
+      "options": ["Odsudzujúci rozsudok", "Oslobodzujúci rozsudok", "Zastavenie konania"],
+      "correct": 1
+    },
+    {
+      "question": "Ktoré rozhodnutie súd vydá, ak skutok nie je trestným činom?",
+      "options": ["Oslobodzujúci rozsudok", "Uznesenie o vrátení veci", "Trestný rozkaz"],
+      "correct": 0
+    },
+    {
+      "question": "Kto má posledné slovo pred vyhlásením rozsudku?",
+      "options": ["Prokurátor", "Obhajca", "Obvinený"],
+      "correct": 2
+    }
+  ],
+
+  "tiles": [
+    { "term": "Meritórne rozhodnutie", "definition": "Rozhodnutie súdu vo veci samej, najmä rozsudok." },
+    { "term": "Odsudzujúci rozsudok", "definition": "Rozhodnutie, ktorým súd uzná obžalovaného vinným." },
+    { "term": "Oslobodzujúci rozsudok", "definition": "Rozhodnutie, ktorým súd obžalovaného oslobodí spod obžaloby." },
+    { "term": "Skutková veta", "definition": "Časť rozsudku opisujúca skutok, ktorý bol preukázaný." },
+    { "term": "Právna veta", "definition": "Časť rozsudku obsahujúca právnu kvalifikáciu skutku." },
+
+    { "term": "Odôvodnenie rozsudku", "definition": "Vysvetlenie, prečo súd rozhodol určitým spôsobom." },
+    { "term": "Výrok rozsudku", "definition": "Základná časť rozsudku, v ktorej súd rozhoduje o vine a treste." },
+    { "term": "Zastavenie konania", "definition": "Rozhodnutie, ak nie sú splnené podmienky na pokračovanie v konaní." },
+    { "term": "Zmena právnej kvalifikácie", "definition": "Súd môže skutok právne posúdiť inak ako prokurátor v obžalobe." },
+    { "term": "Vyhlásenie rozsudku", "definition": "Formálny akt, ktorým súd oznámi svoje rozhodnutie." }
+  ],
+
+  "cases": [
+    {
+      "title": "Prípad 1 – Nedostatok dôkazov",
+      "difficulty": "ľahká",
+      "steps": [
+        {
+          "question": "Zadanie: Po vykonaní dôkazov nie je preukázané, že obžalovaný spáchal skutok.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má súd rozhodnúť?",
+          "options": ["Odsúdiť obžalovaného", "Oslobodiť obžalovaného", "Vrátiť vec prokurátorovi"],
+          "correct": 1
+        },
+        {
+          "question": "Krok 2: Prečo?",
+          "options": ["Nie je dokázaná vina", "Obžalovaný sa priznal", "Prokurátor to navrhol"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo nasleduje po rozhodnutí?",
+          "options": ["Vyhlásenie rozsudku", "Začatie nového vyšetrovania", "Zastavenie konania automaticky"],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "title": "Prípad 2 – Skutok nie je trestným činom",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Zadanie: Obžalovaný sa dopustil konania, ktoré však podľa zákona nie je trestným činom.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "question": "Krok 1: Ako má súd rozhodnúť?",
+          "options": ["Oslobodiť obžalovaného", "Odsúdiť obžalovaného", "Vrátiť vec prokurátorovi"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 2: Aký je dôvod?",
+          "options": ["Skutok nie je trestným činom", "Chýba obžaloba", "Obžalovaný nespolupracoval"],
+          "correct": 0
+        },
+        {
+          "question": "Krok 3: Čo musí rozsudok obsahovať?",
+          "options": [
+            "Výrok, odôvodnenie a poučenie",
+            "Len výrok",
+            "Len právnu vetu"
+          ],
+          "correct": 0
+        }
+      ]
+    }
+  ]
+}
