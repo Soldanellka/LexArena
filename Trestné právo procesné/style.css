@@ -206,8 +206,8 @@ body.dark .quiz-options button:hover {
 .back-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: linear-gradient(180deg, #F4DDDD 0%, #E8C7C7 40%, #CFA5A5 100%);
-  color: #ffffff;
+  background: linear-gradient(180deg,#FFFFFF,#E8ECF2);
+  color: #5A6E8C;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
