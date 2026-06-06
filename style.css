@@ -1,267 +1,358 @@
-/* styles.css – púdrovo‑ružová + tmavá šedo‑modrá téma */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-:root {
-  --bg: #fffafc;
-  --surface: #ffffff;
-  --muted: #7b6f78;
-  --accent-1: #f7c6d6;
-  --accent-2: #f08aa6;
-  --accent-3: #ff6f91;
-  --success: #16a34a;
-  --danger: #ef4444;
-  --card-border: rgba(16,16,16,0.04);
-  --shadow: 0 6px 18px rgba(16,16,16,0.06);
-  --radius: 12px;
-  --text: #2b2b2b;
-  --glass: rgba(240,198,214,0.35);
-}
-
-/* 🌙 DARK THEME */
-:root[data-theme="dark"] {
-  --bg: #0b1220;
-  --surface: #0f1724;
-  --muted: #9aa6b2;
-  --accent-1: #2b6ea3;
-  --accent-2: #1f4f7a;
-  --accent-3: #0f3a5a;
-  --success: #16a34a;
-  --danger: #ef4444;
-  --card-border: rgba(255,255,255,0.04);
-  --shadow: 0 8px 28px rgba(2,6,23,0.6);
-  --text: #e6eef6;
-  --glass: rgba(20,40,60,0.28);
-}
-
-/* ----------------------------------------------------------
-   GLOBAL
----------------------------------------------------------- */
-
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+/* ============================
+   ZÁKLAD
+============================ */
 
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FCEFF1;
+  color: #A04C61;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, var(--bg) 0%, rgba(255,255,255,0.02) 100%);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.45;
-  transition: background .22s ease, color .22s ease;
+  padding: 0;
 }
 
-/* ----------------------------------------------------------
-   HEADER – finálna štíhla verzia
----------------------------------------------------------- */
+/* ============================
+   HLAVIČKA
+============================ */
 
 .header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  color: #A04C61;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.05em;
+  color: #6B3E4E;
+  margin-bottom: 20px;
+}
+
+/* ============================
+   NAVIGÁCIA – HLAVNÉ DLAŽDICE
+============================ */
+
+.nav-buttons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 16px;
-  height: 46px;
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.03);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-}
-
-:root[data-theme="dark"] .header {
-  background: rgba(12,18,30,0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: rgba(255,255,255,0.04);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.55);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--accent-3);
-}
-
-.brand .logo-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
-  box-shadow: 0 2px 6px rgba(240,138,166,0.18);
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* ----------------------------------------------------------
-   BUTTONS
----------------------------------------------------------- */
-
-.btn {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  background: transparent;
-  color: var(--text);
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.btn:active { transform: translateY(1px); }
-
-.btn-primary {
-  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
-  color: white;
-  box-shadow: 0 8px 20px rgba(240,138,166,0.12);
-}
-:root[data-theme="dark"] .btn-primary {
-  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
-  box-shadow: 0 8px 20px rgba(10,30,50,0.18);
-}
-
-/* ----------------------------------------------------------
-   LAYOUT & CARDS
----------------------------------------------------------- */
-
-.container {
-  display: flex;
+  justify-content: center;
   gap: 20px;
-  padding: 26px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.left { flex: 1; }
-.right { width: 420px; }
-
-.card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 16px;
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow);
-  margin-bottom: 16px;
-  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease;
-}
-
-/* ----------------------------------------------------------
-   DLÁŽDICE / CHIPS
----------------------------------------------------------- */
-
-.list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-
-.chip {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #fff, var(--accent-1));
-  border: none;
-  cursor: pointer;
-  color: var(--accent-3);
-  font-weight: 600;
-  box-shadow: 0 6px 18px rgba(240,138,166,0.08);
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-}
-.chip:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(240,138,166,0.18);
-}
-.chip.active {
-  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
-  color: #fff;
-  box-shadow: 0 8px 22px rgba(240,138,166,0.16);
-}
-:root[data-theme="dark"] .chip {
-  background: linear-gradient(180deg, #1f4f7a, #0f3a5a);
-  color: #e6eef6;
-  box-shadow: 0 6px 18px rgba(10,30,50,0.25);
-}
-:root[data-theme="dark"] .chip:hover {
-  background: linear-gradient(180deg, #2b6ea3, #1f4f7a);
-  box-shadow: 0 10px 28px rgba(10,30,50,0.45);
-}
-
-/* ----------------------------------------------------------
-   DUEL PACKAGES – HRY PRIPRAVENÉ NA VÝZVU
----------------------------------------------------------- */
-
-#duelPackagesList {
   margin-top: 10px;
+}
+
+.nav-btn {
+  background-color: #F8DDE2;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  margin: 8px;
+  color: #A04C61;
+  font-weight: 700;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(160, 76, 97, 0.12);
+}
+
+.nav-btn:hover {
+  background-color: #F4C7CF;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   HLAVNÝ OBSAH
+============================ */
+
+.section {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ============================
+   DVOJSTĹPCOVÉ ROZLOŽENIE
+============================ */
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* deliaca čiara */
+.two-columns::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 42%;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(160, 76, 97, 0.15), rgba(160, 76, 97, 0.05));
+}
+
+/* ============================
+   ĽAVÝ STĹPEC
+============================ */
+
+.left-column {
+  flex: 0 0 40%;
+  background-color: #FFF9FA;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(160, 76, 97, 0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#okruhy,
+#okruhy-procesne {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.okruh {
+  background-color: #F9E3E7;
+  color: #A04C61;
+  border-radius: 14px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(160, 76, 97, 0.08);
+  font-size: 0.78em;
+  white-space: nowrap;
+}
+
+.okruh:hover {
+  background-color: #F4C7CF;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   PRAVÝ STĹPEC
+============================ */
+
+.right-column {
+  flex: 1;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFF5F7 100%);
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 10px rgba(160, 76, 97, 0.1);
+  max-height: 80vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.duel-card {
-  background: linear-gradient(180deg, #fff, var(--accent-1));
-  border-radius: var(--radius);
-  padding: 14px 16px;
+.right-inner {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* ============================
+   VNÚTORNÉ BOXY
+============================ */
+
+.box {
+  background: #FFFFFF;
+  border: 1px solid #F2D5DB;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 6px rgba(160, 76, 97, 0.08);
+}
+
+.box h3 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  color: #A04C61;
+  font-weight: 700;
+}
+
+.box p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.45;
+  color: #6B3E4E;
+}
+
+/* ============================
+   KVÍZ
+============================ */
+
+.quiz-container {
+  background-color: #FFF9FA;
+  border: 1px solid #F8DDE2;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 3px 12px rgba(160, 76, 97, 0.12);
+  margin-bottom: 16px;
+}
+
+.quiz-question {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #A04C61;
+  font-size: 0.9em;
+}
+
+.quiz-option {
+  background-color: #F9E3E7;
   border: none;
-  box-shadow: var(--shadow);
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-}
-.duel-card:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(240,138,166,0.18);
-}
-
-:root[data-theme="dark"] .duel-card {
-  background: linear-gradient(180deg, #1f4f7a, #0f3a5a);
-  color: #e6eef6;
-  box-shadow: 0 6px 18px rgba(10,30,50,0.25);
-}
-:root[data-theme="dark"] .duel-card:hover {
-  background: linear-gradient(180deg, #2b6ea3, #1f4f7a);
-  box-shadow: 0 10px 28px rgba(10,30,50,0.45);
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 4px;
+  font-size: 0.78em;
+  color: #A04C61;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(160, 76, 97, 0.08);
 }
 
-.duel-title {
+.quiz-option:hover {
+  background-color: #F4C7CF;
+  transform: translateY(-2px);
+}
+
+.quiz-option.correct {
+  background-color: #DFF5E1;
+  color: #2E7D32;
+}
+
+.quiz-option.wrong {
+  background-color: #FDE0E0;
+  color: #C62828;
+}
+
+/* ============================
+   TLAČIDLÁ
+============================ */
+
+.submit-btn,
+.reset-btn {
+  background-color: #A04C61;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
   font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 4px;
+  transition: 0.3s ease;
 }
 
-.duel-info {
-  font-size: 13px;
-  opacity: 0.8;
+.submit-btn:hover,
+.reset-btn:hover {
+  background-color: #C97A8A;
 }
 
-.duel-time {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-top: 4px;
+/* ============================
+   PRAVÝ PANEL – DVA STĹPCE (NOVÉ)
+============================ */
+
+.content-columns {
+  display: flex;
+  gap: 20px;
+  height: 100%;
 }
 
-/* ----------------------------------------------------------
-   AVATAR – garantovane malý (KROK 2)
----------------------------------------------------------- */
-
-.header-avatar {
-  width: 32px !important;
-  height: 32px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  display: block;
+.info-column,
+.quiz-column {
+  flex: 1;
+  background-color: #FFF9FA;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(160, 76, 97, 0.1);
+  overflow-y: auto;
+  max-height: 75vh;
 }
-.player-nick-display {
+
+/* INFO STĹPEC */
+.info-column h2,
+.info-column h3 {
+  color: #A04C61;
+  margin-top: 0;
+}
+
+.info-column p {
+  color: #6B3E4E;
+  line-height: 1.45;
+}
+
+/* MINI KVÍZ */
+.quiz-column {
+  background-color: #FFEFF2;
+}
+
+.quiz-column h3 {
+  margin-top: 0;
+  color: #A04C61;
+}
+
+.quiz-column button {
+  margin-top: 12px;
+  background-color: #A04C61;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
-  color: var(--accent-3);
-  margin-top: 4px;
-  text-align: center;
+  transition: 0.3s ease;
 }
 
-/* ----------------------------------------------------------
-   KONIEC
----------------------------------------------------------- */
+.quiz-column button:hover {
+  background-color: #C97A8A;
+}
+
+/* Výsledok kvízu */
+#vysledok {
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+/* ============================
+   RESPONSÍVNE
+============================ */
+
+@media (max-width: 900px) {
+  .two-columns {
+    flex-direction: column;
+  }
+
+  .two-columns::after {
+    display: none;
+  }
+
+  .left-column,
+  .right-column {
+    max-height: none;
+  }
+
+  .right-inner {
+    overflow-y: visible;
+  }
+
+  .content-columns {
+    flex-direction: column;
+  }
+
+  .info-column,
+  .quiz-column {
+    max-height: none;
+  }
+}
