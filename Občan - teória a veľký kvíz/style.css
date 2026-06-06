@@ -261,7 +261,7 @@ body {
 .back-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: linear-gradient(180deg, #E7BFB1, #D8A7A7);
+ background: linear-gradient(180deg, #F4DDDD 0%, #E8C7C7 100%);
   color: white;
   border-radius: 6px;
   font-weight: 600;
@@ -269,7 +269,7 @@ body {
   margin-bottom: 12px;
 }
 .back-btn:hover {
-  background: linear-gradient(180deg, #F7E6E6, #E7BFB1);
+ background: linear-gradient(180deg, #E8C7C7 0%, #D8A7A7 100%);
 }
 
 /* ============================
