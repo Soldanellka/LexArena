@@ -28,8 +28,8 @@ const catalog = {
   "Trestné právo – teória a prípady": {
  openExternal: "/Trestné právo - teória a prípady/",
     desc: "Kompletná appka Teoretické vysvetlenia, prípady a praktické riešenia."
-  },
-
+  }
+};
   "Trestné právo – Veľký kvíz": {
  openExternal: "/TREST Veľký KVÍZ/",
     desc: "Kompletná appka Kvíz."
@@ -44,9 +44,6 @@ const catalog = {
   desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
   duelCount: 5
  }
-
-};
-
 
   /* Placeholdery – zatiaľ bez externých modulov */
   "Občianske právo hmotné": {
