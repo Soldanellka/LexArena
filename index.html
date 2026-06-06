@@ -246,7 +246,7 @@
     </div>
   </div>
 
-  <!-- JS moduly -->
+<!-- JS moduly -->
   <script src="data.js"></script>
 
   <!-- LexArena UI inicializácia -->
@@ -311,13 +311,16 @@
         const res = await fetch(url, {cache:'no-store'});
         if (res.ok) {
           const data = await res.json();
-          return data.questions && data.questions.slice(0,5) || [];
+          return (data.questions && data.questions.slice(0,5)) || [];
         }
       } catch(e) {
         console.warn('Fetch challenge failed', e);
       }
     }
-    // fallback demo questions
+    return [];
+  }
+
+  // fallback demo questions
     return [
       { text: 'Ktoré tvrdenie je správne?', answers:['A','B','C','D'], correctIndex:0 },
       { text: 'Čo upravuje pracovné právo?', answers:['Zmluvy','Tresty','Dane','Šport'], correctIndex:0 },
