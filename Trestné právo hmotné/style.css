@@ -203,5 +203,20 @@ body.dark .quiz-options button:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 28px rgba(0,0,0,0.18);
 }
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #7BAF9E;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.back-btn:hover {
+  background: #6FAF8F;
+  transform: translateY(-1px);
+}
 
 @keyframes tile-shake
