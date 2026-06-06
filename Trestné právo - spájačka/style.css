@@ -331,3 +331,7 @@ footer{color:var(--muted);font-size:.8rem;margin-top:.25rem}
   background: #6C80A0;
   transform: translateY(-1px);
 }
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(90, 110, 140, 0.25);
+}
