@@ -1,0 +1,318 @@
+/* style.css
+   Dark + Day (powder pink) theme
+   Toggle day mode by adding the "light" class to the <body> element:
+   <body class="light"> ... </body>
+*/
+
+/* ---------- Dark theme variables (default) ---------- */
+:root{
+  --bg:#07101a;
+  --panel:#0f1724;
+  --muted:#9ca3af;
+  --accent:#3b82f6;
+  --tile:#111827;
+  --tile-2:#1f2937;
+  --success:#10b981;
+  --danger:#ef4444;
+  --hint:#f97316;
+  --glass: rgba(255,255,255,0.03);
+  --text: #e6eef8;
+  --chip-q-bg: #0ea5a4;
+  --chip-q-color: #042022;
+  --chip-d-bg: #f59e0b;
+  --chip-d-color: #2b1300;
+  --chip-e-bg: #a78bfa;
+  --chip-e-color: #1b0733;
+  --empty-border: rgba(255,255,255,0.02);
+  --tile-shadow: rgba(0,0,0,0.45);
+}
+
+/* ---------- Day theme (powder pink) ----------
+   Activate by adding class "light" on <body>
+   Example: <body class="light"> ... </body>
+*/
+body.light {
+  --bg: linear-gradient(180deg,#fff6fb,#fff0f6);
+  --panel: #fff0f6;
+  --muted: #6b6b6b;
+  --accent: #d946ef;           /* vivid pink accent */
+  --tile: #fff;
+  --tile-2: #fff6fb;
+  --success: #059669;
+  --danger: #dc2626;
+  --hint: #fb923c;
+  --glass: rgba(0,0,0,0.03);
+  --text: #0b1220;
+  --chip-q-bg: #c7f9f2;
+  --chip-q-color: #05332f;
+  --chip-d-bg: #ffe8c2;
+  --chip-d-color: #4b2f00;
+  --chip-e-bg: #efe0ff;
+  --chip-e-color: #2b0b3a;
+  --empty-border: rgba(11,18,32,0.06);
+  --tile-shadow: rgba(11,18,32,0.06);
+}
+
+/* ---------- Reset and base ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1rem;
+  padding:1.25rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition:background .35s ease, color .25s ease;
+}
+
+/* ---------- Header / Controls ---------- */
+header{
+  width:100%;
+  max-width:1100px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+}
+h1{margin:0;font-size:1.25rem}
+.controls{display:flex;align-items:center;gap:.5rem}
+select,button{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid rgba(0,0,0,0.06);
+  padding:.45rem .6rem;
+  border-radius:8px;
+  font-size:.9rem;
+  transition:background .2s ease, color .2s ease, transform .08s ease;
+}
+button{cursor:pointer}
+button:active{transform:translateY(1px)}
+select:focus, button:focus{outline:none; box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+/* ---------- Main layout ---------- */
+main{
+  width:100%;
+  max-width:1100px;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+}
+
+/* ---------- Status panel ---------- */
+#status-panel{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  background:var(--glass);
+  padding:.6rem;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.04);
+  transition:background .25s ease, border-color .25s ease;
+}
+.progress-wrap{flex:1;min-width:220px}
+.progress-label{font-size:.85rem;color:var(--muted);margin-bottom:.35rem}
+.progress-bar{
+  height:12px;
+  background:rgba(0,0,0,0.04);
+  border-radius:999px;
+  overflow:hidden;
+}
+#progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--accent),#60a5fa);
+  transition:width .45s ease, background .25s ease;
+}
+.progress-text{font-size:.85rem;color:var(--muted);margin-top:.35rem}
+.info{display:flex;gap:1rem;color:var(--muted);font-size:.9rem}
+
+/* ---------- Game grid ---------- */
+#game-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:.5rem;
+  width:100%;
+}
+.column{
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  min-height:360px;
+  align-items:stretch;
+  transition:opacity .2s ease;
+}
+
+/* ---------- Tile base ---------- */
+.tile{
+  background:linear-gradient(180deg,var(--tile-2),var(--tile));
+  border-radius:10px;
+  padding:.6rem;
+  font-size:.9rem;
+  cursor:pointer;
+  border:2px solid transparent;
+  transition:transform .18s cubic-bezier(.2,.9,.2,1), border-color .12s ease, opacity .25s ease, box-shadow .12s ease, background .12s ease;
+  display:flex;
+  align-items:flex-start;
+  gap:.5rem;
+  min-height:64px;
+  word-break:break-word;
+  position:relative;
+  overflow:hidden;
+  box-shadow: 0 6px 18px var(--tile-shadow);
+}
+
+/* Hover and focus */
+.tile:hover{transform:translateY(-3px)}
+.tile:focus{outline:none;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+
+/* Selected state */
+.tile.selected{
+  border-color:var(--accent);
+  box-shadow:0 10px 30px rgba(59,130,246,0.10);
+  transform:translateY(-4px) scale(1.01);
+  background:linear-gradient(180deg, rgba(59,130,246,0.04), rgba(17,24,39,0.02));
+}
+body.light .tile.selected{
+  background:linear-gradient(180deg, rgba(217,70,239,0.06), rgba(255,240,250,0.02));
+  box-shadow:0 10px 30px rgba(217,70,239,0.08);
+}
+
+/* Hint state */
+.tile.hinted{
+  border-color:var(--hint);
+  box-shadow:0 10px 28px rgba(249,115,22,0.12);
+  transform:translateY(-2px);
+}
+
+/* Matched (static) */
+.tile.matched{
+  opacity:0;
+  pointer-events:none;
+  transform:scale(.98);
+}
+
+/* Empty slot */
+.tile.empty{
+  opacity:0;
+  pointer-events:none;
+  min-height:64px;
+  background:transparent;
+  border:2px dashed var(--empty-border);
+}
+
+/* ---------- Meta content ---------- */
+.tile .meta{display:flex;flex-direction:column;gap:.25rem;width:100%}
+.tile .title{font-weight:600;font-size:.92rem;line-height:1.15}
+.tile .sub{
+  font-size:.78rem;
+  color:var(--muted);
+  margin-top:.25rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+}
+
+/* group-id styling: úplne skryté (transparentné) */
+.tile .sub .group-id{
+  color: transparent;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* type styling: normálna priesvitnosť, menší text */
+.tile .sub .type{
+  opacity: 0.9;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: none;
+  font-size: 0.78rem;
+}
+
+/* Tooltip-like overflow: show full text on hover (desktop) */
+.tile .title[title]{
+  cursor:help;
+}
+
+/* ---------- Chips ---------- */
+.chip{display:inline-block;padding:.18rem .45rem;border-radius:999px;font-size:.75rem;flex-shrink:0}
+.chip.q{background:var(--chip-q-bg);color:var(--chip-q-color)}
+.chip.d{background:var(--chip-d-bg);color:var(--chip-d-color)}
+.chip.e{background:var(--chip-e-bg);color:var(--chip-e-color)}
+
+/* ---------- Legend and footer ---------- */
+#legend{display:flex;gap:.5rem;align-items:center;justify-content:flex-end}
+.legend-item{display:flex;align-items:center;gap:.35rem;color:var(--muted)}
+footer{color:var(--muted);font-size:.8rem;margin-top:.25rem}
+
+/* ---------- Wrong animation (shake) ---------- */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+.tile.wrong{
+  animation:shake .55s cubic-bezier(.36,.07,.19,.97);
+  border-color:var(--danger);
+  box-shadow:0 8px 22px rgba(239,68,68,0.08);
+}
+
+/* ---------- Matched animation (fade + scale out) ---------- */
+@keyframes vanish {
+  0% { opacity: 1; transform: scale(1); }
+  60% { opacity: 0.6; transform: scale(.96); }
+  100% { opacity: 0; transform: scale(.6); }
+}
+.tile.matched-anim{
+  animation:vanish .45s ease forwards;
+  border-color: var(--success);
+  box-shadow:0 10px 30px rgba(16,185,129,0.08);
+}
+
+/* ---------- Accessibility helpers ---------- */
+.visually-hidden{
+  position:absolute!important;
+  height:1px;width:1px;
+  overflow:hidden;clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;border:0;padding:0;margin:-1px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  #game-grid{grid-template-columns:repeat(1,1fr)}
+  .column{min-height:unset}
+}
+
+/* Small screens: compact tiles */
+@media (max-width:600px){
+  .tile{padding:.5rem;font-size:.88rem;min-height:56px}
+  .tile .title{font-size:.9rem}
+  header, main{padding:0 .5rem}
+}
+
+/* Utility: subtle divider for columns */
+.column::before{
+  content:'';
+  display:block;
+  height:1px;
+  margin-bottom:.5rem;
+  background:linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
+}
+
+/* ---------- Extra polish: subtle transitions for theme-sensitive elements ---------- */
+.tile, .chip, header, #status-panel, select, button {
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}

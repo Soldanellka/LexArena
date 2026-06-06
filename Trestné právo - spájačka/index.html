@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spájanie trojíc – 3 stĺpce × 5 riadkov</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Spájanie trojíc</h1>
+    <div class="controls">
+      <label for="subject-select"><strong>Predmet</strong></label>
+      <select id="subject-select">
+        <option value="hmotne">Trestné právo hmotné</option>
+        <option value="procesne">Trestné právo procesné</option>
+      </select>
+
+<button id="theme-toggle" aria-pressed="false" title="Prepínač denného/tmavého režimu">
+  <span id="theme-icon">🌙</span>
+  <span id="theme-label">Tmavý</span>
+</button>
+
+      <button id="hint-btn" title="Použiť nápovedu (odpočíta 1 správnu trojicu)">Nápoveda</button>
+      <button id="restart-btn">Reštartovať</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="status-panel">
+      <div class="progress-wrap">
+        <div class="progress-label"><strong>Progres</strong></div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+        <div class="progress-text"><span id="score">0</span> / <span id="total">0</span> trojíc</div>
+      </div>
+
+      <div class="info">
+        <div><strong>Vybrané</strong> <span id="selected-count">0</span>/3</div>
+        <div><strong>Správne</strong> <span id="correct-count">0</span></div>
+      </div>
+    </section>
+
+    <section id="game-grid" aria-label="Hracia plocha">
+      <div class="column" id="col-questions" aria-label="Otázky"></div>
+      <div class="column" id="col-definitions" aria-label="Definície"></div>
+      <div class="column" id="col-examples" aria-label="Príklady zo života"></div>
+    </section>
+
+    <section id="legend">
+      <div class="legend-item"><span class="chip q">Otázka</span></div>
+      <div class="legend-item"><span class="chip d">Definícia</span></div>
+      <div class="legend-item"><span class="chip e">Príklad</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Verzia: 1.1 • 3 stĺpce × 5 riadkov • Nápoveda znižuje progres o 1 správnu trojicu</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
