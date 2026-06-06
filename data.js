@@ -10,12 +10,16 @@ const catalog = {
 
   "Trestné právo hmotné": {
     openExternal: "/Trestné právo hmotné/",
-    desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady)."
+    desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady).",
+  duelCount: 5
+},
   },
 
   "Trestné právo procesné": {
     openExternal: "/Trestné právo procesné/",
-    desc: "Kompletná TPP appka (zásady, otázky, prípady)."
+    desc: "Kompletná TPP appka (zásady, otázky, prípady).",
+  duelCount: 5
+},
   },
 
   "Trestné právo – spájačka": {
@@ -39,7 +43,9 @@ const catalog = {
 
  "Pracovné právo": {
   openExternal: "/LuluLaw duel Pracovné právo/",
-  desc: "Kompletná appka pracovného práva (otázky, prípady, definície)."
+  desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
+  duelCount: 5
+},
 },
 
 
