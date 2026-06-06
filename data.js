@@ -9,34 +9,35 @@ console.log("DATAJS KOREŇ SA NAČÍTAL"); // diagnostika
 const catalog = {
 
   "Trestné právo hmotné": {
-    openExternal: "/tphmota/",
+    openExternal: "https://lululawtphmota.netlify.app/",
     desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady)."
   },
 
   "Trestné právo procesné": {
-    openExternal: "/tpproces/",
+    openExternal: "https://lululawtpproces.netlify.app/",
     desc: "Kompletná TPP appka (zásady, otázky, prípady)."
   },
 
   "Trestné právo – spájačka": {
-    openExternal: "/tpdlazdice/",
+    openExternal: "https://lululawtpdlazdice.netlify.app/",
     desc: "Hra na spájanie troch prvkov. Ideálne na učenie pojmov."
   },
 
   "Trestné právo – teória a prípady": {
-    openExternal: "/tppripady/",
+    openExternal: "https://lululawtppripady.netlify.app/",
     desc: "Teoretické vysvetlenia, prípady a praktické riešenia."
   },
 
   "Občan – teória a veľký kvíz": {
-    openExternal: "/obcan/",
+    openExternal: "https://lululawobcan.netlify.app/",
     desc: "Teória k TPH, TPP a veľký kvíz v jednej appke."
   },
 
-  "Pracovné právo": {
-    openExternal: "/pracovne/",
-    desc: "Kompletná appka pracovného práva (otázky, prípady, definície)."
-  },
+ "Pracovné právo": {
+  openExternal: "/LuluLaw duel Pracovné právo/",
+  desc: "Kompletná appka pracovného práva (otázky, prípady, definície)."
+},
+
 
   /* Placeholdery – zatiaľ bez externých modulov */
   "Občianske právo hmotné": {
