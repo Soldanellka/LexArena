@@ -203,4 +203,29 @@ body.dark .quiz-options button:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.18);
 }
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #4A6F63;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.back-btn:hover {
+  background: #5E8A7A;
+  transform: translateY(-1px);
+}
+@media (prefers-color-scheme: dark) {
+  .back-btn {
+    background: #3E5C53;
+    color: #F5F7FA;
+  }
+  .back-btn:hover {
+    background: #4A6F63;
+  }
+}
+
 @keyframes tile-shake
