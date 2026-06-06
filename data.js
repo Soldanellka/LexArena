@@ -13,14 +13,12 @@ const catalog = {
     desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady).",
   duelCount: 5
 },
-  },
 
   "Trestné právo procesné": {
     openExternal: "/Trestné právo procesné/",
     desc: "Kompletná TPP appka (zásady, otázky, prípady).",
   duelCount: 5
 },
-  },
 
   "Trestné právo – spájačka": {
     openExternal: "/Trestné právo - spájačka/",
@@ -45,8 +43,9 @@ const catalog = {
   openExternal: "/LuluLaw duel Pracovné právo/",
   desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
   duelCount: 5
-},
-},
+ }
+
+};
 
 
   /* Placeholdery – zatiaľ bez externých modulov */
