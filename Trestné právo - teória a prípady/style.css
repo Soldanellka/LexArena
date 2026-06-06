@@ -362,8 +362,8 @@ body {
 .back-btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #6FAF8F;
-  color: white;
+  background: #7BAF9E;
+  color: #ffffff;
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
@@ -371,7 +371,7 @@ body {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 .back-btn:hover {
-  background: #7BAF9E;
+  background: #6FAF8F;
   transform: translateY(-1px);
 }
 
