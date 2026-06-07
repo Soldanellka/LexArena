@@ -550,9 +550,23 @@
 
 })();
 </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 <!-- --- END --- -->
 
+<script type="module">
+  import { transferAccount, loginWithPin } from "./core.js";
+
+  document.getElementById("transferAccountBtn").onclick = () => {
+    transferAccount();
+  };
+
+  document.getElementById("loginPinBtn").onclick = () => {
+    const pin = prompt("Zadaj PIN:");
+    if (pin) loginWithPin(pin);
+  };
+</script>
+
 </body>
 </html>
+
