@@ -1,150 +1,157 @@
 {
-  "id": "1. A",
-  "title": "Pojem, predmet a systém pracovného práva, definícia závislej práce",
-  "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "závislá práca", "systém pracovného práva"],
-
-  "summary": "\nPracovné právo je samostatné právne odvetvie, ktoré upravuje výkon závislej práce medzi zamestnancom a zamestnávateľom. Jeho predmetom sú individuálne pracovnoprávne vzťahy (pracovný pomer, dohody o prácach vykonávaných mimo pracovného pomeru), kolektívne pracovnoprávne vzťahy (kolektívne vyjednávanie, odbory, zamestnávateľské zväzy) a právna úprava bezpečnosti a ochrany zdravia pri práci. Systém pracovného práva sa tradične delí na individuálne pracovné právo, kolektívne pracovné právo a právnu úpravu BOZP. Závislá práca je definovaná v § 1 ods. 2 Zákonníka práce ako práca vykonávaná osobne, podľa pokynov zamestnávateľa, vo vzťahu nadriadenosti a podriadenosti, v mene zamestnávateľa, za mzdu, v pracovnom čase a na pracovisku zamestnávateľa alebo inom dohodnutom mieste. Závislá práca sa nesmie vykonávať v občianskoprávnom ani obchodnoprávnom vzťahu.\n\nPríklad:\nZamestnávateľ chce uzavrieť so skladníkom živnostenskú zmluvu, hoci má pracovať denne od 8:00 do 16:00, podľa pokynov vedúceho skladu. Keďže práca spĺňa znaky závislej práce (osobný výkon, pokyny, pracovný čas, miesto výkonu), musí byť uzavretý pracovný pomer. Ide o zákaz švarcsystému.\n\nKľúčové slová:\npracovné právo; individuálne pracovné právo; kolektívne pracovné právo; BOZP; závislá práca; osobný výkon práce; pokyny zamestnávateľa; práca v mene zamestnávateľa; pracovný čas; pracovisko; zákaz švarcsystému.\n\nZapamätaj si:\n- Pracovné právo upravuje výkon závislej práce.\n- Závislá práca sa vykonáva osobne, podľa pokynov, v mene zamestnávateľa a za mzdu.\n- Závislá práca sa nesmie vykonávať na živnosť.\n- Systém pracovného práva: individuálne, kolektívne, BOZP.\n- Zamestnanec je chránená strana pracovnoprávneho vzťahu.",
+  "id": "1A",
+  "nazov": "Pojem, predmet, systém a funkcie pracovného práva; definícia závislej práce",
+  "summary": {
+    "vysvetlenie": "Pracovné právo je samostatné právne odvetvie hybridnej povahy, ktoré upravuje právne vzťahy vznikajúce pri výkone závislej práce, pri kolektívnom vyjednávaní a pri realizácii práva občana na prácu. Jeho jadrom je závislá práca – osobný výkon práce zamestnancom pre zamestnávateľa, podľa jeho pokynov, v jeho mene, v pracovnom čase a vo vzťahu nadriadenosti a podriadenosti. Pracovné právo sa člení na individuálne, kolektívne a právo služieb zamestnanosti. Plní regulačnú, ochrannú, kontrolnú a výchovnú funkciu.",
+    "priklad": "Skladník pracuje denne od 8:00 do 16:00 podľa pokynov vedúceho skladu, v mene zamestnávateľa a za mzdu. Ide o závislú prácu, ktorú nemožno vykonávať na živnosť – musí byť uzavretý pracovný pomer.",
+    "klucoveslova": "pracovné právo; závislá práca; individuálne pracovné právo; kolektívne pracovné právo; služby zamestnanosti; funkcie pracovného práva; nadriadenosť a podriadenosť; zákaz švarcsystému",
+    "zapamatajsi": "Závislá práca sa vykonáva osobne, podľa pokynov, v mene zamestnávateľa, v pracovnom čase a vo vzťahu nadriadenosti a podriadenosti. Nemožno ju vykonávať na živnosť. Pracovné právo chráni zamestnanca ako slabšiu stranu."
+  },
 
   "quiz": [
     {
-      "question": "Čo je základným predmetom pracovného práva?",
-      "options": ["Úprava podnikania fyzických osôb", "Úprava výkonu závislej práce", "Úprava obchodných záväzkov"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Pracovné právo upravuje výkon závislej práce medzi zamestnancom a zamestnávateľom.",
-        "wrong": "Nesprávne. Predmetom pracovného práva nie je podnikanie ani obchodné záväzky, ale výkon závislej práce."
-      }
+      "otazka": "Čo je základným predmetom pracovného práva?",
+      "moznosti": [
+        "Výsledok ľudskej práce.",
+        "Závislá práca ako ľudská činnosť.",
+        "Organizácia podnikania zamestnávateľa."
+      ],
+      "spravna": 2,
+      "vysvetlenie": "Predmetom pracovného práva je samotná závislá práca – teda činnosť vykonávaná zamestnancom pre zamestnávateľa. Nejde o výsledok práce ani o podnikateľskú činnosť zamestnávateľa."
     },
     {
-      "question": "Ktoré z uvedených patrí do systému pracovného práva?",
-      "options": ["Individuálne a kolektívne pracovné právo", "Správne právo", "Obchodné právo"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Systém pracovného práva sa delí na individuálne a kolektívne pracovné právo a BOZP.",
-        "wrong": "Nesprávne. Správne ani obchodné právo nie sú súčasťou systému pracovného práva."
-      }
+      "otazka": "Ktorý znak patrí medzi zákonné znaky závislej práce podľa § 1 ods. 2 ZP?",
+      "moznosti": [
+        "Práca vykonávaná bez pokynov zamestnávateľa.",
+        "Práca vykonávaná osobne zamestnancom.",
+        "Práca vykonávaná v ľubovoľnom čase podľa uváženia zamestnanca."
+      ],
+      "spravna": 2,
+      "vysvetlenie": "Závislá práca musí byť vykonávaná osobne, podľa pokynov, v mene zamestnávateľa, v pracovnom čase a vo vzťahu nadriadenosti a podriadenosti."
     },
     {
-      "question": "Ktorý znak je podstatný pre závislú prácu?",
-      "options": ["Výkon práce vo vlastnom mene", "Osobné vykonávanie práce podľa pokynov", "Úplná autonómia pracovníka"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Závislá práca sa vyznačuje osobným výkonom podľa pokynov zamestnávateľa.",
-        "wrong": "Nesprávne. Závislá práca sa nevykonáva autonómne ani vo vlastnom mene."
-      }
+      "otazka": "Ako sa člení pracovné právo?",
+      "moznosti": [
+        "Na individuálne, kolektívne a právo služieb zamestnanosti.",
+        "Na občianskoprávne a obchodnoprávne pracovné vzťahy.",
+        "Na verejné a súkromné pracovné právo."
+      ],
+      "spravna": 1,
+      "vysvetlenie": "Pracovné právo sa člení na individuálne pracovné právo, kolektívne pracovné právo a právo služieb zamestnanosti."
     },
     {
-      "question": "Ktorý právny predpis obsahuje definíciu závislej práce?",
-      "options": ["Občiansky zákonník", "Zákonník práce", "Obchodný zákonník"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Definícia závislej práce je v § 1 ods. 2 Zákonníka práce.",
-        "wrong": "Nesprávne. Občiansky ani obchodný zákonník definíciu neobsahujú."
-      }
+      "otazka": "Ktorá funkcia pracovného práva zabezpečuje ochranu zamestnanca ako slabšej strany?",
+      "moznosti": [
+        "Regulačná funkcia.",
+        "Ochranná funkcia.",
+        "Výchovná funkcia."
+      ],
+      "spravna": 2,
+      "vysvetlenie": "Ochranná funkcia chráni zamestnanca ako slabšiu stranu pracovnoprávneho vzťahu."
     },
     {
-      "question": "Ktorý znak NIE je znakom závislej práce?",
-      "options": ["Výkon práce podľa pokynov", "Výkon práce v mene zamestnávateľa", "Výkon práce na vlastné riziko"],
-      "correct": 2,
-      "explanation": {
-        "correct": "Správne. Práca na vlastné riziko je typická pre podnikanie, nie pre závislú prácu.",
-        "wrong": "Nesprávne. Ostatné možnosti sú typickými znakmi závislej práce."
-      }
+      "otazka": "Môže sa závislá práca vykonávať na živnosť?",
+      "moznosti": [
+        "Áno, ak sa zamestnanec a zamestnávateľ dohodnú.",
+        "Nie, zákon to výslovne zakazuje.",
+        "Áno, ak ide o krátkodobú prácu."
+      ],
+      "spravna": 2,
+      "vysvetlenie": "Závislá práca sa nesmie vykonávať v občianskoprávnom ani obchodnoprávnom vzťahu – ide o zákaz švarcsystému."
     }
   ],
 
-  "tiles": [
-    { "term": "Pracovné právo", "definition": "Právne odvetvie upravujúce výkon závislej práce a vzťahy medzi zamestnancom a zamestnávateľom." },
-    { "term": "Individuálne pracovné právo", "definition": "Úprava pracovného pomeru a práv zamestnanca a zamestnávateľa." },
-    { "term": "Kolektívne pracovné právo", "definition": "Úprava kolektívneho vyjednávania, odborov a kolektívnych zmlúv." },
-    { "term": "BOZP", "definition": "Právna úprava bezpečnosti a ochrany zdravia pri práci." },
-    { "term": "Závislá práca", "definition": "Práca vykonávaná osobne, podľa pokynov, v mene zamestnávateľa, za mzdu a v pracovnom čase." }
+  "dlazdice": [
+    {
+      "pojem": "Pracovné právo",
+      "definicia": "Samostatné právne odvetvie hybridnej povahy upravujúce vzťahy pri výkone závislej práce, kolektívnom vyjednávaní a službách zamestnanosti."
+    },
+    {
+      "pojem": "Závislá práca",
+      "definicia": "Práca vykonávaná osobne, podľa pokynov, vo vzťahu nadriadenosti a podriadenosti, v mene a v pracovnom čase určenom zamestnávateľom."
+    },
+    {
+      "pojem": "Individuálne pracovné právo",
+      "definicia": "Upravuje individuálne vzťahy medzi zamestnancom a zamestnávateľom pri výkone závislej práce."
+    },
+    {
+      "pojem": "Kolektívne pracovné právo",
+      "definicia": "Upravuje vzťahy medzi kolektívom zamestnancov a zamestnávateľom, najmä kolektívne vyjednávanie."
+    },
+    {
+      "pojem": "Funkcie pracovného práva",
+      "definicia": "Regulačná, ochranná, kontrolná a výchovná funkcia ovplyvňujúca pracovnoprávne vzťahy."
+    }
   ],
 
-  "cases": [
+  "kazuistiky": [
     {
-      "title": "Prípad 1 – Je to živnosť alebo závislá práca?",
-      "difficulty": "stredná",
-      "steps": [
+      "zadanie": "Zamestnávateľ chce uzavrieť so skladníkom živnostenskú zmluvu, hoci má pracovať denne od 8:00 do 16:00, podľa pokynov vedúceho skladu a v mene zamestnávateľa.",
+      "kroky": [
         {
-          "question": "Zadanie: Zamestnávateľ chce uzavrieť so skladníkom živnostenskú zmluvu, hoci skladník má pracovať denne od 8:00 do 16:00, podľa pokynov vedúceho skladu.",
-          "options": [],
-          "correct": 0
-        },
-        {
-          "question": "Krok 1: O aký právny problém ide?",
-          "options": ["Švarcsystém", "Kolektívne vyjednávanie", "BOZP"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o typický príklad švarcsystému – zakázaného nahrádzania pracovného pomeru živnosťou.",
-            "wrong": "Nesprávne. Problém nesúvisí s kolektívnym vyjednávaním ani BOZP."
-          }
-        },
-        {
-          "question": "Krok 2: Spĺňa práca znaky závislej práce?",
-          "options": ["Áno", "Nie", "Len ak je to dohodnuté v zmluve"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Práca je osobná, podľa pokynov, v pracovnom čase – ide o závislú prácu.",
-            "wrong": "Nesprávne. Znaky závislej práce vyplývajú z faktického výkonu, nie zo zmluvy."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Navrhnúť uzavretie pracovnej zmluvy",
-            "Odporučiť živnosť, lebo je lacnejšia",
-            "Ignorovať situáciu"
+          "krok": "Identifikácia povahy práce",
+          "moznosti": [
+            "Ide o podnikateľskú činnosť skladníka.",
+            "Ide o závislú prácu.",
+            "Ide o príležitostnú výpomoc."
           ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ak ide o závislú prácu, musí byť uzavretý pracovný pomer.",
-            "wrong": "Nesprávne. Živnosť je v rozpore so zákonom a ignorovanie situácie je protiprávne."
-          }
+          "spravna": 2,
+          "vysvetlenie": "Práca má všetky znaky závislej práce – osobný výkon, pokyny, pracovný čas, nadriadenosť a podriadenosť."
+        },
+        {
+          "krok": "Možnosť vykonávať prácu na živnosť",
+          "moznosti": [
+            "Závislá práca sa môže vykonávať na živnosť, ak to zamestnanec chce.",
+            "Závislá práca sa nesmie vykonávať na živnosť.",
+            "Závislá práca sa môže vykonávať na živnosť pri krátkodobom výkone."
+          ],
+          "spravna": 2,
+          "vysvetlenie": "Zákonník práce výslovne zakazuje vykonávanie závislej práce v občianskoprávnom alebo obchodnoprávnom vzťahu."
+        },
+        {
+          "krok": "Správny právny vzťah",
+          "moznosti": [
+            "Musí byť uzavretý pracovný pomer.",
+            "Stačí dohoda o vykonaní práce.",
+            "Stačí ústna dohoda o spolupráci."
+          ],
+          "spravna": 1,
+          "vysvetlenie": "Pri závislej práci je povinné uzavrieť pracovný pomer alebo obdobný pracovnoprávny vzťah."
         }
       ]
     },
-
     {
-      "title": "Prípad 2 – Freelancer alebo zamestnanec?",
-      "difficulty": "stredná",
-      "steps": [
+      "zadanie": "Zamestnanec vykonáva prácu podľa pokynov, v mene zamestnávateľa, ale tvrdí, že si môže určovať pracovný čas sám. Zamestnávateľ tvrdí, že nejde o závislú prácu.",
+      "kroky": [
         {
-          "question": "Zadanie: Grafik pracuje pre firmu 2 roky. Firma mu určuje pracovný čas, miesto výkonu práce a kontroluje jeho prácu. Grafik má živnosť.",
-          "options": [],
-          "correct": 0
-        },
-        {
-          "question": "Krok 1: Aký problém riešime?",
-          "options": ["Určenie, či ide o závislú prácu", "Otázku mzdy", "Otázku BOZP"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o posúdenie, či je vzťah fakticky pracovnoprávny.",
-            "wrong": "Nesprávne. Mzda ani BOZP nie sú jadrom problému."
-          }
-        },
-        {
-          "question": "Krok 2: Ide o závislú prácu?",
-          "options": ["Áno", "Nie", "Len ak grafik nemá vlastné vybavenie"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Firma určuje čas, miesto aj pokyny – to sú jasné znaky závislej práce.",
-            "wrong": "Nesprávne. Vlastné vybavenie nie je rozhodujúce."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Navrhnúť preklasifikovanie vzťahu na pracovný pomer",
-            "Odporučiť pokračovať v živnosti",
-            "Navrhnúť ukončenie spolupráce bez riešenia"
+          "krok": "Posúdenie znakov závislej práce",
+          "moznosti": [
+            "Rozhodujúce je, či zamestnanec pracuje podľa pokynov a v mene zamestnávateľa.",
+            "Rozhodujúce je len to, kto určuje pracovný čas.",
+            "Rozhodujúce je, či má zamestnanec živnosť."
           ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ak ide o závislú prácu, musí byť uzavretý pracovný pomer.",
-            "wrong": "Nesprávne. Pokračovanie v živnosti je nezákonné a ignorovanie situácie je rizikové."
-          }
+          "spravna": 1,
+          "vysvetlenie": "Závislá práca sa posudzuje podľa všetkých znakov, nie len podľa pracovného času."
+        },
+        {
+          "krok": "Význam pracovného času",
+          "moznosti": [
+            "Ak si zamestnanec určuje čas sám, nikdy nejde o závislú prácu.",
+            "Určovanie času je len jeden zo znakov, nie rozhodujúci.",
+            "Určovanie času je jediný rozhodujúci znak."
+          ],
+          "spravna": 2,
+          "vysvetlenie": "Pracovný čas je len jeden zo zákonných znakov – rozhodujúci je celkový charakter vzťahu."
+        },
+        {
+          "krok": "Záver",
+          "moznosti": [
+            "Vzťah môže byť závislou prácou aj pri flexibilnom pracovnom čase.",
+            "Vzťah nikdy nemôže byť závislou prácou pri flexibilnom čase.",
+            "Vzťah je automaticky živnosťou."
+          ],
+          "spravna": 1,
+          "vysvetlenie": "Flexibilný pracovný čas nevylučuje závislú prácu – rozhodujúce sú ostatné znaky."
         }
       ]
     }
