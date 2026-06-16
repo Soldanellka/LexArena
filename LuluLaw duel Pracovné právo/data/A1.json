@@ -2,141 +2,127 @@
   "id": "1. A",
   "title": "Pojem, predmet, systém a funkcie pracovného práva; definícia závislej práce",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "závislá práca", "predmet pracovného práva", "funkcie pracovného práva"],
+  "tags": [
+    "pracovné právo",
+    "závislá práca",
+    "predmet pracovného práva",
+    "funkcie pracovného práva",
+    "§ 1 ods. 1 ZP",
+    "§ 1 ods. 2 ZP",
+    "§ 1 ods. 3 ZP",
+    "§ 3 ods. 2 ZP",
+    "§ 226 OBZ"
+  ],
 
-  "summary": "Pracovné právo je samostatné právne odvetvie hybridnej povahy, ktoré obsahuje prvky súkromného aj verejného práva. Upravuje právne vzťahy medzi zamestnancom a zamestnávateľom (individuálne pracovné právo), medzi kolektívom zamestnancov a zamestnávateľom (kolektívne pracovné právo) a vzťahy vznikajúce pri realizácii práva občana na prácu (služby zamestnanosti). Predmetom pracovného práva je závislá práca – osobná práca vykonávaná zamestnancom pre zamestnávateľa, podľa jeho pokynov, vo vzťahu nadriadenosti a podriadenosti, v mene zamestnávateľa a v pracovnom čase určenom zamestnávateľom (§ 1 ods. 2 ZP). Závislá práca sa môže vykonávať len v pracovnom pomere alebo v inom pracovnoprávnom vzťahu, nikdy nie na živnosť. Pracovné právo sa člení na individuálne, kolektívne a právo služieb zamestnanosti. Plní regulačnú, ochrannú, kontrolnú a výchovnú funkciu.\n\nPríklad:\nSkladník pracuje denne od 8:00 do 16:00 podľa pokynov vedúceho, v mene zamestnávateľa a osobne. Ide o závislú prácu, ktorú nemožno vykonávať na živnosť – musí byť uzavretý pracovný pomer.\n\nKľúčové slová:\nzávislá práca; individuálne pracovné právo; kolektívne pracovné právo; služby zamestnanosti; funkcie pracovného práva; § 1 ods. 2 ZP; zákaz švarcsystému.\n\nZapamätaj si:\n- Predmetom pracovného práva je závislá práca.\n- Závislá práca má zákonné znaky: osobný výkon, pokyny, nadriadenosť/podriadenosť, výkon v mene zamestnávateľa, pracovný čas.\n- Závislá práca sa nesmie vykonávať na živnosť.\n- Pracovné právo sa člení na individuálne, kolektívne a služby zamestnanosti.\n- Funkcie pracovného práva sú: regulačná, ochranná, kontrolná a výchovná.",
+  "summary": "Pracovné právo podľa § 1 ods. 1 Zákonníka práce upravuje právne vzťahy pri výkone závislej práce medzi zamestnancom a zamestnávateľom, kolektívne pracovnoprávne vzťahy a niektoré súvisiace vzťahy. Predmetom pracovného práva je závislá práca podľa § 1 ods. 2 ZP – osobná práca vykonávaná podľa pokynov, vo vzťahu nadriadenosti a podriadenosti, v mene zamestnávateľa a v pracovnom čase určenom zamestnávateľom. Podľa § 1 ods. 3 ZP sa závislá práca nesmie vykonávať v občianskoprávnom ani obchodnoprávnom vzťahu (zákaz švarcsystému). Závislá práca je definovaná v súlade s odporúčaním MOP č. 198/2006 a európskou doktrínou pracovného práva. V praxi často dochádza k zakrývaniu pracovného pomeru formou živnosti (SZČO), hoci ide o závislú prácu. Takéto konanie je v rozpore so zákonom a zamestnávateľ nesie všetky povinnosti ako pri pracovnom pomere. Zákonník práce sa subsidiárne použije aj na niektoré osobitné kategórie zamestnancov podľa § 3 ods. 2 ZP. Podľa § 226 OBZ môžu stanovy družstva upraviť pracovný vzťah člena družstva, ak je podmienkou členstva aj pracovný pomer, avšak táto úprava nesmie byť v neprospech člena.\n\nJudikatúra potvrdzuje, že pracovný pomer vzniká podľa skutočného obsahu práce, nie podľa formy zmluvy (R 19/1977), používanie vlastného pracovného nástroja nevylučuje pracovný pomer (R 9/1971) a zamestnávateľ nesmie diskriminačne znevýhodniť zamestnancov pri plnení povinností (R 36/2005). R 44/2012 rieši otázku voľného pracovného miesta pri výpovedi a R 57/2014 potvrdzuje nárok na úrok z omeškania pri omeškaní s platom.\n\nPríklad:\nOsoba pracuje denne podľa pokynov, v mene zamestnávateľa, v jeho priestoroch, ale má živnosť. Podľa § 1 ods. 2 a 3 ZP ide o závislú prácu a musí byť uzavretý pracovný pomer.\n\nKľúčové slová:\nzávislá práca; § 1 ods. 2 ZP; § 1 ods. 3 ZP; zákaz švarcsystému; MOP 198/2006; subsidiarita ZP; § 226 OBZ; judikatúra R 9/1971; R 19/1977; R 36/2005; R 44/2012; R 57/2014.\n\nZapamätaj si:\n- Závislá práca je definovaná v § 1 ods. 2 ZP.\n- Závislá práca sa nesmie vykonávať na živnosť (§ 1 ods. 3 ZP).\n- Obsah práce je rozhodujúci, nie názov zmluvy.\n- Používanie vlastného nástroja nevylučuje pracovný pomer (R 9/1971).\n- Ak osoba pracuje ako zamestnanec, vzniká pracovný pomer aj pri neplatnej dohode (R 19/1977).",
 
   "quiz": [
     {
-      "question": "Čo je predmetom pracovného práva?",
-      "options": ["Výsledok práce zamestnanca", "Závislá práca ako ľudská činnosť", "Podnikateľská činnosť zamestnávateľa"],
-      "correct": 1,
+      "question": "Ktoré ustanovenie definuje závislú prácu?",
+      "options": ["§ 1 ods. 2 ZP", "§ 43 ZP", "§ 226 OBZ"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Predmetom pracovného práva je samotná závislá práca.",
-        "wrong": "Nesprávne. Predmetom nie je výsledok práce ani podnikanie."
+        "correct": "Správne. § 1 ods. 2 ZP obsahuje zákonné znaky závislej práce.",
+        "wrong": "Nesprávne. Ostatné ustanovenia sa definícii závislej práce nevenujú."
       }
     },
     {
-      "question": "Ktorý znak patrí medzi zákonné znaky závislej práce?",
-      "options": ["Práca bez pokynov", "Osobný výkon práce zamestnancom", "Práca v ľubovoľnom čase"],
-      "correct": 1,
+      "question": "Ktoré ustanovenie zakazuje vykonávať závislú prácu na živnosť?",
+      "options": ["§ 1 ods. 3 ZP", "§ 52 ZP", "§ 223 OZ"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Osobný výkon je jedným zo zákonných znakov.",
-        "wrong": "Nesprávne. Závislá práca sa vykonáva podľa pokynov a v určenom čase."
+        "correct": "Správne. § 1 ods. 3 ZP zakazuje vykonávať závislú prácu mimo pracovnoprávneho vzťahu.",
+        "wrong": "Nesprávne. Ostatné ustanovenia túto otázku neriešia."
       }
     },
     {
-      "question": "Ako sa člení pracovné právo?",
-      "options": ["Na verejné a súkromné", "Na individuálne, kolektívne a služby zamestnanosti", "Na občianskoprávne a obchodnoprávne"],
-      "correct": 1,
+      "question": "Čo podľa judikatúry R 9/1971 nevylučuje vznik pracovného pomeru?",
+      "options": ["Používanie vlastného pracovného nástroja", "Práca z domu", "Neexistencia pracovnej zmluvy"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Ide o základné členenie pracovného práva.",
-        "wrong": "Nesprávne. Ostatné členenia nie sú zákonné."
+        "correct": "Správne. Používanie vlastného nástroja nevylučuje pracovný pomer.",
+        "wrong": "Nesprávne. Judikát rieši výlučne otázku pracovného nástroja."
       }
     },
     {
-      "question": "Ktorá funkcia pracovného práva chráni zamestnanca ako slabšiu stranu?",
-      "options": ["Regulačná", "Ochranná", "Výchovná"],
-      "correct": 1,
+      "question": "Ktorý judikát potvrdzuje, že pracovný pomer vzniká podľa skutočného obsahu práce?",
+      "options": ["R 19/1977", "R 44/2012", "R 57/2014"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Ochranná funkcia je zameraná na ochranu zamestnanca.",
-        "wrong": "Nesprávne. Regulačná a výchovná funkcia majú iný účel."
+        "correct": "Správne. R 19/1977 uvádza, že pracovný pomer vzniká aj pri neplatnej dohode, ak osoba pracovala ako zamestnanec.",
+        "wrong": "Nesprávne. Ostatné judikáty riešia inú problematiku."
       }
     },
     {
-      "question": "Môže sa závislá práca vykonávať na živnosť?",
-      "options": ["Áno, ak sa strany dohodnú", "Nie, zákon to zakazuje", "Áno, pri krátkodobej práci"],
-      "correct": 1,
+      "question": "Ktoré ustanovenie upravuje subsidiárne použitie Zákonníka práce?",
+      "options": ["§ 3 ods. 2 ZP", "§ 226 OBZ", "§ 1 ods. 1 ZP"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Závislá práca sa nesmie vykonávať v občianskoprávnom ani obchodnoprávnom vzťahu.",
-        "wrong": "Nesprávne. Dohoda strán nemôže obísť zákon."
+        "correct": "Správne. § 3 ods. 2 ZP upravuje použitie ZP na osobitné kategórie zamestnancov.",
+        "wrong": "Nesprávne. Ostatné ustanovenia túto otázku neriešia."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Pracovné právo", "definition": "Právne odvetvie upravujúce vzťahy pri výkone závislej práce, kolektívnom vyjednávaní a službách zamestnanosti." },
-    { "term": "Závislá práca", "definition": "Osobná práca vykonávaná podľa pokynov, v mene zamestnávateľa, v pracovnom čase a vo vzťahu nadriadenosti a podriadenosti." },
-    { "term": "Individuálne pracovné právo", "definition": "Upravuje vzťahy medzi zamestnancom a zamestnávateľom pri výkone závislej práce." },
-    { "term": "Kolektívne pracovné právo", "definition": "Upravuje vzťahy medzi kolektívom zamestnancov a zamestnávateľom, najmä kolektívne vyjednávanie." },
-    { "term": "Funkcie pracovného práva", "definition": "Regulačná, ochranná, kontrolná a výchovná funkcia pracovného práva." }
+    { "term": "§ 1 ods. 2 ZP", "definition": "Definícia závislej práce – osobný výkon, pokyny, nadriadenosť, podriadenosť, pracovný čas, výkon v mene zamestnávateľa." },
+    { "term": "§ 1 ods. 3 ZP", "definition": "Zakazuje vykonávať závislú prácu mimo pracovnoprávneho vzťahu." },
+    { "term": "R 9/1971", "definition": "Používanie vlastného pracovného nástroja nevylučuje pracovný pomer." },
+    { "term": "R 19/1977", "definition": "Pracovný pomer vzniká podľa skutočného obsahu práce, aj pri neplatnej dohode." },
+    { "term": "§ 226 OBZ", "definition": "Stanovy družstva môžu upraviť pracovný vzťah člena, ak je podmienkou členstva pracovný pomer." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Práca vykonávaná podľa pokynov",
-      "difficulty": "ľahká",
+      "title": "Prípad 1 – Zakrytý pracovný pomer (švarcsystém)",
+      "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec pracuje denne od 8:00 do 16:00 podľa pokynov vedúceho. Zamestnávateľ tvrdí, že ide o živnosť.",
+          "question": "Zadanie: Osoba pracuje podľa pokynov, v mene zamestnávateľa, ale má živnosť.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Ide o závislú prácu?",
-          "options": ["Áno", "Nie", "Len ak je písomná zmluva"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Práca má všetky znaky závislej práce.",
-            "wrong": "Nesprávne. Forma zmluvy nie je rozhodujúca."
-          }
+          "question": "Krok 1: Ide o závislú prácu podľa § 1 ods. 2 ZP?",
+          "options": ["Áno", "Nie", "Len ak má pracovnú zmluvu"],
+          "correct": 0
         },
         {
-          "question": "Krok 2: Môže sa vykonávať na živnosť?",
-          "options": ["Nie", "Áno", "Áno, ak to zamestnanec chce"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Závislá práca sa nesmie vykonávať na živnosť.",
-            "wrong": "Nesprávne. Dohoda strán nemôže obísť zákon."
-          }
+          "question": "Krok 2: Je možné vykonávať túto prácu na živnosť?",
+          "options": ["Nie, zakazuje to § 1 ods. 3 ZP", "Áno", "Len ak to zamestnávateľ dovolí"],
+          "correct": 0
         },
         {
-          "question": "Krok 3: Aký vzťah má byť uzavretý?",
-          "options": ["Pracovný pomer", "Dohoda o spolupráci", "Mandátna zmluva"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Pri závislej práci musí byť uzavretý pracovný pomer.",
-            "wrong": "Nesprávne. Občianskoprávne zmluvy sú neprípustné."
-          }
+          "question": "Krok 3: Aký vzťah má vzniknúť?",
+          "options": ["Pracovný pomer", "Mandátna zmluva", "Živnosť"],
+          "correct": 0
         }
       ]
     },
 
     {
-      "title": "Prípad 2 – Flexibilný pracovný čas",
+      "title": "Prípad 2 – Neplatná dohoda, ale vznik pracovného pomeru",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec si môže upraviť začiatok pracovného času, ale pracuje podľa pokynov a v mene zamestnávateľa.",
+          "question": "Zadanie: Osoba pracovala pre zamestnávateľa na základe neplatnej dohody, ale dostávala odmenu.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Je flexibilný čas prekážkou závislej práce?",
-          "options": ["Nie", "Áno", "Len pri práci z domu"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Flexibilný čas nevylučuje závislú prácu.",
-            "wrong": "Nesprávne. Rozhodujúce sú ostatné znaky."
-          }
+          "question": "Krok 1: Vznikol pracovný pomer podľa R 19/1977?",
+          "options": ["Áno", "Nie", "Len ak bola dohoda písomná"],
+          "correct": 0
         },
         {
-          "question": "Krok 2: Ktorý znak je rozhodujúci?",
-          "options": ["Pokyny a výkon v mene zamestnávateľa", "Miesto výkonu práce", "Dĺžka pracovného času"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Pokyny a výkon v mene zamestnávateľa sú kľúčové.",
-            "wrong": "Nesprávne. Ostatné znaky nie sú rozhodujúce samostatne."
-          }
+          "question": "Krok 2: Čo je rozhodujúce?",
+          "options": ["Skutočný obsah práce", "Názov zmluvy", "Forma dohody"],
+          "correct": 0
         },
         {
-          "question": "Krok 3: Záver",
-          "options": ["Vzťah je závislou prácou", "Vzťah nie je závislou prácou", "Vzťah je živnosťou"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Vzťah spĺňa znaky závislej práce.",
-            "wrong": "Nesprávne. Flexibilita času to nemení."
-          }
+          "question": "Krok 3: Aký je právny následok?",
+          "options": ["Vznik pracovného pomeru", "Vznik občianskoprávneho vzťahu", "Nevznikol žiadny vzťah"],
+          "correct": 0
         }
       ]
     }
