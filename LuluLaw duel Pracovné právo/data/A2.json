@@ -2,9 +2,18 @@
   "id": "1. B",
   "title": "Pracovnoprávne aspekty práva na štrajk a výluku",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "štrajk", "výluka", "kolektívne pracovné právo", "§ 16-20 ZKV", "§ 26-28 ZKV", "čl. 37 ods. 4 Ústavy SR", "§ 142 ZP"],
+  "tags": [
+    "pracovné právo",
+    "štrajk",
+    "výluka",
+    "kolektívne pracovné právo",
+    "zákon o kolektívnom vyjednávaní",
+    "čl. 37 ods. 4 Ústavy SR",
+    "§ 142 ZP"
+  ],
 
-  "summary": "\nPrávo na štrajk je základným právom zamestnancov garantovaným čl. 37 ods. 4 Ústavy SR. Podrobná právna úprava štrajku a výluky sa nachádza v zákone č. 2/1991 Zb. o kolektívnom vyjednávaní. Štrajk je upravený v § 16 až § 20, výluka v § 26 až § 28. Štrajk možno vyhlásiť len v spore o uzavretie kolektívnej zmluvy a až po neúspešnom sprostredkovaní. Vyhlasuje ho výlučne odborová organizácia. Štrajk nesmie ohroziť život, zdravie alebo bezpečnosť osôb. Výluka je krajný prostriedok zamestnávateľa, ktorý dočasne neprideľuje prácu zamestnancom. Počas výluky ide o prekážku v práci na strane zamestnávateľa podľa § 142 Zákonníka práce.\n\nPríklad:\nOdborová organizácia chce vyhlásiť štrajk, hoci ešte neprebehlo povinné sprostredkovanie podľa § 18 ZKV. Takýto štrajk by bol nezákonný podľa § 20 ZKV a odbory by niesli zodpovednosť za škodu. Zamestnávateľ môže vyhlásiť výluku podľa § 26 ZKV aj bez štrajku, ale musí dodržať oznamovacie povinnosti podľa § 27 ZKV.\n\nKľúčové slová:\nštrajk; výluka; § 16-20 ZKV; § 26-28 ZKV; čl. 37 ods. 4 Ústavy SR; § 142 ZP; kolektívne vyjednávanie; sprostredkovanie; odborová organizácia; kolektívny spor.\n\nZapamätaj si:\n- Štrajk upravuje § 16 až § 20 zákona o kolektívnom vyjednávaní.\n- Výluku upravuje § 26 až § 28 zákona o kolektívnom vyjednávaní.\n- Právo na štrajk garantuje čl. 37 ods. 4 Ústavy SR.\n- Počas štrajku mzda nepatrí.\n- Počas výluky ide o prekážku v práci podľa § 142 ZP.\n- Nezákonný štrajk alebo výluka môžu viesť k zodpovednosti za škodu.",
+  "summary": "Právo na štrajk je základným právom zamestnancov garantovaným čl. 37 ods. 4 Ústavy SR. Podrobná právna úprava štrajku a výluky sa nachádza v zákone č. 2/1991 Zb. o kolektívnom vyjednávaní. Štrajk je upravený v § 16 až § 20, výluka v § 26 až § 28. Štrajk možno vyhlásiť len v spore o uzavretie kolektívnej zmluvy a až po neúspešnom sprostredkovaní. Vyhlasuje ho výlučne odborová organizácia a nesmie ohroziť život, zdravie alebo bezpečnosť osôb. Výluka je krajný prostriedok zamestnávateľa, ktorý dočasne neprideľuje prácu zamestnancom. Počas výluky ide o prekážku v práci na strane zamestnávateľa podľa § 142 Zákonníka práce.\n\nPríklad:\nOdborová organizácia chce vyhlásiť štrajk, hoci ešte neprebehlo povinné sprostredkovanie podľa § 18 ZKV. Takýto štrajk by bol nezákonný podľa § 20 ZKV a odbory by niesli zodpovednosť za škodu. Zamestnávateľ môže vyhlásiť výluku podľa § 26 ZKV aj bez štrajku, ale musí dodržať oznamovacie povinnosti podľa § 27 ZKV.\n\nKľúčové slová (štátnicové):\n- štrajk – kolektívne prerušenie práce zamestnancami ako krajné opatrenie,\n- výluka – jednostranné neprideľovanie práce zamestnávateľom,\n- zákon o kolektívnom vyjednávaní – jediný komplexný predpis upravujúci štrajk a výluku,\n- čl. 37 ods. 4 Ústavy SR – ústavné právo na štrajk,\n- sprostredkovanie – povinný krok pred štrajkom,\n- nezákonný štrajk/výluka – zodpovednosť za škodu,\n- § 142 ZP – prekážka v práci počas výluky.\n\nZapamätaj si:\n- Štrajk aj výluka sú upravené **výlučne v zákone o kolektívnom vyjednávaní**.\n- Štrajk je krajné opatrenie zamestnancov, výluka krajné opatrenie zamestnávateľa.\n- Štrajk možno vyhlásiť len odborovou organizáciou a až po neúspešnom sprostredkovaní.\n- Počas štrajku mzda nepatrí; počas výluky ide o prekážku v práci na strane zamestnávateľa.\n- Nezákonný štrajk alebo výluka zakladajú zodpovednosť za škodu."
+  ,
 
   "quiz": [
     {
@@ -75,20 +84,12 @@
         {
           "question": "Krok 1: Je štrajk bez sprostredkovania zákonný?",
           "options": ["Áno", "Nie, je nezákonný podľa § 20 ZKV", "Len ak to zamestnávateľ schváli"],
-          "correct": 1,
-          "explanation": {
-            "correct": "Správne. Štrajk bez sprostredkovania je nezákonný podľa § 20 ZKV.",
-            "wrong": "Nesprávne. Zamestnávateľ nemôže legalizovať nezákonný štrajk."
-          }
+          "correct": 1
         },
         {
           "question": "Krok 2: Aké riziko hrozí odborom?",
           "options": ["Žiadne", "Zodpovednosť za škodu podľa § 20 ods. 3 ZKV", "Zrušenie odborov"],
-          "correct": 1,
-          "explanation": {
-            "correct": "Správne. Odbory nesú zodpovednosť za škodu spôsobenú nezákonným štrajkom.",
-            "wrong": "Nesprávne. Odbory nemožno zrušiť za štrajk."
-          }
+          "correct": 1
         }
       ]
     },
@@ -105,20 +106,12 @@
         {
           "question": "Krok 1: Musí zamestnávateľ oznámiť výluku?",
           "options": ["Áno, podľa § 27 ZKV", "Nie", "Len ak ide o zdravotnícke zariadenie"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Výluka musí byť oznámená podľa § 27 ZKV.",
-            "wrong": "Nesprávne. Oznámenie je povinné vždy."
-          }
+          "correct": 0
         },
         {
           "question": "Krok 2: Má zamestnanec nárok na náhradu mzdy?",
           "options": ["Áno, podľa § 142 ZP", "Nie", "Len ak to určí rozhodca"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Počas výluky ide o prekážku v práci podľa § 142 ZP.",
-            "wrong": "Nesprávne. Výluka nie je dôvodom na odňatie náhrady mzdy."
-          }
+          "correct": 0
         }
       ]
     }
