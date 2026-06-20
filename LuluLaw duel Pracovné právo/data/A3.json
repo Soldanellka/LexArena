@@ -13,35 +13,24 @@
     "právo EÚ"
   ],
 
-  "summary": "Pramene pracovného práva sú právne normy upravujúce pracovnoprávne vzťahy medzi zamestnancami a zamestnávateľmi. Najvyšším prameňom je Ústava SR, ktorá garantuje právo na prácu, spravodlivé pracovné podmienky, ochranu práce a právo na štrajk. Základným zákonným prameňom je Zákonník práce, ktorý komplexne upravuje individuálne aj kolektívne pracovnoprávne vzťahy. Ďalšími prameňmi sú osobitné zákony (napr. zákon o inšpekcii práce, zákon o BOZP, zákon o kolektívnom vyjednávaní), vykonávacie predpisy, nariadenia vlády a vyhlášky. Autonómnymi prameňmi sú kolektívne zmluvy, ktoré môžu poskytovať zamestnancom výhodnejšie podmienky. Pracovné právo je ovplyvnené aj právom Európskej únie (najmä smernicami o pracovnom čase, rovnakom zaobchádzaní a BOZP) a medzinárodnými prameňmi, najmä dohovormi MOP. Hierarchia prameňov rešpektuje zásadu, že kolektívne zmluvy ani pracovné zmluvy nesmú zhoršovať postavenie zamestnanca oproti zákonu.\n\nPríklad:\nZamestnávateľ vydá internú smernicu, ktorá odníma zamestnancom zákonný príplatok za prácu v sobotu. Interná smernica je najnižší prameň pracovného práva, preto nemôže ísť proti Zákonníku práce. Takéto ustanovenie je neplatné a zamestnanec má nárok na príplatok podľa zákona.\n\nKľúčové slová (štátnicové):\n- Ústava SR – najvyšší prameň pracovného práva,\n- Zákonník práce – základný zákonný prameň,\n- autonómne pramene – kolektívne zmluvy,\n- smernice EÚ – harmonizácia pracovných podmienok,\n- MOP – medzinárodné pracovné štandardy,\n- hierarchia prameňov – zákaz zhoršenia postavenia zamestnanca,\n- interné predpisy – najnižší prameň, nesmú odporovať zákonu.\n\nZapamätaj si:\n- Pramene pracovného práva tvoria hierarchiu – na vrchole je Ústava SR.\n- Zákonník práce je základný a komplexný zákonný prameň pracovného práva.\n- Kolektívne zmluvy môžu len zlepšovať, nikdy zhoršovať postavenie zamestnanca.\n- Interné smernice sú najnižší prameň a nesmú odporovať zákonu.\n- Pracovné právo ovplyvňuje právo EÚ (smernice) a dohovory MOP.\n- Zásada: čo je pre zamestnanca výhodnejšie, má prednosť (favor laboratoris).",
+  "summary": "Pramene pracovného práva sú pravidlá, z ktorých vychádzajú práva a povinnosti zamestnancov a zamestnávateľov. Na vrchole stojí Ústava SR – garantuje právo na prácu, spravodlivé pracovné podmienky, ochranu práce a právo na štrajk. Zákonník práce je základný zákonný prameň, ktorý upravuje individuálne aj kolektívne pracovnoprávne vzťahy. Ďalšie pramene tvoria osobitné zákony (napr. o inšpekcii práce, BOZP či kolektívnom vyjednávaní), vykonávacie predpisy, nariadenia vlády a vyhlášky.\n\nAutonómnymi prameňmi sú kolektívne zmluvy – tie môžu zamestnancom poskytovať výhodnejšie podmienky, nikdy nie horšie. Interné predpisy zamestnávateľa sú najnižším prameňom a musia byť v súlade so zákonom. Pracovné právo ovplyvňuje aj právo EÚ (najmä smernice o pracovnom čase, rovnakom zaobchádzaní a BOZP) a medzinárodné pramene, najmä dohovory MOP.\n\nHierarchia prameňov rešpektuje zásadu ochrany zamestnanca – pracovná zmluva ani kolektívna zmluva nesmú zhoršiť jeho postavenie oproti zákonu.\n\nPríklad:\nZamestnávateľ vydá internú smernicu, ktorá odníma zamestnancom zákonný príplatok za prácu v sobotu. Interná smernica je najnižší prameň pracovného práva, preto nemôže ísť proti Zákonníku práce. Takéto ustanovenie je neplatné a zamestnanec má nárok na príplatok podľa zákona.\n\nKľúčové slová (štátnicové):\n- Ústava SR – základné pracovné práva a zásady,\n- Zákonník práce – hlavný zákonný prameň,\n- kolektívne zmluvy – autonómny prameň, môže len zlepšovať,\n- smernice EÚ – harmonizácia pracovných podmienok,\n- MOP – medzinárodné pracovné štandardy,\n- hierarchia prameňov – zákon > kolektívna zmluva > pracovná zmluva > interné predpisy,\n- zásada ochrany zamestnanca – nemožno zhoršiť jeho postavenie.\n\nZapamätaj si:\n- Pramene pracovného práva majú hierarchiu – na vrchole je Ústava, pod ňou zákony, potom kolektívne zmluvy a nakoniec interné predpisy.\n- Zákonník práce je základný prameň pracovného práva.\n- Kolektívne zmluvy môžu len zlepšovať podmienky zamestnancov.\n- Interné smernice sú najnižší prameň a nesmú odporovať zákonu.\n- Pracovné právo ovplyvňuje právo EÚ a dohovory MOP.\n- Zásada: čo je pre zamestnanca výhodnejšie, má prednosť."
+  ,
 
   "quiz": [
     {
       "question": "Ktorý právny predpis je základným zákonným prameňom pracovného práva?",
       "options": ["Občiansky zákonník", "Zákonník práce", "Zákon o službách zamestnanosti"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Zákonník práce je základný a komplexný prameň pracovného práva.",
-        "wrong": "Nesprávne. Ostatné predpisy nie sú základným prameňom pracovného práva."
-      }
+      "correct": 1
     },
     {
       "question": "Ktorý z nasledujúcich je autonómny prameň pracovného práva?",
       "options": ["Kolektívna zmluva", "Nariadenie vlády", "Vyhláška ministerstva"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Kolektívna zmluva je autonómny prameň vytvorený sociálnymi partnermi.",
-        "wrong": "Nesprávne. Nariadenia a vyhlášky sú normatívne právne akty štátu."
-      }
+      "correct": 0
     },
     {
       "question": "Ktorý medzinárodný subjekt prijíma dohovory relevantné pre pracovné právo?",
       "options": ["OSN", "MOP – Medzinárodná organizácia práce", "Interpol"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. MOP prijíma dohovory v oblasti pracovných štandardov.",
-        "wrong": "Nesprávne. OSN ani Interpol neprijímajú pracovnoprávne dohovory."
-      }
+      "correct": 1
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
@@ -50,29 +39,21 @@
         "Kolektívna zmluva môže zlepšiť podmienky zamestnancov",
         "Zákonník práce je podriadený kolektívnej zmluve"
       ],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Kolektívna zmluva môže poskytovať výhodnejšie podmienky.",
-        "wrong": "Nesprávne. Pracovná zmluva nesmie zhoršiť postavenie zamestnanca a zákon má vyššiu právnu silu."
-      }
+      "correct": 1
     },
     {
       "question": "Ktorý prameň pracovného práva má najvyššiu právnu silu?",
       "options": ["Kolektívna zmluva", "Ústava SR", "Zákonník práce"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Ústava SR je najvyšší právny predpis štátu.",
-        "wrong": "Nesprávne. Kolektívna zmluva ani Zákonník práce nemajú vyššiu právnu silu ako Ústava."
-      }
+      "correct": 1
     }
   ],
 
   "tiles": [
-    { "term": "Ústava SR", "definition": "Najvyšší prameň pracovného práva – garantuje právo na prácu, spravodlivé podmienky a právo na štrajk." },
-    { "term": "Zákonník práce", "definition": "Komplexný zákon upravujúci individuálne a kolektívne pracovnoprávne vzťahy." },
-    { "term": "Kolektívna zmluva", "definition": "Autonómny prameň pracovného práva uzatváraný medzi odbormi a zamestnávateľom; môže len zlepšovať podmienky." },
-    { "term": "MOP", "definition": "Medzinárodná organizácia práce prijímajúca záväzné pracovné štandardy." },
-    { "term": "Smernice EÚ", "definition": "Pramene práva EÚ harmonizujúce pracovné podmienky, rovnosť a BOZP." }
+    { "term": "Ústava SR", "definition": "Najvyšší prameň pracovného práva – garantuje základné pracovné práva." },
+    { "term": "Zákonník práce", "definition": "Hlavný zákonný prameň upravujúci pracovnoprávne vzťahy." },
+    { "term": "Kolektívna zmluva", "definition": "Autonómny prameň, ktorý môže zamestnancovi poskytnúť výhodnejšie podmienky." },
+    { "term": "MOP", "definition": "Medzinárodná organizácia práce – tvorca pracovných štandardov." },
+    { "term": "Smernice EÚ", "definition": "Pramene harmonizujúce pracovné podmienky v členských štátoch." }
   ],
 
   "cases": [
@@ -80,11 +61,7 @@
       "title": "Prípad 1 – Kolektívna zmluva vs. Zákonník práce",
       "difficulty": "stredná",
       "steps": [
-        {
-          "question": "Zadanie: Kolektívna zmluva stanovuje kratšiu výpovednú dobu ako Zákonník práce.",
-          "options": [],
-          "correct": 0
-        },
+        { "question": "Zadanie: Kolektívna zmluva stanovuje kratšiu výpovednú dobu ako zákon.", "options": [], "correct": 0 },
         {
           "question": "Krok 1: Môže kolektívna zmluva zhoršiť postavenie zamestnanca?",
           "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
@@ -97,11 +74,7 @@
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Upozorniť na neplatnosť ustanovenia kolektívnej zmluvy",
-            "Akceptovať kolektívnu zmluvu",
-            "Ignorovať problém"
-          ],
+          "options": ["Upozorniť na neplatnosť ustanovenia", "Akceptovať kolektívnu zmluvu", "Ignorovať problém"],
           "correct": 0
         }
       ]
@@ -111,11 +84,7 @@
       "title": "Prípad 2 – Interná smernica vs. zákon",
       "difficulty": "ľahká",
       "steps": [
-        {
-          "question": "Zadanie: Interná smernica odníma zamestnancom zákonný príplatok za sobotu.",
-          "options": [],
-          "correct": 0
-        },
+        { "question": "Zadanie: Interná smernica odníma zamestnancom zákonný príplatok za sobotu.", "options": [], "correct": 0 },
         {
           "question": "Krok 1: Môže interná smernica obmedziť zákonné práva?",
           "options": ["Áno", "Nie", "Len ak to zamestnanec podpíše"],
@@ -128,11 +97,7 @@
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Navrhnúť úpravu smernice",
-            "Akceptovať smernicu",
-            "Odporučiť zamestnancom, aby si príplatky neuplatňovali"
-          ],
+          "options": ["Navrhnúť úpravu smernice", "Akceptovať smernicu", "Odporučiť zamestnancom, aby si príplatky neuplatňovali"],
           "correct": 0
         }
       ]
