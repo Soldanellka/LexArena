@@ -405,6 +405,46 @@ body {
   padding: 4px 8px;
   font-size: 12px;
 }
+/* -------------------------------------------
+   💎 Dark mode – dlaždice s tieňovaním zľava doprava
+------------------------------------------- */
+
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .btn,
+:root[data-theme="dark"] .list button {
+  background: linear-gradient(90deg, #2a2b2e 0%, #1b1c1f 100%) !important; /* zľava svetlejšia, doprava tmavšia */
+  color: #e6e9ef !important;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 999px; /* oblé kapsule */
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.08),  /* jemný vnútorný svetlý okraj */
+    inset -1px -1px 3px rgba(0,0,0,0.45),      /* tmavší spodný okraj */
+    0 2px 6px rgba(0,0,0,0.45);               /* vonkajší tieň */
+  transition: all 0.2s ease;
+}
+
+/* Hover efekt – jemné zosvetlenie zľava doprava */
+:root[data-theme="dark"] .chip:hover,
+:root[data-theme="dark"] .btn:hover,
+:root[data-theme="dark"] .list button:hover {
+  background: linear-gradient(90deg, #3a3b3e 0%, #242526 100%) !important;
+  box-shadow:
+    inset 1px 1px 2px rgba(255,255,255,0.12),
+    inset -1px -1px 3px rgba(0,0,0,0.55),
+    0 4px 10px rgba(0,0,0,0.55);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------
+   💎 Dark mode – čitateľný nadpis LexArena
+------------------------------------------- */
+
+:root[data-theme="dark"] .brand,
+:root[data-theme="dark"] header .brand,
+:root[data-theme="dark"] .header .brand {
+  color: #e6e9ef !important; /* svetlá šedobiela */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* jemné oddelenie od pozadia */
+}
 
 /* ----------------------------------------------------------
    KONIEC
