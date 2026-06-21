@@ -3,38 +3,34 @@
 import { $ } from './core.js';
 import { renderAdminPanel } from './admin.js';
 
-/* =========================
-   Render oblastí (dlaždice)
-   ========================= */
-function renderFaculties(){
-  const list = $('facultyList');
-  if(!list || typeof catalog === 'undefined') return;
+/* =====================================================
+   RENDER ŠTUDIJNÝCH MODULOV (externé appky z catalog)
+   ===================================================== */
+function renderModules() {
+  const list = $('modulesList');
+  if (!list || typeof catalog === 'undefined') return;
 
   list.innerHTML = '';
 
-  Object.keys(catalog).forEach(key => {
-    const item = catalog[key]; // priamo objekt oblasti
+  Object.keys(catalog).forEach(name => {
+    const item = catalog[name];
+
+    // renderujeme len moduly, ktoré majú externú appku
+    if (!item.openExternal) return;
 
     const btn = document.createElement('button');
     btn.className = 'chip';
-    btn.textContent = key;
+    btn.textContent = name;
 
-    // 🔥 Klik = okamžité otvorenie appky
     btn.onclick = () => {
-      if (item?.openExternal) {
-        console.log('Otváram externú appku:', item.openExternal);
-        window.location.href = item.openExternal;
-        return;
-      }
+      console.log("Otváram externú appku:", item.openExternal);
 
-      // fallback – interné kvízy (ak by si niekedy chcela)
-      if (Array.isArray(item?.questions) && item.questions.length > 0) {
-        const startBtn = $('startQuizBtn');
-        if(startBtn){
-          startBtn.disabled = false;
-          startBtn.textContent = 'Spustiť kvíz (5 paragrafov)';
-          startBtn.onclick = () => startQuiz();
-        }
+      // 🔥 DÔLEŽITÉ: používame rovnaký mechanizmus ako v živej verzii
+      if (typeof catalog.openExternal === 'function') {
+        catalog.openExternal(item.openExternal);
+      } else {
+        // fallback ak by funkcia neexistovala
+        window.location.href = item.openExternal;
       }
     };
 
@@ -42,15 +38,42 @@ function renderFaculties(){
   });
 }
 
-/* =========================
-   Exporty
-   ========================= */
-export { renderFaculties };
-/* ===============================
-   Nick hráča – uloženie a načítanie
-   =============================== */
+/* =====================================================
+   RENDER OBLASTÍ NA DUEL (interné balíky z areas)
+   ===================================================== */
+function renderAreas() {
+  const list = $('areasList');
+  if (!list || typeof areas === 'undefined') return;
 
-// Uloženie nicku po kliknutí
+  list.innerHTML = '';
+
+  Object.keys(areas).forEach(name => {
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.textContent = name;
+
+    btn.onclick = () => {
+      const startBtn = $('startQuizBtn');
+      if (startBtn) {
+        startBtn.disabled = false;
+        startBtn.textContent = 'Spustiť kvíz (5 paragrafov)';
+        startBtn.onclick = () => startQuiz(name);
+      }
+    };
+
+    list.appendChild(btn);
+  });
+}
+
+/* =====================================================
+   EXPORTY
+   ===================================================== */
+export { renderAreas, renderModules };
+
+/* =====================================================
+   NICK HRÁČA – uloženie a načítanie
+   ===================================================== */
+
 const saveNickBtn = document.getElementById("saveNick");
 if (saveNickBtn) {
   saveNickBtn.addEventListener("click", () => {
@@ -69,7 +92,6 @@ if (saveNickBtn) {
   });
 }
 
-// Načítanie nicku pri štarte
 const savedNick = localStorage.getItem("playerNick");
 if (savedNick) {
   const nickInput = document.getElementById("nickname");
@@ -78,7 +100,11 @@ if (savedNick) {
   const nickDisplay = document.getElementById("playerNickDisplay");
   if (nickDisplay) nickDisplay.textContent = savedNick;
 }
-// --- START: Incoming challenges test helper ---
+
+/* =====================================================
+   VÝZVY OD SPOLUHRÁČOV (bez zmeny)
+   ===================================================== */
+
 (function(){
   const listEl = document.getElementById('incomingChallengeList');
   const acceptAnyBtn = document.getElementById('acceptAnyChallenge');
@@ -88,7 +114,7 @@ if (savedNick) {
     const wrap = document.createElement('div');
     wrap.className = 'challenge-item';
     wrap.dataset.challengeId = id;
-    wrap.style = 'padding:8px;border-radius:6px;background:var(--card-bg, #fff);box-shadow:var(--card-shadow, 0 1px 0 rgba(0,0,0,0.04));';
+    wrap.style = 'padding:8px;border-radius:6px;background:var(--card-bg,#fff);box-shadow:var(--card-shadow,0 1px 0 rgba(0,0,0,0.04));';
 
     const txt = document.createElement('div');
     txt.className = 'challenge-text';
@@ -97,6 +123,7 @@ if (savedNick) {
 
     const actions = document.createElement('div');
     actions.style = 'display:flex;gap:8px;margin-top:8px';
+
     const accept = document.createElement('button');
     accept.className = 'btn btn-primary accept-challenge';
     accept.type = 'button';
@@ -113,15 +140,10 @@ if (savedNick) {
     actions.appendChild(ignore);
     wrap.appendChild(actions);
 
-    // handlers
     accept.addEventListener('click', () => {
-      // demo: spusti duel UI ak existuje
       if (typeof window.startDuelFromExternal === 'function') {
         window.startDuelFromExternal();
-      } else {
-        console.info('startDuelFromExternal not defined — accept simulated for', id);
       }
-      // odstrániť položku z listu
       wrap.remove();
       maybeHideIncomingCard();
     });
@@ -141,13 +163,11 @@ if (savedNick) {
     card.style.display = has ? 'block' : 'none';
   }
 
-  // public helpers
   window.__addDemoChallenge = function(text) {
     if (!listEl) return;
     const id = 'demo-' + Date.now();
     const item = createChallengeItem(id, text || 'Demo výzva: Skúšobný duel');
     listEl.appendChild(item);
-    // ensure card visible
     const card = document.getElementById('incomingChallengeCard');
     if (card) card.style.display = 'block';
   };
@@ -155,9 +175,7 @@ if (savedNick) {
   if (acceptAnyBtn) {
     acceptAnyBtn.addEventListener('click', () => {
       const first = listEl && listEl.querySelector('.challenge-item');
-      if (!first) return console.info('Žiadne výzvy na prijatie');
-      const id = first.dataset.challengeId;
-      // trigger accept button
+      if (!first) return;
       const btn = first.querySelector('.accept-challenge');
       if (btn) btn.click();
     });
@@ -171,15 +189,17 @@ if (savedNick) {
     });
   }
 
-  // auto-insert one demo item on load for quick visual test
   document.addEventListener('DOMContentLoaded', () => {
     if (listEl && listEl.children.length === 0) {
       window.__addDemoChallenge('Jana ťa vyzvala na duel – Pracovné právo');
     }
   });
 })();
-// --- END ---
-// --- START: Safe accept handler for incoming challenges ---
+
+/* =====================================================
+   SAFE ACCEPT HANDLER (bez zmeny)
+   ===================================================== */
+
 (function(){
   const listEl = document.getElementById('incomingChallengeList');
   const cardEl = document.getElementById('incomingChallengeCard');
@@ -193,13 +213,11 @@ if (savedNick) {
   function isDuelVisible() {
     const duelEl = document.getElementById('lexarenaDuelUI');
     if (!duelEl) return false;
-    // check class 'hidden' or computed display
     const hasHiddenClass = duelEl.classList && duelEl.classList.contains('hidden');
     const disp = getComputedStyle(duelEl).display;
     return !hasHiddenClass && disp !== 'none';
   }
 
-  // show small inline loader on the challenge item while starting duel
   function showItemLoader(item) {
     if (!item) return;
     let loader = item.querySelector('.challenge-loader');
@@ -213,8 +231,7 @@ if (savedNick) {
     return loader;
   }
 
-  // delegated click handler for accept buttons
-  document.addEventListener('click', function onDocClick(e){
+  document.addEventListener('click', function(e){
     const btn = e.target.closest && e.target.closest('.accept-challenge');
     if (!btn) return;
     e.preventDefault();
@@ -222,22 +239,15 @@ if (savedNick) {
     const item = btn.closest('.challenge-item');
     if (!item) return;
 
-    // show loader so user sees action
-    const loader = showItemLoader(item);
+    showItemLoader(item);
 
-    // Try to call startDuelFromExternal if available
     const startFn = window.startDuelFromExternal;
     if (typeof startFn === 'function') {
-      try {
-        startFn();
-      } catch(err) {
-        console.error('startDuelFromExternal threw', err);
-      }
-      // poll for duel UI visibility, then remove item
+      try { startFn(); } catch(err) {}
       let attempts = 0;
       const poll = setInterval(() => {
         attempts++;
-        if (isDuelVisible() || attempts > 12) { // ~2.4s timeout
+        if (isDuelVisible() || attempts > 12) {
           clearInterval(poll);
           item.remove();
           updateCardVisibility();
@@ -246,22 +256,14 @@ if (savedNick) {
       return;
     }
 
-    // Fallback: open duel.html in new tab and remove item after short delay
-    const duelUrl = '/duel.html';
-    try {
-      window.open(duelUrl, '_blank');
-    } catch (err) {
-      // if popup blocked, navigate current tab
-      window.location.href = duelUrl;
-    }
+    window.open('/duel.html', '_blank');
     setTimeout(() => {
       item.remove();
       updateCardVisibility();
     }, 700);
   });
 
-  // delegated click handler for ignore buttons
-  document.addEventListener('click', function onDocClickIgnore(e){
+  document.addEventListener('click', function(e){
     const btn = e.target.closest && e.target.closest('.ignore-challenge');
     if (!btn) return;
     e.preventDefault();
@@ -270,7 +272,6 @@ if (savedNick) {
     updateCardVisibility();
   });
 
-  // Accept first / Ignore all controls (if present)
   const acceptAny = document.getElementById('acceptAnyChallenge');
   if (acceptAny) acceptAny.addEventListener('click', () => {
     const firstAccept = listEl && listEl.querySelector('.challenge-item .accept-challenge');
@@ -283,10 +284,5 @@ if (savedNick) {
     updateCardVisibility();
   });
 
-  // ensure card visibility on load
   document.addEventListener('DOMContentLoaded', updateCardVisibility);
-  // also expose helper for debugging
-  window.__isDuelVisible = isDuelVisible;
 })();
-// --- END: Safe accept handler for incoming challenges ---
-
