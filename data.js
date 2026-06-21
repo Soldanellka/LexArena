@@ -1,69 +1,83 @@
-// data.js – katalóg pre LexArenu (externé moduly)
+console.log("DATAJS NAČÍTANÝ");
 
-console.log("DATAJS KOREŇ SA NAČÍTAL"); // diagnostika
+/* =====================================================
+   AUTO-DETEKCIA PROSTREDIA
+   ===================================================== */
 
-/* ============================
-   HLAVNÉ OBLASTI (dlaždice)
-   ============================ */
+const IS_TEST =
+  window.location.hostname.includes("vercel.app") ||
+  window.location.pathname.includes("/test");
+
+const LIVE_ROOT = "https://www.lexarena.sk/";
+const BASE = IS_TEST ? LIVE_ROOT : "/";
+
+
+/* =====================================================
+   OBLASTI
+   ===================================================== */
+
+const areas = {
+  "Trestné právo": {},
+  "Občianske právo": {},
+  "Pracovné právo": {},
+  "Rímske právo": {},
+  "Dejiny práva": {}
+};
+
+
+/* =====================================================
+   ŠTUDIJNÉ MODULY
+   ===================================================== */
 
 const catalog = {
 
   "Trestné právo hmotné": {
-    openExternal: "/Trestné právo hmotné/",
-    desc: "Kompletná TPH appka (otázky, dlaždice, memory, prípady).",
+    openExternal: BASE + "Trestné právo hmotné/",
+    desc: "Kompletná TPH appka.",
     duelCount: 5
   },
 
   "Trestné právo procesné": {
-    openExternal: "/Trestné právo procesné/",
-    desc: "Kompletná TPP appka (zásady, otázky, prípady).",
+    openExternal: BASE + "Trestné právo procesné/",
+    desc: "Kompletná TPP appka.",
     duelCount: 5
   },
 
   "Trestné právo – spájačka": {
-    openExternal: "/Trestné právo - spájačka/",
-    desc: "Hra na spájanie troch prvkov. Ideálne na učenie pojmov."
+    openExternal: BASE + "Trestné právo - spájačka/",
+    desc: "Hra na spájanie troch prvkov."
   },
 
   "Trestné právo – teória a prípady": {
-    openExternal: "/Trestné právo - teória a prípady/",
-    desc: "Kompletná appka Teoretické vysvetlenia, prípady a praktické riešenia."
+    openExternal: BASE + "Trestné právo - teória a prípady/",
+    desc: "Teória + prípady."
   },
 
   "Trestné právo – Veľký kvíz": {
-    openExternal: "/TREST Veľký KVÍZ/",
-    desc: "Kompletná appka Kvíz."
+    openExternal: BASE + "TREST Veľký KVÍZ/",
+    desc: "Veľký kvíz."
   },
 
   "Občan – teória a veľký kvíz": {
-    openExternal: "/Občan - teória a veľký kvíz/",
-    desc: "Kompletná appka Teória k TPH, TPP a veľký kvíz v jednej appke."
+    openExternal: BASE + "Občan - teória a veľký kvíz/",
+    desc: "Teória + veľký kvíz."
   },
 
   "Pracovné právo": {
-    openExternal: "/LuluLaw duel Pracovné právo/",
-    desc: "Kompletná appka pracovného práva (otázky, prípady, definície).",
+    openExternal: BASE + "LuluLaw duel Pracovné právo/",
+    desc: "Kompletná appka pracovného práva.",
     duelCount: 5
   },
 
-  /* Placeholdery – zatiaľ bez externých modulov */
-  "Občianske právo hmotné": {
-    desc: "Základy občianskeho práva – modul vo vývoji."
-  },
-
-  "Občianske právo procesné": {
-    desc: "Procesné inštitúty – modul vo vývoji."
-  },
-
-  "Rímske právo": {
-    desc: "Základy rímskeho práva – modul vo vývoji."
-  }
-
+  "Občianske právo hmotné": { desc: "Modul vo vývoji." },
+  "Občianske právo procesné": { desc: "Modul vo vývoji." },
+  "Rímske právo": { desc: "Modul vo vývoji." }
 };
 
-/* ============================
+
+/* =====================================================
    MEMORY SETS
-   ============================ */
+   ===================================================== */
 
 const memorySets = {
   "TPH-A1": [
@@ -79,9 +93,9 @@ const memorySets = {
 };
 
 
-/* ============================
-   PRÍPADY (placeholder)
-   ============================ */
+/* =====================================================
+   PRÍPADY
+   ===================================================== */
 
 const cases = {
   "TPH-A1": [
@@ -97,4 +111,44 @@ const cases = {
       reward: 2
     }
   ]
+};
+
+
+/* =====================================================
+   FUNKCIA NA OTVORENIE EXTERNEJ APPKY + FIXNUTÝ LOADER
+   ===================================================== */
+
+catalog.openExternal = function (slug) {
+  console.log("Otváram externú appku:", slug);
+
+  // odstrániť starý loader, ak existuje
+  const old = document.getElementById("globalLoader");
+  if (old) old.remove();
+
+  // vytvoriť nový loader
+  const loader = document.createElement("div");
+  loader.id = "globalLoader";
+  loader.style = `
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+  `;
+  loader.textContent = "Načítavam externú aplikáciu…";
+  document.body.appendChild(loader);
+
+  // ⭐ TRIK: vynútiť reflow, aby loader vždy naskočil
+  void loader.offsetHeight;
+
+  // malé oneskorenie pre vizuálny efekt
+  setTimeout(() => {
+    window.location.href = slug;
+  }, 200);
 };
