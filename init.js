@@ -2,81 +2,58 @@
 
 import { $, loadParagrafy } from './core.js';
 import { setParagrafy } from './state.js';
-import { renderFaculties } from './app.js';
+import { renderAreas, renderModules } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
 import { loadReports } from './reports.js';
 import { loadAnsweredCases } from './cases.js';
 import { applyTheme } from './theme.js';
 import { startQuiz, nextQ, prevQ } from './quiz.js';
-import { buildMemory } from './memory.js';
-import { renderCase } from './cases.js';
 
-export function init(){
+export function init() {
+  // 🔹 Načítanie paragrafov
   const p = loadParagrafy();
   setParagrafy(p);
 
-  const pc = $('parCount');
-  if(pc) pc.textContent = p;
+  const pc = $('paragrafValue');   // opravené ID podľa index.html
+  if (pc) pc.textContent = p;
 
-  applyTheme(localStorage.getItem('lex_theme') || 'light');
+  // 🔹 Téma (light/dark)
+  applyTheme(localStorage.getItem('theme') || 'light');
 
+  // 🔹 Renderovanie hlavičky a hlavných sekcií
   renderHeaderAvatar();
-  renderFaculties();   // ✔ jediný render, ktorý potrebujeme
+  renderAreas();
+  renderModules();
+
+  // 🔹 Reporty a prípady
   loadReports();
   loadAnsweredCases('TPH-A1');
 
+  // 🔹 Pripojenie udalostí
   attachEvents();
 }
 
-function attachEvents(){
+function attachEvents() {
   const startBtn = $('startQuizBtn');
-  if(startBtn) startBtn.addEventListener('click', startQuiz);
+  if (startBtn) startBtn.addEventListener('click', startQuiz);
 
   const nextBtn = $('nextBtn');
-  if(nextBtn) nextBtn.addEventListener('click', nextQ);
+  if (nextBtn) nextBtn.addEventListener('click', nextQ);
 
   const prevBtn = $('prevBtn');
-  if(prevBtn) prevBtn.addEventListener('click', prevQ);
-
-  const openMemoryBtn = $('openMemoryBtn');
-  if(openMemoryBtn){
-    openMemoryBtn.addEventListener('click', () => {
-      $('memoryModal').classList.add('open');
-      buildMemory('TPH-A1');
-    });
-  }
-
-  const closeMemory = $('closeMemory');
-  if(closeMemory){
-    closeMemory.addEventListener('click', () => {
-      $('memoryModal').classList.remove('open');
-    });
-  }
-
-  const openCasesBtn = $('openCasesBtn');
-  if(openCasesBtn){
-    openCasesBtn.addEventListener('click', () => {
-      $('casesModal').classList.add('open');
-      renderCase();
-    });
-  }
-
-  const closeCases = $('closeCases');
-  if(closeCases){
-    closeCases.addEventListener('click', () => {
-      $('casesModal').classList.remove('open');
-    });
-  }
+  if (prevBtn) prevBtn.addEventListener('click', prevQ);
 
   const themeToggle = $('themeToggleBtn');
-  if(themeToggle){
+  if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') === 'dark'
-        ? 'light'
-        : 'dark';
+      const current =
+        document.documentElement.getAttribute('data-theme') === 'dark'
+          ? 'light'
+          : 'dark';
       applyTheme(current);
     });
   }
 }
 
+// 🔥 Spustenie inicializácie po načítaní DOM
 document.addEventListener('DOMContentLoaded', init);
