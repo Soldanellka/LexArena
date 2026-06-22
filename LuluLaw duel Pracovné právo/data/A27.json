@@ -2,9 +2,9 @@
   "id": "14. A",
   "title": "Spôsoby skončenia pracovného pomeru – formálne náležitosti, odstupné, odchodné",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "skončenie pracovného pomeru", "odstupné", "odchodné"],
+  "tags": ["pracovné právo", "skončenie pracovného pomeru", "odstupné", "odchodné", "výpoveď", "dohoda"],
 
-  "summary": "\nPracovný pomer môže skončiť štyrmi základnými spôsobmi: dohodou, výpoveďou, okamžitým skončením a skončením v skúšobnej dobe. Dohoda je dvojstranný právny úkon, ktorý musí byť písomný a ak o to zamestnanec požiada, musí obsahovať aj dôvod skončenia. Výpoveď je jednostranný právny úkon, ktorý musí byť písomný, doručený a pri zamestnávateľovi vždy odôvodnený zákonným dôvodom. Okamžité skončenie pracovného pomeru je možné len vo výnimočných prípadoch stanovených zákonom. Skončenie v skúšobnej dobe je flexibilné, nevyžaduje dôvod, ale musí byť písomné.\n\nPri skončení pracovného pomeru môže vzniknúť nárok na odstupné – najmä pri organizačných dôvodoch, zdravotnej nespôsobilosti alebo strate spôsobilosti vykonávať doterajšiu prácu. Výška odstupného závisí od dĺžky trvania pracovného pomeru. Odchodné patrí zamestnancovi pri prvom skončení pracovného pomeru po vzniku nároku na starobný, predčasný alebo invalidný dôchodok.\n\nPríklad:\nZamestnávateľ ruší pracovné miesto a dá zamestnancovi výpoveď. Ide o organizačný dôvod, preto zamestnancovi patrí odstupné podľa dĺžky trvania pracovného pomeru.\n\nKľúčové slová:\ndohoda; výpoveď; okamžité skončenie; skúšobná doba; odstupné; odchodné.\n\nZapamätaj si:\n- Všetky spôsoby skončenia pracovného pomeru musia byť písomné.\n- Výpoveď zamestnávateľa musí byť vždy odôvodnená zákonným dôvodom.\n- Odstupné patrí len pri zákonom stanovených dôvodoch.\n- Odchodné patrí pri prvom skončení po vzniku nároku na dôchodok.\n- Formálne náležitosti (písomná forma, doručenie, dôvod, lehoty) sú kľúčové pre platnosť skončenia.",
+  "summary": "Pracovný pomer možno skončiť len spôsobmi uvedenými v § 59 Zákonníka práce – ide o kogentnú úpravu, od ktorej sa nemožno odchýliť. Skončenie pracovného pomeru môže nastať na základe právnych úkonov (dohoda, výpoveď, okamžité skončenie, skončenie v skúšobnej dobe), právnych udalostí (plynutie času, smrť zamestnanca), iných právnych skutočností (úradné rozhodnutie) alebo priamo zo zákona (napr. porušenie podmienok dočasného pridelenia). Každý spôsob má vlastné formálne náležitosti, najmä písomnú formu a doručenie.\n\nOdstupné predstavuje kompenzáciu pri skončení pracovného pomeru z dôvodov na strane zamestnávateľa alebo zo zdravotných dôvodov. Výška odstupného závisí od dĺžky trvania pracovného pomeru, pričom pri pracovnom úraze alebo chorobe z povolania patrí 10-násobok priemerného zárobku. Odchodné je jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok.\n\nPríklad: Zamestnávateľ ruší časť prevádzky a dáva zamestnancovi výpoveď. Ide o organizačný dôvod podľa § 63 ods. 1 písm. b) ZP, preto zamestnancovi patrí odstupné podľa dĺžky trvania pracovného pomeru.\n\nKľúčové slová: dohoda; výpoveď; okamžité skončenie; skúšobná doba; odstupné; odchodné; právne udalosti; písomná forma.\n\nZapamätaj si:\n- Spôsoby skončenia pracovného pomeru sú kogentné – nemožno ich rozširovať.\n- Výpoveď zamestnávateľa musí byť vždy písomná a odôvodnená.\n- Dohoda musí byť písomná a na žiadosť zamestnanca obsahovať dôvod.\n- Odstupné patrí len pri zákonom stanovených dôvodoch.\n- Odchodné patrí len pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok.",
 
   "quiz": [
     {
@@ -12,7 +12,7 @@
       "options": ["Výpoveď", "Dohoda", "Okamžité skončenie"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Dohoda je dvojstranný právny úkon.",
+        "correct": "Správne. Dohoda je dvojstranný právny úkon vyžadujúci súhlas oboch strán.",
         "wrong": "Nesprávne. Výpoveď aj okamžité skončenie sú jednostranné úkony."
       }
     },
@@ -21,8 +21,8 @@
       "options": ["Vždy", "Nikdy", "Len ak o to zamestnanec požiada"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Výpoveď zamestnávateľa musí byť vždy odôvodnená zákonným dôvodom.",
-        "wrong": "Nesprávne. Odôvodnenie je povinné."
+        "correct": "Správne. Zamestnávateľ môže dať výpoveď len z dôvodov uvedených v § 63 ZP.",
+        "wrong": "Nesprávne. Odôvodnenie je povinné zo zákona."
       }
     },
     {
@@ -30,8 +30,8 @@
       "options": ["Pri výpovedi zo strany zamestnanca", "Pri organizačných dôvodoch alebo zdravotnej nespôsobilosti", "Pri skončení v skúšobnej dobe"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Odstupné patrí pri zákonom stanovených dôvodoch.",
-        "wrong": "Nesprávne. Zamestnanec pri vlastnej výpovedi odstupné nedostáva."
+        "correct": "Správne. Odstupné patrí pri zákonom stanovených dôvodoch podľa § 76 ZP.",
+        "wrong": "Nesprávne. Pri výpovedi zamestnanca odstupné nepatrí."
       }
     },
     {
@@ -48,18 +48,18 @@
       "options": ["Skončenie v skúšobnej dobe musí byť písomné", "Výpoveď môže byť ústna", "Dohoda nemusí byť písomná"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Všetky spôsoby skončenia musia byť písomné.",
+        "correct": "Správne. Všetky spôsoby skončenia pracovného pomeru musia byť písomné.",
         "wrong": "Nesprávne. Ústna forma je neplatná."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Dohoda", "definition": "Dvojstranné skončenie pracovného pomeru, musí byť písomné." },
-    { "term": "Výpoveď", "definition": "Jednostranné skončenie s výpovednou dobou; zamestnávateľ musí uviesť dôvod." },
-    { "term": "Okamžité skončenie", "definition": "Možné len vo výnimočných prípadoch stanovených zákonom." },
-    { "term": "Odstupné", "definition": "Finančné plnenie pri organizačných dôvodoch alebo zdravotnej nespôsobilosti." },
-    { "term": "Odchodné", "definition": "Jednorazové plnenie pri prvom skončení po vzniku nároku na dôchodok." }
+    { "term": "Dohoda", "definition": "Dvojstranný právny úkon, ktorým sa pracovný pomer končí ku dňu dohodnutému stranami." },
+    { "term": "Výpoveď", "definition": "Jednostranné skončenie pracovného pomeru s výpovednou dobou; zamestnávateľ musí uviesť zákonný dôvod." },
+    { "term": "Okamžité skončenie", "definition": "Mimoriadny spôsob skončenia pracovného pomeru možný len v taxatívne uvedených prípadoch." },
+    { "term": "Odstupné", "definition": "Finančné plnenie pri skončení pracovného pomeru z organizačných alebo zdravotných dôvodov." },
+    { "term": "Odchodné", "definition": "Jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zrušenie pracovného miesta je organizačný dôvod.",
+            "correct": "Správne. Zrušenie pracovného miesta je organizačný dôvod podľa § 63 ods. 1 písm. b) ZP.",
             "wrong": "Nesprávne. Súhlas zamestnanca nie je potrebný."
           }
         },
@@ -86,7 +86,7 @@
           "options": ["Áno", "Nie", "Len ak je zamestnanec vo firme viac ako 10 rokov"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Pri organizačných dôvodoch vzniká nárok na odstupné.",
+            "correct": "Správne. Pri organizačných dôvodoch vzniká nárok na odstupné podľa § 76 ZP.",
             "wrong": "Nesprávne. Dĺžka trvania ovplyvňuje výšku, nie samotný nárok."
           }
         },
@@ -99,7 +99,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnanec má zákonný nárok.",
+            "correct": "Správne. Zamestnanec má zákonný nárok na odstupné.",
             "wrong": "Nesprávne. Zamestnávateľ sa nemôže zbaviť povinnosti."
           }
         }
@@ -120,7 +120,7 @@
           "options": ["Áno", "Nie", "Nie je to podstatné"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Odchodné patrí len pri prvom skončení.",
+            "correct": "Správne. Odchodné patrí len pri prvom skončení pracovného pomeru po vzniku nároku.",
             "wrong": "Nesprávne. Opakované skončenia nárok nezakladajú."
           }
         },
@@ -129,7 +129,7 @@
           "options": ["Áno", "Nie", "Len ak zamestnávateľ rozhodne"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Odchodné je zákonný nárok.",
+            "correct": "Správne. Odchodné je zákonný nárok podľa § 76a ZP.",
             "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
           }
         },
@@ -142,7 +142,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Odchodné je povinné plnenie.",
+            "correct": "Správne. Odchodné je povinné plnenie zo zákona.",
             "wrong": "Nesprávne. Zamestnávateľ sa nemôže zbaviť povinnosti."
           }
         }
