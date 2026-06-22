@@ -1,10 +1,10 @@
 {
   "id": "9. B",
-  "title": "Dohody o prácach vykonávaných mimo pracovného pomeru, dohoda o vykonaní práce, dohoda o pracovnej činnosti, dohoda o brigádnickej práci študentov",
+  "title": "Dohody o prácach vykonávaných mimo pracovného pomeru – DVP, DPČ, DBPŠ",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "dohody", "DVP", "DPČ", "DBPŠ"],
+  "tags": ["pracovné právo", "dohody", "DVP", "DPČ", "DBPŠ", "Zákonník práce"],
 
-  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru sú flexibilné formy závislej práce, ktoré sa používajú najmä pri príležitostných, krátkodobých alebo menej rozsiahlych činnostiach. Zákonník práce upravuje tri druhy dohôd: dohodu o vykonaní práce (DVP), dohodu o pracovnej činnosti (DPČ) a dohodu o brigádnickej práci študentov (DBPŠ). Všetky dohody musia byť písomné a obsahovať druh práce, odmenu, rozsah práce a dobu, na ktorú sa uzatvárajú. DVP je určená na jednorazovú úlohu s rozsahom najviac 350 hodín ročne. DPČ sa používa pri opakujúcej sa činnosti do 10 hodín týždenne. DBPŠ je určená pre študentov do 26 rokov, s rozsahom najviac 20 hodín týždenne. Pri dohodách platia osobitné pravidlá pre odvody, pracovný čas, BOZP a skončenie právneho vzťahu. Dohody nesmú nahrádzať pracovný pomer, ak ide o prácu vykonávanú v podriadenosti a pravidelne.\n\nPríklad:\nŠtudent pracuje na DBPŠ 15 hodín týždenne počas letných prázdnin. Ide o legálny rozsah práce, pretože DBPŠ umožňuje až 20 hodín týždenne.\n\nKľúčové slová:\nDVP; DPČ; DBPŠ; 350 hodín; 10 hodín týždenne; 20 hodín týždenne; písomná forma; závislá práca.\n\nZapamätaj si:\n- Všetky dohody musia byť písomné.\n- DVP má limit 350 hodín ročne.\n- DPČ má limit 10 hodín týždenne.\n- DBPŠ je len pre študentov do 26 rokov.\n- Dohody nesmú nahrádzať pracovný pomer, ak ide o závislú prácu.",
+  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru predstavujú osobitné pracovnoprávne vzťahy podľa § 223 – § 228a Zákonníka práce. Zamestnávateľ ich môže uzatvárať len výnimočne, najmä pri príležitostných, krátkodobých alebo sezónnych činnostiach. Nezakladajú pracovný pomer a nemožno nimi nahrádzať závislú prácu vykonávanú pravidelne, v podriadenosti a podľa pokynov zamestnávateľa.\n\nZákonník práce upravuje tri typy dohôd: dohodu o vykonaní práce (DVP), dohodu o pracovnej činnosti (DPČ) a dohodu o brigádnickej práci študentov (DBPŠ). Všetky dohody musia byť písomné, musia obsahovať druh práce, odmenu, rozsah práce a dobu trvania. Pri dohodách platia limity pracovného času (DVP – 350 hodín ročne, DPČ – 10 hodín týždenne, DBPŠ – 20 hodín týždenne), zákaz nadčasov a pracovnej pohotovosti, povinnosť BOZP a osobitné pravidlá pre skončenie dohody.\n\nPríklad:\nZamestnávateľ uzavrel so študentom DBPŠ na 20 hodín týždenne počas leta. Ide o legálny rozsah, pretože DBPŠ umožňuje priemerne 20 hodín týždenne.\n\nKľúčové slová:\nDVP; DPČ; DBPŠ; 350 hodín; 10 hodín týždenne; 20 hodín týždenne; písomná forma; BOZP; sezónna práca.\n\nZapamätaj si:\n- Dohody sú výnimočné pracovnoprávne vzťahy, nenahrádzajú pracovný pomer.\n- Všetky dohody musia byť písomné.\n- DVP má limit 350 hodín ročne.\n- DPČ má limit 10 hodín týždenne.\n- DBPŠ je len pre študentov do 26 rokov.\n- Pri dohodách platí zákaz nadčasov a pracovnej pohotovosti.",
 
   "quiz": [
     {
@@ -12,8 +12,8 @@
       "options": ["100 hodín", "350 hodín", "520 hodín"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. DVP je limitovaná na 350 hodín ročne.",
-        "wrong": "Nesprávne. Ostatné možnosti nezodpovedajú zákonu."
+        "correct": "Správne. DVP je limitovaná na 350 hodín ročne podľa § 226 ZP.",
+        "wrong": "Nesprávne. Zákon stanovuje limit 350 hodín."
       }
     },
     {
@@ -21,7 +21,7 @@
       "options": ["10 hodín týždenne", "20 hodín týždenne", "40 hodín týždenne"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. DPČ je limitovaná na 10 hodín týždenne.",
+        "correct": "Správne. DPČ je limitovaná na 10 hodín týždenne podľa § 228a ZP.",
         "wrong": "Nesprávne. Vyšší rozsah nie je pri DPČ možný."
       }
     },
@@ -30,17 +30,17 @@
       "options": ["Každý zamestnanec", "Študent do 26 rokov", "Len doktorandi"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. DBPŠ je určená pre študentov do 26 rokov.",
-        "wrong": "Nesprávne. Ostatné skupiny nemajú nárok na DBPŠ."
+        "correct": "Správne. DBPŠ je určená pre študentov do 26 rokov podľa § 227 ZP.",
+        "wrong": "Nesprávne. DBPŠ je viazaná na štatút študenta."
       }
     },
     {
-      "question": "Ktorá dohoda je určená na jednorazovú úlohu?",
+      "question": "Ktorá dohoda je určená na jednorazovú pracovnú úlohu?",
       "options": ["Dohoda o vykonaní práce", "Dohoda o pracovnej činnosti", "DBPŠ"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. DVP je určená na konkrétnu úlohu.",
-        "wrong": "Nesprávne. Ostatné dohody sú na opakujúcu sa činnosť."
+        "correct": "Správne. DVP je viazaná na konkrétnu pracovnú úlohu.",
+        "wrong": "Nesprávne. Ostatné dohody sú určené na opakujúcu sa činnosť."
       }
     },
     {
@@ -48,18 +48,18 @@
       "options": ["Dohody môžu nahrádzať pracovný pomer", "Dohody musia byť písomné", "Dohody nemajú žiadne limity"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Dohody musia byť písomné.",
-        "wrong": "Nesprávne. Dohody nesmú nahrádzať pracovný pomer a majú limity."
+        "correct": "Správne. Písomná forma je povinná podľa § 228 ods. 1 ZP.",
+        "wrong": "Nesprávne. Dohody majú limity a nesmú nahrádzať pracovný pomer."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Dohoda o vykonaní práce (DVP)", "definition": "Jednorazová úloha do 350 hodín ročne." },
-    { "term": "Dohoda o pracovnej činnosti (DPČ)", "definition": "Opakujúca sa činnosť do 10 hodín týždenne." },
+    { "term": "Dohoda o vykonaní práce (DVP)", "definition": "Dohoda na jednorazovú pracovnú úlohu, max. 350 hodín ročne." },
+    { "term": "Dohoda o pracovnej činnosti (DPČ)", "definition": "Dohoda na príležitostnú činnosť do 10 hodín týždenne." },
     { "term": "Dohoda o brigádnickej práci študentov (DBPŠ)", "definition": "Dohoda pre študentov do 26 rokov, max. 20 hodín týždenne." },
-    { "term": "Písomná forma", "definition": "Všetky dohody musia byť uzavreté písomne, inak sú neplatné." },
-    { "term": "Závislá práca", "definition": "Dohody nesmú nahrádzať pracovný pomer, ak ide o podriadenú a pravidelnú prácu." }
+    { "term": "Písomná forma", "definition": "Každá dohoda musí byť uzavretá písomne, inak je neplatná." },
+    { "term": "Závislá práca", "definition": "Dohody nesmú nahrádzať pracovný pomer, ak ide o prácu v podriadenosti." }
   ],
 
   "cases": [
@@ -77,17 +77,17 @@
           "options": ["Nie, ide o závislú prácu", "Áno", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Denná práca v podriadenosti je pracovný pomer, nie DVP.",
+            "correct": "Správne. Pravidelná práca v podriadenosti je pracovný pomer, nie DVP.",
             "wrong": "Nesprávne. Súhlas zamestnanca nelegalizuje nesprávnu formu."
           }
         },
         {
           "question": "Krok 2: Ako sa má vzťah posudzovať?",
-          "options": ["Ako pracovný pomer", "Ako živnosť", "Ako platná dohoda"],
+          "options": ["Ako pracovný pomer", "Ako platná dohoda", "Ako živnosť"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Faktický výkon práce má znaky pracovného pomeru.",
-            "wrong": "Nesprávne. Dohoda je neplatná pre rozpor so zákonom."
+            "correct": "Správne. Faktický výkon práce má znaky pracovného pomeru podľa § 1 ods. 2 ZP.",
+            "wrong": "Nesprávne. Dohoda je v rozpore so zákonom."
           }
         },
         {
@@ -99,7 +99,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Je potrebné uviesť právny vzťah do súladu so zákonom.",
+            "correct": "Správne. Je potrebné uviesť právny vzťah do súladu so Zákonníkom práce.",
             "wrong": "Nesprávne. Ignorovanie je protiprávne."
           }
         }
@@ -120,7 +120,7 @@
           "options": ["Nie", "Áno", "Len ak zamestnanec podpíše súhlas"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. DPČ má zákonný limit 10 hodín týždenne.",
+            "correct": "Správne. DPČ má zákonný limit 10 hodín týždenne podľa § 228a ZP.",
             "wrong": "Nesprávne. Súhlas zamestnanca limit nezvyšuje."
           }
         },
