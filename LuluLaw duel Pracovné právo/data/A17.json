@@ -4,43 +4,44 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "zásady", "Zákonník práce", "pracovnoprávne vzťahy"],
 
-  "summary": "\nZákladné zásady pracovného práva predstavujú hodnotové a interpretačné pravidlá, ktoré ovplyvňujú výklad a aplikáciu pracovnoprávnych predpisov. Sú uvedené v § 13 až § 17 Zákonníka práce a tvoria základ ochrany zamestnanca ako slabšej strany pracovnoprávneho vzťahu.\n\nMedzi najdôležitejšie zásady patria: zásada rovnakého zaobchádzania a zákazu diskriminácie, zásada ochrany zamestnanca, zásada bezpečnosti a ochrany zdravia pri práci (BOZP), zásada spravodlivých pracovných podmienok, zásada kolektívneho vyjednávania, zásada osobného výkonu práce a zásada dobrých mravov.\n\nZásady majú význam pri výklade nejasných ustanovení, pri posudzovaní platnosti právnych úkonov a pri riešení sporov. Sú záväzné pre zamestnávateľov, zamestnancov aj súdy.\n\nPríklad:\nUchádzačka o prácu bola odmietnutá s odôvodnením, že „ženy túto prácu nezvládnu“. Ide o porušenie zásady rovnakého zaobchádzania a zákazu diskriminácie.\n\nKľúčové slová:\nrovnaké zaobchádzanie; zákaz diskriminácie; ochrana zamestnanca; BOZP; dobré mravy; kolektívne vyjednávanie.\n\nZapamätaj si:\n- Zásady sú záväzné pre všetkých účastníkov pracovnoprávnych vzťahov.\n- Zásada rovnakého zaobchádzania zakazuje diskrimináciu.\n- Zásada ochrany zamestnanca chráni slabšiu stranu pracovnoprávneho vzťahu.\n- Zásada dobrých mravov zakazuje nátlak a neetické správanie.\n- Zásady sa používajú pri výklade nejasných ustanovení.",
+  "summary": "Základné zásady pracovného práva predstavujú fundamentálne právne idey, ktoré vyjadrujú podstatu pracovného práva ako osobitného odvetvia a slúžia ako interpretačné a aplikačné pravidlá. Sú upravené v čl. 1 až 11 Zákonníka práce a vychádzajú z Ústavy SR, antidiskriminačného zákona, medzinárodných dohovorov MOP a smerníc EÚ. Zásady chránia zamestnanca ako slabšiu stranu pracovnoprávneho vzťahu, určujú limity autonómie vôle a zabezpečujú spravodlivé, bezpečné a nediskriminačné pracovné podmienky.\n\nMedzi kľúčové zásady patria: zásada rovnakého zaobchádzania a zákazu diskriminácie, zásada zmluvnej slobody, zásada dobrých mravov, zásada zákazu zneužitia práva, zásada práva na mzdu a vhodné pracovné podmienky, zásada participácie zamestnancov, zásada riadneho plnenia povinností, zásada rovnakého zaobchádzania mužov a žien, zásada ochrany mladistvých, zásada ochrany života a zdravia, zásada súdnej ochrany, zásada koaličnej slobody a zásada ochrany súkromia zamestnanca.\n\nZásady majú význam pri výklade nejasných ustanovení, pri posudzovaní platnosti právnych úkonov, pri kontrole zákonnosti rozhodnutí zamestnávateľa a pri súdnej ochrane zamestnancov.\n\nPríklad:\nZamestnávateľ odmietne prijať uchádzačku s odôvodnením, že „ženy túto prácu nezvládnu“. Ide o priamu diskrimináciu v rozpore s čl. 1 Základných zásad ZP.\n\nKľúčové slová:\ndiskriminácia; dobré mravy; zmluvná sloboda; BOZP; koaličná sloboda; ochrana zamestnanca; súkromie zamestnanca.\n\nZapamätaj si:\n- Zásady sú záväzné pre všetkých účastníkov pracovnoprávnych vzťahov.\n- Zásada rovnakého zaobchádzania zakazuje akúkoľvek formu diskriminácie.\n- Zásada dobrých mravov a zákazu zneužitia práva bráni nátlaku, šikane a zneužívaniu právomocí.\n- BOZP je základnou povinnosťou zamestnávateľa.\n- Koaličná sloboda zahŕňa právo na odbory, kolektívne vyjednávanie, štrajk a výluku."
+  ,
 
   "quiz": [
     {
-      "question": "Ktorá zásada vyjadruje ochranu slabšej strany pracovnoprávneho vzťahu?",
-      "options": ["Zásada rovnakého zaobchádzania", "Zásada ochrany zamestnanca", "Zásada kolektívneho vyjednávania"],
+      "question": "Ktorá zásada chráni zamestnanca ako slabšiu stranu pracovnoprávneho vzťahu?",
+      "options": ["Zásada rovnakého zaobchádzania", "Zásada ochrany zamestnanca", "Zásada koaličnej slobody"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zásada ochrany zamestnanca chráni slabšiu stranu pracovnoprávneho vzťahu.",
+        "correct": "Správne. Zásada ochrany zamestnanca vyjadruje potrebu zvýšenej ochrany slabšej strany pracovnoprávneho vzťahu.",
         "wrong": "Nesprávne. Ostatné zásady majú iný účel."
       }
     },
     {
-      "question": "Ktorá zásada zakazuje diskrimináciu?",
-      "options": ["Zásada rovnakého zaobchádzania", "Zásada dobrých mravov", "Zásada BOZP"],
-      "correct": 0,
+      "question": "Ktorá zásada zakazuje diskrimináciu v pracovnoprávnych vzťahoch?",
+      "options": ["Zásada dobrých mravov", "Zásada rovnakého zaobchádzania", "Zásada BOZP"],
+      "correct": 1,
       "explanation": {
-        "correct": "Správne. Zásada rovnakého zaobchádzania zahŕňa zákaz diskriminácie.",
+        "correct": "Správne. Zásada rovnakého zaobchádzania zakazuje diskrimináciu podľa čl. 1 Základných zásad ZP.",
         "wrong": "Nesprávne. Ostatné zásady sa diskriminácie netýkajú."
       }
     },
     {
-      "question": "Ktorá zásada sa týka bezpečnosti zamestnancov?",
-      "options": ["Zásada BOZP", "Zásada osobného výkonu práce", "Zásada kolektívneho vyjednávania"],
+      "question": "Ktorá zásada vyžaduje, aby výkon práv nebol v rozpore s etickými normami?",
+      "options": ["Zásada dobrých mravov", "Zásada zmluvnej slobody", "Zásada BOZP"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zásada BOZP zabezpečuje ochranu zdravia pri práci.",
-        "wrong": "Nesprávne. Ostatné zásady sa netýkajú bezpečnosti."
+        "correct": "Správne. Právne úkony nesmú odporovať dobrým mravom podľa čl. 2 Základných zásad ZP.",
+        "wrong": "Nesprávne. Ostatné zásady sa netýkajú etických limitov."
       }
     },
     {
-      "question": "Ktorá zásada vyžaduje, aby pracovnoprávne úkony neodporovali etickým pravidlám?",
-      "options": ["Zásada dobrých mravov", "Zásada rovnakého zaobchádzania", "Zásada ochrany zamestnanca"],
+      "question": "Ktorá zásada sa týka bezpečnosti a ochrany zdravia pri práci?",
+      "options": ["Zásada BOZP", "Zásada koaličnej slobody", "Zásada ochrany súkromia"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Právne úkony nesmú odporovať dobrým mravom.",
-        "wrong": "Nesprávne. Ostatné zásady sa týkajú iných oblastí."
+        "correct": "Správne. Zásada BOZP vyžaduje, aby zamestnávateľ zabezpečil bezpečné pracovné podmienky.",
+        "wrong": "Nesprávne. Ostatné zásady sa netýkajú bezpečnosti."
       }
     },
     {
@@ -48,7 +49,7 @@
       "options": ["Zásady sú len odporúčania", "Zásady sú záväzné pri výklade pracovného práva", "Zásady platia len pre odbory"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zásady sú záväzné pre všetkých účastníkov pracovnoprávnych vzťahov.",
+        "correct": "Správne. Zásady sú záväzné pre všetkých účastníkov pracovnoprávnych vzťahov a súdy ich musia aplikovať.",
         "wrong": "Nesprávne. Zásady nie sú odporúčania a neplatia len pre odbory."
       }
     }
@@ -56,10 +57,10 @@
 
   "tiles": [
     { "term": "Zásada rovnakého zaobchádzania", "definition": "Zakazuje diskrimináciu a vyžaduje rovnaké podmienky pre všetkých zamestnancov." },
-    { "term": "Zásada ochrany zamestnanca", "definition": "Chráni zamestnanca ako slabšiu stranu pracovnoprávneho vzťahu." },
-    { "term": "Zásada BOZP", "definition": "Zabezpečuje bezpečné a zdravé pracovné podmienky." },
-    { "term": "Zásada dobrých mravov", "definition": "Právne úkony nesmú odporovať etickým a morálnym pravidlám." },
-    { "term": "Zásada kolektívneho vyjednávania", "definition": "Podporuje sociálny dialóg medzi zamestnávateľmi a zamestnancami." }
+    { "term": "Zásada zmluvnej slobody", "definition": "Umožňuje slobodný výber zmluvného partnera, ale v zákonom stanovených hraniciach." },
+    { "term": "Zásada dobrých mravov", "definition": "Právne úkony nesmú odporovať etickým a morálnym pravidlám spoločnosti." },
+    { "term": "Zásada zákazu zneužitia práva", "definition": "Zakazuje výkon práva s cieľom poškodiť druhého účastníka pracovnoprávneho vzťahu." },
+    { "term": "Zásada BOZP", "definition": "Zabezpečuje ochranu života, zdravia a bezpečné pracovné podmienky." }
   ],
 
   "cases": [
@@ -68,16 +69,16 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Uchádzačka o prácu bola odmietnutá s odôvodnením, že „ženy túto prácu nezvládnu“. Chce sa brániť.",
+          "question": "Zadanie: Uchádzačka o prácu bola odmietnutá s odôvodnením, že „ženy túto prácu nezvládnu“.",
           "options": [],
           "correct": 0
         },
         {
           "question": "Krok 1: Ktorá zásada bola porušená?",
-          "options": ["Zásada rovnakého zaobchádzania", "Zásada BOZP", "Zásada dobrých mravov"],
+          "options": ["Zásada rovnakého zaobchádzania", "Zásada dobrých mravov", "Zásada BOZP"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o priamu diskrimináciu na základe pohlavia.",
+            "correct": "Správne. Ide o priamu diskrimináciu na základe pohlavia podľa čl. 1 Základných zásad ZP.",
             "wrong": "Nesprávne. Ostatné zásady sa netýkajú diskriminácie."
           }
         },
@@ -86,21 +87,21 @@
           "options": ["Áno", "Nie", "Len ak je členkou odborov"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zákaz diskriminácie platí pre všetkých uchádzačov.",
+            "correct": "Správne. Zákaz diskriminácie sa vzťahuje aj na uchádzačov o zamestnanie.",
             "wrong": "Nesprávne. Členstvo v odboroch nie je podmienkou."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Odporučiť podanie žaloby a obrátiť sa na inšpektorát práce",
+            "Odporučiť podanie žaloby a podnet na inšpekciu práce",
             "Odporučiť uchádzačke, aby sa vzdala nároku",
             "Ignorovať situáciu"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o porušenie zásady rovnakého zaobchádzania.",
-            "wrong": "Nesprávne. Ignorovanie alebo vzdanie sa nároku nie je riešením."
+            "correct": "Správne. Ide o porušenie antidiskriminačnej legislatívy a zásad pracovného práva.",
+            "wrong": "Nesprávne. Ignorovanie nie je riešením."
           }
         }
       ]
@@ -117,10 +118,10 @@
         },
         {
           "question": "Krok 1: Ktorá zásada bola porušená?",
-          "options": ["Zásada dobrých mravov", "Zásada BOZP", "Zásada kolektívneho vyjednávania"],
+          "options": ["Zásada dobrých mravov", "Zásada BOZP", "Zásada koaličnej slobody"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Nátlak a vyhrážky sú v rozpore s dobrými mravmi.",
+            "correct": "Správne. Nátlak a vyhrážky sú v rozpore s dobrými mravmi podľa čl. 2 Základných zásad ZP.",
             "wrong": "Nesprávne. Ostatné zásady sa netýkajú etického správania."
           }
         },
@@ -129,7 +130,7 @@
           "options": ["Nie, je neplatná pre rozpor s dobrými mravmi", "Áno, ak ju zamestnanec podpísal", "Áno, ak ju schválili odbory"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Právny úkon urobený pod nátlakom je neplatný.",
+            "correct": "Správne. Právny úkon urobený pod nátlakom je absolútne neplatný.",
             "wrong": "Nesprávne. Podpis ani odbory nelegalizujú nátlak."
           }
         },
@@ -142,7 +143,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o vážne porušenie zásad pracovného práva.",
+            "correct": "Správne. Ide o vážne porušenie zásad pracovného práva a právny úkon je neplatný.",
             "wrong": "Nesprávne. Podpis dohody pod nátlakom je neplatný."
           }
         }
