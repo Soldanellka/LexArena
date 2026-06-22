@@ -2,99 +2,99 @@
   "id": "13. A",
   "title": "Prekážky v práci na strane zamestnanca",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "prekážky v práci", "zamestnanec", "náhrada mzdy"],
+  "tags": ["pracovné právo", "prekážky v práci", "zamestnanec", "náhrada mzdy", "Zákonník práce"],
 
-  "summary": "\nPrekážky v práci na strane zamestnanca sú situácie, keď zamestnanec nemôže vykonávať prácu z dôvodov, ktoré nesúvisia so zamestnávateľom. Zákonník práce rozlišuje prekážky, pri ktorých zamestnancovi patrí náhrada mzdy (napr. dočasná pracovná neschopnosť, vyšetrenie u lekára, dôležité osobné prekážky, prekážky z dôvodu tehotenstva a materstva), a prekážky, pri ktorých náhrada mzdy nepatrí (napr. neplatené voľno).\n\nZamestnanec je povinný prekážku oznámiť a preukázať bez zbytočného odkladu. Medzi najčastejšie prekážky patria: dočasná pracovná neschopnosť, ošetrovanie člena rodiny, sprevádzanie rodinného príslušníka k lekárovi, svadba, pohreb, sťahovanie, darovanie krvi, výkon verejných funkcií a ďalšie osobné prekážky podľa nariadenia vlády.\n\nPríklad:\nZamestnankyňa potrebuje sprevádzať dieťa k lekárovi. Ide o dôležitú osobnú prekážku, pri ktorej jej patrí pracovné voľno s náhradou mzdy za nevyhnutne potrebný čas.\n\nKľúčové slová:\nprekážky v práci; PN; OČR; osobné prekážky; neplatené voľno; náhrada mzdy.\n\nZapamätaj si:\n- Náhrada mzdy patrí len pri zákonom uznaných prekážkach.\n- PN, OČR, sprevádzanie k lekárovi či pohreb patria medzi prekážky s náhradou mzdy.\n- Sťahovanie je prekážka bez náhrady mzdy.\n- Zamestnanec musí prekážku oznámiť a preukázať.\n- Prekážky chránia zamestnanca v situáciách, keď objektívne nemôže pracovať.",
+  "summary": "Prekážky v práci na strane zamestnanca sú okolnosti, ktoré zamestnancovi objektívne bránia vykonávať prácu podľa pracovnej zmluvy. Zákonník práce rozlišuje štyri základné skupiny prekážok: (1) prekážky z dôvodov všeobecného záujmu (§ 136 – 138 ZP), (2) prekážky z dôvodu plnenia brannej povinnosti, pravidelného cvičenia a úloh ozbrojených síl a dobrovoľnej vojenskej prípravy (§ 138 – 138b ZP), (3) prekážky z dôvodu zvyšovania kvalifikácie (§ 140 ZP) a (4) dôležité osobné prekážky v práci (§ 141 ZP). Zamestnanec je povinný prekážku oznámiť a preukázať bez zbytočného odkladu. Pri niektorých prekážkach patrí náhrada mzdy, pri iných nie; niektoré sú spojené s dávkami zo sociálneho poistenia (PN, OČR). Zákonník práce presne určuje rozsah pracovného voľna a podmienky jeho poskytovania. Prekážky chránia zamestnanca v situáciách, keď nemôže pracovať z dôvodov, ktoré nesúvisia so zamestnávateľom.",
 
   "quiz": [
     {
-      "question": "Kedy patrí zamestnancovi náhrada mzdy pri prekážkach v práci?",
-      "options": ["Len pri neplatenom voľne", "Pri prekážkach uvedených v Zákonníku práce alebo nariadení vlády", "Nikdy"],
+      "question": "Ktoré tvrdenie najlepšie vystihuje pojem prekážky v práci na strane zamestnanca?",
+      "options": ["Ide o situácie, keď zamestnávateľ nemá prácu", "Ide o okolnosti, ktoré bránia zamestnancovi vykonávať prácu", "Ide o porušenie pracovnej disciplíny"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Náhrada mzdy patrí len pri zákonom uznaných prekážkach.",
-        "wrong": "Nesprávne. Neplatené voľno náhradu neobsahuje."
+        "correct": "Správne. Prekážky sú objektívne okolnosti na strane zamestnanca.",
+        "wrong": "Nesprávne. Ostatné možnosti patria medzi prekážky na strane zamestnávateľa alebo disciplinárne konania."
       }
     },
     {
-      "question": "Ktorá z nasledujúcich je prekážkou v práci na strane zamestnanca?",
-      "options": ["Porucha stroja", "Dočasná pracovná neschopnosť", "Nedostatok práce u zamestnávateľa"],
+      "question": "Ktorá z nasledujúcich je prekážkou z dôvodov všeobecného záujmu?",
+      "options": ["Sťahovanie", "Darovanie krvi", "PN"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. PN je typickou prekážkou na strane zamestnanca.",
-        "wrong": "Nesprávne. Ostatné sú prekážky na strane zamestnávateľa."
+        "correct": "Správne. Darovanie krvi je úkon vo všeobecnom záujme.",
+        "wrong": "Nesprávne. Sťahovanie je osobná prekážka, PN je zdravotná prekážka."
       }
     },
     {
-      "question": "Koľko dní voľna patrí zamestnancovi pri úmrtí blízkej osoby?",
-      "options": ["1 deň", "2 dni + 1 deň na pohreb", "5 dní"],
+      "question": "Kedy patrí zamestnancovi náhrada mzdy pri prekážkach z dôvodov všeobecného záujmu?",
+      "options": ["Pri darovaní krvi", "Pri výkone verejnej funkcie", "Pri sťahovaní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Pri darovaní krvi patrí náhrada mzdy.",
+        "wrong": "Nesprávne. Výkon verejnej funkcie je spravidla bez náhrady mzdy."
+      }
+    },
+    {
+      "question": "Koľko dní voľna patrí zamestnancovi pri vlastnej svadbe?",
+      "options": ["1 deň", "2 dni", "3 dni"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Ide o zákonnú dôležitú osobnú prekážku.",
+        "correct": "Správne. Pri vlastnej svadbe patria 2 dni pracovného voľna.",
         "wrong": "Nesprávne. Ostatné možnosti nezodpovedajú zákonu."
       }
     },
     {
-      "question": "Kedy zamestnancovi patrí pracovné voľno bez náhrady mzdy?",
-      "options": ["Pri svadbe", "Pri sťahovaní na vlastnú žiadosť", "Pri PN"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
-        "wrong": "Nesprávne. Svadba aj PN sú prekážky s náhradou."
-      }
-    },
-    {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnanec musí oznámiť prekážku bez zbytočného odkladu", "Zamestnávateľ môže odmietnuť PN"],
-      "correct": 1,
+      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnávateľ môže odmietnuť PN", "Zamestnanec musí prekážku oznámiť bez zbytočného odkladu"],
+      "correct": 2,
       "explanation": {
-        "correct": "Správne. Zamestnanec musí prekážku oznámiť a preukázať.",
-        "wrong": "Nesprávne. PN je zákonná prekážka."
+        "correct": "Správne. Oznámenie a preukázanie prekážky je povinnosťou zamestnanca.",
+        "wrong": "Nesprávne. PN je zákonná prekážka, ktorú nemožno odmietnuť."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Dočasná pracovná neschopnosť", "definition": "Zamestnanec nemôže pracovať zo zdravotných dôvodov; patrí náhrada príjmu." },
-    { "term": "Ošetrovanie člena rodiny (OČR)", "definition": "Prekážka s nárokom na dávku zo Sociálnej poisťovne." },
-    { "term": "Dôležité osobné prekážky", "definition": "Svadba, pohreb, sprevádzanie k lekárovi, darovanie krvi a iné." },
-    { "term": "Neplatené voľno", "definition": "Voľno bez náhrady mzdy, poskytované na žiadosť zamestnanca." },
-    { "term": "Oznamovacia povinnosť", "definition": "Zamestnanec musí prekážku oznámiť a preukázať." }
+    { "term": "Prekážky z dôvodov všeobecného záujmu", "definition": "Výkon verejných funkcií, občianskych povinností a iných úkonov vo všeobecnom záujme (napr. darovanie krvi)." },
+    { "term": "Branná povinnosť a ozbrojené sily", "definition": "Pracovné voľno pri povinnostiach voči štátu, často s náhradou mzdy." },
+    { "term": "Zvyšovanie kvalifikácie", "definition": "Účasť na vzdelávaní potrebnom pre výkon práce; môže patriť náhrada mzdy." },
+    { "term": "Dôležité osobné prekážky", "definition": "PN, OČR, svadba, pohreb, sprevádzanie k lekárovi, sťahovanie a iné." },
+    { "term": "Oznamovacia povinnosť", "definition": "Zamestnanec musí prekážku oznámiť a preukázať bez zbytočného odkladu." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Sprevádzanie dieťaťa k lekárovi",
+      "title": "Prípad 1 – Darovanie krvi",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Zamestnankyňa potrebuje sprevádzať dieťa k lekárovi počas pracovnej doby. Zamestnávateľ tvrdí, že si musí vziať dovolenku.",
+          "question": "Zadanie: Zamestnanec ide darovať krv a žiada o pracovné voľno.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
-          "options": ["Áno", "Nie", "Len ak ide o hospitalizáciu"],
+          "question": "Krok 1: Ide o prekážku v práci?",
+          "options": ["Áno", "Nie", "Len ak ide o plazmu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Sprevádzanie rodinného príslušníka k lekárovi je zákonná prekážka.",
-            "wrong": "Nesprávne. Hospitalizácia nie je podmienkou."
+            "correct": "Správne. Darovanie krvi je úkon vo všeobecnom záujme.",
+            "wrong": "Nesprávne. Zákon to výslovne uvádza."
           }
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Áno, za nevyhnutne potrebný čas", "Nie", "Len ak to zamestnávateľ schváli"],
+          "options": ["Áno", "Nie", "Len ak zamestnávateľ súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Náhrada patrí za nevyhnutný čas.",
-            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+            "correct": "Správne. Pri darovaní krvi patrí náhrada mzdy v plnej výške.",
+            "wrong": "Nesprávne. Súhlas zamestnávateľa nie je potrebný."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť zamestnávateľa na zákonnú povinnosť poskytnúť voľno",
-            "Odporučiť zamestnankyni vziať si dovolenku",
+            "Upozorniť zamestnávateľa na § 138 ZP",
+            "Odporučiť zamestnancovi vziať si dovolenku",
             "Ignorovať situáciu"
           ],
           "correct": 0,
@@ -107,43 +107,43 @@
     },
 
     {
-      "title": "Prípad 2 – Sťahovanie zamestnanca",
-      "difficulty": "ľahká",
+      "title": "Prípad 2 – Zvyšovanie kvalifikácie",
+      "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec sa sťahuje do nového bytu a žiada o deň voľna. Zamestnávateľ súhlasí, ale bez náhrady mzdy.",
+          "question": "Zadanie: Zamestnanec študuje vysokú školu a žiada o voľno na skúšky.",
           "options": [],
           "correct": 0
         },
         {
           "question": "Krok 1: Ide o prekážku v práci?",
-          "options": ["Áno", "Nie", "Len ak ide o služobné sťahovanie"],
+          "options": ["Áno, ak ide o zvyšovanie kvalifikácie", "Nie", "Len ak ide o prehlbovanie kvalifikácie"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Sťahovanie je dôležitá osobná prekážka.",
-            "wrong": "Nesprávne. Nejde o služobné sťahovanie."
+            "correct": "Správne. Zvyšovanie kvalifikácie je prekážka podľa § 140 ZP.",
+            "wrong": "Nesprávne. Prehlbovanie kvalifikácie nie je prekážka."
           }
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Nie", "Áno", "Len ak zamestnávateľ rozhodne"],
+          "options": ["Len ak existuje dohoda o zvýšení kvalifikácie", "Vždy", "Nikdy"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
-            "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+            "correct": "Správne. Náhrada mzdy patrí len pri písomnej dohode podľa § 155 ZP.",
+            "wrong": "Nesprávne. Bez dohody náhrada nepatrí."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Potvrdiť, že zamestnávateľ postupuje správne",
-            "Trvať na náhrade mzdy",
+            "Skontrolovať, či existuje dohoda o zvýšení kvalifikácie",
+            "Odmietnuť žiadosť bez preverenia",
             "Odporučiť zamestnancovi vziať si dovolenku"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o zákonnú prekážku bez náhrady mzdy.",
-            "wrong": "Nesprávne. Náhrada mzdy nepatrí."
+            "correct": "Správne. Dohoda je rozhodujúca pre nárok na náhradu mzdy.",
+            "wrong": "Nesprávne. Zamestnávateľ musí rešpektovať zákon."
           }
         }
       ]
