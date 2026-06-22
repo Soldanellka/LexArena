@@ -1,10 +1,10 @@
 {
   "id": "8. A",
-  "title": "Pracovnoprávne vzťahy, charakteristika, obsah, druhy",
+  "title": "Pracovnoprávne vzťahy – charakteristika, obsah, druhy",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovnoprávne vzťahy", "pracovný pomer", "kolektívne právo"],
+  "tags": ["pracovné právo", "pracovnoprávne vzťahy", "pracovný pomer", "kolektívne právo", "závislá práca"],
 
-  "summary": "\nPracovnoprávne vzťahy sú právne vzťahy vznikajúce pri výkone závislej práce medzi zamestnancom a zamestnávateľom. Ich základom je pracovný pomer, ale zahŕňajú aj dohody o prácach vykonávaných mimo pracovného pomeru, kolektívne pracovnoprávne vzťahy a vzťahy súvisiace s BOZP. Typickými znakmi pracovnoprávnych vzťahov sú osobný výkon práce, podriadenosť zamestnanca, pokynová právomoc zamestnávateľa a odplatnosť práce.\n\nObsahom pracovnoprávnych vzťahov sú práva a povinnosti účastníkov – napríklad povinnosť zamestnávateľa prideľovať prácu, platiť mzdu, zabezpečiť BOZP a povinnosť zamestnanca vykonávať prácu riadne, dodržiavať disciplínu a chrániť majetok zamestnávateľa.\n\nDruhy pracovnoprávnych vzťahov zahŕňajú individuálne pracovnoprávne vzťahy (pracovný pomer, dohody), kolektívne pracovnoprávne vzťahy (kolektívne vyjednávanie, kolektívne zmluvy, štrajk a výluka) a vzťahy súvisiace s BOZP. Pracovnoprávne vzťahy sú upravené najmä Zákonníkom práce a osobitnými predpismi.\n\nPríklad:\nGrafik pracuje denne od 9:00 do 17:00 podľa pokynov nadriadeného, ale má živnosť. Ide o závislú prácu, a teda o pracovnoprávny vzťah, ktorý má byť upravený pracovnou zmluvou.\n\nKľúčové slová:\npracovný pomer; dohody; kolektívne vzťahy; BOZP; závislá práca; práva a povinnosti.\n\nZapamätaj si:\n- Základným pracovnoprávnym vzťahom je pracovný pomer.\n- Rozhodujúci je faktický výkon práce, nie názov zmluvy.\n- Kolektívne pracovnoprávne vzťahy zahŕňajú vyjednávanie, kolektívne zmluvy, štrajk a výluku.\n- BOZP je súčasťou pracovnoprávnych vzťahov.\n- Pracovnoprávne vzťahy vznikajú pri výkone závislej práce.",
+  "summary": "Pracovnoprávne vzťahy sú právne vzťahy vznikajúce pri výkone závislej práce medzi zamestnancom a zamestnávateľom. Ich základom je pracovný pomer, ktorý je najtypickejšou formou realizácie závislej práce podľa § 1 ods. 2 Zákonníka práce. Pracovnoprávne vzťahy zahŕňajú aj dohody o prácach vykonávaných mimo pracovného pomeru, kolektívne pracovnoprávne vzťahy, vzťahy súvisiace s BOZP a ďalšie vzťahy priamo súvisiace s výkonom závislej práce.\n\nZávislá práca sa vyznačuje osobným výkonom práce, podriadenosťou zamestnanca, pokynovou právomocou zamestnávateľa, vykonávaním práce v mene zamestnávateľa a za mzdu. Obsahom pracovnoprávnych vzťahov sú práva a povinnosti účastníkov – zamestnávateľ je povinný prideľovať prácu, platiť mzdu, zabezpečiť bezpečnosť a ochranu zdravia pri práci, vytvárať pracovné podmienky a dodržiavať zásadu rovnakého zaobchádzania. Zamestnanec je povinný vykonávať prácu osobne, riadne, včas, dodržiavať pracovnú disciplínu a chrániť majetok zamestnávateľa.\n\nDruhy pracovnoprávnych vzťahov zahŕňajú individuálne pracovnoprávne vzťahy (pracovný pomer, dohody), kolektívne pracovnoprávne vzťahy (kolektívne vyjednávanie, kolektívne zmluvy, štrajk, výluka) a vzťahy súvisiace s BOZP. Pracovnoprávne vzťahy sú upravené najmä Zákonníkom práce, ale aj osobitnými predpismi (napr. zákon o inšpekcii práce, zákon o kolektívnom vyjednávaní, zákon o službách zamestnanosti).\n\nPríklad:\nGrafik pracuje denne podľa pokynov nadriadeného, v pevne určenom pracovnom čase, používa pracovné prostriedky zamestnávateľa a je kontrolovaný. Hoci má živnosť, ide o závislú prácu, ktorá musí byť vykonávaná v pracovnoprávnom vzťahu.\n\nKľúčové slová:\nzávislá práca; pracovný pomer; dohody; kolektívne vzťahy; BOZP; práva a povinnosti; podriadenosť.\n\nZapamätaj si:\n- Pracovnoprávne vzťahy vznikajú pri výkone závislej práce.\n- Základným pracovnoprávnym vzťahom je pracovný pomer.\n- Rozhodujúci je faktický výkon práce, nie názov zmluvy.\n- Kolektívne vzťahy zahŕňajú vyjednávanie, kolektívne zmluvy, štrajk a výluku.\n- BOZP je neoddeliteľnou súčasťou pracovnoprávnych vzťahov.",
 
   "quiz": [
     {
@@ -12,7 +12,7 @@
       "options": ["Dohoda o brigádnickej práci študentov", "Pracovný pomer", "Mandátna zmluva"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Pracovný pomer je základným pracovnoprávnym vzťahom.",
+        "correct": "Správne. Pracovný pomer je základným pracovnoprávnym vzťahom podľa Zákonníka práce.",
         "wrong": "Nesprávne. Dohody sú len osobitné formy a mandátna zmluva je občianskoprávna."
       }
     },
@@ -21,8 +21,8 @@
       "options": ["Úplná autonómia pracovníka", "Podriadenosť zamestnanca", "Výkon práce vo vlastnom mene"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podriadenosť je základným znakom závislej práce.",
-        "wrong": "Nesprávne. Autonómia a výkon vo vlastnom mene patria podnikaniu."
+        "correct": "Správne. Podriadenosť je jedným zo základných znakov závislej práce podľa § 1 ods. 2 ZP.",
+        "wrong": "Nesprávne. Autonómia a výkon vo vlastnom mene sú znaky podnikania."
       }
     },
     {
@@ -39,7 +39,7 @@
       "options": ["Pracovná zmluva", "Kolektívne vyjednávanie", "Dohoda o vykonaní práce"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Kolektívne vyjednávanie je kolektívny pracovnoprávny vzťah.",
+        "correct": "Správne. Kolektívne vyjednávanie je kolektívny pracovnoprávny vzťah upravený zákonom o kolektívnom vyjednávaní.",
         "wrong": "Nesprávne. Pracovná zmluva a dohody sú individuálne vzťahy."
       }
     },
@@ -48,18 +48,18 @@
       "options": ["Pracovnoprávne vzťahy sú vždy občianskoprávne", "Pracovnoprávne vzťahy vznikajú pri výkone závislej práce", "Pracovnoprávne vzťahy sa nevzťahujú na BOZP"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Pracovnoprávne vzťahy vznikajú pri výkone závislej práce.",
+        "correct": "Správne. Pracovnoprávne vzťahy vznikajú pri výkone závislej práce podľa § 1 ods. 2 ZP.",
         "wrong": "Nesprávne. BOZP je súčasťou pracovnoprávnych vzťahov."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Pracovnoprávny vzťah", "definition": "Vzťah medzi zamestnancom a zamestnávateľom pri výkone závislej práce." },
-    { "term": "Individuálne pracovnoprávne vzťahy", "definition": "Vzťahy medzi zamestnancom a zamestnávateľom, napr. pracovný pomer." },
-    { "term": "Kolektívne pracovnoprávne vzťahy", "definition": "Vzťahy medzi odbormi a zamestnávateľom, napr. kolektívne vyjednávanie." },
-    { "term": "Obsah pracovnoprávnych vzťahov", "definition": "Práva a povinnosti účastníkov, napr. mzda, BOZP, pracovná disciplína." },
-    { "term": "Závislá práca", "definition": "Osobný výkon práce v podriadenosti zamestnávateľovi za mzdu." }
+    { "term": "Pracovnoprávny vzťah", "definition": "Vzťah medzi zamestnancom a zamestnávateľom pri výkone závislej práce podľa § 1 ods. 2 ZP." },
+    { "term": "Individuálne pracovnoprávne vzťahy", "definition": "Vzťahy medzi zamestnancom a zamestnávateľom, najmä pracovný pomer a dohody." },
+    { "term": "Kolektívne pracovnoprávne vzťahy", "definition": "Vzťahy medzi odbormi a zamestnávateľom – kolektívne vyjednávanie, kolektívne zmluvy, štrajk, výluka." },
+    { "term": "Obsah pracovnoprávnych vzťahov", "definition": "Práva a povinnosti účastníkov – mzda, BOZP, pracovná disciplína, pokynová právomoc." },
+    { "term": "Závislá práca", "definition": "Osobný výkon práce v podriadenosti zamestnávateľovi, podľa jeho pokynov, za mzdu." }
   ],
 
   "cases": [
@@ -68,7 +68,7 @@
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Grafik pracuje pre firmu denne od 9:00 do 17:00, podľa pokynov nadriadeného, ale má živnosť.",
+          "question": "Zadanie: Grafik pracuje pre firmu denne od 9:00 do 17:00 podľa pokynov nadriadeného, ale má živnosť.",
           "options": [],
           "correct": 0
         },
@@ -77,7 +77,7 @@
           "options": ["Áno, ide o závislú prácu", "Nie, je to obchodný vzťah", "Len ak má pracovnú zmluvu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Faktický výkon práce má znaky závislej práce.",
+            "correct": "Správne. Faktický výkon práce má znaky závislej práce podľa § 1 ods. 2 ZP.",
             "wrong": "Nesprávne. Forma zmluvy nie je rozhodujúca."
           }
         },
@@ -86,7 +86,7 @@
           "options": ["Podľa faktického výkonu práce", "Podľa názvu zmluvy", "Podľa toho, čo chce zamestnávateľ"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Rozhodujúci je faktický výkon práce.",
+            "correct": "Správne. Rozhodujúci je faktický výkon práce, nie názov zmluvy.",
             "wrong": "Nesprávne. Názov zmluvy nie je rozhodujúci."
           }
         },
@@ -111,7 +111,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnávateľ prideľuje zamestnancovi prácu, ale odmieta mu vyplatiť mzdu s odôvodnením, že „firma má finančné problémy“.",
+          "question": "Zadanie: Zamestnávateľ prideľuje zamestnancovi prácu, ale odmieta mu vyplatiť mzdu s odôvodnením, že firma má finančné problémy.",
           "options": [],
           "correct": 0
         },
@@ -120,7 +120,7 @@
           "options": ["Áno", "Nie", "Len pri plnom úväzku"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Mzda je základným právom zamestnanca.",
+            "correct": "Správne. Mzda je základným právom zamestnanca podľa § 119 ZP.",
             "wrong": "Nesprávne. Úväzok nie je rozhodujúci."
           }
         },
