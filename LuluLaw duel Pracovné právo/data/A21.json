@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "pracovná zmluva", "zmena pracovnej zmluvy", "preradenie"],
 
-  "summary": "Zmena pracovnej zmluvy je možná len na základe písomnej dohody medzi zamestnancom a zamestnávateľom. Týka sa najmä podstatných náležitostí pracovnej zmluvy – druhu práce, miesta výkonu práce, dňa nástupu a mzdových podmienok. Zamestnávateľ nemôže jednostranne meniť pracovnú zmluvu, s výnimkou preradenia na inú prácu podľa zákona.\n\nPreradenie môže byť povinné (napr. zo zdravotných dôvodov, tehotenstvo, mladiství, rozhodnutie súdu, dočasná nespôsobilosť) alebo fakultatívne (len so súhlasom zamestnanca). Povinné preradenie je jednostranné a zamestnanec ho musí akceptovať. Pri preradení musí zamestnávateľ rešpektovať kvalifikáciu, zdravotný stav a zásadu rovnakého zaobchádzania. Ak zamestnanec odmietne povinné preradenie, môže to byť dôvod na skončenie pracovného pomeru.\n\nPríklad:\nZamestnanec dostane lekársky posudok, že nemôže ďalej vykonávať doterajšiu prácu. Zamestnávateľ je povinný preradiť ho na inú vhodnú prácu. Ak taká práca neexistuje, môže ísť o výpovedný dôvod.\n\nKľúčové slová:\nzmena pracovnej zmluvy; preradenie; povinné preradenie; zdravotné dôvody; tehotenstvo; kvalifikácia.\n\nZapamätaj si:\n- Zmena pracovnej zmluvy je možná len písomnou dohodou strán.\n- Povinné preradenie je jednostranné a zamestnanec ho musí akceptovať.\n- Preradenie musí rešpektovať zdravotný stav a kvalifikáciu zamestnanca.\n- Ak zamestnávateľ nemá vhodnú prácu, môže ísť o výpovedný dôvod.\n- Preradenie aj zmena zmluvy musia byť riadne zdokumentované.",
+  "summary": "Zmena pracovnej zmluvy predstavuje zmenu obsahu pracovného pomeru a je možná len na základe písomnej dohody medzi zamestnancom a zamestnávateľom. Ide najmä o zmenu druhu práce, miesta výkonu práce, pracovného času či mzdy. Zamestnávateľ nemôže jednostranne meniť pracovnú zmluvu, s výnimkou preradenia na inú prácu podľa § 55 Zákonníka práce.\n\nPreradenie je jednostranný právny úkon zamestnávateľa, ktorý môže nastať len v zákonom stanovených prípadoch. Povinné preradenie sa vyžaduje najmä zo zdravotných dôvodov, pri tehotenstve, pri chorobe z povolania, pri karanténnych opatreniach alebo na základe rozhodnutia súdu. Fakultatívne preradenie je možné len v mimoriadnych situáciách, napr. pri odvracaní následkov havárie.\n\nPreradenie musí byť vhodné vzhľadom na zdravotný stav, schopnosti a kvalifikáciu zamestnanca. Ak preradenie spôsobí zmenu pracovnej zmluvy, zamestnávateľ musí vydať písomné oznámenie o dôvode a trvaní preradenia. Po odpadnutí dôvodov preradenia je povinný zaradiť zamestnanca späť na pôvodnú prácu.\n\nPríklad:\nZamestnanec dostane lekársky posudok, že doterajšiu prácu nesmie vykonávať. Zamestnávateľ je povinný preradiť ho na inú vhodnú prácu. Ak taká práca neexistuje, môže ísť o výpovedný dôvod podľa § 63 ods. 1 písm. c).\n\nKľúčové slová:\nzmena pracovnej zmluvy; preradenie; povinné preradenie; zdravotné dôvody; tehotenstvo; kvalifikácia; pracovná zmluva.\n\nZapamätaj si:\n- Zmena pracovnej zmluvy je možná len písomnou dohodou strán.\n- Preradenie je výnimka zo zásady zmluvnej slobody.\n- Povinné preradenie je jednostranné a zamestnanec ho musí akceptovať.\n- Preradenie musí byť vhodné vzhľadom na zdravotný stav a kvalifikáciu.\n- Po odpadnutí dôvodov preradenia musí byť zamestnanec zaradený späť na pôvodnú prácu.",
 
   "quiz": [
     {
@@ -77,8 +77,8 @@
           "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí ústne"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Miesto výkonu práce je podstatná náležitosť zmluvy a vyžaduje písomnú dohodu.",
-            "wrong": "Nesprávne. Ústny súhlas nestačí."
+            "correct": "Miesto výkonu práce je podstatná náležitosť zmluvy a vyžaduje písomnú dohodu.",
+            "wrong": "Ústny súhlas nestačí."
           }
         },
         {
@@ -90,8 +90,8 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zmena miesta výkonu práce musí byť písomne dohodnutá.",
-            "wrong": "Nesprávne. Jednostranný presun je neplatný."
+            "correct": "Zmena miesta výkonu práce musí byť písomne dohodnutá.",
+            "wrong": "Jednostranný presun je neplatný."
           }
         },
         {
@@ -99,8 +99,8 @@
           "options": ["Zamestnávateľ môže dať výpoveď z organizačných dôvodov", "Zamestnávateľ môže presunúť aj tak", "Zamestnanec musí súhlasiť"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ak zamestnanec nesúhlasí, zamestnávateľ môže situáciu riešiť výpoveďou.",
-            "wrong": "Nesprávne. Presun bez dohody je neplatný."
+            "correct": "Ak zamestnanec nesúhlasí, zamestnávateľ môže situáciu riešiť výpoveďou.",
+            "wrong": "Presun bez dohody je neplatný."
           }
         }
       ]
@@ -111,7 +111,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec dostal lekársky posudok, že nemôže ďalej vykonávať doterajšiu prácu. Zamestnávateľ ho chce preradiť na inú pozíciu.",
+          "question": "Zadanie: Zamestnanec dostal lekársky posudok, že nemôže ďalej vykonávať doterajšiu prácu.",
           "options": [],
           "correct": 0
         },
@@ -120,8 +120,8 @@
           "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zo zdravotných dôvodov je preradenie povinné.",
-            "wrong": "Nesprávne. Súhlas zamestnanca nie je potrebný."
+            "correct": "Zo zdravotných dôvodov je preradenie povinné.",
+            "wrong": "Súhlas zamestnanca nie je potrebný."
           }
         },
         {
@@ -129,8 +129,8 @@
           "options": ["Áno, musí zodpovedať zdravotnému stavu a kvalifikácii", "Nie", "Len ak to chce zamestnanec"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí rešpektovať zdravotný stav aj kvalifikáciu.",
-            "wrong": "Nesprávne. Preradenie nemôže byť svojvoľné."
+            "correct": "Zamestnávateľ musí rešpektovať zdravotný stav aj kvalifikáciu.",
+            "wrong": "Preradenie nemôže byť svojvoľné."
           }
         },
         {
@@ -138,8 +138,8 @@
           "options": ["Môže dať výpoveď podľa § 63 ods. 1 písm. c)", "Musí zamestnanca ponechať bez práce", "Zamestnanec musí pracovať aj tak"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ak nie je vhodná práca, môže ísť o výpovedný dôvod.",
-            "wrong": "Nesprávne. Zamestnanec nemôže vykonávať zakázanú prácu."
+            "correct": "Ak nie je vhodná práca, môže ísť o výpovedný dôvod.",
+            "wrong": "Zamestnanec nemôže vykonávať zakázanú prácu."
           }
         }
       ]
