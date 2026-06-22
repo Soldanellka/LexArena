@@ -4,21 +4,21 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "subjekty", "pracovnoprávna subjektivita", "zamestnanec", "zamestnávateľ"],
 
-  "summary": "\nSubjekty pracovného práva sú osoby, ktoré vstupujú do pracovnoprávnych vzťahov ako nositelia práv a povinností. Základnými subjektmi sú zamestnanec a zamestnávateľ. Zamestnancom je fyzická osoba vykonávajúca závislú prácu v pracovnoprávnom vzťahu. Zamestnávateľom môže byť fyzická alebo právnická osoba, ktorá zamestnáva zamestnancov.\n\nPracovnoprávna subjektivita znamená spôsobilosť mať pracovnoprávne práva a povinnosti (spôsobilosť na práva) a schopnosť vlastnými úkonmi tieto práva nadobúdať a vykonávať (spôsobilosť na právne úkony). Zamestnanec nadobúda spôsobilosť na pracovnoprávne úkony spravidla dovŕšením 15 rokov a ukončením povinnej školskej dochádzky. Zamestnávateľ nadobúda subjektivitu okamihom vzniku – napríklad zápisom do obchodného registra alebo vznikom SZČO.\n\nOsobitnými subjektmi pracovného práva sú odborové organizácie, zamestnanecké rady, zástupcovia zamestnancov, orgány inšpekcie práce a Sociálna poisťovňa. Subjektivita je základným predpokladom platného vzniku pracovnoprávnych vzťahov.\n\nPríklad:\n14-ročný žiak chce uzavrieť pracovnú zmluvu. Nemá pracovnoprávnu subjektivitu, preto pracovná zmluva nemôže vzniknúť. Môže však vykonávať len ľahké práce podľa osobitných predpisov.\n\nKľúčové slová:\nzamestnanec; zamestnávateľ; subjektivita; spôsobilosť na právne úkony; osobitné subjekty.\n\nZapamätaj si:\n- Základnými subjektmi pracovného práva sú zamestnanec a zamestnávateľ.\n- Zamestnanec nadobúda subjektivitu dovŕšením 15 rokov a ukončením povinnej školskej dochádzky.\n- Zamestnávateľom môže byť fyzická aj právnická osoba.\n- Subjektivita je nevyhnutná pre platný vznik pracovnoprávnych vzťahov.\n- Osobitné subjekty (odbory, zamestnanecké rady, inšpekcia práce) zohrávajú kontrolnú a zastupiteľskú úlohu.",
+  "summary": "Subjekty pracovného práva sú nositelia práv a povinností v pracovnoprávnych vzťahoch. Základnými subjektmi sú zamestnanec a zamestnávateľ. Zamestnancom je fyzická osoba vykonávajúca závislú prácu podľa pokynov zamestnávateľa za mzdu. Zamestnávateľom je fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca.\n\nPracovnoprávna subjektivita zahŕňa spôsobilosť mať pracovnoprávne práva a povinnosti (pasívna zložka), spôsobilosť vlastnými úkonmi tieto práva nadobúdať (aktívna zložka), deliktuálnu spôsobilosť a procesnú spôsobilosť. Zamestnanec nadobúda pracovnoprávnu subjektivitu dovŕšením 15 rokov a ukončením povinnej školskej dochádzky. Zamestnávateľ nadobúda subjektivitu vznikom – napr. zápisom do obchodného registra alebo vznikom SZČO.\n\nOsobitnými subjektmi pracovného práva sú odborové organizácie, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP a štát. Tieto subjekty vykonávajú kontrolnú, informačnú a zastupiteľskú funkciu.\n\nPríklad:\n14-ročná osoba nemôže uzavrieť pracovnú zmluvu, pretože nemá pracovnoprávnu subjektivitu. Môže však vykonávať len ľahké práce podľa osobitných predpisov.\n\nKľúčové slová:\nzamestnanec; zamestnávateľ; subjektivita; spôsobilosť na právne úkony; zástupcovia zamestnancov.\n\nZapamätaj si:\n- Základnými subjektmi pracovného práva sú zamestnanec a zamestnávateľ.\n- Zamestnanec nadobúda subjektivitu dovŕšením 15 rokov a ukončením povinnej školskej dochádzky.\n- Zamestnávateľom môže byť fyzická aj právnická osoba.\n- Subjektivita je nevyhnutná pre platný vznik pracovnoprávnych vzťahov.\n- Osobitné subjekty (odbory, zamestnanecké rady, BOZP) vykonávajú kontrolnú a zastupiteľskú funkciu.",
 
   "quiz": [
     {
-      "question": "Kto je základným subjektom pracovného práva?",
-      "options": ["Zamestnanec a zamestnávateľ", "Súd", "Úrad práce"],
+      "question": "Kto sú základné subjekty pracovného práva?",
+      "options": ["Zamestnanec a zamestnávateľ", "Súd a inšpektorát práce", "Odbory a zamestnanecká rada"],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Základnými subjektmi sú zamestnanec a zamestnávateľ.",
-        "wrong": "Nesprávne. Súd ani úrad práce nie sú účastníkmi pracovnoprávneho vzťahu."
+        "wrong": "Nesprávne. Ostatné subjekty sú len osobitné alebo kontrolné orgány."
       }
     },
     {
       "question": "Kedy vzniká pracovnoprávna subjektivita zamestnanca?",
-      "options": ["Dovŕšením 18 rokov", "Dovŕšením 15 rokov a ukončením povinnej školskej dochádzky", "Po podpise pracovnej zmluvy"],
+      "options": ["Dovŕšením 18 rokov", "Dovŕšením 15 rokov a ukončením povinnej školskej dochádzky", "Podpisom pracovnej zmluvy"],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Musia byť splnené obe podmienky.",
@@ -27,7 +27,7 @@
     },
     {
       "question": "Kto môže byť zamestnávateľom?",
-      "options": ["Len právnická osoba", "Len fyzická osoba", "Fyzická aj právnická osoba"],
+      "options": ["Len právnická osoba", "Len fyzická osoba – podnikateľ", "Fyzická aj právnická osoba"],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Zamestnávateľom môže byť fyzická aj právnická osoba.",
@@ -36,7 +36,7 @@
     },
     {
       "question": "Čo znamená spôsobilosť na právne úkony v pracovnom práve?",
-      "options": ["Možnosť mať práva", "Možnosť vlastnými úkonmi nadobúdať práva a povinnosti", "Možnosť byť členom odborov"],
+      "options": ["Možnosť mať práva", "Schopnosť vlastnými úkonmi nadobúdať práva a povinnosti", "Možnosť byť členom odborov"],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o schopnosť konať vlastnými úkonmi.",
@@ -55,11 +55,11 @@
   ],
 
   "tiles": [
-    { "term": "Zamestnanec", "definition": "Fyzická osoba vykonávajúca závislú prácu v pracovnoprávnom vzťahu." },
-    { "term": "Zamestnávateľ", "definition": "Fyzická alebo právnická osoba, ktorá zamestnáva zamestnancov." },
+    { "term": "Zamestnanec", "definition": "Fyzická osoba vykonávajúca závislú prácu podľa pokynov zamestnávateľa za mzdu." },
+    { "term": "Zamestnávateľ", "definition": "Fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca." },
     { "term": "Pracovnoprávna subjektivita", "definition": "Spôsobilosť mať pracovnoprávne práva a povinnosti a konať vlastnými úkonmi." },
     { "term": "Spôsobilosť na právne úkony", "definition": "Schopnosť vlastnými úkonmi nadobúdať pracovnoprávne práva a povinnosti." },
-    { "term": "Osobitné subjekty", "definition": "Odbory, zamestnanecké rady, inšpekcia práce, Sociálna poisťovňa." }
+    { "term": "Zástupcovia zamestnancov", "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP." }
   ],
 
   "cases": [
@@ -82,7 +82,7 @@
           }
         },
         {
-          "question": "Krok 2: Môže pracovať na inú formu?",
+          "question": "Krok 2: Môže pracovať inou formou?",
           "options": ["Áno, môže vykonávať ľahké práce podľa osobitných predpisov", "Nie, vôbec nemôže pracovať", "Môže pracovať na plný úväzok"],
           "correct": 0,
           "explanation": {
@@ -107,11 +107,11 @@
     },
 
     {
-      "title": "Prípad 2 – Kto je zamestnávateľ?",
+      "title": "Prípad 2 – Kto môže byť zamestnávateľ?",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Skupina troch kamarátov prevádzkuje e-shop bez založenia firmy. Chcú prijať zamestnanca.",
+          "question": "Zadanie: Traja kamaráti prevádzkujú e-shop bez založenia firmy a chcú prijať zamestnanca.",
           "options": [],
           "correct": 0
         },
