@@ -2,17 +2,17 @@
   "id": "10. B",
   "title": "Okamžité skončenie pracovného pomeru",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "skončenie pracovného pomeru", "okamžité skončenie"],
+  "tags": ["pracovné právo", "skončenie pracovného pomeru", "okamžité skončenie", "§ 68 ZP", "§ 69 ZP"],
 
-  "summary": "\nOkamžité skončenie pracovného pomeru je najprísnejší spôsob skončenia pracovného pomeru a možno ho použiť len vo výnimočných prípadoch presne určených zákonom. Ide o jednostranný právny úkon, ktorý musí byť písomný, doručený a musí obsahovať presné skutkové vymedzenie dôvodu.\n\nZamestnávateľ môže okamžite skončiť pracovný pomer len v dvoch prípadoch: ak bol zamestnanec právoplatne odsúdený za úmyselný trestný čin alebo ak porušil pracovnú disciplínu obzvlášť hrubým spôsobom.\n\nZamestnanec môže okamžite skončiť pracovný pomer, ak podľa lekárskeho posudku nemôže ďalej vykonávať prácu bez vážneho ohrozenia zdravia a zamestnávateľ mu neumožnil inú vhodnú prácu, alebo ak mu zamestnávateľ nevyplatil mzdu do 15 dní po splatnosti.\n\nOkamžité skončenie musí byť urobené do dvoch mesiacov odo dňa, keď sa oprávnená strana o dôvode dozvedela. Dôvod nemožno dodatočne meniť ani dopĺňať. Neplatné okamžité skončenie zakladá nárok na náhradu mzdy.\n\nPríklad:\nZamestnávateľ nevyplatil zamestnancovi mzdu ani 20 dní po splatnosti. Zamestnanec môže okamžite skončiť pracovný pomer a má nárok na náhradu mzdy najmenej za 2 mesiace.\n\nKľúčové slová:\nokamžité skončenie; obzvlášť hrubé porušenie disciplíny; nevyplatenie mzdy; písomná forma; lehota 2 mesiacov.\n\nZapamätaj si:\n- Okamžité skončenie je možné len vo výnimočných prípadoch.\n- Musí byť písomné, doručené a s presným skutkovým dôvodom.\n- Zamestnávateľ môže skončiť pomer len pri obzvlášť hrubom porušení alebo odsúdení.\n- Zamestnanec môže skončiť pomer pri ohrození zdravia alebo nevyplatení mzdy.\n- Lehota na uplatnenie je 2 mesiace od zistenia dôvodu.",
+  "summary": "Okamžité skončenie pracovného pomeru je najprísnejší spôsob skončenia pracovného pomeru. Ide o jednostranný právny úkon, ktorý pôsobí okamžite – pracovný pomer končí dňom doručenia písomného oznámenia druhému účastníkovi. Použiť ho možno len vo výnimočných prípadoch presne určených zákonom (§ 68 – 70 ZP). Úkon musí byť písomný, doručený a dôvod musí byť skutkovo presne vymedzený tak, aby ho nebolo možné zameniť s iným. Dôvod nemožno dodatočne meniť ani dopĺňať.\n\nZamestnávateľ môže okamžite skončiť pracovný pomer len v dvoch prípadoch: ak bol zamestnanec právoplatne odsúdený za úmyselný trestný čin alebo ak závažne porušil pracovnú disciplínu. Zamestnanec môže okamžite skončiť pracovný pomer, ak mu zamestnávateľ nevyplatil mzdu do 15 dní po splatnosti, ak podľa lekárskeho posudku nemôže ďalej vykonávať prácu bez vážneho ohrozenia zdravia a zamestnávateľ ho nepreradil, alebo ak je bezprostredne ohrozený jeho život či zdravie.\n\nOkamžité skončenie možno uplatniť len v zákonných lehotách: zamestnávateľ do 2 mesiacov od zistenia dôvodu (najneskôr do 1 roka), zamestnanec do 1 mesiaca od zistenia dôvodu. Neplatné okamžité skončenie zakladá nárok na náhradu mzdy.\n\nPríklad:\nZamestnávateľ nevyplatil zamestnancovi mzdu ani 20 dní po splatnosti. Zamestnanec môže okamžite skončiť pracovný pomer a má nárok na náhradu mzdy za 2 mesiace.\n\nKľúčové slová:\nokamžité skončenie; obzvlášť hrubé porušenie disciplíny; úmyselný trestný čin; nevyplatenie mzdy; písomná forma; doručenie; prekluzívna lehota.\n\nZapamätaj si:\n- Okamžité skončenie je mimoriadny spôsob skončenia pracovného pomeru.\n- Musí byť písomné, doručené a dôvod musí byť presne skutkovo vymedzený.\n- Zamestnávateľ môže skončiť pomer len pri úmyselnom trestnom čine alebo závažnom porušení disciplíny.\n- Zamestnanec môže skončiť pomer pri ohrození zdravia alebo nevyplatení mzdy.\n- Lehota je 2 mesiace (zamestnávateľ) a 1 mesiac (zamestnanec).",
 
   "quiz": [
     {
       "question": "Ktorý z nasledujúcich dôvodov oprávňuje zamestnávateľa na okamžité skončenie pracovného pomeru?",
-      "options": ["Sústavné menej závažné porušenia disciplíny", "Obzvlášť hrubé porušenie pracovnej disciplíny", "Nesúhlas zamestnanca s nadčasom"],
+      "options": ["Sústavné menej závažné porušenia disciplíny", "Závažné porušenie pracovnej disciplíny", "Nesúhlas zamestnanca s nadčasom"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ môže skončiť pracovný pomer okamžite len pri obzvlášť hrubom porušení.",
+        "correct": "Správne. Zamestnávateľ môže okamžite skončiť pracovný pomer len pri závažnom porušení pracovnej disciplíny.",
         "wrong": "Nesprávne. Menej závažné porušenia ani nesúhlas s nadčasom nestačia."
       }
     },
@@ -35,11 +35,11 @@
       }
     },
     {
-      "question": "V akej lehote možno uplatniť okamžité skončenie?",
+      "question": "V akej lehote môže zamestnávateľ uplatniť okamžité skončenie?",
       "options": ["Do 2 mesiacov od zistenia dôvodu", "Do 6 mesiacov", "Kedykoľvek"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Lehota je 2 mesiace od zistenia dôvodu.",
+        "correct": "Správne. Lehota je 2 mesiace od zistenia dôvodu, najneskôr 1 rok od jeho vzniku.",
         "wrong": "Nesprávne. Lehota je striktne obmedzená."
       }
     },
@@ -55,11 +55,11 @@
   ],
 
   "tiles": [
-    { "term": "Obzvlášť hrubé porušenie disciplíny", "definition": "Najzávažnejšie porušenie povinností umožňujúce okamžité skončenie." },
+    { "term": "Závažné porušenie disciplíny", "definition": "Najzávažnejšie porušenie povinností umožňujúce okamžité skončenie pracovného pomeru." },
+    { "term": "Úmyselný trestný čin", "definition": "Právoplatné odsúdenie zamestnanca zakladá dôvod na okamžité skončenie." },
     { "term": "Nevyplatenie mzdy", "definition": "Zákonný dôvod pre okamžité skončenie zo strany zamestnanca." },
-    { "term": "Lehota 2 mesiacov", "definition": "Subjektívna lehota na uplatnenie okamžitého skončenia." },
-    { "term": "Písomná forma", "definition": "Okamžité skončenie musí byť písomné a doručené." },
-    { "term": "Náhrada mzdy", "definition": "Nárok pri neplatnom okamžitom skončení pracovného pomeru." }
+    { "term": "Prekluzívna lehota", "definition": "Lehota, po ktorej uplynutí právo na okamžité skončenie zaniká." },
+    { "term": "Písomná forma", "definition": "Okamžité skončenie musí byť písomné a doručené." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Nie", "Áno", "Len ak zamestnávateľ tak rozhodne"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Opakované meškanie je menej závažné porušenie, nie obzvlášť hrubé.",
+            "correct": "Správne. Opakované meškanie je menej závažné porušenie, nie dôvod na okamžité skončenie.",
             "wrong": "Nesprávne. Zamestnávateľ nemôže svojvoľne určovať závažnosť."
           }
         },
@@ -138,8 +138,8 @@
           "options": ["Áno, najmenej za 2 mesiace", "Nie", "Len ak podá žalobu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnanec má nárok na náhradu mzdy najmenej za 2 mesiace.",
-            "wrong": "Nesprávne. Nárok vzniká automaticky zo zákona."
+            "correct": "Správne. Nárok vzniká zo zákona a patrí najmenej za 2 mesiace.",
+            "wrong": "Nesprávne. Žaloba nie je podmienkou vzniku nároku."
           }
         }
       ]
