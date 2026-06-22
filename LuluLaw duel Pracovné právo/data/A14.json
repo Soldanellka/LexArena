@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "materská dovolenka", "otcovská dovolenka", "rodičovská dovolenka"],
 
-  "summary": "Materská, otcovská a rodičovská dovolenka sú pracovnoprávne inštitúty určené na ochranu rodičovstva a starostlivosti o dieťa. Materská dovolenka trvá spravidla 34 týždňov (osamelé matky 37 týždňov, pri viacpočetných pôrodoch 43 týždňov) a začína sa 6 až 8 týždňov pred pôrodom. Počas materskej dovolenky patrí matke materské zo Sociálnej poisťovne. Otcovská dovolenka trvá 28 týždňov, pričom prvé 2 týždne po pôrode sú osobitným nárokom otca. Rodičovská dovolenka nadväzuje na materskú alebo otcovskú dovolenku a poskytuje sa do 3 rokov veku dieťaťa, resp. do 6 rokov pri dlhodobo nepriaznivom zdravotnom stave dieťaťa. Počas rodičovskej dovolenky patrí rodičovi rodičovský príspevok. Zamestnávateľ je povinný poskytnúť dovolenku na žiadosť rodiča a chrániť pracovné miesto počas materskej a rodičovskej dovolenky. Po návrate má rodič právo na pôvodnú alebo inú vhodnú prácu.\n\nPríklad:\nMatka čerpá materskú dovolenku 34 týždňov. Po jej skončení požiada o rodičovskú dovolenku do 3 rokov dieťaťa. Zamestnávateľ jej musí vyhovieť a po návrate jej musí ponúknuť pôvodnú alebo inú vhodnú prácu.\n\nKľúčové slová:\nmaterská dovolenka; otcovská dovolenka; rodičovská dovolenka; ochranná doba; návrat do práce.\n\nZapamätaj si:\n- Materská dovolenka trvá spravidla 34 týždňov.\n- Otcovská dovolenka trvá 28 týždňov, z toho prvé 2 týždne sú osobitným nárokom.\n- Rodičovská dovolenka je do 3 rokov dieťaťa (do 6 rokov pri zdravotných problémoch).\n- Zamestnávateľ nemôže odmietnuť materskú, otcovskú ani rodičovskú dovolenku.\n- Po návrate má rodič právo na pôvodnú alebo inú vhodnú prácu.",
+  "summary": "Materská, otcovská a rodičovská dovolenka sú pracovnoprávne inštitúty určené na ochranu rodičovstva. Materská dovolenka patrí žene v súvislosti s pôrodom a starostlivosťou o dieťa. Trvá 34 týždňov, osamelej žene 37 týždňov a pri viacpočetnom pôrode 43 týždňov. Začína sa spravidla 6 týždňov pred pôrodom (najskôr 8 týždňov). Ak sa dieťa narodí mŕtve, materská dovolenka trvá 14 týždňov. Mužovi patrí rodičovská dovolenka v rovnakom rozsahu ako materská dovolenka, ak sa stará o narodené dieťa.\n\nOtcovská dovolenka patrí mužovi odo dňa narodenia dieťaťa v trvaní 28 týždňov, osamelému mužovi 31 týždňov a pri viacpočetných deťoch 37 týždňov. Prvých 14 dní po pôrode je osobitný nárok otca.\n\nRodičovská dovolenka podľa § 166 ods. 2 sa poskytuje žene alebo mužovi až do troch rokov veku dieťaťa, resp. do šiestich rokov pri dlhodobo nepriaznivom zdravotnom stave dieťaťa. Na žiadosť rodiča možno nevyčerpanú časť rodičovskej dovolenky po dohode so zamestnávateľom čerpať až do piatich rokov veku dieťaťa, resp. do ôsmich rokov pri zdravotnom postihnutí.\n\nPri prevzatí dieťaťa do náhradnej starostlivosti patrí materská/rodičovská dovolenka v trvaní 28, 31 alebo 37 týždňov podľa situácie. Zamestnávateľ je povinný zaradiť rodiča po návrate na pôvodnú prácu, alebo ak to nie je možné, na inú vhodnú prácu. Rodič musí oznámiť nástup, prerušenie a skončenie dovolenky najmenej mesiac vopred.\n\nPríklad:\nMatka čerpá materskú dovolenku 34 týždňov. Po jej skončení požiada o rodičovskú dovolenku do troch rokov dieťaťa. Zamestnávateľ jej musí vyhovieť a po návrate ju zaradiť na pôvodnú alebo inú vhodnú prácu.\n\nKľúčové slová:\nmaterská dovolenka; otcovská dovolenka; rodičovská dovolenka; náhradná starostlivosť; ochranná doba; návrat do práce; oznamovacia povinnosť.\n\nZapamätaj si:\n- Materská dovolenka: 34 / 37 / 43 týždňov.\n- Otcovská dovolenka: 28 týždňov (osamelý muž 31 týždňov, viac detí 37 týždňov).\n- Rodičovská dovolenka: do 3 rokov dieťaťa, resp. do 6 rokov pri zdravotnom stave.\n- Po dohode možno nevyčerpanú časť čerpať do 5 alebo 8 rokov.\n- Zamestnávateľ nemôže odmietnuť žiadnu z týchto dovoleniek.\n- Rodič oznamuje nástup a zmeny najmenej mesiac vopred.\n- Po návrate má rodič právo na pôvodnú alebo inú vhodnú prácu.",
 
   "quiz": [
     {
@@ -55,10 +55,10 @@
   ],
 
   "tiles": [
-    { "term": "Materská dovolenka", "definition": "Dovolenka poskytovaná matke spravidla 34 týždňov, s nárokom na materské." },
+    { "term": "Materská dovolenka", "definition": "Dovolenka poskytovaná matke v trvaní 34, 37 alebo 43 týždňov podľa situácie." },
     { "term": "Otcovská dovolenka", "definition": "Dovolenka pre otca v trvaní 28 týždňov, vrátane prvých 14 dní po pôrode." },
     { "term": "Rodičovská dovolenka", "definition": "Dovolenka poskytovaná do 3 rokov veku dieťaťa, resp. do 6 rokov pri zdravotných problémoch." },
-    { "term": "Ochranná doba", "definition": "Obdobie, počas ktorého zamestnávateľ nesmie dať výpoveď, napr. počas materskej dovolenky." },
+    { "term": "Ochranná doba", "definition": "Obdobie, počas ktorého zamestnávateľ nesmie dať výpoveď, napr. počas materskej alebo rodičovskej dovolenky." },
     { "term": "Návrat do práce", "definition": "Rodič má právo na pôvodnú alebo inú vhodnú prácu po skončení dovolenky." }
   ],
 
@@ -67,11 +67,7 @@
       "title": "Prípad 1 – Otec žiada o otcovskú dovolenku",
       "difficulty": "ľahká",
       "steps": [
-        {
-          "question": "Zadanie: Otec žiada o otcovskú dovolenku bezprostredne po narodení dieťaťa. Zamestnávateľ tvrdí, že mu ju nemusí poskytnúť.",
-          "options": [],
-          "correct": 0
-        },
+        { "question": "Zadanie: Otec žiada o otcovskú dovolenku bezprostredne po narodení dieťaťa. Zamestnávateľ tvrdí, že mu ju nemusí poskytnúť.", "options": [], "correct": 0 },
         {
           "question": "Krok 1: Má otec nárok na otcovskú dovolenku?",
           "options": ["Áno", "Nie", "Len ak to schváli odborová organizácia"],
@@ -110,11 +106,7 @@
       "title": "Prípad 2 – Predĺženie rodičovskej dovolenky",
       "difficulty": "stredná",
       "steps": [
-        {
-          "question": "Zadanie: Matka čerpá rodičovskú dovolenku do 3 rokov dieťaťa. Dieťa má zdravotné problémy a potrebuje dlhšiu starostlivosť. Matka žiada o predĺženie dovolenky.",
-          "options": [],
-          "correct": 0
-        },
+        { "question": "Zadanie: Matka čerpá rodičovskú dovolenku do 3 rokov dieťaťa. Dieťa má zdravotné problémy a potrebuje dlhšiu starostlivosť. Matka žiada o predĺženie dovolenky.", "options": [], "correct": 0 },
         {
           "question": "Krok 1: Má matka nárok na predĺženie rodičovskej dovolenky?",
           "options": ["Áno, do 6 rokov dieťaťa", "Nie", "Len ak to schváli lekár zamestnávateľa"],
