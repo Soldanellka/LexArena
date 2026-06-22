@@ -2,23 +2,23 @@
   "id": "12. B",
   "title": "Zodpovednosť zamestnávateľa za škodu – všeobecná charakteristika a druhy",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "zodpovednosť zamestnávateľa", "škoda", "pracovný úraz"],
+  "tags": ["pracovné právo", "zodpovednosť zamestnávateľa", "škoda", "pracovný úraz", "odložené veci", "vnesené veci"],
 
-  "summary": "\nZodpovednosť zamestnávateľa za škodu je osobitná forma zodpovednosti v pracovnom práve, ktorá chráni zamestnanca ako slabšiu stranu pracovnoprávneho vzťahu. Zamestnávateľ zodpovedá za škodu spôsobenú zamestnancovi pri plnení pracovných úloh alebo v priamej súvislosti s nimi. Ide najmä o škodu pri pracovných úrazoch a chorobách z povolania, škodu na odložených veciach, škodu na vnesených veciach a škodu spôsobenú porušením povinností zamestnávateľa.\n\nZodpovednosť je prevažne objektívna – nevyžaduje sa zavinenie zamestnávateľa, pokiaľ zákon neustanovuje inak. Zamestnávateľ sa môže zbaviť zodpovednosti len vo výnimočných prípadoch, najmä ak si zamestnanec škodu spôsobil výlučne sám alebo konal v rozpore s predpismi.\n\nZamestnancovi patrí náhrada skutočnej škody, ušlého zárobku, nákladov liečenia, vecnej škody a pri úrazoch aj náhrada za bolesť a sťaženie spoločenského uplatnenia. Cieľom právnej úpravy je zabezpečiť spravodlivú kompenzáciu a motivovať zamestnávateľa k prevencii.\n\nPríklad:\nZamestnankyni ukradnú kabelku zo zamestnávateľom určenej šatne. Ide o škodu na odložených veciach a zamestnávateľ za ňu zodpovedá.\n\nKľúčové slová:\nobjektívna zodpovednosť; škoda; odložené veci; vnesené veci; náhrada škody.\n\nZapamätaj si:\n- Zodpovednosť zamestnávateľa je prevažne objektívna.\n- Zamestnávateľ zodpovedá za škodu pri úrazoch, chorobách z povolania, odložených a vnesených veciach.\n- Zbavenie sa zodpovednosti je možné len pri výlučnej vine zamestnanca.\n- Zamestnanec má nárok na náhradu skutočnej škody aj ušlého zárobku.\n- Prevencia je základnou povinnosťou zamestnávateľa.",
+  "summary": "Zodpovednosť zamestnávateľa za škodu predstavuje osobitný systém ochrany zamestnanca ako slabšej strany pracovnoprávneho vzťahu. Ide prevažne o objektívnu zodpovednosť – zamestnávateľ zodpovedá bez ohľadu na zavinenie, pokiaľ zákon neustanovuje inak. Zodpovednosť sa člení na všeobecnú (§ 192 ZP) a osobitnú (§ 193 – 198 ZP). Všeobecná zodpovednosť sa uplatní pri škode spôsobenej porušením právnych povinností zamestnávateľa alebo jeho zamestnancov. Osobitná zodpovednosť zahŕňa škodu na odložených veciach, škodu pri odvracaní škody, škodu pri pracovných úrazoch a chorobách z povolania.\n\nZamestnávateľ sa môže zbaviť zodpovednosti celkom alebo sčasti len v zákonom presne určených prípadoch, najmä ak zamestnanec porušil predpisy BOZP, bol pod vplyvom alkoholu alebo konal ľahkomyseľne. Zamestnancovi patrí náhrada skutočnej škody, ušlého zárobku, nákladov liečenia, vecnej škody a pri úrazoch aj náhrada za bolesť a sťaženie spoločenského uplatnenia. Cieľom právnej úpravy je zabezpečiť spravodlivú kompenzáciu a motivovať zamestnávateľa k prevencii.",
 
   "quiz": [
     {
       "question": "Aký typ zodpovednosti nesie zamestnávateľ za škodu pri pracovnom úraze?",
-      "options": ["Subjektívnu", "Objektívnu", "Zmluvnú"],
+      "options": ["Subjektívnu (na základe zavinenia)", "Objektívnu (bez ohľadu na zavinenie)", "Zmluvnú"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zodpovednosť je objektívna, nezávislá od zavinenia.",
-        "wrong": "Nesprávne. Zavinenie sa nevyžaduje."
+        "correct": "Správne. Zodpovednosť za pracovné úrazy je objektívna.",
+        "wrong": "Nesprávne. Zavinenie zamestnávateľa sa nevyžaduje."
       }
     },
     {
       "question": "Kedy zodpovedá zamestnávateľ za škodu na odložených veciach?",
-      "options": ["Len ak ich zamestnanec stratil", "Ak boli odložené na mieste určenom zamestnávateľom", "Len ak ide o pracovné pomôcky"],
+      "options": ["Len ak ide o pracovné pomôcky", "Ak boli odložené na určenom alebo obvyklom mieste", "Len ak ich zamestnávateľ prevzal do úschovy"],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zodpovednosť vzniká pri odložení na určenom alebo obvyklom mieste.",
@@ -26,20 +26,20 @@
       }
     },
     {
-      "question": "Kedy sa môže zamestnávateľ zbaviť zodpovednosti?",
+      "question": "Kedy sa môže zamestnávateľ zbaviť zodpovednosti celkom?",
       "options": ["Ak zamestnanec spôsobil škodu výlučne sám", "Ak zamestnávateľ nemal poistenie", "Ak zamestnanec pracoval nadčas"],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Musí ísť o výlučnú príčinu na strane zamestnanca.",
-        "wrong": "Nesprávne. Poistenie nie je podmienkou."
+        "wrong": "Nesprávne. Poistenie nie je podmienkou zodpovednosti."
       }
     },
     {
-      "question": "Ktorá z nasledujúcich škôd patrí do zodpovednosti zamestnávateľa?",
+      "question": "Ktorá škoda patrí do osobitnej zodpovednosti zamestnávateľa?",
       "options": ["Škoda na vnesených veciach", "Škoda na súkromnom aute mimo práce", "Škoda spôsobená rodinným príslušníkom"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ zodpovedá aj za škodu na vnesených veciach.",
+        "correct": "Správne. Zodpovednosť za vnesené veci je osobitným typom zodpovednosti.",
         "wrong": "Nesprávne. Ostatné prípady zákon nepokrýva."
       }
     },
@@ -48,18 +48,18 @@
       "options": ["Zamestnávateľ zodpovedá len za škodu spôsobenú jeho zavinením", "Zamestnávateľ zodpovedá aj bez zavinenia", "Zamestnávateľ nikdy nezodpovedá za vecnú škodu"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zodpovednosť je objektívna.",
+        "correct": "Správne. Zodpovednosť je prevažne objektívna.",
         "wrong": "Nesprávne. Zavinenie nie je potrebné."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Objektívna zodpovednosť", "definition": "Zodpovednosť bez ohľadu na zavinenie zamestnávateľa." },
-    { "term": "Škoda pri pracovnom úraze", "definition": "Zamestnávateľ zodpovedá za škodu spôsobenú úrazom pri práci." },
-    { "term": "Škoda na odložených veciach", "definition": "Zodpovednosť za veci odložené na určenom alebo obvyklom mieste." },
-    { "term": "Škoda na vnesených veciach", "definition": "Zodpovednosť za veci, ktoré zamestnanec priniesol do práce." },
-    { "term": "Zbavenie sa zodpovednosti", "definition": "Možné len ak zamestnanec spôsobil škodu výlučne sám." }
+    { "term": "Všeobecná zodpovednosť", "definition": "Zodpovednosť za škodu spôsobenú porušením právnych povinností zamestnávateľa alebo jeho zamestnancov." },
+    { "term": "Osobitná zodpovednosť", "definition": "Zodpovednosť za škodu na odložených veciach, pri odvracaní škody, pri pracovných úrazoch a chorobách z povolania." },
+    { "term": "Odložené veci", "definition": "Veci odložené na určenom alebo obvyklom mieste, za ktoré zamestnávateľ zodpovedá." },
+    { "term": "Vnesené veci", "definition": "Veci, ktoré zamestnanec priniesol do práce a používa pri plnení pracovných úloh." },
+    { "term": "Zbavenie zodpovednosti", "definition": "Možné len ak zamestnanec spôsobil škodu výlučne sám alebo konal v rozpore s predpismi." }
   ],
 
   "cases": [
@@ -68,7 +68,7 @@
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Zamestnankyni ukradli kabelku zo šatne určenej zamestnávateľom. Zamestnávateľ tvrdí, že nezodpovedá za osobné veci.",
+          "question": "Zadanie: Zamestnankyni ukradli kabelku zo šatne určenej zamestnávateľom. Ten tvrdí, že za osobné veci nezodpovedá.",
           "options": [],
           "correct": 0
         },
@@ -82,7 +82,7 @@
           }
         },
         {
-          "question": "Krok 2: Aký druh škody ide nahradiť?",
+          "question": "Krok 2: O aký druh škody ide?",
           "options": ["Škodu na odložených veciach", "Škodu na vnesených veciach", "Žiadnu škodu"],
           "correct": 0,
           "explanation": {
@@ -111,7 +111,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec používal vlastný notebook na prácu. Pri manipulácii s pracovnými dokumentmi ho poškodil a žiada náhradu škody.",
+          "question": "Zadanie: Zamestnanec používal vlastný notebook na prácu. Pri manipulácii s dokumentmi ho poškodil a žiada náhradu škody.",
           "options": [],
           "correct": 0
         },
@@ -126,7 +126,7 @@
         },
         {
           "question": "Krok 2: Zodpovedá zamestnávateľ?",
-          "options": ["Áno, ak bola vec používaná pri práci", "Nie", "Len ak notebook bol nový"],
+          "options": ["Áno, ak bola vec používaná pri práci", "Nie", "Len ak bol notebook nový"],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ zodpovedá za škodu na vnesených veciach.",
