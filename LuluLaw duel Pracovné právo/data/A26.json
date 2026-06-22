@@ -1,14 +1,14 @@
 {
   "id": "13. B",
-  "title": "Dni pracovného pokoja – pracovná pohotovosť, sviatky",
+  "title": "Dni pracovného pokoja, pracovná pohotovosť a sviatky",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný čas", "sviatky", "pracovná pohotovosť", "dni pracovného pokoja"],
+  "tags": ["pracovné právo", "pracovný čas", "odpočinok", "sviatky", "pracovná pohotovosť"],
 
-  "summary": "\nDni pracovného pokoja sú nedele a sviatky, počas ktorých zamestnanec spravidla nepracuje. Sviatky sú štátom určené dni pracovného pokoja a práca v tieto dni je možná len vo výnimočných prípadoch, napríklad v nepretržitej prevádzke, zdravotníctve, doprave alebo pri zabezpečovaní základných služieb obyvateľstvu.\n\nZa prácu vo sviatok patrí zamestnancovi mzdové zvýhodnenie najmenej 100 % priemerného zárobku. Práca v obchodoch je počas väčšiny sviatkov zakázaná.\n\nPracovná pohotovosť je čas, keď je zamestnanec pripravený na výkon práce. Pohotovosť na pracovisku sa považuje za pracovný čas, zatiaľ čo pohotovosť mimo pracoviska nie je pracovným časom, ale patrí za ňu náhrada najmenej 20 % minimálnej mzdy. Ak je zamestnanec počas pohotovosti privolaný do práce, ide o prácu nadčas.\n\nPríklad:\nTechnik má pohotovosť doma. Aj keď nepracuje, patrí mu náhrada za pohotovosť. Ak je privolaný do práce, ide o nadčas.\n\nKľúčové slová:\ndni pracovného pokoja; sviatok; pracovná pohotovosť; príplatok za sviatok; nadčas.\n\nZapamätaj si:\n- Dni pracovného pokoja sú nedele a sviatky.\n- Práca vo sviatok je možná len pri zákonných výnimkách.\n- Za prácu vo sviatok patrí príplatok najmenej 100 % priemerného zárobku.\n- Pohotovosť na pracovisku je pracovným časom.\n- Pohotovosť mimo pracoviska nie je pracovným časom, ale patrí za ňu náhrada.",
+  "summary": "Dni pracovného pokoja predstavujú obdobie, počas ktorého zamestnanec nepracuje a má zabezpečený nepretržitý odpočinok. Patria sem nedele, sviatky a ďalšie dni, na ktoré pripadá týždenný odpočinok. Práca v tieto dni je možná len výnimočne a za zákonom stanovených podmienok. Pracovná pohotovosť je stav, keď je zamestnanec pripravený na výkon práce na pokyn zamestnávateľa. Pohotovosť na pracovisku sa považuje za pracovný čas, pohotovosť mimo pracoviska nie, avšak patrí za ňu náhrada. Za prácu vo sviatok patrí zamestnancovi mzdové zvýhodnenie najmenej 100 % priemerného zárobku. Zákon zároveň zakazuje maloobchodný predaj počas väčšiny sviatkov, s presne určenými výnimkami.",
 
   "quiz": [
     {
-      "question": "Ktoré dni patria medzi dni pracovného pokoja?",
+      "question": "Čo patrí medzi dni pracovného pokoja?",
       "options": ["Len sviatky", "Nedele a sviatky", "Len soboty"],
       "correct": 1,
       "explanation": {
@@ -18,8 +18,8 @@
     },
     {
       "question": "Aké mzdové zvýhodnenie patrí za prácu vo sviatok?",
-      "options": ["25 % priemerného zárobku", "50 % priemerného zárobku", "100 % priemerného zárobku"],
-      "correct": 2,
+      "options": ["50 % priemerného zárobku", "100 % priemerného zárobku", "25 % priemerného zárobku"],
+      "correct": 1,
       "explanation": {
         "correct": "Správne. Minimálne 100 % priemerného zárobku.",
         "wrong": "Nesprávne. Nižšie sadzby sa týkajú iných príplatkov."
@@ -45,7 +45,7 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Práca vo sviatok je vždy zakázaná", "Práca vo sviatok je možná len pri zákonných výnimkách", "Pohotovosť sa vždy započítava do pracovného času"],
+      "options": ["Práca vo sviatok je vždy zakázaná", "Práca vo sviatok je možná len pri zákonných výnimkách", "Pohotovosť mimo pracoviska sa započítava do pracovného času"],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Práca vo sviatok je možná len v zákonom určených prípadoch.",
@@ -55,11 +55,11 @@
   ],
 
   "tiles": [
-    { "term": "Dni pracovného pokoja", "definition": "Nedele a sviatky, počas ktorých sa spravidla nepracuje." },
+    { "term": "Dni pracovného pokoja", "definition": "Nedele a sviatky, počas ktorých zamestnanec spravidla nepracuje." },
     { "term": "Sviatok", "definition": "Štátom určený deň pracovného pokoja s nárokom na príplatok pri práci." },
-    { "term": "Pracovná pohotovosť", "definition": "Čas, keď je zamestnanec pripravený na výkon práce." },
-    { "term": "Pohotovosť na pracovisku", "definition": "Započítava sa do pracovného času." },
-    { "term": "Pohotovosť mimo pracoviska", "definition": "Nezapočítava sa do pracovného času, patrí náhrada najmenej 20 % minimálnej mzdy." }
+    { "term": "Pracovná pohotovosť", "definition": "Stav pripravenosti zamestnanca nastúpiť na výkon práce na pokyn zamestnávateľa." },
+    { "term": "Pohotovosť na pracovisku", "definition": "Považuje sa za pracovný čas a môže byť aj nadčasom." },
+    { "term": "Pohotovosť mimo pracoviska", "definition": "Nie je pracovným časom; patrí náhrada najmenej 20 % minimálnej mzdy." }
   ],
 
   "cases": [
@@ -68,13 +68,13 @@
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Zamestnávateľ chce, aby predavačka pracovala 1. januára. Tvrdí, že ide o bežný pracovný deň.",
+          "question": "Zadanie: Predavačka má pracovať 1. januára. Zamestnávateľ tvrdí, že ide o bežný pracovný deň.",
           "options": [],
           "correct": 0
         },
         {
           "question": "Krok 1: Je 1. január sviatok?",
-          "options": ["Áno", "Nie", "Len ak to určí zamestnávateľ"],
+          "options": ["Áno", "Nie", "Závisí od zamestnávateľa"],
           "correct": 0,
           "explanation": {
             "correct": "Správne. 1. január je štátny sviatok.",
@@ -83,10 +83,10 @@
         },
         {
           "question": "Krok 2: Môže predavačka pracovať vo sviatok?",
-          "options": ["Nie, práca v obchodoch je zakázaná", "Áno, bez obmedzení", "Áno, ale len ak ide o nevyhnutnú prevádzku"],
+          "options": ["Nie, predaj je zakázaný", "Áno, bez obmedzení", "Áno, ak ide o nevyhnutnú prevádzku"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Predaj v obchodoch je vo sviatky zakázaný.",
+            "correct": "Správne. Maloobchodný predaj je vo sviatky zakázaný.",
             "wrong": "Nesprávne. Nejde o nevyhnutnú prevádzku."
           }
         },
@@ -111,7 +111,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Technik má pohotovosť doma. Zamestnávateľ tvrdí, že mu nepatrí žiadna náhrada, lebo nepracuje.",
+          "question": "Zadanie: Technik má pohotovosť doma. Zamestnávateľ tvrdí, že mu nepatrí náhrada, lebo nepracuje.",
           "options": [],
           "correct": 0
         },
@@ -138,12 +138,12 @@
           "options": [
             "Upozorniť zamestnávateľa na povinnosť vyplatiť náhradu",
             "Súhlasiť so zamestnávateľom",
-            "Odporučiť technikovi, aby pohotovosť odmietol"
+            "Odporučiť technikovi odmietnuť pohotovosť"
           ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Náhrada je zákonná povinnosť.",
-            "wrong": "Nesprávne. Zamestnávateľ sa nemôže zbaviť povinnosti."
+            "wrong": "Nesprávne. Zamestnávateľ sa jej nemôže zbaviť."
           }
         }
       ]
