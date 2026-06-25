@@ -72,3 +72,47 @@ export function closeModal(modalEl){
   modalEl.classList.remove('open');
   modalEl.setAttribute('aria-hidden','true');
 }
+/* =========================
+   PIN login + transfer účtu
+   ========================= */
+
+// jednoduchý PIN login (demo verzia)
+export function loginWithPin(pin) {
+  try {
+    const saved = localStorage.getItem("lex_pin");
+    if (!saved) {
+      alert("PIN ešte nie je nastavený.");
+      return false;
+    }
+
+    if (String(pin) === String(saved)) {
+      alert("Prihlásenie úspešné!");
+      return true;
+    } else {
+      alert("Nesprávny PIN.");
+      return false;
+    }
+  } catch (e) {
+    console.error("loginWithPin error:", e);
+    return false;
+  }
+}
+
+// jednoduchý prenos účtu (demo verzia)
+export function transferAccount() {
+  try {
+    const data = {
+      paragrafy: localStorage.getItem("lex_paragrafy") || 0,
+      avatar: localStorage.getItem("lex_avatar") || null,
+      theme: localStorage.getItem("lex_theme") || "light"
+    };
+
+    alert("Účet exportovaný (demo). Dáta v konzole.");
+    console.log("TRANSFER DATA:", data);
+
+    return data;
+  } catch (e) {
+    console.error("transferAccount error:", e);
+    return null;
+  }
+}
