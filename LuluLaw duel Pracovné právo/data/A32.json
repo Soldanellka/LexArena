@@ -2,64 +2,64 @@
   "id": "16. B",
   "title": "Pracovný čas, rozvrhnutie pracovného času, konto pracovného času, pracovný čas tehotných žien a rodičov",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný čas", "rozvrhnutie", "konto pracovného času", "tehotné ženy", "rodičia"],
+  "tags": ["pracovné právo", "pracovný čas", "rozvrhnutie pracovného času", "konto pracovného času", "tehotné ženy", "rodičia"],
 
-  "summary": "Pracovný čas je čas, v ktorom je zamestnanec povinný vykonávať prácu podľa pokynov zamestnávateľa. Základná dĺžka pracovného času je najviac 40 hodín týždenne, pričom pri niektorých profesiách môže byť kratšia (napr. zdravotníctvo, dvojzmenná prevádzka). Rozvrhnutie pracovného času určuje zamestnávateľ – rovnomerne alebo nerovnomerne, pričom musí rešpektovať limity prestávok, denného a týždenného odpočinku.\n\nKonto pracovného času je flexibilný systém, ktorý umožňuje nerovnomerné rozvrhovanie pracovného času podľa potrieb zamestnávateľa. Zamestnanec dostáva stabilnú mzdu a rozdiely v odpracovaných hodinách sa vyrovnávajú v rámci vyrovnávacieho obdobia.\n\nTehotné ženy, ženy a muži starajúci sa o deti majú osobitnú ochranu: zákaz nočnej práce pre tehotné, zákaz nadčasov bez súhlasu, právo na preradenie pri rizikovej práci, právo žiadať úpravu pracovného času a povinnosť zamestnávateľa prihliadať na ich rodinné potreby.\n\nCieľom právnej úpravy je ochrana zdravia zamestnancov, podpora rodiny a zabezpečenie rovnováhy medzi pracovným a súkromným životom.\n\nPríklad:\nZamestnávateľ nariadi tehotnej zamestnankyni nočnú zmenu. Takéto nariadenie je v rozpore so zákonom – tehotná žena nesmie pracovať v noci a zamestnávateľ ju musí preradiť na dennú prácu.\n\nKľúčové slová:\npracovný čas; rozvrhnutie; konto pracovného času; tehotné ženy; rodičia; ochrana zdravia.\n\nZapamätaj si:\n- Základná dĺžka pracovného času je najviac 40 hodín týždenne.\n- Rozvrhnutie pracovného času určuje zamestnávateľ.\n- Konto pracovného času zabezpečuje flexibilitu pri stabilnej mzde.\n- Tehotné ženy nesmú pracovať v noci ani nadčas.\n- Rodičia môžu žiadať úpravu pracovného času a zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
+  "summary": "Pracovný čas je podľa § 85 ods. 1 Zákonníka práce časový úsek, v ktorom je zamestnanec k dispozícii zamestnávateľovi, vykonáva prácu a plní povinnosti v súlade s pracovnou zmluvou. Ide o kogentnú právnu úpravu, ktorá chráni zdravie zamestnancov a stanovuje limity pracovného času, odpočinku a prestávok.\n\nZákonný týždenný pracovný čas je najviac 40 hodín, pričom pri dvojzmennej prevádzke je najviac 38 3/4 hodiny, pri trojzmennej a nepretržitej prevádzke 37 1/2 hodiny a pri rizikových pracoviskách 33 1/2 hodiny. Pracovný čas mladistvých je osobitne limitovaný.\n\nRozvrhnutie pracovného času môže byť rovnomerné (§ 86 ZP) alebo nerovnomerné (§ 87 ZP). Pri rovnomernom rozvrhnutí nesmie pracovný čas v jednotlivých dňoch presiahnuť 9 hodín a rozdiel medzi týždňami nesmie byť väčší ako 3 hodiny. Pri nerovnomernom rozvrhnutí môže pracovný čas v jednotlivých dňoch dosiahnuť až 12 hodín, pričom priemerný týždenný pracovný čas nesmie prekročiť ustanovený týždenný pracovný čas v rámci 4- alebo 12-mesačného obdobia.\n\nKonto pracovného času (§ 87a ZP) je osobitný spôsob nerovnomerného rozvrhnutia pracovného času. Umožňuje, aby zamestnanec v obdobiach vyššej potreby práce odpracoval viac hodín (kladný účet) a v obdobiach nižšej potreby menej hodín alebo vôbec (záporný účet). Zamestnávateľ musí poskytovať stabilnú základnú zložku mzdy a viesť účet konta pracovného času. Vyrovnávacie obdobie môže byť najviac 30 mesiacov.\n\nTehotné ženy, ženy a muži starajúci sa o deti majú osobitnú ochranu. Tehotné ženy nesmú pracovať v noci (§ 98 ZP) ani nadčas (§ 97 ZP). Zamestnávateľ je povinný preradiť tehotnú ženu na dennú prácu, ak vykonáva nočnú prácu alebo prácu, ktorá ohrozuje jej zdravie. Rodičia detí mladších ako 15 rokov majú právo žiadať kratší pracovný čas (§ 49 ZP) a zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.\n\nCieľom právnej úpravy je ochrana zdravia zamestnancov, podpora rodiny, prevencia rizík a zabezpečenie rovnováhy medzi pracovným a súkromným životom.",
 
   "quiz": [
     {
-      "question": "Aká je základná dĺžka pracovného času?",
-      "options": ["48 hodín týždenne", "40 hodín týždenne", "35 hodín týždenne"],
+      "question": "Ako definuje pracovný čas Zákonník práce?",
+      "options": ["Čas, keď je zamestnanec doma", "Čas, v ktorom je zamestnanec k dispozícii zamestnávateľovi a vykonáva prácu", "Len čas, keď zamestnanec vykonáva fyzickú prácu"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Základná dĺžka pracovného času je najviac 40 hodín týždenne.",
-        "wrong": "Nesprávne. 48 hodín je maximálny limit s nadčasmi."
+        "correct": "Správne. § 85 ods. 1 ZP presne definuje pracovný čas ako časový úsek, v ktorom je zamestnanec k dispozícii zamestnávateľovi.",
+        "wrong": "Nesprávne. Pracovný čas zahŕňa aj čas, keď zamestnanec čaká na pokyny."
       }
     },
     {
-      "question": "Čo je konto pracovného času?",
-      "options": ["Záznam dochádzky", "Flexibilný systém rozvrhovania pracovného času", "Pracovná zmluva na kratší úväzok"],
+      "question": "Aká je základná dĺžka týždenného pracovného času?",
+      "options": ["48 hodín", "40 hodín", "35 hodín"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Konto pracovného času umožňuje flexibilné rozvrhnutie podľa potrieb zamestnávateľa.",
-        "wrong": "Nesprávne. Nejde o dochádzku ani o úväzok."
+        "correct": "Správne. Zákonný pracovný čas je najviac 40 hodín týždenne.",
+        "wrong": "Nesprávne. 48 hodín je limit vrátane nadčasov."
+      }
+    },
+    {
+      "question": "Kedy je možné nerovnomerné rozvrhnutie pracovného času?",
+      "options": ["Vždy, podľa uváženia zamestnávateľa", "Ak povaha práce alebo prevádzka nedovoľuje rovnomerné rozvrhnutie", "Len ak zamestnanec súhlasí"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 87 ZP umožňuje nerovnomerné rozvrhnutie pri prevádzkových alebo technologických dôvodoch.",
+        "wrong": "Nesprávne. Súhlas zamestnanca nie je všeobecnou podmienkou."
       }
     },
     {
       "question": "Môže tehotná žena pracovať v noci?",
-      "options": ["Áno, ak súhlasí", "Nie, nočná práca je zakázaná", "Áno, ak to vyžaduje prevádzka"],
+      "options": ["Áno, ak podpíše súhlas", "Nie, nočná práca je zakázaná", "Áno, ak to vyžaduje prevádzka"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Tehotné ženy nesmú pracovať v noci bez ohľadu na súhlas.",
+        "correct": "Správne. § 98 ZP zakazuje nočnú prácu tehotných žien bez výnimky.",
         "wrong": "Nesprávne. Súhlas ani prevádzka zákaz neodstraňujú."
       }
     },
     {
-      "question": "Kto určuje rozvrhnutie pracovného času?",
-      "options": ["Zamestnanec", "Zamestnávateľ", "Inšpektorát práce"],
+      "question": "Čo je konto pracovného času?",
+      "options": ["Dochádzkový systém", "Spôsob nerovnomerného rozvrhnutia pracovného času s kladným a záporným účtom", "Pracovná zmluva na kratší úväzok"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Rozvrhnutie pracovného času určuje zamestnávateľ.",
-        "wrong": "Nesprávne. Zamestnanec môže žiadať úpravu, ale nerozhoduje o rozvrhu."
-      }
-    },
-    {
-      "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Rodič dieťaťa do 15 rokov môže žiadať úpravu pracovného času", "Tehotná žena môže pracovať nadčas bez obmedzení", "Konto pracovného času znižuje mzdu"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Zamestnávateľ musí žiadosti rodiča vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
-        "wrong": "Nesprávne. Nadčasy tehotných sú zakázané."
+        "correct": "Správne. Konto pracovného času je upravené v § 87a ZP.",
+        "wrong": "Nesprávne. Nejde o dochádzku ani o úväzok."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Pracovný čas", "definition": "Čas, v ktorom je zamestnanec povinný vykonávať prácu; spravidla 40 hodín týždenne." },
-    { "term": "Rozvrhnutie pracovného času", "definition": "Určuje zamestnávateľ – rovnomerne alebo nerovnomerne." },
-    { "term": "Konto pracovného času", "definition": "Flexibilný systém s vyrovnávacím obdobím a stabilnou mzdou." },
-    { "term": "Tehotné ženy", "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na preradenie." },
-    { "term": "Rodičia detí", "definition": "Právo žiadať úpravu pracovného času; osobitná ochrana osamelých rodičov." }
+    { "term": "Pracovný čas", "definition": "Časový úsek podľa § 85 ods. 1 ZP, v ktorom je zamestnanec k dispozícii zamestnávateľovi." },
+    { "term": "Rovnomerné rozvrhnutie", "definition": "Pracovný čas je rozvrhnutý rovnomerne, rozdiel medzi týždňami max. 3 hodiny, max. 9 hodín denne." },
+    { "term": "Nerovnomerné rozvrhnutie", "definition": "Pracovný čas môže byť až 12 hodín denne, priemerný týždenný čas sa sleduje v období 4–12 mesiacov." },
+    { "term": "Konto pracovného času", "definition": "Systém kladného a záporného účtu pracovného času so stabilnou základnou mzdou." },
+    { "term": "Tehotné ženy a rodičia", "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na kratší pracovný čas a preradenie." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Nie", "Áno, ak súhlasí", "Áno, ak to vyžaduje prevádzka"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Nočná práca tehotných je zakázaná.",
+            "correct": "Správne. § 98 ZP zakazuje nočnú prácu tehotných žien.",
             "wrong": "Nesprávne. Súhlas zákaz neodstraňuje."
           }
         },
@@ -86,21 +86,8 @@
           "options": ["Preradiť ju na dennú prácu", "Nechať ju pracovať v noci", "Dať jej neplatené voľno"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí preradiť zamestnankyňu na vhodnú dennú prácu.",
-            "wrong": "Nesprávne. Neplatené voľno nie je riešenie."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Upozorniť na povinnosť preradenia a zákaz nočnej práce",
-            "Súhlasiť so zamestnávateľom",
-            "Odporučiť zamestnankyni ignorovať situáciu"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o zákonnú ochranu tehotných žien.",
-            "wrong": "Nesprávne. Ignorovanie by bolo protiprávne."
+            "correct": "Správne. Zamestnávateľ musí preradiť tehotnú ženu na dennú prácu.",
+            "wrong": "Nesprávne. Neplatené voľno nie je zákonné riešenie."
           }
         }
       ]
@@ -129,21 +116,8 @@
           "options": ["Nie, mzda musí byť stabilná", "Áno, podľa odpracovaných hodín", "Len pri nadčasoch"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Pri konte pracovného času je mzda stabilná a rozdiely sa vyrovnávajú neskôr.",
-            "wrong": "Nesprávne. Kolísanie mzdy je v rozpore s účelom konta."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Upozorniť zamestnávateľa na povinnosť stabilnej mzdy pri konte",
-            "Súhlasiť s kolísaním mzdy",
-            "Odporučiť zamestnancom podať výpoveď"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Konto pracovného času nesmie spôsobovať výkyvy mzdy.",
-            "wrong": "Nesprávne. Kolísanie je nezákonné."
+            "correct": "Správne. Pri konte pracovného času musí byť základná mzda stabilná.",
+            "wrong": "Nesprávne. Kolísanie mzdy je v rozpore s § 87a ZP."
           }
         }
       ]
