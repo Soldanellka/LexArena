@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "mzda", "odmeňovanie", "podnikateľská sféra"],
 
-  "summary": "Odmeňovanie v podnikateľskej sfére je založené na zmluvnej voľnosti, no musí rešpektovať minimálne štandardy Zákonníka práce. Mzdové podmienky sa dojednávajú v pracovnej zmluve alebo v kolektívnej zmluve. Mzda nesmie byť nižšia ako minimálna mzda alebo minimálny mzdový nárok podľa stupňa náročnosti práce. Zamestnávateľ je povinný poskytovať mzdu za vykonanú prácu, príplatky za nadčas, noc, víkend, sviatok a za sťažený výkon práce. Mzda musí byť vyplácaná pravidelne a v zákonných termínoch.\n\nZakázané je diskriminačné odmeňovanie a zrážky zo mzdy bez zákonného dôvodu alebo bez dohody so zamestnancom. Zamestnávateľ môže poskytovať aj dobrovoľné zložky mzdy – prémie, odmeny, bonusy.\n\nCieľom právnej úpravy je zabezpečiť spravodlivé, transparentné a nediskriminačné odmeňovanie.\n\nPríklad:\nZamestnávateľ ponúkne zamestnancovi mzdu nižšiu ako minimálna mzda s tým, že „ak súhlasí, je to v poriadku“. Takéto dojednanie je neplatné – mzda musí byť minimálne v zákonnej výške.\n\nKľúčové slová:\nmzda; minimálna mzda; minimálne mzdové nároky; príplatky; zrážky zo mzdy; diskriminácia.\n\nZapamätaj si:\n- Mzdové podmienky musia byť dohodnuté v pracovnej alebo kolektívnej zmluve.\n- Mzda nesmie byť nižšia ako minimálna mzda alebo minimálny mzdový nárok.\n- Príplatky za nadčas, noc, víkend a sviatok sú povinné.\n- Zrážky zo mzdy sú možné len zo zákonných dôvodov alebo na základe dohody.\n- Diskriminácia v odmeňovaní je zakázaná.",
+  "summary": "Odmeňovanie v podnikateľskej sfére je založené na zmluvnej voľnosti, ktorú však Zákonník práce limituje kogentnými ustanoveniami o mzde, minimálnej mzde, minimálnych mzdových nárokoch, mzdových zvýhodneniach a zákaze diskriminácie. Zamestnávateľ je povinný poskytovať zamestnancovi mzdu za vykonanú prácu (§ 118 ZP), pričom mzda nesmie byť nižšia ako minimálna mzda podľa zákona č. 663/2007 Z. z. alebo minimálny mzdový nárok podľa stupňa náročnosti práce (§ 120 ZP).\n\nMzda je peňažné plnenie alebo plnenie peňažnej hodnoty (naturálna mzda) poskytované za prácu. Zákonník práce presne vymedzuje, čo sa za mzdu považuje (napr. odmeny pri výročiach, dovolenkové a vianočné odmeny) a čo sa za mzdu nepovažuje (napr. náhrada mzdy, odstupné, cestovné náhrady, príspevky zo sociálneho fondu).\n\nMzdové podmienky musia byť dohodnuté v pracovnej zmluve alebo kolektívnej zmluve. Zamestnávateľ je povinný zabezpečiť rovnakú mzdu za rovnakú prácu alebo prácu rovnakej hodnoty (§ 119a ZP). Minimálne mzdové nároky garantujú spravodlivé odmeňovanie podľa stupňa náročnosti práce.\n\nZákonník práce upravuje aj povinné mzdové zvýhodnenia: za nadčas (§ 121 ZP), za prácu vo sviatok (§ 122 ZP), za prácu v sobotu (§ 122a ZP), v nedeľu (§ 122b ZP), za nočnú prácu (§ 123 ZP) a za sťažený výkon práce (§ 124 ZP). Osobitne upravuje naturálnu mzdu (§ 119 ZP), mzdu v cudzej mene (§ 130 ZP), splatnosť mzdy (§ 129 ZP) a pravidlá jej výplaty.\n\nCieľom právnej úpravy je zabezpečiť spravodlivé, transparentné, nediskriminačné a zákonné odmeňovanie zamestnancov v podnikateľskej sfére.",
 
   "quiz": [
     {
@@ -12,8 +12,8 @@
       "options": ["Len v kolektívnej zmluve", "V pracovnej zmluve alebo kolektívnej zmluve", "V internom predpise bez dohody so zamestnancom"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Mzdové podmienky musia byť dohodnuté v pracovnej alebo kolektívnej zmluve.",
-        "wrong": "Nesprávne. Interný predpis nemôže nahradiť dohodu."
+        "correct": "Správne. Mzdové podmienky musia byť dohodnuté v pracovnej alebo kolektívnej zmluve (§ 43 a § 118 ZP).",
+        "wrong": "Nesprávne. Interný predpis nemôže nahradiť dohodu o mzde."
       }
     },
     {
@@ -21,7 +21,7 @@
       "options": ["Zákonom garantovaná mzda podľa stupňa náročnosti práce", "Mzda dohodnutá medzi zamestnancom a zamestnávateľom", "Dobrovoľná odmena"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Minimálny mzdový nárok závisí od náročnosti práce.",
+        "correct": "Správne. Minimálny mzdový nárok je garantovaná suma podľa stupňa náročnosti práce (§ 120 ZP).",
         "wrong": "Nesprávne. Nejde o dobrovoľnú odmenu."
       }
     },
@@ -30,8 +30,8 @@
       "options": ["Mzda môže byť nižšia ako minimálna mzda", "Mzda musí byť vyplácaná pravidelne", "Zamestnávateľ môže robiť zrážky zo mzdy podľa uváženia"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Výplata musí byť pravidelná a v zákonných termínoch.",
-        "wrong": "Nesprávne. Zrážky sú možné len zo zákonných dôvodov."
+        "correct": "Správne. Mzda musí byť vyplácaná pravidelne a v zákonných termínoch (§ 129 ZP).",
+        "wrong": "Nesprávne. Zrážky sú možné len zo zákonných dôvodov alebo na základe dohody."
       }
     },
     {
@@ -39,7 +39,7 @@
       "options": ["Práca nadčas", "Dovolenka", "Stravné"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Za nadčas patrí mzdové zvýhodnenie.",
+        "correct": "Správne. Za nadčas patrí mzdové zvýhodnenie podľa § 121 ZP.",
         "wrong": "Nesprávne. Dovolenka ani stravné nie sú mzdové zvýhodnenia."
       }
     },
@@ -48,18 +48,18 @@
       "options": ["Áno", "Nie", "Len pri kolektívnych zmluvách"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Rovnaká mzda za rovnakú prácu je základná zásada.",
+        "correct": "Správne. Rovnaká mzda za rovnakú prácu je základná zásada (§ 119a ZP).",
         "wrong": "Nesprávne. Zákaz diskriminácie platí vždy."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Mzda", "definition": "Peňažné plnenie za vykonanú prácu, dojednané v pracovnej alebo kolektívnej zmluve." },
-    { "term": "Minimálna mzda", "definition": "Najnižšia prípustná mzda stanovená zákonom." },
-    { "term": "Minimálne mzdové nároky", "definition": "Minimálna mzda podľa stupňa náročnosti práce." },
-    { "term": "Mzdové zvýhodnenia", "definition": "Príplatky za nadčas, sviatok, noc, víkend a sťažený výkon práce." },
-    { "term": "Zrážky zo mzdy", "definition": "Možné len zo zákonných dôvodov alebo na základe dohody." }
+    { "term": "Mzda", "definition": "Peňažné alebo naturálne plnenie poskytované za vykonanú prácu (§ 118 ZP)." },
+    { "term": "Minimálna mzda", "definition": "Najnižšia prípustná mzda podľa zákona č. 663/2007 Z. z." },
+    { "term": "Minimálne mzdové nároky", "definition": "Minimálna mzda podľa stupňa náročnosti práce (§ 120 ZP)." },
+    { "term": "Mzdové zvýhodnenia", "definition": "Príplatky za nadčas, sviatok, noc, sobotu, nedeľu a sťažený výkon práce (§ 121 – § 124 ZP)." },
+    { "term": "Zrážky zo mzdy", "definition": "Možné len zo zákonných dôvodov alebo na základe dohody (§ 131 ZP)." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Mzda nesmie byť nižšia ako minimálna mzda.",
+            "correct": "Správne. Mzda nesmie byť nižšia ako minimálna mzda (§ 120 ZP).",
             "wrong": "Nesprávne. Súhlas zamestnanca neodstraňuje nezákonnosť."
           }
         },
@@ -120,7 +120,7 @@
           "options": ["Nie, len zo zákonných dôvodov", "Áno, ak to zamestnávateľ uzná za vhodné", "Áno, ak ide o škodu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zrážky sú možné len zo zákonných dôvodov alebo na základe dohody.",
+            "correct": "Správne. Zrážky sú možné len zo zákonných dôvodov alebo na základe dohody (§ 131 ZP).",
             "wrong": "Nesprávne. Škoda sama osebe nestačí."
           }
         },
