@@ -1,6 +1,6 @@
 'use strict';
 
-import { $, escapeHtml } from './core.js';
+import { $, escapeHtml, LS, saveParagrafy, closeModal } from './core.js';
 import {
   paragrafy,
   setParagrafy,
@@ -8,11 +8,8 @@ import {
   answeredCases,
   setAnsweredCases
 } from './state.js';
-import { LS } from './core.js';
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
-import { saveParagrafy } from './core.js';
-import { closeModal } from './core.js';
 
 /* =========================
    Storage keys
@@ -57,9 +54,7 @@ export function renderCase(){
   const container = $('caseContainer');
   if(!container) return;
 
-  const set = (typeof cases !== 'undefined' && cases[currentCaseSet])
-    ? cases[currentCaseSet]
-    : [];
+  const set = window.cases?.[currentCaseSet] ?? [];
 
   if(set.length === 0){
     container.innerHTML = '<div class="small">Žiadne prípady v tejto oblasti.</div>';
@@ -109,7 +104,7 @@ export function renderCase(){
     btn.dataset.opt = opt.id;
     btn.textContent = opt.text;
 
-    if(answeredCases.has(c.id)) btn.disabled = true;
+    if(done) btn.disabled = true;
 
     btn.addEventListener('click', () =>
       submitCase(btn.dataset.case, btn.dataset.opt)
@@ -144,10 +139,7 @@ export function renderCase(){
    Submit case
    ========================= */
 export function submitCase(caseId, optionId){
-  const set = (typeof cases !== 'undefined' && cases[currentCaseSet])
-    ? cases[currentCaseSet]
-    : [];
-
+  const set = window.cases?.[currentCaseSet] ?? [];
   const c = set.find(x => x.id === caseId);
   if(!c) return;
 
@@ -165,7 +157,9 @@ export function submitCase(caseId, optionId){
     const newPar = paragrafy + (c.reward || 1);
     setParagrafy(newPar);
     saveParagrafy(newPar);
-    $('parCount').textContent = newPar;
+
+    const pc = $('parCount');
+    if(pc) pc.textContent = newPar;
 
     answeredCases.add(caseId);
     saveAnsweredCases(currentCaseSet);
@@ -182,7 +176,9 @@ export function submitCase(caseId, optionId){
     const newPar = paragrafy + 1;
     setParagrafy(newPar);
     saveParagrafy(newPar);
-    $('parCount').textContent = newPar;
+
+    const pc = $('parCount');
+    if(pc) pc.textContent = newPar;
 
     setTimeout(() => {
       showRewardToast(`Všetkých ${total} prípadov vyriešených • +1 paragraf`);
@@ -197,10 +193,7 @@ export function submitCase(caseId, optionId){
    Navigation
    ========================= */
 export function nextCase(){
-  const set = (typeof cases !== 'undefined' && cases[currentCaseSet])
-    ? cases[currentCaseSet]
-    : [];
-
+  const set = window.cases?.[currentCaseSet] ?? [];
   if(set.length === 0) return;
 
   currentCaseIndex = (currentCaseIndex + 1) % set.length;
@@ -208,10 +201,7 @@ export function nextCase(){
 }
 
 export function prevCase(){
-  const set = (typeof cases !== 'undefined' && cases[currentCaseSet])
-    ? cases[currentCaseSet]
-    : [];
-
+  const set = window.cases?.[currentCaseSet] ?? [];
   if(set.length === 0) return;
 
   currentCaseIndex = (currentCaseIndex - 1 + set.length) % set.length;
