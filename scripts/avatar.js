@@ -314,7 +314,8 @@ export async function selectAvatar(avatarType) {
     const data = snap.exists() ? snap.val() : {};
 
     if (avatarDef.unlock === 'paragraphs_100') {
-      const totalEarned = data.totalParagraphsEarned || 0;
+      // Použi totalParagraphsEarned, ak neexistuje, fallback na aktuálny zostatok
+      const totalEarned = data.totalParagraphsEarned || data.paragrafy || 0;
       if (totalEarned < avatarDef.unlockValue) {
         const chyba = avatarDef.unlockValue - totalEarned;
         showRewardToast(`🔒 Mačka je zamknutá. Chýba ti ešte ${chyba}§ (celkovo nazbieraných).`);
