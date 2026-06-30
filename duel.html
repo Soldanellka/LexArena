@@ -4,46 +4,52 @@
   <meta charset="UTF-8" />
   <title>LexArena – Duel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Globálne štýly -->
   <link rel="stylesheet" href="lexarena/styles.css" />
-<link rel="stylesheet" href="lexarena/duel.css" />
+  <link rel="stylesheet" href="lexarena/duel.css" />
 </head>
 
 <body>
   <div id="duel-root">
 
     <!-- MATCHMAKING -->
-    <section id="duel-matchmaking" class="duel-screen">
-      <div class="duel-header">
+    <section id="duel-matchmaking" class="duel-screen" aria-hidden="false">
+      <header class="duel-header">
         <h1>Duel – hľadáme súpera</h1>
-      </div>
+      </header>
+
       <div class="duel-content matchmaking-content">
         <div class="player-card player-a">
           <div class="avatar-placeholder">A</div>
           <div class="player-name">Ty</div>
-<div id="duelPlayerNick" class="player-nick-display"></div>
+          <div id="duelPlayerNick" class="player-nick-display"></div>
         </div>
+
         <div class="vs-label">VS</div>
+
         <div class="player-card player-b">
           <div class="avatar-placeholder">?</div>
           <div class="player-name">Hľadáme súpera…</div>
         </div>
       </div>
-      <div class="duel-footer">
-        <button id="cancel-matchmaking">Zrušiť</button>
-      </div>
+
+      <footer class="duel-footer">
+        <button id="cancel-matchmaking" class="btn">Zrušiť</button>
+      </footer>
     </section>
 
     <!-- ODPOČET -->
-    <section id="duel-countdown" class="duel-screen" style="display:none;">
+    <section id="duel-countdown" class="duel-screen hidden" aria-hidden="true">
       <div class="duel-content countdown-content">
-        <div id="countdown-number">3</div>
+        <div id="countdown-number" class="countdown-number">3</div>
         <p>Priprav sa na duel…</p>
       </div>
     </section>
 
     <!-- FÁZA 1 – OTÁZKY -->
-    <section id="duel-phase-questions" class="duel-screen" style="display:none;">
-      <div class="duel-header">
+    <section id="duel-phase-questions" class="duel-screen hidden" aria-hidden="true">
+      <header class="duel-header">
         <div class="duel-top-left">
           <span id="questions-progress">Otázka 1/5</span>
         </div>
@@ -54,9 +60,11 @@
           <span id="score-a">Ty: 0</span> |
           <span id="score-b">Súper: 0</span>
         </div>
-      </div>
+      </header>
+
       <div class="duel-content">
         <div id="question-text" class="question-text">Text otázky sa načíta sem</div>
+
         <div class="answers-grid">
           <button class="answer-tile" data-index="0"></button>
           <button class="answer-tile" data-index="1"></button>
@@ -67,8 +75,8 @@
     </section>
 
     <!-- FÁZA 2 – DLAŽDICE -->
-    <section id="duel-phase-tiles" class="duel-screen" style="display:none;">
-      <div class="duel-header">
+    <section id="duel-phase-tiles" class="duel-screen hidden" aria-hidden="true">
+      <header class="duel-header">
         <div class="duel-top-left">
           <span>Dlaždice – pojmy a definície</span>
         </div>
@@ -78,7 +86,8 @@
         <div class="duel-top-right">
           <span id="tiles-progress">0/5 správne</span>
         </div>
-      </div>
+      </header>
+
       <div class="duel-content tiles-layout">
         <div class="tiles-column" id="tiles-terms"></div>
         <div class="tiles-column" id="tiles-definitions"></div>
@@ -86,17 +95,19 @@
     </section>
 
     <!-- FÁZA 3 – PRÍPADY -->
-    <section id="duel-phase-cases" class="duel-screen" style="display:none;">
-      <div class="duel-header">
+    <section id="duel-phase-cases" class="duel-screen hidden" aria-hidden="true">
+      <header class="duel-header">
         <div class="duel-top-left">
           <span id="cases-progress">Prípad 1/2</span>
         </div>
         <div class="duel-top-center">
           <span>Čas: <span id="cases-timer">25</span>s</span>
         </div>
-      </div>
+      </header>
+
       <div class="duel-content">
         <div id="case-text" class="case-text">Text prípadu sa načíta sem</div>
+
         <div class="answers-column">
           <button class="case-answer" data-index="0"></button>
           <button class="case-answer" data-index="1"></button>
@@ -106,18 +117,20 @@
     </section>
 
     <!-- VÝSLEDKY -->
-    <section id="duel-result" class="duel-screen" style="display:none;">
-      <div class="duel-header">
+    <section id="duel-result" class="duel-screen hidden" aria-hidden="true">
+      <header class="duel-header">
         <h1 id="duel-result-title">Víťaz duelu</h1>
-      </div>
+      </header>
+
       <div class="duel-content result-content">
         <div class="result-players">
           <div class="result-player">
             <div class="avatar-placeholder">A</div>
             <div class="player-name" id="result-name-a">Ty</div>
-<div id="resultPlayerNick" class="player-nick-display"></div>
+            <div id="resultPlayerNick" class="player-nick-display"></div>
             <div class="player-score" id="result-score-a">11 bodov</div>
           </div>
+
           <div class="result-player">
             <div class="avatar-placeholder">B</div>
             <div class="player-name" id="result-name-b">Súper</div>
@@ -134,16 +147,19 @@
         </div>
       </div>
 
-      <div class="duel-footer">
-        <button id="play-again">Ďalší duel</button>
-        <button id="back-home">Domov</button>
-      </div>
+      <footer class="duel-footer">
+        <button id="play-again" class="btn btn-primary">Ďalší duel</button>
+        <button id="back-home" class="btn">Domov</button>
+      </footer>
     </section>
 
   </div>
 
-  <!-- DÔLEŽITÉ: modulový script -->
-<script type="module" src="lexarena/challenges.js"></script>
+  <!-- Modulové skripty – správne poradie -->
+  <script type="module" src="lexarena/core.js"></script>
+  <script type="module" src="lexarena/state.js"></script>
+  <script type="module" src="lexarena/ui.js"></script>
+  <script type="module" src="lexarena/challenges.js"></script>
   <script type="module" src="lexarena/duel.js"></script>
 </body>
 </html>
