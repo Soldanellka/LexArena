@@ -63,7 +63,8 @@ async function openAvatarSelectModal() {
       const snap = await get(ref(db, `users/${nick}`));
       if (snap.exists()) {
         const d = snap.val();
-        totalEarned = d.totalParagraphsEarned || 0;
+        // Fallback: ak totalParagraphsEarned neexistuje, použi aktuálny zostatok
+        totalEarned = d.totalParagraphsEarned || d.paragrafy || 0;
         acceptedReports = d.acceptedReports || 0;
       }
     } catch(e) {}
