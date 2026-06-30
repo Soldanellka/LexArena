@@ -40,6 +40,13 @@
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
+/* 🔥 OPRAVA: bráni horizontálnemu scrollu celej stránky,
+   keby aj napriek ostatným opravám niečo pretieklo */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -158,8 +165,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-.left { flex: 1; }
-.right { width: 420px; }
+.left { flex: 1; min-width: 0; }
+.right { width: 420px; min-width: 0; }
 
 .card {
   background: var(--surface);
@@ -406,7 +413,7 @@ body {
   font-size: 12px;
 }
 /* -------------------------------------------
-   💎 Dark mode – dlaždice s tieňovaním zľava doprava
+   💎 Dark mode – dlaždice s tieňovaním zľava doprava
 ------------------------------------------- */
 
 :root[data-theme="dark"] .chip,
@@ -444,6 +451,552 @@ body {
 :root[data-theme="dark"] .header .brand {
   color: #e6e9ef !important; /* svetlá šedobiela */
   text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* jemné oddelenie od pozadia */
+}
+/* ============================
+   LexArena – dizajn odpovedí
+   ============================ */
+.opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.opt:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-1px);
+}
+
+/* správna odpoveď */
+.opt.correct {
+  background: rgba(34,197,94,0.12);
+  border-color: rgba(34,197,94,0.25);
+}
+
+/* nesprávna odpoveď */
+.opt.wrong {
+  background: rgba(239,68,68,0.10);
+  border-color: rgba(239,68,68,0.25);
+}
+
+/* ============================================================
+   🔥 OPRAVA: Banka duelov – dlaždice výziev v štýle LexAreny
+   (.duel-item, .duel-banner, .duel-accept, .duel-reject
+   sa generujú dynamicky v renderDuelBank() v scripts/duels.js
+   a doteraz nemali žiadny vlastný štýl – vyzerali ako default
+   prehliadačové tlačidlá)
+============================================================ */
+
+.duel-item {
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f8 60%, #ffe3ec 100%);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(240,138,166,0.12);
+  margin-bottom: 12px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.duel-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(240,138,166,0.22);
+}
+
+.duel-banner {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent-3);
+  margin-bottom: 6px;
+}
+
+.duel-banner .duel-topic {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.duel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.duel-title {
+  font-size: 14px;
+}
+
+.duel-expire {
+  white-space: nowrap;
+}
+
+.duel-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.duel-accept,
+.duel-reject {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+
+.duel-accept {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(240,138,166,0.25);
+}
+
+.duel-accept:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(240,138,166,0.4);
+}
+
+.duel-reject {
+  background: linear-gradient(to left, #ffe3ec, #ffffff);
+  color: var(--accent-3);
+  box-shadow: 0 4px 12px rgba(240,138,166,0.1);
+}
+
+.duel-reject:hover {
+  transform: translateY(-2px);
+  background: rgba(239,68,68,0.08);
+  color: var(--danger);
+  box-shadow: 0 8px 18px rgba(239,68,68,0.15);
+}
+
+/* 🌙 DARK MODE – banka duelov */
+:root[data-theme="dark"] .duel-item {
+  background: linear-gradient(180deg, #141c2b 0%, #0f1724 100%);
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+:root[data-theme="dark"] .duel-banner {
+  color: #bcd4ea;
+}
+
+:root[data-theme="dark"] .duel-reject {
+  background: linear-gradient(90deg, #2a2b2e 0%, #1b1c1f 100%);
+  color: #e6e9ef;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+:root[data-theme="dark"] .duel-reject:hover {
+  background: rgba(239,68,68,0.15);
+  color: #ffb4b4;
+}
+
+/* ============================================================
+   🔥 OPRAVA: RESPONZIVITA PRE MOBIL
+============================================================ */
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+    row-gap: 6px;
+  }
+
+  .brand {
+    font-size: 15px;
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* 🔥 OPRAVA: na mobile nick-box nemizne, len sa preusporiada
+     na vlastný riadok pod logo/avatar, aby sa nestratila
+     možnosť zadať si nick */
+  .header .nick-box {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 4px 0 0 0;
+    order: 10;
+  }
+
+  .header .nick-row {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .header #nickname {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .player-nick-display {
+    order: 11;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .header-right .btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  #transferAccountBtn,
+  #loginPinBtn {
+    display: none;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}
+
+/* ============================================================
+   🏆 PRÉMIOVÝ DIZAJN REBRÍČKA DUELOV (#duelLeaderboard)
+   Riadky generuje renderLeaderboardList() v scripts/leaderboard.js
+   Štruktúra: .lb-row(.lb-rank-1/2/3) > .lb-rank + .lb-main
+                .lb-main > .lb-top-line(.lb-name + .lb-points)
+                         > .lb-bar > .lb-bar-fill
+                         > .lb-meta
+============================================================ */
+
+#duelLeaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lb-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(247,198,214,0.10);
+  border: 1px solid var(--card-border);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.lb-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240,138,166,0.15);
+}
+
+.lb-rank {
+  flex-shrink: 0;
+  width: 34px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+/* ============================================================
+   🏅 PRÉMIOVÉ CSS MEDAILY (namiesto emoji 🥇🥈🥉)
+   Kovový gradient + lesklý odlesk + malá stužka pod kruhom
+============================================================ */
+
+.lb-medal {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-medal-num {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(0,0,0,0.55);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* lesklý odlesk navrchu medaily */
+.lb-medal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, rgba(255,255,255,0.85), rgba(255,255,255,0) 55%);
+  z-index: 1;
+}
+
+/* malá stužka pod medailou */
+.lb-medal-ribbon {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.lb-medal-1 {
+  background: linear-gradient(155deg, #fff3cf 0%, #f3c45a 45%, #c9912a 100%);
+  box-shadow: 0 3px 8px rgba(201,145,42,0.45), inset 0 0 0 1px rgba(255,255,255,0.4);
+}
+.lb-medal-1 .lb-medal-ribbon {
+  border-top: 8px solid var(--accent-3);
+}
+
+.lb-medal-2 {
+  background: linear-gradient(155deg, #f4f7f9 0%, #c3ccd3 45%, #8f99a3 100%);
+  box-shadow: 0 3px 8px rgba(143,153,163,0.4), inset 0 0 0 1px rgba(255,255,255,0.4);
+}
+.lb-medal-2 .lb-medal-ribbon {
+  border-top: 8px solid var(--accent-2);
+}
+
+.lb-medal-3 {
+  background: linear-gradient(155deg, #f3d9bf 0%, #cf935b 45%, #9c6232 100%);
+  box-shadow: 0 3px 8px rgba(156,98,50,0.4), inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+.lb-medal-3 .lb-medal-ribbon {
+  border-top: 8px solid var(--accent-1);
+}
+
+.lb-row:hover .lb-medal {
+  animation: lbMedalShine .6s ease;
+}
+
+@keyframes lbMedalShine {
+  0%   { transform: scale(1) rotate(0deg); }
+  50%  { transform: scale(1.12) rotate(-4deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* 🌙 DARK MODE – číslo v medaile čitateľnejšie */
+:root[data-theme="dark"] .lb-medal-num {
+  color: rgba(0,0,0,0.65);
+}
+
+.lb-rank-num {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+}
+
+.lb-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.lb-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.lb-name {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-points {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--accent-3);
+  white-space: nowrap;
+}
+
+.lb-points small {
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 2px;
+}
+
+.lb-bar {
+  margin-top: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.lb-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  transition: width .4s ease;
+}
+
+.lb-meta {
+  margin-top: 4px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+/* TOP 1 – zlatá */
+.lb-row.lb-rank-1 {
+  background: linear-gradient(90deg, rgba(255,215,120,0.22), rgba(255,198,214,0.10));
+  border-color: rgba(230,180,70,0.35);
+  box-shadow: 0 6px 18px rgba(230,180,70,0.18);
+}
+.lb-row.lb-rank-1 .lb-bar-fill {
+  background: linear-gradient(90deg, #ffd778, #f7b84a);
+}
+.lb-row.lb-rank-1 .lb-points { color: #c98a13; }
+
+/* TOP 2 – strieborná */
+.lb-row.lb-rank-2 {
+  background: linear-gradient(90deg, rgba(196,206,214,0.28), rgba(255,198,214,0.08));
+  border-color: rgba(160,170,180,0.35);
+}
+.lb-row.lb-rank-2 .lb-bar-fill {
+  background: linear-gradient(90deg, #cfd8df, #9fb0bb);
+}
+
+/* TOP 3 – bronzová */
+.lb-row.lb-rank-3 {
+  background: linear-gradient(90deg, rgba(210,150,110,0.22), rgba(255,198,214,0.08));
+  border-color: rgba(190,120,80,0.3);
+}
+.lb-row.lb-rank-3 .lb-bar-fill {
+  background: linear-gradient(90deg, #e0a679, #c97f4e);
+}
+
+/* Aktívny filter Týždeň/Mesiac/Všetko */
+.chip.active {
+  background: linear-gradient(to left, var(--accent-2), var(--accent-3)) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(240,138,166,0.3) !important;
+}
+
+/* 🌙 DARK MODE – rebríček */
+:root[data-theme="dark"] .lb-row {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.06);
+}
+
+:root[data-theme="dark"] .lb-bar {
+  background: rgba(255,255,255,0.08);
+}
+
+:root[data-theme="dark"] .lb-rank-num {
+  background: rgba(255,255,255,0.08);
+  color: #aebac6;
+}
+
+:root[data-theme="dark"] .lb-row.lb-rank-1 {
+  background: linear-gradient(90deg, rgba(255,215,120,0.14), rgba(255,255,255,0.02));
+  border-color: rgba(230,180,70,0.3);
+}
+
+:root[data-theme="dark"] .lb-row.lb-rank-2 {
+  background: linear-gradient(90deg, rgba(196,206,214,0.14), rgba(255,255,255,0.02));
+  border-color: rgba(160,170,180,0.3);
+}
+
+:root[data-theme="dark"] .lb-row.lb-rank-3 {
+  background: linear-gradient(90deg, rgba(210,150,110,0.14), rgba(255,255,255,0.02));
+  border-color: rgba(190,120,80,0.3);
+}
+
+/* ============================================================
+   🔴 PULZUJÚCI ODZNAK – tlačidlo "Uložené výzvy"
+   .has-pending-duels sa pridáva/odoberá z watchDuelBankBadge()
+   v scripts/duels.js podľa toho, či existujú čakajúce výzvy.
+============================================================ */
+
+#toggleDuelBankBtn.has-pending-duels {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(240,138,166,0.3);
+  animation: duelBtnPulse 1.8s ease-in-out infinite;
+}
+
+.duel-bank-badge {
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #ff3b5c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px var(--surface);
+  animation: duelBadgePop .4s ease;
+}
+
+@keyframes duelBtnPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(240,138,166,0.55), 0 6px 16px rgba(240,138,166,0.3); }
+  70%  { box-shadow: 0 0 0 10px rgba(240,138,166,0), 0 6px 16px rgba(240,138,166,0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(240,138,166,0), 0 6px 16px rgba(240,138,166,0.3); }
+}
+
+@keyframes duelBadgePop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Celá karta "Banka duelov" jemne zvýraznená, kým existujú výzvy */
+.card:has(#toggleDuelBankBtn.has-pending-duels) {
+  border-color: rgba(240,138,166,0.45);
+  box-shadow: 0 8px 26px rgba(240,138,166,0.22);
+}
+
+:root[data-theme="dark"] .card:has(#toggleDuelBankBtn.has-pending-duels) {
+  border-color: rgba(240,138,166,0.3);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.5);
 }
 
 /* ----------------------------------------------------------
