@@ -1,5 +1,8 @@
 'use strict';
 
+/* =====================================================
+   IMPORTY – LEN TO, ČO NAOZAJ EXISTUJE
+   ===================================================== */
 import { $, loadParagrafy } from './core.js';
 import { setParagrafy } from './state.js';
 import { renderAreas, renderModules } from './app.js';
@@ -7,36 +10,78 @@ import { renderHeaderAvatar } from './avatars.js';
 import { loadReports } from './reports.js';
 import { loadAnsweredCases } from './cases.js';
 import { applyTheme } from './theme.js';
-import { startQuiz, nextQ, prevQ } from './quiz.js';
+import { nextQ, prevQ } from './quiz.js';
+import { initDuelLeaderboard } from './scripts/leaderboard.js';
+import { watchDuelBankBadge } from './scripts/duels.js';
 
-export function init() {
-  // 🔹 Načítanie paragrafov
-  const p = loadParagrafy();
-  setParagrafy(p);
+/* =====================================================
+   ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
+   ===================================================== */
+function waitForAllData(callback) {
+  let attempts = 0;
+  const timer = setInterval(() => {
+    attempts++;
+    const areasReady =
+      typeof window.areas !== 'undefined' &&
+      Object.keys(window.areas).length > 0;
+    const catalogReady =
+      typeof window.catalog !== 'undefined' &&
+      Object.keys(window.catalog).length > 0;
+    const externalReady =
+      typeof window.catalog !== 'undefined' &&
+      typeof window.catalog.openExternal === 'function';
 
-  const pc = $('paragrafValue');   // opravené ID podľa index.html
-  if (pc) pc.textContent = p;
+    if (areasReady && catalogReady && externalReady) {
+      clearInterval(timer);
+      console.log("🔥 ALL DATA READY → spúšťam INIT");
+      callback();
+    }
 
-  // 🔹 Téma (light/dark)
-  applyTheme(localStorage.getItem('theme') || 'light');
-
-  // 🔹 Renderovanie hlavičky a hlavných sekcií
-  renderHeaderAvatar();
-  renderAreas();
-  renderModules();
-
-  // 🔹 Reporty a prípady
-  loadReports();
-  loadAnsweredCases('TPH-A1');
-
-  // 🔹 Pripojenie udalostí
-  attachEvents();
+    if (attempts > 80) { // 8 sekúnd
+      clearInterval(timer);
+      console.error("❌ Nepodarilo sa načítať areas alebo catalog.");
+    }
+  }, 100);
 }
 
-function attachEvents() {
-  const startBtn = $('startQuizBtn');
-  if (startBtn) startBtn.addEventListener('click', startQuiz);
+/* =====================================================
+   HLAVNÁ INIT FUNKCIA
+   ===================================================== */
+export function init() {
+  waitForAllData(() => {
+    /* 🔹 Paragrafy */
+    const p = loadParagrafy();
+    setParagrafy(p);
+    const pc = $('paragrafValue');
+    if (pc) pc.textContent = p;
 
+    /* 🔹 Téma */
+    applyTheme(localStorage.getItem('theme') || 'light');
+
+    /* 🔹 UI */
+    renderHeaderAvatar();
+    renderAreas();      // ✔ teraz už určite existuje window.areas
+    renderModules();    // ✔ teraz už určite existuje window.catalog
+
+    /* 🔹 Reporty a prípady */
+    loadReports();
+    loadAnsweredCases('TPH-A1');
+
+    /* 🔹 Rebríček duelov */
+    initDuelLeaderboard();
+
+    /* 🔹 Udalosti */
+    attachEvents();
+
+    /* 🔹 Pulzujúci odznak na "Uložené výzvy" */
+    watchDuelBankBadge();
+  });
+}
+
+/* =====================================================
+   UDALOSTI
+   ===================================================== */
+function attachEvents() {
   const nextBtn = $('nextBtn');
   if (nextBtn) nextBtn.addEventListener('click', nextQ);
 
@@ -53,7 +98,27 @@ function attachEvents() {
       applyTheme(current);
     });
   }
+
+  /* =========================
+     🔥 Banka duelov – tlačidlo "Uložené výzvy"
+     ========================= */
+  const toggleDuelBankBtn = $('toggleDuelBankBtn');
+  const duelBankBox = $('duelBank');
+  if (toggleDuelBankBtn && duelBankBox) {
+    toggleDuelBankBtn.addEventListener('click', () => {
+      const isHidden = duelBankBox.style.display === 'none';
+      duelBankBox.style.display = isHidden ? 'block' : 'none';
+
+      if (isHidden && typeof window.renderDuelBank === 'function') {
+        window.renderDuelBank();
+      }
+    });
+  } else {
+    console.warn('⚠️ toggleDuelBankBtn alebo duelBank element sa nenašiel v DOM.');
+  }
 }
 
-// 🔥 Spustenie inicializácie po načítaní DOM
+/* =====================================================
+   SPUSTENIE PO NAČÍTANÍ DOM
+   ===================================================== */
 document.addEventListener('DOMContentLoaded', init);
