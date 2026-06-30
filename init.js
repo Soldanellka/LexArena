@@ -1,8 +1,5 @@
 'use strict';
 
-/* =====================================================
-   IMPORTY
-   ===================================================== */
 import { $, loadParagrafy } from './core.js';
 import { setParagrafy } from './state.js';
 import { renderAreas, renderModules } from './app.js';
@@ -13,7 +10,7 @@ import { applyTheme } from './theme.js';
 import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
-import { initAvatarSystem } from './scripts/avatar.js';
+import { initAvatarSystem, selectAvatar } from './scripts/avatar.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -37,12 +34,95 @@ function waitForAllData(callback) {
       console.log("🔥 ALL DATA READY → spúšťam INIT");
       callback();
     }
-
     if (attempts > 80) {
       clearInterval(timer);
       console.error("❌ Nepodarilo sa načítať areas alebo catalog.");
     }
   }, 100);
+}
+
+/* =====================================================
+   MODAL VÝBERU AVATARA
+   ===================================================== */
+function openAvatarSelectModal() {
+  const existing = document.getElementById('avatarSelectModal');
+  if (existing) {
+    existing.style.display = 'flex';
+    return;
+  }
+
+  const AVATARS = [
+    { id: 'student-f', name: 'Študentka práva', emoji: '👩‍⚖️', desc: 'Dostupná pre všetkých' },
+    { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých' },
+    { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: 'Za 100§ celkovo' },
+    { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: 'Za 100 uznaných nahlásení' },
+  ];
+
+  const modal = document.createElement('div');
+  modal.id = 'avatarSelectModal';
+  modal.style.cssText = `
+    position:fixed; inset:0; background:rgba(0,0,0,0.5);
+    display:flex; align-items:center; justify-content:center;
+    z-index:9999;
+  `;
+
+  const panel = document.createElement('div');
+  panel.style.cssText = `
+    background:var(--surface,#fff); border-radius:20px;
+    padding:28px; max-width:400px; width:90%;
+    box-shadow:0 20px 60px rgba(0,0,0,0.25);
+  `;
+
+  panel.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <div>
+        <h3 style="margin:0;font-size:18px">Vyber avatar</h3>
+        <div class="small" style="color:var(--muted)">Klikni na avatar ktorý chceš používať</div>
+      </div>
+      <button id="closeAvatarSelectModal" class="btn" style="padding:6px 12px">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      ${AVATARS.map(av => `
+        <div class="avatar-select-card" data-id="${av.id}" style="
+          border:2px solid var(--border,#eee); border-radius:14px;
+          padding:16px; text-align:center; cursor:pointer;
+          transition:all .2s;
+        ">
+          <div style="font-size:42px;margin-bottom:8px">${av.emoji}</div>
+          <div style="font-weight:600;font-size:13px">${av.name}</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">${av.desc}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  modal.appendChild(panel);
+  document.body.appendChild(modal);
+
+  // Zatvorenie
+  document.getElementById('closeAvatarSelectModal').onclick = () => {
+    modal.style.display = 'none';
+  };
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  };
+
+  // Výber avatara
+  panel.querySelectorAll('.avatar-select-card').forEach(card => {
+    card.onmouseenter = () => {
+      card.style.borderColor = 'var(--accent-3,#f08ab0)';
+      card.style.transform = 'scale(1.04)';
+    };
+    card.onmouseleave = () => {
+      card.style.borderColor = 'var(--border,#eee)';
+      card.style.transform = 'scale(1)';
+    };
+    card.onclick = async () => {
+      const avatarId = card.dataset.id;
+      await selectAvatar(avatarId);
+      modal.style.display = 'none';
+    };
+  });
 }
 
 /* =====================================================
@@ -77,7 +157,7 @@ export function init() {
     /* 🔹 Pulzujúci odznak na "Uložené výzvy" */
     watchDuelBankBadge();
 
-    /* 🔹 Avatar systém (energia, login streak, kŕmenie) */
+    /* 🔹 Avatar systém */
     initAvatarSystem();
   });
 }
@@ -99,6 +179,15 @@ function attachEvents() {
         document.documentElement.getAttribute('data-theme') === 'dark'
           ? 'light' : 'dark';
       applyTheme(current);
+    });
+  }
+
+  /* 🔥 Klik na avatar → modal výberu */
+  const avatarWrap = $('avatarWrap');
+  if (avatarWrap) {
+    avatarWrap.addEventListener('click', openAvatarSelectModal);
+    avatarWrap.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') openAvatarSelectModal();
     });
   }
 
