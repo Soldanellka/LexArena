@@ -1,0 +1,236 @@
+'use strict';
+
+import { ref, onValue, get, set, update }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+import { $, escapeHtml } from '../core.js';
+
+/* ============================================================
+   POMOCNÉ FUNKCIE NA KALENDÁRNE OBDOBIA
+============================================================ */
+
+function getWeekStart(date = new Date()) {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = (day === 0 ? -6 : 1) - day;
+  d.setDate(d.getDate() + diff);
+  d.setHours(0, 0, 0, 0);
+  return d.getTime();
+}
+
+function getWeekKey(date = new Date()) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  return `${d.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
+}
+
+function getMonthStart(date = new Date()) {
+  return new Date(date.getFullYear(), date.getMonth(), 1, 0, 0, 0, 0).getTime();
+}
+
+function getMonthKey(date = new Date()) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function getCutoff(period) {
+  if (period === 'week') return getWeekStart();
+  if (period === 'month') return getMonthStart();
+  return 0;
+}
+
+/* ============================================================
+   AGREGÁCIA VÝSLEDKOV Z duels/ PODĽA OBDOBIA
+============================================================ */
+function aggregateStats(duelsData, period) {
+  const cutoff = getCutoff(period);
+  const stats = {};
+
+  Object.values(duelsData || {}).forEach(duel => {
+    if (!duel || duel.status !== 'finished' || !duel.result) return;
+    if (!duel.finishedAt || duel.finishedAt < cutoff) return;
+
+    const { firstPlayer, secondPlayer, winner } = duel.result;
+    if (!firstPlayer || !secondPlayer) return;
+
+    [firstPlayer, secondPlayer].forEach(p => {
+      if (!p || !p.nick || p.nick === 'null' || p.nick === 'Unknown') return;
+      if (!stats[p.nick]) stats[p.nick] = { nick: p.nick, duels: 0, wins: 0, points: 0 };
+      stats[p.nick].duels += 1;
+      stats[p.nick].points += (typeof p.score === 'number' ? p.score : 0);
+      if (winner === p.nick) stats[p.nick].wins += 1;
+    });
+  });
+
+  return Object.values(stats).sort((a, b) => b.points - a.points);
+}
+
+/* ============================================================
+   VYKRESLENIE REBRÍČKA – prémiový dizajn
+   (HTML štruktúra naviazaná na nové CSS triedy
+   .lb-row, .lb-rank, .lb-rank-1/2/3, .lb-name, .lb-stats,
+   .lb-bar, .lb-bar-fill – viď styles.css)
+============================================================ */
+function renderLeaderboardList(list) {
+  const box = $('duelLeaderboard');
+  if (!box) return;
+
+  if (!list.length) {
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne odohrané duely v tomto období.</div>';
+    return;
+  }
+
+  const maxPoints = list[0].points || 1;
+
+  box.innerHTML = list.map((p, i) => {
+    const rankClass = i < 3 ? ` lb-rank-${i + 1}` : '';
+    const pct = Math.max(6, Math.round((p.points / maxPoints) * 100));
+    const medal = i < 3
+      ? `<div class="lb-medal lb-medal-${i + 1}"><span class="lb-medal-ribbon"></span><span class="lb-medal-num">${i + 1}</span></div>`
+      : `<span class="lb-rank-num">${i + 1}</span>`;
+
+    return `
+      <div class="lb-row${rankClass}">
+        <div class="lb-rank">${medal}</div>
+        <div class="lb-main">
+          <div class="lb-top-line">
+            <span class="lb-name">${escapeHtml(p.nick)}</span>
+            <span class="lb-points">${p.points}<small> b.</small></span>
+          </div>
+          <div class="lb-bar"><div class="lb-bar-fill" style="width:${pct}%"></div></div>
+          <div class="lb-meta">${p.wins}/${p.duels} výhier</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ============================================================
+   HLAVNÁ INIT FUNKCIA – NAČÍTANIE + NAPOJENIE FILTROV
+============================================================ */
+export function initDuelLeaderboard() {
+  const box = $('duelLeaderboard');
+  if (!box) {
+    console.warn('⚠️ #duelLeaderboard sa nenašiel v DOM.');
+    return;
+  }
+
+  const db = window.db;
+  if (!db) {
+    console.error('❌ Firebase DB (window.db) nie je inicializovaná – rebríček sa nedá načítať.');
+    return;
+  }
+
+  let currentPeriod = 'all';
+  let latestDuelsData = null;
+
+  function rerender() {
+    if (!latestDuelsData) return;
+    renderLeaderboardList(aggregateStats(latestDuelsData, currentPeriod));
+  }
+
+  const duelsRef = ref(db, 'duels');
+  onValue(duelsRef, (snapshot) => {
+    latestDuelsData = snapshot.val() || {};
+    rerender();
+  });
+
+  const filterRow = box.previousElementSibling;
+  if (filterRow) {
+    const buttons = Array.from(filterRow.querySelectorAll('.chip'));
+    const labelToPeriod = {
+      'Týždeň': 'week',
+      'Mesiac': 'month',
+      'Všetko': 'all'
+    };
+
+    buttons.forEach(btn => {
+      const period = labelToPeriod[btn.textContent.trim()];
+      if (!period) return;
+
+      if (period === 'all') btn.classList.add('active');
+
+      btn.addEventListener('click', () => {
+        currentPeriod = period;
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        rerender();
+      });
+    });
+  } else {
+    console.warn('⚠️ Nenašiel sa riadok s filtrami Týždeň/Mesiac/Všetko nad #duelLeaderboard.');
+  }
+}
+
+/* ============================================================
+   🏆 ODMENY ZA TÝŽDEŇ / MESIAC
+============================================================ */
+
+const WEEKLY_REWARDS = [50, 20, 10];
+const MONTHLY_REWARDS = [500, 200, 100];
+
+async function awardParagrafyDirect(db, nick, amount) {
+  if (!nick || !amount) return;
+  const userRef = ref(db, `users/${nick}`);
+  const snap = await get(userRef);
+  const data = snap.exists() ? snap.val() : {};
+  const current = data.paragrafy || 0;
+  await update(userRef, {
+    paragrafy: current + amount,
+    lastParUpdate: Date.now()
+  });
+}
+
+async function closePeriod(period) {
+  const db = window.db;
+  if (!db) {
+    console.error('❌ Firebase DB nie je inicializovaná.');
+    return null;
+  }
+
+  const key = period === 'week' ? getWeekKey() : getMonthKey();
+  const rewardsRef = ref(db, `rewards/${period}/${key}`);
+
+  const existing = await get(rewardsRef);
+  if (existing.exists()) {
+    console.warn(`⚠️ Obdobie ${key} (${period}) už bolo vyhodnotené.`);
+    return { alreadyClosed: true, key };
+  }
+
+  const duelsSnap = await get(ref(db, 'duels'));
+  const duelsData = duelsSnap.exists() ? duelsSnap.val() : {};
+  const top3 = aggregateStats(duelsData, period).slice(0, 3);
+
+  const rewardTable = period === 'week' ? WEEKLY_REWARDS : MONTHLY_REWARDS;
+  const results = [];
+
+  for (let i = 0; i < top3.length; i++) {
+    const amount = rewardTable[i] || 0;
+    if (amount > 0) {
+      await awardParagrafyDirect(db, top3[i].nick, amount);
+    }
+    results.push({ place: i + 1, nick: top3[i].nick, points: top3[i].points, awarded: amount });
+  }
+
+  await set(rewardsRef, {
+    closedAt: Date.now(),
+    results
+  });
+
+  console.log(`🏆 Obdobie ${key} (${period}) uzavreté, odmeny vyplatené:`, results);
+  return { alreadyClosed: false, key, results };
+}
+
+export function closeWeeklyPeriod() {
+  return closePeriod('week');
+}
+
+export function closeMonthlyPeriod() {
+  return closePeriod('month');
+}
+
+window.initDuelLeaderboard = initDuelLeaderboard;
+window.closeWeeklyPeriod = closeWeeklyPeriod;
+window.closeMonthlyPeriod = closeMonthlyPeriod;
