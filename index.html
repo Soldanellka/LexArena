@@ -4,17 +4,272 @@
   <meta charset="utf-8" />
   <title>LexArena – Právna akadémia</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <!-- FONTY -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- HLAVNÝ ŠTÝL -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .correct { background: rgba(34,197,94,0.06); border:1px solid rgba(34,197,94,0.12); }
+    .wrong   { background: rgba(239,68,68,0.04);  border:1px solid rgba(239,68,68,0.08);  }
+  </style>
 </head>
-
 <body>
-  <div id="app"></div>
 
-  <script type="module" src="scripts/load-components.js"></script>
+<header class="header">
+  <div class="brand">
+    <span class="logo-dot" aria-hidden="true"></span>
+    <span>LexArena</span>
+
+    <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0">
+      <img id="userAvatar" src="assets/avatars/student-f-awake.svg" alt="Avatar používateľa" />
+    </div>
+
+    <!-- Avatar energia mini panel -->
+    <div id="avatarEnergyPanel" class="avatar-energy-panel">
+      <div class="avatar-energy-bar-wrap">
+        <div id="avatarEnergyBar" class="avatar-energy-bar" style="width:100%"></div>
+      </div>
+      <span id="avatarEnergyText" class="avatar-energy-text">⚡ 100%</span>
+      <button id="feedAvatarBtn" class="btn avatar-feed-btn" style="display:none" title="Nakŕm avatara za 12§">
+        🍖 Nakŕmiť (12§)
+      </button>
+    </div>
+
+    <div class="nick-box">
+      <label for="nickname">Tvoj nick</label>
+      <div class="nick-row">
+        <input id="nickname" type="text" placeholder="Zadaj nick">
+        <button id="saveNick">Uložiť</button>
+      </div>
+    </div>
+
+    <div id="playerNickDisplay" class="player-nick-display"></div>
+  </div>
+
+  <div class="header-right">
+    <div class="pill">Paragrafy: <strong id="parCount">0</strong></div>
+    <div class="pill small" id="loginStreakDisplay" style="color:var(--accent-3)"></div>
+    <div class="pill small" id="premiumBadge">FREE</div>
+
+    <button class="btn" id="themeToggleBtn" title="Prepni tému">
+      <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Prepínač témy">
+    </button>
+
+    <button class="btn" id="toggleRoleBtn">Role: student</button>
+    <button class="btn" id="togglePremiumBtn">Toggle PREMIUM</button>
+    <button class="btn" id="transferAccountBtn">Preniesť účet</button>
+    <button class="btn" id="loginPinBtn">Prihlásiť PINom</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="left">
+
+    <div class="card section-card">
+      <h3 style="margin:0">Študijné moduly</h3>
+      <div class="small">Samostatné moduly pre detailné štúdium</div>
+      <div id="modulesList" class="list" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card section-card">
+      <h3 style="margin:0">Rebríček duelov</h3>
+      <div class="small">Najlepší hráči duelových kvízov</div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="chip">Týždeň</button>
+        <button class="chip">Mesiac</button>
+        <button class="chip">Všetko</button>
+      </div>
+      <div id="duelLeaderboard" class="list" style="margin-top:10px">
+        <div class="small muted">Načítavam rebríček…</div>
+      </div>
+    </div>
+
+    <div class="card section-card">
+      <h3 style="margin:0">Nahlásiť právnu nezrovnalosť</h3>
+      <div class="small">Pomôž zlepšiť právne otázky</div>
+      <button class="btn btn-primary" id="reportIssueBtn" style="margin-top:10px">Otvoriť formulár</button>
+    </div>
+
+    <div class="card section-card">
+      <h3 style="margin:0">Obchod</h3>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
+        <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
+        <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
+          <img src="assets/icons/shop.svg" width="18" height="18" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="card section-card">
+      <h3 style="margin:0">Admin a garant panel</h3>
+      <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
+    </div>
+
+  </div>
+
+  <div class="right">
+
+    <div class="card section-card highlight-area">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <h3 style="margin:0">Oblasti</h3>
+          <div class="small">Vyber oblasť pre duelový kvíz</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <img src="assets/icons/book.svg" width="28" height="28" alt="">
+          <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
+        </div>
+      </div>
+      <div id="areasList" class="list" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card highlight-duelquiz" id="quizCard">
+      <div id="quizIntro">
+        <div class="small">Duelový kvíz</div>
+        <h2 id="quizTitle">Vyber oblasť do duelu</h2>
+        <div class="small">Po odohraní sa tvoja 10‑otázková výzva uloží do banky duelov.</div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť duel</button>
+          <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
+          <button class="btn" id="helpBtn" type="button">
+            <img src="assets/icons/info.svg" width="18" height="18" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div id="quizArea" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="small">Oblasť</div>
+            <h3 id="areaTitle" style="margin:6px 0 0 0"></h3>
+          </div>
+          <div style="text-align:right">
+            <div class="small">Otázka</div>
+            <div id="qIndex" style="font-weight:700">1 / 10</div>
+          </div>
+        </div>
+        <div class="question-box">
+          <div class="q-text" id="qText"></div>
+          <div class="options" id="options"></div>
+          <div class="footer-row">
+            <div class="meta">Správne: <span id="correctCount">0</span> • Nesprávne: <span id="wrongCount">0</span></div>
+            <div>
+              <button class="btn btn-ghost" id="prevBtn">Predchádzajúca</button>
+              <button class="btn btn-primary" id="nextBtn">Ďalšia</button>
+            </div>
+          </div>
+          <div style="margin-top:10px">
+            <div class="small">Progres</div>
+            <div class="progress"><i id="progBar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card highlight-games">
+      <h3 style="margin:0">Hry a prípady</h3>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
+        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
+      </div>
+      <div class="small" style="margin-top:10px;color:var(--muted)">
+        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+      </div>
+    </div>
+
+    <div class="card highlight-bank">
+      <h3 style="margin:0">Banka duelov</h3>
+      <div class="small">Balíky otázok a uložené výzvy na duelový kvíz</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
+      </div>
+      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
+    </div>
+
+    <div class="card highlight-challenges" id="incomingChallengeCard" style="display:none; margin-top:16px;">
+      <h3 style="margin:0">Výzvy od spoluhráčov</h3>
+      <div class="small">Prijaté výzvy na duelový kvíz</div>
+      <div id="incomingChallengeList" class="list" style="margin-top:10px"></div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn btn-primary" id="acceptAnyChallenge">Prijať prvú výzvu</button>
+        <button class="btn btn-ghost" id="ignoreAllChallenges">Ignorovať všetky</button>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- Modály -->
+<div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+  <div class="avatar-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h3 id="memoryTitle">Kartičky – matching</h3>
+      <button class="btn" id="closeMemory">Zavrieť</button>
+    </div>
+    <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
+    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory">Reštartovať</button></div>
+  </div>
+</div>
+
+<div id="casesModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+  <div class="avatar-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h3 id="casesTitle">Prípady z praxe</h3>
+      <button class="btn" id="closeCases">Zavrieť</button>
+    </div>
+    <div id="caseContainer" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<!-- KONFIGURÁCIA OTÁZOK -->
+<script>
+  window.LEX_QUESTION_RANGES = {
+    "Pracovné právo":         { start: 1, end: 50 },
+    "Trestné právo hmotné":   { start: 1, end: 30 },
+    "Trestné právo procesné": { start: 1, end: 30 }
+  };
+</script>
+
+<!-- DATA + FIREBASE (pred všetkým ostatným) -->
+<script type="module" src="data.js"></script>
+<script type="module" src="firebase.js"></script>
+
+<!-- CORE MODULES -->
+<script type="module" src="core.js"></script>
+<script type="module" src="state.js"></script>
+<script type="module" src="ui.js"></script>
+<script type="module" src="theme.js"></script>
+<script type="module" src="audio.js"></script>
+<script type="module" src="avatars.js"></script>
+<script type="module" src="areas.js"></script>
+<script type="module" src="admin.js"></script>
+<script type="module" src="reports.js"></script>
+<script type="module" src="memory.js"></script>
+<script type="module" src="cases.js"></script>
+<script type="module" src="app.js"></script>
+
+<!-- DUEL ENGINE -->
+<script type="module" src="scripts/duels.js"></script>
+<script type="module" src="scripts/leaderboard.js"></script>
+
+<!-- QUIZ ENGINE -->
+<script type="module" src="quiz.js"></script>
+
+<!-- INIT (posledný – spúšťa všetko vrátane avatara) -->
+<script type="module" src="init.js"></script>
+
+<!-- PIN + prenos účtu -->
+<script type="module">
+  import { transferAccount, loginWithPin } from "./core.js";
+  const transferBtn = document.getElementById("transferAccountBtn");
+  const loginPinBtn = document.getElementById("loginPinBtn");
+  if (transferBtn) transferBtn.onclick = () => transferAccount();
+  if (loginPinBtn) loginPinBtn.onclick = () => {
+    const pin = prompt("Zadaj PIN:");
+    if (pin) loginWithPin(pin);
+  };
+</script>
+
 </body>
 </html>
