@@ -1,131 +1,156 @@
+'use strict';
+
 console.log("DATAJS NAČÍTANÝ");
 
 /* =====================================================
    AUTO-DETEKCIA PROSTREDIA
-   ===================================================== */
+===================================================== */
 
-const IS_TEST =
-  window.location.hostname.includes("vercel.app") ||
-  window.location.pathname.includes("/test");
-
-const LIVE_ROOT = "https://www.lexarena.sk/";
-const BASE = IS_TEST ? LIVE_ROOT : "/";
-
+const LIVE = "https://www.lexarena.sk/";
 
 /* =====================================================
-   OBLASTI
-   ===================================================== */
+   GLOBÁLNE OBJEKTY PRE DUELOVÝ ENGINE
+===================================================== */
 
-const areas = {
-  "Trestné právo": {},
-  "Občianske právo": {},
-  "Pracovné právo": {},
-  "Rímske právo": {},
-  "Dejiny práva": {}
+window.areas = {
+  "Pracovné právo": [],
+  "Trestné právo hmotné": [],
+  "Trestné právo procesné": [],
+  "Občianske právo hmotné": [],
+  "Občianske právo procesné": []
 };
 
-
 /* =====================================================
-   ŠTUDIJNÉ MODULY
-   ===================================================== */
+   ŠTUDIJNÉ MODULY – VRÁTENÉ VŠETKY
+===================================================== */
 
-const catalog = {
-
-  "Trestné právo hmotné": {
-    openExternal: BASE + "Trestné právo hmotné/",
-    desc: "Kompletná TPH appka.",
-    duelCount: 5
+window.catalog = {
+  "LuluLaw duel Pracovné právo": {
+    id: "pracovne",
+    openExternal: LIVE + "LuluLaw duel Pracovné právo/",
+    externalPath: LIVE + "LuluLaw duel Pracovné právo/data/",
+    desc: "Kompletná appka pracovného práva."
   },
 
-  "Trestné právo procesné": {
-    openExternal: BASE + "Trestné právo procesné/",
-    desc: "Kompletná TPP appka.",
-    duelCount: 5
+  "Občan - teória a veľký kvíz": {
+    id: "obcan",
+    openExternal: LIVE + "Občan - teória a veľký kvíz/",
+    externalPath: LIVE + "Občan - teória a veľký kvíz/data/",
+    desc: "Veľký občiansky kvíz."
   },
 
-  "Trestné právo – spájačka": {
-    openExternal: BASE + "Trestné právo - spájačka/",
-    desc: "Hra na spájanie troch prvkov."
+  "TREST Veľký KVÍZ": {
+    id: "trestvelky",
+    openExternal: LIVE + "TREST Veľký KVÍZ/",
+    externalPath: LIVE + "TREST Veľký KVÍZ/data/",
+    desc: "Kompletný trestný kvíz."
   },
 
-  "Trestné právo – teória a prípady": {
-    openExternal: BASE + "Trestné právo - teória a prípady/",
+  "Trestné právo - spájačka": {
+    id: "spajacka",
+    openExternal: LIVE + "Trestné právo - spájačka/",
+    externalPath: LIVE + "Trestné právo - spájačka/data/",
+    desc: "Interaktívna spájačka."
+  },
+
+  "Trestné právo - teória a prípady": {
+    id: "tppripady",
+    openExternal: LIVE + "Trestné právo - teória a prípady/",
+    externalPath: LIVE + "Trestné právo - teória a prípady/data/",
     desc: "Teória + prípady."
   },
 
-  "Trestné právo – Veľký kvíz": {
-    openExternal: BASE + "TREST Veľký KVÍZ/",
-    desc: "Veľký kvíz."
+  "Trestné právo hmotné": {
+    id: "tph",
+    openExternal: LIVE + "Trestné právo hmotné/",
+    externalPath: LIVE + "Trestné právo hmotné/data/",
+    desc: "Kompletná TPH appka."
   },
 
-  "Občan – teória a veľký kvíz": {
-    openExternal: BASE + "Občan - teória a veľký kvíz/",
-    desc: "Teória + veľký kvíz."
-  },
-
-  "Pracovné právo": {
-    openExternal: BASE + "LuluLaw duel Pracovné právo/",
-    desc: "Kompletná appka pracovného práva.",
-    duelCount: 5
-  },
-
-  "Občianske právo hmotné": { desc: "Modul vo vývoji." },
-  "Občianske právo procesné": { desc: "Modul vo vývoji." },
-  "Rímske právo": { desc: "Modul vo vývoji." }
+  "Trestné právo procesné": {
+    id: "tpp",
+    openExternal: LIVE + "Trestné právo procesné/",
+    externalPath: LIVE + "Trestné právo procesné/data/",
+    desc: "Kompletná TPP appka."
+  }
 };
 
-
 /* =====================================================
-   MEMORY SETS
-   ===================================================== */
+   AUTO-LOADER JSON OTÁZOK
+===================================================== */
 
-const memorySets = {
-  "TPH-A1": [
-    { id: "m1", left: "Nullum crimen sine lege", right: "Žiadny trest bez zákona" },
-    { id: "m2", left: "Lex mitior", right: "Použitie miernejšieho zákona" },
-    { id: "m3", left: "Subsidiarita", right: "TP len ak iné prostriedky zlyhajú" },
-    { id: "m4", left: "Proporcionalita", right: "Trest primeraný závažnosti" },
-    { id: "m5", left: "Preventívna funkcia", right: "Odradenie od páchateľov" },
-    { id: "m6", left: "Represívna funkcia", right: "Trestanie páchateľov" },
-    { id: "m7", left: "Ochranná funkcia", right: "Ochrana spoločnosti" },
-    { id: "m8", left: "Časová pôsobnosť", right: "Ktorý zákon sa použije v čase činu" }
-  ]
-};
+async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
+  console.log("📥 Načítavam JSON otázky pre:", areaTitle);
 
+  const files = Array.from({ length: maxFiles }, (_, i) => `A${i + 1}.json`);
+  const questions = [];
 
-/* =====================================================
-   PRÍPADY
-   ===================================================== */
+  for (const file of files) {
+    try {
+      const res = await fetch(folderUrl + file);
+      if (!res.ok) continue;
 
-const cases = {
-  "TPH-A1": [
-    {
-      id: "case1",
-      title: "Lex mitior – krádež 2024/2025",
-      text: "Páchateľ spácha krádež v roku 2024...",
-      options: [
-        { id: "o1", text: "Použiť zákon z roku 2024", correct: false },
-        { id: "o2", text: "Použiť zákon z roku 2025 (lex mitior)", correct: true },
-        { id: "o3", text: "Rozhodnúť podľa praxe", correct: false }
-      ],
-      reward: 2
+      const json = await res.json();
+
+      if (json.quiz) {
+        json.quiz.forEach(q => {
+          questions.push({
+            question: q.question,
+            options: q.options,
+            correct: q.correct,
+            /* =========================
+               🔥 OPRAVA: source sa nastavuje podľa
+               skutočného súboru (napr. "A23"), nie podľa
+               interného json.id, ktoré môže byť v rôznych
+               JSON súboroch zhodné/duplicitné a spôsobovať
+               nesprávne zoskupovanie otázok do párov
+               (napr. 12 otázok namiesto 10 v duely.js).
+               ========================= */
+            source: file.replace('.json', '')
+          });
+        });
+      }
+    } catch (e) {
+      console.warn("⚠️ Chyba pri načítaní:", file);
     }
-  ]
-};
+  }
 
+  window.areas[areaTitle] = questions;
+  console.log(`✅ ${areaTitle}: načítaných ${questions.length} otázok`);
+}
 
 /* =====================================================
-   FUNKCIA NA OTVORENIE EXTERNEJ APPKY + FIXNUTÝ LOADER
-   ===================================================== */
+   NAČÍTANIE OBLASTÍ PRE DUEL
+===================================================== */
 
-catalog.openExternal = function (slug) {
+// Pracovné právo → 50 JSON
+loadJsonQuestions(
+  "Pracovné právo",
+  LIVE + "LuluLaw duel Pracovné právo/data/",
+  50
+);
+
+// Trestné právo hmotné → 30 JSON
+loadJsonQuestions(
+  "Trestné právo hmotné",
+  LIVE + "Trestné právo hmotné/data/",
+  30
+);
+
+// Trestné právo procesné → 30 JSON
+loadJsonQuestions(
+  "Trestné právo procesné",
+  LIVE + "Trestné právo procesné/data/",
+  30
+);
+
+/* =====================================================
+   OTVORENIE EXTERNEJ APPKY
+===================================================== */
+
+window.catalog.openExternal = function (slug) {
   console.log("Otváram externú appku:", slug);
 
-  // odstrániť starý loader, ak existuje
-  const old = document.getElementById("globalLoader");
-  if (old) old.remove();
-
-  // vytvoriť nový loader
   const loader = document.createElement("div");
   loader.id = "globalLoader";
   loader.style = `
@@ -144,10 +169,6 @@ catalog.openExternal = function (slug) {
   loader.textContent = "Načítavam externú aplikáciu…";
   document.body.appendChild(loader);
 
-  // ⭐ TRIK: vynútiť reflow, aby loader vždy naskočil
-  void loader.offsetHeight;
-
-  // malé oneskorenie pre vizuálny efekt
   setTimeout(() => {
     window.location.href = slug;
   }, 200);
