@@ -22,10 +22,10 @@
 
 <header class="header">
   <div class="brand">
-    <span class="logo-dot"></span>
+    <span class="logo-dot" aria-hidden="true"></span>
     <span>LexArena</span>
 
-    <div id="avatarWrap" class="avatar-wrap" role="button" tabindex="0">
+    <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0">
       <img id="userAvatar" src="assets/avatars/young-lawyer.svg" alt="Avatar používateľa" />
     </div>
 
@@ -44,7 +44,7 @@
     <div class="pill">Paragrafy: <strong id="parCount">0</strong></div>
     <div class="pill small" id="premiumBadge">FREE</div>
 
-    <button class="btn" id="themeToggleBtn">
+    <button class="btn" id="themeToggleBtn" title="Prepni tému">
       <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Prepínač témy">
     </button>
 
@@ -68,13 +68,13 @@
   <div class="left">
 
     <div class="card section-card">
-      <h3>Študijné moduly</h3>
+      <h3 style="margin:0">Študijné moduly</h3>
       <div class="small">Samostatné moduly pre detailné štúdium</div>
       <div id="modulesList" class="list" style="margin-top:10px"></div>
     </div>
 
     <div class="card section-card">
-      <h3>Rebríček duelov</h3>
+      <h3 style="margin:0">Rebríček duelov</h3>
       <div class="small">Najlepší hráči duelových kvízov</div>
 
       <div style="display:flex;gap:8px;margin-top:10px">
@@ -89,23 +89,24 @@
     </div>
 
     <div class="card section-card">
-      <h3>Nahlásiť právnu nezrovnalosť</h3>
+      <h3 style="margin:0">Nahlásiť právnu nezrovnalosť</h3>
+      <div class="small">Pomôž zlepšiť právne otázky</div>
       <button class="btn btn-primary" id="reportIssueBtn" style="margin-top:10px">Otvoriť formulár</button>
     </div>
 
     <div class="card section-card">
-      <h3>Obchod</h3>
+      <h3 style="margin:0">Obchod</h3>
       <div style="display:flex;gap:8px;margin-top:8px">
         <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
         <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
-        <button class="btn" id="openShop">
-          <img src="assets/icons/shop.svg" width="18" alt="Obchod">
+        <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
+          <img src="assets/icons/shop.svg" width="18" height="18" alt="">
         </button>
       </div>
     </div>
 
     <div class="card section-card">
-      <h3>Admin a garant panel</h3>
+      <h3 style="margin:0">Admin a garant panel</h3>
       <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
     </div>
 
@@ -114,8 +115,16 @@
   <div class="right">
 
     <div class="card section-card highlight-area">
-      <h3>Oblasti</h3>
-      <div class="small">Vyber oblasť pre duelový kvíz</div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <h3 style="margin:0">Oblasti</h3>
+          <div class="small">Vyber oblasť pre duelový kvíz</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <img src="assets/icons/book.svg" width="28" height="28" alt="">
+          <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
+        </div>
+      </div>
       <div id="areasList" class="list" style="margin-top:10px"></div>
     </div>
 
@@ -128,8 +137,8 @@
         <div style="margin-top:12px;display:flex;gap:8px">
           <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť duel</button>
           <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
-          <button class="btn" id="helpBtn">
-            <img src="assets/icons/info.svg" width="18" alt="Pomoc">
+          <button class="btn" id="helpBtn" type="button">
+            <img src="assets/icons/info.svg" width="18" height="18" alt="">
           </button>
         </div>
       </div>
@@ -138,7 +147,7 @@
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div>
             <div class="small">Oblasť</div>
-            <h3 id="areaTitle"></h3>
+            <h3 id="areaTitle" style="margin:6px 0 0 0"></h3>
           </div>
           <div style="text-align:right">
             <div class="small">Otázka</div>
@@ -167,25 +176,27 @@
     </div>
 
     <div class="card highlight-games">
-      <h3>Hry a prípady</h3>
+      <h3 style="margin:0">Hry a prípady</h3>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
         <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
         <button class="btn" id="openCasesBtn">Prípady z praxe</button>
       </div>
+      <div class="small" style="margin-top:10px;color:var(--muted)">
+        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+      </div>
     </div>
 
     <div class="card highlight-bank">
-      <h3>Banka duelov</h3>
+      <h3 style="margin:0">Banka duelov</h3>
       <div class="small">Balíky otázok a uložené výzvy na duelový kvíz</div>
       <div style="display:flex;gap:8px;margin-top:8px">
         <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
       </div>
       <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
-      <div id="duelPackagesList" class="list" style="margin-top:10px"></div>
     </div>
 
     <div class="card highlight-challenges" id="incomingChallengeCard" style="display:none; margin-top:16px;">
-      <h3>Výzvy od spoluhráčov</h3>
+      <h3 style="margin:0">Výzvy od spoluhráčov</h3>
       <div class="small">Prijaté výzvy na duelový kvíz</div>
 
       <div id="incomingChallengeList" class="list" style="margin-top:10px"></div>
@@ -201,18 +212,18 @@
 </main>
 
 <!-- Modály -->
-<div id="memoryModal" class="avatar-modal" style="display:none;">
+<div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
   <div class="avatar-panel">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <h3 id="memoryTitle">Kartičky – matching</h3>
       <button class="btn" id="closeMemory">Zavrieť</button>
     </div>
     <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
-    <button class="btn btn-primary" id="restartMemory" style="margin-top:12px">Reštartovať</button>
+    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory">Reštartovať</button></div>
   </div>
 </div>
 
-<div id="casesModal" class="avatar-modal" style="display:none;">
+<div id="casesModal" class="avatar-modal" aria-hidden="true" style="display:none;">
   <div class="avatar-panel">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <h3 id="casesTitle">Prípady z praxe</h3>
@@ -237,6 +248,9 @@
 <!-- FIREBASE (musí byť pred duely a kvízom) -->
 <script type="module" src="firebase.js"></script>
 
+<!-- LexArena pôvodný modul (zachovaný z produkcie, ak je ešte niekde používaný) -->
+<script type="module" src="lexarena/challenges.js"></script>
+
 <!-- CORE MODULES -->
 <script type="module" src="core.js"></script>
 <script type="module" src="state.js"></script>
@@ -254,8 +268,7 @@
 
 <!-- DUEL ENGINE (po Firebase, pred quiz.js) -->
 <script type="module" src="scripts/duels.js"></script>
-<script type="module" src="scripts/duel.js"></script>
-<script type="module" src="scripts/duelPackages.js"></script>
+<script type="module" src="scripts/leaderboard.js"></script>
 
 <!-- QUIZ ENGINE (posledný) -->
 <script type="module" src="quiz.js"></script>
