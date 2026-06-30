@@ -78,6 +78,7 @@ export async function awardParagrafy(amount, reason = '') {
 
   await update(userRef, {
     paragrafy: newTotal,
+    totalParagraphsEarned: (data.totalParagraphsEarned || 0) + amount,
     lastParUpdate: Date.now()
   });
 
@@ -315,14 +316,16 @@ export async function selectAvatar(avatarType) {
     if (avatarDef.unlock === 'paragraphs_100') {
       const totalEarned = data.totalParagraphsEarned || 0;
       if (totalEarned < avatarDef.unlockValue) {
-        showRewardToast(`Potrebuješ celkovo ${avatarDef.unlockValue}§ na odomknutie tohto avatara.`);
+        const chyba = avatarDef.unlockValue - totalEarned;
+        showRewardToast(`🔒 Mačka je zamknutá. Chýba ti ešte ${chyba}§ (celkovo nazbieraných).`);
         return;
       }
     }
     if (avatarDef.unlock === 'reports_100') {
       const acceptedReports = data.acceptedReports || 0;
       if (acceptedReports < avatarDef.unlockValue) {
-        showRewardToast(`Potrebuješ ${avatarDef.unlockValue} uznaných nahlásení.`);
+        const chyba = avatarDef.unlockValue - acceptedReports;
+        showRewardToast(`🔒 Sova je zamknutá. Chýba ti ešte ${chyba} uznaných nahlásení.`);
         return;
       }
     }
