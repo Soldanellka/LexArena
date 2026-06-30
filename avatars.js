@@ -1,152 +1,192 @@
-{
-  "id": "18. B",
-  "title": "Predpoklady zodpovednosti za škodu v pracovnom práve",
-  "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "zodpovednosť za škodu", "predpoklady", "zamestnanec", "zamestnávateľ"],
+'use strict';
 
-  "summary": "Zodpovednosť za škodu v pracovnom práve je osobitný právny režim, ktorý upravuje, kedy zamestnanec alebo zamestnávateľ nesú následky škody vzniknutej pri plnení pracovných úloh. Predpoklady vzniku zodpovednosti sú presne definované a musia byť splnené kumulatívne.\n\nZodpovednosť zamestnanca je subjektívna – vyžaduje sa zavinenie. Predpoklady sú: existencia pracovnoprávneho vzťahu, protiprávny úkon alebo škodná udalosť, vznik škody, príčinná súvislosť a zavinenie. Zavinenie môže byť úmyselné alebo nedbanlivostné. Pri niektorých druhoch zodpovednosti (napr. schodok na zverených hodnotách) sa zavinenie predpokladá.\n\nZodpovednosť zamestnávateľa za pracovné úrazy a choroby z povolania je objektívna – nevyžaduje sa zavinenie. Predpokladmi sú: pracovný úraz alebo choroba z povolania, vznik škody a príčinná súvislosť.\n\nŠkoda musí byť majetková a vyčísliteľná v peniazoch. Rozlišuje sa skutočná škoda a iná škoda (ušlý zisk). Náhrada škody sa poskytuje v peniazoch, ak nie je možné uviesť vec do pôvodného stavu.\n\nCieľom právnej úpravy je vyvážiť ochranu majetku zamestnávateľa a ochranu zamestnanca pred neprimeranou zodpovednosťou, pričom dôkazné bremeno je rozdelené medzi obe strany podľa typu zodpovednosti.",
+import { LS } from './core.js';
+import {
+  currentAvatarId,
+  gamesPlayed,
+  isPremium,
+  setAvatar,
+  setGamesPlayed
+} from './state.js';
+import { showRewardToast } from './ui.js';
+import { $ } from './core.js';
 
-  "quiz": [
-    {
-      "question": "Ktoré sú základné predpoklady zodpovednosti zamestnanca za škodu?",
-      "options": ["Škoda, porušenie povinnosti, príčinná súvislosť, zavinenie", "Len škoda a zavinenie", "Len porušenie povinnosti"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Vznik zodpovednosti vyžaduje splnenie všetkých štyroch predpokladov.",
-        "wrong": "Nesprávne. Predpokladov je viac."
-      }
-    },
-    {
-      "question": "Kto preukazuje zavinenie pri všeobecnej zodpovednosti zamestnanca?",
-      "options": ["Zamestnávateľ", "Zamestnanec", "Inšpektorát práce"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Zavinenie preukazuje zamestnanec, keďže ide o subjektívnu zodpovednosť.",
-        "wrong": "Nesprávne. Zamestnávateľ preukazuje škodu, porušenie povinnosti a príčinnú súvislosť."
-      }
-    },
-    {
-      "question": "Ktorý predpoklad sa nevyžaduje pri objektívnej zodpovednosti zamestnávateľa?",
-      "options": ["Škoda", "Príčinná súvislosť", "Zavinenie"],
-      "correct": 2,
-      "explanation": {
-        "correct": "Správne. Zavinenie sa pri pracovných úrazoch a chorobách z povolania nevyžaduje.",
-        "wrong": "Nesprávne. Ostatné predpoklady musia byť splnené."
-      }
-    },
-    {
-      "question": "Kedy sa zavinenie zamestnanca predpokladá?",
-      "options": ["Pri schodku na zverených hodnotách", "Pri bežnej nedbanlivosti", "Pri meškaní do práce"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Pri schodku sa zavinenie predpokladá, ide o zodpovednosť s prezumpciou viny.",
-        "wrong": "Nesprávne. Meškanie nie je škoda."
-      }
-    },
-    {
-      "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ nemusí preukazovať vznik škody", "Zamestnávateľ musí preukázať škodu, porušenie povinnosti a príčinnú súvislosť", "Zamestnanec vždy zodpovedá v plnej výške"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Ide o základné predpoklady zodpovednosti zamestnanca.",
-        "wrong": "Nesprávne. Zamestnanec má limity zodpovednosti podľa Zákonníka práce."
-      }
+/* =========================
+   Avatar katalóg
+   ========================= */
+export const avatarCatalog = [
+  { id: 'young',  title: 'Mladý právnik',     file: 'assets/avatars/young-lawyer.svg',  unlockAt: 0,  premium: false },
+  { id: 'senior', title: 'Skúsený advokát',   file: 'assets/avatars/senior-lawyer.svg', unlockAt: 10, premium: false },
+  { id: 'judge',  title: 'Sudca',             file: 'assets/avatars/judge.svg',         unlockAt: 30, premium: false },
+  { id: 'cat',    title: 'Mačací avatar',     file: 'assets/avatars/cat-avatar.svg',    unlockAt: 0,  premium: true },
+  { id: 'owl',    title: 'Sova múdrosti',     file: 'assets/avatars/owl-avatar.svg',    unlockAt: 0,  premium: true }
+];
+
+/* =========================
+   Render avatar v hlavičke
+   ========================= */
+export function renderHeaderAvatar(){
+  const img = $('userAvatar');
+  const badge = $('premiumBadge');
+  if(!img) return;
+
+  const avatar = avatarCatalog.find(a => a.id === currentAvatarId) || avatarCatalog[0];
+
+  img.src = avatar.file;
+  img.alt = avatar.title;
+
+  if(badge){
+    if(avatar.premium){
+      badge.innerHTML = 'PREMIUM <span class="badge-premium-small">VIP</span>';
+    } else {
+      badge.textContent = isPremium ? 'PREMIUM' : 'FREE';
     }
-  ],
+  }
+}
 
-  "tiles": [
-    { "term": "Škoda", "definition": "Majetková ujma vyčísliteľná v peniazoch; môže ísť o skutočnú škodu alebo inú škodu (ušlý zisk)." },
-    { "term": "Porušenie povinnosti", "definition": "Konanie alebo opomenutie zamestnanca v rozpore s pracovnými povinnosťami." },
-    { "term": "Príčinná súvislosť", "definition": "Priama väzba medzi porušením povinnosti a vznikom škody." },
-    { "term": "Zavinenie", "definition": "Úmysel alebo nedbanlivosť zamestnanca; pri niektorých druhoch zodpovednosti sa predpokladá." },
-    { "term": "Objektívna zodpovednosť", "definition": "Zodpovednosť bez ohľadu na zavinenie, typicky pri pracovných úrazoch a chorobách z povolania." }
-  ],
+/* =========================
+   Otvorenie modalu
+   ========================= */
+export function openAvatarModal(){
+  const existing = $('avatarModal');
+  if(existing){
+    existing.classList.add('open');
+    return;
+  }
 
-  "cases": [
-    {
-      "title": "Prípad 1 – Poškodenie stroja nesprávnou manipuláciou",
-      "difficulty": "ľahká",
-      "steps": [
-        {
-          "question": "Zadanie: Zamestnanec poškodil stroj pri nesprávnej manipulácii. Tvrdí, že išlo o náhodu.",
-          "options": [],
-          "correct": 0
-        },
-        {
-          "question": "Krok 1: Je splnený predpoklad porušenia povinnosti?",
-          "options": ["Áno", "Nie", "Len ak bol stroj nový"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Nesprávna manipulácia je porušením pracovnej povinnosti.",
-            "wrong": "Nesprávne. Stav stroja nie je rozhodujúci."
-          }
-        },
-        {
-          "question": "Krok 2: Kto preukazuje zavinenie?",
-          "options": ["Zamestnanec", "Zamestnávateľ", "Súd"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Pri všeobecnej zodpovednosti zavinenie preukazuje zamestnanec.",
-            "wrong": "Nesprávne. Zamestnávateľ preukazuje ostatné predpoklady."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Vyčísliť škodu a posúdiť mieru zavinenia",
-            "Požadovať plnú náhradu bez skúmania zavinenia",
-            "Ignorovať príčinnú súvislosť"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Treba posúdiť všetky predpoklady zodpovednosti.",
-            "wrong": "Nesprávne. Plná náhrada nie je automatická."
-          }
+  const modal = document.createElement('div');
+  modal.id = 'avatarModal';
+  modal.className = 'avatar-modal open';
+
+  const panel = document.createElement('div');
+  panel.className = 'avatar-panel';
+  panel.setAttribute('role','dialog');
+  panel.setAttribute('aria-modal','true');
+
+  /* Header */
+  const header = document.createElement('div');
+  header.style.display = 'flex';
+  header.style.justifyContent = 'space-between';
+  header.style.alignItems = 'center';
+
+  const left = document.createElement('div');
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Vyber avatar';
+  const small = document.createElement('div');
+  small.className = 'small';
+  small.textContent = 'Odomknuté podľa odohraných hier. Prémiové avatary sú len pre PREMIUM.';
+  left.appendChild(h3);
+  left.appendChild(small);
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'btn';
+  closeBtn.id = 'closeAvatarModal';
+  closeBtn.textContent = 'Zavrieť';
+
+  header.appendChild(left);
+  header.appendChild(closeBtn);
+  panel.appendChild(header);
+
+  /* Grid */
+  const grid = document.createElement('div');
+  grid.className = 'avatar-grid';
+  grid.id = 'avatarGrid';
+  panel.appendChild(grid);
+
+  modal.appendChild(panel);
+  document.body.appendChild(modal);
+
+  closeBtn.addEventListener('click', closeAvatarModal);
+
+  renderAvatarGrid();
+}
+
+/* =========================
+   Zatvorenie modalu
+   ========================= */
+export function closeAvatarModal(){
+  const m = $('avatarModal');
+  if(m) m.classList.remove('open');
+}
+
+/* =========================
+   Render gridu avatarov
+   ========================= */
+export function renderAvatarGrid(){
+  const grid = $('avatarGrid');
+  if(!grid) return;
+
+  grid.innerHTML = '';
+
+  avatarCatalog.forEach(av => {
+    const unlocked = (gamesPlayed >= av.unlockAt) && (!av.premium || isPremium);
+
+    const card = document.createElement('div');
+    card.className = 'avatar-card' + (unlocked ? '' : ' locked');
+
+    const img = document.createElement('img');
+    img.src = av.file;
+    img.alt = av.title;
+    card.appendChild(img);
+
+    const title = document.createElement('div');
+    title.className = 'avatar-title';
+    title.textContent = av.title;
+    card.appendChild(title);
+
+    const sub = document.createElement('div');
+    sub.className = 'avatar-sub';
+    sub.textContent = av.premium ? 'Prémiový' : `Odomknúť po ${av.unlockAt} hrách`;
+    card.appendChild(sub);
+
+    /* Kliknutie na avatar */
+    card.addEventListener('click', () => {
+      if(!unlocked){
+        if(av.premium && !isPremium){
+          alert('Tento avatar je dostupný len v PREMIUM verzii.');
+          return;
         }
-      ]
-    },
+        alert('Tento avatar ešte nie je odomknutý.');
+        return;
+      }
 
-    {
-      "title": "Prípad 2 – Pracovný úraz a objektívna zodpovednosť zamestnávateľa",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Zadanie: Zamestnanec si pri práci poranil ruku. Zamestnávateľ tvrdí, že nezodpovedá, lebo nepochybil.",
-          "options": [],
-          "correct": 0
-        },
-        {
-          "question": "Krok 1: Vyžaduje sa zavinenie zamestnávateľa?",
-          "options": ["Nie", "Áno", "Len pri ťažkých úrazoch"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Pri pracovných úrazoch ide o objektívnu zodpovednosť bez ohľadu na zavinenie.",
-            "wrong": "Nesprávne. Zavinenie nie je podmienkou."
-          }
-        },
-        {
-          "question": "Krok 2: Ktoré predpoklady musia byť splnené?",
-          "options": ["Úraz, škoda, príčinná súvislosť", "Len úraz", "Len škoda"],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o tri základné predpoklady objektívnej zodpovednosti.",
-            "wrong": "Nesprávne. Úraz sám o sebe nestačí."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Uplatniť nárok na náhradu škody z pracovného úrazu",
-            "Odmietnuť nárok, lebo zamestnávateľ nepochybil",
-            "Požadovať dôkaz o zavinení zamestnávateľa"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Zavinenie sa nevyžaduje, nárok vzniká objektívne.",
-            "wrong": "Nesprávne. Zavinenie nie je predpokladom."
-          }
-        }
-      ]
+      setAvatar(av.id);
+      try { localStorage.setItem(LS.AVATAR, av.id); } catch(e){}
+
+      renderHeaderAvatar();
+
+      try {
+        card.animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.04)' }, { transform: 'scale(1)' }],
+          { duration: 260 }
+        );
+      } catch(e){}
+
+      showRewardToast(`Avatar zmenený na: ${av.title}`);
+      closeAvatarModal();
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+/* =========================
+   Počet odohraných hier
+   ========================= */
+export function incrementGamesPlayed(){
+  const newVal = gamesPlayed + 1;
+  setGamesPlayed(newVal);
+
+  try { localStorage.setItem(LS.GAMES, String(newVal)); } catch(e){}
+
+  avatarCatalog.forEach(av => {
+    if(!av.premium && av.unlockAt > 0 && newVal === av.unlockAt){
+      showRewardToast(`Odomkol si avatar: ${av.title}`);
     }
-  ]
+  });
+
+  const modal = $('avatarModal');
+  if(modal && modal.classList.contains('open')){
+    renderAvatarGrid();
+  }
 }
