@@ -1,7 +1,7 @@
 'use strict';
 
 /* =====================================================
-   IMPORTY – LEN TO, ČO NAOZAJ EXISTUJE
+   IMPORTY
    ===================================================== */
 import { $, loadParagrafy } from './core.js';
 import { setParagrafy } from './state.js';
@@ -13,6 +13,7 @@ import { applyTheme } from './theme.js';
 import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
+import { initAvatarSystem } from './scripts/avatar.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -37,7 +38,7 @@ function waitForAllData(callback) {
       callback();
     }
 
-    if (attempts > 80) { // 8 sekúnd
+    if (attempts > 80) {
       clearInterval(timer);
       console.error("❌ Nepodarilo sa načítať areas alebo catalog.");
     }
@@ -52,7 +53,7 @@ export function init() {
     /* 🔹 Paragrafy */
     const p = loadParagrafy();
     setParagrafy(p);
-    const pc = $('paragrafValue');
+    const pc = $('parCount') || $('paragrafValue');
     if (pc) pc.textContent = p;
 
     /* 🔹 Téma */
@@ -60,8 +61,8 @@ export function init() {
 
     /* 🔹 UI */
     renderHeaderAvatar();
-    renderAreas();      // ✔ teraz už určite existuje window.areas
-    renderModules();    // ✔ teraz už určite existuje window.catalog
+    renderAreas();
+    renderModules();
 
     /* 🔹 Reporty a prípady */
     loadReports();
@@ -75,6 +76,9 @@ export function init() {
 
     /* 🔹 Pulzujúci odznak na "Uložené výzvy" */
     watchDuelBankBadge();
+
+    /* 🔹 Avatar systém (energia, login streak, kŕmenie) */
+    initAvatarSystem();
   });
 }
 
@@ -93,22 +97,18 @@ function attachEvents() {
     themeToggle.addEventListener('click', () => {
       const current =
         document.documentElement.getAttribute('data-theme') === 'dark'
-          ? 'light'
-          : 'dark';
+          ? 'light' : 'dark';
       applyTheme(current);
     });
   }
 
-  /* =========================
-     🔥 Banka duelov – tlačidlo "Uložené výzvy"
-     ========================= */
+  /* 🔥 Banka duelov */
   const toggleDuelBankBtn = $('toggleDuelBankBtn');
   const duelBankBox = $('duelBank');
   if (toggleDuelBankBtn && duelBankBox) {
     toggleDuelBankBtn.addEventListener('click', () => {
       const isHidden = duelBankBox.style.display === 'none';
       duelBankBox.style.display = isHidden ? 'block' : 'none';
-
       if (isHidden && typeof window.renderDuelBank === 'function') {
         window.renderDuelBank();
       }
