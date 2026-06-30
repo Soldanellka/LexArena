@@ -44,18 +44,36 @@ function waitForAllData(callback) {
 /* =====================================================
    MODAL VÝBERU AVATARA
    ===================================================== */
-function openAvatarSelectModal() {
+async function openAvatarSelectModal() {
   const existing = document.getElementById('avatarSelectModal');
   if (existing) {
     existing.style.display = 'flex';
     return;
   }
 
+  const nick = localStorage.getItem('playerNick');
+  const db = window.db;
+
+  // Načítaj stav hráča pre kontrolu odomknutia
+  let totalEarned = 0;
+  let acceptedReports = 0;
+  if (db && nick) {
+    try {
+      const { ref, get } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+      const snap = await get(ref(db, `users/${nick}`));
+      if (snap.exists()) {
+        const d = snap.val();
+        totalEarned = d.totalParagraphsEarned || 0;
+        acceptedReports = d.acceptedReports || 0;
+      }
+    } catch(e) {}
+  }
+
   const AVATARS = [
-    { id: 'student-f', name: 'Študentka práva', emoji: '👩‍⚖️', desc: 'Dostupná pre všetkých' },
-    { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých' },
-    { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: 'Za 100§ celkovo' },
-    { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: 'Za 100 uznaných nahlásení' },
+    { id: 'student-f', name: 'Študentka práva', emoji: '👩‍⚖️', desc: 'Dostupná pre všetkých', locked: false },
+    { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých', locked: false },
+    { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: `Za 100§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 100 },
+    { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
   ];
 
   const modal = document.createElement('div');
@@ -84,10 +102,12 @@ function openAvatarSelectModal() {
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       ${AVATARS.map(av => `
         <div class="avatar-select-card" data-id="${av.id}" style="
-          border:2px solid var(--border,#eee); border-radius:14px;
+          border:2px solid ${av.locked ? 'var(--border,#eee)' : 'var(--border,#eee)'}; border-radius:14px;
           padding:16px; text-align:center; cursor:pointer;
-          transition:all .2s;
+          transition:all .2s; opacity:${av.locked ? '0.55' : '1'};
+          position:relative;
         ">
+          ${av.locked ? '<div style="position:absolute;top:8px;right:8px;font-size:14px">🔒</div>' : ''}
           <div style="font-size:42px;margin-bottom:8px">${av.emoji}</div>
           <div style="font-weight:600;font-size:13px">${av.name}</div>
           <div style="font-size:11px;color:var(--muted);margin-top:4px">${av.desc}</div>
