@@ -1,5 +1,8 @@
 'use strict';
 
+import { ref, update } 
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
 import { $, qsa, shuffleArray, saveParagrafy } from './core.js';
 import {
   quiz,
@@ -14,31 +17,29 @@ import { openReportModal } from './reports.js';
 import { playSound } from './audio.js';
 
 /* =========================
-   Štart kvízu
+   Štart kvízu (študijný)
    ========================= */
 export function startQuiz(){
-  if(!selectedArea){
+  if (!selectedArea) {
     alert('Vyber oblasť.');
     return;
   }
 
-  if(paragrafy < 5){
+  if (paragrafy < 5) {
     alert('Nemáš dosť paragrafov.');
     return;
   }
 
-  // odpočítať 5 paragrafov
   const newPar = paragrafy - 5;
   setParagrafy(newPar);
   saveParagrafy(newPar);
-  $('parCount').textContent = newPar;
+  if ($('parCount')) $('parCount').textContent = newPar;
 
-  // pripraviť otázky
   const qset = Array.isArray(selectedArea.questions) ? selectedArea.questions : [];
   const shuffled = shuffleArray(JSON.parse(JSON.stringify(qset))).slice(0, 10);
 
   shuffled.forEach(q => {
-    if(!Array.isArray(q.options)) q.options = [];
+    if (!Array.isArray(q.options)) q.options = [];
 
     const correctText = (typeof q.correct === 'number')
       ? q.options[q.correct]
@@ -50,7 +51,8 @@ export function startQuiz(){
       ? q.options.findIndex(opt => opt === correctText)
       : 0;
 
-    if(q.correct < 0) q.correct = 0;
+    if (q.correct < 0) q.correct = 0;
+    q.selectedIndex = null;
   });
 
   setQuizState({
@@ -70,21 +72,21 @@ export function startQuiz(){
    Render otázky
    ========================= */
 export function renderQuestion(first = false){
-  if(!quiz.questions.length) return;
+  if (!quiz.questions.length) return;
 
   const q = quiz.questions[quiz.index];
-  if(!q) return;
+  if (!q) return;
 
   const qText = $('qText');
   const optionsEl = $('options');
   const quizArea = $('quizArea');
 
-  if(!qText || !optionsEl || !quizArea){
+  if (!qText || !optionsEl || !quizArea) {
     console.error('Chýbajú DOM elementy pre otázku');
     return;
   }
 
-  $('areaTitle').textContent = selectedArea ? selectedArea.title : '';
+  $('areaTitle').textContent = selectedArea ? selectedArea.title : (window.currentAreaTitle || '');
   $('qIndex').textContent = `${quiz.index + 1} / ${quiz.questions.length}`;
 
   optionsEl.innerHTML = '';
@@ -92,26 +94,25 @@ export function renderQuestion(first = false){
   optionsEl.style.opacity = 0;
 
   setTimeout(() => {
-    qText.textContent = q.q || '';
+    qText.textContent = q.q || q.question || '';
 
     q.options.forEach((o, i) => {
       const b = document.createElement('button');
-      b.className = 'opt';
+      b.className = 'opt lexarena-opt';
 
       const sp = document.createElement('span');
       sp.textContent = o;
       b.appendChild(sp);
 
-      b.addEventListener('click', () => selectOption(b, i === q.correct));
+      b.addEventListener('click', () => selectOption(b, i === q.correct, i));
 
       optionsEl.appendChild(b);
     });
 
-    // report button
     const parent = optionsEl.parentNode;
-    if(parent){
+    if (parent) {
       const old = parent.querySelector('#reportQuestionBtn');
-      if(old) old.remove();
+      if (old) old.remove();
 
       const reportBtn = document.createElement('button');
       reportBtn.id = 'reportQuestionBtn';
@@ -123,7 +124,7 @@ export function renderQuestion(first = false){
         const currentQ = quiz.questions[quiz.index];
         openReportModal({
           questionId: currentQ?.id || null,
-          questionText: currentQ?.q || ''
+          questionText: currentQ?.q || currentQ?.question || ''
         });
       });
 
@@ -152,11 +153,14 @@ export function renderQuestion(first = false){
 /* =========================
    Výber odpovede
    ========================= */
-export function selectOption(btn, correct){
+export function selectOption(btn, correct, index){
   const group = qsa('.opt');
   group.forEach(g => g.onclick = null);
 
-  if(correct){
+  const current = quiz.questions[quiz.index];
+  if (current) current.selectedIndex = index;
+
+  if (correct) {
     btn.classList.add('correct');
     quiz.correct++;
     showInlineIcon(btn, 'assets/icons/check.svg');
@@ -165,10 +169,10 @@ export function selectOption(btn, correct){
     btn.classList.add('wrong');
     quiz.wrong++;
 
-    const correctText = quiz.questions[quiz.index].options[quiz.questions[quiz.index].correct];
+    const correctText = current.options[current.correct];
 
     qsa('.opt').forEach(g => {
-      if(g !== btn && g.textContent.trim() === correctText){
+      if (g !== btn && g.textContent.trim() === correctText) {
         g.classList.add('correct');
         showInlineIcon(g, 'assets/icons/check.svg');
       }
@@ -210,7 +214,7 @@ function showInlineIcon(btn, iconPath){
    Navigácia
    ========================= */
 export function nextQ(){
-  if(quiz.index < quiz.questions.length - 1){
+  if (quiz.index < quiz.questions.length - 1) {
     quiz.index++;
     renderQuestion();
   } else {
@@ -219,7 +223,7 @@ export function nextQ(){
 }
 
 export function prevQ(){
-  if(quiz.index > 0){
+  if (quiz.index > 0) {
     quiz.index--;
     renderQuestion();
   }
@@ -229,31 +233,101 @@ export function prevQ(){
    Dokončenie kvízu
    ========================= */
 export function finishQuiz(){
+  const isDuel = window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length;
+
   $('quizIntro').style.display = 'block';
   $('quizArea').style.display = 'none';
 
-  const reward = Math.max(1, Math.floor(quiz.correct / 4));
+  incrementGamesPlayed();
+  playSound(window.soundWin);
 
+  /* =========================
+     🔥 DUELOVÝ REŽIM
+     ========================= */
+  if (isDuel) {
+
+    showRewardToast(
+      `Duel dokončený. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}.`
+    );
+
+    const nick = localStorage.getItem('playerNick') || 'Unknown';
+    const areaTitle =
+      window.currentAreaTitle ||
+      (selectedArea ? selectedArea.title : 'Pracovné právo');
+
+    const enrichedQuestions = window.duelQuestions.map((q, i) => ({
+      ...q,
+      selectedIndex: quiz.questions[i]?.selectedIndex ?? null
+    }));
+
+    /* =========================
+       🔥 OPRAVA: rozlišujeme podľa toho, či duel už MÁ id
+       (nie podľa toho, či window.currentDuelMeta existuje –
+       to sa totiž nastavuje hneď pri štarte aj prvému hráčovi
+       so id:null, takže predošlá podmienka ho mylne posielala
+       do vetvy "druhý hráč")
+       ========================= */
+    const duelMeta = window.currentDuelMeta || window.currentDuel || null;
+    const hasDuelId = duelMeta && duelMeta.id;
+
+    /* =========================
+       🔥 Prvý hráč (tvorca výzvy) – duel ešte nemá id
+       ========================= */
+    if (!hasDuelId) {
+      if (typeof window.saveDuel === 'function') {
+        window.saveDuel(nick, areaTitle, enrichedQuestions);
+
+        const db = window.db;
+        if (db && window.currentDuel?.id) {
+          const duelId = window.currentDuel.id;
+
+          update(ref(db, `duels/${duelId}`), {
+            status: "pending",
+            created: Date.now(),
+            expiresIn: 86400
+          });
+
+          console.log("🔥 Duel uložený do banky duelov (pending)");
+        }
+      }
+    }
+
+    /* =========================
+       🔥 Druhý hráč (prijímateľ výzvy) – duel už má id
+       ========================= */
+    else {
+      if (typeof window.completeDuel === 'function') {
+        console.log("🔥 Spúšťam vyhodnotenie duelu...");
+        window.completeDuel(quiz.questions);
+      }
+    }
+
+    window.duelQuestions = null;
+    window.currentOpponent = null;
+    window.currentDuelMeta = null;
+    window.currentDuel = null;
+
+    return;
+  }
+
+  /* =========================
+     Študijný režim
+     ========================= */
+  const reward = Math.max(1, Math.floor(quiz.correct / 4));
   const newPar = paragrafy + reward;
   setParagrafy(newPar);
   saveParagrafy(newPar);
-  $('parCount').textContent = newPar;
-
-  incrementGamesPlayed();
+  if ($('parCount')) $('parCount').textContent = newPar;
 
   showRewardToast(`Kvíz dokončený. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. Odmena: +${reward} paragrafov`);
 
-  playSound(window.soundWin);
-
-  // 🔥 Vytvoríme duel balík pre LexArenu
   try {
     const pkg = {
-      subject: selectedArea ? selectedArea.title : 'Neznáma oblasť',
+      subject: selectedArea ? selectedArea.title : (window.currentAreaTitle || 'Neznáma oblasť'),
       quiz: Array.isArray(quiz.questions) ? quiz.questions : [],
-      cases: [], // ak neskôr pridáš kazuistiky, doplníme sem
+      cases: [],
       timestamp: Date.now()
     };
-
     localStorage.setItem('lastDuelPackage', JSON.stringify(pkg));
   } catch(e){
     console.error('Nepodarilo sa uložiť lastDuelPackage:', e);
@@ -275,3 +349,40 @@ export function updateProgress(){
 
   $('progBar').style.width = pct + '%';
 }
+
+/* =========================
+   🔥 GLOBÁLNY DUEL QUIZ ENGINE
+   ========================= */
+window.startDuelQuiz = function(questions){
+  const mapped = (questions || []).map(q => ({
+    q: q.question || q.q || '',
+    options: Array.isArray(q.options) ? q.options : [],
+    correct: typeof q.correct === 'number' ? q.correct : 0,
+    id: q.id || null,
+    selectedIndex: null
+  }));
+
+  setQuizState({
+    questions: mapped,
+    index: 0,
+    correct: 0,
+    wrong: 0
+  });
+
+  try {
+    const pkg = {
+      subject: selectedArea ? selectedArea.title : (window.currentAreaTitle || 'Neznáma oblasť'),
+      quiz: mapped,
+      cases: [],
+      timestamp: Date.now()
+    };
+    localStorage.setItem('lastDuelPackage', JSON.stringify(pkg));
+  } catch(e){
+    console.error('Nepodarilo sa uložiť lastDuelPackage:', e);
+  }
+
+  $('quizIntro').style.display = 'none';
+  $('quizArea').style.display = 'block';
+
+  renderQuestion(true);
+};
