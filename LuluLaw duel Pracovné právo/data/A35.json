@@ -2,9 +2,9 @@
   "id": "18. A",
   "title": "Osobitné pracovné podmienky žien, tehotných žien, matiek a zamestnancov starajúcich sa o dieťa",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "tehotné ženy", "matky", "rodičia", "osobitná ochrana"],
+  "tags": ["pracovné právo", "tehotné ženy", "matky", "dojčiace ženy", "rodičia", "osobitná ochrana"],
 
-  "summary": "Zákonník práce poskytuje osobitnú ochranu ženám, tehotným ženám, matkám a zamestnancom starajúcim sa o dieťa. Tehotné ženy majú zákaz nočnej práce, zákaz nadčasov, právo na preradenie pri rizikovej práci a zvýšenú ochranu pred výpoveďou. Matky do konca deviateho mesiaca po pôrode a dojčiace ženy majú obdobnú ochranu.\n\nRodičia (ženy aj muži) starajúci sa o dieťa mladšie ako 15 rokov majú právo žiadať úpravu pracovného času, zákaz nadčasov bez súhlasu a osamelí rodičia majú aj zákaz nočnej práce. Zamestnávateľ musí prihliadať na rodinné potreby zamestnanca, najmä pri rozvrhovaní pracovného času.\n\nOchrana zahŕňa aj právo na prestávky na dojčenie, preradenie na inú prácu, zákaz práce, ktorá ohrozuje tehotenstvo alebo materstvo, a povinnosť zamestnávateľa vytvoriť bezpečné pracovné podmienky.\n\nCieľom právnej úpravy je ochrana zdravia ženy, dieťaťa a podpora zosúladenia pracovného a rodinného života.\n\nPríklad:\nTehotná zamestnankyňa pracuje na nočné zmeny. Zamestnávateľ tvrdí, že môže pokračovať, ak podpíše súhlas. Takéto nariadenie je nezákonné – tehotná žena nesmie pracovať v noci a zamestnávateľ ju musí preradiť na dennú prácu.\n\nKľúčové slová:\ntehotné ženy; matky; dojčiace ženy; rodičia; osamelí rodičia; ochrana zdravia; preradenie; zákaz nočnej práce.\n\nZapamätaj si:\n- Tehotné ženy nesmú pracovať v noci ani nadčas.\n- Matky do 9 mesiacov po pôrode a dojčiace ženy majú obdobnú ochranu.\n- Rodičia detí do 15 rokov môžu žiadať úpravu pracovného času.\n- Osamelí rodičia majú zákaz nočnej práce.\n- Zamestnávateľ musí prihliadať na rodinné potreby zamestnanca.",
+  "summary": "Zákonník práce poskytuje osobitnú ochranu ženám, tehotným ženám, matkám a zamestnancom starajúcim sa o dieťa. Ide o súbor opatrení, ktoré majú chrániť zdravie ženy, bezpečnosť dieťaťa a umožniť zosúladenie pracovného a rodinného života.\n\nTehotné ženy, matky do konca deviateho mesiaca po pôrode a dojčiace ženy majú zákaz nočnej práce (§ 161 ZP), zákaz práce nadčas (§ 164 ods. 4 ZP), právo na preradenie na inú vhodnú prácu, ak ich súčasná práca je zakázaná alebo ohrozuje tehotenstvo (§ 162 ZP), a zvýšenú ochranu pred výpoveďou (§ 64 ZP). Zamestnávateľ je povinný vytvárať bezpečné pracovné podmienky a rešpektovať zoznam zakázaných prác podľa nariadenia vlády č. 272/2004 Z. z.\n\nRodičia detí mladších ako 15 rokov majú právo žiadať úpravu pracovného času (§ 164 ZP). Zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody, ktoré je povinný preukázať. Osamelí rodičia majú zákaz nočnej práce (§ 164 ods. 4 ZP) a zákaz nadčasov bez súhlasu.\n\nOchrana zahŕňa aj prestávky na dojčenie (§ 170 ZP), zákaz vysielania tehotných žien na pracovné cesty bez súhlasu (§ 57 ZP), povinnosť preradenia pri rizikovej práci a právo na rovnaké pracovné podmienky po návrate z materskej alebo rodičovskej dovolenky (§ 166 – § 169 ZP).\n\nCieľom právnej úpravy je ochrana zdravia ženy, dieťaťa, prevencia rizík a podpora rodinného života.\n\nPríklad:\nTehotná zamestnankyňa pracuje na nočné zmeny. Zamestnávateľ tvrdí, že môže pokračovať, ak podpíše súhlas. Takéto nariadenie je nezákonné – tehotná žena nesmie pracovať v noci a zamestnávateľ ju musí preradiť na dennú prácu.\n\nKľúčové slová:\ntehotné ženy; matky; dojčiace ženy; rodičia; osamelí rodičia; ochrana zdravia; preradenie; zákaz nočnej práce.\n\nZapamätaj si:\n- Tehotné ženy nesmú pracovať v noci ani nadčas.\n- Matky do 9 mesiacov po pôrode a dojčiace ženy majú rovnakú ochranu.\n- Rodičia detí do 15 rokov môžu žiadať úpravu pracovného času.\n- Osamelí rodičia majú zákaz nočnej práce.\n- Zamestnávateľ musí prihliadať na rodinné potreby zamestnanca.",
 
   "quiz": [
     {
@@ -12,7 +12,7 @@
       "options": ["Nie", "Áno, ak súhlasí", "Áno, ak to vyžaduje prevádzka"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Nočná práca tehotných je zakázaná.",
+        "correct": "Správne. Nočná práca tehotných je zakázaná podľa § 161 ZP.",
         "wrong": "Nesprávne. Súhlas ani prevádzka zákaz neodstraňujú."
       }
     },
@@ -21,7 +21,7 @@
       "options": ["Áno", "Nie", "Len ak je osamelý rodič"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.",
+        "correct": "Správne. § 164 ZP umožňuje rodičovi žiadať kratší pracovný čas alebo inú úpravu.",
         "wrong": "Nesprávne. Právo majú všetci rodičia."
       }
     },
@@ -30,7 +30,7 @@
       "options": ["Tehotná žena môže pracovať nadčas", "Tehotná žena má zákaz nadčasov", "Zákaz nadčasov platí len pre matky po pôrode"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Tehotné ženy nesmú pracovať nadčas.",
+        "correct": "Správne. Tehotné ženy nesmú pracovať nadčas podľa § 164 ods. 4 ZP.",
         "wrong": "Nesprávne. Zákaz platí aj pre dojčiace ženy a matky do 9 mesiacov po pôrode."
       }
     },
@@ -39,7 +39,7 @@
       "options": ["Len tehotné ženy", "Tehotné ženy, dojčiace ženy a matky do 9 mesiacov po pôrode", "Len rodičia detí do 3 rokov"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Preradenie sa týka všetkých týchto skupín pri rizikovej práci.",
+        "correct": "Správne. Preradenie sa týka všetkých týchto skupín pri rizikovej alebo zakázanej práci.",
         "wrong": "Nesprávne. Ochrana je širšia."
       }
     },
@@ -48,7 +48,7 @@
       "options": ["Každý rodič dieťaťa do 15 rokov", "Osamelý rodič dieťaťa do 15 rokov", "Len matka"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zákaz nočnej práce platí pre osamelých rodičov.",
+        "correct": "Správne. Osamelý rodič má zákaz nočnej práce podľa § 164 ods. 4 ZP.",
         "wrong": "Nesprávne. Neplatí pre všetkých rodičov."
       }
     }
@@ -56,7 +56,7 @@
 
   "tiles": [
     { "term": "Tehotné ženy", "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na preradenie, zvýšená ochrana pred výpoveďou." },
-    { "term": "Matky do 9 mesiacov po pôrode", "definition": "Zákaz nadčasov a nočnej práce, právo na preradenie." },
+    { "term": "Matky do 9 mesiacov po pôrode", "definition": "Zákaz nadčasov a nočnej práce, právo na preradenie pri rizikovej práci." },
     { "term": "Dojčiace ženy", "definition": "Právo na prestávky na dojčenie a ochranu pred rizikovou prácou." },
     { "term": "Rodičia detí do 15 rokov", "definition": "Právo žiadať úpravu pracovného času, zákaz nadčasov bez súhlasu." },
     { "term": "Osamelí rodičia", "definition": "Zákaz nočnej práce a osobitná ochrana pri rozvrhovaní pracovného času." }
@@ -77,7 +77,7 @@
           "options": ["Nie", "Áno, ak súhlasí", "Áno, ak to vyžaduje prevádzka"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Nočná práca tehotných je zakázaná.",
+            "correct": "Správne. Nočná práca tehotných je zakázaná podľa § 161 ZP.",
             "wrong": "Nesprávne. Súhlas zákaz neodstraňuje."
           }
         },
@@ -86,21 +86,8 @@
           "options": ["Preradiť ju na dennú prácu", "Nechať ju pracovať v noci", "Dať jej neplatené voľno"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí preradiť zamestnankyňu na vhodnú prácu.",
+            "correct": "Správne. Zamestnávateľ musí preradiť zamestnankyňu na vhodnú prácu podľa § 162 ZP.",
             "wrong": "Nesprávne. Neplatené voľno nie je riešenie."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Upozorniť na zákaz nočnej práce a povinnosť preradenia",
-            "Súhlasiť so zamestnávateľom",
-            "Odporučiť zamestnankyni ignorovať situáciu"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o povinnú ochranu tehotných žien.",
-            "wrong": "Nesprávne. Ignorovanie by bolo protiprávne."
           }
         }
       ]
@@ -120,7 +107,7 @@
           "options": ["Nie", "Áno", "Len ak súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Osamelý rodič dieťaťa do 15 rokov nesmie pracovať v noci.",
+            "correct": "Správne. Osamelý rodič dieťaťa do 15 rokov nesmie pracovať v noci podľa § 164 ods. 4 ZP.",
             "wrong": "Nesprávne. Súhlas zákaz neodstraňuje."
           }
         },
@@ -129,21 +116,8 @@
           "options": ["Zmeniť rozvrh práce", "Trvať na nočnej zmene", "Dať výpoveď"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí rešpektovať zákonný zákaz.",
+            "correct": "Správne. Zamestnávateľ musí rešpektovať zákonný zákaz nočnej práce osamelých rodičov.",
             "wrong": "Nesprávne. Výpoveď by bola neplatná."
-          }
-        },
-        {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Upozorniť na zákaz nočnej práce osamelých rodičov",
-            "Súhlasiť so zamestnávateľom",
-            "Odporučiť zamestnankyni prijať nočnú zmenu"
-          ],
-          "correct": 0,
-          "explanation": {
-            "correct": "Správne. Ide o zákonnú ochranu rodiča.",
-            "wrong": "Nesprávne. Nočná práca je zakázaná."
           }
         }
       ]
