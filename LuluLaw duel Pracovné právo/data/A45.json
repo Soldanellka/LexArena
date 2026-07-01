@@ -2,9 +2,9 @@
   "id": "23. A",
   "title": "Prekážky v práci na strane zamestnávateľa",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "prekážky v práci", "zamestnávateľ", "náhrada mzdy"],
+  "tags": ["pracovné právo", "prekážky v práci", "zamestnávateľ", "náhrada mzdy", "prestoje", "vážne prevádzkové dôvody"],
 
-  "summary": "Prekážky v práci na strane zamestnávateľa vznikajú vtedy, keď zamestnávateľ nemôže prideľovať zamestnancovi prácu, hoci zamestnanec je pripravený pracovať. Zamestnávateľ je povinný poskytnúť náhradu mzdy, ktorej výška závisí od druhu prekážky. Medzi najčastejšie patria organizačné dôvody, dočasné obmedzenie prevádzky, nepriaznivé poveternostné podmienky pri povolaniach závislých od počasia, prestoje spôsobené poruchou strojov alebo výpadkom surovín a dôležité prevádzkové dôvody, pri ktorých môže zamestnávateľ zamestnanca preradiť na inú prácu. Zamestnávateľ musí prekážky preukázať a nesmie ich zneužívať. Účelom právnej úpravy je chrániť zamestnanca pred stratou príjmu v situáciách, ktoré nemôže ovplyvniť.\n\nPríklad:\nZamestnávateľ nemôže prideľovať prácu kvôli poruche stroja a tvrdí, že zamestnanci nedostanú žiadnu náhradu. Takýto postup je nezákonný – ide o prekážku na strane zamestnávateľa a patrí náhrada mzdy najmenej 60 % priemerného zárobku.\n\nKľúčové slová:\nprekážky v práci; náhrada mzdy; prestoje; nepriaznivé počasie; preradenie; organizačné dôvody.\n\nZapamätaj si:\n- Prekážky vznikajú, keď zamestnávateľ nemôže prideľovať prácu.\n- Minimálna náhrada mzdy je 60 % pri väčšine prekážok.\n- Porucha stroja alebo výpadok surovín sú typické prekážky na strane zamestnávateľa.\n- Pri dôležitých prevádzkových dôvodoch môže zamestnávateľ zamestnanca preradiť.\n- Zamestnávateľ musí prekážku preukázať a nesmie ju zneužívať.",
+  "summary": "Prekážky v práci na strane zamestnávateľa sú situácie, keď zamestnávateľ nemôže prideľovať zamestnancovi prácu podľa pracovnej zmluvy, hoci zamestnanec je pripravený ju vykonávať (§ 142 ZP). Ide o právne významné prekážky, pri ktorých zamestnanec nesmie byť bez príjmu. Zákon rozlišuje tri kategórie: prestoje, nepriaznivé poveternostné vplyvy a iné prekážky.\n\nPri prestojoch (porucha stroja, výpadok surovín, technické poruchy) patrí zamestnancovi náhrada mzdy vo výške 100 % priemerného zárobku, ak nebol preradený na inú prácu. Pri nepriaznivých poveternostných vplyvoch patrí náhrada najmenej 50 %. Pri iných prekážkach (napr. protiprávne konanie zamestnávateľa) patrí náhrada 100 %.\n\nOsobitnou kategóriou sú vážne prevádzkové dôvody, ktoré musia byť vymedzené v písomnej dohode so zástupcami zamestnancov. Vtedy patrí náhrada najmenej 60 % priemerného zárobku. Dohodu nemožno nahradiť jednostranným rozhodnutím zamestnávateľa. Pri vážnych prevádzkových dôvodoch môže zamestnávateľ použiť aj konto pracovného času.\n\nPri podpore v čase skrátenej práce (tzv. kurzarbeit) patrí zamestnancovi najmenej 80 % priemerného zárobku, ak je uzavretá dohoda so zástupcami zamestnancov alebo so zamestnancom.\n\nPríklad:\nPorucha stroja spôsobí prerušenie práce. Zamestnávateľ tvrdí, že náhrada mzdy nepatrí. Ide o nezákonný postup – pri prestoji patrí 100 % priemerného zárobku.\n\nKľúčové slová:\nprestoje; nepriaznivé počasie; vážne prevádzkové dôvody; náhrada mzdy; konto pracovného času; kurzarbeit.\n\nZapamätaj si:\n- Prestoje = 100 % priemerného zárobku.\n- Nepriaznivé počasie = min. 50 % priemerného zárobku.\n- Iné prekážky = 100 % priemerného zárobku.\n- Vážne prevádzkové dôvody = min. 60 % + dohoda so zástupcami.\n- Kurzarbeit = min. 80 % priemerného zárobku.\n- Zamestnávateľ musí prekážku preukázať a nesmie ju zneužívať.",
 
   "quiz": [
     {
@@ -17,89 +17,89 @@
       }
     },
     {
-      "question": "Aká je minimálna náhrada mzdy pri prekážkach na strane zamestnávateľa?",
-      "options": ["100 % priemerného zárobku", "60 % priemerného zárobku", "20 % priemerného zárobku"],
-      "correct": 1,
+      "question": "Aká je náhrada mzdy pri prestojoch?",
+      "options": ["50 % priemerného zárobku", "60 % priemerného zárobku", "100 % priemerného zárobku"],
+      "correct": 2,
       "explanation": {
-        "correct": "Správne. Zákon stanovuje minimálne 60 %.",
-        "wrong": "Nesprávne. 100 % patrí len pri niektorých špecifických situáciách."
+        "correct": "Správne. Pri prestojoch patrí 100 % priemerného zárobku.",
+        "wrong": "Nesprávne. 50 % sa týka počasia, 60 % vážnych prevádzkových dôvodov."
       }
     },
     {
-      "question": "Ktorá situácia je prekážkou na strane zamestnávateľa?",
-      "options": ["PN zamestnanca", "Porucha stroja", "Svadba zamestnanca"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Porucha stroja je typická prekážka na strane zamestnávateľa.",
-        "wrong": "Nesprávne. Ostatné sú osobné prekážky."
-      }
-    },
-    {
-      "question": "Môže zamestnávateľ preradiť zamestnanca pri prekážkach na inú prácu?",
-      "options": ["Áno, ak ide o dôležité prevádzkové dôvody", "Nie", "Len ak zamestnanec súhlasí"],
+      "question": "Aká je náhrada mzdy pri nepriaznivých poveternostných vplyvoch?",
+      "options": ["Najmenej 50 %", "Najmenej 60 %", "100 %"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zákon to umožňuje.",
-        "wrong": "Nesprávne. Súhlas zamestnanca nie je vždy potrebný."
+        "correct": "Správne. Zákon stanovuje minimálne 50 %.",
+        "wrong": "Nesprávne. Vyššie percentá sa týkajú iných prekážok."
+      }
+    },
+    {
+      "question": "Kedy patrí náhrada najmenej 60 % priemerného zárobku?",
+      "options": ["Pri prestojoch", "Pri vážnych prevádzkových dôvodoch", "Pri iných prekážkach"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vážne prevádzkové dôvody musia byť vymedzené v dohode.",
+        "wrong": "Nesprávne. Prestoje a iné prekážky sú 100 %."
       }
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ nemusí prekážky preukazovať", "Zamestnávateľ musí prekážky preukázať", "Zamestnanec hradí náklady prekážok"],
+      "options": ["Zamestnávateľ môže jednostranne určiť vážne prevádzkové dôvody", "Dohoda so zástupcami je povinná", "Nepriaznivé počasie nepatrí medzi prekážky"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ musí preukázať, že prekážka skutočne existuje.",
-        "wrong": "Nesprávne. Zamestnanec nenesie náklady."
+        "correct": "Správne. Vážne prevádzkové dôvody musia byť v dohode.",
+        "wrong": "Nesprávne. Zamestnávateľ nemôže rozhodnúť sám."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Prekážky na strane zamestnávateľa", "definition": "Zamestnávateľ nemôže prideľovať prácu, hoci zamestnanec je pripravený." },
-    { "term": "Náhrada mzdy 60 %", "definition": "Minimálna náhrada pri väčšine prekážok." },
-    { "term": "Prestoje", "definition": "Porucha stroja, výpadok surovín, technické problémy." },
-    { "term": "Nepriaznivé počasie", "definition": "Prekážka pri prácach závislých od poveternostných podmienok." },
-    { "term": "Preradenie", "definition": "Možné pri dôležitých prevádzkových dôvodoch." }
+    { "term": "Prestoje", "definition": "Porucha stroja, výpadok surovín, technické poruchy – náhrada 100 %." },
+    { "term": "Nepriaznivé počasie", "definition": "Prekážka pri prácach závislých od počasia – náhrada min. 50 %." },
+    { "term": "Iné prekážky", "definition": "Protiprávne konanie zamestnávateľa alebo iné dôvody – náhrada 100 %." },
+    { "term": "Vážne prevádzkové dôvody", "definition": "Musí byť dohoda so zástupcami – náhrada min. 60 %." },
+    { "term": "Kurzarbeit", "definition": "Podpora v čase skrátenej práce – náhrada min. 80 %." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Porucha stroja",
+      "title": "Prípad 1 – Prestoje spôsobené poruchou stroja",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Zamestnávateľ nemôže prideľovať prácu kvôli poruche stroja. Tvrdí, že zamestnanci nedostanú žiadnu náhradu.",
+          "question": "Zadanie: Porucha stroja spôsobila prerušenie práce. Zamestnávateľ tvrdí, že náhrada mzdy nepatrí.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Ide o prekážku na strane zamestnávateľa?",
+          "question": "Krok 1: Ide o prestoj?",
           "options": ["Áno", "Nie", "Len ak porucha trvá viac ako týždeň"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Porucha stroja je typická prekážka.",
+            "correct": "Správne. Porucha stroja je typický prestoj.",
             "wrong": "Nesprávne. Dĺžka poruchy nerozhoduje."
           }
         },
         {
-          "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Áno, najmenej 60 %", "Nie", "Len ak zamestnávateľ chce"],
-          "correct": 0,
+          "question": "Krok 2: Aká náhrada patrí?",
+          "options": ["50 %", "60 %", "100 %"],
+          "correct": 2,
           "explanation": {
-            "correct": "Správne. Náhrada je povinná.",
-            "wrong": "Nesprávne. Zamestnávateľ nemá voľnú úvahu."
+            "correct": "Správne. Pri prestojoch patrí 100 % priemerného zárobku.",
+            "wrong": "Nesprávne. Nižšie percentá sa týkajú iných prekážok."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť na povinnosť poskytnúť náhradu mzdy",
+            "Upozorniť na povinnosť poskytnúť 100 % náhradu",
             "Súhlasiť so zamestnávateľom",
             "Odporučiť zamestnancom vziať si dovolenku"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí náhradu poskytnúť.",
+            "correct": "Správne. Zamestnávateľ musí poskytnúť náhradu.",
             "wrong": "Nesprávne. Dovolenka nie je riešenie."
           }
         }
@@ -111,7 +111,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Stavebná firma nemôže pracovať kvôli silnému vetru. Zamestnávateľ tvrdí, že ide o prekážku bez náhrady.",
+          "question": "Zadanie: Stavebná firma nemôže pracovať kvôli silnému vetru. Zamestnávateľ tvrdí, že náhrada nepatrí.",
           "options": [],
           "correct": 0
         },
@@ -125,18 +125,18 @@
           }
         },
         {
-          "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Áno, podľa zákona", "Nie", "Len ak zamestnávateľ rozhodne"],
+          "question": "Krok 2: Aká náhrada patrí?",
+          "options": ["Najmenej 50 %", "60 %", "100 %"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Aj pri počasí patrí náhrada.",
-            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+            "correct": "Správne. Minimálne 50 % priemerného zárobku.",
+            "wrong": "Nesprávne. Vyššie percentá sa týkajú iných prekážok."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť na povinnosť poskytnúť náhradu mzdy",
+            "Upozorniť na povinnosť poskytnúť náhradu",
             "Súhlasiť so zamestnávateľom",
             "Odporučiť zamestnancom neplatené voľno"
           ],
