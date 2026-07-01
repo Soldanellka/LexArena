@@ -2,9 +2,9 @@
   "id": "25. B",
   "title": "Dohody o prácach vykonávaných mimo pracovného pomeru vs. Pracovný pomer",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "dohody", "pracovný pomer", "DPP", "DPČ", "DoVP"],
+  "tags": ["pracovné právo", "dohody", "pracovný pomer", "DPP", "DPČ", "DoVP", "študenti"],
 
-  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru (DPP, DPČ, DoVP) sú flexibilné formy výkonu práce, ktoré sa využívajú najmä pri príležitostnej, krátkodobej alebo sezónnej práci. Na rozdiel od pracovného pomeru neposkytujú plný rozsah práv zamestnanca – nepatrí dovolenka, odstupné, výpovedná doba ani garancia minimálneho rozsahu práce. Pracovný pomer je základná forma závislej práce vykonávanej podľa pracovnej zmluvy, ktorá poskytuje stabilitu, sociálne istoty, dovolenku, prekážky v práci, výpovednú ochranu a pravidelný pracovný čas. Dohody majú zákonné limity: DPP najviac 40 hodín mesačne, DPČ najviac 10 hodín týždenne, DoVP sa uzatvára na konkrétne dielo. Dohody sú vhodné na doplnkovú alebo krátkodobú prácu, pracovný pomer na stabilný výkon práce. Účelom právnej úpravy je odlíšiť flexibilné formy práce od štandardného zamestnania a zabrániť obchádzaniu pracovnoprávnych predpisov.\n\nPríklad:\nZamestnávateľ uzatvára so zamestnancami DPP, hoci pracujú denne 8 hodín podľa pokynov nadriadeného. Ide o závislú prácu, ktorá musí byť vykonávaná v pracovnom pomere.\n\nKľúčové slová:\nDPP; DPČ; DoVP; pracovný pomer; flexibilná práca; závislá práca; limity dohôd.\n\nZapamätaj si:\n- Pracovný pomer je základná forma závislej práce.\n- Dohody neposkytujú dovolenku, odstupné ani výpovednú dobu.\n- DPP má limit 40 hodín mesačne, DPČ 10 hodín týždenne.\n- Dohody nesmú nahrádzať pracovný pomer.\n- DoVP sa uzatvára na konkrétne dielo.\n- Cieľom úpravy je zabrániť obchádzaniu pracovného práva.",
+  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru (DoVP, DBPŠ, DPČ) sú osobitné pracovnoprávne vzťahy, ktoré sa uzatvárajú výnimočne – najmä pri príležitostnej, krátkodobej alebo sezónnej práci. Nezakladajú pracovný pomer a neposkytujú plný rozsah práv ako pracovná zmluva: nepatrí dovolenka, odstupné, výpovedná doba (ak nie je dohodnutá), ani prekážky v práci s náhradou mzdy. Pracovný pomer je základná forma závislej práce, poskytuje stabilitu, sociálne istoty, ochranu pri výpovedi, dovolenku, prekážky v práci, pravidelný pracovný čas a vyššiu právnu ochranu.\n\nDohody majú zákonné limity: DoVP najviac 350 hodín ročne, DBPŠ najviac 20 hodín týždenne v priemere, DPČ najviac 10 hodín týždenne. Pri dohodách nemožno nariadiť ani dohodnúť nadčas ani pracovnú pohotovosť. Pracovný čas pri dohodách nesmie presiahnuť 12 hodín denne (u mladistvých 8 hodín). Dohody sú vhodné na doplnkovú prácu, pracovný pomer na stabilný výkon práce.\n\nÚčelom právnej úpravy je odlíšiť flexibilné formy práce od štandardného zamestnania a zabrániť obchádzaniu pracovnoprávnych predpisov.\n\nPríklad:\nZamestnávateľ uzatvára so zamestnancami DoVP, hoci pracujú denne 8 hodín podľa pokynov nadriadeného. Ide o závislú prácu, ktorá musí byť vykonávaná v pracovnom pomere.\n\nKľúčové slová:\nDoVP; DBPŠ; DPČ; pracovný pomer; závislá práca; limity dohôd; odmena; skončenie dohody.\n\nZapamätaj si:\n- Dohody sú výnimočné a nesmú nahrádzať pracovný pomer.\n- Pracovný pomer poskytuje dovolenku, odstupné, výpovednú ochranu.\n- DoVP má limit 350 hodín ročne.\n- DBPŠ má limit 20 hodín týždenne v priemere.\n- DPČ má limit 10 hodín týždenne.\n- Pri dohodách nemožno nariadiť nadčas ani pracovnú pohotovosť.\n- Dohody musia byť vždy písomné.",
 
   "quiz": [
     {
@@ -17,12 +17,12 @@
       }
     },
     {
-      "question": "Koľko hodín možno odpracovať na DPP?",
-      "options": ["40 hodín mesačne", "10 hodín týždenne", "Neobmedzene"],
+      "question": "Koľko hodín možno odpracovať na DoVP?",
+      "options": ["350 hodín ročne", "40 hodín mesačne", "10 hodín týždenne"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. DPP má limit 40 hodín mesačne.",
-        "wrong": "Nesprávne. Nejde o týždenný limit."
+        "correct": "Správne. DoVP má limit 350 hodín ročne.",
+        "wrong": "Nesprávne. 40 hodín mesačne je limit DPP, ktorý už neexistuje."
       }
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Dohody majú výpovednú dobu 2 mesiace", "Pracovný pomer poskytuje vyššiu ochranu zamestnanca", "Dohody sú určené na trvalý výkon práce"],
+      "options": ["Dohody majú zákonnú výpovednú dobu 2 mesiace", "Pracovný pomer poskytuje vyššiu ochranu zamestnanca", "Dohody sú určené na trvalý výkon práce"],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pracovný pomer poskytuje komplexnú ochranu.",
@@ -56,9 +56,9 @@
 
   "tiles": [
     { "term": "Pracovný pomer", "definition": "Základná forma závislej práce s plnými právami zamestnanca." },
-    { "term": "DPP", "definition": "Dohoda o vykonaní práce – max. 40 hodín mesačne." },
+    { "term": "DoVP", "definition": "Dohoda o vykonaní práce – max. 350 hodín ročne, práca vymedzená výsledkom." },
+    { "term": "DBPŠ", "definition": "Dohoda o brigádnickej práci študentov – max. 20 hodín týždenne v priemere." },
     { "term": "DPČ", "definition": "Dohoda o pracovnej činnosti – max. 10 hodín týždenne." },
-    { "term": "DoVP", "definition": "Dohoda o vykonaní práce – na konkrétne dielo." },
     { "term": "Rozdiely", "definition": "Dohody nemajú dovolenku, odstupné, výpovednú dobu ani ochranu." }
   ],
 
@@ -68,7 +68,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Zamestnávateľ uzatvára so zamestnancami DPP, hoci pracujú denne 8 hodín a plnia pokyny nadriadeného.",
+          "question": "Zadanie: Zamestnávateľ uzatvára so zamestnancami DoVP, hoci pracujú denne 8 hodín a plnia pokyny nadriadeného.",
           "options": [],
           "correct": 0
         },
@@ -82,7 +82,7 @@
           }
         },
         {
-          "question": "Krok 2: Je DPP v tejto situácii zákonná?",
+          "question": "Krok 2: Je DoVP v tejto situácii zákonná?",
           "options": ["Nie", "Áno", "Len ak je práca sezónna"],
           "correct": 0,
           "explanation": {
@@ -107,7 +107,7 @@
     },
 
     {
-      "title": "Prípad 2 – Ukončenie dohody bez výpovednej doby",
+      "title": "Prípad 2 – Ukončenie DPČ bez výpovednej doby",
       "difficulty": "ľahká",
       "steps": [
         {
