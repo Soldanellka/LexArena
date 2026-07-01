@@ -477,13 +477,42 @@ body {
 /* správna odpoveď */
 .opt.correct {
   background: rgba(34,197,94,0.12);
-  border-color: rgba(34,197,94,0.25);
+  border-color: rgba(34,197,94,0.4);
+  position: relative;
+}
+
+.opt.correct::after {
+  content: "✓";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #16a34a;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* nesprávna odpoveď */
 .opt.wrong {
   background: rgba(239,68,68,0.10);
-  border-color: rgba(239,68,68,0.25);
+  border-color: rgba(239,68,68,0.35);
+  position: relative;
+}
+
+.opt.wrong::after {
+  content: "✗";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #dc2626;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Skryť broken images v texte odpovedí (z JSON súborov) */
+.opt img, .q-text img {
+  display: none;
 }
 
 /* ============================================================
