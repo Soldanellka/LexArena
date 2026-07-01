@@ -183,6 +183,95 @@ export function init() {
 
     /* 🔹 Video systém */
     initVideoSystem();
+
+    /* 🔹 Feedback systém */
+    initFeedbackSystem();
+  });
+}
+
+/* =====================================================
+   💬 FEEDBACK SYSTÉM
+   ===================================================== */
+function initFeedbackSystem() {
+  const textarea = document.getElementById('feedbackText');
+  const charCount = document.getElementById('feedbackCharCount');
+  const sendBtn = document.getElementById('sendFeedbackBtn');
+  const form = document.getElementById('feedbackForm');
+  const success = document.getElementById('feedbackSuccess');
+  const againBtn = document.getElementById('feedbackAgainBtn');
+  const typeBtns = document.querySelectorAll('.feedback-type-btn');
+
+  if (!textarea) return;
+
+  let selectedType = 'napad';
+
+  // Výber typu
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedType = btn.dataset.type;
+    });
+  });
+
+  // Počítadlo znakov
+  textarea.addEventListener('input', () => {
+    charCount.textContent = `${textarea.value.length} / 500`;
+  });
+
+  // Odoslanie
+  sendBtn && sendBtn.addEventListener('click', async () => {
+    const text = textarea.value.trim();
+    if (!text) {
+      textarea.focus();
+      textarea.style.borderColor = 'var(--accent-3)';
+      setTimeout(() => textarea.style.borderColor = '', 1500);
+      return;
+    }
+
+    const db = window.db;
+    const nick = localStorage.getItem('playerNick') || 'Anonymous';
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Odosielam...';
+
+    try {
+      if (db) {
+        const { ref, push } = await import(
+          "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+        );
+        await push(ref(db, 'feedback'), {
+          nick,
+          type: selectedType,
+          text,
+          createdAt: Date.now(),
+          read: false
+        });
+      }
+
+      // Zobraz úspech
+      form.style.display = 'none';
+      success.style.display = 'block';
+      textarea.value = '';
+      charCount.textContent = '0 / 500';
+
+    } catch (e) {
+      console.error('Feedback chyba:', e);
+      sendBtn.textContent = 'Chyba – skús znova';
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Odoslať';
+    }
+  });
+
+  // Ďalšia pripomienka
+  againBtn && againBtn.addEventListener('click', () => {
+    success.style.display = 'none';
+    form.style.display = 'block';
+    // Reset na prvý typ
+    typeBtns.forEach(b => b.classList.remove('active'));
+    typeBtns[0] && typeBtns[0].classList.add('active');
+    selectedType = 'napad';
   });
 }
 
