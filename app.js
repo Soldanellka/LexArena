@@ -45,18 +45,29 @@ function renderAreas() {
   if (!list || typeof window.areas === 'undefined') return;
 
   list.innerHTML = '';
+  let selectedName = null;
 
   Object.keys(window.areas).forEach(name => {
     const btn = document.createElement('button');
-    btn.className = 'chip';
+    btn.className = 'chip area-chip';
     btn.textContent = name;
+    btn.dataset.area = name;
 
     btn.onclick = () => {
+      // Zruš zvýraznenie všetkých
+      list.querySelectorAll('.area-chip').forEach(b => {
+        b.classList.remove('chip-active');
+      });
+
+      // Zvýrazni vybraný
+      btn.classList.add('chip-active');
+      selectedName = name;
+
       const startBtn = $('startQuizBtn');
       const quizTitle = $('quizTitle');
       const areaTitle = $('areaTitle');
 
-      if (quizTitle) quizTitle.textContent = `Vybraná oblasť: ${name}`;
+      if (quizTitle) quizTitle.textContent = 'Vyber oblasť do duelu';
       if (areaTitle) areaTitle.textContent = name;
 
       if (startBtn) {
