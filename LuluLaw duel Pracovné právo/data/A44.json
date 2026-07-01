@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "kvalifikácia", "vzdelávanie", "zamestnanec", "zamestnávateľ"],
 
-  "summary": "Zvyšovanie a prehlbovanie kvalifikácie predstavuje odborné vzdelávanie zamestnanca, ktoré súvisí s výkonom práce. Zvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania, napríklad vysokoškolského štúdia. Prehlbovanie kvalifikácie je dopĺňanie vedomostí v rámci existujúcej kvalifikácie, napríklad formou kurzov, školení alebo povinných preškolení. Zamestnávateľ môže požadovať prehlbovanie kvalifikácie a je povinný ho uhradiť. Pri zvyšovaní kvalifikácie môže zamestnávateľ uzavrieť kvalifikačnú dohodu, v ktorej sa zamestnanec zaviaže zotrvať v pracovnom pomere najviac 5 rokov. Ak záväzok poruší, musí nahradiť náklady, ale len vtedy, ak zamestnávateľ preukázateľne náklady uhradil a vzdelávanie bolo v jeho záujme. Zamestnanec má počas vzdelávania nárok na pracovné voľno a náhradu mzdy podľa zákona. Cieľom právnej úpravy je podpora odborného rastu zamestnancov a zabezpečenie kvalifikovanej pracovnej sily.\n\nPríklad:\nZamestnávateľ nariadi zamestnancovi povinné školenie BOZP a požaduje, aby si ho uhradil sám. Takýto postup je nezákonný – ide o prehlbovanie kvalifikácie, ktoré musí uhradiť zamestnávateľ.\n\nKľúčové slová:\nzvyšovanie kvalifikácie; prehlbovanie kvalifikácie; kvalifikačná dohoda; náhrada nákladov; pracovné voľno.\n\nZapamätaj si:\n- Zvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania.\n- Prehlbovanie kvalifikácie je dopĺňanie vedomostí v rámci existujúcej kvalifikácie.\n- Kvalifikačná dohoda sa uzatvára len pri zvyšovaní kvalifikácie.\n- Maximálna viazanosť v kvalifikačnej dohode je 5 rokov.\n- Povinné školenia hradí zamestnávateľ.\n- Zamestnanec má pri zvyšovaní kvalifikácie nárok na pracovné voľno a náhradu mzdy.",
+  "summary": "Zvyšovanie a prehlbovanie kvalifikácie predstavuje odborné vzdelávanie zamestnanca podľa § 153 – 155 Zákonníka práce. Prehlbovanie kvalifikácie je povinnosťou zamestnanca a znamená dopĺňanie, udržiavanie alebo obnovovanie vedomostí v rámci existujúcej kvalifikácie (napr. školenia, kurzy, BOZP, rekvalifikácia pri zmene pracoviska). Ide o výkon práce, za ktorý patrí mzda.\n\nZvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania (napr. VŠ štúdium). Zamestnávateľ nie je povinný umožniť zvyšovanie kvalifikácie, pokiaľ neuzavrie so zamestnancom kvalifikačnú dohodu. Kvalifikačná dohoda musí byť písomná, môže trvať najviac 5 rokov a zakladá povinnosť zamestnávateľa poskytovať pracovné voľno, náhradu mzdy a úhradu nákladov. Zamestnanec sa zaväzuje zotrvať v pracovnom pomere alebo uhradiť náklady, ak záväzok poruší.\n\nPovinnosť uhradiť náklady nevzniká v prípadoch uvedených v zákone, napr. pri organizačných dôvodoch, zdravotnej nespôsobilosti, chorobe z povolania, materskej a rodičovskej dovolenke či pri porušení povinností zamestnávateľa. Pri prehlbovaní kvalifikácie možno uzavrieť dohodu len vtedy, ak náklady presiahnu 1700 eur – v takom prípade zamestnanec nemá povinnosť prehlbovať si kvalifikáciu.\n\nCieľom právnej úpravy je podpora odborného rastu zamestnancov, stabilizácia pracovnej sily a zabezpečenie kvalifikovaného výkonu práce.\n\nPríklad:\nZamestnávateľ nariadi zamestnancovi povinné školenie BOZP a požaduje, aby si ho uhradil sám. Ide o nezákonný postup – prehlbovanie kvalifikácie musí uhradiť zamestnávateľ.\n\nKľúčové slová:\nzvyšovanie kvalifikácie; prehlbovanie kvalifikácie; kvalifikačná dohoda; náhrada nákladov; pracovné voľno; rekvalifikácia.\n\nZapamätaj si:\n- Prehlbovanie kvalifikácie je povinnosť zamestnanca a je to výkon práce.\n- Zvyšovanie kvalifikácie je dobrovoľné a vyžaduje písomnú kvalifikačnú dohodu.\n- Maximálna viazanosť v kvalifikačnej dohode je 5 rokov.\n- Náklady sa uhrádzajú len pri platnej dohode a preukázaných výdavkoch.\n- Povinné školenia hradí zamestnávateľ.\n- Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy.",
 
   "quiz": [
     {
@@ -12,7 +12,7 @@
       "options": ["Doplnenie vedomostí v rámci existujúcej kvalifikácie", "Získanie vyššieho stupňa vzdelania", "Krátke interné školenie"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zvyšovanie kvalifikácie znamená získanie vyššieho vzdelania.",
+        "correct": "Správne. Zvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania.",
         "wrong": "Nesprávne. Prehlbovanie je dopĺňanie vedomostí."
       }
     },
@@ -48,7 +48,7 @@
       "options": ["Kvalifikačná dohoda je povinná pri každom školení", "Zamestnanec má nárok na pracovné voľno pri zvyšovaní kvalifikácie", "Zamestnávateľ nemusí preukazovať náklady"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Pri zvyšovaní kvalifikácie patrí pracovné voľno.",
+        "correct": "Správne. Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy.",
         "wrong": "Nesprávne. Dohoda nie je povinná a náklady musia byť preukázané."
       }
     }
@@ -56,10 +56,10 @@
 
   "tiles": [
     { "term": "Zvyšovanie kvalifikácie", "definition": "Získanie vyššieho stupňa vzdelania (napr. VŠ štúdium)." },
-    { "term": "Prehlbovanie kvalifikácie", "definition": "Doplnenie vedomostí v rámci existujúcej kvalifikácie." },
-    { "term": "Kvalifikačná dohoda", "definition": "Dohoda o zotrvaní v pracovnom pomere najviac 5 rokov." },
-    { "term": "Náhrada nákladov", "definition": "Zamestnanec ich hradí len pri porušení kvalifikačnej dohody." },
-    { "term": "Pracovné voľno", "definition": "Pri zvyšovaní kvalifikácie patrí voľno a náhrada mzdy." }
+    { "term": "Prehlbovanie kvalifikácie", "definition": "Doplnenie, udržiavanie alebo obnovovanie vedomostí v rámci existujúcej kvalifikácie." },
+    { "term": "Kvalifikačná dohoda", "definition": "Písomná dohoda o zvyšovaní kvalifikácie s viazanosťou najviac 5 rokov." },
+    { "term": "Náhrada nákladov", "definition": "Zamestnanec ich hradí len pri porušení platnej kvalifikačnej dohody." },
+    { "term": "Pracovné voľno", "definition": "Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy." }
   ],
 
   "cases": [
