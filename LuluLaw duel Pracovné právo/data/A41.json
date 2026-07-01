@@ -2,82 +2,82 @@
   "id": "21. A",
   "title": "Predzmluvné vzťahy",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "predzmluvné vzťahy", "vznik pracovného pomeru", "informovanie"],
+  "tags": ["pracovné právo", "predzmluvné vzťahy", "vznik pracovného pomeru", "informovanie", "rovnaké zaobchádzanie"],
 
-  "summary": "Predzmluvné vzťahy sú úkony a rokovania, ktoré predchádzajú vzniku pracovného pomeru. Zahŕňajú výberové konanie, poskytovanie informácií, preverovanie predpokladov na výkon práce a rokovanie o pracovnej zmluve. Zamestnávateľ môže od uchádzača požadovať len údaje súvisiace s pracovným pomerom a nesmie zisťovať zakázané informácie (tehotenstvo, rodinný stav, plánovanie rodiny). Uchádzač je povinný uvádzať pravdivé údaje o kvalifikácii a zdravotnej spôsobilosti. Zamestnávateľ musí poskytnúť pravdivé informácie o pracovných a mzdových podmienkach a o rizikách práce. Predzmluvné vzťahy sú chránené zásadou rovnakého zaobchádzania, dobrými mravmi a povinnosťou mlčanlivosti. Porušenie povinností môže viesť k zodpovednosti za škodu.\n\nPríklad:\nUchádzačke sa zamestnávateľ na pohovore pýta, či plánuje mať deti. Ide o zakázanú diskriminačnú otázku, na ktorú uchádzačka nemusí odpovedať.\n\nKľúčové slová:\npredzmluvné vzťahy; výberové konanie; zákaz diskriminácie; povinnosť informovať; pravdivé údaje.\n\nZapamätaj si:\n- Zamestnávateľ môže zisťovať len údaje súvisiace s prácou.\n- Tehotenstvo, rodinný stav a plánovanie rodiny sú zakázané otázky.\n- Uchádzač musí uvádzať pravdivé údaje o kvalifikácii.\n- Zamestnávateľ musí poskytnúť pravdivé informácie o práci a mzde.\n- Porušenie povinností môže viesť k náhrade škody.",
+  "summary": "Predzmluvné vzťahy sú právne významné úkony a komunikácia medzi budúcim zamestnávateľom a uchádzačom o zamestnanie pred uzavretím pracovnej zmluvy. Zákonník práce (§ 41 ZP) presne upravuje, aké informácie môže zamestnávateľ požadovať, aké povinnosti musí splniť a aké práva má uchádzač.\n\nZamestnávateľ môže od uchádzača požadovať len údaje súvisiace s prácou. Pri prvom zamestnaní môže zisťovať iba informácie potrebné pre výkon práce; pri uchádzačovi, ktorý už pracoval, môže vyžadovať pracovný posudok a potvrdenie o zamestnaní. Zamestnávateľ nesmie zisťovať tehotenstvo, rodinné pomery, politickú či odborovú príslušnosť, ani bezúhonnosť, pokiaľ to nevyžaduje osobitný predpis alebo povaha práce.\n\nZamestnávateľ je povinný oboznámiť uchádzača s právami a povinnosťami vyplývajúcimi z pracovnej zmluvy, s pracovnými a mzdovými podmienkami, a ak to vyžaduje osobitný predpis, overiť zdravotnú či psychickú spôsobilosť. Pri mladistvom uchádzačovi musí zabezpečiť lekárske vyšetrenie a vyžiadať si vyjadrenie zákonného zástupcu.\n\nUchádzač je povinný uvádzať pravdivé údaje a informovať o skutočnostiach, ktoré bránia výkonu práce alebo môžu spôsobiť zamestnávateľovi ujmu. Ak zamestnávateľ poruší zásadu rovnakého zaobchádzania alebo požaduje zakázané informácie, uchádzač má právo na primeranú peňažnú náhradu.\n\nPredzmluvné vzťahy sú chránené zásadou rovnakého zaobchádzania, zákazom diskriminácie a povinnosťou oboch strán konať čestne a pravdivo.",
 
   "quiz": [
     {
-      "question": "Čo sú predzmluvné vzťahy?",
-      "options": ["Vzťahy po skončení pracovného pomeru", "Úkony pred vznikom pracovného pomeru", "Vzťahy medzi odbormi a zamestnávateľom"],
+      "question": "Čo môže zamestnávateľ požadovať od uchádzača o prvé zamestnanie?",
+      "options": ["Informácie o rodinnom stave", "Len údaje súvisiace s prácou", "Bezúhonnosť vždy"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Ide o úkony pred podpisom pracovnej zmluvy.",
-        "wrong": "Nesprávne. Predzmluvné vzťahy sú pred vznikom pracovného pomeru."
+        "correct": "Správne. Pri prvom zamestnaní môže zamestnávateľ zisťovať iba údaje potrebné pre výkon práce.",
+        "wrong": "Nesprávne. Rodinný stav a bezúhonnosť nie sú prípustné údaje."
       }
     },
     {
-      "question": "Môže zamestnávateľ zisťovať tehotenstvo uchádzačky?",
-      "options": ["Áno", "Nie", "Len ak ide o rizikovú prácu"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Zisťovanie tehotenstva je zakázané.",
-        "wrong": "Nesprávne. Ide o diskriminačnú otázku."
-      }
-    },
-    {
-      "question": "Ktorú informáciu môže zamestnávateľ požadovať?",
-      "options": ["Plánovanie rodiny", "Odbornú kvalifikáciu", "Politické názory"],
-      "correct": 1,
-      "explanation": {
-        "correct": "Správne. Kvalifikácia je relevantná pre výkon práce.",
-        "wrong": "Nesprávne. Ostatné informácie sú zakázané."
-      }
-    },
-    {
-      "question": "Akú povinnosť má zamestnávateľ voči uchádzačovi?",
-      "options": ["Informovať o pracovných podmienkach", "Zabezpečiť dopravu do práce", "Poskytnúť pracovnú zmluvu ešte pred výberovým konaním"],
+      "question": "Ktorá informácia je zakázaná?",
+      "options": ["Tehotenstvo", "Zdravotná spôsobilosť, ak ju vyžaduje zákon", "Kvalifikácia"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ musí poskytnúť pravdivé informácie.",
+        "correct": "Správne. Tehotenstvo je zakázané zisťovať.",
+        "wrong": "Nesprávne. Zdravotná spôsobilosť a kvalifikácia môžu byť požadované."
+      }
+    },
+    {
+      "question": "Akú povinnosť má zamestnávateľ pred uzavretím pracovnej zmluvy?",
+      "options": ["Oboznámiť uchádzača s pracovnými a mzdovými podmienkami", "Zabezpečiť dopravu do práce", "Poskytnúť pracovnú zmluvu týždeň vopred"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zamestnávateľ musí poskytnúť pravdivé informácie o práci a mzde.",
         "wrong": "Nesprávne. Ostatné povinnosti zákon neukladá."
       }
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Uchádzač môže uvádzať nepravdivé údaje", "Zamestnávateľ nesmie diskriminovať uchádzača", "Predzmluvné vzťahy nie sú právne významné"],
+      "options": ["Uchádzač môže uvádzať nepravdivé údaje", "Zamestnávateľ musí dodržiavať zásadu rovnakého zaobchádzania", "Zamestnávateľ môže zisťovať politickú príslušnosť"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zákaz diskriminácie platí aj pred vznikom pracovného pomeru.",
-        "wrong": "Nesprávne. Uchádzač musí uvádzať pravdivé údaje."
+        "correct": "Správne. Rovnaké zaobchádzanie je povinnosťou zamestnávateľa.",
+        "wrong": "Nesprávne. Uchádzač musí uvádzať pravdu a politická príslušnosť je zakázaná."
+      }
+    },
+    {
+      "question": "Čo môže uchádzač požadovať, ak zamestnávateľ poruší zákaz diskriminácie?",
+      "options": ["Primeranú peňažnú náhradu", "Automatické prijatie do práce", "Nič"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Uchádzač má právo na primeranú peňažnú náhradu.",
+        "wrong": "Nesprávne. Porušenie povinností nezakladá automatické prijatie."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Predzmluvné vzťahy", "definition": "Úkony a rokovania pred vznikom pracovného pomeru." },
-    { "term": "Zákaz diskriminácie", "definition": "Zamestnávateľ nesmie zisťovať zakázané údaje (tehotenstvo, rodinný stav)." },
-    { "term": "Povinnosť informovať", "definition": "Zamestnávateľ musí poskytnúť pravdivé informácie o práci a mzde." },
-    { "term": "Povinnosť pravdivosti", "definition": "Uchádzač musí uvádzať pravdivé údaje o kvalifikácii a zdravotnej spôsobilosti." },
-    { "term": "Zodpovednosť za škodu", "definition": "Porušenie predzmluvných povinností môže viesť k náhrade škody." }
+    { "term": "Predzmluvné vzťahy", "definition": "Vzťahy medzi zamestnávateľom a uchádzačom pred uzavretím pracovnej zmluvy." },
+    { "term": "Zakázané otázky", "definition": "Tehotenstvo, rodinné pomery, politická či odborová príslušnosť." },
+    { "term": "Povinnosť informovať", "definition": "Zamestnávateľ musí oboznámiť uchádzača s pracovnými a mzdovými podmienkami." },
+    { "term": "Pravdivé údaje", "definition": "Uchádzač musí uvádzať pravdivé informácie o kvalifikácii a spôsobilosti." },
+    { "term": "Rovnaké zaobchádzanie", "definition": "Zákaz diskriminácie pri prístupe k zamestnaniu." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Diskriminačná otázka na pohovore",
+      "title": "Prípad 1 – Zakázaná otázka na pohovore",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Uchádzačka na pohovore dostala otázku, či plánuje mať deti.",
+          "question": "Zadanie: Uchádzačka dostala otázku, či je tehotná.",
           "options": [],
           "correct": 0
         },
         {
           "question": "Krok 1: Je otázka prípustná?",
-          "options": ["Nie", "Áno", "Len ak ide o fyzicky náročnú prácu"],
+          "options": ["Nie", "Áno", "Len ak ide o rizikovú prácu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o zakázanú diskriminačnú otázku.",
+            "correct": "Správne. Zisťovanie tehotenstva je zakázané.",
             "wrong": "Nesprávne. Druh práce nie je relevantný."
           }
         },
@@ -93,13 +93,13 @@
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť na porušenie zákazu diskriminácie",
+            "Upozorniť na porušenie zásady rovnakého zaobchádzania",
             "Odporučiť uchádzačke odpovedať",
             "Ignorovať situáciu"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Ide o porušenie zásady rovnakého zaobchádzania.",
+            "correct": "Správne. Ide o diskriminačné konanie.",
             "wrong": "Nesprávne. Odpovedanie by legitimizovalo porušenie."
           }
         }
@@ -111,13 +111,13 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Uchádzač uviedol v životopise nepravdivý údaj o odbornej kvalifikácii. Zamestnávateľ to zistil po nástupe.",
+          "question": "Zadanie: Uchádzač uviedol nepravdivé údaje o kvalifikácii, čo sa zistilo po nástupe.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Porušil uchádzač predzmluvné povinnosti?",
-          "options": ["Áno", "Nie", "Len ak to spôsobilo škodu"],
+          "question": "Krok 1: Porušil uchádzač povinnosti?",
+          "options": ["Áno", "Nie", "Len ak vznikla škoda"],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uchádzač musí uvádzať pravdivé údaje.",
@@ -126,7 +126,7 @@
         },
         {
           "question": "Krok 2: Môže zamestnávateľ skončiť pracovný pomer?",
-          "options": ["Áno, pre neplnenie predpokladov", "Nie", "Len ak uchádzač odmietne ospravedlnenie"],
+          "options": ["Áno, pre nesplnenie predpokladov", "Nie", "Len ak uchádzač odmietne ospravedlnenie"],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nepravdivé údaje môžu byť dôvodom na výpoveď.",
