@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "výpoveď", "výpovedná doba", "zákaz výpovede"],
 
-  "summary": "Výpoveď je jednostranný právny úkon, ktorým zamestnávateľ alebo zamestnanec ukončuje pracovný pomer uplynutím výpovednej doby. Zamestnávateľ môže dať výpoveď len zo zákonných dôvodov uvedených v § 63 Zákonníka práce, pričom dôvod musí byť presne a konkrétne skutkovo vymedzený. Zamestnanec môže dať výpoveď z akéhokoľvek dôvodu alebo aj bez uvedenia dôvodu.\n\nVýpovedná doba je najmenej 1 mesiac a jej dĺžka sa predlžuje podľa dĺžky trvania pracovného pomeru (2 alebo 3 mesiace). Začína plynúť prvým dňom mesiaca nasledujúceho po doručení výpovede.\n\nZákaz výpovede (ochranná doba) chráni zamestnanca v situáciách, keď je sociálne alebo zdravotne zraniteľný – počas PN, tehotenstva, materskej a rodičovskej dovolenky, pri povolaní na výkon mimoriadnej služby či pri nočnej práci tehotných. Zákaz výpovede sa neuplatní pri organizačných dôvodoch, zrušení zamestnávateľa alebo pri dôvodoch na okamžité skončenie pracovného pomeru.\n\nPríklad:\nZamestnávateľ doručí zamestnancovi výpoveď počas PN. Takáto výpoveď je neplatná, pretože PN je ochranná doba a zákaz výpovede sa uplatní.\n\nKľúčové slová:\nvýpoveď; výpovedná doba; zákaz výpovede; ochranná doba; dôvody výpovede; doručenie výpovede.\n\nZapamätaj si:\n- Zamestnávateľ môže dať výpoveď len zo zákonných dôvodov.\n- Zamestnanec môže dať výpoveď aj bez uvedenia dôvodu.\n- Výpovedná doba začína plynúť prvým dňom nasledujúceho mesiaca.\n- PN, tehotenstvo, MD a RD patria do ochrannej doby.\n- Zákaz výpovede neplatí pri organizačných dôvodoch alebo zrušení zamestnávateľa.",
+  "summary": "Výpoveď je jednostranný právny úkon smerujúci k skončeniu pracovného pomeru uplynutím výpovednej doby. Zákonník práce striktne rozlišuje výpoveď danú zamestnávateľom a výpoveď danú zamestnancom. Zamestnanec môže dať výpoveď z akéhokoľvek dôvodu alebo bez uvedenia dôvodu, zatiaľ čo zamestnávateľ môže dať výpoveď len z dôvodov taxatívne uvedených v § 63 ods. 1 ZP.\n\nZamestnávateľ musí výpovedný dôvod presne skutkovo vymedziť, inak je výpoveď neplatná. Dôvod nemožno dodatočne meniť. Pri výpovedi musí zamestnávateľ splniť viaceré povinnosti: prerokovanie so zástupcami zamestnancov, ponukovú povinnosť, predchádzajúci súhlas úradu práce pri výpovedi zamestnanca so zdravotným postihnutím, informovanie zákonného zástupcu mladistvého a oboznámenie zamestnanca s dôvodom výpovede.\n\nVýpovedná doba je najmenej 1 mesiac. Pri výpovedi z organizačných dôvodov (§ 63 ods. 1 písm. a) a b)) alebo zo zdravotných dôvodov (§ 63 ods. 1 písm. c)) sa jej dĺžka odvíja od dĺžky trvania pracovného pomeru (1–3 mesiace). Začína plynúť prvým dňom mesiaca nasledujúceho po doručení výpovede.\n\nZákaz výpovede (§ 64 ZP) chráni zamestnanca v tzv. ochrannej dobe: počas PN, tehotenstva, materskej a rodičovskej dovolenky, pri povolaní na mimoriadnu službu, pri dobrovoľnej vojenskej príprave či pri dočasnej nespôsobilosti na nočnú prácu. Zákaz výpovede sa neuplatní pri organizačných dôvodoch, zrušení zamestnávateľa alebo pri dôvodoch na okamžité skončenie pracovného pomeru.\n\nCieľom právnej úpravy je ochrana zamestnanca pred svojvoľným skončením pracovného pomeru, zabezpečenie právnej istoty a rovnováhy medzi flexibilitou zamestnávateľa a sociálnou ochranou zamestnanca.",
 
   "quiz": [
     {
@@ -12,8 +12,8 @@
       "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ musí uviesť zákonný dôvod.",
-        "wrong": "Nesprávne. Súhlas zamestnanca nič nemení."
+        "correct": "Správne. Zamestnávateľ musí uviesť presný zákonný dôvod podľa § 63 ZP.",
+        "wrong": "Nesprávne. Súhlas zamestnanca nemá vplyv na povinnosť uviesť dôvod."
       }
     },
     {
@@ -21,7 +21,7 @@
       "options": ["Dňom doručenia výpovede", "Prvým dňom nasledujúceho mesiaca", "Posledným dňom mesiaca"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Výpovedná doba začína prvým dňom nasledujúceho mesiaca.",
+        "correct": "Správne. Výpovedná doba začína plynúť prvým dňom nasledujúceho kalendárneho mesiaca.",
         "wrong": "Nesprávne. Doručenie nie je začiatok plynutia."
       }
     },
@@ -30,7 +30,7 @@
       "options": ["Zamestnanec musí uviesť dôvod výpovede", "Zamestnanec môže dať výpoveď bez dôvodu", "Zamestnanec môže dať výpoveď len so súhlasom zamestnávateľa"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zamestnanec nemusí uvádzať dôvod.",
+        "correct": "Správne. Zamestnanec môže ukončiť pracovný pomer bez uvedenia dôvodu.",
         "wrong": "Nesprávne. Súhlas zamestnávateľa nie je potrebný."
       }
     },
@@ -39,7 +39,7 @@
       "options": ["Tehotenstvo", "Dovolenka", "Práca z domu"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Tehotenstvo je ochranná doba.",
+        "correct": "Správne. Tehotenstvo je ochranná doba podľa § 64 ZP.",
         "wrong": "Nesprávne. Dovolenka nie je ochranná doba."
       }
     },
@@ -48,18 +48,18 @@
       "options": ["Pri PN", "Pri organizačných dôvodoch", "Pri tehotenstve"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Pri organizačných dôvodoch zákaz výpovede neplatí.",
+        "correct": "Správne. Pri organizačných dôvodoch (§ 63 ods. 1 písm. a) a b)) zákaz výpovede neplatí.",
         "wrong": "Nesprávne. PN aj tehotenstvo sú chránené."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Výpoveď", "definition": "Jednostranný právny úkon smerujúci k skončeniu pracovného pomeru." },
-    { "term": "Výpovedná doba", "definition": "Najmenej 1 mesiac; začína plynúť prvým dňom nasledujúceho mesiaca." },
-    { "term": "Zákaz výpovede", "definition": "Ochranná doba, počas ktorej nemožno dať výpoveď (PN, tehotenstvo, MD, RD)." },
-    { "term": "Dôvody výpovede", "definition": "Zamestnávateľ môže dať výpoveď len zo zákonných dôvodov." },
-    { "term": "Doručenie výpovede", "definition": "Výpoveď musí byť písomná a preukázateľne doručená." }
+    { "term": "Výpoveď", "definition": "Jednostranný právny úkon smerujúci k skončeniu pracovného pomeru uplynutím výpovednej doby." },
+    { "term": "Výpovedná doba", "definition": "Najmenej 1 mesiac; začína plynúť prvým dňom nasledujúceho mesiaca po doručení výpovede." },
+    { "term": "Zákaz výpovede", "definition": "Ochranná doba, počas ktorej nemožno dať výpoveď (PN, tehotenstvo, MD, RD, mimoriadna služba)." },
+    { "term": "Dôvody výpovede", "definition": "Zamestnávateľ môže dať výpoveď len zo zákonných dôvodov uvedených v § 63 ods. 1 ZP." },
+    { "term": "Doručenie výpovede", "definition": "Výpoveď musí byť písomná a preukázateľne doručená druhému účastníkovi." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Áno", "Nie", "Len ak PN trvá viac ako 30 dní"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. PN je ochranná doba.",
+            "correct": "Správne. PN je ochranná doba podľa § 64 ZP.",
             "wrong": "Nesprávne. Dĺžka PN nerozhoduje."
           }
         },
@@ -86,14 +86,14 @@
           "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Výpoveď počas PN je neplatná.",
+            "correct": "Správne. Výpoveď počas ochrannej doby je neplatná.",
             "wrong": "Nesprávne. Súhlas zamestnanca nie je relevantný."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť na neplatnosť výpovede a trvať na jej zrušení",
+            "Upozorniť na neplatnosť výpovede a požadovať jej zrušenie",
             "Odporučiť zamestnancovi akceptovať výpoveď",
             "Ignorovať situáciu"
           ],
@@ -120,7 +120,7 @@
           "options": ["Áno", "Nie", "Len ak zamestnávateľ nevie o tehotenstve"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Tehotenstvo je ochranná doba.",
+            "correct": "Správne. Tehotenstvo je ochranná doba podľa § 64 ZP.",
             "wrong": "Nesprávne. Vedomosť zamestnávateľa nie je podmienkou."
           }
         },
@@ -129,7 +129,7 @@
           "options": ["Áno, pri organizačných dôvodoch", "Nie", "Len ak zamestnankyňa súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Pri organizačných dôvodoch zákaz výpovede neplatí.",
+            "correct": "Správne. Pri organizačných dôvodoch zákaz výpovede neplatí (§ 64 ods. 3 ZP).",
             "wrong": "Nesprávne. Súhlas zamestnankyne nie je potrebný."
           }
         },
@@ -138,7 +138,7 @@
           "options": ["Áno, ak je dôvod skutočný a riadne odôvodnený", "Nie", "Len ak zamestnankyňa podpíše dohodu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Organizačný dôvod je zákonná výnimka.",
+            "correct": "Správne. Organizačný dôvod je zákonná výnimka zo zákazu výpovede.",
             "wrong": "Nesprávne. Dohoda nie je potrebná."
           }
         }
