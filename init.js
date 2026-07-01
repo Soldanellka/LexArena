@@ -172,6 +172,12 @@ export function init() {
     /* 🔹 Rebríček duelov */
     initDuelLeaderboard();
 
+    /* 🔹 Rola systém */
+    initRoleSystem();
+
+    /* 🔹 Garančná pečať */
+    initGuarantorSeal();
+
     /* 🔹 Udalosti */
     attachEvents();
 
@@ -395,6 +401,227 @@ function initVideoSystem() {
       if (badge) badge.classList.add('claimed');
     }
   });
+}
+
+
+
+/* =====================================================
+   ROLA SYSTÉM – admin panel, garant, role management
+   ===================================================== */
+
+async function initRoleSystem() {
+  const db = window.db;
+  const nick = localStorage.getItem('playerNick');
+  if (!db || !nick) return;
+
+  const { ref, get, update, onValue } =
+    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+  // Načítaj rolu z Firebase
+  const snap = await get(ref(db, `users/${nick}/role`));
+  const role = snap.exists() ? snap.val() : 'student';
+
+  // Ulož rolu lokálne
+  localStorage.setItem('playerRole', role);
+
+  // Aktualizuj UI
+  const roleLabel = document.getElementById('roleLabel');
+  const roleBadge = document.getElementById('roleBadge');
+  if (roleLabel) roleLabel.textContent = role;
+  if (roleBadge) {
+    roleBadge.setAttribute('data-role', role);
+    roleBadge.title = role === 'admin'
+      ? 'Admin – plný prístup'
+      : role === 'garant'
+      ? 'Garant – môžeš pridávať garančnú pečať'
+      : 'Študent';
+  }
+
+  // Zobraz admin panel
+  if (role === 'admin' || role === 'garant') {
+    renderAdminPanel(role, db, ref, get, update, onValue);
+  }
+}
+
+function renderAdminPanel(role, db, ref, get, update, onValue) {
+  const panel = document.getElementById('adminPanel');
+  if (!panel) return;
+
+  panel.innerHTML = `
+    <div style="margin-bottom:12px">
+      <div style="font-weight:600;margin-bottom:4px">
+        ${role === 'admin' ? '👑 Admin panel' : '🔏 Garant panel'}
+      </div>
+      ${role === 'admin' ? `
+        <div style="margin-bottom:10px">
+          <input id="adminNickInput" class="form-input" type="text"
+            placeholder="Nick hráča..." style="margin-bottom:6px"/>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="setGarantBtn">🔏 Nastaviť garanta</button>
+            <button class="btn" id="setStudentBtn">👤 Odobrať garanta</button>
+          </div>
+          <div id="adminMsg" class="small" style="margin-top:6px;color:var(--muted)"></div>
+        </div>
+        <button class="btn" id="listUsersBtn" style="width:100%;margin-bottom:8px">
+          👥 Zobraziť hráčov
+        </button>
+        <div id="usersList" style="display:none;max-height:200px;overflow-y:auto"></div>
+      ` : ''}
+      <div class="small muted" style="margin-top:8px">
+        ${role === 'admin'
+          ? 'Ako admin môžeš udeľovať rolu garanta hráčom.'
+          : 'Ako garant môžeš pridávať garančnú pečať na otázky v kvíze.'}
+      </div>
+    </div>
+  `;
+
+  if (role === 'admin') {
+    // Nastaviť garanta
+    panel.querySelector('#setGarantBtn').onclick = async () => {
+      const targetNick = panel.querySelector('#adminNickInput').value.trim();
+      const msg = panel.querySelector('#adminMsg');
+      if (!targetNick) { msg.textContent = 'Zadaj nick hráča.'; return; }
+      await update(ref(db, `users/${targetNick}`), { role: 'garant' });
+      msg.textContent = `✅ ${targetNick} je teraz garant.`;
+      msg.style.color = 'var(--accent-3)';
+    };
+
+    // Odobrať garanta
+    panel.querySelector('#setStudentBtn').onclick = async () => {
+      const targetNick = panel.querySelector('#adminNickInput').value.trim();
+      const msg = panel.querySelector('#adminMsg');
+      if (!targetNick) { msg.textContent = 'Zadaj nick hráča.'; return; }
+      await update(ref(db, `users/${targetNick}`), { role: 'student' });
+      msg.textContent = `✅ ${targetNick} je teraz student.`;
+      msg.style.color = 'var(--muted)';
+    };
+
+    // Zoznam hráčov
+    panel.querySelector('#listUsersBtn').onclick = async () => {
+      const listEl = panel.querySelector('#usersList');
+      const isHidden = listEl.style.display === 'none';
+      if (!isHidden) { listEl.style.display = 'none'; return; }
+
+      listEl.innerHTML = '<div class="small muted">Načítavam...</div>';
+      listEl.style.display = 'block';
+
+      const snap = await get(ref(db, 'users'));
+      const users = snap.val() || {};
+
+      listEl.innerHTML = Object.entries(users).map(([n, u]) => `
+        <div style="display:flex;justify-content:space-between;align-items:center;
+          padding:6px 8px;border-bottom:1px solid var(--card-border);font-size:13px">
+          <div>
+            <strong>${n}</strong>
+            <span class="small muted" style="margin-left:6px">${u.role || 'student'}</span>
+          </div>
+          <div style="display:flex;gap:4px">
+            <button class="btn" style="font-size:11px;padding:3px 8px"
+              onclick="(async()=>{
+                const {ref,update}=await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js');
+                await update(ref(window.db,'users/${n}'),{role:'garant'});
+                this.closest('div').querySelector('span').textContent='garant';
+              })()">🔏 Garant</button>
+            <button class="btn" style="font-size:11px;padding:3px 8px"
+              onclick="(async()=>{
+                const {ref,update}=await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js');
+                await update(ref(window.db,'users/${n}'),{role:'student'});
+                this.closest('div').querySelector('span').textContent='student';
+              })()">👤 Student</button>
+          </div>
+        </div>
+      `).join('');
+    };
+  }
+}
+
+/* =====================================================
+   GARANČNÁ PEČAŤ NA OTÁZKACH
+   ===================================================== */
+
+// Zobraz tlačidlo "Pridať pečať" pre garanta počas kvízu
+export function initGuarantorSeal() {
+  const role = localStorage.getItem('playerRole');
+  if (role !== 'garant' && role !== 'admin') return;
+
+  // Sleduj zmeny otázky a pridaj tlačidlo
+  const observer = new MutationObserver(() => {
+    const qBox = document.querySelector('.question-box');
+    if (!qBox || document.getElementById('sealBtn')) return;
+
+    const sealBtn = document.createElement('button');
+    sealBtn.id = 'sealBtn';
+    sealBtn.className = 'btn';
+    sealBtn.style.cssText = 'margin-top:10px;font-size:12px;';
+    sealBtn.textContent = '🔏 Pridať garančnú pečať';
+    sealBtn.onclick = addGuarantorSeal;
+    qBox.appendChild(sealBtn);
+
+    // Zobraz existujúcu pečať
+    showExistingSeal(qBox);
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+async function addGuarantorSeal() {
+  const nick = localStorage.getItem('playerNick');
+  const area = document.getElementById('areaTitle')?.textContent?.trim();
+  const qText = document.getElementById('qText')?.textContent?.trim();
+
+  if (!nick || !area || !qText) return;
+
+  const db = window.db;
+  if (!db) return;
+
+  const { ref, set } =
+    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+  // Vytvor bezpečný kľúč z textu otázky
+  const qKey = btoa(encodeURIComponent(qText.substring(0, 50))).replace(/[^a-zA-Z0-9]/g, '').substring(0, 30);
+
+  await set(ref(db, `seals/questions/${area}/${qKey}`), {
+    nick,
+    timestamp: Date.now(),
+    questionText: qText.substring(0, 100)
+  });
+
+  const btn = document.getElementById('sealBtn');
+  if (btn) {
+    btn.textContent = '✅ Pečať pridaná';
+    btn.disabled = true;
+    btn.style.color = 'var(--accent-3)';
+  }
+
+  // Zobraz pečať
+  showSealBadge(nick);
+}
+
+async function showExistingSeal(container) {
+  const area = document.getElementById('areaTitle')?.textContent?.trim();
+  const qText = document.getElementById('qText')?.textContent?.trim();
+  if (!area || !qText || !window.db) return;
+
+  const { ref, get } =
+    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+  const qKey = btoa(encodeURIComponent(qText.substring(0, 50))).replace(/[^a-zA-Z0-9]/g, '').substring(0, 30);
+  const snap = await get(ref(window.db, `seals/questions/${area}/${qKey}`));
+
+  if (snap.exists()) {
+    showSealBadge(snap.val().nick);
+  }
+}
+
+function showSealBadge(garantNick) {
+  const qBox = document.querySelector('.question-box');
+  if (!qBox || document.getElementById('sealBadgeOnQ')) return;
+
+  const badge = document.createElement('div');
+  badge.id = 'sealBadgeOnQ';
+  badge.style.cssText = 'display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;border-radius:999px;padding:3px 10px;margin-top:8px;border:1px solid rgba(214,158,46,0.4);background:rgba(214,158,46,0.08);color:#b45309;';
+  badge.innerHTML = `🔏 Overené garantom <strong>${garantNick}</strong>`;
+  qBox.insertBefore(badge, qBox.firstChild);
 }
 
 
