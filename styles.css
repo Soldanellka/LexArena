@@ -975,6 +975,76 @@ body {
 
 
 
+
+/* ============================================================
+   💬 FEEDBACK DLAŽDICA
+============================================================ */
+
+.highlight-feedback {
+  border-left: 3px solid #a78bfa;
+}
+
+.feedback-options {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.feedback-type-btn {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--card-border);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .18s;
+}
+
+.feedback-type-btn:hover {
+  border-color: #a78bfa;
+  color: #7c3aed;
+}
+
+.feedback-type-btn.active {
+  background: linear-gradient(90deg, #a78bfa, #7c3aed);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 3px 10px rgba(124,58,237,0.25);
+}
+
+.feedback-textarea {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 10px;
+  border: 1.5px solid var(--card-border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 10px 12px;
+  resize: vertical;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167,139,250,0.15);
+}
+
+.feedback-textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+:root[data-theme="dark"] .feedback-textarea {
+  background: rgba(255,255,255,0.04);
+}
+
 /* ============================================================
    📺 VIDEO DLAŽDICA
 ============================================================ */
