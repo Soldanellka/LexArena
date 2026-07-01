@@ -535,6 +535,8 @@ window.openReportModal = function(prefill = {}) {
 
 /* ── SÚDNA SIEŇ ── */
 window.openCourtroomModal = async function() {
+  console.log('🏛️ openCourtroomModal zavolaná');
+  try {
   let modal = document.getElementById('courtroomModalNew');
   if (!modal) {
     modal = document.createElement('div');
@@ -573,7 +575,8 @@ window.openCourtroomModal = async function() {
     });
   }
   modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px;box-sizing:border-box;overflow-y:auto;';
-  loadCList('in_court');
+  console.log('🏛️ Volám loadCList...');
+  await loadCList('in_court');
 
   async function loadCList(status) {
     const list = modal.querySelector('#cList');
@@ -661,6 +664,10 @@ window.openCourtroomModal = async function() {
         loadCList(status);
       };
     });
+  }
+  } catch(err) {
+    console.error('❌ openCourtroomModal chyba:', err);
+    alert('Chyba: ' + err.message);
   }
 };
 
