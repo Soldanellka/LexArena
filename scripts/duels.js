@@ -22,7 +22,32 @@ function getDb() {
 /* ============================================================
    VÝBER OTÁZOK PODĽA TVOJHO MODELU
 ============================================================ */
+/* Shuffluje odpovede otázky a správne aktualizuje index správnej odpovede */
+function shuffleQuestionOptions(q) {
+  q = JSON.parse(JSON.stringify(q)); // deep copy
+  if (!Array.isArray(q.options) || q.options.length === 0) return q;
+
+  const correctText = (typeof q.correct === 'number')
+    ? q.options[q.correct]
+    : null;
+
+  // Fisher-Yates shuffle
+  for (let i = q.options.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+  }
+
+  // Aktualizuj index správnej odpovede
+  if (correctText !== null) {
+    const newIndex = q.options.findIndex(o => o === correctText);
+    q.correct = newIndex >= 0 ? newIndex : 0;
+  }
+
+  return q;
+}
+
 function pickQuestions(areaName) {
+  let questions = [];
 
   // 🔥 PRACOVNÉ PRÁVO – páry A1+A2, A3+A4, … A49+A50
   if (areaName === "Pracovné právo") {
@@ -49,26 +74,25 @@ function pickQuestions(areaName) {
     }
 
     const chosen = pairs[Math.floor(Math.random() * pairs.length)];
-    return chosen;
+    questions = chosen || [];
   }
 
   // 🔥 TRESTNÉ PRÁVO – 1×TPH + 1×TPP
-  if (areaName === "Trestné právo hmotné" || areaName === "Trestné právo procesné") {
-
+  else if (areaName === "Trestné právo hmotné" || areaName === "Trestné právo procesné") {
     const tph = window.areas["Trestné právo hmotné"];
     const tpp = window.areas["Trestné právo procesné"];
-
     const pick5 = arr => arr.slice().sort(()=>Math.random()-0.5).slice(0,5);
-
-    return [
-      ...pick5(tph),
-      ...pick5(tpp)
-    ];
+    questions = [...pick5(tph), ...pick5(tpp)];
   }
 
   // 🔥 Ostatné oblasti – fallback
-  const all = window.areas[areaName] || [];
-  return all.slice().sort(()=>Math.random()-0.5).slice(0,10);
+  else {
+    const all = window.areas[areaName] || [];
+    questions = all.slice().sort(()=>Math.random()-0.5).slice(0,10);
+  }
+
+  // 🔥 Shuffluj odpovede každej otázky
+  return questions.map(q => shuffleQuestionOptions(q));
 }
 
 /* ============================================================
@@ -215,16 +239,23 @@ function finalizeDuel(duel, opponentNick, opponentQuestions) {
   else if (scoreB > scoreA) winner = opponentNick;
   else winner = "draw";
 
-  // 🔥 Paragrafy
+  // 🔥 § EKONOMIKA
+  // Výhra:  8§ (7§ výhra + 1§ odohranie)
+  // Prehra: 2§ tvorca / 3§ prijímateľ (1§ prehra + 1§ odohranie [+ 1§ prijatie])
+  // Remíza: 4§ tvorca / 5§ prijímateľ (3§ remíza + 1§ odohranie [+ 1§ prijatie])
   if (winner === firstNick) {
-    awardParagrafy(firstNick, 7 + 1);
+    awardParagrafy(firstNick, 8);
     awardParagrafy(opponentNick, 3);
   } else if (winner === opponentNick) {
-    awardParagrafy(opponentNick, 7);
-    awardParagrafy(firstNick, 3 + 1);
+    awardParagrafy(opponentNick, 9);
+    awardParagrafy(firstNick, 2);
   } else {
-    awardParagrafy(firstNick, 3 + 1);
-    awardParagrafy(opponentNick, 3);
+    awardParagrafy(firstNick, 4);
+    awardParagrafy(opponentNick, 5);
+  }
+  // Energia avatara -10 za odohraný duel
+  if (typeof window.deductEnergy === 'function') {
+    window.deductEnergy(10);
   }
 
   // 🔥 Rebríček
@@ -336,6 +367,15 @@ export function renderDuelBank() {
           window.startDuelQuiz(duel.questions);
         } else {
           console.error("❌ startDuelQuiz() neexistuje!");
+        }
+
+        // 🔥 +1§ za prijatie výzvy (pred hrou)
+        if (typeof window.awardParagrafy === 'function') {
+          window.awardParagrafy(1, 'za prijatie výzvy');
+        }
+        // 🔥 Energia -10 za prijatie duelu
+        if (typeof window.deductEnergy === 'function') {
+          window.deductEnergy(10);
         }
 
         const db = getDb();
