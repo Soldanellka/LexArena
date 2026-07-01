@@ -2,104 +2,105 @@
   "id": "20. B",
   "title": "Vznik odborov a ich postavenie v pracovnoprávnych vzťahoch",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "odbory", "kolektívne vyjednávanie", "zástupcovia zamestnancov"],
+  "tags": ["pracovné právo", "odbory", "kolektívne vyjednávanie", "zástupcovia zamestnancov", "participácia zamestnancov"],
 
-  "summary": "Odbory sú dobrovoľné združenia zamestnancov vytvorené na ochranu ich pracovných, sociálnych a ekonomických záujmov. Vznikajú registráciou stanov na Ministerstve vnútra SR a ich existencia je založená na ústavnom práve slobodne sa združovať. Odbory pôsobia nezávisle od zamestnávateľa a štátu.\n\nV pracovnoprávnych vzťahoch majú odbory silné postavenie: zastupujú zamestnancov, kontrolujú dodržiavanie pracovnoprávnych predpisov, prerokúvajú zásadné otázky (napr. pracovný poriadok, hromadné prepúšťanie, BOZP) a sú jediným subjektom oprávneným uzatvárať kolektívne zmluvy. Zamestnávateľ je povinný umožniť odborom pôsobenie na pracovisku, poskytovať im informácie a prerokúvať zákonom určené otázky. Odboroví funkcionári sú chránení pred výpoveďou.\n\nCieľom právnej úpravy je vyvážiť postavenie zamestnanca a zamestnávateľa a zabezpečiť kolektívnu ochranu práv zamestnancov.\n\nPríklad:\nZamestnávateľ odmieta prerokovať pracovný poriadok s odbormi. Takýto postup je v rozpore so zákonom – pracovný poriadok musí byť prerokovaný s odborovou organizáciou.\n\nKľúčové slová:\nodbory; kolektívne vyjednávanie; kontrolná funkcia; ochrana funkcionárov; nezávislosť odborov.\n\nZapamätaj si:\n- Odbory vznikajú registráciou stanov na Ministerstve vnútra SR.\n- Odbory sú nezávislé od zamestnávateľa.\n- Kolektívnu zmluvu môžu uzatvárať len odbory.\n- Zamestnávateľ musí s odbormi prerokúvať zákonom určené otázky.\n- Odboroví funkcionári sú chránení pred výpoveďou.",
+  "summary": "Odbory sú dobrovoľné združenia zamestnancov založené na ústavnom práve slobodne sa združovať. Vznikajú registráciou stanov na Ministerstve vnútra SR podľa zákona o združovaní občanov. Odbory pôsobia nezávisle od zamestnávateľa a štátu.\n\nV pracovnoprávnych vzťahoch majú odbory silné postavenie: zastupujú zamestnancov, vykonávajú kontrolnú činnosť, prerokúvajú zásadné otázky (pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie) a sú jediným subjektom oprávneným uzatvárať kolektívne zmluvy. Zamestnávateľ je povinný umožniť odborom pôsobenie na pracovisku, poskytovať im informácie a prerokovať zákonom určené otázky.\n\nZástupcami zamestnancov sú odborová organizácia, zamestnanecká rada, zamestnanecký dôverník a zástupca pre BOZP. Odbory majú najširšie právomoci – spolurozhodovanie, kontrolu, informácie a kolektívne vyjednávanie. Zamestnanecká rada a dôverník majú právo na prerokovanie a informácie.\n\nOdboroví funkcionári sú chránení pred výpoveďou počas výkonu funkcie a 6 mesiacov po jej skončení. Zamestnávateľ im nemôže dať výpoveď bez predchádzajúceho súhlasu odborov.\n\nCieľom právnej úpravy je vyvážiť postavenie zamestnanca a zamestnávateľa, podporiť participáciu zamestnancov a zabezpečiť kolektívnu ochranu práv zamestnancov.\n\nPríklad:\nZamestnávateľ chce zaviesť nový pracovný poriadok bez prerokovania s odbormi. Takýto postup je neplatný – pracovný poriadok musí byť prerokovaný so zástupcami zamestnancov.\n\nKľúčové slová:\nodbory; kolektívne vyjednávanie; zamestnanecká rada; prerokovanie; spolurozhodovanie; kontrolná činnosť; ochrana funkcionárov.",
 
   "quiz": [
     {
-      "question": "Ako vznikajú odbory?",
+      "question": "Ako vzniká odborová organizácia?",
       "options": ["Rozhodnutím zamestnávateľa", "Registráciou stanov na Ministerstve vnútra SR", "Automaticky pri vzniku firmy"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Odbory vznikajú registráciou stanov.",
+        "correct": "Správne. Odbory vznikajú registráciou stanov podľa zákona o združovaní občanov.",
         "wrong": "Nesprávne. Zamestnávateľ odbory nezriaďuje."
       }
     },
     {
       "question": "Kto môže uzatvárať kolektívnu zmluvu?",
-      "options": ["Zamestnávateľ a odbory", "Zamestnanec individuálne", "Inšpektorát práce"],
+      "options": ["Odbory a zamestnávateľ", "Zamestnanec individuálne", "Inšpektorát práce"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Kolektívnu zmluvu uzatvárajú odbory so zamestnávateľom.",
+        "correct": "Správne. Kolektívnu zmluvu uzatvára odborový orgán so zamestnávateľom.",
         "wrong": "Nesprávne. Individuálne dohody nie sú kolektívne zmluvy."
       }
     },
     {
-      "question": "Majú odbory právo kontrolovať dodržiavanie pracovnoprávnych predpisov?",
-      "options": ["Áno", "Nie", "Len ak to zamestnávateľ povolí"],
-      "correct": 0,
+      "question": "Ktorý zástupca zamestnancov má najširšie právomoci?",
+      "options": ["Zamestnanecká rada", "Zamestnanecký dôverník", "Odborová organizácia"],
+      "correct": 2,
       "explanation": {
-        "correct": "Správne. Kontrolná funkcia je jednou z hlavných úloh odborov.",
-        "wrong": "Nesprávne. Zamestnávateľ o tom nerozhoduje."
+        "correct": "Správne. Odbory majú právo spolurozhodovania, kontroly, informácií aj kolektívneho vyjednávania.",
+        "wrong": "Nesprávne. Rada a dôverník majú užšie právomoci."
       }
     },
     {
-      "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Odbory môže zrušiť zamestnávateľ", "Odbory sú nezávislé od zamestnávateľa", "Odbory musia mať súhlas zamestnávateľa na vznik"],
-      "correct": 1,
+      "question": "Môže zamestnávateľ odmietnuť prerokovanie otázok, ktoré zákon prikazuje prerokovať?",
+      "options": ["Nie", "Áno", "Len ak odbory nemajú 50 členov"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Odbory sú nezávislé a zamestnávateľ ich nemôže zrušiť.",
-        "wrong": "Nesprávne. Zamestnávateľ nemá právomoc zasahovať."
+        "correct": "Správne. Prerokovanie je zákonná povinnosť zamestnávateľa.",
+        "wrong": "Nesprávne. Počet členov nie je podmienkou."
       }
     },
     {
       "question": "Kto je chránený pred výpoveďou?",
-      "options": ["Odboroví funkcionári", "Každý člen odborov", "Nikto"],
-      "correct": 0,
+      "options": ["Každý člen odborov", "Odboroví funkcionári", "Nikto"],
+      "correct": 1,
       "explanation": {
-        "correct": "Správne. Zákon chráni odborových funkcionárov.",
+        "correct": "Správne. Ochrana sa vzťahuje na funkcionárov počas výkonu funkcie a 6 mesiacov po jej skončení.",
         "wrong": "Nesprávne. Ochrana sa nevzťahuje na všetkých členov."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Vznik odborov", "definition": "Registráciou stanov na Ministerstve vnútra SR." },
-    { "term": "Nezávislosť odborov", "definition": "Odbory sú nezávislé od zamestnávateľa a štátu." },
-    { "term": "Kolektívne vyjednávanie", "definition": "Odbory sú jediným subjektom oprávneným uzatvárať kolektívne zmluvy." },
-    { "term": "Kontrolná funkcia", "definition": "Odbory kontrolujú dodržiavanie pracovnoprávnych predpisov." },
-    { "term": "Ochrana funkcionárov", "definition": "Odboroví funkcionári sú chránení pred výpoveďou." }
+    { "term": "Vznik odborov", "definition": "Registráciou stanov na Ministerstve vnútra SR podľa zákona o združovaní občanov." },
+    { "term": "Zástupcovia zamestnancov", "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP." },
+    { "term": "Spolurozhodovanie", "definition": "Odbory majú právo spolurozhodovať pri pracovnom poriadku, BOZP, pracovnom čase a ďalších otázkach." },
+    { "term": "Prerokovanie", "definition": "Zamestnávateľ musí prerokovať zásadné otázky so zástupcami zamestnancov." },
+    { "term": "Kontrolná činnosť", "definition": "Odbory kontrolujú dodržiavanie pracovnoprávnych predpisov a kolektívnej zmluvy." },
+    { "term": "Ochrana funkcionárov", "definition": "Výpoveď odborového funkcionára je možná len so súhlasom odborov." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Zamestnávateľ odmieta komunikovať s odbormi",
+      "title": "Prípad 1 – Zamestnávateľ odmieta prerokovať pracovný poriadok",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Odbory požiadali zamestnávateľa o prerokovanie pracovného poriadku. Zamestnávateľ tvrdí, že s odbormi komunikovať nemusí.",
+          "question": "Zadanie: Odbory žiadajú prerokovanie pracovného poriadku. Zamestnávateľ tvrdí, že prerokovanie nie je potrebné.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Má zamestnávateľ povinnosť prerokovať pracovný poriadok?",
-          "options": ["Áno", "Nie", "Len ak chce"],
+          "question": "Krok 1: Je prerokovanie pracovného poriadku povinné?",
+          "options": ["Áno", "Nie", "Len ak to zamestnávateľ uzná"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Pracovný poriadok musí byť prerokovaný s odbormi.",
+            "correct": "Správne. Pracovný poriadok musí byť prerokovaný so zástupcami zamestnancov.",
             "wrong": "Nesprávne. Zamestnávateľ si nemôže vyberať."
           }
         },
         {
-          "question": "Krok 2: Môže zamestnávateľ odmietnuť komunikáciu?",
-          "options": ["Nie", "Áno", "Len ak odbory nemajú 50 členov"],
+          "question": "Krok 2: Môže zamestnávateľ odmietnuť komunikáciu s odbormi?",
+          "options": ["Nie", "Áno", "Len ak odbory nemajú právnu subjektivitu"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí s odbormi spolupracovať.",
-            "wrong": "Nesprávne. Počet členov nie je podmienkou."
+            "correct": "Správne. Zamestnávateľ je povinný spolupracovať s odbormi.",
+            "wrong": "Nesprávne. Právna subjektivita vzniká registráciou."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Upozorniť zamestnávateľa na zákonnú povinnosť prerokovania",
+            "Upozorniť na neplatnosť pracovného poriadku bez prerokovania",
             "Súhlasiť so zamestnávateľom",
             "Odporučiť odborom, aby prerokovanie ignorovali"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ porušuje zákon.",
+            "correct": "Správne. Pracovný poriadok vydaný bez prerokovania je neplatný.",
             "wrong": "Nesprávne. Odbory majú zákonné práva."
           }
         }
@@ -107,42 +108,42 @@
     },
 
     {
-      "title": "Prípad 2 – Ochrana odborového funkcionára",
+      "title": "Prípad 2 – Výpoveď odborového funkcionára",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Zadanie: Odborový funkcionár dostal výpoveď z dôvodu nadbytočnosti. Zamestnávateľ tvrdí, že ide o bežný organizačný dôvod.",
+          "question": "Zadanie: Odborový funkcionár dostal výpoveď z dôvodu nadbytočnosti. Zamestnávateľ nevyžiadal súhlas odborov.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Krok 1: Je odborový funkcionár chránený pred výpoveďou?",
+          "question": "Krok 1: Je funkcionár chránený pred výpoveďou?",
           "options": ["Áno", "Nie", "Len ak je vo funkcii viac ako rok"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Funkcionári majú osobitnú ochranu.",
+            "correct": "Správne. Funkcionár je chránený počas výkonu funkcie a 6 mesiacov po jej skončení.",
             "wrong": "Nesprávne. Dĺžka funkcie nerozhoduje."
           }
         },
         {
-          "question": "Krok 2: Môže zamestnávateľ dať výpoveď bez súhlasu odborov?",
+          "question": "Krok 2: Je výpoveď bez súhlasu odborov platná?",
           "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ potrebuje súhlas odborov.",
+            "correct": "Správne. Bez súhlasu odborov je výpoveď neplatná.",
             "wrong": "Nesprávne. Súhlas zamestnanca nestačí."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Namietať neplatnosť výpovede pre chýbajúci súhlas odborov",
+            "Namietať neplatnosť výpovede",
             "Súhlasiť s výpoveďou",
             "Odporučiť zamestnancovi podpísať dohodu"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Bez súhlasu odborov je výpoveď neplatná.",
+            "correct": "Správne. Výpoveď je neplatná pre chýbajúci súhlas odborov.",
             "wrong": "Nesprávne. Dohoda nie je riešenie."
           }
         }
