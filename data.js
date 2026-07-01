@@ -123,7 +123,7 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
    NAČÍTANIE OBLASTÍ PRE DUEL
 ===================================================== */
 
-// Pracovné právo → 50 JSON
+// Pracovné právo → 50 JSON (A1-A50)
 loadJsonQuestions(
   "Pracovné právo",
   LIVE + "LuluLaw duel Pracovné právo/data/",
