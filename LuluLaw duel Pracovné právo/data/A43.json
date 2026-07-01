@@ -2,9 +2,9 @@
   "id": "22. A",
   "title": "Právna úprava odmeňovania za prácu v nepodnikateľskej sfére",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "odmeňovanie", "nepodnikateľská sféra", "plat", "tarify"],
+  "tags": ["pracovné právo", "odmeňovanie", "verejný sektor", "plat", "tarifné tabuľky"],
 
-  "summary": "Odmeňovanie v nepodnikateľskej sfére (štátna služba, verejná služba, rozpočtové a príspevkové organizácie) sa riadi zákonom o odmeňovaní zamestnancov pri výkone práce vo verejnom záujme a osobitnými predpismi. Na rozdiel od podnikateľskej sféry sa neposkytuje mzda, ale plat. Plat je určený podľa platových tried, ktoré zohľadňujú náročnosť práce, a platových stupňov, ktoré zohľadňujú dĺžku započítanej praxe. Zamestnávateľ nemá voľnosť dohodnúť plat individuálne – musí rešpektovať tarifné tabuľky. Súčasťou platu sú aj príplatky, osobné príplatky a odmeny. Odmeňovanie je prísne regulované s cieľom zabezpečiť rovnosť, transparentnosť a predvídateľnosť.\n\nPríklad:\nZamestnávateľ zaradí zamestnanca do nižšej platovej triedy, než zodpovedá jeho pracovnej činnosti, aby ušetril. Takýto postup je nezákonný – trieda musí zodpovedať katalógu pracovných činností.\n\nKľúčové slová:\nplat; tarifný plat; platová trieda; platový stupeň; osobný príplatok; verejný sektor.\n\nZapamätaj si:\n- V nepodnikateľskej sfére sa poskytuje plat, nie mzda.\n- Plat je určený tarifnými tabuľkami, nie dohodou.\n- Platová trieda musí zodpovedať náročnosti práce.\n- Platový stupeň závisí od započítanej praxe.\n- Osobný príplatok je možný, ale musí byť odôvodnený a nediskriminačný.\n- Odmeňovanie vo verejnom sektore musí byť transparentné a rovnaké.",
+  "summary": "Odmeňovanie zamestnancov v nepodnikateľskej sfére (štátna správa, samospráva, rozpočtové a príspevkové organizácie) sa riadi zákonom č. 553/2003 Z. z. o odmeňovaní pri výkone práce vo verejnom záujme. Na rozdiel od podnikateľskej sféry sa neposkytuje mzda, ale plat. Plat je určený tarifnými tabuľkami, ktoré zohľadňujú náročnosť práce (platová trieda) a dĺžku započítanej praxe (platový stupeň). Zamestnávateľ nemôže plat dohodnúť individuálne – musí rešpektovať zákonné tarify.\n\nSúčasťou platu sú tarifný plat, osobný príplatok, príplatky za prácu (napr. nočná práca, sviatok, víkend), odmeny a ďalšie zákonné zložky. Zaradenie zamestnanca do triedy musí zodpovedať katalógu pracovných činností. Odmeňovanie je prísne regulované s cieľom zabezpečiť rovnosť, transparentnosť a predvídateľnosť.\n\nPríklad:\nZamestnávateľ zaradí zamestnanca do nižšej triedy, než zodpovedá jeho pracovnej činnosti, aby ušetril. Takýto postup je nezákonný – trieda musí zodpovedať katalógu pracovných činností.\n\nKľúčové slová:\nplat; tarifný plat; platová trieda; platový stupeň; osobný príplatok; verejný sektor.\n\nZapamätaj si:\n- V nepodnikateľskej sfére sa poskytuje plat, nie mzda.\n- Plat je určený tarifnými tabuľkami, nie dohodou.\n- Platová trieda musí zodpovedať náročnosti práce.\n- Platový stupeň závisí od započítanej praxe.\n- Osobný príplatok je možný, ale musí byť objektívne odôvodnený.\n- Odmeňovanie vo verejnom sektore musí byť transparentné a rovnaké.",
 
   "quiz": [
     {
@@ -56,7 +56,7 @@
 
   "tiles": [
     { "term": "Plat", "definition": "Odmena za prácu vo verejnom záujme; určená zákonom." },
-    { "term": "Platová trieda", "definition": "Zohľadňuje náročnosť pracovnej činnosti." },
+    { "term": "Platová trieda", "definition": "Zohľadňuje náročnosť pracovnej činnosti podľa katalógu." },
     { "term": "Platový stupeň", "definition": "Zohľadňuje dĺžku započítanej praxe." },
     { "term": "Tarifný plat", "definition": "Základná zložka platu podľa zákonných tabuliek." },
     { "term": "Osobný príplatok", "definition": "Dobrovoľná zložka platu za mimoriadne výsledky alebo vyššiu záťaž." }
