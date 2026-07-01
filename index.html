@@ -486,7 +486,14 @@ window.openReportModal = function(prefill = {}) {
       btn.disabled = true; btn.textContent = 'Odosielam...';
 
       try {
-        const db = getDb();
+        // Počkaj kým je Firebase inicializovaná
+        let db = getDb();
+        let attempts = 0;
+        while (!db && attempts < 30) {
+          await new Promise(r => setTimeout(r, 100));
+          db = getDb();
+          attempts++;
+        }
         if (db) {
           const { ref, push, update } = await fbImport();
           const r = await push(ref(db, 'reports'), {
