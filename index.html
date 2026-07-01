@@ -16,7 +16,7 @@
 <header class="header">
   <div class="brand">
     <span class="logo-dot" aria-hidden="true"></span>
-    <span>LexArena</span>
+    <span class="logo-text">LexArena</span>
 
     <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0">
       <img id="userAvatar" src="assets/avatars/student-f-awake.svg" alt="Avatar používateľa" />
@@ -45,20 +45,47 @@
   </div>
 
   <div class="header-right">
-    <div class="pill">Paragrafy: <strong id="parCount">0</strong></div>
-    <div class="pill small" id="loginStreakDisplay" style="color:var(--accent-3)"></div>
-    <div class="pill small" id="premiumBadge">FREE</div>
 
-    <button class="btn" id="themeToggleBtn" title="Prepni tému">
+    <!-- § Paragrafy – prémiový dizajn -->
+    <div class="par-badge" title="Tvoje paragrafy">
+      <span class="par-icon">§</span>
+      <span id="parCount" class="par-count">0</span>
+    </div>
+
+    <!-- Streak -->
+    <div class="pill streak-pill" id="loginStreakDisplay"></div>
+
+    <!-- Rola -->
+    <div class="role-badge" id="roleBadge" title="Tvoja rola">
+      <span id="roleLabel">student</span>
+    </div>
+
+    <!-- Tmavý režim -->
+    <button class="btn icon-btn" id="themeToggleBtn" title="Prepni tému">
       <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Prepínač témy">
     </button>
 
-    <button class="btn" id="toggleRoleBtn">Role: student</button>
-    <button class="btn" id="togglePremiumBtn">Toggle PREMIUM</button>
-    <button class="btn" id="transferAccountBtn">Preniesť účet</button>
-    <button class="btn" id="loginPinBtn">Prihlásiť PINom</button>
+    <!-- Prihlásenie z iného zariadenia -->
+    <button class="btn btn-primary header-login-btn" id="loginDeviceBtn" title="Prihlásiť sa z iného zariadenia">
+      🔑 Môj kód
+    </button>
+
   </div>
 </header>
+
+<!-- Modal: Môj kód / prihlásenie -->
+<div id="loginCodeModal" class="avatar-modal" style="display:none">
+  <div class="avatar-panel" style="max-width:420px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <h3 style="margin:0">🔑 Môj prístupový kód</h3>
+      <button class="btn" id="closeLoginModal">✕</button>
+    </div>
+    <div id="loginModalContent">
+      <!-- Obsah sa generuje dynamicky v core.js -->
+      <p class="small muted">Načítavam...</p>
+    </div>
+  </div>
+</div>
 
 <main class="container">
 
@@ -97,6 +124,48 @@
         <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
           <img src="assets/icons/shop.svg" width="18" height="18" alt="">
         </button>
+      </div>
+    </div>
+
+    <div class="card section-card highlight-video">
+      <h3 style="margin:0">📺 Návody & odmeny</h3>
+      <div class="small" style="margin-bottom:12px">Pozri video a získaj <strong>+12§</strong></div>
+
+      <div id="videoList" class="video-list">
+
+        <div class="video-item" data-video-id="v1">
+          <div class="video-thumb" onclick="openVideo('v1')">
+            <div class="video-play-btn">▶</div>
+            <div class="video-label">Ako funguje LexArena?</div>
+          </div>
+          <div class="video-meta">
+            <span class="small muted">Úvod do platformy • 3 min</span>
+            <span class="video-reward-badge" id="reward-v1">+12§</span>
+          </div>
+        </div>
+
+        <div class="video-item" data-video-id="v2">
+          <div class="video-thumb" onclick="openVideo('v2')">
+            <div class="video-play-btn">▶</div>
+            <div class="video-label">Ako hrať duelový kvíz?</div>
+          </div>
+          <div class="video-meta">
+            <span class="small muted">Duely krok za krokom • 2 min</span>
+            <span class="video-reward-badge" id="reward-v2">+12§</span>
+          </div>
+        </div>
+
+        <div class="video-item" data-video-id="v3">
+          <div class="video-thumb" onclick="openVideo('v3')">
+            <div class="video-play-btn">▶</div>
+            <div class="video-label">Ako nahlasovať nezrovnalosti?</div>
+          </div>
+          <div class="video-meta">
+            <span class="small muted">Súdna sieň • 2 min</span>
+            <span class="video-reward-badge" id="reward-v3">+12§</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -192,6 +261,30 @@
   </div>
 
 </main>
+
+<!-- Video modal -->
+<div id="videoModal" class="avatar-modal" style="display:none">
+  <div class="avatar-panel video-modal-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <h3 id="videoModalTitle" style="margin:0">Návod</h3>
+      <button class="btn" id="closeVideoModal">✕</button>
+    </div>
+    <div id="videoPlayerWrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000;margin-bottom:16px">
+      <iframe id="videoPlayer" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div id="videoRewardInfo" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(240,138,166,0.08);border-radius:12px;border:1px solid rgba(240,138,166,0.2)">
+      <span class="small">Dohraj video a získaj odmenu</span>
+      <span style="font-weight:700;color:var(--accent-3)">+12§</span>
+    </div>
+    <button id="claimVideoRewardBtn" class="btn btn-primary" style="width:100%;margin-top:12px;display:none">
+      🎉 Prevziať odmenu (+12§)
+    </button>
+    <div id="videoAlreadyClaimed" style="display:none;text-align:center;padding:8px;color:var(--muted)" class="small">
+      ✓ Odmena za toto video už bola prevzatá
+    </div>
+  </div>
+</div>
 
 <!-- Modály -->
 <div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
