@@ -4,7 +4,7 @@
   "schemaVersion": "1.1",
   "tags": ["pracovné právo", "mladiství", "ochrana zamestnancov", "pracovné podmienky"],
 
-  "summary": "Mladiství zamestnanci (osoby od 15 do 18 rokov) požívajú zvýšenú pracovnoprávnu ochranu. Zákonník práce zakazuje ich zamestnávanie prácami, ktoré sú nebezpečné, zdraviu škodlivé alebo ohrozujú ich mravný vývoj. Mladiství nesmú pracovať v noci, nesmú vykonávať nadčasy a ich pracovný čas je obmedzený na najviac 37,5 hodiny týždenne.\n\nPrestávku musia dostať najneskôr po 4,5 hodinách práce a denný odpočinok musí byť najmenej 14 hodín. Týždenný odpočinok musí trvať najmenej 48 hodín vcelku. Zamestnávateľ je povinný zabezpečiť lekárske prehliadky, viesť evidenciu mladistvých a prihliadať na ich fyzický a psychický vývoj.\n\nCieľom úpravy je ochrana zdravia, bezpečnosti a harmonického vývoja mladistvých.\n\nPríklad:\nZamestnávateľ zaradí 17-ročného zamestnanca na nočnú zmenu. Takéto zaradenie je v rozpore so zákonom – mladistvý nesmie pracovať v noci.\n\nKľúčové slová:\nmladiství; zákaz nočnej práce; zákaz nadčasov; prestávka; odpočinok; ochrana zdravia.\n\nZapamätaj si:\n- Mladistvý je osoba vo veku 15–18 rokov.\n- Mladiství nesmú pracovať v noci ani vykonávať nadčasy.\n- Prestávka musí byť najneskôr po 4,5 hodinách práce.\n- Denný odpočinok mladistvého je najmenej 14 hodín.\n- Zamestnávateľ musí zabezpečiť lekárske prehliadky a prihliadať na vývoj mladistvého.",
+  "summary": "Mladistvým zamestnancom je podľa § 40 ods. 3 Zákonníka práce osoba mladšia ako 18 rokov. Ide o skupinu zamestnancov, ktorá požíva zvýšenú pracovnoprávnu ochranu, vyplývajúcu z ich fyzického, psychického a sociálneho vývoja. Zamestnávateľ môže mladistvých zamestnávať len prácami primeranými ich rozumovému a telesnému rozvoju, ktoré neohrozujú ich mravnosť.\n\nZamestnávateľ má rozsiahle povinnosti: musí viesť evidenciu mladistvých, zabezpečiť lekárske prehliadky pred vznikom pracovného pomeru aj pravidelne počas neho, spolupracovať so zákonnými zástupcami, informovať ich o výpovedi či okamžitom skončení pracovného pomeru a pri skončení pracovného pomeru mladistvého si vyžiadať stanovisko zákonného zástupcu.\n\nMladistvým sú zakázané práce pod zemou, práce neprimerané ich vývoju, práce so zvýšeným rizikom úrazu a práce, ktoré môžu ohroziť bezpečnosť iných osôb. Zoznam zakázaných prác upravuje nariadenie vlády č. 286/2004 Z. z.\n\nMladiství nesmú vykonávať prácu nadčas, prácu v noci ani pracovnú pohotovosť. Výnimka z nočnej práce existuje len pre mladistvých nad 16 rokov v rámci prípravy na povolanie, najviac v rozsahu jednej hodiny, a musí bezprostredne nadväzovať na dennú prácu.\n\nCieľom právnej úpravy je ochrana zdravia, bezpečnosti a harmonického vývoja mladistvých, v súlade s čl. 38 Ústavy SR a Dohovorom MOP č. 138 o minimálnom veku.",
 
   "quiz": [
     {
@@ -21,7 +21,7 @@
       "options": ["Áno", "Nie", "Len ak súhlasí zákonný zástupca"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Nočná práca mladistvých je zakázaná.",
+        "correct": "Správne. Nočná práca mladistvých je zakázaná, okrem výnimočnej 1-hodinovej prípravy na povolanie.",
         "wrong": "Nesprávne. Súhlas rodiča zákaz neodstraňuje."
       }
     },
@@ -30,7 +30,7 @@
       "options": ["Po 6 hodinách práce", "Po 4,5 hodinách práce", "Po 8 hodinách práce"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Mladistvým patrí prestávka skôr ako dospelým.",
+        "correct": "Správne. Prestávka musí byť najneskôr po 4,5 hodinách práce.",
         "wrong": "Nesprávne. 6 hodín platí pre dospelých."
       }
     },
@@ -39,8 +39,8 @@
       "options": ["Áno", "Nie", "Len v nevyhnutných prípadoch"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Nadčasy sú mladistvým zakázané.",
-        "wrong": "Nesprávne. Neexistujú výnimky."
+        "correct": "Správne. Nadčasy sú mladistvým zakázané bez výnimky.",
+        "wrong": "Nesprávne. Neexistujú prípady, keď by nadčas bol dovolený."
       }
     },
     {
@@ -55,11 +55,11 @@
   ],
 
   "tiles": [
-    { "term": "Mladistvý zamestnanec", "definition": "Osoba vo veku 15–18 rokov s osobitnou ochranou." },
-    { "term": "Zákaz nočnej práce", "definition": "Mladiství nesmú pracovať medzi 22:00 a 6:00." },
-    { "term": "Zákaz nadčasov", "definition": "Mladiství nesmú vykonávať žiadnu nadčasovú prácu." },
-    { "term": "Prestávka po 4,5 h", "definition": "Mladistvým patrí prestávka skôr ako dospelým." },
-    { "term": "Lekárske prehliadky", "definition": "Zamestnávateľ musí zabezpečiť pravidelné lekárske prehliadky." }
+    { "term": "Mladistvý zamestnanec", "definition": "Osoba vo veku 15–18 rokov s osobitnou pracovnoprávnou ochranou." },
+    { "term": "Zákaz nočnej práce", "definition": "Mladiství nesmú pracovať medzi 22:00 a 6:00, okrem výnimočnej 1-hodinovej prípravy na povolanie." },
+    { "term": "Zákaz nadčasov", "definition": "Mladiství nesmú vykonávať žiadnu nadčasovú prácu ani pracovnú pohotovosť." },
+    { "term": "Prestávka po 4,5 h", "definition": "Mladistvým patrí prestávka najneskôr po 4,5 hodinách práce." },
+    { "term": "Lekárske prehliadky", "definition": "Zamestnávateľ musí zabezpečiť vstupné a pravidelné lekárske prehliadky najmenej raz ročne." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Nie", "Áno", "Len ak súhlasí rodič"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Nočná práca mladistvých je zakázaná bez výnimky.",
+            "correct": "Správne. Nočná práca mladistvých je zakázaná bez výnimky, okrem 1-hodinovej prípravy na povolanie.",
             "wrong": "Nesprávne. Súhlas rodiča zákaz neodstraňuje."
           }
         },
@@ -86,7 +86,7 @@
           "options": ["Zmeniť rozvrh práce", "Nechať mladistvého na nočnej", "Dať mu neplatené voľno"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí rešpektovať zákaz nočnej práce.",
+            "correct": "Správne. Zamestnávateľ musí rešpektovať zákaz nočnej práce mladistvých.",
             "wrong": "Nesprávne. Nočná práca je neprípustná."
           }
         },
@@ -120,7 +120,7 @@
           "options": ["Po 4,5 hodinách", "Po 6 hodinách", "Po 8 hodinách"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Prestávka musí byť najneskôr po 4,5 hodinách.",
+            "correct": "Správne. Prestávka musí byť najneskôr po 4,5 hodinách práce.",
             "wrong": "Nesprávne. 6 hodín platí pre dospelých."
           }
         },
