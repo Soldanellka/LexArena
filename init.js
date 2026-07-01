@@ -180,7 +180,240 @@ export function init() {
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
+
+    /* 🔹 Video systém */
+    initVideoSystem();
   });
+}
+
+/* =====================================================
+   📺 VIDEO SYSTÉM
+   ===================================================== */
+
+// Konfigurácia videí — URL zmeň keď budeš mať skutočné videá
+// Formát: YouTube embed URL alebo priamy MP4 link
+const VIDEO_CONFIG = {
+  v1: {
+    title: 'Ako funguje LexArena?',
+    // Zatiaľ placeholder — nahraď YouTube embed URL
+    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
+    duration: 180 // sekundy — po uplynutí sa odomkne odmena
+  },
+  v2: {
+    title: 'Ako hrať duelový kvíz?',
+    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
+    duration: 120
+  },
+  v3: {
+    title: 'Ako nahlasovať nezrovnalosti?',
+    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
+    duration: 120
+  }
+};
+
+let videoRewardTimer = null;
+let currentVideoId = null;
+
+window.openVideo = function(videoId) {
+  const cfg = VIDEO_CONFIG[videoId];
+  if (!cfg) return;
+
+  currentVideoId = videoId;
+
+  const modal = document.getElementById('videoModal');
+  const title = document.getElementById('videoModalTitle');
+  const player = document.getElementById('videoPlayer');
+  const claimBtn = document.getElementById('claimVideoRewardBtn');
+  const alreadyClaimed = document.getElementById('videoAlreadyClaimed');
+
+  if (!modal) return;
+
+  title.textContent = cfg.title;
+  player.src = cfg.url;
+
+  // Skontroluj či odmena už bola vyzdvihnutá
+  const claimed = localStorage.getItem(`video_claimed_${videoId}`);
+
+  if (claimed) {
+    claimBtn.style.display = 'none';
+    alreadyClaimed.style.display = 'block';
+  } else {
+    claimBtn.style.display = 'none';
+    alreadyClaimed.style.display = 'none';
+
+    // Po uplynutí trvania videa sa odomkne tlačidlo odmeny
+    if (videoRewardTimer) clearTimeout(videoRewardTimer);
+    videoRewardTimer = setTimeout(() => {
+      claimBtn.style.display = 'block';
+      claimBtn.style.animation = 'duelBadgePop .4s ease';
+    }, cfg.duration * 1000);
+  }
+
+  modal.style.display = 'flex';
+};
+
+function initVideoSystem() {
+  // Zatvoriť modal
+  const closeBtn = document.getElementById('closeVideoModal');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('videoPlayer');
+      if (modal) modal.style.display = 'none';
+      if (player) player.src = ''; // zastaví video
+      if (videoRewardTimer) clearTimeout(videoRewardTimer);
+      currentVideoId = null;
+    });
+  }
+
+  // Prevziať odmenu
+  const claimBtn = document.getElementById('claimVideoRewardBtn');
+  if (claimBtn) {
+    claimBtn.addEventListener('click', async () => {
+      if (!currentVideoId) return;
+
+      // Ulož do localStorage (jednoduchá ochrana)
+      localStorage.setItem(`video_claimed_${currentVideoId}`, Date.now());
+
+      // Prideľ 12§
+      if (typeof window.awardParagrafy === 'function') {
+        await window.awardParagrafy(12, 'za pozretie videa');
+      }
+
+      // Aktualizuj UI
+      claimBtn.style.display = 'none';
+      document.getElementById('videoAlreadyClaimed').style.display = 'block';
+
+      // Označ video ako vyzdvihnuté v zozname
+      const badge = document.getElementById(`reward-${currentVideoId}`);
+      if (badge) badge.classList.add('claimed');
+
+      // Zatvoriť modal po 2 sekundách
+      setTimeout(() => {
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('videoPlayer');
+        if (modal) modal.style.display = 'none';
+        if (player) player.src = '';
+        currentVideoId = null;
+      }, 2000);
+    });
+  }
+
+  // Obnov stav claimedvideí z localStorage
+  Object.keys(VIDEO_CONFIG).forEach(videoId => {
+    if (localStorage.getItem(`video_claimed_${videoId}`)) {
+      const badge = document.getElementById(`reward-${videoId}`);
+      if (badge) badge.classList.add('claimed');
+    }
+  });
+}
+
+/* =====================================================
+   ROLA BADGE
+   ===================================================== */
+function initRoleBadge() {
+  const badge = document.getElementById('roleBadge');
+  const label = document.getElementById('roleLabel');
+  if (!badge || !label) return;
+
+  const role = localStorage.getItem('playerRole') || 'student';
+  label.textContent = role;
+  badge.setAttribute('data-role', role);
+
+  // Admin a garant môžu kliknúť na rolu
+  if (role === 'admin') {
+    badge.title = 'Admin';
+    badge.style.cursor = 'pointer';
+  } else if (role === 'garant') {
+    badge.title = 'Garant – môžeš udeľovať garančnú pečať';
+    badge.style.cursor = 'default';
+  }
+}
+
+/* =====================================================
+   MODAL PRÍSTUPOVÉHO KÓDU
+   ===================================================== */
+function openLoginCodeModal() {
+  const modal = document.getElementById('loginCodeModal');
+  const content = document.getElementById('loginModalContent');
+  if (!modal || !content) return;
+
+  const nick = localStorage.getItem('playerNick');
+  const code = localStorage.getItem('lexarena_code');
+
+  if (!nick) {
+    content.innerHTML = `
+      <p class="small" style="margin-bottom:16px">
+        Zadaj najprv nick v hlavičke. Potom ti vygenerujeme tvoj prístupový kód.
+      </p>`;
+  } else if (!code) {
+    // Vygeneruj nový kód
+    const words = ['modrý','červený','zlatý','právny','rýchly','múdry','silný','tichý',
+                   'zákon','súd','sova','mačka','kniha','duel','právo','hviezda',
+                   'hora','rieka','vietor','oheň','ľad','more','les','obloha'];
+    const pick = () => words[Math.floor(Math.random() * words.length)];
+    const num = Math.floor(Math.random() * 900) + 100;
+    const newCode = `${pick()}-${pick()}-${pick()}-${num}`;
+    localStorage.setItem('lexarena_code', newCode);
+
+    content.innerHTML = `
+      <p class="small" style="margin-bottom:8px">
+        Tvoj prístupový kód pre nick <strong>${nick}</strong>:
+      </p>
+      <div style="background:var(--surface);border:2px dashed var(--accent-3);border-radius:12px;
+           padding:16px;text-align:center;font-size:20px;font-weight:700;letter-spacing:2px;
+           color:var(--accent-3);margin-bottom:16px">
+        ${newCode}
+      </div>
+      <p class="small muted" style="margin-bottom:16px">
+        📋 Ulož si ho! Na inom zariadení zadaj tento kód a načíta sa tvoj účet.
+      </p>
+      <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${newCode}').then(()=>alert('Kód skopírovaný!'))" style="width:100%">
+        Kopírovať kód
+      </button>`;
+  } else {
+    content.innerHTML = `
+      <p class="small" style="margin-bottom:8px">
+        Tvoj prístupový kód pre nick <strong>${nick}</strong>:
+      </p>
+      <div style="background:var(--surface);border:2px dashed var(--accent-3);border-radius:12px;
+           padding:16px;text-align:center;font-size:20px;font-weight:700;letter-spacing:2px;
+           color:var(--accent-3);margin-bottom:16px">
+        ${code}
+      </div>
+      <p class="small muted" style="margin-bottom:12px">
+        Na inom zariadení zadaj tento kód pre načítanie tvojho účtu.
+      </p>
+      <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${code}').then(()=>alert('Kód skopírovaný!'))" style="width:100%;margin-bottom:8px">
+        Kopírovať kód
+      </button>
+      <button class="btn" id="enterCodeBtn" style="width:100%">
+        Zadať kód iného hráča
+      </button>`;
+
+    setTimeout(() => {
+      const enterBtn = document.getElementById('enterCodeBtn');
+      if (enterBtn) {
+        enterBtn.onclick = () => {
+          const input = prompt('Zadaj prístupový kód:');
+          if (input && input.trim()) {
+            const trimmed = input.trim();
+            const storedCode = localStorage.getItem('lexarena_code');
+            if (trimmed === storedCode) {
+              alert('Toto je tvoj vlastný kód 😊');
+            } else {
+              localStorage.setItem('lexarena_code', trimmed);
+              // Nick z kódu nie je uložený lokálne, hráč ho musí zadať
+              alert('Kód uložený. Zadaj aj svoj nick a stránka sa prepne na tvoj účet.');
+              window.location.reload();
+            }
+          }
+        };
+      }
+    }, 100);
+  }
+
+  modal.style.display = 'flex';
 }
 
 /* =====================================================
@@ -209,6 +442,22 @@ function attachEvents() {
     avatarWrap.addEventListener('click', openAvatarSelectModal);
     avatarWrap.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') openAvatarSelectModal();
+    });
+  }
+
+  /* 🔥 Rola badge */
+  initRoleBadge();
+
+  /* 🔥 Modal prístupového kódu */
+  const loginDeviceBtn = $('loginDeviceBtn');
+  if (loginDeviceBtn) {
+    loginDeviceBtn.addEventListener('click', openLoginCodeModal);
+  }
+  const closeLoginModal = $('closeLoginModal');
+  if (closeLoginModal) {
+    closeLoginModal.addEventListener('click', () => {
+      const m = $('loginCodeModal');
+      if (m) m.style.display = 'none';
     });
   }
 
