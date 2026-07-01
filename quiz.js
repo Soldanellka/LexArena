@@ -252,8 +252,10 @@ export function finishQuiz(){
 
     const nick = localStorage.getItem('playerNick') || 'Unknown';
     const areaTitle =
+      (window.currentDuelMeta && window.currentDuelMeta.areaTitle) ||
+      (window.currentDuel && window.currentDuel.areaTitle) ||
       window.currentAreaTitle ||
-      (selectedArea ? selectedArea.title : 'Pracovné právo');
+      (selectedArea ? selectedArea.title : 'Neznáma oblasť');
 
     const enrichedQuestions = window.duelQuestions.map((q, i) => ({
       ...q,
@@ -290,6 +292,10 @@ export function finishQuiz(){
           console.log("🔥 Duel uložený do banky duelov (pending)");
         }
       }
+      // 🔥 Energia -10 za odohraný duel (prvý hráč - tvorca)
+      if (typeof window.deductEnergy === 'function') {
+        window.deductEnergy(10);
+      }
     }
 
     /* =========================
@@ -299,6 +305,10 @@ export function finishQuiz(){
       if (typeof window.completeDuel === 'function') {
         console.log("🔥 Spúšťam vyhodnotenie duelu...");
         window.completeDuel(quiz.questions);
+      }
+      // 🔥 Energia -10 za odohraný duel (druhý hráč - prijímateľ)
+      if (typeof window.deductEnergy === 'function') {
+        window.deductEnergy(10);
       }
     }
 
@@ -313,13 +323,14 @@ export function finishQuiz(){
   /* =========================
      Študijný režim
      ========================= */
-  const reward = Math.max(1, Math.floor(quiz.correct / 4));
+  // 🔥 § EKONOMIKA: +1§ za každé odohranie kvízu
+  const reward = 1;
   const newPar = paragrafy + reward;
   setParagrafy(newPar);
   saveParagrafy(newPar);
   if ($('parCount')) $('parCount').textContent = newPar;
 
-  showRewardToast(`Kvíz dokončený. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. Odmena: +${reward} paragrafov`);
+  showRewardToast(`Kvíz dokončený! Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. +1§ za odohranie!`);
 
   try {
     const pkg = {
