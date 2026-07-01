@@ -114,8 +114,12 @@
       <h3 style="margin:0">⚖️ Právna nezrovnalosť</h3>
       <div class="small" style="margin-bottom:12px">Nájdol/a si chybu? Argumentuj ako právnik a pomôž zlepšiť otázky.</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="reportIssueBtn">📝 Nahlásiť otázku</button>
-        <button class="btn" id="openCourtroomBtn">🏛️ Súdna sieň</button>
+        <button class="btn btn-primary" id="reportIssueBtn"
+          onclick="typeof window.openReportModal==='function' ? window.openReportModal() : alert('Načítavam...')">
+          📝 Nahlásiť otázku</button>
+        <button class="btn" id="openCourtroomBtn"
+          onclick="typeof window.openCourtroomModal==='function' ? window.openCourtroomModal() : alert('Načítavam...')">
+          🏛️ Súdna sieň</button>
       </div>
       <div id="sealDisplay" style="margin-top:12px;display:none">
         <div class="small muted">Tvoje pečate:</div>
