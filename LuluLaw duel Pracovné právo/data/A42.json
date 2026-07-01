@@ -2,9 +2,9 @@
   "id": "21. B",
   "title": "Sociálna politika zamestnávateľa",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "sociálna politika", "zamestnávateľ", "benefity", "pracovné podmienky"],
+  "tags": ["pracovné právo", "sociálna politika", "pracovné podmienky", "zamestnávateľ", "benefity"],
 
-  "summary": "Sociálna politika zamestnávateľa je súbor povinných a dobrovoľných opatrení, ktorými zamestnávateľ podporuje pracovné podmienky, sociálne istoty a životnú úroveň zamestnancov. Povinná sociálna politika zahŕňa najmä BOZP, stravovanie, pracovné podmienky, ochranu zdravia a prekážky v práci. Dobrovoľná sociálna politika zahŕňa benefity, príspevky, flexibilitu, vzdelávanie či programy starostlivosti o zamestnancov.\n\nZamestnávateľ môže poskytovať príspevky na šport, kultúru, vzdelávanie, dopravu, zdravotnú starostlivosť, dôchodkové sporenie, flexibilný pracovný čas, home office, firemné akcie či programy duševného zdravia. Sociálna politika môže byť upravená aj v kolektívnej zmluve.\n\nCieľom sociálnej politiky je vytvoriť priaznivé pracovné prostredie, podporiť motiváciu, lojalitu a znížiť fluktuáciu.\n\nPríklad:\nZamestnávateľ odmieta zabezpečiť stravovanie s tvrdením, že ide o dobrovoľný benefit. Takýto postup je nezákonný – stravovanie je povinnou súčasťou sociálnej politiky.\n\nKľúčové slová:\nsociálna politika; benefity; BOZP; stravovanie; kolektívna zmluva; motivácia.\n\nZapamätaj si:\n- Sociálna politika môže byť povinná aj dobrovoľná.\n- Stravovanie je zákonná povinnosť zamestnávateľa.\n- Benefity musia byť poskytované spravodlivo a nediskriminačne.\n- Sociálna politika môže byť rozšírená kolektívnou zmluvou.\n- Cieľom je podpora pracovných podmienok a spokojnosti zamestnancov.",
+  "summary": "Sociálna politika zamestnávateľa je súbor povinných a dobrovoľných opatrení, ktorými zamestnávateľ vytvára priaznivé pracovné podmienky, podporuje sociálne istoty zamestnancov a prispieva k ich pracovnej spokojnosti. Povinná sociálna politika zahŕňa najmä bezpečnosť a ochranu zdravia pri práci (BOZP), pracovné podmienky, stravovanie, prekážky v práci, ochranu zdravia a povinnosti vyplývajúce zo Zákonníka práce. Dobrovoľná sociálna politika zahŕňa benefity, príspevky, flexibilitu, vzdelávanie, programy starostlivosti o zamestnancov či podporu duševného zdravia.\n\nZamestnávateľ môže poskytovať rôzne nadštandardné benefity, ako príspevky na šport a kultúru, vzdelávanie, dopravu, zdravotnú starostlivosť, dôchodkové sporenie, flexibilný pracovný čas, home office, firemné akcie či programy well-beingu. Sociálna politika môže byť rozšírená aj kolektívnou zmluvou, ktorá často upravuje benefity nad rámec zákona.\n\nCieľom sociálnej politiky je vytvoriť bezpečné, motivujúce a stabilné pracovné prostredie, podporiť lojalitu zamestnancov, znižovať fluktuáciu a zlepšovať pracovnú kultúru.\n\nPríklad:\nZamestnávateľ odmieta zabezpečiť stravovanie s tvrdením, že ide o dobrovoľný benefit. Takýto postup je nezákonný – stravovanie je povinnou súčasťou sociálnej politiky.\n\nKľúčové slová:\nsociálna politika; BOZP; stravovanie; benefity; kolektívna zmluva; pracovné podmienky.\n\nZapamätaj si:\n- Sociálna politika zahŕňa povinné aj dobrovoľné opatrenia.\n- Stravovanie je zákonná povinnosť zamestnávateľa.\n- Benefity musia byť poskytované spravodlivo a nediskriminačne.\n- Kolektívna zmluva môže sociálnu politiku rozšíriť.\n- Cieľom je podpora pracovných podmienok, zdravia a spokojnosti zamestnancov.",
 
   "quiz": [
     {
@@ -12,7 +12,7 @@
       "options": ["Súbor opatrení na podporu zamestnancov", "Zákon o sociálnom poistení", "Len povinné benefity"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Ide o opatrenia na podporu pracovných a sociálnych podmienok.",
+        "correct": "Správne. Sociálna politika zahŕňa povinné aj dobrovoľné opatrenia na podporu pracovných podmienok.",
         "wrong": "Nesprávne. Sociálna politika nie je len o povinných benefitoch."
       }
     },
@@ -30,7 +30,7 @@
       "options": ["Sociálna politika môže byť aj dobrovoľná", "Zamestnávateľ nesmie poskytovať benefity", "Benefity sú povinné pre všetkých zamestnávateľov"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zamestnávateľ môže poskytovať nadštandardné benefity.",
+        "correct": "Správne. Zamestnávateľ môže poskytovať nadštandardné benefity podľa svojich možností.",
         "wrong": "Nesprávne. Benefity nie sú povinné."
       }
     },
@@ -48,18 +48,18 @@
       "options": ["V kolektívnej zmluve", "Len v zákone", "Nikde"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Kolektívna zmluva môže obsahovať nadštandardné benefity.",
-        "wrong": "Nesprávne. Sociálna politika nie je len zákonná."
+        "correct": "Správne. Kolektívna zmluva môže rozširovať sociálnu politiku zamestnávateľa.",
+        "wrong": "Nesprávne. Sociálna politika nie je upravená len zákonom."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Zákonná sociálna politika", "definition": "Povinné opatrenia – BOZP, stravovanie, pracovné podmienky." },
-    { "term": "Dobrovoľné benefity", "definition": "Príspevky, flexibilita, vzdelávanie, zdravotná starostlivosť." },
-    { "term": "Motivácia zamestnancov", "definition": "Cieľom je stabilizácia a zvýšenie spokojnosti." },
-    { "term": "Kolektívna zmluva", "definition": "Môže rozširovať sociálnu politiku zamestnávateľa." },
-    { "term": "Firemná kultúra", "definition": "Sociálna politika je súčasťou personálnej stratégie." }
+    { "term": "Zákonná sociálna politika", "definition": "Povinné opatrenia – BOZP, stravovanie, pracovné podmienky, prekážky v práci." },
+    { "term": "Dobrovoľné benefity", "definition": "Príspevky, flexibilita, vzdelávanie, zdravotná starostlivosť, šport, kultúra." },
+    { "term": "Motivácia zamestnancov", "definition": "Cieľom sociálnej politiky je stabilizácia, spokojnosť a lojalita zamestnancov." },
+    { "term": "Kolektívna zmluva", "definition": "Dokument, ktorý môže rozširovať sociálnu politiku nad rámec zákona." },
+    { "term": "Firemná kultúra", "definition": "Sociálna politika je súčasťou personálnej stratégie a ovplyvňuje pracovné prostredie." }
   ],
 
   "cases": [
@@ -77,7 +77,7 @@
           "options": ["Áno", "Nie", "Len pri zmennosti"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Stravovanie je zákonná povinnosť.",
+            "correct": "Správne. Stravovanie je zákonná povinnosť zamestnávateľa.",
             "wrong": "Nesprávne. Nejde o dobrovoľný benefit."
           }
         },
@@ -86,8 +86,8 @@
           "options": ["Zabezpečiť stravovanie alebo príspevok", "Poskytnúť len vodu", "Nič nerobiť"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnávateľ musí zabezpečiť stravu alebo príspevok.",
-            "wrong": "Nesprávne. Ostatné možnosti sú nezákonné."
+            "correct": "Správne. Zamestnávateľ musí zabezpečiť stravu alebo finančný príspevok.",
+            "wrong": "Nesprávne. Ostatné možnosti sú v rozpore so zákonom."
           }
         },
         {
@@ -99,8 +99,8 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Stravovanie je povinné zo zákona.",
-            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť."
+            "correct": "Správne. Zamestnávateľ porušuje zákonnú povinnosť.",
+            "wrong": "Nesprávne. Zamestnávateľ nemôže odmietnuť stravovanie."
           }
         }
       ]
@@ -120,7 +120,7 @@
           "options": ["Áno, ale musí dodržať zásadu rovnakého zaobchádzania", "Nie, benefity musia byť pre všetkých", "Áno, bez obmedzení"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Benefity môžu byť diferencované, ale nie diskriminačne.",
+            "correct": "Správne. Benefity môžu byť diferencované, ale nie diskriminačné.",
             "wrong": "Nesprávne. Benefity nemusia byť pre všetkých, ale musia byť spravodlivé."
           }
         },
@@ -129,7 +129,7 @@
           "options": ["Nie, ak neexistujú objektívne kritériá", "Áno", "Len ak zamestnanci súhlasia"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Bez kritérií môže ísť o diskrimináciu.",
+            "correct": "Správne. Bez objektívnych kritérií môže ísť o diskrimináciu.",
             "wrong": "Nesprávne. Súhlas zamestnancov nie je relevantný."
           }
         },
