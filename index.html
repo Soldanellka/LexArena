@@ -109,18 +109,13 @@
 
   <div class="right">
 
-    <div class="card section-card highlight-area">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div>
-          <h3 style="margin:0">Oblasti</h3>
-          <div class="small">Vyber oblasť pre duelový kvíz</div>
-        </div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <img src="assets/icons/book.svg" width="28" height="28" alt="">
-          <img src="assets/icons/gavel.svg" width="28" height="28" alt="">
-        </div>
+    <div class="card highlight-bank">
+      <h3 style="margin:0">Banka duelov</h3>
+      <div class="small">Balíky otázok a uložené výzvy na duelový kvíz</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
       </div>
-      <div id="areasList" class="list" style="margin-top:10px"></div>
+      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
     </div>
 
     <div class="card highlight-duelquiz" id="quizCard">
@@ -128,6 +123,13 @@
         <div class="small">Duelový kvíz</div>
         <h2 id="quizTitle">Vyber oblasť do duelu</h2>
         <div class="small">Po odohraní sa tvoja 10‑otázková výzva uloží do banky duelov.</div>
+
+        <!-- Oblasti priamo v kvíze -->
+        <div id="areasInQuiz" style="margin-top:14px">
+          <div class="small" style="margin-bottom:8px;font-weight:600;color:var(--muted)">Vyber oblasť:</div>
+          <div id="areasList" class="areas-chips"></div>
+        </div>
+
         <div style="margin-top:12px;display:flex;gap:8px">
           <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť duel</button>
           <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
@@ -175,15 +177,6 @@
       <div class="small" style="margin-top:10px;color:var(--muted)">
         Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
       </div>
-    </div>
-
-    <div class="card highlight-bank">
-      <h3 style="margin:0">Banka duelov</h3>
-      <div class="small">Balíky otázok a uložené výzvy na duelový kvíz</div>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
-      </div>
-      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
     </div>
 
     <div class="card highlight-challenges" id="incomingChallengeCard" style="display:none; margin-top:16px;">
