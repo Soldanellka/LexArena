@@ -169,6 +169,32 @@
       </div>
     </div>
 
+    <div class="card section-card highlight-feedback">
+      <h3 style="margin:0">💬 Tvoj názor</h3>
+      <div class="small" style="margin-bottom:12px">Pomôž nám zlepšiť LexArenu</div>
+
+      <div id="feedbackForm">
+        <div class="feedback-options">
+          <button class="feedback-type-btn active" data-type="napad">💡 Nápad</button>
+          <button class="feedback-type-btn" data-type="chyba">🐛 Chyba</button>
+          <button class="feedback-type-btn" data-type="pochvala">⭐ Pochvala</button>
+        </div>
+        <textarea id="feedbackText" class="feedback-textarea"
+          placeholder="Napíš svoju pripomienku..." maxlength="500"></textarea>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <span id="feedbackCharCount" class="small muted">0 / 500</span>
+          <button class="btn btn-primary" id="sendFeedbackBtn">Odoslať</button>
+        </div>
+      </div>
+
+      <div id="feedbackSuccess" style="display:none;text-align:center;padding:16px">
+        <div style="font-size:32px;margin-bottom:8px">🙏</div>
+        <div style="font-weight:600">Ďakujeme za spätnú väzbu!</div>
+        <div class="small muted" style="margin-top:4px">Prečítame každú pripomienku.</div>
+        <button class="btn" id="feedbackAgainBtn" style="margin-top:12px">Pridať ďalšiu</button>
+      </div>
+    </div>
+
     <div class="card section-card">
       <h3 style="margin:0">Admin a garant panel</h3>
       <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
