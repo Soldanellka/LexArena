@@ -421,25 +421,24 @@ async function initRoleSystem() {
   const snap = await get(ref(db, `users/${nick}/role`));
   const role = snap.exists() ? snap.val() : 'student';
 
-  // Ulož rolu lokálne
-  localStorage.setItem('playerRole', role);
-
-  // Aktualizuj UI
-  const roleLabel = document.getElementById('roleLabel');
-  const roleBadge = document.getElementById('roleBadge');
-  if (roleLabel) roleLabel.textContent = role;
-  if (roleBadge) {
-    roleBadge.setAttribute('data-role', role);
-    roleBadge.title = role === 'admin'
-      ? 'Admin – plný prístup'
-      : role === 'garant'
-      ? 'Garant – môžeš pridávať garančnú pečať'
-      : 'Študent';
+  // Ulož Firebase rolu (skutočná rola) aj view rolu zvlášť
+  localStorage.setItem('playerFirebaseRole', role);
+  // Nastav view rolu len ak ešte nie je nastavená
+  if (!localStorage.getItem('playerRole')) {
+    localStorage.setItem('playerRole', role);
   }
 
-  // Zobraz admin panel
-  if (role === 'admin' || role === 'garant') {
-    renderAdminPanel(role, db, ref, get, update, onValue);
+  const viewRole = localStorage.getItem('playerRole') || role;
+
+  // Aktualizuj badge
+  initRoleBadge();
+
+  // Zobraz admin panel podľa view roly
+  if (viewRole === 'admin' || viewRole === 'garant') {
+    renderAdminPanel(viewRole, db, ref, get, update, onValue);
+  } else {
+    const panel = document.getElementById('adminPanel');
+    if (panel) panel.innerHTML = '<span class="small muted">Pre zobrazenie prepni rolu na garant.</span>';
   }
 }
 
@@ -668,18 +667,76 @@ function initRoleBadge() {
   const label = document.getElementById('roleLabel');
   if (!badge || !label) return;
 
-  const role = localStorage.getItem('playerRole') || 'student';
-  label.textContent = role;
-  badge.setAttribute('data-role', role);
+  const firebaseRole = localStorage.getItem('playerFirebaseRole') || 'student';
+  const currentView = localStorage.getItem('playerRole') || firebaseRole;
 
-  // Admin a garant môžu kliknúť na rolu
-  if (role === 'admin') {
-    badge.title = 'Admin';
-    badge.style.cursor = 'pointer';
-  } else if (role === 'garant') {
-    badge.title = 'Garant – môžeš udeľovať garančnú pečať';
-    badge.style.cursor = 'default';
-  }
+  label.textContent = currentView;
+  badge.setAttribute('data-role', currentView);
+  badge.style.cursor = 'pointer';
+  badge.title = 'Klikni pre prepnutie roly';
+
+  badge.onclick = () => openRoleSwitcher(firebaseRole);
+}
+
+function openRoleSwitcher(firebaseRole) {
+  let modal = document.getElementById('roleSwitchModal');
+  if (modal) { modal.style.display = 'flex'; return; }
+
+  // Dostupné roly podľa Firebase roly
+  const available = firebaseRole === 'admin'
+    ? ['admin', 'garant', 'student']
+    : firebaseRole === 'garant'
+    ? ['garant', 'student']
+    : ['student'];
+
+  const roleLabels = {
+    admin: '👑 Admin',
+    garant: '🔏 Garant',
+    student: '👤 Študent'
+  };
+
+  modal = document.createElement('div');
+  modal.id = 'roleSwitchModal';
+  modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;z-index:9999;';
+
+  modal.innerHTML = `
+    <div style="background:var(--surface,#fff);border-radius:16px;padding:24px;min-width:280px;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+      <h3 style="margin:0 0 16px 0">Prepnúť zobrazenie</h3>
+      <div style="display:flex;flex-direction:column;gap:8px" id="roleOptions">
+        ${available.map(r => `
+          <button class="btn role-switch-btn ${localStorage.getItem('playerRole')===r?'btn-primary':''}"
+            data-role="${r}" style="text-align:left;padding:10px 14px;font-size:14px">
+            ${roleLabels[r]}
+            ${localStorage.getItem('playerRole')===r ? ' ✓' : ''}
+          </button>
+        `).join('')}
+      </div>
+      <button class="btn" id="closeRoleSwitch" style="width:100%;margin-top:12px">Zavrieť</button>
+    </div>`;
+
+  document.body.appendChild(modal);
+
+  modal.querySelector('#closeRoleSwitch').onclick = () => { modal.style.display = 'none'; };
+  modal.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+  modal.querySelectorAll('.role-switch-btn').forEach(btn => {
+    btn.onclick = () => {
+      const newRole = btn.dataset.role;
+      localStorage.setItem('playerRole', newRole);
+
+      const label = document.getElementById('roleLabel');
+      const badge = document.getElementById('roleBadge');
+      if (label) label.textContent = newRole;
+      if (badge) badge.setAttribute('data-role', newRole);
+
+      modal.style.display = 'none';
+
+      // Obnov admin panel
+      const db = window.db;
+      if (db) renderAdminPanel(newRole, db, null, null, null, null);
+      initRoleSystem();
+    };
+  });
 }
 
 /* =====================================================
