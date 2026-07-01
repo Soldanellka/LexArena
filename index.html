@@ -372,8 +372,285 @@
 <script type="module" src="cases.js"></script>
 <script type="module" src="app.js"></script>
 
-<!-- REPORTS SYSTEM -->
-<script type="module" src="scripts/reports-system.js"></script>
+<!-- REPORTS SYSTEM – inline pre spoľahlivé načítanie -->
+<script type="module">
+import { ref, push, update, get }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+function getDb() { return window.db || null; }
+function getNick() { return localStorage.getItem('playerNick') || null; }
+
+/* ── NAHLÁSENIE ── */
+window.openReportModal = function(prefill = {}) {
+  let modal = document.getElementById('reportModalNew');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'reportModalNew';
+    modal.className = 'avatar-modal';
+    modal.innerHTML = `
+      <div class="avatar-panel report-panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <div>
+            <h3 style="margin:0">⚖️ Nahlásiť právnu nezrovnalosť</h3>
+            <div class="small muted">Argumentuj ako právnik – uveď zákon, judikát alebo paragraf</div>
+          </div>
+          <button class="btn" id="rCloseBtn">✕</button>
+        </div>
+        <div id="rForm">
+          <div style="margin-bottom:12px">
+            <label class="form-label">Oblasť práva *</label>
+            <select id="rArea" class="form-input">
+              <option value="">– Vyber –</option>
+              <option>Pracovné právo</option>
+              <option>Trestné právo hmotné</option>
+              <option>Trestné právo procesné</option>
+              <option>Občianske právo</option>
+              <option>Rímske právo</option>
+              <option>Dejiny práva</option>
+            </select>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="form-label">Číslo / identifikátor otázky * <span class="small muted">(napr. A23 / otázka 3)</span></label>
+            <input id="rQid" class="form-input" type="text" placeholder="napr. A23 / otázka 3" maxlength="100"/>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="form-label">Text otázky (voliteľné)</label>
+            <textarea id="rQtext" class="feedback-textarea" rows="2" placeholder="Skopíruj text otázky..." maxlength="500"></textarea>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="form-label">Typ nezrovnalosti *</label>
+            <div style="display:flex;gap:6px;flex-wrap:wrap" id="rTypes">
+              <button class="report-type-btn active" data-t="wrong_answer">❌ Nesprávna odpoveď</button>
+              <button class="report-type-btn" data-t="outdated">📅 Zastaraná info</button>
+              <button class="report-type-btn" data-t="unclear">❓ Nejasné znenie</button>
+              <button class="report-type-btn" data-t="other">📝 Iné</button>
+            </div>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="form-label">Právna argumentácia * <span class="small muted">(min. 50 znakov)</span></label>
+            <textarea id="rArg" class="feedback-textarea" rows="5"
+              placeholder="Napr.: Podľa § 42 ods. 1 Zákonníka práce (zákon č. 311/2001 Z. z.) správna odpoveď je... NS SR sp. zn. 3Cdo/123/2020 potvrdzuje..."
+              maxlength="2000"></textarea>
+            <div style="text-align:right"><span id="rArgCount" class="small muted">0 / 2000</span></div>
+          </div>
+          <div style="margin-bottom:16px">
+            <label class="form-label">Právny zdroj (zákon, judikát)</label>
+            <input id="rSrc" class="form-input" type="text" placeholder="napr. § 42 Zákonníka práce, NS SR 3Cdo/123/2020" maxlength="200"/>
+          </div>
+          <div id="rError" style="display:none;color:#dc2626;font-size:13px;margin-bottom:8px"></div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-primary" id="rSubmit" style="flex:1">⚖️ Odoslať do Súdnej siene</button>
+            <button class="btn" id="rCancel">Zrušiť</button>
+          </div>
+        </div>
+        <div id="rSuccess" style="display:none;text-align:center;padding:24px">
+          <div style="font-size:48px">⚖️</div>
+          <h3>Nahlásené!</h3>
+          <p class="small muted">Presunuté do Súdnej siene. Ostatní hráči sa môžu vyjadriť.</p>
+          <button class="btn" id="rDone" style="margin-top:12px">Zavrieť</button>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    let selType = 'wrong_answer';
+    modal.querySelectorAll('.report-type-btn').forEach(b => {
+      b.onclick = () => {
+        modal.querySelectorAll('.report-type-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active'); selType = b.dataset.t;
+      };
+    });
+
+    modal.querySelector('#rArg').oninput = function() {
+      modal.querySelector('#rArgCount').textContent = this.value.length + ' / 2000';
+    };
+
+    const close = () => { modal.style.display = 'none'; };
+    modal.querySelector('#rCloseBtn').onclick = close;
+    modal.querySelector('#rCancel').onclick = close;
+    modal.querySelector('#rDone').onclick = close;
+    modal.onclick = e => { if (e.target === modal) close(); };
+
+    modal.querySelector('#rSubmit').onclick = async () => {
+      const area = modal.querySelector('#rArea').value;
+      const qid  = modal.querySelector('#rQid').value.trim();
+      const arg  = modal.querySelector('#rArg').value.trim();
+      const errEl = modal.querySelector('#rError');
+
+      if (!area) { errEl.textContent='Vyber oblasť.'; errEl.style.display='block'; return; }
+      if (!qid)  { errEl.textContent='Zadaj číslo otázky.'; errEl.style.display='block'; return; }
+      if (arg.length < 50) { errEl.textContent='Argumentácia musí mať aspoň 50 znakov.'; errEl.style.display='block'; return; }
+      errEl.style.display = 'none';
+
+      const btn = modal.querySelector('#rSubmit');
+      btn.disabled = true; btn.textContent = 'Odosielam...';
+
+      try {
+        const db = getDb();
+        if (db) {
+          const r = await push(ref(db, 'reports'), {
+            nick: getNick() || 'Anonymous',
+            area, questionId: qid,
+            questionText: modal.querySelector('#rQtext').value.trim(),
+            type: selType,
+            argument: arg,
+            source: modal.querySelector('#rSrc').value.trim(),
+            status: 'in_court',
+            createdAt: Date.now(),
+            votes: { for: 0, against: 0 }
+          });
+          await update(ref(db, `courtroom/${r.key}`), { reportId: r.key, createdAt: Date.now() });
+        }
+        modal.querySelector('#rForm').style.display = 'none';
+        modal.querySelector('#rSuccess').style.display = 'block';
+      } catch(e) {
+        errEl.textContent = 'Chyba: ' + e.message;
+        errEl.style.display = 'block';
+      } finally {
+        btn.disabled = false; btn.textContent = '⚖️ Odoslať do Súdnej siene';
+      }
+    };
+  }
+
+  // Predvyplnenie
+  if (prefill.area) modal.querySelector('#rArea').value = prefill.area;
+  if (prefill.questionId) modal.querySelector('#rQid').value = prefill.questionId;
+  if (prefill.questionText) modal.querySelector('#rQtext').value = prefill.questionText;
+
+  // Reset
+  modal.querySelector('#rForm').style.display = 'block';
+  modal.querySelector('#rSuccess').style.display = 'none';
+  modal.style.display = 'flex';
+  console.log('✅ openReportModal otvorené');
+};
+
+/* ── SÚDNA SIEŇ ── */
+window.openCourtroomModal = async function() {
+  let modal = document.getElementById('courtroomModalNew');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'courtroomModalNew';
+    modal.className = 'avatar-modal';
+    modal.innerHTML = `
+      <div class="avatar-panel courtroom-panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <div>
+            <h3 style="margin:0">🏛️ Súdna sieň</h3>
+            <div class="small muted">Nahlásené otázky čakajúce na posúdenie</div>
+          </div>
+          <button class="btn" id="cClose">✕</button>
+        </div>
+        <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap" id="cFilters">
+          <button class="chip active" data-s="in_court">⏳ Čakajúce</button>
+          <button class="chip" data-s="approved">✅ Schválené</button>
+          <button class="chip" data-s="rejected">❌ Zamietnuté</button>
+        </div>
+        <div id="cList" style="max-height:60vh;overflow-y:auto">
+          <div class="small muted" style="text-align:center;padding:20px">Načítavam...</div>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    modal.querySelector('#cClose').onclick = () => { modal.style.display = 'none'; };
+    modal.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+    modal.querySelectorAll('#cFilters .chip').forEach(b => {
+      b.onclick = () => {
+        modal.querySelectorAll('#cFilters .chip').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        loadCList(b.dataset.s);
+      };
+    });
+  }
+  modal.style.display = 'flex';
+  loadCList('in_court');
+
+  async function loadCList(status) {
+    const list = modal.querySelector('#cList');
+    list.innerHTML = '<div class="small muted" style="text-align:center;padding:20px">Načítavam...</div>';
+    const db = getDb();
+    if (!db) { list.innerHTML = '<div class="small muted" style="text-align:center;padding:20px">Firebase nie je dostupná.</div>'; return; }
+
+    const snap = await get(ref(db, 'reports'));
+    const data = snap.val() || {};
+    const role = localStorage.getItem('playerRole') || 'student';
+    const nick = getNick();
+
+    const items = Object.entries(data)
+      .filter(([,r]) => r.status === status)
+      .sort(([,a],[,b]) => b.createdAt - a.createdAt);
+
+    if (!items.length) {
+      list.innerHTML = '<div class="small muted" style="text-align:center;padding:20px">Žiadne nahlásenia.</div>';
+      return;
+    }
+
+    const typeLabel = { wrong_answer:'❌ Nesprávna odpoveď', outdated:'📅 Zastaraná info', unclear:'❓ Nejasné znenie', other:'📝 Iné' };
+    const fmtDate = ts => { const d=new Date(ts); return d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear(); };
+
+    list.innerHTML = items.map(([id,r]) => `
+      <div class="courtroom-item">
+        <div class="courtroom-item-header">
+          <div><span class="report-type-badge type-${r.type}">${typeLabel[r.type]||r.type}</span>
+          <strong>${r.area}</strong> · <code>${r.questionId}</code></div>
+          <div class="small muted">${fmtDate(r.createdAt)} · ${r.nick}</div>
+        </div>
+        ${r.questionText ? `<div class="courtroom-question-text small">"${r.questionText}"</div>` : ''}
+        <div class="courtroom-argument">${r.argument}</div>
+        ${r.source ? `<div class="small muted" style="margin-top:4px">📚 ${r.source}</div>` : ''}
+        <div class="courtroom-actions">
+          <div style="display:flex;gap:6px">
+            <button class="btn courtroom-vote-btn vote-for" data-id="${id}" data-v="for">👍 Za (${r.votes?.for||0})</button>
+            <button class="btn courtroom-vote-btn vote-against" data-id="${id}" data-v="against">👎 Proti (${r.votes?.against||0})</button>
+          </div>
+          ${(role==='admin'||role==='garant') ? `
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-primary admin-ap" data-id="${id}" data-nick="${r.nick}">✅ Schváliť</button>
+            <button class="btn admin-rj" data-id="${id}">❌ Zamietnuť</button>
+          </div>` : ''}
+        </div>
+      </div>`).join('');
+
+    list.querySelectorAll('.courtroom-vote-btn').forEach(b => {
+      b.onclick = async () => {
+        const key = 'voted_'+b.dataset.id;
+        if (localStorage.getItem(key)) { alert('Už si hlasoval/a.'); return; }
+        const snap2 = await get(ref(db, `reports/${b.dataset.id}/votes`));
+        const v = snap2.val() || {for:0,against:0};
+        v[b.dataset.v] = (v[b.dataset.v]||0)+1;
+        await update(ref(db, `reports/${b.dataset.id}/votes`), v);
+        localStorage.setItem(key, b.dataset.v);
+        loadCList(status);
+      };
+    });
+
+    list.querySelectorAll('.admin-ap').forEach(b => {
+      b.onclick = async () => {
+        await update(ref(db, `reports/${b.dataset.id}`), { status:'approved', decidedAt:Date.now(), decidedBy:getNick() });
+        // Pečať
+        const rNick = b.dataset.nick;
+        if (rNick) {
+          const uSnap = await get(ref(db, `users/${rNick}`));
+          const ud = uSnap.val()||{};
+          const cnt = (ud.approvedReports||0)+1;
+          const sealType = cnt>=100?'gold':cnt>=7?'silver':'bronze';
+          await update(ref(db, `users/${rNick}`), { approvedReports:cnt });
+          await update(ref(db, `reports/${b.dataset.id}`), { seal:{nick:rNick,type:sealType} });
+        }
+        loadCList(status);
+      };
+    });
+
+    list.querySelectorAll('.admin-rj').forEach(b => {
+      b.onclick = async () => {
+        await update(ref(db, `reports/${b.dataset.id}`), { status:'rejected', decidedAt:Date.now(), decidedBy:getNick() });
+        loadCList(status);
+      };
+    });
+  }
+};
+
+console.log('✅ Reports system inline načítaný');
+</script>
 
 <!-- DUEL ENGINE -->
 <script type="module" src="scripts/duels.js"></script>
