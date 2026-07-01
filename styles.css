@@ -976,6 +976,242 @@ body {
 
 
 
+
+/* ============================================================
+   ⚖️ NAHLASOVANIE + SÚDNA SIEŇ
+============================================================ */
+
+.highlight-report {
+  border-left: 3px solid #f59e0b;
+}
+
+/* Report panel */
+.report-panel {
+  max-width: 640px !important;
+  width: 95% !important;
+}
+
+.report-form .form-row {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1.5px solid var(--card-border);
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  transition: border-color .2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.12);
+}
+
+/* Typ nezrovnalosti */
+.report-type-btns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.report-type-btn {
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--card-border);
+  background: var(--surface);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .18s;
+}
+
+.report-type-btn.active {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 3px 8px rgba(245,158,11,0.3);
+}
+
+.report-error {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #dc2626;
+  margin-top: 8px;
+}
+
+/* Type badge */
+.report-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-right: 6px;
+}
+.type-wrong_answer { background: rgba(239,68,68,0.1); color: #dc2626; }
+.type-outdated     { background: rgba(245,158,11,0.1); color: #d97706; }
+.type-unclear      { background: rgba(99,102,241,0.1); color: #6366f1; }
+.type-other        { background: rgba(100,116,139,0.1); color: #64748b; }
+
+/* Súdna sieň panel */
+.courtroom-panel {
+  max-width: 720px !important;
+  width: 95% !important;
+}
+
+.courtroom-item {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: var(--surface);
+}
+
+.courtroom-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.courtroom-question-text {
+  background: rgba(0,0,0,0.03);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.courtroom-argument {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.courtroom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--card-border);
+}
+
+.courtroom-vote-btn {
+  font-size: 12px !important;
+  padding: 4px 10px !important;
+}
+
+.vote-for { border-color: rgba(34,197,94,0.3) !important; color: #16a34a !important; }
+.vote-against { border-color: rgba(239,68,68,0.3) !important; color: #dc2626 !important; }
+
+/* Komentáre */
+.courtroom-comments {
+  margin-top: 12px;
+  border-top: 1px solid var(--card-border);
+  padding-top: 12px;
+}
+
+.courtroom-comment {
+  background: rgba(0,0,0,0.02);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.comment-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.comment-stance {
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+
+.stance-for     { background: rgba(34,197,94,0.1);  color: #16a34a; }
+.stance-against { background: rgba(239,68,68,0.1);  color: #dc2626; }
+
+.comment-form {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--card-border);
+}
+
+.comment-stance-btn {
+  font-size: 12px !important;
+  padding: 4px 10px !important;
+}
+
+.comment-stance-btn.active {
+  background: var(--accent-3) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Pečate */
+.seal-badge {
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 10px;
+  border: 1.5px solid;
+}
+
+.seal-badge.gold   { background: rgba(234,179,8,0.1);  border-color: rgba(234,179,8,0.4);  color: #b45309; }
+.seal-badge.silver { background: rgba(148,163,184,0.1); border-color: rgba(148,163,184,0.4); color: #64748b; }
+.seal-badge.bronze { background: rgba(180,83,9,0.1);  border-color: rgba(180,83,9,0.3);   color: #92400e; }
+
+/* Pečať na otázke v kvíze */
+.question-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-top: 8px;
+  border: 1px solid rgba(234,179,8,0.3);
+  background: rgba(234,179,8,0.06);
+  color: #92400e;
+}
+
+@media (max-width: 640px) {
+  .courtroom-actions { flex-direction: column; align-items: flex-start; }
+  .report-type-btns { gap: 4px; }
+  .report-type-btn { font-size: 10px; padding: 4px 8px; }
+}
+
 /* ============================================================
    💬 FEEDBACK DLAŽDICA
 ============================================================ */
