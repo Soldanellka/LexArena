@@ -2,13 +2,22 @@
   "id": "24. B",
   "title": "Bezpečnosť a ochrana zdravia pri práci (BOZP)",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "BOZP", "bezpečnosť práce", "ochrana zdravia", "zamestnávateľ"],
+  "tags": ["pracovné právo", "BOZP", "bezpečnosť práce", "ochrana zdravia", "pracovný úraz", "zamestnávateľ"],
 
-  "summary": "Bezpečnosť a ochrana zdravia pri práci predstavuje súbor právnych, organizačných a technických opatrení, ktorých cieľom je predchádzať pracovným úrazom, chorobám z povolania a ohrozeniu zdravia zamestnancov. Zamestnávateľ je povinný vytvárať bezpečné pracovné podmienky, hodnotiť riziká, zabezpečiť školenia, poskytovať osobné ochranné pracovné prostriedky, vykonávať pravidelné kontroly a viesť evidenciu pracovných úrazov. Zamestnanec je povinný dodržiavať predpisy BOZP, používať ochranné prostriedky a oznamovať nebezpečné situácie. BOZP je upravené Zákonníkom práce a osobitnými predpismi. Účelom právnej úpravy je ochrana života, zdravia a pracovnej schopnosti zamestnancov.\n\nPríklad:\nZamestnávateľ odmietne poskytnúť zamestnancovi ochranné rukavice pri rizikovej práci. Takýto postup je v rozpore s povinnosťami BOZP a zamestnávateľ porušuje zákon.\n\nKľúčové slová:\nBOZP; osobné ochranné pracovné prostriedky; hodnotenie rizík; školenie BOZP; evidencia úrazov; pracovný úraz.\n\nZapamätaj si:\n- Zamestnávateľ zodpovedá za bezpečné pracovné podmienky.\n- OOPP musí zamestnávateľ poskytovať bezplatne pri rizikovej práci.\n- Školenie BOZP je povinné pred začiatkom výkonu práce.\n- Zamestnávateľ musí hodnotiť riziká a viesť evidenciu úrazov.\n- Porušenie BOZP môže viesť k zodpovednosti za pracovný úraz.",
+  "summary": "Bezpečnosť a ochrana zdravia pri práci (BOZP) je systém právnych, organizačných, technických, zdravotníckych a sociálnych opatrení, ktorých cieľom je vytvárať pracovné podmienky, ktoré vylučujú alebo minimalizujú pôsobenie nebezpečných a škodlivých faktorov na zdravie zamestnancov. BOZP je neoddeliteľnou súčasťou pracovnoprávnych vzťahov a je upravené najmä Zákonníkom práce (§ 146–150), zákonom č. 124/2006 Z. z. o BOZP, zákonom č. 355/2007 Z. z. o verejnom zdraví, zákonom č. 125/2006 Z. z. o inšpekcii práce, smernicami EÚ a dohovormi MOP.\n\nZamestnávateľ je povinný sústavne zabezpečovať BOZP, hodnotiť riziká, vypracovať dokument o posúdení rizík, vydávať vnútorné predpisy, zabezpečiť školenia, poskytovať OOPP, zabezpečiť prvú pomoc, evakuačné postupy, rekondičné pobyty pre zamestnancov v rizikových kategóriách, zriadiť komisiu BOZP (pri 100+ zamestnancoch) a spolupracovať so zástupcami zamestnancov pre BOZP.\n\nZamestnanec je povinný dodržiavať predpisy BOZP, používať OOPP, zúčastňovať sa školení, oznamovať nebezpečné situácie, podrobiť sa vyšetreniu na alkohol a omamné látky, dodržiavať zákaz fajčenia a zúčastňovať sa rekondičných pobytov. Má právo odmietnuť prácu pri bezprostrednom ohrození života alebo zdravia.\n\nKontrolu BOZP vykonávajú odborové orgány, zástupcovia zamestnancov pre BOZP, komisia BOZP a inšpekcia práce. Pri porušení povinností môže zamestnávateľ niesť zodpovednosť za pracovný úraz.\n\nPríklad:\nZamestnávateľ odmietne poskytnúť zamestnancovi ochranné rukavice pri rizikovej práci. Ide o porušenie zákona – OOPP musí poskytnúť bezplatne.\n\nKľúčové slová:\nBOZP; OOPP; hodnotenie rizík; školenie BOZP; pracovný úraz; rekondičný pobyt; inšpekcia práce.\n\nZapamätaj si:\n- BOZP je povinnosť zamestnávateľa, nie dobrovoľná aktivita.\n- OOPP sa poskytujú bezplatne.\n- Školenie BOZP je povinné a považuje sa za výkon práce.\n- Zamestnanec môže odmietnuť prácu pri bezprostrednom ohrození.\n- Rekondičné pobyty sú povinné pri práci v 3. a 4. kategórii.\n- Kontrolu BOZP vykonáva aj inšpekcia práce a odbory.",
 
   "quiz": [
     {
-      "question": "Kto zodpovedá za vytváranie bezpečných pracovných podmienok?",
+      "question": "Čo je BOZP?",
+      "options": ["Dobrovoľný program firmy", "Systém opatrení na ochranu zdravia pri práci", "Len školenie zamestnancov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. BOZP je komplexný systém opatrení na ochranu zdravia a bezpečnosti.",
+        "wrong": "Nesprávne. BOZP nie je dobrovoľný program."
+      }
+    },
+    {
+      "question": "Kto zodpovedá za bezpečné pracovné podmienky?",
       "options": ["Zamestnanec", "Zamestnávateľ", "Inšpektorát práce"],
       "correct": 1,
       "explanation": {
@@ -17,49 +26,40 @@
       }
     },
     {
-      "question": "Čo je OOPP?",
-      "options": ["Osobné ochranné pracovné prostriedky", "Organizačné opatrenia pri práci", "Odborové opatrenia pri práci"],
+      "question": "Čo sú OOPP?",
+      "options": ["Osobné ochranné pracovné prostriedky", "Organizačné opatrenia pri práci", "Odborové opatrenia"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Ide o ochranné pomôcky poskytované zamestnávateľom.",
+        "correct": "Správne. OOPP sú ochranné pomôcky poskytované zamestnávateľom.",
         "wrong": "Nesprávne. OOPP nie sú organizačné opatrenia."
       }
     },
     {
-      "question": "Kto vykonáva školenie BOZP?",
-      "options": ["Zamestnávateľ alebo poverená osoba", "Zamestnanec sám", "Len inšpektorát práce"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Školenie zabezpečuje zamestnávateľ.",
-        "wrong": "Nesprávne. Inšpektorát práce školenia nerobí."
-      }
-    },
-    {
-      "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnanec nemusí používať OOPP", "Zamestnávateľ musí hodnotiť riziká", "BOZP je dobrovoľné"],
+      "question": "Kedy môže zamestnanec odmietnuť prácu?",
+      "options": ["Keď sa mu nechce pracovať", "Pri bezprostrednom ohrození života alebo zdravia", "Len ak to schváli odborová organizácia"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Hodnotenie rizík je zákonná povinnosť.",
-        "wrong": "Nesprávne. BOZP nie je dobrovoľné."
+        "correct": "Správne. Zamestnanec môže odmietnuť prácu pri vážnom ohrození.",
+        "wrong": "Nesprávne. Odmietnutie práce nie je voľná možnosť."
       }
     },
     {
-      "question": "Čo musí zamestnávateľ viesť?",
-      "options": ["Evidenciu pracovných úrazov", "Evidenciu súkromných aktivít zamestnancov", "Evidenciu dovoleniek iných firiem"],
-      "correct": 0,
+      "question": "Kto vykonáva kontrolu BOZP?",
+      "options": ["Len zamestnávateľ", "Odbory, zástupcovia BOZP, komisia BOZP a inšpekcia práce", "Len polícia"],
+      "correct": 1,
       "explanation": {
-        "correct": "Správne. Evidencia úrazov je povinná.",
-        "wrong": "Nesprávne. Ostatné evidencie nemajú súvis s BOZP."
+        "correct": "Správne. Kontrolu vykonáva viacero subjektov.",
+        "wrong": "Nesprávne. Polícia BOZP nekontroluje."
       }
     }
   ],
 
   "tiles": [
-    { "term": "BOZP", "definition": "Súbor opatrení na ochranu zdravia a života pri práci." },
-    { "term": "OOPP", "definition": "Osobné ochranné pracovné prostriedky poskytované zamestnávateľom." },
-    { "term": "Hodnotenie rizík", "definition": "Povinnosť zamestnávateľa identifikovať a minimalizovať riziká." },
-    { "term": "Školenie BOZP", "definition": "Povinné oboznamovanie zamestnancov s bezpečnostnými pravidlami." },
-    { "term": "Evidencia úrazov", "definition": "Zamestnávateľ musí viesť knihu úrazov a hlásiť závažné úrazy." }
+    { "term": "BOZP", "definition": "Systém opatrení na ochranu zdravia a života pri práci." },
+    { "term": "OOPP", "definition": "Ochranné prostriedky poskytované zamestnávateľom bezplatne." },
+    { "term": "Posúdenie rizík", "definition": "Písomný dokument, ktorý musí zamestnávateľ vypracovať pre všetky činnosti." },
+    { "term": "Rekondičný pobyt", "definition": "Povinná prevencia pre práce v 3. a 4. kategórii." },
+    { "term": "Inšpekcia práce", "definition": "Orgán dozoru nad BOZP." }
   ],
 
   "cases": [
