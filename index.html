@@ -110,10 +110,17 @@
       </div>
     </div>
 
-    <div class="card section-card">
-      <h3 style="margin:0">Nahlásiť právnu nezrovnalosť</h3>
-      <div class="small">Pomôž zlepšiť právne otázky</div>
-      <button class="btn btn-primary" id="reportIssueBtn" style="margin-top:10px">Otvoriť formulár</button>
+    <div class="card section-card highlight-report">
+      <h3 style="margin:0">⚖️ Právna nezrovnalosť</h3>
+      <div class="small" style="margin-bottom:12px">Nájdol/a si chybu? Argumentuj ako právnik a pomôž zlepšiť otázky.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="reportIssueBtn">📝 Nahlásiť otázku</button>
+        <button class="btn" id="openCourtroomBtn">🏛️ Súdna sieň</button>
+      </div>
+      <div id="sealDisplay" style="margin-top:12px;display:none">
+        <div class="small muted">Tvoje pečate:</div>
+        <div id="sealBadges" style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap"></div>
+      </div>
     </div>
 
     <div class="card section-card">
@@ -360,6 +367,9 @@
 <script type="module" src="memory.js"></script>
 <script type="module" src="cases.js"></script>
 <script type="module" src="app.js"></script>
+
+<!-- REPORTS SYSTEM -->
+<script type="module" src="scripts/reports-system.js"></script>
 
 <!-- DUEL ENGINE -->
 <script type="module" src="scripts/duels.js"></script>
