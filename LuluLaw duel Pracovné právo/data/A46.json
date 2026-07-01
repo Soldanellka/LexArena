@@ -2,73 +2,74 @@
   "id": "23. B",
   "title": "Nároky z neplatného skončenia pracovného pomeru",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "neplatné skončenie", "náhrada mzdy", "obnovenie pracovného pomeru"],
+  "tags": ["pracovné právo", "neplatné skončenie", "náhrada mzdy", "súdne konanie", "pracovný pomer"],
 
-  "summary": "Neplatné skončenie pracovného pomeru nastáva vtedy, keď zamestnávateľ alebo zamestnanec skončí pracovný pomer v rozpore so zákonom, napríklad bez uvedenia dôvodu, bez písomnej formy, počas ochrannej doby alebo bez prerokovania s odborovou organizáciou. Zamestnanec má dve základné možnosti. Môže oznámiť zamestnávateľovi, že trvá na ďalšom zamestnávaní – v takom prípade pracovný pomer trvá ďalej a zamestnávateľ je povinný poskytnúť náhradu mzdy vo výške priemerného zárobku až do umožnenia výkonu práce. Druhou možnosťou je netrvať na ďalšom zamestnávaní – pracovný pomer sa považuje za skončený a zamestnanec má nárok na náhradu mzdy najviac za 12 mesiacov. Zamestnávateľ môže navrhnúť súdu zníženie náhrady mzdy, ak zamestnanec nepracoval z vlastnej viny alebo si neprimerane predlžoval obdobie bez práce. Účelom právnej úpravy je chrániť zamestnanca pred svojvoľným skončením pracovného pomeru a zabezpečiť mu primeranú kompenzáciu.\n\nPríklad:\nZamestnanec dostane výpoveď počas ochrannej doby, napríklad počas PN. Takáto výpoveď je neplatná a zamestnanec môže trvať na ďalšom zamestnávaní a žiadať náhradu mzdy.\n\nKľúčové slová:\nneplatné skončenie; náhrada mzdy; trvanie na zamestnávaní; ochranná doba; súdne zníženie náhrady.\n\nZapamätaj si:\n- Neplatné skončenie vzniká pri porušení zákonných podmienok.\n- Zamestnanec môže trvať na ďalšom zamestnávaní alebo nie.\n- Pri trvaní na zamestnávaní pracovný pomer pokračuje a patrí náhrada mzdy.\n- Ak zamestnanec netrvá na zamestnávaní, patrí náhrada mzdy najviac za 12 mesiacov.\n- O znížení náhrady mzdy rozhoduje súd, nie zamestnávateľ.",
+  "summary": "Neplatné skončenie pracovného pomeru nastáva vtedy, keď právny úkon smerujúci k skončeniu pracovného pomeru nespĺňa zákonné podmienky (§ 77–80 ZP). Ide o relatívnu neplatnosť – dovolať sa jej môže len účastník, ktorému vznikla ujma. Žalobu o neplatnosť možno podať najneskôr do dvoch mesiacov odo dňa, keď sa mal pracovný pomer skončiť (prekluzívna lehota).\n\nZákon rozlišuje nároky pri neplatnom skončení zo strany zamestnanca a zo strany zamestnávateľa. Ak zamestnanec neplatne skončí pracovný pomer, zamestnávateľ môže trvať na ďalšom vykonávaní práce – pracovný pomer trvá a zamestnanec je povinný nastúpiť do práce, inak môže zamestnávateľ požadovať náhradu škody. Ak zamestnávateľ netrvá na ďalšom zamestnávaní, pracovný pomer sa považuje za skončený dohodou (fikcia skončenia).\n\nAk zamestnávateľ neplatne skončí pracovný pomer, zamestnanec môže oznámiť, že trvá na ďalšom zamestnávaní – pracovný pomer trvá a zamestnávateľ musí prideľovať prácu alebo poskytnúť náhradu mzdy vo výške priemerného zárobku. Náhrada mzdy môže byť priznaná najviac za 36 mesiacov, pričom súd môže náhradu za čas nad 12 mesiacov primerane znížiť alebo nepriznať. Ak zamestnanec netrvá na ďalšom zamestnávaní, pracovný pomer sa považuje za skončený dohodou a patrí mu náhrada mzdy za výpovednú dobu.\n\nPri neplatnej dohode o skončení pracovného pomeru sa postupuje rovnako ako pri neplatnej výpovedi. Zamestnávateľ môže požadovať náhradu škody. Pri oznamovateľoch protispoločenskej činnosti sa náhrada mzdy neobmedzuje – patrí plná náhrada.\n\nJudikatúra: R 39/1985 – treba skúmať, či po neplatnej výpovedi nedošlo k platnému skončeniu pracovného pomeru. R 47/1997 – ak zamestnávateľ neprideľuje prácu po oznámení zamestnanca, patrí náhrada mzdy podľa § 142.\n\nPríklad:\nZamestnanec dostane neplatnú výpoveď počas PN. Ak oznámi, že trvá na ďalšom zamestnávaní, pracovný pomer trvá a patrí mu náhrada mzdy až do umožnenia výkonu práce.\n\nKľúčové slová:\nneplatné skončenie; náhrada mzdy; trvanie na zamestnávaní; fikcia skončenia; prekluzívna lehota; súdne zníženie náhrady.\n\nZapamätaj si:\n- Žaloba o neplatnosť musí byť podaná do 2 mesiacov.\n- Pri trvaní na zamestnávaní pracovný pomer pokračuje.\n- Náhrada mzdy môže byť najviac za 36 mesiacov.\n- Pri netrvaní sa pracovný pomer považuje za skončený dohodou.\n- Súd môže náhradu znížiť po 12 mesiacoch.\n- Pri whistlebloweroch sa náhrada neobmedzuje."
+  ,
 
   "quiz": [
     {
-      "question": "Kedy ide o neplatné skončenie pracovného pomeru?",
-      "options": ["Keď zamestnanec mešká do práce", "Keď je výpoveď v rozpore so zákonom", "Keď zamestnanec čerpá dovolenku"],
+      "question": "Aká je lehota na podanie žaloby o neplatnosť skončenia pracovného pomeru?",
+      "options": ["1 mesiac", "2 mesiace", "6 mesiacov"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Neplatnosť vzniká pri porušení zákonných podmienok.",
-        "wrong": "Nesprávne. Ostatné situácie neznamenajú neplatnosť."
+        "correct": "Správne. Ide o prekluzívnu dvojmesačnú lehotu.",
+        "wrong": "Nesprávne. Lehota je presne 2 mesiace."
       }
     },
     {
-      "question": "Čo môže zamestnanec urobiť pri neplatnom skončení?",
-      "options": ["Trvať na ďalšom zamestnávaní", "Nič", "Musí odísť"],
+      "question": "Čo sa stane, ak zamestnanec oznámi, že trvá na ďalšom zamestnávaní?",
+      "options": ["Pracovný pomer pokračuje", "Pracovný pomer sa končí", "Zamestnanec nemá žiadne nároky"],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Zamestnanec si môže uplatniť pokračovanie pracovného pomeru.",
-        "wrong": "Nesprávne. Zamestnanec nie je povinný odísť."
+        "correct": "Správne. Pracovný pomer trvá ďalej.",
+        "wrong": "Nesprávne. Oznámenie bráni skončeniu."
       }
     },
     {
-      "question": "Aká je výška náhrady mzdy pri neplatnom skončení?",
-      "options": ["Priemerný zárobok", "Minimálna mzda", "Žiadna"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Náhrada mzdy je vo výške priemerného zárobku.",
-        "wrong": "Nesprávne. Minimálna mzda sa neuplatňuje."
-      }
-    },
-    {
-      "question": "Ako dlho môže trvať náhrada mzdy, ak zamestnanec netrvá na ďalšom zamestnávaní?",
-      "options": ["Najviac 12 mesiacov", "Najviac 3 mesiace", "Bez obmedzenia"],
-      "correct": 0,
-      "explanation": {
-        "correct": "Správne. Zákon stanovuje limit 12 mesiacov.",
-        "wrong": "Nesprávne. Náhrada nie je neobmedzená."
-      }
-    },
-    {
-      "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ môže znížiť náhradu mzdy svojvoľne", "Súd môže znížiť náhradu mzdy", "Náhrada mzdy sa vždy poskytuje v plnej výške"],
+      "question": "Aká je maximálna náhrada mzdy pri trvaní na zamestnávaní?",
+      "options": ["12 mesiacov", "36 mesiacov", "Bez obmedzenia"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. O znížení rozhoduje súd, nie zamestnávateľ.",
-        "wrong": "Nesprávne. Náhrada nie je automaticky plná."
+        "correct": "Správne. Horný limit je 36 mesiacov.",
+        "wrong": "Nesprávne. 12 mesiacov je limit pre zníženie súdom."
+      }
+    },
+    {
+      "question": "Čo sa stane, ak zamestnanec netrvá na ďalšom zamestnávaní?",
+      "options": ["Pracovný pomer sa považuje za skončený dohodou", "Pracovný pomer pokračuje", "Zamestnanec nemá žiadne nároky"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o fikciu skončenia pracovného pomeru.",
+        "wrong": "Nesprávne. Pracovný pomer sa nepokračuje."
+      }
+    },
+    {
+      "question": "Kto môže znížiť náhradu mzdy pri neplatnom skončení?",
+      "options": ["Zamestnávateľ", "Súd", "Odbory"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. O znížení rozhoduje súd.",
+        "wrong": "Nesprávne. Zamestnávateľ nemá túto právomoc."
       }
     }
   ],
 
   "tiles": [
-    { "term": "Neplatné skončenie", "definition": "Skončenie pracovného pomeru v rozpore so zákonom." },
+    { "term": "Relatívna neplatnosť", "definition": "Neplatnosti sa môže dovolať len dotknutý účastník." },
     { "term": "Trvanie na zamestnávaní", "definition": "Zamestnanec oznámi, že chce pokračovať v práci – pracovný pomer trvá." },
-    { "term": "Náhrada mzdy", "definition": "Priemerný zárobok za čas, keď zamestnanec nemohol pracovať." },
-    { "term": "Max. 12 mesiacov", "definition": "Limit náhrady, ak zamestnanec netrvá na zamestnávaní." },
-    { "term": "Zníženie náhrady", "definition": "Súd môže znížiť náhradu, ak zamestnanec nepracoval bez vážneho dôvodu." }
+    { "term": "Fikcia skončenia", "definition": "Ak zamestnanec netrvá na zamestnávaní, pracovný pomer sa považuje za skončený dohodou." },
+    { "term": "Náhrada mzdy", "definition": "Pri trvaní patrí náhrada až do umožnenia výkonu práce, max. 36 mesiacov." },
+    { "term": "Prekluzívna lehota", "definition": "Žalobu o neplatnosť treba podať do 2 mesiacov." }
   ],
 
   "cases": [
     {
-      "title": "Prípad 1 – Výpoveď počas ochrannej doby",
+      "title": "Prípad 1 – Neplatná výpoveď počas PN",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zadanie: Zamestnanec dostal výpoveď počas PN. Zamestnávateľ tvrdí, že dôvod je vážny a výpoveď je platná.",
+          "question": "Zadanie: Zamestnanec dostal výpoveď počas PN. Zamestnávateľ tvrdí, že výpoveď je platná.",
           "options": [],
           "correct": 0
         },
@@ -77,30 +78,26 @@
           "options": ["Nie", "Áno", "Len ak PN trvá krátko"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. PN je ochranná doba a výpoveď je neplatná.",
+            "correct": "Správne. PN je ochranná doba.",
             "wrong": "Nesprávne. Dĺžka PN nerozhoduje."
           }
         },
         {
-          "question": "Krok 2: Aký nárok má zamestnanec?",
-          "options": ["Náhradu mzdy a pokračovanie pracovného pomeru", "Žiadny", "Len odstupné"],
+          "question": "Krok 2: Čo môže zamestnanec urobiť?",
+          "options": ["Trvať na ďalšom zamestnávaní", "Nič", "Musí odísť"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zamestnanec môže trvať na zamestnávaní.",
-            "wrong": "Nesprávne. Odstupné sa neuplatňuje."
+            "correct": "Správne. Môže požadovať pokračovanie pracovného pomeru.",
+            "wrong": "Nesprávne. Zamestnanec nie je povinný odísť."
           }
         },
         {
-          "question": "Krok 3: Ako má právnik postupovať?",
-          "options": [
-            "Namietať neplatnosť výpovede a žiadať náhradu mzdy",
-            "Súhlasiť so zamestnávateľom",
-            "Odporučiť zamestnancovi odísť"
-          ],
+          "question": "Krok 3: Aký nárok vzniká?",
+          "options": ["Náhrada mzdy vo výške priemerného zárobku", "Len odstupné", "Žiadny"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Výpoveď je v rozpore so zákonom.",
-            "wrong": "Nesprávne. Zamestnanec je chránený."
+            "correct": "Správne. Patrí náhrada až do umožnenia výkonu práce.",
+            "wrong": "Nesprávne. Odstupné sa neuplatňuje."
           }
         }
       ]
@@ -117,16 +114,16 @@
         },
         {
           "question": "Krok 1: Má nárok na náhradu mzdy?",
-          "options": ["Áno, najviac za 12 mesiacov", "Nie", "Len ak sa vráti do práce"],
+          "options": ["Áno, za výpovednú dobu", "Nie", "Len ak sa vráti do práce"],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Aj bez návratu patrí náhrada.",
+            "correct": "Správne. Pri netrvaní patrí náhrada za výpovednú dobu.",
             "wrong": "Nesprávne. Nárok nie je podmienený návratom."
           }
         },
         {
-          "question": "Krok 2: Môže súd náhradu znížiť?",
-          "options": ["Áno", "Nie", "Len ak zamestnávateľ chce"],
+          "question": "Krok 2: Môže súd znížiť náhradu pri trvaní na zamestnávaní?",
+          "options": ["Áno, po 12 mesiacoch", "Nie", "Len ak zamestnávateľ chce"],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súd môže náhradu primerane znížiť.",
