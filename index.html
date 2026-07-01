@@ -374,11 +374,12 @@
 
 <!-- REPORTS SYSTEM – inline pre spoľahlivé načítanie -->
 <script type="module">
-import { ref, push, update, get }
-  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
+
+async function fbImport() {
+  return await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+}
 
 /* ── NAHLÁSENIE ── */
 window.openReportModal = function(prefill = {}) {
@@ -487,6 +488,7 @@ window.openReportModal = function(prefill = {}) {
       try {
         const db = getDb();
         if (db) {
+          const { ref, push, update } = await fbImport();
           const r = await push(ref(db, 'reports'), {
             nick: getNick() || 'Anonymous',
             area, questionId: qid,
@@ -570,6 +572,7 @@ window.openCourtroomModal = async function() {
     const db = getDb();
     if (!db) { list.innerHTML = '<div class="small muted" style="text-align:center;padding:20px">Firebase nie je dostupná.</div>'; return; }
 
+    const { ref, get, update } = await fbImport();
     const snap = await get(ref(db, 'reports'));
     const data = snap.val() || {};
     const role = localStorage.getItem('playerRole') || 'student';
@@ -614,6 +617,7 @@ window.openCourtroomModal = async function() {
       b.onclick = async () => {
         const key = 'voted_'+b.dataset.id;
         if (localStorage.getItem(key)) { alert('Už si hlasoval/a.'); return; }
+        const { ref, get, update } = await fbImport();
         const snap2 = await get(ref(db, `reports/${b.dataset.id}/votes`));
         const v = snap2.val() || {for:0,against:0};
         v[b.dataset.v] = (v[b.dataset.v]||0)+1;
@@ -625,6 +629,7 @@ window.openCourtroomModal = async function() {
 
     list.querySelectorAll('.admin-ap').forEach(b => {
       b.onclick = async () => {
+        const { ref, get, update } = await fbImport();
         await update(ref(db, `reports/${b.dataset.id}`), { status:'approved', decidedAt:Date.now(), decidedBy:getNick() });
         // Pečať
         const rNick = b.dataset.nick;
@@ -642,6 +647,7 @@ window.openCourtroomModal = async function() {
 
     list.querySelectorAll('.admin-rj').forEach(b => {
       b.onclick = async () => {
+        const { ref, update } = await fbImport();
         await update(ref(db, `reports/${b.dataset.id}`), { status:'rejected', decidedAt:Date.now(), decidedBy:getNick() });
         loadCList(status);
       };
