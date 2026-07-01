@@ -397,6 +397,42 @@ function initVideoSystem() {
   });
 }
 
+
+/* =====================================================
+   PEČATE HRÁČA V DLAŽDICI
+   ===================================================== */
+async function displayPlayerSeals() {
+  const db = window.db;
+  const nick = localStorage.getItem('playerNick');
+  if (!db || !nick) return;
+
+  try {
+    const { ref, get } = await import(
+      "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+    );
+    const snap = await get(ref(db, `users/${nick}`));
+    if (!snap.exists()) return;
+
+    const data = snap.val();
+    const seals = data.seals || {};
+    const approved = data.approvedReports || 0;
+
+    const display = document.getElementById('sealDisplay');
+    const badges = document.getElementById('sealBadges');
+    if (!display || !badges) return;
+
+    if (approved > 0) {
+      display.style.display = 'block';
+      badges.innerHTML = [
+        seals.gold   ? `<span class="seal-badge gold">🥇 Zlatá ×${seals.gold}</span>` : '',
+        seals.silver ? `<span class="seal-badge silver">🥈 Strieborná ×${seals.silver}</span>` : '',
+        seals.bronze ? `<span class="seal-badge bronze">🥉 Bronzová ×${seals.bronze}</span>` : '',
+        `<span class="small muted">Uznaných: ${approved}</span>`
+      ].join('');
+    }
+  } catch(e) {}
+}
+
 /* =====================================================
    ROLA BADGE
    ===================================================== */
@@ -536,6 +572,19 @@ function attachEvents() {
 
   /* 🔥 Rola badge */
   initRoleBadge();
+
+  /* 🔥 Nahlasovanie + Súdna sieň */
+  const reportBtn = document.getElementById('reportIssueBtn');
+  if (reportBtn) reportBtn.addEventListener('click', () => {
+    if (typeof window.openReportModal === 'function') window.openReportModal();
+  });
+  const courtroomBtn = document.getElementById('openCourtroomBtn');
+  if (courtroomBtn) courtroomBtn.addEventListener('click', () => {
+    if (typeof window.openCourtroomModal === 'function') window.openCourtroomModal();
+  });
+
+  /* 🔥 Zobraz pečate hráča */
+  displayPlayerSeals();
 
   /* 🔥 Modal prístupového kódu */
   const loginDeviceBtn = $('loginDeviceBtn');
