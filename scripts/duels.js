@@ -133,10 +133,41 @@ function pickQuestions(areaName) {
 /* ============================================================
    HLAVNÁ FUNKCIA – SPUSTENIE DUELOVÉHO KVÍZU (TVORBA VÝZVY)
 ============================================================ */
-export function startDuel(areaName) {
+/* ============================================================
+   ČAKANIE NA NAČÍTANIE OTÁZOK (asynchrónne z data.js)
+============================================================ */
+function waitForQuestions(areaName) {
+  return new Promise((resolve) => {
+    const areasToCheck = areaName === "Trestné právo"
+      ? ["Trestné právo hmotné", "Trestné právo procesné"]
+      : [areaName];
+
+    let attempts = 0;
+    const timer = setInterval(() => {
+      attempts++;
+      const ready = areasToCheck.every(a =>
+        window.areas[a] && window.areas[a].length > 0
+      );
+      if (ready) {
+        clearInterval(timer);
+        resolve();
+      }
+      if (attempts > 100) { // 10 sekúnd max
+        clearInterval(timer);
+        console.warn("⚠️ Otázky sa nenačítali včas pre:", areaName);
+        resolve();
+      }
+    }, 100);
+  });
+}
+
+export async function startDuel(areaName) {
   console.log("🔥 startDuel() – štartujem duel pre oblasť:", areaName);
 
-  if (!areaName || !window.areas[areaName]) {
+  // 🔥 Počkaj kým sú otázky načítané (TPH a TPP prídu asynchrónne)
+  await waitForQuestions(areaName);
+
+  if (!areaName) {
     console.warn("⚠️ Oblasť neexistuje.");
     return;
   }
