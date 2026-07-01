@@ -49,40 +49,75 @@ function shuffleQuestionOptions(q) {
 function pickQuestions(areaName) {
   let questions = [];
 
-  // 🔥 PRACOVNÉ PRÁVO – páry A1+A2, A3+A4, … A49+A50
+  // 🔥 PRACOVNÉ PRÁVO – páry A1+A2, A3+A4, …
+  // Súbory sú A1-A53, párujeme po dvoch.
+  // Ak je nepárny počet (napr. A53 bez páru), posledný sa vynechá.
   if (areaName === "Pracovné právo") {
     const all = window.areas["Pracovné právo"];
 
+    // Zoskup otázky podľa zdrojového súboru (A1, A2, A3...)
     const groups = {};
     all.forEach(q => {
-      const id = q.source.replace(".json", "");
+      const id = q.source; // napr. "A1", "A23"
       if (!groups[id]) groups[id] = [];
       groups[id].push(q);
     });
 
-    const pairs = [];
-    const keys = Object.keys(groups).sort(
-      (a,b)=>Number(a.replace("A",""))-Number(b.replace("A",""))
+    // Zoraď kľúče numericky (A1, A2, A3... A10, A11...)
+    const keys = Object.keys(groups).filter(k => /^A\d+$/.test(k)).sort(
+      (a, b) => Number(a.replace("A","")) - Number(b.replace("A",""))
     );
 
-    for (let i = 0; i < keys.length; i += 2) {
+    // Vytvor páry (A1+A2, A3+A4...)
+    const pairs = [];
+    for (let i = 0; i < keys.length - 1; i += 2) {
       const k1 = keys[i];
-      const k2 = keys[i+1];
+      const k2 = keys[i + 1];
       if (groups[k1] && groups[k2]) {
         pairs.push([...groups[k1], ...groups[k2]]);
       }
     }
 
-    const chosen = pairs[Math.floor(Math.random() * pairs.length)];
-    questions = chosen || [];
+    if (pairs.length === 0) {
+      // Fallback: vyber náhodných 10
+      questions = all.slice().sort(() => Math.random() - 0.5).slice(0, 10);
+    } else {
+      const chosen = pairs[Math.floor(Math.random() * pairs.length)];
+      questions = chosen;
+    }
   }
 
-  // 🔥 TRESTNÉ PRÁVO – 1×TPH + 1×TPP
-  else if (areaName === "Trestné právo hmotné" || areaName === "Trestné právo procesné") {
-    const tph = window.areas["Trestné právo hmotné"];
-    const tpp = window.areas["Trestné právo procesné"];
-    const pick5 = arr => arr.slice().sort(()=>Math.random()-0.5).slice(0,5);
-    questions = [...pick5(tph), ...pick5(tpp)];
+  // 🔥 TRESTNÉ PRÁVO – 1 náhodný A.json z TPH (5 otázok) + 1 náhodný A.json z TPP (5 otázok)
+  // Každý A.json obsahuje presne 5 otázok (okruh).
+  else if (areaName === "Trestné právo" || areaName === "Trestné právo hmotné" || areaName === "Trestné právo procesné") {
+
+    function pickOneFile(areaQuestions) {
+      // Zoskup podľa source (A1, A2... A30)
+      const groups = {};
+      areaQuestions.forEach(q => {
+        const id = q.source;
+        if (!groups[id]) groups[id] = [];
+        groups[id].push(q);
+      });
+
+      // Zoraď numericky a vyber náhodný okruh
+      const keys = Object.keys(groups)
+        .filter(k => /^A\d+$/.test(k))
+        .sort((a, b) => Number(a.replace("A","")) - Number(b.replace("A","")));
+
+      if (keys.length === 0) return [];
+      const randomKey = keys[Math.floor(Math.random() * keys.length)];
+      return groups[randomKey] || [];
+    }
+
+    const tph = window.areas["Trestné právo hmotné"] || [];
+    const tpp = window.areas["Trestné právo procesné"] || [];
+
+    const fromTPH = pickOneFile(tph); // 1 náhodný okruh z TPH (5 otázok)
+    const fromTPP = pickOneFile(tpp); // 1 náhodný okruh z TPP (5 otázok)
+
+    console.log(`🔥 Trestné: TPH okruh ${fromTPH[0]?.source}, TPP okruh ${fromTPP[0]?.source}`);
+    questions = [...fromTPH, ...fromTPP];
   }
 
   // 🔥 Ostatné oblasti – fallback
