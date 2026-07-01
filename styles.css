@@ -999,6 +999,109 @@ body {
   box-shadow: 0 8px 26px rgba(0,0,0,0.5);
 }
 
-/* ----------------------------------------------------------
+
+/* ============================================================
+   🐾 AVATAR ENERGIA PANEL (vedľa avatara v headeri)
+============================================================ */
+
+.avatar-energy-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-left: 4px;
+}
+
+.avatar-energy-bar-wrap {
+  width: 60px;
+  height: 7px;
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.avatar-energy-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #48bb78, #38a169);
+  transition: width .5s ease, background .5s ease;
+}
+
+.avatar-energy-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.avatar-feed-btn {
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3)) !important;
+  color: white !important;
+  animation: feedPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes feedPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240,138,166,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(240,138,166,0); }
+}
+
+/* Spánkový filter na avatar obrázok */
+#userAvatar {
+  transition: filter .5s ease;
+}
+
+/* Streak display */
+#loginStreakDisplay {
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Na mobile skryť energy text, len bar */
+@media (max-width: 640px) {
+  .avatar-energy-bar-wrap {
+    width: 44px;
+  }
+  .avatar-energy-text {
+    font-size: 9px;
+  }
+  #loginStreakDisplay {
+    display: none;
+  }
+}
+
+
+/* ============================================================
+   OBLASTI V DUELOVOM KVÍZE – čipy so zvýraznením
+============================================================ */
+
+.areas-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.area-chip {
+  transition: all .18s ease;
+}
+
+.area-chip.chip-active {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3)) !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(240,138,166,0.35);
+  transform: scale(1.04);
+  font-weight: 600;
+}
+
+.area-chip:hover:not(.chip-active) {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+}
+
+/* ============================================================
    KONIEC
----------------------------------------------------------- */
+============================================================ */
