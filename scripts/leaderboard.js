@@ -84,6 +84,38 @@ function renderLeaderboardList(list) {
 
   const maxPoints = list[0].points || 1;
 
+  // Načítaj avatary hráčov z Firebase
+  const avatarMap = {};
+  try {
+    const userSnaps = await Promise.all(
+      list.map(p => get(ref(db, `users/${p.nick}/avatar`)))
+    );
+    list.forEach((p, i) => {
+      avatarMap[p.nick] = userSnaps[i].exists()
+        ? userSnaps[i].val()
+        : { type: 'student-f', energy: 100 };
+    });
+  } catch(e) {
+    list.forEach(p => { avatarMap[p.nick] = { type: 'student-f', energy: 100 }; });
+  }
+
+  // Avatar data URI mapovanie (rovnaké ako v avatar.js)
+  const AVATAR_AWAKE = {
+    'student-f': 'assets/avatars/student-f-awake.svg',
+    'student-m': 'assets/avatars/student-m-awake.svg',
+    'cat':       'assets/avatars/cat-avatar.svg',
+    'owl':       'assets/avatars/owl-avatar.svg',
+  };
+
+  function getAvatarSrc(type, energy) {
+    if (energy <= 0) {
+      return type === 'student-f'
+        ? 'assets/avatars/student-f-sleep.svg'
+        : 'assets/avatars/student-m-sleep.svg';
+    }
+    return AVATAR_AWAKE[type] || AVATAR_AWAKE['student-f'];
+  }
+
   box.innerHTML = list.map((p, i) => {
     const rankClass = i < 3 ? ` lb-rank-${i + 1}` : '';
     const pct = Math.max(6, Math.round((p.points / maxPoints) * 100));
@@ -91,9 +123,14 @@ function renderLeaderboardList(list) {
       ? `<div class="lb-medal lb-medal-${i + 1}"><span class="lb-medal-ribbon"></span><span class="lb-medal-num">${i + 1}</span></div>`
       : `<span class="lb-rank-num">${i + 1}</span>`;
 
+    const av = avatarMap[p.nick] || { type: 'student-f', energy: 100 };
+    const avatarSrc = getAvatarSrc(av.type, av.energy);
+
     return `
       <div class="lb-row${rankClass}">
         <div class="lb-rank">${medal}</div>
+        <img class="lb-avatar" src="${avatarSrc}" alt="avatar" 
+          onerror="this.style.display='none'"/>
         <div class="lb-main">
           <div class="lb-top-line">
             <span class="lb-name">${escapeHtml(p.nick)}</span>
