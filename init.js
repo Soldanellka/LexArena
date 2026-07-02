@@ -685,12 +685,18 @@ function initRoleBadge() {
   badge.style.cursor = 'pointer';
   badge.title = 'Klikni pre prepnutie roly';
 
-  badge.onclick = () => openRoleSwitcher(firebaseRole);
+  // Čítaj rolu v čase kliknutia (nie pri init - vtedy ešte Firebase nenačítaná)
+  badge.onclick = () => {
+    const fr = localStorage.getItem('playerFirebaseRole') || 'student';
+    openRoleSwitcher(fr);
+  };
 }
 
 function openRoleSwitcher(firebaseRole) {
-  let modal = document.getElementById('roleSwitchModal');
-  if (modal) { modal.style.display = 'flex'; return; }
+  // Vždy vymaž starý modal a vytvor nový s aktuálnymi rolami
+  const old = document.getElementById('roleSwitchModal');
+  if (old) old.remove();
+  let modal;
 
   // Dostupné roly podľa Firebase roly
   const available = firebaseRole === 'admin'
