@@ -505,10 +505,14 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
           </div>
           <div id="adminMsg" class="small" style="margin-top:6px;color:var(--muted)"></div>
         </div>
-        <button class="btn" id="listUsersBtn" style="width:100%;margin-bottom:8px">
+        <button class="btn" id="listUsersBtn" style="width:100%;margin-bottom:6px">
           👥 Zobraziť hráčov
         </button>
-        <div id="usersList" style="display:none;max-height:200px;overflow-y:auto"></div>
+        <div id="usersList" style="display:none;max-height:200px;overflow-y:auto;margin-bottom:8px"></div>
+        <button class="btn" id="listFeedbackBtn" style="width:100%;margin-bottom:6px">
+          💬 Zobraziť pripomienky
+        </button>
+        <div id="feedbackList" style="display:none;max-height:250px;overflow-y:auto"></div>
       ` : ''}
       <div class="small muted" style="margin-top:8px">
         ${role === 'admin'
@@ -537,6 +541,42 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
       await update(ref(db, `users/${targetNick}`), { role: 'student' });
       msg.textContent = `✅ ${targetNick} je teraz student.`;
       msg.style.color = 'var(--muted)';
+    };
+
+    // Zoznam pripomienok
+    panel.querySelector('#listFeedbackBtn').onclick = async () => {
+      const listEl = panel.querySelector('#feedbackList');
+      const isHidden = listEl.style.display === 'none';
+      if (!isHidden) { listEl.style.display = 'none'; return; }
+
+      listEl.innerHTML = '<div class="small muted">Načítavam...</div>';
+      listEl.style.display = 'block';
+
+      const snap = await get(ref(db, 'feedback'));
+      const data = snap.val() || {};
+      const items = Object.entries(data)
+        .sort(([,a],[,b]) => b.createdAt - a.createdAt);
+
+      if (!items.length) {
+        listEl.innerHTML = '<div class="small muted" style="padding:8px">Žiadne pripomienky.</div>';
+        return;
+      }
+
+      const typeEmoji = { napad: '💡', chyba: '🐛', pochvala: '⭐' };
+      const fmtDate = ts => {
+        const d = new Date(ts);
+        return d.getDate()+'.'+(d.getMonth()+1)+'. '+d.getHours()+':'+String(d.getMinutes()).padStart(2,'0');
+      };
+
+      listEl.innerHTML = items.map(([id, f]) => `
+        <div style="padding:8px 10px;border-bottom:1px solid var(--card-border);font-size:13px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+            <span>${typeEmoji[f.type]||'📝'} <strong>${f.nick}</strong></span>
+            <span class="small muted">${fmtDate(f.createdAt)}</span>
+          </div>
+          <div>${f.text}</div>
+        </div>
+      `).join('');
     };
 
     // Zoznam hráčov
