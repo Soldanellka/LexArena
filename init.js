@@ -417,9 +417,19 @@ async function initRoleSystem() {
   const { ref, get, update, onValue } =
     await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
 
-  // Načítaj rolu z Firebase
-  const snap = await get(ref(db, `users/${nick}/role`));
-  const role = snap.exists() ? snap.val() : 'student';
+  // Načítaj rolu z Firebase - skontroluj obe miesta
+  const snapUsers = await get(ref(db, `users/${nick}/role`));
+  const snapLeader = await get(ref(db, `leaderboard/${nick}/role`));
+  const role = snapUsers.exists()
+    ? snapUsers.val()
+    : snapLeader.exists()
+    ? snapLeader.val()
+    : 'student';
+  
+  // Synchronizuj rolu do users/ ak tam nie je
+  if (!snapUsers.exists() && role !== 'student') {
+    await update(ref(db, `users/${nick}`), { role });
+  }
 
   // Ulož Firebase rolu (skutočná rola) aj view rolu zvlášť
   localStorage.setItem('playerFirebaseRole', role);
