@@ -1097,12 +1097,31 @@ function attachEvents() {
       const modal = $('memoryModal');
       if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
 
+      const areaTiles = window.__areaTilesForGames;
       const areaQs = window.__areaQuestionsForGames;
-      if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
+      if (areaTiles && areaTiles.length && typeof window.buildMemoryFromTiles === 'function') {
+        // 🃏 Dlaždice z JSON (pojem ↔ definícia)
+        window.buildMemoryFromTiles(areaTiles);
+      } else if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
+        // Fallback: otázka ↔ správna odpoveď
         window.buildMemoryFromQuestions(areaQs);
-      } else {
-        // Fallback na pôvodné sety
-        if (typeof buildMemory === 'function') buildMemory('TPH-A1');
+      } else if (typeof window.buildMemory === 'function') {
+        window.buildMemory('TPH-A1');
+      }
+    });
+  }
+
+  const restartMemoryBtn = $('restartMemory');
+  if (restartMemoryBtn) {
+    restartMemoryBtn.addEventListener('click', () => {
+      const areaTiles = window.__areaTilesForGames;
+      const areaQs = window.__areaQuestionsForGames;
+      if (areaTiles && areaTiles.length && typeof window.buildMemoryFromTiles === 'function') {
+        window.buildMemoryFromTiles(areaTiles);
+      } else if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
+        window.buildMemoryFromQuestions(areaQs);
+      } else if (typeof window.buildMemory === 'function') {
+        window.buildMemory('TPH-A1');
       }
     });
   }
@@ -1122,9 +1141,14 @@ function attachEvents() {
       const modal = $('casesModal');
       if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
 
+      const areaCases = window.__areaCasesForGames;
       const areaQs = window.__areaQuestionsForGames;
       const areaName = window.__selectedAreaName || '';
-      if (areaQs && areaQs.length && typeof window.loadCasesFromQuestions === 'function') {
+      if (areaCases && areaCases.length && typeof window.loadCasesFromJson === 'function') {
+        // 📋 Skutočné prípady z JSON (viackrokové)
+        window.loadCasesFromJson(areaCases, areaName);
+      } else if (areaQs && areaQs.length && typeof window.loadCasesFromQuestions === 'function') {
+        // Fallback: otázky ako jednoduché prípady
         window.loadCasesFromQuestions(areaQs, areaName);
       }
     });

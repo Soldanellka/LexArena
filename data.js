@@ -84,6 +84,8 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
 
   const files = Array.from({ length: maxFiles }, (_, i) => `A${i + 1}.json`);
   const questions = [];
+  const tiles = [];
+  const cases = [];
 
   for (const file of files) {
     try {
@@ -92,12 +94,36 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
 
       const json = await res.json();
 
+      /* 🃏 Dlaždice pre memory (pojem ↔ definícia) */
+      if (Array.isArray(json.tiles)) {
+        json.tiles.forEach(t => {
+          if (t && t.term && t.definition) {
+            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json','') });
+          }
+        });
+      }
+
+      /* 📋 Prípady z praxe (jeden prípad = viac krokov) */
+      if (Array.isArray(json.cases)) {
+        json.cases.forEach(c => {
+          if (c && Array.isArray(c.steps)) {
+            cases.push({
+              title: c.title || 'Prípad',
+              difficulty: c.difficulty || '',
+              steps: c.steps,
+              source: file.replace('.json','')
+            });
+          }
+        });
+      }
+
       if (json.quiz) {
         json.quiz.forEach(q => {
           questions.push({
             question: q.question,
             options: q.options,
             correct: q.correct,
+            explanation: q.explanation || null,
             /* =========================
                🔥 OPRAVA: source sa nastavuje podľa
                skutočného súboru (napr. "A23"), nie podľa
@@ -116,7 +142,11 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
   }
 
   window.areas[areaTitle] = questions;
-  console.log(`✅ ${areaTitle}: načítaných ${questions.length} otázok`);
+  window.areaTiles = window.areaTiles || {};
+  window.areaCases = window.areaCases || {};
+  window.areaTiles[areaTitle] = tiles;
+  window.areaCases[areaTitle] = cases;
+  console.log(`✅ ${areaTitle}: ${questions.length} otázok, ${tiles.length} dlaždíc, ${cases.length} prípadov`);
 }
 
 /* =====================================================

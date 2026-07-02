@@ -74,13 +74,7 @@ export function renderMemoryBoard(){
 
   memoryState.cards.forEach((card, idx) => {
     const el = document.createElement('div');
-    el.className = 'avatar-card memory-card';
-    el.style.minHeight = '72px';
-    el.style.display = 'flex';
-    el.style.alignItems = 'center';
-    el.style.justifyContent = 'center';
-    el.style.fontWeight = '600';
-    el.style.cursor = 'pointer';
+    el.className = 'memory-card' + (card.side === 'L' ? ' memory-card-q' : ' memory-card-a');
     el.dataset.uid = card.uid;
     el.dataset.index = String(idx);
     el.tabIndex = 0;
@@ -543,3 +537,53 @@ export function buildMemoryFromQuestions(questions) {
 
 // Globálny export pre volanie z init.js
 window.buildMemoryFromQuestions = buildMemoryFromQuestions;
+
+/* ===============================
+   BUILD MEMORY FROM TILES
+   Páruje pojem ↔ definícia z JSON "tiles"
+   =============================== */
+export function buildMemoryFromTiles(tiles) {
+  const board = $('memoryBoard');
+  if (!board) return;
+
+  if (!tiles || !tiles.length) {
+    board.innerHTML = '<div class="small muted">Žiadne dlaždice pre túto oblasť.</div>';
+    return;
+  }
+
+  ensureMemoryControls();
+
+  // Zamiešaj a vyber max 8 párov
+  const pool = [...tiles];
+  shuffleArray(pool);
+  const pairs = pool.slice(0, 8).map((t, i) => ({
+    id: `t${i}`,
+    left: t.term,
+    right: t.definition
+  }));
+
+  const cards = [];
+  pairs.forEach(p => {
+    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false });
+    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false });
+  });
+
+  shuffleArray(cards);
+
+  memoryState.cards = cards;
+  memoryState.first = null;
+  memoryState.second = null;
+  memoryState.lock = false;
+  memoryState.matches = 0;
+  memoryState.wrongs = 0;
+  memoryState.elapsed = 0;
+  memoryState.startTime = Date.now();
+
+  startTimer();
+  renderMemoryBoard();
+  updateMemoryCounter();
+  updateStats();
+  memoryFocusedIndex = 0;
+}
+
+window.buildMemoryFromTiles = buildMemoryFromTiles;

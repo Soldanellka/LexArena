@@ -333,20 +333,20 @@
 
 <!-- Modály -->
 <div id="memoryModal" class="avatar-modal" aria-hidden="true" style="display:none;">
-  <div class="avatar-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 id="memoryTitle">Kartičky – matching</h3>
+  <div class="avatar-panel game-panel">
+    <div class="game-panel-header">
+      <h3 id="memoryTitle">🃏 Kartičky – spoj pojem s definíciou</h3>
       <button class="btn" id="closeMemory">Zavrieť</button>
     </div>
-    <div id="memoryBoard" style="margin-top:12px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px"></div>
-    <div style="margin-top:12px"><button class="btn btn-primary" id="restartMemory">Reštartovať</button></div>
+    <div id="memoryBoard"></div>
+    <div style="margin-top:14px"><button class="btn btn-primary" id="restartMemory">🔄 Zamiešať znova</button></div>
   </div>
 </div>
 
 <div id="casesModal" class="avatar-modal" aria-hidden="true" style="display:none;">
-  <div class="avatar-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 id="casesTitle">Prípady z praxe</h3>
+  <div class="avatar-panel game-panel">
+    <div class="game-panel-header">
+      <h3 id="casesTitle">📋 Prípady z praxe</h3>
       <button class="btn" id="closeCases">Zavrieť</button>
     </div>
     <div id="caseContainer" style="margin-top:12px"></div>

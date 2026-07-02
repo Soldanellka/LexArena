@@ -354,3 +354,145 @@ function renderCasesFromQuestions(container) {
 }
 
 window.loadCasesFromQuestions = loadCasesFromQuestions;
+
+/* =========================
+   MULTI-STEP PRÍPADY Z JSON
+   Jeden prípad = scenár + viac otázok (steps)
+   ========================= */
+export function loadCasesFromJson(casesArr, areaTitle) {
+  const container = $('caseContainer');
+  if (!container) return;
+
+  if (!casesArr || !casesArr.length) {
+    container.innerHTML = '<div class="small muted">Žiadne prípady pre túto oblasť.</div>';
+    return;
+  }
+
+  window.__jsonCases = casesArr;
+  window.__jsonCaseIndex = 0;
+  window.__jsonCaseAnswers = {}; // { caseIdx: { stepIdx: chosenOption } }
+
+  renderJsonCase(container, areaTitle);
+}
+
+function renderJsonCase(container, areaTitle) {
+  const cases = window.__jsonCases || [];
+  const idx = window.__jsonCaseIndex || 0;
+  const answers = window.__jsonCaseAnswers[idx] || {};
+  const c = cases[idx];
+  if (!c) return;
+
+  const total = cases.length;
+  const questionSteps = c.steps.filter(s => Array.isArray(s.options) && s.options.length > 0);
+  const answeredCount = Object.keys(answers).length;
+  const allAnswered = answeredCount >= questionSteps.length;
+  const correctCount = Object.entries(answers)
+    .filter(([si, opt]) => {
+      const step = c.steps[parseInt(si)];
+      return step && opt === step.correct;
+    }).length;
+
+  const diffBadge = c.difficulty
+    ? `<span class="case-diff case-diff-${c.difficulty}">${c.difficulty}</span>`
+    : '';
+
+  let html = `
+    <div class="case-header">
+      <div>
+        <div class="case-counter">Prípad ${idx + 1} / ${total} ${c.source ? '· ' + c.source : ''}</div>
+        <div class="case-title">${escapeHtml(c.title)}</div>
+      </div>
+      ${diffBadge}
+    </div>
+    <div class="case-steps">
+  `;
+
+  let visibleUpTo = 0;
+  // Zobrazuj kroky postupne: ďalší krok sa odomkne po zodpovedaní predchádzajúcej otázky
+  for (let i = 0; i < c.steps.length; i++) {
+    const s = c.steps[i];
+    const isScenario = !Array.isArray(s.options) || s.options.length === 0;
+    if (isScenario) { visibleUpTo = i; continue; }
+    if (answers[i] !== undefined) { visibleUpTo = i; continue; }
+    visibleUpTo = i;
+    break;
+  }
+
+  c.steps.forEach((s, i) => {
+    if (i > visibleUpTo) return;
+    const isScenario = !Array.isArray(s.options) || s.options.length === 0;
+
+    if (isScenario) {
+      html += `<div class="case-scenario">📄 ${escapeHtml(s.question)}</div>`;
+      return;
+    }
+
+    const answered = answers[i];
+    html += `<div class="case-step">
+      <div class="case-step-q">${escapeHtml(s.question)}</div>
+      <div class="case-step-opts">`;
+
+    s.options.forEach((opt, oi) => {
+      let cls = 'case-step-opt';
+      let disabled = '';
+      if (answered !== undefined) {
+        disabled = 'disabled';
+        if (oi === s.correct) cls += ' correct';
+        else if (oi === answered) cls += ' wrong';
+      }
+      html += `<button class="${cls}" ${disabled} data-step="${i}" data-opt="${oi}">${escapeHtml(opt)}</button>`;
+    });
+
+    html += `</div>`;
+
+    if (answered !== undefined) {
+      const ok = answered === s.correct;
+      html += `<div class="case-step-feedback ${ok ? 'ok' : 'no'}">
+        ${ok ? '✅ Správne!' : '❌ Nesprávne. Správna odpoveď: ' + escapeHtml(s.options[s.correct])}
+      </div>`;
+    }
+
+    html += `</div>`;
+  });
+
+  html += `</div>`;
+
+  // Výsledok prípadu
+  if (allAnswered && questionSteps.length) {
+    const pct = Math.round(correctCount / questionSteps.length * 100);
+    html += `<div class="case-result ${pct >= 60 ? 'ok' : 'no'}">
+      ${pct >= 60 ? '🏆' : '📚'} Prípad vyriešený: ${correctCount}/${questionSteps.length} správne (${pct}%)
+    </div>`;
+  }
+
+  // Navigácia
+  html += `<div class="case-nav">
+    <button class="btn case-prev" ${idx === 0 ? 'disabled' : ''}>← Predchádzajúci</button>
+    <span class="small muted">${answeredCount}/${questionSteps.length} otázok</span>
+    <button class="btn btn-primary case-next" ${idx >= total - 1 ? 'disabled' : ''}>Ďalší prípad →</button>
+  </div>`;
+
+  container.innerHTML = html;
+
+  // Event listenery
+  container.querySelectorAll('.case-step-opt:not([disabled])').forEach(btn => {
+    btn.onclick = () => {
+      const si = parseInt(btn.dataset.step);
+      const oi = parseInt(btn.dataset.opt);
+      if (!window.__jsonCaseAnswers[idx]) window.__jsonCaseAnswers[idx] = {};
+      window.__jsonCaseAnswers[idx][si] = oi;
+      renderJsonCase(container, areaTitle);
+    };
+  });
+
+  container.querySelector('.case-prev')?.addEventListener('click', () => {
+    window.__jsonCaseIndex = Math.max(0, idx - 1);
+    renderJsonCase(container, areaTitle);
+  });
+  container.querySelector('.case-next')?.addEventListener('click', () => {
+    window.__jsonCaseIndex = Math.min(total - 1, idx + 1);
+    renderJsonCase(container, areaTitle);
+  });
+}
+
+window.loadCasesFromJson = loadCasesFromJson;

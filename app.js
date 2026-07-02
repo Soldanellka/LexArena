@@ -104,7 +104,9 @@ function preloadAreaGames(areaName) {
     if (questions && questions.length > 0) {
       clearInterval(check);
       window.__areaQuestionsForGames = questions;
-      console.log(`🎮 Načítaných ${questions.length} otázok pre ${areaName} → Memory & Prípady`);
+      window.__areaTilesForGames = getTilesForArea(areaName);
+      window.__areaCasesForGames = getCasesForArea(areaName);
+      console.log(`🎮 ${areaName}: ${questions.length} otázok, ${(window.__areaTilesForGames||[]).length} dlaždíc, ${(window.__areaCasesForGames||[]).length} prípadov`);
     }
     if (attempts > 50) clearInterval(check);
   }, 100);
@@ -117,6 +119,24 @@ function getQuestionsForArea(areaName) {
     return [...tph.slice(0,5), ...tpp.slice(0,5)];
   }
   return window.areas?.[areaName] || [];
+}
+
+function getTilesForArea(areaName) {
+  if (areaName === 'Trestné právo') {
+    const tph = window.areaTiles?.['Trestné právo hmotné'] || [];
+    const tpp = window.areaTiles?.['Trestné právo procesné'] || [];
+    return [...tph, ...tpp];
+  }
+  return window.areaTiles?.[areaName] || [];
+}
+
+function getCasesForArea(areaName) {
+  if (areaName === 'Trestné právo') {
+    const tph = window.areaCases?.['Trestné právo hmotné'] || [];
+    const tpp = window.areaCases?.['Trestné právo procesné'] || [];
+    return [...tph, ...tpp];
+  }
+  return window.areaCases?.[areaName] || [];
 }
 
 export { renderAreas, renderModules };
