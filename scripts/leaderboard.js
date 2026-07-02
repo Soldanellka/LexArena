@@ -73,7 +73,7 @@ function aggregateStats(duelsData, period) {
    .lb-row, .lb-rank, .lb-rank-1/2/3, .lb-name, .lb-stats,
    .lb-bar, .lb-bar-fill – viď styles.css)
 ============================================================ */
-function renderLeaderboardList(list) {
+async function renderLeaderboardList(list) {
   const box = $('duelLeaderboard');
   if (!box) return;
 
@@ -87,8 +87,10 @@ function renderLeaderboardList(list) {
   // Načítaj avatary hráčov z Firebase
   const avatarMap = {};
   try {
+    const dbase = window.db;
+    if (!dbase) throw new Error('db nedostupná');
     const userSnaps = await Promise.all(
-      list.map(p => get(ref(db, `users/${p.nick}/avatar`)))
+      list.map(p => get(ref(dbase, `users/${p.nick}/avatar`)))
     );
     list.forEach((p, i) => {
       avatarMap[p.nick] = userSnaps[i].exists()
