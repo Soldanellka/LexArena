@@ -212,3 +212,145 @@ export function prevCase(){
    Internal index
    ========================= */
 let currentCaseIndex = 0;
+
+/* =========================
+   LOAD CASES FROM DUEL QUESTIONS
+   Načíta prípady z JSON otázok (každá otázka = prípad)
+   ========================= */
+export function loadCasesFromQuestions(questions, areaTitle) {
+  const container = $('caseContainer');
+  if (!container) return;
+
+  if (!questions || !questions.length) {
+    container.innerHTML = '<div class="small muted">Žiadne otázky pre túto oblasť.</div>';
+    return;
+  }
+
+  // Konvertuj otázky do formátu prípadov
+  const cases = questions.map((q, i) => ({
+    id: `case_${i}`,
+    title: q.question || `Prípad ${i + 1}`,
+    options: q.options || [],
+    correct: typeof q.correct === 'number' ? q.correct : 0,
+    source: q.source || areaTitle
+  }));
+
+  // Ulož do window pre renderovanie
+  window.__currentCases = cases;
+  window.__currentCaseIndex = 0;
+  window.__answeredCasesLocal = new Set();
+
+  renderCasesFromQuestions(container);
+}
+
+function renderCasesFromQuestions(container) {
+  const cases = window.__currentCases || [];
+  const idx = window.__currentCaseIndex || 0;
+  const answered = window.__answeredCasesLocal || new Set();
+
+  if (!cases.length) return;
+
+  const c = cases[idx];
+  const isDone = answered.has(c.id);
+  const total = cases.length;
+
+  container.innerHTML = '';
+
+  // Hlavička
+  const header = document.createElement('div');
+  header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:12px';
+  header.innerHTML = `
+    <div class="small muted">Prípad ${idx + 1} z ${total}
+      ${c.source ? `• <em>${c.source}</em>` : ''}
+    </div>
+    <div style="display:flex;gap:6px">
+      <button class="btn" id="casePrevBtn" ${idx === 0 ? 'disabled' : ''} style="padding:4px 10px;font-size:12px">◀</button>
+      <button class="btn" id="caseNextBtn" ${idx === total-1 ? 'disabled' : ''} style="padding:4px 10px;font-size:12px">▶</button>
+    </div>`;
+  container.appendChild(header);
+
+  // Otázka
+  const qEl = document.createElement('div');
+  qEl.style.cssText = 'font-weight:600;font-size:14px;line-height:1.5;margin-bottom:14px;padding:12px;background:rgba(240,138,166,0.06);border-radius:10px;border-left:3px solid var(--accent-3)';
+  qEl.textContent = c.title;
+  container.appendChild(qEl);
+
+  // Možnosti
+  const optContainer = document.createElement('div');
+  optContainer.style.cssText = 'display:flex;flex-direction:column;gap:8px';
+
+  c.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'btn';
+    btn.style.cssText = 'text-align:left;padding:10px 14px;font-size:13px;border-radius:10px;transition:all .18s;';
+    btn.textContent = opt;
+
+    if (isDone) {
+      if (i === c.correct) {
+        btn.style.background = 'rgba(34,197,94,0.12)';
+        btn.style.borderColor = 'rgba(34,197,94,0.4)';
+        btn.textContent = opt + '  ✓';
+      }
+      btn.disabled = true;
+    } else {
+      btn.onclick = () => {
+        const isCorrect = i === c.correct;
+        answered.add(c.id);
+        window.__answeredCasesLocal = answered;
+
+        optContainer.querySelectorAll('button').forEach((b, bi) => {
+          b.disabled = true;
+          if (bi === c.correct) {
+            b.style.background = 'rgba(34,197,94,0.12)';
+            b.style.borderColor = 'rgba(34,197,94,0.4)';
+            b.textContent = b.textContent + '  ✓';
+          } else if (bi === i && !isCorrect) {
+            b.style.background = 'rgba(239,68,68,0.08)';
+            b.style.borderColor = 'rgba(239,68,68,0.3)';
+            b.textContent = b.textContent + '  ✗';
+          }
+        });
+
+        // Správa o výsledku
+        const msg = document.createElement('div');
+        msg.style.cssText = `margin-top:10px;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:600;
+          background:${isCorrect ? 'rgba(34,197,94,0.1)' : 'rgba(239,68,68,0.08)'};
+          color:${isCorrect ? '#16a34a' : '#dc2626'};`;
+        msg.textContent = isCorrect
+          ? '✅ Správne! Výborne!'
+          : `❌ Nesprávne. Správna odpoveď: ${c.options[c.correct]}`;
+        container.appendChild(msg);
+      };
+    }
+
+    optContainer.appendChild(btn);
+  });
+
+  container.appendChild(optContainer);
+
+  // Navigácia
+  container.querySelector('#casePrevBtn')?.addEventListener('click', () => {
+    window.__currentCaseIndex = Math.max(0, idx - 1);
+    renderCasesFromQuestions(container);
+  });
+
+  container.querySelector('#caseNextBtn')?.addEventListener('click', () => {
+    window.__currentCaseIndex = Math.min(total - 1, idx + 1);
+    renderCasesFromQuestions(container);
+  });
+
+  // Progres
+  const prog = document.createElement('div');
+  prog.style.cssText = 'margin-top:14px';
+  prog.innerHTML = `
+    <div class="small muted" style="margin-bottom:4px">
+      Vyriešené: ${answered.size} / ${total}
+    </div>
+    <div class="progress">
+      <i style="width:${Math.round(answered.size/total*100)}%;display:block;height:100%;
+        background:linear-gradient(90deg,var(--accent-2),var(--accent-3));border-radius:999px"></i>
+    </div>`;
+  container.appendChild(prog);
+}
+
+window.loadCasesFromQuestions = loadCasesFromQuestions;

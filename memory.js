@@ -480,3 +480,66 @@ function memoryKeyboardHandler(e){
     cards[memoryFocusedIndex].click();
   }
 }
+
+/* ===============================
+   BUILD MEMORY FROM DUEL QUESTIONS
+   Načíta páry z JSON otázok (question ↔ správna odpoveď)
+   =============================== */
+export function buildMemoryFromQuestions(questions) {
+  const board = $('memoryBoard');
+  if (!board) return;
+
+  if (!questions || !questions.length) {
+    board.innerHTML = '<div class="small muted">Žiadne otázky pre túto oblasť.</div>';
+    return;
+  }
+
+  ensureMemoryControls();
+
+  // Vytvor páry: otázka ↔ správna odpoveď (max 8 párov pre prehľadnosť)
+  const pairs = questions.slice(0, 8).map((q, i) => {
+    const correctAnswer = Array.isArray(q.options) && typeof q.correct === 'number'
+      ? q.options[q.correct]
+      : '';
+    // Skráť otázku ak je príliš dlhá
+    const shortQ = q.question && q.question.length > 80
+      ? q.question.substring(0, 78) + '…'
+      : (q.question || '?');
+    return {
+      id: `q${i}`,
+      left: shortQ,
+      right: correctAnswer
+    };
+  }).filter(p => p.right); // len páry so správnou odpoveďou
+
+  if (!pairs.length) {
+    board.innerHTML = '<div class="small muted">Otázky nemajú správne odpovede.</div>';
+    return;
+  }
+
+  const cards = [];
+  pairs.forEach(p => {
+    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false });
+    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false });
+  });
+
+  shuffleArray(cards);
+
+  memoryState.cards = cards;
+  memoryState.first = null;
+  memoryState.second = null;
+  memoryState.lock = false;
+  memoryState.matches = 0;
+  memoryState.wrongs = 0;
+  memoryState.elapsed = 0;
+  memoryState.startTime = Date.now();
+
+  startTimer();
+  renderMemoryBoard();
+  updateMemoryCounter();
+  updateStats();
+  memoryFocusedIndex = 0;
+}
+
+// Globálny export pre volanie z init.js
+window.buildMemoryFromQuestions = buildMemoryFromQuestions;

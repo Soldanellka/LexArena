@@ -78,6 +78,10 @@ function renderAreas() {
           startDuel(name);
         };
       }
+
+      // 🔥 Načítaj otázky pre Memory a Prípady z tejto oblasti
+      window.__selectedAreaName = name;
+      preloadAreaGames(name);
     };
 
     list.appendChild(btn);
@@ -87,6 +91,34 @@ function renderAreas() {
 /* =====================================================
    EXPORTY
    ===================================================== */
+
+/* ===============================
+   PRELOAD MEMORY + CASES pre vybranú oblasť
+   =============================== */
+function preloadAreaGames(areaName) {
+  // Počkaj kým sú otázky načítané
+  let attempts = 0;
+  const check = setInterval(() => {
+    attempts++;
+    const questions = getQuestionsForArea(areaName);
+    if (questions && questions.length > 0) {
+      clearInterval(check);
+      window.__areaQuestionsForGames = questions;
+      console.log(`🎮 Načítaných ${questions.length} otázok pre ${areaName} → Memory & Prípady`);
+    }
+    if (attempts > 50) clearInterval(check);
+  }, 100);
+}
+
+function getQuestionsForArea(areaName) {
+  if (areaName === 'Trestné právo') {
+    const tph = window.areas?.['Trestné právo hmotné'] || [];
+    const tpp = window.areas?.['Trestné právo procesné'] || [];
+    return [...tph.slice(0,5), ...tpp.slice(0,5)];
+  }
+  return window.areas?.[areaName] || [];
+}
+
 export { renderAreas, renderModules };
 
 /* =====================================================

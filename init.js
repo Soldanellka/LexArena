@@ -192,6 +192,7 @@ export function init() {
 
     /* 🔹 Feedback systém */
     initFeedbackSystem();
+    renderPublishedFeedback();
   });
 }
 
@@ -425,6 +426,150 @@ function initVideoSystem() {
 
 
 
+
+/* =====================================================
+   ADMIN FEEDBACK MANAGEMENT
+   ===================================================== */
+async function loadAdminFeedback(listEl, db, ref, get, update) {
+  listEl.innerHTML = '<div class="small muted" style="padding:8px">Načítavam...</div>';
+
+  const snap = await get(ref(db, 'feedback'));
+  const data = snap.val() || {};
+  const items = Object.entries(data)
+    .sort(([,a],[,b]) => b.createdAt - a.createdAt);
+
+  if (!items.length) {
+    listEl.innerHTML = '<div class="small muted" style="padding:8px">Žiadne príspevky.</div>';
+    return;
+  }
+
+  const typeEmoji = { napad: '💡', chyba: '🐛', pochvala: '⭐' };
+  const fmtDate = ts => {
+    if (!ts) return '';
+    const d = new Date(ts);
+    return d.getDate()+'.'+(d.getMonth()+1)+'. '+d.getHours()+':'+String(d.getMinutes()).padStart(2,'0');
+  };
+  const statusLabel = { pending: '⏳ Čaká', published: '✅ Zverejnené', hidden: '🚫 Skryté' };
+
+  listEl.innerHTML = items.map(([id, f]) => `
+    <div class="admin-feedback-item" data-id="${id}" style="
+      padding:10px 12px;border-bottom:1px solid var(--card-border);font-size:13px;
+      background:${f.status==='published'?'rgba(34,197,94,0.04)':f.status==='hidden'?'rgba(239,68,68,0.04)':'inherit'}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span>${typeEmoji[f.type]||'📝'} <strong>${f.nick}</strong></span>
+        <div style="display:flex;gap:4px;align-items:center">
+          <span class="small" style="color:var(--muted)">${statusLabel[f.status||'pending']}</span>
+          <span class="small muted">${fmtDate(f.createdAt)}</span>
+        </div>
+      </div>
+      <div style="margin-bottom:8px">${f.text}</div>
+      ${f.adminReply ? `
+        <div style="background:rgba(240,138,166,0.08);border-left:3px solid var(--accent-3);
+          padding:6px 10px;border-radius:0 8px 8px 0;margin-bottom:8px;font-size:12px">
+          💬 <strong>Admin:</strong> ${f.adminReply.text}
+          <span class="small muted" style="margin-left:6px">${fmtDate(f.adminReply.createdAt)}</span>
+        </div>` : ''}
+      <div style="display:flex;gap:4px;flex-wrap:wrap">
+        ${f.status !== 'published' ? `<button class="btn fb-publish" data-id="${id}" style="font-size:11px;padding:3px 8px">✅ Zverejniť</button>` : ''}
+        ${f.status !== 'hidden' ? `<button class="btn fb-hide" data-id="${id}" style="font-size:11px;padding:3px 8px">🚫 Skryť</button>` : ''}
+        <button class="btn fb-reply" data-id="${id}" style="font-size:11px;padding:3px 8px">💬 Odpovedať</button>
+      </div>
+      <div class="fb-reply-form" data-id="${id}" style="display:none;margin-top:8px">
+        <textarea class="feedback-textarea fb-reply-text" rows="2"
+          placeholder="Napíš odpoveď..." maxlength="500"
+          style="font-size:12px">${f.adminReply?.text||''}</textarea>
+        <button class="btn btn-primary fb-reply-send" data-id="${id}"
+          style="font-size:11px;padding:4px 10px;margin-top:4px">Odoslať odpoveď</button>
+      </div>
+    </div>
+  `).join('');
+
+  // Event listenery
+  listEl.querySelectorAll('.fb-publish').forEach(btn => {
+    btn.onclick = async () => {
+      await update(ref(db, `feedback/${btn.dataset.id}`), { status: 'published' });
+      await loadAdminFeedback(listEl, db, ref, get, update);
+      renderPublishedFeedback();
+    };
+  });
+
+  listEl.querySelectorAll('.fb-hide').forEach(btn => {
+    btn.onclick = async () => {
+      await update(ref(db, `feedback/${btn.dataset.id}`), { status: 'hidden' });
+      await loadAdminFeedback(listEl, db, ref, get, update);
+      renderPublishedFeedback();
+    };
+  });
+
+  listEl.querySelectorAll('.fb-reply').forEach(btn => {
+    btn.onclick = () => {
+      const form = listEl.querySelector(`.fb-reply-form[data-id="${btn.dataset.id}"]`);
+      if (form) form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    };
+  });
+
+  listEl.querySelectorAll('.fb-reply-send').forEach(btn => {
+    btn.onclick = async () => {
+      const form = listEl.querySelector(`.fb-reply-form[data-id="${btn.dataset.id}"]`);
+      const text = form?.querySelector('.fb-reply-text')?.value?.trim();
+      if (!text) return;
+      await update(ref(db, `feedback/${btn.dataset.id}`), {
+        adminReply: { text, createdAt: Date.now() }
+      });
+      await loadAdminFeedback(listEl, db, ref, get, update);
+      renderPublishedFeedback();
+    };
+  });
+}
+
+/* =====================================================
+   VEREJNÁ NÁSTENKA – zverejnené príspevky
+   ===================================================== */
+async function renderPublishedFeedback() {
+  const box = document.getElementById('publishedFeedbackBox');
+  if (!box) return;
+
+  const db = window.db;
+  if (!db) return;
+
+  const { ref, get } = await import(
+    "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+  );
+
+  const snap = await get(ref(db, 'feedback'));
+  const data = snap.val() || {};
+  const published = Object.values(data)
+    .filter(f => f.status === 'published')
+    .sort((a, b) => b.createdAt - a.createdAt);
+
+  if (!published.length) {
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne zverejnené príspevky.</div>';
+    return;
+  }
+
+  const typeEmoji = { napad: '💡', chyba: '🐛', pochvala: '⭐' };
+  const fmtDate = ts => {
+    if (!ts) return '';
+    const d = new Date(ts);
+    return d.getDate()+'.'+(d.getMonth()+1)+'.';
+  };
+
+  box.innerHTML = published.slice(0, 10).map(f => `
+    <div style="padding:10px 0;border-bottom:1px solid var(--card-border)">
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+        <span class="small">${typeEmoji[f.type]||'📝'} <strong>${f.nick}</strong></span>
+        <span class="small muted">${fmtDate(f.createdAt)}</span>
+      </div>
+      <div style="font-size:13px;margin-bottom:${f.adminReply?'6px':'0'}">${f.text}</div>
+      ${f.adminReply ? `
+        <div style="background:rgba(240,138,166,0.08);border-left:3px solid var(--accent-3);
+          padding:5px 8px;border-radius:0 6px 6px 0;font-size:12px">
+          💬 <em>${f.adminReply.text}</em>
+        </div>` : ''}
+    </div>
+  `).join('');
+}
+
 /* =====================================================
    ROLA SYSTÉM – admin panel, garant, role management
    ===================================================== */
@@ -542,40 +687,13 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
       msg.style.color = 'var(--muted)';
     };
 
-    // Zoznam pripomienok
+    // Zoznam pripomienok s admin akciami
     panel.querySelector('#listFeedbackBtn').onclick = async () => {
       const listEl = panel.querySelector('#feedbackList');
       const isHidden = listEl.style.display === 'none';
       if (!isHidden) { listEl.style.display = 'none'; return; }
-
-      listEl.innerHTML = '<div class="small muted">Načítavam...</div>';
       listEl.style.display = 'block';
-
-      const snap = await get(ref(db, 'feedback'));
-      const data = snap.val() || {};
-      const items = Object.entries(data)
-        .sort(([,a],[,b]) => b.createdAt - a.createdAt);
-
-      if (!items.length) {
-        listEl.innerHTML = '<div class="small muted" style="padding:8px">Žiadne pripomienky.</div>';
-        return;
-      }
-
-      const typeEmoji = { napad: '💡', chyba: '🐛', pochvala: '⭐' };
-      const fmtDate = ts => {
-        const d = new Date(ts);
-        return d.getDate()+'.'+(d.getMonth()+1)+'. '+d.getHours()+':'+String(d.getMinutes()).padStart(2,'0');
-      };
-
-      listEl.innerHTML = items.map(([id, f]) => `
-        <div style="padding:8px 10px;border-bottom:1px solid var(--card-border);font-size:13px">
-          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-            <span>${typeEmoji[f.type]||'📝'} <strong>${f.nick}</strong></span>
-            <span class="small muted">${fmtDate(f.createdAt)}</span>
-          </div>
-          <div>${f.text}</div>
-        </div>
-      `).join('');
+      await loadAdminFeedback(listEl, db, ref, get, update);
     };
 
     // Zoznam hráčov
@@ -969,6 +1087,54 @@ function attachEvents() {
     closeLoginModal.addEventListener('click', () => {
       const m = $('loginCodeModal');
       if (m) m.style.display = 'none';
+    });
+  }
+
+  /* 🔥 Kartičky Memory */
+  const openMemoryBtn = $('openMemoryBtn');
+  if (openMemoryBtn) {
+    openMemoryBtn.addEventListener('click', () => {
+      const modal = $('memoryModal');
+      if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
+
+      const areaQs = window.__areaQuestionsForGames;
+      if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
+        window.buildMemoryFromQuestions(areaQs);
+      } else {
+        // Fallback na pôvodné sety
+        if (typeof buildMemory === 'function') buildMemory('TPH-A1');
+      }
+    });
+  }
+
+  const closeMemoryBtn = $('closeMemory');
+  if (closeMemoryBtn) {
+    closeMemoryBtn.addEventListener('click', () => {
+      const modal = $('memoryModal');
+      if (modal) { modal.style.display = 'none'; modal.classList.remove('open'); }
+    });
+  }
+
+  /* 🔥 Prípady z praxe */
+  const openCasesBtn = $('openCasesBtn');
+  if (openCasesBtn) {
+    openCasesBtn.addEventListener('click', () => {
+      const modal = $('casesModal');
+      if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
+
+      const areaQs = window.__areaQuestionsForGames;
+      const areaName = window.__selectedAreaName || '';
+      if (areaQs && areaQs.length && typeof window.loadCasesFromQuestions === 'function') {
+        window.loadCasesFromQuestions(areaQs, areaName);
+      }
+    });
+  }
+
+  const closeCasesBtn = $('closeCases');
+  if (closeCasesBtn) {
+    closeCasesBtn.addEventListener('click', () => {
+      const modal = $('casesModal');
+      if (modal) { modal.style.display = 'none'; modal.classList.remove('open'); }
     });
   }
 

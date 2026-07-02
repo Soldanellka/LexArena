@@ -1713,3 +1713,35 @@ body {
 /* ============================================================
    KONIEC
 ============================================================ */
+
+/* Avatar v rebríčku */
+.lb-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--card-border);
+  background: var(--surface);
+}
+
+.lb-rank-1 .lb-avatar { border-color: #f3c45a; }
+.lb-rank-2 .lb-avatar { border-color: #c3ccd3; }
+.lb-rank-3 .lb-avatar { border-color: #cf935b; }
+
+/* ============================================================
+   📋 NÁSTENKA + ADMIN FEEDBACK
+============================================================ */
+
+.highlight-noticeboard {
+  border-left: 3px solid #a78bfa;
+}
+
+.admin-feedback-item:last-child {
+  border-bottom: none;
+}
+
+.fb-reply-text {
+  width: 100%;
+  box-sizing: border-box;
+}
