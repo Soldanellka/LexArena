@@ -291,17 +291,17 @@ const VIDEO_CONFIG = {
   v1: {
     title: 'Ako funguje LexArena?',
     url: 'https://www.youtube.com/embed/PHkX6DmuLic?autoplay=1&rel=0',
-    duration: 180
+    duration: 30
   },
   v2: {
     title: 'Ako hrať duelový kvíz?',
     url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
-    duration: 120
+    duration: 30
   },
   v3: {
     title: 'Ako nahlasovať nezrovnalosti?',
     url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
-    duration: 120
+    duration: 30
   }
 };
 
@@ -369,9 +369,31 @@ function initVideoSystem() {
       // Ulož do localStorage (jednoduchá ochrana)
       localStorage.setItem(`video_claimed_${currentVideoId}`, Date.now());
 
-      // Prideľ 12§
-      if (typeof window.awardParagrafy === 'function') {
-        await window.awardParagrafy(12, 'za pozretie videa');
+      // Prideľ 12§ - priamo cez Firebase ako fallback
+      try {
+        if (typeof window.awardParagrafy === 'function') {
+          await window.awardParagrafy(12, 'za pozretie videa 🎬');
+        } else {
+          // Fallback - priamy zápis do Firebase
+          const nick = localStorage.getItem('playerNick');
+          const db = window.db;
+          if (db && nick) {
+            const { ref, get, update } = await import(
+              "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+            );
+            const snap = await get(ref(db, `users/${nick}/paragrafy`));
+            const current = snap.exists() ? snap.val() : 0;
+            await update(ref(db, `users/${nick}`), {
+              paragrafy: current + 12,
+              lastParUpdate: Date.now()
+            });
+            const el = document.getElementById('parCount') || document.getElementById('paragrafValue');
+            if (el) el.textContent = current + 12;
+          }
+        }
+        console.log('✅ +12§ za video pridelených');
+      } catch(e) {
+        console.error('❌ Chyba pri prideľovaní §:', e);
       }
 
       // Aktualizuj UI
