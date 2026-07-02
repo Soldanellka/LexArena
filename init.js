@@ -332,15 +332,14 @@ window.openVideo = function(videoId) {
     claimBtn.style.display = 'none';
     alreadyClaimed.style.display = 'block';
   } else {
-    claimBtn.style.display = 'none';
     alreadyClaimed.style.display = 'none';
-
-    // Po uplynutí trvania videa sa odomkne tlačidlo odmeny
+    // Tlačidlo sa zobrazí po 5 sekundách (overenie že video spustil)
+    claimBtn.style.display = 'none';
     if (videoRewardTimer) clearTimeout(videoRewardTimer);
     videoRewardTimer = setTimeout(() => {
       claimBtn.style.display = 'block';
       claimBtn.style.animation = 'duelBadgePop .4s ease';
-    }, cfg.duration * 1000);
+    }, 5000);
   }
 
   modal.style.display = 'flex';
