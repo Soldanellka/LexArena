@@ -290,9 +290,8 @@ function initFeedbackSystem() {
 const VIDEO_CONFIG = {
   v1: {
     title: 'Ako funguje LexArena?',
-    // Zatiaľ placeholder — nahraď YouTube embed URL
-    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
-    duration: 180 // sekundy — po uplynutí sa odomkne odmena
+    url: 'https://www.youtube.com/embed/PHkX6DmuLic?autoplay=1&rel=0',
+    duration: 180
   },
   v2: {
     title: 'Ako hrať duelový kvíz?',
@@ -410,26 +409,36 @@ function initVideoSystem() {
    ===================================================== */
 
 async function initRoleSystem() {
+  console.log('🔑 initRoleSystem štart');
   const db = window.db;
   const nick = localStorage.getItem('playerNick');
-  if (!db || !nick) return;
-
-  const { ref, get, update, onValue } =
-    await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
-
-  // Načítaj rolu z Firebase - skontroluj obe miesta
-  const snapUsers = await get(ref(db, `users/${nick}/role`));
-  const snapLeader = await get(ref(db, `leaderboard/${nick}/role`));
-  const role = snapUsers.exists()
-    ? snapUsers.val()
-    : snapLeader.exists()
-    ? snapLeader.val()
-    : 'student';
-  
-  // Synchronizuj rolu do users/ ak tam nie je
-  if (!snapUsers.exists() && role !== 'student') {
-    await update(ref(db, `users/${nick}`), { role });
+  console.log('🔑 db:', !!db, 'nick:', nick);
+  if (!db || !nick) {
+    console.warn('🔑 chýba db alebo nick');
+    return;
   }
+
+  try {
+    const { ref, get, update } =
+      await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+    // Načítaj rolu z Firebase - skontroluj obe miesta
+    const snapUsers = await get(ref(db, `users/${nick}/role`));
+    const snapLeader = await get(ref(db, `leaderboard/${nick}/role`));
+    console.log('🔑 users role:', snapUsers.val(), '| leaderboard role:', snapLeader.val());
+    
+    const role = snapUsers.exists()
+      ? snapUsers.val()
+      : snapLeader.exists()
+      ? snapLeader.val()
+      : 'student';
+    
+    console.log('🔑 Načítaná rola:', role);
+
+    // Synchronizuj rolu do users/ ak tam nie je
+    if (!snapUsers.exists() && role !== 'student') {
+      await update(ref(db, `users/${nick}`), { role });
+    }
 
   // Ulož Firebase rolu (skutočná rola) aj view rolu zvlášť
   localStorage.setItem('playerFirebaseRole', role);
@@ -443,12 +452,15 @@ async function initRoleSystem() {
   // Aktualizuj badge
   initRoleBadge();
 
-  // Zobraz admin panel podľa view roly
-  if (viewRole === 'admin' || viewRole === 'garant') {
-    renderAdminPanel(viewRole, db, ref, get, update, onValue);
-  } else {
-    const panel = document.getElementById('adminPanel');
-    if (panel) panel.innerHTML = '<span class="small muted">Pre zobrazenie prepni rolu na garant.</span>';
+    // Zobraz admin panel podľa view roly
+    if (viewRole === 'admin' || viewRole === 'garant') {
+      renderAdminPanel(viewRole, db, ref, get, update, null);
+    } else {
+      const panel = document.getElementById('adminPanel');
+      if (panel) panel.innerHTML = '<span class="small muted">Pre zobrazenie prepni rolu na garant.</span>';
+    }
+  } catch(e) {
+    console.error('❌ initRoleSystem chyba:', e);
   }
 }
 
