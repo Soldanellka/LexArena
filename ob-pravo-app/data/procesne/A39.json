@@ -1,0 +1,114 @@
+{
+  "id": "39",
+  "title": "Exekučné konanie – pojem, funkcie, predpoklady začatia a priebeh",
+  "schemaVersion": "1.1",
+  "tags": ["exekučné konanie", "exekučný titul", "exekučný súd", "poverenie na vykonanie exekúcie"],
+  "summary": "Exekučné konanie je konanie upravené Exekučným poriadkom (zákon č. 233/1995 Z. z.), ktorého účelom je nútený výkon exekučného titulu v prípade, že povinný dobrovoľne nesplnil povinnosť, ktorá mu z neho vyplýva. Plní najmä donucovaciu funkciu (núti povinného k splneniu povinnosti) a satisfakčnú funkciu (reálne uspokojuje oprávneného), popri tom pôsobí aj preventívne a výchovne voči ostatným účastníkom právnych vzťahov.\n\nPredpokladom začatia exekučného konania je existencia vykonateľného exekučného titulu a podanie exekučného návrhu oprávneným, dnes spravidla elektronicky prostredníctvom exekútora zapísaného v príslušnom registri. Exekútor následne požiada o poverenie na vykonanie exekúcie exekučný súd – od reformy exekučného konania z roku 2017 je jediným exekučným súdom pre celé územie Slovenskej republiky Okresný súd Banská Bystrica. Po udelení poverenia exekútor vykoná exekúciu spôsobom uvedeným v poverení, napríklad zrážkami zo mzdy, prikázaním pohľadávky z účtu alebo predajom hnuteľných či nehnuteľných vecí povinného.\n\nZapamätaj si:\n- Exekučné konanie slúži na nútený výkon exekučného titulu pri nesplnení povinnosti dobrovoľne.\n- Plní donucovaciu a satisfakčnú funkciu.\n- Predpokladom je vykonateľný exekučný titul a exekučný návrh oprávneného.\n- Jediným exekučným súdom v SR je od roku 2017 Okresný súd Banská Bystrica.\n- Exekútor vykonáva exekúciu na základe poverenia vydaného exekučným súdom."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je účelom exekučného konania?",
+      "options": ["Nútený výkon exekučného titulu, ak povinný dobrovoľne nesplnil svoju povinnosť", "Rozhodnutie o tom, kto má pravdu v spore", "Zmierovacie konanie medzi stranami", "Trestné stíhanie dlžníka"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Exekučné konanie nerieši spornú otázku práva, ale vynucuje splnenie už existujúcej povinnosti.",
+        "wrong": "Nesprávne. O tom, kto má pravdu, sa rozhoduje v konaní vo veci samej, nie v exekúcii, a nejde ani o zmier či trestné stíhanie."
+      }
+    },
+    {
+      "question": "Čo je predpokladom začatia exekučného konania?",
+      "options": ["Existencia vykonateľného exekučného titulu a podanie exekučného návrhu oprávneným", "Iba ústna dohoda medzi veriteľom a dlžníkom", "Súhlas dlžníka s vedením exekúcie", "Rozhodnutie notára o vine dlžníka"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Bez vykonateľného exekučného titulu a návrhu oprávneného exekúciu nemožno začať.",
+        "wrong": "Nesprávne. Ústna dohoda ani súhlas dlžníka nenahrádzajú exekučný titul, a o „vine“ dlžníka sa v civilnej exekúcii nerozhoduje."
+      }
+    },
+    {
+      "question": "Kto udeľuje exekútorovi poverenie na vykonanie exekúcie?",
+      "options": ["Súd (od reformy z roku 2017 exekučný súd)", "Sám exekútor bez účasti súdu", "Notár ako súdny komisár", "Minister spravodlivosti SR osobne"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Poverenie vydáva výlučne exekučný súd, nie sám exekútor.",
+        "wrong": "Nesprávne. Notár a minister spravodlivosti nemajú v tomto procese rozhodovaciu úlohu."
+      }
+    },
+    {
+      "question": "Ktorý súd je od reformy exekúcií z roku 2017 jediným exekučným súdom pre celé Slovensko?",
+      "options": ["Okresný súd Bratislava I", "Okresný súd Banská Bystrica", "Krajský súd v Košiciach", "Najvyšší súd SR"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Reforma centralizovala udeľovanie poverení na jediný exekučný súd – Okresný súd Banská Bystrica.",
+        "wrong": "Nesprávne. Ostatné uvedené súdy nie sú príslušným exekučným súdom podľa súčasnej právnej úpravy."
+      }
+    },
+    {
+      "question": "Aké funkcie plní exekučné konanie?",
+      "options": ["Iba represívnu funkciu voči povinnému", "Donucovaciu a satisfakčnú funkciu – núti povinného splniť povinnosť a uspokojuje oprávneného", "Výlučne evidenčnú funkciu bez donucovacích účinkov", "Funkciu nahradiť súdne konanie vo veci samej"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Exekúcia núti povinného k plneniu a súčasne reálne uspokojuje oprávneného.",
+        "wrong": "Nesprávne. Nejde len o evidenciu ani o náhradu súdneho konania vo veci samej, ktoré exekúcii vždy predchádza."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Exekučné konanie", "definition": "Konanie na nútený výkon exekučného titulu, ak povinný dobrovoľne nesplnil svoju povinnosť." },
+    { "term": "Exekučný titul", "definition": "Vykonateľné rozhodnutie alebo iná listina, na základe ktorej možno viesť exekúciu." },
+    { "term": "Exekučný návrh", "definition": "Návrh oprávneného podaný exekútorovi na začatie exekúcie." },
+    { "term": "Poverenie na vykonanie exekúcie", "definition": "Vydáva ho exekučný súd (Okresný súd Banská Bystrica) po posúdení návrhu." },
+    { "term": "Donucovacia a satisfakčná funkcia", "definition": "Exekúcia núti povinného splniť povinnosť a zároveň uspokojuje oprávneného." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Podanie exekučného návrhu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Veriteľ má právoplatný a vykonateľný rozsudok, no dlžník napriek tomu dobrovoľne neplatí.", "options": [], "correct": 0 },
+        {
+          "question": "Čo môže veriteľ urobiť?",
+          "options": ["Podať exekučný návrh exekútorovi na základe vykonateľného exekučného titulu", "Musí sám vynútiť plnenie svojpomocne", "Musí počkať, kým dlžník sám zaplatí, bez ďalšej možnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Práve exekučný návrh je zákonným nástrojom na vynútenie splnenia rozsudku.",
+            "wrong": "Nesprávne. Svojpomoc nie je prípustným riešením a veriteľ nemusí pasívne čakať na dobrovoľné plnenie."
+          }
+        },
+        {
+          "question": "Kto udelí exekútorovi poverenie na vykonanie tejto exekúcie?",
+          "options": ["Exekučný súd (Okresný súd Banská Bystrica)", "Sám exekútor bez súdu", "Notár"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Poverenie udeľuje výlučne príslušný exekučný súd.",
+            "wrong": "Nesprávne. Exekútor sám seba poveriť nemôže a notár nemá v tomto konaní rozhodovaciu úlohu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Chýbajúci exekučný titul",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Osoba tvrdí, že jej niekto dlhuje peniaze, no nemá žiadne právoplatné rozhodnutie ani inú vykonateľnú listinu, ktorá by tento dlh potvrdzovala.", "options": [], "correct": 0 },
+        {
+          "question": "Môže táto osoba rovno podať exekučný návrh?",
+          "options": ["Nie, bez vykonateľného exekučného titulu exekúciu nemožno viesť", "Áno, exekúciu možno viesť aj bez exekučného titulu", "Áno, stačí jej vlastné čestné vyhlásenie o existencii dlhu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Exekučný titul je nevyhnutnou podmienkou vedenia exekúcie.",
+            "wrong": "Nesprávne. Čestné vyhlásenie veriteľa nenahrádza vykonateľný exekučný titul."
+          }
+        },
+        {
+          "question": "Čo musí táto osoba urobiť najprv?",
+          "options": ["Získať exekučný titul, napríklad právoplatný a vykonateľný rozsudok súdu", "Rovno kontaktovať exekútora bez ďalších podkladov", "Počkať, kým dlžník dobrovoľne prizná dlh na verejnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez exekučného titulu nemá exekútor právny podklad na vedenie exekúcie.",
+            "wrong": "Nesprávne. Kontaktovanie exekútora bez podkladov ani čakanie na verejné priznanie dlhu nerieši chýbajúci exekučný titul."
+          }
+        }
+      ]
+    }
+  ]
+}

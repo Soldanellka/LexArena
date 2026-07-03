@@ -1,0 +1,114 @@
+{
+  "id": "36",
+  "title": "Konanie o dedičstve",
+  "schemaVersion": "1.1",
+  "tags": ["konanie o dedičstve", "súdny komisár", "odúmrť", "predlžené dedičstvo"],
+  "summary": "Konanie o dedičstve je typickým mimosporovým konaním podľa CMP, ktoré sa začína aj bez návrhu, len čo sa súd (na základe oznámenia matriky o úmrtí) dozvie o smrti poručiteľa – ide o výrazný prejav zásady oficiality. Úkony v konaní vykonáva súdny komisár, ktorým je notár poverený súdom podľa rozvrhu; notár koná v mene súdu a pripravuje podklady pre rozhodnutie, samotné rozhodnutie vo veci samej však má formu uznesenia súdu. Konanie prebieha vo fázach – predbežné šetrenie (zistenie okruhu dedičov, majetku a záväzkov poručiteľa), vyporiadanie dedičstva (dohodou dedičov schválenou súdom, alebo rozhodnutím podľa dedičských podielov) a skončenie konania uznesením o dedičstve.\n\nAk dlhy poručiteľa prevyšujú hodnotu jeho majetku, ide o predlžené dedičstvo, pri ktorom prichádza do úvahy jeho likvidácia namiesto štandardného vyporiadania medzi dedičmi. Ak niet žiadneho dediča alebo dedičstvo žiadny z dedičov neprijme, prechádza majetok na štát ako tzv. odúmrť, aby nezostal bez vlastníka.\n\nZapamätaj si:\n- Konanie o dedičstve sa začína aj bez návrhu, keď sa súd dozvie o úmrtí (zásada oficiality).\n- Úkony vykonáva súdny komisár – notár poverený súdom, konajúci v jeho mene.\n- Vo veci samej rozhoduje súd uznesením.\n- Predlžené dedičstvo (dlhy prevyšujú majetok) môže viesť k likvidácii dedičstva.\n- Ak niet dedičov alebo dedičstvo nikto neprijme, prechádza majetok na štát ako odúmrť."
+  ,
+  "quiz": [
+    {
+      "question": "Kedy sa začína konanie o dedičstve?",
+      "options": ["Iba na návrh dediča", "Aj bez návrhu, keď sa súd dozvie o úmrtí poručiteľa (zásada oficiality)", "Až po uplynutí jedného roka od úmrtia", "Iba na návrh notára"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Konanie o dedičstve súd začína z úradnej moci, len čo sa dozvie o úmrtí poručiteľa.",
+        "wrong": "Nesprávne. Nie je potrebný návrh dediča ani notára a konanie nečaká na uplynutie žiadnej lehoty od úmrtia."
+      }
+    },
+    {
+      "question": "Kto v konaní o dedičstve vykonáva úkony ako súdny komisár?",
+      "options": ["Sudca špecializovaný na dedičské veci", "Notár poverený súdom, ktorý koná v mene súdu", "Exekútor", "Advokát dediča"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súdnym komisárom je notár poverený súdom, ktorý úkony vykonáva v jeho mene.",
+        "wrong": "Nesprávne. Nejde o samostatného sudcu, exekútora ani o advokáta niektorého z dedičov."
+      }
+    },
+    {
+      "question": "Akou formou súd rozhoduje o dedičstve vo veci samej?",
+      "options": ["Rozsudkom", "Uznesením", "Nálezom", "Zápisnicou notára bez rozhodnutia súdu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Rovnako ako v iných mimosporových veciach, aj v dedičskom konaní súd rozhoduje uznesením.",
+        "wrong": "Nesprávne. Rozsudok patrí sporovému konaniu, nález Ústavnému súdu SR, a samotná zápisnica notára nenahrádza rozhodnutie súdu."
+      }
+    },
+    {
+      "question": "Čo sa stane, ak dedičstvo nikto neprijme alebo niet dedičov?",
+      "options": ["Dedičstvo prepadá v prospech štátu ako odúmrť", "Majetok zostáva bez vlastníka natrvalo", "Automaticky ho získava obec, v ktorej mal poručiteľ trvalý pobyt, bez rozhodnutia súdu", "Konanie sa preruší na neurčito"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Inštitút odúmrte zabezpečuje, aby majetok nezostal bez vlastníka.",
+        "wrong": "Nesprávne. Majetok neprechádza automaticky na obec bez rozhodnutia súdu a nezostáva ani bez vlastníka."
+      }
+    },
+    {
+      "question": "Čo je predlžené dedičstvo?",
+      "options": ["Dedičstvo, ktorého dlhy prevyšujú hodnotu majetku poručiteľa", "Dedičstvo rozdelené medzi viacero dedičov", "Dedičstvo, o ktorom sa dlho nerozhodlo", "Dedičstvo pozostávajúce len z nehnuteľností"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o situáciu, keď záväzky poručiteľa presahujú hodnotu jeho majetku.",
+        "wrong": "Nesprávne. Rozdelenie medzi viacero dedičov, dĺžka konania ani druh majetku samy osebe nezakladajú predlženosť dedičstva."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Konanie o dedičstve", "definition": "Mimosporové konanie začínajúce sa aj bez návrhu po úmrtí poručiteľa." },
+    { "term": "Súdny komisár", "definition": "Notár poverený súdom, ktorý v konaní o dedičstve koná v mene súdu." },
+    { "term": "Predbežné šetrenie", "definition": "Fáza zisťovania okruhu dedičov, majetku a záväzkov poručiteľa." },
+    { "term": "Uznesenie o dedičstve", "definition": "Forma rozhodnutia súdu vo veci samej v dedičskom konaní." },
+    { "term": "Odúmrť", "definition": "Prechod dedičstva na štát, ak niet dedičov alebo dedičstvo nikto neprijme." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Začatie konania bez návrhu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Matrika oznámi súdu úmrtie občana, hoci žiadny z jeho príbuzných návrh na dedičské konanie nepodal.", "options": [], "correct": 0 },
+        {
+          "question": "Začne súd konanie o dedičstve?",
+          "options": ["Áno, konanie začne aj bez návrhu na základe zásady oficiality", "Nie, bez návrhu dediča konanie nezačne", "Áno, ale iba po uplynutí jedného roka od úmrtia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd začne konanie hneď po tom, čo sa o úmrtí dozvie, bez ohľadu na návrh dedičov.",
+            "wrong": "Nesprávne. Konanie nečaká na návrh dedičov ani na uplynutie ročnej lehoty."
+          }
+        },
+        {
+          "question": "Kto v tomto konaní vykoná potrebné úkony v mene súdu?",
+          "options": ["Poverený notár ako súdny komisár", "Výlučne sudca osobne bez možnosti poverenia", "Exekútor"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Úkony vykonáva notár poverený súdom ako súdny komisár.",
+            "wrong": "Nesprávne. Poverenie notára je práve zákonom predpokladaným postupom, exekútor s dedičským konaním nesúvisí."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Predlžené dedičstvo",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Po poručiteľovi zostali dlhy vo výške presahujúcej hodnotu celého jeho majetku.", "options": [], "correct": 0 },
+        {
+          "question": "O aký typ dedičstva ide?",
+          "options": ["Predlžené dedičstvo", "Odúmrť", "Bezpodielové spoluvlastníctvo"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o typický príklad predlženého dedičstva, kde dlhy prevyšujú majetok.",
+            "wrong": "Nesprávne. Odúmrť súvisí s neexistenciou dedičov, nie s výškou dlhov, a bezpodielové spoluvlastníctvo je samostatný inštitút manželského majetkového práva."
+          }
+        },
+        {
+          "question": "Aký postup pri predlženom dedičstve prichádza do úvahy?",
+          "options": ["Likvidácia dedičstva", "Automatické zdedenie dlhov bez ďalšieho konania", "Prevod dedičstva na štát bez ohľadu na existenciu dedičov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Likvidácia dedičstva rieši situáciu, keď majetok nepostačuje na úhradu všetkých dlhov.",
+            "wrong": "Nesprávne. Dlhy sa nededia automaticky bez konania a prevod na štát sa uplatní len pri odúmrti, nie pri predlženosti dedičstva."
+          }
+        }
+      ]
+    }
+  ]
+}

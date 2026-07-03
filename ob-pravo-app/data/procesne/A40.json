@@ -1,0 +1,114 @@
+{
+  "id": "40",
+  "title": "Základné princípy exekučného konania, exekučné tituly",
+  "schemaVersion": "1.1",
+  "tags": ["princíp primeranosti", "exekučný titul", "notárska zápisnica", "nepostihnuteľné minimum"],
+  "summary": "Exekučné konanie ovládajú viaceré základné princípy. Princíp legality vyžaduje, aby sa exekúcia viedla výlučne na základe zákona a existujúceho exekučného titulu. Dispozičná zásada sa uplatňuje aj tu – exekučné konanie sa začína na návrh oprávneného, nie z úradnej moci súdu či exekútora. Kľúčový je princíp primeranosti (proporcionality): spôsob vykonania exekúcie musí zodpovedať výške vymáhanej pohľadávky a zákon zároveň chráni tzv. nepostihnuteľné minimum povinného, aby exekúcia nezasiahla do jeho základných životných potrieb neprimeraným spôsobom.\n\nExekučnými titulmi (§ 41 Exekučného poriadku) sú predovšetkým vykonateľné rozhodnutia súdu (rozsudok, platobný rozkaz, súdom schválený zmier), vykonateľné rozhodnutia rozhodcovského súdu, vykonateľné rozhodnutia orgánov verejnej správy, ako aj notárska zápisnica, ktorá obsahuje zákonom vyžadované náležitosti vrátane výslovného súhlasu povinného s jej vykonateľnosťou. Existencia platného exekučného titulu je nevyhnutnou podmienkou pre vedenie akejkoľvek exekúcie.\n\nZapamätaj si:\n- Princíp legality: exekúcia sa vedie len na základe zákona a exekučného titulu.\n- Dispozičná zásada: exekúcia sa začína na návrh oprávneného, nie z úradnej moci.\n- Princíp primeranosti chráni povinného pred neprimeraným spôsobom exekúcie a jeho nepostihnuteľné minimum.\n- Exekučné tituly (§ 41 Exekučného poriadku): súdne rozhodnutia, rozhodnutia rozhodcovského súdu, notárska zápisnica so súhlasom s vykonateľnosťou a i.\n- Notárska zápisnica je exekučným titulom len pri splnení zákonom stanovených náležitostí."
+  ,
+  "quiz": [
+    {
+      "question": "Čo vyjadruje princíp primeranosti (proporcionality) v exekučnom konaní?",
+      "options": ["Spôsob vykonania exekúcie musí byť primeraný výške vymáhanej pohľadávky, s ochranou nepostihnuteľného minima povinného", "Exekúcia sa vždy vedie najprísnejším možným spôsobom", "Výška pohľadávky nemá na spôsob exekúcie žiadny vplyv", "Ochrana povinného sa v exekučnom konaní neuplatňuje"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Princíp primeranosti vyžaduje voľbu spôsobu exekúcie zodpovedajúceho konkrétnej pohľadávke a chráni základné potreby povinného.",
+        "wrong": "Nesprávne. Exekúcia sa nevedie automaticky najprísnejším spôsobom a ochrana povinného je súčasťou zákonnej úpravy."
+      }
+    },
+    {
+      "question": "Začína sa exekučné konanie z úradnej moci alebo na návrh?",
+      "options": ["Vždy z úradnej moci bez návrhu oprávneného", "Na návrh oprávneného (dispozičná zásada platí aj tu)", "Iba na návrh štátneho orgánu", "Automaticky pri každom vykonateľnom rozhodnutí bez návrhu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Aj v exekučnom konaní platí dispozičná zásada – iniciatíva patrí oprávnenému.",
+        "wrong": "Nesprávne. Exekúcia sa nezačína automaticky ani z úradnej moci, iniciatívu musí prejaviť oprávnený, nie štátny orgán."
+      }
+    },
+    {
+      "question": "Čo je exekučný titul?",
+      "options": ["Akékoľvek tvrdenie veriteľa o existencii dlhu", "Vykonateľné rozhodnutie alebo iná zákonom uznaná listina, na základe ktorej možno viesť exekúciu (§ 41 Exekučného poriadku)", "Iba rozsudok trestného súdu", "Iba notárska zápisnica bez ďalších náležitostí"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Exekučný titul musí byť vykonateľný a zákonom uznaný, nestačí len tvrdenie veriteľa.",
+        "wrong": "Nesprávne. Samotné tvrdenie veriteľa nepostačuje a exekučným titulom môže byť viacero druhov listín, nielen rozsudok trestného súdu."
+      }
+    },
+    {
+      "question": "Môže byť exekučným titulom notárska zápisnica?",
+      "options": ["Áno, ak obsahuje náležitosti ustanovené zákonom vrátane súhlasu povinného s vykonateľnosťou", "Nie, notárska zápisnica nikdy nie je exekučným titulom", "Áno, ale iba ak ju podpíše sudca", "Áno, bez ohľadu na akékoľvek náležitosti"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Notárska zápisnica sa exekučným titulom stáva len pri splnení presne stanovených zákonných náležitostí.",
+        "wrong": "Nesprávne. Podpis sudcu nie je súčasťou tohto inštitútu a náležitosti nemožno obísť ľubovoľne."
+      }
+    },
+    {
+      "question": "Aký princíp chráni povinného pred neprimeraným spôsobom exekúcie?",
+      "options": ["Princíp primeranosti (proporcionality) a ochrana nepostihnuteľného minima", "Princíp, podľa ktorého sa vždy postihne celý majetok povinného bez výnimky", "Princíp, že exekúciu možno viesť aj bez exekučného titulu", "Princíp automatického oslobodenia povinného od každého dlhu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Princíp primeranosti spolu s ochranou nepostihnuteľného minima chráni povinného pred neprimeraným zásahom.",
+        "wrong": "Nesprávne. Exekúcia nesmie postihnúť celý majetok bez ohľadu na okolnosti a exekučný titul je vždy potrebný."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Princíp primeranosti (proporcionality)", "definition": "Spôsob exekúcie musí zodpovedať výške vymáhanej pohľadávky a chrániť nepostihnuteľné minimum." },
+    { "term": "Dispozičná zásada v exekúcii", "definition": "Exekučné konanie sa začína na návrh oprávneného, nie z úradnej moci." },
+    { "term": "Exekučný titul (§ 41 Exekučného poriadku)", "definition": "Vykonateľné rozhodnutie alebo iná zákonom uznaná listina zakladajúca právo viesť exekúciu." },
+    { "term": "Notárska zápisnica ako exekučný titul", "definition": "Musí obsahovať náležitosti vrátane súhlasu povinného s vykonateľnosťou." },
+    { "term": "Ochrana povinného", "definition": "Exekúcia nesmie byť vedená spôsobom zjavne neprimeraným okolnostiam veci." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neprimeraný spôsob exekúcie",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Exekútor chce pre nepatrný, nízky dlh nariadiť predaj jedinej nehnuteľnosti, v ktorej povinný trvalo býva, hoci by postačovali zrážky zo mzdy povinného.", "options": [], "correct": 0 },
+        {
+          "question": "Je takýto postup v súlade s princípom primeranosti?",
+          "options": ["Nie, spôsob exekúcie musí byť primeraný výške pohľadávky, miernejší prostriedok má mať prednosť", "Áno, exekútor si môže vybrať ktorýkoľvek spôsob bez obmedzenia", "Áno, veriteľ má vždy právo žiadať predaj nehnuteľnosti bez ohľadu na výšku dlhu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Princíp primeranosti vyžaduje uprednostniť menej invazívny, ale dostatočne účinný spôsob exekúcie.",
+            "wrong": "Nesprávne. Voľba spôsobu exekúcie nie je neobmedzená a nezávisí len od želania veriteľa bez ohľadu na výšku dlhu."
+          }
+        },
+        {
+          "question": "Čo z toho vyplýva pre výber spôsobu exekúcie?",
+          "options": ["Prednosť by mal dostať miernejší, dostatočne účinný spôsob (napr. zrážky zo mzdy)", "Vždy sa musí zvoliť najprísnejší možný spôsob", "Voľba spôsobu exekúcie nemá žiadne pravidlá"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Miernejší, ale dostatočne účinný spôsob má prednosť pred drastickejším zásahom do majetku povinného.",
+            "wrong": "Nesprávne. Voľba spôsobu exekúcie sa riadi zákonnými pravidlami, nie je teda ani bezpravidlová, ani vždy najprísnejšia."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Notárska zápisnica ako exekučný titul",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dlžník a veriteľ uzavreli dohodu o splátkach dlhu vo forme notárskej zápisnice, v ktorej dlžník výslovne súhlasil s jej vykonateľnosťou.", "options": [], "correct": 0 },
+        {
+          "question": "Môže táto notárska zápisnica slúžiť ako exekučný titul?",
+          "options": ["Áno, ak spĺňa zákonom stanovené náležitosti vrátane súhlasu s vykonateľnosťou", "Nie, notárska zápisnica nikdy nemôže byť exekučným titulom", "Áno, ale iba ak ju dodatočne schváli súd osobitným rozsudkom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Notárska zápisnica so súhlasom s vykonateľnosťou je jedným zo zákonom uznaných exekučných titulov.",
+            "wrong": "Nesprávne. Dodatočné schválenie osobitným rozsudkom súdu nie je pre tento typ exekučného titulu potrebné."
+          }
+        },
+        {
+          "question": "Musí veriteľ pred exekúciou najprv viesť samostatné súdne konanie o zaplatenie dlhu?",
+          "options": ["Nie, notárska zápisnica ako exekučný titul umožňuje viesť exekúciu priamo", "Áno, vždy musí najprv získať rozsudok súdu", "Áno, ale iba ak dlžník s exekúciou nesúhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Práve v tom spočíva výhoda notárskej zápisnice ako exekučného titulu – netreba osobitné súdne konanie o veci samej.",
+            "wrong": "Nesprávne. Samostatné súdne konanie o zaplatenie dlhu nie je pri platnom exekučnom titule potrebné."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "38",
+  "title": "Výkon rozhodnutia vo veciach starostlivosti o maloletých",
+  "schemaVersion": "1.1",
+  "tags": ["výkon rozhodnutia", "styk s maloletým", "poriadková pokuta", "záujem dieťaťa"],
+  "summary": "CMP obsahuje osobitnú úpravu výkonu rozhodnutí vo veciach starostlivosti o maloletých, odlišnú od bežnej exekúcie podľa Exekučného poriadku. Týka sa najmä výkonu rozhodnutí o styku rodiča s dieťaťom alebo o odovzdaní maloletého do starostlivosti oprávnenej osoby. Súd pred nariadením núteného výkonu vyzve povinného na dobrovoľné splnenie povinnosti a poučí ho o možných následkoch, vrátane možnosti uloženia poriadkovej pokuty ako nástroja motivujúceho k dobrovoľnému plneniu.\n\nAk povinný ani napriek výzve a poriadkovej pokute svoju povinnosť nesplní, súd môže nariadiť výkon rozhodnutia aj odňatím maloletého a jeho odovzdaním oprávnenej osobe. Pri celom postupe musí súd vždy prihliadať na záujem a psychickú pohodu dieťaťa – výkon rozhodnutia sa má uskutočniť spôsobom, ktorý čo najmenej zasahuje do jeho prežívania; súd môže na tento účel spolupracovať s orgánom sociálnoprávnej ochrany detí a kurately, prípadne s psychológom.\n\nZapamätaj si:\n- Výkon rozhodnutia o starostlivosti o maloletých je upravený osobitne v CMP, nie klasickou exekúciou.\n- Súd najprv vyzve povinného na dobrovoľné splnenie a poučí ho o následkoch.\n- Poriadková pokuta je nástrojom motivujúcim k dobrovoľnému plneniu.\n- Výkon rozhodnutia sa má uskutočniť spôsobom čo najmenej zasahujúcim do psychiky dieťaťa.\n- Súd môže spolupracovať s orgánom sociálnoprávnej ochrany detí a psychológom."
+  ,
+  "quiz": [
+    {
+      "question": "Čím sa výkon rozhodnutia vo veciach starostlivosti o maloletých líši od bežnej exekúcie?",
+      "options": ["Ide o osobitnú úpravu podľa CMP, ktorá kladie dôraz na ochranu záujmu dieťaťa, nie o klasickú exekúciu podľa Exekučného poriadku", "Vôbec sa nelíši, ide o rovnaký postup ako pri exekúcii peňažnej pohľadávky", "Vykonáva ho výlučne súkromný exekútor bez účasti súdu", "Nemožno ho vôbec vykonať"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Osobitná úprava reaguje na citlivosť veci týkajúcej sa dieťaťa, ktorá si vyžaduje odlišný prístup než peňažná exekúcia.",
+        "wrong": "Nesprávne. Postup nie je totožný s peňažnou exekúciou a nevykonáva ho súkromný exekútor bez účasti súdu."
+      }
+    },
+    {
+      "question": "Čo súd urobí pred nariadením núteného výkonu rozhodnutia o styku s dieťaťom?",
+      "options": ["Vyzve povinného na dobrovoľné splnenie a poučí ho o možných následkoch", "Ihneď nariadi odňatie dieťaťa bez akéhokoľvek poučenia", "Vec automaticky postúpi prokuratúre", "Rozhodnutie sa nikdy nevynucuje"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Výzva a poučenie predchádzajú akémukoľvek prísnejšiemu opatreniu.",
+        "wrong": "Nesprávne. Okamžité odňatie dieťaťa bez výzvy, postúpenie prokuratúre alebo úplná nevynútiteľnosť rozhodnutia nezodpovedajú zákonu."
+      }
+    },
+    {
+      "question": "Aký nástroj môže súd použiť na motiváciu povinného rodiča k dobrovoľnému plneniu?",
+      "options": ["Poriadkovú pokutu", "Trest odňatia slobody bez súdneho konania", "Okamžité odňatie rodičovských práv bez ďalšieho konania", "Zablokovanie bankového účtu druhého rodiča"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Poriadková pokuta je štandardným nástrojom na vynútenie splnenia povinnosti v tomto type konania.",
+        "wrong": "Nesprávne. Trest odňatia slobody bez konania, okamžité odňatie rodičovských práv či blokovanie účtu nie sú nástrojmi tohto konania."
+      }
+    },
+    {
+      "question": "Čo musí súd pri výkone rozhodnutia týkajúceho sa maloletého vždy zohľadniť?",
+      "options": ["Výlučne záujem povinného rodiča", "Záujem a psychickú pohodu maloletého dieťaťa", "Iba záujem oprávneného rodiča bez ohľadu na dieťa", "Iba finančné náklady konania"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Najlepší záujem dieťaťa je vždy prvoradým kritériom, aj pri samotnom výkone rozhodnutia.",
+        "wrong": "Nesprávne. Ani záujem povinného, ani záujem oprávneného rodiča samy osebe, ani náklady konania nemôžu prevážiť nad záujmom dieťaťa."
+      }
+    },
+    {
+      "question": "S kým môže súd pri výkone rozhodnutia spolupracovať v záujme šetrného postupu voči dieťaťu?",
+      "options": ["S orgánom sociálnoprávnej ochrany detí a prípadne psychológom", "Výlučne so súdnym exekútorom", "S políciou bez účasti akéhokoľvek odborníka na deti", "So žiadnym iným subjektom, koná úplne samostatne"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Spolupráca s odborníkmi na ochranu detí pomáha minimalizovať negatívny dopad výkonu rozhodnutia na dieťa.",
+        "wrong": "Nesprávne. Exekútor sa v tomto type konania štandardne nevyužíva a súd nekoná bez spolupráce s inými orgánmi."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Výkon rozhodnutia o styku s maloletým", "definition": "Osobitne upravený v CMP, s dôrazom na ochranu záujmu dieťaťa." },
+    { "term": "Výzva na dobrovoľné splnenie", "definition": "Prvý krok súdu pred nariadením núteného výkonu rozhodnutia." },
+    { "term": "Poriadková pokuta", "definition": "Nástroj motivujúci povinného rodiča k dobrovoľnému splneniu povinnosti." },
+    { "term": "Šetrný spôsob výkonu", "definition": "Výkon rozhodnutia sa má vykonať tak, aby čo najmenej zasiahol psychiku dieťaťa." },
+    { "term": "Spolupráca s orgánom sociálnoprávnej ochrany detí", "definition": "Súd môže pri výkone rozhodnutia spolupracovať s odborníkmi na ochranu detí." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Bránenie styku s dieťaťom",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Matka opakovane bráni otcovi v styku s dieťaťom napriek právoplatnému rozhodnutiu súdu upravujúcemu tento styk.", "options": [], "correct": 0 },
+        {
+          "question": "Čo súd urobí ako prvý krok?",
+          "options": ["Vyzve matku na dobrovoľné splnenie povinnosti a poučí ju o následkoch nesplnenia", "Ihneď nariadi odňatie dieťaťa bez ďalšieho postupu", "Automaticky zbaví matku rodičovských práv"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výzva a poučenie predchádzajú prísnejším opatreniam.",
+            "wrong": "Nesprávne. Odňatie dieťaťa a zbavenie rodičovských práv bez predchádzajúceho postupu nie sú prvým krokom súdu."
+          }
+        },
+        {
+          "question": "Aký nástroj môže súd použiť, ak matka aj napriek výzve povinnosť neplní?",
+          "options": ["Uložiť poriadkovú pokutu", "Bez ďalšieho nariadiť trest odňatia slobody", "Zablokovať jej bankový účet"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Poriadková pokuta je typickým prostriedkom vynútenia splnenia povinnosti v tomto konaní.",
+            "wrong": "Nesprávne. Trest odňatia slobody bez trestného konania a blokovanie účtu nie sú nástrojmi tohto typu konania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Šetrný výkon rozhodnutia",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd musí pristúpiť k výkonu rozhodnutia o odovzdaní dieťaťa do starostlivosti oprávneného rodiča.", "options": [], "correct": 0 },
+        {
+          "question": "Na čo musí súd pri samotnom výkone dbať predovšetkým?",
+          "options": ["Aby bol zásah do psychiky dieťaťa čo najmenší", "Aby bol výkon čo najrýchlejší bez ohľadu na dieťa", "Aby boli náklady konania čo najnižšie bez ohľadu na iné okolnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ochrana psychiky dieťaťa má prednosť pred rýchlosťou či nákladovosťou postupu.",
+            "wrong": "Nesprávne. Rýchlosť ani úspora nákladov nemôžu byť nadradené záujmu dieťaťa."
+          }
+        },
+        {
+          "question": "S kým môže súd v tejto súvislosti spolupracovať?",
+          "options": ["S orgánom sociálnoprávnej ochrany detí, prípadne psychológom", "Výlučne so súdnym exekútorom bez účasti ďalších odborníkov", "So žiadnym ďalším subjektom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Spolupráca s odborníkmi na ochranu detí pomáha zabezpečiť šetrný priebeh výkonu rozhodnutia.",
+            "wrong": "Nesprávne. Súdny exekútor sa v tomto konaní štandardne nevyužíva a súd nekoná úplne izolovane."
+          }
+        }
+      ]
+    }
+  ]
+}
