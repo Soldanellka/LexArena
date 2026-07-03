@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zmena diela je možná, ale zhotoviteľ má právo na kompenzáciu za zmenu."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluva o dielo (§ 631 OZ)", "definition": "Zhotoviteľ vykoná dielo, objednávateľ zaplatí odmenu." },
+    { "term": "Predmet diela", "definition": "Zhotovenie, oprava, úprava alebo iná zmena veci, aj nehmotný výsledok." },
+    { "term": "Zodpovednosť za vady", "definition": "Zhotoviteľ zodpovedá za vady, ktoré malo dielo pri odovzdaní." },
+    { "term": "Práva objednávateľa pri vade", "definition": "Bezplatné odstránenie vady, primeraná zľava alebo odstúpenie od zmluvy pri podstatnej vade." },
+    { "term": "Zmena diela počas zhotovovania", "definition": "Možná, zhotoviteľ má nárok na primeranú zmenu odmeny a lehoty." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Omeškanie zhotoviteľa",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Zhotoviteľ nábytku na mieru neodovzdá hotové dielo v dohodnutom termíne, hoci objednávateľ si splnil všetky svoje povinnosti.", "options": [], "correct": 0 },
+        {
+          "question": "V akom postavení sa zhotoviteľ ocitá?",
+          "options": ["Je v omeškaní so zhotovením a odovzdaním diela", "Zodpovednosť nevzniká, kým dielo nie je úplne dokončené", "Objednávateľ automaticky stráca nárok na dielo"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nedodržanie dohodnutého termínu zakladá omeškanie zhotoviteľa.",
+            "wrong": "Nesprávne. Zodpovednosť za omeškanie vzniká už samotným nedodržaním termínu a objednávateľ nárok na dielo nestráca."
+          }
+        },
+        {
+          "question": "Čo môže objednávateľ v dôsledku omeškania požadovať?",
+          "options": ["Napríklad náhradu škody spôsobenej omeškaním, prípadne iné zákonné nároky", "Iba prevzatie diela bez akýchkoľvek ďalších nárokov", "Okamžité zrušenie zmluvy bez možnosti akejkoľvek nápravy zo strany zhotoviteľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Omeškanie zhotoviteľa zakladá objednávateľovi zákonné nároky, napríklad na náhradu škody.",
+            "wrong": "Nesprávne. Objednávateľ nie je odkázaný len na prevzatie diela a okamžité zrušenie zmluvy bez ďalšieho nie je jedinou možnosťou."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Podstatná vada diela",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Po odovzdaní stavebného diela sa zistí podstatná vada, ktorá znemožňuje riadne užívanie stavby.", "options": [], "correct": 0 },
+        {
+          "question": "Aké má objednávateľ možnosti?",
+          "options": ["Môže žiadať bezplatné odstránenie vady, primeranú zľavu, alebo pri podstatnej vade odstúpiť od zmluvy", "Môže žiadať iba úplne nové dielo bez akejkoľvek inej možnosti", "Nemá žiadne práva, keďže dielo už prevzal"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon dáva objednávateľovi pri vadách viacero možností podľa ich povahy.",
+            "wrong": "Nesprávne. Prevzatie diela objednávateľa o práva z vád nepripravuje a nie je obmedzený len na požiadavku nového diela."
+          }
+        },
+        {
+          "question": "Za akú vadu zhotoviteľ zodpovedá?",
+          "options": ["Za vadu, ktorú malo dielo už v čase jeho odovzdania objednávateľovi", "Iba za vady, ktoré objednávateľ zistí do troch dní od prevzatia", "Iba za vady spôsobené vyššou mocou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozhodujúci je stav diela v čase jeho odovzdania, nie okamih zistenia vady.",
+            "wrong": "Nesprávne. Zodpovednosť nie je obmedzená na trojdňovú lehotu zistenia ani len na vady spôsobené vyššou mocou."
+          }
+        }
+      ]
+    }
   ]
 }

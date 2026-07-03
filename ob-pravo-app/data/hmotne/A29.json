@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Kogentná ochrana spotrebiteľa vylučuje zmluvnú odchýlku v jeho neprospech."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Spotrebiteľ (§ 52 ods. 3 OZ)", "definition": "Fyzická osoba, ktorá pri zmluve nekoná v rámci podnikateľskej činnosti." },
+    { "term": "Neprijateľná podmienka (§ 53 OZ)", "definition": "Podmienka spôsobujúca v rozpore s dobrou vierou výraznú nerovnováhu v neprospech spotrebiteľa." },
+    { "term": "Čiastočná neplatnosť", "definition": "Neprijateľná podmienka je neplatná, zvyšok zmluvy zostáva platný." },
+    { "term": "Odstúpenie od zmluvy na diaľku", "definition": "Spotrebiteľ môže odstúpiť bez uvedenia dôvodu do 14 dní." },
+    { "term": "Kogentnosť ochrany spotrebiteľa", "definition": "Odchýlka v neprospech spotrebiteľa dohodou je neplatná." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nevýhodná podmienka v štandardnej zmluve",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dodávateľ zaradí do štandardnej spotrebiteľskej zmluvy podmienku, ktorá mu umožňuje jednostranne a bez obmedzenia meniť cenu už uzavretej zmluvy na úkor spotrebiteľa.", "options": [], "correct": 0 },
+        {
+          "question": "Ako sa takáto podmienka posúdi?",
+          "options": ["Ako neprijateľná podmienka podľa § 53 OZ, ktorá je neplatná", "Ako bežná a plne platná zmluvná podmienka", "Ako podmienka platná iba do výšky polovice pôvodnej ceny"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Takáto jednostranná a neobmedzená možnosť zmeny ceny je typickou neprijateľnou podmienkou.",
+            "wrong": "Nesprávne. Ide práve o podmienku spôsobujúcu neprijateľnú nerovnováhu, nie o bežné, plne platné dojednanie."
+          }
+        },
+        {
+          "question": "Čo sa stane so zvyškom zmluvy po vyhlásení tejto podmienky za neplatnú?",
+          "options": ["Zvyšok zmluvy zostáva platný", "Celá zmluva sa stáva neplatnou", "Spotrebiteľ stráca všetky práva zo zmluvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neplatnosť sa týka len neprijateľnej podmienky, zvyšok zmluvy platí ďalej.",
+            "wrong": "Nesprávne. Neplatnosť jednej podmienky neruší celú zmluvu ani nezbavuje spotrebiteľa jeho práv."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odstúpenie od internetového nákupu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Spotrebiteľ si kúpi tovar cez internetový obchod a týždeň po jeho prevzatí sa rozhodne, že oň nemá záujem.", "options": [], "correct": 0 },
+        {
+          "question": "Môže od zmluvy odstúpiť bez uvedenia dôvodu?",
+          "options": ["Áno, v lehote 14 dní od prevzatia tovaru", "Nie, pri kúpe cez internet odstúpenie zákon nepripúšťa", "Áno, ale iba do 3 dní od prevzatia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri zmluvách uzavretých na diaľku má spotrebiteľ 14-dňové právo na odstúpenie bez udania dôvodu.",
+            "wrong": "Nesprávne. Toto právo zákon výslovne priznáva a lehota nie je skrátená na 3 dni."
+          }
+        },
+        {
+          "question": "Mohol by predávajúci v zmluve platne vylúčiť toto právo spotrebiteľa na odstúpenie?",
+          "options": ["Nie, ochrana spotrebiteľa je kogentná a takáto odchýlka v jeho neprospech by bola neplatná", "Áno, ak by s tým spotrebiteľ pri kúpe súhlasil", "Áno, ak by to bolo výslovne uvedené v obchodných podmienkach"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Kogentná ochrana spotrebiteľa vylučuje platné zmluvné vylúčenie tohto práva.",
+            "wrong": "Nesprávne. Ani súhlas spotrebiteľa, ani uvedenie v obchodných podmienkach nemôžu obísť kogentnú ochranu."
+          }
+        }
+      ]
+    }
   ]
 }

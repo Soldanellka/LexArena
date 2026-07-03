@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Pri hnuteľných veciach stačí tradícia (odovzdanie) - na rozdiel od nehnuteľností nevyžaduje vklad do katastra."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Podstatné náležitosti kúpnej zmluvy", "definition": "Predmet kúpy a kúpna cena." },
+    { "term": "Prechod vlastníctva pri hnuteľnej veci", "definition": "Odovzdaním (tradíciou), nie podpisom zmluvy." },
+    { "term": "Zámenná zmluva (§ 611 OZ)", "definition": "Strany si navzájom prevádzajú vlastníctvo vecí (barter)." },
+    { "term": "Forma darovacej zmluvy (§ 628 OZ)", "definition": "Písomná, ak sa dar neodovzdáva súčasne s uzavretím zmluvy." },
+    { "term": "Vrátenie daru (§ 630 OZ)", "definition": "Možné pri hrubo nevďačnom správaní obdarovaného voči darcovi alebo jeho blízkym." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Kúpa použitého bicykla",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Kupujúci si na trhu kúpi použitý bicykel, zaplatí zaň a predávajúci mu ho ihneď odovzdá; písomná zmluva neexistuje.", "options": [], "correct": 0 },
+        {
+          "question": "Kedy prešlo vlastníctvo bicykla na kupujúceho?",
+          "options": ["Odovzdaním (tradíciou) veci kupujúcemu", "Až budúcim spísaním písomnej zmluvy", "Zaplatením kúpnej ceny bez ohľadu na odovzdanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri hnuteľnej veci prechádza vlastníctvo jej odovzdaním kupujúcemu.",
+            "wrong": "Nesprávne. Písomná zmluva sa pri bežnej kúpe hnuteľnej veci nevyžaduje a samotné zaplatenie bez odovzdania vlastníctvo neprevádza."
+          }
+        },
+        {
+          "question": "Je pri kúpe hnuteľnej veci nevyhnutná písomná forma zmluvy?",
+          "options": ["Nie, pri hnuteľných veciach spravidla postačuje aj neformálna dohoda s odovzdaním veci", "Áno, každá kúpna zmluva musí byť písomná", "Áno, ale iba ak ide o vec staršiu ako 5 rokov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri bežných hnuteľných veciach zákon písomnú formu nevyžaduje.",
+            "wrong": "Nesprávne. Písomná forma nie je všeobecne povinná pre kúpne zmluvy o hnuteľných veciach a vek veci nie je rozhodujúci."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vrátenie daru pre hrubú nevďačnosť",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Obdarovaný sa po prijatí hodnotného daru začne k darcovi správať hrubo nevďačne, uráža ho a odopiera mu akúkoľvek pomoc v núdzi.", "options": [], "correct": 0 },
+        {
+          "question": "Môže darca za týchto okolností žiadať vrátenie daru?",
+          "options": ["Áno, podľa § 630 OZ pri hrubo nevďačnom správaní obdarovaného", "Nie, darovanie je vždy neodvolateľné bez ohľadu na správanie obdarovaného", "Áno, ale iba do jedného mesiaca od darovania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Hrubá nevďačnosť obdarovaného zakladá darcovi právo žiadať vrátenie daru.",
+            "wrong": "Nesprávne. Darovanie nie je absolútne neodvolateľné a zákon neviaže toto právo na jednomesačnú lehotu od darovania."
+          }
+        },
+        {
+          "question": "Stačí na vrátenie daru akékoľvek bežné nezhody medzi darcom a obdarovaným?",
+          "options": ["Nie, vyžaduje sa kvalifikované, hrubo nevďačné správanie, nie bežné nezhody", "Áno, akýkoľvek konflikt postačuje", "Áno, ak si to darca jednostranne želá"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon vyžaduje kvalifikovanú intenzitu nevďačnosti, nie bežné rodinné nezhody.",
+            "wrong": "Nesprávne. Samotné želanie darcu bez kvalifikovaného správania obdarovaného na vrátenie daru nestačí."
+          }
+        }
+      ]
+    }
   ]
 }

@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Manžel/manželka nie je neopomenuteľným dedičom - môže byť závetom vylúčený."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Prvá dedičská skupina (§ 473 OZ)", "definition": "Deti poručiteľa a manžel/manželka, rovnakým dielom." },
+    { "term": "Druhá dedičská skupina (§ 474 OZ)", "definition": "Manžel/manželka, rodičia a spolužijúce osoby; manžel dostane aspoň 1/2." },
+    { "term": "Reprezentačné právo", "definition": "Ak dieťa poručiteľa nededí, jeho podiel prechádza na jeho potomkov." },
+    { "term": "Odúmrť (§ 462 OZ)", "definition": "Ak niet žiadnych zákonných dedičov, dedičstvo pripadne štátu." },
+    { "term": "Manžel a neopomenuteľnosť", "definition": "Manžel/manželka nie je neopomenuteľným dedičom, môže byť závetom vylúčený." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Dedenie po zomretom dieťati poručiteľa",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Poručiteľ mal dve deti, jedno z nich však zomrelo pred ním a zanechalo po sebe dve vlastné deti (vnúčatá poručiteľa).", "options": [], "correct": 0 },
+        {
+          "question": "Kto zdedí podiel, ktorý by inak pripadol zomretému dieťaťu poručiteľa?",
+          "options": ["Jeho potomkovia (vnúčatá poručiteľa) na základe reprezentačného práva", "Podiel automaticky pripadne štátu", "Podiel sa rozdelí medzi ostatné žijúce deti poručiteľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Reprezentačné právo umožňuje potomkom nastúpiť na miesto svojho zomretého rodiča.",
+            "wrong": "Nesprávne. Podiel nepripadá štátu ani sa nerozdeľuje medzi ostatné deti, kým existujú potomkovia zomretého dieťaťa."
+          }
+        },
+        {
+          "question": "Ako sa tento podiel medzi vnúčatá rozdelí?",
+          "options": ["Rovnakým dielom medzi nich", "Celý pripadne najstaršiemu z nich", "Podľa uváženia notára"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Potomkovia zomretého dediča si podiel delia rovnakým dielom.",
+            "wrong": "Nesprávne. Podiel sa nedáva len najstaršiemu vnúčaťu a notár nerozhoduje o výške podielov podľa vlastnej úvahy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vylúčenie manžela zo závetu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Poručiteľ vo svojom platnom závete výslovne vylúči svoju manželku z dedenia v prospech svojich detí.", "options": [], "correct": 0 },
+        {
+          "question": "Je takéto vylúčenie manželky možné?",
+          "options": ["Áno, manžel/manželka nie je neopomenuteľným dedičom", "Nie, manžel je vždy neopomenuteľný dedič ako deti", "Nie, bez súhlasu manželky je takýto závet neplatný"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neopomenuteľnými dedičmi sú výlučne deti poručiteľa, nie manžel.",
+            "wrong": "Nesprávne. Manžel nemá rovnaké postavenie ako deti a jeho súhlas nie je podmienkou platnosti závetu."
+          }
+        },
+        {
+          "question": "Platilo by to isté, keby chcel poručiteľ takto vylúčiť svoje maloleté dieťa?",
+          "options": ["Nie, maloleté dieťa je neopomenuteľným dedičom a musí dostať celý zákonný podiel", "Áno, rovnaké pravidlo platí aj pre maloleté deti", "Áno, ak s tým súhlasí druhý rodič"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Na rozdiel od manžela sú deti (najmä maloleté) neopomenuteľnými dedičmi s nárokom na celý zákonný podiel.",
+            "wrong": "Nesprávne. Pravidlo pre manžela a maloleté dieťa nie je rovnaké a súhlas druhého rodiča na tom nič nemení."
+          }
+        }
+      ]
+    }
   ]
 }

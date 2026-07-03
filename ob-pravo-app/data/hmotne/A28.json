@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Jednostrannosť závetu znamená slobodu poručiteľa meniť alebo odvolávať závet."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Závet", "definition": "Jednostranný, odvolateľný a osobný právny úkon poručiteľa." },
+    { "term": "Vlastnoručný závet (§ 476a OZ)", "definition": "Celý vlastnoručne napísaný a podpísaný poručiteľom." },
+    { "term": "Alografický závet (§ 476b OZ)", "definition": "Nemusí byť napísaný rukou, ale vyžaduje podpis dvoch svedkov." },
+    { "term": "Neopomenuteľní dediči (§ 479 OZ)", "definition": "Deti poručiteľa – maloleté (celý zákonný podiel), plnoleté (aspoň polovica)." },
+    { "term": "Odvolateľnosť závetu", "definition": "Poručiteľ môže závet kedykoľvek zmeniť alebo odvolať bez súhlasu dediča." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Závet napísaný na počítači",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Poručiteľ si závet napíše na počítači, vytlačí ho a vlastnoručne ho iba podpíše, bez prítomnosti svedkov.", "options": [], "correct": 0 },
+        {
+          "question": "Je takýto závet platný ako vlastnoručný závet?",
+          "options": ["Nie, vlastnoručný závet musí byť celý napísaný rukou, nielen podpísaný", "Áno, stačí vlastnoručný podpis pod vytlačeným textom", "Áno, ak to poručiteľ vyhlási pred rodinou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vlastnoručný závet musí byť celý napísaný rukou poručiteľa, samotný podpis nestačí.",
+            "wrong": "Nesprávne. Samotný podpis pod vytlačeným textom ani ústne vyhlásenie pred rodinou nenahrádzajú zákonnú formu."
+          }
+        },
+        {
+          "question": "Akou inou formou by mohol poručiteľ platne zanechať závet napísaný na počítači?",
+          "options": ["Ako alografický závet za prítomnosti dvoch svedkov, alebo formou notárskej zápisnice", "Formou vlastnoručného závetu bez ďalších náležitostí", "Ústne pred dvoma svedkami"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Text nenapísaný rukou možno použiť ako alografický závet so svedkami, alebo formou notárskej zápisnice.",
+            "wrong": "Nesprávne. Vlastnoručný závet vyžaduje ručné písanie a ústny závet OZ nepripúšťa."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vylúčenie maloletého dieťaťa zo závetu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Poručiteľ vo svojom závete odkáže celý svoj majetok jednej osobe mimo rodiny a svoje maloleté dieťa v závete vôbec nespomenie.", "options": [], "correct": 0 },
+        {
+          "question": "Je takýto závet voči maloletému dieťaťu bez ďalšieho účinný v plnom rozsahu?",
+          "options": ["Nie, v časti ukracujúcej neopomenuteľného maloletého dediča je neplatný", "Áno, poručiteľ môže so svojím majetkom naložiť úplne ľubovoľne", "Áno, pokiaľ dieťa v čase spísania závetu ešte nebolo splnoleté"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Závet ukracujúci neopomenuteľného dediča je v tejto časti neplatný.",
+            "wrong": "Nesprávne. Voľnosť poručiteľa je obmedzená právami neopomenuteľných dedičov, vek dieťaťa pri spísaní závetu na tom nič nemení."
+          }
+        },
+        {
+          "question": "Aký podiel patrí maloletému dieťaťu ako neopomenuteľnému dedičovi?",
+          "options": ["Celý jeho zákonný dedičský podiel", "Iba polovica jeho zákonného podielu", "Žiadny podiel, kým nedovŕši plnoletosť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Maloletým neopomenuteľným dedičom patrí celý ich zákonný podiel.",
+            "wrong": "Nesprávne. Polovica zákonného podielu patrí plnoletým neopomenuteľným dedičom, nie maloletým, a nárok nezávisí od dosiahnutia plnoletosti."
+          }
+        }
+      ]
+    }
   ]
 }
