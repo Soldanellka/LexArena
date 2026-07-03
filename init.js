@@ -243,18 +243,19 @@ function initFeedbackSystem() {
     sendBtn.textContent = 'Odosielam...';
 
     try {
-      if (db) {
-        const { ref, push } = await import(
-          "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
-        );
-        await push(ref(db, 'feedback'), {
-          nick,
-          type: selectedType,
-          text,
-          createdAt: Date.now(),
-          read: false
-        });
-      }
+      if (!db) throw new Error('Firebase nie je pripojená');
+      const { ref, push } = await import(
+        "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+      );
+      await push(ref(db, 'feedback'), {
+        nick,
+        type: selectedType,
+        text,
+        createdAt: Date.now(),
+        status: 'pending',
+        read: false
+      });
+      console.log('✅ Feedback odoslaný do Firebase');
 
       // Zobraz úspech
       form.style.display = 'none';
@@ -430,8 +431,17 @@ function initVideoSystem() {
 /* =====================================================
    ADMIN FEEDBACK MANAGEMENT
    ===================================================== */
-async function loadAdminFeedback(listEl, db, ref, get, update) {
+async function loadAdminFeedback(listEl) {
   listEl.innerHTML = '<div class="small muted" style="padding:8px">Načítavam...</div>';
+
+  const db = window.db;
+  if (!db) {
+    listEl.innerHTML = '<div class="small muted" style="padding:8px">❌ Firebase nie je pripojená.</div>';
+    return;
+  }
+  const { ref, get, update } = await import(
+    "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+  );
 
   const snap = await get(ref(db, 'feedback'));
   const data = snap.val() || {};
@@ -488,7 +498,7 @@ async function loadAdminFeedback(listEl, db, ref, get, update) {
   listEl.querySelectorAll('.fb-publish').forEach(btn => {
     btn.onclick = async () => {
       await update(ref(db, `feedback/${btn.dataset.id}`), { status: 'published' });
-      await loadAdminFeedback(listEl, db, ref, get, update);
+      await loadAdminFeedback(listEl);
       renderPublishedFeedback();
     };
   });
@@ -496,7 +506,7 @@ async function loadAdminFeedback(listEl, db, ref, get, update) {
   listEl.querySelectorAll('.fb-hide').forEach(btn => {
     btn.onclick = async () => {
       await update(ref(db, `feedback/${btn.dataset.id}`), { status: 'hidden' });
-      await loadAdminFeedback(listEl, db, ref, get, update);
+      await loadAdminFeedback(listEl);
       renderPublishedFeedback();
     };
   });
@@ -516,7 +526,7 @@ async function loadAdminFeedback(listEl, db, ref, get, update) {
       await update(ref(db, `feedback/${btn.dataset.id}`), {
         adminReply: { text, createdAt: Date.now() }
       });
-      await loadAdminFeedback(listEl, db, ref, get, update);
+      await loadAdminFeedback(listEl);
       renderPublishedFeedback();
     };
   });
@@ -693,7 +703,7 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
       const isHidden = listEl.style.display === 'none';
       if (!isHidden) { listEl.style.display = 'none'; return; }
       listEl.style.display = 'block';
-      await loadAdminFeedback(listEl, db, ref, get, update);
+      await loadAdminFeedback(listEl);
     };
 
     // Zoznam hráčov
