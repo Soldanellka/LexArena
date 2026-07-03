@@ -1,0 +1,114 @@
+{
+  "id": "45",
+  "title": "Správne súdnictvo, základná charakteristika",
+  "schemaVersion": "1.1",
+  "tags": ["správne súdnictvo", "SSP", "správna žaloba", "Najvyšší správny súd SR"],
+  "summary": "Správne súdnictvo je časťou súdnictva, ktorá poskytuje fyzickým a právnickým osobám súdnu ochranu v oblasti verejnej správy; upravuje ho Správny súdny poriadok (zákon č. 162/2015 Z. z., SSP). Jeho základným účelom je súdny prieskum zákonnosti rozhodnutí, opatrení a postupov orgánov verejnej správy, prípadne ďalších subjektov vykonávajúcich verejnú správu. SSP upravuje viacero typov konaní – konanie o správnej žalobe proti rozhodnutiu alebo opatreniu orgánu verejnej správy, konanie o žalobe proti nečinnosti takéhoto orgánu, konanie o žalobe na ochranu pred nezákonným zásahom, konanie o kompetenčnej žalobe, ako aj osobitné konania vo veciach volieb, referenda a politických strán.\n\nSústavu správneho súdnictva tvoria krajské súdy ako správne súdy prvej inštancie a Najvyšší správny súd SR, ktorý od 1.8.2021 pôsobí ako odvolací (kasačný) súd voči rozhodnutiam krajských súdov a súčasne ako súd prvej inštancie v niektorých osobitne určených veciach (napríklad volebných). Pri prieskume napadnutého rozhodnutia je správny súd spravidla viazaný žalobnými bodmi – teda rozsahom a dôvodmi uvedenými v žalobe, ak zákon neustanoví inak.\n\nZapamätaj si:\n- Správne súdnictvo poskytuje ochranu pred nezákonným konaním orgánov verejnej správy.\n- Upravuje ho Správny súdny poriadok (zákon č. 162/2015 Z. z.).\n- Typy žalôb: proti rozhodnutiu, proti nečinnosti, na ochranu pred nezákonným zásahom, kompetenčná žaloba.\n- Sústava: krajské súdy ako správne súdy prvej inštancie, Najvyšší správny súd SR ako kasačný súd.\n- Súd je pri prieskume spravidla viazaný žalobnými bodmi."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je predmetom správneho súdnictva?",
+      "options": ["Súdny prieskum zákonnosti rozhodnutí a postupov orgánov verejnej správy", "Riešenie sporov medzi súkromnými osobami o vlastníctvo", "Trestné stíhanie páchateľov trestných činov", "Riešenie rodinnoprávnych sporov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Správne súdnictvo chráni osoby pred nezákonným konaním verejnej správy, nie súkromnoprávne spory.",
+        "wrong": "Nesprávne. Spory o vlastníctvo rieši CSP, trestné stíhanie Trestný poriadok a rodinnoprávne spory CMP."
+      }
+    },
+    {
+      "question": "Ktorý zákon upravuje správne súdnictvo na Slovensku?",
+      "options": ["Civilný sporový poriadok (CSP)", "Správny súdny poriadok (zákon č. 162/2015 Z. z., SSP)", "Civilný mimosporový poriadok (CMP)", "Exekučný poriadok"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Správne súdnictvo je samostatne upravené Správnym súdnym poriadkom.",
+        "wrong": "Nesprávne. CSP, CMP a Exekučný poriadok upravujú iné oblasti civilného procesu."
+      }
+    },
+    {
+      "question": "Aké typy žalôb SSP pozná?",
+      "options": ["Iba žalobu o náhradu škody", "Napríklad správnu žalobu proti rozhodnutiu orgánu verejnej správy, žalobu proti nečinnosti a žalobu na ochranu pred nezákonným zásahom", "Iba dovolanie", "Iba žalobu o rozvod manželstva"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. SSP upravuje viacero typov žalôb prispôsobených rôznym formám nezákonného konania verejnej správy.",
+        "wrong": "Nesprávne. Žaloba o náhradu škody, dovolanie a žaloba o rozvod patria do iných kódexov, nie do SSP."
+      }
+    },
+    {
+      "question": "Ktorý súd je od 1.8.2021 vrcholným orgánom v systéme správneho súdnictva?",
+      "options": ["Najvyšší súd SR", "Najvyšší správny súd SR", "Ústavný súd SR", "Okresný súd Banská Bystrica"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Agendu vrcholného orgánu správneho súdnictva prevzal Najvyšší správny súd SR.",
+        "wrong": "Nesprávne. Najvyšší súd SR rieši civilné a trestné veci, Ústavný súd SR ústavnosť, Okresný súd Banská Bystrica je exekučným súdom."
+      }
+    },
+    {
+      "question": "Akou zásadou je správny súd pri prieskume rozhodnutia orgánu verejnej správy spravidla viazaný?",
+      "options": ["Zásadou viazanosti žalobnými bodmi", "Súd skúma vec v neobmedzenom rozsahu bez ohľadu na žalobu", "Súd je viazaný výlučne stanoviskom žalovaného orgánu", "Súd nesmie rozhodnutie orgánu verejnej správy nijako preskúmať"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Súd sa spravidla pohybuje v medziach toho, čo žalobca v žalobe namieta.",
+        "wrong": "Nesprávne. Neobmedzený prieskum ani viazanosť stanoviskom žalovaného orgánu nezodpovedajú zásade viazanosti žalobnými bodmi."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Správne súdnictvo", "definition": "Časť súdnictva poskytujúca ochranu osobám pred nezákonnými rozhodnutiami a postupmi orgánov verejnej správy." },
+    { "term": "SSP", "definition": "Správny súdny poriadok (zákon č. 162/2015 Z. z.) – upravuje konania pred správnymi súdmi." },
+    { "term": "Správna žaloba", "definition": "Žaloba proti rozhodnutiu alebo opatreniu orgánu verejnej správy." },
+    { "term": "Najvyšší správny súd SR", "definition": "Od 1.8.2021 vrcholný orgán systému správneho súdnictva." },
+    { "term": "Zásada viazanosti žalobnými bodmi", "definition": "Správny súd preskúmava napadnuté rozhodnutie spravidla v rozsahu a z dôvodov uvedených v žalobe." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Napadnutie rozhodnutia stavebného úradu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Stavebník nesúhlasí s rozhodnutím stavebného úradu, ktorým mu nebolo vydané stavebné povolenie, a vyčerpal už všetky opravné prostriedky v rámci verejnej správy.", "options": [], "correct": 0 },
+        {
+          "question": "Aký prostriedok súdnej ochrany môže využiť?",
+          "options": ["Podať správnu žalobu na príslušný správny súd (krajský súd)", "Podať žalobu na všeobecný súd podľa CSP ako v bežnom obchodnom spore", "Musí sa obrátiť rovno na Najvyšší súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súdny prieskum rozhodnutí verejnej správy patrí do systému správneho súdnictva, nie do sporového konania podľa CSP.",
+            "wrong": "Nesprávne. CSP tu nie je použiteľný a vec nepatrí do prvostupňovej právomoci Najvyššieho súdu SR."
+          }
+        },
+        {
+          "question": "Čím bude správny súd pri prieskume viazaný?",
+          "options": ["Rozsahom a dôvodmi uvedenými v žalobe (žalobnými bodmi)", "Ničím, môže preskúmať vec v úplne neobmedzenom rozsahu vždy", "Iba stanoviskom stavebného úradu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd sa spravidla drží rozsahu a dôvodov, ktoré žalobca uviedol v žalobe.",
+            "wrong": "Nesprávne. Prieskum nie je neobmedzený a súd nie je viazaný len stanoviskom žalovaného úradu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Nečinnosť správneho orgánu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Občan podal žiadosť na úrad, ktorý o nej už dlhodobo nerozhoduje, hoci zákonná lehota na rozhodnutie dávno uplynula.", "options": [], "correct": 0 },
+        {
+          "question": "Aký typ žaloby môže občan v systéme správneho súdnictva podať?",
+          "options": ["Žalobu proti nečinnosti orgánu verejnej správy", "Žalobu o náhradu škody proti štátu ako jediné možné riešenie", "Trestné oznámenie na zamestnancov úradu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Práve na tento účel slúži žaloba proti nečinnosti orgánu verejnej správy podľa SSP.",
+            "wrong": "Nesprávne. Žaloba o náhradu škody rieši inú otázku a trestné oznámenie nie je nástrojom na vynútenie rozhodnutia úradu."
+          }
+        },
+        {
+          "question": "Čoho sa touto žalobou občan domáha?",
+          "options": ["Aby súd uložil orgánu povinnosť rozhodnúť v určenej lehote", "Aby súd sám vydal rozhodnutie namiesto správneho orgánu vo veci samej", "Aby súd zrušil samotný úrad"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cieľom je prinútiť orgán k rozhodnutiu, nie nahradiť ho vlastným meritórnym rozhodnutím súdu.",
+            "wrong": "Nesprávne. Súd spravidla sám nerozhoduje namiesto správneho orgánu vo veci samej a zrušenie úradu nie je predmetom tejto žaloby."
+          }
+        }
+      ]
+    }
+  ]
+}

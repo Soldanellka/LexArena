@@ -1,0 +1,114 @@
+{
+  "id": "43",
+  "title": "Rozhodcovské konanie a alternatívne spôsoby riešenia sporov (mediácia, konciliácia)",
+  "schemaVersion": "1.1",
+  "tags": ["rozhodcovské konanie", "mediácia", "konciliácia", "ADR"],
+  "summary": "Rozhodcovské konanie (zákon č. 244/2002 Z. z. o rozhodcovskom konaní) je alternatívny spôsob riešenia majetkových sporov mimo sústavy všeobecných súdov, založený na rozhodcovskej zmluve (rozhodcovská doložka v zmluve alebo samostatná rozhodcovská zmluva), ktorou strany vylučujú právomoc všeobecného súdu v prospech rozhodcovského súdu alebo rozhodcu. Rozhodcovský rozsudok má účinky právoplatného súdneho rozsudku a je exekučným titulom; osobitná úprava chráni spotrebiteľov pred nevýhodnými rozhodcovskými doložkami v spotrebiteľských zmluvách.\n\nMediácia (zákon č. 420/2004 Z. z. o mediácii) je mimosúdny spôsob riešenia sporu za účasti nezávislého a nestranného mediátora, ktorý na rozdiel od rozhodcu sám nerozhoduje, ale pomáha stranám nájsť a dosiahnuť vlastnú dohodu. Výsledkom je dohoda o mediácii, ktorú možno dať schváliť súdom alebo spísať vo forme notárskej zápisnice, čím sa môže stať exekučným titulom. Konciliácia je príbuzný postup, pri ktorom konciliátor spravidla aktívnejšie navrhuje možné riešenia sporu, hoci konečné rozhodnutie zostáva vždy na stranách. Spoločnou výhodou týchto alternatívnych spôsobov riešenia sporov (ADR) oproti súdnemu konaniu je rýchlosť, dôvernosť, nižšie náklady a lepšie zachovanie vzájomných vzťahov medzi stranami.\n\nZapamätaj si:\n- Rozhodcovské konanie vylučuje právomoc všeobecného súdu na základe rozhodcovskej zmluvy.\n- Rozhodcovský rozsudok má účinky právoplatného rozsudku a je exekučným titulom.\n- Mediátor stranám pomáha dosiahnuť dohodu, sám spor nerozhoduje.\n- Konciliátor spravidla aktívnejšie navrhuje riešenia, rozhodnutie však zostáva na stranách.\n- Výhody ADR: rýchlosť, dôvernosť, nižšie náklady, zachovanie vzťahov medzi stranami."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je rozhodcovské konanie?",
+      "options": ["Alternatívny spôsob riešenia majetkových sporov mimo všeobecných súdov na základe rozhodcovskej zmluvy", "Konanie pred štátnym súdom o mimoriadnom opravnom prostriedku", "Konanie, v ktorom vždy rozhoduje notár", "Konanie výlučne v trestných veciach"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Rozhodcovské konanie je súkromnoprávnou alternatívou k všeobecnému súdnictvu založenou na dohode strán.",
+        "wrong": "Nesprávne. Nejde o konanie pred štátnym súdom, o rozhodovanie notárom ani o trestné veci."
+      }
+    },
+    {
+      "question": "Aké účinky má rozhodcovský rozsudok?",
+      "options": ["Nemá žiadne právne účinky", "Má účinky právoplatného súdneho rozsudku a je exekučným titulom", "Je len odporúčaním bez záväznosti pre strany", "Musí ho dodatočne potvrdiť súd rozsudkom, inak je bez účinku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Rozhodcovský rozsudok je záväzný a vykonateľný rovnako ako rozsudok všeobecného súdu.",
+        "wrong": "Nesprávne. Rozhodcovský rozsudok nie je len odporúčaním a nevyžaduje osobitné potvrdenie súdom, aby bol záväzný."
+      }
+    },
+    {
+      "question": "Čo je mediácia?",
+      "options": ["Mimosúdne riešenie sporu za účasti nezávislého mediátora, ktorý pomáha stranám dosiahnuť dohodu, sám však nerozhoduje", "Konanie, v ktorom mediátor namiesto strán autoritatívne rozhodne spor", "Totožný pojem s rozhodcovským konaním", "Konanie výlučne pred súdom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Mediátor uľahčuje komunikáciu a hľadanie riešenia, ale sám o veci nerozhoduje.",
+        "wrong": "Nesprávne. Mediácia nie je totožná s rozhodcovským konaním, kde rozhodca autoritatívne rozhoduje, a neprebieha pred súdom."
+      }
+    },
+    {
+      "question": "Čím sa konciliácia líši od klasickej mediácie?",
+      "options": ["Konciliátor spravidla aktívnejšie navrhuje možné riešenia sporu, kým mediátor skôr uľahčuje komunikáciu medzi stranami", "Konciliácia je totožná s rozhodcovským konaním", "V konciliácii rozhoduje výlučne štátny súd", "Konciliácia sa nikdy nepoužíva pri riešení civilných sporov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Rozdiel spočíva v miere aktivity tretej osoby pri navrhovaní riešení, nie v tom, kto napokon rozhoduje.",
+        "wrong": "Nesprávne. Konciliácia nie je totožná s rozhodcovským konaním a nerozhoduje v nej štátny súd."
+      }
+    },
+    {
+      "question": "Aké sú typické výhody alternatívnych spôsobov riešenia sporov (ADR) oproti súdnemu konaniu?",
+      "options": ["Rýchlosť, dôvernosť, nižšie náklady a zachovanie vzťahov medzi stranami", "Vyššie náklady a dlhší priebeh v porovnaní so súdnym konaním", "Absolútna verejnosť konania", "Nemožnosť dosiahnuť vykonateľné rozhodnutie"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Tieto výhody sú hlavným dôvodom rastúcej obľuby ADR pri riešení sporov.",
+        "wrong": "Nesprávne. ADR je spravidla lacnejšie a rýchlejšie ako súdne konanie a jeho výsledky môžu byť vykonateľné (napr. rozhodcovský rozsudok)."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Rozhodcovské konanie", "definition": "Alternatívny spôsob riešenia majetkových sporov na základe rozhodcovskej zmluvy (zákon č. 244/2002 Z. z.)." },
+    { "term": "Rozhodcovský rozsudok", "definition": "Má účinky právoplatného súdneho rozsudku a je exekučným titulom." },
+    { "term": "Mediácia", "definition": "Mimosúdne riešenie sporu za účasti nezávislého mediátora, ktorý stranám pomáha dosiahnuť dohodu (zákon č. 420/2004 Z. z.)." },
+    { "term": "Konciliácia", "definition": "Zmierovacie konanie, kde konciliátor aktívnejšie navrhuje možné riešenia sporu." },
+    { "term": "Výhody ADR", "definition": "Rýchlosť, dôvernosť, nižšie náklady, zachovanie vzťahov medzi stranami." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Riešenie sporu mediáciou",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dvaja obchodní partneri majú spor o plnenie zo zmluvy a chcú ho vyriešiť rýchlo, dôverne a bez narušenia vzájomných vzťahov.", "options": [], "correct": 0 },
+        {
+          "question": "Aký spôsob riešenia sporu je pre nich vhodný?",
+          "options": ["Mediácia", "Trestné oznámenie", "Exekučné konanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mediácia práve umožňuje rýchle, dôverné riešenie s ohľadom na zachovanie vzťahov strán.",
+            "wrong": "Nesprávne. Trestné oznámenie sa netýka riešenia obchodného sporu a exekúcia predpokladá existenciu už vymáhateľného nároku."
+          }
+        },
+        {
+          "question": "Rozhoduje mediátor namiesto strán o obsahu dohody?",
+          "options": ["Nie, mediátor len pomáha stranám dosiahnuť vlastnú dohodu, sám nerozhoduje", "Áno, mediátor autoritatívne rozhodne namiesto strán", "Áno, mediátor vydáva záväzný rozsudok"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mediátor je facilitátorom procesu, nie rozhodcom.",
+            "wrong": "Nesprávne. Mediátor nevydáva žiadny rozsudok ani autoritatívne rozhodnutie namiesto strán."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vylúčenie právomoci súdu rozhodcovskou doložkou",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Zmluvné strany si v obchodnej zmluve dohodli rozhodcovskú doložku, podľa ktorej všetky spory z tejto zmluvy rozhodne rozhodcovský súd.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to má vplyv na právomoc všeobecného súdu?",
+          "options": ["Právomoc všeobecného súdu je platnou rozhodcovskou doložkou vylúčená v prospech rozhodcovského súdu", "Rozhodcovská doložka nemá žiadny právny význam", "Všeobecný súd musí bez ohľadu na doložku vždy rozhodovať vo veci"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Platná rozhodcovská doložka vylučuje právomoc všeobecného súdu v jej rozsahu.",
+            "wrong": "Nesprávne. Rozhodcovská doložka má zásadný právny význam a všeobecný súd na jej základe zásadne ustúpi zo svojej právomoci."
+          }
+        },
+        {
+          "question": "Aké účinky bude mať rozhodnutie rozhodcovského súdu?",
+          "options": ["Účinky právoplatného rozsudku a bude exekučným titulom", "Len odporúčací charakter bez vynútiteľnosti", "Musí ho dodatočne schváliť všeobecný súd, inak je nevykonateľné"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozhodcovský rozsudok je priamo vykonateľný bez potreby dodatočného schválenia všeobecným súdom.",
+            "wrong": "Nesprávne. Rozhodcovský rozsudok nie je len odporúčaním a nevyžaduje dodatočné schválenie všeobecným súdom."
+          }
+        }
+      ]
+    }
+  ]
+}

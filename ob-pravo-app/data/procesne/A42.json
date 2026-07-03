@@ -1,0 +1,114 @@
+{
+  "id": "42",
+  "title": "Odklad exekúcie, zastavenie exekúcie",
+  "schemaVersion": "1.1",
+  "tags": ["odklad exekúcie", "zastavenie exekúcie", "Exekučný poriadok"],
+  "summary": "Odklad exekúcie (§ 56 Exekučného poriadku) je dočasné odloženie jej vykonania. Prichádza do úvahy najmä vtedy, ak sa povinný bez svojej viny prechodne ocitol v takom postavení, že by okamžitá exekúcia mohla mať pre neho alebo jeho rodinu osobitne nepriaznivé následky, pričom odklad by oprávneného vážne nepoškodil, alebo ak možno dôvodne očakávať, že exekúcia bude neskôr zastavená. Odklad je vždy len dočasným opatrením – po jeho uplynutí alebo odpadnutí dôvodu môže exekúcia pokračovať.\n\nZastavenie exekúcie (§ 57 Exekučného poriadku) je naopak definitívnym skončením exekučného konania (v celom rozsahu alebo v jeho časti), a to z dôvodov, ktoré majú trvalú povahu – napríklad ak bola exekúcia nariadená napriek nesplneniu zákonných predpokladov, ak bol exekučný titul následne zrušený, ak vymáhaná povinnosť medzičasom zanikla, alebo ak exekúcia postihuje veci, ktoré sú z exekúcie vylúčené. Zásadný rozdiel medzi oboma inštitútmi teda spočíva v tom, že odklad je prechodným opatrením umožňujúcim neskoršie pokračovanie exekúcie, kým zastavenie exekučné konanie definitívne ukončuje.\n\nZapamätaj si:\n- Odklad exekúcie (§ 56 EP) je dočasný, exekúcia môže neskôr pokračovať.\n- Typický dôvod odkladu: prechodné, nezavinené ťažkosti povinného bez vážneho poškodenia oprávneného.\n- Zastavenie exekúcie (§ 57 EP) je definitívnym skončením konania.\n- Typický dôvod zastavenia: zrušenie exekučného titulu, zánik povinnosti, nedostatok predpokladov exekúcie.\n- Rozdiel: odklad je prechodný, zastavenie je trvalé skončenie konania."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je odklad exekúcie?",
+      "options": ["Dočasné odloženie vykonania exekúcie za splnenia zákonných podmienok", "Definitívne skončenie exekúcie", "Zvýšenie vymáhanej sumy", "Zmena osoby exekútora"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Odklad je len dočasným, nie konečným riešením situácie.",
+        "wrong": "Nesprávne. Definitívne skončenie predstavuje zastavenie exekúcie, nie jej odklad; odklad sa netýka výšky sumy ani osoby exekútora."
+      }
+    },
+    {
+      "question": "Za akých okolností môže súd/exekútor odložiť exekúciu?",
+      "options": ["Ak sa povinný bez svojej viny prechodne ocitol v nepriaznivom postavení a odklad by vážne nepoškodil oprávneného, alebo možno očakávať zastavenie exekúcie", "Kedykoľvek na základe ľubovôle exekútora bez zákonného dôvodu", "Iba ak si to želá oprávnený bez ďalších podmienok", "Nikdy, odklad exekúcie zákon nepozná"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Odklad je viazaný na konkrétne zákonné podmienky, nie na svojvoľné rozhodnutie.",
+        "wrong": "Nesprávne. Odklad exekúcie zákon pozná a nezávisí len od želania oprávneného ani od ľubovôle exekútora."
+      }
+    },
+    {
+      "question": "Čo je zastavenie exekúcie?",
+      "options": ["Definitívne skončenie exekučného konania z dôvodov ustanovených zákonom", "Dočasné pozastavenie exekúcie na žiadosť povinného bez ďalších podmienok", "Zmena exekútora vedúceho konanie", "Zvýšenie trov exekúcie"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zastavenie je trvalým, nie dočasným ukončením exekučného konania.",
+        "wrong": "Nesprávne. Samotná žiadosť povinného bez zákonného dôvodu nestačí a nejde ani o zmenu exekútora či zvýšenie trov."
+      }
+    },
+    {
+      "question": "Ktorý z nasledujúcich je typickým dôvodom na zastavenie exekúcie?",
+      "options": ["Exekučný titul bol následne zrušený alebo povinnosť zanikla", "Povinný má nového zamestnávateľa", "Oprávnený zmenil svoje bydlisko", "Exekútor sa presťahoval do iného mesta"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zánik exekučného titulu alebo vymáhanej povinnosti sú typickými dôvodmi zastavenia.",
+        "wrong": "Nesprávne. Zmena zamestnávateľa, bydliska oprávneného či sídla exekútora samy osebe nie sú dôvodom na zastavenie exekúcie."
+      }
+    },
+    {
+      "question": "Aký je rozdiel medzi odkladom a zastavením exekúcie?",
+      "options": ["Odklad je dočasný a exekúcia môže pokračovať, zastavenie je definitívnym skončením konania", "Medzi nimi niet žiadneho rozdielu", "Zastavenie je vždy len dočasné, odklad je definitívny", "Odklad sa týka len peňažných pohľadávok, zastavenie len nepeňažných"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Kľúčovým rozdielom je práve dočasnosť odkladu oproti definitívnosti zastavenia.",
+        "wrong": "Nesprávne. Rozdiel medzi nimi existuje a nesúvisí s tým, či ide o peňažnú alebo nepeňažnú pohľadávku."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Odklad exekúcie (§ 56 Exekučného poriadku)", "definition": "Dočasné odloženie vykonania exekúcie za splnenia zákonných podmienok." },
+    { "term": "Zastavenie exekúcie (§ 57 Exekučného poriadku)", "definition": "Definitívne skončenie exekučného konania z dôvodov ustanovených zákonom." },
+    { "term": "Dôvod odkladu", "definition": "Prechodné nepriaznivé postavenie povinného bez jeho zavinenia, ak sa oprávnený vážne nepoškodí." },
+    { "term": "Dôvod zastavenia", "definition": "Napríklad zrušenie exekučného titulu alebo zánik vymáhanej povinnosti." },
+    { "term": "Rozdiel odklad – zastavenie", "definition": "Odklad je dočasný, zastavenie je definitívne skončenie exekúcie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Dočasné ťažkosti povinného",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Povinný sa bez vlastného zavinenia (napr. pre náhlu vážnu chorobu) ocitol v dočasnej finančnej núdzi, pričom krátky odklad exekúcie by oprávneného vážne nepoškodil.", "options": [], "correct": 0 },
+        {
+          "question": "Aký procesný prostriedok môže povinný navrhnúť?",
+          "options": ["Odklad exekúcie", "Zastavenie exekúcie natrvalo", "Zmenu exekútora"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Prechodná situácia povinného bez vážneho poškodenia oprávneného je typickým dôvodom na odklad.",
+            "wrong": "Nesprávne. Trvalé zastavenie exekúcie ani zmena exekútora nezodpovedajú povahe tejto dočasnej situácie."
+          }
+        },
+        {
+          "question": "Znamená odklad, že exekúcia sa už nikdy nevykoná?",
+          "options": ["Nie, odklad je len dočasný, exekúcia môže neskôr pokračovať", "Áno, odklad je vždy totožný so zastavením", "Áno, odkladom exekúcia bez ďalšieho zaniká"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odklad nerieši vec trvalo, exekúcia môže po jeho uplynutí pokračovať.",
+            "wrong": "Nesprávne. Odklad a zastavenie sú odlišné inštitúty a odklad exekúciu sám osebe nezrušuje."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zrušenie exekučného titulu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Rozsudok, ktorý bol podkladom pre vedenie exekúcie, bol následne na základe mimoriadneho opravného prostriedku zrušený.", "options": [], "correct": 0 },
+        {
+          "question": "Čo sa stane s prebiehajúcou exekúciou?",
+          "options": ["Exekúcia sa zastaví, keďže exekučný titul zanikol", "Exekúcia napriek tomu pokračuje bez zmeny", "Exekúcia sa iba dočasne odloží, kým sa vec znova neprejedná"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zánik exekučného titulu je typickým dôvodom na zastavenie, nie len odklad exekúcie.",
+            "wrong": "Nesprávne. Exekúcia nemôže bez podkladu (exekučného titulu) ďalej pokračovať a samotný odklad by problém trvalo nevyriešil."
+          }
+        },
+        {
+          "question": "Prečo v tomto prípade nejde len o odklad, ale o zastavenie?",
+          "options": ["Lebo dôvod (zánik exekučného titulu) je trvalý, nie iba prechodný", "Lebo zastavenie sa nariaďuje vždy namiesto odkladu bez ohľadu na dôvod", "Lebo o tom rozhoduje výlučne exekútor podľa vlastnej úvahy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Trvalá povaha dôvodu (zrušenie titulu) odôvodňuje definitívne zastavenie, nie len dočasný odklad.",
+            "wrong": "Nesprávne. Voľba medzi odkladom a zastavením závisí od povahy dôvodu, nie od svojvoľnej úvahy exekútora."
+          }
+        }
+      ]
+    }
+  ]
+}
