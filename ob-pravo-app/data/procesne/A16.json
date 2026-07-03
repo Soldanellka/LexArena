@@ -1,0 +1,114 @@
+{
+  "id": "16",
+  "title": "Priebeh konania na súde prvej inštancie, predbežné prejednanie sporu",
+  "schemaVersion": "1.1",
+  "tags": ["priebeh konania", "predbežné prejednanie sporu", "začatie konania", "rozsudok pre zmeškanie"],
+  "summary": "Sporové konanie na prvom stupni je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 143 CSP). Po podaní žaloby súd v úvodnej fáze skúma splnenie procesných podmienok a formálnu bezvadnosť žaloby, prípadne vyzve žalobcu na odstránenie vád; následne žalobu doručí žalovanému na vyjadrenie. Súd môže nariadiť predbežné prejednanie sporu (§ 168 a nasl. CSP), ktorého cieľom je čo najrýchlejšie a najhospodárnejšie priblíženie k rozhodnutiu vo veci – overenie procesných podmienok, vyjasnenie sporných skutkových a právnych otázok, poučenie strán, preskúmanie možnosti zmieru a prípadné rozvrhnutie ďalšieho postupu vrátane koncentrácie konania.\n\nAk to zákon pripúšťa, súd môže rozhodnúť aj bez nariadenia pojednávania vo veci samej – napríklad rozsudkom pre uznanie, ak žalovaný nárok uzná, alebo rozsudkom pre zmeškanie, ak žalovaný napriek riadnemu poučeniu a výzve zostane nečinný. V ostatných prípadoch súd po skončení prípravnej fázy nariadi pojednávanie.\n\nZapamätaj si:\n- Konanie je začaté dňom, keď žaloba dôjde príslušnému súdu (§ 143 CSP).\n- Súd najprv skúma procesné podmienky a formálnu bezvadnosť žaloby.\n- Predbežné prejednanie sporu (§ 168 CSP) pripravuje pojednávanie a smeruje k hospodárnemu priebehu konania.\n- Súd môže rozhodnúť aj bez pojednávania (rozsudok pre uznanie, rozsudok pre zmeškanie).\n- Cieľom prípravnej fázy je čo najrýchlejšie a najhospodárnejšie smerovanie k rozhodnutiu."
+  ,
+  "quiz": [
+    {
+      "question": "Kedy je sporové konanie začaté?",
+      "options": ["Dňom, keď žaloba dôjde príslušnému súdu", "Dňom nariadenia pojednávania", "Dňom doručenia žaloby žalovanému", "Dňom vydania rozsudku"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 143 CSP).",
+        "wrong": "Nesprávne. Doručenie žalovanému, nariadenie pojednávania ani vydanie rozsudku nie sú okamihom začatia konania."
+      }
+    },
+    {
+      "question": "Na čo slúži predbežné prejednanie sporu (§ 168 CSP)?",
+      "options": ["Na definitívne rozhodnutie vo veci samej", "Na prípravu pojednávania – overenie procesných podmienok, vyjasnenie sporných otázok, možnosť zmieru a rozvrhnutie ďalšieho postupu", "Na vykonanie exekúcie rozhodnutia", "Na doručenie rozsudku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Predbežné prejednanie sporu má pripraviť pôdu pre hospodárny priebeh ďalšieho konania, nie rozhodnúť vo veci samej.",
+        "wrong": "Nesprávne. Definitívne rozhodnutie, exekúcia ani doručenie rozsudku nepatria do fázy predbežného prejednania sporu."
+      }
+    },
+    {
+      "question": "Môže súd rozhodnúť bez nariadenia pojednávania?",
+      "options": ["Nie, pojednávanie je vždy povinné", "Áno, v zákonom ustanovených prípadoch (napr. rozsudok pre uznanie, rozsudok pre zmeškanie)", "Áno, ale iba ak si to želá žalovaný", "Áno, ale iba v mimosporovom konaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon v niektorých prípadoch výslovne pripúšťa rozhodnutie bez nariadenia pojednávania.",
+        "wrong": "Nesprávne. Nejde o výsadu iba žalovaného ani o inštitút vyhradený len mimosporovému konaniu."
+      }
+    },
+    {
+      "question": "Čo skúma súd v úvodnej fáze konania pred nariadením pojednávania?",
+      "options": ["Iba výšku súdneho poplatku", "Splnenie procesných podmienok a formálnu bezvadnosť žaloby", "Iba dôveryhodnosť svedkov", "Iba majetkové pomery strán"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Skôr než súd pristúpi k meritórnemu prejednaniu, overuje procesné podmienky a formálnu správnosť žaloby.",
+        "wrong": "Nesprávne. Hodnotenie dôveryhodnosti svedkov ani majetkových pomerov nepatrí do tejto úvodnej procesnej fázy."
+      }
+    },
+    {
+      "question": "Aký je cieľ predbežného prejednania sporu?",
+      "options": ["Čo najrýchlejšie a najhospodárnejšie priblíženie k rozhodnutiu vo veci", "Predĺženie konania", "Zistenie osobných pomerov sudcu", "Vylúčenie verejnosti z konania"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Predbežné prejednanie sporu má prispieť k rýchlemu a hospodárnemu priebehu konania.",
+        "wrong": "Nesprávne. Cieľom nie je predlžovanie konania ani otázky súvisiace s osobou sudcu či verejnosťou pojednávania."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Začatie konania", "definition": "Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu." },
+    { "term": "Predbežné prejednanie sporu (§ 168 CSP)", "definition": "Fáza prípravy pojednávania zameraná na vyjasnenie sporných otázok a možnosť zmieru." },
+    { "term": "Rozsudok pre zmeškanie", "definition": "Rozsudok vydaný bez nariadenia pojednávania pri splnení zákonných podmienok nečinnosti žalovaného." },
+    { "term": "Rozsudok pre uznanie", "definition": "Rozsudok vydaný na základe uznania nároku žalovaným, možný aj bez pojednávania." },
+    { "term": "Hospodárnosť prípravnej fázy", "definition": "Cieľom prípravy konania je čo najrýchlejšie a najefektívnejšie smerovanie k rozhodnutiu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Deň začatia konania",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalobca podá žalobu poštou; na súd je doručená 5. marca, hoci bola na poštu podaná už 1. marca.", "options": [], "correct": 0 },
+        {
+          "question": "Kedy je konanie začaté?",
+          "options": ["Dňom, keď žaloba fakticky dôjde súdu (5. marca)", "Dňom podania na pošte (1. marca)", "Dňom doručenia žaloby žalovanému"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozhodujúci je deň, keď žaloba skutočne dôjde príslušnému súdu, nie deň jej podania na pošte.",
+            "wrong": "Nesprávne. Podanie na poštu ani doručenie žalovanému nie sú okamihom začatia konania podľa § 143 CSP."
+          }
+        },
+        {
+          "question": "Prečo je určenie dňa začatia konania dôležité?",
+          "options": ["Viaže sa naň napríklad posudzovanie litispendencie a plynutie niektorých lehôt", "Nemá to žiadny právny význam", "Určuje výšku súdneho poplatku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Deň začatia konania je rozhodujúci napríklad pri posudzovaní prekážky litispendencie.",
+            "wrong": "Nesprávne. Deň začatia konania nemá vplyv na výšku súdneho poplatku a rozhodne nie je bez právneho významu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rozhodnutie bez pojednávania",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalovaný sa napriek riadnemu doručeniu žaloby a poučeniu na výzvu súdu vôbec nevyjadril spôsobom, ktorý by vyžadoval nariadenie pojednávania.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd rozhodnúť bez pojednávania?",
+          "options": ["Áno, ak sú splnené zákonné podmienky (napr. pre rozsudok pre zmeškanie)", "Nie, pojednávanie musí byť vždy nariadené", "Áno, ale iba so súhlasom žalovaného"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon pri nečinnosti žalovaného za stanovených podmienok umožňuje rozhodnúť rozsudkom pre zmeškanie bez pojednávania.",
+            "wrong": "Nesprávne. Pojednávanie nie je za týchto podmienok bezvýnimočne povinné a súhlas nečinného žalovaného sa nevyžaduje."
+          }
+        },
+        {
+          "question": "Aký je zmysel takejto úpravy?",
+          "options": ["Zabrániť účelovému a pasívnemu predlžovaniu konania nečinnosťou žalovaného", "Uľahčiť žalovanému obranu", "Zvýšiť náklady konania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Inštitút rozsudku pre zmeškanie chráni žalobcu pred účelovou pasivitou žalovaného.",
+            "wrong": "Nesprávne. Účelom nie je uľahčiť obranu nečinnému žalovanému ani zvyšovať náklady konania."
+          }
+        }
+      ]
+    }
+  ]
+}

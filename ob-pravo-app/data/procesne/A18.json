@@ -1,0 +1,114 @@
+{
+  "id": "18",
+  "title": "Neodkladné a zabezpečovacie opatrenia podľa CSP",
+  "schemaVersion": "1.1",
+  "tags": ["neodkladné opatrenie", "zabezpečovacie opatrenie", "osvedčenie nároku", "CSP"],
+  "summary": "Štvrtá časť CSP upravuje neodkladné a zabezpečovacie opatrenia ako nástroje dočasnej ochrany práv strán ešte pred tým, než súd rozhodne vo veci samej. Neodkladné opatrenie (§ 325 a nasl. CSP) súd nariadi, ak je potrebné bezodkladne upraviť pomery strán alebo ak existuje obava, že by výkon budúceho rozhodnutia bol ohrozený; možno ho nariadiť pred začatím konania, počas neho, ako aj po jeho skončení. Typickým príkladom je predbežná úprava výživného alebo zákaz nakladania s vecou.\n\nZabezpečovacie opatrenie (§ 343 a nasl. CSP) slúži na zabezpečenie peňažnej pohľadávky (napríklad zriadením záložného práva na majetok povinného) alebo nepeňažnej pohľadávky, aby bola vymožiteľná aj po skončení konania. Na nariadenie oboch typov opatrení postačuje osvedčenie nároku a naliehavosti potreby – nevyžaduje sa jeho úplné dokázanie ako pri rozhodnutí vo veci samej. Opatrenie zaniká najmä splnením zabezpečenej povinnosti, právoplatným rozhodnutím vo veci samej, uplynutím doby, na ktorú bolo nariadené, alebo jeho zrušením súdom.\n\nZapamätaj si:\n- Neodkladné opatrenie (§ 325 CSP) rieši naliehavú potrebu dočasnej úpravy pomerov.\n- Zabezpečovacie opatrenie (§ 343 CSP) zabezpečuje peňažnú alebo nepeňažnú pohľadávku pre budúcu exekúciu.\n- Postačuje osvedčenie nároku, nie jeho úplné dokázanie.\n- Oba typy opatrení možno nariadiť aj pred začatím konania vo veci samej.\n- Opatrenie zaniká splnením povinnosti, rozhodnutím vo veci, uplynutím doby alebo zrušením súdom."
+  ,
+  "quiz": [
+    {
+      "question": "Na čo slúži neodkladné opatrenie podľa CSP?",
+      "options": ["Na definitívne rozhodnutie sporu", "Na bezodkladnú, dočasnú úpravu pomerov strán alebo zabezpečenie výkonu budúceho rozhodnutia", "Na zastavenie konania", "Na zmenu žaloby"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Neodkladné opatrenie je dočasným nástrojom, nie konečným rozhodnutím vo veci samej.",
+        "wrong": "Nesprávne. Zastavenie konania a zmena žaloby sú samostatné inštitúty nesúvisiace priamo s neodkladným opatrením."
+      }
+    },
+    {
+      "question": "Čo musí navrhovateľ neodkladného opatrenia preukázať?",
+      "options": ["Úplné a nepochybné dokázanie nároku", "Osvedčenie (nie úplné dokázanie) nároku a naliehavosť potreby dočasnej úpravy", "Len svoju totožnosť", "Súhlas protistrany"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Na nariadenie opatrenia postačuje nižší dôkazný štandard – osvedčenie nároku a naliehavosti.",
+        "wrong": "Nesprávne. Nevyžaduje sa úplné dokázanie ako pri rozhodnutí vo veci samej, ani súhlas protistrany."
+      }
+    },
+    {
+      "question": "Čo je zabezpečovacie opatrenie podľa § 343 CSP?",
+      "options": ["Opatrenie slúžiace na zabezpečenie peňažnej alebo nepeňažnej pohľadávky pre prípad budúcej exekúcie", "Opatrenie na doručovanie písomností", "Opatrenie na vylúčenie sudcu", "Opatrenie na zmenu príslušnosti súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zabezpečovacie opatrenie chráni vymožiteľnosť pohľadávky do budúcna, napríklad zriadením záložného práva.",
+        "wrong": "Nesprávne. Doručovanie, vylúčenie sudcu a zmena príslušnosti sú samostatné inštitúty, nesúvisiace so zabezpečovacím opatrením."
+      }
+    },
+    {
+      "question": "Môže súd nariadiť neodkladné opatrenie ešte pred podaním žaloby vo veci samej?",
+      "options": ["Nie, len počas už prebiehajúceho konania", "Áno, aj pred začatím konania vo veci samej", "Len po právoplatnom skončení konania", "Len so súhlasom Ministerstva spravodlivosti SR"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Neodkladné opatrenie možno nariadiť aj pred začatím konania vo veci samej, práve pre jeho naliehavú povahu.",
+        "wrong": "Nesprávne. Opatrenie nie je viazané len na už prebiehajúce konanie, ani nevyžaduje súhlas ministerstva."
+      }
+    },
+    {
+      "question": "Kedy zaniká neodkladné alebo zabezpečovacie opatrenie?",
+      "options": ["Nikdy, opatrenie je trvalé", "Splnením zabezpečenej povinnosti, právoplatným rozhodnutím vo veci, uplynutím určenej doby alebo zrušením súdom", "Len rozhodnutím Národnej rady SR", "Len uplynutím desiatich rokov bez ohľadu na okolnosti"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon vymenúva viacero dôvodov zániku opatrenia, viazaných na konkrétne okolnosti veci.",
+        "wrong": "Nesprávne. Opatrenie nie je trvalé a jeho zánik nezávisí od orgánov, ktoré s vecou vôbec nesúvisia."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Neodkladné opatrenie (§ 325 CSP)", "definition": "Slúži na bezodkladnú, dočasnú úpravu pomerov strán pred alebo počas konania." },
+    { "term": "Zabezpečovacie opatrenie (§ 343 CSP)", "definition": "Zabezpečuje peňažnú alebo nepeňažnú pohľadávku pre prípad budúcej exekúcie." },
+    { "term": "Osvedčenie nároku", "definition": "Nižší dôkazný štandard než plné dokázanie, postačujúci na nariadenie opatrenia." },
+    { "term": "Nariadenie pred začatím konania", "definition": "Neodkladné opatrenie možno nariadiť aj pred podaním žaloby vo veci samej." },
+    { "term": "Zánik opatrenia", "definition": "Splnením povinnosti, právoplatným rozhodnutím vo veci, uplynutím doby alebo zrušením súdom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Naliehavá úprava styku s dieťaťom",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Rodičia sú v rozvodovom konaní a jeden z nich bráni druhému akémukoľvek kontaktu s dieťaťom ešte pred rozhodnutím vo veci samej.", "options": [], "correct": 0 },
+        {
+          "question": "Aký procesný nástroj môže dotknutý rodič využiť na rýchlu, dočasnú úpravu?",
+          "options": ["Návrh na nariadenie neodkladného opatrenia", "Musí počkať na právoplatný rozsudok vo veci samej", "Podanie na políciu ako jediné možné riešenie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neodkladné opatrenie umožňuje rýchlu, dočasnú úpravu pomerov ešte pred konečným rozhodnutím vo veci.",
+            "wrong": "Nesprávne. Čakanie na právoplatný rozsudok by mohlo trvať príliš dlho a polícia nie je nástrojom civilnoprávnej úpravy styku."
+          }
+        },
+        {
+          "question": "Aký štandard preukázania sa na nariadenie tohto opatrenia vyžaduje?",
+          "options": ["Postačuje osvedčenie nároku a naliehavosti, nie plné dokázanie", "Musí byť nárok bez pochýb úplne dokázaný ako pri rozsudku", "Nevyžaduje sa žiadne preukázanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pre neodkladné opatrenie postačuje nižší dôkazný štandard – osvedčenie, nie úplné dokázanie.",
+            "wrong": "Nesprávne. Úplné dôkazné konanie ako pri meritórnom rozsudku by poprelo zmysel rýchlosti neodkladného opatrenia."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zabezpečenie peňažnej pohľadávky",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Veriteľ sa obáva, že dlžník počas súdneho sporu prevedie svoj jediný majetok na tretiu osobu, aby zmaril budúcu exekúciu.", "options": [], "correct": 0 },
+        {
+          "question": "Aký inštitút môže veriteľ využiť?",
+          "options": ["Návrh na nariadenie zabezpečovacieho opatrenia (napr. zriadenie záložného práva na majetok dlžníka)", "Musí počkať, kým spor skončí, a potom konať", "Nemôže urobiť nič, kým nie je nárok právoplatne priznaný"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zabezpečovacie opatrenie chráni pohľadávku ešte pred právoplatným rozhodnutím vo veci samej.",
+            "wrong": "Nesprávne. Čakanie na skončenie sporu by mohlo znamenať, že majetok dlžníka medzitým zanikne alebo bude prevedený."
+          }
+        },
+        {
+          "question": "Aký je účel takéhoto opatrenia?",
+          "options": ["Zabezpečiť, aby bola pohľadávka vymožiteľná aj po skončení konania", "Rozhodnúť s konečnou platnosťou o výške pohľadávky", "Nahradiť potrebu podať žalobu vo veci samej"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zabezpečovacie opatrenie chráni budúcu vymožiteľnosť nároku, nerieši jeho výšku ani nenahrádza žalobu.",
+            "wrong": "Nesprávne. O výške pohľadávky rozhoduje súd až vo veci samej; opatrenie ju len chráni do budúcnosti."
+          }
+        }
+      ]
+    }
+  ]
+}

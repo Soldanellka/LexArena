@@ -1,0 +1,114 @@
+{
+  "id": "19",
+  "title": "Neodkladné a zabezpečovacie opatrenia podľa CMP",
+  "schemaVersion": "1.1",
+  "tags": ["neodkladné opatrenie CMP", "zásada oficiality", "najlepší záujem dieťaťa", "predbežná úprava styku"],
+  "summary": "Aj Civilný mimosporový poriadok pozná neodkladné a zabezpečovacie opatrenia, ktoré sú však prispôsobené osobitostiam mimosporových konaní. Zatiaľ čo v sporovom konaní podľa CSP je súd pri nariaďovaní opatrenia spravidla viazaný návrhom, v mimosporových veciach sa vo väčšej miere presadzuje zásada oficiality – súd môže neodkladné opatrenie nariadiť aj bez návrhu, ak si to vyžaduje najlepší záujem maloletého dieťaťa alebo iný chránený záujem (napríklad ochrana osoby s obmedzenou spôsobilosťou na právne úkony).\n\nTypickým príkladom je predbežná úprava styku rodiča s dieťaťom, predbežné zverenie dieťaťa do starostlivosti jedného z rodičov alebo inej osoby počas prebiehajúceho konania o úprave rodičovských práv a povinností, prípadne v naliehavých prípadoch aj nariadenie neodkladnej ústavnej starostlivosti, ak je dieťa bezprostredne ohrozené. Súd sa pri rozhodovaní o takýchto opatreniach riadi predovšetkým najlepším záujmom dieťaťa, nie len záujmom niektorého z rodičov.\n\nZapamätaj si:\n- Neodkladné opatrenie podľa CMP možno v zákonom ustanovených prípadoch nariadiť aj bez návrhu (zásada oficiality).\n- Typický príklad: predbežná úprava styku alebo predbežné zverenie dieťaťa do starostlivosti.\n- V naliehavých prípadoch možno nariadiť aj neodkladnú ústavnú starostlivosť o dieťa.\n- Hlavným kritériom rozhodovania je najlepší záujem maloletého dieťaťa.\n- Rozdiel oproti CSP: väčšia vlastná aktivita súdu namiesto viazanosti návrhom."
+  ,
+  "quiz": [
+    {
+      "question": "Môže súd v mimosporovom konaní nariadiť neodkladné opatrenie aj bez návrhu?",
+      "options": ["Nie, vždy je potrebný návrh účastníka", "Áno, ak si to vyžaduje najlepší záujem maloletého alebo iný chránený záujem (zásada oficiality)", "Áno, ale iba so súhlasom oboch rodičov", "Nie, takýto postup CMP vôbec nepozná"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. V mimosporových veciach môže súd na základe zásady oficiality konať aj bez návrhu, ak je to potrebné na ochranu maloletého.",
+        "wrong": "Nesprávne. CMP práve pripúšťa aktivitu súdu bez návrhu, ak si to vyžaduje ochrana záujmu maloletého alebo inej chránenej osoby."
+      }
+    },
+    {
+      "question": "Aký je typický príklad neodkladného opatrenia podľa CMP?",
+      "options": ["Zabezpečenie obchodnej pohľadávky medzi podnikateľmi", "Predbežná úprava styku s maloletým dieťaťom alebo jeho predbežné zverenie do starostlivosti", "Zriadenie záložného práva na nehnuteľnosť v obchodnom spore", "Zabezpečenie dôkazu v spore o autorské práva"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o typický nástroj ochrany dieťaťa počas prebiehajúceho mimosporového konania.",
+        "wrong": "Nesprávne. Zabezpečenie obchodnej pohľadávky alebo dôkazu v spore o autorské práva patrí skôr do sporového konania podľa CSP."
+      }
+    },
+    {
+      "question": "Aký záujem chráni súd predovšetkým pri neodkladných opatreniach v konaniach o maloletých?",
+      "options": ["Záujem rodiča, ktorý podal návrh", "Najlepší záujem maloletého dieťaťa", "Záujem štátu na znížení nákladov konania", "Záujem druhého rodiča bez ohľadu na dieťa"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vo všetkých konaniach týkajúcich sa maloletých je rozhodujúcim kritériom jeho najlepší záujem.",
+        "wrong": "Nesprávne. Záujem jedného z rodičov ani úspora nákladov nesmú prevážiť nad ochranou záujmu dieťaťa."
+      }
+    },
+    {
+      "question": "Čím sa neodkladné opatrenie podľa CMP líši od neodkladného opatrenia podľa CSP?",
+      "options": ["Podľa CMP ho súd môže vzhľadom na zásadu oficiality nariadiť aj bez návrhu, kým v CSP je spravidla viazaný návrhom", "Neodkladné opatrenie podľa CMP vôbec neexistuje", "Podľa CMP ho môže nariadiť iba orgán sociálnoprávnej ochrany detí, nie súd", "Rozdiel medzi nimi neexistuje"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Kľúčovým rozdielom je väčšia miera aktivity súdu v mimosporovom konaní vďaka zásade oficiality.",
+        "wrong": "Nesprávne. Neodkladné opatrenie v CMP existuje a nariaďuje ho súd, nie orgán sociálnoprávnej ochrany detí."
+      }
+    },
+    {
+      "question": "Môže súd nariadiť neodkladnú ústavnú starostlivosť o dieťa?",
+      "options": ["Áno, v naliehavých prípadoch ohrozenia dieťaťa, aj ako neodkladné opatrenie", "Nie, o ústavnej starostlivosti možno rozhodnúť len po skončení celého konania", "Áno, ale iba na žiadosť samotného dieťaťa staršieho ako 18 rokov", "Nie, tento inštitút civilné právo nepozná"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. V naliehavých prípadoch bezprostredného ohrozenia dieťaťa možno nariadiť ústavnú starostlivosť aj formou neodkladného opatrenia.",
+        "wrong": "Nesprávne. Čakanie na skončenie celého konania by mohlo byť pre bezprostredne ohrozené dieťa neúnosné, a osoba staršia ako 18 rokov už nie je maloletým dieťaťom."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Neodkladné opatrenie v CMP", "definition": "Dočasná úprava pomerov v mimosporovom konaní, ktorú môže súd nariadiť aj bez návrhu." },
+    { "term": "Zásada oficiality pri opatreniach", "definition": "Súd koná z vlastnej iniciatívy, ak si to vyžaduje záujem maloletého alebo iná chránená osoba." },
+    { "term": "Predbežná úprava styku", "definition": "Typické neodkladné opatrenie upravujúce dočasný kontakt rodiča s dieťaťom." },
+    { "term": "Najlepší záujem dieťaťa", "definition": "Hlavné kritérium, ktorým sa súd pri neodkladných opatreniach v rodinných veciach riadi." },
+    { "term": "Neodkladná ústavná starostlivosť", "definition": "Mimoriadne opatrenie pri bezprostrednom ohrození dieťaťa." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Ohrozenie dieťaťa v domácnosti",
+      "difficulty": "ťažká",
+      "steps": [
+        { "question": "Súd sa z podnetu orgánu sociálnoprávnej ochrany detí dozvie o vážnom ohrození maloletého dieťaťa v jeho domácom prostredí, hoci žiadny z rodičov návrh na súd nepodal.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd napriek chýbajúcemu návrhu konať?",
+          "options": ["Áno, na základe zásady oficiality môže nariadiť neodkladné opatrenie aj bez návrhu", "Nie, bez návrhu rodiča súd konať nesmie", "Áno, ale iba ak s tým rodičia dodatočne súhlasia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zásada oficiality umožňuje súdu konať z vlastnej iniciatívy na ochranu ohrozeného dieťaťa.",
+            "wrong": "Nesprávne. Súhlas rodičov nie je podmienkou konania súdu, ak je bezprostredne ohrozené dieťa."
+          }
+        },
+        {
+          "question": "Čo môže súd v takomto naliehavom prípade nariadiť?",
+          "options": ["Napríklad neodkladné zverenie dieťaťa do starostlivosti inej osoby alebo nariadenie ústavnej starostlivosti", "Iba informovať políciu bez ďalšieho konania", "Iba predvolať rodičov na pojednávanie o niekoľko mesiacov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. V naliehavých prípadoch môže súd okamžite nariadiť opatrenia smerujúce k ochrane dieťaťa.",
+            "wrong": "Nesprávne. Odkázanie iba na políciu alebo pojednávanie o mesiace neskôr by neposkytovalo dieťaťu bezprostrednú ochranu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Predbežná úprava styku počas rozvodu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Počas dlho trvajúceho konania o rozvod a úpravu práv k dieťaťu chce jeden z rodičov dosiahnuť aspoň dočasnú úpravu styku s dieťaťom.", "options": [], "correct": 0 },
+        {
+          "question": "Aký procesný nástroj mu na to slúži?",
+          "options": ["Návrh na nariadenie neodkladného opatrenia o predbežnej úprave styku", "Musí počkať na právoplatné skončenie celého konania", "Musí podať úplne novú samostatnú žalobu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neodkladné opatrenie umožňuje rýchlu, dočasnú úpravu styku ešte pred konečným rozhodnutím vo veci.",
+            "wrong": "Nesprávne. Čakanie na skončenie celého konania by mohlo trvať neúmerne dlho a nová samostatná žaloba nie je na tento účel potrebná."
+          }
+        },
+        {
+          "question": "Čím sa súd pri rozhodovaní o takomto opatrení riadi predovšetkým?",
+          "options": ["Najlepším záujmom dieťaťa", "Výlučne prianím rodiča, ktorý návrh podal", "Poradím, v akom rodičia podali svoje návrhy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozhodujúcim kritériom je vždy najlepší záujem dieťaťa, nie priania alebo poradie návrhov rodičov.",
+            "wrong": "Nesprávne. Priania jedného rodiča ani poradie podania návrhov nemôžu prevážiť nad záujmom dieťaťa."
+          }
+        }
+      ]
+    }
+  ]
+}

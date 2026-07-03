@@ -1,0 +1,114 @@
+{
+  "id": "20",
+  "title": "Prostriedky procesného útoku, prostriedky procesnej obrany a koncentrácia konania",
+  "schemaVersion": "1.1",
+  "tags": ["prostriedky procesného útoku", "prostriedky procesnej obrany", "koncentrácia konania", "sudcovská koncentrácia"],
+  "summary": "Prostriedky procesného útoku sú skutkové tvrdenia, dôkazy a právne argumenty, ktorými žalobca podopiera dôvodnosť žaloby. Prostriedky procesnej obrany sú naopak tvrdenia, námietky a dôkazy žalovaného smerujúce k spochybneniu dôvodnosti žaloby – typickým príkladom je námietka premlčania alebo námietka započítania. Aby sa predišlo účelovému a postupnému predlžovaniu konania, CSP zavádza koncentráciu konania – obmedzenie momentu, dokedy možno tieto prostriedky uplatniť.\n\nZákonná koncentrácia (§ 154 CSP) vyplýva priamo zo zákona a viaže uplatnenie nových tvrdení a dôkazov na určitý procesný okamih (napríklad do vyhlásenia rozhodnutia, ktorým sa dokazovanie končí). Sudcovská koncentrácia (§ 153 CSP) umožňuje súdu uznesením určiť konkrétnu lehotu, po ktorej márnom uplynutí už strany nemôžu uplatniť nové tvrdenia ani dôkazy, ak nepreukážu, že ich nemohli uplatniť skôr bez svojej viny. Cieľom oboch foriem koncentrácie je predísť prieťahom v konaní a zabrániť taktickému, postupnému predkladaniu tvrdení až v neskorších štádiách sporu.\n\nZapamätaj si:\n- Prostriedky procesného útoku = tvrdenia a dôkazy žalobcu na podporu žaloby.\n- Prostriedky procesnej obrany = tvrdenia, námietky a dôkazy žalovaného proti žalobe.\n- Zákonná koncentrácia (§ 154 CSP) vyplýva priamo zo zákona.\n- Sudcovská koncentrácia (§ 153 CSP) – lehotu určuje uznesením súd.\n- Cieľom koncentrácie je zabrániť účelovému predlžovaniu konania."
+  ,
+  "quiz": [
+    {
+      "question": "Čo sú prostriedky procesného útoku?",
+      "options": ["Tvrdenia a dôkazy, ktorými žalobca podopiera žalobu", "Iba návrh na náhradu trov konania", "Výlučne odvolanie proti rozsudku", "Iba znalecký posudok predložený súdom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o skutkové tvrdenia, dôkazy a právne argumenty žalobcu na podporu dôvodnosti žaloby.",
+        "wrong": "Nesprávne. Trovy konania, odvolanie ani znalecký posudok súdu samy osebe nie sú prostriedkami procesného útoku žalobcu."
+      }
+    },
+    {
+      "question": "Čo sú prostriedky procesnej obrany?",
+      "options": ["Tvrdenia, námietky a dôkazy žalovaného smerujúce k spochybneniu dôvodnosti žaloby", "Iba súhlas žalovaného so žalobou", "Výlučne procesné úkony súdu", "Iba dôkazy predložené žalobcom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Prostriedky procesnej obrany slúžia žalovanému na spochybnenie dôvodnosti alebo výšky žalovaného nároku.",
+        "wrong": "Nesprávne. Súhlas so žalobou by bol dispozičným úkonom (uznaním), nie prostriedkom obrany, a nejde o úkony súdu."
+      }
+    },
+    {
+      "question": "Čo je zákonná koncentrácia konania (§ 154 CSP)?",
+      "options": ["Obmedzenie uplatňovania prostriedkov útoku a obrany do momentu určeného priamo zákonom", "Povinnosť sústrediť všetky pojednávania do jedného dňa", "Obmedzenie počtu svedkov na troch", "Presun konania na iný súd"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zákonná koncentrácia vyplýva priamo zo zákona a viaže uplatnenie nových tvrdení a dôkazov na určený procesný okamih.",
+        "wrong": "Nesprávne. Nejde o technické zlúčenie pojednávaní do jedného dňa, obmedzenie počtu svedkov ani o presun príslušnosti."
+      }
+    },
+    {
+      "question": "Čo je sudcovská koncentrácia konania (§ 153 CSP)?",
+      "options": ["Súd uznesením určí lehotu, po uplynutí ktorej už strany nemôžu uplatniť nové tvrdenia a dôkazy", "Sudca sám rozhoduje o počte pojednávaní bez akéhokoľvek obmedzenia", "Koncentrácia, ktorú si dohodnú strany medzi sebou bez účasti súdu", "Presun konania na vyššieho sudcu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Na rozdiel od zákonnej koncentrácie tu lehotu určuje súd svojím uznesením podľa okolností konkrétneho prípadu.",
+        "wrong": "Nesprávne. Nejde o dohodu strán ani o presun konania na iného sudcu."
+      }
+    },
+    {
+      "question": "Aký je hlavný cieľ inštitútu koncentrácie konania?",
+      "options": ["Zabrániť účelovému predlžovaniu konania postupným (neskorým) uplatňovaním tvrdení a dôkazov", "Zvýšiť počet nariadených pojednávaní", "Umožniť stranám meniť žalobu bez akéhokoľvek obmedzenia", "Zrušiť povinnosť dôkazného bremena"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Koncentrácia má motivovať strany, aby svoje tvrdenia a dôkazy predložili včas, a nie účelovo postupne.",
+        "wrong": "Nesprávne. Cieľom nie je zvyšovať počet pojednávaní ani meniť pravidlá o dôkaznom bremene či zmene žaloby."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Prostriedky procesného útoku", "definition": "Tvrdenia a dôkazy, ktorými žalobca podopiera dôvodnosť žaloby." },
+    { "term": "Prostriedky procesnej obrany", "definition": "Tvrdenia, námietky a dôkazy žalovaného spochybňujúce dôvodnosť žaloby." },
+    { "term": "Zákonná koncentrácia (§ 154 CSP)", "definition": "Okamih, po ktorom už nemožno zo zákona uplatniť nové tvrdenia a dôkazy." },
+    { "term": "Sudcovská koncentrácia (§ 153 CSP)", "definition": "Lehota určená súdom, po uplynutí ktorej strany nemôžu uplatniť nové tvrdenia a dôkazy." },
+    { "term": "Námietka premlčania", "definition": "Typický prostriedok procesnej obrany žalovaného." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Oneskorené tvrdenie žalovaného",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Súd uznesením určil stranám lehotu na uplatnenie všetkých tvrdení a dôkazov. Žalovaný chce nové rozhodujúce tvrdenie predložiť až po jej uplynutí, bez toho, aby preukázal, že ho nemohol uplatniť skôr.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd na takéto oneskorené tvrdenie prihliadnuť?",
+          "options": ["Spravidla nie, pre uplynutie lehoty stanovenej sudcovskou koncentráciou konania", "Áno, vždy bez ďalšieho skúmania", "Áno, ale iba ak s tým žalobca súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po uplynutí lehoty stanovenej sudcovskou koncentráciou sa na nepreukázane oneskorené tvrdenia spravidla neprihliada.",
+            "wrong": "Nesprávne. Súhlas žalobcu nie je pri koncentrácii konania rozhodujúci a súd nemôže prihliadnuť na oneskorené tvrdenie bez ďalšieho."
+          }
+        },
+        {
+          "question": "Aký je zmysel takéhoto obmedzenia?",
+          "options": ["Zabrániť účelovému a neskorému predlžovaniu konania", "Uľahčiť žalovanému procesnú obranu bez akéhokoľvek obmedzenia", "Zvýšiť náklady konania pre obe strany"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Koncentrácia konania má motivovať strany k včasnému a úplnému uplatneniu svojich tvrdení a dôkazov.",
+            "wrong": "Nesprávne. Cieľom nie je zvyšovanie nákladov ani neobmedzené uľahčenie obrany na úkor rýchlosti konania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Námietka premlčania ako prostriedok obrany",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalovaný v spore o zaplatenie dlhu namietne, že pohľadávka žalobcu je premlčaná.", "options": [], "correct": 0 },
+        {
+          "question": "Čím je táto námietka z procesného hľadiska?",
+          "options": ["Prostriedkom procesnej obrany žalovaného", "Prostriedkom procesného útoku", "Dispozičným úkonom žalobcu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Námietka premlčania je typickým prostriedkom, ktorým sa žalovaný bráni proti žalobe.",
+            "wrong": "Nesprávne. Ide o obranu žalovaného, nie o útok žalobcu ani o dispozičný úkon žalobcu."
+          }
+        },
+        {
+          "question": "Musí súd na premlčanie prihliadnuť z úradnej moci, aj keby ho žalovaný nenamietal?",
+          "options": ["Nie, súd na premlčanie prihliadne až na základe námietky žalovaného", "Áno, súd musí premlčanie skúmať vždy sám bez námietky", "Premlčanie sa v civilnom konaní vôbec nerieši"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Premlčanie je typickou obranou, na ktorú súd prihliada až vtedy, keď ju žalovaný uplatní.",
+            "wrong": "Nesprávne. Bez námietky žalovaného súd premlčanie z vlastnej iniciatívy neskúma."
+          }
+        }
+      ]
+    }
+  ]
+}
