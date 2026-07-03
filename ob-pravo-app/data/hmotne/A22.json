@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zákon umožňuje liberáciu – škodca sa môže zbaviť zodpovednosti preukázaním absencie zavinenia."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Preventívna povinnosť (§ 415 OZ)", "definition": "Každý je povinný počínať si tak, aby nedochádzalo ku škodám." },
+    { "term": "Predpoklady zodpovednosti (§ 420 OZ)", "definition": "Protiprávny úkon, škoda, príčinná súvislosť a zavinenie." },
+    { "term": "Presumpcia zavinenia", "definition": "Zavinenie sa predpokladá, škodca musí preukázať opak." },
+    { "term": "Kauzálny nexus", "definition": "Vzťah príčiny a následku medzi protiprávnym úkonom a škodou." },
+    { "term": "Liberácia", "definition": "Zbavenie sa zodpovednosti preukázaním, že škodu škodca nezavinil." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Porušenie prevenčnej povinnosti",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vlastník nechá na chodníku pred domom rozliaty olej a neurobí nič, aby zabránil možnému úrazu okoloidúcich.", "options": [], "correct": 0 },
+        {
+          "question": "Akú povinnosť tým vlastník porušuje?",
+          "options": ["Preventívnu povinnosť podľa § 415 OZ", "Povinnosť platiť daň z nehnuteľnosti", "Povinnosť uzavrieť poistenie majetku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. § 415 OZ ukladá každému povinnosť počínať si tak, aby nedochádzalo ku škodám.",
+            "wrong": "Nesprávne. Daňová povinnosť a poistenie majetku s touto situáciou priamo nesúvisia."
+          }
+        },
+        {
+          "question": "Čo ak niekto na oleji skutočne uklzne a zraní sa?",
+          "options": ["Môžu byť splnené predpoklady všeobecnej zodpovednosti za škodu podľa § 420 OZ", "Vlastník nikdy nenesie žiadnu zodpovednosť", "Zodpovedá výlučne zranená osoba sama"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Porušenie prevenčnej povinnosti môže založiť zodpovednosť za škodu, ak sú splnené aj ostatné predpoklady.",
+            "wrong": "Nesprávne. Vlastník môže niesť zodpovednosť a zranená osoba nezodpovedá sama za cudzie porušenie prevenčnej povinnosti."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Dôkazné bremeno pri zavinení",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Poškodený žaluje škodcu o náhradu škody a preukáže protiprávny úkon, vznik škody aj príčinnú súvislosť medzi nimi.", "options": [], "correct": 0 },
+        {
+          "question": "Musí poškodený navyše preukazovať aj zavinenie škodcu?",
+          "options": ["Nie, zavinenie sa predpokladá, dôkazné bremeno o jeho absencii nesie škodca", "Áno, poškodený musí preukázať aj úmysel škodcu", "Áno, inak zodpovednosť vôbec nevznikne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zavinenie sa pri všeobecnej zodpovednosti podľa § 420 OZ predpokladá.",
+            "wrong": "Nesprávne. Poškodený nemusí preukazovať úmysel škodcu, presumpcia zavinenia mu túto povinnosť odníma."
+          }
+        },
+        {
+          "question": "Ako sa môže škodca zodpovednosti zbaviť?",
+          "options": ["Preukázaním, že škodu nezavinil (liberácia)", "Iba zaplatením preddavku poškodenému", "Škodca sa zodpovednosti zbaviť nemôže nikdy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Škodca sa môže zbaviť zodpovednosti preukázaním absencie zavinenia.",
+            "wrong": "Nesprávne. Zaplatenie preddavku nie je liberačným dôvodom a zákon liberáciu výslovne pripúšťa."
+          }
+        }
+      ]
+    }
   ]
 }

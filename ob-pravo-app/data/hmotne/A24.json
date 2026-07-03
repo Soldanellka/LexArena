@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Bolesťné a sťaženie spoločenského uplatnenia nie sú majetkové škody – sú to osobitné nemajetkové náhrady."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Skutočná škoda (damnum emergens)", "definition": "Priama majetková strata poškodeného." },
+    { "term": "Ušlý zisk (lucrum cessans)", "definition": "Majetkový prospech, o ktorý poškodený prišiel v dôsledku škodovej udalosti." },
+    { "term": "Naturálna reštitúcia (§ 442 ods. 2 OZ)", "definition": "Prednostný spôsob náhrady – uvedenie do predošlého stavu." },
+    { "term": "Spoluzavinenie poškodeného (§ 441 OZ)", "definition": "Znižuje rozsah náhrady škody pomerne k miere zavinenia poškodeného." },
+    { "term": "Bolesťné a sťaženie spoločenského uplatnenia (§ 444 OZ)", "definition": "Osobitné nemajetkové náhrady pri poškodení zdravia." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Poškodenie vozidla",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vinník dopravnej nehody poškodí vozidlo poškodeného, ktoré je možné opraviť do pôvodného stavu.", "options": [], "correct": 0 },
+        {
+          "question": "Aký spôsob náhrady škody má prednosť?",
+          "options": ["Naturálna reštitúcia – uvedenie veci do pôvodného stavu (napr. oprava)", "Vždy len peňažná náhrada bez ohľadu na možnosť opravy", "Poškodený si nemôže vybrať žiadny spôsob"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon uprednostňuje naturálnu reštitúciu pred peňažnou náhradou, ak je možná a účelná.",
+            "wrong": "Nesprávne. Peňažná náhrada nie je vždy prvou voľbou a poškodený nie je bez akejkoľvek možnosti voľby."
+          }
+        },
+        {
+          "question": "Čo ak by oprava nebola možná alebo účelná?",
+          "options": ["Poskytne sa peňažná náhrada škody", "Poškodený by nemal nárok na žiadnu náhradu", "Škodca by musel poskytnúť úplne iné vozidlo bez ohľadu na hodnotu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak naturálna reštitúcia nie je možná, nastupuje peňažná náhrada škody.",
+            "wrong": "Nesprávne. Nárok na náhradu neguje a poskytnutie úplne iného vozidla bez ohľadu na hodnotu nezodpovedá zásade primeranosti náhrady."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Spoluzavinenie chodca",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Chodec prechádzal cez cestu mimo priechodu pre chodcov a bol zrazený vodičom, ktorý zároveň prekročil povolenú rýchlosť.", "options": [], "correct": 0 },
+        {
+          "question": "Ako sa v takomto prípade posúdi náhrada škody?",
+          "options": ["Náhrada sa pomerne zníži podľa miery spoluzavinenia chodca (§ 441 OZ)", "Vodič nesie celú zodpovednosť bez ohľadu na správanie chodca", "Chodec stráca nárok na akúkoľvek náhradu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri spoluzavinení oboch strán sa náhrada rozdelí podľa miery zavinenia každej z nich.",
+            "wrong": "Nesprávne. Správanie chodca má vplyv na rozsah náhrady a úplná strata nároku by bola pri čiastočnom zavinení vodiča neprimeraná."
+          }
+        },
+        {
+          "question": "Prečo zákon takto rieši spoluzavinenie poškodeného?",
+          "options": ["Aby zodpovednosť zodpovedala skutočnému podielu zavinenia oboch strán", "Aby sa vodičovi vždy odpustila celá zodpovednosť", "Aby chodec nikdy nemohol dostať žiadnu náhradu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cieľom je spravodlivé rozdelenie zodpovednosti podľa skutočného podielu zavinenia.",
+            "wrong": "Nesprávne. Nejde o automatické zbavenie vodiča zodpovednosti ani o úplné vylúčenie nároku chodca."
+          }
+        }
+      ]
+    }
   ]
 }

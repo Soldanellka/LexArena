@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Condictio indebiti sa týka vrátenia plnenia bez existujúceho dlhu, nie vrátenia daru."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Bezdôvodné obohatenie (§ 451 OZ)", "definition": "Majetkový prospech získaný bez právneho dôvodu, z neplatného úkonu alebo z dôvodu, ktorý odpadol." },
+    { "term": "Povinná osoba", "definition": "Ten, kto sa na úkor iného bezdôvodne obohatil." },
+    { "term": "Vydanie obohatenia (§ 456 OZ)", "definition": "Vydáva sa to, o čo sa niekto obohatil; ak to nie je možné, peňažná náhrada." },
+    { "term": "Premlčanie (§ 107 OZ)", "definition": "2 roky subjektívna a 3 roky objektívna lehota." },
+    { "term": "Condictio indebiti", "definition": "Nárok na vrátenie plnenia poskytnutého omylom bez existujúceho dlhu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Omylom zaplatená suma",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Osoba omylom prevedie peniaze na účet cudzej osoby, s ktorou nemá žiadny záväzkový vzťah.", "options": [], "correct": 0 },
+        {
+          "question": "Vzniká príjemcovi povinnosť tieto peniaze vrátiť?",
+          "options": ["Áno, ide o bezdôvodné obohatenie, ktoré je povinný vydať", "Nie, peniaze mu už patria bez ďalšieho", "Áno, ale iba ak s tým sám súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Prijatie peňazí bez právneho dôvodu zakladá povinnosť ich vydania.",
+            "wrong": "Nesprávne. Peniaze príjemcovi bez právneho dôvodu nepatria a povinnosť vydať ich nezávisí od jeho súhlasu."
+          }
+        },
+        {
+          "question": "Ako sa tento konkrétny nárok na vrátenie omylom zaplatenej sumy označuje?",
+          "options": ["Condictio indebiti", "Reivindikačná žaloba", "Negatórna žaloba"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Condictio indebiti je klasické označenie nároku na vrátenie plnenia poskytnutého omylom bez dlhu.",
+            "wrong": "Nesprávne. Reivindikačná a negatórna žaloba slúžia na ochranu vlastníckeho práva, nie na vrátenie omylom zaplatenej sumy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Neplatná zmluva a už poskytnuté plnenie",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Strany si na základe neskôr zrušenej (neplatnej) zmluvy navzájom poskytli plnenia – jedna zaplatila peniaze, druhá odovzdala tovar.", "options": [], "correct": 0 },
+        {
+          "question": "Čo sa deje s takto poskytnutými plneniami po zistení neplatnosti zmluvy?",
+          "options": ["Ide o bezdôvodné obohatenie, ktoré si strany musia navzájom vydať", "Plnenia zostávajú bez ďalšieho tak, ako boli poskytnuté", "Iba jedna strana má povinnosť čokoľvek vrátiť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Plnenia z neplatnej zmluvy sú bezdôvodným obohatením a musia sa vzájomne vydať.",
+            "wrong": "Nesprávne. Neplatnosť zmluvy nezanecháva plnenia bez ďalšieho a povinnosť vydania sa týka oboch strán."
+          }
+        },
+        {
+          "question": "Aká je premlčacia doba nároku na vydanie takéhoto bezdôvodného obohatenia?",
+          "options": ["2 roky subjektívna a 3 roky objektívna lehota", "Len všeobecná 3-ročná lehota bez rozlíšenia", "Nárok sa nepremlčuje vôbec"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. § 107 OZ stanovuje osobitnú dvojstupňovú premlčaciu dobu pre bezdôvodné obohatenie.",
+            "wrong": "Nesprávne. Nejde o jednotnú všeobecnú 3-ročnú lehotu a nárok premlčaniu podlieha."
+          }
+        }
+      ]
+    }
   ]
 }

@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zákon rozlišuje medzi dobrovoľným a nedobrovoľným stavom nepríčetnosti."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Objektívna zodpovednosť (§ 420a OZ)", "definition": "Prevádzkovateľ zodpovedá za škodu z prevádzkovej činnosti bez ohľadu na zavinenie." },
+    { "term": "Liberačné dôvody (§ 420a ods. 3 OZ)", "definition": "Nevyhnutná vlastnosť prevádzky alebo výlučné konanie poškodeného." },
+    { "term": "Zodpovednosť za škodu spôsobenú zvieraťom (§ 431 OZ)", "definition": "Zodpovedá vlastník (chovateľ) bez ohľadu na zavinenie." },
+    { "term": "Zodpovednosť za pád z budovy (§ 422 OZ)", "definition": "Vlastník zodpovedá za škodu spôsobenú pádom predmetu alebo vadou stavby." },
+    { "term": "Zodpovednosť v stave nepríčetnosti (§ 422 ods. 2 OZ)", "definition": "Zodpovedá ten, kto sa do tohto stavu priviedol vlastnou vinou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Škoda z prevádzkovej činnosti",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Pri prevádzke výrobnej haly dôjde k úniku látky, ktorá poškodí susedný pozemok, hoci prevádzkovateľ dodržal všetky bezpečnostné predpisy.", "options": [], "correct": 0 },
+        {
+          "question": "Zodpovedá prevádzkovateľ za škodu, hoci nezavinil úraz úmyselne ani z nedbanlivosti?",
+          "options": ["Áno, ide o objektívnu zodpovednosť podľa § 420a OZ nezávislú od zavinenia", "Nie, bez zavinenia zodpovednosť nikdy nevzniká", "Zodpovedá iba vtedy, ak porušil predpisy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zodpovednosť za prevádzkovú činnosť je objektívna, nezávisí od zavinenia.",
+            "wrong": "Nesprávne. Objektívna zodpovednosť práve nevyžaduje zavinenie ani porušenie predpisov."
+          }
+        },
+        {
+          "question": "Ako sa môže prevádzkovateľ tejto zodpovednosti zbaviť?",
+          "options": ["Preukázaním, že škodu spôsobila nevyhnutná vlastnosť prevádzky alebo výlučne konanie poškodeného", "Preukázaním, že škodu nezavinil", "Zaplatením poistného namiesto náhrady škody"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Liberačné dôvody pri objektívnej zodpovednosti sú užšie než pri zodpovednosti za zavinenie.",
+            "wrong": "Nesprávne. Absencia zavinenia pri objektívnej zodpovednosti nestačí a zaplatenie poistného nie je liberačným dôvodom."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Škoda spôsobená psom",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Voľne pobehujúci pes uhryzne okoloidúceho chodca.", "options": [], "correct": 0 },
+        {
+          "question": "Kto zodpovedá za takto spôsobenú škodu?",
+          "options": ["Vlastník (chovateľ) psa bez ohľadu na svoje zavinenie", "Iba samotný pes, čo je právne bezpredmetné", "Nikto, ak vlastník preukáže, že psa dobre vychoval"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Za škodu spôsobenú zvieraťom zodpovedá jeho vlastník objektívne.",
+            "wrong": "Nesprávne. Zviera nie je právnym subjektom a dobrá výchova psa vlastníka zodpovednosti nezbavuje."
+          }
+        },
+        {
+          "question": "Ide o zodpovednosť založenú na zavinení, alebo objektívnu?",
+          "options": ["O objektívnu zodpovednosť, zavinenie vlastníka sa nevyžaduje", "O zodpovednosť založenú výlučne na preukázanom zavinení vlastníka", "Táto situácia nie je občianskoprávne upravená"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zodpovednosť podľa § 431 OZ je objektívna.",
+            "wrong": "Nesprávne. Preukázanie zavinenia sa nevyžaduje a situácia je výslovne upravená v § 431 OZ."
+          }
+        }
+      ]
+    }
   ]
 }

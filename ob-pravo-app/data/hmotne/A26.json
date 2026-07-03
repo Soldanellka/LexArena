@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Odmietnutie je neodvolateľné a nespôsobuje prepadnutie štátu."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Prechod dedičstva (§ 460 OZ)", "definition": "Dedičstvo prechádza na dediča smrťou poručiteľa, automaticky." },
+    { "term": "Dedičská nespôsobilosť (§ 469 OZ)", "definition": "Zákonné vylúčenie z dedenia, napr. pri úmyselnom trestnom čine voči poručiteľovi." },
+    { "term": "Tituly dedenia (§ 461 OZ)", "definition": "Zo závetu, zo zákona, alebo z oboch; závet má prednosť." },
+    { "term": "Odmietnutie dedičstva (§ 463 OZ)", "definition": "Možné v lehote 1 mesiaca od oznámenia súdu, neodvolateľné." },
+    { "term": "Následok odmietnutia", "definition": "Hľadí sa naň, akoby dedič dedičstvo nenadobudol; podiel prechádza na ďalších dedičov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Trestný čin voči poručiteľovi",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Syn sa dopustil úmyselného trestného činu ublíženia na zdraví voči svojmu otcovi (poručiteľovi), ktorý mu to pred smrťou výslovne neodpustil.", "options": [], "correct": 0 },
+        {
+          "question": "Môže syn po otcovi dediť?",
+          "options": ["Nie, je dedičsky nespôsobilý podľa § 469 OZ", "Áno, trestný čin nemá na dedenie žiadny vplyv", "Áno, ale iba polovicu dedičského podielu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Úmyselný trestný čin voči poručiteľovi bez jeho odpustenia zakladá dedičskú nespôsobilosť.",
+            "wrong": "Nesprávne. Takéto konanie má na dedenie zásadný vplyv a nejde o automatické zníženie podielu na polovicu."
+          }
+        },
+        {
+          "question": "Zmenilo by sa niečo, keby mu to otec pred smrťou výslovne odpustil?",
+          "options": ["Áno, odpustenie by dedičskú nespôsobilosť zhojilo", "Nie, odpustenie nemá na dedičskú nespôsobilosť žiadny vplyv", "Áno, ale iba ak by odpustenie bolo súdne schválené"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon výslovne pripúšťa, že odpustenie poručiteľa dedičskú nespôsobilosť zhojí.",
+            "wrong": "Nesprávne. Odpustenie má právny účinok a nevyžaduje osobitné súdne schválenie."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odmietnutie dedičstva",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dedič sa dozvie, že poručiteľ zanechal viac dlhov než majetku, a preto sa rozhodne dedičstvo odmietnuť.", "options": [], "correct": 0 },
+        {
+          "question": "V akej lehote tak musí urobiť?",
+          "options": ["Do 1 mesiaca od oznámenia súdu o práve dedičstvo odmietnuť", "Kedykoľvek bez časového obmedzenia", "Do 1 roka od smrti poručiteľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon stanovuje jednomesačnú lehotu od oznámenia súdu.",
+            "wrong": "Nesprávne. Lehota nie je neobmedzená ani viazaná na rok od smrti poručiteľa."
+          }
+        },
+        {
+          "question": "Môže dedič svoje odmietnutie dedičstva neskôr vziať späť?",
+          "options": ["Nie, odmietnutie dedičstva je neodvolateľné", "Áno, kedykoľvek bez obmedzenia", "Áno, ale iba do jedného týždňa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odmietnutie dedičstva je definitívnym a neodvolateľným úkonom.",
+            "wrong": "Nesprávne. Zákon nepripúšťa dodatočné odvolanie odmietnutia, ani v krátkej lehote."
+          }
+        }
+      ]
+    }
   ]
 }
