@@ -98,6 +98,12 @@
     </div>
 
     <div class="card section-card">
+      <h3 style="margin:0">🧠 Bifľovačka</h3>
+      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
+      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card section-card">
       <h3 style="margin:0">Rebríček duelov</h3>
       <div class="small">Najlepší hráči duelových kvízov</div>
       <div style="display:flex;gap:8px;margin-top:10px">
@@ -379,6 +385,12 @@
 <script type="module" src="memory.js"></script>
 <script type="module" src="cases.js"></script>
 <script type="module" src="app.js"></script>
+
+<!-- BIFĽOVAČKA (Memory Trainer) – dlaždice na dashboarde -->
+<script type="module">
+  import { renderMemoryTiles } from './memoryTrainer.js';
+  renderMemoryTiles('memoryTrainerTiles');
+</script>
 
 <!-- REPORTS SYSTEM – inline pre spoľahlivé načítanie -->
 <script type="module">

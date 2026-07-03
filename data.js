@@ -180,6 +180,20 @@ loadJsonQuestions(
   30
 );
 
+// Občianske právo hmotné → 40 JSON
+loadJsonQuestions(
+  "Občianske právo hmotné",
+  LIVE + "ob-pravo-app/data/hmotne/",
+  40
+);
+
+// Občianske právo procesné → 45 JSON
+loadJsonQuestions(
+  "Občianske právo procesné",
+  LIVE + "ob-pravo-app/data/procesne/",
+  45
+);
+
 /* =====================================================
    OTVORENIE EXTERNEJ APPKY
 ===================================================== */

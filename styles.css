@@ -2127,3 +2127,44 @@ body {
   }
   .game-panel-header h3 { font-size: 14.5px; }
 }
+
+/* ============================================================
+   Bifľovačka (Memory Trainer) – dlaždice
+============================================================ */
+.memory-tile {
+  display: block;
+  background: var(--surface);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .18s, transform .18s;
+}
+
+.memory-tile:hover {
+  box-shadow: 0 8px 22px rgba(240,138,166,0.16);
+  transform: translateY(-2px);
+}
+
+.memory-tile-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.memory-tile-stat {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.memory-tile-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8" />
+<title>🧠 Bifľovačka – LexArena</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .mt-wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+  .mt-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+  .mt-back { text-decoration:none; color:var(--muted); font-size:14px; }
+  .mt-progress-line { font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .mt-reveal-box {
+    background:var(--surface); border:1px solid rgba(0,0,0,0.06); border-radius:16px;
+    padding:28px 24px; font-size:18px; line-height:1.5; box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    min-height:120px; display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .mt-timerbar-wrap { height:6px; border-radius:6px; background:rgba(0,0,0,0.08); margin-top:14px; overflow:hidden; }
+  .mt-timerbar { height:100%; background:linear-gradient(90deg,var(--accent-2),var(--accent-3)); width:100%; transition:width 0.1s linear; }
+  .mt-answer-box textarea {
+    width:100%; min-height:110px; border-radius:12px; border:1px solid rgba(0,0,0,0.12);
+    padding:12px 14px; font-size:15px; font-family:inherit; resize:vertical; box-sizing:border-box;
+  }
+  .mt-actions { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+  .mt-score { font-size:44px; font-weight:800; text-align:center; margin:6px 0; }
+  .mt-score.ok { color:#22c55e; }
+  .mt-score.mid { color:#eab308; }
+  .mt-score.bad { color:#ef4444; }
+  .mt-notes { text-align:center; margin-bottom:10px; }
+  .mt-keywords { text-align:center; color:var(--muted); font-size:13px; margin-bottom:16px; }
+  .mt-reveal-answer { background:rgba(0,0,0,0.03); border-radius:12px; padding:14px 16px; margin-top:10px; font-size:14px; }
+  .mt-finish { text-align:center; padding:40px 20px; }
+  .mt-finish .seal { font-size:64px; }
+  .mt-areas-list a.memory-tile { display:block; }
+</style>
+</head>
+<body>
+
+<div class="mt-wrap">
+
+  <div class="mt-header">
+    <a href="index.html" class="mt-back">← Späť na LexArenu</a>
+    <div class="pill" id="mtAreaBadge"></div>
+  </div>
+
+  <h2 id="mtTitle">🧠 Bifľovačka</h2>
+
+  <!-- Výber oblasti (ak nie je zadaný ?area=) -->
+  <div id="mtAreaPicker" style="display:none">
+    <p class="small muted">Vyber právnu oblasť, ktorú si chceš vybifľovať.</p>
+    <div id="memoryTrainerTiles" class="list mt-areas-list"></div>
+  </div>
+
+  <!-- Priebeh balíčka -->
+  <div id="mtFlow" style="display:none">
+    <div class="mt-progress-line" id="mtProgressLine"></div>
+    <div class="progress" style="margin-bottom:18px"><i id="mtProgBar" style="width:0%"></i></div>
+
+    <!-- Fáza 1: odhalenie -->
+    <div id="mtRevealPhase">
+      <div class="mt-reveal-box" id="mtRevealText"></div>
+      <div class="mt-timerbar-wrap"><div class="mt-timerbar" id="mtTimerBar"></div></div>
+      <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si túto vetu/definíciu…</div>
+    </div>
+
+    <!-- Fáza 2: odpoveď -->
+    <div id="mtAnswerPhase" style="display:none">
+      <div class="small" style="margin-bottom:8px;font-weight:600">Napíš, čo si zapamätal/a:</div>
+      <div class="mt-answer-box">
+        <textarea id="mtAnswerInput" placeholder="Napíš právnu vetu / definíciu tak, ako si ju zapamätal/a..."></textarea>
+      </div>
+      <div class="mt-actions">
+        <button class="btn btn-primary" id="mtSubmitBtn">✅ Vyhodnotiť</button>
+      </div>
+    </div>
+
+    <!-- Fáza 3: výsledok -->
+    <div id="mtResultPhase" style="display:none">
+      <div class="mt-score" id="mtScoreNum">0 %</div>
+      <div class="mt-notes" id="mtNotesText"></div>
+      <div class="mt-keywords" id="mtKeywordsText"></div>
+      <div class="mt-reveal-answer" id="mtRevealAnswer"></div>
+      <div class="mt-actions" id="mtResultActions"></div>
+    </div>
+  </div>
+
+  <!-- Dokončenie oblasti -->
+  <div id="mtFinish" class="mt-finish" style="display:none">
+    <div class="seal" id="mtFinishSeal">🏆</div>
+    <h2 id="mtFinishTitle">Oblasť dokončená!</h2>
+    <p id="mtFinishSub" class="small muted"></p>
+    <p><span class="badge-premium-small">🎓 Pripravený na štátnice</span></p>
+    <div style="margin-top:20px"><a href="index.html" class="btn btn-primary">Späť na dashboard</a></div>
+  </div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module">
+import { MEMORY_AREAS, getAreaBySlug } from './memoryDefinitions.js';
+import {
+  loadMemoryArea, getNextMemoryItem, compareText,
+  saveMemoryScore, calculateCompletion, renderMemoryTiles
+} from './memoryTrainer.js';
+
+const $ = id => document.getElementById(id);
+
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('area');
+
+const SEAL_LABEL = { bronze: '🥉 Bronzová pečať', silver: '🥈 Strieborná pečať', gold: '🥇 Zlatá pečať' };
+const SEAL_ICON = { bronze: '🥉', silver: '🥈', gold: '🥇' };
+
+let currentItem = null;
+let revealTimer = null;
+
+function showAreaPicker() {
+  $('mtTitle').textContent = '🧠 Bifľovačka';
+  $('mtAreaPicker').style.display = 'block';
+  renderMemoryTiles('memoryTrainerTiles');
+}
+
+async function startArea(areaSlug) {
+  const area = getAreaBySlug(areaSlug);
+  if (!area) {
+    $('mtTitle').textContent = 'Neznáma oblasť';
+    return;
+  }
+  $('mtTitle').textContent = `🧠 Bifľovačka – ${area.name}`;
+  $('mtAreaBadge').textContent = area.name;
+  $('mtFlow').style.display = 'block';
+  $('mtRevealText').textContent = 'Načítavam balíčky…';
+
+  await loadMemoryArea(areaSlug);
+  showNextItem(areaSlug);
+}
+
+function updateProgressLine(areaSlug) {
+  const stats = calculateCompletion(areaSlug);
+  $('mtProgressLine').textContent =
+    `Dokončené: ${stats.completed}/${stats.total} (${stats.percent} %) · Priemerná presnosť: ${stats.avgAccuracy} % · Najlepší výsledok: ${stats.bestScore} %`;
+  $('mtProgBar').style.width = stats.percent + '%';
+}
+
+function showNextItem(areaSlug) {
+  updateProgressLine(areaSlug);
+  const item = getNextMemoryItem(areaSlug);
+
+  if (!item) {
+    finishArea(areaSlug);
+    return;
+  }
+
+  currentItem = item;
+  $('mtRevealPhase').style.display = 'block';
+  $('mtAnswerPhase').style.display = 'none';
+  $('mtResultPhase').style.display = 'none';
+
+  $('mtRevealText').textContent = item.legalSentence || item.definition;
+  $('mtAnswerInput').value = '';
+
+  const revealMs = Math.max(5000, Math.min(10000, 5000 + (item.legalSentence || '').length * 40));
+  runRevealCountdown(revealMs);
+}
+
+function runRevealCountdown(durationMs) {
+  clearInterval(revealTimer);
+  const bar = $('mtTimerBar');
+  const start = Date.now();
+  bar.style.width = '100%';
+
+  revealTimer = setInterval(() => {
+    const elapsed = Date.now() - start;
+    const pct = Math.max(0, 100 - (elapsed / durationMs) * 100);
+    bar.style.width = pct + '%';
+    if (elapsed >= durationMs) {
+      clearInterval(revealTimer);
+      revealToAnswerPhase();
+    }
+  }, 80);
+}
+
+function revealToAnswerPhase() {
+  $('mtRevealPhase').style.display = 'none';
+  $('mtAnswerPhase').style.display = 'block';
+  $('mtAnswerInput').focus();
+}
+
+async function submitAnswer(areaSlug) {
+  const userText = $('mtAnswerInput').value;
+  const result = compareText(userText, currentItem);
+
+  const saved = await saveMemoryScore(areaSlug, currentItem.id, result.score);
+
+  $('mtAnswerPhase').style.display = 'none';
+  $('mtResultPhase').style.display = 'block';
+
+  const scoreEl = $('mtScoreNum');
+  scoreEl.textContent = result.score + ' %';
+  scoreEl.className = 'mt-score ' + (result.score >= 80 ? 'ok' : result.score >= 50 ? 'mid' : 'bad');
+
+  $('mtNotesText').textContent = result.notes;
+  $('mtKeywordsText').textContent = `Kľúčové slová: ${result.keywordsMatched}`;
+  $('mtRevealAnswer').innerHTML = `<strong>Správne znenie:</strong><br>${escapeHtml(currentItem.legalSentence || currentItem.definition)}`;
+
+  const actions = $('mtResultActions');
+  actions.innerHTML = '';
+
+  const retryBtn = document.createElement('button');
+  retryBtn.className = 'btn';
+  retryBtn.textContent = '🔁 Skúsiť znova';
+  retryBtn.onclick = () => retryItem(areaSlug);
+  actions.appendChild(retryBtn);
+
+  if (result.score >= 50) {
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'btn btn-primary';
+    nextBtn.textContent = '➡️ Pokračovať';
+    nextBtn.onclick = () => showNextItem(areaSlug);
+    actions.appendChild(nextBtn);
+  }
+
+  updateProgressLine(areaSlug);
+
+  if (saved.areaJustFinished) {
+    setTimeout(() => finishArea(areaSlug, saved.sealTier), 900);
+  }
+}
+
+function retryItem(areaSlug) {
+  $('mtResultPhase').style.display = 'none';
+  $('mtRevealPhase').style.display = 'block';
+  $('mtRevealText').textContent = currentItem.legalSentence || currentItem.definition;
+  const revealMs = Math.max(5000, Math.min(10000, 5000 + (currentItem.legalSentence || '').length * 40));
+  runRevealCountdown(revealMs);
+}
+
+function finishArea(areaSlug, sealTierOverride) {
+  const stats = calculateCompletion(areaSlug);
+  const area = getAreaBySlug(areaSlug);
+
+  $('mtFlow').style.display = 'none';
+  $('mtFinish').style.display = 'block';
+
+  const sealTier = sealTierOverride || (stats.avgAccuracy >= 90 ? 'gold' : stats.avgAccuracy >= 75 ? 'silver' : 'bronze');
+  $('mtFinishSeal').textContent = SEAL_ICON[sealTier] || '🏆';
+  $('mtFinishTitle').textContent = `${area ? area.name : ''} – oblasť dokončená!`;
+  $('mtFinishSub').textContent =
+    `${SEAL_LABEL[sealTier] || ''} · Priemerná presnosť ${stats.avgAccuracy} % · Najlepší výsledok ${stats.bestScore} %`;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (slug) {
+    startArea(slug);
+    $('mtSubmitBtn').addEventListener('click', () => submitAnswer(slug));
+    $('mtAnswerInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter' && e.ctrlKey) submitAnswer(slug);
+    });
+  } else {
+    showAreaPicker();
+  }
+});
+</script>
+
+</body>
+</html>
