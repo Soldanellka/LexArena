@@ -1,0 +1,114 @@
+{
+  "id": "22",
+  "title": "Dôkazné prostriedky v civilnom procese",
+  "schemaVersion": "1.1",
+  "tags": ["dôkazné prostriedky", "svedok", "listinný dôkaz", "znalecký posudok", "obhliadka", "výsluch účastníkov"],
+  "summary": "CSP obsahuje demonštratívny (nie taxatívny) výpočet dôkazných prostriedkov (§ 187 a nasl. CSP) – súd môže vykonať dokazovanie akýmkoľvek vhodným spôsobom, ktorým možno zistiť skutkový stav. Svedkom môže byť akákoľvek fyzická osoba odlišná od účastníka konania, ktorá vypovedá o skutočnostiach vnímaných vlastnými zmyslami; svedok má povinnosť vypovedať pravdivo, avšak zákon mu za určitých podmienok (napr. blízky vzťah k účastníkovi, povinnosť mlčanlivosti) priznáva právo výpoveď odoprieť.\n\nListinný dôkaz môže mať povahu verejnej listiny (vydanej orgánom verejnej moci v medziach jeho právomoci), ktorá je dôkazom o pravdivosti toho, čo je v nej osvedčené alebo potvrdené, kým sa nepreukáže opak, alebo súkromnej listiny bez takejto osobitnej dôkaznej sily. Znalecký posudok súd nariadi, ak si zistenie alebo posúdenie skutočnosti vyžaduje odborné znalosti; posudok napriek svojej odbornosti hodnotí súd rovnako ako každý iný dôkaz a nie je ním viazaný. Obhliadka umožňuje súdu priame zmyslové vnímanie predmetu dokazovania (napríklad miesta udalosti alebo veci). Výsluch účastníkov sa vykonáva najmä vtedy, ak dokazovanú skutočnosť nemožno preukázať inak, alebo na doplnenie iných dôkazov.\n\nZapamätaj si:\n- Výpočet dôkazných prostriedkov v CSP je demonštratívny, nie uzavretý.\n- Svedok vypovedá o skutočnostiach vnímaných zmyslami; za zákonných podmienok môže výpoveď odoprieť.\n- Verejná listina má osobitnú dôkaznú silu, súkromná listina nie.\n- Znalecký posudok hodnotí súd ako iný dôkaz, nie je ním viazaný.\n- Výsluch účastníkov sa uplatní najmä vtedy, keď skutočnosť nemožno preukázať inak."
+  ,
+  "quiz": [
+    {
+      "question": "Kto môže byť svedkom v civilnom konaní?",
+      "options": ["Ktokoľvek okrem účastníka konania, kto vníma skutočnosti dôležité pre rozhodnutie", "Iba znalec", "Iba účastník konania", "Iba osoba staršia ako 30 rokov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Svedkom môže byť akákoľvek fyzická osoba odlišná od účastníka, ktorá vníma relevantné skutočnosti.",
+        "wrong": "Nesprávne. Znalec je samostatným dôkazným prostriedkom, účastník sa vypočúva iným spôsobom a vek nie je rozhodujúcim kritériom."
+      }
+    },
+    {
+      "question": "Aký je rozdiel medzi verejnou a súkromnou listinou ako dôkazom?",
+      "options": ["Verejná listina je dôkazom o pravdivosti toho, čo je v nej osvedčené, kým sa nepreukáže opak; súkromná listina takúto osobitnú dôkaznú silu nemá", "Súkromná listina má vždy väčšiu dôkaznú silu ako verejná", "Medzi nimi niet žiadneho rozdielu", "Len súkromná listina môže byť dôkazom v civilnom konaní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Verejná listina požíva osobitnú dôkaznú prezumpciu pravdivosti, súkromná listina ju nemá.",
+        "wrong": "Nesprávne. Verejná, nie súkromná listina má silnejšiu dôkaznú váhu a obe môžu byť v konaní použité ako dôkaz."
+      }
+    },
+    {
+      "question": "Je súd viazaný záverom znaleckého posudku?",
+      "options": ["Nie, znalecký posudok hodnotí súd ako každý iný dôkaz, hoci ide o odborné závery", "Áno, znalecký posudok je pre súd vždy záväzný", "Áno, ale len ak ho vypracoval súdny znalec zapísaný v zozname", "Znalecký posudok sa v civilnom konaní vôbec nepoužíva"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Aj odborný záver znalca podlieha voľnému hodnoteniu súdu spolu s ostatnými dôkazmi.",
+        "wrong": "Nesprávne. Súd nie je znaleckým posudkom automaticky viazaný bez ohľadu na to, kto ho vypracoval."
+      }
+    },
+    {
+      "question": "Čo je obhliadka ako dôkazný prostriedok?",
+      "options": ["Priame zmyslové vnímanie predmetu dokazovania súdom (napr. obhliadka miesta alebo veci)", "Výsluch znalca na pojednávaní", "Predloženie listiny súdu", "Vypočutie svedka mimo pojednávania"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Obhliadka umožňuje súdu priamo vnímať predmet dokazovania vlastnými zmyslami.",
+        "wrong": "Nesprávne. Výsluch znalca, listinný dôkaz a výsluch svedka sú samostatné dôkazné prostriedky odlišné od obhliadky."
+      }
+    },
+    {
+      "question": "Kedy súd vykoná výsluch účastníkov ako dôkazný prostriedok?",
+      "options": ["Nikdy, účastníci nemôžu byť vypočutí ako dôkazný prostriedok", "Keď skutočnosť nemožno preukázať inak alebo na doplnenie iných dôkazov", "Len ak s tým súhlasí protistrana", "Len v mimosporovom konaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Výsluch účastníkov je zákonom predvídaný dôkazný prostriedok, uplatňovaný najmä subsidiárne alebo doplnkovo.",
+        "wrong": "Nesprávne. Výsluch účastníkov nie je vylúčený zo sporového konania ani viazaný na súhlas protistrany."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Svedok", "definition": "Fyzická osoba odlišná od účastníka, ktorá vypovedá o skutočnostiach vnímaných zmyslami." },
+    { "term": "Verejná listina", "definition": "Dôkaz o pravdivosti toho, čo je v nej osvedčené, kým sa nepreukáže opak." },
+    { "term": "Znalecký posudok", "definition": "Odborný záver hodnotený súdom ako každý iný dôkaz, súd ním nie je viazaný." },
+    { "term": "Obhliadka", "definition": "Priame zmyslové vnímanie predmetu dokazovania súdom." },
+    { "term": "Výsluch účastníkov", "definition": "Dôkazný prostriedok použitý najmä vtedy, keď skutočnosť nemožno preukázať inak." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Hodnotenie znaleckého posudku",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "V spore o výške škody predloží znalec posudok, podľa ktorého škoda predstavuje 10 000 eur, no súd má pochybnosti o použitej metodike výpočtu.", "options": [], "correct": 0 },
+        {
+          "question": "Musí súd bez ďalšieho vychádzať zo záveru znalca?",
+          "options": ["Nie, znalecký posudok hodnotí súd ako iný dôkaz a môže mať o ňom pochybnosti", "Áno, znalecký posudok je pre súd vždy záväzný bez výnimky", "Áno, pokiaľ ho nezruší vyšší súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd môže mať k znaleckému posudku odôvodnené výhrady a hodnotí ho spolu s ostatnými dôkazmi.",
+            "wrong": "Nesprávne. Znalecký posudok nie je pre súd bezvýhradne záväzný a jeho prípadné nedostatky nemusí riešiť až vyšší súd."
+          }
+        },
+        {
+          "question": "Čo môže súd urobiť, ak má o posudku odôvodnené pochybnosti?",
+          "options": ["Napríklad nariadiť výsluch znalca alebo vyžiadať doplnenie či revízny posudok", "Musí sa uspokojiť s posudkom bez akejkoľvek možnosti overenia", "Musí spor bez ďalšieho rozhodnúť v prospech strany, ktorá posudok predložila"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd môže dôkaznú situáciu doplniť, napríklad vypočutím znalca alebo revíznym posudkom.",
+            "wrong": "Nesprávne. Súd sa nemusí uspokojiť s pochybným posudkom a jeho existencia sama osebe nerozhoduje spor v prospech predkladajúcej strany."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odopretie výpovede svedka",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd predvolá ako svedka blízku osobu žalovaného (jeho súrodenca), ktorý bol prítomný pri rozhodujúcej udalosti.", "options": [], "correct": 0 },
+        {
+          "question": "Môže tento svedok odoprieť výpoveď?",
+          "options": ["Áno, zákon priznáva blízkym osobám účastníka právo odoprieť výpoveď", "Nie, svedok musí vypovedať vždy bez výnimky", "Áno, ale iba ak s tým súhlasí súd vopred bez zákonného dôvodu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon chráni blízke vzťahy tým, že takýmto osobám priznáva právo výpoveď odoprieť.",
+            "wrong": "Nesprávne. Povinnosť vypovedať nie je bezvýnimočná a odopretie nezávisí od svojvoľného súhlasu súdu bez zákonného dôvodu."
+          }
+        },
+        {
+          "question": "Znamená odopretie výpovede, že svedok klame?",
+          "options": ["Nie, ide o zákonom priznané právo chrániace blízke vzťahy, nie o nepravdivosť výpovede", "Áno, odopretie výpovede sa vždy považuje za klamstvo", "Áno, súd musí odopretie výpovede potrestať"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odopretie výpovede je legitímnym výkonom zákonného práva, nie prejavom nepravdivosti.",
+            "wrong": "Nesprávne. Zákonné odopretie výpovede nie je dôvodom na sankcionovanie svedka."
+          }
+        }
+      ]
+    }
+  ]
+}

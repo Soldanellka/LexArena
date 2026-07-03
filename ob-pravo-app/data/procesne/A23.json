@@ -1,0 +1,114 @@
+{
+  "id": "23",
+  "title": "Rozsudok – pojem, druhy, náležitosti jeho písomného vyhotovenia",
+  "schemaVersion": "1.1",
+  "tags": ["rozsudok", "medzitýmny rozsudok", "čiastočný rozsudok", "náležitosti rozsudku"],
+  "summary": "Rozsudok je rozhodnutie súdu vo veci samej (meritórne rozhodnutie), ktoré sa vyhlasuje a vydáva v mene Slovenskej republiky. Popri konečnom rozsudku, ktorým sa rieši celý predmet konania, CSP pozná aj čiastočný rozsudok (§ 217 CSP), ktorým súd rozhodne len o časti veci spôsobilej na samostatné prejednanie, a medzitýmny rozsudok (§ 216 CSP), ktorým súd vyrieši základ uplatneného nároku, kým o jeho výške rozhodne až následne ďalším rozsudkom. Osobitnými druhmi sú rozsudok pre uznanie (na základe uznania nároku žalovaným) a rozsudok pre zmeškanie (pri nečinnosti žalovaného za zákonom stanovených podmienok).\n\nPísomné vyhotovenie rozsudku musí mať náležitosti podľa § 220 CSP: záhlavie (označenie súdu, sudcu alebo senátu, účastníkov a predmetu konania), výrok, odôvodnenie a poučenie o opravnom prostriedku. Odôvodnenie musí obsahovať skutkový stav, ktorý súd zistil, dôkazy, z ktorých pri tom vychádzal, a právne posúdenie veci vrátane úvah, ktorými sa súd pri rozhodovaní riadil; nedostatočné odôvodnenie môže spôsobiť nepreskúmateľnosť rozsudku a byť dôvodom na jeho zrušenie v odvolacom konaní.\n\nZapamätaj si:\n- Rozsudok = meritórne rozhodnutie vydávané v mene Slovenskej republiky.\n- Čiastočný rozsudok (§ 217 CSP) rieši len časť veci spôsobilú na samostatné rozhodnutie.\n- Medzitýmny rozsudok (§ 216 CSP) rieši základ nároku, o výške sa rozhoduje neskôr.\n- Náležitosti písomného vyhotovenia (§ 220 CSP): záhlavie, výrok, odôvodnenie, poučenie.\n- Nedostatočné odôvodnenie môže viesť k zrušeniu rozsudku pre nepreskúmateľnosť."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je rozsudok?",
+      "options": ["Rozhodnutie súdu vo veci samej vydávané v mene Slovenskej republiky", "Rozhodnutie súdu o procesných otázkach", "Rozhodnutie prokurátora vo veci", "Rozhodnutie znalca predložené súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Rozsudok je meritórnym rozhodnutím súdu vo veci samej.",
+        "wrong": "Nesprávne. O procesných otázkach súd rozhoduje spravidla uznesením, nie rozsudkom, a prokurátor ani znalec rozsudok nevydávajú."
+      }
+    },
+    {
+      "question": "Čo je medzitýmny rozsudok (§ 216 CSP)?",
+      "options": ["Rozsudok riešiaci základ nároku, pričom o jeho výške rozhodne súd neskôr", "Rozsudok riešiaci iba trovy konania", "Rozsudok vydávaný bez akéhokoľvek odôvodnenia", "Predbežné opatrenie súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Medzitýmny rozsudok rieši, či nárok vôbec existuje (základ), výška sa rieši neskôr osobitným rozsudkom.",
+        "wrong": "Nesprávne. Medzitýmny rozsudok sa netýka len trov konania a nejde o predbežné opatrenie ani o rozhodnutie bez odôvodnenia."
+      }
+    },
+    {
+      "question": "Čo je čiastočný rozsudok (§ 217 CSP)?",
+      "options": ["Rozsudok, ktorým súd rozhodne len o časti prejednávanej veci, ak je táto časť spôsobilá na samostatné rozhodnutie", "Rozsudok vydaný polovicou senátu", "Rozsudok, ktorý platí len dočasne", "Rozsudok vydaný bez návrhu strán"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Čiastočný rozsudok umožňuje rozhodnúť o samostatne posúditeľnej časti veci skôr, než o zvyšku sporu.",
+        "wrong": "Nesprávne. Nejde o rozhodovanie polovicou senátu ani o dočasné rozhodnutie."
+      }
+    },
+    {
+      "question": "Čo musí obsahovať písomné vyhotovenie rozsudku podľa § 220 CSP?",
+      "options": ["Iba výrok", "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku", "Iba odôvodnenie bez výroku", "Iba poučenie o odvolaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon vyžaduje súhrn náležitostí, nielen niektorú z nich samostatne.",
+        "wrong": "Nesprávne. Samotný výrok, samotné odôvodnenie ani samotné poučenie bez ďalších náležitostí nepostačujú."
+      }
+    },
+    {
+      "question": "Čo musí obsahovať odôvodnenie rozsudku?",
+      "options": ["Iba citáciu zákona bez ďalšieho", "Skutkový stav zistený súdom, dôkazy, z ktorých vychádzal, a právne posúdenie veci", "Iba zoznam vypočutých svedkov", "Osobné hodnotenie sudcu o stranách konania"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Riadne odôvodnenie musí umožniť preskúmateľnosť úvah súdu, ktoré ho viedli k danému rozhodnutiu.",
+        "wrong": "Nesprávne. Samotná citácia zákona alebo zoznam svedkov bez ďalšieho odôvodnenia nepostačuje a osobné hodnotenie strán do rozsudku nepatrí."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Rozsudok", "definition": "Meritórne rozhodnutie súdu vo veci samej, vydávané v mene Slovenskej republiky." },
+    { "term": "Medzitýmny rozsudok (§ 216 CSP)", "definition": "Rieši základ nároku, o jeho výške rozhodne súd neskôr." },
+    { "term": "Čiastočný rozsudok (§ 217 CSP)", "definition": "Rozhoduje len o časti veci spôsobilej na samostatné rozhodnutie." },
+    { "term": "Náležitosti rozsudku (§ 220 CSP)", "definition": "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku." },
+    { "term": "Odôvodnenie rozsudku", "definition": "Obsahuje zistený skutkový stav, hodnotenie dôkazov a právne posúdenie veci." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Spor o základ a výšku nároku",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "V spore je sporný tak samotný základ nároku (či škoda vôbec vznikla z konania žalovaného), ako aj jej presná výška.", "options": [], "correct": 0 },
+        {
+          "question": "Aký rozsudok môže súd vydať, ak najprv vyrieši iba otázku základu?",
+          "options": ["Medzitýmny rozsudok", "Rozsudok pre zmeškanie", "Rozsudok pre uznanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Medzitýmny rozsudok je určený presne na situáciu, keď sa najprv rieši základ nároku.",
+            "wrong": "Nesprávne. Rozsudok pre zmeškanie a rozsudok pre uznanie sa viažu na iné procesné situácie (nečinnosť či uznanie žalovaným), nie na rozdelenie základu a výšky nároku."
+          }
+        },
+        {
+          "question": "Čo nasleduje po vydaní medzitýmneho rozsudku?",
+          "options": ["Súd následne rozhodne aj o výške nároku ďalším rozsudkom", "Konanie sa tým definitívne skončí bez ďalšieho", "Žalovaný musí ihneď zaplatiť celú spornú sumu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po vyriešení základu nároku súd pokračuje v konaní a rozhodne aj o jeho výške.",
+            "wrong": "Nesprávne. Konanie sa medzitýmnym rozsudkom nekončí a žalovaný nemusí ihneď plniť, kým nie je určená výška nároku."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Chýbajúce odôvodnenie",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd vydá rozsudok, ktorého písomné vyhotovenie obsahuje výrok a poučenie o odvolaní, no odôvodnenie je len jednou všeobecnou vetou bez uvedenia zistených skutočností a dôkazov.", "options": [], "correct": 0 },
+        {
+          "question": "Spĺňa takéto písomné vyhotovenie zákonné náležitosti?",
+          "options": ["Nie, odôvodnenie musí obsahovať zistený skutkový stav, hodnotenie dôkazov a právne posúdenie", "Áno, stačí, že rozsudok obsahuje výrok a poučenie", "Áno, odôvodnenie je len nepovinnou súčasťou rozsudku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odôvodnenie je povinnou a obsahovo podstatnou náležitosťou rozsudku podľa § 220 CSP.",
+            "wrong": "Nesprávne. Samotný výrok a poučenie bez riadneho odôvodnenia nespĺňajú zákonné požiadavky na písomné vyhotovenie rozsudku."
+          }
+        },
+        {
+          "question": "Aký môže mať nedostatočné odôvodnenie procesný následok?",
+          "options": ["Môže byť dôvodom na zrušenie rozsudku v odvolacom konaní pre nepreskúmateľnosť", "Nemá žiadny význam, rozsudok zostáva bez zmeny v platnosti", "Automaticky spôsobuje neplatnosť žaloby"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nepreskúmateľnosť rozsudku pre nedostatok odôvodnenia je typickým odvolacím dôvodom.",
+            "wrong": "Nesprávne. Nedostatočné odôvodnenie nie je bezvýznamné a netýka sa platnosti žaloby, ale kvality samotného rozhodnutia."
+          }
+        }
+      ]
+    }
+  ]
+}
