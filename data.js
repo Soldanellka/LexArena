@@ -72,12 +72,6 @@ window.catalog = {
     openExternal: LIVE + "Trestné právo procesné/",
     externalPath: LIVE + "Trestné právo procesné/data/",
     desc: "Kompletná TPP appka."
-  },
-
-  "Občianske právo": {
-    id: "obcianske",
-    openExternal: LIVE + "ob-pravo-app/",
-    desc: "Kompletná appka občianskeho práva – hmotné (A1-A40) a procesné (A1-A45) okruhy."
   }
 };
 
@@ -178,6 +172,20 @@ loadJsonQuestions(
   "Trestné právo procesné",
   LIVE + "Trestné právo procesné/data/",
   30
+);
+
+// Občianske právo hmotné → 40 JSON
+loadJsonQuestions(
+  "Občianske právo hmotné",
+  LIVE + "ob-pravo-app/data/hmotne/",
+  40
+);
+
+// Občianske právo procesné → 45 JSON
+loadJsonQuestions(
+  "Občianske právo procesné",
+  LIVE + "ob-pravo-app/data/procesne/",
+  45
 );
 
 /* =====================================================

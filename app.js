@@ -67,7 +67,7 @@ function renderAreas() {
       const quizTitle = $('quizTitle');
       const areaTitle = $('areaTitle');
 
-      if (quizTitle) quizTitle.textContent = 'Vyber oblasť do duelu';
+      if (quizTitle) quizTitle.textContent = 'Vyber oblasť do duelu, hry a prípady';
       if (areaTitle) areaTitle.textContent = name;
 
       if (startBtn) {
@@ -106,7 +106,17 @@ function preloadAreaGames(areaName) {
       window.__areaQuestionsForGames = questions;
       window.__areaTilesForGames = getTilesForArea(areaName);
       window.__areaCasesForGames = getCasesForArea(areaName);
-      console.log(`🎮 ${areaName}: ${questions.length} otázok, ${(window.__areaTilesForGames||[]).length} dlaždíc, ${(window.__areaCasesForGames||[]).length} prípadov`);
+      const nTiles = (window.__areaTilesForGames||[]).length;
+      const nCases = (window.__areaCasesForGames||[]).length;
+      console.log(`🎮 ${areaName}: ${questions.length} otázok, ${nTiles} dlaždíc, ${nCases} prípadov`);
+
+      // 🎮 Aktualizuj indikátor pri tlačidlách hier
+      const hint = document.getElementById('gamesAreaHint');
+      if (hint) {
+        hint.classList.add('games-hint-ready');
+        hint.innerHTML = `<span class="games-hint-dot ready"></span>
+          <strong>${areaName}</strong> – pripravené: ${nTiles} kartičiek, ${nCases} prípadov`;
+      }
     }
     if (attempts > 50) clearInterval(check);
   }, 100);
@@ -118,6 +128,11 @@ function getQuestionsForArea(areaName) {
     const tpp = window.areas?.['Trestné právo procesné'] || [];
     return [...tph.slice(0,5), ...tpp.slice(0,5)];
   }
+  if (areaName === 'Občianske právo') {
+    const oph = window.areas?.['Občianske právo hmotné'] || [];
+    const opp = window.areas?.['Občianske právo procesné'] || [];
+    return [...oph.slice(0,5), ...opp.slice(0,5)];
+  }
   return window.areas?.[areaName] || [];
 }
 
@@ -127,6 +142,11 @@ function getTilesForArea(areaName) {
     const tpp = window.areaTiles?.['Trestné právo procesné'] || [];
     return [...tph, ...tpp];
   }
+  if (areaName === 'Občianske právo') {
+    const oph = window.areaTiles?.['Občianske právo hmotné'] || [];
+    const opp = window.areaTiles?.['Občianske právo procesné'] || [];
+    return [...oph, ...opp];
+  }
   return window.areaTiles?.[areaName] || [];
 }
 
@@ -135,6 +155,11 @@ function getCasesForArea(areaName) {
     const tph = window.areaCases?.['Trestné právo hmotné'] || [];
     const tpp = window.areaCases?.['Trestné právo procesné'] || [];
     return [...tph, ...tpp];
+  }
+  if (areaName === 'Občianske právo') {
+    const oph = window.areaCases?.['Občianske právo hmotné'] || [];
+    const opp = window.areaCases?.['Občianske právo procesné'] || [];
+    return [...oph, ...opp];
   }
   return window.areaCases?.[areaName] || [];
 }
