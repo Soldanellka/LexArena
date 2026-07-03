@@ -1,0 +1,114 @@
+{
+  "id": "15",
+  "title": "Dispozičné procesné úkony v súdnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["dispozičné úkony", "späťvzatie žaloby", "uznanie nároku", "vzdanie sa nároku", "súdny zmier"],
+  "summary": "Dispozičné procesné úkony sú úkony, ktorými strany disponujú predmetom konania alebo jeho priebehom, čo je prejavom dispozičnej zásady civilného sporového konania. Patrí sem späťvzatie žaloby (§ 144 CSP) – žalobca môže žalobu vziať späť, po začatí pojednávania vo veci samej ju však súd nepripustí, ak s tým žalovaný z vážnych dôvodov nesúhlasí. Ďalšími dispozičnými úkonmi sú zmena žaloby (§ 142 CSP), uznanie nároku žalovaným (§ 133 CSP) a vzdanie sa nároku žalobcom (§ 134 CSP).\n\nAk žalovaný nárok uzná, súd je uznaním viazaný a môže vydať rozsudok pre uznanie bez ďalšieho dokazovania o základe nároku. Ak sa žalobca nároku vzdá, súd rozhodne rozsudkom v súlade s týmto vzdaním sa. Osobitným a v praxi častým dispozičným úkonom oboch strán je súdny zmier (§ 145 CSP) – dohoda strán o predmete konania, ktorú súd schváli uznesením, ak nie je v rozpore so zákonom alebo záujmom chráneným zákonom; schválený zmier má účinky právoplatného rozsudku a je exekučným titulom.\n\nZapamätaj si:\n- Dispozičné úkony = prejav dispozičnej zásady, strany nimi disponujú predmetom/priebehom konania.\n- Späťvzatie žaloby (§ 144 CSP): po začatí pojednávania viazané na súhlas žalovaného pri vážnom nesúhlase.\n- Uznanie nároku (§ 133 CSP) – súd je ním viazaný, môže vydať rozsudok pre uznanie.\n- Vzdanie sa nároku (§ 134 CSP) – súd rozhodne rozsudkom v súlade so vzdaním sa.\n- Súdny zmier (§ 145 CSP) – schválená dohoda strán s účinkami právoplatného rozsudku."
+  ,
+  "quiz": [
+    {
+      "question": "Čo sú dispozičné procesné úkony?",
+      "options": ["Úkony, ktorými strany disponujú predmetom alebo priebehom konania (napr. späťvzatie žaloby, uznanie nároku, zmier)", "Úkony súdu pri vedení pojednávania", "Úkony znalca pri vypracovaní posudku", "Úkony bez akýchkoľvek procesných účinkov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Dispozičné úkony sú prejavom dispozičnej zásady – strany nimi disponujú predmetom alebo priebehom konania.",
+        "wrong": "Nesprávne. Ide o úkony strán, nie o úkony súdu alebo znalca, a majú zásadné procesné účinky."
+      }
+    },
+    {
+      "question": "Čo je uznanie nároku podľa § 133 CSP?",
+      "options": ["Vyjadrenie žalovaného, ktorým uznáva žalobcom uplatnený nárok; súd je ním viazaný a môže vydať rozsudok pre uznanie", "Vzdanie sa práva žalovaného na odvolanie", "Vzatie žaloby späť žalobcom", "Návrh na uzavretie zmieru"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Uznaním nároku je súd viazaný, čo mu umožňuje vydať rozsudok pre uznanie bez ďalšieho dokazovania o základe nároku.",
+        "wrong": "Nesprávne. Uznanie nároku je úkonom žalovaného vo veci samej, nie vzdaním sa práva na odvolanie ani späťvzatím žaloby."
+      }
+    },
+    {
+      "question": "Čo je súdny zmier podľa § 145 CSP?",
+      "options": ["Dohoda strán o predmete konania schválená súdom, ktorá má účinky právoplatného rozsudku", "Rozhodnutie súdu vo veci samej bez dohody strán", "Vzdanie sa nároku jednou zo strán", "Odvolanie proti rozsudku"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zmier je dohodou strán, ktorú súd schvaľuje; schválený zmier má rovnaké účinky ako právoplatný rozsudok.",
+        "wrong": "Nesprávne. Zmier nie je jednostranným rozhodnutím súdu ani jednostranným úkonom jednej strany – ide o dohodu oboch strán."
+      }
+    },
+    {
+      "question": "Aký je následok vzdania sa nároku žalobcom?",
+      "options": ["Súd na základe toho rozhodne rozsudkom v súlade so vzdaním sa nároku", "Konanie sa automaticky preruší bez ďalšieho rozhodnutia", "Žalovaný musí s tým výslovne súhlasiť, inak je vzdanie sa neúčinné", "Vzdanie sa nároku nemá žiadne procesné účinky"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Vzdanie sa nároku je jednostranný dispozičný úkon žalobcu, na základe ktorého súd rozhodne v súlade s ním.",
+        "wrong": "Nesprávne. Vzdanie sa nároku nevyžaduje súhlas žalovaného a nevedie len k prerušeniu konania bez rozhodnutia."
+      }
+    },
+    {
+      "question": "Môže súd zmier neschváliť?",
+      "options": ["Áno, ak by bol v rozpore so zákonom alebo záujmom chráneným zákonom", "Nie, súd je vždy povinný zmier bez ďalšieho schváliť", "Áno, ale iba na základe svojvoľného rozhodnutia bez dôvodu", "Nie, o schválení zmieru rozhoduje výlučne protistrana"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Súd zmier neschváli, ak je v rozpore so zákonom alebo poškodzuje záujem chránený zákonom (napr. záujem maloletého).",
+        "wrong": "Nesprávne. Súd nemá povinnosť schváliť akýkoľvek zmier automaticky, ani nerozhoduje svojvoľne bez zákonného dôvodu."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Dispozičný úkon", "definition": "Úkon, ktorým strana disponuje predmetom alebo priebehom konania (späťvzatie, uznanie, zmier)." },
+    { "term": "Späťvzatie žaloby (§ 144 CSP)", "definition": "Žalobca môže vziať žalobu späť; po začatí pojednávania len so súhlasom žalovaného, ak s tým z vážnych dôvodov nesúhlasí." },
+    { "term": "Uznanie nároku (§ 133 CSP)", "definition": "Žalovaný uzná žalobcom uplatnený nárok; súd je uznaním viazaný." },
+    { "term": "Vzdanie sa nároku (§ 134 CSP)", "definition": "Žalobca sa vzdá uplatneného nároku; súd o tom rozhodne rozsudkom." },
+    { "term": "Súdny zmier (§ 145 CSP)", "definition": "Dohoda strán o predmete konania schválená súdom; má účinky právoplatného rozsudku." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Schválenie zmieru",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Strany počas pojednávania predložia súdu návrh zmieru, ktorým sa dohodli na postupnom splácaní dlhu.", "options": [], "correct": 0 },
+        {
+          "question": "Čo musí súd urobiť, aby zmier nadobudol účinky?",
+          "options": ["Zmier schváliť uznesením, ak nie je v rozpore so zákonom", "Zmier bez ďalšieho odmietnuť", "Nariadiť ďalšie dokazovanie napriek dohode strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmier nadobúda účinky až jeho schválením súdom, ak neodporuje zákonu ani chránenému záujmu.",
+            "wrong": "Nesprávne. Súd dohodu strán neodmieta bez dôvodu, ani po dosiahnutí zmieru nepokračuje v dokazovaní o veci samej."
+          }
+        },
+        {
+          "question": "Aké účinky má schválený zmier?",
+          "options": ["Účinky právoplatného rozsudku", "Je iba odporúčaním bez záväznosti", "Musí byť dodatočne potvrdený ešte samostatným rozsudkom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Schválený zmier má rovnaké účinky ako právoplatný rozsudok a je exekučným titulom.",
+            "wrong": "Nesprávne. Schválený zmier je záväzný sám osebe, nevyžaduje dodatočné potvrdenie rozsudkom."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Uznanie nároku žalovaným",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalovaný na pojednávaní výslovne uzná celý žalobou uplatnený nárok.", "options": [], "correct": 0 },
+        {
+          "question": "Čo môže súd na základe toho urobiť?",
+          "options": ["Vydať rozsudok pre uznanie", "Napriek uznaniu vykonať rozsiahle dokazovanie o celej veci", "Žalobu bez ďalšieho zamietnuť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Uznanie nároku umožňuje súdu vydať rozsudok pre uznanie bez potreby ďalšieho dokazovania o základe nároku.",
+            "wrong": "Nesprávne. Uznanie nároku nevedie k zamietnutiu žaloby a nevyžaduje rozsiahle ďalšie dokazovanie o uznanej časti."
+          }
+        },
+        {
+          "question": "Je súd uznaním nároku viazaný?",
+          "options": ["Áno, súd z uznania vychádza a rozsudok mu spravidla zodpovedá", "Nie, súd môže rozhodnúť úplne inak bez ohľadu na uznanie", "Uznanie nároku nemá v konaní žiadny význam"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Uznanie nároku viaže súd, ktorý na jeho základe môže rozhodnúť rozsudkom pre uznanie.",
+            "wrong": "Nesprávne. Uznanie nároku má zásadný procesný význam a súd sa od neho pri rozhodovaní neodkláňa bez zákonného dôvodu."
+          }
+        }
+      ]
+    }
+  ]
+}

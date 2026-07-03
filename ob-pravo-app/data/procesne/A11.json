@@ -1,0 +1,114 @@
+{
+  "id": "11",
+  "title": "Doručovanie v súdnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["doručovanie", "doručenie do vlastných rúk", "náhradné doručenie", "fikcia doručenia", "elektronické doručovanie"],
+  "summary": "Doručovanie (§ 105 – 121 CSP) je procesný úkon súdu, ktorým sa písomnosti dostávajú do dispozičnej sféry účastníkov a ďalších osôb. Najdôležitejšie písomnosti (žaloba, predvolanie, rozsudok a i.) sa doručujú do vlastných rúk, ostatné bežným spôsobom. Ak si adresát zásielku doručovanú do vlastných rúk neprevezme v odbernej lehote napriek riadnemu uloženiu a poučeniu, nastáva náhradné doručenie (fikcia doručenia) – písomnosť sa považuje za doručenú, hoci si ju adresát fyzicky neprevzal. Fikcia sa neuplatní napríklad pri doručovaní do cudziny alebo ak adresát preukázateľne v mieste doručenia nebýva.\n\nPrávnickým osobám sa doručuje na adresu zapísanú vo verejnom registri (napr. obchodnom registri); doručenie na túto adresu je účinné, aj keď sa spoločnosť na nej fakticky nezdržiava, kým si adresu nezmení. Moderným spôsobom je elektronické doručovanie do elektronickej schránky adresáta podľa zákona o e-Governmente. Ak je pobyt adresáta neznámy a nemožno mu ustanoviť ani opatrovníka, doručuje sa verejnou vyhláškou. Vadné (neúčinné) doručenie môže byť vadou konania s vplyvom na jeho ďalší priebeh, napríklad na plynutie procesných lehôt.\n\nZapamätaj si:\n- Doručenie do vlastných rúk sa používa pri najvýznamnejších písomnostiach (žaloba, rozsudok).\n- Náhradné doručenie (fikcia) nastáva pri neprevzatí zásielky v odbernej lehote po riadnom uložení.\n- Fikcia sa neuplatní pri doručovaní do cudziny alebo ak adresát v mieste doručenia preukázateľne nebýva.\n- Právnickým osobám sa doručuje na adresu zapísanú vo verejnom registri.\n- Verejná vyhláška slúži na doručovanie osobám s neznámym pobytom."
+  ,
+  "quiz": [
+    {
+      "question": "Aký je rozdiel medzi doručením do vlastných rúk a bežným doručením?",
+      "options": ["Do vlastných rúk sa doručujú najdôležitejšie písomnosti (napr. žaloba, rozsudok), bežné doručenie stačí pri menej významných písomnostiach", "Niet medzi nimi žiadneho rozdielu", "Do vlastných rúk sa doručuje len fyzickým osobám", "Bežné doručenie sa používa len pri elektronickom doručovaní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zákon vyžaduje doručenie do vlastných rúk práve pri písomnostiach zásadného významu pre priebeh konania.",
+        "wrong": "Nesprávne. Rozlíšenie spôsobu doručenia závisí od významu písomnosti, nie od typu adresáta ani výlučne od formy doručenia."
+      }
+    },
+    {
+      "question": "Čo je náhradné doručenie (fikcia doručenia)?",
+      "options": ["Písomnosť sa považuje za doručenú aj bez prevzatia adresátom, ak si ju napriek riadnemu uloženiu neprevzal v odbernej lehote", "Doručenie inej osobe namiesto adresáta bez ďalších podmienok", "Doručenie súdnym exekútorom", "Doručenie výlučne prostredníctvom médií"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ak adresát zásielku určenú do vlastných rúk neprevezme v odbernej lehote, nastáva jej náhradné (fiktívne) doručenie.",
+        "wrong": "Nesprávne. Fikcia doručenia sa neviaže na doručenie inej osobe ani na účasť exekútora či médií."
+      }
+    },
+    {
+      "question": "Kedy sa fikcia doručenia neuplatní?",
+      "options": ["Nikdy, uplatní sa vždy bez výnimky", "Napríklad pri doručovaní do cudziny alebo ak adresát preukázateľne v mieste doručenia nebýva", "Len pri doručovaní právnickým osobám", "Len pri elektronickom doručovaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon vylučuje fikciu doručenia napríklad pri doručovaní do cudziny alebo ak sa preukáže, že adresát na danej adrese nebýva.",
+        "wrong": "Nesprávne. Výnimky z fikcie doručenia sa netýkajú len právnických osôb ani len elektronického doručovania."
+      }
+    },
+    {
+      "question": "Ako sa doručuje osobe s neznámym pobytom, ktorej nemožno ustanoviť opatrovníka inak?",
+      "options": ["Verejnou vyhláškou", "Vždy osobne bez ohľadu na okolnosti", "Prostredníctvom susedov", "Takejto osobe sa nedoručuje vôbec"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Pri neznámom pobyte adresáta a nemožnosti iného postupu sa doručuje verejnou vyhláškou.",
+        "wrong": "Nesprávne. Osobné doručenie ani doručenie cez susedov nie sú náhradou za zákonom predpokladanú verejnú vyhlášku."
+      }
+    },
+    {
+      "question": "Čo je elektronické doručovanie v civilnom konaní?",
+      "options": ["Doručovanie do elektronickej schránky adresáta podľa zákona o e-Governmente", "Doručovanie prostredníctvom bežného e-mailu bez ďalších podmienok", "Doručovanie cez sociálne siete", "Doručovanie SMS správou"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Elektronické doručovanie prebieha do aktivovanej elektronickej schránky adresáta podľa zákona o e-Governmente (napr. cez portál slovensko.sk).",
+        "wrong": "Nesprávne. Bežný e-mail, sociálne siete ani SMS nie sú zákonom predpokladaným spôsobom elektronického doručovania súdnych písomností."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Doručenie do vlastných rúk", "definition": "Spôsob doručenia najdôležitejších písomností (napr. žaloba, rozsudok) priamo adresátovi." },
+    { "term": "Náhradné doručenie (fikcia)", "definition": "Písomnosť sa považuje za doručenú aj bez prevzatia, ak si ju adresát neprevzal v odbernej lehote po riadnom uložení." },
+    { "term": "Elektronické doručovanie", "definition": "Doručovanie do elektronickej schránky adresáta podľa zákona o e-Governmente." },
+    { "term": "Verejná vyhláška", "definition": "Spôsob doručenia osobe s neznámym pobytom, ktorej inak nemožno doručiť." },
+    { "term": "Vadné doručenie", "definition": "Nesprávny postup pri doručovaní, ktorý môže mať za následok neúčinnosť doručenia a vadu konania." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neprevzatá zásielka",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalovanému bola do vlastných rúk zaslaná žaloba; poštár ho nezastihol, zásielku uložil a zanechal výzvu, žalovaný si ju v odbernej lehote neprevzal.", "options": [], "correct": 0 },
+        {
+          "question": "Považuje sa žaloba za doručenú?",
+          "options": ["Áno, nastáva náhradné (fiktívne) doručenie dňom márneho uplynutia odbernej lehoty", "Nie, kým si žalovaný zásielku fyzicky neprevezme", "Áno, ale až po uplynutí 30 dní bez ďalších podmienok"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Márnym uplynutím odbernej lehoty po riadnom uložení zásielky nastáva jej náhradné doručenie.",
+            "wrong": "Nesprávne. Práve zmyslom fikcie doručenia je, že účinky doručenia nastanú aj bez fyzického prevzatia zásielky."
+          }
+        },
+        {
+          "question": "Zmenilo by sa niečo, keby žalovaný preukázateľne v danom mieste vôbec nebýval?",
+          "options": ["Áno, v takom prípade fikcia doručenia nenastáva", "Nie, fikcia nastáva vždy bez ohľadu na skutočný pobyt", "Áno, ale len ak by o tom vopred písomne informoval súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Preukázateľná skutočnosť, že adresát na danej adrese nebýva, vylučuje uplatnenie fikcie doručenia.",
+            "wrong": "Nesprávne. Zákon práve pre tento prípad výslovne vylučuje nastúpenie fikcie doručenia."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Doručovanie právnickej osobe",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd doručuje rozsudok obchodnej spoločnosti na adresu jej sídla zapísanú v obchodnom registri.", "options": [], "correct": 0 },
+        {
+          "question": "Je takéto doručenie účinné, ak spoločnosť na tejto adrese fakticky nesídli, hoci ju v registri nezmenila?",
+          "options": ["Áno, doručenie na zapísané sídlo je účinné, kým spoločnosť adresu v registri nezmení", "Nie, súd musí vždy zisťovať skutočné sídlo spoločnosti", "Doručovanie právnickým osobám sa spravuje úplne inými pravidlami ako fyzickým osobám"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Doručenie na adresu zapísanú vo verejnom registri je účinné, kým si právnická osoba adresu nezmení.",
+            "wrong": "Nesprávne. Súd nie je povinný aktívne zisťovať faktické sídlo, ak sa spolieha na údaj vo verejnom registri."
+          }
+        },
+        {
+          "question": "Prečo zákon takto chráni doručovanie na zapísanú adresu?",
+          "options": ["Aby sa predišlo účelovému vyhýbaniu sa doručovaniu a chránila sa právna istota", "Aby súd nemusel vôbec doručovať právnickým osobám", "Lebo právnické osoby nemajú právo na riadne doručenie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Väzba na verejný register chráni právnu istotu a bráni účelovému vyhýbaniu sa doručovaniu.",
+            "wrong": "Nesprávne. Právnické osoby majú právo na riadne doručenie – zákon len presne definuje, na akú adresu sa doručuje."
+          }
+        }
+      ]
+    }
+  ]
+}

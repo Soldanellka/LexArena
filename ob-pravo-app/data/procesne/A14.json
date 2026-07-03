@@ -1,0 +1,114 @@
+{
+  "id": "14",
+  "title": "Podanie a žaloba",
+  "schemaVersion": "1.1",
+  "tags": ["podanie", "žaloba", "petit", "naliehavý právny záujem", "zmena žaloby"],
+  "summary": "Podanie je procesný úkon účastníka adresovaný súdu, ktorý musí spĺňať všeobecné náležitosti podľa § 127 CSP. Žaloba je osobitným, najvýznamnejším podaním – je to procesný úkon, ktorým sa začína sporové konanie (§ 123 CSP). Okrem všeobecných náležitostí podania musí žaloba podľa § 132 CSP obsahovať opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit) – teda konkrétne vyjadrenie, čoho sa žalobca domáha a čím je súd pri rozhodovaní viazaný.\n\nPodľa povahy petitu rozlišujeme žalobu na plnenie (žalobca žiada uložiť žalovanému povinnosť niečo dať, konať, zdržať sa alebo strpieť), žalobu určovaciu (§ 137 písm. c) CSP – domáhanie sa určenia, či tu právny vzťah alebo právo je, alebo nie je, pokiaľ je na tom naliehavý právny záujem) a žalobu na vykonanie právneho úkonu. Naliehavý právny záujem na určovacej žalobe spravidla chýba tam, kde možno dosiahnuť úplné vyriešenie veci žalobou na plnenie. Žalobca môže žalobu počas konania zmeniť len so súhlasom súdu (§ 142 CSP); súd súhlas neudelí, ak by výsledky doterajšieho konania nemohli byť podkladom pre konanie o zmenenej žalobe.\n\nZapamätaj si:\n- Žaloba musí mať náležitosti podania (§ 127 CSP) a osobitné náležitosti žaloby (§ 132 CSP).\n- Petit = návrh výroku rozhodnutia, ktorým je súd viazaný.\n- Naliehavý právny záujem (§ 137 písm. c) CSP) je podmienkou určovacej žaloby.\n- Určovacia žaloba je spravidla vylúčená, ak možno podať žalobu na plnenie.\n- Zmena žaloby (§ 142 CSP) je možná len so súhlasom súdu."
+  ,
+  "quiz": [
+    {
+      "question": "Čo musí povinne obsahovať žaloba podľa CSP?",
+      "options": ["Len meno žalobcu a žalovaného", "Označenie súdu, strán, opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit)", "Len petit (čoho sa žalobca domáha)", "Len právnu kvalifikáciu nároku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 132 CSP musí žaloba obsahovať súhrn zákonom vymenovaných náležitostí, nielen niektorú z nich.",
+        "wrong": "Nesprávne. Samotný petit ani samotné mená strán bez skutkového opisu a dôkazov nestačia na riadnu žalobu."
+      }
+    },
+    {
+      "question": "Čo je žalobný petit?",
+      "options": ["Opis skutkového stavu veci", "Návrh výroku rozhodnutia, teda čo konkrétne žalobca žiada od súdu", "Zoznam predložených dôkazov", "Právna kvalifikácia uplatneného nároku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Petit je jadrom žaloby – konkrétny návrh výroku, ktorým je súd viazaný a nemôže prisúdiť viac ani niečo iné.",
+        "wrong": "Nesprávne. Petit nie je opisom skutkového stavu ani zoznamom dôkazov, ale konkrétnym návrhom výroku rozhodnutia."
+      }
+    },
+    {
+      "question": "Kedy má žalobca naliehavý právny záujem na určovacej žalobe?",
+      "options": ["Vždy, keď chce niečo určiť", "Keď je to potrebné na odstránenie stavu neistoty v právnom vzťahu, ktorý nemožno odstrániť inak (napr. žalobou na plnenie)", "Len keď je pohľadávka premlčaná", "Len pri sporoch o nehnuteľnosti"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Naliehavý právny záujem sa spravidla vylučuje, ak žalobca môže dosiahnuť úplné vyriešenie veci žalobou na plnenie.",
+        "wrong": "Nesprávne. Naliehavý právny záujem musí byť reálny a nemôže spočívať len v subjektívnej vôli žalobcu niečo si potvrdiť."
+      }
+    },
+    {
+      "question": "Môže žalobca zmeniť žalobu počas konania?",
+      "options": ["Áno, kedykoľvek bez akéhokoľvek obmedzenia", "Áno, len so súhlasom súdu", "Nie, žaloba sa nikdy nemôže meniť", "Len pred prvým pojednávaním a nikdy potom"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 142 CSP môže žalobca žalobu zmeniť len so súhlasom súdu, ktorý ho môže odoprieť, ak by to bránilo hospodárnemu priebehu konania.",
+        "wrong": "Nesprávne. Zmena žaloby nie je ani úplne voľná, ani úplne vylúčená – vyžaduje procesný súhlas súdu."
+      }
+    },
+    {
+      "question": "Aké sú základné druhy žalôb podľa žalobného petitu?",
+      "options": ["Žaloba na plnenie, žaloba určovacia a žaloba na vykonanie právneho úkonu", "Iba žaloba na plnenie", "Iba žaloba určovacia", "Žaloba civilná a žaloba trestná"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Civilné procesné právo rozlišuje žaloby na plnenie, určovacie žaloby a žaloby na vykonanie právneho úkonu.",
+        "wrong": "Nesprávne. Delenie žalôb podľa petitu je širšie než len jeden typ a rozlíšenie na civilnú/trestnú žalobu nedáva zmysel v civilnom procese."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Podanie", "definition": "Procesný úkon účastníka adresovaný súdu, musí spĺňať náležitosti podľa § 127 CSP." },
+    { "term": "Žaloba", "definition": "Podanie, ktorým sa začína sporové konanie (§ 123 CSP)." },
+    { "term": "Petit", "definition": "Návrh výroku rozhodnutia – konkrétne vyjadrenie, čoho sa žalobca domáha." },
+    { "term": "Určovacia žaloba", "definition": "Žaloba o určenie, či tu právo alebo právny vzťah je, alebo nie je, pri naliehavom právnom záujme (§ 137 písm. c) CSP)." },
+    { "term": "Zmena žaloby (§ 142 CSP)", "definition": "Zmenu žaloby môže žalobca urobiť len so súhlasom súdu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Určovacia žaloba bez naliehavého záujmu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalobca sa žalobou domáha určenia, že je vlastníkom veci, hoci mu nič nebráni podať rovno žalobu na vydanie veci, ktorou by spor vyriešil úplne.", "options": [], "correct": 0 },
+        {
+          "question": "Má žalobca v takom prípade naliehavý právny záujem na určovacej žalobe?",
+          "options": ["Spravidla nie, ak existuje žaloba na plnenie, ktorou možno dosiahnuť úplné vyriešenie veci", "Áno, vždy, keď si to žalobca želá", "Áno, lebo určovacia žaloba je prípustná bez ďalších podmienok"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak možno spor úplne vyriešiť žalobou na plnenie, naliehavý právny záujem na samostatnej určovacej žalobe spravidla chýba.",
+            "wrong": "Nesprávne. Naliehavý právny záujem nie je len otázkou vôle žalobcu ani automatickou podmienkou určovacej žaloby."
+          }
+        },
+        {
+          "question": "Čo by mal žalobca v tejto situácii radšej podať?",
+          "options": ["Žalobu na plnenie (napríklad o vydanie veci)", "Určovaciu žalobu bez ďalšieho", "Žalobu na vykonanie právneho úkonu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Žaloba na plnenie umožňuje úplné vyriešenie sporu vrátane exekučnej vymáhateľnosti nároku.",
+            "wrong": "Nesprávne. Určovacia žaloba by tu bola procesne nadbytočná, keďže existuje priamočiarejšia cesta k úplnému vyriešeniu veci."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rozšírenie žaloby",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalobca chce počas konania rozšíriť žalobu o ďalší nárok, ktorý pôvodne neuplatnil.", "options": [], "correct": 0 },
+        {
+          "question": "Môže tak urobiť?",
+          "options": ["Áno, ale len so súhlasom súdu", "Áno, úplne voľne bez ďalších podmienok", "Nie, žalobu nemožno nikdy meniť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozšírenie žaloby je jej zmenou v zmysle § 142 CSP a vyžaduje súhlas súdu.",
+            "wrong": "Nesprávne. Zmena žaloby nie je ani úplne voľná, ani absolútne vylúčená."
+          }
+        },
+        {
+          "question": "Kedy súd zmenu žaloby nepripustí?",
+          "options": ["Ak by výsledky doterajšieho konania nemohli byť podkladom pre konanie o zmenenej žalobe", "Vždy, súd zmenu nikdy nepripustí", "Len ak s tým nesúhlasí sám žalobca"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd neudelí súhlas so zmenou žaloby najmä vtedy, ak by to znamenalo nehospodárne opakovanie doterajšieho dokazovania.",
+            "wrong": "Nesprávne. Zákon nezakazuje zmenu žaloby úplne – súhlas súdu závisí od konkrétnych okolností, nie od vôle samotného žalobcu."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "12",
+  "title": "Procesné úkony účastníkov konania",
+  "schemaVersion": "1.1",
+  "tags": ["procesný úkon", "podanie", "náležitosti podania", "odstránenie vád podania"],
+  "summary": "Procesný úkon účastníka je prejav vôle smerujúci voči súdu alebo inému účastníkovi, ktorý má procesné účinky – napríklad žaloba, vyjadrenie k žalobe, návrh na vykonanie dôkazu, odvolanie alebo späťvzatie návrhu. Úkony možno robiť písomne, ústne do zápisnice na súde, alebo elektronicky, ak to zákon pripúšťa. Každé podanie musí mať náležitosti podľa § 127 CSP – musí byť z neho zrejmé, ktorému súdu je určené, kto ho robí, ktorej veci sa týka, čo sleduje, a musí byť podpísané.\n\nAk podanie trpí vadami, ktoré bránia jeho vecnému prejednaniu, súd vyzve účastníka, aby ich v určenej lehote odstránil; ak sa tak nestane, súd na podanie neprihliadne, prípadne ho odmietne. Riadne urobený procesný úkon je pre účastníka záväzný a viaže ho, kým ho nezmení alebo neodvolá spôsobom, ktorý zákon pripúšťa (napríklad späťvzatie žaloby). Zákon zároveň v niektorých fázach konania obmedzuje možnosť uplatňovať nové tvrdenia a dôkazy (zásada koncentrácie konania), aby sa predišlo účelovému predlžovaniu sporu.\n\nZapamätaj si:\n- Procesný úkon = prejav vôle účastníka s procesnými účinkami voči súdu alebo protistrane.\n- Náležitosti podania (§ 127 CSP): súd, účastník, vec, čo sleduje, podpis.\n- Vadné podanie – súd vyzve na odstránenie vád, inak naň neprihliadne alebo ho odmietne.\n- Riadne urobený úkon účastníka je záväzný, kým nie je zákonným spôsobom zmenený.\n- Koncentrácia konania obmedzuje uplatňovanie nových tvrdení a dôkazov v neskorších fázach."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je procesný úkon účastníka?",
+      "options": ["Prejav vôle účastníka smerujúci voči súdu alebo inému účastníkovi, ktorý má procesné účinky", "Iba samotné podanie žaloby", "Iba rozhodnutie súdu", "Úkon, ktorý nemá žiadne právne účinky"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Procesný úkon je akýkoľvek prejav vôle účastníka s procesnými účinkami, nielen žaloba.",
+        "wrong": "Nesprávne. Rozhodnutie súdu je úkonom súdu, nie účastníka, a procesné úkony účastníkov majú vždy určité procesné účinky."
+      }
+    },
+    {
+      "question": "Aké formy môže mať procesný úkon účastníka?",
+      "options": ["Iba písomnú formu", "Písomnú, ústne do zápisnice alebo elektronickú, podľa povahy úkonu a zákonných podmienok", "Iba elektronickú formu", "Iba prostredníctvom advokáta"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon pripúšťa viacero foriem procesných úkonov v závislosti od ich povahy a zákonných podmienok.",
+        "wrong": "Nesprávne. Procesné úkony nie sú obmedzené len na jednu formu ani viazané výlučne na zastúpenie advokátom."
+      }
+    },
+    {
+      "question": "Čo musí každé podanie účastníka obsahovať podľa § 127 CSP?",
+      "options": ["Len podpis účastníka", "Náležitosti podľa § 127 CSP – ktorému súdu je určené, kto ho robí, ktorej veci sa týka, čo sleduje, a podpis", "Len označenie súdu", "Len opis skutkového stavu bez ďalšieho"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 127 CSP vymedzuje súhrn náležitostí, ktoré musí obsahovať každé podanie, nielen niektorú z nich.",
+        "wrong": "Nesprávne. Samotný podpis, samotné označenie súdu alebo samotný skutkový opis bez ďalších náležitostí nepostačujú."
+      }
+    },
+    {
+      "question": "Čo urobí súd, ak podanie účastníka trpí vadami brániacimi jeho prejednaniu?",
+      "options": ["Bez ďalšieho ho odmietne bez možnosti nápravy", "Vyzve účastníka na odstránenie vád v primeranej lehote, inak na podanie neprihliadne alebo ho odmietne", "Podanie automaticky prijme napriek vadám", "Postúpi ho bez ďalšieho inému súdu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd dáva účastníkovi možnosť vady odstrániť skôr, než vyvodí procesné dôsledky.",
+        "wrong": "Nesprávne. Súd neodmieta podanie bez možnosti nápravy ani ho neprijíma automaticky bez ohľadu na vady."
+      }
+    },
+    {
+      "question": "Je účastník svojím riadne urobeným procesným úkonom (napr. uznaním nároku) viazaný?",
+      "options": ["Áno, riadne urobený procesný úkon je pre účastníka záväzný, kým ho zákonom predpokladaným spôsobom nezmení alebo neodvolá", "Nie, úkony možno kedykoľvek bez obmedzenia meniť", "Viazanosť sa týka len súdu, nie účastníka", "Úkony účastníkov nemajú žiadne záväzné účinky"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Riadne urobený procesný úkon zaväzuje účastníka, čím sa chráni predvídateľnosť a stabilita konania.",
+        "wrong": "Nesprávne. Voľná zmena úkonov bez obmedzenia by popierala zmysel procesných úkonov ako záväzných prejavov vôle."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Procesný úkon účastníka", "definition": "Prejav vôle účastníka voči súdu alebo inému účastníkovi s procesnými účinkami." },
+    { "term": "Náležitosti podania (§ 127 CSP)", "definition": "Označenie súdu, účastníka, veci, čo sa sleduje, a podpis." },
+    { "term": "Odstránenie vád podania", "definition": "Súd vyzve účastníka na doplnenie alebo opravu podania v určenej lehote." },
+    { "term": "Koncentrácia konania", "definition": "Obmedzenie možnosti uplatňovať nové tvrdenia a dôkazy po určitom momente konania." },
+    { "term": "Viazanosť procesným úkonom", "definition": "Riadne urobený úkon je pre účastníka záväzný, kým ho zákonným spôsobom nezmení." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neúplná žaloba",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalobca podá žalobu, v ktorej chýba presné označenie žalovaného.", "options": [], "correct": 0 },
+        {
+          "question": "Ako má súd postupovať?",
+          "options": ["Vyzvať žalobcu na odstránenie tejto vady v určenej lehote", "Žalobu bez ďalšieho odmietnuť bez možnosti opravy", "Konanie automaticky zastaviť bez výzvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Chýbajúce označenie žalovaného je odstrániteľnou vadou, na ktorú súd žalobcu vyzve.",
+            "wrong": "Nesprávne. Súd dáva žalobcovi možnosť vadu odstrániť skôr, než podanie odmietne alebo konanie zastaví."
+          }
+        },
+        {
+          "question": "Čo ak žalobca vadu v stanovenej lehote neodstráni?",
+          "options": ["Súd na podanie neprihliadne, prípadne žalobu odmietne", "Súd si chýbajúci údaj sám domyslí", "Konanie napriek tomu pokračuje bez akejkoľvek zmeny"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak vada nie je odstránená, súd vyvodí procesné dôsledky – na podanie neprihliadne alebo ho odmietne.",
+            "wrong": "Nesprávne. Súd si chýbajúce náležitosti sám nedopĺňa, keďže ide o zodpovednosť žalobcu za riadnosť podania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zmena stanoviska účastníka",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalovaný na pojednávaní nárok výslovne uznal, no o týždeň neskôr chce toto uznanie jednostranne odvolať bez ďalšieho odôvodnenia.", "options": [], "correct": 0 },
+        {
+          "question": "Môže tak urobiť voľne?",
+          "options": ["Nie, riadne urobeným procesným úkonom (uznaním) je viazaný, kým ho nezmení spôsobom, ktorý zákon pripúšťa", "Áno, procesné úkony možno kedykoľvek voľne meniť", "Áno, ale iba so súhlasom sudcu bez ďalších podmienok"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Uznanie nároku je záväzný dispozičný úkon, ktorý nemožno jednostranne a bez zákonného dôvodu odvolať.",
+            "wrong": "Nesprávne. Voľná a neobmedzená zmena procesných úkonov by narušila stabilitu a predvídateľnosť konania."
+          }
+        },
+        {
+          "question": "Aký je zmysel viazanosti účastníka vlastným procesným úkonom?",
+          "options": ["Zabezpečiť predvídateľnosť a stabilitu priebehu konania", "Sťažiť účastníkovi prístup k spravodlivosti", "Chrániť výlučne záujmy súdu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Viazanosť úkonmi chráni predovšetkým riadny a predvídateľný priebeh konania pre všetkých účastníkov.",
+            "wrong": "Nesprávne. Nejde o obmedzenie prístupu k spravodlivosti ani o ochranu výlučne záujmov súdu."
+          }
+        }
+      ]
+    }
+  ]
+}
