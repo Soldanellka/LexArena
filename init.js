@@ -295,13 +295,13 @@ const VIDEO_CONFIG = {
     duration: 30
   },
   v2: {
-    title: 'Ako hrať duelový kvíz?',
-    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
+    title: 'Ako hrať duelový kvíz v LexArene?',
+    url: 'https://www.youtube.com/embed/OjzYMtixyJ8?autoplay=1&rel=0',
     duration: 30
   },
   v3: {
-    title: 'Ako nahlasovať nezrovnalosti?',
-    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0',
+    title: 'Ako nahlásiť právnu nezrovnalosť v LexArene',
+    url: 'https://www.youtube.com/embed/AiutHAdqF4E?autoplay=1&rel=0',
     duration: 30
   }
 };
