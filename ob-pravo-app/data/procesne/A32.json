@@ -1,0 +1,114 @@
+{
+  "id": "32",
+  "title": "Žaloba na obnovu konania – pojem, podmienky prípustnosti, rozhodnutie",
+  "schemaVersion": "1.1",
+  "tags": ["žaloba na obnovu konania", "mimoriadny opravný prostriedok", "subjektívna lehota", "objektívna lehota"],
+  "summary": "Žaloba na obnovu konania (§ 397 a nasl. CSP) je mimoriadny opravný prostriedok, ktorým možno dosiahnuť znovuotvorenie právoplatne skončenej veci, ak sú splnené zákonom vymedzené dôvody. Na rozdiel od dovolania sa prejednáva na súde, ktorý vo veci rozhodoval na prvom stupni, nie na Najvyššom súde SR. Typickým dôvodom obnovy je, že existujú skutočnosti, rozhodnutia alebo dôkazy, ktoré účastník bez svojej viny nemohol použiť už v pôvodnom konaní a ktoré by preň mohli priniesť priaznivejšie rozhodnutie, prípadne že rozhodnutie záviselo od predbežnej otázky, o ktorej neskôr príslušný orgán rozhodol inak.\n\nPre podanie žaloby na obnovu konania platia dve lehoty – subjektívna, plynúca odo dňa, keď sa účastník o dôvode obnovy dozvedel, a objektívna, plynúca od právoplatnosti napadnutého rozhodnutia; po uplynutí objektívnej lehoty už obnovu nemožno navrhnúť bez ohľadu na to, kedy sa účastník o dôvode dozvedel. Súd najprv rozhodne o tom, či žalobu na obnovu konania povolí; ak jej vyhovie, vec sa vracia do štádia pred vydaním napadnutého rozhodnutia a znova sa vecne prejednáva.\n\nZapamätaj si:\n- Žaloba na obnovu konania sa prejednáva na súde, ktorý rozhodoval na prvom stupni.\n- Typický dôvod: nové skutočnosti/dôkazy, ktoré účastník bez svojej viny nemohol použiť skôr.\n- Platí subjektívna aj objektívna lehota; po uplynutí objektívnej lehoty obnova nie je možná.\n- Cieľom lehôt je chrániť právnu istotu už právoplatne rozhodnutých vecí.\n- Po povolení obnovy sa vec vracia do štádia pred napadnutým rozhodnutím a znova sa prejednáva."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je žaloba na obnovu konania?",
+      "options": ["Mimoriadny opravný prostriedok umožňujúci znovuotvorenie právoplatne skončenej veci pri splnení zákonných dôvodov", "Riadny opravný prostriedok proti neprávoplatnému rozhodnutiu", "Návrh na výkon rozhodnutia", "Žaloba na určenie vlastníckeho práva"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Žaloba na obnovu konania patrí medzi mimoriadne opravné prostriedky smerujúce proti právoplatnému rozhodnutiu.",
+        "wrong": "Nesprávne. Nejde o riadny opravný prostriedok, návrh na exekúciu ani o samostatnú určovaciu žalobu."
+      }
+    },
+    {
+      "question": "Na ktorom súde sa žaloba na obnovu konania prejednáva?",
+      "options": ["Na Najvyššom súde SR", "Na súde, ktorý vo veci rozhodoval na prvom stupni", "Na Ústavnom súde SR", "Na odvolacom súde bez ohľadu na to, kto rozhodoval na prvom stupni"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Na rozdiel od dovolania sa obnova konania prejednáva na súde prvej inštancie, ktorý vo veci pôvodne rozhodol.",
+        "wrong": "Nesprávne. Najvyšší súd SR ani Ústavný súd SR nie sú príslušné na prejednanie žaloby na obnovu konania."
+      }
+    },
+    {
+      "question": "Aký je typický dôvod obnovy konania?",
+      "options": ["Účastníkovi sa nepáči výsledok konania", "Existujú skutočnosti, rozhodnutia alebo dôkazy, ktoré účastník bez svojej viny nemohol použiť v pôvodnom konaní a mohli by preň priniesť priaznivejšie rozhodnutie", "Súd nesprávne právne posúdil vec", "Odvolací súd sa odchýlil od ustálenej rozhodovacej praxe"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o dôvod viazaný na nové, dovtedy nedostupné skutočnosti alebo dôkazy, nie na nespokojnosť s výsledkom.",
+        "wrong": "Nesprávne. Nesprávne právne posúdenie a odklon od judikatúry sú skôr dôvodmi dovolania, nie žaloby na obnovu konania."
+      }
+    },
+    {
+      "question": "Aké lehoty platia pre podanie žaloby na obnovu konania?",
+      "options": ["Iba jedna všeobecná lehota 15 dní", "Subjektívna lehota (od poznania dôvodu) aj objektívna lehota (od právoplatnosti rozhodnutia), po uplynutí ktorej obnovu nemožno navrhnúť", "Bez akéhokoľvek časového obmedzenia", "Iba lehota určená ľubovoľne súdom"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon kombinuje subjektívnu aj objektívnu lehotu, aby chránil právnu istotu a zároveň umožnil reagovať na nové skutočnosti.",
+        "wrong": "Nesprávne. Nejde o jednotnú 15-dňovú lehotu, absenciu lehôt ani o lehotu určovanú ľubovoľne súdom."
+      }
+    },
+    {
+      "question": "Čo nasleduje po tom, čo súd žalobe na obnovu konania vyhovie (povolí obnovu)?",
+      "options": ["Vec sa vracia do štádia pred vydaním napadnutého rozhodnutia a znova sa prejednáva", "Pôvodné rozhodnutie zostáva bezo zmeny v platnosti", "Konanie sa bez ďalšieho zastaví natrvalo", "Vec automaticky prejednáva Najvyšší súd SR namiesto pôvodného súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Povolením obnovy sa konanie vracia do skoršieho štádia a súd vec znova vecne posúdi.",
+        "wrong": "Nesprávne. Pôvodné rozhodnutie po povolení obnovy neostáva bez zmeny a vec sa neprenáša automaticky na Najvyšší súd SR."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Žaloba na obnovu konania", "definition": "Mimoriadny opravný prostriedok na znovuotvorenie právoplatne skončenej veci pri splnení zákonných dôvodov." },
+    { "term": "Miesto prejednania", "definition": "Prejednáva ju súd, ktorý vo veci rozhodoval na prvom stupni." },
+    { "term": "Dôvod obnovy", "definition": "Napríklad nové skutočnosti či dôkazy, ktoré účastník bez svojej viny nemohol použiť skôr." },
+    { "term": "Subjektívna a objektívna lehota", "definition": "Lehota od poznania dôvodu a lehota od právoplatnosti rozhodnutia; po uplynutí objektívnej lehoty obnova nie je možná." },
+    { "term": "Povolenie obnovy", "definition": "Vec sa vracia do štádia pred napadnutým rozhodnutím a znova sa prejednáva." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Novoobjavený dôkaz",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Po právoplatnom skončení sporu nájde neúspešný účastník listinu, ktorú napriek náležitej starostlivosti nemohol v pôvodnom konaní objaviť a ktorá mohla vec zásadne ovplyvniť v jeho prospech.", "options": [], "correct": 0 },
+        {
+          "question": "Aký procesný prostriedok môže využiť?",
+          "options": ["Žalobu na obnovu konania", "Odvolanie proti už právoplatnému rozsudku", "Návrh na predbežné opatrenie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Novoobjavený dôkaz, ktorý účastník bez svojej viny nemohol použiť skôr, je typickým dôvodom obnovy konania.",
+            "wrong": "Nesprávne. Odvolanie proti už právoplatnému rozsudku nie je možné a neodkladné opatrenie tu nerieši podstatu veci."
+          }
+        },
+        {
+          "question": "Na ktorom súde túto žalobu podá?",
+          "options": ["Na súde, ktorý vo veci rozhodoval na prvom stupni", "Priamo na Najvyššom súde SR", "Na Ústavnom súde SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Žaloba na obnovu konania patrí do právomoci súdu prvej inštancie, ktorý vo veci pôvodne rozhodol.",
+            "wrong": "Nesprávne. Najvyšší súd SR ani Ústavný súd SR nerozhodujú o žalobe na obnovu konania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zmeškanie objektívnej lehoty",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Účastník sa o novom, priaznivom dôkaze dozvie až päť rokov po právoplatnosti rozhodnutia.", "options": [], "correct": 0 },
+        {
+          "question": "Môže ešte podať žalobu na obnovu konania?",
+          "options": ["Nie, po uplynutí objektívnej lehoty obnovu nemožno navrhnúť", "Áno, lehoty pri obnove konania neexistujú", "Áno, kedykoľvek bez obmedzenia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Objektívna lehota beží nezávisle od toho, kedy sa účastník o dôvode dozvedel, a po jej uplynutí obnova už nie je možná.",
+            "wrong": "Nesprávne. Lehoty pri obnove konania existujú a nie sú neobmedzené."
+          }
+        },
+        {
+          "question": "Prečo zákon stanovuje aj objektívnu lehotu popri subjektívnej?",
+          "options": ["Aby sa chránila právna istota a nedochádzalo k neobmedzenému spochybňovaniu starých právoplatných rozhodnutí", "Aby sa zjednodušila práca súdu bez ohľadu na záujmy strán", "Aby sa znemožnilo podávanie akýchkoľvek opravných prostriedkov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Objektívna lehota vyvažuje záujem na náprave nespravodlivosti so záujmom na stabilite právnych vzťahov.",
+            "wrong": "Nesprávne. Cieľom nie je zjednodušiť prácu súdu na úkor strán ani úplne znemožniť opravné prostriedky."
+          }
+        }
+      ]
+    }
+  ]
+}

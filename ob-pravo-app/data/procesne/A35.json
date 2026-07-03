@@ -1,0 +1,114 @@
+{
+  "id": "35",
+  "title": "Konania v niektorých rodinnoprávnych veciach",
+  "schemaVersion": "1.1",
+  "tags": ["rozvod manželstva", "úprava rodičovských práv", "určenie a zapretie rodičovstva", "osvojenie"],
+  "summary": "CMP upravuje v osobitnej časti viacero mimosporových konaní z oblasti rodinného práva. Popri konaní o rozvode manželstva ide najmä o konania vo veciach manželských (napríklad o neplatnosti manželstva), konanie o určení a zapretí rodičovstva, konanie o osvojení (adopcii) a konania o výživnom. Osobitosťou konania o rozvode manželstva je jeho úzke prepojenie s ochranou maloletých detí – ak majú manželia maloleté dieťa, súd musí pred rozvodom vždy upraviť výkon rodičovských práv a povinností k tomuto dieťaťu na čas po rozvode; rozviesť manželstvo bez takejto úpravy nie je možné.\n\nVo všetkých konaniach, ktoré sa priamo týkajú maloletého dieťaťa, súd zisťuje jeho názor, a to primerane veku a rozumovej vyspelosti dieťaťa; súd však nie je názorom dieťaťa bezvýhradne viazaný, ale zohľadňuje ho v rámci komplexného posúdenia najlepšieho záujmu dieťaťa. Súd môže v priebehu týchto konaní nariadiť aj neodkladné opatrenie (napríklad predbežnú úpravu styku alebo starostlivosti o dieťa), ak si to vyžaduje naliehavosť situácie ešte pred vydaním konečného rozhodnutia vo veci.\n\nZapamätaj si:\n- Rozvod manželstva s maloletým dieťaťom je vždy spojený s povinnou úpravou výkonu rodičovských práv a povinností.\n- Súd zisťuje názor maloletého dieťaťa primerane jeho veku a vyspelosti.\n- CMP upravuje aj konanie o určení a zapretí rodičovstva a konanie o osvojení.\n- Súd môže v rodinnoprávnych konaniach nariadiť neodkladné opatrenie na predbežnú úpravu pomerov.\n- Názor dieťaťa je dôležitým, no nie jediným a bezvýhradne záväzným kritériom rozhodovania."
+  ,
+  "quiz": [
+    {
+      "question": "Čo musí súd urobiť pred rozvodom manželstva, ak majú manželia maloleté dieťa?",
+      "options": ["Nemusí riešiť nič súvisiace s dieťaťom", "Upraviť výkon rodičovských práv a povinností k maloletému dieťaťu na čas po rozvode", "Automaticky zveriť dieťa matke bez ďalšieho skúmania", "Počkať, kým dieťa dovŕši 18 rokov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Rozvod manželstva s maloletým dieťaťom je vždy spojený s povinnou úpravou výkonu rodičovských práv a povinností.",
+        "wrong": "Nesprávne. Automatické zverenie dieťaťa matke bez skúmania okolností ani čakanie na plnoletosť dieťaťa nezodpovedajú zákonnej úprave."
+      }
+    },
+    {
+      "question": "Zisťuje súd v konaniach týkajúcich sa maloletého dieťaťa jeho názor?",
+      "options": ["Nikdy, dieťa sa nikdy nevypočúva", "Áno, primerane veku a rozumovej vyspelosti dieťaťa", "Áno, ale iba ak má dieťa aspoň 18 rokov", "Iba ak o to výslovne požiada jeden z rodičov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd zisťuje názor dieťaťa v rozsahu primeranom jeho veku a rozumovej vyspelosti.",
+        "wrong": "Nesprávne. Dieťa staršie ako 18 rokov už nie je maloletým a zisťovanie jeho názoru nezávisí od žiadosti rodiča."
+      }
+    },
+    {
+      "question": "Aké ďalšie konanie okrem rozvodu upravuje CMP v rodinnoprávnych veciach?",
+      "options": ["Iba konanie o rozvode, nič iné", "Napríklad konanie o určení a zapretí rodičovstva, konanie o osvojení, konanie o výživnom", "Iba obchodné spory medzi manželmi podnikateľmi", "Iba exekučné konanie voči manželovi"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. CMP upravuje v osobitnej časti viacero samostatných rodinnoprávnych konaní.",
+        "wrong": "Nesprávne. Obchodné spory a exekučné konanie nepatria medzi mimosporové rodinnoprávne konania podľa CMP."
+      }
+    },
+    {
+      "question": "Môže súd v rodinnoprávnom konaní nariadiť neodkladné opatrenie týkajúce sa maloletého?",
+      "options": ["Áno, napríklad na predbežnú úpravu styku alebo starostlivosti o dieťa", "Nie, neodkladné opatrenia sa v rodinnoprávnych veciach nepoužívajú", "Áno, ale iba so súhlasom oboch rodičov bez výnimky", "Nie, tieto konania nepripúšťajú žiadne dočasné riešenia"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Neodkladné opatrenie umožňuje rýchlu, dočasnú úpravu pomerov dieťaťa počas prebiehajúceho konania.",
+        "wrong": "Nesprávne. Súhlas oboch rodičov nie je bezpodmienečne potrebný, najmä ak si to vyžaduje ochrana dieťaťa."
+      }
+    },
+    {
+      "question": "Kto rozhoduje o úprave výkonu rodičovských práv a povinností pri rozvode?",
+      "options": ["Súd v rámci konania o rozvode manželstva podľa CMP", "Iba dohoda rodičov bez potreby rozhodnutia súdu", "Notár", "Orgán sociálnoprávnej ochrany detí namiesto súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. O úprave rodičovských práv a povinností rozhoduje výlučne súd, aj keď môže vychádzať z dohody rodičov.",
+        "wrong": "Nesprávne. Samotná dohoda rodičov bez schválenia súdom, notár ani orgán sociálnoprávnej ochrany detí nenahrádzajú rozhodnutie súdu."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Konanie o rozvode manželstva", "definition": "Spojené s povinnou úpravou výkonu rodičovských práv a povinností k maloletým deťom na čas po rozvode." },
+    { "term": "Vypočutie maloletého", "definition": "Súd zisťuje názor dieťaťa primerane jeho veku a rozumovej vyspelosti." },
+    { "term": "Konanie o určení a zapretí rodičovstva", "definition": "Osobitné mimosporové konanie upravené v CMP." },
+    { "term": "Konanie o osvojení", "definition": "Mimosporové konanie týkajúce sa vzniku osvojenia (adopcie)." },
+    { "term": "Neodkladné opatrenie v rodinných veciach", "definition": "Umožňuje predbežnú úpravu styku alebo starostlivosti o dieťa počas konania." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Rozvod bez úpravy pomerov k dieťaťu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Manželia s maloletým dieťaťom podajú návrh na rozvod, no v návrhu neriešia otázku starostlivosti o dieťa po rozvode.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd manželstvo rozviesť bez toho, aby upravil pomery k dieťaťu?",
+          "options": ["Nie, súd musí pred rozvodom upraviť výkon rodičovských práv a povinností k maloletému dieťaťu na čas po rozvode", "Áno, úprava pomerov k dieťaťu je vždy vecou samostatného, neskoršieho konania", "Áno, ak s tým obaja rodičia súhlasia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd nemôže manželstvo rozviesť bez súčasnej úpravy pomerov k maloletému dieťaťu.",
+            "wrong": "Nesprávne. Táto úprava nie je odkladaná na samostatné neskoršie konanie a súhlas rodičov sám osebe rozvod bez úpravy pomerov neumožňuje."
+          }
+        },
+        {
+          "question": "Prečo zákon vyžaduje takéto prepojenie oboch otázok?",
+          "options": ["Aby sa ochránili záujmy dieťaťa hneď pri zániku manželstva rodičov", "Aby sa zjednodušila práca súdu bez ohľadu na záujem dieťaťa", "Aby sa rozvod celkovo predĺžil"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cieľom je zabezpečiť, aby zánik manželstva nezanechal pomery dieťaťa neupravené.",
+            "wrong": "Nesprávne. Prepojenie oboch otázok neslúži na zjednodušenie práce súdu na úkor dieťaťa ani na účelové predlžovanie konania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Názor dieťaťa v konaní",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "V konaní o úprave styku súd zisťuje aj názor desaťročného dieťaťa na to, ako by si predstavovalo kontakt s rodičmi.", "options": [], "correct": 0 },
+        {
+          "question": "Je takýto postup súdu v súlade so zákonom?",
+          "options": ["Áno, súd má zisťovať názor dieťaťa primerane jeho veku a vyspelosti", "Nie, názor dieťaťa sa v civilnom konaní nikdy nezisťuje", "Nie, dieťa môže byť vypočuté až po dovŕšení 18 rokov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zisťovanie názoru dieťaťa primerane jeho veku je zákonom predpokladaným postupom.",
+            "wrong": "Nesprávne. Názor dieťaťa sa v takýchto konaniach zisťuje a nie je viazaný na dosiahnutie plnoletosti."
+          }
+        },
+        {
+          "question": "Znamená to, že súd musí názor dieťaťa bez výhrady nasledovať?",
+          "options": ["Nie, súd názor dieťaťa zohľadňuje, no rozhoduje s ohľadom na jeho najlepší záujem ako celok", "Áno, súd je názorom dieťaťa vždy bezvýhradne viazaný", "Nie, názor dieťaťa nemá pri rozhodovaní žiadny význam"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Názor dieťaťa je dôležitým, ale nie jediným kritériom – rozhoduje najlepší záujem dieťaťa ako celok.",
+            "wrong": "Nesprávne. Súd nie je názorom dieťaťa absolútne viazaný, no zároveň mu nemožno uprieť akýkoľvek význam."
+          }
+        }
+      ]
+    }
+  ]
+}

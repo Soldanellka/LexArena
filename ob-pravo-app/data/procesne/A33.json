@@ -1,0 +1,114 @@
+{
+  "id": "33",
+  "title": "Dovolanie generálneho prokurátora a kasačná sťažnosť ako opravný prostriedok",
+  "schemaVersion": "1.1",
+  "tags": ["dovolanie generálneho prokurátora", "kasačná sťažnosť", "Najvyšší správny súd SR", "kasačný princíp"],
+  "summary": "Dovolanie generálneho prokurátora (§ 458 a nasl. CSP) je mimoriadny opravný prostriedok, ktorý generálny prokurátor SR podáva na Najvyšší súd SR na návrh oprávnenej osoby, ak sa právoplatným rozhodnutím súdu zjavne porušil zákon a ochranu práv tejto osoby nemožno dosiahnuť inými právnymi prostriedkami (napríklad bežným dovolaním). Ide o subsidiárny nástroj ochrany práv určený pre situácie, keď dotknutá osoba už sama nemá k dispozícii iný riadny ani mimoriadny opravný prostriedok.\n\nAnalogickým mimoriadnym opravným prostriedkom, avšak v inej vetve civilného procesu – v správnom súdnictve podľa Správneho súdneho poriadku – je kasačná sťažnosť. Smeruje proti právoplatnému rozhodnutiu krajského súdu ako správneho súdu a rozhoduje o nej Najvyšší správny súd SR ako kasačný súd. Pre kasačnú sťažnosť je typický kasačný princíp – Najvyšší správny súd SR napadnuté rozhodnutie spravidla len zruší a vec vráti na ďalšie konanie, sám ho svojím rozhodnutím nenahrádza.\n\nZapamätaj si:\n- Dovolanie generálneho prokurátora podáva generálny prokurátor SR na Najvyšší súd SR, na návrh oprávnenej osoby.\n- Podmienkou je zjavné porušenie zákona a nemožnosť dosiahnuť ochranu práv inak.\n- Kasačná sťažnosť je mimoriadny opravný prostriedok v správnom súdnictve (podľa SSP).\n- O kasačnej sťažnosti rozhoduje Najvyšší správny súd SR.\n- Kasačný princíp: súd rozhodnutie zruší, spravidla ho sám nenahrádza vlastným rozhodnutím vo veci."
+  ,
+  "quiz": [
+    {
+      "question": "Kto podáva dovolanie generálneho prokurátora?",
+      "options": ["Sám účastník konania priamo", "Generálny prokurátor SR na návrh oprávnenej osoby, ak sa právoplatným rozhodnutím zjavne porušil zákon a ochranu práv nemožno dosiahnuť inak", "Predseda súdu prvej inštancie", "Ombudsman (verejný ochranca práv)"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dovolanie podáva výlučne generálny prokurátor SR, hoci podnet naň dáva dotknutá osoba.",
+        "wrong": "Nesprávne. Účastník sám, predseda súdu ani ombudsman toto dovolanie nepodávajú."
+      }
+    },
+    {
+      "question": "Na ktorý súd sa dovolanie generálneho prokurátora podáva?",
+      "options": ["Na Ústavný súd SR", "Na Najvyšší súd SR", "Na Najvyšší správny súd SR", "Na krajský súd"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. O dovolaní generálneho prokurátora rozhoduje Najvyšší súd SR.",
+        "wrong": "Nesprávne. Ústavný súd SR, Najvyšší správny súd SR ani krajský súd nie sú príslušné na toto dovolanie."
+      }
+    },
+    {
+      "question": "Čo je kasačná sťažnosť?",
+      "options": ["Riadny opravný prostriedok v sporovom konaní podľa CSP", "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu krajského súdu v správnom súdnictve, o ktorom rozhoduje Najvyšší správny súd SR", "Opravný prostriedok proti rozhodnutiu notára", "Prostriedok použiteľný len v exekučnom konaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kasačná sťažnosť patrí do systému správneho súdnictva, nie do sporového konania podľa CSP.",
+        "wrong": "Nesprávne. Nejde o riadny opravný prostriedok CSP, prostriedok proti notárovi ani o nástroj exekučného konania."
+      }
+    },
+    {
+      "question": "Aký typ preskúmania je typický pre kasačnú sťažnosť?",
+      "options": ["Kasačný – súd napadnuté rozhodnutie spravidla len zruší, prípadne vec vráti, sám ho nemení", "Apelačný – súd rozhodnutie vždy sám zmení", "Súd rozhoduje bez akéhokoľvek obmedzenia rozsahu prieskumu", "Súd rozhoduje výlučne o trovách konania"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Kasačný princíp znamená, že súd rozhodnutie zruší, namiesto toho, aby ho sám nahradil vlastným rozhodnutím vo veci.",
+        "wrong": "Nesprávne. Nejde o apelačný systém so zmenou rozhodnutia ani o rozhodovanie výlučne o trovách."
+      }
+    },
+    {
+      "question": "Za akých okolností prichádza do úvahy dovolanie generálneho prokurátora?",
+      "options": ["Ak právoplatným rozhodnutím súdu bol zjavne porušený zákon a ochranu práv nemožno dosiahnuť inými prostriedkami", "Vždy, keď účastník nesúhlasí s výsledkom sporu", "Iba pri sporoch medzi štátnymi orgánmi", "Iba pri sporoch s medzinárodným prvkom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o subsidiárny prostriedok pre výnimočné prípady zjavného porušenia zákona bez inej dostupnej ochrany.",
+        "wrong": "Nesprávne. Samotná nespokojnosť s výsledkom, spor medzi štátnymi orgánmi ani medzinárodný prvok samy osebe nepostačujú."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Dovolanie generálneho prokurátora", "definition": "Mimoriadny opravný prostriedok podávaný generálnym prokurátorom SR na návrh oprávnenej osoby pri zjavnom porušení zákona." },
+    { "term": "Podmienka podania", "definition": "Ochranu práv nemožno dosiahnuť inými právnymi prostriedkami (napr. bežným dovolaním)." },
+    { "term": "Rozhodujúci súd (dovolanie GP)", "definition": "Najvyšší súd SR." },
+    { "term": "Kasačná sťažnosť", "definition": "Mimoriadny opravný prostriedok v správnom súdnictve proti rozhodnutiu krajského súdu, rozhoduje Najvyšší správny súd SR." },
+    { "term": "Kasačný princíp", "definition": "Súd napadnuté rozhodnutie spravidla len zruší, sám ho nemení." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Návrh na podanie dovolania generálneho prokurátora",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Fyzická osoba sa domnieva, že právoplatným rozsudkom bol zjavne porušený zákon, no sama už nemá k dispozícii žiadny iný riadny ani mimoriadny opravný prostriedok.", "options": [], "correct": 0 },
+        {
+          "question": "Čo môže táto osoba urobiť?",
+          "options": ["Podať návrh generálnemu prokurátorovi SR na podanie dovolania generálneho prokurátora", "Podať nové odvolanie na ten istý súd", "Priamo sama podať dovolanie generálneho prokurátora na Najvyšší súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Osoba môže dať podnet generálnemu prokurátorovi, ktorý sám posúdi, či dovolanie podá.",
+            "wrong": "Nesprávne. Nové odvolanie proti právoplatnému rozsudku nie je prípustné a dovolanie generálneho prokurátora nemôže podať sama dotknutá osoba."
+          }
+        },
+        {
+          "question": "Kto v prípade vyhovenia návrhu podá samotné dovolanie?",
+          "options": ["Generálny prokurátor SR", "Samotný účastník", "Sudca, ktorý vo veci pôvodne rozhodoval"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Podanie dovolania je výlučne v rukách generálneho prokurátora SR.",
+            "wrong": "Nesprávne. Ani samotný účastník, ani pôvodne rozhodujúci sudca nie sú oprávnení toto dovolanie podať."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Kasačná sťažnosť v správnom súdnictve",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Účastník správneho súdneho konania nesúhlasí s právoplatným rozsudkom krajského súdu, ktorý ako správny súd preskúmaval rozhodnutie správneho orgánu.", "options": [], "correct": 0 },
+        {
+          "question": "Aký mimoriadny opravný prostriedok môže využiť?",
+          "options": ["Kasačnú sťažnosť na Najvyšší správny súd SR", "Dovolanie na Najvyšší súd SR", "Odvolanie na ten istý krajský súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. V správnom súdnictve je mimoriadnym opravným prostriedkom kasačná sťažnosť, o ktorej rozhoduje Najvyšší správny súd SR.",
+            "wrong": "Nesprávne. Dovolanie patrí do civilného sporového konania podľa CSP a opakované odvolanie na ten istý súd zákon nepripúšťa."
+          }
+        },
+        {
+          "question": "Môže Najvyšší správny súd SR pri kasačnej sťažnosti sám vo veci rozhodnúť namiesto krajského súdu?",
+          "options": ["Spravidla nie, kasačný princíp znamená, že súd rozhodnutie zruší, nie že ho sám nahradí vlastným rozhodnutím vo veci", "Áno, vždy sám rozhodne namiesto krajského súdu", "Áno, ale iba ak s tým súhlasia obe strany"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Kasačný princíp obmedzuje právomoc súdu na zrušenie rozhodnutia, nie na jeho nahradenie vlastným meritórnym rozhodnutím.",
+            "wrong": "Nesprávne. Súhlas strán nemení kasačnú povahu tohto opravného prostriedku."
+          }
+        }
+      ]
+    }
+  ]
+}

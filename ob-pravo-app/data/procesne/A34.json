@@ -1,0 +1,114 @@
+{
+  "id": "34",
+  "title": "Členenie CMP, jeho vzťah k CSP, osobitosti konaní podľa CMP",
+  "schemaVersion": "1.1",
+  "tags": ["CMP", "vzťah CMP a CSP", "subsidiarita CSP", "mimosporové konania"],
+  "summary": "Civilný mimosporový poriadok (zákon č. 161/2015 Z. z.) sa člení na všeobecné ustanovenia, ktoré sa vzťahujú na všetky mimosporové konania, a osobitnú časť upravujúcu jednotlivé typy konaní – napríklad konania vo veciach starostlivosti súdu o maloletých, konanie o dedičstve, konanie o spôsobilosti na právne úkony, konanie o vyhlásení za mŕtveho a ďalšie. Vo vzťahu k CSP je CMP osobitným predpisom (lex specialis); ak CMP niektorú procesnú otázku výslovne neupravuje, na základe § 2 CMP sa primerane použijú ustanovenia CSP.\n\nMimosporové konania podľa CMP majú oproti sporovému konaniu podľa CSP viacero osobitostí. Vo väčšej miere sa presadzuje zásada oficiality (súd môže v zákonom ustanovených prípadoch konať aj bez návrhu, napríklad začať konanie o dedičstve) a vyšetrovacia zásada pri zisťovaní skutkového stavu. Súd má vo vzťahu k ochrane osôb, ktoré sa nemôžu samy dostatočne brániť (maloletí, osoby s obmedzenou spôsobilosťou na právne úkony), širšie oprávnenia. Na rozdiel od CSP, kde sa vo veci samej rozhoduje rozsudkom, sa v CMP vo veci samej spravidla rozhoduje uznesením.\n\nZapamätaj si:\n- CMP sa člení na všeobecné ustanovenia a osobitnú časť pre jednotlivé typy konaní.\n- CMP je vo vzťahu k CSP osobitným predpisom; CSP sa použije subsidiárne (§ 2 CMP).\n- V CMP sa výraznejšie uplatňuje zásada oficiality a vyšetrovacia zásada.\n- Vo veci samej sa v CMP spravidla rozhoduje uznesením, nie rozsudkom.\n- Súd má v CMP širšie oprávnenia na ochranu osôb, ktoré sa nemôžu samy dostatočne brániť."
+  ,
+  "quiz": [
+    {
+      "question": "Ako sa CMP člení?",
+      "options": ["Iba na jednu všeobecnú časť bez ďalšieho triedenia", "Na všeobecné ustanovenia a osobitnú časť upravujúcu jednotlivé typy mimosporových konaní", "Iba na ustanovenia o dedičskom konaní", "Na trestnoprávnu a civilnoprávnu časť"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. CMP má všeobecnú časť platnú pre všetky mimosporové konania a osobitnú časť pre konkrétne typy konaní.",
+        "wrong": "Nesprávne. CMP nie je obmedzený len na dedičské konanie ani nemá trestnoprávnu časť."
+      }
+    },
+    {
+      "question": "Aký je vzťah CMP k CSP?",
+      "options": ["CMP je všeobecným predpisom, CSP osobitným", "CMP je vo vzťahu k CSP osobitným predpisom (lex specialis); ak CMP niečo neupravuje, subsidiárne sa použije CSP", "Medzi CMP a CSP neexistuje žiadny vzťah", "CSP sa na mimosporové konania nikdy nepoužije, ani subsidiárne"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 2 CMP výslovne umožňuje subsidiárne použitie CSP tam, kde CMP mlčí.",
+        "wrong": "Nesprávne. Vzťah medzi oboma kódexmi je presne opačný a CSP sa na mimosporové konania subsidiárne použije."
+      }
+    },
+    {
+      "question": "Ktorá zásada sa v konaniach podľa CMP uplatňuje výraznejšie než v CSP?",
+      "options": ["Dispozičná zásada bez výnimky", "Zásada oficiality a vyšetrovacia zásada", "Zásada tajnosti konania", "Zásada kontradiktórnosti bez výnimky"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Mimosporové konanie sa vyznačuje väčšou vlastnou aktivitou súdu než sporové konanie.",
+        "wrong": "Nesprávne. Čisto dispozičná zásada bez výnimky je typickejšia pre sporové konanie, nie pre CMP."
+      }
+    },
+    {
+      "question": "Akou formou sa v CMP spravidla rozhoduje vo veci samej?",
+      "options": ["Rozsudkom, rovnako ako v CSP", "Uznesením", "Nálezom Ústavného súdu SR", "Vždy len neformálnym záznamom"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Práve tu je zásadný rozdiel oproti CSP, kde sa vo veci samej rozhoduje rozsudkom.",
+        "wrong": "Nesprávne. Nález vydáva výlučne Ústavný súd SR a neformálny záznam nie je platnou formou súdneho rozhodnutia."
+      }
+    },
+    {
+      "question": "Aký typ konaní typicky upravuje osobitná časť CMP?",
+      "options": ["Konania vo veciach starostlivosti o maloletých, dedičské konanie, konanie o spôsobilosti na právne úkony a podobné mimosporové veci", "Výlučne obchodné spory medzi podnikateľmi", "Výlučne trestné konania", "Výlučne správne súdnictvo"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Osobitná časť CMP obsahuje úpravu konkrétnych typov mimosporových vecí.",
+        "wrong": "Nesprávne. Obchodné spory rieši CSP, trestné konania Trestný poriadok a správne súdnictvo SSP."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Členenie CMP", "definition": "Všeobecné ustanovenia a osobitná časť pre jednotlivé typy mimosporových konaní." },
+    { "term": "Vzťah CMP k CSP", "definition": "CMP je osobitným predpisom (lex specialis); subsidiárne sa použije CSP." },
+    { "term": "Zásada oficiality a vyšetrovacia zásada", "definition": "Výraznejšie uplatnené v CMP než v CSP." },
+    { "term": "Uznesenie vo veci samej", "definition": "Typická forma rozhodnutia v mimosporovom konaní podľa CMP." },
+    { "term": "Osobitné mimosporové konania", "definition": "Napríklad starostlivosť o maloletých, dedičské konanie, spôsobilosť na právne úkony." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Medzera v úprave CMP",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "V konkrétnom mimosporovom konaní CMP výslovne neupravuje otázku niektorého procesného úkonu účastníka.", "options": [], "correct": 0 },
+        {
+          "question": "Ako súd postupuje?",
+          "options": ["Primerane použije ustanovenia CSP (§ 2 CMP)", "Otázku ponechá bez akéhokoľvek riešenia", "Použije výlučne ustanovenia Exekučného poriadku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Subsidiárne použitie CSP je práve na tento účel v § 2 CMP výslovne upravené.",
+            "wrong": "Nesprávne. Otázka sa neponecháva bez riešenia a Exekučný poriadok tu nemá čo dopĺňať."
+          }
+        },
+        {
+          "question": "Prečo je takéto subsidiárne použitie CSP možné?",
+          "options": ["Lebo CMP je vo vzťahu k všeobecnej úprave civilného procesu osobitným predpisom, ktorý CSP dopĺňa tam, kde sám mlčí", "Lebo CSP je nadradený CMP ako ústavný zákon", "Lebo o tom rozhoduje výlučne Ministerstvo spravodlivosti SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vzťah medzi CMP a CSP je vzťahom osobitného a všeobecného predpisu, nie hierarchickej nadradenosti.",
+            "wrong": "Nesprávne. CSP nie je ústavným zákonom a subsidiárne použitie nezávisí od rozhodnutia ministerstva."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Forma rozhodnutia v konaní o obmedzení svojprávnosti",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Súd v mimosporovom konaní rozhoduje o obmedzení svojprávnosti fyzickej osoby.", "options": [], "correct": 0 },
+        {
+          "question": "Akou formou vo veci samej rozhodne?",
+          "options": ["Uznesením", "Rozsudkom, rovnako ako v sporovom konaní", "Nálezom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vo veci samej sa v mimosporovom konaní rozhoduje uznesením.",
+            "wrong": "Nesprávne. Rozsudok je formou rozhodnutia v CSP a nález vydáva iba Ústavný súd SR."
+          }
+        },
+        {
+          "question": "Môže súd v tomto konaní konať aj bez návrhu?",
+          "options": ["Áno, ak to vyžaduje ochrana dotknutej osoby a zákon to pripúšťa (zásada oficiality)", "Nie, vždy je nevyhnutný návrh dotknutej osoby", "Nie, CMP zásadu oficiality vôbec nepozná"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zásada oficiality umožňuje súdu konať z vlastnej iniciatívy na ochranu dotknutej osoby.",
+            "wrong": "Nesprávne. Návrh dotknutej osoby nie je vždy nevyhnutný a CMP zásadu oficiality naopak výrazne uplatňuje."
+          }
+        }
+      ]
+    }
+  ]
+}
