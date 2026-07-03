@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Väčšina právnych úkonov nevyžaduje písomnú formu. Je povinná len keď to zákon alebo zmluva určuje."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Právny úkon (§ 34 OZ)", "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností." },
+    { "term": "Spôsobilosť na právne úkony", "definition": "Náležitosť subjektu – osoba musí byť spôsobilá vlastnými úkonmi nadobúdať práva a povinnosti." },
+    { "term": "Konkludentný úkon", "definition": "Prejav vôle urobený činom/správaním, nie výslovne slovom." },
+    { "term": "Určitosť a zrozumiteľnosť (§ 37 OZ)", "definition": "Úkon musí byť možné vyložiť, inak je neplatný." },
+    { "term": "Písomná forma", "definition": "Vyžaduje sa, ak to ustanovuje zákon (napr. pri nehnuteľnostiach) alebo dohoda strán." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Kúpa nehnuteľnosti len ústne",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dvaja susedia sa ústne dohodnú na predaji pozemku, bez akejkoľvek písomnej zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Je táto ústna dohoda o prevode nehnuteľnosti platná?",
+          "options": ["Nie, zákon pre prevod nehnuteľnosti vyžaduje písomnú formu (§ 46 OZ)", "Áno, ústna dohoda medzi susedmi vždy postačuje", "Áno, pokiaľ si to obe strany navzájom odsúhlasia ústne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmluvy o prevode nehnuteľností musia mať zo zákona písomnú formu.",
+            "wrong": "Nesprávne. Ústna dohoda tu nepostačuje bez ohľadu na vzájomný súhlas strán."
+          }
+        },
+        {
+          "question": "Čo z toho vyplýva pre platnosť takéhoto úkonu?",
+          "options": ["Úkon je neplatný pre nedostatok zákonom predpísanej formy", "Úkon je platný, forma nemá pri nehnuteľnostiach žiadny význam", "Úkon je iba relatívne neplatný na návrh notára"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nedostatok povinnej písomnej formy spôsobuje neplatnosť úkonu.",
+            "wrong": "Nesprávne. Forma má pri nehnuteľnostiach zásadný význam a notár nie je oprávnenou osobou na dovolanie sa tejto neplatnosti."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Konkludentné konanie",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Cestujúci nastúpi do mestského autobusu a označí si cestovný lístok, hoci s vodičom o tom nehovoril ani slovo.", "options": [], "correct": 0 },
+        {
+          "question": "Vzniká takýmto konaním právny úkon?",
+          "options": ["Áno, ide o konkludentný prejav vôle uzavrieť prepravnú zmluvu", "Nie, bez výslovného ústneho alebo písomného prejavu úkon nevzniká", "Nie, ide iba o protiprávne konanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nastúpenie a označenie lístka je typickým príkladom konkludentného právneho úkonu.",
+            "wrong": "Nesprávne. Zákon pripúšťa aj konkludentný prejav vôle, nielen výslovný, a nejde o protiprávne konanie."
+          }
+        },
+        {
+          "question": "Čo je typickým znakom konkludentného úkonu?",
+          "options": ["Vôľa je vyjadrená správaním (činom), nie slovami", "Musí byť vždy písomný", "Nemôže zakladať žiadne právne účinky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konkludentný úkon vyjadruje vôľu činom, nie slovným prejavom.",
+            "wrong": "Nesprávne. Konkludentný úkon nie je písomný a má rovnaké právne účinky ako iné platné právne úkony."
+          }
+        }
+      ]
+    }
   ]
 }

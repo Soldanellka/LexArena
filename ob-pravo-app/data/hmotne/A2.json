@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. § 3 ods. 1 OZ nehovorí o forme zmluvy, ale o zákaze výkonu práv odporujúcich dobrým mravom."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Autonómia vôle", "definition": "Strany môžu slobodne upraviť svoje vzťahy v medziach zákona." },
+    { "term": "Zásada rovnosti subjektov", "definition": "Účastníci občianskoprávnych vzťahov majú rovné postavenie, žiadny nie je nadriadený druhému." },
+    { "term": "Dobré mravy (§ 3 ods. 1, § 39 OZ)", "definition": "Normy mravného správania uznávané spoločnosťou, chránené sankciou neplatnosti." },
+    { "term": "Zákaz zneužitia práva (šikana)", "definition": "Výkon práva nesmie smerovať k poškodeniu iného bez oprávneného záujmu." },
+    { "term": "Subsidiarita OZ", "definition": "OZ sa uplatní tam, kde osobitný predpis danú otázku neupravuje." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zmluvná podmienka v rozpore s dobrými mravmi",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "V zmluve o pôžičke si veriteľ dohodol úrok vo výške niekoľkonásobne prevyšujúcej obvyklú trhovú sadzbu, výrazne znevýhodňujúci dlžníka.", "options": [], "correct": 0 },
+        {
+          "question": "Môže byť takéto dojednanie posúdené ako neplatné?",
+          "options": ["Áno, ak odporuje dobrým mravom podľa § 39 OZ", "Nie, zmluvná voľnosť je vždy absolútna", "Nie, výšku úroku môže veriteľ určiť ľubovoľne bez obmedzenia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dojednanie hrubo odporujúce dobrým mravom je podľa § 39 OZ neplatné.",
+            "wrong": "Nesprávne. Zmluvná voľnosť má hranice v kogentných normách a dobrých mravoch."
+          }
+        },
+        {
+          "question": "Ktorá zásada OZ je týmto dojednaním porušená?",
+          "options": ["Zásada dobrých mravov, príp. zákaz zneužitia práva", "Zásada rovnosti pred zákonom v trestnom konaní", "Zásada verejnosti súdneho konania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o priamy rozpor s dobrými mravmi, prípadne zneužitie ekonomicky silnejšieho postavenia veriteľa.",
+            "wrong": "Nesprávne. Trestnoprávne a procesné zásady sa netýkajú tejto občianskoprávnej otázky."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výkon práva na úkor suseda",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vlastník pozemku vykonáva svoje vlastnícke právo výlučne s cieľom obťažovať a poškodiť suseda, bez akéhokoľvek vlastného úžitku.", "options": [], "correct": 0 },
+        {
+          "question": "Ako sa takéto konanie posúdi?",
+          "options": ["Ako zakázané zneužitie práva (šikana) podľa § 3 ods. 1 OZ", "Ako riadny a bezvýhradný výkon vlastníckeho práva", "Ako trestný čin bez občianskoprávnych dôsledkov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výkon práva výlučne na poškodenie iného je zakázaným zneužitím práva.",
+            "wrong": "Nesprávne. Vlastnícke právo nie je bezhraničné a nejde len o trestnoprávnu otázku."
+          }
+        },
+        {
+          "question": "Aký je základ tejto zásady?",
+          "options": ["Výkon práva nesmie byť na úkor práv a oprávnených záujmov iných bez vlastného oprávneného účelu", "Vlastník má absolútne a ničím neobmedzené právo nakladať so svojou vecou", "Sused musí znášať akýkoľvek zásah do svojich práv bez námietky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákaz šikany chráni iných pred výkonom práva, ktorý nemá iný účel než ich poškodiť.",
+            "wrong": "Nesprávne. Ani vlastnícke právo nie je absolútne bezhraničné a sused nemusí znášať bezúčelné poškodzujúce konanie."
+          }
+        }
+      ]
+    }
   ]
 }

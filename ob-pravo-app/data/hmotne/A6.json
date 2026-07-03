@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Samotná výzva na plnenie premlčaciu dobu nestavuje. Potrebné je podanie žaloby alebo iného procesného úkonu."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Premlčanie", "definition": "Uplynutím premlčacej doby sa právo nezaniká, ale stáva sa nevymáhateľným, ak dlžník vznesie námietku (§ 100 OZ)." },
+    { "term": "Preklúzia", "definition": "Uplynutím zákonnej lehoty právo samotné zaniká, súd naň prihliadne z úradnej moci." },
+    { "term": "Všeobecná premlčacia doba (§ 101 OZ)", "definition": "Tri roky, plynúca odo dňa, keď sa právo mohlo vykonať po prvý raz." },
+    { "term": "Námietka premlčania", "definition": "Procesný prostriedok dlžníka, bez ktorého súd na premlčanie neprihliadne." },
+    { "term": "Stavenie premlčacej doby (§ 112 OZ)", "definition": "Uplatnením práva na súde alebo v rozhodcovskom konaní premlčacia doba po dobu konania neplynie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nesplnený dlh po piatich rokoch",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Veriteľ si spomenie na dlh, ktorý dlžník nesplatil už pred piatimi rokmi, a podá naň žalobu; dlžník v konaní výslovne namietne premlčanie.", "options": [], "correct": 0 },
+        {
+          "question": "Ako súd rozhodne, ak je nárok premlčaný a dlžník námietku vzniesol?",
+          "options": ["Súd nárok neprizná, keďže premlčanie bolo namietnuté", "Súd nárok prizná bez ohľadu na námietku premlčania", "Súd na námietku vôbec neprihliadne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po vznesení námietky premlčania súd premlčaný nárok neprizná.",
+            "wrong": "Nesprávne. Vznesená námietka premlčania má zásadný vplyv na výsledok konania, súd na ňu prihliadne."
+          }
+        },
+        {
+          "question": "Čo by sa stalo, keby dlžník námietku premlčania v konaní vôbec nevzniesol?",
+          "options": ["Súd by na premlčanie neprihliadol a mohol by nárok priznať", "Súd by musel premlčanie zohľadniť aj bez námietky", "Nárok by zanikol úplne bez ohľadu na konanie dlžníka"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez vznesenia námietky súd premlčanie sám z úradnej moci nezohľadňuje.",
+            "wrong": "Nesprávne. Premlčanie na rozdiel od preklúzie súd bez námietky nezohľadňuje a samotné právo premlčaním nezaniká."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zánik práva uplynutím prekluzívnej lehoty",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Zákon stanovuje na uplatnenie určitého práva prekluzívnu lehotu, ktorá márne uplynie bez toho, aby oprávnený právo uplatnil.", "options": [], "correct": 0 },
+        {
+          "question": "Čo sa s týmto právom stane?",
+          "options": ["Právo úplne zaniká (preklúzia), súd na to prihliadne z úradnej moci", "Právo zostáva zachované, iba sa oslabuje jeho vymáhateľnosť", "Právo zaniká len na základe námietky povinného"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Preklúzia spôsobuje priamy zánik práva, ktorý súd zohľadní aj bez námietky.",
+            "wrong": "Nesprávne. Zachovanie práva s oslabenou vymáhateľnosťou je typické pre premlčanie, nie preklúziu."
+          }
+        },
+        {
+          "question": "Čím sa preklúzia zásadne líši od premlčania?",
+          "options": ["Pri preklúzii zaniká samotné právo a súd naň prihliada aj bez námietky, pri premlčaní právo zostáva, len sa oslabuje jeho vymáhateľnosť na základe námietky", "Preklúzia a premlčanie sú úplne totožné inštitúty", "Preklúzia sa týka len zmluvných pokút, premlčanie len náhrady škody"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Kľúčový rozdiel spočíva v tom, čo presne zaniká a či je potrebná námietka.",
+            "wrong": "Nesprávne. Inštitúty nie sú totožné a rozdiel sa netýka len konkrétneho typu nároku."
+          }
+        }
+      ]
+    }
   ]
 }

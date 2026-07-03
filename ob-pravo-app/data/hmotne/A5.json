@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Rozdiel medzi absolútnou a relatívnou neplatnosťou platí aj pre konvalidáciu."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Absolútna neplatnosť (§ 39 OZ)", "definition": "Nastáva priamo zo zákona (ex lege), súd na ňu prihliada z úradnej moci." },
+    { "term": "Relatívna neplatnosť (§ 40a OZ)", "definition": "Existuje, len ak sa jej oprávnená osoba dovolá." },
+    { "term": "Omyl (§ 49a OZ)", "definition": "Zakladá relatívnu neplatnosť, ak ho druhá strana vyvolala alebo o ňom vedela." },
+    { "term": "Donútenie (§ 49 OZ)", "definition": "Protiprávna výhražka spôsobujúca relatívnu neplatnosť úkonu." },
+    { "term": "Konvalidácia", "definition": "Dodatočné zhojenie vady úkonu; možná pri relatívnej, nie pri absolútnej neplatnosti." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zmluva odporujúca zákonu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Strany uzavrú zmluvu, ktorej obsah priamo odporuje kogentnému ustanoveniu zákona.", "options": [], "correct": 0 },
+        {
+          "question": "Aký typ neplatnosti táto zmluva zakladá?",
+          "options": ["Absolútnu neplatnosť podľa § 39 OZ", "Relatívnu neplatnosť, len na návrh jednej zo strán", "Zmluva je bez ďalšieho platná napriek rozporu so zákonom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Rozpor so zákonom zakladá absolútnu neplatnosť podľa § 39 OZ.",
+            "wrong": "Nesprávne. Nejde o neplatnosť závislú od návrhu strany a zmluva rozporná so zákonom nemôže byť bez ďalšieho platná."
+          }
+        },
+        {
+          "question": "Musí sa niektorá strana tejto neplatnosti dovolávať, aby na ňu súd prihliadol?",
+          "options": ["Nie, súd na absolútnu neplatnosť prihliada z úradnej moci", "Áno, bez návrhu súd nikdy neplatnosť nezohľadní", "Áno, ale iba ak ide o spotrebiteľskú zmluvu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Absolútna neplatnosť pôsobí ex lege a súd na ňu prihliada aj bez návrhu.",
+            "wrong": "Nesprávne. Pri absolútnej neplatnosti nie je návrh strany podmienkou a nejde len o osobitný prípad spotrebiteľských zmlúv."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zmluva uzavretá v omyle",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Kupujúci uzavrel kúpnu zmluvu v omyle o vlastnostiach veci, pričom predávajúci o tomto omyle vedel a mlčky ho využil.", "options": [], "correct": 0 },
+        {
+          "question": "Aký typ neplatnosti tento omyl zakladá?",
+          "options": ["Relatívnu neplatnosť podľa § 49a OZ", "Absolútnu neplatnosť bez ďalšieho", "Zmluva zostáva bezvýhradne platná"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Omyl, o ktorom druhá strana vedela, zakladá relatívnu neplatnosť podľa § 49a OZ.",
+            "wrong": "Nesprávne. Nejde o absolútnu neplatnosť a zmluva nezostáva bez ďalšieho platná."
+          }
+        },
+        {
+          "question": "Čo musí kupujúci urobiť, aby sa tejto neplatnosti účinne dovolal?",
+          "options": ["Musí sa neplatnosti výslovne dovolať, inak zmluva zostáva v platnosti", "Nemusí nič, neplatnosť nastáva automaticky", "Musí počkať, kým to namietne predávajúci"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Relatívna neplatnosť nastáva až dovolaním sa oprávnenej osoby.",
+            "wrong": "Nesprávne. Bez dovolania sa kupujúceho relatívna neplatnosť automaticky nenastáva a predávajúci ju sám namietať nebude, keďže je v jeho prospech."
+          }
+        }
+      ]
+    }
   ]
 }

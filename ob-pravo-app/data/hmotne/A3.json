@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Smrť nie je vôľové konanie – je to právna udalosť nastávajúca nezávisle od vôle."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Právna skutočnosť", "definition": "Skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností." },
+    { "term": "Právny úkon", "definition": "Vôľové konanie smerujúce k právnym následkom (napr. zmluva)." },
+    { "term": "Právna udalosť", "definition": "Skutočnosť nastávajúca nezávisle od vôle (napr. narodenie, smrť, uplynutie času)." },
+    { "term": "Protiprávny úkon (delikt)", "definition": "Konanie porušujúce povinnosť, z ktorého vzniká zodpovednosť." },
+    { "term": "Právny stav", "definition": "Trvajúci stav, s ktorým právo spája určité následky (napr. vlastníctvo, manželstvo)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Uplynutie výpovednej lehoty",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "V nájomnej zmluve uplynie dohodnutá výpovedná lehota, čím zmluva zaniká bez ďalšieho konania strán.", "options": [], "correct": 0 },
+        {
+          "question": "O aký typ právnej skutočnosti ide?",
+          "options": ["Právnu udalosť (uplynutie času)", "Právny úkon", "Protiprávny úkon"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Uplynutie času nastáva nezávisle od aktuálnej vôle strán – ide o právnu udalosť.",
+            "wrong": "Nesprávne. Nejde o vôľové konanie strán v danom okamihu ani o protiprávne konanie."
+          }
+        },
+        {
+          "question": "Prečo nejde o právny úkon?",
+          "options": ["Lebo zánik nastáva nezávisle od aktuálneho prejavu vôle strán v danom okamihu, iba plynutím času", "Lebo strany pri uzavretí zmluvy vôbec neprejavili vôľu", "Lebo ide o protiprávne konanie jednej zo strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Právny úkon vyžaduje aktuálny prejav vôle smerujúci k následku, čo pri plynutí lehoty chýba.",
+            "wrong": "Nesprávne. Strany pri uzavretí zmluvy vôľu prejavili, no samotné uplynutie lehoty už ich aktuálnu vôľu nevyžaduje."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Spôsobenie škody z nedbanlivosti",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Vodič z nedbanlivosti poškodí cudzie vozidlo pri dopravnej nehode.", "options": [], "correct": 0 },
+        {
+          "question": "O aký typ právnej skutočnosti ide z hľadiska vzniku zodpovednosti za škodu?",
+          "options": ["O protiprávny úkon (delikt)", "O právnu udalosť", "O právny úkon smerujúci k vzniku záväzku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nedbanlivostné spôsobenie škody je protiprávnym konaním zakladajúcim zodpovednosť.",
+            "wrong": "Nesprávne. Nejde o udalosť nezávislú od konania osoby ani o zámerný právny úkon smerujúci k záväzku."
+          }
+        },
+        {
+          "question": "Čo je typickým znakom protiprávneho úkonu?",
+          "options": ["Porušenie právnej povinnosti, z ktorého vzniká zodpovednosť za následky", "Súlad konania so zákonom a dobrými mravmi", "Vždy úmyselné konanie smerujúce k uzavretiu zmluvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Delikt sa vyznačuje porušením povinnosti a vznikom zodpovednosti, nie súladom so zákonom.",
+            "wrong": "Nesprávne. Delikt nemusí byť úmyselný (postačuje nedbanlivosť) a nesmeruje k uzavretiu zmluvy."
+          }
+        }
+      ]
+    }
   ]
 }
