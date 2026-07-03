@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Súhlas dlžníka pri postúpení pohľadávky nie je potrebný – stačí oznámenie."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Postúpenie pohľadávky (§ 524 OZ)", "definition": "Prevod pohľadávky na nového veriteľa bez súhlasu dlžníka, stačí oznámenie." },
+    { "term": "Prevzatie dlhu (§ 531 OZ)", "definition": "Prevod dlhu na nového dlžníka, vyžaduje súhlas veriteľa." },
+    { "term": "Pristúpenie k záväzku (§ 533 OZ)", "definition": "Ďalší dlžník sa zaväzuje plniť solidárne popri pôvodnom dlžníkovi." },
+    { "term": "Novácia", "definition": "Zánik pôvodného záväzku a vznik nového na základe dohody strán." },
+    { "term": "Solidarita pri pristúpení", "definition": "Veriteľ môže požadovať plnenie od ktoréhokoľvek zo solidárne zaviazaných dlžníkov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Postúpenie pohľadávky bez súhlasu dlžníka",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Veriteľ postúpi svoju pohľadávku voči dlžníkovi na tretiu osobu (postupníka), pričom dlžníka o tom iba upovedomí.", "options": [], "correct": 0 },
+        {
+          "question": "Je na platnosť postúpenia potrebný súhlas dlžníka?",
+          "options": ["Nie, stačí dlžníka o postúpení upovedomiť", "Áno, bez súhlasu dlžníka je postúpenie neplatné", "Áno, ale iba ak ide o pohľadávku nad 1000 eur"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Postúpenie pohľadávky nevyžaduje súhlas dlžníka, postačuje oznámenie.",
+            "wrong": "Nesprávne. Neplatnosť bez súhlasu dlžníka ani výnimka podľa výšky pohľadávky nezodpovedajú § 524 OZ."
+          }
+        },
+        {
+          "question": "Komu je dlžník povinný po upovedomení plniť?",
+          "options": ["Novému veriteľovi (postupníkovi)", "Naďalej pôvodnému veriteľovi bez ohľadu na postúpenie", "Podľa vlastného výberu ktorémukoľvek z nich"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po oznámení postúpenia sa dlžník musí plniť novému veriteľovi.",
+            "wrong": "Nesprávne. Dlžník si nemôže po riadnom oznámení sám vybrať, komu bude plniť."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Prevzatie dlhu bez súhlasu veriteľa",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dlžník sa dohodne s treťou osobou, že namiesto neho prevezme jeho dlh voči veriteľovi, no veriteľ o tejto dohode vôbec nevie a nesúhlasil s ňou.", "options": [], "correct": 0 },
+        {
+          "question": "Je takéto prevzatie dlhu voči veriteľovi účinné?",
+          "options": ["Nie, prevzatie dlhu je účinné až so súhlasom veriteľa (§ 531 OZ)", "Áno, súhlas veriteľa sa pri prevzatí dlhu nevyžaduje", "Áno, stačí, že o tom bol veriteľ dodatočne informovaný"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Na rozdiel od postúpenia pohľadávky si prevzatie dlhu vyžaduje súhlas veriteľa.",
+            "wrong": "Nesprávne. Bez súhlasu veriteľa nie je prevzatie dlhu voči nemu účinné, samotné informovanie nestačí."
+          }
+        },
+        {
+          "question": "Prečo zákon pri prevzatí dlhu vyžaduje súhlas veriteľa, na rozdiel od postúpenia pohľadávky?",
+          "options": ["Lebo veriteľovi záleží na osobe a bonite dlžníka, ktorý mu má plniť", "Lebo ide o úplne rovnaký inštitút ako postúpenie pohľadávky", "Lebo zákon to vyžaduje bez akéhokoľvek dôvodu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmena osoby dlžníka priamo ovplyvňuje vymožiteľnosť pohľadávky veriteľa.",
+            "wrong": "Nesprávne. Prevzatie dlhu a postúpenie pohľadávky sú odlišné inštitúty a rozdiel má vecný dôvod."
+          }
+        }
+      ]
+    }
   ]
 }

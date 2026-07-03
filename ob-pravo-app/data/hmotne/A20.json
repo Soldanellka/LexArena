@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Konfúzia nie je dohoda – nastáva automaticky keď jedna osoba nadobudne pozíciu veriteľa aj dlžníka."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Splnenie (§ 559 OZ)", "definition": "Najčastejší spôsob zániku záväzku – dlžník splní, čo bol povinný plniť." },
+    { "term": "Kompenzácia (§ 580 OZ)", "definition": "Vzájomné pohľadávky rovnakého druhu zanikajú do výšky nižšej z nich." },
+    { "term": "Narovnanie (§ 585 OZ)", "definition": "Dohoda strán nahrádzajúca sporný alebo pochybný záväzok novým usporiadaním práv a povinností." },
+    { "term": "Nemožnosť plnenia", "definition": "Záväzok zaniká, ak sa plnenie stane objektívne nemožným bez zavinenia dlžníka." },
+    { "term": "Konfúzia", "definition": "Zánik záväzku splynutím veriteľa a dlžníka v jednej osobe." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Vzájomné pohľadávky strán",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Firma A dlhuje firme B sumu 1000 eur, zároveň firma B dlhuje firme A sumu 700 eur z inej zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Čo môžu strany urobiť s týmito vzájomnými pohľadávkami?",
+          "options": ["Započítať ich (kompenzácia) do výšky nižšej z nich", "Museli by nutne obe sumy zaplatiť v plnej výške bez možnosti započítania", "Pohľadávky by museli byť postúpené tretej osobe"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vzájomné pohľadávky rovnakého druhu možno započítať do výšky nižšej z nich.",
+            "wrong": "Nesprávne. Zákon kompenzáciu pripúšťa, netreba teda platiť obe sumy v plnej výške ani postupovať pohľadávky tretej osobe."
+          }
+        },
+        {
+          "question": "Aký je výsledok takéhoto započítania v uvedenom príklade?",
+          "options": ["Zanikne pohľadávka B vo výške 700 eur a A dlhuje B už len 300 eur", "Obe pohľadávky zostanú v pôvodnej výške bez zmeny", "Zanikne iba pohľadávka firmy A v plnej výške"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Kompenzácia zníži vyššiu pohľadávku o hodnotu nižšej pohľadávky.",
+            "wrong": "Nesprávne. Pohľadávky sa nezachovajú v pôvodnej výške a nezanikne iba pohľadávka firmy A."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zdedenie vlastnej pohľadávky",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Syn, ktorý dlhoval svojmu otcovi peniaze, po jeho smrti zdedí práve túto pohľadávku otca voči sebe samému.", "options": [], "correct": 0 },
+        {
+          "question": "Čo sa s týmto záväzkom stane?",
+          "options": ["Zanikne konfúziou – splynutím veriteľa a dlžníka v jednej osobe", "Záväzok zostáva v platnosti, syn dlhuje sám sebe", "Záväzok automaticky prechádza na štát"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Keď sa veriteľ a dlžník stanú tou istou osobou, záväzok zaniká konfúziou.",
+            "wrong": "Nesprávne. Záväzok nemôže logicky trvať medzi tou istou osobou a neprechádza na štát."
+          }
+        },
+        {
+          "question": "Prečo v takomto prípade záväzok zaniká?",
+          "options": ["Lebo záväzkový vzťah predpokladá dve odlišné strany – veriteľa a dlžníka", "Lebo dedenie dlhov je vo všeobecnosti zakázané", "Lebo štát preberá všetky dedičské pohľadávky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez dvoch odlišných strán stráca záväzkový vzťah zmysel a zaniká.",
+            "wrong": "Nesprávne. Dedenie dlhov nie je vo všeobecnosti zakázané a štát tu pohľadávky nepreberá."
+          }
+        }
+      ]
+    }
   ]
 }

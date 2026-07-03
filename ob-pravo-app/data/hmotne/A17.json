@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Relatívna povaha záväzkov znamená pôsobenie len medzi stranami, nie voči všetkým."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Záväzok (§ 488 OZ)", "definition": "Relatívny právny vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh." },
+    { "term": "Pohľadávka", "definition": "Aktívna stránka záväzku – právo veriteľa požadovať plnenie." },
+    { "term": "Dlh", "definition": "Pasívna stránka záväzku – povinnosť dlžníka plniť." },
+    { "term": "Predmet záväzku", "definition": "Plnenie – dať (dare), konať (facere), zdržať sa (omittere) alebo strpieť (pati)." },
+    { "term": "Relatívna povaha záväzkov", "definition": "Záväzkové práva pôsobia len medzi stranami, nie erga omnes." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Vznik záväzku zo zmluvy",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dvaja podnikatelia uzavrú kúpnu zmluvu, z ktorej jednému vznikne právo na zaplatenie ceny a druhému povinnosť ju zaplatiť.", "options": [], "correct": 0 },
+        {
+          "question": "Aký typ právneho vzťahu medzi nimi vzniká?",
+          "options": ["Záväzkový (relatívny) právny vzťah", "Vecné právo pôsobiace voči všetkým", "Právny stav bez konkrétnych strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o typický záväzkový vzťah medzi konkrétnym veriteľom a dlžníkom.",
+            "wrong": "Nesprávne. Nejde o vecné právo pôsobiace voči všetkým ani o právny stav bez konkrétnych strán."
+          }
+        },
+        {
+          "question": "Voči komu pôsobí takto vzniknuté právo na zaplatenie ceny?",
+          "options": ["Len voči konkrétnemu dlžníkovi zo zmluvy, nie voči všetkým osobám", "Voči všetkým osobám bez rozdielu (erga omnes)", "Voči celému okoliu podnikateľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Záväzkové právo je relatívne a pôsobí len medzi zmluvnými stranami.",
+            "wrong": "Nesprávne. Účinky erga omnes sú typické pre vecné, nie záväzkové práva."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rôzne formy plnenia",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Zmluva zaväzuje jednu stranu zdržať sa určitej konkurenčnej činnosti počas dohodnutého obdobia.", "options": [], "correct": 0 },
+        {
+          "question": "O akú formu plnenia (predmetu záväzku) v tomto prípade ide?",
+          "options": ["Omittere – zdržanie sa konania", "Dare – odovzdanie veci", "Facere – aktívne konanie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Záväzok zdržať sa konkurenčnej činnosti je typickým príkladom omittere.",
+            "wrong": "Nesprávne. Nejde o odovzdanie veci ani o aktívne konanie, ale o zdržanie sa určitého správania."
+          }
+        },
+        {
+          "question": "Musí byť predmetom záväzku vždy odovzdanie veci alebo peňazí?",
+          "options": ["Nie, predmetom môže byť aj konanie, zdržanie sa alebo strpenie niečoho", "Áno, záväzok sa vždy týka odovzdania veci", "Áno, výlučne peňažného plnenia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon pripúšťa širokú škálu foriem plnenia, nielen odovzdanie veci či peňazí.",
+            "wrong": "Nesprávne. Záväzky nie sú obmedzené len na odovzdanie veci alebo peňažné plnenie."
+          }
+        }
+      ]
+    }
   ]
 }

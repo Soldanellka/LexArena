@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Omeškanie veriteľa sa vzťahuje na odmietnutie prijatia plnenia, nie na nesplnenie peňažného záväzku."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Záručná doba (§ 620 OZ)", "definition": "Pri predaji tovaru spotrebiteľovi 2 roky (24 mesiacov)." },
+    { "term": "Práva z vadného plnenia", "definition": "Oprava, výmena, primeraná zľava alebo odstúpenie od zmluvy (pri podstatnej vade)." },
+    { "term": "Omeškanie dlžníka (§ 517 OZ)", "definition": "Nesplnenie záväzku riadne a včas v dobe plnenia." },
+    { "term": "Úrok z omeškania", "definition": "Zákonná sadzba – dvojnásobok základnej sadzby NBS, najmenej 5 % ročne." },
+    { "term": "Omeškanie veriteľa (§ 522 OZ)", "definition": "Veriteľ neprijme riadne ponúknuté plnenie alebo neposkytne súčinnosť." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Vadný tovar u spotrebiteľa",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Spotrebiteľ zakúpi tovar, ktorý sa mesiac po kúpe pokazí pre skrytú vadu existujúcu už pri predaji.", "options": [], "correct": 0 },
+        {
+          "question": "Aké má spotrebiteľ možnosti?",
+          "options": ["Môže žiadať opravu, výmenu, primeranú zľavu alebo (pri podstatnej vade) odstúpiť od zmluvy", "Môže žiadať výlučne vrátenie peňazí bez ďalších možností", "Nemá žiadne práva, keďže tovar už používal"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon dáva spotrebiteľovi viacero nárokov z vadného plnenia podľa povahy vady.",
+            "wrong": "Nesprávne. Spotrebiteľ nemá len jedinú možnosť a bežné používanie tovaru ho o práva z vád neoberá."
+          }
+        },
+        {
+          "question": "Ako dlhá je záručná doba pri predaji tovaru spotrebiteľovi?",
+          "options": ["24 mesiacov (2 roky)", "6 mesiacov", "5 rokov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. § 620 OZ stanovuje pri predaji spotrebiteľovi záručnú dobu 24 mesiacov.",
+            "wrong": "Nesprávne. Záručná doba nie je 6 mesiacov ani 5 rokov."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Omeškanie s platbou",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dlžník nezaplatí veriteľovi splatnú sumu v dohodnutom termíne, hoci na to mal dostatok prostriedkov.", "options": [], "correct": 0 },
+        {
+          "question": "V akom postavení sa dlžník ocitá?",
+          "options": ["Je v omeškaní s plnením peňažného záväzku (§ 517 OZ)", "Záväzok tým automaticky zaniká", "Veriteľ stráca právo na plnenie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nesplnenie v dobe plnenia zakladá omeškanie dlžníka.",
+            "wrong": "Nesprávne. Záväzok omeškaním nezaniká a veriteľ právo na plnenie neváha."
+          }
+        },
+        {
+          "question": "Aké má veriteľ právo v dôsledku omeškania dlžníka?",
+          "options": ["Právo na úrok z omeškania podľa zákonnej sadzby, ak nie je dohodnuté inak", "Právo okamžite exekučne predať majetok dlžníka bez súdneho konania", "Žiadne ďalšie právo nad rámec pôvodnej sumy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Veriteľovi vzniká popri istine aj nárok na úrok z omeškania.",
+            "wrong": "Nesprávne. Priama exekúcia bez súdneho titulu nie je možná a veriteľovi patrí aj nárok presahujúci pôvodnú sumu."
+          }
+        }
+      ]
+    }
   ]
 }

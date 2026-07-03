@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zádržné právo nie je záložné právo – nevzniká zmluvou, ale zo zákona pri splnení podmienok."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluvná pokuta (§ 544 OZ)", "definition": "Dohodnutá suma, ktorú dlžník zaplatí veriteľovi pri porušení záväzku." },
+    { "term": "Moderačné právo súdu (§ 545a OZ)", "definition": "Súd môže neprimeranú zmluvnú pokutu znížiť." },
+    { "term": "Ručenie (§ 546 – 550 OZ)", "definition": "Subsidiárny záväzok ručiteľa plniť, ak dlžník nesplní po výzve." },
+    { "term": "Záloha (preddavok)", "definition": "Suma zaplatená vopred, zarátava sa do plnenia alebo prepadá pri nesplnení." },
+    { "term": "Zádržné právo (§ 175 OZ)", "definition": "Právo zadržať cudziu vec ako zabezpečenie splatnej pohľadávky." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neprimerane vysoká zmluvná pokuta",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Strany si dohodli zmluvnú pokutu vo výške niekoľkonásobne prevyšujúcej hodnotu celého plnenia zo zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd takúto pokutu znížiť?",
+          "options": ["Áno, súd môže neprimeranú zmluvnú pokutu znížiť (§ 545a OZ)", "Nie, zmluvná pokuta je vždy záväzná v dohodnutej výške", "Nie, iba veriteľ sám môže dobrovoľne pokutu znížiť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon dáva súdu moderačné právo pri zjavne neprimeranej zmluvnej pokute.",
+            "wrong": "Nesprávne. Zmluvná pokuta nie je bezvýhradne záväzná v akejkoľvek výške a zníženie nezávisí len od vôle veriteľa."
+          }
+        },
+        {
+          "question": "Čo súd zohľadňuje pri rozhodovaní o znížení pokuty?",
+          "options": ["Hodnotu a význam zabezpečovanej povinnosti", "Iba osobné sympatie k jednej zo strán", "Výlučne majetkové pomery veriteľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súd posudzuje primeranosť pokuty vo vzťahu k hodnote a významu zabezpečenej povinnosti.",
+            "wrong": "Nesprávne. Sympatie ani majetkové pomery veriteľa nie sú relevantným kritériom."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Plnenie ručiteľa",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Veriteľ vyzve dlžníka na splnenie záväzku, dlžník však ani po výzve neplní.", "options": [], "correct": 0 },
+        {
+          "question": "Kedy je ručiteľ povinný namiesto dlžníka plniť?",
+          "options": ["Až keď dlžník nesplní záväzok ani po výzve veriteľa (subsidiárne)", "Ihneď po uzavretí ručiteľskej zmluvy bez ďalšieho", "Iba ak dlžník zomrie"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ručenie je subsidiárne – ručiteľ plní až po neúspešnej výzve dlžníkovi.",
+            "wrong": "Nesprávne. Ručiteľ neplní automaticky hneď po uzavretí zmluvy ani len v prípade smrti dlžníka."
+          }
+        },
+        {
+          "question": "Čo vyjadruje subsidiárna povaha ručenia?",
+          "options": ["Ručiteľ plní až vtedy, keď zlyhá primárny dlžník", "Ručiteľ plní vždy súčasne s dlžníkom bez rozdielu", "Ručiteľ nikdy neplní, iba garantuje záväzok formálne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Subsidiarita znamená, že ručiteľ nastupuje až po zlyhaní hlavného dlžníka.",
+            "wrong": "Nesprávne. Ručiteľ neplní súčasne s dlžníkom automaticky a jeho záväzok nie je iba formálny."
+          }
+        }
+      ]
+    }
   ]
 }
