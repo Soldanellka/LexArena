@@ -1,0 +1,77 @@
+{
+  "id": "19",
+  "title": "Zmena záväzkov",
+  "summary": "Zmena záväzkov môže nastať v subjektoch (stranách) alebo v obsahu. Zmena v osobe veriteľa: postúpenie pohľadávky (§ 524 OZ) – bez súhlasu dlžníka, len oznámenie. Zmena v osobe dlžníka: prevzatie dlhu (§ 531 OZ) – vyžaduje súhlas veriteľa. Pristúpenie k záväzku (§ 533 OZ) – ďalší dlžník plní solidárne s pôvodným. Novacia: zánik starého záväzku a vznik nového.",
+  "quiz": [
+    {
+      "question": "Čo je postúpenie pohľadávky (§ 524 OZ)?",
+      "options": [
+        "Zánik pohľadávky",
+        "Prevod pohľadávky na nového veriteľa (postupníka) bez súhlasu dlžníka",
+        "Zánik záväzku splnením",
+        "Prevod dlhu na nového dlžníka"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Postúpením pohľadávky (cesia) prechádza pohľadávka na nového veriteľa bez súhlasu dlžníka – stačí mu to len oznámiť.",
+        "wrong": "Nesprávne. Postúpenie je prevod pohľadávky na novú osobu, nie zánik."
+      }
+    },
+    {
+      "question": "Kedy je prevzatie dlhu (§ 531 OZ) účinné?",
+      "options": [
+        "Ihneď po uzavretí zmluvy medzi pôvodným a novým dlžníkom",
+        "Až po súhlase veriteľa",
+        "Len po notárskom overení",
+        "Len po súhlase súdu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 531 OZ: prevzatie dlhu je účinné až so súhlasom veriteľa – veriteľ si musí overiť bonitu nového dlžníka.",
+        "wrong": "Nesprávne. Na rozdiel od postúpenia pohľadávky, prevzatie dlhu vyžaduje súhlas veriteľa."
+      }
+    },
+    {
+      "question": "Čo je pristúpenie k záväzku (§ 533 OZ)?",
+      "options": [
+        "Zánik záväzku pôvodného dlžníka",
+        "K pôvodnému dlžníkovi pristúpi ďalší dlžník – obaja plnia solidárne",
+        "Zánik veriteľa",
+        "Predĺženie lehoty na plnenie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 533 OZ: pristúpením k záväzku sa popri pôvodnom dlžníkovi zaviazuje ďalšia osoba plniť solidárne.",
+        "wrong": "Nesprávne. Pristúpenie záväzok neprerušuje – k pôvodnému dlžníkovi len pribudne ďalší."
+      }
+    },
+    {
+      "question": "Čo je novacia záväzku?",
+      "options": [
+        "Zmena miesta plnenia",
+        "Zánik pôvodného záväzku a vznik nového na základe dohody strán",
+        "Prevod pohľadávky",
+        "Zánik záväzku splnením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Novacia je dohoda strán, ktorou pôvodný záväzok zaniká a nahrádza ho nový záväzok s iným obsahom (napr. zmena predmetu alebo strán).",
+        "wrong": "Nesprávne. Novacia nie je plnenie ani prevod – je to zánik starého záväzku nahradením novým."
+      }
+    },
+    {
+      "question": "Môže veriteľ postúpiť pohľadávku bez súhlasu dlžníka?",
+      "options": [
+        "Nie, vždy potrebuje súhlas dlžníka",
+        "Áno – stačí len dlžníka o postúpení upovedomiť (§ 526 OZ)",
+        "Len so súhlasom notára",
+        "Len pre pohľadávky do 500 EUR"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 524 OZ: postúpenie pohľadávky nevyžaduje súhlas dlžníka. Postupca je povinný postúpenie dlžníkovi oznámiť.",
+        "wrong": "Nesprávne. Súhlas dlžníka pri postúpení pohľadávky nie je potrebný – stačí oznámenie."
+      }
+    }
+  ]
+}

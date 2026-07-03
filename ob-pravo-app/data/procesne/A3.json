@@ -1,0 +1,79 @@
+{
+  "id": "3",
+  "title": "Strany konania, procesná subjektivita a zastúpenie",
+  "schemaVersion": "1.1",
+  "tags": ["strany konania", "procesná spôsobilosť", "advokát", "zmena strán"],
+  "summary": "Stranami konania sú žalobca a žalovaný. Procesná subjektivita (spôsobilosť byť stranou) zodpovedá právnej subjektivite. Procesná spôsobilosť (schopnosť vlastnými úkonmi nadobúdať procesné práva) zodpovedá spôsobilosti na právne úkony. Za procesne nespôsobilé osoby konajú ich zákonní zástupcovia. Zastúpenie advokátom je povinné v dovolacom konaní. Zmena strán: singulárna sukcesia – postúpenie pohľadávky, prevzatie dlhu; univerzálna – dedičstvo, zánik právnickej osoby so sukcesiou.",
+  "quiz": [
+    {
+      "question": "Čo je procesná subjektivita (spôsobilosť byť stranou)?",
+      "options": [
+        "Schopnosť vlastnými procesnimi úkonmi nadobúdať práva",
+        "Spôsobilosť byť stranou civilného konania – mať procesné práva a povinnosti",
+        "Právo na bezplatnú právnu pomoc",
+        "Schopnosť podávať odvolania"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Procesná subjektivita (§ 68 CSP) je spôsobilosť byť stranou konania – mať procesné práva a povinnosti. Zodpovedá právnej subjektivite v hmotnom práve.",
+        "wrong": "Nesprávne. Schopnosť vlastnými úkonmi nadobúdať procesné práva je procesná spôsobilosť (nie subjektivita)."
+      }
+    },
+    {
+      "question": "Je zastúpenie advokátom povinné v dovolacom konaní?",
+      "options": [
+        "Nie, strana môže konať sama",
+        "Áno – dovolateľ musí byť zastúpený advokátom",
+        "Len ak ide o sumu nad 50 000 EUR",
+        "Len pre zahraničné strany"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 429 ods. 1 CSP musí byť dovolateľ zastúpený advokátom, pokiaľ sám nemá právnické vzdelanie. Podmienka povinného zastúpenia je kogentná.",
+        "wrong": "Nesprávne. Povinné zastúpenie advokátom v dovolacom konaní platí bez ohľadu na výšku predmetu sporu."
+      }
+    },
+    {
+      "question": "Čo sa stane so konaním, ak žalobca zomrie v jeho priebehu?",
+      "options": [
+        "Konanie sa zastaví",
+        "Ak je právo prevoditeľné, konanie pokračuje s právnymi nástupcami",
+        "Konanie sa prerušuje navždy",
+        "Žalovaný automaticky vyhrá"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ak účastník zomrie a ide o právo, ktoré prechádza na právnych nástupcov, súd konanie preruší a po zistnení nástupcu v ňom pokračuje (§ 162 CSP).",
+        "wrong": "Nesprávne. Smrť strany automaticky neukončuje konanie. Ak je právo dedičné, konanie sa preruší a pokračuje s dedičmi."
+      }
+    },
+    {
+      "question": "Kto môže byť procesným zástupcom strany okrem advokáta?",
+      "options": [
+        "Len notár",
+        "Zákonný zástupca, príp. ktokoľvek, komu strana udelí plnú moc",
+        "Len príbuzní v priamom rade",
+        "Len daňový poradca"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Okrem advokáta môže stranu zastupovať zákonný zástupca alebo splnomocnený zástupca (§ 88 a nasl. CSP). Plná moc musí byť súdu predložená.",
+        "wrong": "Nesprávne. CSP nevyhrazuje zastúpenie len notárom alebo príbuzným – pripúšťa aj splnomocneného zástupcu na základe plnej moci."
+      }
+    },
+    {
+      "question": "Čo je singulárna sukcesia v procesnom práve?",
+      "options": [
+        "Nástupníctvo pri zániku právnickej osoby",
+        "Zmena v osobe strany pri postúpení konkrétnej pohľadávky alebo prevzatí dlhu",
+        "Prevod celého podniku",
+        "Zmena sudcu v priebehu konania"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Singulárna sukcesia nastáva pri zmene jednej konkrétnej pohľadávky alebo záväzku (postúpenie pohľadávky, prevzatie dlhu). Súd môže rozhodnúť o vstupe nástupcu do konania.",
+        "wrong": "Nesprávne. Nástupníctvo pri zániku právnickej osoby je univerzálna sukcesia. Singulárna sa týka len konkrétneho práva."
+      }
+    }
+  ]
+}

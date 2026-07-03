@@ -1,0 +1,77 @@
+{
+  "id": "30",
+  "title": "Kúpna, zámenná a darovacia zmluva",
+  "summary": "Kúpna zmluva (§ 588-600 OZ): predávajúci odovzdá vec a prevedie vlastníctvo, kupujúci zaplatí kúpnu cenu. Zámenná zmluva: obidve strany si navzájom prevádzajú vlastníctvo veci. Darovacia zmluva (§ 628-630 OZ): darca bezodplatne prenecháva dar obdarovanému; ústna stačí ak sa dar odovzdá, inak potrebná písomná forma. Vrátenie daru: hrubo nevďačné správanie (§ 630 OZ).",
+  "quiz": [
+    {
+      "question": "Čo je podstatnou náležitosťou kúpnej zmluvy?",
+      "options": [
+        "Len cena",
+        "Predmet kúpy a kúpna cena",
+        "Len písomná forma",
+        "Len záručná doba"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kúpna zmluva vyžaduje dohodu o predmete kúpy (veci) a kúpnej cene. Bez ceny nejde o kúpnu zmluvu.",
+        "wrong": "Nesprávne. Písomná forma ani záručná doba nie sú podstatnými náležitosťami každej kúpnej zmluvy."
+      }
+    },
+    {
+      "question": "Kedy musí mať darovacia zmluva písomnú formu?",
+      "options": [
+        "Vždy",
+        "Ak nedôjde k odovzdaniu daru pri darovaní (§ 628 OZ)",
+        "Nikdy",
+        "Len pri darovaní nehnuteľností"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 628 ods. 2 OZ: darovacia zmluva musí byť písomná, ak sa dar neodovzdá pri darovaní. Pri súčasnom odovzdaní stačí ústna forma.",
+        "wrong": "Nesprávne. Písomná forma je povinná len ak sa dar neodovzdáva súčasne s darovacou zmluvou."
+      }
+    },
+    {
+      "question": "Kedy môže darca požadovať vrátenie daru (§ 630 OZ)?",
+      "options": [
+        "Kedykoľvek bez dôvodu",
+        "Ak sa obdarovaný správa k darcovi alebo členom jeho rodiny hrubo nevďačne",
+        "Len ak dar nebol použitý",
+        "Len do 1 roka od darovania"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 630 OZ: darca môže požadovať vrátenie daru ak sa obdarovaný hrubou nevďačnosťou znevažuje dobré mravy voči darcovi alebo jeho blízkym.",
+        "wrong": "Nesprávne. Vrátenie daru nie je ľubovoľné - vyžaduje hrubo nevďačné správanie obdarovaného."
+      }
+    },
+    {
+      "question": "Čo je zámenná zmluva?",
+      "options": [
+        "Zmena predmetu zmluvy",
+        "Zmluva kde si obe strany navzájom prevádzajú vlastníctvo vecí",
+        "Zmluva o výmene miesta plnenia",
+        "Zmluva o postúpení pohľadávky"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri zámennej zmluve (§ 611 OZ) si obe strany navzájom prevádzajú vlastníctvo veci za inú vec - ide o barter.",
+        "wrong": "Nesprávne. Zámenná zmluva nie je zmena podmienok - je to prevod vecí medzi stranami navzájom."
+      }
+    },
+    {
+      "question": "Kedy prechádza vlastníctvo pri kúpe hnuteľnej veci?",
+      "options": [
+        "Zaplatením ceny",
+        "Odovzdaním veci kupujúcemu",
+        "Podpisom zmluvy",
+        "Overením zmluvy notárom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri hnuteľných veciach prechádza vlastníctvo odovzdaním veci (tradíciou), nie podpisom zmluvy.",
+        "wrong": "Nesprávne. Pri hnuteľných veciach stačí tradícia (odovzdanie) - na rozdiel od nehnuteľností nevyžaduje vklad do katastra."
+      }
+    }
+  ]
+}

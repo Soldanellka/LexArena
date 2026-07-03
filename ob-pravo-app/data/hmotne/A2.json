@@ -1,0 +1,77 @@
+{
+  "id": "2",
+  "title": "Základné zásady občianskeho práva",
+  "summary": "Základné zásady OZ vyjadrujú hodnotový základ právneho poriadku. Ide o: zásadu zákonnosti, ochrany fyzickej osoby, autonómie vôle, rovnosti subjektov, ochrany dobrých mravov (§ 39 OZ), zákazu zneužívania práv (šikany) a subsidiarity OZ. Zásady sú záväzné pri výklade a aplikácii práva.",
+  "quiz": [
+    {
+      "question": "Čo vyjadruje zásada autonómie vôle v OZ?",
+      "options": [
+        "Štát určuje obsah zmlúv",
+        "Strany môžu slobodne upraviť svoje vzťahy v medziach zákona",
+        "Súd je viazaný len zákonom",
+        "Zmluvná sloboda je neobmedzená"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Autonómia vôle znamená, že strany môžu slobodne v rámci zákona určovať obsah svojich záväzkov.",
+        "wrong": "Nesprávne. Autonómia vôle nie je neobmedzená – má hranice v kogentných normách a dobrých mravoch."
+      }
+    },
+    {
+      "question": "Čo je zákaz šikany (zneužívania práva) v OZ?",
+      "options": [
+        "Zákaz fyzického napadnutia",
+        "Výkon práva nesmie poškodzovať iných bez oprávnenia",
+        "Povinnosť uzavrieť zmluvu",
+        "Zákaz diskriminácie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákaz šikany (§ 3 ods. 1 OZ) zakazuje výkon práva, ktorého cieľom je poškodenie iného – ide o zneužitie práva.",
+        "wrong": "Nesprávne. Zákaz šikany je procesuálno-právny a hmotnoprávny princíp, nie fyzický zákaz."
+      }
+    },
+    {
+      "question": "Čo sú dobré mravy podľa OZ?",
+      "options": [
+        "Etické normy záväzne kodifikované zákonom",
+        "Normy mravného správania uznávané väčšinou spoločnosti, na ochranu ktorých zákon ukladá sankciu",
+        "Náboženské predpisy",
+        "Pravidlá slušnosti"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dobré mravy sú normy mravného správania, ktoré spoločnosť uznáva, a zákon (§ 3 ods. 1, § 39 OZ) ich chráni sankciou neplatnosti.",
+        "wrong": "Nesprávne. Dobré mravy nie sú kodifikovaný zákon ani náboženské predpisy."
+      }
+    },
+    {
+      "question": "Ako sa uplatňujú zásady OZ pri interpretácii práva?",
+      "options": [
+        "Sú nezáväzné – len odporúčacie",
+        "Sú záväzné – slúžia ako interpretačné vodidlo",
+        "Platia len pre súdy",
+        "Platia len pre fyzické osoby"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Základné zásady sú záväzné a slúžia ako interpretačné pravidlá pri výklade celého OZ aj špeciálnych zákonov.",
+        "wrong": "Nesprávne. Zásady majú normatívny charakter – sú záväzné, nie len odporúčacie."
+      }
+    },
+    {
+      "question": "Čo zakazuje § 3 ods. 1 OZ?",
+      "options": [
+        "Uzatváranie ústnych zmlúv",
+        "Výkon práv a povinností odporujúci dobrým mravom",
+        "Zmenu zmluvy počas konania",
+        "Darovanie nehnuteľností"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 3 ods. 1 OZ zakazuje, aby výkon práv a povinností z občianskoprávnych vzťahov odporoval dobrým mravom.",
+        "wrong": "Nesprávne. § 3 ods. 1 OZ nehovorí o forme zmluvy, ale o zákaze výkonu práv odporujúcich dobrým mravom."
+      }
+    }
+  ]
+}

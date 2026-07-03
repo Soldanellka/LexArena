@@ -1,0 +1,77 @@
+{
+  "id": "17",
+  "title": "Záväzkové právne vzťahy – pojem, prvky, vznik záväzkov",
+  "summary": "Záväzkový právny vzťah (§ 488–900 OZ) je vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh. Prvky: subjekty (veriteľ, dlžník), obsah (práva a povinnosti), predmet (plnenie). Vznik: zo zmluvy (hlavný zdroj), z protiprávneho konania (škoda, bezdôvodné obohatenie), z iných skutočností (nálezné).",
+  "quiz": [
+    {
+      "question": "Čo je záväzok v občianskom práve?",
+      "options": [
+        "Povinnosť platiť dane",
+        "Právny vzťah, z ktorého veriteľovi vzniká právo na plnenie a dlžníkovi povinnosť plniť",
+        "Vecné právo k cudzej veci",
+        "Povinnosť uzavrieť zmluvu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záväzok (§ 488 OZ) je relatívny právny vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh.",
+        "wrong": "Nesprávne. Záväzok nie je vecné právo – je to relatívny právny vzťah medzi určitými osobami."
+      }
+    },
+    {
+      "question": "Aký je hlavný zdroj vzniku záväzkov?",
+      "options": [
+        "Zákon",
+        "Zmluva",
+        "Súdne rozhodnutie",
+        "Dedičstvo"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva je najčastejším a najdôležitejším zdrojom záväzkov. Ďalšími sú protiprávne konania a iné právne skutočnosti.",
+        "wrong": "Nesprávne. Zákon sám osebe záväzok nezakladá – je právnym základom, nie priamym zdrojom."
+      }
+    },
+    {
+      "question": "Čo je pohľadávka veriteľa?",
+      "options": [
+        "Povinnosť veriteľa plniť",
+        "Právo veriteľa požadovať od dlžníka plnenie",
+        "Majetok veriteľa",
+        "Záložné právo veriteľa"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pohľadávka je právo (nárok) veriteľa voči dlžníkovi na plnenie – je to aktívna stránka záväzku.",
+        "wrong": "Nesprávne. Pohľadávka je aktívna stránka záväzku (právo), dlh je pasívna stránka (povinnosť)."
+      }
+    },
+    {
+      "question": "Aký je predmet záväzku?",
+      "options": [
+        "Vždy peňažné plnenie",
+        "Plnenie dlžníka – dať (dare), konať (facere), zdržať sa konania (omittere) alebo strpieť (pati)",
+        "Len nehnuteľnosti",
+        "Vždy odovzdanie veci"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Predmetom záväzku je plnenie, ktoré môže mať formu: dare (odovzdať), facere (konať), omittere (zdržať sa) alebo pati (strpieť).",
+        "wrong": "Nesprávne. Predmet záväzku nie je len peniaze – môže ísť o akúkoľvek formu plnenia."
+      }
+    },
+    {
+      "question": "Čo je relatívna povaha záväzkových práv?",
+      "options": [
+        "Pôsobia voči všetkým",
+        "Pôsobia len medzi určitými subjektmi – veriteľom a dlžníkom",
+        "Sú prevoditeľné bez súhlasu",
+        "Zanikajú smrťou veriteľa"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záväzkové práva sú relatívne – pôsobia len medzi konkrétnymi stranami záväzku. Na rozdiel od vecných práv nepôsobia erga omnes.",
+        "wrong": "Nesprávne. Relatívna povaha záväzkov znamená pôsobenie len medzi stranami, nie voči všetkým."
+      }
+    }
+  ]
+}

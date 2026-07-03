@@ -1,0 +1,77 @@
+{
+  "id": "31",
+  "title": "Zmluva o dielo - pojem, podstatné náležitosti, osobitné druhy",
+  "summary": "Zmluva o dielo (§ 631-656 OZ): zhotoviteľ sa zaväzuje vykonať dielo a objednávateľ zaplatiť odmenu. Dielo: zhotovenie, oprava, úprava alebo iná zmena veci. Odmena: dohodnutá alebo určená podľa rozpočtu. Zodpovednosť za vady: zhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní. Záručná doba: minimálne 24 mesiacov pri stavbách.",
+  "quiz": [
+    {
+      "question": "Čo je predmetom zmluvy o dielo?",
+      "options": [
+        "Len zhotovenie novej veci",
+        "Zhotovenie, oprava, úprava alebo iná zmena veci (hmotný alebo nehmotný výsledok)",
+        "Len stavebné práce",
+        "Len autorské dielo"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva o dielo (§ 631 OZ) pokrýva akýkoľvek výsledok práce - zhotovenie, opravu, úpravu aj nehmotný výsledok.",
+        "wrong": "Nesprávne. Zmluva o dielo sa netýka len hmotných vecí - môže ísť aj o nehmotný výsledok."
+      }
+    },
+    {
+      "question": "Kedy sa zhotoviteľ dostane do omeškania pri zmluve o dielo?",
+      "options": [
+        "Ak dielo odovzdá neskôr ako bolo dohodnuté",
+        "Ak dielo odovzdá predčasne",
+        "Ak dielo prekoná rozpočet",
+        "Ak dielo zmení bez súhlasu"
+      ],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zhotoviteľ je v omeškaní ak dielo neodovzdá v dohodnutom čase.",
+        "wrong": "Nesprávne. Omeškanie nastáva pri meškaní, nie predčasnom odovzdaní."
+      }
+    },
+    {
+      "question": "Za aké vady zodpovedá zhotoviteľ?",
+      "options": [
+        "Len za skryté vady",
+        "Za vady, ktoré má dielo pri odovzdaní objednávateľovi",
+        "Len za vady materiálu",
+        "Len za vady zistené do 3 mesiacov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zhotoviteľ zodpovedá za vady diela, ktoré existujú v čase odovzdania - bez ohľadu na to kedy sú objavené.",
+        "wrong": "Nesprávne. Zodpovednosť za vady nie je obmedzená len na skryté vady alebo vady materiálu."
+      }
+    },
+    {
+      "question": "Aké práva má objednávateľ pri vadnom diele?",
+      "options": [
+        "Len právo na náhradu škody",
+        "Bezplatné odstránenie vady, primeranú zľavu alebo od zmluvy odstúpiť (pri podstatnej vade)",
+        "Len právo na nové dielo",
+        "Len právo na zálohu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri vadnom diele má objednávateľ právo na bezplatnú opravu, zľavu alebo pri podstatnej vade odstúpenie od zmluvy.",
+        "wrong": "Nesprávne. Práva pri vadnom diele sú analogické právam pri kúpe - výber medzi opravou, zľavou, odstúpením."
+      }
+    },
+    {
+      "question": "Môže objednávateľ zmeniť dielo počas jeho vyhotovenia?",
+      "options": [
+        "Nie, zmena nie je možná",
+        "Áno, ale zhotoviteľ má právo na primeranú zmenu odmeny a lehoty",
+        "Len so súhlasom notára",
+        "Len ak dielo nie je začaté"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ak objednávateľ zmení dielo, zhotoviteľ má právo na zodpovedajúcu zmenu odmeny a lehoty dokončenia.",
+        "wrong": "Nesprávne. Zmena diela je možná, ale zhotoviteľ má právo na kompenzáciu za zmenu."
+      }
+    }
+  ]
+}

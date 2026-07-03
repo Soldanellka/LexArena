@@ -1,0 +1,77 @@
+{
+  "id": "38",
+  "title": "Zmluva o úschove a zmluva o združení",
+  "summary": "Zmluva o úschove (§ 747-753 OZ): schovateľ prevezme vec a zaväzuje sa ju uschovať a vrátiť. Zodpovednosť za škodu. Zmluva o združení (§ 829-841 OZ): viacero osôb sa združí na dosiahnutie dohodnutého účelu - nesú spoločné záväzky, združenie nie je právnickou osobou. Združenie sa riadi dohodou účastníkov.",
+  "quiz": [
+    {
+      "question": "Čo je povinnosťou schovateľa pri zmluve o úschove?",
+      "options": [
+        "Len prevziať vec",
+        "Prevziať vec, uschovať ju a vrátiť ju v pôvodnom stave úschovu",
+        "Predať vec po uplynutí doby",
+        "Veci nie je povinný chrániť"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Schovateľ je povinný prevziať vec, starať sa o ňu s patričnou starostlivosťou a vrátiť ju v pôvodnom stave.",
+        "wrong": "Nesprávne. Schovateľ má trojitú povinnosť: prevziať, uschovať a vrátiť."
+      }
+    },
+    {
+      "question": "Zodpovedá schovateľ za škodu na uchovávanej veci?",
+      "options": [
+        "Nie, riziko nesie vkladateľ",
+        "Áno - schovateľ zodpovedá za škodu na veci, ak nepostupoval s patričnou starostlivosťou",
+        "Len za úmyselné poškodenie",
+        "Len ak je zmluva písomná"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Schovateľ zodpovedá za škodu na veci, ak nedodržal povinnosť starostlivosti. Ide o zodpovednosť za zavinenie.",
+        "wrong": "Nesprávne. Schovateľ zodpovedá za škodu pri porušení povinnosti starostlivosti."
+      }
+    },
+    {
+      "question": "Čo je zmluva o združení (§ 829 OZ)?",
+      "options": [
+        "Zmluva o vzniku obchodnej spoločnosti",
+        "Zmluva kde sa viacero osôb dohodne na spoločnom postupe k dosiahnutiu dohodnutého účelu bez vzniku novej právnickej osoby",
+        "Zmluva o zdieľaní nehnuteľnosti",
+        "Zmluva o franchisingu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 829 OZ: zmluva o združení zakladá záväzkový vzťah medzi účastníkmi na dosiahnutie spoločného cieľa - bez vzniku právnickej osoby.",
+        "wrong": "Nesprávne. Združenie podľa § 829 OZ nie je obchodná spoločnosť - nemá právnu subjektivitu."
+      }
+    },
+    {
+      "question": "Aká je zodpovednosť účastníkov združenia voči tretím osobám?",
+      "options": [
+        "Každý zodpovedá len za svoju časť",
+        "Solidárne zodpovedajú spoločne - každý za celý záväzok",
+        "Závisí od dohody v združení",
+        "Nezodpovedajú tretím osobám"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Účastníci združenia zodpovedajú voči tretím osobám solidárne - každý za celý záväzok.",
+        "wrong": "Nesprávne. Zodpovednosť účastníkov združenia voči tretím osobám je solidárna, nie podielová."
+      }
+    },
+    {
+      "question": "Je zmluva o združení právnická osoba?",
+      "options": [
+        "Áno, registruje sa v OR",
+        "Nie - združenie podľa § 829 OZ nie je právnickou osobou",
+        "Závisí od počtu účastníkov",
+        "Len ak má majetok"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Združenie podľa § 829 OZ nemá právnu subjektivitu - je to záväzkový vzťah bez vzniku novej právnickej osoby.",
+        "wrong": "Nesprávne. Zmluva o združení je záväzkový vzťah - nezakladá právnickú osobu."
+      }
+    }
+  ]
+}

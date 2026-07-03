@@ -1,0 +1,77 @@
+{
+  "id": "28",
+  "title": "Dedenie zo závetu",
+  "summary": "Závet (§ 476-480a OZ) je jednostranný, odvolateľný a osobný právny úkon. Forma: vlastnoručný (celý ručne písaný + podpis), alografický (inak písaný + 2 svedkovia) alebo notárska zápisnica. Neopomenuteľní dediči: maloleté deti (celý zákonný podiel), plnoleté (1/2 zákonného podielu) - § 479 OZ.",
+  "quiz": [
+    {
+      "question": "Aké formy závetov pozná OZ?",
+      "options": [
+        "Len notárska zápisnica",
+        "Vlastnoručný (§ 476a), alografický (§ 476b) a notárska zápisnica (§ 476d)",
+        "Len písaný na počítači",
+        "Len ústny pred svedkami"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. OZ pripúšťa tri formy závetov: vlastnoručný, alografický a závet formou notárskej zápisnice.",
+        "wrong": "Nesprávne. Ústny závet OZ nepripúšťa. Vyžaduje sa vždy písomná forma."
+      }
+    },
+    {
+      "question": "Čo je vlastnoručný závet (§ 476a OZ)?",
+      "options": [
+        "Závet podpísaný pred notárom",
+        "Závet celý vlastnoručne napísaný a podpísaný poručiteľom",
+        "Závet napísaný svedkami",
+        "Závet overený súdom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vlastnoručný závet musí byť celý vlastnoručne napísaný a podpísaný poručiteľom - nesmie byť napísaný na počítači ani inou osobou.",
+        "wrong": "Nesprávne. Vlastnoručný závet musí byť CELÝ napísaný rukou, nielen podpísaný."
+      }
+    },
+    {
+      "question": "Kto sú neopomenuteľní dediči (§ 479 OZ)?",
+      "options": [
+        "Len manžel/manželka",
+        "Deti poručiteľa (maloleté a plnoleté)",
+        "Rodičia poručiteľa",
+        "Súrodenci poručiteľa"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 479 OZ: neopomenuteľnými dedičmi sú len deti poručiteľa. Maloletým patrí celý zákonný podiel, plnoletým aspoň 1/2.",
+        "wrong": "Nesprávne. Manžel ani rodičia nie sú neopomenuteľnými dedičmi - len deti poručiteľa."
+      }
+    },
+    {
+      "question": "Môže poručiteľ vylúčiť maloletého potomka z dedičstva závetom?",
+      "options": [
+        "Áno, závet je slobodná voľa",
+        "Nie - maloletým neopomenuteľným dedičom musí prísť celý zákonný podiel",
+        "Len ak sú nezaopatrení",
+        "Len ak to schváli súd"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Maloletí potomkovia sú neopomenuteľnými dedičmi - závet, ktorý by ich ukrátil pod zákonný podiel, je v tejto časti neplatný.",
+        "wrong": "Nesprávne. Závet nemôže úplne vylúčiť maloletých neopomenuteľných dedičov."
+      }
+    },
+    {
+      "question": "Závet je jednostranný právny úkon - čo to znamená?",
+      "options": [
+        "Platí len keď s ním súhlasí dedič",
+        "Poručiteľ ho môže kedykoľvek odvolať bez súhlasu dediča",
+        "Závet musí podpísať dedič",
+        "Závet musí byť overený notárom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Závet je jednostranný - poručiteľ ho môže kedykoľvek odvolať, zmeniť alebo nahradiť novým. Súhlas dediča sa nevyžaduje.",
+        "wrong": "Nesprávne. Jednostrannosť závetu znamená slobodu poručiteľa meniť alebo odvolávať závet."
+      }
+    }
+  ]
+}

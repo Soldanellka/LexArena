@@ -1,0 +1,79 @@
+{
+  "id": "4",
+  "title": "Žaloba – náležitosti, druhy a zmena",
+  "schemaVersion": "1.1",
+  "tags": ["žaloba", "petit", "skutkové tvrdenia", "zmena žaloby"],
+  "summary": "Žaloba je procesný úkon žalobcu, ktorým sa začína sporové konanie (§ 123 CSP). Povinné náležitosti: označenie súdu, strán, predmetu konania, opisu rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit). Druhy žalôb: na plnenie (condemnatio), na určenie (§ 137 písm. c) CSP – naliehavý právny záujem) a na vykonanie právneho úkonu. Zmenu žaloby môže žalobca urobiť len so súhlasom súdu.",
+  "quiz": [
+    {
+      "question": "Čo musí povinne obsahovať žaloba podľa CSP?",
+      "options": [
+        "Len meno žalobcu a žalovaného",
+        "Označenie súdu, strán, predmetu, skutkových tvrdení, dôkazov a petit",
+        "Len petit (čoho sa žalobca domáha)",
+        "Len právnu kvalifikáciu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 132 CSP musí žaloba obsahovať: označenie súdu, označenie strán, opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit).",
+        "wrong": "Nesprávne. Samotný petit bez skutkového opisu nestačí. Žaloba musí obsahovať všetky zákonné náležitosti podľa § 132 CSP."
+      }
+    },
+    {
+      "question": "Čo je žalobný petit?",
+      "options": [
+        "Opis skutkového stavu",
+        "Návrh výroku rozhodnutia, teda čo konkrétne žalobca žiada od súdu",
+        "Zoznam predložených dôkazov",
+        "Právna kvalifikácia nároku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Petit je jadrom žaloby – ide o návrh výroku rozhodnutia. Súd ním je viazaný a nemôže prisúdiť viac ani niečo iné.",
+        "wrong": "Nesprávne. Petit nie je opis skutkového stavu ani zoznam dôkazov. Je to konkrétny návrh toho, čo má súd rozhodnúť."
+      }
+    },
+    {
+      "question": "Kedy má žalobca naliehavý právny záujem na určovacej žalobe?",
+      "options": [
+        "Vždy keď chce niečo určiť",
+        "Keď je to potrebné na odstránenie stavu neistoty v právnom vzťahu, ktorý nemožno odstrániť inak",
+        "Len keď je pohľadávka premlčaná",
+        "Len pri nehnuteľnostiach"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 137 písm. c) CSP sa možno žalobou domáhať určenia, či tu právny vzťah alebo právo je alebo nie je, ak je na tom naliehavý právny záujem.",
+        "wrong": "Nesprávne. Naliehavý právny záujem musí byť reálny a preukázateľný. Nestačí len túžba potvrdiť nejaké právo."
+      }
+    },
+    {
+      "question": "Môže žalobca zmeniť žalobu počas konania?",
+      "options": [
+        "Áno, kedykoľvek bez obmedzenia",
+        "Len so súhlasom súdu",
+        "Nie – žaloba sa nemôže meniť",
+        "Len pred prvým pojednávaním"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 142 CSP žalobca môže zmeniť žalobu len so súhlasom súdu. Súd súhlas neudelí, ak by zmena bola v neprospech riadneho priebehu konania.",
+        "wrong": "Nesprávne. Zmena žaloby nie je voľná – vyžaduje súhlas súdu. Súd ho môže odmietnuť, ak by zmena poškodila priebeh konania."
+      }
+    },
+    {
+      "question": "Kedy nastáva litispendencia (prekážka konania)?",
+      "options": [
+        "Keď súd odmietne žalobu",
+        "Keď vo veci začne konanie pred tým istým alebo iným súdom skôr",
+        "Keď žalovaný podá protižalobu",
+        "Keď strany uzavrú dohodu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Litispendencia nastáva keď v tej istej veci (eadem causa) medzi tými istými stranami (idem personae) prebieha skoršie konanie. Neskoršie konanie súd zastaví.",
+        "wrong": "Nesprávne. Litispendencia nie je odmietnutie žaloby – je to prekážka spočívajúca v existencii skoršieho konania o tej istej veci."
+      }
+    }
+  ]
+}

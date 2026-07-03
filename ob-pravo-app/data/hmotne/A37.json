@@ -1,0 +1,77 @@
+{
+  "id": "37",
+  "title": "Poistná zmluva - pojem, podstatné náležitosti",
+  "summary": "Poistná zmluva (§ 788-828 OZ, zákon č. 8/2008 Z.z. o poisťovníctve): poisťovateľ sa zaväzuje poskytnúť poistné plnenie (poistné krytie) pri poistnej udalosti, poistník platí poistné. Podstatné náležitosti: poistná udalosť, poistná suma, poistné. Druhy: životné a neživotné poistenie, povinné (zodpovednostné) a dobrovoľné. Poistná udalosť: náhodná skutočnosť, s ktorou zmluva spája povinnosť plniť.",
+  "quiz": [
+    {
+      "question": "Čo je poistná udalosť?",
+      "options": [
+        "Akákoľvek škoda",
+        "Náhodná skutočnosť, s ktorou zmluva alebo zákon spája vznik povinnosti poisťovateľa plniť",
+        "Uzavretie poistnej zmluvy",
+        "Platba poistného"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Poistná udalosť je náhodná skutočnosť (napr. havária, choroba, smrť), pri ktorej vzniká poisťovateľovi povinnosť poskytnúť poistné plnenie.",
+        "wrong": "Nesprávne. Poistná udalosť musí byť náhodná a musí s ňou zmluva spájať povinnosť plniť."
+      }
+    },
+    {
+      "question": "Aký je základ poistnej zmluvy?",
+      "options": [
+        "Len poistné",
+        "Poistná udalosť, poistná suma (krytie) a poistné (platba)",
+        "Len podpis zmluvy",
+        "Notárske overenie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podstatnými náležitosťami poistnej zmluvy sú: vymedzenie poistnej udalosti, poistná suma alebo limit plnenia a výška poistného.",
+        "wrong": "Nesprávne. Podstatné náležitosti zahŕňajú viac ako len poistné."
+      }
+    },
+    {
+      "question": "Čo je vinkulácia poistného plnenia?",
+      "options": [
+        "Poistné plnenie sa vyplatí vždy poistenej osobe",
+        "Poistné plnenie sa viaže na splnenie záväzku - vypláca sa veriteľovi (banke) namiesto poistníkovi",
+        "Zánik poistnej zmluvy",
+        "Zvýšenie poistného"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vinkulácia je dohoda, pri ktorej poisťovateľ vyplatí poistné plnenie priamo veriteľovi (napr. banke), nie poistníkovi - bežné pri hypotéke.",
+        "wrong": "Nesprávne. Vinkulácia mení príjemcu poistného plnenia - nie je to zánik poistenia."
+      }
+    },
+    {
+      "question": "Ako sa delí poistenie podľa predmetu?",
+      "options": [
+        "Na lacné a drahé",
+        "Na životné (krytie rizika dožitia alebo smrti) a neživotné (krytie iných rizík: majetok, zodpovednosť)",
+        "Na krátkodobé a dlhodobé",
+        "Na domáce a zahraničné"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Životné poistenie kryje riziko dožitia alebo smrti. Neživotné poistenie kryje iné riziká - majetok, zodpovednosť, zdravie.",
+        "wrong": "Nesprávne. Delenie nie je podľa ceny ani doby trvania - je to podľa predmetu poistenia."
+      }
+    },
+    {
+      "question": "Čo je povinné zmluvné poistenie zodpovednosti za škodu z prevádzky motorového vozidla?",
+      "options": [
+        "Dobrovoľné poistenie auta",
+        "Zákonná povinnosť - každý vlastník motorového vozidla musí mať uzavretú poistku zodpovednosti (PZP)",
+        "Poistenie karosérie vozidla",
+        "Poistenie posádky"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. PZP (poistenie zodpovednosti za škodu) je povinné pre každé motorové vozidlo - zabezpečuje náhradu škody tretím osobám.",
+        "wrong": "Nesprávne. PZP nie je dobrovoľné - je zákonnou povinnosťou pri prevádzke motorového vozidla."
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "2",
+  "title": "Príslušnosť súdov – vecná a miestna",
+  "schemaVersion": "1.1",
+  "tags": ["príslušnosť", "vecná príslušnosť", "miestna príslušnosť", "prorogácia"],
+  "summary": "Vecná príslušnosť určuje, ktorý stupeň súdu je oprávnený rozhodovať v prvom stupni. Spravidla rozhodujú okresné súdy; krajské súdy rozhodujú v prvom stupni vo veciach určených zákonom (napr. spory o ochranu osobnosti). Miestna príslušnosť určuje, ktorý konkrétny súd v rámci toho istého stupňa je príslušný. Všeobecná miestna príslušnosť sa určuje podľa bydliska (fyzická osoba) alebo sídla (právnická osoba) žalovaného. Možná je aj dohodnutá príslušnosť (prorogácia).",
+  "quiz": [
+    {
+      "question": "Čo určuje vecná príslušnosť súdu?",
+      "options": [
+        "Územie, na ktorom súd pôsobí",
+        "Stupeň súdnej sústavy oprávnený rozhodovať v prvom stupni",
+        "Počet sudcov na súde",
+        "Druh sporu (trestný alebo občiansky)"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecná príslušnosť (§ 12-14 CSP) určuje, ktorý stupeň súdnej sústavy (okresný alebo krajský súd) je príslušný konať a rozhodovať v prvom stupni.",
+        "wrong": "Nesprávne. Vecná príslušnosť sa týka stupňa súdu, nie jeho územného obvodu (to je miestna príslušnosť)."
+      }
+    },
+    {
+      "question": "Podľa čoho sa určuje všeobecná miestna príslušnosť pre fyzickú osobu?",
+      "options": [
+        "Podľa miesta, kde nastala škodná udalosť",
+        "Podľa bydliska žalovaného",
+        "Podľa bydliska žalobcu",
+        "Podľa sídla súdu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 13 CSP sa vec koná na súde, v obvode ktorého má žalovaný (fyzická osoba) bydlisko. Ide o zásadu actor sequitur forum rei.",
+        "wrong": "Nesprávne. Všeobecná miestna príslušnosť sa určuje podľa žalovaného, nie žalobcu. Žalobca musí sám ísť pred súd žalovaného (actor sequitur forum rei)."
+      }
+    },
+    {
+      "question": "Čo je prorogácia príslušnosti?",
+      "options": [
+        "Postúpenie veci inému súdu rozhodnutím",
+        "Dohodou strán určená miestna príslušnosť iného súdu",
+        "Odvolanie sa na vyšší súd",
+        "Námietka miestnej nepríslušnosti"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prorogácia (§ 17 CSP) umožňuje stranám dohodou písomne určiť miestnu príslušnosť iného súdu, než by bola inak príslušná.",
+        "wrong": "Nesprávne. Prorogácia je dohoda strán o miestnej príslušnosti – nie postúpenie veci ani odvolanie."
+      }
+    },
+    {
+      "question": "Ktorý súd rozhoduje v prvom stupni o sporom z ochrany osobnosti?",
+      "options": [
+        "Okresný súd",
+        "Krajský súd",
+        "Najvyšší súd",
+        "Ústavný súd"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Spory o ochranu osobnosti podľa OZ patria do vecnej príslušnosti krajských súdov, ktoré v týchto veciach rozhodujú ako súdy prvého stupňa.",
+        "wrong": "Nesprávne. Spory o ochranu osobnosti sú výslovne zverené krajským súdom ako súdom prvého stupňa (§ 22 CSP)."
+      }
+    },
+    {
+      "question": "Kedy môže súd skúmať svoju príslušnosť z úradnej povinnosti?",
+      "options": [
+        "Nikdy – len na námietku strany",
+        "Len vecnú príslušnosť, a to kedykoľvek počas konania",
+        "Len miestnu príslušnosť na začiatku konania",
+        "Vždy obe formy príslušnosti"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecnú príslušnosť skúma súd kedykoľvek počas konania z úradnej moci. Miestnu nepríslušnosť skúma len na začiatku a len na námietku žalovaného.",
+        "wrong": "Nesprávne. Vecná a miestna príslušnosť sa skúmajú rozdielne. Vecná vždy a z úradnej moci; miestna len na počiatku a na námietku."
+      }
+    }
+  ]
+}

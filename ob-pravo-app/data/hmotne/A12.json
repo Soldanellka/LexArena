@@ -1,0 +1,77 @@
+{
+  "id": "12",
+  "title": "Vlastnícke právo – pojem, obsah, nadobúdanie, ochrana",
+  "summary": "Vlastnícke právo je najúplnejšie vecné právo (§ 123 OZ). Obsah: ius possidendi (držať), ius utendi (užívať), ius fruendi (požívať plody), ius disponendi (nakladať). Nadobudnutie: zmluva + vklad do KN (nehnuteľnosti), vydržanie – 10 rokov pre nehnuteľnosti (§ 134 OZ). Ochrana: reivindikačná žaloba (§ 126 OZ), negatórna žaloba (§ 127 OZ).",
+  "quiz": [
+    {
+      "question": "Čo vyjadruje ius disponendi ako súčasť vlastníckeho práva?",
+      "options": [
+        "Právo vec držať",
+        "Právo vec užívať",
+        "Právo nakladať s vecou – predať, darovať, zastaviť",
+        "Právo požívať plody veci"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Ius disponendi je právo nakladať s vecou – previesť vlastníctvo, zaťažiť alebo zničiť vec.",
+        "wrong": "Nesprávne. Právo vec užívať je ius utendi, držať je ius possidendi, požívať plody je ius fruendi."
+      }
+    },
+    {
+      "question": "Ako dlho trvá vydržacia doba pre nehnuteľnosti (§ 134 OZ)?",
+      "options": [
+        "3 roky",
+        "5 rokov",
+        "10 rokov",
+        "20 rokov"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. § 134 OZ: vydržanie nehnuteľnosti vyžaduje nepretržitú oprávnenú dobromyseľnú držbu po dobu 10 rokov.",
+        "wrong": "Nesprávne. 3 roky platia pre hnuteľnosti. Pre nehnuteľnosti je vydržacia doba 10 rokov."
+      }
+    },
+    {
+      "question": "Čo je reivindikačná žaloba (§ 126 OZ)?",
+      "options": [
+        "Žaloba na zdržanie sa rušenia vlastníka",
+        "Žaloba vlastníka na vydanie veci od neoprávneného držiteľa",
+        "Žaloba na náhradu škody",
+        "Žaloba na určenie vlastníctva"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 126 OZ: vlastník má právo na vydanie veci od toho, kto mu ju neoprávnene zadržuje – reivindikačná (vindikačná) žaloba.",
+        "wrong": "Nesprávne. Žaloba na zdržanie sa rušenia je negatórna (§ 127 OZ). Reivindikačná žaloba smeruje na vydanie veci."
+      }
+    },
+    {
+      "question": "Kedy prechádza vlastníctvo nehnuteľnosti pri kúpnej zmluve?",
+      "options": [
+        "Podpisom kúpnej zmluvy",
+        "Zaplatením kúpnej ceny",
+        "Vkladom do katastra nehnuteľností",
+        "Notárskym overením zmluvy"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Vlastníctvo nehnuteľnosti prechádza vkladom (intabuláciou) do katastra nehnuteľností – kúpna zmluva je len titusom, nie modusom.",
+        "wrong": "Nesprávne. Kúpna zmluva sama osebe vlastníctvo nehnuteľnosti neprenáša – potrebný je vklad do katastra."
+      }
+    },
+    {
+      "question": "Čo je negatórna žaloba (§ 127 OZ)?",
+      "options": [
+        "Žaloba na vydanie veci",
+        "Žaloba vlastníka na zdržanie sa neoprávnených zásahov do jeho vlastníckeho práva",
+        "Žaloba na náhradu škody",
+        "Žaloba na určenie hranice pozemku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Negatórna žaloba chráni vlastníka pred rušením jeho práva – môže sa domáhať, aby sa rušiteľ zdržal zásahov (§ 127 OZ).",
+        "wrong": "Nesprávne. Negatórna žaloba nesmeruje na vydanie veci (to je reivindikačná), ale na zdržanie sa rušenia."
+      }
+    }
+  ]
+}

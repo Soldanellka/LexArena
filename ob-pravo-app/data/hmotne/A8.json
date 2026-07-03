@@ -1,0 +1,77 @@
+{
+  "id": "8",
+  "title": "Zastúpenie v občianskom práve",
+  "summary": "Zastúpenie (§ 22–33a OZ) je konanie zástupcu v mene zastúpeného, pričom právne účinky nastávajú priamo pre zastúpeného. Zákonné zastúpenie: rodičia za maloletých, opatrovník. Zmluvné zastúpenie: na základe plnej moci (§ 31 OZ). Plná moc pre úkony vyžadujúce písomnú formu musí byť písomná. Prokúra – obchodné zastúpenie.",
+  "quiz": [
+    {
+      "question": "Čo je podstatou zastúpenia podľa § 22 OZ?",
+      "options": [
+        "Zástupca koná vo vlastnom mene a na cudzí účet",
+        "Zástupca koná v mene zastúpeného a právne účinky nastávajú priamo zastúpenému",
+        "Zástupca zodpovedá za záväzky zastúpeného",
+        "Zástupca preberá dlhy zastúpeného"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 22 ods. 1 OZ: zástupca koná v cudzom mene – právne účinky jeho konania nastávajú priamo zastúpenému.",
+        "wrong": "Nesprávne. Konanie vo vlastnom mene na cudzí účet je komisia, nie zastúpenie."
+      }
+    },
+    {
+      "question": "Aká forma sa vyžaduje pre plnú moc k úkonu v písomnej forme?",
+      "options": [
+        "Stačí ústna plná moc",
+        "Plná moc musí byť písomná (§ 31 ods. 4 OZ)",
+        "Notárska zápisnica vždy",
+        "Forma nie je predpísaná"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 31 ods. 4 OZ: ak sa pre právny úkon vyžaduje písomná forma, musí byť v tejto forme udelená aj plná moc.",
+        "wrong": "Nesprávne. Pri úkonoch s predpísanou písomnou formou musí byť aj plná moc písomná."
+      }
+    },
+    {
+      "question": "Čo je falsus procurator?",
+      "options": [
+        "Zákonný zástupca maloletého",
+        "Osoba konajúca bez splnomocnenia alebo nad jeho rámec (§ 33 OZ)",
+        "Advokát bez licencie",
+        "Notár konajúci mimo obvodu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 33 OZ: ak niekto koná bez plnej moci alebo ju prekročí, zastúpený nie je viazaný, pokiaľ konanie dodatočne neschváli.",
+        "wrong": "Nesprávne. Falsus procurator je osoba konajúca bez oprávnenia, nie zákonný zástupca."
+      }
+    },
+    {
+      "question": "Môže splnomocnenec udeliť ďalšiu (sub)plnú moc?",
+      "options": [
+        "Áno, vždy",
+        "Nie, nikdy",
+        "Len ak ho splnomocniteľ výslovne oprávnil alebo ak si to vyžadujú okolnosti (§ 33a OZ)",
+        "Len so súhlasom súdu"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. § 33a OZ: substitúcia je prípustná len ak je splnomocnenec výslovne oprávnený alebo ak si to vyžadujú okolnosti (napr. choroba).",
+        "wrong": "Nesprávne. Právo na substitúciu musí byť výslovne udelené alebo vyplývať z okolností."
+      }
+    },
+    {
+      "question": "Kto je zákonným zástupcom maloletého dieťaťa?",
+      "options": [
+        "Starí rodičia",
+        "Rodičia, prípadne opatrovník ustanovený súdom",
+        "Orgán sociálnoprávnej ochrany",
+        "Notár"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákonným zástupcom maloletého sú rodičia. Ak nemôžu zastupovať, súd ustanoví opatrovníka (§ 26–27 OZ).",
+        "wrong": "Nesprávne. Zákonné zastúpenie prináleží predovšetkým rodičom, nie orgánom štátnej správy."
+      }
+    }
+  ]
+}

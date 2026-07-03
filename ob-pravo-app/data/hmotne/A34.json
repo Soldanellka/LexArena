@@ -1,0 +1,77 @@
+{
+  "id": "34",
+  "title": "Nájom bytu (podľa OZ a zákona o krátkodobom nájme bytu)",
+  "summary": "Nájom bytu (§ 685-716 OZ) má posilnenú ochranu nájomcu. Prenajímateľ môže vypovedať nájom len z dôvodov taxatívne uvedených v § 711 OZ (napr. hrubé porušenie povinností). Nájomca má právo na predĺženie nájmu. Zákon č. 98/2014 Z.z. o krátkodobom nájme bytu: na kratšie obdobia (do 6 rokov), registrovaná u notára, kratšia výpovedná lehota - 15 dní.",
+  "quiz": [
+    {
+      "question": "Aká zvláštna ochrana platí pre nájomcu bytu?",
+      "options": [
+        "Žiadna špeciálna ochrana",
+        "Prenajímateľ môže vypovedať nájom bytu len z dôvodov taxatívne uvedených zákonom (§ 711 OZ)",
+        "Nájomca môže byt predať",
+        "Nájomca neplatí nájomné 3 mesiace"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nájom bytu je osobitne chránený - výpoveď prenajímateľom je možná len z dôvodov taxatívne stanovených zákonom.",
+        "wrong": "Nesprávne. Ochrana nájomcu bytu je silnejšia ako pri bežnom nájme - prenajímateľ nemôže vypovedať bez zákonného dôvodu."
+      }
+    },
+    {
+      "question": "Aké dôvody oprávňujú prenajímateľa na výpoveď nájmu bytu?",
+      "options": [
+        "Len ak nájomca neplatí nájomné",
+        "Taxatívne dôvody v § 711 OZ: neplatenie nájomného, hrubé porušenie povinností, odsúdenie za trestný čin a ďalšie",
+        "Kedykoľvek na základe vôle prenajímateľa",
+        "Len ak vyžaduje byt pre seba"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 711 OZ obsahuje taxatívny zoznam dôvodov - prenajímateľ bez nich nemôže platne dať výpoveď.",
+        "wrong": "Nesprávne. Prenajímateľ nemôže vypovedať ľubovoľne - musí existovať zákonný dôvod."
+      }
+    },
+    {
+      "question": "Čo je krátkodobý nájom bytu podľa zákona č. 98/2014 Z.z.?",
+      "options": [
+        "Nájom kratší ako 1 rok",
+        "Nájom na dobu určitú maximálne 6 rokov uzavretý v zákonom predpísanej forme s registráciou u notára",
+        "Nájom bez výpovednej lehoty",
+        "Iba turistický prenájom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon č. 98/2014 Z.z. upravuje krátkodobý nájom bytu: doba do 6 rokov, zmluva registrovaná u notára, kratšia ochrana nájomcu.",
+        "wrong": "Nesprávne. Krátkodobý nájom podľa tohto zákona nemá maximálnu dobu 1 rok - je to až 6 rokov."
+      }
+    },
+    {
+      "question": "Aká je výpovedná lehota pri krátkodobom nájme bytu?",
+      "options": [
+        "3 mesiace",
+        "15 dní pri nájomcovi, 30 dní pri prenajímateľovi",
+        "1 mesiac",
+        "Okamžitá"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pri krátkodobom nájme bytu je výpovedná lehota kratšia ako pri bežnom nájme bytu - 15 resp. 30 dní.",
+        "wrong": "Nesprávne. Kratšia výpovedná lehota je jednou z výhod krátkodobého nájmu podľa zákona č. 98/2014 Z.z."
+      }
+    },
+    {
+      "question": "Môže nájomca bytu prenajatý byt podnajať?",
+      "options": [
+        "Áno, vždy bez obmedzení",
+        "Len so súhlasom prenajímateľa (§ 719 OZ)",
+        "Nie, nikdy",
+        "Len na kratšie ako 1 mesiac"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 719 OZ: nájomca môže byt podnajať len so súhlasom prenajímateľa. Bez súhlasu je podnájom neplatný.",
+        "wrong": "Nesprávne. Podnájom bytu bez súhlasu prenajímateľa je neprípustný."
+      }
+    }
+  ]
+}

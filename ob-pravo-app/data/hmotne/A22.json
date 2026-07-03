@@ -1,0 +1,77 @@
+{
+  "id": "22",
+  "title": "Prevencia v občianskom práve. Všeobecná zodpovednosť za škodu",
+  "summary": "Preventívna povinnosť (§ 415–419 OZ) zaväzuje každého počínať si tak, aby nedochádzalo ku škodám. Všeobecná zodpovednosť za škodu (§ 420 OZ): protiprávny úkon, škoda, príčinná súvislosť a zavinenie. Zavinenie sa predpokladá. Liberácia: preukázanie, že škodu nezavinil.",
+  "quiz": [
+    {
+      "question": "Čo je preventívna povinnosť v OZ (§ 415)?",
+      "options": [
+        "Povinnosť uzavrieť poistenie",
+        "Povinnosť každého počínať si tak, aby nedochádzalo ku škodám na zdraví, majetku a iných hodnotách",
+        "Povinnosť nahlásiť škodu",
+        "Povinnosť ohlasovať nehody"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 415 OZ: každý je povinný zachovávať také správanie, aby nedochádzalo ku škodám – ide o generálnu prevenčnú povinnosť.",
+        "wrong": "Nesprávne. Preventívna povinnosť nie je poistenie – je to všeobecná povinnosť správania."
+      }
+    },
+    {
+      "question": "Aké sú predpoklady všeobecnej zodpovednosti za škodu (§ 420 OZ)?",
+      "options": [
+        "Len škoda a zavinenie",
+        "Protiprávny úkon, škoda, príčinná súvislosť a zavinenie",
+        "Len úmysel",
+        "Škoda a bohatstvo škodcu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 420 OZ vyžaduje kumulatívne: protiprávny úkon (alebo opomenutie), vznik škody, príčinnú súvislosť a zavinenie.",
+        "wrong": "Nesprávne. Všetky štyri predpoklady musia byť splnené súčasne."
+      }
+    },
+    {
+      "question": "Čo sa predpokladá pri zodpovednosti za škodu podľa § 420 OZ?",
+      "options": [
+        "Zavinenie škodcu sa predpokladá – on musí preukázať opak (presumptio culpae)",
+        "Zavinenie musí preukázať poškodený",
+        "Zavinenie nie je relevantné",
+        "Vždy sa predpokladá úmysel"
+      ],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. § 420 ods. 3 OZ: zavinenie sa predpokladá – škodca sa môže zbaviť zodpovednosti len ak preukáže, že škodu nezavinil (presumptio culpae).",
+        "wrong": "Nesprávne. Zákon presumuje zavinenie – dôkazné bremeno nesie škodca, nie poškodený."
+      }
+    },
+    {
+      "question": "Čo je príčinná súvislosť (kauzálny nexus)?",
+      "options": [
+        "Časová blízkosť protiprávneho úkonu a škody",
+        "Vzťah príčiny a následku medzi protiprávnym úkonom a škodou",
+        "Totožnosť škodcu a poškodeného",
+        "Výška škody"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kauzálny nexus je nutný vzťah medzi protiprávnym úkonom a škodou – škoda musí byť priamym následkom protiprávneho úkonu.",
+        "wrong": "Nesprávne. Príčinná súvislosť nie je len časová blízkosť – musí existovať reálny príčinno-následkový vzťah."
+      }
+    },
+    {
+      "question": "Kedy sa škodca zbaví zodpovednosti za škodu (liberácia)?",
+      "options": [
+        "Nikdy – škoda sa vždy nahradí",
+        "Ak preukáže, že škodu nezavinil (§ 420 ods. 3 OZ)",
+        "Len ak je chudobný",
+        "Len s notárskym overením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 420 ods. 3 OZ: zodpovednosť nevznikne, ak škodca preukáže, že škodu nezavinil. Dôkazné bremeno nesie škodca.",
+        "wrong": "Nesprávne. Zákon umožňuje liberáciu – škodca sa môže zbaviť zodpovednosti preukázaním absencie zavinenia."
+      }
+    }
+  ]
+}

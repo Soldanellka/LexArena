@@ -1,0 +1,77 @@
+{
+  "id": "21",
+  "title": "Zodpovednosť za vady a zodpovednosť za omeškanie",
+  "summary": "Zodpovednosť za vady (§ 499–510 OZ) nastáva pri odovzdaní veci s vadami. Kupujúci môže požadovať: opravu, výmenu, primeranú zľavu alebo od zmluvy odstúpiť. Nároky z vád je potrebné uplatniť v záručnej dobe (2 roky – spotrebitelia). Omeškanie dlžníka (§ 517 OZ): nesplnenie v dobe plnenia – vznik práva na úrok z omeškania (5,5% p.a. alebo zákonná sadzba).",
+  "quiz": [
+    {
+      "question": "Čo je záručná doba pri predaji tovaru spotrebiteľovi?",
+      "options": [
+        "1 rok",
+        "2 roky (§ 620 OZ)",
+        "5 rokov",
+        "Len 6 mesiacov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 620 OZ: pri predaji tovaru spotrebiteľovi je záručná doba 24 mesiacov (2 roky).",
+        "wrong": "Nesprávne. Záručná doba je 2 roky, nie 1 rok. Skrátenie záručnej doby pre spotrebiteľov je neplatné."
+      }
+    },
+    {
+      "question": "Aké práva má kupujúci pri vadnom plnení?",
+      "options": [
+        "Len právo na náhradu škody",
+        "Opravu, výmenu veci, zľavu z ceny alebo odstúpenie od zmluvy",
+        "Len právo na zníženie ceny",
+        "Len právo na výmenu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kupujúci si môže pri vadnom plnení vybrať medzi opravou, výmenou, primeranou zľavou alebo odstúpením od zmluvy (pri podstatnej vade).",
+        "wrong": "Nesprávne. Práva pri vadnom plnení sú viacstupňové – zákon dáva kupujúcemu výber."
+      }
+    },
+    {
+      "question": "Kedy nastáva omeškanie dlžníka?",
+      "options": [
+        "Keď nemá peniaze na zaplatenie",
+        "Keď dlžník nesplní záväzok v dobe jeho plnenia",
+        "Keď záväzok zabudne splniť",
+        "Len pri peňažných záväzkoch"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 517 OZ: dlžník je v omeškaní, ak záväzok nesplnil riadne a včas.",
+        "wrong": "Nesprávne. Omeškanie nie je len subjektívny stav – nastáva objektívne nesplnením v stanovenom čase."
+      }
+    },
+    {
+      "question": "Aká je zákonná sadzba úroku z omeškania?",
+      "options": [
+        "1% ročne",
+        "Dvojnásobok základnej úrokovej sadzby NBS, minimálne 5% ročne",
+        "3% ročne",
+        "10% ročne"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nariadenie vlády č. 87/1995 Z.z. v spojení s § 517 OZ: úrok z omeškania je vo výške dvojnásobku základnej sadzby NBS, najmenej však 5% ročne.",
+        "wrong": "Nesprávne. Zákonná sadzba úroku z omeškania je dvojnásobok základnej sadzby NBS (min. 5% p.a.)."
+      }
+    },
+    {
+      "question": "Čo je omeškanie veriteľa?",
+      "options": [
+        "Veriteľ nesplní záväzok platiť",
+        "Veriteľ neprijme riadne ponúknuté plnenie od dlžníka (§ 522 OZ)",
+        "Veriteľ predá pohľadávku",
+        "Veriteľ zomrie pred plnením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 522 OZ: veriteľ je v omeškaní, ak neprijme riadne ponúknuté plnenie alebo neposkytne potrebnú súčinnosť.",
+        "wrong": "Nesprávne. Omeškanie veriteľa sa vzťahuje na odmietnutie prijatia plnenia, nie na nesplnenie peňažného záväzku."
+      }
+    }
+  ]
+}

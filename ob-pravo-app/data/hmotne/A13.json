@@ -1,0 +1,77 @@
+{
+  "id": "13",
+  "title": "Vecné bremená – pojem, vznik a zánik",
+  "summary": "Vecné bremeno (§ 151n OZ) obmedzuje vlastníka nehnuteľnosti v prospech iného. Druhy: in rem (viazané k panujúcej nehnuteľnosti – prechádza s ňou) alebo in personam (viazané k osobe – zanikne jej smrťou). Vznik: písomná zmluva + vklad do KN, závet, rozhodnutie súdu, vydržanie. Zánik: výmazom z KN, smrťou oprávneného (in personam).",
+  "quiz": [
+    {
+      "question": "Čo je vecné bremeno podľa § 151n OZ?",
+      "options": [
+        "Záložné právo k nehnuteľnosti",
+        "Obmedzenie vlastníka povinnosťou strpieť alebo konať niečo v prospech iného",
+        "Právo predkúpu",
+        "Povinnosť zaplatiť nájomné"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecné bremeno zaväzuje vlastníka zaťaženej nehnuteľnosti strpieť alebo konať niečo v prospech oprávneného (napr. právo prechodu).",
+        "wrong": "Nesprávne. Vecné bremeno nie je záložné právo ani predkupné právo."
+      }
+    },
+    {
+      "question": "Ako vzniká vecné bremeno k nehnuteľnosti?",
+      "options": [
+        "Ústnou dohodou",
+        "Písomnou zmluvou a vkladom do katastra nehnuteľností",
+        "Len závetom",
+        "Len rozhodnutím súdu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecné bremeno k nehnuteľnosti vzniká písomnou zmluvou a vkladom do katastra (§ 151p OZ), prípadne závetom, zákonom alebo rozhodnutím súdu.",
+        "wrong": "Nesprávne. Ústna dohoda nestačí – vyžaduje sa písomná zmluva a konštitutívny vklad do katastra."
+      }
+    },
+    {
+      "question": "Čo je vecné bremeno in personam?",
+      "options": [
+        "Bremeno viazané k panujúcej nehnuteľnosti",
+        "Bremeno viazané k osobe oprávneného – zanikne jej smrťou",
+        "Bremeno zabezpečujúce pohľadávku",
+        "Bremeno prenosné na dediča"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecné bremeno in personam (osobné) je viazané ku konkrétnej osobe – zanikne jej smrťou alebo zánikom právnickej osoby.",
+        "wrong": "Nesprávne. Bremeno in rem (vecné) prechádza s nehnuteľnosťou na každého ďalšieho vlastníka."
+      }
+    },
+    {
+      "question": "Kedy zaniká vecné bremeno in rem?",
+      "options": [
+        "Smrťou vlastníka zaťaženej nehnuteľnosti",
+        "Prevodom zaťaženej nehnuteľnosti",
+        "Výmazom z katastra nehnuteľností",
+        "Zaplatením kompenzácie"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Vecné bremeno in rem zanikne výmazom z katastra (na základe dohody alebo rozhodnutia súdu).",
+        "wrong": "Nesprávne. Bremeno in rem nasleduje nehnuteľnosť – prevodom nezaniká, ale prechádza na nového vlastníka."
+      }
+    },
+    {
+      "question": "Môže súd zrušiť vecné bremeno?",
+      "options": [
+        "Nie, vecné bremeno je večné",
+        "Áno – ak sa zmenia pomery a oprávnený ho trvalo nemôže využívať (§ 151p ods. 3 OZ)",
+        "Len ak to chce vlastník zaťaženej nehnuteľnosti",
+        "Len po uplynutí 30 rokov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 151p ods. 3 OZ: súd môže na návrh povinného zrušiť alebo obmedziť vecné bremeno, ak sa pomerné zmenia a oprávnený ho trvalo nemôže využívať.",
+        "wrong": "Nesprávne. Vecné bremeno nie je večné – zákon umožňuje súdne zrušenie pri zmene pomerov."
+      }
+    }
+  ]
+}

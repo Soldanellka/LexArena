@@ -1,0 +1,79 @@
+{
+  "id": "1",
+  "title": "Základné zásady civilného sporového konania",
+  "schemaVersion": "1.1",
+  "tags": ["CSP", "zásady", "dispozičná zásada", "kontradiktórnosť"],
+  "summary": "Civilný sporový poriadok (zákon č. 160/2015 Z. z.) je od 1.7.2016 základným procesným predpisom. Kľúčové zásady: dispozičná zásada (strany disponujú predmetom konania), kontradiktórnosť (každá strana má právo vyjadriť sa), zásada rovnosti strán, zásada hospodárnosti konania, zásada materiálnej pravdy. Súd je viazaný návrhmi strán – nemôže rozhodnúť o niečom inom ani o viac, než strany žiadajú (ne eat iudex ultra petita partium).",
+  "quiz": [
+    {
+      "question": "Aký zákon upravuje civilné sporové konanie na Slovensku od 1.7.2016?",
+      "options": [
+        "Zákon č. 99/1963 Zb. – Občiansky súdny poriadok",
+        "Zákon č. 160/2015 Z. z. – Civilný sporový poriadok",
+        "Zákon č. 161/2015 Z. z. – Civilný mimosporový poriadok",
+        "Zákon č. 549/2003 Z. z."
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Od 1.7.2016 platí Civilný sporový poriadok (zákon č. 160/2015 Z. z.), ktorý nahradil Občiansky súdny poriadok.",
+        "wrong": "Nesprávne. OSP bol zrušený k 1.7.2016. Sporové konanie dnes upravuje výlučne CSP (zákon č. 160/2015 Z. z.)."
+      }
+    },
+    {
+      "question": "Čo vyjadruje dispozičná zásada v civilnom procese?",
+      "options": [
+        "Súd koná vždy z vlastnej iniciatívy",
+        "Strany disponujú predmetom konania – súd nemôže rozhodnúť nad rámec návrhov",
+        "Súd určuje, čo je predmetom sporu",
+        "Štát zastupuje slabšiu stranu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dispozičná zásada (§ 2 CSP) zaručuje stranám právo disponovať predmetom konania. Súd nemôže konať bez návrhu ani rozhodnúť o niečom, čo strany nepožadovali (ne eat iudex ultra petita).",
+        "wrong": "Nesprávne. V sporovom konaní koná súd zásadne na návrh – iniciativa patrí stranám, nie súdu."
+      }
+    },
+    {
+      "question": "Čo zaručuje zásada kontradiktórnosti?",
+      "options": [
+        "Tajnosť súdneho konania",
+        "Každej strane právo vyjadriť sa k tvrdeniam a dôkazom protistrany",
+        "Rovnaký počet svedkov na oboch stranách",
+        "Bezplatnú právnu pomoc"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kontradiktórnosť (§ 9 CSP) zaručuje každej strane právo vedieť o tvrdeniach a dôkazoch protistrany a vyjadriť sa k nim pred vydaním rozhodnutia.",
+        "wrong": "Nesprávne. Kontradiktórnosť nie je o počte svedkov – je to právo na informácie o argumentoch protistrany a možnosť reagovať."
+      }
+    },
+    {
+      "question": "Kto nesie dôkazné bremeno v civilnom spore?",
+      "options": [
+        "Vždy žalobca",
+        "Súd – sám zisťuje skutkový stav",
+        "Strana, ktorá tvrdenie uplatňuje",
+        "Vždy žalovaný"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. V sporovom konaní platí zásada, že dôkazné bremeno nesie tá strana, ktorá danú skutočnosť tvrdí. Súd nevyhľadáva dôkazy z úradnej moci (rozdiel oproti mimosporovému konaniu).",
+        "wrong": "Nesprávne. Sporové konanie je kontradiktórne – súd nie je vyšetrovateľom. Každá strana preukazuje skutočnosti, na ktoré sa odvoláva."
+      }
+    },
+    {
+      "question": "Čo je to litispendencia?",
+      "options": [
+        "Právoplatnosť rozsudku",
+        "Procesná prekážka spočívajúca v tom, že vo veci už prebieha konanie",
+        "Zánik pohľadávky premlčaním",
+        "Zánik konania bez rozhodnutia"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Litispendencia (§ 196 CSP) je procesná prekážka: ak pred tým istým alebo iným súdom prebieha konanie o tej istej veci, neskôr začaté konanie súd zastaví.",
+        "wrong": "Nesprávne. Litispendencia je prekážka začatého konania – nie premlčanie ani zánik konania. Chráni strany pred dvojitým konaním o tej istej veci."
+      }
+    }
+  ]
+}

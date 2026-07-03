@@ -1,0 +1,77 @@
+{
+  "id": "6",
+  "title": "Čas ako právna skutočnosť, premlčanie, preklúzia",
+  "summary": "Čas je právnou skutočnosťou – uplynutie doby spôsobuje vznik alebo zánik práv (premlčanie, preklúzia, vydržanie). Premlčanie (§ 100–114 OZ): uplynutím premlčacej doby sa právo neruší, ale stáva sa nevymáhateľným ak dlžník vznesie námietku. Všeobecná doba: 3 roky. Preklúzia: uplynutím zákonnej lehoty právo samotné zaniká (súd prihliadne z úradnej moci).",
+  "quiz": [
+    {
+      "question": "Čo je premlčanie v občianskom práve?",
+      "options": [
+        "Zánik práva uplynutím lehoty",
+        "Oslabenie vymáhateľnosti práva ak dlžník vznesie námietku po uplynutí premlčacej doby",
+        "Zánik pohľadávky dohodou",
+        "Zánik záväzku splnením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Premlčaním právo nezaniká – ostáva ako naturálna obligácia. Ak ale dlžník vznesie námietku premlčania, súd pohľadávku neuzná (§ 100 OZ).",
+        "wrong": "Nesprávne. Zánik práva uplynutím lehoty je preklúzia, nie premlčanie."
+      }
+    },
+    {
+      "question": "Aká je všeobecná premlčacia doba podľa § 101 OZ?",
+      "options": [
+        "1 rok",
+        "2 roky",
+        "3 roky",
+        "10 rokov"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. § 101 OZ: všeobecná premlčacia doba je trojročná a plynie odo dňa, keď sa právo mohlo vykonať po prvý raz.",
+        "wrong": "Nesprávne. Všeobecná premlčacia doba je 3 roky. Iné doby (2-ročná, 10-ročná) sú špeciálne pre určité typy práv."
+      }
+    },
+    {
+      "question": "Ako musí súd postupovať pri premlčanom nároku?",
+      "options": [
+        "Zamietne ho z úradnej moci",
+        "Prihliadne naň len ak dlžník vznesie námietku premlčania",
+        "Vyzve strany na uzavretie dohody",
+        "Preruší konanie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 100 ods. 1 OZ: súd prihliadne na premlčanie len vtedy, ak sa ho dlžník dovolá. Bez námietky súd o premlčaní nerozhoduje.",
+        "wrong": "Nesprávne. Toto je kľúčový rozdiel od preklúzie – pri premlčaní súd nekoná z úradnej moci."
+      }
+    },
+    {
+      "question": "Čo je preklúzia práva?",
+      "options": [
+        "Oslabenie vymáhateľnosti pohľadávky",
+        "Zánik samotného práva uplynutím zákonom stanovenej lehoty, na čo súd prihliadne z úradnej moci",
+        "Zánik záväzku dohodou",
+        "Prevod pohľadávky na tretiu osobu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Preklúziou (prepadnutím práva) samotné právo zaniká. Na preklúziu prihliadne súd aj bez námietky strany.",
+        "wrong": "Nesprávne. Preklúzia je závažnejšia ako premlčanie – zaniká právo samotné, nie len jeho vymáhateľnosť."
+      }
+    },
+    {
+      "question": "Kedy nastáva stavenie premlčacej doby?",
+      "options": [
+        "Zaslaním výzvy na plnenie",
+        "Uplatnením práva na súde alebo v rozhodcovskom konaní (§ 112 OZ)",
+        "Uzavretím dohody o splátkovom kalendári",
+        "Prechodom pohľadávky na právneho nástupcu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 112 OZ: ak oprávnený uplatní právo na súde alebo v rozhodcovskom konaní, premlčacia doba po dobu konania neplynie.",
+        "wrong": "Nesprávne. Samotná výzva na plnenie premlčaciu dobu nestavuje. Potrebné je podanie žaloby alebo iného procesného úkonu."
+      }
+    }
+  ]
+}

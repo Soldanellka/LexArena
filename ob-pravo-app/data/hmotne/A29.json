@@ -1,0 +1,77 @@
+{
+  "id": "29",
+  "title": "Spotrebiteľská zmluva - pojem, subjekty, neprijateľné podmienky",
+  "summary": "Spotrebiteľská zmluva (§ 52-60 OZ) je zmluva uzavretá medzi dodávateľom (podnikateľ) a spotrebiteľom (fyzická osoba mimo podnikateľskej činnosti). Poskytuje zvýšenú ochranu spotrebiteľovi. Neprijateľné podmienky (§ 53 OZ): podmienky, ktoré v rozpore s požiadavkou dobrej viery spôsobujú výraznú nerovnováhu v právach a povinnostiach - sú neplatné. Právo odstúpiť od zmluvy uzavretej na diaľku do 14 dní.",
+  "quiz": [
+    {
+      "question": "Kto je spotrebiteľ pri spotrebiteľskej zmluve?",
+      "options": [
+        "Každý, kto niečo kupuje",
+        "Fyzická osoba, ktorá nekoná v rámci podnikateľskej činnosti pri uzavieraní zmluvy",
+        "Právnická osoba nakupujúca tovar",
+        "Každý zákazník"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Spotrebiteľom je fyzická osoba, ktorá pri uzavieraní zmluvy nekoná v rámci svojej podnikateľskej alebo inej zárobkovej činnosti (§ 52 ods. 3 OZ).",
+        "wrong": "Nesprávne. Právnická osoba ani podnikateľ nakupujúci pre firmu nie sú spotrebiteľmi."
+      }
+    },
+    {
+      "question": "Čo sú neprijateľné podmienky v spotrebiteľskej zmluve (§ 53 OZ)?",
+      "options": [
+        "Podmienky dohodnuté ústne",
+        "Podmienky, ktoré v rozpore s dobrou vierou spôsobujú výraznú nerovnováhu v právach a povinnostiach",
+        "Podmienky písané malým písmom",
+        "Podmienky o záručnej dobe"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 53 OZ: neprijateľné sú podmienky, ktoré v rozpore s požiadavkou dobrej viery spôsobujú výraznú nerovnováhu v neprospech spotrebiteľa.",
+        "wrong": "Nesprávne. Neprijateľnosť nie je otázka formy (veľkosť písma), ale obsahového nerovnováhy."
+      }
+    },
+    {
+      "question": "Aký je dôsledok neprijateľnej podmienky v spotrebiteľskej zmluve?",
+      "options": [
+        "Celá zmluva je neplatná",
+        "Neprijateľná podmienka je neplatná, zvyšok zmluvy ostáva v platnosti",
+        "Spotrebiteľ musí podmienku splniť",
+        "Podmienka je platná po schválení súdom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 53 ods. 5 OZ: neprijateľné podmienky sú neplatné, zvyšné ustanovenia zmluvy ostávajú platné.",
+        "wrong": "Nesprávne. Neplatnosť neprijateľnej podmienky nespôsobuje neplatnosť celej zmluvy."
+      }
+    },
+    {
+      "question": "Do kedy môže spotrebiteľ odstúpiť od zmluvy uzavretej na diaľku?",
+      "options": [
+        "Do 7 dní",
+        "Do 14 dní od prevzatia tovaru",
+        "Do 30 dní",
+        "Len ak tovar vráti nepoužitý"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Spotrebiteľ má právo odstúpiť od zmluvy uzavretej na diaľku bez uvedenia dôvodu do 14 dní od prevzatia tovaru.",
+        "wrong": "Nesprávne. Lehota na odstúpenie pri zmluvách uzavretých na diaľku je 14 dní."
+      }
+    },
+    {
+      "question": "Môžu sa strany dohodou odchýliť od ochrany spotrebiteľa nepriaznivo pre spotrebiteľa?",
+      "options": [
+        "Áno, zmluvná sloboda to umožňuje",
+        "Nie - kogentné normy ochrany spotrebiteľa neumožňujú zhoršenie jeho postavenia dohodou",
+        "Len s notárskym overením",
+        "Len pri zmluvách nad 500 EUR"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ochrana spotrebiteľa je zabezpečená kogentnou normou - odchýlka v neprospech spotrebiteľa je neplatná.",
+        "wrong": "Nesprávne. Kogentná ochrana spotrebiteľa vylučuje zmluvnú odchýlku v jeho neprospech."
+      }
+    }
+  ]
+}

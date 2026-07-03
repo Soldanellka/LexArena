@@ -1,0 +1,77 @@
+{
+  "id": "11",
+  "title": "Vecné práva – pojem, druhy, základná charakteristika",
+  "summary": "Vecné práva sú absolútne práva pôsobiace erga omnes (voči všetkým). Druhy: vlastnícke právo, spoluvlastníctvo, záložné právo, vecné bremená. Platí princíp numerus clausus – zákon taxatívne vymenúva vecné práva. Vecné právo nasleduje vec (droit de suite).",
+  "quiz": [
+    {
+      "question": "Čo je charakteristickým znakom vecného práva?",
+      "options": [
+        "Pôsobí len medzi zmluvnými stranami",
+        "Pôsobí absolútne voči všetkým osobám (erga omnes)",
+        "Vzniká len zo zmluvy",
+        "Zaniká smrťou oprávneného"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecné právo je absolútne – pôsobí voči všetkým, nielen voči zmluvnému partnerovi.",
+        "wrong": "Nesprávne. Relatívne (záväzkové) práva pôsobia len medzi stranami. Vecné práva sú absolútne."
+      }
+    },
+    {
+      "question": "Čo znamená princíp numerus clausus vecných práv?",
+      "options": [
+        "Zákon taxatívne určuje druhy vecných práv – strany nemôžu vytvárať nové",
+        "Vecné práva sú neobmedzené",
+        "Vecné práva platia len 10 rokov",
+        "Vecné práva platia len pri nehnuteľnostiach"
+      ],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Numerus clausus zakazuje stranám vytvárať atypické vecné práva mimo zákonného zoznamu.",
+        "wrong": "Nesprávne. Záväzkové práva môžu byť atypické (§ 51 OZ), vecné nie – platí numerus clausus."
+      }
+    },
+    {
+      "question": "Čo znamená, že vecné právo nasleduje vec (droit de suite)?",
+      "options": [
+        "Právo zaniká predajom veci",
+        "Pri prevode veci prechádza vecné právo (napr. záložné, bremeno) na nového vlastníka",
+        "Právo platí len počas života vlastníka",
+        "Právo sa mení podľa ceny veci"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecné právo je spojené s vecou, nie s osobou vlastníka – prechádza s vecou na každého ďalšieho nadobúdateľa.",
+        "wrong": "Nesprávne. Vecné právo nezaniká prevodom veci – nasleduje ju k novému vlastníkovi."
+      }
+    },
+    {
+      "question": "Záložné právo je:",
+      "options": [
+        "Právo vlastniť založenú vec",
+        "Vecné právo na zabezpečenie pohľadávky – veriteľ môže uspokojiť pohľadávku zo zálohu",
+        "Právo na zálohu pri nájme bytu",
+        "Právo na predkúp nehnuteľnosti"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záložné právo je vedľajšie vecné právo slúžiace na zabezpečenie pohľadávky veriteľa.",
+        "wrong": "Nesprávne. Záložné právo neznamená vlastníctvo zálohu – ide o právo uspokojiť pohľadávku zo zálohu."
+      }
+    },
+    {
+      "question": "Vlastnícke právo je:",
+      "options": [
+        "Relatívne právo pôsobiace len voči predávajúcemu",
+        "Najúplnejšie vecné právo – oprávňuje vlastníka na všetky formy dispozície s vecou",
+        "Záväzkové právo na použitie cudzej veci",
+        "Právo dočasného užívania"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vlastnícke právo je najúplnejším vecným právom (§ 123 OZ) – zahŕňa ius possidendi, utendi, fruendi a disponendi.",
+        "wrong": "Nesprávne. Vlastnícke právo je vecné (absolútne) právo, nie záväzkové."
+      }
+    }
+  ]
+}

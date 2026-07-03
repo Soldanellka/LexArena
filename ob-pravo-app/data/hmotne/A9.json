@@ -1,0 +1,77 @@
+{
+  "id": "9",
+  "title": "Právnické osoby",
+  "summary": "Právnická osoba je umelý subjekt práva odlišný od fyzických osôb (§ 18 OZ). Druhy: združenia fyzických alebo právnických osôb, účelové združenia majetku (nadácie, fondy), jednotky územnej samosprávy, iné. Vznik zápisom do registra (§ 19 OZ). Zánik výmazom z registra (§ 19a OZ). Koná prostredníctvom štatutárnych orgánov (§ 20 OZ).",
+  "quiz": [
+    {
+      "question": "Kedy vzniká právnická osoba?",
+      "options": [
+        "Uzavretím zakladateľskej zmluvy",
+        "Zápisom do zákonom určeného registra (§ 19 OZ)",
+        "Automaticky po splnení podmienok",
+        "Rozhodnutím notára"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 19 OZ: právnická osoba vzniká dňom zápisu do obchodného alebo iného zákonného registra.",
+        "wrong": "Nesprávne. Samotná zakladateľská zmluva nestačí – konštitutívny účinok má zápis do registra."
+      }
+    },
+    {
+      "question": "Kto koná v mene právnickej osoby?",
+      "options": [
+        "Akýkoľvek zamestnanec",
+        "Štatutárny orgán alebo zákonný zástupca (§ 20 OZ)",
+        "Len advokát",
+        "Len zakladatelia"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 20 OZ: v mene právnickej osoby konajú štatutárne orgány (napr. konateľ v s.r.o., predseda predstavenstva v a.s.).",
+        "wrong": "Nesprávne. Nie každý zamestnanec môže konať v mene právnickej osoby."
+      }
+    },
+    {
+      "question": "Kedy zaniká právnická osoba?",
+      "options": [
+        "Smrťou zakladateľa",
+        "Výmazom z registra (§ 19a OZ)",
+        "Ukončením podnikania",
+        "Rozhodnutím valného zhromaždenia bez ďalšieho"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 19a OZ: právnická osoba zaniká dňom výmazu z príslušného registra.",
+        "wrong": "Nesprávne. Samotné rozhodnutie valného zhromaždenia bez výmazu z registra zánik nezakladá."
+      }
+    },
+    {
+      "question": "Zodpovedá fyzická osoba (člen orgánu) za záväzky právnickej osoby?",
+      "options": [
+        "Áno, vždy solidárne",
+        "Nie – za záväzky zodpovedá len právnická osoba, ak zákon neustanovuje inak",
+        "Áno, ak je konateľom",
+        "Len pri úpadku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Oddelenie majetku je kľúčovým princípom – záväzky právnickej osoby v zásade nezaväzujú jej orgány osobne.",
+        "wrong": "Nesprávne. Výnimky z ručenia existujú (napr. v niektorých typoch obchodných spoločností), ale nie je to pravidlo."
+      }
+    },
+    {
+      "question": "Ktorý z nasledujúcich subjektov je právnickou osobou?",
+      "options": [
+        "Živnostník",
+        "Obchodná spoločnosť zapísaná v OR",
+        "Advokát",
+        "Fyzická osoba – podnikateľ"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Obchodná spoločnosť zapísaná v obchodnom registri je právnickou osobou (§ 18 ods. 2 písm. a) OZ).",
+        "wrong": "Nesprávne. Živnostník a advokát sú fyzické osoby – podnikatelia, nie právnické osoby."
+      }
+    }
+  ]
+}

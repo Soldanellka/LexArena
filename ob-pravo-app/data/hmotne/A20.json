@@ -1,0 +1,77 @@
+{
+  "id": "20",
+  "title": "Zánik záväzkov",
+  "summary": "Záväzok zaniká najčastejšie splnením (§ 559 OZ). Ďalšie dôvody: kompenzácia (vzájomný zápočet – § 580 OZ), dohoda o narovnaní, odstúpenie od zmluvy (§ 48 OZ), zánik plnenia (nemožnosť), konfúzia (splynutie dlžníka a veriteľa), preklúzia, smrť dlžníka (ak je plnenie viazané na jeho osobu).",
+  "quiz": [
+    {
+      "question": "Čo je najčastejší spôsob zániku záväzku?",
+      "options": [
+        "Premlčanie",
+        "Splnenie záväzku (§ 559 OZ)",
+        "Smrť dlžníka",
+        "Vzdanie sa pohľadávky veriteľom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Splnenie je najprirodzenjší a najčastejší spôsob zániku záväzku – dlžník splní to, čo bol povinný plniť.",
+        "wrong": "Nesprávne. Premlčanie záväzok neruší – len oslabuje jeho vymáhateľnosť."
+      }
+    },
+    {
+      "question": "Čo je kompenzácia (vzájomný zápočet – § 580 OZ)?",
+      "options": [
+        "Zánik záväzku predajom pohľadávky",
+        "Zánik vzájomných pohľadávok strán do výšky nižšej z nich",
+        "Dohoda o splátkach",
+        "Zánik záväzku darom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 580 OZ: ak veriteľ a dlžník majú vzájomné pohľadávky rovnakého druhu, pohľadávky sa rušia do výšky nižšej z nich.",
+        "wrong": "Nesprávne. Kompenzácia nie je predaj pohľadávky – je to vzájomné stretnutie pohľadávok a ich zánik."
+      }
+    },
+    {
+      "question": "Čo je dohoda o narovnaní (§ 585 OZ)?",
+      "options": [
+        "Zánik záväzku splnením",
+        "Dohoda strán o nových vzájomných právach a povinnostiach nahrádzajúca sporný alebo pochybný pôvodný záväzok",
+        "Povinnosť predĺžiť záväzok",
+        "Súdna dohoda"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 585 OZ: narovnanie je dohoda strán, ktorou sa upravujú ich sporné alebo pochybné práva a povinnosti – pôvodné zanikajú a nahrádzajú ich nové.",
+        "wrong": "Nesprávne. Narovnanie nie je splnenie záväzku – je to nová dohoda nahrádzajúca sporný záväzok."
+      }
+    },
+    {
+      "question": "Kedy zaniká záväzok nemožnosťou plnenia?",
+      "options": [
+        "Vždy keď je plnenie náročné",
+        "Ak sa plnenie stane objektívne nemožným po uzavretí zmluvy bez zavinenia dlžníka",
+        "Len ak dlžník chce odmietnuť plnenie",
+        "Ak veriteľ zmizne"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ak sa plnenie stane po uzavretí zmluvy nemožným bez zavinenia dlžníka (napr. zákon zakáže plnenie), záväzok zaniká.",
+        "wrong": "Nesprávne. Subjektívna ťažkosť plnenia záväzok neruší – nemožnosť musí byť objektívna a bez zavinenia dlžníka."
+      }
+    },
+    {
+      "question": "Čo je konfúzia (splynutie veriteľa a dlžníka) ako dôvod zániku záväzku?",
+      "options": [
+        "Zánik záväzku dohodou",
+        "Zánik záväzku, keď sa veriteľ a dlžník stanú tou istou osobou (napr. dedením)",
+        "Zánik pohľadávky postúpením",
+        "Zánik záväzku premlčaním"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Konfúzia nastáva napr. keď dedič zdedí pohľadávku voči sebe samému (bol dlžníkom poručiteľa) – záväzok zaniká splynutím oboch strán v jednej osobe.",
+        "wrong": "Nesprávne. Konfúzia nie je dohoda – nastáva automaticky keď jedna osoba nadobudne pozíciu veriteľa aj dlžníka."
+      }
+    }
+  ]
+}

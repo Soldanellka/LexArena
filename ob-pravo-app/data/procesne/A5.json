@@ -1,0 +1,79 @@
+{
+  "id": "5",
+  "title": "Dokazovanie v civilnom procese",
+  "schemaVersion": "1.1",
+  "tags": ["dokazovanie", "dôkazy", "listinný dôkaz", "znalec"],
+  "summary": "Dokazovanie je ústrednou časťou civilného konania (§ 185-225 CSP). Dôkazné bremeno nesú strany – každá preukazuje skutočnosti, na ktoré sa odvoláva. Dôkazné prostriedky: výsluch strán, svedecká výpoveď, listinný dôkaz, znalecký posudok, obhliadka. Voľné hodnotenie dôkazov – súd hodnotí každý dôkaz jednotlivo aj v ich súhrne. Nepriamy dôkaz (indícia) je prípustný.",
+  "quiz": [
+    {
+      "question": "Kto nesie dôkazné bremeno v sporovom konaní?",
+      "options": [
+        "Vždy žalobca",
+        "Súd zisťuje skutočnosti z úradnej moci",
+        "Strana, ktorá tvrdenie uplatňuje",
+        "Vždy žalovaný"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. V sporovom konaní platí zásada, že každá strana preukazuje skutočnosti, na ktoré sa odvoláva (§ 185 CSP). Súd nedoplňuje dôkazy za strany.",
+        "wrong": "Nesprávne. Dôkazné bremeno nie je jednostranné. Každá strana ho nesie vo vzťahu k vlastným tvrdeniam – nie vždy iba žalobca."
+      }
+    },
+    {
+      "question": "Ako hodnotí súd dôkazy podľa CSP?",
+      "options": [
+        "Každý dôkaz má vopred danú dôkaznú silu",
+        "Voľne – hodnotí každý dôkaz jednotlivo aj všetky dôkazy v súhrne",
+        "Len listinné dôkazy sú záväzné",
+        "Znalecký posudok je pre súd záväzný"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 191 CSP zakotvuje zásadu voľného hodnotenia dôkazov – súd hodnotí dôkazy podľa svojej úvahy, každý dôkaz jednotlivo a všetky dôkazy v ich vzájomnej súvislosti.",
+        "wrong": "Nesprávne. Žiadny dôkaz nemá vopred danú absolútnu dôkaznú silu. Znalecký posudok hodnotí súd ako ostatné dôkazy."
+      }
+    },
+    {
+      "question": "Čo je notorieta (všeobecne známa skutočnosť)?",
+      "options": [
+        "Skutočnosť uznaná znalcom",
+        "Skutočnosť, ktorú súd nemusí dokazovať – je všeobecne známa",
+        "Skutočnosť zaprotokolovaná notárom",
+        "Skutočnosť priznaná žalovaným"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Notoriety (§ 186 CSP) sú skutočnosti všeobecne známe alebo súdu z jeho činnosti známe. Na tieto skutočnosti sa nemusí preukazovať – súd z nich vychádza bez dokazovania.",
+        "wrong": "Nesprávne. Notorieta nie je viazaná na notára ani znalca. Ide o skutočnosti, ktoré sú všeobecne alebo súdu samému známe."
+      }
+    },
+    {
+      "question": "Môže byť výsluch strany dôkazným prostriedkom?",
+      "options": [
+        "Nie – strana nie je nestranným svedkom",
+        "Áno – výsluch strán je zákonom predvídaný dôkazný prostriedok",
+        "Len výsluch žalobcu",
+        "Len ak s tým druhá strana súhlasí"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 194 CSP výslovne počíta s výsluchom strán ako dôkazným prostriedkom. Súd ho nariadí, ak to uzná za potrebné.",
+        "wrong": "Nesprávne. Hoci strana je zainteresovanou osobou, CSP výsluch strán ako dôkazný prostriedok výslovne predpokladá."
+      }
+    },
+    {
+      "question": "Kedy môže súd nariadiť znalecký posudok?",
+      "options": [
+        "Vždy na návrh strany",
+        "Keď na posúdenie skutočnosti potrebuje odborné znalosti",
+        "Len v obchodných sporoch",
+        "Len na návrh oboch strán"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Znalecký posudok (§ 202 CSP) nariaďuje súd, ak na zistenie alebo posúdenie skutočnosti dôležitej pre rozhodnutie potrebuje odborné znalosti.",
+        "wrong": "Nesprávne. Znalecký dôkaz nariaďuje súd z úradnej moci alebo na návrh strany – nie len na návrh oboch strán."
+      }
+    }
+  ]
+}

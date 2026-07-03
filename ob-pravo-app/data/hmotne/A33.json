@@ -1,0 +1,77 @@
+{
+  "id": "33",
+  "title": "Nájomná zmluva - pojem, podstatné náležitosti, osobitné druhy nájmu",
+  "summary": "Nájomná zmluva (§ 663-684 OZ): prenajímateľ prenechá nájomcovi vec na dočasné užívanie za nájomné. Podstatné náležitosti: predmet nájmu, nájomné, čas. Osobitné druhy: nájom bytu (§ 685-716 OZ), nájom nebytových priestorov (zákon č. 116/1990 Zb.), podnájom. Prenajímateľ je povinný odovzdať vec v stave spôsobilom na dohodnuté užívanie. Nájomca platí nájomné a vec riadne užíva.",
+  "quiz": [
+    {
+      "question": "Čo je podstatou nájomnej zmluvy?",
+      "options": [
+        "Predaj veci",
+        "Prenajímateľ prenechá nájomcovi vec na dočasné odplatné užívanie",
+        "Výpožička veci",
+        "Záložné právo k veci"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nájom (§ 663 OZ) je odplatné dočasné prenechanie veci na užívanie - nájomca platí nájomné.",
+        "wrong": "Nesprávne. Nájom je odplatný (nájomné) a dočasný. Výpožička je bezodplatná."
+      }
+    },
+    {
+      "question": "Aké sú povinnosti prenajímateľa?",
+      "options": [
+        "Len prevziať nájomné",
+        "Odovzdať vec v stave spôsobilom na dohodnuté užívanie a udržiavať ju v tomto stave",
+        "Len uzavrieť zmluvu",
+        "Opraviť vec len ak si nájomca platí"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prenajímateľ musí odovzdať vec v spôsobilom stave a počas nájmu ho udržiavať (§ 664 OZ) - nájomca to môže požadovať.",
+        "wrong": "Nesprávne. Povinnosti prenajímateľa zahŕňajú nielen odovzdanie, ale aj udržiavanie veci."
+      }
+    },
+    {
+      "question": "Čo je podnájom?",
+      "options": [
+        "Prenajatia veci od vlastníka",
+        "Nájomca prenajme vec (alebo jej časť) ďalšej osobe (podnájomcovi)",
+        "Zmena nájomcu",
+        "Predĺženie nájmu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podnájom vzniká keď nájomca so súhlasom prenajímateľa prenajme predmet nájmu (alebo jeho časť) tretej osobe.",
+        "wrong": "Nesprávne. Podnájom neznamená zmenu zmluvy - je to ďalší nájomný vzťah medzi nájomcom a treťou osobou."
+      }
+    },
+    {
+      "question": "Aká je výpovedná lehota pri nájme bez dohodnutej doby?",
+      "options": [
+        "1 mesiac",
+        "Závisí od dohody alebo zákona - pri nájme bytu minimálne 3 mesiace",
+        "Okamžitá výpoveď",
+        "10 dní"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Výpovedná lehota závisí od druhu nájmu. Pri nájme bytu bez dohodnutého dôvodu je výpovedná lehota 3 mesiace (§ 711a OZ).",
+        "wrong": "Nesprávne. Výpovedná lehota nie je jednotná - závisí od druhu nájmu a dôvodu výpovede."
+      }
+    },
+    {
+      "question": "Čo je typickým dôvodom zániku nájmu?",
+      "options": [
+        "Smrť nájomcu",
+        "Uplynutie dohodnutej doby, výpoveď alebo dohoda strán",
+        "Zánik prenajímanej veci vždy ruší nájom",
+        "Predaj veci"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nájom zaniká: uplynutím doby, výpoveďou, dohodou, zánik predmetu nájmu alebo iné zákonné dôvody.",
+        "wrong": "Nesprávne. Predaj veci automaticky nájom neruší - platí zásada emptio non tollit locatum."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "32",
+  "title": "Zmluva o pôžičke a zmluva o výpožičke",
+  "summary": "Zmluva o pôžičke (§ 657-658 OZ): veriteľ odovzdá dlžníkovi veci určené podľa druhu (peniaze, potraviny) - dlžník vráti rovnaké množstvo. Reálna zmluva - vznik odovzdaním. Výpožička (§ 659-662 OZ): prenechanie veci na bezodplatné dočasné užívanie - vracia sa tá istá vec. Rozdiel: pri pôžičke prechádza vlastníctvo, pri výpožičke nie.",
+  "quiz": [
+    {
+      "question": "Čo je charakteristickým znakom zmluvy o pôžičke?",
+      "options": [
+        "Veriteľ prenechá konkrétnu vec na vrátenie",
+        "Veriteľ odovzdá dlžníkovi veci určené druhovo - dlžník vráti rovnaké množstvo rovnakej veci",
+        "Zmluva je bezodplatná",
+        "Veriteľ aj dlžník si vypožičia navzájom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Pôžička (§ 657 OZ) je odovzdanie druhovo určených vecí (napr. peňazí) - dlžník vráti nie tie isté veci, ale rovnaké množstvo.",
+        "wrong": "Nesprávne. Pri pôžičke sa nevracia tá istá vec - vracia sa rovnaké množstvo vecí rovnakého druhu."
+      }
+    },
+    {
+      "question": "Kedy nastáva uzavretie zmluvy o pôžičke?",
+      "options": [
+        "Podpisom zmluvy",
+        "Odovzdaním veci dlžníkovi (reálna zmluva)",
+        "Súhlasom strán",
+        "Notárskym overením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva o pôžičke je reálna zmluva - vznik je podmienený odovzdaním predmetu pôžičky.",
+        "wrong": "Nesprávne. Pôžička nevzniká len konsensom - vyžaduje sa reálne odovzdanie predmetu."
+      }
+    },
+    {
+      "question": "Aký je rozdiel medzi pôžičkou a výpožičkou?",
+      "options": [
+        "Nie je medzi nimi rozdiel",
+        "Pri pôžičke prechádza vlastníctvo na dlžníka, pri výpožičke nie - vracia sa tá istá vec",
+        "Výpožička je vždy úročená",
+        "Pôžička je len pre peniaze"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kľúčový rozdiel: pri pôžičke dlžník nadobúda vlastníctvo a vracia iné (rovnaké) veci. Pri výpožičke vlastníctvo neprechádza a vracia sa tá istá vec.",
+        "wrong": "Nesprávne. Zásadný rozdiel je prechod vlastníctva - pri pôžičke áno, pri výpožičke nie."
+      }
+    },
+    {
+      "question": "Je zmluva o pôžičke odplatná alebo bezodplatná?",
+      "options": [
+        "Vždy odplatná",
+        "Môže byť oboje - odplatná (s úrokom) aj bezodplatná (bez úroku)",
+        "Vždy bezodplatná",
+        "Závisí od výšky pôžičky"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva o pôžičke môže byť bezodplatná (bez úroku) aj odplatná (s dohodnutým úrokom). Zákon nevyžaduje úroky ako podmienku platnosti.",
+        "wrong": "Nesprávne. OZ nevyžaduje úroky ako podstatnú náležitosť pôžičky."
+      }
+    },
+    {
+      "question": "Zmluva o výpožičke je:",
+      "options": [
+        "Odplatná zmluva",
+        "Vždy bezodplatná zmluva (§ 659 OZ)",
+        "Môže byť odplatná aj bezodplatná",
+        "Zmluva o prenájme"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 659 OZ: výpožička je vždy bezodplatná - ak by sa požadovala odplata, išlo by o nájom, nie výpožičku.",
+        "wrong": "Nesprávne. Bezodplatnosť je definiujúcim znakom výpožičky - pri odplatnosti by šlo o nájom."
+      }
+    }
+  ]
+}

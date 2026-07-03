@@ -1,0 +1,77 @@
+{
+  "id": "3",
+  "title": "Právne skutočnosti v občianskom práve – pojem, druhy",
+  "summary": "Právna skutočnosť je každá skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností. Delenie: právne úkony (jednania), protiprávne úkony (delikty), právne udalosti (nezávislé od vôle – narodenie, smrť, uplynutie času) a právne stavy.",
+  "quiz": [
+    {
+      "question": "Čo je právna skutočnosť?",
+      "options": [
+        "Akákoľvek udalosť v živote osoby",
+        "Skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností",
+        "Len písomná zmluva",
+        "Len súdne rozhodnutie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Právna skutočnosť je skutočnosť, s ktorou právny poriadok spája vznik, zmenu alebo zánik subjektívnych práv a povinností.",
+        "wrong": "Nesprávne. Nie každá životná udalosť je právnou skutočnosťou – musí s ňou zákon spájať právne následky."
+      }
+    },
+    {
+      "question": "Ako sa delia právne skutočnosti podľa vzťahu k ľudskej vôli?",
+      "options": [
+        "Na zákonné a nezákonné",
+        "Na právne úkony (vôľové) a právne udalosti (mimovoľné)",
+        "Na písomné a ústne",
+        "Na hmotné a nehmotné"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Základné delenie: právne úkony (prejav vôle) a právne udalosti (nastanú nezávisle od vôle, napr. narodenie, smrť, uplynutie času).",
+        "wrong": "Nesprávne. Základným kritériom delenia je vzťah k ľudskej vôli, nie forma."
+      }
+    },
+    {
+      "question": "Čo je právna udalosť?",
+      "options": [
+        "Úmyselné konanie fyzickej osoby",
+        "Skutočnosť nastávajúca nezávisle od vôle, s ktorou právo spája právne účinky",
+        "Uzavretie zmluvy",
+        "Protiprávne konanie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Právna udalosť nastáva nezávisle od vôle (napr. smrť, uplynutie času). Zákon s ňou spája právne následky.",
+        "wrong": "Nesprávne. Úmyselné konanie je právnym úkonom, nie udalosťou."
+      }
+    },
+    {
+      "question": "Čo je protiprávny úkon (delikt) v občianskom práve?",
+      "options": [
+        "Platný právny úkon",
+        "Konanie porušujúce povinnosť uloženú zákonom alebo zmluvou, z ktorého vzniká zodpovednosť",
+        "Odmietnutie uzavrieť zmluvu",
+        "Zákonné konanie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Delikt je protiprávne konanie (napr. spôsobenie škody, bezdôvodné obohatenie), z ktorého právo vyvodzuje zodpovednosť.",
+        "wrong": "Nesprávne. Delikt je protizákonné konanie, nie zákonný úkon."
+      }
+    },
+    {
+      "question": "Smrť fyzickej osoby je príkladom:",
+      "options": [
+        "Právneho úkonu",
+        "Protiprávneho úkonu",
+        "Právnej udalosti",
+        "Právneho stavu"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. Smrť nastáva nezávisle od vôle osoby a zákon s ňou spája závažné právne následky (zánik právnej subjektivity, otvorenie dedičstva) – je to teda právna udalosť.",
+        "wrong": "Nesprávne. Smrť nie je vôľové konanie – je to právna udalosť nastávajúca nezávisle od vôle."
+      }
+    }
+  ]
+}

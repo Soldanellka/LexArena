@@ -1,0 +1,77 @@
+{
+  "id": "35",
+  "title": "Príkazná zmluva, sprostredkovateľská zmluva a obstarávacie zmluvy",
+  "summary": "Príkazná zmluva (§ 724-736 OZ): príkazník sa zaväzuje obstará príkazcovi určitú vec alebo vykoná iný úkon. Môže byť bezodplatná (príkaz) alebo odplatná. Sprostredkovateľská zmluva (§ 642-651 OZ ObchZ subsidiárne): sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy. Obstarávacie zmluvy: zmluva o obstaraní veci (§ 733 OZ) a zmluva o obstaraní predaja veci.",
+  "quiz": [
+    {
+      "question": "Čo je predmetom príkaznej zmluvy (§ 724 OZ)?",
+      "options": [
+        "Kúpa veci",
+        "Príkazník sa zaväzuje obstarať príkazcovi určitú záležitosť alebo vykonať iný úkon",
+        "Predaj nehnuteľnosti",
+        "Preprava tovaru"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 724 OZ: príkazník sa zaväzuje pre príkazcu obstarať nejakú vec alebo vykonať iný úkon - ide o konanie v jeho záujme.",
+        "wrong": "Nesprávne. Príkazná zmluva nie je kúpna zmluva - je to záväzok konať v záujme inej osoby."
+      }
+    },
+    {
+      "question": "Je príkazná zmluva vždy odplatná?",
+      "options": [
+        "Áno, vždy",
+        "Nie - môže byť bezodplatná (príkaz) aj odplatná",
+        "Len keď je uzavretá s advokátom",
+        "Závisí od predmetu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 724 OZ: príkazná zmluva môže byť bezodplatná. Ak je dohodnutá odmena, ide o mandátnu zmluvu v obchodnom zmysle.",
+        "wrong": "Nesprávne. Príkaz môže byť aj bezodplatný - závisí od dohody strán."
+      }
+    },
+    {
+      "question": "Čo je sprostredkovateľská zmluva?",
+      "options": [
+        "Zmluva o predaji veci",
+        "Zmluva, kde sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy - odmena závisí od výsledku",
+        "Zmluva o poskytnutí informácií",
+        "Zmluva o obstaraní prepravy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Sprostredkovateľ sa zaväzuje vyhľadať záujemcu o uzavretie zmluvy a odmena mu patrí len ak zmluva naozaj vznikne (odmena je viazaná na výsledok).",
+        "wrong": "Nesprávne. Sprostredkovateľ len vyhľadáva záujemcov - neuzaviera zmluvu namiesto klienta."
+      }
+    },
+    {
+      "question": "Kedy patrí sprostredkovateľovi odmena?",
+      "options": [
+        "Vždy po uzavretí sprostredkovateľskej zmluvy",
+        "Až keď záujemca uzavrie zmluvu, ktorú sprostredkovateľ obstaral",
+        "Mesačne bez ohľadu na výsledok",
+        "Len ak je to vopred dohodnuté"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Odmena sprostredkovateľa je viazaná na výsledok - patrí mu až po uzavretí zmluvy so záujemcom, ktorého vyhľadal.",
+        "wrong": "Nesprávne. Sprostredkovateľ nemá nárok na odmenu bez výsledku - ak zmluva nevznikne, odmenu nedostane."
+      }
+    },
+    {
+      "question": "Môže príkazník od príkaznej zmluvy odstúpiť?",
+      "options": [
+        "Nie, je záväzne viazaný",
+        "Áno - príkazník môže odstúpiť ak je to v záujme príkazcu alebo ak ďalšie vykonávanie príkazu nie je možné",
+        "Len so súhlasom príkazcu",
+        "Len po 6 mesiacoch"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Príkazník môže za zákonom stanovených podmienok od zmluvy odstúpiť - napr. ak ďalšie plnenie nie je možné alebo je v záujme príkazcu.",
+        "wrong": "Nesprávne. Príkazník nie je bezpodmienečne viazaný - zákon umožňuje odstúpenie za určitých podmienok."
+      }
+    }
+  ]
+}

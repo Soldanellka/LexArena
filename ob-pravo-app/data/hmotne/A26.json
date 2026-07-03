@@ -1,0 +1,77 @@
+{
+  "id": "26",
+  "title": "Predpoklady dedenia",
+  "summary": "Dedičstvo prechádza na dediča smrťou poručiteľa (§ 460 OZ). Predpoklady: smrť poručiteľa, existencia dedičov, spôsobilosť dediča (§ 469 OZ), tituly dedenia (závet alebo zákon). Dedičská nespôsobilosť: kto sa dopustil úmyselného trestného činu voči poručiteľovi.",
+  "quiz": [
+    {
+      "question": "Kedy prechádza dedičstvo na dediča?",
+      "options": [
+        "Dňom vydania osvedčenia o dedičstve",
+        "Smrťou poručiteľa - automaticky (§ 460 OZ)",
+        "Dňom prijatia dedičstva",
+        "Dňom právoplatnosti uznesenia o dedičstve"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 460 OZ: dedičstvo nadobúda dedič smrťou poručiteľa. Dedičské konanie má len deklaratórny účinok.",
+        "wrong": "Nesprávne. Dedičstvo prechádza automaticky smrťou - súd len deklaratórne potvrdzuje, čo nastalo."
+      }
+    },
+    {
+      "question": "Čo je dedičská nespôsobilosť (§ 469 OZ)?",
+      "options": [
+        "Neschopnosť spravovať dedičstvo",
+        "Stav, keď zákon vylučuje určitú osobu z dedenia (napr. kto spáchal úmyselný trestný čin voči poručiteľovi)",
+        "Odmietnutie dedičstva",
+        "Vzdanie sa dedičského práva"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 469 OZ: z dedenia je vylúčený dedič, ktorý sa dopustil úmyselného trestného činu voči poručiteľovi - ak mu to poručiteľ neodpustil.",
+        "wrong": "Nesprávne. Dedičská nespôsobilosť nie je odmietnutie - je to zákonné vylúčenie z dedenia."
+      }
+    },
+    {
+      "question": "Aké sú tituly (základy) dedenia?",
+      "options": [
+        "Len zákon",
+        "Závet alebo zákon; závet má prednosť",
+        "Len závet",
+        "Len dedičská zmluva"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dedičstvo sa nadobúda zo závetu, zo zákona alebo z oboch titulov (§ 461 OZ). Závet má prednosť pred zákonnou postupnosťou.",
+        "wrong": "Nesprávne. Slovenské právo pozná dva tituly dedenia - závet a zákon."
+      }
+    },
+    {
+      "question": "Kedy môže dedič odmietnuť dedičstvo?",
+      "options": [
+        "Kedykoľvek",
+        "V lehote 1 mesiaca od oznámenia súdom (§ 463 OZ)",
+        "Len do 1 roka od smrti poručiteľa",
+        "Len pred súdom v prítomnosti notára"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 463 OZ: dedič môže dedičstvo odmietnuť v lehote 1 mesiaca od vyhlásenia súdu. Odmietnutie je neodvolateľné.",
+        "wrong": "Nesprávne. Lehota na odmietnutie dedičstva je 1 mesiac od oznámenia súdu."
+      }
+    },
+    {
+      "question": "Čo nastane ak dedič dedičstvo odmietne?",
+      "options": [
+        "Dedičstvo prepadne štátu",
+        "Hľadí sa naň, akoby dediť nenadobudol - jeho podiel prechádza na ďalších dedičov",
+        "Odmietnutie možno vziať späť",
+        "Súd rozhodne o náhradníkovi"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 463 ods. 2 OZ: ak dedič odmietne, hľadí sa naň, akoby sa dedičstva nedožil. Podiel prechádza na ďalších zákonných dedičov.",
+        "wrong": "Nesprávne. Odmietnutie je neodvolateľné a nespôsobuje prepadnutie štátu."
+      }
+    }
+  ]
+}

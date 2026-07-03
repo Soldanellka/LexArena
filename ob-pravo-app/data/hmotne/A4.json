@@ -1,0 +1,77 @@
+{
+  "id": "4",
+  "title": "Právne úkony, náležitosti právnych úkonov",
+  "summary": "Právny úkon je prejav vôle smerujúci k vzniku, zmene alebo zániku práv (§ 34 OZ). Náležitosti: subjekt (spôsobilý), vôľa (slobodná, vážna, bez omylu), prejav (určitý, zrozumiteľný) a forma (zákonom predpísaná). Ústne, písomné alebo konkludentné konanie. Písomná forma je povinná pre úkony s nehnuteľnosťami.",
+  "quiz": [
+    {
+      "question": "Čo definuje § 34 OZ ako právny úkon?",
+      "options": [
+        "Akékoľvek správanie osoby",
+        "Prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností",
+        "Písomné podanie na súd",
+        "Rozhodnutie správneho orgánu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 34 OZ: právny úkon je prejav vôle, ktorý smeruje k vzniku, zmene alebo zániku tých práv a povinností, ktoré právne predpisy s ním spájajú.",
+        "wrong": "Nesprávne. Nie každé správanie je právnym úkonom – rozhodujúci je prejav vôle smerujúci k právnym následkom."
+      }
+    },
+    {
+      "question": "Ktorá náležitosť platného právneho úkonu sa týka subjektu?",
+      "options": [
+        "Písomná forma",
+        "Spôsobilosť osoby na právne úkony",
+        "Súhlas druhej strany",
+        "Notárske overenie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Subjekt musí byť spôsobilý na právne úkony. Úkon osoby pozbavenej spôsobilosti je absolútne neplatný.",
+        "wrong": "Nesprávne. Formu a súhlas druhej strany sú iné náležitosti. Subjektívna náležitosť sa týka spôsobilosti."
+      }
+    },
+    {
+      "question": "Aké formy môže mať prejav vôle pri právnom úkone?",
+      "options": [
+        "Len písomná",
+        "Ústna, písomná alebo konkludentná (činom)",
+        "Len notárska zápisnica",
+        "Len výslovná"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prejav vôle môže byť výslovný (slovom – ústne alebo písomne) alebo konkludentný (činom, správaním – § 35 ods. 1 OZ).",
+        "wrong": "Nesprávne. Zákon nevyžaduje vždy písomnú formu. Konkludentné konanie (napr. nastúpenie do autobusu) je tiež právnym úkonom."
+      }
+    },
+    {
+      "question": "Kedy je právny úkon neurčitý alebo nezrozumiteľný?",
+      "options": [
+        "Keď je písaný rukou",
+        "Keď ho nemožno jednoznačne vyložiť ani výkladom",
+        "Keď nie je podpísaný",
+        "Keď ho urobila maloletá osoba"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Neurčitý alebo nezrozumiteľný právny úkon (§ 37 OZ) je neplatný, ak ho nemožno objasniť ani výkladom podľa § 35 OZ.",
+        "wrong": "Nesprávne. Neurčitosť sa týka obsahu, nie formy – nečitateľný podpis ani ručné písanie neurčitosť nezakladajú."
+      }
+    },
+    {
+      "question": "Kedy sa vyžaduje písomná forma právneho úkonu?",
+      "options": [
+        "Vždy",
+        "Len ak zákon alebo dohoda písomnosť výslovne vyžaduje",
+        "Len pre darovacie zmluvy",
+        "Len pre podnikateľov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Písomná forma sa vyžaduje, ak to zákon stanovuje (napr. § 46 OZ pre nehnuteľnosti) alebo ak sa na nej strany dohodli (§ 40 ods. 1 OZ).",
+        "wrong": "Nesprávne. Väčšina právnych úkonov nevyžaduje písomnú formu. Je povinná len keď to zákon alebo zmluva určuje."
+      }
+    }
+  ]
+}

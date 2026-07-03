@@ -1,0 +1,77 @@
+{
+  "id": "40",
+  "title": "Verejná súťaž a verejný prísľub",
+  "summary": "Verejná súťaž (§ 847-849 OZ): vyhlasovateľ vyhlási súťaž na najlepší návrh - zaväzuje sa odmeniť najlepší návrh. Verejný prísľub (§ 850-852 OZ): kto verejne vyhlási odmenu za vykonanie určitého výkonu, je povinný odmenu poskytnúť tomu, kto výkon uskutočnil. Oba inštitúty sú jednostrannými právnymi úkonmi zaväzujúcimi vyhlasovateľa.",
+  "quiz": [
+    {
+      "question": "Čo je verejná súťaž (§ 847 OZ)?",
+      "options": [
+        "Výberové konanie na pracovné miesto",
+        "Verejné vyhlásenie zaväzujúce vyhlasovateľa odmeniť najlepší návrh (dielo) doručený v stanovenej lehote",
+        "Tender na zákazku",
+        "Predaj v dražbe"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Verejná súťaž (§ 847 OZ) je verejné vyhlásenie, kde vyhlasovateľ sľubuje odmenu za najlepší návrh. Je to jednostranný záväzný právny úkon.",
+        "wrong": "Nesprávne. Verejná súťaž podľa OZ nie je pracovné výberové konanie - je to sľub odmeny za najlepší návrh."
+      }
+    },
+    {
+      "question": "Koho zaväzuje verejná súťaž?",
+      "options": [
+        "Všetkých účastníkov",
+        "Len vyhlasovateľa - je povinný odmeniť víťaza najlepšieho návrhu",
+        "Len víťaza",
+        "Štát"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Verejná súťaž je jednostranný záväzok vyhlasovateľa - účastníci nie sú povinní podávať návrhy.",
+        "wrong": "Nesprávne. Záväzok plynie pre vyhlasovateľa, nie pre účastníkov - tí podávajú návrhy dobrovoľne."
+      }
+    },
+    {
+      "question": "Čo je verejný prísľub (§ 850 OZ)?",
+      "options": [
+        "Zmluva s konkrétnou osobou",
+        "Verejné vyhlásenie sľubujúce odmenu za uskutočnenie určitého výkonu - zaväzuje vyhlasovateľa voči tomu, kto výkon uskutočnil",
+        "Reklama na odmenu",
+        "Výzva na predaj veci"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 850 OZ: verejný prísľub je jednostranný právny úkon - ten, kto verejne sľúbi odmenu za výkon, je ňou viazaný voči tomu, kto výkon uskutoční.",
+        "wrong": "Nesprávne. Verejný prísľub nie je reklama - je to záväzný právny úkon zaväzujúci vyhlasovateľa."
+      }
+    },
+    {
+      "question": "Môže vyhlasovateľ verejný prísľub odvolať?",
+      "options": [
+        "Nie, nikdy",
+        "Áno - len pred uskutočnením výkonu a rovnakým spôsobom ako bol zverejnený (§ 851 OZ)",
+        "Len so súhlasom záujemcov",
+        "Len po 1 roku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 851 OZ: vyhlasovateľ môže prísľub odvolať, ale len pred uskutočnením výkonu a rovnakou formou ako ho zverejnil.",
+        "wrong": "Nesprávne. Odvolanie prísľubu nie je ľubovoľné - musí byť pred uskutočnením výkonu a rovnakou formou."
+      }
+    },
+    {
+      "question": "Čo sa stane ak verejný prísľub splní viacero osôb súčasne?",
+      "options": [
+        "Odmena prepadne vyhlasovateľovi",
+        "Odmena sa rozdelí medzi všetky osoby, ktoré výkon uskutočnili súčasne (§ 852 OZ)",
+        "Odmena sa vypláca len prvému",
+        "Vyhlasovateľ si vyberie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 852 OZ: ak výkon uskutočnili viaceré osoby súčasne, odmena sa delí medzi ne rovnakým dielom, ak vyhlasovateľ neurčil inak.",
+        "wrong": "Nesprávne. Pri súčasnom uskutočnení výkonu viacerými sa odmena rozdeľuje, nie prepadá."
+      }
+    }
+  ]
+}

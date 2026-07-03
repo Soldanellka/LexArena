@@ -1,0 +1,77 @@
+{
+  "id": "5",
+  "title": "Následky vadnosti právnych úkonov",
+  "summary": "Vadnosť právneho úkonu môže spôsobiť jeho neplatnosť: absolútnu (§ 39 OZ – ex lege, súd prihliadne z úradnej moci) alebo relatívnu (§ 40a OZ – len ak sa oprávnená osoba neplatnosti dovolá). Dôvody absolútnej neplatnosti: rozpor so zákonom, dobrými mravmi, nenaplnenie zákonnej formy. Relatívna neplatnosť: omyl (§ 49a OZ), tieseň, lesť, výhrážka (§ 49 OZ).",
+  "quiz": [
+    {
+      "question": "Aký je rozdiel medzi absolútnou a relatívnou neplatnosťou právneho úkonu?",
+      "options": [
+        "Absolútna nastáva len pri písomných úkonoch",
+        "Absolútna nastáva ex lege; relatívna len na základe dovolania sa oprávnenej osoby",
+        "Relatívna je závažnejšia",
+        "Absolútnu môže súd zhojiť"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Absolútna neplatnosť (§ 39 OZ) nastáva priamo zo zákona; súd na ňu prihliadne bez návrhu. Relatívna (§ 40a OZ) existuje, kým sa jej oprávnená osoba nedovolá.",
+        "wrong": "Nesprávne. Kľúčový rozdiel je v spôsobe, akým neplatnosť nastáva – ex lege vs. na dovolanie."
+      }
+    },
+    {
+      "question": "Právny úkon urobený v omyle je:",
+      "options": [
+        "Vždy absolútne neplatný",
+        "Relatívne neplatný, ak druhá strana omyl vyvolala alebo o ňom vedela (§ 49a OZ)",
+        "Vždy platný",
+        "Neplatný len ak šlo o omyl v práve"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 49a OZ: omyl zakladá relatívnu neplatnosť, ak druhá strana omyl vyvolala alebo o ňom vedela. Omyl v pohnutke relevantný nie je.",
+        "wrong": "Nesprávne. Omyl automaticky nespôsobuje neplatnosť – vyžaduje sa, aby ho druhá strana vyvolala alebo o ňom vedela."
+      }
+    },
+    {
+      "question": "Právny úkon odporujúci zákonu alebo dobrým mravom (§ 39 OZ) je:",
+      "options": [
+        "Relatívne neplatný",
+        "Platný so súhlasom súdu",
+        "Absolútne neplatný",
+        "Neplatný len na návrh prokuratúry"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. § 39 OZ: neplatný je právny úkon, ktorý svojím obsahom alebo účelom odporuje zákonu alebo ho obchádza, alebo sa prieči dobrým mravom. Ide o absolútnu neplatnosť.",
+        "wrong": "Nesprávne. Ide o absolútnu neplatnosť – súd na ňu prihliadne z úradnej moci, nie len na návrh."
+      }
+    },
+    {
+      "question": "Čo je donútenie (vis compulsiva) ako vada vôle?",
+      "options": [
+        "Fyzické násilné konanie",
+        "Psychický nátlak (výhrážka), pod vplyvom ktorého osoba koná",
+        "Omyl v osobe",
+        "Podvod pri uzatváraní zmluvy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Donútenie (§ 49 OZ) ako psychický nátlak (výhrážka) je dôvodom relatívnej neplatnosti právneho úkonu, ak je protiprávna a vážna.",
+        "wrong": "Nesprávne. Fyzické násilné konanie (vis absoluta) vylučuje vôľu celkom – úkon sa považuje za neexistujúci."
+      }
+    },
+    {
+      "question": "Môže byť neplatnosť právneho úkonu zhojená (konvalidácia)?",
+      "options": [
+        "Áno, vždy následným súhlasom",
+        "Absolútna nie; relatívna môže byť, ak zákon konvalidáciu pripúšťa",
+        "Nie, nikdy",
+        "Len rozhodnutím súdu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Absolútna neplatnosť sa konvalidovať nedá. Relatívna neplatnosť môže byť zhojená (napr. dodatočné schválenie konania falsus procuratora).",
+        "wrong": "Nesprávne. Rozdiel medzi absolútnou a relatívnou neplatnosťou platí aj pre konvalidáciu."
+      }
+    }
+  ]
+}

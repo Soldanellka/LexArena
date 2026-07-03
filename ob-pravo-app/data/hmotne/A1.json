@@ -1,0 +1,136 @@
+{
+  "id": "1",
+  "title": "Pojem, predmet a systém občianskeho práva, pramene",
+  "summary": "Občianske právo je základné odvetvie súkromného práva, ktoré upravuje majetkové a osobné vzťahy fyzických a právnických osôb. Predmetom sú vzťahy rovnosti strán. Systém tvoria: všeobecná časť, vecné právo, záväzkové právo, dedičské právo, rodinné právo. Hlavným prameňom je zákon č. 40/1964 Zb. – Občiansky zákonník (OZ).",
+  "quiz": [
+    {
+      "question": "Ktorý zákon je základným prameňom občianskeho práva v SR?",
+      "options": [
+        "Zákon č. 513/1991 Zb. Obchodný zákonník",
+        "Zákon č. 40/1964 Zb. Občiansky zákonník",
+        "Zákon č. 160/2015 Z.z. CSP",
+        "Zákon č. 36/2005 Z.z. o rodine"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Základným prameňom občianskeho práva je zákon č. 40/1964 Zb. – Občiansky zákonník.",
+        "wrong": "Nesprávne. Obchodný zákonník upravuje podnikateľské vzťahy, nie všeobecné občianskoprávne."
+      }
+    },
+    {
+      "question": "Čo je predmetom občianskeho práva?",
+      "options": [
+        "Vzťahy nadriadenosti a podriadenosti",
+        "Majetkové a osobné vzťahy fyzických a právnických osôb na základe rovnosti",
+        "Vzťahy medzi zamestnávateľom a zamestnancom",
+        "Vzťahy orgánov štátnej správy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Občianske právo upravuje majetkové a osobné vzťahy fyzických a právnických osôb pri rovnosti strán.",
+        "wrong": "Nesprávne. Nadriadenosť a podriadenosť je typická pre verejné právo, nie pre súkromné."
+      }
+    },
+    {
+      "question": "Ktorý z princípov je základným pre občianske právo?",
+      "options": [
+        "Zásada nadradenosti štátu",
+        "Zásada autonómie vôle a rovnosti strán",
+        "Zásada ex offo",
+        "Zásada inkorporácie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Autonómia vôle a rovnosť strán sú základné princípy súkromného práva, vrátane práva občianskeho.",
+        "wrong": "Nesprávne. Zásada ex offo (z úradnej moci) je typická pre verejné právo."
+      }
+    },
+    {
+      "question": "Čo je subsidiárna pôsobnosť OZ?",
+      "options": [
+        "OZ sa použije prednostne pred všetkými zákonmi",
+        "OZ sa použije vtedy, ak špeciálny zákon neobsahuje vlastnú úpravu",
+        "OZ upravuje len dedičské právo",
+        "OZ je nadradený Ústave SR"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. OZ má subsidiárnu pôsobnosť – uplatní sa vtedy, ak špeciálny zákon (napr. obchodný) neobsahuje osobitnú úpravu.",
+        "wrong": "Nesprávne. OZ nie je prednostný pred všetkými zákonmi – špeciálne zákony majú prednosť."
+      }
+    },
+    {
+      "question": "Čo je kogentná norma v občianskom práve?",
+      "options": [
+        "Norma, od ktorej sa možno odchýliť dohodou",
+        "Norma, od ktorej sa nemožno odchýliť ani zmluvou",
+        "Norma platná len pre podnikateľov",
+        "Norma vydaná vládou"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Kogentné normy sú záväzné a strany sa od nich nemôžu odchýliť. Opakom sú dispozitívne normy, od ktorých sa odchýliť možno.",
+        "wrong": "Nesprávne. Normy, od ktorých sa možno odchýliť dohodou, sú dispozitívne, nie kogentné."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Občianske právo", "definition": "Základné odvetvie súkromného práva upravujúce majetkové a osobné vzťahy FO a PO na základe rovnosti (§ 1 OZ)." },
+    { "term": "Kogentná norma", "definition": "Záväzná norma, od ktorej sa strany nemôžu odchýliť ani dohodou (§ 2 ods. 3 OZ)." },
+    { "term": "Dispozitívna norma", "definition": "Norma, od ktorej sa strany môžu dohodou odchýliť, ak to zákon výslovne nezakazuje (§ 2 ods. 3 OZ)." },
+    { "term": "Subsidiarita OZ", "definition": "OZ sa použije, ak osobitný predpis (napr. Obchodný zákonník) danú otázku neupravuje." },
+    { "term": "Systém občianskeho práva", "definition": "Všeobecná časť, vecné právo, záväzkové právo, dedičské právo, rodinné právo." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Medzera v obchodnej zmluve",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dvaja podnikatelia uzavreli kúpnu zmluvu podľa Obchodného zákonníka. Pri spore sa ukázalo, že Obchodný zákonník otázku premlčania konkrétneho nároku vôbec neupravuje.", "options": [], "correct": 0 },
+        {
+          "question": "Ktorý predpis sa na túto medzeru použije?",
+          "options": ["Výlučne Obchodný zákonník bez doplnenia", "Subsidiárne sa použijú ustanovenia Občianskeho zákonníka", "Otázka ostane právne neriešená"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Podľa § 1 ods. 2 Obchodného zákonníka (zákon č. 513/1991 Zb.) sa otázky, ktoré nemožno riešiť podľa jeho ustanovení, riešia podľa predpisov občianskeho práva.",
+            "wrong": "Nesprávne. Obchodný zákonník sám odkazuje na subsidiárne použitie Občianskeho zákonníka (§ 1 ods. 2 ObZ), preto medzera sa nenecháva bez riešenia."
+          }
+        },
+        {
+          "question": "Prečo je takéto subsidiárne použitie OZ možné?",
+          "options": ["Lebo OZ je hierarchicky nadradený Obchodnému zákonníku", "Lebo OZ je všeobecným predpisom súkromného práva, ktorý sa uplatní pri medzere v osobitnej úprave", "Lebo o tom rozhoduje súd podľa vlastnej úvahy bez zákonného základu"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. OZ je všeobecným (subsidiárnym) predpisom súkromného práva – uplatní sa všade tam, kde osobitný predpis danú otázku neupravuje.",
+            "wrong": "Nesprávne. Medzi OZ a Obchodným zákonníkom neplatí vzťah hierarchickej nadradenosti, ale vzťah všeobecnej a osobitnej úpravy (lex generalis – lex specialis)."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Neplatná zmluvná doložka",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "V kúpnej zmluve sa strany dohodli na doložke, ktorá je v priamom rozpore s kogentným ustanovením Občianskeho zákonníka.", "options": [], "correct": 0 },
+        {
+          "question": "Je takáto doložka platná?",
+          "options": ["Áno, dohoda strán má pri súkromnoprávnych vzťahoch vždy prednosť", "Nie, odporuje kogentnej norme, a je preto neplatná", "Áno, pokiaľ s ňou obe strany súhlasili"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Od kogentných ustanovení sa strany nemôžu odchýliť ani vzájomnou dohodou (§ 2 ods. 3 OZ a contrario) – odchylná doložka je neplatná.",
+            "wrong": "Nesprávne. Autonómia vôle strán je obmedzená kogentnými normami – súhlas oboch strán neplatnosť takejto doložky nezhojí."
+          }
+        },
+        {
+          "question": "Čo by platilo, keby dotknuté ustanovenie bolo dispozitívne, nie kogentné?",
+          "options": ["Odchylná dohoda strán by bola prípustná", "Aj tak by bola doložka neplatná", "Celá zmluva by bez ďalšieho zanikla"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri dispozitívnych normách § 2 ods. 3 OZ výslovne pripúšťa, aby sa účastníci dohodli odchylne od zákona.",
+            "wrong": "Nesprávne. Dispozitívna norma je práve tá, od ktorej sa možno platne odchýliť dohodou – preto by doložka bola platná."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "15",
+  "title": "Podielové spoluvlastníctvo",
+  "summary": "Podielové spoluvlastníctvo (§ 137–142 OZ) vzniká keď viac osôb vlastní vec spoločne, pričom každý má ideálny podiel (nie reálnu časť). Podiely sa predpokladajú rovnaké. Hospodárenie: väčšinou podielov. Predkupné právo spoluvlastníkov (§ 140 OZ) – pri prevode podielu majú ostatní spoluvlastníci predkupné právo. Zánik: dohodou o rozdelení, súdnym rozdelením alebo dražbou.",
+  "quiz": [
+    {
+      "question": "Čo je podiel spoluvlastníka v podielovom spoluvlastníctve?",
+      "options": [
+        "Reálna časť veci",
+        "Ideálna (abstraktná) časť spoluvlastníctva k celej veci",
+        "Právo na určitú miestnosť",
+        "Právo prednostného kúpy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podiel v podielovom spoluvlastníctve je ideálny (matematický) – spoluvlastník nemá vlastnícke právo k reálnej časti veci.",
+        "wrong": "Nesprávne. Ideálny podiel nie je reálna časť – spoluvlastník má právo k celej veci v rozsahu podielu."
+      }
+    },
+    {
+      "question": "Ako sa určujú podiely spoluvlastníkov pri absencii dohody?",
+      "options": [
+        "Podľa výšky investícií",
+        "Rovnako (§ 137 ods. 1 OZ)",
+        "Podľa doby trvania vlastníctva",
+        "Podľa veku spoluvlastníkov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 137 ods. 1 OZ: ak nie je dohodnuté inak, predpokladá sa, že podiely sú rovnaké.",
+        "wrong": "Nesprávne. Zákon predpokladá rovnosť podielov bez ohľadu na príspevky."
+      }
+    },
+    {
+      "question": "Čo je predkupné právo spoluvlastníkov (§ 140 OZ)?",
+      "options": [
+        "Právo kúpiť vec ako prvý pri predaji celej veci",
+        "Ak spoluvlastník prevádza podiel, ostatní spoluvlastníci ho majú právo kúpiť prednostne za rovnakých podmienok",
+        "Povinnosť predať podiel spoluvlastníkovi",
+        "Právo zakázať prevod podielu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 140 OZ: pri prevode spoluvlastníckeho podielu na tretiu osobu majú ostatní spoluvlastníci predkupné právo. Výnimka: prevod na blízku osobu.",
+        "wrong": "Nesprávne. Predkupné právo nie je povinnosť predať – je to právo kúpiť za ponúknutých podmienok."
+      }
+    },
+    {
+      "question": "Ako sa rozhoduje o hospodárení so spoločnou vecou?",
+      "options": [
+        "Jednomyseľne",
+        "Väčšinou (§ 139 OZ) – podielovou väčšinou (nad 1/2 podielov)",
+        "Podľa najstaršieho spoluvlastníka",
+        "Len súdom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 139 ods. 2 OZ: o hospodárení so spoločnou vecou rozhodujú spoluvlastníci väčšinou počítanou podľa veľkosti podielov.",
+        "wrong": "Nesprávne. Jednomyseľnosť sa nevyžaduje – stačí väčšina podielov."
+      }
+    },
+    {
+      "question": "Kedy môže spoluvlastník žiadať o zrušenie spoluvlastníctva?",
+      "options": [
+        "Len po 10 rokoch",
+        "Kedykoľvek – nikto nemôže byť nútený zostať v spoluvlastníctve (§ 142 OZ)",
+        "Len ak s tým súhlasia všetci",
+        "Len ak je vec deliteľná"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 142 OZ: každý spoluvlastník môže žiadať o zrušenie a vyporiadanie spoluvlastníctva – základnou zásadou je dobrovoľnosť zotrvania v spoluvlastníctve.",
+        "wrong": "Nesprávne. Zákon nepripúšťa nútené zotrvávaanie v spoluvlastníctve – kdokoľvek môže žiadať o jeho zrušenie."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "23",
+  "title": "Osobitné prípady zodpovednosti za škodu",
+  "summary": "OZ upravuje osobitné prípady zodpovednosti: za škodu spôsobenú prevádzkovou činnosťou (§ 420a – objektívna), vadným výrobkom (zákon č. 294/1999 Z.z.), škodou na vnesených veciach (§ 433), škodou spôsobenou zveraťom (§ 431), osobou nespôsobilou (§ 422). Objektívna zodpovednosť: bez zavinenia – prevádzkovateľ zodpovedá za samotný vznik škody.",
+  "quiz": [
+    {
+      "question": "Čo je zodpovednosť za škodu spôsobenú prevádzkovou činnosťou (§ 420a OZ)?",
+      "options": [
+        "Zodpovednosť len pri zavinení",
+        "Objektívna zodpovednosť prevádzkovateľa – zodpovedá bez ohľadu na zavinenie",
+        "Zodpovednosť len za škody na zdraví",
+        "Zodpovednosť len pri porušení licencie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 420a OZ zakladá objektívnu zodpovednosť – prevádzkovateľ zodpovedá za škodu spôsobenú prevádzkovou činnosťou bez ohľadu na zavinenie.",
+        "wrong": "Nesprávne. Zodpovednosť podľa § 420a OZ je objektívna – zavinenie sa nevyžaduje."
+      }
+    },
+    {
+      "question": "Ako sa môže prevádzkovateľ zbaviť zodpovednosti podľa § 420a OZ?",
+      "options": [
+        "Poukázaním na absenciu zavinenia",
+        "Preukázaním, že škodu spôsobila nevyhnutná vlastnosť prevádzky alebo konanie poškodeného",
+        "Zaplatením zálohy",
+        "Uzavretím poistenia"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 420a ods. 3 OZ: liberácia je možná ak prevádzkovateľ preukáže, že škodu spôsobila nevyhnutná vlastnosť prevádzky alebo výlučne konanie samotného poškodeného.",
+        "wrong": "Nesprávne. Samotná absencia zavinenia nezbaví zodpovednosti pri objektívnej zodpovednosti – potrebné sú zákonné liberačné dôvody."
+      }
+    },
+    {
+      "question": "Čo je zodpovednosť za škodu spôsobenú zvieraťom (§ 431 OZ)?",
+      "options": [
+        "Zodpovedá len ten, kto zviera vyprovokoval",
+        "Za škodu spôsobenú zvieraťom zodpovedá jeho vlastník bez ohľadu na zavinenie",
+        "Zodpovednosť nesie len osoba, ktorá zviera strážila",
+        "Zodpovednosť nevzniká"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 431 OZ: za škodu spôsobenú zvieraťom zodpovedá jeho vlastník bez ohľadu na zavinenie. Zodpovednosť prešla na chovateľa, ak ho mal v opatere.",
+        "wrong": "Nesprávne. Zodpovednosť za škodu spôsobenú zvieraťom je objektívna – zavinenie vlastníka sa nevyžaduje."
+      }
+    },
+    {
+      "question": "Zodpovedá vlastník budovy za škodu spôsobenú jej vadou alebo pádom?",
+      "options": [
+        "Nie",
+        "Áno – § 415 OZ ukladá povinnosť predchádzať škodám; § 422 OZ rieši zodpovednosť za škodu spôsobenú pádom predmetov zo stavby",
+        "Len ak budova bola poistená",
+        "Len za škody na zdraví"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Za škodu spôsobenú vadou stavby alebo pádom predmetu zo stavby zodpovedá vlastník objektívne.",
+        "wrong": "Nesprávne. Vlastník nesie zodpovednosť za stav nehnuteľnosti a škody z nej vyplývajúce."
+      }
+    },
+    {
+      "question": "Zodpovedá za škodu ten, kto ju spôsobil v stave nepríčetnosti?",
+      "options": [
+        "Nie – chýba zavinenie",
+        "Áno – ak sa do stavu nepríčetnosti priviedol sám (napr. požitím alkoholu) – § 422 ods. 2 OZ",
+        "Len za škodu na zdraví",
+        "Len ak bol neplnoletý"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 422 ods. 2 OZ: za škodu spôsobenú v stave nepríčetnosti zodpovedá ten, kto sa do tohto stavu priviedol vlastnou vinou (napr. opitosťou).",
+        "wrong": "Nesprávne. Zákon rozlišuje medzi dobrovoľným a nedobrovoľným stavom nepríčetnosti."
+      }
+    }
+  ]
+}

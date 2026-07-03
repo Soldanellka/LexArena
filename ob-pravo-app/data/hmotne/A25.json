@@ -1,0 +1,77 @@
+{
+  "id": "25",
+  "title": "Bezdôvodné obohatenie",
+  "summary": "Bezdôvodné obohatenie (§ 451-459 OZ) je majetkový prospech získaný bez právneho dôvodu alebo z neplatného úkonu. Vydáva sa to, o čo sa niekto obohatil. Premlčanie: 2 roky subjektívna, 3 roky objektívna (§ 107 OZ).",
+  "quiz": [
+    {
+      "question": "Čo je bezdôvodné obohatenie podľa § 451 OZ?",
+      "options": [
+        "Akýkoľvek majetkový zisk",
+        "Majetkový prospech získaný bez právneho dôvodu alebo z neplatného právneho úkonu",
+        "Príjem z podnikania",
+        "Dedičstvo"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 451 OZ: bezdôvodným obohatením je majetkový prospech z plnenia bez právneho dôvodu, z neplatného úkonu alebo z dôvodu, ktorý odpadol.",
+        "wrong": "Nesprávne. Nie každý majetkový zisk je bezdôvodným obohatením - musí chýbať právny titul."
+      }
+    },
+    {
+      "question": "Kto je povinný vydať bezdôvodné obohatenie?",
+      "options": [
+        "Ten, kto škodu spôsobil",
+        "Ten, kto sa na úkor iného obohatil (§ 451 ods. 1 OZ)",
+        "Štát",
+        "Ten, kto plnil"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Povinnou osobou je ten, kto sa obohatil. Oprávnenou osobou je ten, na úkor koho sa obohatenie uskutočnilo.",
+        "wrong": "Nesprávne. Povinnosť vydať obohatenie má ten, kto obohatenie získal."
+      }
+    },
+    {
+      "question": "Čo sa vydáva pri bezdôvodnom obohatení?",
+      "options": [
+        "Vždy dvojnásobok obohatenia",
+        "To, o čo sa niekto obohatil; ak to nie je možné - peňažná náhrada (§ 456 OZ)",
+        "Len peňažná náhrada",
+        "Vždy predmet obohatenia v naturáliách"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 456 OZ: vydáva sa to, o čo sa niekto bezdôvodne obohatil. Ak vydanie v naturáliách nie je možné, poskytne sa peňažná náhrada.",
+        "wrong": "Nesprávne. Primárna je naturálna vydanie - peňažná náhrada je subsidiárna."
+      }
+    },
+    {
+      "question": "Aká je premlčacia doba práva na vydanie bezdôvodného obohatenia?",
+      "options": [
+        "1 rok subjektívna",
+        "2 roky subjektívna a 3 roky objektívna (§ 107 OZ)",
+        "3 roky jednotná",
+        "5 rokov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 107 OZ: právo na vydanie bezdôvodného obohatenia sa premlčuje za 2 roky (subjektívna) a najneskôr za 3 roky (objektívna).",
+        "wrong": "Nesprávne. Bezdôvodné obohatenie má špeciálnu dvojstupňovú lehotu: 2+3 roky."
+      }
+    },
+    {
+      "question": "Čo je condictio indebiti?",
+      "options": [
+        "Právo na vrátenie daru",
+        "Právo požadovať vrátenie plnenia poskytnutého bez dlhu - omylom",
+        "Právo na náhradu škody",
+        "Právo na vydanie obohatenia zo zápisnice"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Condictio indebiti je nárok na vrátenie plnenia, ktoré bolo poskytnuté omylom - veriteľ plnil niečo, čo mu dlžník nedlhoval.",
+        "wrong": "Nesprávne. Condictio indebiti sa týka vrátenia plnenia bez existujúceho dlhu, nie vrátenia daru."
+      }
+    }
+  ]
+}

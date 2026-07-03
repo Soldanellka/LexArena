@@ -1,0 +1,77 @@
+{
+  "id": "18",
+  "title": "Zabezpečenie záväzkov",
+  "summary": "Zabezpečovanie záväzkov (§ 544–558 OZ) posilňuje postavenie veriteľa. Prostriedky: zmluvná pokuta (§ 544 OZ), ručenie (§ 546–550 OZ), záložné právo, záloha, uznanie záväzku, zádržné právo. Zmluvná pokuta: paušalizovaná náhrada škody, možno ju znížiť súdom. Ručiteľ plní subsidiárne – až keď dlžník neplní po výzve.",
+  "quiz": [
+    {
+      "question": "Čo je zmluvná pokuta (§ 544 OZ)?",
+      "options": [
+        "Trestnoprávny trest",
+        "Dohodnutá suma, ktorú dlžník zaplatí veriteľovi pri porušení záväzku",
+        "Úrok z omeškania",
+        "Zákon stanovená pokuta"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluvná pokuta je dohodnutá suma (alebo iné plnenie), ktorú dlžník zaplatí veriteľovi v prípade porušenia zmluvnej povinnosti (§ 544 OZ).",
+        "wrong": "Nesprávne. Zmluvná pokuta je súkromnoprávny inštitút, nie trest. Stanovujú ju zmluvy, nie zákon."
+      }
+    },
+    {
+      "question": "Môže súd znížiť neprimeranú zmluvnú pokutu?",
+      "options": [
+        "Nie, zmluvná pokuta je záväzná v plnej výške",
+        "Áno – súd môže neprimenú zmluvnú pokutu znížiť (§ 545a OZ)",
+        "Len ak o to požiada veriteľ",
+        "Len pri spotrebiteľských zmluvách"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 545a OZ: súd môže neprimeranú zmluvnú pokutu znížiť s prihliadnutím na hodnotu a význam zabezpečenej povinnosti.",
+        "wrong": "Nesprávne. Súd má moderačné právo znížiť neprimeranú pokutu aj bez návrhu veriteľa."
+      }
+    },
+    {
+      "question": "Kedy je ručiteľ povinný plniť?",
+      "options": [
+        "Ihneď pri uzavretí ručiteľskej zmluvy",
+        "Až keď dlžník nesplní záväzok ani po výzve veriteľa (subsidiárne ručenie)",
+        "Len ak dlžník zomrie",
+        "Len ak je ručenie zabezpečené záložným právom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ručenie je subsidiárne (§ 548 OZ) – ručiteľ je povinný plniť, až keď dlžník nesplní záväzok v primeranej dobe po výzve veriteľa.",
+        "wrong": "Nesprávne. Ručiteľ nie je primárnym dlžníkom – plní len subsidiárne, nie súčasne s dlžníkom."
+      }
+    },
+    {
+      "question": "Čo je záloha (preddavok) ako zabezpečovací prostriedok?",
+      "options": [
+        "Suma zaplatená vopred, ktorá sa pri splnení zmluvy zarátava do plnenia alebo prepadá pri nesplnení",
+        "Záložné právo k nehnuteľnosti",
+        "Ručiteľský záväzok",
+        "Depozit u notára"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záloha (preddavok) je suma zaplatená vopred – pri splnení zmluvy sa zarátava do plnenia; pri nesplnení závisí od dohody, či prepadá.",
+        "wrong": "Nesprávne. Záloha nie je záložné právo – je to forma platby vopred slúžiaca aj ako zabezpečenie."
+      }
+    },
+    {
+      "question": "Čo je zádržné právo?",
+      "options": [
+        "Právo veriteľa zadržať vec dlžníka ako zabezpečenie pohľadávky",
+        "Právo záložného veriteľa predať záložnú vec",
+        "Právo na vrátenie zálohy",
+        "Právo na úrok z omeškania"
+      ],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Zádržné právo (§ 175 OZ) umožňuje tomu, kto má oprávnene vec u seba, zadržať ju ako zabezpečenie splatnej pohľadávky voči vlastníkovi veci.",
+        "wrong": "Nesprávne. Zádržné právo nie je záložné právo – nevzniká zmluvou, ale zo zákona pri splnení podmienok."
+      }
+    }
+  ]
+}

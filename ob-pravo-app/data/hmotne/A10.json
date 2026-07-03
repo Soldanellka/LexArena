@@ -1,0 +1,77 @@
+{
+  "id": "10",
+  "title": "Ochrana osobnosti fyzickej osoby",
+  "summary": "Ochrana osobnosti (§ 11–16 OZ) zahŕňa právo na ochranu života, zdravia, občianskej cti, ľudskej dôstojnosti, súkromia, mena a prejavov osobnej povahy. Osobnostné práva sú neprevoditeľné a nepremlčateľné. Prostriedky ochrany: upustenie od zásahu, odstránenie následkov, primerané zadosťučinenie (morálne alebo peňažné). Spory o ochranu osobnosti patria krajskému súdu.",
+  "quiz": [
+    {
+      "question": "Aké práva chráni § 11 OZ?",
+      "options": [
+        "Len majetkové práva fyzickej osoby",
+        "Život, zdravie, občiansku česť, ľudskú dôstojnosť, súkromie, meno a prejavy osobnej povahy",
+        "Len právo na meno",
+        "Len právo na súkromie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 11 OZ zaručuje fyzickej osobe právo na ochranu jej osobnosti – najmä života, zdravia, cti, dôstojnosti, súkromia, mena.",
+        "wrong": "Nesprávne. Ochrana osobnosti je komplexná a zahŕňa širokú škálu osobnostných záujmov."
+      }
+    },
+    {
+      "question": "Sú osobnostné práva prevoditeľné alebo dediteľné?",
+      "options": [
+        "Áno, zmluvou",
+        "Nie – sú neprevoditeľné a zanikajú smrťou",
+        "Áno, dedením",
+        "Len právo na meno je dediteľné"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Osobnostné práva sú neprevoditeľné a nepremlčateľné. Zanikajú smrťou fyzickej osoby (hoci niektoré ochranné nároky môžu uplatniť blízke osoby).",
+        "wrong": "Nesprávne. Osobnostné práva sú súčasne nedeliteľné s osobou – nemožno ich previesť ani zdediť."
+      }
+    },
+    {
+      "question": "Aké prostriedky ochrany osobnosti sú dostupné podľa § 13 OZ?",
+      "options": [
+        "Len peňažná náhrada",
+        "Upustenie od zásahu, odstránenie následkov a primerané zadosťučinenie (morálne alebo peňažné)",
+        "Len trestné oznámenie",
+        "Len náhrada škody podľa § 420 OZ"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 13 OZ: fyzická osoba sa môže domáhať upustenia od neoprávnených zásahov, odstránenia následkov a primeraného zadosťučinenia (aj peňažného).",
+        "worry": "Nesprávne. Ochrana osobnosti má vlastný systém prostriedkov, odlišný od všeobecnej náhrady škody."
+      }
+    },
+    {
+      "question": "Ktorý súd je príslušný na spory o ochranu osobnosti?",
+      "options": [
+        "Okresný súd",
+        "Krajský súd",
+        "Najvyšší súd",
+        "Ústavný súd"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Spory o ochranu osobnosti podľa § 11 OZ patria do vecnej príslušnosti krajských súdov (§ 22 CSP).",
+        "wrong": "Nesprávne. Ide o výnimočnú vecnú príslušnosť krajského súdu v prvom stupni."
+      }
+    },
+    {
+      "question": "Môže fyzická osoba disponovať svojimi osobnostnými statkami (napr. súhlasiť so zverejnením fotografie)?",
+      "options": [
+        "Nie, nikdy",
+        "Áno – v medziach zákona môže dať súhlas na použitie jej osobnostných statkov",
+        "Len so súhlasom súdu",
+        "Len v písomnej forme"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Fyzická osoba môže v medziach zákona disponovať svojimi osobnostnými statkami – napr. poskytnúť súhlas s použitím podobizne alebo prejavov osobnej povahy (§ 12 OZ).",
+        "wrong": "Nesprávne. Hoci osobnostné práva sú neprevoditeľné, dotknutá osoba môže udeliť súhlas na ich použitie."
+      }
+    }
+  ]
+}

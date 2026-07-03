@@ -1,0 +1,77 @@
+{
+  "id": "24",
+  "title": "Spôsob a rozsah náhrady škody",
+  "summary": "Náhrada škody (§ 442–450 OZ) zahŕňa skutočnú škodu (damnum emergens) a ušlý zisk (lucrum cessans). Spôsob: naturálna reštitúcia (uvedenie do pôvodného stavu) alebo peňažná náhrada. Rozsah: skutočná škoda + ušlý zisk. Spoluzavinenie poškodeného znižuje náhradu (§ 441 OZ). Mimoriadne okolnosti alebo tieseň škodcu môžu viesť k zníženiu náhrady.",
+  "quiz": [
+    {
+      "question": "Čo zahŕňa náhrada škody podľa § 442 OZ?",
+      "options": [
+        "Len skutočnú škodu",
+        "Skutočnú škodu (damnum emergens) a ušlý zisk (lucrum cessans)",
+        "Len ušlý zisk",
+        "Skutočnú škodu, ušlý zisk a nemajetkové ujmy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 442 ods. 1 OZ: hradí sa skutočná škoda a to, čo poškodenému ušlo (ušlý zisk).",
+        "wrong": "Nesprávne. Nemajetkové ujmy (bolesťné, sťaženie spoločenského uplatnenia) sa riešia osobitne."
+      }
+    },
+    {
+      "question": "Aký je primárny spôsob náhrady škody?",
+      "options": [
+        "Vždy peňažná náhrada",
+        "Naturálna reštitúcia (uvedenie do pôvodného stavu) – § 442 ods. 2 OZ",
+        "Závisí od výšky škody",
+        "Len dohodou strán"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 442 ods. 2 OZ: škoda sa nahrádza predovšetkým uvedením do predošlého stavu (naturálna reštitúcia). Ak to nie je možné alebo účelné, nahrádza sa peňažne.",
+        "wrong": "Nesprávne. Primárnou formou je naturálna reštitúcia, nie peňažná náhrada."
+      }
+    },
+    {
+      "question": "Čo je ušlý zisk (lucrum cessans)?",
+      "options": [
+        "Priama majetková strata poškodeného",
+        "Majetkový prospech, o ktorý poškodený prišiel v dôsledku škodovej udalosti",
+        "Nemajetková ujma",
+        "Náklady na liečenie"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ušlý zisk predstavuje to, čo by poškodený za normálnych okolností získal, ak by škodová udalosť nenastala.",
+        "wrong": "Nesprávne. Priama majetková strata je skutočná škoda (damnum emergens), nie ušlý zisk."
+      }
+    },
+    {
+      "question": "Čo je spoluzavinenie poškodeného (§ 441 OZ)?",
+      "options": [
+        "Poškodený nesie celú škodu",
+        "Ak poškodený svojím zavinením prispel ku škode, znáša ju pomerne v rozsahu svojho spoluzavinenia",
+        "Nezmenšuje náhradu",
+        "Poškodený dostáva viac náhrady"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 441 OZ: pri spoluzavinení poškodeného sa náhrada škody pomerne znižuje – škodca zodpovedá len za tú časť škody, ktorú spôsobil.",
+        "wrong": "Nesprávne. Spoluzavinenie poškodeného je relevantné – znižuje rozsah povinnej náhrady."
+      }
+    },
+    {
+      "question": "Čo je bolesťné a sťaženie spoločenského uplatnenia?",
+      "options": [
+        "Zložky náhrady škody na majetku",
+        "Osobitné náhrady za nepriaznivé dôsledky poškodenia zdravia (§ 444 OZ)",
+        "Náhrada ušlého zisku",
+        "Zákonný úrok z omeškania"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 444 OZ: pri poškodení zdravia sa okrem vecnej škody poskytuje bolesťné (za bolesť) a náhrada za sťaženie spoločenského uplatnenia (za dlhodobé následky).",
+        "wrong": "Nesprávne. Bolesťné a sťaženie spoločenského uplatnenia nie sú majetkové škody – sú to osobitné nemajetkové náhrady."
+      }
+    }
+  ]
+}

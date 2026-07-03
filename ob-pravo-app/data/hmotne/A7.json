@@ -1,0 +1,77 @@
+{
+  "id": "7",
+  "title": "Fyzické osoby",
+  "summary": "Fyzická osoba nadobúda spôsobilosť na práva a povinnosti (právnu subjektivitu) narodením (§ 7 OZ). Spôsobilosť na právne úkony vzniká plnoletosťou (18 rokov), môže byť súdom obmedzená alebo odňatá. Ochrana osobnosti fyzickej osoby (§ 11–16 OZ): život, zdravie, občianska cnosť, súkromie. Osobné práva sú neprevoditeľné a nepremlčateľné.",
+  "quiz": [
+    {
+      "question": "Kedy nadobúda fyzická osoba spôsobilosť na práva a povinnosti?",
+      "options": [
+        "Dovŕšením 15 rokov",
+        "Narodením (§ 7 OZ)",
+        "Uzavretím manželstva",
+        "Zápisom do registra"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 7 ods. 1 OZ: spôsobilosť fyzickej osoby mať práva a povinnosti vzniká narodením.",
+        "wrong": "Nesprávne. Narodenie, nie dosiahnutie určitého veku, je momentom vzniku právnej subjektivity."
+      }
+    },
+    {
+      "question": "Kto je oprávnený obmedziť alebo pozbavenia spôsobilosti na právne úkony?",
+      "options": [
+        "Notár",
+        "Lekár psychiater",
+        "Súd (§ 10 OZ)",
+        "Obecný úrad"
+      ],
+      "correct": 2,
+      "explanation": {
+        "correct": "Správne. § 10 OZ: obmedzenie alebo pozbavenie spôsobilosti na právne úkony je výlučne v právomoci súdu.",
+        "wrong": "Nesprávne. Ani lekár ani notár nemajú oprávnenie obmedziť spôsobilosť na právne úkony."
+      }
+    },
+    {
+      "question": "Kedy môže nastať emancipácia maloletého?",
+      "options": [
+        "Automaticky po dovŕšení 16 rokov",
+        "Uzavretím manželstva so súhlasom súdu (§ 8 ods. 2 OZ)",
+        "Rozhodnutím rodičov",
+        "Zápisom do obchodného registra"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 8 ods. 2 OZ: uzavretím manželstva nadobúda maloletý plnú spôsobilosť na právne úkony. Manželstvo môže súd povoliť od 16 rokov.",
+        "wrong": "Nesprávne. Samotné dosiahnutie 16 rokov emancipáciu nezakladá."
+      }
+    },
+    {
+      "question": "Sú osobné práva fyzickej osoby prevoditeľné?",
+      "options": [
+        "Áno, zmluvou",
+        "Nie – sú neprevoditeľné a zaniknú smrťou",
+        "Len s notárskym overením",
+        "Áno, dedením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Osobné práva (ochrana osobnosti – § 11 OZ) sú neprevoditeľné a nepremlčateľné. Zanikajú smrťou (niektoré ochranné nároky prechádzajú na blízkych).",
+        "wrong": "Nesprávne. Osobnostné práva nie sú majetkovými právami – nie sú prevoditeľné ani dediteľné."
+      }
+    },
+    {
+      "question": "Čo upravuje § 11 OZ?",
+      "options": [
+        "Spôsobilosť na právne úkony",
+        "Právo na ochranu osobnosti fyzickej osoby (život, zdravie, súkromie)",
+        "Vznik právnickej osoby",
+        "Zánik záväzku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 11 OZ zaručuje fyzickej osobe právo na ochranu jej osobnosti, najmä života a zdravia, občianskej cti a ľudskej dôstojnosti, súkromia, mena a prejavov osobnej povahy.",
+        "wrong": "Nesprávne. § 11 OZ je základom ochrany osobnosti fyzickej osoby, nie spôsobilosti na úkony."
+      }
+    }
+  ]
+}

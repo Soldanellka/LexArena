@@ -1,0 +1,77 @@
+{
+  "id": "16",
+  "title": "Bezpodielové spoluvlastníctvo manželov (BSM)",
+  "summary": "BSM (§ 143–151 OZ) vzniká automaticky uzavretím manželstva. Predmet: veci nadobudnuté počas manželstva, okrem vecí získaných darovaním, dedením alebo pred manželstvom. Manželia majú rovnaké práva k celému majetku BSM. Zánik: zánik manželstva, rozhodnutie súdu (redukcia) alebo dohoda. Vyporiadanie: dohodou, rozhodnutím súdu alebo zákonnou fikciou (§ 150 OZ).",
+  "quiz": [
+    {
+      "question": "Kedy vzniká bezpodielové spoluvlastníctvo manželov?",
+      "options": [
+        "Dohodou manželov",
+        "Uzavretím manželstva – automaticky zo zákona (§ 143 OZ)",
+        "Zápisom do katastra",
+        "Súdnym rozhodnutím"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. BSM vzniká automaticky uzavretím manželstva – nie je potrebný žiaden ďalší právny akt.",
+        "wrong": "Nesprávne. BSM nevyžaduje osobitnú dohodu ani zápis – vzniká priamo uzavretím manželstva."
+      }
+    },
+    {
+      "question": "Čo patrí do BSM?",
+      "options": [
+        "Všetok majetok manželov",
+        "Veci nadobudnuté počas manželstva okrem vecí získaných dedením, darovaním a vecí osobnej potreby",
+        "Len nehnuteľnosti",
+        "Len spoločné bankové účty"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 143 OZ: do BSM patrí majetok nadobudnutý počas manželstva okrem vecí získaných dedením, darovaním alebo určených len pre jedného manžela.",
+        "wrong": "Nesprávne. Niektoré veci (darované, zdedené, osobnej potreby) do BSM nepatria."
+      }
+    },
+    {
+      "question": "Čo je predmanželská zmluva (notárska zápisnica o zúžení BSM)?",
+      "options": [
+        "Závet pre prípad rozvodu",
+        "Notárska zápisnica, ktorou si manželia dohodou rozšíria alebo zúžia zákonný rozsah BSM",
+        "Povinný dokument pri sobáši",
+        "Dohoda o dedičstve"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Manželia môžu za podmienok § 143a OZ formou notárskej zápisnice rozšíriť, zúžiť alebo vyhradiť vznik BSM na deň zániku manželstva.",
+        "wrong": "Nesprávne. Predmanželská zmluva nie je závet – je to dohoda o majetkových pomeroch manželov."
+      }
+    },
+    {
+      "question": "Ako sa vyporiadava BSM po rozvode?",
+      "options": [
+        "Automaticky – majetok si manželia rozdelia rovnako",
+        "Dohodou, súdnym rozhodnutím alebo zákonnou fikciou (§ 150 OZ) po uplynutí 3 rokov",
+        "Len súdnym rozhodnutím",
+        "Do 1 roka od rozvodu musí byť vždy dohoda"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vyporiadanie BSM prebieha prednostne dohodou. Ak nedôjde k dohode, rozhodne súd. Ak sa nevyporiadava 3 roky, nastáva zákonná fikcia podielov (§ 150 ods. 4 OZ).",
+        "wrong": "Nesprávne. Zákon preferuje dohodu, ale ak k nej nedôjde, nastupuje súd alebo zákonná fikcia."
+      }
+    },
+    {
+      "question": "Čo je zákonná fikcia vyporiadania BSM (§ 150 ods. 4 OZ)?",
+      "options": [
+        "BSM zaniká bez vyporiadania",
+        "Ak manželia nevyporiadajú BSM do 3 rokov od zániku manželstva, hnuteľnosti patria tomu, kto ich používa; nehnuteľnosti sú v podielovom spoluvlastníctve",
+        "Celý majetok prejde na štát",
+        "Majetok sa vyloží v dražbe"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 150 ods. 4 OZ: po uplynutí 3 rokov od zániku manželstva nastáva zákonná fikcia – hnuteľnosti patria tomu, kto ich užíva, nehnuteľnosti sú v podielovom spoluvlastníctve 1:1.",
+        "wrong": "Nesprávne. Zákonná fikcia nie je automatické prepadnutie štátu – zákon určuje konkrétne pravidlá."
+      }
+    }
+  ]
+}

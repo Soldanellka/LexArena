@@ -1,0 +1,77 @@
+{
+  "id": "14",
+  "title": "Záložné právo – funkcie, vznik, zánik a výkon",
+  "summary": "Záložné právo (§ 151a–151me OZ) slúži na zabezpečenie pohľadávky – veriteľ (záložný veriteľ) má právo uspokojiť pohľadávku zo zálohu ak dlžník nesplní záväzok. Vznik: zmluvou, zákonom alebo rozhodnutím súdu. Záložný veriteľ môže záložné právo vykonať dohodou alebo verejnou dražbou. Záložné právo zaniká: zánikom pohľadávky, zánik zálohu, vzdanie sa práva.",
+  "quiz": [
+    {
+      "question": "Akú funkciu plní záložné právo?",
+      "options": [
+        "Záložný veriteľ sa stáva vlastníkom zálohu",
+        "Záložný veriteľ má právo uspokojiť pohľadávku zo zálohu ak dlžník nesplní záväzok",
+        "Záložné právo zakladá povinnosť zaplatiť úrok",
+        "Záložné právo je totožné s ručením"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záložné právo zabezpečuje pohľadávku tak, že záložný veriteľ sa môže uspokojiť zo zálohu pri nesplnení záväzku.",
+        "wrong": "Nesprávne. Záložný veriteľ sa nestáva vlastníkom zálohu – len má právo uspokojiť pohľadávku z neho."
+      }
+    },
+    {
+      "question": "Ako môže záložný veriteľ vykonať záložné právo?",
+      "options": [
+        "Len podaním žaloby na súde",
+        "Dohodou so záložcom alebo verejnou dražbou (§ 151j OZ)",
+        "Priamym odňatím zálohu bez súhlasu",
+        "Len rozhodnutím notára"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 151j OZ: záložné právo sa vykonáva dohodou záložného veriteľa a záložcu alebo predajom zálohu vo verejnej dražbe.",
+        "wrong": "Nesprávne. Záložné právo nemožno vykonať ľubovoľne – zákon predpisuje zákonné postupy."
+      }
+    },
+    {
+      "question": "Kedy zaniká záložné právo?",
+      "options": [
+        "Len výmazom z katastra",
+        "Zánikom zabezpečenej pohľadávky, zánikom zálohu alebo vzdaním sa záložného práva",
+        "Len smrťou záložcu",
+        "Len zaplatením úroku"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Záložné právo je akcesorické – zaniká zánikom hlavnej pohľadávky, zánikom zálohu alebo vzdaním sa práva záložným veriteľom.",
+        "wrong": "Nesprávne. Záložné právo má viacero dôvodov zániku – nielen výmaz z katastra."
+      }
+    },
+    {
+      "question": "Čo je podzálog?",
+      "options": [
+        "Záložné právo zriadené záložcom",
+        "Záložné právo záložného veriteľa k zálohu – záložný veriteľ zastaví svoju pohľadávku zabezpečenú záložným právom",
+        "Druhé záložné právo na tú istú vec",
+        "Záložné právo na hnuteľnú vec"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podzálog vzniká keď záložný veriteľ zastaví svoju pohľadávku (vrátane záložného práva, ktoré ju zabezpečuje) ďalšej osobe.",
+        "wrong": "Nesprávne. Podzálog nie je totožný s druhým záložným právom."
+      }
+    },
+    {
+      "question": "Záložné právo je vedľajším (akcesorickým) práve. Čo to znamená?",
+      "options": [
+        "Existuje samostatne bez pohľadávky",
+        "Jeho existencia závisí od existencie zabezpečenej pohľadávky",
+        "Môže ho zriadiť len notár",
+        "Platí len 5 rokov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Akcesorická povaha záložného práva znamená, že závisí od existencie pohľadávky, ktorú zabezpečuje – zanikne, keď zanikne pohľadávka.",
+        "wrong": "Nesprávne. Záložné právo je akcesorické – nie je samostatné, vždy závisí od pohľadávky."
+      }
+    }
+  ]
+}

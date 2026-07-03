@@ -1,0 +1,77 @@
+{
+  "id": "27",
+  "title": "Dedenie zo zákona",
+  "summary": "Zákonná dedičská postupnosť (§ 473-475a OZ) platí ak poručiteľ nezanechal závet. 4 skupiny: 1. deti a manžel/manželka (rovnaký diel), 2. manžel/manželka, rodičia a spolužijúce osoby, 3. súrodenci a spolužijúce osoby, 4. prarodičia. Ak niet dedičov, dedičstvo pripadne štátu.",
+  "quiz": [
+    {
+      "question": "Kto dedí v prvej skupiny zákonných dedičov?",
+      "options": [
+        "Rodičia a súrodenci",
+        "Deti poručiteľa a manžel alebo manželka, každý rovnakým dielom (§ 473 OZ)",
+        "Len deti",
+        "Manžel a rodičia"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 473 OZ: v prvej skupine dedia deti a manžel/manželka, každý rovnakým dielom.",
+        "wrong": "Nesprávne. Rodičia patria do 2. skupiny. Prvú tvoria deti a manžel/manželka."
+      }
+    },
+    {
+      "question": "Čo sa stane s dedičstvom ak niet žiadnych zákonných dedičov?",
+      "options": [
+        "Rozdelí sa medzi veriteľov",
+        "Dedičstvo pripadne štátu (§ 462 OZ)",
+        "Dedičstvo zaniká",
+        "Vypíše sa dražba"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 462 OZ: ak niet žiadnych zákonných dedičov, dedičstvo nadobúda štát ako dedičstvo bez pána.",
+        "wrong": "Nesprávne. Dedičstvo bez pána nepadne veriteľom - štát ho nadobudne a z neho veriteľov uspokojí."
+      }
+    },
+    {
+      "question": "Kto dedí v druhej skupiny zákonných dedičov?",
+      "options": [
+        "Len manžel/manželka",
+        "Manžel/manželka, rodičia a spolužijúce osoby - manžel dostane aspoň 1/2",
+        "Len rodičia",
+        "Prarodičia"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 474 OZ: v 2. skupine dedia manžel/manželka, rodičia a spolužijúce osoby - manžel/manželka musí dostať aspoň 1/2.",
+        "wrong": "Nesprávne. 2. skupina je manžel spolu s rodičmi a spolužijúcimi osobami."
+      }
+    },
+    {
+      "question": "Čo je reprezentačné právo (§ 473 ods. 2 OZ)?",
+      "options": [
+        "Právo manžela zastupovať deti",
+        "Ak dieťa poručiteľa zomrelo pred ním, namiesto neho dedia jeho potomkovia",
+        "Právo zákonného zástupcu dediť",
+        "Právo neopomenuteľného dediča"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 473 ods. 2 OZ: ak niektoré dieťa poručiteľa nededí, jeho podiel rovnakým dielom prechádza na jeho potomkov.",
+        "wrong": "Nesprávne. Reprezentačné právo nie je právo zákonného zástupcu - je to náhradné dedenie vnúčat."
+      }
+    },
+    {
+      "question": "Môže byť manžel/manželka vydedený závetom?",
+      "options": [
+        "Nie, manžel je neopomenuteľný dedič",
+        "Áno - manžel/manželka nie je neopomenuteľným dedičom, môže byť závetom vylúčený",
+        "Len so súhlasom notára",
+        "Len ak súhlasí"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Neopomenuteľnými dedičmi sú len deti, nie manžel. Manžel/manželka môže byť závetom vylúčený z dedenia.",
+        "wrong": "Nesprávne. Manžel/manželka nie je neopomenuteľným dedičom - môže byť závetom vylúčený."
+      }
+    }
+  ]
+}

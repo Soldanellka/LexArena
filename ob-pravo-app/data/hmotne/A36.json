@@ -1,0 +1,77 @@
+{
+  "id": "36",
+  "title": "Zmluvy o preprave - pojem, podstatné náležitosti, druhy",
+  "summary": "Zmluvy o preprave (§ 760-773 OZ): prepravná zmluva zaväzuje dopravcu prepraviť cestujúceho, zásielku alebo náklad. Druhy: zmluva o preprave osôb (§ 760-764), zmluva o preprave nákladu/zásielky (§ 765-773). Dopravca zodpovedá za škodu na prepravovanej veci počas prepravy. Cestovná zmluva: komplexná zmluva o organizovanom zájazde.",
+  "quiz": [
+    {
+      "question": "Čo je predmetom zmluvy o preprave osôb (§ 760 OZ)?",
+      "options": [
+        "Preprava tovaru",
+        "Dopravca sa zaväzuje prepraviť cestujúceho do dohodnutého miesta určenia",
+        "Prenájom dopravného prostriedku",
+        "Predaj cestovného lístka"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva o preprave osôb (§ 760 OZ) zaväzuje dopravcu prepraviť cestujúceho za odplatu do dohodnutého miesta určenia.",
+        "wrong": "Nesprávne. Predmetom je preprava osoby (nie tovaru), za čo cestujúci platí cenu prepravy."
+      }
+    },
+    {
+      "question": "Kedy zodpovedá dopravca za škodu pri preprave nákladu?",
+      "options": [
+        "Len pri zavinení",
+        "Za škodu na prepravovanom náklade, ktorá vznikla od prevzatia do odovzdania - objektívna zodpovednosť",
+        "Len za čiastočnú stratu",
+        "Len pri dopravných nehodách"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Dopravca zodpovedá objektívne za škodu na náklade počas prepravy (§ 772 OZ) - bez ohľadu na zavinenie, s obmedzenými liberačnými dôvodmi.",
+        "wrong": "Nesprávne. Zodpovednosť dopravcu za škodu na náklade je objektívna - nie je viazaná na zavinenie."
+      }
+    },
+    {
+      "question": "Čo je zasielateľská zmluva?",
+      "options": [
+        "Zmluva o preprave tovaru",
+        "Zasielateľ sa zaväzuje obstarať prepravu veci (vo vlastnom mene, na cudzí účet)",
+        "Zmluva o skladovaní tovaru",
+        "Zmluva o poistení prepravy"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zasielateľ (§ 601 ObchZ) koná vo vlastnom mene, ale na účet príkazcu - zabezpečuje prepravu, ale sám nepreváža.",
+        "wrong": "Nesprávne. Zasielateľ sám nepreváža - zabezpečuje prepravu prostredníctvom iných dopravcov."
+      }
+    },
+    {
+      "question": "Môže cestujúci od zmluvy o preprave odstúpiť pred odchodom?",
+      "options": [
+        "Nie, zmluva je záväzná",
+        "Áno - pred odchodom môže cestujúci odstúpiť, pri organizovanom zájazde platí storno poplatok",
+        "Len ak je chorý",
+        "Len so súhlasom dopravcu"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Cestujúci môže od zmluvy odstúpiť - dôsledky závisia od podmienok prepravy a druhu zmluvy.",
+        "wrong": "Nesprávne. Zákon pripúšťa odstúpenie od zmluvy o preprave, ale môžu byť spojené s poplatkami."
+      }
+    },
+    {
+      "question": "Čo je osobitosťou cestovnej zmluvy (zákon č. 281/2001 Z.z.)?",
+      "options": [
+        "Je len o preprave",
+        "Komplexná zmluva zahŕňajúca prepravu, ubytovanie a iné služby - organizátor zodpovedá za celý zájazd",
+        "Len o ubytovaní",
+        "Je synonymom letenky"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Cestovná zmluva o organizovanom zájazde zaväzuje organizátora zabezpečiť balík služieb a zodpovedá za ich riadne poskytnutie.",
+        "wrong": "Nesprávne. Cestovná zmluva nie je len o preprave - ide o komplexný balík služieb (dovolenkový balík)."
+      }
+    }
+  ]
+}

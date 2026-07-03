@@ -1,0 +1,77 @@
+{
+  "id": "39",
+  "title": "Zmluva o dôchodku, stávka a hra",
+  "summary": "Zmluva o dôchodku (§ 842-844 OZ): jeden záväzok sa vypláca v dôchodkových dávkach po dobu dohodnutú alebo po dobu života. Stávka a hra (§ 845-846 OZ): nevzniká žalovateľná pohľadávka - ide o naturálnu obligáciu. Výnimka: hazardné hry povolené zákonom (zákon o hazardných hrách). Víťaz nemá vymáhateľný nárok na výhru zo stávky.",
+  "quiz": [
+    {
+      "question": "Čo je zmluva o dôchodku (§ 842 OZ)?",
+      "options": [
+        "Zmluva o starobnom dôchodku zo Sociálnej poisťovne",
+        "Zmluva kde sa dlžník zaväzuje poskytovať veriteľovi opakované dávky (dôchodok) po dohodnutú dobu",
+        "Zmluva o sporení",
+        "Zmluva o nájomnom"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zmluva o dôchodku zakladá záväzok vyplácať pravidelné dávky - môže byť na dobu určitú alebo dobu života oprávneného.",
+        "wrong": "Nesprávne. Zmluva o dôchodku podľa OZ nie je sociálne poistenie - je to súkromnoprávny záväzok."
+      }
+    },
+    {
+      "question": "Je pohľadávka z hazardnej hry alebo stávky žalovateľná?",
+      "options": [
+        "Áno, vždy",
+        "Nie - § 845 OZ: zo stávky a hry nevzniká vymáhateľná pohľadávka (naturálna obligácia)",
+        "Len do výšky 500 EUR",
+        "Len pri registrovaných hrách"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. § 845 OZ: zo stávky alebo hry nevzniká pohľadávka, ktorú možno vymáhať na súde - ide o naturálnu obligáciu.",
+        "wrong": "Nesprávne. Pohľadávka z hry alebo stávky nie je súdne vymáhateľná - ide o naturálnu obligáciu."
+      }
+    },
+    {
+      "question": "Čo je naturálna obligácia?",
+      "options": [
+        "Záväzok zo zákona",
+        "Záväzok, ktorý existuje, ale nemožno ho vymáhať súdnou cestou (dobrovoľné plnenie je ale platné)",
+        "Záväzok zo stáda zvierat",
+        "Záväzok k prírode"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Naturálna obligácia je záväzok, ktorý nemá súdnu vymáhateľnosť - ak dlžník dobrovoľne plní, plnenie je platné a nemožno ho požadovať späť.",
+        "wrong": "Nesprávne. Naturálna obligácia neznamená zánik záväzku - existuje, ale nemožno ho súdne vymáhať."
+      }
+    },
+    {
+      "question": "Aká je výnimka pri hrách a stávkach?",
+      "options": [
+        "Žiadna - všetky sú naturálnou obligáciou",
+        "Pohľadávky zo štátom povolených hazardných hier sú žalovateľné",
+        "Výnimka platí len pre lotérie",
+        "Výnimka platí len pre kasinové hry"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Z hrám a stávkam povoleným zákonom (zákon o hazardných hrách č. 30/2019 Z.z.) môžu vznikať platné záväzky.",
+        "wrong": "Nesprávne. Zákonné výnimky existujú pre povolené hazardné hry - tam pohľadávka môže byť platná."
+      }
+    },
+    {
+      "question": "Dobu trvania dôchodku z dôchodkovej zmluvy určuje:",
+      "options": [
+        "Vždy zákon",
+        "Dohoda strán - môže byť na dobu určitú alebo na dobu života oprávneného",
+        "Súd",
+        "Vždy do 65 rokov"
+      ],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Doba trvania dôchodku závisí od dohody - môže byť dohodnutá časovo alebo viazaná na život oprávneného (doživotný dôchodok).",
+        "wrong": "Nesprávne. OZ ponecháva dobu dôchodku na dohodu strán - zákon ju nepredpisuje."
+      }
+    }
+  ]
+}
