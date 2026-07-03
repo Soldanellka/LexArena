@@ -1,1 +1,114 @@
-{"id":"6","title":"Rozsudok – druhy, právoplatnosť a vykonateľnosť","schemaVersion":"1.1","tags":["rozsudok","právoplatnosť","vykonateľnosť","res iudicata"],"summary":"Rozsudok je rozhodnutie súdu vo veci samej (§ 214 CSP). Druhy: rozsudok pre uznanie (§ 218 CSP), rozsudok pre zmeškanie (§ 219 CSP), čiastočný rozsudok, medzitýmny rozsudok. Právoplatnosť nastáva márnym uplynutím odvolacej lehoty alebo doručením rozhodnutia odvolacieho súdu. Právoplatný rozsudok je záväzný – res iudicata. Vykonateľnosť nastáva právoplatnosťou (ak nejde o plnenie do rúk). Predbežná vykonateľnosť nastáva zložením kaucie.","quiz":[{"question":"Čo je právoplatnosť rozsudku?","options":["Vykonateľnosť rozhodnutia","Stav kedy rozsudok nemožno napadnúť riadnym opravným prostriedkom","Záväznosť rozsudku pre strany","Doručenie rozsudku stranám"],"correct":1,"explanation":{"correct":"Správne. Právoplatnosť nastáva keď voči rozsudku nie je prípustný riadny opravný prostriedok (odvolanie) – buď márnym uplynutím odvolacej lehoty, alebo doručením rozhodnutia odvolacieho súdu.","wrong":"Nesprávne. Právoplatnosť a vykonateľnosť sú rôzne pojmy. Právoplatnosť znamená definitívnosť – nemožnosť napadnúť rozsudok riadnym opravným prostriedkom."}},{"question":"Čo je rozsudok pre uznanie?","options":["Rozsudok kde súd uznal nárok","Rozsudok vydaný ak žalovaný uzná žalobcom uplatnený nárok","Rozsudok vydaný bez pojednávania","Rozsudok vydaný na návrh oboch strán"],"correct":1,"explanation":{"correct":"Správne. Podľa § 218 CSP vydá súd rozsudok pre uznanie, ak žalovaný na pojednávaní alebo písomne uzná uplatnený nárok. Súd je uznaním viazaný.","wrong":"Nesprávne. Rozsudok pre uznanie vydáva súd na základe uznania nároku žalovaným – nie na základe vlastného zistenia súdu."}},{"question":"Čo je zásada res iudicata?","options":["Povinnosť plniť rozsudok","Záväznosť právoplatného rozhodnutia – vec je definitívne rozhodnutá","Právo odvolať sa","Povinnosť súdu rozhodnúť"],"correct":1,"explanation":{"correct":"Správne. Res iudicata (rozhodnutá vec) znamená, že právoplatný rozsudok je záväzný – o tej istej veci medzi tými istými stranami nemôže súd znova rozhodovať.","wrong":"Nesprávne. Res iudicata nie je povinnosť plniť, ale procesná prekážka a záväznosť právoplatného rozhodnutia."}},{"question":"Kedy nastáva vykonateľnosť rozsudku?","options":["Ihneď po vyhlásení","Právoplatnosťou alebo uplynutím lehoty na plnenie","Len po zaplatení súdneho poplatku","Len po podaní návrhu na exekúciu"],"correct":1,"explanation":{"correct":"Správne. Rozsudok je vykonateľný keď je právoplatný a uplynula lehota na plnenie. Predbežná vykonateľnosť je možná za zákonom stanovených podmienok.","wrong":"Nesprávne. Ihneď po vyhlásení nie je rozsudok vykonateľný – musí najprv nastať právoplatnosť."}},{"question":"Čo je medzitýmny rozsudok?","options":["Rozsudok vydaný pred skončením dokazovania","Rozsudok o základe nároku, pred rozhodnutím o jeho výške","Rozsudok vydaný bez prítomnosti strán","Predbežné opatrenie"],"correct":1,"explanation":{"correct":"Správne. Medzitýmny rozsudok (§ 214 ods. 1 CSP) rieši základ nároku (či nárok vôbec existuje), pričom o jeho výške rozhodne súd neskôr.","wrong":"Nesprávne. Medzitýmny rozsudok rieši základ veci – nie formu konania. Výška plnenia sa rieši ďalším rozsudkom."}}]}
+{
+  "id": "6",
+  "title": "Právomoc súdov",
+  "schemaVersion": "1.1",
+  "tags": ["právomoc súdu", "nedostatok právomoci", "rozhodcovská zmluva", "medzinárodná právomoc"],
+  "summary": "Právomoc súdu vyjadruje, či daný druh veci vôbec patrí do rozhodovania súdov ako celku, na rozdiel od iných orgánov – rozhodcovských súdov, orgánov verejnej správy alebo súdov iného štátu. Ide teda o vymedzenie hraníc súdnej právomoci navonok, kým príslušnosť rieši, ktorý konkrétny súd v rámci tejto právomoci vec prejedná. Ak súd zistí nedostatok svojej právomoci, konanie zastaví, prípadne vec postúpi orgánu, do ktorého právomoci vec patrí.\n\nPrávomoc súdov môže byť v súkromnoprávnych veciach zmluvne vylúčená v prospech rozhodcovského súdu, ak strany platne uzavreli rozhodcovskú zmluvu podľa zákona č. 244/2002 Z. z. o rozhodcovskom konaní; súd potom na námietku žalovaného ustúpi zo svojej právomoci. Osobitnou kategóriou je medzinárodná právomoc – pri sporoch s cudzím prvkom v rámci EÚ sa spravidla posudzuje priamo podľa nariadení EÚ (najmä nariadenie Brusel Ia č. 1215/2012 o právomoci a uznávaní rozhodnutí v občianskych a obchodných veciach), doplnkovo podľa zákona o medzinárodnom práve súkromnom a procesnom.\n\nZapamätaj si:\n- Právomoc = oprávnenie súdov ako celku prejednávať daný druh vecí (oproti rozhodcovskému súdu, správnemu orgánu, cudziemu súdu).\n- Nedostatok právomoci → súd konanie zastaví, prípadne postúpi príslušnému orgánu.\n- Rozhodcovská zmluva môže vylúčiť právomoc všeobecného súdu (zákon č. 244/2002 Z. z.).\n- Medzinárodná právomoc v EÚ sa posudzuje najmä podľa nariadenia Brusel Ia (1215/2012).\n- Nezamieňať právomoc (druh orgánu) s príslušnosťou (konkrétny súd v rámci právomoci)."
+  ,
+  "quiz": [
+    {
+      "question": "Čo vyjadruje pojem „právomoc súdu“?",
+      "options": ["Ktorý konkrétny súd v rámci sústavy súdov vec prejedná", "Vymedzenie okruhu vecí patriacich do rozhodovania súdov oproti iným orgánom (napr. rozhodcovským súdom, správnym orgánom)", "Zloženie senátu, ktorý vo veci rozhoduje", "Miestnu príslušnosť súdu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Právomoc vymedzuje, či daný druh veci patrí súdom ako celku, na rozdiel od iných orgánov (rozhodcovský súd, orgán verejnej správy).",
+        "wrong": "Nesprávne. Určenie konkrétneho súdu v rámci sústavy je otázkou príslušnosti, nie právomoci."
+      }
+    },
+    {
+      "question": "Čo urobí súd, ak zistí nedostatok svojej právomoci?",
+      "options": ["Rozhodne vo veci napriek tomu", "Konanie zastaví, prípadne vec postúpi orgánu, do ktorého právomoci vec patrí", "Vec automaticky postúpi na Ústavný súd SR", "Preruší konanie na neurčito bez ďalšieho postupu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Nedostatok právomoci je dôvodom na zastavenie konania, prípadne postúpenie veci príslušnému orgánu.",
+        "wrong": "Nesprávne. Súd nemôže vo veci rozhodnúť bez právomoci, ani vec bez ďalšieho postúpiť Ústavnému súdu SR."
+      }
+    },
+    {
+      "question": "Kedy má právomoc rozhodovať súkromnoprávny spor namiesto súdu rozhodcovský súd?",
+      "options": ["Nikdy, právomoc súdov nemožno zmluvne vylúčiť", "Ak strany platne uzavreli rozhodcovskú zmluvu v medziach zákona o rozhodcovskom konaní", "Iba pri sporoch zo spotrebiteľských zmlúv bez akéhokoľvek obmedzenia", "Iba ak je jednou zo strán štát"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Platná rozhodcovská zmluva podľa zákona č. 244/2002 Z. z. môže vylúčiť právomoc všeobecného súdu v prospech rozhodcovského súdu.",
+        "wrong": "Nesprávne. Právomoc súdov možno v súkromnoprávnych veciach zmluvne obmedziť, avšak zákon osobitne chráni napr. spotrebiteľov pred nevýhodnými rozhodcovskými doložkami."
+      }
+    },
+    {
+      "question": "Akým prameňom sa riadi medzinárodná právomoc slovenských súdov v cezhraničných občianskych sporoch v rámci EÚ?",
+      "options": ["Výlučne vnútroštátnym CSP", "Priamo aplikovateľnými nariadeniami EÚ (napr. nariadenie Brusel Ia č. 1215/2012), doplnkovo zákonom o medzinárodnom práve súkromnom a procesnom", "Dohodou strán bez akéhokoľvek zákonného základu", "Iba dvojstrannými zmluvami s USA"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. V rámci EÚ sa medzinárodná právomoc posudzuje predovšetkým podľa priamo aplikovateľných nariadení EÚ, napr. nariadenia Brusel Ia.",
+        "wrong": "Nesprávne. Samotný vnútroštátny CSP neupravuje medzinárodnú právomoc v cezhraničných veciach v rámci EÚ – prednosť majú predpisy EÚ."
+      }
+    },
+    {
+      "question": "Čo je opakom nedostatku právomoci?",
+      "options": ["Nedostatok príslušnosti", "Existencia právomoci – súd je oprávnený vec ako druh prejednať a rozhodnúť", "Nedostatok procesnej subjektivity", "Litispendencia"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ak súd má právomoc, je oprávnený daný druh veci prejednať a rozhodnúť; ďalej sa už len rieši, ktorý konkrétny súd (príslušnosť).",
+        "wrong": "Nesprávne. Nedostatok príslušnosti, procesnej subjektivity a litispendencia sú samostatné inštitúty, nie priamy protiklad nedostatku právomoci."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Právomoc súdu", "definition": "Oprávnenie súdov ako celku prejednávať a rozhodovať určitý druh vecí oproti iným orgánom (rozhodcovský súd, správny orgán)." },
+    { "term": "Nedostatok právomoci", "definition": "Prekážka konania, pri ktorej súd konanie zastaví, prípadne vec postúpi príslušnému orgánu." },
+    { "term": "Rozhodcovská zmluva", "definition": "Dohoda strán vylučujúca právomoc všeobecného súdu v prospech rozhodcovského súdu (zákon č. 244/2002 Z. z.)." },
+    { "term": "Medzinárodná právomoc", "definition": "Určenie, či vec s cudzím prvkom patrí do právomoci slovenských súdov (napr. podľa nariadenia Brusel Ia)." },
+    { "term": "Nariadenie Brusel Ia", "definition": "Nariadenie EÚ č. 1215/2012 o právomoci a uznávaní rozhodnutí v občianskych a obchodných veciach." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Žaloba napriek rozhodcovskej doložke",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalobca podá na súd žalobu, hoci zmluva medzi stranami obsahuje platnú rozhodcovskú doložku.", "options": [], "correct": 0 },
+        {
+          "question": "Ako súd naloží so žalobou, ak sa žalovaný na túto doložku včas odvolá?",
+          "options": ["Súd konanie zastaví pre nedostatok svojej právomoci (existuje platná rozhodcovská zmluva)", "Súd vec napriek tomu prejedná a rozhodne", "Súd žalobu bez ďalšieho zamietne ako nedôvodnú"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak žalovaný včas namietne existenciu platnej rozhodcovskej zmluvy, súd konanie zastaví pre nedostatok právomoci.",
+            "wrong": "Nesprávne. Súd by prekročil svoju právomoc, ak by rozhodol vo veci, ktorá platne patrí rozhodcovskému súdu; zamietnutie žaloby by tiež bolo nesprávnym procesným krokom."
+          }
+        },
+        {
+          "question": "Čo ak by sa žalovaný na rozhodcovskú doložku vôbec neodvolal a začal by sa brániť vo veci samej?",
+          "options": ["Súd môže vec prejednať, lebo námietka nedostatku právomoci nebola včas vznesená", "Súd musí aj tak zastaviť konanie z úradnej moci", "Rozhodcovská doložka sa tým automaticky stáva neplatnou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak sa žalovaný bez výhrad pustí do konania vo veci samej, súd môže vo veci konať ďalej, keďže námietka nedostatku právomoci nebola včas uplatnená.",
+            "wrong": "Nesprávne. Súd nezastavuje konanie z úradnej moci, ak žalovaný námietku nevzniesol; platnosť doložky sa tým tiež automaticky nemení."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Cezhraničný spor v rámci EÚ",
+      "difficulty": "ťažká",
+      "steps": [
+        { "question": "Slovenská spoločnosť žaluje nemeckého odberateľa o zaplatenie kúpnej ceny za tovar dodaný do Nemecka.", "options": [], "correct": 0 },
+        {
+          "question": "Podľa čoho sa primárne posúdi, či majú právomoc slovenské súdy?",
+          "options": ["Podľa nariadenia Brusel Ia (č. 1215/2012)", "Výlučne podľa CSP bez ďalšieho", "Podľa dvojstrannej zmluvy so Spolkovou republikou Nemecko", "Právomoc v takomto spore nemá žiadny súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri sporoch v rámci EÚ s cudzím prvkom sa právomoc posudzuje predovšetkým podľa priamo aplikovateľného nariadenia Brusel Ia.",
+            "wrong": "Nesprávne. Samotný vnútroštátny CSP neurčuje medzinárodnú právomoc v cezhraničných veciach EÚ – prednosť má právo EÚ."
+          }
+        },
+        {
+          "question": "Čo ak strany v zmluve výslovne dohodli právomoc slovenských súdov (prorogačná doložka)?",
+          "options": ["Takáto dohoda je za podmienok nariadenia Brusel Ia zásadne prípustná a záväzná", "Dohoda o právomoci súdu je v medzinárodných veciach vždy neplatná", "Právomoc určuje výlučne miesto plnenia bez možnosti dohody strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nariadenie Brusel Ia pripúšťa dohodu strán o právomoci súdu členského štátu (prorogácia) za splnenia stanovených podmienok.",
+            "wrong": "Nesprávne. Dohoda o právomoci nie je automaticky neplatná ani vylúčená určením miesta plnenia."
+          }
+        }
+      ]
+    }
+  ]
+}

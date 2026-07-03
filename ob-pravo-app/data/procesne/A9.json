@@ -1,1 +1,114 @@
-{"id":"9","title":"Trovy konania","schemaVersion":"1.1","tags":["trovy konania","súdny poplatok","náhrada trov","advokátske trovy"],"summary":"Trovy konania (§ 251-271 CSP) zahŕňajú súdne poplatky, trovy dôkazov, odmenu advokáta a hotové výdavky strán. Úspešná strana má právo na náhradu trov od neúspešnej (§ 255 CSP). Trovy znáša strana, ktorá vo veci nemala úspech – zásada úspechu vo veci. Čiastočný úspech vedie k pomernému vysporiadaniu trov. Súd môže výnimočne nepriznať náhradu trov z dôvodov hodných osobitného zreteľa.","quiz":[{"question":"Na základe akej zásady sa pri neúspechu vo veci rozhoduje o trovách?","options":["Zásada rovnosti strán","Zásada úspechu vo veci – neúspešná strana hradí trovy","Zásada proporcionality","Zásada hospodárnosti"],"correct":1,"explanation":{"correct":"Správne. Podľa § 255 CSP platí zásada úspechu vo veci – strana, ktorá nemala úspech, je povinná nahradiť trovy úspešnej strane.","wrong":"Nesprávne. O trovách konania rozhoduje súd na základe zásady úspechu vo veci, nie rovnosti."}},{"question":"Čo zahŕňajú trovy konania?","options":["Len súdny poplatok","Súdne poplatky, trovy dôkazov, odmenu advokáta a hotové výdavky","Len odmenu advokáta","Len náklady na cestovné"],"correct":1,"explanation":{"correct":"Správne. Trovy konania tvoria viacero zložiek: súdne poplatky, hotové výdavky strán (cestovné, ubytovanie), trovy dôkazov a odmena zástupcu (advokáta).","wrong":"Nesprávne. Trovy konania sú širší pojem – zahŕňajú nielen súdny poplatok, ale aj odmenu advokáta a ďalšie náklady."}},{"question":"Kedy môže súd výnimočne nepriznať náhradu trov?","options":["Vždy keď uzná za vhodné","Z dôvodov hodných osobitného zreteľa","Len pri spotrebiteľských sporoch","Keď o to požiada neúspešná strana"],"correct":1,"explanation":{"correct":"Správne. § 257 CSP umožňuje súdu výnimočne nepriznať náhradu trov alebo ju znížiť z dôvodov hodných osobitného zreteľa (napr. majetkové pomery strany, povaha veci).","wrong":"Nesprávne. Súd nemôže ľubovoľne odmietať náhradu trov – výnimka sa uplatní len pri existencii osobitných dôvodov."}},{"question":"Kedy sa určuje výška odmeny advokáta pre účely trov konania?","options":["Podľa dohody advokáta a klienta","Podľa vyhlášky o odmenách advokátov (advokátska tarifa)","Podľa uváženia súdu","Podľa hodinovej sadzby advokáta"],"correct":1,"explanation":{"correct":"Správne. Pre účely trov konania sa odmena advokáta určuje podľa vyhlášky č. 655/2004 Z. z. o odmenách a náhradách advokátov, nie podľa skutočnej zmluvnej odmeny.","wrong":"Nesprávne. Súd pri výpočte trov vychádza z tarifnej odmeny podľa advokátskej tarichy, nie zo zmluvy advokáta s klientom."}},{"question":"Čo platí pri čiastočnom úspechu vo veci?","options":["Každá strana znáša vlastné trovy","Trovy sa pomerne rozvrhnú podľa miery úspechu","Vždy hradí trovy žalovaný","Súd trovy nepriznáva"],"correct":1,"explanation":{"correct":"Správne. Pri čiastočnom úspechu súd pomerne zváži mieru úspechu každej strany a podľa toho rozhodne o trovách (§ 256 CSP) – prípadne rozhodne, že každá strana znáša vlastné trovy.","wrong":"Nesprávne. Čiastočný úspech nevedie automaticky k tomu, že každá strana znáša vlastné trovy – závisí od miery úspechu."}}]}
+{
+  "id": "9",
+  "title": "Zastúpenie v civilnom konaní",
+  "schemaVersion": "1.1",
+  "tags": ["zastúpenie", "plnomocenstvo", "procesný opatrovník", "kolízny opatrovník", "povinné zastúpenie advokátom"],
+  "summary": "Civilné procesné právo pozná zastúpenie zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu. Zmluvné zastúpenie vzniká udelením plnomocenstva, spravidla advokátovi; plnomocenstvo môže byť všeobecné (oprávňuje na všetky úkony v konaní) alebo špeciálne (len na konkrétny, presne vymedzený úkon). Zákonné zastúpenie vyplýva priamo zo zákona – napríklad rodič zastupuje maloleté dieťa alebo štatutárny orgán koná za právnickú osobu.\n\nSúd ustanoví účastníkovi procesného opatrovníka najmä vtedy, ak je jeho pobyt neznámy alebo mu nemožno doručovať na známu adresu v cudzine a inak by sa konanie neúmerne predĺžilo (§ 78 CSP); ide o zastúpenie z rozhodnutia súdu. Osobitným prípadom je kolízny opatrovník, ktorého súd ustanoví na ochranu záujmov maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu. V dovolacom konaní pred Najvyšším súdom SR je zastúpenie advokátom spravidla povinné (§ 429 CSP), s výnimkou, ak má dovolateľ sám vysokoškolské právnické vzdelanie druhého stupňa; nedostatok povinného zastúpenia vedie k odmietnutiu dovolania, ak nie je odstránený.\n\nZapamätaj si:\n- Druhy zastúpenia: zmluvné (plnomocenstvo), zákonné (zo zákona), na základe rozhodnutia súdu (procesný opatrovník).\n- Všeobecné plnomocenstvo = na všetky úkony; špeciálne = len na vymedzený úkon.\n- Procesný opatrovník (§ 78 CSP) – ustanovuje sa napr. pri neznámom pobyte účastníka.\n- Kolízny opatrovník chráni záujmy maloletého pri rozpore so zákonným zástupcom.\n- Povinné zastúpenie advokátom v dovolacom konaní (§ 429 CSP), s výnimkou právnicky vzdelaného dovolateľa."
+  ,
+  "quiz": [
+    {
+      "question": "Aké druhy zastúpenia civilné procesné právo pozná?",
+      "options": ["Iba zmluvné", "Zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu (procesný opatrovník)", "Iba zákonné", "Iba prostredníctvom advokáta"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Popri zmluvnom a zákonnom zastúpení pozná civilný proces aj zastúpenie z rozhodnutia súdu, napríklad prostredníctvom procesného opatrovníka.",
+        "wrong": "Nesprávne. Zastúpenie sa neobmedzuje len na zmluvné, zákonné alebo advokátske – zákon počíta aj so zastúpením ustanoveným súdom."
+      }
+    },
+    {
+      "question": "Kedy je v civilnom sporovom konaní povinné zastúpenie advokátom?",
+      "options": ["Vždy už na prvom stupni", "V dovolacom konaní pred Najvyšším súdom SR (§ 429 CSP), ak zákon neustanoví inak", "Nikdy nie je povinné", "Iba pri sporoch do 500 eur"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 429 CSP musí byť dovolateľ v dovolacom konaní zastúpený advokátom, s výnimkou, ak má sám vysokoškolské právnické vzdelanie druhého stupňa.",
+        "wrong": "Nesprávne. Na prvom stupni zastúpenie advokátom spravidla povinné nie je – povinnosť sa viaže na dovolacie konanie."
+      }
+    },
+    {
+      "question": "Kto zastupuje maloleté dieťa v konaní, ak sú záujmy zákonného zástupcu v rozpore so záujmami dieťaťa?",
+      "options": ["Súd ustanoví kolízneho opatrovníka", "Dieťa zostáva bez zastúpenia", "Zastupuje ho automaticky prokurátor", "Zastupuje ho druhý rodič bez ohľadu na rozpor záujmov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Pri rozpore záujmov medzi zákonným zástupcom a maloletým súd ustanoví kolízneho opatrovníka na ochranu záujmov dieťaťa.",
+        "wrong": "Nesprávne. Dieťa nezostáva bez zastúpenia a prokurátor ani automaticky druhý rodič túto úlohu neplnia."
+      }
+    },
+    {
+      "question": "Aký je rozdiel medzi všeobecným a špeciálnym plnomocenstvom?",
+      "options": ["Všeobecné oprávňuje na všetky úkony v konaní, špeciálne len na konkrétny, presne vymedzený úkon", "Nie je medzi nimi rozdiel", "Špeciálne plnomocenstvo je vždy širšie ako všeobecné", "Všeobecné plnomocenstvo sa udeľuje iba advokátovi"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Všeobecné plnomocenstvo pokrýva všetky procesné úkony v konaní, kým špeciálne sa vzťahuje len na vymedzený úkon (napr. podanie odvolania).",
+        "wrong": "Nesprávne. Rozsah oprávnenia sa medzi oboma typmi plnomocenstva zásadne líši a nie je viazaný len na osobu advokáta."
+      }
+    },
+    {
+      "question": "Kedy súd ustanoví účastníkovi procesného opatrovníka?",
+      "options": ["Ak je pobyt účastníka neznámy alebo mu nemožno doručovať na známu adresu v cudzine, a inak by sa konanie neúmerne predĺžilo, prípadne z iných zákonom ustanovených dôvodov", "Vždy na začiatku konania automaticky bez ďalšieho", "Iba na žiadosť žalovaného bez odôvodnenia", "Nikdy, opatrovník sa ustanovuje len v trestnom konaní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Procesný opatrovník sa ustanoví najmä pri neznámom pobyte účastníka alebo nemožnosti doručovania, aby sa predišlo neprimeranému predĺženiu konania.",
+        "wrong": "Nesprávne. Ustanovenie procesného opatrovníka nie je automatické pri každom konaní a inštitút existuje aj v civilnom, nielen trestnom procese."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Zmluvné zastúpenie", "definition": "Zastúpenie na základe plnomocenstva udeleného účastníkom (napr. advokátovi)." },
+    { "term": "Zákonné zastúpenie", "definition": "Zastúpenie vyplývajúce priamo zo zákona (rodič za maloleté dieťa, štatutárny orgán za právnickú osobu)." },
+    { "term": "Procesný opatrovník", "definition": "Zástupca ustanovený súdom, napríklad ak je pobyt účastníka neznámy (§ 78 CSP)." },
+    { "term": "Kolízny opatrovník", "definition": "Zástupca ustanovený na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu." },
+    { "term": "Povinné zastúpenie advokátom", "definition": "V dovolacom konaní musí byť dovolateľ zastúpený advokátom, ak zákon neustanoví výnimku (§ 429 CSP)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neznámy pobyt žalovaného",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Súd nemôže doručiť žalobu žalovanému, pretože jeho pobyt je neznámy a nedá sa zistiť ani šetrením.", "options": [], "correct": 0 },
+        {
+          "question": "Čo súd v takom prípade urobí?",
+          "options": ["Ustanoví žalovanému procesného opatrovníka", "Konanie bez ďalšieho zastaví", "Rozhodne v neprospech žalobcu automaticky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri neznámom pobyte žalovaného súd ustanoví procesného opatrovníka, aby sa mohlo konanie riadne uskutočniť.",
+            "wrong": "Nesprávne. Konanie sa nezastavuje ani sa automaticky nerozhoduje v neprospech žalobcu len pre neznámy pobyt žalovaného."
+          }
+        },
+        {
+          "question": "Aké má procesný opatrovník postavenie?",
+          "options": ["Zastupuje žalovaného v konaní a hája jeho procesné záujmy najlepšie, ako to okolnosti dovoľujú", "Stáva sa žalovaným namiesto pôvodného účastníka", "Je iba formálnym pozorovateľom bez procesných práv"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Procesný opatrovník vystupuje ako zástupca žalovaného a vykonáva jeho procesné práva v jeho záujme.",
+            "wrong": "Nesprávne. Opatrovník nenahrádza žalovaného ako účastníka konania a nie je len pasívnym pozorovateľom."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Dovolanie bez advokáta",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Účastník podá dovolanie na Najvyšší súd SR sám, bez zastúpenia advokátom, hoci nespĺňa žiadnu zákonnú výnimku.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to má procesný následok?",
+          "options": ["Súd ho vyzve na odstránenie nedostatku (zastúpenie advokátom), inak dovolanie odmietne", "Dovolanie sa bez ďalšieho prejedná", "Nedostatok zastúpenia je bez akéhokoľvek významu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Chýbajúce povinné zastúpenie advokátom je odstrániteľným nedostatkom podania; ak sa neodstráni, dovolanie sa odmietne.",
+            "wrong": "Nesprávne. Bez povinného zastúpenia advokátom sa dovolanie ďalej neprejedná – ide o zákonom vyžadovanú podmienku."
+          }
+        },
+        {
+          "question": "Existuje výnimka z povinného zastúpenia advokátom v dovolacom konaní?",
+          "options": ["Áno, napríklad ak má dovolateľ sám vysokoškolské právnické vzdelanie druhého stupňa (§ 429 ods. 2 CSP)", "Nie, výnimky neexistujú", "Áno, ak je dovolateľ štátnym občanom SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon oslobodzuje od povinného zastúpenia advokátom dovolateľa, ktorý má sám požadované právnické vzdelanie.",
+            "wrong": "Nesprávne. Štátne občianstvo samo osebe výnimku nezakladá – rozhodujúce je právnické vzdelanie dovolateľa."
+          }
+        }
+      ]
+    }
+  ]
+}

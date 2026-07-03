@@ -1,79 +1,114 @@
 {
   "id": "5",
-  "title": "Dokazovanie v civilnom procese",
+  "title": "Subjekty civilného procesu",
   "schemaVersion": "1.1",
-  "tags": ["dokazovanie", "dôkazy", "listinný dôkaz", "znalec"],
-  "summary": "Dokazovanie je ústrednou časťou civilného konania (§ 185-225 CSP). Dôkazné bremeno nesú strany – každá preukazuje skutočnosti, na ktoré sa odvoláva. Dôkazné prostriedky: výsluch strán, svedecká výpoveď, listinný dôkaz, znalecký posudok, obhliadka. Voľné hodnotenie dôkazov – súd hodnotí každý dôkaz jednotlivo aj v ich súhrne. Nepriamy dôkaz (indícia) je prípustný.",
+  "tags": ["subjekty procesu", "procesná subjektivita", "procesná spôsobilosť", "znalec", "kolízny opatrovník"],
+  "summary": "Subjektmi civilného procesu sú súd, účastníci konania (v sporovom konaní strany – žalobca a žalovaný) a ďalšie osoby zúčastnené na konaní – svedkovia, znalci, tlmočníci, prípadne prokurátor alebo iné orgány verejnej moci. Účastník musí mať procesnú subjektivitu (spôsobilosť byť stranou konania), ktorá zodpovedá právnej subjektivite v hmotnom práve, a procesnú spôsobilosť (spôsobilosť vlastnými úkonmi nadobúdať a vykonávať procesné práva a povinnosti), ktorá zodpovedá spôsobilosti na právne úkony. Za osoby bez procesnej spôsobilosti konajú ich zákonní zástupcovia.\n\nOd účastníkov treba odlišovať tzv. iné subjekty procesu, ktoré majú iba funkčnú úlohu – znalec poskytuje odborný záver ako dôkazný prostriedok, svedok vypovedá o skutočnostiach, tlmočník zabezpečuje jazykovú komunikáciu; žiadny z nich nemá vlastný právny záujem na výsledku konania a nedisponuje predmetom konania. Osobitným subjektom je kolízny opatrovník, ktorého súd ustanoví na ochranu záujmov maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu. V zákonom ustanovených prípadoch môže do konania vstúpiť aj prokurátor na ochranu verejného záujmu.\n\nZapamätaj si:\n- Hlavné subjekty: súd a účastníci (strany sporu); majú vlastný právny záujem na výsledku.\n- Iné subjekty procesu: svedok, znalec, tlmočník – bez vlastného právneho záujmu na výsledku.\n- Procesná subjektivita = spôsobilosť byť stranou konania (zodpovedá právnej subjektivite).\n- Procesná spôsobilosť = spôsobilosť vlastnými úkonmi konať v konaní (zodpovedá spôsobilosti na právne úkony).\n- Kolízny opatrovník chráni záujmy maloletého pri rozpore záujmov so zákonným zástupcom."
+  ,
   "quiz": [
     {
-      "question": "Kto nesie dôkazné bremeno v sporovom konaní?",
-      "options": [
-        "Vždy žalobca",
-        "Súd zisťuje skutočnosti z úradnej moci",
-        "Strana, ktorá tvrdenie uplatňuje",
-        "Vždy žalovaný"
-      ],
-      "correct": 2,
+      "question": "Kto je vždy hlavným subjektom civilného sporového konania spolu so súdom?",
+      "options": ["Svedok", "Strany sporu (žalobca a žalovaný)", "Znalec", "Tlmočník"],
+      "correct": 1,
       "explanation": {
-        "correct": "Správne. V sporovom konaní platí zásada, že každá strana preukazuje skutočnosti, na ktoré sa odvoláva (§ 185 CSP). Súd nedoplňuje dôkazy za strany.",
-        "wrong": "Nesprávne. Dôkazné bremeno nie je jednostranné. Každá strana ho nesie vo vzťahu k vlastným tvrdeniam – nie vždy iba žalobca."
+        "correct": "Správne. Hlavnými subjektmi civilného sporového konania sú súd a strany sporu – žalobca a žalovaný.",
+        "wrong": "Nesprávne. Svedok, znalec a tlmočník sú tzv. iné subjekty procesu s funkčnou úlohou, nie hlavnými účastníkmi konania."
       }
     },
     {
-      "question": "Ako hodnotí súd dôkazy podľa CSP?",
-      "options": [
-        "Každý dôkaz má vopred danú dôkaznú silu",
-        "Voľne – hodnotí každý dôkaz jednotlivo aj všetky dôkazy v súhrne",
-        "Len listinné dôkazy sú záväzné",
-        "Znalecký posudok je pre súd záväzný"
-      ],
+      "question": "Aké je postavenie znalca v civilnom procese?",
+      "options": ["Je účastníkom konania", "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok, nie účastníkom", "Rozhoduje namiesto súdu o právnych otázkach", "Zastupuje jednu zo strán"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. § 191 CSP zakotvuje zásadu voľného hodnotenia dôkazov – súd hodnotí dôkazy podľa svojej úvahy, každý dôkaz jednotlivo a všetky dôkazy v ich vzájomnej súvislosti.",
-        "wrong": "Nesprávne. Žiadny dôkaz nemá vopred danú absolútnu dôkaznú silu. Znalecký posudok hodnotí súd ako ostatné dôkazy."
+        "correct": "Správne. Znalec poskytuje odborný záver (znalecký posudok) ako dôkazný prostriedok; nie je účastníkom konania ani nerozhoduje o právnych otázkach.",
+        "wrong": "Nesprávne. Hodnotenie právnych otázok patrí výlučne súdu; znalec sa vyjadruje len k odborným (skutkovým) otázkam."
       }
     },
     {
-      "question": "Čo je notorieta (všeobecne známa skutočnosť)?",
-      "options": [
-        "Skutočnosť uznaná znalcom",
-        "Skutočnosť, ktorú súd nemusí dokazovať – je všeobecne známa",
-        "Skutočnosť zaprotokolovaná notárom",
-        "Skutočnosť priznaná žalovaným"
-      ],
+      "question": "Môže do civilného konania vstúpiť prokurátor?",
+      "options": ["Nikdy, prokurátor pôsobí len v trestnom konaní", "Áno, v zákonom ustanovených prípadoch môže podať návrh alebo vstúpiť do už začatého konania na ochranu verejného záujmu", "Áno, ale iba ako svedok", "Áno, iba ako znalec"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Notoriety (§ 186 CSP) sú skutočnosti všeobecne známe alebo súdu z jeho činnosti známe. Na tieto skutočnosti sa nemusí preukazovať – súd z nich vychádza bez dokazovania.",
-        "wrong": "Nesprávne. Notorieta nie je viazaná na notára ani znalca. Ide o skutočnosti, ktoré sú všeobecne alebo súdu samému známe."
+        "correct": "Správne. Zákon v ustanovených prípadoch umožňuje prokurátorovi podať návrh na začatie konania alebo doň vstúpiť na ochranu verejného záujmu.",
+        "wrong": "Nesprávne. Prokurátor nepôsobí len v trestnom konaní – civilné procesné kódexy počítajú aj s jeho účasťou na ochranu verejného záujmu."
       }
     },
     {
-      "question": "Môže byť výsluch strany dôkazným prostriedkom?",
-      "options": [
-        "Nie – strana nie je nestranným svedkom",
-        "Áno – výsluch strán je zákonom predvídaný dôkazný prostriedok",
-        "Len výsluch žalobcu",
-        "Len ak s tým druhá strana súhlasí"
-      ],
+      "question": "Aké je postavenie kolízneho opatrovníka v konaniach týkajúcich sa maloletého?",
+      "options": ["Nemá žiadne procesné postavenie", "Chráni záujmy maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu", "Je vždy žalovaným v konaní", "Nahrádza súd pri rozhodovaní vo veci"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. § 194 CSP výslovne počíta s výsluchom strán ako dôkazným prostriedkom. Súd ho nariadí, ak to uzná za potrebné.",
-        "wrong": "Nesprávne. Hoci strana je zainteresovanou osobou, CSP výsluch strán ako dôkazný prostriedok výslovne predpokladá."
+        "correct": "Správne. Súd ustanoví kolízneho opatrovníka práve vtedy, keď záujmy maloletého a jeho zákonného zástupcu nie sú zhodné, aby bol maloletý riadne zastúpený.",
+        "wrong": "Nesprávne. Kolízny opatrovník nerozhoduje namiesto súdu ani nie je automaticky žalovaným – zastupuje záujmy maloletého ako jeho procesný zástupca."
       }
     },
     {
-      "question": "Kedy môže súd nariadiť znalecký posudok?",
-      "options": [
-        "Vždy na návrh strany",
-        "Keď na posúdenie skutočnosti potrebuje odborné znalosti",
-        "Len v obchodných sporoch",
-        "Len na návrh oboch strán"
-      ],
-      "correct": 1,
+      "question": "Čím sa účastník konania odlišuje od iných subjektov procesu (svedok, znalec, tlmočník)?",
+      "options": ["Účastník má vlastný právny záujem na výsledku konania a disponuje procesnými právami vo veci samej, iní majú len funkčnú úlohu", "Iné subjekty majú rovnaké procesné práva ako účastníci", "Rozdiel medzi nimi neexistuje", "Svedok je vždy zároveň aj účastníkom konania"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Znalecký posudok (§ 202 CSP) nariaďuje súd, ak na zistenie alebo posúdenie skutočnosti dôležitej pre rozhodnutie potrebuje odborné znalosti.",
-        "wrong": "Nesprávne. Znalecký dôkaz nariaďuje súd z úradnej moci alebo na návrh strany – nie len na návrh oboch strán."
+        "correct": "Správne. Účastník má priamy právny záujem na výsledku sporu a môže disponovať predmetom konania; iní subjekti majú iba pomocnú, funkčnú úlohu.",
+        "wrong": "Nesprávne. Svedok, znalec či tlmočník nedisponujú predmetom konania a nemajú vlastný právny záujem na jeho výsledku."
       }
+    }
+  ],
+  "tiles": [
+    { "term": "Subjekty civilného procesu", "definition": "Súd, účastníci konania a ďalšie osoby zúčastnené na konaní (svedkovia, znalci, tlmočníci)." },
+    { "term": "Procesná subjektivita", "definition": "Spôsobilosť byť stranou civilného konania; zodpovedá právnej subjektivite v hmotnom práve." },
+    { "term": "Procesná spôsobilosť", "definition": "Spôsobilosť vlastnými úkonmi nadobúdať a vykonávať procesné práva a povinnosti; zodpovedá spôsobilosti na právne úkony." },
+    { "term": "Znalec", "definition": "Odborník poskytujúci znalecký posudok ako dôkazný prostriedok, nie účastník konania." },
+    { "term": "Kolízny opatrovník", "definition": "Osoba ustanovená súdom na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Rozpor záujmov rodiča a dieťaťa",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "V konaní o úprave výkonu rodičovských práv súd zistí, že záujmy matky a maloletého dieťaťa sú v rozpore.", "options": [], "correct": 0 },
+        {
+          "question": "Čo súd ustanoví?",
+          "options": ["Kolízneho opatrovníka na ochranu záujmov dieťaťa", "Nič, matka zastupuje dieťa aj naďalej", "Súd konanie bez ďalšieho zastaví"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri rozpore záujmov medzi zákonným zástupcom a maloletým súd ustanoví kolízneho opatrovníka, aby bol maloletý riadne zastúpený.",
+            "wrong": "Nesprávne. Ponechanie zastúpenia matkou by pri rozpore záujmov ohrozilo riadnu ochranu práv dieťaťa; konanie sa pritom nezastavuje."
+          }
+        },
+        {
+          "question": "Je kolízny opatrovník samostatným účastníkom konania alebo zástupcom maloletého?",
+          "options": ["Koná v mene a v záujme maloletého ako jeho procesný zástupca, maloletý zostáva účastníkom konania", "Je samostatným účastníkom popri dieťati", "Je iba svedkom v konaní"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Kolízny opatrovník vystupuje ako zástupca maloletého, ktorý sám zostáva účastníkom konania.",
+            "wrong": "Nesprávne. Kolízny opatrovník nenahrádza maloletého ako účastníka, iba ho v konaní zastupuje."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výsluch znalca na pojednávaní",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd predvolá znalca, aby na pojednávaní vysvetlil svoj znalecký posudok o výške škody.", "options": [], "correct": 0 },
+        {
+          "question": "Aké je procesné postavenie znalca?",
+          "options": ["Je účastníkom konania s právom navrhovať dôkazy", "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok", "Zastupuje žalovaného"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Znalec je iným subjektom procesu – jeho posudok je dôkazným prostriedkom, on sám nie je účastníkom.",
+            "wrong": "Nesprávne. Znalec nemá procesné práva účastníka (napr. navrhovať vlastné dôkazy vo veci samej) ani nezastupuje žiadnu stranu."
+          }
+        },
+        {
+          "question": "Môže znalec namiesto súdu rozhodnúť o právnej otázke zavinenia?",
+          "options": ["Áno, ak je odborník na danú oblasť", "Nie, hodnotenie právnych otázok patrí výlučne súdu, znalec sa vyjadruje len k odborným (skutkovým) otázkam", "Áno, ak s tým strany súhlasia"],
+          "correct": 1,
+          "explanation": {
+            "correct": "Správne. Právne posúdenie veci, vrátane otázky zavinenia, patrí výlučne súdu; znalec poskytuje len odborné závery k skutkovým otázkam.",
+            "wrong": "Nesprávne. Súhlas strán ani odbornosť znalca nemenia rozdelenie úloh medzi súd (právne posúdenie) a znalca (odborné posúdenie)."
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,79 +1,114 @@
 {
   "id": "4",
-  "title": "Žaloba – náležitosti, druhy a zmena",
+  "title": "Zloženie súdu a vylúčenie sudcu",
   "schemaVersion": "1.1",
-  "tags": ["žaloba", "petit", "skutkové tvrdenia", "zmena žaloby"],
-  "summary": "Žaloba je procesný úkon žalobcu, ktorým sa začína sporové konanie (§ 123 CSP). Povinné náležitosti: označenie súdu, strán, predmetu konania, opisu rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit). Druhy žalôb: na plnenie (condemnatio), na určenie (§ 137 písm. c) CSP – naliehavý právny záujem) a na vykonanie právneho úkonu. Zmenu žaloby môže žalobca urobiť len so súhlasom súdu.",
+  "tags": ["samosudca", "senát", "vylúčenie sudcu", "námietka zaujatosti", "podjatosť"],
+  "summary": "Civilné súdy rozhodujú buď prostredníctvom samosudcu, alebo v senáte. Na prvom stupni rozhoduje v sporových veciach spravidla samosudca; na odvolacom a dovolacom stupni rozhodujú senáty zložené spravidla z troch sudcov. Zloženie súdu musí byť určené vopred podľa rozvrhu práce (zásada zákonného sudcu).\n\nSudca je z prejednávania a rozhodovania veci vylúčený, ak má pomer k veci, k účastníkom alebo k ich zástupcom, ktorý vzbudzuje pochybnosť o jeho nezaujatosti (§ 49 a nasl. CSP). Dôvodom vylúčenia je aj skutočnosť, že sudca už v tej istej veci rozhodoval na nižšom stupni. Účastník môže podjatosť sudcu namietať prostredníctvom námietky zaujatosti, ktorú musí uplatniť bez zbytočného odkladu, len čo sa o dôvode dozvedel; oneskorená alebo účelová námietka sa neprihliada. O vylúčení sudcu nerozhoduje sám namietaný sudca, ale nadriadený súd, prípadne iný senát alebo sudca určený zákonom, aby sa zachovala objektivita rozhodovania.\n\nZapamätaj si:\n- Prvý stupeň v sporových veciach: spravidla samosudca; odvolanie a dovolanie: senát (spravidla traja sudcovia).\n- Vylúčenie sudcu (§ 49 CSP): pomer k veci, účastníkom alebo ich zástupcom vzbudzujúci pochybnosť o nestrannosti.\n- Dôvodom vylúčenia je aj opätovné rozhodovanie tej istej veci na nižšom stupni.\n- Námietku zaujatosti treba uplatniť bez zbytočného odkladu, inak sa na ňu neprihliada.\n- O vylúčení nerozhoduje sám namietaný sudca, ale nadriadený súd/iný senát."
+  ,
   "quiz": [
     {
-      "question": "Čo musí povinne obsahovať žaloba podľa CSP?",
-      "options": [
-        "Len meno žalobcu a žalovaného",
-        "Označenie súdu, strán, predmetu, skutkových tvrdení, dôkazov a petit",
-        "Len petit (čoho sa žalobca domáha)",
-        "Len právnu kvalifikáciu"
-      ],
+      "question": "Kto spravidla rozhoduje na prvom stupni v civilnom spore?",
+      "options": ["Senát troch sudcov", "Samosudca", "Prísediaci sudcovia", "Predseda súdu"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 132 CSP musí žaloba obsahovať: označenie súdu, označenie strán, opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit).",
-        "wrong": "Nesprávne. Samotný petit bez skutkového opisu nestačí. Žaloba musí obsahovať všetky zákonné náležitosti podľa § 132 CSP."
+        "correct": "Správne. V civilnom sporovom konaní na prvom stupni rozhoduje spravidla samosudca.",
+        "wrong": "Nesprávne. Senáty rozhodujú najmä na odvolacom a dovolacom stupni, nie spravidla na prvom stupni."
       }
     },
     {
-      "question": "Čo je žalobný petit?",
-      "options": [
-        "Opis skutkového stavu",
-        "Návrh výroku rozhodnutia, teda čo konkrétne žalobca žiada od súdu",
-        "Zoznam predložených dôkazov",
-        "Právna kvalifikácia nároku"
-      ],
+      "question": "Aké je zloženie odvolacieho senátu na krajskom súde v civilnej veci?",
+      "options": ["Samosudca", "Senát zložený spravidla z troch sudcov", "Dvaja sudcovia a jeden prísediaci", "Senát piatich sudcov"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Petit je jadrom žaloby – ide o návrh výroku rozhodnutia. Súd ním je viazaný a nemôže prisúdiť viac ani niečo iné.",
-        "wrong": "Nesprávne. Petit nie je opis skutkového stavu ani zoznam dôkazov. Je to konkrétny návrh toho, čo má súd rozhodnúť."
+        "correct": "Správne. Odvolacie senáty na krajských súdoch rozhodujú spravidla v zložení troch sudcov.",
+        "wrong": "Nesprávne. V civilnom odvolacom konaní sa nevyužíva samosudca ani prísediaci – rozhoduje trojčlenný senát."
       }
     },
     {
-      "question": "Kedy má žalobca naliehavý právny záujem na určovacej žalobe?",
-      "options": [
-        "Vždy keď chce niečo určiť",
-        "Keď je to potrebné na odstránenie stavu neistoty v právnom vzťahu, ktorý nemožno odstrániť inak",
-        "Len keď je pohľadávka premlčaná",
-        "Len pri nehnuteľnostiach"
-      ],
+      "question": "Čo je dôvodom vylúčenia sudcu podľa § 49 CSP?",
+      "options": ["Sudca má rovnaké priezvisko ako účastník", "Sudca má pomer k veci, k účastníkom alebo ich zástupcom, ktorý vzbudzuje pochybnosť o jeho nezaujatosti", "Sudca už v minulosti rozhodoval iný spor s iným účastníkom", "Sudca je iného vierovyznania ako účastník"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 137 písm. c) CSP sa možno žalobou domáhať určenia, či tu právny vzťah alebo právo je alebo nie je, ak je na tom naliehavý právny záujem.",
-        "wrong": "Nesprávne. Naliehavý právny záujem musí byť reálny a preukázateľný. Nestačí len túžba potvrdiť nejaké právo."
+        "correct": "Správne. Dôvodom vylúčenia je pomer sudcu k veci, k účastníkom alebo ich zástupcom, ktorý objektívne vzbudzuje pochybnosť o jeho nezaujatosti.",
+        "wrong": "Nesprávne. Zhoda priezviska, iná viera či nesúvisiace predchádzajúce konanie samy osebe dôvodom vylúčenia nie sú."
       }
     },
     {
-      "question": "Môže žalobca zmeniť žalobu počas konania?",
-      "options": [
-        "Áno, kedykoľvek bez obmedzenia",
-        "Len so súhlasom súdu",
-        "Nie – žaloba sa nemôže meniť",
-        "Len pred prvým pojednávaním"
-      ],
+      "question": "Kto rozhoduje o námietke zaujatosti sudcu?",
+      "options": ["Samotný namietaný sudca", "Nadriadený súd, resp. iný senát/sudca určený zákonom, nie sám namietaný sudca", "Účastník konania", "Minister spravodlivosti SR"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 142 CSP žalobca môže zmeniť žalobu len so súhlasom súdu. Súd súhlas neudelí, ak by zmena bola v neprospech riadneho priebehu konania.",
-        "wrong": "Nesprávne. Zmena žaloby nie je voľná – vyžaduje súhlas súdu. Súd ho môže odmietnuť, ak by zmena poškodila priebeh konania."
+        "correct": "Správne. Aby bolo rozhodnutie objektívne, o vylúčení sudcu rozhoduje iný, zákonom určený súd, senát alebo sudca – nie namietaný sudca sám.",
+        "wrong": "Nesprávne. Ak by o svojej zaujatosti rozhodoval sám namietaný sudca, stratil by sa zmysel inštitútu vylúčenia."
       }
     },
     {
-      "question": "Kedy nastáva litispendencia (prekážka konania)?",
-      "options": [
-        "Keď súd odmietne žalobu",
-        "Keď vo veci začne konanie pred tým istým alebo iným súdom skôr",
-        "Keď žalovaný podá protižalobu",
-        "Keď strany uzavrú dohodu"
-      ],
-      "correct": 1,
+      "question": "Môže byť z prejednávania veci vylúčený sudca, ktorý už v tej istej veci rozhodoval na nižšom stupni?",
+      "options": ["Áno, pre pochybnosť o nezaujatosti pri opätovnom rozhodovaní tej istej veci", "Nie, nikdy", "Iba ak si to účastník výslovne vyžiada bez odôvodnenia", "Iba pri trestných veciach"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Litispendencia nastáva keď v tej istej veci (eadem causa) medzi tými istými stranami (idem personae) prebieha skoršie konanie. Neskoršie konanie súd zastaví.",
-        "wrong": "Nesprávne. Litispendencia nie je odmietnutie žaloby – je to prekážka spočívajúca v existencii skoršieho konania o tej istej veci."
+        "correct": "Správne. Zákon vylučuje sudcu, ktorý už v tej istej veci rozhodoval na nižšom stupni, aby sa predišlo pochybnostiam o nestrannosti opätovného rozhodovania.",
+        "wrong": "Nesprávne. Ide o samostatný, zákonom výslovne upravený dôvod vylúčenia, nezávislý od vôle účastníka."
       }
+    }
+  ],
+  "tiles": [
+    { "term": "Samosudca", "definition": "Sudca, ktorý sám rozhoduje najmä na prvom stupni v civilných sporových veciach." },
+    { "term": "Senát", "definition": "Kolégium sudcov (spravidla traja), ktoré rozhoduje najmä v odvolacom a dovolacom konaní." },
+    { "term": "Vylúčenie sudcu", "definition": "Vyňatie sudcu z prejednávania a rozhodovania veci pre pochybnosť o jeho nezaujatosti (§ 49 CSP)." },
+    { "term": "Námietka zaujatosti", "definition": "Procesný prostriedok účastníka, ktorým namieta podjatosť sudcu; musí byť odôvodnená a včasná." },
+    { "term": "Podjatosť", "definition": "Stav, keď má sudca pomer k veci, účastníkom alebo ich zástupcom vzbudzujúci pochybnosť o nestrannosti." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Sudca a príbuzenský vzťah",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Sudca zistí, že žalovaný je jeho blízky príbuzný.", "options": [], "correct": 0 },
+        {
+          "question": "Čo má sudca urobiť?",
+          "options": ["Oznámiť túto skutočnosť a vec ďalej neprejednávať, kým sa nerozhodne o jeho vylúčení", "Vec rozhodnúť rýchlo, aby sa vyhol komplikáciám", "Prejednať vec, lebo príbuzenstvo nie je nikdy dôvodom vylúčenia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Sudca je povinný bez zbytočného odkladu oznámiť skutočnosti nasvedčujúce jeho vylúčeniu a ďalej vo veci nekonať, kým sa o jeho vylúčení nerozhodne.",
+            "wrong": "Nesprávne. Blízky príbuzenský vzťah k účastníkovi je typickým dôvodom vylúčenia sudcu, nie skutočnosťou bez významu."
+          }
+        },
+        {
+          "question": "Kto napokon rozhodne o vylúčení tohto sudcu?",
+          "options": ["Nadriadený súd/určený senát podľa rozvrhu práce, nie samotný sudca", "Sám dotknutý sudca", "Žalobca"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. O vylúčení rozhoduje iný, zákonom určený orgán súdu, aby bolo rozhodnutie objektívne.",
+            "wrong": "Nesprávne. Ak by rozhodoval sám namietaný sudca, stratila by sa záruka nestrannosti tohto rozhodovania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Oneskorená námietka zaujatosti",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Účastník vznesie námietku zaujatosti sudcu až po vyhlásení rozsudku, hoci o dôvode vedel už na začiatku konania.", "options": [], "correct": 0 },
+        {
+          "question": "Bude sa na takúto námietku prihliadať?",
+          "options": ["Spravidla nie, ak nebola uplatnená bez zbytočného odkladu, ide o oneskorenú/účelovú námietku", "Áno, vždy bez obmedzenia", "Iba ak s tým súhlasí protistrana"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Námietku zaujatosti treba uplatniť bez zbytočného odkladu po tom, čo sa účastník o dôvode dozvedel; oneskorená námietka sa spravidla neberie do úvahy.",
+            "wrong": "Nesprávne. Zákon vyžaduje včasnosť námietky práve preto, aby sa zabránilo jej účelovému uplatneniu až po nepriaznivom rozhodnutí."
+          }
+        },
+        {
+          "question": "Aký je zmysel požiadavky na včasnosť námietky?",
+          "options": ["Zabrániť účelovému zneužívaniu inštitútu na spochybňovanie už vydaných rozhodnutí", "Chrániť výlučne záujmy sudcu", "Zjednodušiť prácu vyššieho súdu bez ďalšieho odôvodnenia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Požiadavka včasnosti bráni tomu, aby účastníci namietali podjatosť až vtedy, keď je pre nich výsledok konania nepriaznivý.",
+            "wrong": "Nesprávne. Ide predovšetkým o ochranu riadneho a dôveryhodného priebehu konania, nie o ochranu záujmov sudcu ako takého."
+          }
+        }
+      ]
     }
   ]
 }

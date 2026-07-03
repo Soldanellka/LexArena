@@ -1,1 +1,114 @@
-{"id":"7","title":"Odvolacie konanie","schemaVersion":"1.1","tags":["odvolanie","odvolacia lehota","odvolací súd","rozsah preskúmania"],"summary":"Odvolanie (§ 355-385 CSP) je riadny opravný prostriedok proti rozsudku alebo uzneseniu súdu prvého stupňa. Lehota na podanie odvolania: 15 dní od doručenia rozhodnutia. Odvolací súd preskúmava rozhodnutie v rozsahu odvolacích dôvodov a v medziach odvolacích návrhov. Nové skutočnosti a dôkazy (novatá) sú v odvolacom konaní zásadne neprípustné – platí zásada neúplnej apelácie. Odvolací súd môže rozhodnutie potvrdiť, zmeniť alebo zrušiť a vrátiť vec.","quiz":[{"question":"Aká je lehota na podanie odvolania?","options":["7 dní od doručenia","15 dní od doručenia","30 dní od doručenia","60 dní od doručenia"],"correct":1,"explanation":{"correct":"Správne. Podľa § 362 CSP možno odvolanie podať do 15 dní od doručenia napadnutého rozhodnutia na súde prvého stupňa.","wrong":"Nesprávne. Odvolacia lehota je 15 dní od doručenia rozhodnutia, nie 7 ani 30 dní."}},{"question":"Kde sa podáva odvolanie?","options":["Priamo na odvolacím súde","Na súde prvého stupňa, ktorý napadnuté rozhodnutie vydal","Na Najvyššom súde SR","Na Ministerstve spravodlivosti"],"correct":1,"explanation":{"correct":"Správne. Odvolanie sa podáva na súde, ktorý napadnuté rozhodnutie vydal (§ 362 CSP) – teda na súde prvého stupňa, nie na odvolacom súde.","wrong":"Nesprávne. Odvolanie sa podáva na súde prvého stupňa, ktorý napadnuté rozhodnutie vydal."}},{"question":"Čo je zásada neúplnej apelačnej sústavy v odvolacom konaní?","options":["Odvolací súd preskúmava len výrok o trovách","Nové skutočnosti a dôkazy sú v odvolacom konaní zásadne neprípustné","Odvolací súd nemôže meniť rozsudok","Len jedna strana môže podať odvolanie"],"correct":1,"explanation":{"correct":"Správne. CSP zaviedol neúplnú apelačnú sústavu – nové skutočnosti a dôkazy (novatá) možno v odvolacom konaní uplatniť len výnimočne (§ 366 CSP).","wrong":"Nesprávne. Neúplná apelácia sa týka zákazu uplatňovať nové skutočnosti a dôkazy, nie rozsahu preskúmania výroku."}},{"question":"Aké rozhodnutia môže vydať odvolací súd?","options":["Len potvrdiť alebo zrušiť","Potvrdiť, zmeniť alebo zrušiť a vrátiť vec na ďalšie konanie","Len zmeniť","Odmietnuť alebo zamietnuť odvolanie"],"correct":1,"explanation":{"correct":"Správne. Odvolací súd môže rozhodnutie potvrdiť (§ 387 CSP), zmeniť (§ 388 CSP) alebo zrušiť a vrátiť vec súdu prvého stupňa na ďalšie konanie (§ 389 CSP).","wrong":"Nesprávne. Odvolací súd má tri základné možnosti: potvrdiť, zmeniť alebo zrušiť rozhodnutie."}},{"question":"Môže odvolací súd prihliadnuť na vady konania, ktoré neboli v odvolaní namietané?","options":["Nie – je viazaný len uplatnenými dôvodmi","Áno – na niektoré vady prihliadne z úradnej moci","Len na vady pri doručovaní","Len na procesné vady"],"correct":1,"explanation":{"correct":"Správne. Na niektoré vady (napr. nedostatok právomoci súdu, absolútna neplatnosť) prihliadne odvolací súd z úradnej moci (§ 380 CSP), aj keď neboli v odvolaní namietané.","wrong":"Nesprávne. Hoci odvolací súd je viazaný odvolacími dôvodmi, na niektoré závažné vady prihliadne z úradnej moci."}}]}
+{
+  "id": "7",
+  "title": "Príslušnosť súdov",
+  "schemaVersion": "1.1",
+  "tags": ["príslušnosť", "vecná príslušnosť", "miestna príslušnosť", "prorogácia", "delegácia"],
+  "summary": "Kým právomoc určuje, či vec patrí súdom vôbec, príslušnosť rieši, ktorý konkrétny súd v rámci tejto právomoci má vec prejednať. Vecná príslušnosť určuje stupeň súdu oprávnený konať na prvom stupni – spravidla okresný súd, výnimočne (napr. spory o ochranu osobnosti, hospodárska súťaž, priemyselné vlastníctvo) krajský súd (§ 12 – 21 CSP). Miestna príslušnosť určuje konkrétny súd daného stupňa; všeobecná miestna príslušnosť sa v sporovom konaní spravuje zásadou actor sequitur forum rei – žaluje sa na súde podľa bydliska (fyzická osoba) alebo sídla (právnická osoba) žalovaného (§ 12 – 13 CSP).\n\nOsobitným druhom je výlučná príslušnosť, ktorú kogentne určuje zákon a nemožno ju zmeniť dohodou (napr. konanie o právach k nehnuteľnosti podľa jej polohy). Naopak, prorogáciou (§ 17 CSP) si strany môžu dohodou písomne určiť miestnu príslušnosť iného než inak príslušného súdu, ak zákon dohodu nevylučuje. Ak by prejednanie veci pred príslušným súdom bolo neefektívne (napr. pre vylúčenie všetkých jeho sudcov), môže nadriadený súd vec delegovať inému súdu (§ 41 CSP). Súd skúma nedostatok vecnej príslušnosti kedykoľvek počas konania z úradnej moci, kým miestnu nepríslušnosť spravidla len na začiatku konania a na námietku žalovaného.\n\nZapamätaj si:\n- Vecná príslušnosť = ktorý stupeň súdu (okresný/krajský) koná na prvom stupni.\n- Miestna príslušnosť = ktorý konkrétny súd daného stupňa vec prejedná.\n- Všeobecná miestna príslušnosť: podľa bydliska/sídla žalovaného (actor sequitur forum rei).\n- Výlučná príslušnosť sa nedá zmeniť dohodou; prorogácia (§ 17 CSP) naopak dohodu pripúšťa.\n- Delegácia (§ 41 CSP): prikázanie veci inému súdu z dôvodu vhodnosti (napr. vylúčenie sudcov)."
+  ,
+  "quiz": [
+    {
+      "question": "Čo určuje vecná príslušnosť súdu?",
+      "options": ["Územie, na ktorom súd pôsobí", "Stupeň súdnej sústavy oprávnený rozhodovať v prvom stupni", "Počet sudcov v senáte", "Druh sporu (trestný alebo občiansky)"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecná príslušnosť (§ 12 – 21 CSP) určuje, ktorý stupeň súdnej sústavy (okresný alebo krajský súd) je príslušný konať a rozhodovať v prvom stupni.",
+        "wrong": "Nesprávne. Vecná príslušnosť sa týka stupňa súdu, nie jeho územného obvodu (to je miestna príslušnosť)."
+      }
+    },
+    {
+      "question": "Podľa čoho sa určuje všeobecná miestna príslušnosť pre fyzickú osobu?",
+      "options": ["Podľa miesta, kde nastala škodná udalosť", "Podľa bydliska žalovaného", "Podľa bydliska žalobcu", "Podľa sídla súdu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Podľa § 12 CSP sa vec koná na súde, v obvode ktorého má žalovaný (fyzická osoba) bydlisko – zásada actor sequitur forum rei.",
+        "wrong": "Nesprávne. Všeobecná miestna príslušnosť sa určuje podľa žalovaného, nie žalobcu – žalobca musí ísť pred súd žalovaného."
+      }
+    },
+    {
+      "question": "Čo je prorogácia príslušnosti?",
+      "options": ["Postúpenie veci inému súdu rozhodnutím súdu", "Dohodou strán určená miestna príslušnosť iného súdu", "Odvolanie sa na vyšší súd", "Námietka miestnej nepríslušnosti"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prorogácia (§ 17 CSP) umožňuje stranám dohodou písomne určiť miestnu príslušnosť iného súdu, než by bola inak príslušná.",
+        "wrong": "Nesprávne. Prorogácia je dohoda strán o miestnej príslušnosti – nie postúpenie veci ani odvolanie."
+      }
+    },
+    {
+      "question": "Čo je delegácia príslušnosti podľa § 41 CSP?",
+      "options": ["Prevod veci na iný súd nadriadeným súdom z dôvodu vhodnosti", "Zmena právomoci súdu na rozhodcovský súd", "Postúpenie veci orgánu verejnej správy", "Zrušenie rozhodnutia súdu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Delegácia umožňuje nadriadenému súdu prikázať vec inému súdu, ak je to vzhľadom na okolnosti vhodnejšie (napr. vylúčenie sudcov miestne príslušného súdu).",
+        "wrong": "Nesprávne. Delegácia sa netýka právomoci rozhodcovského súdu ani orgánov verejnej správy – ide o presun medzi všeobecnými súdmi."
+      }
+    },
+    {
+      "question": "Kedy môže súd skúmať svoju príslušnosť z úradnej moci?",
+      "options": ["Nikdy – len na námietku strany", "Vecnú príslušnosť kedykoľvek počas konania", "Len miestnu príslušnosť na začiatku konania bez námietky žalovaného", "Vždy obe formy príslušnosti rovnako"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Vecnú príslušnosť skúma súd kedykoľvek počas konania z úradnej moci. Miestnu nepríslušnosť skúma najmä na začiatku konania a spravidla na námietku žalovaného.",
+        "wrong": "Nesprávne. Vecná a miestna príslušnosť sa skúmajú odlišne – vecná vždy z úradnej moci, miestna prevažne na námietku žalovaného na začiatku konania."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Vecná príslušnosť", "definition": "Určuje, či má vec na prvom stupni prejednať okresný, alebo výnimočne krajský súd." },
+    { "term": "Miestna príslušnosť", "definition": "Určuje, ktorý konkrétny súd v rámci daného stupňa má vec prejednať." },
+    { "term": "Actor sequitur forum rei", "definition": "Zásada, podľa ktorej sa žaluje na súde podľa bydliska/sídla žalovaného (§ 12 CSP)." },
+    { "term": "Prorogácia (§ 17 CSP)", "definition": "Dohoda strán, ktorou si písomne určia miestnu príslušnosť iného súdu, ak to zákon nevylučuje." },
+    { "term": "Delegácia (§ 41 CSP)", "definition": "Prikázanie veci inému súdu z dôvodu vhodnosti, ak by prejednanie pred príslušným súdom bolo neefektívne." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Žaloba o vlastnícke právo k nehnuteľnosti",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalobca podáva žalobu o určenie vlastníckeho práva k pozemku, ktorý sa nachádza v inom súdnom obvode, než kde má žalovaný bydlisko.", "options": [], "correct": 0 },
+        {
+          "question": "Ktorý súd bude miestne príslušný?",
+          "options": ["Súd podľa polohy nehnuteľnosti (výlučná príslušnosť)", "Súd podľa bydliska žalovaného", "Súd podľa bydliska žalobcu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konania týkajúce sa práv k nehnuteľnosti patria do výlučnej príslušnosti súdu, v ktorého obvode sa nehnuteľnosť nachádza.",
+            "wrong": "Nesprávne. Všeobecná príslušnosť podľa bydliska žalovaného sa neuplatní, keďže zákon pre veci nehnuteľností ustanovuje výlučnú príslušnosť podľa polohy veci."
+          }
+        },
+        {
+          "question": "Môžu sa strany dohodnúť na inom súde?",
+          "options": ["Nie, ide o výlučnú príslušnosť, ktorú nemožno zmeniť dohodou", "Áno, kedykoľvek bez obmedzenia", "Áno, ale iba pred podaním žaloby"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Výlučná príslušnosť je kogentná a dohodou strán (prorogáciou) ju nemožno zmeniť.",
+            "wrong": "Nesprávne. Prorogácia podľa § 17 CSP sa neuplatní tam, kde zákon ustanovuje výlučnú príslušnosť."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Návrh na delegáciu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Všetci sudcovia miestne príslušného okresného súdu sú vylúčení, pretože žalovaným je zamestnanec tohto súdu.", "options": [], "correct": 0 },
+        {
+          "question": "Čo v takom prípade prichádza do úvahy?",
+          "options": ["Delegácia veci inému súdu nadriadeným súdom (§ 41 CSP)", "Zastavenie konania pre nedostatok právomoci", "Postúpenie veci prokuratúre"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak by prejednanie pred inak príslušným súdom bolo pre vylúčenie všetkých jeho sudcov neefektívne, nadriadený súd môže vec delegovať inému súdu.",
+            "wrong": "Nesprávne. Nejde o nedostatok právomoci (súdy majú právomoc vec prejednať) ani o vec, ktorú by riešila prokuratúra."
+          }
+        },
+        {
+          "question": "Kto o delegácii rozhoduje?",
+          "options": ["Nadriadený (spravidla krajský) súd", "Samotný okresný súd, ktorého sudcovia sú vylúčení", "Účastníci konania dohodou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. O delegácii rozhoduje súd nadriadený súdu, ktorý by inak vec prejednával.",
+            "wrong": "Nesprávne. Delegácia nie je vecou dohody účastníkov ani rozhodnutia samotného (vylúčeného) súdu."
+          }
+        }
+      ]
+    }
+  ]
+}

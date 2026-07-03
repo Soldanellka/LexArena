@@ -1,79 +1,114 @@
 {
   "id": "2",
-  "title": "Príslušnosť súdov – vecná a miestna",
+  "title": "Základné princípy civilného procesu (CSP, CMP, SSP)",
   "schemaVersion": "1.1",
-  "tags": ["príslušnosť", "vecná príslušnosť", "miestna príslušnosť", "prorogácia"],
-  "summary": "Vecná príslušnosť určuje, ktorý stupeň súdu je oprávnený rozhodovať v prvom stupni. Spravidla rozhodujú okresné súdy; krajské súdy rozhodujú v prvom stupni vo veciach určených zákonom (napr. spory o ochranu osobnosti). Miestna príslušnosť určuje, ktorý konkrétny súd v rámci toho istého stupňa je príslušný. Všeobecná miestna príslušnosť sa určuje podľa bydliska (fyzická osoba) alebo sídla (právnická osoba) žalovaného. Možná je aj dohodnutá príslušnosť (prorogácia).",
+  "tags": ["zásady civilného procesu", "dispozičná zásada", "prejednacia zásada", "zásada oficiality", "kontradiktórnosť"],
+  "summary": "Civilný proces je ovládaný sústavou zásad, ktoré sa v jednotlivých kódexoch prejavujú rôznou mierou. V sporovom konaní podľa CSP prevláda dispozičná zásada (strany disponujú predmetom konania, § 2 CSP) a prejednacia zásada (strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli). Ďalšími zásadami CSP sú kontradiktórnosť (§ 9 CSP – právo strany vyjadriť sa k tvrdeniam a dôkazom protistrany), rovnosť strán, hospodárnosť konania, ústnosť a verejnosť pojednávania, ako aj zásada voľného hodnotenia dôkazov.\n\nV mimosporovom konaní podľa CMP sa naopak vo väčšej miere uplatňuje zásada oficiality (súd môže v zákonom ustanovených prípadoch konať aj bez návrhu, napr. začať dedičské konanie) a vyšetrovacia zásada pri zisťovaní skutkového stavu (súd nie je viazaný iba tvrdeniami a dôkazmi účastníkov, ale môže sám vykonať potrebné dôkazy). Dôvodom je verejný záujem na riadnom usporiadaní pomerov v mimosporových veciach (starostlivosť o maloletých, dedičstvo).\n\nV správnom súdnictve podľa SSP platí zásada viazanosti súdu žalobnými bodmi (súd spravidla preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe), s výnimkami ustanovenými zákonom.\n\nZapamätaj si:\n- CSP: dispozičná a prejednacia zásada, kontradiktórnosť, rovnosť strán.\n- CMP: zásada oficiality a vyšetrovacia zásada – väčšia aktivita súdu.\n- Kontradiktórnosť (§ 9 CSP) – právo vyjadriť sa k tvrdeniam a dôkazom protistrany.\n- Zásada hospodárnosti – konanie rýchlo a bez zbytočných nákladov, bez ujmy práv.\n- SSP – súd viazaný žalobnými bodmi, ak zákon neustanoví inak."
+  ,
   "quiz": [
     {
-      "question": "Čo určuje vecná príslušnosť súdu?",
-      "options": [
-        "Územie, na ktorom súd pôsobí",
-        "Stupeň súdnej sústavy oprávnený rozhodovať v prvom stupni",
-        "Počet sudcov na súde",
-        "Druh sporu (trestný alebo občiansky)"
-      ],
+      "question": "Ktorá zásada je typická pre sporové konanie podľa CSP?",
+      "options": ["Zásada oficiality – súd koná z úradnej moci", "Dispozičná a prejednacia zásada – iniciatíva patrí stranám", "Vyšetrovacia zásada", "Zásada tajnosti konania"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Vecná príslušnosť (§ 12-14 CSP) určuje, ktorý stupeň súdnej sústavy (okresný alebo krajský súd) je príslušný konať a rozhodovať v prvom stupni.",
-        "wrong": "Nesprávne. Vecná príslušnosť sa týka stupňa súdu, nie jeho územného obvodu (to je miestna príslušnosť)."
+        "correct": "Správne. V sporovom konaní podľa CSP prevláda dispozičná zásada (§ 2 CSP) a prejednacia zásada – strany disponujú predmetom konania a nesú tvrdiacu a dôkaznú povinnosť.",
+        "wrong": "Nesprávne. Zásada oficiality a vyšetrovacia zásada sú typické skôr pre mimosporové konanie podľa CMP, nie pre sporové konanie."
       }
     },
     {
-      "question": "Podľa čoho sa určuje všeobecná miestna príslušnosť pre fyzickú osobu?",
-      "options": [
-        "Podľa miesta, kde nastala škodná udalosť",
-        "Podľa bydliska žalovaného",
-        "Podľa bydliska žalobcu",
-        "Podľa sídla súdu"
-      ],
+      "question": "Aká zásada prevláda v mimosporovom konaní podľa CMP?",
+      "options": ["Výlučne dispozičná zásada bez výnimky", "Zásada oficiality a vyšetrovacia zásada pri zisťovaní skutkového stavu", "Zásada kontradiktórnosti bez výnimky", "Súd je viazaný výlučne návrhmi strán"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 13 CSP sa vec koná na súde, v obvode ktorého má žalovaný (fyzická osoba) bydlisko. Ide o zásadu actor sequitur forum rei.",
-        "wrong": "Nesprávne. Všeobecná miestna príslušnosť sa určuje podľa žalovaného, nie žalobcu. Žalobca musí sám ísť pred súd žalovaného (actor sequitur forum rei)."
+        "correct": "Správne. V mimosporovom konaní môže súd v zákonom ustanovených prípadoch konať aj bez návrhu a sám zisťovať skutkový stav (zásada oficiality a vyšetrovacia zásada).",
+        "wrong": "Nesprávne. Čisto dispozičná zásada je typická pre sporové konanie – v mimosporovom konaní má súd väčšiu vlastnú aktivitu."
       }
     },
     {
-      "question": "Čo je prorogácia príslušnosti?",
-      "options": [
-        "Postúpenie veci inému súdu rozhodnutím",
-        "Dohodou strán určená miestna príslušnosť iného súdu",
-        "Odvolanie sa na vyšší súd",
-        "Námietka miestnej nepríslušnosti"
-      ],
+      "question": "Čo zaručuje zásada kontradiktórnosti podľa § 9 CSP?",
+      "options": ["Tajnosť súdneho konania", "Každej strane právo vyjadriť sa k tvrdeniam a dôkazom protistrany", "Rovnaký počet svedkov na oboch stranách", "Bezplatnú právnu pomoc"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Prorogácia (§ 17 CSP) umožňuje stranám dohodou písomne určiť miestnu príslušnosť iného súdu, než by bola inak príslušná.",
-        "wrong": "Nesprávne. Prorogácia je dohoda strán o miestnej príslušnosti – nie postúpenie veci ani odvolanie."
+        "correct": "Správne. Kontradiktórnosť (§ 9 CSP) zaručuje každej strane právo poznať tvrdenia a dôkazy protistrany a vyjadriť sa k nim pred rozhodnutím.",
+        "wrong": "Nesprávne. Kontradiktórnosť nesúvisí s počtom svedkov ani s tajnosťou konania – ide o právo reagovať na argumenty protistrany."
       }
     },
     {
-      "question": "Ktorý súd rozhoduje v prvom stupni o sporom z ochrany osobnosti?",
-      "options": [
-        "Okresný súd",
-        "Krajský súd",
-        "Najvyšší súd",
-        "Ústavný súd"
-      ],
-      "correct": 1,
+      "question": "Čo vyjadruje zásada hospodárnosti konania?",
+      "options": ["Konanie má prebiehať rýchlo a s čo najmenšími nákladmi, bez ujmy na ochrane práv účastníkov", "Súd musí vždy nariadiť ústne pojednávanie", "Strany musia vopred zaplatiť súdny poplatok, inak konanie nezačne", "Konanie sa má vždy prerušiť, ak je to lacnejšie"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Spory o ochranu osobnosti podľa OZ patria do vecnej príslušnosti krajských súdov, ktoré v týchto veciach rozhodujú ako súdy prvého stupňa.",
-        "wrong": "Nesprávne. Spory o ochranu osobnosti sú výslovne zverené krajským súdom ako súdom prvého stupňa (§ 22 CSP)."
+        "correct": "Správne. Zásada hospodárnosti smeruje k rýchlemu a nákladovo efektívnemu prejednaniu veci bez toho, aby to bolo na úkor riadnej ochrany práv účastníkov.",
+        "wrong": "Nesprávne. Hospodárnosť konania nie je o platení poplatkov vopred ani o povinnom pojednávaní – ide o efektivitu procesu ako celku."
       }
     },
     {
-      "question": "Kedy môže súd skúmať svoju príslušnosť z úradnej povinnosti?",
-      "options": [
-        "Nikdy – len na námietku strany",
-        "Len vecnú príslušnosť, a to kedykoľvek počas konania",
-        "Len miestnu príslušnosť na začiatku konania",
-        "Vždy obe formy príslušnosti"
-      ],
-      "correct": 1,
+      "question": "Ako sa uplatňuje zásada viazanosti súdu v správnom súdnictve podľa SSP?",
+      "options": ["Správny súd je pri prieskume spravidla viazaný žalobnými bodmi, ak zákon neustanoví inak", "Správny súd skúma vec v neobmedzenom rozsahu bez ohľadu na žalobu", "V CSP súd nie je nikdy viazaný petitom žaloby", "Medzi CSP a SSP niet v tomto ohľade rozdielu"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Vecnú príslušnosť skúma súd kedykoľvek počas konania z úradnej moci. Miestnu nepríslušnosť skúma len na začiatku a len na námietku žalovaného.",
-        "wrong": "Nesprávne. Vecná a miestna príslušnosť sa skúmajú rozdielne. Vecná vždy a z úradnej moci; miestna len na počiatku a na námietku."
+        "correct": "Správne. V správnom súdnictve platí zásada viazanosti žalobnými bodmi – súd preskúmava napadnuté rozhodnutie spravidla len v rozsahu a z dôvodov uvedených v žalobe.",
+        "wrong": "Nesprávne. Neobmedzený prieskum bez ohľadu na žalobu nie je pravidlom SSP – zásadou je práve viazanosť žalobnými bodmi."
       }
+    }
+  ],
+  "tiles": [
+    { "term": "Dispozičná zásada", "definition": "Strany disponujú predmetom konania a jeho priebehom, napr. môžu vziať žalobu späť (§ 2 CSP)." },
+    { "term": "Prejednacia zásada", "definition": "Strany majú tvrdiacu a dôkaznú povinnosť; súd vychádza zo skutočností, ktoré strany uviedli." },
+    { "term": "Zásada oficiality", "definition": "V mimosporovom konaní môže súd v zákonom ustanovených prípadoch konať aj bez návrhu (napr. dedičské konanie)." },
+    { "term": "Kontradiktórnosť", "definition": "Každá strana má právo vyjadriť sa k tvrdeniam a dôkazom protistrany (§ 9 CSP)." },
+    { "term": "Zásada hospodárnosti", "definition": "Konanie sa má uskutočniť rýchlo a s čo najmenšími nákladmi bez ujmy na ochrane práv účastníkov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Späťvzatie žaloby",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalobca sa počas konania rozhodne vziať žalobu späť, pretože sa so žalovaným mimosúdne dohodol.", "options": [], "correct": 0 },
+        {
+          "question": "Ktorá zásada mu to umožňuje?",
+          "options": ["Dispozičná zásada", "Zásada oficiality", "Zásada tajnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dispozičná zásada (§ 2 CSP) dáva stranám právo disponovať predmetom konania, vrátane späťvzatia žaloby.",
+            "wrong": "Nesprávne. Zásada oficiality sa uplatňuje najmä v mimosporovom konaní a znamená aktivitu súdu, nie dispozíciu strany."
+          }
+        },
+        {
+          "question": "Môže súd späťvzatie žaloby odmietnuť?",
+          "options": ["Áno, ak s tým žalovaný z vážnych dôvodov nesúhlasí (§ 144 CSP)", "Nie, súd nemá v tomto smere žiadnu právomoc", "Iba žalovaný sám môže rozhodnúť, nie súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Podľa § 144 CSP súd späťvzatie žaloby po začatí pojednávania nepripustí, ak s tým žalovaný z vážnych dôvodov nesúhlasí.",
+            "wrong": "Nesprávne. Dispozičná zásada nie je absolútna – zákon ju obmedzuje práve v prospech žalovaného v § 144 CSP."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Dedičské konanie bez návrhu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Po smrti poručiteľa súd začne dedičské konanie, hoci žiadny z dedičov naň nepodal návrh.", "options": [], "correct": 0 },
+        {
+          "question": "Ktorá zásada to umožňuje?",
+          "options": ["Zásada oficiality", "Dispozičná zásada", "Zásada rovnosti strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konanie o dedičstve súd začína aj bez návrhu, len čo sa dozvie o úmrtí – ide o prejav zásady oficiality v mimosporovom konaní.",
+            "wrong": "Nesprávne. Dispozičná zásada by vyžadovala návrh niektorého z dedičov, čo tu chýba – rozhodujúca je práve zásada oficiality."
+          }
+        },
+        {
+          "question": "Prečo sa v tomto type konania uplatňuje zásada oficiality?",
+          "options": ["Lebo ide o mimosporové konanie vo verejnom záujme na riadnom usporiadaní dedičských pomerov", "Lebo dedičia si to výslovne dohodli", "Lebo notár nie je súdnym komisárom"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Verejný záujem na usporiadaní majetkových pomerov po zomretom odôvodňuje, aby konanie prebehlo aj bez iniciatívy účastníkov.",
+            "wrong": "Nesprávne. Nejde o dohodu dedičov, ale o zákonom stanovenú povinnosť súdu konať z úradnej moci v mimosporových veciach."
+          }
+        }
+      ]
     }
   ]
 }

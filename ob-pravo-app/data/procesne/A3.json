@@ -1,79 +1,114 @@
 {
   "id": "3",
-  "title": "Strany konania, procesná subjektivita a zastúpenie",
+  "title": "Súdy a ich postavenie, organizácia súdov",
   "schemaVersion": "1.1",
-  "tags": ["strany konania", "procesná spôsobilosť", "advokát", "zmena strán"],
-  "summary": "Stranami konania sú žalobca a žalovaný. Procesná subjektivita (spôsobilosť byť stranou) zodpovedá právnej subjektivite. Procesná spôsobilosť (schopnosť vlastnými úkonmi nadobúdať procesné práva) zodpovedá spôsobilosti na právne úkony. Za procesne nespôsobilé osoby konajú ich zákonní zástupcovia. Zastúpenie advokátom je povinné v dovolacom konaní. Zmena strán: singulárna sukcesia – postúpenie pohľadávky, prevzatie dlhu; univerzálna – dedičstvo, zánik právnickej osoby so sukcesiou.",
+  "tags": ["sústava súdov", "okresný súd", "krajský súd", "Najvyšší súd SR", "Najvyšší správny súd SR", "nezávislosť súdov"],
+  "summary": "Súdnictvo v Slovenskej republike vykonávajú nezávislé a nestranné súdy oddelené od zákonodarnej a výkonnej moci. Sústavu všeobecných súdov tvoria okresné súdy (spravidla súdy prvej inštancie), krajské súdy (spravidla odvolacie súdy, výnimočne aj súdy prvej inštancie vo vymedzených veciach) a Najvyšší súd SR ako najvyššia inštancia všeobecného súdnictva, ktorý rozhoduje najmä o dovolaniach. Od 1.8.2021 pôsobí aj Najvyšší správny súd SR, ktorý vykonáva správne súdnictvo (dovtedy patriace Najvyššiemu súdu SR) a niektoré disciplinárne konania (napr. voči sudcom, prokurátorom, advokátom). Mimo sústavy všeobecných súdov stojí Ústavný súd SR, ktorý chráni ústavnosť.\n\nPostavenie súdov charakterizuje nezávislosť a nestrannosť (čl. 141 a nasl. Ústavy SR), viazanosť ústavou, zákonom a medzinárodnou zmluvou, ako aj právo na zákonného sudcu – vec musí prejednať sudca alebo senát určený vopred podľa rozvrhu práce, nie účelovo vybraný pre konkrétnu kauzu. Organizačne súdy fungujú v senátoch alebo prostredníctvom samosudcov; štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR v súčinnosti so Súdnou radou SR, ktorá dbá na nezávislosť súdnictva.\n\nZapamätaj si:\n- Sústava všeobecných súdov: okresné súdy, krajské súdy, Najvyšší súd SR.\n- Najvyšší správny súd SR (od 1.8.2021): správne súdnictvo a niektoré disciplinárne konania.\n- Ústavný súd SR stojí mimo sústavy všeobecných súdov.\n- Zásada zákonného sudcu (čl. 48 Ústavy SR) – sudcu určuje vopred rozvrh práce.\n- Štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR spolu so Súdnou radou SR."
+  ,
   "quiz": [
     {
-      "question": "Čo je procesná subjektivita (spôsobilosť byť stranou)?",
-      "options": [
-        "Schopnosť vlastnými procesnimi úkonmi nadobúdať práva",
-        "Spôsobilosť byť stranou civilného konania – mať procesné práva a povinnosti",
-        "Právo na bezplatnú právnu pomoc",
-        "Schopnosť podávať odvolania"
-      ],
+      "question": "Ktorý súd je najvyššou inštanciou všeobecného súdnictva v civilných sporových veciach?",
+      "options": ["Ústavný súd SR", "Najvyšší súd SR", "Krajský súd", "Najvyšší správny súd SR"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Procesná subjektivita (§ 68 CSP) je spôsobilosť byť stranou konania – mať procesné práva a povinnosti. Zodpovedá právnej subjektivite v hmotnom práve.",
-        "wrong": "Nesprávne. Schopnosť vlastnými úkonmi nadobúdať procesné práva je procesná spôsobilosť (nie subjektivita)."
+        "correct": "Správne. V civilných veciach je najvyššou inštanciou všeobecného súdnictva Najvyšší súd SR, ktorý rozhoduje najmä o dovolaniach.",
+        "wrong": "Nesprávne. Ústavný súd SR nie je súčasťou sústavy všeobecných súdov a Najvyšší správny súd SR pôsobí v oblasti správneho súdnictva, nie civilných sporov."
       }
     },
     {
-      "question": "Je zastúpenie advokátom povinné v dovolacom konaní?",
-      "options": [
-        "Nie, strana môže konať sama",
-        "Áno – dovolateľ musí byť zastúpený advokátom",
-        "Len ak ide o sumu nad 50 000 EUR",
-        "Len pre zahraničné strany"
-      ],
+      "question": "Aké je poslanie Najvyššieho správneho súdu SR (od roku 2021)?",
+      "options": ["Rozhoduje o dovolaniach v civilných sporoch", "Vykonáva správne súdnictvo a niektoré disciplinárne konania", "Je odvolacím súdom voči okresným súdom v civilných veciach", "Nahradil Ústavný súd SR"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 429 ods. 1 CSP musí byť dovolateľ zastúpený advokátom, pokiaľ sám nemá právnické vzdelanie. Podmienka povinného zastúpenia je kogentná.",
-        "wrong": "Nesprávne. Povinné zastúpenie advokátom v dovolacom konaní platí bez ohľadu na výšku predmetu sporu."
+        "correct": "Správne. Od 1.8.2021 Najvyšší správny súd SR prevzal agendu správneho súdnictva a rozhoduje niektoré disciplinárne konania (napr. voči sudcom).",
+        "wrong": "Nesprávne. Dovolania v civilných sporoch naďalej rozhoduje Najvyšší súd SR, nie Najvyšší správny súd SR."
       }
     },
     {
-      "question": "Čo sa stane so konaním, ak žalobca zomrie v jeho priebehu?",
-      "options": [
-        "Konanie sa zastaví",
-        "Ak je právo prevoditeľné, konanie pokračuje s právnymi nástupcami",
-        "Konanie sa prerušuje navždy",
-        "Žalovaný automaticky vyhrá"
-      ],
-      "correct": 1,
+      "question": "Čo zaručuje zásada zákonného sudcu (čl. 48 Ústavy SR)?",
+      "options": ["Vec prejedná sudca alebo senát určený vopred podľa rozvrhu práce, nie ad hoc", "Účastník konania si môže vybrať sudcu", "O veci môže rozhodnúť ktorýkoľvek sudca v SR podľa vlastného uváženia", "Sudcu určuje žalobca v žalobe"],
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Ak účastník zomrie a ide o právo, ktoré prechádza na právnych nástupcov, súd konanie preruší a po zistnení nástupcu v ňom pokračuje (§ 162 CSP).",
-        "wrong": "Nesprávne. Smrť strany automaticky neukončuje konanie. Ak je právo dedičné, konanie sa preruší a pokračuje s dedičmi."
+        "correct": "Správne. Nikoho nemožno odňať jeho zákonnému sudcovi – vec musí byť pridelená vopred stanoveným postupom podľa rozvrhu práce súdu.",
+        "wrong": "Nesprávne. Výber sudcu účastníkom ani ľubovoľné rozhodovanie ktoréhokoľvek sudcu nie sú v súlade so zásadou zákonného sudcu."
       }
     },
     {
-      "question": "Kto môže byť procesným zástupcom strany okrem advokáta?",
-      "options": [
-        "Len notár",
-        "Zákonný zástupca, príp. ktokoľvek, komu strana udelí plnú moc",
-        "Len príbuzní v priamom rade",
-        "Len daňový poradca"
-      ],
+      "question": "Kto vykonáva štátnu správu súdov v SR?",
+      "options": ["Výlučne predseda Najvyššieho súdu SR", "Ministerstvo spravodlivosti SR v súčinnosti so Súdnou radou SR", "Prezident SR priamym riadením", "Generálna prokuratúra SR"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Okrem advokáta môže stranu zastupovať zákonný zástupca alebo splnomocnený zástupca (§ 88 a nasl. CSP). Plná moc musí byť súdu predložená.",
-        "wrong": "Nesprávne. CSP nevyhrazuje zastúpenie len notárom alebo príbuzným – pripúšťa aj splnomocneného zástupcu na základe plnej moci."
+        "correct": "Správne. Štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR, pričom Súdna rada SR dbá na zachovanie nezávislosti súdnictva.",
+        "wrong": "Nesprávne. Ani predseda Najvyššieho súdu SR, ani prezident SR ani Generálna prokuratúra nevykonávajú štátnu správu súdov."
       }
     },
     {
-      "question": "Čo je singulárna sukcesia v procesnom práve?",
-      "options": [
-        "Nástupníctvo pri zániku právnickej osoby",
-        "Zmena v osobe strany pri postúpení konkrétnej pohľadávky alebo prevzatí dlhu",
-        "Prevod celého podniku",
-        "Zmena sudcu v priebehu konania"
-      ],
+      "question": "Ktorý súd spravidla koná a rozhoduje ako súd prvej inštancie v civilných sporových veciach?",
+      "options": ["Krajský súd", "Okresný súd", "Najvyšší súd SR", "Najvyšší správny súd SR"],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Singulárna sukcesia nastáva pri zmene jednej konkrétnej pohľadávky alebo záväzku (postúpenie pohľadávky, prevzatie dlhu). Súd môže rozhodnúť o vstupe nástupcu do konania.",
-        "wrong": "Nesprávne. Nástupníctvo pri zániku právnickej osoby je univerzálna sukcesia. Singulárna sa týka len konkrétneho práva."
+        "correct": "Správne. Okresné súdy sú základným článkom sústavy všeobecných súdov a spravidla konajú a rozhodujú na prvom stupni.",
+        "wrong": "Nesprávne. Krajský súd koná na prvom stupni len vo výnimočných, zákonom výslovne určených veciach; inak je odvolacím súdom."
       }
+    }
+  ],
+  "tiles": [
+    { "term": "Okresný súd", "definition": "Základný článok sústavy všeobecných súdov, spravidla koná a rozhoduje ako súd prvej inštancie." },
+    { "term": "Krajský súd", "definition": "Spravidla odvolací súd voči rozhodnutiam okresných súdov vo svojom obvode." },
+    { "term": "Najvyšší súd SR", "definition": "Najvyššia inštancia všeobecného súdnictva, rozhoduje najmä o dovolaniach." },
+    { "term": "Najvyšší správny súd SR", "definition": "Od 1.8.2021 vykonáva správne súdnictvo a niektoré disciplinárne konania." },
+    { "term": "Zásada zákonného sudcu", "definition": "Vec musí prejednať sudca/senát určený vopred podľa rozvrhu práce, nie účelovo (čl. 48 Ústavy SR)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Určenie príslušného stupňa súdu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Účastník podáva odvolanie proti rozsudku okresného súdu.", "options": [], "correct": 0 },
+        {
+          "question": "Ktorý súd o odvolaní rozhodne?",
+          "options": ["Krajský súd", "Najvyšší súd SR", "Ústavný súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odvolania proti rozhodnutiam okresných súdov spravidla prejednáva a rozhoduje príslušný krajský súd.",
+            "wrong": "Nesprávne. Najvyšší súd SR rozhoduje až o mimoriadnom opravnom prostriedku (dovolaní), Ústavný súd SR nie je odvolacou inštanciou v civilnom procese."
+          }
+        },
+        {
+          "question": "Čo ak by chcel účastník napadnúť právoplatné rozhodnutie krajského súdu mimoriadnym opravným prostriedkom?",
+          "options": ["Podá dovolanie na Najvyšší súd SR", "Podá opäť odvolanie na krajský súd", "Obráti sa na Najvyšší správny súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Mimoriadnym opravným prostriedkom proti právoplatnému rozhodnutiu odvolacieho súdu je dovolanie na Najvyšší súd SR.",
+            "wrong": "Nesprávne. Opakované odvolanie na ten istý súd zákon nepripúšťa a Najvyšší správny súd SR nerieši civilné spory."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zmena rozvrhu práce",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Predseda súdu tesne pred pojednávaním v konkrétnej kauze zmenil rozvrh práce a pridelil vec inému sudcovi.", "options": [], "correct": 0 },
+        {
+          "question": "Aký princíp je týmto postupom potenciálne ohrozený?",
+          "options": ["Zásada zákonného sudcu", "Zásada rovnosti strán", "Zásada hospodárnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Účelová zmena rozvrhu práce tesne pred rozhodovaním konkrétnej veci môže porušovať právo na zákonného sudcu podľa čl. 48 Ústavy SR.",
+            "wrong": "Nesprávne. Ide primárne o otázku určenia sudcu, nie o rovnosť strán ani o hospodárnosť konania."
+          }
+        },
+        {
+          "question": "Čo by mal dotknutý účastník namietať?",
+          "options": ["Že mu bol odňatý zákonný sudca v rozpore s čl. 48 Ústavy SR", "Že súd nemá právomoc vo veci konať", "Že ide o vecnú nepríslušnosť súdu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Účastník sa môže brániť námietkou porušenia práva na zákonného sudcu, prípadne ústavnou sťažnosťou po vyčerpaní opravných prostriedkov.",
+            "wrong": "Nesprávne. Nedostatok právomoci ani vecná nepríslušnosť tu nie sú relevantné – problémom je spôsob určenia konkrétneho sudcu."
+          }
+        }
+      ]
     }
   ]
 }

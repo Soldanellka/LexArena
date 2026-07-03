@@ -1,1 +1,114 @@
-{"id":"10","title":"Predbežné opatrenie a zabezpečenie dôkazu","schemaVersion":"1.1","tags":["predbežné opatrenie","zabezpečenie dôkazu","urgentné konanie"],"summary":"Predbežné opatrenie (§ 324-338 CSP) je procesný inštitút slúžiaci na dočasné usporiadanie pomerov strán pred právoplatným rozhodnutím. Súd ho môže nariadiť pred začatím konania aj počas neho. Navrhovateľ musí osvedčiť naliehavú potrebu. Predbežné opatrenie zaniká právoplatnosťou rozhodnutia vo veci samej, uplynutím doby alebo zrušením súdom. Zabezpečenie dôkazu (§ 339-344 CSP) chráni dôkaz, ktorý by mohol byť znehodnotený.","quiz":[{"question":"Na čo slúži predbežné opatrenie?","options":["Na definitívne rozhodnutie veci","Na dočasné usporiadanie pomerov alebo zaistenie výkonu rozhodnutia","Na zastavenie konania","Na zmenu strán konania"],"correct":1,"explanation":{"correct":"Správne. Predbežné opatrenie (§ 324 CSP) slúži na dočasné usporiadanie pomerov alebo zaistenie výkonu budúceho rozhodnutia. Nejde o definitívne rozhodnutie – iba o dočasné opatrenie.","wrong":"Nesprávne. Predbežné opatrenie nie je definitívnym rozhodnutím – je dočasným inštitútom na zabezpečenie ochrany práv."}},{"question":"Čo musí navrhovateľ predbežného opatrenia osvedčiť?","options":["Úplné preukázanie nároku","Naliehavú potrebu dočasnej úpravy pomerov","Len totožnosť protistrany","Súhlas žalovaného"],"correct":1,"explanation":{"correct":"Správne. Na nariadenie predbežného opatrenia stačí osvedčenie (nie úplné dokázanie) nároku a naliehavej potreby. Súd naň nemusí nariadiť pojednávanie.","wrong":"Nesprávne. Na predbežné opatrenie postačí osvedčenie – teda nižší štandard ako plné dokazovanie. Súhlas protistrany sa nevyžaduje."}},{"question":"Kedy zaniká predbežné opatrenie?","options":["Len rozhodnutím súdu o jeho zrušení","Právoplatnosťou rozhodnutia vo veci, uplynutím doby alebo zrušením súdom","Dohodou strán","Odvolaním navrhovateľa"],"correct":1,"explanation":{"correct":"Správne. § 336 CSP uvádza, že predbežné opatrenie zaniká: právoplatnosťou rozhodnutia vo veci samej, uplynutím doby na ktorú bolo nariadené, alebo rozhodnutím súdu o jeho zrušení.","wrong":"Nesprávne. Predbežné opatrenie nezaniká dohodou strán ani samotným odvolaním navrhu – zánik je upravený v § 336 CSP."}},{"question":"Na čo slúži zabezpečenie dôkazu?","options":["Na predčasné rozhodnutie vo veci","Na zachovanie dôkazu, ktorý by mohol byť znehodnotený alebo nedostupný","Na urýchlenie konania","Na získanie výpovede žalovaného"],"correct":1,"explanation":{"correct":"Správne. Zabezpečenie dôkazu (§ 339 CSP) chráni dôkaz, keď hrozí, že neskôr bude nedostupný alebo znehodnotený (napr. výpoveď vážne chorého svedka, stav veci, ktorá sa môže zničiť).","wrong":"Nesprávne. Zabezpečenie dôkazu neslúži na urýchlenie konania, ale na uchovanie dôkazu pre prípad jeho budúcej nedostupnosti."}},{"question":"Môže súd nariadiť predbežné opatrenie aj pred začatím konania vo veci samej?","options":["Nie – len počas konania","Áno – aj pred podaním žaloby vo veci samej","Len v rodinnoprávnych veciach","Len so súhlasom prokuratúry"],"correct":1,"explanation":{"correct":"Správne. § 324 CSP výslovne umožňuje nariadenie predbežného opatrenia aj pred začatím konania. Navrhovateľ je spravidla povinný podať žalobu v stanovenej lehote.","wrong":"Nesprávne. Predbežné opatrenie možno nariadiť aj pred začatím konania – práve preto je vhodným nástrojom v naliehavých situáciách."}}]}
+{
+  "id": "10",
+  "title": "Procesné úkony súdu",
+  "schemaVersion": "1.1",
+  "tags": ["procesné úkony súdu", "rozsudok", "uznesenie", "poučovacia povinnosť", "zápisnica"],
+  "summary": "Procesné úkony súdu sú prejavy vôle súdu smerujúce k priebehu a rozhodnutiu konania. Základnými formami rozhodnutí v civilnom sporovom konaní sú rozsudok, ktorým sa rozhoduje vo veci samej (meritórne), a uznesenie, ktorým sa rozhoduje spravidla o procesných otázkach (napríklad o zastavení konania, o trovách, o predbežnom opatrení). Popri rozhodnutiach súd vykonáva aj ďalšie procesné úkony – predvolania na pojednávanie, výzvy a upovedomenia účastníkov, poučenia o procesných právach a povinnostiach, ako aj doručovanie písomností.\n\nDôležitou súčasťou činnosti súdu je poučovacia povinnosť – súd je povinný poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom, najmä ak nie sú zastúpení; opomenutie poučenia môže byť vadou konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci, a účastník ju môže namietať napríklad v odvolaní. O priebehu pojednávania sa vyhotovuje zápisnica, ktorá je verejnou listinou zaznamenávajúcou obsah a priebeh úkonov vykonaných na pojednávaní.\n\nZapamätaj si:\n- Rozsudok = rozhodnutie vo veci samej; uznesenie = rozhodnutie spravidla o procesných otázkach.\n- Ďalšie procesné úkony súdu: predvolanie, poučenie, doručovanie, zápisnica o pojednávaní.\n- Poučovacia povinnosť súdu chráni najmä nezastúpených účastníkov.\n- Opomenutie poučenia môže byť vadou konania s vplyvom na správnosť rozhodnutia.\n- Zápisnica o pojednávaní je verejná listina o priebehu a obsahu konania."
+  ,
+  "quiz": [
+    {
+      "question": "Aké sú základné formy rozhodnutí súdu v civilnom sporovom konaní?",
+      "options": ["Iba rozsudok", "Rozsudok a uznesenie", "Nález a uznesenie", "Rozsudok a nález"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd v civilnom sporovom konaní rozhoduje formou rozsudku alebo uznesenia.",
+        "wrong": "Nesprávne. Nález je formou rozhodnutia Ústavného súdu SR, nie všeobecného súdu v civilnom procese."
+      }
+    },
+    {
+      "question": "Čím sa rozsudok líši od uznesenia?",
+      "options": ["Rozsudkom sa spravidla rozhoduje vo veci samej, uznesením najmä o procesných otázkach", "Uznesenie sa vydáva iba v trestnom konaní", "Rozsudok vydáva iba Najvyšší súd SR", "Medzi rozsudkom a uznesením niet rozdielu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Rozsudok je meritórnym rozhodnutím vo veci samej, kým uznesením súd rieši spravidla procesné otázky.",
+        "wrong": "Nesprávne. Uznesenie sa vydáva aj v civilnom konaní a rozsudok môže vydať ktorýkoľvek stupeň všeobecného súdu, nielen Najvyšší súd SR."
+      }
+    },
+    {
+      "question": "Ktoré z nasledujúcich sú procesné úkony súdu popri rozhodnutiach?",
+      "options": ["Iba podanie žaloby", "Predvolanie na pojednávanie, poučenie účastníka, doručovanie písomností, zápisnica o pojednávaní", "Iba vyjadrenie znalca", "Iba plnomocenstvo"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd okrem rozhodnutí vykonáva aj ďalšie procesné úkony – predvoláva, poučuje, doručuje a vedie zápisnicu o pojednávaní.",
+        "wrong": "Nesprávne. Podanie žaloby je úkonom žalobcu, plnomocenstvo úkonom zastúpeného účastníka, nie úkonom súdu."
+      }
+    },
+    {
+      "question": "Aký je význam poučovacej povinnosti súdu voči účastníkom?",
+      "options": ["Súd nesmie účastníkov poučovať o ich procesných právach", "Súd je povinný účastníkov poučiť o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom", "Poučovacia povinnosť sa týka iba zástupcov účastníkov", "Poučenie sa dáva iba na konci konania"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd má zákonnú povinnosť poučiť účastníkov, najmä nezastúpených, o ich procesných právach a povinnostiach.",
+        "wrong": "Nesprávne. Poučovacia povinnosť smeruje predovšetkým k účastníkom samotným, nie len k ich zástupcom, a uplatňuje sa priebežne, nielen na konci konania."
+      }
+    },
+    {
+      "question": "Kto vedie zápisnicu o pojednávaní a aká je jej povaha?",
+      "options": ["Súd (zapisovateľ) zaznamenáva priebeh pojednávania do zápisnice, ktorá je verejnou listinou o priebehu konania", "Zapisuje ju výlučne žalobca", "Zápisnica sa v civilnom konaní nevedie", "Vedie ju advokát žalovaného"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. O pojednávaní sa vedie zápisnica ako verejná listina, ktorú vyhotovuje súd (zapisovateľ) a ktorá je dôkazom o priebehu konania.",
+        "wrong": "Nesprávne. Zápisnicu nevedie žalobca ani advokát žalovaného – ide o úradný úkon súdu, ktorý sa v civilnom konaní bežne vedie."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej (meritórne rozhodnutie)." },
+    { "term": "Uznesenie", "definition": "Rozhodnutie súdu spravidla o procesných otázkach (nie vo veci samej), napr. o zastavení konania." },
+    { "term": "Predvolanie", "definition": "Procesný úkon súdu, ktorým vyzýva účastníka alebo inú osobu, aby sa dostavila na pojednávanie." },
+    { "term": "Poučovacia povinnosť", "definition": "Povinnosť súdu poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom." },
+    { "term": "Zápisnica o pojednávaní", "definition": "Verejná listina zaznamenávajúca priebeh a obsah pojednávania." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zastavenie konania uznesením",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Žalobca vzal žalobu späť ešte pred vydaním rozsudku.", "options": [], "correct": 0 },
+        {
+          "question": "Akou formou súd na to zareaguje?",
+          "options": ["Uznesením o zastavení konania", "Rozsudkom vo veci samej", "Iba neformálnym oznámením"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. O procesnom následku späťvzatia žaloby (zastavení konania) rozhoduje súd uznesením.",
+            "wrong": "Nesprávne. Rozsudok sa vydáva pri rozhodnutí vo veci samej, čo tu vzhľadom na späťvzatie žaloby nenastáva."
+          }
+        },
+        {
+          "question": "Prečo sa v tomto prípade nepoužije rozsudok?",
+          "options": ["Lebo sa nerozhoduje vo veci samej, ale o procesnej otázke (zastavení konania)", "Lebo rozsudok môže vydať iba odvolací súd", "Lebo žalovaný by s rozsudkom nesúhlasil"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zastavenie konania je procesné rozhodnutie, nie rozhodnutie o veci samej, preto sa vydáva uznesením.",
+            "wrong": "Nesprávne. Rozsudok môže vydať aj súd prvej inštancie a súhlas žalovaného s formou rozhodnutia nie je relevantný."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Chýbajúce poučenie účastníka",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Súd opomenul poučiť nezastúpeného účastníka o dôkaznej povinnosti a následkoch jej nesplnenia.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to môže mať dôsledok pre konanie?",
+          "options": ["Môže ísť o vadu konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci", "Žiadny, poučenie je len formalita bez významu", "Konanie sa tým automaticky stáva neplatným od začiatku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Opomenutie zákonom vyžadovaného poučenia môže predstavovať vadu konania s možným vplyvom na správnosť rozhodnutia.",
+            "wrong": "Nesprávne. Poučovacia povinnosť nie je len formalitou a jej porušenie tiež automaticky neruší celé konanie od začiatku, ale zakladá dôvod na jeho prípadné napadnutie."
+          }
+        },
+        {
+          "question": "Kto môže takúto vadu namietať?",
+          "options": ["Dotknutý účastník, napríklad v odvolaní", "Iba súd sám voči sebe", "Iba znalec"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vadu spočívajúcu v absencii poučenia môže namietať dotknutý účastník, typicky v opravnom prostriedku.",
+            "wrong": "Nesprávne. Súd si vlastnú vadu spravidla sám nenapráva bez podnetu a znalec nemá procesné oprávnenie takúto vadu namietať."
+          }
+        }
+      ]
+    }
+  ]
+}
