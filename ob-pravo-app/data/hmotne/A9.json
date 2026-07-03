@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Živnostník a advokát sú fyzické osoby – podnikatelia, nie právnické osoby."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Právnická osoba (§ 18 OZ)", "definition": "Umelý subjekt práva odlišný od fyzických osôb." },
+    { "term": "Vznik právnickej osoby (§ 19 OZ)", "definition": "Zápisom do zákonom určeného registra." },
+    { "term": "Zánik právnickej osoby (§ 19a OZ)", "definition": "Výmazom z registra." },
+    { "term": "Štatutárny orgán (§ 20 OZ)", "definition": "Koná v mene právnickej osoby navonok." },
+    { "term": "Oddelenie majetku", "definition": "Za záväzky právnickej osoby v zásade zodpovedá len ona sama, nie jej členovia/orgány." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Zmluva pred zápisom do registra",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Zakladatelia obchodnej spoločnosti uzavrú zmluvu v jej mene ešte predtým, než bola spoločnosť zapísaná do obchodného registra.", "options": [], "correct": 0 },
+        {
+          "question": "Existuje už v tomto momente právnická osoba, ktorá by bola zmluvou viazaná?",
+          "options": ["Nie, právnická osoba vzniká až zápisom do registra", "Áno, vzniká už uzavretím zakladateľskej zmluvy", "Áno, vzniká už podaním návrhu na zápis"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konštitutívny účinok má až zápis do registra podľa § 19 OZ.",
+            "wrong": "Nesprávne. Zakladateľská zmluva ani podanie návrhu na zápis samy osebe právnickú osobu nezakladajú."
+          }
+        },
+        {
+          "question": "Kto teda z takejto zmluvy zaväzuje sa pred zápisom do registra?",
+          "options": ["Spravidla osoby, ktoré v tomto mene konali, kým spoločnosť záväzok neprevezme", "Nikto, zmluva je bez ďalšieho neplatná", "Automaticky štát"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pred vznikom spoločnosti zaväzujú konajúce osoby, kým záväzok po vzniku spoločnosť neprevezme.",
+            "wrong": "Nesprávne. Zmluva nie je automaticky neplatná a štát tu záväzky nepreberá."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Konanie zamestnanca bez oprávnenia",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Radový zamestnanec spoločnosti bez osobitného poverenia podpíše dôležitú zmluvu v mene spoločnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Je spoločnosť touto zmluvou automaticky viazaná?",
+          "options": ["Nie, konať v mene spoločnosti navonok môže spravidla len štatutárny orgán alebo osoba s osobitným poverením", "Áno, každý zamestnanec môže bez obmedzenia zaväzovať spoločnosť", "Áno, ak zamestnanec konal v dobrej viere, bez ďalšieho skúmania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konať navonok v mene právnickej osoby môže spravidla len jej štatutárny orgán alebo poverená osoba.",
+            "wrong": "Nesprávne. Bežný zamestnanec bez poverenia nezaväzuje spoločnosť automaticky, ani pri dobrej viere."
+          }
+        },
+        {
+          "question": "Kto je typicky štatutárnym orgánom obchodnej spoločnosti?",
+          "options": ["Napríklad konateľ v s.r.o. alebo predstavenstvo v akciovej spoločnosti", "Ktokoľvek s pracovnou zmluvou v spoločnosti", "Výlučne zakladateľ spoločnosti"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Konateľ, prípadne predstavenstvo, sú typickými štatutárnymi orgánmi obchodných spoločností.",
+            "wrong": "Nesprávne. Obyčajná pracovná zmluva ani samotné zakladateľstvo automaticky nezakladajú postavenie štatutárneho orgánu."
+          }
+        }
+      ]
+    }
   ]
 }

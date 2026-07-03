@@ -42,7 +42,7 @@
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 13 OZ: fyzická osoba sa môže domáhať upustenia od neoprávnených zásahov, odstránenia následkov a primeraného zadosťučinenia (aj peňažného).",
-        "worry": "Nesprávne. Ochrana osobnosti má vlastný systém prostriedkov, odlišný od všeobecnej náhrady škody."
+        "wrong": "Nesprávne. Ochrana osobnosti má vlastný systém prostriedkov, odlišný od všeobecnej náhrady škody."
       }
     },
     {
@@ -72,6 +72,65 @@
         "correct": "Správne. Fyzická osoba môže v medziach zákona disponovať svojimi osobnostnými statkami – napr. poskytnúť súhlas s použitím podobizne alebo prejavov osobnej povahy (§ 12 OZ).",
         "wrong": "Nesprávne. Hoci osobnostné práva sú neprevoditeľné, dotknutá osoba môže udeliť súhlas na ich použitie."
       }
+    }
+  ],
+  "tiles": [
+    { "term": "Ochrana osobnosti (§ 11 OZ)", "definition": "Chráni život, zdravie, česť, dôstojnosť, súkromie, meno a prejavy osobnej povahy." },
+    { "term": "Neprevoditeľnosť", "definition": "Osobnostné práva sú neprevoditeľné a nepremlčateľné." },
+    { "term": "Prostriedky ochrany (§ 13 OZ)", "definition": "Upustenie od zásahu, odstránenie následkov, primerané zadosťučinenie (morálne aj peňažné)." },
+    { "term": "Vecná príslušnosť", "definition": "Spory o ochranu osobnosti patria krajskému súdu ako súdu prvej inštancie." },
+    { "term": "Súhlas dotknutej osoby", "definition": "Fyzická osoba môže v medziach zákona súhlasiť s použitím svojich osobnostných statkov (napr. podobizne)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neoprávnené zverejnenie fotografie",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Médium bez súhlasu dotknutej osoby zverejní jej súkromnú fotografiu spôsobom zasahujúcim do jej súkromia.", "options": [], "correct": 0 },
+        {
+          "question": "Akých prostriedkov ochrany sa dotknutá osoba môže domáhať?",
+          "options": ["Upustenia od ďalšieho zásahu, odstránenia následkov a primeraného zadosťučinenia", "Iba trestného oznámenia bez občianskoprávnej ochrany", "Iba náhrady škody podľa všeobecných ustanovení o škode bez ďalších nárokov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. § 13 OZ poskytuje samostatný súbor prostriedkov ochrany osobnosti.",
+            "wrong": "Nesprávne. Ochrana osobnosti nie je obmedzená len na trestnoprávnu rovinu ani len na všeobecnú náhradu škody."
+          }
+        },
+        {
+          "question": "Na ktorý súd sa dotknutá osoba obráti v prvom stupni?",
+          "options": ["Na krajský súd", "Na okresný súd", "Na Najvyšší súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Spory o ochranu osobnosti patria do vecnej príslušnosti krajského súdu.",
+            "wrong": "Nesprávne. Okresný súd ani Najvyšší súd SR nie sú príslušné na prvostupňové prejednanie tejto veci."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Súhlas so zverejnením podobizne",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Osoba dobrovoľne udelí súhlas s tým, aby jej podobizeň bola použitá v reklamnej kampani.", "options": [], "correct": 0 },
+        {
+          "question": "Je takýto súhlas v súlade s právom na ochranu osobnosti?",
+          "options": ["Áno, dotknutá osoba môže v medziach zákona so svojimi osobnostnými statkami disponovať", "Nie, súhlas na použitie osobnostných statkov nie je nikdy možný", "Nie, súhlas by musel udeliť súd namiesto dotknutej osoby"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dotknutá osoba môže v medziach zákona udeliť súhlas s použitím svojej podobizne.",
+            "wrong": "Nesprávne. Súhlas je možný a nevyžaduje nahradenie rozhodnutím súdu."
+          }
+        },
+        {
+          "question": "Znamená to, že sa osobnostné právo prevádza na inú osobu?",
+          "options": ["Nie, ide len o súhlas s určitým použitím, právo samotné zostáva neprevoditeľné", "Áno, právo sa trvalo prevádza na tú osobu, ktorej bol súhlas udelený", "Áno, súhlasom osoba definitívne stráca svoje osobnostné právo"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Samotné osobnostné právo zostáva neprevoditeľné, súhlas sa týka len konkrétneho použitia.",
+            "wrong": "Nesprávne. Osobnostné právo sa súhlasom neprevádza ani natrvalo nestráca."
+          }
+        }
+      ]
     }
   ]
 }

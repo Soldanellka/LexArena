@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zákonné zastúpenie prináleží predovšetkým rodičom, nie orgánom štátnej správy."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zastúpenie (§ 22 OZ)", "definition": "Zástupca koná v mene zastúpeného, právne účinky nastávajú priamo zastúpenému." },
+    { "term": "Zákonné zastúpenie", "definition": "Rodičia za maloletých, opatrovník ustanovený súdom." },
+    { "term": "Zmluvné zastúpenie", "definition": "Na základe plnej moci (§ 31 OZ)." },
+    { "term": "Falsus procurator (§ 33 OZ)", "definition": "Osoba konajúca bez splnomocnenia alebo nad jeho rámec; zastúpený nie je viazaný, pokiaľ konanie dodatočne neschváli." },
+    { "term": "Substitúcia (§ 33a OZ)", "definition": "Ďalšia (sub)plná moc, prípustná len ak je výslovne dovolená alebo si ju vyžadujú okolnosti." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Konanie bez plnomocenstva",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Osoba uzavrie v mene iného zmluvu, hoci od neho nemá žiadnu plnú moc.", "options": [], "correct": 0 },
+        {
+          "question": "Je zastúpený takouto zmluvou viazaný?",
+          "options": ["Nie, pokiaľ konanie dodatočne neschváli", "Áno, vždy automaticky", "Áno, ale iba ak s tým súhlasí druhá zmluvná strana"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez dodatočného schválenia zastúpený konaním falsus procuratora viazaný nie je.",
+            "wrong": "Nesprávne. Automatická viazanosť ani súhlas druhej zmluvnej strany na tom nič nemenia."
+          }
+        },
+        {
+          "question": "Ako sa označuje osoba, ktorá takto konala bez oprávnenia?",
+          "options": ["Falsus procurator", "Súdny komisár", "Kolízny opatrovník"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o klasické latinské označenie osoby konajúcej bez potrebného oprávnenia.",
+            "wrong": "Nesprávne. Súdny komisár a kolízny opatrovník sú úplne odlišné inštitúty."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Plná moc na predaj nehnuteľnosti",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vlastník splnomocní zástupcu, aby v jeho mene predal nehnuteľnosť.", "options": [], "correct": 0 },
+        {
+          "question": "Akú formu musí mať táto plná moc?",
+          "options": ["Písomnú, keďže aj samotná kúpna zmluva o nehnuteľnosti vyžaduje písomnú formu", "Postačuje ústna forma bez ďalšieho", "Formu si zástupca môže zvoliť ľubovoľne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Podľa § 31 ods. 4 OZ musí mať plná moc rovnakú formu ako úkon, na ktorý sa vzťahuje.",
+            "wrong": "Nesprávne. Ústna forma tu nepostačuje a voľba formy nezávisí od zástupcu."
+          }
+        },
+        {
+          "question": "Prečo sa vyžaduje rovnaká forma plnej moci ako forma samotného úkonu?",
+          "options": ["Aby sa zabezpečila rovnaká miera právnej istoty pri overení rozsahu oprávnenia zástupcu", "Aby sa zjednodušila práca notára", "Nie je na to žiadny osobitný dôvod, ide len o formalitu bez významu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zhoda foriem chráni právnu istotu druhej strany aj samotného splnomocniteľa.",
+            "wrong": "Nesprávne. Nejde o bezúčelnú formalitu ani o uľahčenie práce notára."
+          }
+        }
+      ]
+    }
   ]
 }

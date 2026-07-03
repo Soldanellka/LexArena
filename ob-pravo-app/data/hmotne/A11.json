@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Vlastnícke právo je vecné (absolútne) právo, nie záväzkové."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Vecné právo", "definition": "Absolútne právo pôsobiace erga omnes (voči všetkým)." },
+    { "term": "Numerus clausus", "definition": "Zákon taxatívne vymenúva druhy vecných práv, strany nemôžu vytvárať nové." },
+    { "term": "Droit de suite", "definition": "Vecné právo nasleduje vec aj pri zmene vlastníka." },
+    { "term": "Záložné právo", "definition": "Vecné právo zabezpečujúce pohľadávku veriteľa možnosťou uspokojenia zo zálohu." },
+    { "term": "Vlastnícke právo (§ 123 OZ)", "definition": "Najúplnejšie vecné právo zahŕňajúce právo vec držať, užívať, požívať plody a nakladať s ňou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Prevod zaťaženej nehnuteľnosti",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Vlastník predá nehnuteľnosť zaťaženú záložným právom veriteľa, bez toho, aby záložné právo pred predajom zaniklo.", "options": [], "correct": 0 },
+        {
+          "question": "Prechádza záložné právo na nového vlastníka nehnuteľnosti?",
+          "options": ["Áno, vecné právo nasleduje vec (droit de suite)", "Nie, prevodom veci záložné právo automaticky zaniká", "Áno, ale iba ak s tým nový vlastník výslovne súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Záložné právo ako vecné právo zostáva viazané na vec bez ohľadu na zmenu vlastníka.",
+            "wrong": "Nesprávne. Prevodom veci záložné právo nezaniká a súhlas nového vlastníka nie je podmienkou jeho trvania."
+          }
+        },
+        {
+          "question": "Prečo vecné právo takto „nasleduje“ vec?",
+          "options": ["Lebo je viazané na vec, nie na osobu pôvodného vlastníka", "Lebo ide o záväzkové právo pôsobiace len medzi pôvodnými stranami", "Lebo zákon to výslovne zakazuje, iba ak ide o hnuteľnú vec"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Absolútna povaha vecného práva znamená jeho pôsobenie voči každému, kto sa vecou stane vlastníkom.",
+            "wrong": "Nesprávne. Nejde o záväzkové právo viazané len na pôvodné strany a nejde o zákaz viazaný na typ veci."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Pokus o dohodnutie atypického vecného práva",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Strany sa v zmluve pokúsia dohodnúť si úplne nový, zákonom neupravený typ vecného práva k nehnuteľnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Je takáto dohoda o novom, atypickom vecnom práve možná?",
+          "options": ["Nie, platí zásada numerus clausus – vecné práva sú len tie, ktoré zákon taxatívne vymenúva", "Áno, strany môžu vytvoriť ľubovoľné vecné právo rovnako ako pri záväzkoch", "Áno, ak to schváli notár"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Na rozdiel od záväzkových práv sú vecné práva uzavretým, zákonom vymedzeným okruhom.",
+            "wrong": "Nesprávne. Zásada numerus clausus vylučuje vytváranie nových vecných práv a schválenie notárom na tom nič nemení."
+          }
+        },
+        {
+          "question": "Čo by v takom prípade mohli strany dohodnúť namiesto toho?",
+          "options": ["Záväzkový (zmluvný) vzťah s obdobným obsahom, pôsobiaci však len medzi nimi", "Nič, žiadna dohoda o obsahu podobnom vecnému právu nie je možná", "Vecné právo, ak si to obe strany písomne odsúhlasia"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Záväzkové právo môže mať atypický obsah, pôsobí však len medzi zmluvnými stranami, nie erga omnes.",
+            "wrong": "Nesprávne. Podobný obsah dohody je možný v záväzkovej rovine a písomná forma sama osebe nevytvorí vecné právo mimo numerus clausus."
+          }
+        }
+      ]
+    }
   ]
 }

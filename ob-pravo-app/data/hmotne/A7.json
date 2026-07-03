@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. § 11 OZ je základom ochrany osobnosti fyzickej osoby, nie spôsobilosti na úkony."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Právna subjektivita", "definition": "Spôsobilosť mať práva a povinnosti, vzniká narodením (§ 7 OZ)." },
+    { "term": "Spôsobilosť na právne úkony", "definition": "Vzniká plnoletosťou (18 rokov); môže byť súdom obmedzená alebo odňatá." },
+    { "term": "Emancipácia", "definition": "Nadobudnutie plnej spôsobilosti na právne úkony uzavretím manželstva so súhlasom súdu (§ 8 ods. 2 OZ)." },
+    { "term": "Ochrana osobnosti (§ 11 – 16 OZ)", "definition": "Chráni život, zdravie, česť, súkromie fyzickej osoby." },
+    { "term": "Neprevoditeľnosť osobných práv", "definition": "Osobné práva sú neprevoditeľné a nepremlčateľné." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Obmedzenie spôsobilosti na právne úkony",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Súd na základe znaleckého posudku obmedzí spôsobilosť osoby na právne úkony pre jej duševnú poruchu.", "options": [], "correct": 0 },
+        {
+          "question": "Kto je oprávnený takéto obmedzenie vysloviť?",
+          "options": ["Iba súd", "Lekár psychiater samostatne", "Notár"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Obmedzenie spôsobilosti na právne úkony patrí výlučne do právomoci súdu (§ 10 OZ).",
+            "wrong": "Nesprávne. Lekár ani notár nemajú právomoc obmedziť spôsobilosť na právne úkony."
+          }
+        },
+        {
+          "question": "Môže táto osoba naďalej robiť právne úkony v rozsahu, v akom nebola obmedzená?",
+          "options": ["Áno, mimo rozsahu obmedzenia si zachováva spôsobilosť", "Nie, obmedzením stráca spôsobilosť úplne", "Áno, ale iba so súhlasom notára"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Obmedzenie spôsobilosti musí zodpovedať konkrétnemu rozsahu, mimo neho si osoba spôsobilosť zachováva.",
+            "wrong": "Nesprávne. Úplná strata spôsobilosti ani podmienenosť súhlasom notára nezodpovedajú zákonnej úprave."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Manželstvo maloletého",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "16-ročná osoba uzavrie so súhlasom súdu manželstvo.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to má vplyv na jej spôsobilosť na právne úkony?",
+          "options": ["Nadobúda plnú spôsobilosť na právne úkony (emancipácia)", "Spôsobilosť zostáva obmedzená až do 18 rokov", "Spôsobilosť stráca úplne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Uzavretím manželstva nadobúda maloletý plnú spôsobilosť na právne úkony (§ 8 ods. 2 OZ).",
+            "wrong": "Nesprávne. Spôsobilosť sa nezostáva obmedzená a rozhodne sa nestráca úplne."
+          }
+        },
+        {
+          "question": "Stratí táto osoba spôsobilosť späť, ak sa manželstvo neskôr rozvedie pred jej 18. narodeninami?",
+          "options": ["Nie, raz nadobudnutá plná spôsobilosť zostáva zachovaná", "Áno, automaticky sa vracia do postavenia maloletého", "Áno, ale iba ak o to požiada súd"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nadobudnutá plná spôsobilosť na právne úkony sa rozvodom manželstva nestráca.",
+            "wrong": "Nesprávne. Zákon nepredpokladá automatický ani na návrh podmienený návrat k obmedzenej spôsobilosti."
+          }
+        }
+      ]
+    }
   ]
 }
