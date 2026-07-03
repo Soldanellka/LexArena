@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Pri súčasnom uskutočnení výkonu viacerými sa odmena rozdeľuje, nie prepadá."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Verejná súťaž (§ 847 OZ)", "definition": "Vyhlasovateľ sa zaväzuje odmeniť najlepší návrh doručený v stanovenej lehote." },
+    { "term": "Verejný prísľub (§ 850 OZ)", "definition": "Vyhlasovateľ je viazaný voči tomu, kto uskutoční sľúbený výkon." },
+    { "term": "Jednostrannosť", "definition": "Oba inštitúty zaväzujú iba vyhlasovateľa, nie účastníkov." },
+    { "term": "Odvolanie prísľubu (§ 851 OZ)", "definition": "Možné len pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený." },
+    { "term": "Súčasné splnenie viacerými osobami (§ 852 OZ)", "definition": "Odmena sa rozdelí rovnakým dielom, ak vyhlasovateľ neurčil inak." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Odvolanie verejného prísľubu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Vyhlasovateľ verejne sľúbi odmenu tomu, kto nájde jeho stratené zviera, no ešte predtým, než ho niekto nájde, chce svoj prísľub odvolať.", "options": [], "correct": 0 },
+        {
+          "question": "Môže tak urobiť?",
+          "options": ["Áno, ale iba pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený", "Nie, verejný prísľub nemožno nikdy odvolať", "Áno, kedykoľvek aj bez akejkoľvek formy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odvolanie musí predchádzať uskutočneniu výkonu a musí mať rovnakú formu ako pôvodný prísľub.",
+            "wrong": "Nesprávne. Odvolanie nie je ani úplne vylúčené, ani formálne neobmedzené."
+          }
+        },
+        {
+          "question": "Čo ak by zviera niekto medzitým už našiel skôr, než bolo odvolanie zverejnené?",
+          "options": ["Nálezcovi by nárok na odmenu vznikol, odvolanie by naň už nemalo vplyv", "Odvolanie by pôsobilo spätne a nálezca by nárok nezískal", "Nálezca by musel o odmenu súdiť sa s vyhlasovateľom bez nároku na úspech"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ak výkon nastal skôr než odvolanie, nárok na odmenu už vznikol a neskoršie odvolanie naň nemá vplyv.",
+            "wrong": "Nesprávne. Odvolanie nepôsobí spätne na už vzniknutý nárok nálezcu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Súčasné odovzdanie víťazného návrhu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vo verejnej súťaži o najlepší architektonický návrh dorazia dva rovnako hodnotené najlepšie návrhy od dvoch rôznych autorov súčasne.", "options": [], "correct": 0 },
+        {
+          "question": "Ako sa v takom prípade rozdelí odmena, ak vyhlasovateľ vopred neurčil iný postup?",
+          "options": ["Rovnakým dielom medzi oboch autorov", "Odmena prepadne v prospech vyhlasovateľa", "Odmenu dostane iba ten, kto podal návrh skôr v ten istý deň"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon predpokladá rovnaké rozdelenie odmeny medzi rovnocenných autorov.",
+            "wrong": "Nesprávne. Odmena nepripadá vyhlasovateľovi a rozhodujúci nie je čas podania návrhu v rámci toho istého dňa."
+          }
+        },
+        {
+          "question": "Kto je vôbec zaviazaný z verejnej súťaže?",
+          "options": ["Iba vyhlasovateľ, ktorý sľúbil odmenu za najlepší návrh", "Všetci účastníci súťaže navzájom", "Iba účastníci, ktorí súťaž nevyhrali"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Verejná súťaž je jednostranným záväzkom vyhlasovateľa, nie vzájomným záväzkom účastníkov.",
+            "wrong": "Nesprávne. Účastníci súťaže navzájom zaviazaní nie sú a záväzok sa netýka len neúspešných účastníkov."
+          }
+        }
+      ]
+    }
   ]
 }

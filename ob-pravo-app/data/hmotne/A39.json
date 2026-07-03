@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. OZ ponecháva dobu dôchodku na dohodu strán - zákon ju nepredpisuje."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluva o dôchodku (§ 842 OZ)", "definition": "Záväzok vyplácať opakované dávky na dohodnutú dobu alebo na dobu života oprávneného." },
+    { "term": "Naturálna obligácia", "definition": "Záväzok, ktorý existuje, ale nemožno ho súdne vymáhať." },
+    { "term": "Stávka a hra (§ 845 OZ)", "definition": "Nevzniká z nich súdne vymáhateľná pohľadávka." },
+    { "term": "Dobrovoľné plnenie naturálnej obligácie", "definition": "Ak dlžník dobrovoľne plní, plnenie je platné a nemožno ho žiadať späť." },
+    { "term": "Výnimka pre povolené hazardné hry", "definition": "Pohľadávky zo štátom povolených hier môžu byť žalovateľné." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nevymáhateľná stávka medzi priateľmi",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dvaja priatelia sa súkromne stavili o 50 eur na výsledok športového zápasu, mimo akejkoľvek povolenej hazardnej hry.", "options": [], "correct": 0 },
+        {
+          "question": "Môže víťaz stávky svoju výhru vymáhať na súde, ak mu ju druhý priateľ odmietne zaplatiť?",
+          "options": ["Nie, ide o naturálnu obligáciu, ktorá nie je súdne vymáhateľná", "Áno, môže si výhru vysúdiť rovnako ako akýkoľvek iný dlh", "Áno, ale iba do výšky 20 eur"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Súkromná stávka mimo povolených hier zakladá len naturálnu obligáciu bez súdnej vymáhateľnosti.",
+            "wrong": "Nesprávne. Takáto pohľadávka nie je vymáhateľná ani v plnej, ani v čiastočnej výške na súde."
+          }
+        },
+        {
+          "question": "Čo by sa stalo, keby prehrávajúci priateľ výhru napriek tomu dobrovoľne zaplatil?",
+          "options": ["Plnenie by bolo platné a nemohol by žiadať jeho vrátenie", "Plnenie by bolo neplatné a musel by dostať peniaze späť", "Plnenie by bolo možné vymáhať späť len súdnou cestou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Dobrovoľné plnenie naturálnej obligácie je platné a nemožno ho žiadať späť.",
+            "wrong": "Nesprávne. Naturálna obligácia nespôsobuje neplatnosť dobrovoľného plnenia a nevzniká nárok na jeho vrátenie."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výhra v štátom povolenej lotérii",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Hráč vyhrá v lotérii prevádzkovanej na základe povolenia podľa zákona o hazardných hrách, prevádzkovateľ mu však výhru odmieta vyplatiť.", "options": [], "correct": 0 },
+        {
+          "question": "Môže si hráč v tomto prípade nárok na výhru vymáhať na súde?",
+          "options": ["Áno, pri štátom povolených hazardných hrách môže byť pohľadávka žalovateľná", "Nie, žiadna pohľadávka zo stávky alebo hry nikdy nie je vymáhateľná", "Nie, výhru možno získať iba dobrovoľným plnením prevádzkovateľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri zákonom povolených hazardných hrách zákon žalovateľnosť výslovne pripúšťa.",
+            "wrong": "Nesprávne. Pravidlo o naturálnej obligácii sa neuplatní bez výnimky na všetky hry, práve povolené hry sú výnimkou."
+          }
+        },
+        {
+          "question": "Čím sa táto situácia líši od bežnej súkromnej stávky medzi priateľmi?",
+          "options": ["Ide o zákonom osobitne upravenú a povolenú hazardnú hru, pri ktorej zákon žalovateľnosť pripúšťa", "Žiadnym spôsobom, právny režim je úplne rovnaký", "Rozdiel spočíva iba vo výške výhry"] ,
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákonná úprava povolených hazardných hier vytvára výnimku z pravidla o naturálnej obligácii.",
+            "wrong": "Nesprávne. Právny režim nie je rovnaký a rozdiel nespočíva vo výške výhry, ale v zákonnej úprave hry."
+          }
+        }
+      ]
+    }
   ]
 }

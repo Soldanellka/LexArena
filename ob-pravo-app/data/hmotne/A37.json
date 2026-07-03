@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. PZP nie je dobrovoľné - je zákonnou povinnosťou pri prevádzke motorového vozidla."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Poistná udalosť", "definition": "Náhodná skutočnosť, s ktorou zmluva spája vznik povinnosti poisťovateľa plniť." },
+    { "term": "Podstatné náležitosti", "definition": "Poistná udalosť, poistná suma a poistné." },
+    { "term": "Vinkulácia", "definition": "Poistné plnenie sa viaže na splnenie záväzku a vypláca sa veriteľovi namiesto poistníkovi." },
+    { "term": "Životné vs. neživotné poistenie", "definition": "Delenie poistenia podľa krytého rizika." },
+    { "term": "PZP", "definition": "Povinné zmluvné poistenie zodpovednosti za škodu z prevádzky motorového vozidla." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Poistná udalosť pri havárii",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vodič má uzatvorené havarijné poistenie vozidla a spôsobí nehodu, pri ktorej sa jeho auto poškodí.", "options": [], "correct": 0 },
+        {
+          "question": "Je táto nehoda poistnou udalosťou?",
+          "options": ["Áno, ide o náhodnú skutočnosť, s ktorou zmluva spája poisťovateľovu povinnosť plniť", "Nie, poistná udalosť sa vzťahuje len na krádež vozidla", "Nie, poistenie kryje len škodu spôsobenú inou osobou"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Havarijné poistenie kryje aj škodu spôsobenú vlastnou nehodou poistníka.",
+            "wrong": "Nesprávne. Poistná udalosť nie je obmedzená len na krádež ani len na škodu spôsobenú treťou osobou."
+          }
+        },
+        {
+          "question": "Čo musí byť súčasťou poistnej zmluvy, aby bolo možné z nej plniť pri takejto udalosti?",
+          "options": ["Vymedzenie poistnej udalosti, poistná suma a výška poistného", "Iba podpis oboch strán bez ďalších náležitostí", "Notárske overenie zmluvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Toto sú podstatné náležitosti, bez ktorých poistná zmluva neplní svoj účel.",
+            "wrong": "Nesprávne. Samotný podpis ani notárske overenie nenahrádzajú vymedzenie podstatných náležitostí zmluvy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Vinkulácia v prospech banky",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Pri hypotekárnom úvere si banka dohodne s poistníkom vinkuláciu poistného plnenia z poistenia nehnuteľnosti v jej prospech.", "options": [], "correct": 0 },
+        {
+          "question": "Komu sa v prípade poistnej udalosti vyplatí poistné plnenie?",
+          "options": ["Priamo banke ako vinkulovanému veriteľovi, nie poistníkovi", "Vždy iba poistníkovi bez ohľadu na vinkuláciu", "Rovným dielom banke aj poistníkovi automaticky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vinkulácia práve mení príjemcu poistného plnenia v prospech dohodnutého veriteľa.",
+            "wrong": "Nesprávne. Vinkulácia mení štandardné pravidlo výplaty poistníkovi a nejde o automatické delenie plnenia."
+          }
+        },
+        {
+          "question": "Prečo banky pri hypotékach bežne vyžadujú vinkuláciu poistenia?",
+          "options": ["Aby mali istotu, že poistné plnenie pri škode použije prednostne na úhradu alebo obnovu zabezpečenej nehnuteľnosti", "Aby zvýšili poistné, ktoré platí poistník", "Vinkulácia nemá pre banku žiadny praktický význam"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Vinkulácia chráni záujem banky na hodnote zabezpečujúcej nehnuteľnosti.",
+            "wrong": "Nesprávne. Vinkulácia sama osebe nezvyšuje poistné a má pre banku zásadný praktický význam."
+          }
+        }
+      ]
+    }
   ]
 }

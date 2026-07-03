@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zmluva o združení je záväzkový vzťah - nezakladá právnickú osobu."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluva o úschove", "definition": "Schovateľ prevezme vec, uschová ju a vráti v pôvodnom stave." },
+    { "term": "Zodpovednosť schovateľa", "definition": "Zodpovedá za škodu na veci, ak nepostupoval s náležitou starostlivosťou." },
+    { "term": "Zmluva o združení (§ 829 OZ)", "definition": "Viacero osôb sa združí na dosiahnutie spoločného účelu bez vzniku právnickej osoby." },
+    { "term": "Solidárna zodpovednosť účastníkov združenia", "definition": "Voči tretím osobám zodpovedá každý účastník za celý záväzok." },
+    { "term": "Chýbajúca právna subjektivita združenia", "definition": "Združenie podľa § 829 OZ nie je právnickou osobou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Poškodenie veci v úschove",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Osoba dá do úschovy cenný obraz; schovateľ ho neuloží v primeraných podmienkach a obraz sa počas úschovy poškodí vlhkosťou.", "options": [], "correct": 0 },
+        {
+          "question": "Zodpovedá schovateľ za takto vzniknutú škodu?",
+          "options": ["Áno, ak nepostupoval s náležitou starostlivosťou pri opatere zverenej veci", "Nie, riziko poškodenia nesie vždy vkladateľ", "Zodpovedá iba pri úmyselnom poškodení obrazu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Schovateľ zodpovedá za škodu spôsobenú nedodržaním povinnej starostlivosti o zverenú vec.",
+            "wrong": "Nesprávne. Riziko nenesie automaticky vkladateľ a zodpovednosť sa neobmedzuje len na úmyselné poškodenie."
+          }
+        },
+        {
+          "question": "Aká je základná povinnosť schovateľa pri zmluve o úschove?",
+          "options": ["Prevziať vec, riadne sa o ňu starať a vrátiť ju v pôvodnom stave", "Iba prevziať vec bez ďalších povinností", "Vec po uplynutí dohodnutej doby predať"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Schovateľ má trojitú povinnosť – prevzatie, riadnu starostlivosť a vrátenie veci.",
+            "wrong": "Nesprávne. Samotné prevzatie bez ďalšej starostlivosti nestačí a schovateľ vec štandardne nepredáva."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Spoločný záväzok účastníkov združenia",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Traja podnikatelia sa dohodnú na spoločnom organizovaní jednorazového podujatia formou zmluvy o združení podľa § 829 OZ, bez založenia novej spoločnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Vzniká takouto zmluvou nová právnická osoba?",
+          "options": ["Nie, združenie podľa § 829 OZ nemá právnu subjektivitu", "Áno, vzniká automaticky nová právnická osoba", "Áno, ale iba ak sa zapíše do obchodného registra"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Združenie zostáva len záväzkovým vzťahom medzi jeho účastníkmi, bez právnej subjektivity.",
+            "wrong": "Nesprávne. Zápis do registra by tu ani nezaložil právnu subjektivitu tohto typu združenia."
+          }
+        },
+        {
+          "question": "Ako zodpovedajú účastníci združenia voči tretej osobe, s ktorou uzavreli zmluvu v súvislosti s podujatím?",
+          "options": ["Solidárne, každý z nich zodpovedá za celý záväzok", "Každý zodpovedá len za pomernú časť záväzku", "Zodpovedá iba ten účastník, ktorý zmluvu s treťou osobou fyzicky podpísal"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Účastníci združenia zodpovedajú voči tretím osobám solidárne.",
+            "wrong": "Nesprávne. Zodpovednosť nie je len pomerná ani obmedzená na osobu, ktorá zmluvu fyzicky podpísala."
+          }
+        }
+      ]
+    }
   ]
 }
