@@ -32,6 +32,13 @@ window.catalog = {
     desc: "Kompletná appka pracovného práva."
   },
 
+  "Občianske právo – hmotné a procesné": {
+    id: "obcianske",
+    openExternal: LIVE + "ob-pravo-app/",
+    externalPath: LIVE + "ob-pravo-app/data/",
+    desc: "Kompletná appka občianskeho práva: 40 okruhov hmotného + 45 procesného, kvízy, kartičky a prípady."
+  },
+
   "Občan - teória a veľký kvíz": {
     id: "obcan",
     openExternal: LIVE + "Občan - teória a veľký kvíz/",
