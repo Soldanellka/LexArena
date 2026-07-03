@@ -72,6 +72,12 @@ window.catalog = {
     openExternal: LIVE + "Trestné právo procesné/",
     externalPath: LIVE + "Trestné právo procesné/data/",
     desc: "Kompletná TPP appka."
+  },
+
+  "Občianske právo": {
+    id: "obcianske",
+    openExternal: LIVE + "ob-pravo-app/",
+    desc: "Kompletná appka občianskeho práva – hmotné (A1-A40) a procesné (A1-A45) okruhy."
   }
 };
 
