@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Vecné bremeno nie je večné – zákon umožňuje súdne zrušenie pri zmene pomerov."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Vecné bremeno (§ 151n OZ)", "definition": "Obmedzuje vlastníka nehnuteľnosti povinnosťou niečo strpieť, konať alebo sa niečoho zdržať v prospech iného." },
+    { "term": "Bremeno in rem", "definition": "Viazané k panujúcej nehnuteľnosti, prechádza s ňou na nového vlastníka." },
+    { "term": "Bremeno in personam", "definition": "Viazané ku konkrétnej osobe, zaniká jej smrťou." },
+    { "term": "Vznik bremena", "definition": "Písomná zmluva a vklad do katastra, prípadne závet, zákon alebo rozhodnutie súdu." },
+    { "term": "Zrušenie bremena súdom (§ 151p ods. 3 OZ)", "definition": "Možné pri zmene pomerov, ak ho oprávnený trvalo nemôže využívať." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Právo prechodu cez susedný pozemok",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Vlastník pozemku A má na základe zmluvy zapísané v katastre právo prechodu cez pozemok B, ktoré slúži v prospech pozemku A bez ohľadu na to, kto je jeho aktuálnym vlastníkom.", "options": [], "correct": 0 },
+        {
+          "question": "O aký typ vecného bremena ide?",
+          "options": ["Vecné bremeno in rem", "Vecné bremeno in personam", "O záložné právo"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bremeno viazané na panujúcu nehnuteľnosť (pozemok A), nie na konkrétnu osobu, je bremenom in rem.",
+            "wrong": "Nesprávne. Nejde o osobné bremeno viazané na konkrétnu osobu ani o záložné právo."
+          }
+        },
+        {
+          "question": "Čo sa stane s týmto bremenom, ak vlastník pozemku A svoj pozemok predá?",
+          "options": ["Právo prechodu prejde s pozemkom A na nového vlastníka", "Právo prechodu automaticky zanikne predajom pozemku A", "Právo prechodu prejde na predávajúceho aj po predaji pozemku"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bremeno in rem je viazané na nehnuteľnosť, nie na osobu, preto prechádza s pozemkom.",
+            "wrong": "Nesprávne. Predajom pozemku bremeno nezaniká a neostáva viazané na pôvodného vlastníka."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zrušenie bremena pre zmenu pomerov",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Oprávnený z vecného bremena práva doživotného bývania sa už mnoho rokov v dome vôbec nezdržiava a trvalo býva inde, pričom povinný vlastník sa domáha zrušenia bremena.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd také bremeno zrušiť?",
+          "options": ["Áno, ak sa zmenili pomery a oprávnený ho trvalo nemôže využívať (§ 151p ods. 3 OZ)", "Nie, vecné bremeno je vždy trvalé a nezrušiteľné", "Áno, ale iba ak s tým oprávnený súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmena pomerov spojená s trvalou nemožnosťou využívania bremena je zákonným dôvodom na jeho zrušenie súdom.",
+            "wrong": "Nesprávne. Bremeno nie je absolútne nezrušiteľné a súhlas oprávneného nie je podmienkou súdneho zrušenia."
+          }
+        },
+        {
+          "question": "Kto môže takýto návrh na súd podať?",
+          "options": ["Povinný z vecného bremena (vlastník zaťaženej nehnuteľnosti)", "Iba oprávnený z vecného bremena", "Iba notár"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Návrh na zrušenie alebo obmedzenie bremena podáva povinný, teda vlastník zaťaženej nehnuteľnosti.",
+            "wrong": "Nesprávne. Oprávnený, ktorý z bremena profituje, o jeho zrušenie spravidla žiadať nebude, a notár nie je aktívne legitimovaný na podanie návrhu."
+          }
+        }
+      ]
+    }
   ]
 }

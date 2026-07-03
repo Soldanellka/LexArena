@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Negatórna žaloba nesmeruje na vydanie veci (to je reivindikačná), ale na zdržanie sa rušenia."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Ius disponendi", "definition": "Právo nakladať s vecou – previesť, zaťažiť alebo zničiť ju." },
+    { "term": "Vydržanie nehnuteľnosti (§ 134 OZ)", "definition": "10-ročná nepretržitá oprávnená dobromyseľná držba." },
+    { "term": "Reivindikačná žaloba (§ 126 OZ)", "definition": "Žaloba vlastníka na vydanie veci od neoprávneného držiteľa." },
+    { "term": "Negatórna žaloba (§ 127 OZ)", "definition": "Žaloba na zdržanie sa neoprávnených zásahov do vlastníckeho práva." },
+    { "term": "Vklad do katastra", "definition": "Konštitutívny úkon, ktorým vlastníctvo nehnuteľnosti prechádza na nadobúdateľa." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Kúpa bez vkladu do katastra",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Kupujúci podpíše kúpnu zmluvu o nehnuteľnosti a zaplatí celú kúpnu cenu, no vklad vlastníckeho práva do katastra ešte nebol vykonaný.", "options": [], "correct": 0 },
+        {
+          "question": "Je už kupujúci vlastníkom nehnuteľnosti?",
+          "options": ["Nie, vlastníctvo prechádza až vkladom do katastra nehnuteľností", "Áno, vlastníctvo prešlo už podpisom zmluvy", "Áno, vlastníctvo prešlo zaplatením kúpnej ceny"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri nehnuteľnostiach má konštitutívny účinok až vklad do katastra, nie samotný podpis zmluvy či zaplatenie ceny.",
+            "wrong": "Nesprávne. Ani podpis zmluvy, ani zaplatenie ceny samy osebe neprevádzajú vlastníctvo nehnuteľnosti."
+          }
+        },
+        {
+          "question": "Čo je teda kúpna zmluva vo vzťahu k prevodu vlastníctva nehnuteľnosti?",
+          "options": ["Iba titul (právny dôvod), vklad do katastra je modus (spôsob nadobudnutia)", "Sama osebe postačujúci a jediný predpoklad prevodu", "Bezvýznamná formalita bez právneho významu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmluva zakladá titul, ale k samotnému prevodu (modu) dochádza až vkladom do katastra.",
+            "wrong": "Nesprávne. Zmluva sama osebe vlastníctvo neprevádza a rozhodne nejde o bezvýznamnú formalitu."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Neoprávnené zadržiavanie veci",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Osoba odmieta vrátiť vlastníkovi jeho bicykel, hoci naň nemá žiadny právny nárok.", "options": [], "correct": 0 },
+        {
+          "question": "Akou žalobou sa vlastník bicykla domôže jeho vydania?",
+          "options": ["Reivindikačnou (vindikačnou) žalobou", "Negatórnou žalobou", "Žalobou o náhradu škody bez možnosti vydania veci"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Reivindikačná žaloba smeruje priamo na vydanie veci neoprávneným držiteľom.",
+            "wrong": "Nesprávne. Negatórna žaloba rieši iné rušenie, nie vydanie zadržiavanej veci."
+          }
+        },
+        {
+          "question": "Čím sa táto žaloba líši od negatórnej žaloby?",
+          "options": ["Reivindikačná žaloba smeruje na vydanie veci, negatórna na zdržanie sa rušenia bez vydania veci", "Obe žaloby majú úplne rovnaký účel", "Negatórna žaloba slúži výlučne na vydanie hnuteľných vecí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ide o dve odlišné žaloby na ochranu vlastníctva s odlišným petitom.",
+            "wrong": "Nesprávne. Účel oboch žalôb nie je rovnaký a negatórna žaloba neslúži na vydanie veci."
+          }
+        }
+      ]
+    }
   ]
 }

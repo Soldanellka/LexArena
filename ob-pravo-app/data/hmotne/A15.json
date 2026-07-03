@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zákon nepripúšťa nútené zotrvávaanie v spoluvlastníctve – kdokoľvek môže žiadať o jeho zrušenie."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Ideálny podiel", "definition": "Abstraktný (matematický) podiel na celej veci, nie reálna časť." },
+    { "term": "Predpoklad rovnosti podielov (§ 137 ods. 1 OZ)", "definition": "Ak nie je dohodnuté inak, podiely sa považujú za rovnaké." },
+    { "term": "Predkupné právo spoluvlastníkov (§ 140 OZ)", "definition": "Pri prevode podielu na tretiu osobu majú ostatní spoluvlastníci právo kúpiť ho prednostne." },
+    { "term": "Hospodárenie so spoločnou vecou (§ 139 OZ)", "definition": "Rozhoduje väčšina počítaná podľa veľkosti podielov." },
+    { "term": "Zrušenie spoluvlastníctva (§ 142 OZ)", "definition": "Každý spoluvlastník má právo kedykoľvek žiadať o zrušenie a vyporiadanie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Predaj podielu bez ponuky ostatným",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Spoluvlastník predá svoj podiel na nehnuteľnosti cudzej, nespriaznenej osobe bez toho, aby ho vopred ponúkol ostatným spoluvlastníkom.", "options": [], "correct": 0 },
+        {
+          "question": "Porušil týmto postupom niektoré právo ostatných spoluvlastníkov?",
+          "options": ["Áno, porušil ich zákonné predkupné právo podľa § 140 OZ", "Nie, spoluvlastník môže svoj podiel predať komukoľvek bez obmedzenia", "Nie, predkupné právo sa uplatňuje len pri predaji celej veci"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri prevode podielu na tretiu osobu majú ostatní spoluvlastníci zákonné predkupné právo.",
+            "wrong": "Nesprávne. Predaj podielu nie je bez obmedzenia a predkupné právo sa vzťahuje práve na prevod podielu, nie len celej veci."
+          }
+        },
+        {
+          "question": "Platilo by rovnaké obmedzenie, keby podiel predával svojmu blízkemu príbuznému?",
+          "options": ["Nie, pri prevode na blízku osobu sa predkupné právo ostatných spoluvlastníkov neuplatní", "Áno, výnimka pre blízke osoby neexistuje", "Áno, ale iba ak s tým blízka osoba súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon výslovne vyníma prevod na blízku osobu spod predkupného práva ostatných spoluvlastníkov.",
+            "wrong": "Nesprávne. Výnimka pre blízke osoby v zákone existuje a nezávisí od súhlasu tejto osoby."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rozhodovanie o oprave spoločnej strechy",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Traja spoluvlastníci domu s rovnakými podielmi sa nevedia dohodnúť, či opraviť spoločnú strechu; dvaja z nich sú za opravu, jeden proti.", "options": [], "correct": 0 },
+        {
+          "question": "Ako sa v takomto prípade rozhodne o hospodárení so spoločnou vecou?",
+          "options": ["Rozhoduje väčšina počítaná podľa veľkosti podielov, teda návrh dvoch spoluvlastníkov prevládne", "Musí byť dosiahnutá jednomyseľná zhoda všetkých spoluvlastníkov", "Rozhoduje výlučne najstarší spoluvlastník"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. O hospodárení so spoločnou vecou rozhoduje väčšina počítaná podľa veľkosti podielov.",
+            "wrong": "Nesprávne. Jednomyseľnosť sa nevyžaduje a vek spoluvlastníka nie je rozhodujúcim kritériom."
+          }
+        },
+        {
+          "question": "Môže nesúhlasiaci spoluvlastník namiesto ďalšieho spolužitia žiadať zrušenie spoluvlastníctva?",
+          "options": ["Áno, kedykoľvek môže žiadať o zrušenie a vyporiadanie spoluvlastníctva (§ 142 OZ)", "Nie, spoluvlastníctvo možno zrušiť len jednomyseľnou dohodou všetkých", "Nie, zrušenie spoluvlastníctva zákon nepripúšťa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Žiadny spoluvlastník nemôže byť nútený zotrvávať v spoluvlastníctve proti svojej vôli.",
+            "wrong": "Nesprávne. Zrušenie spoluvlastníctva nevyžaduje jednomyseľnosť ostatných a zákon ho výslovne pripúšťa."
+          }
+        }
+      ]
+    }
   ]
 }

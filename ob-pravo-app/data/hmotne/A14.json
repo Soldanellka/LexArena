@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Záložné právo je akcesorické – nie je samostatné, vždy závisí od pohľadávky."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Záložné právo", "definition": "Zabezpečuje pohľadávku – veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok." },
+    { "term": "Akcesorickosť", "definition": "Existencia záložného práva závisí od existencie zabezpečenej pohľadávky." },
+    { "term": "Výkon záložného práva (§ 151j OZ)", "definition": "Dohodou záložcu a záložného veriteľa alebo predajom vo verejnej dražbe." },
+    { "term": "Podzálog", "definition": "Záložný veriteľ zastaví svoju pohľadávku (vrátane záložného práva) ďalšej osobe." },
+    { "term": "Zánik záložného práva", "definition": "Zánikom pohľadávky, zánikom zálohu alebo vzdaním sa práva." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neplnenie zabezpečeného dlhu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Dlžník nesplní svoj záväzok zabezpečený záložným právom k jeho vozidlu.", "options": [], "correct": 0 },
+        {
+          "question": "Čo môže záložný veriteľ urobiť?",
+          "options": ["Uspokojiť sa zo zálohu, napríklad dohodou alebo predajom vo verejnej dražbe", "Automaticky sa stať vlastníkom vozidla bez ďalšieho postupu", "Vec bez akéhokoľvek postupu jednoducho zabrať"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon predpisuje konkrétne spôsoby výkonu záložného práva – dohodu alebo verejnú dražbu.",
+            "wrong": "Nesprávne. Záložný veriteľ sa nestáva automaticky vlastníkom a svojpomocné zabratie veci zákon nepripúšťa."
+          }
+        },
+        {
+          "question": "Stáva sa záložný veriteľ okamžite vlastníkom zálohu, len čo dlžník nesplní dlh?",
+          "options": ["Nie, záložné právo dáva len právo uspokojiť sa zo zálohu zákonným postupom, nie automatické vlastníctvo", "Áno, záložné právo automaticky prevádza vlastníctvo", "Áno, ale iba pri hnuteľných veciach"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Záložné právo je len uspokojovacím právom, nie priamym nadobudnutím vlastníctva.",
+            "wrong": "Nesprávne. Automatický prechod vlastníctva zálohu na veriteľa zákon nepripúšťa ani pri hnuteľných veciach."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zánik záložného práva splatením dlhu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Dlžník v plnom rozsahu splatí pohľadávku, ktorá bola zabezpečená záložným právom.", "options": [], "correct": 0 },
+        {
+          "question": "Čo sa stane so záložným právom?",
+          "options": ["Zanikne, keďže záložné právo je akcesorické k zabezpečenej pohľadávke", "Zostáva naďalej v platnosti bez ohľadu na splatenie dlhu", "Prechádza automaticky na inú pohľadávku toho istého veriteľa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zánikom zabezpečenej pohľadávky zaniká aj akcesorické záložné právo.",
+            "wrong": "Nesprávne. Záložné právo nezostáva samostatne v platnosti a neprechádza automaticky na inú pohľadávku."
+          }
+        },
+        {
+          "question": "Čo vyjadruje akcesorická povaha záložného práva?",
+          "options": ["Jeho existencia je závislá od existencie zabezpečenej pohľadávky", "Existuje úplne samostatne bez väzby na akúkoľvek pohľadávku", "Môže vzniknúť len bez akejkoľvek pohľadávky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Akcesorickosť znamená väzbu záložného práva na osud zabezpečenej pohľadávky.",
+            "wrong": "Nesprávne. Záložné právo nemôže existovať samostatne bez zabezpečenej pohľadávky."
+          }
+        }
+      ]
+    }
   ]
 }

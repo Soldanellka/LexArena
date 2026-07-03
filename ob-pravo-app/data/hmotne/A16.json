@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Zákonná fikcia nie je automatické prepadnutie štátu – zákon určuje konkrétne pravidlá."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Vznik BSM (§ 143 OZ)", "definition": "Vzniká automaticky uzavretím manželstva." },
+    { "term": "Predmet BSM", "definition": "Majetok nadobudnutý počas manželstva, okrem darov, dedičstva a vecí osobnej potreby." },
+    { "term": "Zúženie/rozšírenie BSM (§ 143a OZ)", "definition": "Možné dohodou manželov vo forme notárskej zápisnice." },
+    { "term": "Vyporiadanie BSM", "definition": "Prednostne dohodou, inak rozhodnutím súdu." },
+    { "term": "Zákonná fikcia (§ 150 ods. 4 OZ)", "definition": "Ak sa BSM nevyporiada do 3 rokov od zániku, hnuteľnosti patria tomu, kto ich užíva, nehnuteľnosti sú v podielovom spoluvlastníctve." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Majetok nadobudnutý dedením počas manželstva",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Manžel počas trvania manželstva zdedí po svojom otcovi rodinný dom.", "options": [], "correct": 0 },
+        {
+          "question": "Patrí tento dom do BSM?",
+          "options": ["Nie, majetok nadobudnutý dedením do BSM nepatrí", "Áno, všetok majetok nadobudnutý počas manželstva patrí do BSM bez výnimky", "Áno, ale iba ak s tým manželka súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon výslovne vylučuje z BSM majetok nadobudnutý dedením.",
+            "wrong": "Nesprávne. Nie všetok majetok nadobudnutý počas manželstva patrí do BSM a súhlas manželky na túto výnimku nemá vplyv."
+          }
+        },
+        {
+          "question": "Prečo zákon takéto veci z BSM vylučuje?",
+          "options": ["Lebo dedičstvo smeruje ku konkrétnej osobe, nie je výsledkom spoločného nadobúdania manželmi", "Lebo dedičstvo je vždy hodnotovo zanedbateľné", "Lebo dedenie počas manželstva zákon vôbec nepripúšťa"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. BSM má zahŕňať výsledky spoločného nadobúdania majetku manželmi, nie osobné dedičstvo jedného z nich.",
+            "wrong": "Nesprávne. Hodnota dedičstva nie je rozhodujúca a dedenie počas manželstva je bežné a zákonom umožnené."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Nevyporiadané BSM po rozvode",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Od právoplatného rozvodu manželstva uplynuli už viac ako tri roky a bývalí manželia svoje BSM doteraz nijako nevyporiadali.", "options": [], "correct": 0 },
+        {
+          "question": "Čo nastáva v takomto prípade zo zákona?",
+          "options": ["Zákonná fikcia vyporiadania podľa § 150 ods. 4 OZ", "BSM zostáva navždy nevyporiadané bez akéhokoľvek riešenia", "Celý majetok automaticky pripadne štátu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po troch rokoch nastupuje zákonná fikcia vyporiadania.",
+            "wrong": "Nesprávne. Situácia sa nenecháva bez riešenia a majetok nepripadá štátu."
+          }
+        },
+        {
+          "question": "Ako táto fikcia rieši hnuteľné veci?",
+          "options": ["Hnuteľné veci pripadnú tomu z bývalých manželov, kto ich fakticky užíva ako vlastník", "Hnuteľné veci sa vždy rozdelia presne na polovicu bez ohľadu na užívanie", "Hnuteľné veci pripadnú štátu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákonná fikcia priznáva hnuteľné veci tomu, kto ich ako vlastník fakticky užíva.",
+            "wrong": "Nesprávne. Nejde o automatické delenie na polovicu ani o prepadnutie v prospech štátu."
+          }
+        }
+      ]
+    }
   ]
 }
