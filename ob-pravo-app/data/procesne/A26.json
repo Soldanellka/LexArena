@@ -1,0 +1,114 @@
+{
+  "id": "26",
+  "title": "Skrátené konania a skrátené rozhodnutia",
+  "schemaVersion": "1.1",
+  "tags": ["platobný rozkaz", "upomínacie konanie", "odpor", "zmenkový platobný rozkaz"],
+  "summary": "Skrátené konania a rozhodnutia umožňujú rýchle a hospodárne vybavenie jednoduchých, najmä nesporných peňažných nárokov bez potreby nariadenia pojednávania a rozsiahleho dokazovania. Typickým príkladom je platobný rozkaz (§ 265 a nasl. CSP), ktorý súd vydá bez pojednávania na základe žalobných tvrdení a predložených listinných dôkazov, ak sú splnené zákonné podmienky; osobitným druhom je zmenkový a šekový platobný rozkaz vydávaný na základe zmenky alebo šeku. Samostatnou právnou úpravou (zákon č. 307/2016 Z. z.) je upomínacie konanie – z veľkej časti elektronizované konanie určené na rýchle vymáhanie peňažných pohľadávok prostredníctvom centrálneho portálu.\n\nProti platobnému rozkazu nie je opravným prostriedkom odvolanie, ale odpor, ktorý musí žalovaný podať v zákonnej lehote; riadne podaný odpor zrušuje platobný rozkaz v celom rozsahu (nie iba v časti, ktorej sa odpor týka) a súd následne pokračuje v riadnom sporovom konaní vrátane nariadenia pojednávania, ak je potrebné. Tento mechanizmus umožňuje rýchle vybavenie nesporných vecí, no zároveň zachováva plné právo žalovaného na riadnu procesnú obranu.\n\nZapamätaj si:\n- Platobný rozkaz sa vydáva bez pojednávania a dokazovania, na základe tvrdení a listín.\n- Upomínacie konanie (zákon č. 307/2016 Z. z.) je osobitné, elektronizované konanie na vymáhanie peňažných pohľadávok.\n- Riadnym opravným prostriedkom proti platobnému rozkazu je odpor, nie odvolanie.\n- Odpor zrušuje platobný rozkaz v celom rozsahu, nie len sčasti.\n- Po zrušení platobného rozkazu pokračuje súd v riadnom sporovom konaní."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je typickým príkladom skráteného rozhodnutia v civilnom konaní?",
+      "options": ["Rozsudok po vykonaní rozsiahleho dokazovania", "Platobný rozkaz vydaný bez nariadenia pojednávania a bez dokazovania", "Rozsudok odvolacieho súdu", "Uznesenie o vylúčení sudcu"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Platobný rozkaz je typickým skráteným rozhodnutím vydávaným bez pojednávania pri splnení zákonných podmienok.",
+        "wrong": "Nesprávne. Rozsudok po rozsiahlom dokazovaní, rozhodnutie odvolacieho súdu a uznesenie o vylúčení sudcu nie sú skrátenými rozhodnutiami v tomto zmysle."
+      }
+    },
+    {
+      "question": "Čo je upomínacie konanie?",
+      "options": ["Osobitné zjednodušené a z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok podľa zákona č. 307/2016 Z. z.", "Konanie o výkone rozhodnutia (exekúcia)", "Konanie o rozvode manželstva", "Konanie o vylúčení sudcu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Upomínacie konanie je samostatne upravené osobitným zákonom a slúži na rýchle vymáhanie peňažných nárokov.",
+        "wrong": "Nesprávne. Nejde ani o exekučné konanie, ani o konanie rodinnoprávne alebo o vylúčení sudcu."
+      }
+    },
+    {
+      "question": "Čo sa stane, ak žalovaný podá včas odpor proti platobnému rozkazu?",
+      "options": ["Platobný rozkaz sa v celom rozsahu zrušuje a súd pokračuje v riadnom konaní", "Odpor nemá žiadny účinok", "Platobný rozkaz sa zruší len sčasti, vo výške odporu", "Súd odpor bez ďalšieho zamietne"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Riadne podaný odpor zrušuje platobný rozkaz vcelku, nie len v časti, a konanie pokračuje ako riadne sporové konanie.",
+        "wrong": "Nesprávne. Odpor nie je bez účinku ani nespôsobuje len čiastočné zrušenie platobného rozkazu."
+      }
+    },
+    {
+      "question": "Aký je zmysel skrátených konaní a rozhodnutí?",
+      "options": ["Umožniť rýchle a hospodárne vybavenie jednoduchých alebo nesporných vecí (najmä vymáhanie peňažných pohľadávok)", "Predĺžiť konanie v zložitých veciach", "Nahradiť odvolacie konanie", "Zrušiť povinnosť platiť súdny poplatok"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Cieľom je efektivita a rýchlosť pri jednoduchých, spravidla nesporných peňažných nárokoch.",
+        "wrong": "Nesprávne. Skrátené konania nemajú za cieľ predlžovanie konania ani nahrádzajú odvolacie konanie či poplatkovú povinnosť."
+      }
+    },
+    {
+      "question": "Je proti platobnému rozkazu prípustné odvolanie?",
+      "options": ["Nie, jediným riadnym prostriedkom obrany žalovaného je odpor, nie odvolanie", "Áno, vždy len odvolanie, odpor CSP nepozná", "Áno, aj odvolanie aj odpor súčasne", "Platobný rozkaz nemožno napadnúť vôbec žiadnym spôsobom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Proti platobnému rozkazu smeruje odpor, nie odvolanie, ktoré je určené pre iné druhy rozhodnutí.",
+        "wrong": "Nesprávne. Odpor v CSP existuje a platobný rozkaz napadnuteľný je, práve prostredníctvom odporu."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Platobný rozkaz", "definition": "Skrátené rozhodnutie o peňažnom nároku vydané bez pojednávania a dokazovania, ak sú splnené zákonné podmienky." },
+    { "term": "Upomínacie konanie", "definition": "Osobitné, z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok (zákon č. 307/2016 Z. z.)." },
+    { "term": "Odpor", "definition": "Riadny prostriedok obrany žalovaného proti platobnému rozkazu; jeho podanie ruší rozkaz v celom rozsahu." },
+    { "term": "Zmenkový a šekový platobný rozkaz", "definition": "Osobitný druh platobného rozkazu vydávaný na základe zmenky alebo šeku." },
+    { "term": "Zjednodušené konania", "definition": "Postupy umožňujúce rýchle vybavenie jednoduchých, najmä peňažných nárokov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Vydanie platobného rozkazu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Veriteľ podá elektronický návrh na vydanie platobného rozkazu v upomínacom konaní na zaplatenie nesporného dlhu.", "options": [], "correct": 0 },
+        {
+          "question": "Musí súd pred vydaním platobného rozkazu nariadiť pojednávanie a vykonať dokazovanie?",
+          "options": ["Nie, platobný rozkaz môže súd vydať bez pojednávania, len na základe žalobných tvrdení a listinných dôkazov", "Áno, pojednávanie je vždy povinné", "Áno, musí vždy vykonať výsluch svedkov"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Práve v tom spočíva zrýchlenie tohto typu konania oproti riadnemu sporovému konaniu.",
+            "wrong": "Nesprávne. Povinné pojednávanie ani výsluch svedkov nie sú podmienkou vydania platobného rozkazu."
+          }
+        },
+        {
+          "question": "Čo môže žalovaný urobiť, ak s platobným rozkazom nesúhlasí?",
+          "options": ["Podať odpor v zákonnej lehote", "Podať odvolanie", "Nemôže urobiť nič"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odpor je jediným riadnym prostriedkom obrany žalovaného proti platobnému rozkazu.",
+            "wrong": "Nesprávne. Odvolanie sa proti platobnému rozkazu nepoužíva a žalovaný rozhodne nie je bez možnosti obrany."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Účinky podaného odporu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Žalovaný v zákonnej lehote podá riadne odôvodnený odpor proti vydanému platobnému rozkazu.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to má účinok na platobný rozkaz?",
+          "options": ["Platobný rozkaz sa zrušuje v celom rozsahu", "Platobný rozkaz zostáva čiastočne v platnosti", "Odpor nemá žiadny vplyv na platobný rozkaz"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Riadne podaný odpor ruší platobný rozkaz vcelku, bez ohľadu na rozsah námietok v odpore.",
+            "wrong": "Nesprávne. Platobný rozkaz nezostáva čiastočne v platnosti a odpor rozhodne nie je bez účinku."
+          }
+        },
+        {
+          "question": "Ako súd ďalej postupuje po zrušení platobného rozkazu?",
+          "options": ["Pokračuje v riadnom sporovom konaní a nariadi ďalšie potrebné procesné kroky", "Konanie bez ďalšieho zastaví", "Musí automaticky vydať nový, totožný platobný rozkaz"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po zrušení platobného rozkazu sa konanie vracia do štandardného sporového konania.",
+            "wrong": "Nesprávne. Konanie sa nezastavuje a súd nemôže automaticky opakovať pôvodné rozhodnutie."
+          }
+        }
+      ]
+    }
+  ]
+}

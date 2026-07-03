@@ -1,0 +1,114 @@
+{
+  "id": "29",
+  "title": "Odvolanie – pojem a prípustnosť odvolania",
+  "schemaVersion": "1.1",
+  "tags": ["odvolanie", "odvolacia lehota", "prípustnosť odvolania", "odvolacie dôvody"],
+  "summary": "Odvolanie je riadny opravný prostriedok proti rozhodnutiu súdu prvej inštancie, ktoré ešte nenadobudlo právoplatnosť. Proti rozsudku súdu prvej inštancie je odvolanie prípustné spravidla vždy, ak zákon výslovne neustanoví inak; proti uzneseniu je prípustné len v prípadoch taxatívne vymenovaných v § 357 CSP. Odvolanie podáva účastník, ktorého sa napadnuté rozhodnutie nepriaznivo dotýka, v lehote 15 dní od doručenia rozhodnutia (§ 362 CSP), a to na súde, ktorý napadnuté rozhodnutie vydal – nie priamo na odvolacom súde.\n\nOdvolacie dôvody sú v § 365 CSP vymedzené (nie úplne uzavreto) príkladmo – patrí medzi ne najmä nesprávne právne posúdenie veci súdom prvej inštancie, vada konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci, neúplné zistenie skutkového stavu, alebo nesprávne vykonané dokazovanie. Samotná subjektívna nespokojnosť účastníka s výsledkom konania bez uvedenia konkrétneho odvolacieho dôvodu na úspešnosť odvolania nestačí.\n\nZapamätaj si:\n- Odvolanie = riadny opravný prostriedok proti neprávoplatnému rozhodnutiu súdu prvej inštancie.\n- Podáva sa na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal.\n- Lehota na podanie odvolania je 15 dní od doručenia rozhodnutia (§ 362 CSP).\n- Proti uzneseniu je odvolanie prípustné len v prípadoch vymenovaných v § 357 CSP.\n- Odvolacie dôvody (§ 365 CSP): napr. nesprávne právne posúdenie veci, vada konania s vplyvom na správnosť rozhodnutia."
+  ,
+  "quiz": [
+    {
+      "question": "Čo je odvolanie?",
+      "options": ["Riadny opravný prostriedok proti rozhodnutiu súdu prvej inštancie, ktoré ešte nenadobudlo právoplatnosť", "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu", "Návrh na exekúciu", "Sťažnosť na Ústavný súd SR"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Odvolanie je typickým riadnym opravným prostriedkom viazaným na neprávoplatnosť rozhodnutia.",
+        "wrong": "Nesprávne. Mimoriadny opravný prostriedok, návrh na exekúciu a ústavná sťažnosť sú samostatné inštitúty odlišné od odvolania."
+      }
+    },
+    {
+      "question": "Kde sa podáva odvolanie?",
+      "options": ["Priamo na odvolacom súde", "Na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal", "Na Najvyššom súde SR", "Na Ministerstve spravodlivosti SR"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Odvolanie sa podáva na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal.",
+        "wrong": "Nesprávne. Odvolací súd, Najvyšší súd SR ani ministerstvo nie sú miestom podania odvolania."
+      }
+    },
+    {
+      "question": "Aká je lehota na podanie odvolania?",
+      "options": ["7 dní od doručenia rozhodnutia", "15 dní od doručenia rozhodnutia", "30 dní od doručenia rozhodnutia", "60 dní od doručenia rozhodnutia"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Odvolaciu lehotu 15 dní od doručenia rozhodnutia ustanovuje § 362 CSP.",
+        "wrong": "Nesprávne. Zákonná lehota nie je 7, 30 ani 60 dní."
+      }
+    },
+    {
+      "question": "Je odvolanie prípustné proti každému uzneseniu súdu prvej inštancie?",
+      "options": ["Áno, proti každému uzneseniu bez výnimky", "Nie, len proti uzneseniam, pri ktorých to zákon výslovne pripúšťa (§ 357 CSP)", "Nie, proti žiadnemu uzneseniu odvolanie nie je prípustné", "Áno, ale iba ak ide o uznesenie vydané v mimosporovom konaní"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Prípustnosť odvolania proti uzneseniu je viazaná na taxatívny výpočet v § 357 CSP.",
+        "wrong": "Nesprávne. Odvolanie nie je prípustné proti akémukoľvek uzneseniu, ale ani úplne vylúčené."
+      }
+    },
+    {
+      "question": "Čo patrí medzi odvolacie dôvody podľa § 365 CSP?",
+      "options": ["Iba nespokojnosť účastníka s výsledkom bez ďalšieho dôvodu", "Napríklad nesprávne právne posúdenie veci súdom alebo vada konania, ktorá mohla mať za následok nesprávne rozhodnutie", "Iba formálna chyba v dátume rozhodnutia", "Iba nesprávne určenie súdnych poplatkov"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Zákon vymenúva konkrétne, vecne relevantné dôvody, na ktorých musí odvolanie stáť.",
+        "wrong": "Nesprávne. Samotná subjektívna nespokojnosť ani drobná formálna chyba bez vecného významu nie sú postačujúcim odvolacím dôvodom."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Odvolanie", "definition": "Riadny opravný prostriedok proti neprávoplatnému rozhodnutiu súdu prvej inštancie." },
+    { "term": "Odvolacia lehota", "definition": "15 dní od doručenia napadnutého rozhodnutia (§ 362 CSP)." },
+    { "term": "Miesto podania odvolania", "definition": "Podáva sa na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal." },
+    { "term": "Prípustnosť proti uzneseniu", "definition": "Iba ak to zákon výslovne pripúšťa (§ 357 CSP)." },
+    { "term": "Odvolacie dôvody (§ 365 CSP)", "definition": "Napríklad nesprávne právne posúdenie veci alebo vada konania s vplyvom na správnosť rozhodnutia." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Omeškané podanie odvolania",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Účastníkovi bol rozsudok doručený 1. júna, no odvolanie podá až 25. júna, teda po uplynutí 15-dňovej lehoty.", "options": [], "correct": 0 },
+        {
+          "question": "Aký to má následok?",
+          "options": ["Odvolanie sa odmietne ako oneskorené", "Odvolanie sa napriek omeškaniu automaticky prejedná", "Lehota na odvolanie sa v civilnom konaní vôbec nesleduje"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmeškanie zákonnej odvolacej lehoty vedie k odmietnutiu odvolania ako oneskoreného.",
+            "wrong": "Nesprávne. Odvolacia lehota sa striktne sleduje a jej zmeškanie nemôže byť bez následku."
+          }
+        },
+        {
+          "question": "Kde mal účastník odvolanie podať?",
+          "options": ["Na súde prvej inštancie, ktorý rozsudok vydal", "Priamo na odvolacom súde", "Na Najvyššom súde SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odvolanie sa vždy podáva na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal.",
+            "wrong": "Nesprávne. Odvolací súd ani Najvyšší súd SR nie sú miestom podania odvolania."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odvolanie proti bežnému procesnému uzneseniu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Účastník chce podať odvolanie proti uzneseniu, ktorým súd len upravil poriadok pri pojednávaní, pričom takéto uznesenie nie je uvedené v § 357 CSP.", "options": [], "correct": 0 },
+        {
+          "question": "Je také odvolanie prípustné?",
+          "options": ["Nie, odvolanie je prípustné len proti uzneseniam vymenovaným v § 357 CSP", "Áno, odvolanie je prípustné proti akémukoľvek uzneseniu", "Áno, ak s tým súhlasí protistrana"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon presne vymenúva, proti ktorým uzneseniam možno podať odvolanie.",
+            "wrong": "Nesprávne. Súhlas protistrany nerozhoduje o prípustnosti odvolania proti uzneseniu."
+          }
+        },
+        {
+          "question": "Čo môže súd urobiť s neprípustným odvolaním?",
+          "options": ["Odmietne ho ako neprípustné", "Musí ho vždy vecne prejednať bez ohľadu na prípustnosť", "Postúpi ho na Ústavný súd SR"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Neprípustné odvolanie súd odmietne bez vecného prejednania.",
+            "wrong": "Nesprávne. Neprípustnosť bráni vecnému prejednaniu a odovzdanie veci Ústavnému súdu SR tu neprichádza do úvahy."
+          }
+        }
+      ]
+    }
+  ]
+}

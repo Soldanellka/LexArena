@@ -1,0 +1,114 @@
+{
+  "id": "30",
+  "title": "Konanie o odvolaní na súde 1. inštancie a konanie na odvolacom súde, rozhodnutie odvolacieho súdu",
+  "schemaVersion": "1.1",
+  "tags": ["konanie o odvolaní", "autoremedúra", "neúplná apelácia", "rozhodnutie odvolacieho súdu"],
+  "summary": "Po podaní odvolania súd prvej inštancie najprv skúma jeho formálne náležitosti a včasnosť a doručí ho ostatným účastníkom na vyjadrenie. Pri odvolaní proti niektorým uzneseniam môže súd prvej inštancie využiť autoremedúru – ak odvolaniu v celom rozsahu vyhovie, sám svoje rozhodnutie zmení alebo zruší bez toho, aby vec musel postúpiť odvolaciemu súdu. Ak autoremedúra neprichádza do úvahy alebo jej súd nevyhovie, predloží vec odvolaciemu súdu.\n\nOdvolací súd je pri preskúmaní napadnutého rozhodnutia viazaný rozsahom a dôvodmi odvolania, s výnimkou skutočností, na ktoré musí prihliadnuť z úradnej moci (napríklad niektoré procesné vady). Uplatňuje sa zásada neúplnej apelácie (§ 366 CSP) – nové skutočnosti a dôkazy (tzv. novoty) sú v odvolacom konaní prípustné len výnimočne, aby sa predišlo účelovému taktizovaniu strán. Odvolací súd môže napadnuté rozhodnutie potvrdiť (§ 387 CSP), ak je vecne správne, zmeniť (§ 388 CSP), ak sú na to splnené podmienky, alebo ho zrušiť a vec vrátiť súdu prvej inštancie na ďalšie konanie (§ 389 CSP), ak nemožno vadu odstrániť priamo v odvolacom konaní.\n\nZapamätaj si:\n- Súd prvej inštancie skúma náležitosti odvolania a môže pri uzneseniach využiť autoremedúru.\n- Odvolací súd je viazaný rozsahom a dôvodmi odvolania, s výnimkami skúmanými z úradnej moci.\n- Neúplná apelácia (§ 366 CSP) obmedzuje uplatňovanie nových skutočností a dôkazov.\n- Odvolací súd môže rozhodnutie potvrdiť (§ 387), zmeniť (§ 388) alebo zrušiť a vrátiť vec (§ 389 CSP).\n- Cieľom obmedzenia noviel je zabrániť účelovému taktickému správaniu strán."
+  ,
+  "quiz": [
+    {
+      "question": "Čo robí súd prvej inštancie po podaní odvolania?",
+      "options": ["Ihneď postúpi vec odvolaciemu súdu bez akéhokoľvek ďalšieho úkonu", "Skúma formálne náležitosti a včasnosť odvolania, doručí ho ostatným stranám na vyjadrenie, príp. môže sám odvolaniu vyhovieť (autoremedúra)", "Vydá nový rozsudok bez ohľadu na odvolanie", "Automaticky zruší svoje predchádzajúce rozhodnutie"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Súd prvej inštancie vykonáva pred postúpením veci viacero procesných úkonov vrátane možnej autoremedúry.",
+        "wrong": "Nesprávne. Vec sa nepostupuje bez ďalšieho a súd nevydáva nový rozsudok ani automaticky neruší svoje rozhodnutie bez posúdenia odvolania."
+      }
+    },
+    {
+      "question": "Čo je autoremedúra?",
+      "options": ["Možnosť súdu prvej inštancie sám vyhovieť odvolaniu a zmeniť či zrušiť svoje rozhodnutie, ak to zákon pripúšťa", "Rozhodnutie výlučne odvolacieho súdu", "Mimoriadny opravný prostriedok generálneho prokurátora", "Rozhodnutie o vylúčení sudcu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Autoremedúra šetrí čas tým, že súd prvej inštancie môže sám odvolaniu vyhovieť bez zásahu odvolacieho súdu.",
+        "wrong": "Nesprávne. Nejde o rozhodnutie odvolacieho súdu, dovolanie generálneho prokurátora ani o vylúčenie sudcu."
+      }
+    },
+    {
+      "question": "Čím je odvolací súd pri prieskume napadnutého rozhodnutia viazaný?",
+      "options": ["Rozsahom a dôvodmi odvolania, s výnimkami, na ktoré prihliada z úradnej moci", "Výlučne návrhom žalovaného bez ohľadu na odvolanie", "Ničím, môže preskúmať vec v neobmedzenom rozsahu vždy", "Iba tým, čo navrhne prokurátor"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Odvolací súd sa pohybuje v medziach odvolania, okrem prípadov, kde zákon vyžaduje prihliadnutie z úradnej moci.",
+        "wrong": "Nesprávne. Odvolací súd nie je viazaný len návrhom žalovaného a jeho prieskum nie je neobmedzený vo všetkých prípadoch."
+      }
+    },
+    {
+      "question": "Čo je zásada neúplnej apelácie (§ 366 CSP)?",
+      "options": ["Nové skutočnosti a dôkazy (novoty) sú v odvolacom konaní prípustné len výnimočne", "Odvolací súd nikdy nesmie vykonať žiadny dôkaz", "V odvolacom konaní možno uplatniť akékoľvek nové tvrdenia bez obmedzenia", "Odvolanie sa považuje vždy za novú žalobu"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Neúplná apelácia obmedzuje, nie úplne vylučuje ani neobmedzene pripúšťa, uplatňovanie noviel v odvolacom konaní.",
+        "wrong": "Nesprávne. Odvolací súd môže za výnimočných podmienok dôkaz vykonať a odvolanie nie je novou žalobou."
+      }
+    },
+    {
+      "question": "Aké rozhodnutia môže vydať odvolací súd?",
+      "options": ["Len potvrdiť napadnuté rozhodnutie alebo ho zrušiť", "Potvrdiť, zmeniť, alebo zrušiť a vrátiť vec súdu prvej inštancie na ďalšie konanie", "Len zmeniť rozhodnutie", "Len nariadiť opakovanie celého konania od začiatku"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Odvolací súd má tri hlavné možnosti rozhodnutia podľa § 387 – 389 CSP.",
+        "wrong": "Nesprávne. Možnosti odvolacieho súdu nie sú obmedzené len na potvrdenie a zrušenie, ani len na zmenu rozhodnutia."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Autoremedúra", "definition": "Možnosť súdu prvej inštancie sám vyhovieť odvolaniu bez postúpenia veci odvolaciemu súdu." },
+    { "term": "Viazanosť odvolacieho súdu", "definition": "Odvolací súd je viazaný rozsahom a dôvodmi odvolania, s výnimkami skúmanými z úradnej moci." },
+    { "term": "Neúplná apelácia (§ 366 CSP)", "definition": "Nové skutočnosti a dôkazy sú v odvolacom konaní prípustné len výnimočne." },
+    { "term": "Potvrdenie rozhodnutia (§ 387 CSP)", "definition": "Odvolací súd potvrdí správne a zákonné rozhodnutie súdu prvej inštancie." },
+    { "term": "Zrušenie a vrátenie veci (§ 389 CSP)", "definition": "Odvolací súd zruší rozhodnutie a vráti vec súdu prvej inštancie na ďalšie konanie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Autoremedúra súdu prvej inštancie",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Súd prvej inštancie po podaní odvolania proti svojmu uzneseniu zistí, že odvolaniu možno v celom rozsahu vyhovieť bez potreby postúpenia veci vyššiemu súdu.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd sám rozhodnúť o zmene svojho uznesenia?",
+          "options": ["Áno, ak zákon pripúšťa autoremedúru pri danom type uznesenia", "Nie, vždy musí vec postúpiť odvolaciemu súdu", "Nie, súd svoje vlastné rozhodnutia nemôže nikdy meniť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Autoremedúra umožňuje rýchlejšie vybavenie veci bez zaťaženia odvolacieho súdu.",
+            "wrong": "Nesprávne. Postúpenie vyššiemu súdu nie je vždy nevyhnutné a súd svoje rozhodnutia môže v zákonom pripustených prípadoch zmeniť."
+          }
+        },
+        {
+          "question": "Čo sa stane, ak autoremedúra neprichádza do úvahy alebo jej súd nevyhovie?",
+          "options": ["Vec sa predloží odvolaciemu súdu na rozhodnutie", "Konanie sa automaticky zastaví", "Odvolanie sa považuje za vzaté späť"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez autoremedúry musí súd prvej inštancie vec postúpiť odvolaciemu súdu na rozhodnutie o odvolaní.",
+            "wrong": "Nesprávne. Konanie sa nezastavuje ani sa odvolanie nepovažuje za vzaté späť len preto, že autoremedúra neprichádza do úvahy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Nové dôkazy v odvolaní",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Účastník chce v odvolaní predložiť dôkaz, ktorý mohol bez problémov navrhnúť už na súde prvej inštancie, no urobil tak až teraz z taktických dôvodov.", "options": [], "correct": 0 },
+        {
+          "question": "Môže odvolací súd na takýto dôkaz prihliadnuť?",
+          "options": ["Spravidla nie, pre zásadu neúplnej apelácie (§ 366 CSP)", "Áno, vždy bez ďalšieho skúmania", "Áno, ale iba ak s tým súhlasí protistrana"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zásada neúplnej apelácie bráni účelovému predkladaniu dôkazov, ktoré mohli byť navrhnuté už skôr.",
+            "wrong": "Nesprávne. Súhlas protistrany nie je pri posudzovaní prípustnosti noviel rozhodujúci a odvolací súd nemôže prihliadnuť na dôkaz bez ďalšieho."
+          }
+        },
+        {
+          "question": "Aký je zmysel tohto obmedzenia?",
+          "options": ["Motivovať strany, aby dôkazy predkladali už na súde prvej inštancie, a nie účelovo až v odvolaní", "Uľahčiť účastníkom prekvapivé taktické ťahy v odvolacom konaní", "Zvýšiť počet pojednávaní na odvolacom súde"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cieľom je koncentrácia dokazovania na súde prvej inštancie a zamedzenie procesnej taktike.",
+            "wrong": "Nesprávne. Zmyslom obmedzenia nie je umožniť prekvapivé taktické ťahy ani zvyšovať počet pojednávaní."
+          }
+        }
+      ]
+    }
+  ]
+}

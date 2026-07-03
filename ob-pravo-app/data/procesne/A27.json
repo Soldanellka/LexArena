@@ -1,0 +1,114 @@
+{
+  "id": "27",
+  "title": "Spory s ochranou slabšej strany",
+  "schemaVersion": "1.1",
+  "tags": ["spory s ochranou slabšej strany", "spotrebiteľské spory", "pracovnoprávne spory", "antidiskriminačné spory"],
+  "summary": "CSP vyčleňuje ako osobitnú kategóriu tzv. spory s ochranou slabšej strany – patria sem spotrebiteľské spory, individuálne pracovnoprávne spory a spory s antidiskriminačným prvkom. Spoločným menovateľom je, že jedna zo strán (spotrebiteľ, zamestnanec, osoba dotknutá diskrimináciou) je z hľadiska ekonomického, informačného alebo faktického postavenia slabšia než jej protistrana, a preto zákon posilňuje jej procesnú ochranu.\n\nV spotrebiteľských sporoch súd prihliada na neprijateľnosť zmluvných podmienok aj bez námietky spotrebiteľa (§ 292 CSP), čím reaguje na jeho slabšiu informovanosť. V sporoch s antidiskriminačným prvkom platí uľahčené (obrátené) dôkazné bremeno – ak žalobca preukáže skutočnosti nasvedčujúce tomu, že došlo k porušeniu zásady rovnakého zaobchádzania, je na žalovanom, aby preukázal, že k porušeniu nedošlo. V individuálnych pracovnoprávnych sporoch sa zohľadňuje slabšia pozícia zamestnanca voči zamestnávateľovi, a to napríklad aj pri posudzovaní pravidiel o náhrade trov konania, aby slabšiu stranu neodrádzali od uplatnenia jej práv na súde.\n\nZapamätaj si:\n- Spory s ochranou slabšej strany: spotrebiteľské, individuálne pracovnoprávne a antidiskriminačné.\n- V spotrebiteľských sporoch súd prihliada na neprijateľné podmienky aj bez námietky (§ 292 CSP).\n- V antidiskriminačných sporoch nesie žalovaný dôkazné bremeno, že k porušeniu nedošlo.\n- Zamestnanec je považovaný za slabšiu stranu voči zamestnávateľovi.\n- Osobitné pravidlá (napr. o trovách) chránia slabšiu stranu pred neprimeranou záťažou."
+  ,
+  "quiz": [
+    {
+      "question": "Ktoré typy sporov CSP zaraďuje medzi „spory s ochranou slabšej strany“?",
+      "options": ["Obchodné spory medzi podnikateľmi", "Spotrebiteľské spory, individuálne pracovnoprávne spory a spory s antidiskriminačným prvkom", "Dedičské spory", "Exekučné spory"],
+      "correct": 1,
+      "explanation": {
+        "correct": "Správne. Ide o tri kategórie sporov, kde zákon osobitne chráni ekonomicky alebo informačne slabšiu stranu.",
+        "wrong": "Nesprávne. Obchodné spory medzi rovnocennými podnikateľmi, dedičské a exekučné konania nepatria do tejto osobitnej kategórie."
+      }
+    },
+    {
+      "question": "Ako sa v spotrebiteľských sporoch posilňuje ochrana spotrebiteľa pri skúmaní neprijateľných zmluvných podmienok?",
+      "options": ["Súd prihliada na neprijateľnosť podmienok aj bez námietky spotrebiteľa (§ 292 CSP)", "Súd môže neprijateľnosť skúmať iba na výslovný návrh spotrebiteľa", "Ochrana spotrebiteľa sa v civilnom procese vôbec neuplatňuje", "Súd neprihliada na neprijateľnosť podmienok nikdy z úradnej moci"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Súd túto ochranu poskytuje aj bez toho, aby ju spotrebiteľ výslovne namietal.",
+        "wrong": "Nesprávne. Ochrana spotrebiteľa sa v civilnom procese uplatňuje práve prostredníctvom povinnosti súdu skúmať neprijateľnosť z úradnej moci."
+      }
+    },
+    {
+      "question": "Ako sa v antidiskriminačných sporoch uľahčuje postavenie žalobcu pri dokazovaní?",
+      "options": ["Preukáže-li žalobca skutočnosti nasvedčujúce diskriminácii, je na žalovanom, aby preukázal, že k porušeniu zásady rovnakého zaobchádzania nedošlo", "Dôkazné bremeno nesie vždy výlučne žalobca bez akejkoľvek úľavy", "Súd o diskriminácii rozhoduje bez akéhokoľvek dokazovania", "Žalobca musí dokázať diskrimináciu nad akúkoľvek pochybnosť ako v trestnom konaní"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Ide o typický príklad tzv. obráteného dôkazného bremena v prospech slabšej strany.",
+        "wrong": "Nesprávne. Práve preto, že priame dôkazy má spravidla k dispozícii žalovaný, zákon dôkazné bremeno čiastočne prenáša naň."
+      }
+    },
+    {
+      "question": "Prečo zákon osobitne chráni zamestnanca v individuálnych pracovnoprávnych sporoch?",
+      "options": ["Lebo zamestnanec je považovaný za ekonomicky a informačne slabšiu stranu voči zamestnávateľovi", "Lebo zamestnávateľ nemá v konaní žiadne procesné práva", "Lebo pracovnoprávne spory sa neriadia civilným procesom", "Lebo zamestnanec musí byť vždy zastúpený štátom"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Nerovnováha medzi zamestnancom a zamestnávateľom odôvodňuje osobitnú procesnú ochranu zamestnanca.",
+        "wrong": "Nesprávne. Zamestnávateľ má štandardné procesné práva a pracovnoprávne spory sa civilným procesom riadia."
+      }
+    },
+    {
+      "question": "Aký vplyv má postavenie slabšej strany na pravidlá o trovách konania?",
+      "options": ["Osobitné pravidlá môžu slabšiu stranu chrániť pred neprimeranou trovou záťažou", "Slabšia strana musí vždy znášať všetky trovy konania bez výnimky", "Trovy konania sa v týchto sporoch vôbec nepriznávajú", "Silnejšia strana je vždy oslobodená od platenia trov"],
+      "correct": 0,
+      "explanation": {
+        "correct": "Správne. Cieľom je, aby obava z vysokých trov neodrádzala slabšiu stranu od uplatnenia jej práv na súde.",
+        "wrong": "Nesprávne. Nejde o automatické oslobodenie silnejšej strany ani o úplné vylúčenie inštitútu trov konania."
+      }
+    }
+  ],
+  "tiles": [
+    { "term": "Spory s ochranou slabšej strany", "definition": "Osobitná kategória sporov (spotrebiteľské, pracovnoprávne, antidiskriminačné) s posilnenou procesnou ochranou slabšej strany." },
+    { "term": "Neprijateľné zmluvné podmienky (§ 292 CSP)", "definition": "Súd na ne prihliada aj bez námietky spotrebiteľa." },
+    { "term": "Obrátenie dôkazného bremena", "definition": "V antidiskriminačných sporoch musí žalovaný preukázať, že k porušeniu rovnakého zaobchádzania nedošlo." },
+    { "term": "Ochrana zamestnanca", "definition": "Zamestnanec je v individuálnom pracovnoprávnom spore považovaný za slabšiu stranu." },
+    { "term": "Osobitné pravidlá o trovách", "definition": "Chránia slabšiu stranu pred neprimeranou trovou záťažou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Neprijateľná podmienka v spotrebiteľskej zmluve",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "V spore o zaplatenie úveru obsahuje spotrebiteľská zmluva podmienku, ktorá je zjavne v neprospech spotrebiteľa, hoci ju spotrebiteľ v konaní výslovne nenamietal.", "options": [], "correct": 0 },
+        {
+          "question": "Môže súd na túto neprijateľnú podmienku prihliadnuť aj bez námietky spotrebiteľa?",
+          "options": ["Áno, súd na neprijateľnosť podmienky prihliada aj z úradnej moci (§ 292 CSP)", "Nie, súd môže konať len na výslovný návrh spotrebiteľa", "Nie, ochrana spotrebiteľa sa v súdnom konaní vôbec neuplatňuje"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Práve táto povinnosť súdu konať z úradnej moci je jadrom osobitnej ochrany spotrebiteľa v civilnom procese.",
+            "wrong": "Nesprávne. Súd nie je odkázaný len na výslovnú námietku spotrebiteľa a ochrana spotrebiteľa sa v civilnom procese reálne uplatňuje."
+          }
+        },
+        {
+          "question": "Prečo zákon takúto povinnosť súdu ustanovuje?",
+          "options": ["Aby sa vyrovnala slabšia procesná a informačná pozícia spotrebiteľa voči dodávateľovi", "Aby sa zjednodušila práca súdu bez ohľadu na záujmy strán", "Aby dodávateľ mal vždy výhodu v konaní"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cieľom je vyváženie nerovného postavenia spotrebiteľa a profesionálneho dodávateľa.",
+            "wrong": "Nesprávne. Účelom nie je uľahčiť prácu súdu na úkor záujmov strán ani zvýhodniť dodávateľa."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Antidiskriminačný spor v zamestnaní",
+      "difficulty": "ťažká",
+      "steps": [
+        { "question": "Zamestnankyňa tvrdí, že jej zamestnávateľ neponúkol povýšenie pre jej tehotenstvo, a predloží skutočnosti nasvedčujúce takémuto znevýhodneniu.", "options": [], "correct": 0 },
+        {
+          "question": "Kto musí v takomto spore preukázať, že nedošlo k porušeniu zásady rovnakého zaobchádzania?",
+          "options": ["Zamestnávateľ (žalovaný), keďže zamestnankyňa preukázala skutočnosti nasvedčujúce diskriminácii", "Vždy iba zamestnankyňa (žalobkyňa) v plnom rozsahu", "Súd, ktorý musí sám vykonať vyšetrovanie namiesto strán"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Po preukázaní skutočností nasvedčujúcich diskriminácii prechádza dôkazné bremeno na zamestnávateľa.",
+            "wrong": "Nesprávne. Zamestnankyňa nemusí niesť celé dôkazné bremeno sama a súd nenahrádza dokazovanie strán vlastným vyšetrovaním."
+          }
+        },
+        {
+          "question": "Prečo zákon takto rozkladá dôkazné bremeno?",
+          "options": ["Lebo priame dôkazy o diskriminačnom motíve má spravidla k dispozícii skôr zamestnávateľ, a nie zamestnanec", "Lebo zamestnankyňa nemá právo na súdnu ochranu", "Lebo ide o vec, ktorú súd rieši bez dokazovania"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zamestnávateľ má spravidla lepší prístup k dôkazom o dôvodoch svojho rozhodovania.",
+            "wrong": "Nesprávne. Zamestnankyňa právo na súdnu ochranu má a dokazovanie sa v takýchto sporoch vykonáva štandardne."
+          }
+        }
+      ]
+    }
+  ]
+}
