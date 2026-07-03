@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Predaj veci automaticky nájom neruší - platí zásada emptio non tollit locatum."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Nájomná zmluva (§ 663 OZ)", "definition": "Prenajímateľ prenechá nájomcovi vec na dočasné odplatné užívanie." },
+    { "term": "Podstatné náležitosti", "definition": "Predmet nájmu, nájomné a čas užívania." },
+    { "term": "Povinnosti prenajímateľa", "definition": "Odovzdať vec v spôsobilom stave a udržiavať ju počas nájmu." },
+    { "term": "Podnájom", "definition": "Nájomca so súhlasom prenajímateľa prenajme vec (alebo jej časť) ďalšej osobe." },
+    { "term": "Emptio non tollit locatum", "definition": "Predaj prenajatej veci automaticky neruší existujúci nájom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Predaj prenajatého bytu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Vlastník prenajatého bytu byt počas trvania nájmu predá novému vlastníkovi, bez toho, aby s nájomcom akokoľvek riešil ukončenie nájmu.", "options": [], "correct": 0 },
+        {
+          "question": "Zaniká nájomná zmluva predajom bytu?",
+          "options": ["Nie, platí zásada, že kúpa neruší nájom (emptio non tollit locatum)", "Áno, nový vlastník nemusí nájom rešpektovať", "Áno, ale iba ak s tým nájomca súhlasí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmena vlastníka veci nemá vplyv na existujúci nájomný vzťah.",
+            "wrong": "Nesprávne. Nový vlastník musí nájom rešpektovať a nezáleží pritom na súhlase nájomcu."
+          }
+        },
+        {
+          "question": "Kto je po predaji bytu novým prenajímateľom vo vzťahu k nájomcovi?",
+          "options": ["Nový vlastník bytu, ktorý vstupuje do práv a povinností pôvodného prenajímateľa", "Pôvodný vlastník naďalej zostáva prenajímateľom", "Nikto, nájom zaniká bez náhrady"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Nový vlastník vstupuje do postavenia prenajímateľa namiesto pôvodného vlastníka.",
+            "wrong": "Nesprávne. Pôvodný vlastník už prenajímateľom nie je a nájom nezaniká."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Podnájom časti bytu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Nájomca bytu chce prenajať jednu izbu ďalšej osobe, aby si znížil náklady na bývanie.", "options": [], "correct": 0 },
+        {
+          "question": "Potrebuje na to súhlas prenajímateľa?",
+          "options": ["Áno, podnájom je možný len so súhlasom prenajímateľa", "Nie, nájomca môže podnajímať bez obmedzenia", "Nie, stačí informovať prenajímateľa dodatočne"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Podnájom vyžaduje predchádzajúci súhlas prenajímateľa.",
+            "wrong": "Nesprávne. Podnájom nie je bez obmedzenia a dodatočné informovanie súhlas nenahrádza."
+          }
+        },
+        {
+          "question": "Čo sa stane, ak nájomca podnajme izbu bez súhlasu prenajímateľa?",
+          "options": ["Ide o porušenie povinností nájomcu, ktoré môže mať za následok napr. výpoveď nájmu", "Podnájom je bez ďalšieho automaticky platný", "Prenajímateľ stráca právo na nájomné"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Porušenie tejto povinnosti môže mať vážne procesné dôsledky pre nájomcu.",
+            "wrong": "Nesprávne. Podnájom bez súhlasu nie je automaticky platný a prenajímateľ nestráca právo na nájomné."
+          }
+        }
+      ]
+    }
   ]
 }

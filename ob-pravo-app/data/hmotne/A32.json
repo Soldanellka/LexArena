@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Bezodplatnosť je definiujúcim znakom výpožičky - pri odplatnosti by šlo o nájom."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluva o pôžičke (§ 657 OZ)", "definition": "Veriteľ odovzdá druhovo určené veci, dlžník vráti rovnaké množstvo." },
+    { "term": "Reálna zmluva", "definition": "Zmluva o pôžičke vzniká až odovzdaním predmetu pôžičky." },
+    { "term": "Výpožička (§ 659 OZ)", "definition": "Bezodplatné prenechanie individuálne určenej veci na dočasné užívanie, vracia sa tá istá vec." },
+    { "term": "Prechod vlastníctva pri pôžičke", "definition": "Vlastníctvo prechádza na dlžníka, na rozdiel od výpožičky." },
+    { "term": "Odplatnosť", "definition": "Pôžička môže byť odplatná (s úrokom) aj bezodplatná; výpožička je vždy bezodplatná." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pôžička peňazí medzi priateľmi",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Priateľ požičia druhému priateľovi 500 eur s tým, že mu ich o mesiac vráti.", "options": [], "correct": 0 },
+        {
+          "question": "Musí dlžník vrátiť presne tie isté bankovky, ktoré dostal?",
+          "options": ["Nie, stačí vrátiť rovnakú sumu peňazí (druhovo určenú vec)", "Áno, musí vrátiť presne tie isté bankovky", "Áno, inak by šlo o krádež"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri pôžičke sa vracia rovnaké množstvo druhovo určenej veci, nie tie isté kusy.",
+            "wrong": "Nesprávne. Vrátenie tých istých bankoviek sa nevyžaduje a nejde o krádež."
+          }
+        },
+        {
+          "question": "Kedy táto zmluva o pôžičke vznikla?",
+          "options": ["Až odovzdaním peňazí dlžníkovi (ide o reálnu zmluvu)", "Už samotnou ústnou dohodou bez odovzdania peňazí", "Až vrátením peňazí"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zmluva o pôžičke je reálna zmluva, vyžaduje si skutočné odovzdanie predmetu pôžičky.",
+            "wrong": "Nesprávne. Samotná dohoda bez odovzdania peňazí ani samotné vrátenie nezakladajú vznik zmluvy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Výpožička auta na víkend",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Sused požičia svojmu susedovi na víkend osobné auto bezplatne, s tým, že po víkende mu presne to isté auto vráti.", "options": [], "correct": 0 },
+        {
+          "question": "O aký zmluvný typ ide?",
+          "options": ["O zmluvu o výpožičke", "O zmluvu o pôžičke", "O nájomnú zmluvu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bezodplatné prenechanie individuálne určenej veci s povinnosťou vrátiť tú istú vec je výpožička.",
+            "wrong": "Nesprávne. Pôžička sa týka druhovo určených vecí a nájom je vždy odplatný, čo tu chýba."
+          }
+        },
+        {
+          "question": "Prešlo by na vypožičiavajúceho suseda vlastníctvo auta?",
+          "options": ["Nie, pri výpožičke vlastníctvo neprechádza, vracia sa tá istá vec", "Áno, tak ako pri pôžičke", "Áno, ale iba dočasne na dobu výpožičky"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Pri výpožičke ide len o dočasné užívanie, vlastníctvo zostáva požičiavajúcemu.",
+            "wrong": "Nesprávne. Na rozdiel od pôžičky pri výpožičke vlastníctvo vôbec neprechádza, ani dočasne."
+          }
+        }
+      ]
+    }
   ]
 }

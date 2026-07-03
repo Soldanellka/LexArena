@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Cestovná zmluva nie je len o preprave - ide o komplexný balík služieb (dovolenkový balík)."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Zmluva o preprave osôb (§ 760 OZ)", "definition": "Dopravca sa zaväzuje prepraviť cestujúceho do dohodnutého miesta určenia." },
+    { "term": "Objektívna zodpovednosť dopravcu (§ 772 OZ)", "definition": "Zodpovedá za škodu na náklade od prevzatia do odovzdania bez ohľadu na zavinenie." },
+    { "term": "Zasielateľská zmluva", "definition": "Zasielateľ vo vlastnom mene, na cudzí účet obstaráva prepravu veci." },
+    { "term": "Cestovná zmluva (zákon č. 281/2001 Z. z.)", "definition": "Komplexná zmluva o organizovanom zájazde, organizátor zodpovedá za celý balík služieb." },
+    { "term": "Odstúpenie cestujúceho", "definition": "Možné aj pred odchodom, pri organizovanom zájazde spravidla so stornopoplatkom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Poškodenie prepravovaného nákladu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Počas prepravy tovaru dopravcom dôjde k jeho poškodeniu, hoci dopravca postupoval s náležitou starostlivosťou a nezavinil poškodenie úmyselne ani z nedbanlivosti.", "options": [], "correct": 0 },
+        {
+          "question": "Zodpovedá dopravca za túto škodu?",
+          "options": ["Áno, zodpovedá objektívne bez ohľadu na zavinenie, s obmedzenými liberačnými dôvodmi", "Nie, bez zavinenia zodpovednosť dopravcu nevzniká", "Zodpovedá iba v prípade úmyselného poškodenia nákladu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zodpovednosť dopravcu za náklad je objektívna, absencia zavinenia ho automaticky nezbavuje zodpovednosti.",
+            "wrong": "Nesprávne. Zavinenie nie je predpokladom tejto zodpovednosti a nejde len o úmyselné poškodenie."
+          }
+        },
+        {
+          "question": "V akom časovom rozmedzí dopravca za škodu na náklade zodpovedá?",
+          "options": ["Od prevzatia nákladu do jeho odovzdania príjemcovi", "Iba počas skutočnej jazdy vozidla, nie pri nakladaní a vykladaní", "Iba do momentu podpisu prepravnej zmluvy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zodpovednosť dopravcu trvá počas celého obdobia, kedy má náklad u seba.",
+            "wrong": "Nesprávne. Zodpovednosť sa neobmedzuje len na samotnú jazdu ani nekončí podpisom zmluvy."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odstúpenie od cestovnej zmluvy",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Zákazník si objedná organizovaný zájazd, no mesiac pred odchodom sa rozhodne od cestovnej zmluvy odstúpiť.", "options": [], "correct": 0 },
+        {
+          "question": "Môže tak urobiť?",
+          "options": ["Áno, cestujúci môže od zmluvy o zájazde odstúpiť aj pred odchodom", "Nie, cestovná zmluva je vždy absolútne záväzná bez možnosti odstúpenia", "Áno, ale iba ak zájazd zruší sám organizátor"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Cestujúci má právo odstúpiť od cestovnej zmluvy aj z vlastnej iniciatívy.",
+            "wrong": "Nesprávne. Zmluva nie je absolútne neodstúpiteľná a odstúpenie nezávisí len od zrušenia zájazdu organizátorom."
+          }
+        },
+        {
+          "question": "Musí pri odstúpení počítať s nejakými dôsledkami?",
+          "options": ["Áno, spravidla so stornopoplatkom podľa podmienok zmluvy", "Nie, odstúpenie je vždy úplne bez akýchkoľvek nákladov", "Áno, musí zaplatiť celú cenu zájazdu bez zľavy"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odstúpenie pred odchodom je spravidla spojené so stornopoplatkom podľa zmluvných podmienok.",
+            "wrong": "Nesprávne. Odstúpenie nie je vždy úplne bezplatné, no zároveň sa spravidla nevyžaduje zaplatenie celej ceny zájazdu."
+          }
+        }
+      ]
+    }
   ]
 }

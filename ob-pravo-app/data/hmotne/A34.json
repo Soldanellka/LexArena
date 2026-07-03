@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Podnájom bytu bez súhlasu prenajímateľa je neprípustný."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Výpoveď nájmu bytu (§ 711 OZ)", "definition": "Prenajímateľ môže vypovedať iba z taxatívne vymedzených zákonných dôvodov." },
+    { "term": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)", "definition": "Na dobu určitú do 6 rokov, so zápisom u notára." },
+    { "term": "Výpovedná lehota pri krátkodobom nájme", "definition": "Kratšia než pri bežnom nájme bytu (napr. 15/30 dní)." },
+    { "term": "Podnájom bytu (§ 719 OZ)", "definition": "Možný len so súhlasom prenajímateľa." },
+    { "term": "Posilnená ochrana nájomcu", "definition": "Typický znak nájmu bytu podľa OZ v porovnaní s bežným nájmom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Výpoveď bez zákonného dôvodu",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Prenajímateľ chce ukončiť nájom bytu jednoducho preto, že si to rozmyslel, bez toho, aby existoval niektorý z dôvodov uvedených v § 711 OZ.", "options": [], "correct": 0 },
+        {
+          "question": "Je takáto výpoveď platná?",
+          "options": ["Nie, prenajímateľ môže vypovedať nájom bytu len z taxatívne vymedzených zákonných dôvodov", "Áno, prenajímateľ môže nájom bytu vypovedať kedykoľvek bez dôvodu", "Áno, ak o tom nájomcu informuje aspoň mesiac vopred"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez naplnenia niektorého z taxatívnych dôvodov nie je výpoveď platná.",
+            "wrong": "Nesprávne. Samotné vopredné informovanie nenahrádza chýbajúci zákonný dôvod výpovede."
+          }
+        },
+        {
+          "question": "Prečo zákon takto chráni nájomcu bytu?",
+          "options": ["Lebo bývanie sa považuje za základnú životnú potrebu vyžadujúcu zvýšenú právnu ochranu", "Lebo prenajímatelia nemajú žiadne vlastnícke práva k bytu", "Lebo ide len o formalitu bez reálneho významu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Ochrana bývania ako základnej potreby odôvodňuje posilnenú ochranu nájomcu.",
+            "wrong": "Nesprávne. Prenajímateľ svoje vlastnícke právo nestráca a ochrana nájomcu nie je len formalitou."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Krátkodobý nájom bytu",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Vlastník bytu sa rozhodne prenajať byt na presne 2 roky formou krátkodobého nájmu podľa zákona č. 98/2014 Z. z., so zápisom zmluvy u notára.", "options": [], "correct": 0 },
+        {
+          "question": "Je takáto dĺžka nájmu v súlade s týmto zákonom?",
+          "options": ["Áno, krátkodobý nájom môže trvať až do 6 rokov", "Nie, krátkodobý nájom môže trvať najviac 1 rok", "Nie, tento zákon umožňuje len neurčitú dobu nájmu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Zákon o krátkodobom nájme bytu pripúšťa dobu až 6 rokov.",
+            "wrong": "Nesprávne. Doba nie je obmedzená na 1 rok a zákon sa naopak týka práve doby určitej."
+          }
+        },
+        {
+          "question": "Aká je hlavná výhoda krátkodobého nájmu pre prenajímateľa oproti bežnému nájmu bytu?",
+          "options": ["Kratšia výpovedná lehota a menej prísna ochrana nájomcu ako pri bežnom nájme bytu", "Úplné vylúčenie akejkoľvek ochrany nájomcu", "Možnosť nájom kedykoľvek okamžite ukončiť bez výpovednej lehoty"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Krátkodobý nájom zmierňuje niektoré ochranné prvky bežného nájmu bytu, no úplne ich neruší.",
+            "wrong": "Nesprávne. Ochrana nájomcu nie je úplne vylúčená a výpovedná lehota naďalej existuje, len je kratšia."
+          }
+        }
+      ]
+    }
   ]
 }

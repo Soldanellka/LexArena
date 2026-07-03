@@ -73,5 +73,64 @@
         "wrong": "Nesprávne. Príkazník nie je bezpodmienečne viazaný - zákon umožňuje odstúpenie za určitých podmienok."
       }
     }
+  ],
+  "tiles": [
+    { "term": "Príkazná zmluva (§ 724 OZ)", "definition": "Príkazník sa zaväzuje obstarať príkazcovi určitú záležitosť alebo vykonať úkon." },
+    { "term": "Odplatnosť príkaznej zmluvy", "definition": "Môže byť bezodplatná (príkaz) aj odplatná, podľa dohody strán." },
+    { "term": "Sprostredkovateľská zmluva", "definition": "Sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy, odmena je viazaná na výsledok." },
+    { "term": "Odmena sprostredkovateľa", "definition": "Patrí mu až po skutočnom uzavretí sprostredkovanej zmluvy." },
+    { "term": "Odstúpenie príkazníka", "definition": "Možné, ak je to v záujme príkazcu alebo ak plnenie príkazu už nie je možné." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Bezodplatný príkaz medzi priateľmi",
+      "difficulty": "ľahká",
+      "steps": [
+        { "question": "Jeden priateľ požiada druhého, aby počas jeho dovolenky zariadil zaňho vybavenie určitej úradnej záležitosti, bez toho, aby mu za to zaplatil odmenu.", "options": [], "correct": 0 },
+        {
+          "question": "Je takáto zmluva platná aj bez dohodnutej odmeny?",
+          "options": ["Áno, príkazná zmluva môže byť bezodplatná", "Nie, príkazná zmluva musí byť vždy odplatná", "Nie, bez odmeny nejde o žiadnu platnú zmluvu"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Príkazná zmluva môže byť bezodplatná, odmena nie je jej podstatnou náležitosťou.",
+            "wrong": "Nesprávne. Odplatnosť nie je pri príkaznej zmluve povinná a absencia odmeny neplatnosť nezakladá."
+          }
+        },
+        {
+          "question": "Ako sa takáto bezodplatná forma príkaznej zmluvy bežne označuje?",
+          "options": ["Príkaz", "Mandátna zmluva", "Sprostredkovateľská zmluva"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bezodplatná forma príkaznej zmluvy sa tradične označuje ako príkaz.",
+            "wrong": "Nesprávne. Mandátna zmluva a sprostredkovateľská zmluva sú odlišné, spravidla odplatné inštitúty."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Odmena sprostredkovateľa nehnuteľností",
+      "difficulty": "stredná",
+      "steps": [
+        { "question": "Realitná kancelária ako sprostredkovateľ nájde záujemcu o kúpu nehnuteľnosti, no k podpisu kúpnej zmluvy napokon vôbec nedôjde.", "options": [], "correct": 0 },
+        {
+          "question": "Patrí sprostredkovateľovi odmena, hoci k zmluve nedošlo?",
+          "options": ["Spravidla nie, odmena je viazaná na výsledok – uzavretie sprostredkovanej zmluvy", "Áno, odmena patrí bez ohľadu na to, či zmluva vznikla", "Áno, ale iba v polovičnej výške"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Bez uzavretia sprostredkovanej zmluvy sprostredkovateľovi spravidla odmena nevzniká.",
+            "wrong": "Nesprávne. Odmena nie je nezávislá od výsledku a nárok na polovičnú odmenu bez zákonného alebo zmluvného základu nevzniká."
+          }
+        },
+        {
+          "question": "Čo musí sprostredkovateľ urobiť, aby si odmenu zaslúžil?",
+          "options": ["Vyhľadať záujemcu, s ktorým napokon dôjde k uzavretiu sprostredkovanej zmluvy", "Stačí, že osloví akéhokoľvek potenciálneho záujemcu", "Musí sám podpísať zmluvu namiesto klienta"],
+          "correct": 0,
+          "explanation": {
+            "correct": "Správne. Odmena je podmienená skutočným uzavretím zmluvy so sprostredkovaným záujemcom.",
+            "wrong": "Nesprávne. Samotné oslovenie záujemcu bez uzavretia zmluvy nestačí a sprostredkovateľ zmluvu za klienta nepodpisuje."
+          }
+        }
+      ]
+    }
   ]
 }
