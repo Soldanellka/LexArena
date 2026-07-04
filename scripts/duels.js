@@ -120,6 +120,35 @@ function pickQuestions(areaName) {
     questions = [...fromTPH, ...fromTPP];
   }
 
+  // 🔥 OBČIANSKE PRÁVO – 1 náhodný A.json z hmotného (5 otázok) + 1 z procesného (5 otázok)
+  else if (areaName === "Občianske právo" || areaName === "Občianske právo hmotné" || areaName === "Občianske právo procesné") {
+
+    function pickOneFileOP(areaQuestions) {
+      const groups = {};
+      areaQuestions.forEach(q => {
+        const id = q.source;
+        if (!groups[id]) groups[id] = [];
+        groups[id].push(q);
+      });
+      const keys = Object.keys(groups)
+        .filter(k => /^A\d+$/.test(k))
+        .sort((a, b) => Number(a.replace("A","")) - Number(b.replace("A","")));
+      if (keys.length === 0) return [];
+      const randomKey = keys[Math.floor(Math.random() * keys.length)];
+      // Max 5 otázok z okruhu (JSON môže mať aj viac)
+      return (groups[randomKey] || []).slice(0, 5);
+    }
+
+    const oph = window.areas["Občianske právo hmotné"] || [];
+    const opp = window.areas["Občianske právo procesné"] || [];
+
+    const fromOPH = pickOneFileOP(oph);
+    const fromOPP = pickOneFileOP(opp);
+
+    console.log(`⚖️ Občianske: hmotné okruh ${fromOPH[0]?.source}, procesné okruh ${fromOPP[0]?.source}`);
+    questions = [...fromOPH, ...fromOPP];
+  }
+
   // 🔥 Ostatné oblasti – fallback
   else {
     const all = window.areas[areaName] || [];
@@ -140,7 +169,9 @@ function waitForQuestions(areaName) {
   return new Promise((resolve) => {
     const areasToCheck = areaName === "Trestné právo"
       ? ["Trestné právo hmotné", "Trestné právo procesné"]
-      : [areaName];
+      : areaName === "Občianske právo"
+        ? ["Občianske právo hmotné", "Občianske právo procesné"]
+        : [areaName];
 
     let attempts = 0;
     const timer = setInterval(() => {

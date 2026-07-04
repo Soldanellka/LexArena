@@ -32,6 +32,13 @@ window.catalog = {
     desc: "Kompletná appka pracovného práva."
   },
 
+  "Občianske právo – hmotné a procesné": {
+    id: "obcianske",
+    openExternal: LIVE + "ob-pravo-app/",
+    externalPath: LIVE + "ob-pravo-app/data/",
+    desc: "Kompletná appka občianskeho práva: 40 okruhov hmotného + 45 procesného, kvízy, kartičky a prípady."
+  },
+
   "Občan - teória a veľký kvíz": {
     id: "obcan",
     openExternal: LIVE + "Občan - teória a veľký kvíz/",
@@ -72,12 +79,6 @@ window.catalog = {
     openExternal: LIVE + "Trestné právo procesné/",
     externalPath: LIVE + "Trestné právo procesné/data/",
     desc: "Kompletná TPP appka."
-  },
-
-  "Občianske právo": {
-    id: "obcianske",
-    openExternal: LIVE + "ob-pravo-app/",
-    desc: "Kompletná appka občianskeho práva – hmotné (A1-A40) a procesné (A1-A45) okruhy."
   }
 };
 

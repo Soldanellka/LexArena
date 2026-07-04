@@ -2168,3 +2168,45 @@ body {
   background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
   color: #fff;
 }
+
+/* 🎮 Indikátor vybranej oblasti pre hry */
+.games-hint {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  margin-top: 8px;
+  font-size: 11.5px;
+  color: var(--muted, #7b6f78);
+  padding: 7px 12px;
+  background: rgba(240,138,166,0.06);
+  border: 1px dashed rgba(240,138,166,0.35);
+  border-radius: 10px;
+  transition: all .25s ease;
+}
+
+.games-hint.games-hint-ready {
+  border-style: solid;
+  border-color: rgba(34,197,94,0.35);
+  background: rgba(34,197,94,0.06);
+  color: #15803d;
+}
+
+.games-hint-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f08aa6;
+  flex-shrink: 0;
+  animation: hintPulse 1.6s ease infinite;
+}
+
+.games-hint-dot.ready {
+  background: #22c55e;
+  animation: none;
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .45; transform: scale(0.85); }
+}
