@@ -187,7 +187,7 @@ function sequenceOrderScore(userText, referenceText) {
    Váhy: Levenshtein 35 % · Jaro-Winkler 25 % · kľúčové slová 30 % · poradie 10 %
 ============================================================ */
 export function calculateSimilarity(userText, pkg) {
-  const reference = pkg.legalSentence || pkg.definition || pkg.correctAnswer || '';
+  const reference = pkg.definition || pkg.summary || pkg.legalSentence || pkg.correctAnswer || '';
   const refKeywordsCount = extractKeywords(reference).size;
 
   if (!userText || !userText.trim()) {
@@ -500,3 +500,52 @@ export async function renderMemoryTiles(containerId) {
 }
 
 window.renderMemoryTiles = renderMemoryTiles;
+
+/* ============================================================
+   Zvuková podpora – prehratie definície (SpeechSynthesis)
+   a nahratie odpovede hlasom (SpeechRecognition).
+============================================================ */
+export function speakText(text) {
+  if (!text || !('speechSynthesis' in window)) return false;
+  try {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'sk-SK';
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+    return true;
+  } catch (e) {
+    console.warn('Bifľovačka: prehratie hlasu zlyhalo', e);
+    return false;
+  }
+}
+
+export function isSpeechRecognitionSupported() {
+  return !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+}
+
+/**
+ * Vytvorí rozpoznávač reči pre jednu nahrávku.
+ * callbacks: { onStart, onResult(transcript), onEnd, onError }
+ * Vráti inštanciu s .start()/.stop(), alebo null ak nie je podporované.
+ */
+export function createSpeechRecognizer(callbacks = {}) {
+  const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Ctor) return null;
+
+  const recognizer = new Ctor();
+  recognizer.lang = 'sk-SK';
+  recognizer.continuous = false;
+  recognizer.interimResults = false;
+  recognizer.maxAlternatives = 1;
+
+  recognizer.onstart = () => callbacks.onStart && callbacks.onStart();
+  recognizer.onend = () => callbacks.onEnd && callbacks.onEnd();
+  recognizer.onerror = (e) => callbacks.onError && callbacks.onError(e);
+  recognizer.onresult = (e) => {
+    const transcript = e.results?.[0]?.[0]?.transcript || '';
+    callbacks.onResult && callbacks.onResult(transcript);
+  };
+
+  return recognizer;
+}

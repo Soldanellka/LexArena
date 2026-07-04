@@ -33,6 +33,13 @@
   .mt-finish { text-align:center; padding:40px 20px; }
   .mt-finish .seal { font-size:64px; }
   .mt-areas-list a.memory-tile { display:block; }
+  .mt-reveal-actions { text-align:center; margin-top:10px; }
+  #mtMicBtn.mt-mic-active {
+    background: linear-gradient(90deg,#ef4444,#dc2626);
+    color:#fff;
+    animation: mtMicPulse 1.2s ease infinite;
+  }
+  @keyframes mtMicPulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
 </style>
 </head>
 <body>
@@ -61,16 +68,20 @@
     <div id="mtRevealPhase">
       <div class="mt-reveal-box" id="mtRevealText"></div>
       <div class="mt-timerbar-wrap"><div class="mt-timerbar" id="mtTimerBar"></div></div>
+      <div class="mt-reveal-actions">
+        <button class="btn" id="mtSpeakBtn" type="button">🔊 Prečítať nahlas</button>
+      </div>
       <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si túto vetu/definíciu…</div>
     </div>
 
     <!-- Fáza 2: odpoveď -->
     <div id="mtAnswerPhase" style="display:none">
-      <div class="small" style="margin-bottom:8px;font-weight:600">Napíš, čo si zapamätal/a:</div>
+      <div class="small" style="margin-bottom:8px;font-weight:600">Napíš (alebo nahovor), čo si zapamätal/a:</div>
       <div class="mt-answer-box">
         <textarea id="mtAnswerInput" placeholder="Napíš právnu vetu / definíciu tak, ako si ju zapamätal/a..."></textarea>
       </div>
       <div class="mt-actions">
+        <button class="btn" id="mtMicBtn" type="button">🎤 Nahrať odpoveď</button>
         <button class="btn btn-primary" id="mtSubmitBtn">✅ Vyhodnotiť</button>
       </div>
     </div>
@@ -101,7 +112,8 @@
 import { MEMORY_AREAS, getAreaBySlug } from './memoryDefinitions.js';
 import {
   loadMemoryArea, getNextMemoryItem, compareText,
-  saveMemoryScore, calculateCompletion, renderMemoryTiles
+  saveMemoryScore, calculateCompletion, renderMemoryTiles,
+  speakText, isSpeechRecognitionSupported, createSpeechRecognizer
 } from './memoryTrainer.js';
 
 const $ = id => document.getElementById(id);
@@ -114,6 +126,8 @@ const SEAL_ICON = { bronze: '🥉', silver: '🥈', gold: '🥇' };
 
 let currentItem = null;
 let revealTimer = null;
+let recognizer = null;
+let recognizing = false;
 
 function showAreaPicker() {
   $('mtTitle').textContent = '🧠 Bifľovačka';
@@ -157,10 +171,11 @@ function showNextItem(areaSlug) {
   $('mtAnswerPhase').style.display = 'none';
   $('mtResultPhase').style.display = 'none';
 
-  $('mtRevealText').textContent = item.legalSentence || item.definition;
+  const revealText = item.definition || item.summary || item.legalSentence;
+  $('mtRevealText').textContent = revealText;
   $('mtAnswerInput').value = '';
 
-  const revealMs = Math.max(5000, Math.min(10000, 5000 + (item.legalSentence || '').length * 40));
+  const revealMs = Math.max(5000, Math.min(10000, 5000 + revealText.length * 40));
   runRevealCountdown(revealMs);
 }
 
@@ -202,7 +217,7 @@ async function submitAnswer(areaSlug) {
 
   $('mtNotesText').textContent = result.notes;
   $('mtKeywordsText').textContent = `Kľúčové slová: ${result.keywordsMatched}`;
-  $('mtRevealAnswer').innerHTML = `<strong>Správne znenie:</strong><br>${escapeHtml(currentItem.legalSentence || currentItem.definition)}`;
+  $('mtRevealAnswer').innerHTML = `<strong>Správne znenie:</strong><br>${escapeHtml(currentItem.definition || currentItem.summary || currentItem.legalSentence)}`;
 
   const actions = $('mtResultActions');
   actions.innerHTML = '';
@@ -231,8 +246,9 @@ async function submitAnswer(areaSlug) {
 function retryItem(areaSlug) {
   $('mtResultPhase').style.display = 'none';
   $('mtRevealPhase').style.display = 'block';
-  $('mtRevealText').textContent = currentItem.legalSentence || currentItem.definition;
-  const revealMs = Math.max(5000, Math.min(10000, 5000 + (currentItem.legalSentence || '').length * 40));
+  const revealText = currentItem.definition || currentItem.summary || currentItem.legalSentence;
+  $('mtRevealText').textContent = revealText;
+  const revealMs = Math.max(5000, Math.min(10000, 5000 + revealText.length * 40));
   runRevealCountdown(revealMs);
 }
 
@@ -256,7 +272,68 @@ function escapeHtml(s) {
   }[c]));
 }
 
+/* ============================================================
+   Zvuk: prehratie definície (SpeechSynthesis)
+============================================================ */
+function setupSpeakButton() {
+  const btn = $('mtSpeakBtn');
+  btn.addEventListener('click', () => {
+    if (!currentItem) return;
+    const text = currentItem.definition || currentItem.summary || currentItem.legalSentence;
+    const ok = speakText(text);
+    if (!ok) alert('Tento prehliadač nepodporuje prehrávanie hlasu.');
+  });
+}
+
+/* ============================================================
+   Zvuk: nahratie odpovede (SpeechRecognition)
+============================================================ */
+function setupMicButton() {
+  const btn = $('mtMicBtn');
+
+  if (!isSpeechRecognitionSupported()) {
+    btn.disabled = true;
+    btn.title = 'Rozpoznávanie hlasu nie je v tomto prehliadači podporované (skús Chrome).';
+    return;
+  }
+
+  btn.addEventListener('click', () => {
+    if (recognizing) {
+      recognizer && recognizer.stop();
+      return;
+    }
+
+    recognizer = createSpeechRecognizer({
+      onStart: () => {
+        recognizing = true;
+        btn.classList.add('mt-mic-active');
+        btn.textContent = '⏹️ Nahrávam… (klikni pre stop)';
+      },
+      onEnd: () => {
+        recognizing = false;
+        btn.classList.remove('mt-mic-active');
+        btn.textContent = '🎤 Nahrať odpoveď';
+      },
+      onError: (e) => {
+        recognizing = false;
+        btn.classList.remove('mt-mic-active');
+        btn.textContent = '🎤 Nahrať odpoveď';
+        console.warn('Bifľovačka: rozpoznávanie hlasu zlyhalo', e);
+      },
+      onResult: (transcript) => {
+        const ta = $('mtAnswerInput');
+        ta.value = (ta.value.trim() ? ta.value.trim() + ' ' : '') + transcript;
+      }
+    });
+
+    recognizer.start();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  setupSpeakButton();
+  setupMicButton();
+
   if (slug) {
     startArea(slug);
     $('mtSubmitBtn').addEventListener('click', () => submitAnswer(slug));
