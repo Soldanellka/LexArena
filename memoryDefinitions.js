@@ -91,9 +91,37 @@ function findMatchingTile(tiles, correctAnswer, question) {
 }
 
 /* ============================================================
+   Ručné balíčky – biflovacka/{slug}.json
+   Ak pre danú oblasť existuje ručne pripravený súbor s definíciami
+   (schéma: { area, slug, schemaVersion, okruhy: [{ id, title,
+   definitions: [{ question, answer }] }] }), použije sa prednostne
+   namiesto automatického generovania z kvízov.
+============================================================ */
+function packagesFromManualFile(slug, manual) {
+  const packages = [];
+  (manual.okruhy || []).forEach(okruh => {
+    (okruh.definitions || []).forEach((def, idx) => {
+      if (!def || !def.answer) return;
+      packages.push({
+        id: `${slug}_${okruh.id}_${idx + 1}`,
+        area: slug,
+        source: okruh.title || '',
+        question: def.question || '',
+        correctAnswer: def.answer,
+        definition: def.answer,
+        summary: okruh.title || '',
+        legalSentence: def.answer
+      });
+    });
+  });
+  return packages;
+}
+
+/* ============================================================
    generateMemoryPackages(slug)
-   Načíta A1..A{count}.json danej oblasti a z ich `quiz` poľa
-   vytvorí bifľovacie balíčky:
+   Ak existuje biflovacka/{slug}.json, balíčky sa postavia z neho
+   (ručné definície). Inak sa načíta A1..A{count}.json danej oblasti
+   a z ich `quiz` poľa sa vytvoria bifľovacie balíčky:
    { id, area, source, question, correctAnswer,
      definition, summary, legalSentence }
 
@@ -109,6 +137,20 @@ export async function generateMemoryPackages(slug) {
 
   const area = getAreaBySlug(slug);
   if (!area) return [];
+
+  try {
+    const manualRes = await fetch(`biflovacka/${slug}.json`);
+    if (manualRes.ok) {
+      const manual = await manualRes.json();
+      const manualPackages = packagesFromManualFile(slug, manual);
+      if (manualPackages.length) {
+        packageCache.set(slug, manualPackages);
+        return manualPackages;
+      }
+    }
+  } catch (e) {
+    console.warn(`⚠️ Bifľovačka: chyba pri načítaní ručných definícií pre ${slug}`, e);
+  }
 
   const packages = [];
   let n = 0;
