@@ -5,10 +5,13 @@ import {
   ref,
   push,
   set,
+  get,
   update,
   remove,
   onValue
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { awardParagrafy as awardParagrafyGlobal } from './avatar.js';
+import { showRewardToast } from '../ui.js';
 
 /* Bezpečný prístup k db */
 function getDb() {
@@ -413,6 +416,8 @@ export function renderDuelBank() {
 
   box.innerHTML = "<p class='small muted'>Načítavam…</p>";
 
+  const currentUser = localStorage.getItem('playerNick') || "Unknown";
+
   loadDuelBank((stored) => {
     box.innerHTML = "";
 
@@ -426,6 +431,7 @@ export function renderDuelBank() {
     stored.forEach((duel) => {
       const div = document.createElement("div");
       div.className = "duel-item";
+      const isOwn = duel.from === currentUser;
 
       div.innerHTML = `
         <div class="duel-banner">
@@ -443,43 +449,67 @@ export function renderDuelBank() {
         </div>
 
         <div class="duel-actions">
-          <button class="duel-accept">Prijať</button>
+          ${isOwn
+            ? `<button class="duel-accept duel-send">📤 Poslať</button>`
+            : `<button class="duel-accept">Prijať</button>`}
           <button class="duel-reject">Odmietnuť</button>
         </div>
       `;
 
-      div.querySelector(".duel-accept").onclick = () => {
+      const sendBtn = div.querySelector(".duel-send");
+      if (sendBtn) {
+        sendBtn.onclick = async () => {
+          const link = `https://www.lexarena.sk/?duel=${duel.id}`;
+          try {
+            await navigator.clipboard.writeText(link);
+            showRewardToast('Link na výzvu skopírovaný ✅');
+          } catch (e) {
+            window.prompt('Skopíruj link manuálne:', link);
+          }
+          if (navigator.share) {
+            navigator.share({
+              title: 'Výzva na duel – LexArena',
+              text: `⚔️ ${currentUser} ťa vyzýva na duel z oblasti ${duel.areaTitle}!`,
+              url: link
+            }).catch(() => {});
+          }
+        };
+      }
 
-        // 🔥 OPRAVA: správny nick hráča
-        const currentUser = localStorage.getItem('playerNick') || "Unknown";
-        window.currentUser = currentUser;
+      const acceptBtn = div.querySelector(".duel-accept:not(.duel-send)");
+      if (acceptBtn) {
+        acceptBtn.onclick = () => {
 
-        window.currentDuelId = duel.id;
-        window.currentDuelMeta = duel;
-        window.currentDuel = duel;
-        window.duelQuestions = duel.questions;
-        window.currentOpponent = duel.from;
+          // 🔥 OPRAVA: správny nick hráča
+          window.currentUser = currentUser;
 
-        if (typeof window.startDuelQuiz === "function") {
-          window.startDuelQuiz(duel.questions);
-        } else {
-          console.error("❌ startDuelQuiz() neexistuje!");
-        }
+          window.currentDuelId = duel.id;
+          window.currentDuelMeta = duel;
+          window.currentDuel = duel;
+          window.duelQuestions = duel.questions;
+          window.currentOpponent = duel.from;
 
-        // 🔥 +1§ za prijatie výzvy (pred hrou)
-        if (typeof window.awardParagrafy === 'function') {
-          window.awardParagrafy(1, 'za prijatie výzvy');
-        }
-        // 🔥 Energia -10 za prijatie duelu
-        if (typeof window.deductEnergy === 'function') {
-          window.deductEnergy(10);
-        }
+          if (typeof window.startDuelQuiz === "function") {
+            window.startDuelQuiz(duel.questions);
+          } else {
+            console.error("❌ startDuelQuiz() neexistuje!");
+          }
 
-        const db = getDb();
-        if (db) {
-          update(ref(db, `duels/${duel.id}`), { status: "accepted", acceptedBy: currentUser });
-        }
-      };
+          // 🔥 +1§ za prijatie výzvy (pred hrou)
+          if (typeof window.awardParagrafy === 'function') {
+            window.awardParagrafy(1, 'za prijatie výzvy');
+          }
+          // 🔥 Energia -10 za prijatie duelu
+          if (typeof window.deductEnergy === 'function') {
+            window.deductEnergy(10);
+          }
+
+          const db = getDb();
+          if (db) {
+            update(ref(db, `duels/${duel.id}`), { status: "accepted", acceptedBy: currentUser });
+          }
+        };
+      }
 
       div.querySelector(".duel-reject").onclick = () => {
         const db = getDb();
@@ -559,7 +589,32 @@ window.completeDuel = function(opponentQuestions){
   }
 
   finalizeDuel(duel, opponentNick, opponentQuestions);
+
+  // 🔥 Odmena za prijatie výzvy cez zdieľateľný link (?duel=ID)
+  const pending = window.__pendingChallengeReward;
+  if (pending && pending.nick === opponentNick) {
+    awardChallengeLinkReward(pending);
+    window.__pendingChallengeReward = null;
+  }
 };
+
+/* ============================================================
+   ODMENA ZA PRIJATIE VÝZVY CEZ LINK
+   +7§ nový hráč (nick ešte neexistoval v users/) / +1§ existujúci hráč.
+   Ochrana proti opakovanému čerpaniu: duels/{id}/challengeClaimed/{nick}.
+============================================================ */
+async function awardChallengeLinkReward({ duelId, nick, isNewPlayer }) {
+  const db = getDb();
+  if (!db || !duelId || !nick) return;
+
+  const claimedRef = ref(db, `duels/${duelId}/challengeClaimed/${nick}`);
+  const already = await get(claimedRef);
+  if (already.exists()) return;
+
+  await set(claimedRef, true);
+  const amount = isNewPlayer ? 7 : 1;
+  await awardParagrafyGlobal(amount, isNewPlayer ? 'za prvý duel z výzvy 🎉' : 'za prijatie výzvy cez link');
+}
 
 /* ============================================================
    EXPORTY

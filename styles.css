@@ -2210,3 +2210,59 @@ body {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: .45; transform: scale(0.85); }
 }
+
+/* ============================================================
+   ⚔️ Výzva na duel cez zdieľateľný link (?duel=ID)
+   duelChallengeModal – generovaný dynamicky v init.js
+============================================================ */
+.duel-challenge-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
+}
+
+.duel-challenge-modal {
+  background: var(--surface, #fff);
+  border-radius: 14px;
+  padding: 26px 22px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(240,138,166,0.3);
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, #f08aa6, #ff6f91) 1;
+}
+
+.duel-challenge-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  background: linear-gradient(90deg, #f08aa6, #ff6f91);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.duel-challenge-modal .btn-primary {
+  background: linear-gradient(90deg, #f08aa6, #ff6f91);
+  border: none;
+  border-radius: 999px;
+  padding: 11px 16px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(240,138,166,0.35);
+}
+
+@media (max-width: 480px) {
+  .duel-challenge-modal {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+  .duel-challenge-title {
+    font-size: 15px;
+  }
+}

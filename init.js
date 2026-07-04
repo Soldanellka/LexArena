@@ -1,6 +1,6 @@
 'use strict';
 
-import { $, loadParagrafy } from './core.js';
+import { $, loadParagrafy, escapeHtml } from './core.js';
 import { setParagrafy } from './state.js';
 import { renderAreas, renderModules } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
@@ -183,6 +183,9 @@ export function init() {
 
     /* 🔹 Pulzujúci odznak na "Uložené výzvy" */
     watchDuelBankBadge();
+
+    /* 🔹 Výzva na duel cez zdieľateľný link (?duel=ID) */
+    checkDuelChallengeLink();
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
@@ -1040,6 +1043,134 @@ function openLoginCodeModal() {
   }
 
   modal.style.display = 'flex';
+}
+
+/* =====================================================
+   VÝZVA NA DUEL CEZ ZDIEĽATEĽNÝ LINK (?duel=ID)
+   ===================================================== */
+async function checkDuelChallengeLink() {
+  const params = new URLSearchParams(window.location.search);
+  const duelId = params.get('duel');
+  if (!duelId) return;
+
+  const db = window.db;
+  if (!db) return;
+
+  try {
+    const { ref, get } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+    const snap = await get(ref(db, `duels/${duelId}`));
+    const duel = snap.exists() ? snap.val() : null;
+
+    if (!duel || duel.status !== 'pending') {
+      showDuelChallengeModal(null, duelId);
+      return;
+    }
+    showDuelChallengeModal(duel, duelId);
+  } catch (e) {
+    console.error('❌ checkDuelChallengeLink chyba:', e);
+    showDuelChallengeModal(null, duelId);
+  }
+}
+
+function closeDuelChallengeModal() {
+  const modal = document.getElementById('duelChallengeModal');
+  if (modal) modal.remove();
+
+  // Odstráň ?duel= z URL bez znovunačítania stránky
+  const url = new URL(window.location.href);
+  url.searchParams.delete('duel');
+  window.history.replaceState({}, '', url);
+}
+
+function showDuelChallengeModal(duel, duelId) {
+  const old = document.getElementById('duelChallengeModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'duelChallengeModal';
+  modal.className = 'duel-challenge-modal-overlay';
+
+  if (!duel) {
+    modal.innerHTML = `
+      <div class="duel-challenge-modal">
+        <div class="duel-challenge-title">⚔️ Výzva na duel</div>
+        <p class="small" style="margin:12px 0">Táto výzva už nie je aktívna.</p>
+        <button class="btn btn-primary" id="closeDuelChallengeModal" style="width:100%">Zavrieť</button>
+      </div>`;
+    document.body.appendChild(modal);
+    document.getElementById('closeDuelChallengeModal').onclick = closeDuelChallengeModal;
+    modal.onclick = e => { if (e.target === modal) closeDuelChallengeModal(); };
+    return;
+  }
+
+  const existingNick = localStorage.getItem('playerNick') || '';
+
+  modal.innerHTML = `
+    <div class="duel-challenge-modal">
+      <div class="duel-challenge-title">⚔️ ${escapeHtml(duel.from)} ťa vyzýva na duel z oblasti ${escapeHtml(duel.areaTitle)}!</div>
+      <input type="text" id="duelChallengeNick" class="form-input" placeholder="Zadaj svoj nick..." value="${escapeHtml(existingNick)}" style="margin:14px 0" />
+      <div id="duelChallengeMsg" class="small" style="min-height:16px;margin-bottom:8px"></div>
+      <button class="btn btn-primary" id="acceptChallengeBtn" style="width:100%">Prijať výzvu</button>
+    </div>`;
+
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) closeDuelChallengeModal(); };
+
+  document.getElementById('acceptChallengeBtn').onclick = async () => {
+    const input = document.getElementById('duelChallengeNick');
+    const msg = document.getElementById('duelChallengeMsg');
+    const nick = input.value.trim();
+    if (nick.length < 2) {
+      msg.textContent = 'Zadaj nick (aspoň 2 znaky).';
+      msg.style.color = 'var(--accent-3)';
+      return;
+    }
+    await acceptDuelChallenge(duel, duelId, nick, msg);
+  };
+}
+
+async function acceptDuelChallenge(duel, duelId, nick, msgEl) {
+  const db = window.db;
+  if (!db) return;
+
+  const { ref, get, update } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+
+  // Over, že výzva ešte nebola medzičasom prijatá niekým iným
+  const freshSnap = await get(ref(db, `duels/${duelId}`));
+  const freshDuel = freshSnap.exists() ? freshSnap.val() : null;
+  if (!freshDuel || freshDuel.status !== 'pending') {
+    if (msgEl) { msgEl.textContent = 'Táto výzva už nie je aktívna.'; msgEl.style.color = 'var(--accent-3)'; }
+    return;
+  }
+
+  // Nový hráč = nick ešte neexistuje v users/
+  const userSnap = await get(ref(db, `users/${nick}`));
+  const isNewPlayer = !userSnap.exists();
+
+  // Bežný flow registrácie nicku (rovnaký ako pri manuálnom zadaní v hlavičke)
+  localStorage.setItem('playerNick', nick);
+  const nickDisplay = document.getElementById('playerNickDisplay');
+  if (nickDisplay) nickDisplay.textContent = nick;
+  const nickInput = document.getElementById('nickname');
+  if (nickInput) nickInput.value = nick;
+
+  window.currentUser = nick;
+  window.currentDuelId = duelId;
+  window.currentDuelMeta = freshDuel;
+  window.currentDuel = freshDuel;
+  window.duelQuestions = freshDuel.questions;
+  window.currentOpponent = freshDuel.from;
+  window.__pendingChallengeReward = { duelId, nick, isNewPlayer };
+
+  await update(ref(db, `duels/${duelId}`), { status: 'accepted', acceptedBy: nick });
+
+  if (typeof window.startDuelQuiz === 'function') {
+    window.startDuelQuiz(freshDuel.questions);
+  } else {
+    console.error('❌ startDuelQuiz() neexistuje!');
+  }
+
+  closeDuelChallengeModal();
 }
 
 /* =====================================================
