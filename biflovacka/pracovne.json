@@ -135,7 +135,7 @@
       "definitions": [
         { "question": "Čo je dovolenka na zotavenie?", "answer": "Dovolenka na zotavenie je doba pracovného voľna s náhradou mzdy, ktorá slúži na regeneráciu pracovnej sily zamestnanca a na ktorú mu vzniká nárok za odpracované obdobie u zamestnávateľa. Základná výmera dovolenky je najmenej štyri týždne v kalendárnom roku." },
         { "question": "Aká je výmera dovolenky zamestnanca staršieho ako tridsaťtri rokov?", "answer": "Zamestnancovi, ktorý do konca kalendárneho roka dovŕši najmenej tridsaťtri rokov veku, patrí dovolenka vo výmere najmenej päť týždňov. Rovnaká výmera patrí aj zamestnancovi trvale sa starajúcemu o dieťa." },
-        { "question": "Kedy určuje čerpanie dovolenky zamestnávateľ?", "answer": "Čerpanie dovolenky určuje zamestnávateľ po prerokovaní so zamestnancom podľa plánu dovoleniek stanoveného s predchádzajúcim súhlasom zástupcov zamestnancov, pričom má prihliadať na oprávnené záujmy zamestnanca. Zamestnávateľ je povinný oznámiť zamestnancovi čerpanie dovolenky aspoň štrnásť dní vopred." }
+        { "question": "Kedy určuje čerpanie dovolenky zamestnávateľ?", "answer": "Čerpanie dovolenky určuje zamestnávateľ po prerokovaní so zamestnancom podľa plánu dovoleniek so súhlasom zástupcov zamestnancov, pričom prihliada na jeho oprávnené záujmy. Zamestnávateľ je povinný oznámiť zamestnancovi čerpanie dovolenky aspoň štrnásť dní vopred." }
       ]
     },
     {
@@ -153,7 +153,7 @@
       "definitions": [
         { "question": "Čo sú prekážky v práci na strane zamestnávateľa?", "answer": "Prekážky v práci na strane zamestnávateľa sú okolnosti, pre ktoré zamestnávateľ nemôže zamestnancovi prideľovať prácu, hoci je pripravený ju vykonávať, napríklad prestoj alebo prerušenie práce pre nepriaznivé poveternostné vplyvy. Zamestnancovi v takom prípade spravidla patrí náhrada mzdy." },
         { "question": "Aká náhrada mzdy patrí zamestnancovi pri prestoji?", "answer": "Ak zamestnanec nemohol pracovať pre prechodnú poruchu na strojovom zariadení alebo v dodávke surovín či energie, ide o prestoj a patrí mu náhrada mzdy vo výške priemerného zárobku. Zamestnávateľ ho môže preradiť na inú prácu, ak to jeho zdravotný stav umožňuje." },
-        { "question": "Kedy ide o prekážku v práci z dôvodu iných vážnych prevádzkových dôvodov?", "answer": "O prekážku z vážnych prevádzkových dôvodov ide vtedy, keď zamestnávateľ dočasne nemôže zamestnancovi prideľovať prácu v dohodnutom rozsahu, napríklad pre nedostatok zákaziek, po prerokovaní so zástupcami zamestnancov. Zamestnancovi patrí náhrada mzdy najmenej vo výške šesťdesiat percent priemerného zárobku." }
+        { "question": "Kedy ide o prekážku v práci z dôvodu iných vážnych prevádzkových dôvodov?", "answer": "O prekážku z vážnych prevádzkových dôvodov ide vtedy, keď zamestnávateľ dočasne nemôže prideľovať prácu v dohodnutom rozsahu, napríklad pre nedostatok zákaziek, po prerokovaní so zástupcami zamestnancov. Zamestnancovi patrí náhrada mzdy najmenej vo výške šesťdesiat percent zárobku." }
       ]
     },
     {
@@ -232,8 +232,8 @@
       "id": "26",
       "title": "Kolektívna zmluva – pojem, druhy, obsah",
       "definitions": [
-        { "question": "Čo je kolektívna zmluva?", "answer": "Kolektívna zmluva je písomná zmluva medzi zamestnávateľom a príslušným odborovým orgánom, ktorá upravuje pracovné a mzdové podmienky, podmienky zamestnávania a vzťahy medzi zmluvnými stranami. Uzatvára sa podľa zákona o kolektívnom vyjednávaní, teda zákona číslo dva z roku tisícdeväťstodeväťdesiatjeden." },
-        { "question": "Aké druhy kolektívnych zmlúv poznáme?", "answer": "Rozlišujeme podnikovú kolektívnu zmluvu uzatváranú medzi zamestnávateľom a odborovou organizáciou pôsobiacou u neho a vyššiu kolektívnu zmluvu uzatváranú medzi organizáciou zamestnávateľov a odborovým zväzom pre celé odvetvie. Vyššia kolektívna zmluva môže byť rozšírená aj na ďalších zamestnávateľov." },
+        { "question": "Čo je kolektívna zmluva?", "answer": "Kolektívna zmluva je písomná zmluva medzi zamestnávateľom a odborovým orgánom, ktorá upravuje pracovné a mzdové podmienky, podmienky zamestnávania a vzťahy medzi zmluvnými stranami. Uzatvára sa podľa zákona o kolektívnom vyjednávaní, teda zákona číslo dva z roku tisícdeväťstodeväťdesiatjeden." },
+        { "question": "Aké druhy kolektívnych zmlúv poznáme?", "answer": "Rozlišujeme podnikovú kolektívnu zmluvu uzatváranú medzi zamestnávateľom a odborovou organizáciou u neho pôsobiacou a vyššiu kolektívnu zmluvu medzi organizáciou zamestnávateľov a odborovým zväzom pre celé odvetvie. Vyššiu zmluvu možno rozšíriť aj na ďalších zamestnávateľov." },
         { "question": "Kedy je časť kolektívnej zmluvy neplatná?", "answer": "Časť kolektívnej zmluvy, ktorá upravuje nároky zamestnancov v menšom rozsahu, ako ustanovuje zákon, je neplatná a nahrádza sa príslušným ustanovením zákona. Kolektívna zmluva naopak môže priznať zamestnancom nároky vo väčšom rozsahu, než ustanovuje Zákonník práce." }
       ]
     },
@@ -241,7 +241,7 @@
       "id": "27",
       "title": "Odborová organizácia a jej postavenie",
       "definitions": [
-        { "question": "Čo je odborová organizácia?", "answer": "Odborová organizácia je dobrovoľné združenie zamestnancov vznikajúce na základe práva na slobodné združovanie zaručeného Ústavou Slovenskej republiky, ktorého cieľom je obhajovať hospodárske a sociálne záujmy zamestnancov. Je právnickou osobou, ktorá vzniká dňom nasledujúcim po doručení návrhu na jej registráciu." },
+        { "question": "Čo je odborová organizácia?", "answer": "Odborová organizácia je dobrovoľné združenie zamestnancov vznikajúce na základe práva na slobodné združovanie zaručeného Ústavou Slovenskej republiky, ktorého cieľom je obhajovať záujmy zamestnancov. Je právnickou osobou, ktorá vzniká dňom nasledujúcim po doručení návrhu na jej registráciu." },
         { "question": "Aké oprávnenia má odborová organizácia u zamestnávateľa?", "answer": "Odborová organizácia má právo na prerokovanie a spolurozhodovanie v otázkach hromadného prepúšťania, na uzatváranie kolektívnej zmluvy a na kontrolu dodržiavania pracovnoprávnych predpisov. Zamestnávateľ je povinný umožniť jej pôsobenie a poskytovať jej potrebné informácie." },
         { "question": "Kedy pôsobí u zamestnávateľa viacero odborových organizácií?", "answer": "Ak u zamestnávateľa pôsobí viacero odborových organizácií, zamestnávateľ musí konať s každou z nich, ak sa navzájom nedohodnú na spoločnom postupe. Pri uzatváraní kolektívnej zmluvy bez takej dohody je zamestnávateľ oprávnený uzavrieť ju s organizáciou s najväčším počtom členov." }
       ]
@@ -394,9 +394,9 @@
       "id": "44",
       "title": "Verejná služba – osobitosti pracovnoprávneho vzťahu",
       "definitions": [
-        { "question": "Čo je verejná služba?", "answer": "Verejná služba je výkon práce vo verejnom záujme pre zamestnávateľov, akými sú obce, vyššie územné celky alebo príspevkové organizácie, ktorý sa uskutočňuje v pracovnom pomere podľa Zákonníka práce s osobitosťami ustanovenými zákonom o výkone práce vo verejnom záujme. Tento vzťah sa odlišuje od štátnej služby, ktorá je verejnoprávnou kategóriou." },
-        { "question": "Aké osobitosti má odmeňovanie zamestnancov vo verejnej službe?", "answer": "Zamestnanci vo verejnej službe sú odmeňovaní podľa osobitného zákona o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme, ktorý určuje tarifné triedy a platové stupne podľa dosiahnutého vzdelania a odbornej praxe. Ich mzda sa označuje ako plat a jeho zložky sú presne stanovené zákonom." },
-        { "question": "Kedy sa na zamestnanca vo verejnej službe vzťahuje Zákonník práce?", "answer": "Na zamestnanca vo verejnej službe sa Zákonník práce vzťahuje ako všeobecný predpis vždy, keď osobitný zákon o výkone práce vo verejnom záujme neustanovuje inak, napríklad pri vzniku a skončení pracovného pomeru. Osobitná úprava sa týka najmä odmeňovania a niektorých obmedzení súvisiacich s výkonom vo verejnom záujme." }
+        { "question": "Čo je verejná služba?", "answer": "Verejná služba je výkon práce vo verejnom záujme pre zamestnávateľov, akými sú obce, vyššie územné celky alebo príspevkové organizácie, uskutočňovaný v pracovnom pomere podľa Zákonníka práce s osobitosťami podľa zákona o výkone práce vo verejnom záujme. Odlišuje sa od štátnej služby, ktorá je verejnoprávnou kategóriou." },
+        { "question": "Aké osobitosti má odmeňovanie zamestnancov vo verejnej službe?", "answer": "Zamestnanci vo verejnej službe sú odmeňovaní podľa osobitného zákona o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme, ktorý určuje tarifné triedy a platové stupne podľa vzdelania a praxe. Ich mzda sa označuje ako plat a jej zložky sú presne stanovené zákonom." },
+        { "question": "Kedy sa na zamestnanca vo verejnej službe vzťahuje Zákonník práce?", "answer": "Na zamestnanca vo verejnej službe sa Zákonník práce vzťahuje vždy, keď osobitný zákon o výkone práce vo verejnom záujme neustanovuje inak, napríklad pri vzniku a skončení pracovného pomeru. Osobitná úprava sa týka najmä odmeňovania a niektorých obmedzení súvisiacich s výkonom vo verejnom záujme." }
       ]
     },
     {
@@ -404,17 +404,17 @@
       "title": "Pracovná disciplína a jej porušenie",
       "definitions": [
         { "question": "Čo je pracovná disciplína?", "answer": "Pracovná disciplína je súhrn povinností zamestnanca vyplývajúcich z právnych predpisov, pracovného poriadku a pokynov nadriadených, ktorých dodržiavanie je predpokladom riadneho plnenia pracovných úloh. Jej porušenie môže mať za následok pracovnoprávne postihy vrátane skončenia pracovného pomeru." },
-        { "question": "Aké stupne intenzity porušenia pracovnej disciplíny Zákonník práce rozlišuje?", "answer": "Zákonník práce rozlišuje menej závažné porušenie pracovnej disciplíny, závažné porušenie pracovnej disciplíny a osobitne závažné porušenie, pričom od tejto intenzity závisí, aký spôsob skončenia pracovného pomeru môže zamestnávateľ použiť. Pri opakovanom menej závažnom porušení je potrebné predchádzajúce písomné upozornenie zamestnanca." },
-        { "question": "Kedy môže zamestnávateľ dať výpoveď pre menej závažné porušenie pracovnej disciplíny?", "answer": "Zamestnávateľ môže dať zamestnancovi výpoveď pre menej závažné porušenie pracovnej disciplíny len vtedy, ak bol zamestnanec v posledných šiestich mesiacoch v súvislosti s porušením pracovnej disciplíny písomne upozornený na možnosť výpovede. Bez tohto predchádzajúceho upozornenia je výpoveď z tohto dôvodu neplatná." }
+        { "question": "Aké stupne intenzity porušenia pracovnej disciplíny Zákonník práce rozlišuje?", "answer": "Zákonník práce rozlišuje menej závažné, závažné a osobitne závažné porušenie pracovnej disciplíny, pričom od tejto intenzity závisí, aký spôsob skončenia pracovného pomeru môže zamestnávateľ použiť. Pri opakovanom menej závažnom porušení je potrebné predchádzajúce písomné upozornenie zamestnanca." },
+        { "question": "Kedy môže zamestnávateľ dať výpoveď pre menej závažné porušenie pracovnej disciplíny?", "answer": "Zamestnávateľ môže dať zamestnancovi výpoveď pre menej závažné porušenie pracovnej disciplíny len vtedy, ak bol v posledných šiestich mesiacoch v súvislosti s takým porušením písomne upozornený na možnosť výpovede. Bez tohto predchádzajúceho upozornenia je výpoveď z tohto dôvodu neplatná." }
       ]
     },
     {
       "id": "46",
       "title": "Priemerný zárobok a jeho zisťovanie",
       "definitions": [
-        { "question": "Ako sa zisťuje priemerný zárobok zamestnanca?", "answer": "Priemerný zárobok sa zisťuje z hrubej mzdy zúčtovanej zamestnancovi v rozhodujúcom období a z počtu skutočne odpracovaných hodín v tomto období, pričom rozhodujúcim obdobím je spravidla predchádzajúci kalendárny štvrťrok. Takto zistený priemerný zárobok sa uplatňuje počas celého nasledujúceho štvrťroka." },
+        { "question": "Ako sa zisťuje priemerný zárobok zamestnanca?", "answer": "Priemerný zárobok sa zisťuje z hrubej mzdy zúčtovanej zamestnancovi v rozhodujúcom období a z počtu skutočne odpracovaných hodín, pričom rozhodujúcim obdobím je spravidla predchádzajúci kalendárny štvrťrok. Takto zistený priemerný zárobok sa uplatňuje počas celého nasledujúceho štvrťroka." },
         { "question": "Na čo sa priemerný zárobok zamestnanca používa?", "answer": "Priemerný zárobok sa používa najmä na výpočet náhrady mzdy pri prekážkach v práci, náhrady mzdy pri dovolenke, mzdového zvýhodnenia za prácu nadčas a náhrady škody. Slúži tiež ako podklad pri výpočte odstupného a odchodného." },
-        { "question": "Kedy sa použije pravdepodobný zárobok namiesto priemerného zárobku?", "answer": "Pravdepodobný zárobok sa použije vtedy, keď zamestnanec v rozhodujúcom období neodpracoval žiadny deň, napríklad pri nástupe do zamestnania, a zisťuje sa z toho, aký zárobok zamestnanec pravdepodobne dosiahne, prípadne z priemerného zárobku porovnateľného zamestnanca. Tento spôsob výpočtu zabezpečuje, aby zamestnanec nebol ukrátený na svojich nárokoch." }
+        { "question": "Kedy sa použije pravdepodobný zárobok namiesto priemerného zárobku?", "answer": "Pravdepodobný zárobok sa použije vtedy, keď zamestnanec v rozhodujúcom období neodpracoval žiadny deň, napríklad pri nástupe do zamestnania, a zisťuje sa z toho, aký zárobok by pravdepodobne dosiahol. Tento spôsob výpočtu zabezpečuje, aby zamestnanec nebol ukrátený na svojich nárokoch." }
       ]
     },
     {
@@ -422,7 +422,7 @@
       "title": "Pracovné voľno a osobné prekážky v práci",
       "definitions": [
         { "question": "Čo je pracovné voľno?", "answer": "Pracovné voľno je doba, počas ktorej je zamestnanec ospravedlnene neprítomný v práci z dôvodov ustanovených zákonom alebo dohodnutých so zamestnávateľom, pričom podľa okolností mu môže, ale nemusí patriť náhrada mzdy. Poskytuje sa napríklad pri vyšetrení u lekára, sťahovaní alebo účasti na pohrebe." },
-        { "question": "Kedy patrí zamestnancovi pracovné voľno pri vyšetrení alebo ošetrení v zdravotníckom zariadení?", "answer": "Zamestnancovi patrí pracovné voľno s náhradou mzdy na nevyhnutne potrebný čas, ak vyšetrenie alebo ošetrenie nebolo možné vykonať mimo pracovného času, pričom zamestnávateľ môže požadovať preukázanie tejto skutočnosti. Ak vyšetrenie sprevádza rodinného príslušníka, náhrada mzdy patrí len v rozsahu ustanovenom nariadením vlády." },
+        { "question": "Kedy patrí zamestnancovi pracovné voľno pri vyšetrení alebo ošetrení v zdravotníckom zariadení?", "answer": "Zamestnancovi patrí pracovné voľno s náhradou mzdy na nevyhnutne potrebný čas, ak vyšetrenie alebo ošetrenie nebolo možné vykonať mimo pracovného času. Ak sprevádza rodinného príslušníka, náhrada mzdy patrí len v rozsahu ustanovenom nariadením vlády." },
         { "question": "Aké pracovné voľno patrí zamestnancovi pri sťahovaní?", "answer": "Pri sťahovaní zamestnanca, ktorý má vlastné bytové zariadenie, v záujme zamestnávateľa patrí zamestnancovi pracovné voľno s náhradou mzdy najviac na dva dni, pri sťahovaní v inom záujme len bez náhrady mzdy. Rozsah tohto voľna určuje nariadenie vlády, ktoré upravuje prekážky v práci." }
       ]
     },
@@ -430,9 +430,9 @@
       "id": "48",
       "title": "Zmluvná pokuta a jej obmedzenia v pracovnom práve",
       "definitions": [
-        { "question": "Čo je zmluvná pokuta a je prípustná v pracovnom práve?", "answer": "Zmluvná pokuta je peňažná sankcia dohodnutá pre prípad porušenia zmluvnej povinnosti, ktorá je bežná v obchodných a občianskoprávnych vzťahoch, avšak v pracovnoprávnych vzťahoch medzi zamestnancom a zamestnávateľom ju Zákonník práce v zásade nepripúšťa. Výnimkou je náhrada podľa konkurenčnej doložky, ktorá má osobitný právny režim." },
-        { "question": "Prečo Zákonník práce obmedzuje použitie zmluvnej pokuty voči zamestnancovi?", "answer": "Zákonník práce obmedzuje použitie zmluvnej pokuty voči zamestnancovi z dôvodu ochrany zamestnanca ako slabšej strany pracovnoprávneho vzťahu, keďže zodpovednosť zamestnanca za škodu je už osobitne a limitovane upravená v zákone. Dojednanie zmluvnej pokuty v pracovnej zmluve v neprospech zamestnanca je preto neplatné." },
-        { "question": "Kedy môže byť dohodnutá peňažná náhrada podobná zmluvnej pokute v pracovnom práve?", "answer": "Peňažná náhrada podobná zmluvnej pokute môže byť dohodnutá napríklad v rámci konkurenčnej doložky, kde zamestnanec pri porušení záväzku zdržať sa konkurenčnej činnosti vráti zamestnávateľovi časť poskytnutej peňažnej náhrady. Takéto dojednanie musí zostať v medziach výslovne ustanovených Zákonníkom práce." }
+        { "question": "Čo je zmluvná pokuta a je prípustná v pracovnom práve?", "answer": "Zmluvná pokuta je peňažná sankcia dohodnutá pre prípad porušenia zmluvnej povinnosti, bežná v obchodných a občianskoprávnych vzťahoch, ktorú však Zákonník práce medzi zamestnancom a zamestnávateľom v zásade nepripúšťa. Výnimkou je náhrada podľa konkurenčnej doložky s osobitným právnym režimom." },
+        { "question": "Prečo Zákonník práce obmedzuje použitie zmluvnej pokuty voči zamestnancovi?", "answer": "Zákonník práce obmedzuje použitie zmluvnej pokuty voči zamestnancovi z dôvodu ochrany zamestnanca ako slabšej strany, keďže jeho zodpovednosť za škodu je už osobitne a limitovane upravená v zákone. Dojednanie zmluvnej pokuty v pracovnej zmluve v jeho neprospech je preto neplatné." },
+        { "question": "Kedy môže byť dohodnutá peňažná náhrada podobná zmluvnej pokute v pracovnom práve?", "answer": "Peňažná náhrada podobná zmluvnej pokute môže byť dohodnutá napríklad v rámci konkurenčnej doložky, kde zamestnanec pri porušení záväzku zdržať sa konkurencie vráti zamestnávateľovi časť poskytnutej náhrady. Takéto dojednanie musí zostať v medziach výslovne ustanovených Zákonníkom práce." }
       ]
     },
     {
@@ -440,17 +440,17 @@
       "title": "Skončenie pracovného pomeru so zdravotne postihnutým zamestnancom",
       "definitions": [
         { "question": "Aká je osobitná ochrana zdravotne postihnutého zamestnanca pri výpovedi?", "answer": "Zamestnávateľ potrebuje predchádzajúci súhlas príslušného úradu práce, sociálnych vecí a rodiny na výpoveď danú zamestnancovi so zdravotným postihnutím, s výnimkou niektorých výpovedných dôvodov, akým je napríklad zrušenie zamestnávateľa. Bez tohto súhlasu je výpoveď z takéhoto dôvodu neplatná." },
-        { "question": "Kedy môže zamestnávateľ skončiť pracovný pomer so zamestnancom so zdravotným postihnutím bez súhlasu úradu práce?", "answer": "Súhlas úradu práce sa nevyžaduje, ak sa zamestnávateľ zrušuje alebo premiestňuje, ak zamestnanec stratil vzhľadom na svoj zdravotný stav dlhodobo spôsobilosť vykonávať doterajšiu prácu, alebo ak ide o okamžité skončenie pracovného pomeru. V ostatných prípadoch výpovedného dôvodu je súhlas úradu práce nevyhnutnou podmienkou platnosti výpovede." },
-        { "question": "Aké povinnosti má zamestnávateľ voči zamestnancovi so zmenenou pracovnou schopnosťou pred skončením pracovného pomeru?", "answer": "Zamestnávateľ je povinný zabezpečovať zamestnancom so zdravotným postihnutím osobitné pracovné podmienky a podľa možností im utvárať podmienky na výkon práce zodpovedajúce ich zdravotnému stavu skôr, než pristúpi k skončeniu pracovného pomeru. Táto povinnosť vyplýva zo Zákonníka práce a zo zákona o službách zamestnanosti podporujúceho zamestnávanie takýchto osôb." }
+        { "question": "Kedy môže zamestnávateľ skončiť pracovný pomer so zamestnancom so zdravotným postihnutím bez súhlasu úradu práce?", "answer": "Súhlas úradu práce sa nevyžaduje, ak sa zamestnávateľ zrušuje alebo premiestňuje, ak zamestnanec stratil vzhľadom na zdravotný stav dlhodobo spôsobilosť vykonávať doterajšiu prácu, alebo pri okamžitom skončení pracovného pomeru. V ostatných prípadoch je súhlas nevyhnutnou podmienkou platnosti výpovede." },
+        { "question": "Aké povinnosti má zamestnávateľ voči zamestnancovi so zmenenou pracovnou schopnosťou pred skončením pracovného pomeru?", "answer": "Zamestnávateľ je povinný zabezpečovať zamestnancom so zdravotným postihnutím osobitné pracovné podmienky a podľa možností im utvárať podmienky zodpovedajúce ich zdravotnému stavu skôr, než pristúpi k skončeniu pracovného pomeru. Táto povinnosť vyplýva zo Zákonníka práce a zo zákona o službách zamestnanosti." }
       ]
     },
     {
       "id": "50",
       "title": "Medzinárodné a európske pracovné právo, vplyv práva EÚ",
       "definitions": [
-        { "question": "Aký vplyv má právo Európskej únie na slovenské pracovné právo?", "answer": "Právo Európskej únie výrazne ovplyvňuje slovenské pracovné právo prostredníctvom smerníc, ktoré musia byť transponované do vnútroštátnych predpisov, napríklad v oblasti rovnakého zaobchádzania, pracovného času alebo informovania a prerokovania so zamestnancami. Zákonník práce je tak v mnohých ustanoveniach priamym výsledkom harmonizácie s právom Únie." },
-        { "question": "Čo sú dohovory Medzinárodnej organizácie práce?", "answer": "Dohovory Medzinárodnej organizácie práce sú medzinárodné zmluvy prijímané v rámci tejto organizácie, ktoré po ratifikácii zaväzujú Slovenskú republiku a stávajú sa súčasťou jej právneho poriadku s prednosťou pred zákonom. Upravujú napríklad slobodu združovania, zákaz nútenej práce či minimálny vek na vstup do zamestnania." },
-        { "question": "Ako Ústava Slovenskej republiky zaručuje pracovné práva?", "answer": "Ústava Slovenskej republiky v článkoch tridsaťpäť a tridsaťšesť zaručuje právo na slobodnú voľbu povolania, právo na prácu, na spravodlivé a uspokojivé pracovné podmienky a na primerané odmeňovanie za vykonanú prácu. Tieto ústavné práva sú bližšie rozvedené v Zákonníku práce a súvisiacich pracovnoprávnych predpisoch." }
+        { "question": "Aký vplyv má právo Európskej únie na slovenské pracovné právo?", "answer": "Právo Európskej únie výrazne ovplyvňuje slovenské pracovné právo prostredníctvom smerníc transponovaných do vnútroštátnych predpisov, napríklad v oblasti rovnakého zaobchádzania, pracovného času či informovania zamestnancov. Zákonník práce je v mnohých ustanoveniach priamym výsledkom harmonizácie s právom Únie." },
+        { "question": "Čo sú dohovory Medzinárodnej organizácie práce?", "answer": "Dohovory Medzinárodnej organizácie práce sú medzinárodné zmluvy, ktoré po ratifikácii zaväzujú Slovenskú republiku a stávajú sa súčasťou jej právneho poriadku s prednosťou pred zákonom. Upravujú napríklad slobodu združovania, zákaz nútenej práce či minimálny vek na vstup do zamestnania." },
+        { "question": "Ako Ústava Slovenskej republiky zaručuje pracovné práva?", "answer": "Ústava Slovenskej republiky v článkoch tridsaťpäť a tridsaťšesť zaručuje právo na slobodnú voľbu povolania, na prácu, na spravodlivé pracovné podmienky a na primerané odmeňovanie za vykonanú prácu. Tieto ústavné práva sú bližšie rozvedené v Zákonníku práce a súvisiacich predpisoch." }
       ]
     }
   ]
