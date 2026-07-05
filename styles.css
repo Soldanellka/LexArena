@@ -1588,6 +1588,8 @@ body {
 
 .header-earn-btn .earn-btn-short { display: none; }
 
+.header-login-btn .login-btn-short { display: none; }
+
 /* Icon button (téma) */
 .icon-btn {
   padding: 6px 8px !important;
@@ -1610,12 +1612,60 @@ body {
   .par-badge { padding: 4px 10px 4px 8px; }
   .par-icon { font-size: 15px; }
   .par-count { font-size: 14px; }
-  .header-login-btn { display: none; }
   .role-badge { display: none; }
   .streak-pill { display: none !important; }
   .header-earn-btn { padding: 6px 9px !important; }
   .header-earn-btn .earn-btn-full { display: none; }
   .header-earn-btn .earn-btn-short { display: inline; }
+
+  /* Prihlásenie z iného zariadenia – ikona namiesto textu, nech sa lišta nelame */
+  .header-login-btn {
+    padding: 6px 9px !important;
+    min-width: 0 !important;
+  }
+  .header-login-btn .login-btn-full { display: none; }
+  .header-login-btn .login-btn-short { display: inline; }
+
+  /* Riadok tlačidiel (§, 💰, ℹ️, 🌙, 🔑) – jeden kompaktný riadok bez lámania */
+  .header-right {
+    flex-wrap: nowrap;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  /* Formuláre: min. 16px, inak iOS pri fokuse zoomuje stránku */
+  .form-input,
+  .feedback-textarea,
+  .header #nickname {
+    font-size: 16px;
+  }
+
+  /* Dotykové ciele min. 44×44 px – možnosti kvízu/duelu, prípady, akordeón návodu
+     (pexeso .memory-card už má min-height 88px, netreba upravovať) */
+  .opt,
+  .case-opt {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .guide-accordion summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  /* Súdna sieň – hlasovanie použiteľné palcom */
+  .courtroom-vote-btn,
+  .admin-ap,
+  .admin-rj {
+    min-height: 44px !important;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
 }
 
 /* ============================================================

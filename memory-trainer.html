@@ -18,9 +18,10 @@
   }
   .mt-answer-box textarea {
     width:100%; min-height:110px; border-radius:12px; border:1px solid rgba(0,0,0,0.12);
-    padding:12px 14px; font-size:15px; font-family:inherit; resize:vertical; box-sizing:border-box;
+    padding:12px 14px; font-size:16px; font-family:inherit; resize:vertical; box-sizing:border-box;
   }
   .mt-actions { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+  .mt-actions .btn { min-height:44px; }
   .mt-score { font-size:44px; font-weight:800; text-align:center; margin:6px 0; }
   .mt-score.ok { color:#22c55e; }
   .mt-score.mid { color:#eab308; }
@@ -38,6 +39,14 @@
     animation: mtMicPulse 1.2s ease infinite;
   }
   @keyframes mtMicPulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
+
+  @media (max-width: 640px) {
+    .mt-wrap { padding: 16px 12px 40px; }
+    .mt-reveal-box { padding: 20px 16px; font-size: 16px; }
+    .mt-actions { flex-direction: column; }
+    .mt-actions .btn { width: 100%; }
+    #mtSpeakBtn, #mtReadyBtn { min-height: 44px; }
+  }
 </style>
 </head>
 <body>
