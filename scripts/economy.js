@@ -307,15 +307,17 @@ function aggregateDuelStats(duelsData, start, end) {
    ten vyhodnocuje; ostatní (paralelne otvorení hráči) preskočia. */
 async function settlePeriod(db, period) {
   const evaluatedRef = ref(db, `rewards/${period.key}/evaluated`);
-  let shouldEvaluate = false;
 
-  await runTransaction(evaluatedRef, (current) => {
+  /* POZOR na optimistický beh Firebase transakcií: callback sa najprv
+     spustí s lokálnou (často null) hodnotou a až potom so serverovou.
+     Preto sa NESMIE rozhodovať podľa vlajky nastavenej v callbacku –
+     jediný spoľahlivý signál je result.committed. */
+  const result = await runTransaction(evaluatedRef, (current) => {
     if (current === true) return; // abort – už vyhodnotené
-    shouldEvaluate = true;
     return true;
   });
 
-  if (!shouldEvaluate) return;
+  if (!result || !result.committed) return;
 
   const duelsSnap = await get(ref(db, 'duels'));
   const duelsData = duelsSnap.exists() ? duelsSnap.val() : {};
