@@ -15,6 +15,7 @@ import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { openReportModal } from './reports.js';
 import { playSound } from './audio.js';
+import { econEnergy, econSpend, ECONOMY_CONFIG } from './scripts/economy.js';
 
 /* =========================
    Štart kvízu (študijný)
@@ -99,6 +100,7 @@ export function renderQuestion(first = false){
     q.options.forEach((o, i) => {
       const b = document.createElement('button');
       b.className = 'opt lexarena-opt';
+      b.dataset.optIndex = i;
 
       const sp = document.createElement('span');
       sp.textContent = o;
@@ -111,8 +113,37 @@ export function renderQuestion(first = false){
 
     const parent = optionsEl.parentNode;
     if (parent) {
-      const old = parent.querySelector('#reportQuestionBtn');
-      if (old) old.remove();
+      const oldReport = parent.querySelector('#reportQuestionBtn');
+      if (oldReport) oldReport.remove();
+      const oldHint = parent.querySelector('#hint5050Btn');
+      if (oldHint) oldHint.remove();
+
+      /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
+      const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
+      if (isDuelQuiz && !q.hintUsed) {
+        const hintBtn = document.createElement('button');
+        hintBtn.id = 'hint5050Btn';
+        hintBtn.className = 'btn';
+        hintBtn.textContent = `💡 50:50 (${ECONOMY_CONFIG.SINKS.QUIZ_HINT_5050}§)`;
+        hintBtn.style.marginTop = '10px';
+
+        hintBtn.addEventListener('click', async () => {
+          const nick = localStorage.getItem('playerNick');
+          if (!nick) return;
+          const ok = await econSpend(nick, ECONOMY_CONFIG.SINKS.QUIZ_HINT_5050, 'nápoveda 50:50');
+          if (!ok) return;
+
+          q.hintUsed = true;
+          hintBtn.remove();
+
+          const wrongButtons = qsa('.opt').filter(btn => Number(btn.dataset.optIndex) !== q.correct);
+          shuffleArray(wrongButtons)
+            .slice(0, Math.max(0, wrongButtons.length - 1))
+            .forEach(btn => { btn.style.visibility = 'hidden'; btn.disabled = true; });
+        });
+
+        parent.appendChild(hintBtn);
+      }
 
       const reportBtn = document.createElement('button');
       reportBtn.id = 'reportQuestionBtn';
@@ -292,10 +323,8 @@ export function finishQuiz(){
           console.log("🔥 Duel uložený do banky duelov (pending)");
         }
       }
-      // 🔥 Energia -10 za odohraný duel (prvý hráč - tvorca)
-      if (typeof window.deductEnergy === 'function') {
-        window.deductEnergy(10);
-      }
+      // 🔥 Energia za odohraný duel (prvý hráč - tvorca)
+      econEnergy(nick, ECONOMY_CONFIG.ENERGY.DUEL, 'odohraný duel');
     }
 
     /* =========================
@@ -306,10 +335,8 @@ export function finishQuiz(){
         console.log("🔥 Spúšťam vyhodnotenie duelu...");
         window.completeDuel(quiz.questions);
       }
-      // 🔥 Energia -10 za odohraný duel (druhý hráč - prijímateľ)
-      if (typeof window.deductEnergy === 'function') {
-        window.deductEnergy(10);
-      }
+      // Energia za odohraný duel (druhý hráč - prijímateľ) sa odpočíta
+      // v scripts/duels.js finalizeDuel() – jediné miesto, nech sa neodpočítava 2×.
     }
 
     window.duelQuestions = null;

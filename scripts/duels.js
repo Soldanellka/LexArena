@@ -10,7 +10,7 @@ import {
   remove,
   onValue
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-import { awardParagrafy as awardParagrafyGlobal } from './avatar.js';
+import { econAward, econEnergy, econCanPlay, ECONOMY_CONFIG } from './economy.js';
 import { showRewardToast } from '../ui.js';
 
 /* Bezpečný prístup k db */
@@ -198,6 +198,9 @@ function waitForQuestions(areaName) {
 export async function startDuel(areaName) {
   console.log("🔥 startDuel() – štartujem duel pre oblasť:", areaName);
 
+  const canPlay = await econCanPlay('duel');
+  if (!canPlay) return;
+
   // 🔥 Počkaj kým sú otázky načítané (TPH a TPP prídu asynchrónne)
   await waitForQuestions(areaName);
 
@@ -276,23 +279,6 @@ function computeScoreFromQuestions(questions = []) {
   }, 0);
 }
 
-function awardParagrafy(nick, gain) {
-  const db = getDb();
-  if (!db || !nick || !gain) return;
-
-  const userRef = ref(db, `users/${nick}`);
-
-  onValue(userRef, (snap) => {
-    const data = snap.val() || {};
-    const current = data.paragrafy || 0;
-
-    update(userRef, {
-      paragrafy: current + gain,
-      lastParUpdate: Date.now()
-    });
-  }, { onlyOnce: true });
-}
-
 function updateLeaderboardWithResult(nick, score, isWin) {
   const db = getDb();
   if (!db || !nick) return;
@@ -339,24 +325,18 @@ function finalizeDuel(duel, opponentNick, opponentQuestions) {
   else if (scoreB > scoreA) winner = opponentNick;
   else winner = "draw";
 
-  // 🔥 § EKONOMIKA
-  // Výhra:  8§ (7§ výhra + 1§ odohranie)
-  // Prehra: 2§ tvorca / 3§ prijímateľ (1§ prehra + 1§ odohranie [+ 1§ prijatie])
-  // Remíza: 4§ tvorca / 5§ prijímateľ (3§ remíza + 1§ odohranie [+ 1§ prijatie])
-  if (winner === firstNick) {
-    awardParagrafy(firstNick, 8);
-    awardParagrafy(opponentNick, 3);
-  } else if (winner === opponentNick) {
-    awardParagrafy(opponentNick, 9);
-    awardParagrafy(firstNick, 2);
+  // 🔥 § EKONOMIKA – jediná brána: economy.js
+  if (winner === 'draw') {
+    econAward(firstNick, ECONOMY_CONFIG.REWARDS.DUEL_DRAW, 'remíza v dueli');
+    econAward(opponentNick, ECONOMY_CONFIG.REWARDS.DUEL_DRAW, 'remíza v dueli');
   } else {
-    awardParagrafy(firstNick, 4);
-    awardParagrafy(opponentNick, 5);
+    const loserNick = winner === firstNick ? opponentNick : firstNick;
+    econAward(winner, ECONOMY_CONFIG.REWARDS.DUEL_WIN, 'výhra v dueli');
+    econAward(loserNick, ECONOMY_CONFIG.REWARDS.DUEL_LOSS, 'prehra v dueli');
   }
-  // Energia avatara -10 za odohraný duel
-  if (typeof window.deductEnergy === 'function') {
-    window.deductEnergy(10);
-  }
+  // Energia avatara za odohraný duel – len prijímateľ (tento hráč sedí za týmto
+  // zariadením); tvorcovi sa energia odpočíta pri jeho vlastnom odohraní v quiz.js.
+  econEnergy(opponentNick, ECONOMY_CONFIG.ENERGY.DUEL, 'odohraný duel');
 
   // 🔥 Rebríček
   updateLeaderboardWithResult(firstNick, scoreA, winner === firstNick);
@@ -478,7 +458,9 @@ export function renderDuelBank() {
 
       const acceptBtn = div.querySelector(".duel-accept:not(.duel-send)");
       if (acceptBtn) {
-        acceptBtn.onclick = () => {
+        acceptBtn.onclick = async () => {
+          const canPlay = await econCanPlay('duel');
+          if (!canPlay) return;
 
           // 🔥 OPRAVA: správny nick hráča
           window.currentUser = currentUser;
@@ -495,14 +477,8 @@ export function renderDuelBank() {
             console.error("❌ startDuelQuiz() neexistuje!");
           }
 
-          // 🔥 +1§ za prijatie výzvy (pred hrou)
-          if (typeof window.awardParagrafy === 'function') {
-            window.awardParagrafy(1, 'za prijatie výzvy');
-          }
-          // 🔥 Energia -10 za prijatie duelu
-          if (typeof window.deductEnergy === 'function') {
-            window.deductEnergy(10);
-          }
+          // 🔥 § za prijatie výzvy (energia sa odpočíta až po odohraní duelu)
+          econAward(currentUser, ECONOMY_CONFIG.REWARDS.CHALLENGE_EXISTING, 'za prijatie výzvy');
 
           const db = getDb();
           if (db) {
@@ -612,8 +588,8 @@ async function awardChallengeLinkReward({ duelId, nick, isNewPlayer }) {
   if (already.exists()) return;
 
   await set(claimedRef, true);
-  const amount = isNewPlayer ? 7 : 1;
-  await awardParagrafyGlobal(amount, isNewPlayer ? 'za prvý duel z výzvy 🎉' : 'za prijatie výzvy cez link');
+  const amount = isNewPlayer ? ECONOMY_CONFIG.REWARDS.CHALLENGE_NEW : ECONOMY_CONFIG.REWARDS.CHALLENGE_EXISTING;
+  await econAward(nick, amount, isNewPlayer ? 'za prvý duel z výzvy 🎉' : 'za prijatie výzvy cez link');
 }
 
 /* ============================================================
