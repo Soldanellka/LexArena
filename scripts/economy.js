@@ -181,29 +181,121 @@ export async function econIsVideoClaimed(videoId) {
 }
 
 /* ============================================================
-   6️⃣ REKLAMY – príprava bez zobrazenia v UI (ADS.ENABLED=false)
+   6️⃣ REKLAMY – "Získaj §" karta 📺
+   econAdStatus(): len na čítanie, pre render karty (koľko zostáva dnes).
+   econAdComplete(): volať AŽ PO dopozeraní (20 s časovač v UI vrstve);
+   denný limit sa vynucuje transakčne (result.committed), potom sa
+   pripíše odmena cez econAward.
 ============================================================ */
-export async function econWatchAd() {
-  if (!ECONOMY_CONFIG.ADS.ENABLED) return { available: false };
+export async function econAdStatus() {
+  if (!ECONOMY_CONFIG.ADS.ENABLED) return { enabled: false, remaining: 0 };
 
   const db = getDb();
   const nick = getNick();
-  if (!db || !nick) return { available: false };
+  if (!db || !nick) return { enabled: true, remaining: 0 };
 
-  const countRef = ref(db, `users/${nick}/adsWatched/${todayKey()}`);
-  const snap = await get(countRef);
+  const snap = await get(ref(db, `users/${nick}/adsWatched/${todayKey()}`));
   const count = snap.exists() ? snap.val() : 0;
-  if (count >= ECONOMY_CONFIG.ADS.DAILY_MAX) {
-    return { available: false, reason: 'daily_max' };
+  return { enabled: true, remaining: Math.max(0, ECONOMY_CONFIG.ADS.DAILY_MAX - count) };
+}
+
+export async function econAdComplete() {
+  if (!ECONOMY_CONFIG.ADS.ENABLED) return { success: false, reason: 'disabled' };
+
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick) return { success: false, reason: 'no_user' };
+
+  const max = ECONOMY_CONFIG.ADS.DAILY_MAX;
+  const countRef = ref(db, `users/${nick}/adsWatched/${todayKey()}`);
+
+  // Transakčne – nie get-potom-set – aby dve súbežné reklamy v tú istú
+  // sekundu nemohli obe prejsť cez limit. Rozhoduje result.committed.
+  const result = await runTransaction(countRef, (current) => {
+    const count = current || 0;
+    if (count >= max) return; // abort – limit už vyčerpaný
+    return count + 1;
+  });
+
+  if (!result.committed) {
+    showRewardToast(`Dnešný limit ${max} reklám je vyčerpaný. Vráť sa zajtra!`);
+    return { success: false, reason: 'daily_max' };
   }
 
   // TODO: pri aktivácii monetizácie sem doplniť volanie SDK poskytovateľa
-  // odmeňovanej reklamy, napr.:
-  //   const result = await adProvider.showRewardedAd();
-  //   if (!result.completed) return { available: false, reason: 'not_completed' };
-  await set(countRef, count + 1);
+  // odmeňovanej reklamy PRED zavolaním econAdComplete (t. j. zavolať túto
+  // funkciu až po potvrdení od SDK, že reklama bola skutočne dopozeraná),
+  // napr.: const result = await adProvider.showRewardedAd();
+  //        if (!result.completed) return; // nevolaj econAdComplete()
   await econAward(nick, ECONOMY_CONFIG.ADS.REWARD, 'za pozretie reklamy', { skipCap: true });
-  return { available: true };
+  return { success: true };
+}
+
+/* Spätná kompatibilita – pôvodná jednofázová funkcia (get+set, nie
+   transakcia). Nová UI cez econAdStatus/econAdComplete ju nepoužíva. */
+export async function econWatchAd() {
+  const status = await econAdStatus();
+  if (!status.enabled || status.remaining <= 0) return { available: false };
+  const result = await econAdComplete();
+  return { available: result.success };
+}
+
+/* ============================================================
+   PROMO KÓDY – 🎟️ "Zadaj kód" karta
+   promoCodes/{CODE}: { amount, active, maxUses, usedCount, expiresAt,
+                         createdBy, createdAt, redeemed: { [nick]: true } }
+   Jeden nick môže jeden kód uplatniť len raz. Atomicita cez transakciu
+   na CELOM uzle (všetky podmienky overené znova v callbacku), double-click
+   ochrana rovnako ako pri econAdComplete: rozhoduje result.committed.
+============================================================ */
+export async function econRedeemCode(rawCode) {
+  const db = getDb();
+  const nick = getNick();
+  const code = (rawCode || '').trim().toUpperCase();
+  if (!db || !nick || !code) return { ok: false, message: '❌ Neplatný kód' };
+
+  const codeRef = ref(db, `promoCodes/${code}`);
+  const snap = await get(codeRef);
+
+  if (!snap.exists() || snap.val().active !== true) {
+    return { ok: false, message: '❌ Neplatný kód' };
+  }
+  const preData = snap.val();
+  if (preData.redeemed && preData.redeemed[nick]) {
+    return { ok: false, message: '❌ Kód si už použil/a' };
+  }
+  const now = Date.now();
+  const preExpired = typeof preData.expiresAt === 'number' && preData.expiresAt < now;
+  const preExhausted = typeof preData.maxUses === 'number' && (preData.usedCount || 0) >= preData.maxUses;
+  if (preExpired || preExhausted) {
+    return { ok: false, message: '❌ Kód vypršal alebo bol vyčerpaný' };
+  }
+
+  const result = await runTransaction(codeRef, (current) => {
+    if (!current || current.active !== true) return; // abort – neplatný/neexistujúci
+    if (current.redeemed && current.redeemed[nick]) return; // abort – už uplatnil
+    const expired = typeof current.expiresAt === 'number' && current.expiresAt < Date.now();
+    const exhausted = typeof current.maxUses === 'number' && (current.usedCount || 0) >= current.maxUses;
+    if (expired || exhausted) return; // abort
+
+    return {
+      ...current,
+      usedCount: (current.usedCount || 0) + 1,
+      redeemed: { ...(current.redeemed || {}), [nick]: true }
+    };
+  });
+
+  if (!result.committed) {
+    const final = result.snapshot.val();
+    if (!final || final.active !== true) return { ok: false, message: '❌ Neplatný kód' };
+    if (final.redeemed && final.redeemed[nick]) return { ok: false, message: '❌ Kód si už použil/a' };
+    return { ok: false, message: '❌ Kód vypršal alebo bol vyčerpaný' };
+  }
+
+  const amount = result.snapshot.val().amount || 0;
+  await econAward(nick, amount, `promo kód ${code}`, { skipCap: true });
+  showRewardToast(`🎟️ +${amount}§ za kód ${code}!`);
+  return { ok: true, message: `✅ Kód ${code}: +${amount}§!`, amount };
 }
 
 /* ============================================================
@@ -304,14 +396,14 @@ function aggregateDuelStats(duelsData, start, end) {
 }
 
 /* Transaction lock na rewards/{key}/evaluated – kto prvý zapíše true,
-   ten vyhodnocuje; ostatní (paralelne otvorení hráči) preskočia. */
+   ten vyhodnocuje; ostatní (paralelne otvorení hráči) preskočia.
+   POZOR: rozhoduje sa podľa result.committed (návratová hodnota
+   runTransaction), NIE podľa vlajky nastavenej vnútri callbacku – ten sa
+   môže pri kontencii zavolať viackrát/aj keď transakcia napokon abortne,
+   čo pri optimistickom vyhodnocovaní vie spôsobiť dvojitú výplatu. */
 async function settlePeriod(db, period) {
   const evaluatedRef = ref(db, `rewards/${period.key}/evaluated`);
 
-  /* POZOR na optimistický beh Firebase transakcií: callback sa najprv
-     spustí s lokálnou (často null) hodnotou a až potom so serverovou.
-     Preto sa NESMIE rozhodovať podľa vlajky nastavenej v callbacku –
-     jediný spoľahlivý signál je result.committed. */
   const result = await runTransaction(evaluatedRef, (current) => {
     if (current === true) return; // abort – už vyhodnotené
     return true;
@@ -375,5 +467,8 @@ window.econCanPlay = econCanPlay;
 window.econVideoReward = econVideoReward;
 window.econIsVideoClaimed = econIsVideoClaimed;
 window.econWatchAd = econWatchAd;
+window.econAdStatus = econAdStatus;
+window.econAdComplete = econAdComplete;
+window.econRedeemCode = econRedeemCode;
 window.econGrant = econGrant;
 window.econSettleLeaderboards = econSettleLeaderboards;

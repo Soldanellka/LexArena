@@ -1560,6 +1560,23 @@ body {
   border-radius: 999px !important;
 }
 
+/* Získaj § tlačidlo */
+.header-earn-btn {
+  font-size: 12px !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(240,138,166,0.12) !important;
+  border: 1.5px solid rgba(240,138,166,0.4) !important;
+  color: #d6567e !important;
+  font-weight: 700 !important;
+}
+
+.header-earn-btn:hover {
+  background: rgba(240,138,166,0.22) !important;
+}
+
+.header-earn-btn .earn-btn-short { display: none; }
+
 /* Icon button (téma) */
 .icon-btn {
   padding: 6px 8px !important;
@@ -1585,6 +1602,9 @@ body {
   .header-login-btn { display: none; }
   .role-badge { display: none; }
   .streak-pill { display: none !important; }
+  .header-earn-btn { padding: 6px 9px !important; }
+  .header-earn-btn .earn-btn-full { display: none; }
+  .header-earn-btn .earn-btn-short { display: inline; }
 }
 
 /* ============================================================

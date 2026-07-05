@@ -185,6 +185,9 @@ if (saveNickBtn) {
 
     const nickDisplay = $('playerNickDisplay');
     if (nickDisplay) nickDisplay.textContent = nick;
+
+    const earnBtn = $('earnBtn');
+    if (earnBtn) earnBtn.style.display = 'inline-flex';
   });
 }
 

@@ -13,7 +13,8 @@ import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
 import { initAvatarSystem, selectAvatar } from './scripts/avatar.js';
 import {
-  econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG
+  econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG,
+  econAdStatus, econAdComplete, econRedeemCode
 } from './scripts/economy.js';
 
 /* =====================================================
@@ -167,6 +168,10 @@ export function init() {
     const pc = $('parCount') || $('paragrafValue');
     if (pc) pc.textContent = p;
 
+    /* 🔹 Získaj § – tlačidlo viditeľné len prihlásenému hráčovi */
+    const earnBtn = $('earnBtn');
+    if (earnBtn) earnBtn.style.display = localStorage.getItem('playerNick') ? 'inline-flex' : 'none';
+
     /* 🔹 Téma */
     applyTheme(localStorage.getItem('theme') || 'light');
 
@@ -306,6 +311,108 @@ function initFeedbackSystem() {
 }
 
 /* =====================================================
+   💰 ZÍSKAJ § – reklamy (placeholder videami) + promo kódy
+   ===================================================== */
+async function openEarnModal() {
+  let modal = document.getElementById('earnModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'earnModal';
+    modal.className = 'avatar-modal';
+    modal.innerHTML = `
+      <div class="avatar-panel" style="max-width:440px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <h3 style="margin:0">💰 Získaj §</h3>
+          <button class="btn" id="closeEarnModal">✕</button>
+        </div>
+
+        <div class="earn-card" id="earnAdCard" style="border:1px solid var(--card-border,#eee);border-radius:14px;padding:16px;margin-bottom:12px">
+          <div style="font-weight:700;margin-bottom:4px">📺 Pozri reklamu</div>
+          <div class="small muted" style="margin-bottom:10px">Pozri si krátke video a získaj +${ECONOMY_CONFIG.ADS.REWARD}§</div>
+          <div class="small" id="earnAdStatus" style="margin-bottom:10px"></div>
+          <button class="btn btn-primary" id="earnAdPlayBtn" style="width:100%">▶️ Prehrať</button>
+        </div>
+
+        <div class="earn-card" id="earnCodeCard" style="border:1px solid var(--card-border,#eee);border-radius:14px;padding:16px">
+          <div style="font-weight:700;margin-bottom:4px">🎟️ Zadaj kód</div>
+          <div class="small muted" style="margin-bottom:10px">Promo kód od influencera alebo z akcie</div>
+          <div style="display:flex;gap:8px">
+            <input id="earnCodeInput" class="form-input" type="text" placeholder="napr. LEXARENA25" maxlength="30" style="text-transform:uppercase">
+            <button class="btn btn-primary" id="earnCodeSubmitBtn">Uplatniť</button>
+          </div>
+          <div class="small" id="earnCodeResult" style="margin-top:8px"></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelector('#closeEarnModal').onclick = () => { modal.style.display = 'none'; };
+    modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+    modal.querySelector('#earnAdPlayBtn').onclick = async () => {
+      const status = await econAdStatus();
+      if (!status.enabled || status.remaining <= 0) {
+        await refreshEarnAdCard();
+        return;
+      }
+      modal.style.display = 'none';
+      window.openAdVideoModal();
+    };
+
+    modal.querySelector('#earnCodeSubmitBtn').onclick = async () => {
+      const input = modal.querySelector('#earnCodeInput');
+      const resultEl = modal.querySelector('#earnCodeResult');
+      const code = input.value.trim().toUpperCase();
+      if (!code) return;
+
+      const btn = modal.querySelector('#earnCodeSubmitBtn');
+      btn.disabled = true;
+      const res = await econRedeemCode(code);
+      btn.disabled = false;
+
+      resultEl.textContent = res.message;
+      resultEl.style.color = res.ok ? '#16a34a' : '#dc2626';
+      if (res.ok) input.value = '';
+    };
+
+    modal.querySelector('#earnCodeInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') modal.querySelector('#earnCodeSubmitBtn').click();
+    });
+  }
+
+  modal.querySelector('#earnCodeResult').textContent = '';
+  modal.querySelector('#earnCodeInput').value = '';
+  await refreshEarnAdCard();
+  modal.style.display = 'flex';
+}
+
+async function refreshEarnAdCard() {
+  const modal = document.getElementById('earnModal');
+  if (!modal) return;
+
+  const status = await econAdStatus();
+  const statusEl = modal.querySelector('#earnAdStatus');
+  const btn = modal.querySelector('#earnAdPlayBtn');
+  if (!statusEl || !btn) return;
+
+  if (!status.enabled) {
+    statusEl.textContent = 'Reklamy zatiaľ nie sú dostupné.';
+    btn.disabled = true;
+    btn.textContent = '▶️ Prehrať';
+    return;
+  }
+
+  statusEl.textContent = `Dnes ešte ${status.remaining}/${ECONOMY_CONFIG.ADS.DAILY_MAX}`;
+  if (status.remaining <= 0) {
+    btn.disabled = true;
+    btn.textContent = 'Dnešný limit vyčerpaný, vráť sa zajtra ✅';
+  } else {
+    btn.disabled = false;
+    btn.textContent = '▶️ Prehrať';
+  }
+}
+
+/* =====================================================
    📺 VIDEO SYSTÉM
    ===================================================== */
 
@@ -331,43 +438,80 @@ const VIDEO_CONFIG = {
 
 let videoRewardTimer = null;
 let currentVideoId = null;
+let currentVideoMode = 'learning'; // 'learning' (náuková, +12§ raz na video) | 'ad' (reklama, +3§, 3×/deň)
+let lastAdVideoId = null;
 
-window.openVideo = async function(videoId) {
+function pickRandomVideoId() {
+  const ids = Object.keys(VIDEO_CONFIG);
+  const pool = ids.length > 1 && lastAdVideoId ? ids.filter(id => id !== lastAdVideoId) : ids;
+  const picked = pool[Math.floor(Math.random() * pool.length)];
+  lastAdVideoId = picked;
+  return picked;
+}
+
+async function showVideoModal(videoId, mode) {
   const cfg = VIDEO_CONFIG[videoId];
   if (!cfg) return;
 
   currentVideoId = videoId;
+  currentVideoMode = mode;
 
   const modal = document.getElementById('videoModal');
   const title = document.getElementById('videoModalTitle');
   const player = document.getElementById('videoPlayer');
   const claimBtn = document.getElementById('claimVideoRewardBtn');
   const alreadyClaimed = document.getElementById('videoAlreadyClaimed');
+  const rewardInfo = document.getElementById('videoRewardInfo');
 
   if (!modal) return;
 
   title.textContent = cfg.title;
   player.src = cfg.url;
 
-  // Odmena je viazaná na nick vo Firebase (users/{nick}/videoRewards/{videoId}),
-  // nie na toto zariadenie – funguje aj po zmazaní localStorage/inom prehliadači.
-  const claimed = await econIsVideoClaimed(videoId);
+  if (videoRewardTimer) clearTimeout(videoRewardTimer);
+  claimBtn.style.display = 'none';
+  alreadyClaimed.style.display = 'none';
 
-  if (claimed) {
-    claimBtn.style.display = 'none';
-    alreadyClaimed.style.display = 'block';
-  } else {
-    alreadyClaimed.style.display = 'none';
-    // Tlačidlo sa zobrazí po 5 sekundách (overenie že video spustil)
-    claimBtn.style.display = 'none';
-    if (videoRewardTimer) clearTimeout(videoRewardTimer);
+  if (mode === 'ad') {
+    const reward = ECONOMY_CONFIG.ADS.REWARD;
+    if (rewardInfo) rewardInfo.querySelector('span:last-child').textContent = `+${reward}§`;
+    claimBtn.textContent = `🎉 Prevziať odmenu (+${reward}§)`;
+    // Odmena sa pripíše až po 20 s prehrávania (econAdComplete overí denný limit transakčne)
     videoRewardTimer = setTimeout(() => {
       claimBtn.style.display = 'block';
       claimBtn.style.animation = 'duelBadgePop .4s ease';
-    }, 5000);
+    }, 20000);
+  } else {
+    const reward = ECONOMY_CONFIG.REWARDS.VIDEO;
+    if (rewardInfo) rewardInfo.querySelector('span:last-child').textContent = `+${reward}§`;
+    claimBtn.textContent = `🎉 Prevziať odmenu (+${reward}§)`;
+
+    // Odmena je viazaná na nick vo Firebase (users/{nick}/videoRewards/{videoId}),
+    // nie na toto zariadenie – funguje aj po zmazaní localStorage/inom prehliadači.
+    const claimed = await econIsVideoClaimed(videoId);
+    if (claimed) {
+      claimBtn.style.display = 'none';
+      alreadyClaimed.style.display = 'block';
+    } else {
+      videoRewardTimer = setTimeout(() => {
+        claimBtn.style.display = 'block';
+        claimBtn.style.animation = 'duelBadgePop .4s ease';
+      }, 5000);
+    }
   }
 
   modal.style.display = 'flex';
+}
+
+window.openVideo = function(videoId) {
+  showVideoModal(videoId, 'learning');
+};
+
+// Reklama (placeholder existujúcimi náukovými videami) – náhodné video z
+// VIDEO_CONFIG, nech sa neopakuje stále to isté. Odmena +3§/3× deň cez
+// econAdComplete, nezávisle od jednorazovej náukovej odmeny +12§ vyššie.
+window.openAdVideoModal = function() {
+  showVideoModal(pickRandomVideoId(), 'ad');
 };
 
 function initVideoSystem() {
@@ -378,7 +522,7 @@ function initVideoSystem() {
       const modal = document.getElementById('videoModal');
       const player = document.getElementById('videoPlayer');
       if (modal) modal.style.display = 'none';
-      if (player) player.src = ''; // zastaví video
+      if (player) player.src = ''; // zastaví video – zavretie pred limitom = bez odmeny
       if (videoRewardTimer) clearTimeout(videoRewardTimer);
       currentVideoId = null;
     });
@@ -389,6 +533,23 @@ function initVideoSystem() {
   if (claimBtn) {
     claimBtn.addEventListener('click', async () => {
       if (!currentVideoId) return;
+
+      if (currentVideoMode === 'ad') {
+        const result = await econAdComplete();
+        if (!result.success) return; // toast (limit vyčerpaný) zobrazil economy.js
+
+        claimBtn.style.display = 'none';
+        refreshEarnAdCard();
+
+        setTimeout(() => {
+          const modal = document.getElementById('videoModal');
+          const player = document.getElementById('videoPlayer');
+          if (modal) modal.style.display = 'none';
+          if (player) player.src = '';
+          currentVideoId = null;
+        }, 1200);
+        return;
+      }
 
       const awarded = await econVideoReward(currentVideoId);
       if (!awarded) return; // už vyzdvihnuté (toast zobrazil economy.js)
@@ -663,6 +824,21 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
           💬 Zobraziť pripomienky
         </button>
         <div id="feedbackList" style="display:none;max-height:250px;overflow-y:auto"></div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border)">
+          <div style="font-weight:600;margin-bottom:8px">🎟️ Promo kódy</div>
+          <input id="promoCodeInput" class="form-input" type="text"
+            placeholder="KÓD (napr. LEXARENA25)" style="margin-bottom:6px;text-transform:uppercase" maxlength="30"/>
+          <div style="display:flex;gap:6px;margin-bottom:6px">
+            <input id="promoAmountInput" class="form-input" type="number" min="10" max="50" value="25" placeholder="§ (10–50)"/>
+            <input id="promoMaxUsesInput" class="form-input" type="number" min="1" placeholder="Max použití (prázdne = ∞)"/>
+          </div>
+          <input id="promoExpiresInput" class="form-input" type="date" style="margin-bottom:6px"/>
+          <button class="btn btn-primary" id="promoCreateBtn" style="width:100%;margin-bottom:6px">Vytvoriť</button>
+          <div id="promoMsg" class="small" style="margin-bottom:8px;color:var(--muted)"></div>
+          <button class="btn" id="listPromoBtn" style="width:100%;margin-bottom:6px">🎟️ Zobraziť kódy</button>
+          <div id="promoList" style="display:none;max-height:220px;overflow-y:auto"></div>
+        </div>
       ` : ''}
       <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
         <div style="font-weight:600;margin-bottom:6px">💰 Poslať § hráčovi</div>
@@ -785,7 +961,95 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
         </div>
       `).join('');
     };
+
+    // Vytvoriť promo kód
+    panel.querySelector('#promoCreateBtn').onclick = async () => {
+      const codeInput = panel.querySelector('#promoCodeInput');
+      const amountInput = panel.querySelector('#promoAmountInput');
+      const maxUsesInput = panel.querySelector('#promoMaxUsesInput');
+      const expiresInput = panel.querySelector('#promoExpiresInput');
+      const msg = panel.querySelector('#promoMsg');
+
+      const code = codeInput.value.trim().toUpperCase();
+      if (!code) { msg.textContent = 'Zadaj kód.'; msg.style.color = '#dc2626'; return; }
+
+      let amount = parseInt(amountInput.value, 10);
+      if (!Number.isFinite(amount)) amount = 25;
+      amount = Math.min(50, Math.max(10, amount));
+
+      const maxUsesRaw = maxUsesInput.value.trim();
+      const maxUses = maxUsesRaw ? Math.max(1, parseInt(maxUsesRaw, 10)) : null;
+
+      const expiresRaw = expiresInput.value;
+      const expiresAt = expiresRaw ? new Date(`${expiresRaw}T23:59:59`).getTime() : null;
+
+      const codeRef = ref(db, `promoCodes/${code}`);
+      const existing = await get(codeRef);
+      if (existing.exists()) {
+        msg.textContent = `❌ Kód ${code} už existuje.`;
+        msg.style.color = '#dc2626';
+        return;
+      }
+
+      await update(codeRef, {
+        amount, active: true, maxUses, usedCount: 0, expiresAt,
+        createdBy: localStorage.getItem('playerNick') || 'admin',
+        createdAt: Date.now(), redeemed: {}
+      });
+
+      msg.textContent = `✅ Kód ${code} vytvorený (${amount}§).`;
+      msg.style.color = 'var(--accent-3)';
+      codeInput.value = ''; amountInput.value = 25; maxUsesInput.value = ''; expiresInput.value = '';
+
+      const listEl = panel.querySelector('#promoList');
+      if (listEl.style.display !== 'none') await loadPromoList(panel, db, ref, get, update);
+    };
+
+    // Zoznam promo kódov
+    panel.querySelector('#listPromoBtn').onclick = async () => {
+      const listEl = panel.querySelector('#promoList');
+      const isHidden = listEl.style.display === 'none';
+      if (!isHidden) { listEl.style.display = 'none'; return; }
+      listEl.style.display = 'block';
+      await loadPromoList(panel, db, ref, get, update);
+    };
   }
+}
+
+async function loadPromoList(panel, db, ref, get, update) {
+  const listEl = panel.querySelector('#promoList');
+  listEl.innerHTML = '<div class="small muted">Načítavam...</div>';
+
+  const snap = await get(ref(db, 'promoCodes'));
+  const codes = snap.val() || {};
+  const entries = Object.entries(codes).sort(([a], [b]) => a.localeCompare(b));
+
+  if (!entries.length) {
+    listEl.innerHTML = '<div class="small muted">Zatiaľ žiadne kódy.</div>';
+    return;
+  }
+
+  listEl.innerHTML = entries.map(([code, c]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:6px 8px;border-bottom:1px solid var(--card-border);font-size:13px">
+      <div>
+        <strong>${code}</strong>
+        <span class="small muted" style="margin-left:6px">${c.amount}§ · ${c.usedCount || 0}/${c.maxUses ?? '∞'} · ${c.active ? '🟢' : '🔴'}</span>
+      </div>
+      <button class="btn promo-toggle-btn" data-code="${code}" data-active="${c.active ? '1' : '0'}" style="font-size:11px;padding:3px 8px">
+        ${c.active ? 'Deaktivovať' : 'Aktivovať'}
+      </button>
+    </div>
+  `).join('');
+
+  listEl.querySelectorAll('.promo-toggle-btn').forEach(btn => {
+    btn.onclick = async () => {
+      const code = btn.dataset.code;
+      const nowActive = btn.dataset.active === '1';
+      await update(ref(db, `promoCodes/${code}`), { active: !nowActive });
+      await loadPromoList(panel, db, ref, get, update);
+    };
+  });
 }
 
 /* =====================================================
@@ -1290,6 +1554,12 @@ function attachEvents() {
 
   /* 🔥 Zobraz pečate hráča */
   displayPlayerSeals();
+
+  /* 🔥 Získaj § (reklamy + promo kódy) */
+  const earnBtn = $('earnBtn');
+  if (earnBtn) {
+    earnBtn.addEventListener('click', openEarnModal);
+  }
 
   /* 🔥 Modal prístupového kódu */
   const loginDeviceBtn = $('loginDeviceBtn');

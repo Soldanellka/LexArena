@@ -93,7 +93,7 @@ export const ECONOMY_CONFIG = {
     big:    { sg: 800, eur: 9.99 }
   },
   ADS: {
-    ENABLED: false,           // zatiaľ vypnuté – žiadne reklamy v UI
+    ENABLED: true,            // "Získaj §" – zatiaľ placeholder videami, nie skutočným SDK
     REWARD: 3,                // § za pozretie odmeňovanej reklamy (rewarded ad)
     DAILY_MAX: 3              // max reklám denne (t. j. max +9§/deň z reklám)
   }
