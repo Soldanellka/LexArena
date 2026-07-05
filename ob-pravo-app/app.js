@@ -9,13 +9,15 @@ const CONFIG = {
     label: 'Hmotné právo',
     path: 'data/hmotne/',
     count: 40,
-    emoji: '⚖️'
+    emoji: '⚖️',
+    reportArea: 'Občianske právo hmotné'
   },
   procesne: {
     label: 'Procesné právo',
     path: 'data/procesne/',
     count: 45,
-    emoji: '📋'
+    emoji: '📋',
+    reportArea: 'Občianske právo procesné'
   }
 };
 
@@ -250,6 +252,7 @@ function renderQuestion() {
   // Otázka
   $('questionNumber').textContent = `Otázka ${q.current + 1}`;
   $('questionText').textContent = question.question;
+  setupReportButton(question);
 
   // Možnosti
   const grid = $('optionsGrid');
@@ -288,6 +291,25 @@ function renderQuestion() {
   nav.style.display = answered !== null ? 'flex' : 'none';
   $('prevQBtn').disabled = q.current === 0;
   $('nextQBtn').textContent = q.current === total - 1 ? 'Výsledky →' : 'Ďalšia →';
+}
+
+/* ============================================================
+   NAHLÁSENIE PRÁVNEJ NEZROVNALOSTI
+   ob-pravo-app je samostatná stránka bez vlastného reportModalu
+   (ten žije v hlavnom index.html), preto otvárame hlavnú stránku
+   v novej karte s parametrami na predvyplnenie formulára.
+============================================================ */
+function setupReportButton(question) {
+  const btn = $('questionReportBtn');
+  if (!btn) return;
+  btn.onclick = () => {
+    const okruh = state.okruhy[state.currentOkruh];
+    const cfg = CONFIG[state.area];
+    const url = `/?report=1&area=${encodeURIComponent(cfg.reportArea)}` +
+      `&src=${encodeURIComponent(okruh ? okruh._file || '' : '')}` +
+      `&qtext=${encodeURIComponent(question.question || '')}`;
+    window.open(url, '_blank');
+  };
 }
 
 function selectAnswer(optIdx) {

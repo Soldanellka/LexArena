@@ -1108,6 +1108,44 @@ body {
 .type-unclear      { background: rgba(99,102,241,0.1); color: #6366f1; }
 .type-other        { background: rgba(100,116,139,0.1); color: #64748b; }
 
+/* Audit otázok: tlačidlo nahlásenia + pečať pri otázke */
+.question-box {
+  position: relative;
+}
+
+.report-q-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--muted, #888);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.report-q-btn:hover {
+  color: #f08aa6;
+}
+
+.seal-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.55);
+  color: #8a6d1a;
+  white-space: nowrap;
+}
+
 /* Súdna sieň panel */
 .courtroom-panel {
   max-width: 720px !important;

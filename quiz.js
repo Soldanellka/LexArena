@@ -13,9 +13,19 @@ import {
 } from './state.js';
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
-import { openReportModal } from './reports.js';
+import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js';
 import { playSound } from './audio.js';
 import { econEnergy, econSpend, ECONOMY_CONFIG } from './scripts/economy.js';
+
+const SEAL_EMOJI = { bronze: '🥉', silver: '🥈', gold: '🥇', academic: '🎓' };
+
+/* Oblasť aktuálnej otázky – funguje pre študijný aj duelový režim. */
+function resolveAreaTitle() {
+  return (window.currentDuelMeta && window.currentDuelMeta.areaTitle) ||
+    (window.currentDuel && window.currentDuel.areaTitle) ||
+    window.currentAreaTitle ||
+    (selectedArea ? selectedArea.title : 'Neznáma oblasť');
+}
 
 /* =========================
    Štart kvízu (študijný)
@@ -117,6 +127,20 @@ export function renderQuestion(first = false){
       if (oldReport) oldReport.remove();
       const oldHint = parent.querySelector('#hint5050Btn');
       if (oldHint) oldHint.remove();
+      const oldSeal = parent.querySelector('#questionSealBadge');
+      if (oldSeal) oldSeal.remove();
+
+      /* 🏅 Pečať auditu – ak má otázka schválené nahlásenie (z cache, žiadne čítanie Firebase tu) */
+      const areaTitle = resolveAreaTitle();
+      const questionKey = makeQuestionKey(q.source, q.q || q.question || '');
+      const seal = getQuestionSeal(areaTitle, questionKey);
+      if (seal) {
+        const badge = document.createElement('div');
+        badge.id = 'questionSealBadge';
+        badge.className = 'seal-badge';
+        badge.textContent = `${SEAL_EMOJI[seal.seal] || '🥉'} Auditované · ${seal.nick}${seal.byGarant ? ' 🎓' : ''}`;
+        parent.appendChild(badge);
+      }
 
       /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
       const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
@@ -147,14 +171,14 @@ export function renderQuestion(first = false){
 
       const reportBtn = document.createElement('button');
       reportBtn.id = 'reportQuestionBtn';
-      reportBtn.className = 'btn';
-      reportBtn.textContent = 'Nahlásiť právnu nezrovnalosť';
-      reportBtn.style.marginTop = '10px';
+      reportBtn.className = 'report-q-btn';
+      reportBtn.textContent = '⚖️ Nahlásiť právnu nezrovnalosť';
 
       reportBtn.addEventListener('click', () => {
         const currentQ = quiz.questions[quiz.index];
         openReportModal({
-          questionId: currentQ?.id || null,
+          area: resolveAreaTitle(),
+          questionId: makeQuestionKey(currentQ?.source, currentQ?.q || currentQ?.question || ''),
           questionText: currentQ?.q || currentQ?.question || ''
         });
       });
@@ -397,6 +421,7 @@ window.startDuelQuiz = function(questions){
     options: Array.isArray(q.options) ? q.options : [],
     correct: typeof q.correct === 'number' ? q.correct : 0,
     id: q.id || null,
+    source: q.source || null,
     selectedIndex: null
   }));
 

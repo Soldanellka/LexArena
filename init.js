@@ -5,7 +5,7 @@ import { setParagrafy } from './state.js';
 import { showRewardToast } from './ui.js';
 import { renderAreas, renderModules } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
-import { loadReports } from './reports.js';
+import { loadReports, openReportModal, makeQuestionKey, initSealCache } from './reports.js';
 import { loadAnsweredCases } from './cases.js';
 import { applyTheme } from './theme.js';
 import { nextQ, prevQ } from './quiz.js';
@@ -197,8 +197,14 @@ export function init() {
     /* 🔹 Výzva na duel cez zdieľateľný link (?duel=ID) */
     checkDuelChallengeLink();
 
+    /* 🔹 Nahlásenie z inej stránky (Bifľovačka, ob-pravo-app) cez ?report=1&area=&src=&qtext= */
+    checkReportLink();
+
     /* 🔹 Avatar systém */
     initAvatarSystem();
+
+    /* 🔹 Pečate na otázkach – jedno načítanie reports/ (bez N čítaní per otázka) */
+    initSealCache();
 
     /* 🔹 Lazy vyhodnotenie týždenného/mesačného rebríčka (bez servera/cronu) */
     econSettleLeaderboards();
@@ -1035,6 +1041,36 @@ function openLoginCodeModal() {
 /* =====================================================
    VÝZVA NA DUEL CEZ ZDIEĽATEĽNÝ LINK (?duel=ID)
    ===================================================== */
+/* ============================================================
+   NAHLÁSENIE Z INEJ STRÁNKY (Bifľovačka, ob-pravo-app)
+   Tieto stránky nemajú vlastný reportModal, preto pri kliknutí na
+   ich tlačidlo nahlásenia otvoria hlavnú stránku s parametrami
+   ?report=1&area=...&src=...&qtext=... – tu ich spracujeme
+   a z URL vyčistíme.
+============================================================ */
+function checkReportLink() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('report') !== '1') return;
+
+  const area = params.get('area') || '';
+  const src = params.get('src') || '';
+  const qtext = params.get('qtext') || '';
+
+  openReportModal({
+    area,
+    questionId: makeQuestionKey(src, qtext),
+    questionText: qtext
+  });
+
+  params.delete('report');
+  params.delete('area');
+  params.delete('src');
+  params.delete('qtext');
+  const rest = params.toString();
+  const cleanUrl = window.location.pathname + (rest ? `?${rest}` : '') + window.location.hash;
+  history.replaceState(null, '', cleanUrl);
+}
+
 async function checkDuelChallengeLink() {
   const params = new URLSearchParams(window.location.search);
   const duelId = params.get('duel');

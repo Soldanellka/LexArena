@@ -72,6 +72,9 @@
         <button class="btn" id="mtSpeakBtn" type="button">🔊 Prečítať nahlas</button>
       </div>
       <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si túto vetu/definíciu…</div>
+      <div style="text-align:center;margin-top:6px">
+        <button class="report-q-btn" id="mtReportBtn" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+      </div>
     </div>
 
     <!-- Fáza 2: odpoveď -->
@@ -281,6 +284,24 @@ function escapeHtml(s) {
 }
 
 /* ============================================================
+   Nahlásenie právnej nezrovnalosti – táto stránka nemá vlastný
+   reportModal (ten žije v index.html), preto otvárame hlavnú
+   stránku v novej karte s parametrami na predvyplnenie formulára.
+============================================================ */
+function setupReportButton() {
+  const btn = $('mtReportBtn');
+  btn.addEventListener('click', () => {
+    if (!currentItem) return;
+    const area = getAreaBySlug(slug);
+    const qtext = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
+    const url = `/?report=1&area=${encodeURIComponent(area ? area.name : '')}` +
+      `&src=${encodeURIComponent(currentItem.source || '')}` +
+      `&qtext=${encodeURIComponent(qtext)}`;
+    window.open(url, '_blank');
+  });
+}
+
+/* ============================================================
    Zvuk: prehratie definície (SpeechSynthesis)
 ============================================================ */
 function setupSpeakButton() {
@@ -341,6 +362,7 @@ function setupMicButton() {
 document.addEventListener('DOMContentLoaded', () => {
   setupSpeakButton();
   setupMicButton();
+  setupReportButton();
 
   if (slug) {
     startArea(slug);
