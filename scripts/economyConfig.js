@@ -1,132 +1,379 @@
 'use strict';
 
 /* ============================================================
-   LEXARENA – EKONOMICKÁ KONFIGURÁCIA
-   Jediný zdroj pravdy pre všetky čísla ekonomiky (§ + energia).
-   Žiaden modul nesmie mať vlastné hardcodované ceny/odmeny –
-   všetko sa číta odtiaľto (cez economy.js, prípadne priamo tu
-   pre avatar.js – pozri poznámku nižšie).
+   LEXARENA – ECONOMY ENGINE
+   Jediná brána pre § a energiu avatara. Žiaden iný modul
+   nesmie zapisovať § ani energiu priamo do Firebase – všetko
+   ide cez econAward / econSpend / econEnergy / econGrant nižšie.
 
-   Prečo samostatný súbor a nie priamo v economy.js:
-   economy.js interne importuje funkcie z avatar.js (aby UI
-   ostalo synchronizované), a avatar.js zároveň potrebuje túto
-   konfiguráciu (FEED_COST, STREAK, ...). Keby ECONOMY_CONFIG
-   žil v economy.js, vznikol by cyklický import
-   avatar.js ↔ economy.js. Tento súbor je list v strome importov
-   (nič neimportuje z avatar.js/economy.js), takže cyklus nehrozí.
-   economy.js re-exportuje ECONOMY_CONFIG, takže zvyšok appky
-   naďalej importuje všetko len z economy.js.
+   Hodnota § = vzácnosť §. Bežný aktívny deň má skončiť približne
+   na nule; na drahé veci (streak shield, prestige avatar, balíky)
+   hráč šetrí alebo si ich neskôr kúpi.
 ============================================================ */
 
-import { ref, get, push }
+import { ref, get, set, update, runTransaction }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-export const ECONOMY_CONFIG = {
-  // ENERGIA (náklady v % z max 100)
-  ENERGY: {
-    DUEL: -5,              // odohratý duel – výzva aj prijatie
-    BIFLOVACKA_CARD: -1,   // za kartičku (pôvodne −2; učenie je jadro appky, netrestať –
-                           //  50 kartičiek = polovica energie, nie celá)
-    MEMORY_SET: -2,        // za dohranú sadu pexesa
-    CASES_SET: -4,         // za dohranú sadu prípadov
-    FEED_COST: 12,         // § za nakŕmenie
-    FEED_TO: 100           // kŕmenie doplní na 100 %
-  },
+import { awardParagrafy, spendParagrafy, deductEnergy, canPlayDuel }
+from './avatar.js';
+import { ECONOMY_CONFIG, getRole, logTransaction } from './economyConfig.js';
+import { showRewardToast } from '../ui.js';
 
-  // ODMENY §
-  REWARDS: {
-    DUEL_WIN: 7,
-    DUEL_DRAW: 3,
-    DUEL_LOSS: 0,          // pôvodne +1; pri +1 je duel VŽDY ziskový (20 duelov na plnú
-                           //  energiu = min. +20§ vs. kŕmenie 12§) a § stráca hodnotu
-    BIFLOVACKA_OKRUH: 2,   // NOVÉ: za dokončený okruh so skóre ≥ 80 % – priebežná motivácia
-    BIFLOVACKA_AREA: 10,   // 100 % celej oblasti (pôvodný návrh zachovaný)
-    MEMORY_PERFECT: 5,     // sada bez chyby
-    CASES_SET: 5,          // dokončená sada
-    CASES_PERFECT: 10,     // sada na 100 %
-    CHALLENGE_NEW: 7,      // prijatie duel-linku novým nickom (zjednotiť s existujúcou logikou)
-    CHALLENGE_EXISTING: 1,
-    VIDEO: 12              // odmena za náukové video – JEDNORAZOVO na video a nick
-    // TODO (Audit otázok): až sa rozhodne odmeňovať § za schválené nahlásenia,
-    // pridaj REWARDS.REPORT_APPROVED sem a zavolaj econAward(reporterNick,
-    // REWARDS.REPORT_APPROVED, 'za schválené nahlásenie') z openVerdictModal()
-    // v index.html (vetva decision === 'approved', vedľa awardSeal logiky).
-    // Zatiaľ zámerne bez odmeny – rieši sa samostatným zadaním.
-  },
+export { ECONOMY_CONFIG };
 
-  // STREAK – krivka so stropom (pôvodne 1–50§ lineárne; 50§/deň = 1500§/mesiac zadarmo
-  //  → inflácia, balíky by nemali zmysel. Krivka so stropom drží hodnotu §.)
-  STREAK: {
-    BASE: [1, 2, 3, 4, 5, 6, 7],   // deň 1–7
-    AFTER: 7,                      // deň 8+ = 7§/deň
-    MILESTONES: { 7: 10, 30: 50 }  // bonus navyše v míľnikový deň
-  },
+/* ---------- HELPERY ---------- */
+function getDb() { return window.db || null; }
+function getNick() { return localStorage.getItem('playerNick') || null; }
+function todayKey() { return new Date().toISOString().slice(0, 10); }
 
-  // REBRÍČKY
-  LEADERBOARD: {
-    WEEKLY:  [50, 30, 10],    // 1., 2., 3. miesto; vyhodnotiť po nedeli 24:00
-    MONTHLY: [200, 100, 50]   // po poslednom dni mesiaca 24:00
-  },
+async function getBalance(db, nick) {
+  const snap = await get(ref(db, `users/${nick}/paragrafy`));
+  return snap.exists() ? snap.val() : 0;
+}
 
-  // ROLE
-  ROLES: {
-    ADMIN_UNLIMITED: true,
-    GARANT_DAILY_GRANT: 50    // koľko § môže garant rozdať denne
-  },
+/* Priamy zápis § pre ĽUBOVOĽNÝ nick (napr. súper v dueli, ktorý
+   nesedí za týmto zariadením) – avatar.js vie pracovať len
+   s aktuálnym lokálnym hráčom. */
+async function awardParagrafyRemote(db, nick, amount) {
+  const userRef = ref(db, `users/${nick}`);
+  const snap = await get(userRef);
+  const data = snap.exists() ? snap.val() : {};
+  const current = data.paragrafy || 0;
+  const newTotal = current + amount;
+  await update(userRef, {
+    paragrafy: newTotal,
+    totalParagraphsEarned: (data.totalParagraphsEarned || 0) + amount,
+    lastParUpdate: Date.now()
+  });
+  return newTotal;
+}
 
-  // ANTI-ABUSE
-  LIMITS: {
-    DAILY_EARN_CAP: 60        // max § z aktivít/deň; NEPOČÍTA sa: streak, rebríčky, videá
-  },
+async function spendParagrafyRemote(db, nick, amount) {
+  const current = await getBalance(db, nick);
+  if (current < amount) return { ok: false, balanceAfter: current };
+  const balanceAfter = current - amount;
+  await update(ref(db, `users/${nick}`), { paragrafy: balanceAfter, lastParUpdate: Date.now() });
+  return { ok: true, balanceAfter };
+}
 
-  // SINKY – aby mal hráč na čo míňať (hodnota § rastie s možnosťami minúť)
-  SINKS: {
-    QUIZ_HINT_5050: 3,        // nápoveda 50:50 v duelovom kvíze
-    STREAK_SHIELD: 5,         // existuje v avatar.js – zjednotiť sem
-    PRESTIGE_AVATAR_MIN: 300  // cenové pásmo prestige avatarov (300–500§), viď Sinky
-  },
+/* Dorovná denný strop zárobku pre daný nick. Vráti povolenú (prípadne
+   orezanú) sumu, alebo null ak je strop už vyčerpaný. */
+async function applyDailyCap(db, nick, amount) {
+  const cap = ECONOMY_CONFIG.LIMITS.DAILY_EARN_CAP;
+  const capRef = ref(db, `users/${nick}/dailyEarned/${todayKey()}`);
+  const snap = await get(capRef);
+  const earned = snap.exists() ? snap.val() : 0;
 
-  // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
-  PACKS: {
-    small:  { sg: 100, eur: 1.99 },
-    medium: { sg: 300, eur: 4.99 },
-    big:    { sg: 800, eur: 9.99 }
-  },
-  ADS: {
-    ENABLED: false,           // zatiaľ vypnuté – žiadne reklamy v UI
-    REWARD: 3,                // § za pozretie odmeňovanej reklamy (rewarded ad)
-    DAILY_MAX: 3              // max reklám denne (t. j. max +9§/deň z reklám)
+  if (earned >= cap) {
+    if (nick === getNick()) {
+      showRewardToast(`Dosiahol/a si dnešný limit ${cap}§ z aktivít. Streak, rebríčky a videá idú ďalej!`);
+    }
+    return null;
   }
-};
 
-/* ============================================================
-   ROLA HRÁČA – vždy zo skutočného Firebase záznamu
-   (nie z lokálneho "view" prepínača v localStorage, ten slúži
-   len na náhľad UI iných rolí a dal by sa zneužiť na obídenie
-   ekonomiky).
-============================================================ */
-export async function getRole(nick) {
-  const db = window.db;
-  if (!db || !nick) return 'student';
-  try {
-    const snap = await get(ref(db, `users/${nick}/role`));
-    return snap.exists() ? snap.val() : 'student';
-  } catch (e) {
-    console.warn('economyConfig: čítanie role zlyhalo', e);
-    return 'student';
-  }
+  const allowed = Math.min(amount, cap - earned);
+  await set(capRef, earned + allowed);
+  return allowed;
 }
 
 /* ============================================================
-   TRANSAKČNÝ LOG – audit aj podklad pre budúcu monetizáciu.
-   users/{nick}/transactions (push): { ts, type, amount, reason, balanceAfter }
+   1️⃣ econAward – pripíše §
+   opts.skipCap = true pre streak, rebríčky, videá, reklamy, granty
 ============================================================ */
-export async function logTransaction(nick, entry) {
-  const db = window.db;
-  if (!db || !nick) return;
-  try {
-    await push(ref(db, `users/${nick}/transactions`), { ts: Date.now(), ...entry });
-  } catch (e) {
-    console.warn('economyConfig: zápis transakcie zlyhal', e);
+export async function econAward(nick, amount, reason = '', opts = {}) {
+  const db = getDb();
+  if (!db || !nick || !amount) return null;
+
+  const role = await getRole(nick);
+  const skipCap = !!opts.skipCap || role === 'admin';
+
+  let grantAmount = amount;
+  if (!skipCap) {
+    grantAmount = await applyDailyCap(db, nick, amount);
+    if (grantAmount === null) return null;
+  }
+  if (!grantAmount) return null;
+
+  let balanceAfter;
+  if (nick === getNick()) {
+    balanceAfter = await awardParagrafy(grantAmount, reason);
+  } else {
+    balanceAfter = await awardParagrafyRemote(db, nick, grantAmount);
+  }
+
+  await logTransaction(nick, { type: 'award', amount: grantAmount, reason, balanceAfter });
+  return balanceAfter;
+}
+
+/* ============================================================
+   2️⃣ econSpend – odpíše §, zlyhá pri nedostatku
+   admin: vždy zadarmo (bez odpočtu)
+============================================================ */
+export async function econSpend(nick, amount, reason = '') {
+  const db = getDb();
+  if (!db || !nick || !amount) return false;
+
+  const role = await getRole(nick);
+  if (role === 'admin') {
+    await logTransaction(nick, { type: 'spend', amount: 0, reason: `${reason} (admin zadarmo)`, balanceAfter: null });
+    return true;
+  }
+
+  if (nick === getNick()) {
+    const ok = await spendParagrafy(amount, reason);
+    if (!ok) return false;
+    const balanceAfter = await getBalance(db, nick);
+    await logTransaction(nick, { type: 'spend', amount, reason, balanceAfter });
+    return true;
+  }
+
+  const result = await spendParagrafyRemote(db, nick, amount);
+  if (!result.ok) return false;
+  await logTransaction(nick, { type: 'spend', amount, reason, balanceAfter: result.balanceAfter });
+  return true;
+}
+
+/* ============================================================
+   3️⃣ econEnergy – zmení energiu avatara (0–100)
+   Energia je viazaná na toto zariadenie (aktuálny lokálny hráč).
+============================================================ */
+export async function econEnergy(nick, delta, reason = '') {
+  if (!delta || nick !== getNick()) return;
+  const newEnergy = await deductEnergy(Math.abs(delta));
+  await logTransaction(nick, { type: 'energy', amount: delta, reason, balanceAfter: newEnergy });
+}
+
+/* ============================================================
+   4️⃣ econCanPlay – kontrola pred hraním (duel, bifľovačka,
+   memory, prípady). Vráti false + toast, ak avatar spí.
+============================================================ */
+export async function econCanPlay(activity = '') {
+  return await canPlayDuel();
+}
+
+/* ============================================================
+   5️⃣ VIDEÁ – jednorazová odmena na video a nick
+============================================================ */
+export async function econVideoReward(videoId) {
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick || !videoId) return false;
+
+  const claimedRef = ref(db, `users/${nick}/videoRewards/${videoId}`);
+  const already = await get(claimedRef);
+  if (already.exists()) {
+    showRewardToast('Odmenu za toto video si už získal/a.');
+    return false;
+  }
+
+  await set(claimedRef, true);
+  await econAward(nick, ECONOMY_CONFIG.REWARDS.VIDEO, 'za pozretie videa 🎬', { skipCap: true });
+  return true;
+}
+
+/* Len na čítanie – pre UI (napr. zobrazenie "už vyzdvihnuté" v modáli videa). */
+export async function econIsVideoClaimed(videoId) {
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick || !videoId) return false;
+  const snap = await get(ref(db, `users/${nick}/videoRewards/${videoId}`));
+  return snap.exists();
+}
+
+/* ============================================================
+   6️⃣ REKLAMY – príprava bez zobrazenia v UI (ADS.ENABLED=false)
+============================================================ */
+export async function econWatchAd() {
+  if (!ECONOMY_CONFIG.ADS.ENABLED) return { available: false };
+
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick) return { available: false };
+
+  const countRef = ref(db, `users/${nick}/adsWatched/${todayKey()}`);
+  const snap = await get(countRef);
+  const count = snap.exists() ? snap.val() : 0;
+  if (count >= ECONOMY_CONFIG.ADS.DAILY_MAX) {
+    return { available: false, reason: 'daily_max' };
+  }
+
+  // TODO: pri aktivácii monetizácie sem doplniť volanie SDK poskytovateľa
+  // odmeňovanej reklamy, napr.:
+  //   const result = await adProvider.showRewardedAd();
+  //   if (!result.completed) return { available: false, reason: 'not_completed' };
+  await set(countRef, count + 1);
+  await econAward(nick, ECONOMY_CONFIG.ADS.REWARD, 'za pozretie reklamy', { skipCap: true });
+  return { available: true };
+}
+
+/* ============================================================
+   7️⃣ GARANT – denný limit rozdávania §
+============================================================ */
+export async function econGrant(fromGarant, toNick, amount) {
+  const db = getDb();
+  if (!db || !fromGarant || !toNick || !amount) return false;
+
+  const role = await getRole(fromGarant);
+  if (role !== 'garant' && role !== 'admin') {
+    showRewardToast('Len garant alebo admin môže rozdávať §.');
+    return false;
+  }
+
+  if (role === 'garant') {
+    const cap = ECONOMY_CONFIG.ROLES.GARANT_DAILY_GRANT;
+    const grantRef = ref(db, `users/${fromGarant}/dailyGrant/${todayKey()}`);
+    const snap = await get(grantRef);
+    const already = snap.exists() ? snap.val() : 0;
+    if (already + amount > cap) {
+      showRewardToast(`Denný limit garanta vyčerpaný (${cap}§).`);
+      return false;
+    }
+    await set(grantRef, already + amount);
+  }
+
+  await econAward(toNick, amount, `dar od garanta ${fromGarant}`, { skipCap: true });
+  await logTransaction(fromGarant, { type: 'grant', amount: -amount, reason: `dar pre ${toNick}`, balanceAfter: null });
+  return true;
+}
+
+/* ============================================================
+   8️⃣ REBRÍČKY – LAZY vyhodnotenie s ochranou proti dvojitej výplate
+============================================================ */
+function isoWeekInfo(date) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const week = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  return { year: d.getUTCFullYear(), week };
+}
+
+function getWeekStartLocal(date) {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = (day === 0 ? -6 : 1) - day;
+  d.setDate(d.getDate() + diff);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+function getPreviousWeekPeriod(now = new Date()) {
+  const thisWeekStart = getWeekStartLocal(now);
+  const prevWeekStart = new Date(thisWeekStart);
+  prevWeekStart.setDate(prevWeekStart.getDate() - 7);
+  const { year, week } = isoWeekInfo(prevWeekStart);
+  return {
+    key: `W-${year}-${String(week).padStart(2, '0')}`,
+    start: prevWeekStart.getTime(),
+    end: thisWeekStart.getTime(),
+    rewardTable: ECONOMY_CONFIG.LEADERBOARD.WEEKLY,
+    label: 'týždennom'
+  };
+}
+
+function getPreviousMonthPeriod(now = new Date()) {
+  const thisMonthStart = new Date(now.getFullYear(), now.getMonth(), 1, 0, 0, 0, 0);
+  const prevMonthStart = new Date(now.getFullYear(), now.getMonth() - 1, 1, 0, 0, 0, 0);
+  return {
+    key: `M-${prevMonthStart.getFullYear()}-${String(prevMonthStart.getMonth() + 1).padStart(2, '0')}`,
+    start: prevMonthStart.getTime(),
+    end: thisMonthStart.getTime(),
+    rewardTable: ECONOMY_CONFIG.LEADERBOARD.MONTHLY,
+    label: 'mesačnom'
+  };
+}
+
+/* Rovnaká agregácia ako scripts/leaderboard.js (duels/{id}.result),
+   len ohraničená na konkrétne uzavreté obdobie [start, end). */
+function aggregateDuelStats(duelsData, start, end) {
+  const stats = {};
+  Object.values(duelsData || {}).forEach(duel => {
+    if (!duel || duel.status !== 'finished' || !duel.result) return;
+    if (!duel.finishedAt || duel.finishedAt < start || duel.finishedAt >= end) return;
+
+    const { firstPlayer, secondPlayer, winner } = duel.result;
+    if (!firstPlayer || !secondPlayer) return;
+
+    [firstPlayer, secondPlayer].forEach(p => {
+      if (!p || !p.nick || p.nick === 'null' || p.nick === 'Unknown') return;
+      if (!stats[p.nick]) stats[p.nick] = { nick: p.nick, points: 0 };
+      stats[p.nick].points += (typeof p.score === 'number' ? p.score : 0);
+    });
+  });
+  return Object.values(stats).sort((a, b) => b.points - a.points);
+}
+
+/* Transaction lock na rewards/{key}/evaluated – kto prvý zapíše true,
+   ten vyhodnocuje; ostatní (paralelne otvorení hráči) preskočia. */
+async function settlePeriod(db, period) {
+  const evaluatedRef = ref(db, `rewards/${period.key}/evaluated`);
+
+  /* POZOR na optimistický beh Firebase transakcií: callback sa najprv
+     spustí s lokálnou (často null) hodnotou a až potom so serverovou.
+     Preto sa NESMIE rozhodovať podľa vlajky nastavenej v callbacku –
+     jediný spoľahlivý signál je result.committed. */
+  const result = await runTransaction(evaluatedRef, (current) => {
+    if (current === true) return; // abort – už vyhodnotené
+    return true;
+  });
+
+  if (!result || !result.committed) return;
+
+  const duelsSnap = await get(ref(db, 'duels'));
+  const duelsData = duelsSnap.exists() ? duelsSnap.val() : {};
+  const top3 = aggregateDuelStats(duelsData, period.start, period.end).slice(0, 3);
+
+  const winners = [];
+  for (let i = 0; i < top3.length; i++) {
+    const amount = period.rewardTable[i] || 0;
+    if (amount > 0) {
+      await econAward(top3[i].nick, amount, `${i + 1}. miesto v ${period.label} rebríčku`, { skipCap: true });
+      winners.push({ nick: top3[i].nick, amount, place: i + 1 });
+    }
+  }
+
+  await set(ref(db, `rewards/${period.key}/winners`), winners);
+}
+
+/* Ak je aktuálny hráč medzi výhercami a ešte to nevidel, zobraz toast raz. */
+async function announceLeaderboardWinIfAny(db, periods) {
+  const nick = getNick();
+  if (!nick) return;
+
+  for (const period of periods) {
+    const winnersSnap = await get(ref(db, `rewards/${period.key}/winners`));
+    if (!winnersSnap.exists()) continue;
+
+    const winners = winnersSnap.val() || [];
+    const mine = winners.find(w => w.nick === nick);
+    if (!mine) continue;
+
+    const seenRef = ref(db, `rewards/${period.key}/seen/${nick}`);
+    const seenSnap = await get(seenRef);
+    if (seenSnap.exists()) continue;
+
+    await set(seenRef, true);
+    showRewardToast(`🏆 Skončil/a si ${mine.place}. v ${period.label} rebríčku! +${mine.amount}§`);
   }
 }
+
+export async function econSettleLeaderboards() {
+  const db = getDb();
+  if (!db) return;
+
+  const periods = [getPreviousWeekPeriod(), getPreviousMonthPeriod()];
+  for (const period of periods) {
+    await settlePeriod(db, period);
+  }
+  await announceLeaderboardWinIfAny(db, periods);
+}
+
+window.econAward = econAward;
+window.econSpend = econSpend;
+window.econEnergy = econEnergy;
+window.econCanPlay = econCanPlay;
+window.econVideoReward = econVideoReward;
+window.econIsVideoClaimed = econIsVideoClaimed;
+window.econWatchAd = econWatchAd;
+window.econGrant = econGrant;
+window.econSettleLeaderboards = econSettleLeaderboards;
