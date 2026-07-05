@@ -2,6 +2,7 @@
 
 import { $, loadParagrafy, escapeHtml } from './core.js';
 import { setParagrafy } from './state.js';
+import { showRewardToast } from './ui.js';
 import { renderAreas, renderModules } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
 import { loadReports } from './reports.js';
@@ -11,6 +12,9 @@ import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
 import { initAvatarSystem, selectAvatar } from './scripts/avatar.js';
+import {
+  econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG
+} from './scripts/economy.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -75,6 +79,7 @@ async function openAvatarSelectModal() {
     { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých', locked: false },
     { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: `Za 100§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 100 },
     { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
+    { id: 'prestige',  name: 'Prestige avatar',  emoji: '✨',   desc: `Čoskoro – od ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATAR_MIN}§`, locked: true, comingSoon: true },
   ];
 
   const modal = document.createElement('div');
@@ -140,6 +145,11 @@ async function openAvatarSelectModal() {
     };
     card.onclick = async () => {
       const avatarId = card.dataset.id;
+      const avatarDef = AVATARS.find(av => av.id === avatarId);
+      if (avatarDef && avatarDef.comingSoon) {
+        showRewardToast('✨ Prestige avatary čoskoro!');
+        return;
+      }
       await selectAvatar(avatarId);
       modal.style.display = 'none';
     };
@@ -189,6 +199,9 @@ export function init() {
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
+
+    /* 🔹 Lazy vyhodnotenie týždenného/mesačného rebríčka (bez servera/cronu) */
+    econSettleLeaderboards();
 
     /* 🔹 Video systém */
     initVideoSystem();
@@ -313,7 +326,7 @@ const VIDEO_CONFIG = {
 let videoRewardTimer = null;
 let currentVideoId = null;
 
-window.openVideo = function(videoId) {
+window.openVideo = async function(videoId) {
   const cfg = VIDEO_CONFIG[videoId];
   if (!cfg) return;
 
@@ -330,8 +343,9 @@ window.openVideo = function(videoId) {
   title.textContent = cfg.title;
   player.src = cfg.url;
 
-  // Skontroluj či odmena už bola vyzdvihnutá
-  const claimed = localStorage.getItem(`video_claimed_${videoId}`);
+  // Odmena je viazaná na nick vo Firebase (users/{nick}/videoRewards/{videoId}),
+  // nie na toto zariadenie – funguje aj po zmazaní localStorage/inom prehliadači.
+  const claimed = await econIsVideoClaimed(videoId);
 
   if (claimed) {
     claimBtn.style.display = 'none';
@@ -370,35 +384,8 @@ function initVideoSystem() {
     claimBtn.addEventListener('click', async () => {
       if (!currentVideoId) return;
 
-      // Ulož do localStorage (jednoduchá ochrana)
-      localStorage.setItem(`video_claimed_${currentVideoId}`, Date.now());
-
-      // Prideľ 12§ - priamo cez Firebase ako fallback
-      try {
-        if (typeof window.awardParagrafy === 'function') {
-          await window.awardParagrafy(12, 'za pozretie videa 🎬');
-        } else {
-          // Fallback - priamy zápis do Firebase
-          const nick = localStorage.getItem('playerNick');
-          const db = window.db;
-          if (db && nick) {
-            const { ref, get, update } = await import(
-              "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
-            );
-            const snap = await get(ref(db, `users/${nick}/paragrafy`));
-            const current = snap.exists() ? snap.val() : 0;
-            await update(ref(db, `users/${nick}`), {
-              paragrafy: current + 12,
-              lastParUpdate: Date.now()
-            });
-            const el = document.getElementById('parCount') || document.getElementById('paragrafValue');
-            if (el) el.textContent = current + 12;
-          }
-        }
-        console.log('✅ +12§ za video pridelených');
-      } catch(e) {
-        console.error('❌ Chyba pri prideľovaní §:', e);
-      }
+      const awarded = await econVideoReward(currentVideoId);
+      if (!awarded) return; // už vyzdvihnuté (toast zobrazil economy.js)
 
       // Aktualizuj UI
       claimBtn.style.display = 'none';
@@ -419,9 +406,9 @@ function initVideoSystem() {
     });
   }
 
-  // Obnov stav claimedvideí z localStorage
-  Object.keys(VIDEO_CONFIG).forEach(videoId => {
-    if (localStorage.getItem(`video_claimed_${videoId}`)) {
+  // Obnov stav vyzdvihnutých videí (Firebase = zdroj pravdy)
+  Object.keys(VIDEO_CONFIG).forEach(async videoId => {
+    if (await econIsVideoClaimed(videoId)) {
       const badge = document.getElementById(`reward-${videoId}`);
       if (badge) badge.classList.add('claimed');
     }
@@ -1234,7 +1221,10 @@ function attachEvents() {
   /* 🔥 Kartičky Memory */
   const openMemoryBtn = $('openMemoryBtn');
   if (openMemoryBtn) {
-    openMemoryBtn.addEventListener('click', () => {
+    openMemoryBtn.addEventListener('click', async () => {
+      const canPlay = await econCanPlay('memory');
+      if (!canPlay) return;
+
       const modal = $('memoryModal');
       if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
 
@@ -1254,7 +1244,10 @@ function attachEvents() {
 
   const restartMemoryBtn = $('restartMemory');
   if (restartMemoryBtn) {
-    restartMemoryBtn.addEventListener('click', () => {
+    restartMemoryBtn.addEventListener('click', async () => {
+      const canPlay = await econCanPlay('memory');
+      if (!canPlay) return;
+
       const areaTiles = window.__areaTilesForGames;
       const areaQs = window.__areaQuestionsForGames;
       if (areaTiles && areaTiles.length && typeof window.buildMemoryFromTiles === 'function') {
@@ -1278,7 +1271,10 @@ function attachEvents() {
   /* 🔥 Prípady z praxe */
   const openCasesBtn = $('openCasesBtn');
   if (openCasesBtn) {
-    openCasesBtn.addEventListener('click', () => {
+    openCasesBtn.addEventListener('click', async () => {
+      const canPlay = await econCanPlay('cases');
+      if (!canPlay) return;
+
       const modal = $('casesModal');
       if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); }
 
