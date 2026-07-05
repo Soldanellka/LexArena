@@ -664,6 +664,19 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
         </button>
         <div id="feedbackList" style="display:none;max-height:250px;overflow-y:auto"></div>
       ` : ''}
+      <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
+        <div style="font-weight:600;margin-bottom:6px">💰 Poslať § hráčovi</div>
+        <input id="grantNickInput" class="form-input" type="text"
+          placeholder="Nick hráča..." style="margin-bottom:6px"/>
+        <div style="display:flex;gap:6px">
+          <input id="grantAmountInput" class="form-input" type="number" min="1"
+            placeholder="Suma §" style="width:100px"/>
+          <button class="btn btn-primary" id="grantSendBtn">Poslať</button>
+        </div>
+        <div id="grantMsg" class="small" style="margin-top:6px;color:var(--muted)">
+          ${role === 'garant' ? 'Denný limit garanta: 50§.' : 'Admin – bez limitu.'}
+        </div>
+      </div>
       <div class="small muted" style="margin-top:8px">
         ${role === 'admin'
           ? 'Ako admin môžeš udeľovať rolu garanta hráčom.'
@@ -671,6 +684,40 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
       </div>
     </div>
   `;
+
+  // 💰 Poslať § – admin aj garant (limit garanta rieši econGrant)
+  const grantBtn = panel.querySelector('#grantSendBtn');
+  if (grantBtn) {
+    grantBtn.onclick = async () => {
+      const toNick = panel.querySelector('#grantNickInput').value.trim();
+      const amount = parseInt(panel.querySelector('#grantAmountInput').value, 10);
+      const msg = panel.querySelector('#grantMsg');
+      if (!toNick) { msg.textContent = 'Zadaj nick hráča.'; return; }
+      if (!amount || amount < 1) { msg.textContent = 'Zadaj platnú sumu.'; return; }
+
+      const me = localStorage.getItem('playerNick');
+      // Over, že hráč existuje – preklepy by vytvorili § "do vzduchu"
+      try {
+        const { ref: r2, get: g2 } = await import(
+          "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+        );
+        const snap = await g2(r2(window.db, `users/${toNick}`));
+        if (!snap.exists()) { msg.textContent = `❌ Hráč "${toNick}" neexistuje.`; return; }
+      } catch (e) { msg.textContent = 'Chyba pripojenia.'; return; }
+
+      grantBtn.disabled = true;
+      const ok = await window.econGrant(me, toNick, amount);
+      grantBtn.disabled = false;
+      if (ok) {
+        msg.textContent = `✅ Poslané ${amount}§ hráčovi ${toNick}.`;
+        msg.style.color = 'var(--accent-3, #15803d)';
+        panel.querySelector('#grantAmountInput').value = '';
+      } else {
+        msg.textContent = '❌ Nepodarilo sa poslať (limit alebo chyba).';
+        msg.style.color = '#b91c1c';
+      }
+    };
+  }
 
   if (role === 'admin') {
     // Nastaviť garanta
