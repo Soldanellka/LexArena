@@ -405,6 +405,37 @@ async function fbImport() {
   return await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
 }
 
+/* ── PEČATE ── */
+const SEALS = {
+  bronze:   { label: '🥉 Bronzová pečať',   min: 1,  max: 4 },
+  silver:   { label: '🥈 Strieborná pečať', min: 5,  max: 14 },
+  gold:     { label: '🥇 Zlatá pečať',      min: 15, max: Infinity },
+  academic: { label: '🎓 Akademická pečať' } // garant/admin automaticky, bez počítania
+};
+const SEAL_EMOJI = { bronze: '🥉', silver: '🥈', gold: '🥇', academic: '🎓' };
+
+function getSealType(approvedCount, role) {
+  if (role === 'garant' || role === 'admin') return 'academic';
+  if (approvedCount >= SEALS.gold.min) return 'gold';
+  if (approvedCount >= SEALS.silver.min) return 'silver';
+  if (approvedCount >= SEALS.bronze.min) return 'bronze';
+  return null;
+}
+
+/* Skutočná rola (Firebase), nie lokálny "view" prepínač – ten sa dá zmeniť
+   v UI len na náhľad iných rolí a nesmie ovplyvniť schvaľovacie práva. */
+async function getRealRole(nick) {
+  const db = getDb();
+  if (!db || !nick) return 'student';
+  try {
+    const { ref, get } = await fbImport();
+    const snap = await get(ref(db, `users/${nick}/role`));
+    return snap.exists() ? snap.val() : 'student';
+  } catch (e) {
+    return 'student';
+  }
+}
+
 /* ── NAHLÁSENIE ── */
 window.openReportModal = function(prefill = {}) {
   let modal = document.getElementById('reportModalNew');
@@ -610,11 +641,11 @@ window.openCourtroomModal = async function() {
     const db = getDb();
     if (!db) { list.innerHTML = '<div class="small muted" style="text-align:center;padding:20px">Firebase nie je dostupná.</div>'; return; }
 
-    const { ref, get, update } = await fbImport();
+    const { ref, get } = await fbImport();
     const snap = await get(ref(db, 'reports'));
     const data = snap.val() || {};
-    const role = localStorage.getItem('playerRole') || 'student';
     const nick = getNick();
+    const role = await getRealRole(nick);
 
     const items = Object.entries(data)
       .filter(([,r]) => r.status === status)
@@ -628,28 +659,44 @@ window.openCourtroomModal = async function() {
     const typeLabel = { wrong_answer:'❌ Nesprávna odpoveď', outdated:'📅 Zastaraná info', unclear:'❓ Nejasné znenie', other:'📝 Iné' };
     const fmtDate = ts => { const d=new Date(ts); return d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear(); };
 
-    list.innerHTML = items.map(([id,r]) => `
+    list.innerHTML = items.map(([id,r]) => {
+      const canModerate = role === 'admin' || (role === 'garant' && r.nick !== nick);
+      const isOwnAsGarant = role === 'garant' && r.nick === nick;
+      const sealBadge = r.seal ? ` ${SEAL_EMOJI[r.seal.type] || ''}` : '';
+
+      let verdictHtml = '';
+      if (r.verdict) {
+        const roleIcon = r.verdict.role === 'garant' ? '🎓' : '⚖️';
+        const roleLabel = r.verdict.role === 'garant' ? 'garant' : 'admin';
+        verdictHtml = r.verdict.comment
+          ? `<div class="courtroom-verdict">📜 Verdikt (${roleLabel} ${roleIcon} ${r.verdict.by}): ${r.verdict.comment}</div>`
+          : `<div class="courtroom-verdict">📜 ${status === 'approved' ? 'Schválené' : 'Zamietnuté'} – ${roleLabel} ${roleIcon} ${r.verdict.by}</div>`;
+      }
+
+      return `
       <div class="courtroom-item">
         <div class="courtroom-item-header">
           <div><span class="report-type-badge type-${r.type}">${typeLabel[r.type]||r.type}</span>
           <strong>${r.area}</strong> · <code>${r.questionId}</code></div>
-          <div class="small muted">${fmtDate(r.createdAt)} · ${r.nick}</div>
+          <div class="small muted">${fmtDate(r.createdAt)} · ${r.nick}${sealBadge}</div>
         </div>
         ${r.questionText ? `<div class="courtroom-question-text small">"${r.questionText}"</div>` : ''}
         <div class="courtroom-argument">${r.argument}</div>
         ${r.source ? `<div class="small muted" style="margin-top:4px">📚 ${r.source}</div>` : ''}
+        ${verdictHtml}
         <div class="courtroom-actions">
           <div style="display:flex;gap:6px">
             <button class="btn courtroom-vote-btn vote-for" data-id="${id}" data-v="for">👍 Za (${r.votes?.for||0})</button>
             <button class="btn courtroom-vote-btn vote-against" data-id="${id}" data-v="against">👎 Proti (${r.votes?.against||0})</button>
           </div>
-          ${(role==='admin'||role==='garant') ? `
+          ${canModerate ? `
           <div style="display:flex;gap:6px">
             <button class="btn btn-primary admin-ap" data-id="${id}" data-nick="${r.nick}">✅ Schváliť</button>
-            <button class="btn admin-rj" data-id="${id}">❌ Zamietnuť</button>
-          </div>` : ''}
+            <button class="btn admin-rj" data-id="${id}" data-nick="${r.nick}">❌ Zamietnuť</button>
+          </div>` : (isOwnAsGarant ? '<div class="small muted">Vlastné nahlásenie posúdi iný garant alebo admin.</div>' : '')}
         </div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
 
     list.querySelectorAll('.courtroom-vote-btn').forEach(b => {
       b.onclick = async () => {
@@ -666,29 +713,17 @@ window.openCourtroomModal = async function() {
     });
 
     list.querySelectorAll('.admin-ap').forEach(b => {
-      b.onclick = async () => {
-        const { ref, get, update } = await fbImport();
-        await update(ref(db, `reports/${b.dataset.id}`), { status:'approved', decidedAt:Date.now(), decidedBy:getNick() });
-        // Pečať
-        const rNick = b.dataset.nick;
-        if (rNick) {
-          const uSnap = await get(ref(db, `users/${rNick}`));
-          const ud = uSnap.val()||{};
-          const cnt = (ud.approvedReports||0)+1;
-          const sealType = cnt>=100?'gold':cnt>=7?'silver':'bronze';
-          await update(ref(db, `users/${rNick}`), { approvedReports:cnt });
-          await update(ref(db, `reports/${b.dataset.id}`), { seal:{nick:rNick,type:sealType} });
-        }
-        loadCList(status);
-      };
+      b.onclick = () => openVerdictModal({
+        id: b.dataset.id, reporterNick: b.dataset.nick, decision: 'approved',
+        role, nick, db, onDone: () => loadCList(status)
+      });
     });
 
     list.querySelectorAll('.admin-rj').forEach(b => {
-      b.onclick = async () => {
-        const { ref, update } = await fbImport();
-        await update(ref(db, `reports/${b.dataset.id}`), { status:'rejected', decidedAt:Date.now(), decidedBy:getNick() });
-        loadCList(status);
-      };
+      b.onclick = () => openVerdictModal({
+        id: b.dataset.id, reporterNick: b.dataset.nick, decision: 'rejected',
+        role, nick, db, onDone: () => loadCList(status)
+      });
     });
   }
   } catch(err) {
@@ -696,6 +731,69 @@ window.openCourtroomModal = async function() {
     alert('Chyba: ' + err.message);
   }
 };
+
+/* ── VERDIKT S KOMENTÁROM ──
+   Mini-modal pred schválením/zamietnutím – komentár je voliteľný,
+   verdikt (rola, autor, komentár, čas) sa uloží verejne k reportu. */
+function openVerdictModal({ id, reporterNick, decision, role, nick, db, onDone }) {
+  const existing = document.getElementById('verdictModal');
+  if (existing) existing.remove();
+
+  const vModal = document.createElement('div');
+  vModal.id = 'verdictModal';
+  vModal.className = 'avatar-modal';
+  vModal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:10000;padding:16px;box-sizing:border-box;';
+
+  const actionLabel = decision === 'approved' ? '✅ Schváliť a zverejniť verdikt' : '❌ Zamietnuť a zverejniť verdikt';
+
+  vModal.innerHTML = `
+    <div class="avatar-panel" style="background:var(--surface,#fff);border-radius:20px;padding:24px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.25);">
+      <h3 style="margin:0 0 12px 0">${decision === 'approved' ? '✅ Schváliť nahlásenie' : '❌ Zamietnuť nahlásenie'}</h3>
+      <label class="form-label">Komentár k verdiktu (voliteľné)</label>
+      <textarea id="vComment" class="feedback-textarea" rows="3" maxlength="500"
+        placeholder="Zdôvodnenie rozhodnutia pre hráčov..."></textarea>
+      <div style="display:flex;gap:8px;margin-top:16px">
+        <button class="btn btn-primary" id="vConfirm" style="flex:1">${actionLabel}</button>
+        <button class="btn" id="vCancel">Zrušiť</button>
+      </div>
+    </div>`;
+  document.body.appendChild(vModal);
+
+  const close = () => vModal.remove();
+  vModal.querySelector('#vCancel').onclick = close;
+  vModal.onclick = e => { if (e.target === vModal) close(); };
+
+  vModal.querySelector('#vConfirm').onclick = async () => {
+    const confirmBtn = vModal.querySelector('#vConfirm');
+    confirmBtn.disabled = true;
+    confirmBtn.textContent = 'Ukladám...';
+
+    const comment = vModal.querySelector('#vComment').value.trim();
+    const { ref, get, update } = await fbImport();
+
+    const verdict = { by: nick, role: role === 'garant' ? 'garant' : 'admin', decision, comment, ts: Date.now() };
+    await update(ref(db, `reports/${id}`), { status: decision, decidedAt: Date.now(), decidedBy: nick, verdict });
+
+    if (decision === 'approved' && reporterNick) {
+      const uSnap = await get(ref(db, `users/${reporterNick}`));
+      const ud = uSnap.val() || {};
+      const cnt = (ud.approvedReports || 0) + 1;
+      const reporterRole = await getRealRole(reporterNick);
+      const sealType = getSealType(cnt, reporterRole);
+
+      await update(ref(db, `users/${reporterNick}`), { approvedReports: cnt });
+      if (sealType) {
+        await update(ref(db, `reports/${id}`), { seal: { nick: reporterNick, type: sealType } });
+        await update(ref(db, `users/${reporterNick}/seals`), {
+          [sealType]: ((ud.seals && ud.seals[sealType]) || 0) + 1
+        });
+      }
+    }
+
+    close();
+    onDone();
+  };
+}
 
 console.log('✅ Reports system inline načítaný');
 </script>

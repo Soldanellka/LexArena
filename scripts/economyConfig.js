@@ -47,6 +47,11 @@ export const ECONOMY_CONFIG = {
     CHALLENGE_NEW: 7,      // prijatie duel-linku novým nickom (zjednotiť s existujúcou logikou)
     CHALLENGE_EXISTING: 1,
     VIDEO: 12              // odmena za náukové video – JEDNORAZOVO na video a nick
+    // TODO (Audit otázok): až sa rozhodne odmeňovať § za schválené nahlásenia,
+    // pridaj REWARDS.REPORT_APPROVED sem a zavolaj econAward(reporterNick,
+    // REWARDS.REPORT_APPROVED, 'za schválené nahlásenie') z openVerdictModal()
+    // v index.html (vetva decision === 'approved', vedľa awardSeal logiky).
+    // Zatiaľ zámerne bez odmeny – rieši sa samostatným zadaním.
   },
 
   // STREAK – krivka so stropom (pôvodne 1–50§ lineárne; 50§/deň = 1500§/mesiac zadarmo

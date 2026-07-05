@@ -1129,23 +1129,6 @@ body {
   color: #f08aa6;
 }
 
-.seal-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 10.5px;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: rgba(212,175,55,0.12);
-  border: 1px solid rgba(212,175,55,0.55);
-  color: #8a6d1a;
-  white-space: nowrap;
-}
-
 /* Súdna sieň panel */
 .courtroom-panel {
   max-width: 720px !important;
@@ -1183,6 +1166,16 @@ body {
   line-height: 1.6;
   margin-bottom: 10px;
   white-space: pre-wrap;
+}
+
+.courtroom-verdict {
+  background: rgba(212,175,55,0.08);
+  border-left: 3px solid rgba(212,175,55,0.6);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .courtroom-actions {
@@ -1262,23 +1255,27 @@ body {
   border: 1.5px solid;
 }
 
-.seal-badge.gold   { background: rgba(234,179,8,0.1);  border-color: rgba(234,179,8,0.4);  color: #b45309; }
-.seal-badge.silver { background: rgba(148,163,184,0.1); border-color: rgba(148,163,184,0.4); color: #64748b; }
-.seal-badge.bronze { background: rgba(180,83,9,0.1);  border-color: rgba(180,83,9,0.3);   color: #92400e; }
+.seal-badge.gold     { background: rgba(234,179,8,0.1);  border-color: rgba(234,179,8,0.4);  color: #b45309; }
+.seal-badge.silver   { background: rgba(148,163,184,0.1); border-color: rgba(148,163,184,0.4); color: #64748b; }
+.seal-badge.bronze   { background: rgba(180,83,9,0.1);  border-color: rgba(180,83,9,0.3);   color: #92400e; }
+.seal-badge.academic { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.4); color: #4f46e5; }
 
-/* Pečať na otázke v kvíze */
+/* Pečať na otázke v kvíze – pilulka v pravom hornom rohu bloku otázky */
 .question-seal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   border-radius: 999px;
-  padding: 2px 10px;
-  margin-top: 8px;
-  border: 1px solid rgba(234,179,8,0.3);
-  background: rgba(234,179,8,0.06);
-  color: #92400e;
+  padding: 3px 9px;
+  border: 1px solid rgba(212,175,55,0.55);
+  background: rgba(212,175,55,0.12);
+  color: #8a6d1a;
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {

@@ -137,7 +137,7 @@ export function renderQuestion(first = false){
       if (seal) {
         const badge = document.createElement('div');
         badge.id = 'questionSealBadge';
-        badge.className = 'seal-badge';
+        badge.className = 'question-seal';
         badge.textContent = `${SEAL_EMOJI[seal.seal] || '🥉'} Auditované · ${seal.nick}${seal.byGarant ? ' 🎓' : ''}`;
         parent.appendChild(badge);
       }

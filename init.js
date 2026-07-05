@@ -849,14 +849,17 @@ async function displayPlayerSeals() {
     const data = snap.val();
     const seals = data.seals || {};
     const approved = data.approvedReports || 0;
+    const role = data.role || 'student';
+    const isAcademic = role === 'garant' || role === 'admin';
 
     const display = document.getElementById('sealDisplay');
     const badges = document.getElementById('sealBadges');
     if (!display || !badges) return;
 
-    if (approved > 0) {
+    if (approved > 0 || isAcademic) {
       display.style.display = 'block';
       badges.innerHTML = [
+        isAcademic   ? `<span class="seal-badge academic">🎓 Akademická pečať</span>` : '',
         seals.gold   ? `<span class="seal-badge gold">🥇 Zlatá ×${seals.gold}</span>` : '',
         seals.silver ? `<span class="seal-badge silver">🥈 Strieborná ×${seals.silver}</span>` : '',
         seals.bronze ? `<span class="seal-badge bronze">🥉 Bronzová ×${seals.bronze}</span>` : '',
