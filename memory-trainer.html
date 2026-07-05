@@ -16,8 +16,6 @@
     padding:28px 24px; font-size:18px; line-height:1.5; box-shadow: 0 6px 20px rgba(0,0,0,0.04);
     min-height:120px; display:flex; align-items:center; justify-content:center; text-align:center;
   }
-  .mt-timerbar-wrap { height:6px; border-radius:6px; background:rgba(0,0,0,0.08); margin-top:14px; overflow:hidden; }
-  .mt-timerbar { height:100%; background:linear-gradient(90deg,var(--accent-2),var(--accent-3)); width:100%; transition:width 0.1s linear; }
   .mt-answer-box textarea {
     width:100%; min-height:110px; border-radius:12px; border:1px solid rgba(0,0,0,0.12);
     padding:12px 14px; font-size:15px; font-family:inherit; resize:vertical; box-sizing:border-box;
@@ -67,11 +65,14 @@
     <!-- Fáza 1: odhalenie -->
     <div id="mtRevealPhase">
       <div class="mt-reveal-box" id="mtRevealText"></div>
-      <div class="mt-timerbar-wrap"><div class="mt-timerbar" id="mtTimerBar"></div></div>
       <div class="mt-reveal-actions">
         <button class="btn" id="mtSpeakBtn" type="button">🔊 Prečítať nahlas</button>
       </div>
-      <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si túto vetu/definíciu…</div>
+      <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si definíciu a klikni, keď si pripravený/á</div>
+      <div class="small muted" style="text-align:center;margin-top:4px" id="mtReadTimeHint"></div>
+      <div style="margin-top:10px">
+        <button class="btn btn-primary" id="mtReadyBtn" type="button" style="width:100%">Zapamätal/a som si ✅</button>
+      </div>
       <div style="text-align:center;margin-top:6px">
         <button class="report-q-btn" id="mtReportBtn" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
       </div>
@@ -129,7 +130,6 @@ const SEAL_LABEL = { bronze: '🥉 Bronzová pečať', silver: '🥈 Strieborná
 const SEAL_ICON = { bronze: '🥉', silver: '🥈', gold: '🥇' };
 
 let currentItem = null;
-let revealTimer = null;
 let recognizer = null;
 let recognizing = false;
 
@@ -185,29 +185,19 @@ function showNextItem(areaSlug) {
   const revealText = item.definition || item.summary || item.legalSentence;
   $('mtRevealText').textContent = revealText;
   $('mtAnswerInput').value = '';
-
-  const revealMs = Math.max(5000, Math.min(10000, 5000 + revealText.length * 40));
-  runRevealCountdown(revealMs);
+  updateReadTimeHint(revealText);
 }
 
-function runRevealCountdown(durationMs) {
-  clearInterval(revealTimer);
-  const bar = $('mtTimerBar');
-  const start = Date.now();
-  bar.style.width = '100%';
-
-  revealTimer = setInterval(() => {
-    const elapsed = Date.now() - start;
-    const pct = Math.max(0, 100 - (elapsed / durationMs) * 100);
-    bar.style.width = pct + '%';
-    if (elapsed >= durationMs) {
-      clearInterval(revealTimer);
-      revealToAnswerPhase();
-    }
-  }, 80);
+/* Len informačný odhad – žiadny odpočet, definícia visí kým klikneš na tlačidlo. */
+function updateReadTimeHint(text) {
+  const hint = $('mtReadTimeHint');
+  if (hint) hint.textContent = `⏱️ ~${Math.ceil((text || '').length / 15)} s čítania`;
 }
 
 function revealToAnswerPhase() {
+  if (window.speechSynthesis && window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
   $('mtRevealPhase').style.display = 'none';
   $('mtAnswerPhase').style.display = 'block';
   $('mtAnswerInput').focus();
@@ -259,8 +249,7 @@ function retryItem(areaSlug) {
   $('mtRevealPhase').style.display = 'block';
   const revealText = currentItem.definition || currentItem.summary || currentItem.legalSentence;
   $('mtRevealText').textContent = revealText;
-  const revealMs = Math.max(5000, Math.min(10000, 5000 + revealText.length * 40));
-  runRevealCountdown(revealMs);
+  updateReadTimeHint(revealText);
 }
 
 function finishArea(areaSlug, sealTierOverride) {
@@ -314,6 +303,13 @@ function setupSpeakButton() {
   });
 }
 
+/* Definícia visí kým hráč sám neklikne – žiadny automatický časovač. */
+function setupReadyButton() {
+  $('mtReadyBtn').addEventListener('click', () => {
+    revealToAnswerPhase();
+  });
+}
+
 /* ============================================================
    Zvuk: nahratie odpovede (SpeechRecognition)
 ============================================================ */
@@ -363,6 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSpeakButton();
   setupMicButton();
   setupReportButton();
+  setupReadyButton();
 
   if (slug) {
     startArea(slug);

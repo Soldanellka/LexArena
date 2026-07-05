@@ -603,6 +603,17 @@ body {
   white-space: nowrap;
 }
 
+/* Zvýraznenie kvízu po prijatí výzvy – nech ho hráč nemusí sám hľadať */
+.duel-highlight {
+  animation: duelGlow 2s ease;
+  border-radius: 14px;
+}
+
+@keyframes duelGlow {
+  0% { box-shadow: 0 0 0 3px rgba(240,138,166,0.7); }
+  100% { box-shadow: 0 0 0 0 rgba(240,138,166,0); }
+}
+
 .duel-actions {
   display: flex;
   gap: 8px;

@@ -440,16 +440,17 @@ export function renderDuelBank() {
       if (sendBtn) {
         sendBtn.onclick = async () => {
           const link = `https://www.lexarena.sk/?duel=${duel.id}`;
+          const message = `⚔️ ${duel.from} ťa vyzýva na duel z oblasti ${duel.areaTitle} v LexAréne! Prijmi výzvu: ${link}`;
           try {
-            await navigator.clipboard.writeText(link);
-            showRewardToast('Link na výzvu skopírovaný ✅');
+            await navigator.clipboard.writeText(message);
+            showRewardToast('Výzva skopírovaná – stačí vložiť ✅');
           } catch (e) {
-            window.prompt('Skopíruj link manuálne:', link);
+            window.prompt('Skopíruj správu manuálne:', message);
           }
           if (navigator.share) {
             navigator.share({
               title: 'Výzva na duel – LexArena',
-              text: `⚔️ ${currentUser} ťa vyzýva na duel z oblasti ${duel.areaTitle}!`,
+              text: message,
               url: link
             }).catch(() => {});
           }
