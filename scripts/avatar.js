@@ -3,23 +3,23 @@
 import { ref, get, update, onValue }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { showRewardToast } from '../ui.js';
+import { ECONOMY_CONFIG, getRole, logTransaction } from './economyConfig.js';
 
 /* ============================================================
    KONFIGURÁCIA AVATARA
+   FEED_COST, FEED_ENERGY a STREAK_SHIELD_COST sa čítajú z
+   ECONOMY_CONFIG (scripts/economyConfig.js) – jediný zdroj pravdy.
 ============================================================ */
 
 const AVATAR_CONFIG = {
   // Energia
   MAX_ENERGY: 100,
-  ENERGY_PER_DUEL: -10,      // každý duel (výzva) -10 energie
-  ENERGY_PER_QUIZ: -3,       // každý študijný kvíz -3 energie
-  FEED_COST: 12,             // kŕmenie stojí 12§
-  FEED_ENERGY: 100,          // kŕmenie doplní na 100%
+  FEED_COST: ECONOMY_CONFIG.ENERGY.FEED_COST,     // kŕmenie stojí 12§
+  FEED_ENERGY: ECONOMY_CONFIG.ENERGY.FEED_TO,     // kŕmenie doplní na 100%
   SLEEP_THRESHOLD: 0,        // pri 0 avatar zaspí
 
-  // Denný login streak
-  STREAK_REWARDS: [2, 3, 4, 5, 6, 7, 10], // deň 1-7
-  STREAK_SHIELD_COST: 5,     // štít streaku stojí 5§
+  // Denný login streak – krivka viď ECONOMY_CONFIG.STREAK v checkDailyLogin()
+  STREAK_SHIELD_COST: ECONOMY_CONFIG.SINKS.STREAK_SHIELD,     // štít streaku stojí 5§
 
   // Dostupné avatary (id: { name, file_awake, file_sleep, unlockCondition })
   AVATARS: {
@@ -175,7 +175,8 @@ export async function feedAvatar() {
   const nick = getNick();
   if (!nick) return;
 
-  const spent = await spendParagrafy(AVATAR_CONFIG.FEED_COST, 'za kŕmenie avatara');
+  const isAdmin = (await getRole(nick)) === 'admin';
+  const spent = isAdmin ? true : await spendParagrafy(AVATAR_CONFIG.FEED_COST, 'za kŕmenie avatara');
   if (!spent) return;
 
   const state = await loadAvatarState(nick);
@@ -188,7 +189,13 @@ export async function feedAvatar() {
   });
 
   updateAvatarUI(newEnergy, state.type);
-  showRewardToast('🍖 Avatar nakŕmený! Energia 100%');
+  await logTransaction(nick, {
+    type: 'spend',
+    amount: isAdmin ? 0 : AVATAR_CONFIG.FEED_COST,
+    reason: isAdmin ? 'za kŕmenie avatara (admin zadarmo)' : 'za kŕmenie avatara',
+    balanceAfter: null
+  });
+  showRewardToast(isAdmin ? '🍖 Avatar nakŕmený (admin zadarmo)! Energia 100%' : '🍖 Avatar nakŕmený! Energia 100%');
 }
 
 /* ============================================================
@@ -202,7 +209,7 @@ export async function canPlayDuel() {
   if (!state) return true;
 
   if ((state.energy || 100) <= AVATAR_CONFIG.SLEEP_THRESHOLD) {
-    showRewardToast('😴 Avatar spí! Nakŕm ho za 12§ aby sa prebudil.');
+    showRewardToast(`😴 Avatar spí! Nakŕm ho za ${AVATAR_CONFIG.FEED_COST}§ aby sa prebudil.`);
     return false;
   }
   return true;
@@ -234,13 +241,13 @@ export async function checkDailyLogin() {
   let streakBroken = false;
 
   if (hoursSinceLast < 48) {
-    // Prišiel v ďalší deň — streak pokračuje
-    newStreak = Math.min(streak + 1, 7);
+    // Prišiel v ďalší deň — streak pokračuje (bez stropu, kvôli míľnikom napr. deň 30)
+    newStreak = streak + 1;
   } else {
     // Vynechal deň
     if (shieldActive) {
       // Štít zachránil streak
-      newStreak = Math.min(streak + 1, 7);
+      newStreak = streak + 1;
       await update(userRef, { streakShield: false });
       showRewardToast('🛡️ Štít streaku aktivovaný! Streak zachránený.');
     } else {
@@ -250,9 +257,11 @@ export async function checkDailyLogin() {
     }
   }
 
-  // Odmena
-  const rewardIndex = Math.min(newStreak - 1, 6);
-  const reward = AVATAR_CONFIG.STREAK_REWARDS[rewardIndex];
+  // Odmena – krivka so stropom: deň 1-7 podľa BASE, deň 8+ = AFTER, + prípadný míľnikový bonus
+  const { BASE, AFTER, MILESTONES } = ECONOMY_CONFIG.STREAK;
+  const base = newStreak <= BASE.length ? BASE[newStreak - 1] : AFTER;
+  const milestone = MILESTONES[newStreak] || 0;
+  const reward = base + milestone;
 
   await update(userRef, {
     lastLogin: now,
@@ -260,14 +269,15 @@ export async function checkDailyLogin() {
   });
 
   await awardParagrafy(reward, `za prihlásenie (deň ${newStreak})`);
+  await logTransaction(nick, { type: 'award', amount: reward, reason: `streak deň ${newStreak}`, balanceAfter: null });
 
   // Zobraz streak info
   if (streakBroken) {
     showRewardToast(`💔 Streak prerušený. Začínaš odznova. +${reward}§`);
-  } else if (newStreak === 7) {
-    showRewardToast(`🔥 STREAK BONUS! 7 dní za sebou! +${reward}§`);
+  } else if (milestone > 0) {
+    showRewardToast(`🔥 Streak ${newStreak} dní! +${base}§ +${milestone}§ bonus!`);
   } else if (newStreak > 1) {
-    showRewardToast(`🔥 Streak ${newStreak} dní! +${reward}§. Zajtra +${AVATAR_CONFIG.STREAK_REWARDS[Math.min(newStreak, 6)]}§`);
+    showRewardToast(`🔥 Streak ${newStreak} dní! +${reward}§`);
   }
 
   // Aktualizuj UI streak
@@ -290,10 +300,17 @@ export async function buyStreakShield() {
     return;
   }
 
-  const spent = await spendParagrafy(AVATAR_CONFIG.STREAK_SHIELD_COST, 'za štít streaku');
+  const isAdmin = (await getRole(nick)) === 'admin';
+  const spent = isAdmin ? true : await spendParagrafy(AVATAR_CONFIG.STREAK_SHIELD_COST, 'za štít streaku');
   if (!spent) return;
 
   await update(ref(db, `users/${nick}`), { streakShield: true });
+  await logTransaction(nick, {
+    type: 'spend',
+    amount: isAdmin ? 0 : AVATAR_CONFIG.STREAK_SHIELD_COST,
+    reason: isAdmin ? 'za štít streaku (admin zadarmo)' : 'za štít streaku',
+    balanceAfter: null
+  });
   showRewardToast('🛡️ Štít streaku aktivovaný! Môžeš vynechať 1 deň.');
 }
 
