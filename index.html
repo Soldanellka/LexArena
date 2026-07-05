@@ -66,6 +66,12 @@
       <span id="roleLabel">student</span>
     </div>
 
+    <!-- Návod -->
+    <button class="btn icon-btn header-info-btn" id="infoBtn" title="Ako funguje LexArena">
+      ℹ️
+      <span class="games-hint-dot" id="infoHintDot"></span>
+    </button>
+
     <!-- Tmavý režim -->
     <button class="btn icon-btn" id="themeToggleBtn" title="Prepni tému">
       <img id="themeIcon" src="assets/icons/moon.svg" width="18" height="18" alt="Prepínač témy">
@@ -189,6 +195,10 @@
           </div>
         </div>
 
+      </div>
+
+      <div style="margin-top:10px;text-align:center">
+        <a href="#" class="guide-link" id="openGuideLink">📖 Kompletný návod</a>
       </div>
     </div>
 
@@ -366,6 +376,175 @@
       <button class="btn" id="closeCases">Zavrieť</button>
     </div>
     <div id="caseContainer" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<div id="guideModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+  <div class="avatar-panel game-panel guide-panel">
+    <div class="game-panel-header">
+      <h3>📖 Ako funguje LexArena</h3>
+      <button class="btn" id="closeGuide">Zavrieť</button>
+    </div>
+
+    <div class="guide-accordion">
+
+      <details class="guide-section" open>
+        <summary>🎯 Čo je LexArena</summary>
+        <div class="guide-content">
+          <p>LexArena je študijná aréna pre študentov práva. Precvičuješ štátnicové okruhy
+          z pracovného, trestného a občianskeho práva formou duelov, kartičiek, prípadov
+          z praxe a bifľovačky – a za aktivitu zbieraš paragrafy (§), našu hernú menu.</p>
+          <p><strong>Dôležité – obsah tvoríme spoločne:</strong> Otázky a definície pripravujeme s odbornou
+          starostlivosťou, no kvalita obsahu je v rukách celej komunity. Každý hráč sa
+          spolupodieľa na tvorbe a kontrole obsahu nahlasovaním právnych nezrovnalostí –
+          tie posudzujú garanti a admin v Súdnej sieni. Otázky, ktoré prešli auditom,
+          spoznáš podľa pečate. LexArena je študijná pomôcka, nie právne poradenstvo:
+          kľúčové informácie si pred skúškou vždy over v aktuálnom znení predpisov
+          na slov-lex.sk.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>⚔️ Duel</summary>
+        <div class="guide-content">
+          <p>Vyber si oblasť práva a vyzvi súpera. Duel má 10 otázok – pri kombinovaných
+          oblastiach (trestné, občianske právo) 5 z hmotného a 5 z procesného práva,
+          vždy z náhodného štátnicového okruhu. Súper odpovedá na tie isté otázky.</p>
+          <p>Svoj odohraný duel nájdeš v banke duelov – tlačidlom „📤 Poslať" vygeneruješ
+          link na výzvu a pošleš ho komukoľvek. Kto výzvu prijme, hrá proti tebe tie
+          isté otázky.</p>
+          <table class="guide-table">
+            <tr><th>Výsledok</th><th>Odmena</th></tr>
+            <tr><td>Výhra</td><td>+7§</td></tr>
+            <tr><td>Remíza</td><td>+3§</td></tr>
+            <tr><td>Prehra</td><td>0§</td></tr>
+            <tr><td>Prijatie výzvy linkom – nový hráč</td><td>+7§</td></tr>
+            <tr><td>Prijatie výzvy linkom – registrovaný</td><td>+1§</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>🃏 Kartičky a 📋 Prípady z praxe</summary>
+        <div class="guide-content">
+          <p>Po výbere oblasti sa ti sprístupnia kartičky (spájanie pojmov s definíciami)
+          a viackrokové prípady z praxe – reálne situácie, ktoré riešiš otázku po otázke.</p>
+          <table class="guide-table">
+            <tr><th>Aktivita</th><th>Odmena</th></tr>
+            <tr><td>Kartičky – sada bez jedinej chyby</td><td>+5§</td></tr>
+            <tr><td>Prípady – dokončená sada</td><td>+5§</td></tr>
+            <tr><td>Prípady – sada na 100 %</td><td>+10§</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>📚 Bifľovačka</summary>
+        <div class="guide-content">
+          <p>Tréning definícií na štátnice: zobrazí sa ti definícia, zapamätáš si ju, a potom
+          ju povieš alebo napíšeš vlastnými slovami. Pri zhode aspoň 50 % postupuješ ďalej.
+          Definície ti vie prečítať aj počítač – ideálne na učenie počas cesty.</p>
+          <table class="guide-table">
+            <tr><th>Aktivita</th><th>Odmena</th></tr>
+            <tr><td>Dokončený okruh (úspešnosť ≥ 80 %)</td><td>+2§</td></tr>
+            <tr><td>100 % celej oblasti</td><td>+10§</td></tr>
+          </table>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>⚡ Energia a avatar</summary>
+        <div class="guide-content">
+          <p>Tvoj avatar má energiu 0–100 %. Hranie ju spotrebúva:</p>
+          <table class="guide-table">
+            <tr><th>Aktivita</th><th>Energia</th></tr>
+            <tr><td>Duel</td><td>−5 %</td></tr>
+            <tr><td>Bifľovačka</td><td>−1 % / kartičku</td></tr>
+            <tr><td>Kartičky</td><td>−2 % / sadu</td></tr>
+            <tr><td>Prípady</td><td>−4 % / sadu</td></tr>
+          </table>
+          <p>Pri 0 % avatar zaspí a nedá sa hrať. Nakŕm ho za <strong>12§</strong> a energia sa doplní
+          na 100 %. Avatar mení výzor podľa energie – plný elánu, unavený, spiaci.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>🔥 Denný streak</summary>
+        <div class="guide-content">
+          <p>Za každý deň, keď si v LexAréne, rastie tvoja séria:</p>
+          <table class="guide-table">
+            <tr><th>Streak</th><th>Odmena</th></tr>
+            <tr><td>Deň 1 – 7</td><td>+1§ až +7§ (rastie každý deň)</td></tr>
+            <tr><td>Deň 8 a ďalej</td><td>+7§ / deň</td></tr>
+            <tr><td>Míľnik – deň 7</td><td>+10§ bonus</td></tr>
+            <tr><td>Míľnik – deň 30</td><td>+50§ bonus</td></tr>
+          </table>
+          <p>Vynechaný deň sériu preruší. Streak shield (5§) ťa ochráni pri jednom
+          vynechanom dni.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>🏆 Rebríčky</summary>
+        <div class="guide-content">
+          <p>Body z duelov ťa posúvajú v rebríčku. Vyhodnocuje sa automaticky:</p>
+          <table class="guide-table">
+            <tr><th>Rebríček</th><th>1. miesto</th><th>2. miesto</th><th>3. miesto</th></tr>
+            <tr><td>Týždenný (nedeľa polnoc)</td><td>+50§</td><td>+30§</td><td>+10§</td></tr>
+            <tr><td>Mesačný (koniec mesiaca)</td><td>+200§</td><td>+100§</td><td>+50§</td></tr>
+          </table>
+          <p>Ak sa umiestniš, LexArena ti to oznámi pri najbližšej návšteve.</p>
+          <p class="small muted">Denný strop zárobku z herných aktivít je 60§ – streak, rebríčky a videá sa
+          doň nepočítajú.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>⚖️ Súdna sieň a pečate</summary>
+        <div class="guide-content">
+          <p>Našiel/Našla si v otázke právnu nezrovnalosť? Pri každej otázke je tlačidlo
+          na nahlásenie – navrhneš správne znenie a právnicky ho zdôvodníš. Nahlásenie
+          putuje do Súdnej siene, kde môžu ostatní hlasovať a komentovať. Garant alebo
+          admin vydá verdikt s odôvodnením, ktoré vidí celá komunita.</p>
+          <p>Za schválené nahlásenia zbieraš pečate:</p>
+          <table class="guide-table">
+            <tr><th>Pečať</th><th>Podmienka</th></tr>
+            <tr><td>🥉 Bronzová</td><td>1. schválené nahlásenie</td></tr>
+            <tr><td>🥈 Strieborná</td><td>5 schválených</td></tr>
+            <tr><td>🥇 Zlatá</td><td>15 schválených</td></tr>
+            <tr><td>🎓 Akademická</td><td>garant (automaticky)</td></tr>
+          </table>
+          <p>Pečať sa zobrazuje aj pri auditovanej otázke – vieš, že prešla kontrolou
+          a kým. Takto spoločne držíme obsah LexArény presný a aktuálny.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>💰 Ako získať ďalšie §</summary>
+        <div class="guide-content">
+          <ul class="guide-list">
+            <li>📺 <strong>Náukové videá</strong> – za každé z troch videí v sekcii Návody & odmeny +12§
+            (jednorazovo).</li>
+            <li>💰 <strong>Získaj §</strong> v hornej lište – pozri krátke video (+3§, max 3× denne)
+            alebo zadaj promo kód od našich partnerov.</li>
+            <li>🎁 Sleduj naše sociálne siete – promo kódy rozdávame pri kampaniach.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>👥 Roly v komunite</summary>
+        <div class="guide-content">
+          <ul class="guide-list">
+            <li><strong>Študent</strong> – hráč; hrá, učí sa, nahlasuje nezrovnalosti, zbiera pečate.</li>
+            <li><strong>Garant</strong> – odborný audítor; posudzuje nahlásenia, vydáva verdikty, nesie
+            akademickú pečať 🎓.</li>
+            <li><strong>Admin</strong> – správca LexArény; udeľuje role, taláre a odmeny, spravuje obsah.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
   </div>
 </div>
 

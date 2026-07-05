@@ -413,6 +413,54 @@ async function refreshEarnAdCard() {
 }
 
 /* =====================================================
+   📖 NÁVOD „Ako funguje LexArena"
+   ===================================================== */
+const LEX_GUIDE_SEEN_KEY = 'lexGuideSeen';
+
+function openGuideModal() {
+  const modal = $('guideModal');
+  if (!modal) return;
+  modal.style.display = 'flex';
+
+  if (!localStorage.getItem(LEX_GUIDE_SEEN_KEY)) {
+    localStorage.setItem(LEX_GUIDE_SEEN_KEY, '1');
+    const dot = $('infoHintDot');
+    if (dot) dot.style.display = 'none';
+  }
+}
+
+function initGuideSystem() {
+  const dot = $('infoHintDot');
+  if (dot) dot.style.display = localStorage.getItem(LEX_GUIDE_SEEN_KEY) ? 'none' : '';
+
+  const infoBtn = $('infoBtn');
+  if (infoBtn) infoBtn.addEventListener('click', openGuideModal);
+
+  const closeBtn = $('closeGuide');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      const modal = $('guideModal');
+      if (modal) modal.style.display = 'none';
+    });
+  }
+
+  const modal = $('guideModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  }
+
+  const guideLink = $('openGuideLink');
+  if (guideLink) {
+    guideLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openGuideModal();
+    });
+  }
+}
+
+/* =====================================================
    📺 VIDEO SYSTÉM
    ===================================================== */
 
@@ -1560,6 +1608,9 @@ function attachEvents() {
   if (earnBtn) {
     earnBtn.addEventListener('click', openEarnModal);
   }
+
+  /* 🔥 Návod „Ako funguje LexArena" */
+  initGuideSystem();
 
   /* 🔥 Modal prístupového kódu */
   const loginDeviceBtn = $('loginDeviceBtn');

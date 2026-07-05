@@ -16,6 +16,13 @@
    (nič neimportuje z avatar.js/economy.js), takže cyklus nehrozí.
    economy.js re-exportuje ECONOMY_CONFIG, takže zvyšok appky
    naďalej importuje všetko len z economy.js.
+
+   ⚠️ SÍDLO PRAVDY, ALE NIE JEDINÉ MIESTO S TÝMITO ČÍSLAMI:
+   Návod „Ako funguje LexArena" (index.html, #guideModal) uvádza tieto
+   isté odmeny/náklady hráčom doslovne v texte (tabuľky pri dueli,
+   kartičkách, bifľovačke, energii, streaku, rebríčkoch, pečatiach aj
+   § navyše). Ak tu zmeníš čísla, over/uprav aj text v #guideModal,
+   inak sa návod rozíde so skutočným správaním appky.
 ============================================================ */
 
 import { ref, get, push }
