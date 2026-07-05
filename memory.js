@@ -6,6 +6,7 @@ import { showRewardToast } from './ui.js';
 import { playSound } from './audio.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { LS } from './core.js';
+import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 
 /* ===============================
    Memory state
@@ -274,6 +275,14 @@ function finishMemoryGame(){
 
   const mode = $('memoryMode')?.value || 'training';
   const reward = Math.max(1, memoryState.cards.length / 8);
+
+  const nick = localStorage.getItem('playerNick');
+  if (nick) {
+    econEnergy(nick, ECONOMY_CONFIG.ENERGY.MEMORY_SET, 'dohraná sada pexesa');
+    if (memoryState.wrongs === 0) {
+      econAward(nick, ECONOMY_CONFIG.REWARDS.MEMORY_PERFECT, 'pexeso bez chyby');
+    }
+  }
 
   if(mode === 'exam'){
     const newPar = paragrafy + reward;

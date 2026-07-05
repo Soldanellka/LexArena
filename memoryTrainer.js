@@ -10,8 +10,8 @@
 ============================================================ */
 
 import { MEMORY_AREAS, getAreaBySlug, generateMemoryPackages } from './memoryDefinitions.js';
-import { saveParagrafy, loadParagrafy } from './core.js';
 import { incrementGamesPlayed } from './avatars.js';
+import { econEnergy, econAward, econCanPlay, ECONOMY_CONFIG } from './scripts/economy.js';
 
 /* ============================================================
    Slovenské stopslová + detekcia právnych pojmov
@@ -312,26 +312,6 @@ async function persistMeta(slug, meta) {
   }
 }
 
-async function awardParagrafy(amount) {
-  const current = loadParagrafy();
-  const next = current + amount;
-  saveParagrafy(next);
-
-  const pc = document.getElementById('parCount');
-  if (pc) pc.textContent = next;
-
-  const nick = getNick();
-  const db = getDb();
-  if (nick && db) {
-    try {
-      const { ref, get, update } = await fbImport();
-      const snap = await get(ref(db, `users/${nick}/paragrafy`));
-      const fbCurrent = snap.exists() ? snap.val() : current;
-      await update(ref(db, `users/${nick}`), { paragrafy: fbCurrent + amount });
-    } catch (e) {}
-  }
-}
-
 async function awardXp(amount) {
   const key = 'lex_memory_xp';
   const current = Number(localStorage.getItem(key) || 0);
@@ -426,10 +406,16 @@ export async function saveMemoryScore(slug, id, score) {
   state.progress[id] = { score, completed, attempts, updatedAt: Date.now() };
   await persistProgress(slug, state.progress);
 
+  const nick = getNick();
+  if (nick) econEnergy(nick, ECONOMY_CONFIG.ENERGY.BIFLOVACKA_CARD, 'kartička bifľovačky');
+
   const newlyCompleted = completed && !prevCompleted;
   if (newlyCompleted) {
-    await awardParagrafy(1);
     await awardXp(2);
+    // § odmena za okruh len pri vyššej presnosti (priebežná motivácia, nie za každý pokus)
+    if (nick && score >= 80) {
+      await econAward(nick, ECONOMY_CONFIG.REWARDS.BIFLOVACKA_OKRUH, 'okruh bifľovačky ≥ 80 %');
+    }
   }
 
   const stats = calculateCompletion(slug);
@@ -441,12 +427,18 @@ export async function saveMemoryScore(slug, id, score) {
     areaJustFinished = true;
     sealTier = stats.avgAccuracy >= 90 ? 'gold' : stats.avgAccuracy >= 75 ? 'silver' : 'bronze';
     await persistMeta(slug, { examUnlocked: true, sealTier, finishedAt: Date.now() });
-    await awardParagrafy(10);
+    if (nick) await econAward(nick, ECONOMY_CONFIG.REWARDS.BIFLOVACKA_AREA, 'celá oblasť bifľovačky dokončená');
     await awardXp(20);
     try { incrementGamesPlayed(); } catch (e) {}
   }
 
   return { stats, newlyCompleted, areaJustFinished, sealTier };
+}
+
+/* Zavolaj pred vstupom do oblasti (startArea v memory-trainer.html) –
+   ak avatar spí, zobrazí toast a vráti false. */
+export async function canPlayBiflovacka() {
+  return await econCanPlay('biflovacka');
 }
 
 /* ============================================================

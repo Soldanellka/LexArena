@@ -10,6 +10,7 @@ import {
 } from './state.js';
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
+import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 
 /* =========================
    Storage keys
@@ -173,15 +174,17 @@ export function submitCase(caseId, optionId){
     .length;
 
   if(doneCount >= total){
-    const newPar = paragrafy + 1;
-    setParagrafy(newPar);
-    saveParagrafy(newPar);
-
-    const pc = $('parCount');
-    if(pc) pc.textContent = newPar;
+    const nick = localStorage.getItem('playerNick');
+    if (nick) {
+      econEnergy(nick, ECONOMY_CONFIG.ENERGY.CASES_SET, 'dohraná sada prípadov');
+      econAward(nick, ECONOMY_CONFIG.REWARDS.CASES_SET, 'dokončená sada prípadov');
+      // Sadu možno dokončiť len samými správnymi odpoveďami (nesprávna voľba
+      // prípad neoznačí za vyriešený), takže dokončenie = 100 %.
+      econAward(nick, ECONOMY_CONFIG.REWARDS.CASES_PERFECT, 'sada prípadov na 100 %');
+    }
 
     setTimeout(() => {
-      showRewardToast(`Všetkých ${total} prípadov vyriešených • +1 paragraf`);
+      showRewardToast(`Všetkých ${total} prípadov vyriešených!`);
       const casesModal = $('casesModal');
       if(casesModal) closeModal(casesModal);
       incrementGamesPlayed();

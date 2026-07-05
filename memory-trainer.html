@@ -113,7 +113,8 @@ import { MEMORY_AREAS, getAreaBySlug } from './memoryDefinitions.js';
 import {
   loadMemoryArea, getNextMemoryItem, compareText,
   saveMemoryScore, calculateCompletion, renderMemoryTiles,
-  speakText, isSpeechRecognitionSupported, createSpeechRecognizer
+  speakText, isSpeechRecognitionSupported, createSpeechRecognizer,
+  canPlayBiflovacka
 } from './memoryTrainer.js';
 
 const $ = id => document.getElementById(id);
@@ -141,6 +142,13 @@ async function startArea(areaSlug) {
     $('mtTitle').textContent = 'Neznáma oblasť';
     return;
   }
+
+  const canPlay = await canPlayBiflovacka();
+  if (!canPlay) {
+    showAreaPicker();
+    return;
+  }
+
   $('mtTitle').textContent = `🧠 Bifľovačka – ${area.name}`;
   $('mtAreaBadge').textContent = area.name;
   $('mtFlow').style.display = 'block';
