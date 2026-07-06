@@ -52,7 +52,19 @@ const AVATAR_CONFIG = {
       unlock: 'reports_100',
       unlockValue: 100,
       desc: 'Za 100 uznaných nahlásení'
-    }
+    },
+
+    /* ============================================================
+       ZÁKLADNÁ SADA (18 PNG, avatars/) – zadarmo, 3 stavy energie
+       (full/tired/sleep) namiesto starých 2 (awake/sleep).
+       avatarSrc() nižšie rozlišuje podľa prítomnosti `base`.
+    ============================================================ */
+    'studentka-tmava':  { name: 'Študentka (tmavé vlasy)',  base: 'avatars/studentka-tmava',  unlock: 'default', isBasic: true },
+    'studentka-medena': { name: 'Študentka (medené vlasy)', base: 'avatars/studentka-medena', unlock: 'default', isBasic: true },
+    'studentka-blond':  { name: 'Študentka (blond vlasy)',  base: 'avatars/studentka-blond',  unlock: 'default', isBasic: true },
+    'student-tmavy':    { name: 'Študent (tmavé vlasy)',    base: 'avatars/student-tmavy',    unlock: 'default', isBasic: true },
+    'student-medeny':   { name: 'Študent (medené vlasy)',   base: 'avatars/student-medeny',   unlock: 'default', isBasic: true },
+    'student-blond':    { name: 'Študent (blond vlasy)',    base: 'avatars/student-blond',    unlock: 'default', isBasic: true }
   }
 };
 
@@ -351,6 +363,7 @@ export async function selectAvatar(avatarType) {
 
   const state = await loadAvatarState(nick);
   await saveAvatarState(nick, { ...state, type: avatarType });
+  preloadAvatarStates(avatarDef);
   updateAvatarUI(state.energy || 100, avatarType);
   showRewardToast(`Avatar zmenený na: ${avatarDef.name}`);
 }
@@ -358,6 +371,26 @@ export async function selectAvatar(avatarType) {
 /* ============================================================
    UI – aktualizácia avatara na stránke
 ============================================================ */
+/* Zdroj obrázka avatara podľa energie.
+   - Základná sada (def.base): 3 vlastné stavy – full/tired/sleep.
+   - Staré/obchodné avatary (def.awake/def.sleep): pôvodné 2 stavy, bez zmeny. */
+function avatarSrc(def, energy) {
+  if (def.base) {
+    const state = energy <= 0 ? 'sleep' : energy <= 50 ? 'tired' : 'full';
+    return `${def.base}-${state}.png`;
+  }
+  return energy <= AVATAR_CONFIG.SLEEP_THRESHOLD ? def.sleep : def.awake;
+}
+
+/* Preloadne všetky 3 stavy základnej sady, nech full→tired→sleep neblikne. */
+function preloadAvatarStates(def) {
+  if (!def || !def.base) return;
+  ['full', 'tired', 'sleep'].forEach(state => {
+    const img = new Image();
+    img.src = `${def.base}-${state}.png`;
+  });
+}
+
 export function updateAvatarUI(energy, avatarType) {
   const avatarDef = AVATAR_CONFIG.AVATARS[avatarType] || AVATAR_CONFIG.AVATARS['student-f'];
   const isSleeping = energy <= AVATAR_CONFIG.SLEEP_THRESHOLD;
@@ -365,10 +398,10 @@ export function updateAvatarUI(energy, avatarType) {
   // Obrázok avatara
   const imgEl = document.getElementById('userAvatar');
   if (imgEl) {
-    imgEl.src = isSleeping ? avatarDef.sleep : avatarDef.awake;
+    imgEl.src = avatarSrc(avatarDef, energy);
     imgEl.alt = avatarDef.name;
-    // Animácia pri spánku
-    imgEl.style.filter = isSleeping ? 'saturate(0.5) brightness(0.8)' : '';
+    // Animácia pri spánku – len staré avatary (2 stavy); nová sada má vlastný spiaci render
+    imgEl.style.filter = (!avatarDef.base && isSleeping) ? 'saturate(0.5) brightness(0.8)' : '';
   }
 
   // Energy bar (ak existuje)
@@ -412,6 +445,46 @@ export function updateStreakUI(streak) {
 }
 
 /* ============================================================
+   VRSTVENIE – taláre a zvieratká (príprava, BEZ UI)
+   TODO: assety avatars/talar-{farba}.png a avatars/pet-{typ}.png
+   ešte neexistujú; admin udeľovanie (kto dostane čo) bude
+   samostatné zadanie. Tu len nastavíme src ak dáta existujú,
+   s bezpečným zlyhaním (onerror → skryť), nech chýbajúci súbor
+   nič nerozbije.
+============================================================ */
+export async function applyAccessories(nick) {
+  const db = getDb();
+  if (!db || !nick) return;
+
+  const snap = await get(ref(db, `users/${nick}/accessories`));
+  const acc = snap.exists() ? snap.val() : {};
+
+  // POZOR: #avatarWrap img { display:block !important } (existujúce pravidlo pre
+  // #userAvatar) by inak prebilo skrytie týchto vrstiev – preto setProperty(...,'important').
+  const talarEl = document.getElementById('avatarTalar');
+  if (talarEl) {
+    if (acc.talar) {
+      talarEl.onerror = () => { talarEl.style.setProperty('display', 'none', 'important'); };
+      talarEl.src = `avatars/talar-${acc.talar}.png`;
+      talarEl.style.setProperty('display', 'block', 'important');
+    } else {
+      talarEl.style.setProperty('display', 'none', 'important');
+    }
+  }
+
+  const petEl = document.getElementById('avatarPet');
+  if (petEl) {
+    if (acc.pet) {
+      petEl.onerror = () => { petEl.style.setProperty('display', 'none', 'important'); };
+      petEl.src = `avatars/pet-${acc.pet}.png`;
+      petEl.style.setProperty('display', 'block', 'important');
+    } else {
+      petEl.style.setProperty('display', 'none', 'important');
+    }
+  }
+}
+
+/* ============================================================
    INIT – spustenie celého systému
 ============================================================ */
 export async function initAvatarSystem() {
@@ -427,8 +500,20 @@ export async function initAvatarSystem() {
   // Načítaj stav
   const state = await loadAvatarState(nick);
   if (state) {
+    const avatarDef = AVATAR_CONFIG.AVATARS[state.type];
     updateAvatarUI(state.energy || 100, state.type || 'student-f');
+    preloadAvatarStates(avatarDef);
+
+    // Nový nick (loadAvatarState ho práve defaultol) alebo starý typ pred
+    // zavedením základnej sady – jednorazovo ponúkni výber zo 6 nových avatarov.
+    if ((state.type === 'student-f' || state.type === 'student-m') &&
+        typeof window.openAvatarPickerModal === 'function') {
+      window.openAvatarPickerModal(true);
+    }
   }
+
+  // Taláre/zvieratká (príprava bez UI)
+  applyAccessories(nick);
 
   // Live sledovanie zmien avatara
   onValue(ref(db, `users/${nick}/avatar`), (snap) => {

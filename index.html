@@ -19,7 +19,12 @@
     <span class="logo-text">LexArena</span>
 
     <div id="avatarWrap" class="avatar-wrap" title="Klikni pre výber avatara" role="button" tabindex="0">
-      <img id="userAvatar" src="assets/avatars/student-f-awake.svg" alt="Avatar používateľa" />
+      <div class="avatar-stack">
+        <img id="userAvatar" src="assets/avatars/student-f-awake.svg" alt="Avatar používateľa" />
+        <!-- Vrstvy pre budúce taláre a zvieratká (samostatné zadanie) – zatiaľ skryté, bez assetov -->
+        <img id="avatarTalar" class="avatar-layer" style="display:none !important" alt="" />
+        <img id="avatarPet" class="avatar-layer avatar-pet" style="display:none !important" alt="" />
+      </div>
     </div>
 
     <!-- Avatar energia mini panel -->
@@ -30,6 +35,9 @@
       <span id="avatarEnergyText" class="avatar-energy-text">⚡ 100%</span>
       <button id="feedAvatarBtn" class="btn avatar-feed-btn" style="display:none" title="Nakŕm avatara za 12§">
         🍖 Nakŕmiť (12§)
+      </button>
+      <button id="changeAvatarBtn" class="btn icon-btn" title="Zmeniť avatara">
+        🎨
       </button>
     </div>
 

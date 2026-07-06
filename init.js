@@ -158,6 +158,88 @@ async function openAvatarSelectModal() {
 }
 
 /* =====================================================
+   ZÁKLADNÁ SADA AVATAROV – prvý výber / zmena
+   6 zadarmo dostupných postáv (2 postavy × 3 farby vlasov),
+   3 stavy energie riešené v scripts/avatar.js (avatarSrc()).
+   Táto mriežka vždy zobrazuje -full.png náhľady na výber.
+   ===================================================== */
+const BASIC_AVATARS = [
+  { id: 'studentka-tmava',  name: 'Študentka (tmavé vlasy)' },
+  { id: 'studentka-medena', name: 'Študentka (medené vlasy)' },
+  { id: 'studentka-blond',  name: 'Študentka (blond vlasy)' },
+  { id: 'student-tmavy',    name: 'Študent (tmavé vlasy)' },
+  { id: 'student-medeny',   name: 'Študent (medené vlasy)' },
+  { id: 'student-blond',    name: 'Študent (blond vlasy)' }
+];
+
+function openAvatarPickerModal(mandatory = false) {
+  let modal = document.getElementById('avatarPickerModal');
+
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'avatarPickerModal';
+    modal.className = 'avatar-modal';
+    modal.innerHTML = `
+      <div class="avatar-panel" style="max-width:460px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <h3 style="margin:0">🎨 Vyber si svojho avatara</h3>
+          <button class="btn" id="closeAvatarPickerModal">✕</button>
+        </div>
+        <div class="small muted" style="margin-bottom:14px">Zadarmo, kedykoľvek zmeníš neskôr.</div>
+        <div id="avatarPickerGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+          ${BASIC_AVATARS.map(av => `
+            <div class="avatar-picker-card" data-id="${av.id}" style="cursor:pointer;border:2px solid var(--card-border,#eee);border-radius:12px;padding:8px;text-align:center;transition:border-color .15s ease">
+              <img src="avatars/${av.id}-full.png" alt="${av.name}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px" />
+              <div class="small" style="margin-top:6px;font-weight:600">${av.name}</div>
+            </div>
+          `).join('')}
+        </div>
+        <button class="btn btn-primary" id="avatarPickerConfirmBtn" style="width:100%" disabled>Potvrdiť</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    let selected = null;
+    const grid = modal.querySelector('#avatarPickerGrid');
+    const confirmBtn = modal.querySelector('#avatarPickerConfirmBtn');
+
+    grid.querySelectorAll('.avatar-picker-card').forEach(card => {
+      card.onclick = () => {
+        grid.querySelectorAll('.avatar-picker-card').forEach(c => c.style.borderColor = 'var(--card-border, #eee)');
+        card.style.borderColor = '#f08aa6';
+        selected = card.dataset.id;
+        confirmBtn.disabled = false;
+      };
+    });
+
+    confirmBtn.onclick = async () => {
+      if (!selected) return;
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Ukladám...';
+      await selectAvatar(selected);
+      modal.style.display = 'none';
+      confirmBtn.disabled = false;
+      confirmBtn.textContent = 'Potvrdiť';
+    };
+
+    modal.querySelector('#closeAvatarPickerModal').onclick = () => {
+      if (modal.dataset.mandatory === '1') return; // prvé prihlásenie – nedá sa preskočiť
+      modal.style.display = 'none';
+    };
+    modal.onclick = (e) => {
+      if (e.target === modal && modal.dataset.mandatory !== '1') modal.style.display = 'none';
+    };
+  }
+
+  modal.dataset.mandatory = mandatory ? '1' : '0';
+  const closeBtn = modal.querySelector('#closeAvatarPickerModal');
+  if (closeBtn) closeBtn.style.display = mandatory ? 'none' : 'inline-flex';
+
+  modal.style.display = 'flex';
+}
+window.openAvatarPickerModal = openAvatarPickerModal;
+
+/* =====================================================
    HLAVNÁ INIT FUNKCIA
    ===================================================== */
 export function init() {
@@ -1593,6 +1675,12 @@ function attachEvents() {
     avatarWrap.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') openAvatarSelectModal();
     });
+  }
+
+  /* 🔥 Zmeniť avatara (základná sada – vždy dá zavrieť) */
+  const changeAvatarBtn = $('changeAvatarBtn');
+  if (changeAvatarBtn) {
+    changeAvatarBtn.addEventListener('click', () => openAvatarPickerModal(false));
   }
 
   /* 🔥 Rola badge */
