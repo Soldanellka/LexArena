@@ -4,6 +4,7 @@ import { ref, onValue, get, set, update }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 import { $, escapeHtml } from '../core.js';
+import { getAvatarBustSrc } from './avatar.js';
 
 /* ============================================================
    POMOCNÉ FUNKCIE NA KALENDÁRNE OBDOBIA
@@ -110,6 +111,11 @@ async function renderLeaderboardList(list) {
   };
 
   function getAvatarSrc(type, energy) {
+    // Základná sada (18 PNG) – bust (portrét) verzia, rovnaká ako v hlavičke
+    const bust = getAvatarBustSrc(type, energy);
+    if (bust) return bust;
+
+    // Staré/obchodné avatary bez bust verzie – pôvodná logika bez zmeny
     if (energy <= 0) {
       return type === 'student-f'
         ? 'assets/avatars/student-f-sleep.svg'

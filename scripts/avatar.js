@@ -372,22 +372,37 @@ export async function selectAvatar(avatarType) {
    UI – aktualizácia avatara na stránke
 ============================================================ */
 /* Zdroj obrázka avatara podľa energie.
-   - Základná sada (def.base): 3 vlastné stavy – full/tired/sleep.
-   - Staré/obchodné avatary (def.awake/def.sleep): pôvodné 2 stavy, bez zmeny. */
-function avatarSrc(def, energy) {
+   - Základná sada (def.base): 3 stavy full/tired/sleep. variant 'bust' vráti
+     portrét (hlavička, rebríček – malý kruh, celá postava by bola nečitateľná
+     s odseknutou hlavou), variant 'full' celú postavu (výberový modal, avatar
+     sekcia).
+   - Staré/obchodné avatary (def.awake/def.sleep): pôvodné 2 stavy, bust
+     nemajú – variant sa ignoruje, bez zmeny správania. */
+function avatarSrc(def, energy, variant = 'full') {
   if (def.base) {
     const state = energy <= 0 ? 'sleep' : energy <= 50 ? 'tired' : 'full';
-    return `${def.base}-${state}.png`;
+    const suffix = variant === 'bust' ? '-bust' : '';
+    return `${def.base}-${state}${suffix}.png`;
   }
   return energy <= AVATAR_CONFIG.SLEEP_THRESHOLD ? def.sleep : def.awake;
 }
 
-/* Preloadne všetky 3 stavy základnej sady, nech full→tired→sleep neblikne. */
+/* Pre iné moduly (napr. scripts/leaderboard.js), ktoré potrebujú bust cestu
+   pre avatar ĽUBOVOĽNÉHO hráča, nielen aktuálne prihláseného. Vráti null pre
+   staré/obchodné avatary bez bust verzie – volajúci použije vlastný fallback. */
+export function getAvatarBustSrc(avatarType, energy) {
+  const def = AVATAR_CONFIG.AVATARS[avatarType];
+  if (!def || !def.base) return null;
+  return avatarSrc(def, energy, 'bust');
+}
+
+/* Preloadne všetky 3 stavy základnej sady (celá postava aj bust), nech
+   full→tired→sleep neblikne ani v hlavičke, ani v obchode/sekcii avatara. */
 function preloadAvatarStates(def) {
   if (!def || !def.base) return;
   ['full', 'tired', 'sleep'].forEach(state => {
-    const img = new Image();
-    img.src = `${def.base}-${state}.png`;
+    new Image().src = `${def.base}-${state}.png`;
+    new Image().src = `${def.base}-${state}-bust.png`;
   });
 }
 
@@ -395,10 +410,10 @@ export function updateAvatarUI(energy, avatarType) {
   const avatarDef = AVATAR_CONFIG.AVATARS[avatarType] || AVATAR_CONFIG.AVATARS['student-f'];
   const isSleeping = energy <= AVATAR_CONFIG.SLEEP_THRESHOLD;
 
-  // Obrázok avatara
+  // Obrázok avatara – hlavička VŽDY bust (portrét), aj pre základnú sadu
   const imgEl = document.getElementById('userAvatar');
   if (imgEl) {
-    imgEl.src = avatarSrc(avatarDef, energy);
+    imgEl.src = avatarSrc(avatarDef, energy, 'bust');
     imgEl.alt = avatarDef.name;
     // Animácia pri spánku – len staré avatary (2 stavy); nová sada má vlastný spiaci render
     imgEl.style.filter = (!avatarDef.base && isSleeping) ? 'saturate(0.5) brightness(0.8)' : '';

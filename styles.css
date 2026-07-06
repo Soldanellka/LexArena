@@ -143,22 +143,24 @@ body {
   gap: 8px;
 }
 
-/* 🧑‍⚖️ Avatar – fix veľkosti a pozície */
+/* 🧑‍⚖️ Avatar – fix veľkosti a pozície
+   40px (nie 32px) – bust portrét potrebuje trochu viac miesta ako predošlé
+   celopostavové SVG, inak je aj portrét v malom kruhu nečitateľný. */
 #avatarWrap {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
 }
 
 #avatarWrap img,
 #userAvatar {
-  width: 32px !important;
-  height: 32px !important;
+  width: 40px !important;
+  height: 40px !important;
   object-fit: cover !important;
   border-radius: 50% !important;
   display: block !important;
