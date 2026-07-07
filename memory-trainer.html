@@ -40,12 +40,37 @@
   }
   @keyframes mtMicPulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
 
+  /* 🃏 Žolíky – platené pomôcky vo fáze odpovede */
+  .mt-jokers {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .mt-jokers-label { font-size: 13px; color: var(--muted); margin-right: 2px; }
+  .mt-joker {
+    padding: 6px 12px; font-size: 13px; min-height: 32px; border-radius: 999px;
+  }
+  .mt-joker:disabled { opacity: 0.5; cursor: not-allowed; }
+  .mt-joker-balance { font-size: 13px; color: var(--muted); margin-left: auto; }
+  .mt-joker-hint {
+    background: rgba(245,197,66,0.12);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
   @media (max-width: 640px) {
     .mt-wrap { padding: 16px 12px 40px; }
     .mt-reveal-box { padding: 20px 16px; font-size: 16px; }
     .mt-actions { flex-direction: column; }
     .mt-actions .btn { width: 100%; }
     #mtSpeakBtn, #mtReadyBtn { min-height: 44px; }
+    .mt-jokers { flex-direction: column; align-items: stretch; }
+    .mt-joker { width: 100%; }
+    .mt-joker-balance { margin-left: 0; text-align: center; }
   }
 </style>
 </head>
@@ -90,6 +115,14 @@
     <!-- Fáza 2: odpoveď -->
     <div id="mtAnswerPhase" style="display:none">
       <div class="small" style="margin-bottom:8px;font-weight:600">Napíš (alebo nahovor), čo si zapamätal/a:</div>
+      <div class="mt-jokers" id="mtJokers">
+        <span class="mt-jokers-label">Pomôcky:</span>
+        <button class="btn mt-joker" id="jokerSkeleton" type="button">🃏 Kostra</button>
+        <button class="btn mt-joker" id="jokerInitials" type="button">🔤 Iniciály</button>
+        <button class="btn mt-joker" id="jokerReplay" type="button">🔊 Vypočuť</button>
+        <span class="mt-joker-balance" id="mtJokerBalance"></span>
+      </div>
+      <div class="mt-joker-hint" id="mtJokerHint" style="display:none"></div>
       <div class="mt-answer-box">
         <textarea id="mtAnswerInput" placeholder="Napíš právnu vetu / definíciu tak, ako si ju zapamätal/a..."></textarea>
       </div>
@@ -127,8 +160,9 @@ import {
   loadMemoryArea, getNextMemoryItem, compareText,
   saveMemoryScore, calculateCompletion, renderMemoryTiles,
   speakText, isSpeechRecognitionSupported, createSpeechRecognizer,
-  canPlayBiflovacka
+  canPlayBiflovacka, buildSkeleton, buildInitials
 } from './memoryTrainer.js';
+import { econSpend, econBalance, ECONOMY_CONFIG } from './scripts/economy.js';
 
 const $ = id => document.getElementById(id);
 
@@ -141,6 +175,99 @@ const SEAL_ICON = { bronze: '🥉', silver: '🥈', gold: '🥇' };
 let currentItem = null;
 let recognizer = null;
 let recognizing = false;
+
+/* ============================================================
+   Žolíky – platené pomôcky vo fáze odpovede.
+   Max 1 žolík na definíciu; nový pokus (nová položka aj retry
+   tej istej) žolíky resetne. Hodnotenie odpovede a odmeny za
+   okruh/oblasť sa žolíkom nemenia (rieši saveMemoryScore ako doteraz).
+============================================================ */
+const JOKER_DEFS = [
+  { id: 'jokerSkeleton', type: 'skeleton', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_SKELETON, label: '🃏 Kostra' },
+  { id: 'jokerInitials', type: 'initials', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_INITIALS, label: '🔤 Iniciály' },
+  { id: 'jokerReplay',   type: 'replay',   price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_REPLAY,   label: '🔊 Vypočuť' }
+];
+
+let jokerUsed = null;
+let jokerBalance = 0;
+
+function referenceText() {
+  return currentItem ? (currentItem.definition || currentItem.summary || currentItem.legalSentence || '') : '';
+}
+
+function updateJokerButtonsUI() {
+  JOKER_DEFS.forEach(def => {
+    const btn = $(def.id);
+    if (!btn) return;
+    btn.textContent = `${def.label} (${def.price}§)`;
+    if (jokerUsed) {
+      btn.disabled = true;
+      btn.title = 'Na jednu definíciu len jeden žolík';
+    } else if (jokerBalance < def.price) {
+      btn.disabled = true;
+      btn.title = `Potrebuješ ${def.price}§, máš ${jokerBalance}§`;
+    } else {
+      btn.disabled = false;
+      btn.title = '';
+    }
+  });
+  const balEl = $('mtJokerBalance');
+  if (balEl) balEl.textContent = `Máš: ${jokerBalance}§`;
+}
+
+async function refreshJokerBalance() {
+  const nick = localStorage.getItem('playerNick');
+  jokerBalance = nick ? await econBalance(nick) : 0;
+  updateJokerButtonsUI();
+}
+
+/* Volať pri každom novom pokuse o definíciu (nová položka aj retry). */
+function resetJokers() {
+  jokerUsed = null;
+  const hint = $('mtJokerHint');
+  if (hint) {
+    hint.style.display = 'none';
+    hint.textContent = '';
+  }
+  refreshJokerBalance();
+}
+
+async function handleJokerClick(def) {
+  if (jokerUsed || !currentItem) return;
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return;
+
+  const ok = await econSpend(nick, def.price, `žolík bifľovačka: ${def.type}`);
+  if (!ok) { refreshJokerBalance(); return; }
+
+  jokerUsed = def.type;
+  const reference = referenceText();
+
+  if (def.type === 'skeleton') {
+    showJokerHint(buildSkeleton(reference));
+  } else if (def.type === 'initials') {
+    showJokerHint(buildInitials(reference));
+  } else if (def.type === 'replay') {
+    speakText(reference);
+  }
+
+  await refreshJokerBalance();
+}
+
+function showJokerHint(text) {
+  const hint = $('mtJokerHint');
+  if (!hint) return;
+  hint.textContent = text;
+  hint.style.display = 'block';
+}
+
+function setupJokers() {
+  JOKER_DEFS.forEach(def => {
+    const btn = $(def.id);
+    if (btn) btn.addEventListener('click', () => handleJokerClick(def));
+  });
+  updateJokerButtonsUI();
+}
 
 function showAreaPicker() {
   $('mtTitle').textContent = '🧠 Bifľovačka';
@@ -195,6 +322,7 @@ function showNextItem(areaSlug) {
   $('mtRevealText').textContent = revealText;
   $('mtAnswerInput').value = '';
   updateReadTimeHint(revealText);
+  resetJokers();
 }
 
 /* Len informačný odhad – žiadny odpočet, definícia visí kým klikneš na tlačidlo. */
@@ -259,6 +387,7 @@ function retryItem(areaSlug) {
   const revealText = currentItem.definition || currentItem.summary || currentItem.legalSentence;
   $('mtRevealText').textContent = revealText;
   updateReadTimeHint(revealText);
+  resetJokers();
 }
 
 function finishArea(areaSlug, sealTierOverride) {
@@ -369,6 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMicButton();
   setupReportButton();
   setupReadyButton();
+  setupJokers();
 
   if (slug) {
     startArea(slug);

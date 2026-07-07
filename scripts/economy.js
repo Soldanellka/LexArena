@@ -133,6 +133,14 @@ export async function econSpend(nick, amount, reason = '') {
   return true;
 }
 
+/* Len na čítanie – aktuálny zostatok § pre nick (napr. zobrazenie
+   "Máš: X§" pri žolíkoch v Bifľovačke). */
+export async function econBalance(nick) {
+  const db = getDb();
+  if (!db || !nick) return 0;
+  return await getBalance(db, nick);
+}
+
 /* ============================================================
    3️⃣ econEnergy – zmení energiu avatara (0–100)
    Energia je viazaná na toto zariadenie (aktuálny lokálny hráč).
@@ -462,6 +470,7 @@ export async function econSettleLeaderboards() {
 
 window.econAward = econAward;
 window.econSpend = econSpend;
+window.econBalance = econBalance;
 window.econEnergy = econEnergy;
 window.econCanPlay = econCanPlay;
 window.econVideoReward = econVideoReward;

@@ -90,7 +90,10 @@ export const ECONOMY_CONFIG = {
   SINKS: {
     QUIZ_HINT_5050: 3,        // nápoveda 50:50 v duelovom kvíze
     STREAK_SHIELD: 5,         // existuje v avatar.js – zjednotiť sem
-    PRESTIGE_AVATAR_MIN: 300  // cenové pásmo prestige avatarov (300–500§), viď Sinky
+    PRESTIGE_AVATAR_MIN: 300, // cenové pásmo prestige avatarov (300–500§), viď Sinky
+    BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
+    BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
+    BIFLOVACKA_JOKER_REPLAY: 1    // žolík: vypočuť definíciu znova cez TTS
   },
 
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI

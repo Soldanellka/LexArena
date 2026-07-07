@@ -222,6 +222,30 @@ export function compareText(userText, pkg) {
 }
 
 /* ============================================================
+   ŽOLÍKY – textové pomôcky pre fázu odpovede
+   Čísla/§/paragrafy sa nikdy neskrývajú (bez nich sa nedá doplniť).
+============================================================ */
+export function buildSkeleton(text) {
+  return String(text || '').split(/(\s+)/).map((tok, i, arr) => {
+    if (/^\s+$/.test(tok)) return tok;
+    const wordIdx = arr.slice(0, i).filter(t => !/^\s+$/.test(t)).length;
+    if (/\d/.test(tok)) return tok;
+    if (wordIdx % 3 === 0) return tok; // každé 3. slovo viditeľné
+    const core = tok.replace(/[.,;:()"]/g, '');
+    return tok.replace(core, '_'.repeat(Math.min(core.length, 12)));
+  }).join('');
+}
+
+export function buildInitials(text) {
+  return String(text || '').split(/(\s+)/).map(tok => {
+    if (/^\s+$/.test(tok) || /\d/.test(tok)) return tok;
+    const m = tok.match(/^\W*(\p{L})/u);
+    if (!m) return tok;
+    return tok.replace(/\p{L}[\p{L}''-]*/u, w => w[0] + '_'.repeat(Math.min(w.length - 1, 10)));
+  }).join('');
+}
+
+/* ============================================================
    Firebase / localStorage perzistencia progresu
 ============================================================ */
 const LS_PROGRESS_PREFIX = 'lex_memory_progress_';
