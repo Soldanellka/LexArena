@@ -75,6 +75,7 @@ export function startQuiz(){
 
   $('quizIntro').style.display = 'none';
   $('quizArea').style.display = 'block';
+  document.body.classList.add('quiz-fullscreen');
 
   renderQuestion(true);
 }
@@ -292,6 +293,7 @@ export function finishQuiz(){
 
   $('quizIntro').style.display = 'block';
   $('quizArea').style.display = 'none';
+  document.body.classList.remove('quiz-fullscreen');
 
   incrementGamesPlayed();
   playSound(window.soundWin);
@@ -397,6 +399,26 @@ export function finishQuiz(){
 }
 
 /* =========================
+   Zrušenie rozohraného kvízu/duelu (✕ v celoobrazovkovom mobilnom kvíze)
+   Žiadna odmena, žiadne vyhodnotenie – len návrat na výber oblasti.
+   ========================= */
+export function cancelQuiz(){
+  if (!confirm('Naozaj ukončiť duel?')) return;
+
+  $('quizIntro').style.display = 'block';
+  $('quizArea').style.display = 'none';
+  document.body.classList.remove('quiz-fullscreen');
+
+  window.duelQuestions = null;
+  window.currentOpponent = null;
+  window.currentDuelMeta = null;
+  window.currentDuel = null;
+
+  setQuizState({ questions: [], index: 0, correct: 0, wrong: 0 });
+}
+window.cancelQuiz = cancelQuiz;
+
+/* =========================
    Štatistiky
    ========================= */
 export function updateStats(){
@@ -446,6 +468,7 @@ window.startDuelQuiz = function(questions){
 
   $('quizIntro').style.display = 'none';
   $('quizArea').style.display = 'block';
+  document.body.classList.add('quiz-fullscreen');
 
   renderQuestion(true);
 };

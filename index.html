@@ -112,7 +112,7 @@
 
   <div class="left">
 
-    <div class="card section-card">
+    <div class="card section-card" id="tilesSection">
       <h3 style="margin:0">Študijné moduly</h3>
       <div class="small">Samostatné moduly pre detailné štúdium</div>
       <div id="modulesList" class="list" style="margin-top:10px"></div>
@@ -124,7 +124,7 @@
       <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
     </div>
 
-    <div class="card section-card">
+    <div class="card section-card" id="leaderboardSection">
       <h3 style="margin:0">Rebríček duelov</h3>
       <div class="small">Najlepší hráči duelových kvízov</div>
       <div style="display:flex;gap:8px;margin-top:10px">
@@ -285,7 +285,7 @@
       </div>
 
       <div id="quizArea" style="display:none">
-        <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="quiz-top-row" style="display:flex;justify-content:space-between;align-items:center">
           <div>
             <div class="small">Oblasť</div>
             <h3 id="areaTitle" style="margin:6px 0 0 0"></h3>
@@ -294,6 +294,8 @@
             <div class="small">Otázka</div>
             <div id="qIndex" style="font-weight:700">1 / 10</div>
           </div>
+          <button class="btn icon-btn" id="quizCancelBtn" title="Ukončiť duel"
+            onclick="typeof window.cancelQuiz==='function' && window.cancelQuiz()">✕</button>
         </div>
         <div class="question-box">
           <div class="q-text" id="qText"></div>
@@ -313,7 +315,7 @@
       </div>
     </div>
 
-    <div class="card highlight-games">
+    <div class="card highlight-games" id="gamesSection">
       <h3 style="margin:0">Hry a prípady</h3>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
         <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
@@ -1013,6 +1015,16 @@ console.log('✅ Reports system inline načítaný');
     if (pin) loginWithPin(pin);
   };
 </script>
+
+<!-- Spodná navigácia (len mobil) -->
+<nav class="bottom-nav" aria-label="Rýchla navigácia">
+  <button data-target="top">🏠<span>Domov</span></button>
+  <button data-target="quizCard">⚔️<span>Duel</span></button>
+  <button data-target="gamesSection">🎮<span>Hry</span></button>
+  <button data-target="leaderboardSection">🏆<span>Rebríček</span></button>
+  <button data-target="profile">👤<span>Profil</span></button>
+</nav>
+<script type="module" src="mobile-nav.js"></script>
 
 </body>
 </html>
