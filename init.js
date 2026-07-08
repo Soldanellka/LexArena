@@ -19,7 +19,9 @@ import {
 import { MEMORY_AREAS } from './memoryDefinitions.js';
 import {
   createSenat, joinSenat, getMojeSenaty, getSenat, buildInviteMessage, getInviteLink,
-  renameSenat, kickMember, leaveSenat, disbandSenat
+  renameSenat, kickMember, leaveSenat, disbandSenat,
+  getSporyForSenat, challengeSenat, startSenatSporPlay, settlePendingSenatSpory,
+  getSenatLeaderboard, settleSenatLeaderboards
 } from './scripts/senaty.js';
 
 /* =====================================================
@@ -271,8 +273,9 @@ export function init() {
     loadReports();
     loadAnsweredCases('TPH-A1');
 
-    /* 🔹 Rebríček duelov */
+    /* 🔹 Rebríček pojednávaní + senátov (prepínač) */
     initDuelLeaderboard();
+    setupLeaderboardModeToggle();
 
     /* 🔹 Rola systém */
     initRoleSystem();
@@ -1367,6 +1370,8 @@ let senatyMineCache = [];
 async function initSenaty() {
   const nick = localStorage.getItem('playerNick');
   if (!nick) return;
+  await settlePendingSenatSpory();
+  await settleSenatLeaderboards();
   await renderSenatyCard(nick);
   setupSenatyButtons(nick);
   renderSenatyMiniLeaderboard();
@@ -1386,10 +1391,32 @@ async function renderSenatyCard(nick) {
   }
 
   noneBox.style.display = 'none';
-  mineBox.innerHTML = senatyMineCache.map(s => {
+
+  const items = await Promise.all(senatyMineCache.map(async (s) => {
     const count = Object.keys(s.members || {}).length;
     const iamPredseda = s.members && s.members[nick] && s.members[nick].role === 'predseda';
     const statusLabel = s.status === 'active' ? '🟢 Súťažný' : `🟡 Zostavuje sa (${count}/3)`;
+
+    let pendingHtml = '';
+    const spory = await getSporyForSenat(s.id);
+    const myPending = spory.find(sp => {
+      if (sp.status !== 'running') return false;
+      const mine = (sp.scores && sp.scores[s.id] && typeof sp.scores[s.id][nick] === 'number');
+      return !mine && sp.deadline > Date.now();
+    });
+    if (myPending) {
+      const otherSenatId = myPending.challenger === s.id ? myPending.opponent : myPending.challenger;
+      const otherSenat = await getSenat(otherSenatId);
+      const hoursLeft = Math.max(0, Math.round((myPending.deadline - Date.now()) / (60 * 60 * 1000)));
+      pendingHtml = `
+        <div class="small" style="margin-top:6px;padding:8px 10px;background:rgba(240,138,166,0.1);border-radius:8px">
+          ⚖️ Máš odohrať spor proti <strong>${escapeHtml(otherSenat ? otherSenat.name : 'neznámy senát')}</strong>!
+          Zostáva ${hoursLeft} h.
+          <button class="btn btn-primary senat-play-spor-btn" data-spor-id="${myPending.id}" data-senat-id="${s.id}" style="margin-top:6px;width:100%;font-size:12px;padding:4px 10px">▶️ Odohrať</button>
+        </div>
+      `;
+    }
+
     return `
       <div class="senat-item" style="border:1px solid var(--card-border, rgba(0,0,0,0.08));border-radius:10px;padding:10px 12px;margin-bottom:8px">
         <div style="display:flex;justify-content:space-between;align-items:center">
@@ -1400,12 +1427,22 @@ async function renderSenatyCard(nick) {
         <button class="btn senat-manage-btn" data-senat-id="${s.id}" style="margin-top:8px;font-size:12px;padding:4px 10px">
           ${iamPredseda ? 'Spravovať' : 'Zobraziť'}
         </button>
+        ${pendingHtml}
       </div>
     `;
-  }).join('');
+  }));
+
+  mineBox.innerHTML = items.join('');
 
   mineBox.querySelectorAll('.senat-manage-btn').forEach(btn => {
     btn.onclick = () => openSenatDetailModal(btn.dataset.senatId, nick);
+  });
+
+  mineBox.querySelectorAll('.senat-play-spor-btn').forEach(btn => {
+    btn.onclick = async () => {
+      const result = await startSenatSporPlay(btn.dataset.sporId, btn.dataset.senatId);
+      if (!result.ok) alert(result.message || 'Nepodarilo sa spustiť spor.');
+    };
   });
 
   // Ak ešte nie je uložená explicitná localStorage preferencia zbalenia,
@@ -1584,6 +1621,7 @@ function openSenatDetailModal(senatId, nick) {
       <div style="margin-bottom:12px">${membersHtml}</div>
       ${iamPredseda ? `
         <button class="btn btn-primary" id="senatInviteShareBtn" style="width:100%;margin-bottom:8px">📤 Pozvať</button>
+        ${senat.status === 'active' ? `<button class="btn" id="senatChallengeBtn" style="width:100%;margin-bottom:8px">⚔️ Vyzvať iný senát</button>` : ''}
         <div style="display:flex;gap:8px;margin-bottom:8px">
           <input type="text" id="senatRenameInput" class="form-input" placeholder="Nový názov" value="${escapeHtml(senat.name)}"/>
           <button class="btn" id="senatRenameBtn">Premenovať</button>
@@ -1616,6 +1654,11 @@ function openSenatDetailModal(senatId, nick) {
         navigator.share({ title: 'Pozvánka do senátu – LexArena', text: message, url: inviteLink }).catch(() => {});
       }
     };
+  }
+
+  const challengeBtn = document.getElementById('senatChallengeBtn');
+  if (challengeBtn) {
+    challengeBtn.onclick = () => openChallengeSenatModal(senatId, nick);
   }
 
   const renameBtn = document.getElementById('senatRenameBtn');
@@ -1662,6 +1705,112 @@ function openSenatDetailModal(senatId, nick) {
       await renderSenatyCard(nick);
     };
   });
+}
+
+/* Výber súperovho senátu (aktívny, bez spoločného člena) + oblasť sporu. */
+async function openChallengeSenatModal(challengerSenatId, nick) {
+  const leaderboard = await getSenatLeaderboard();
+  const challenger = senatyMineCache.find(s => s.id === challengerSenatId);
+  const challengerMembers = new Set(Object.keys((challenger && challenger.members) || {}));
+  const candidates = leaderboard.filter(s =>
+    s.id !== challengerSenatId &&
+    !Object.keys(s.members || {}).some(m => challengerMembers.has(m))
+  );
+
+  const old = document.getElementById('challengeSenatModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'challengeSenatModal';
+  modal.className = 'avatar-modal';
+
+  const areaNames = (typeof window.areas !== 'undefined') ? Object.keys(window.areas) : [];
+
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <h3 style="margin:0">⚔️ Vyzvať senát</h3>
+        <button class="btn" id="closeChallengeSenatModal">✕</button>
+      </div>
+      ${candidates.length ? `
+        <select id="challengeSenatSelect" class="form-input" style="margin-bottom:8px">
+          ${candidates.map(s => `<option value="${s.id}">${escapeHtml(s.name)} (${s.points || 0} b.)</option>`).join('')}
+        </select>
+        <select id="challengeAreaSelect" class="form-input" style="margin-bottom:8px">
+          ${areaNames.map(a => `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`).join('')}
+        </select>
+        <div id="challengeSenatMsg" class="small" style="min-height:16px;margin-bottom:8px;color:var(--muted)"></div>
+        <button class="btn btn-primary" id="challengeSenatSubmitBtn" style="width:100%">Vyzvať</button>
+      ` : `<p class="small muted">Zatiaľ niet iného súťažného senátu bez spoločného člena.</p>`}
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  document.getElementById('closeChallengeSenatModal').onclick = () => modal.remove();
+
+  const submitBtn = document.getElementById('challengeSenatSubmitBtn');
+  if (submitBtn) {
+    submitBtn.onclick = async () => {
+      const opponentSenatId = document.getElementById('challengeSenatSelect').value;
+      const areaName = document.getElementById('challengeAreaSelect').value;
+      const msg = document.getElementById('challengeSenatMsg');
+      msg.textContent = 'Vyzývam...';
+      const result = await challengeSenat(challengerSenatId, opponentSenatId, areaName, nick);
+      if (!result.ok) { msg.textContent = `❌ ${result.message}`; return; }
+      modal.remove();
+      showRewardToast('⚔️ Senátny spor bol vytvorený!');
+      await renderSenatyCard(nick);
+    };
+  }
+}
+
+/* Prepínač Jednotlivci/Senáty pri #leaderboardSection. */
+function setupLeaderboardModeToggle() {
+  const chips = document.querySelectorAll('.lb-mode-chip');
+  const individualBox = document.getElementById('individualLeaderboardBox');
+  const senatBox = document.getElementById('senatLeaderboardBox');
+  const title = document.getElementById('leaderboardTitle');
+  const subtitle = document.getElementById('leaderboardSubtitle');
+  if (!chips.length) return;
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const mode = chip.dataset.lbMode;
+      if (mode === 'senaty') {
+        individualBox.style.display = 'none';
+        senatBox.style.display = 'block';
+        title.textContent = 'Rebríček senátov';
+        subtitle.textContent = 'Najlepšie senáty podľa bodov';
+        renderSenatLeaderboardFull();
+      } else {
+        individualBox.style.display = 'block';
+        senatBox.style.display = 'none';
+        title.textContent = 'Rebríček pojednávaní';
+        subtitle.textContent = 'Najlepší hráči pojednávaní';
+      }
+    });
+  });
+}
+
+async function renderSenatLeaderboardFull() {
+  const box = document.getElementById('senatLeaderboard');
+  if (!box) return;
+  const list = await getSenatLeaderboard();
+  if (!list.length) {
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne súťažné senáty.</div>';
+    return;
+  }
+  box.innerHTML = list.map((s, i) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:8px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
+      <div><strong>${i + 1}.</strong> ${escapeHtml(s.name)}
+        <span class="small muted">(${Object.keys(s.members || {}).length} členov)</span></div>
+      <div>${s.points || 0} b. <span class="small muted">(${s.wins || 0}/${s.draws || 0}/${s.losses || 0})</span></div>
+    </div>
+  `).join('');
 }
 
 /* Mini rebríček TOP 3 senátov (plný prepínateľný rebríček je samostatná úloha) */

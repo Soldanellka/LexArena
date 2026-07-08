@@ -289,11 +289,30 @@ export function prevQ(){
    Dokončenie kvízu
    ========================= */
 export function finishQuiz(){
-  const isDuel = window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length;
-
   $('quizIntro').style.display = 'block';
   $('quizArea').style.display = 'none';
   document.body.classList.remove('quiz-fullscreen');
+
+  /* =========================
+     ⚖️ SENÁTNY SPOR – zapíš skóre do senatSpory/{id}, žiadne
+     energie/odmeny tu (tie sa vyplácajú až pri vyhodnotení sporu),
+     nesmie prepadnúť do normálnej duelovej vetvy nižšie.
+     ========================= */
+  if (window.currentSenatSpor) {
+    const { sporId, senatId } = window.currentSenatSpor;
+    const nick = localStorage.getItem('playerNick') || 'Unknown';
+    window.currentSenatSpor = null;
+    window.duelQuestions = null;
+    window.currentOpponent = null;
+    window.currentDuelMeta = null;
+    window.currentDuel = null;
+    import('./scripts/senaty.js').then(({ recordSenatSporScore }) => {
+      recordSenatSporScore(sporId, senatId, nick, quiz.correct);
+    });
+    return;
+  }
+
+  const isDuel = window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length;
 
   incrementGamesPlayed();
   playSound(window.soundWin);
@@ -413,6 +432,7 @@ export function cancelQuiz(){
   window.currentOpponent = null;
   window.currentDuelMeta = null;
   window.currentDuel = null;
+  window.currentSenatSpor = null;
 
   setQuizState({ questions: [], index: 0, correct: 0, wrong: 0 });
 }

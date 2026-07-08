@@ -125,15 +125,26 @@
     </div>
 
     <div class="card section-card" id="leaderboardSection">
-      <h3 style="margin:0">Rebríček pojednávaní</h3>
-      <div class="small">Najlepší hráči pojednávaní</div>
+      <h3 style="margin:0" id="leaderboardTitle">Rebríček pojednávaní</h3>
+      <div class="small" id="leaderboardSubtitle">Najlepší hráči pojednávaní</div>
       <div style="display:flex;gap:8px;margin-top:10px">
-        <button class="chip">Týždeň</button>
-        <button class="chip">Mesiac</button>
-        <button class="chip">Všetko</button>
+        <button class="chip lb-mode-chip active" data-lb-mode="individual">Jednotlivci</button>
+        <button class="chip lb-mode-chip" data-lb-mode="senaty">Senáty</button>
       </div>
-      <div id="duelLeaderboard" class="list" style="margin-top:10px">
-        <div class="small muted">Načítavam rebríček…</div>
+      <div id="individualLeaderboardBox">
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button class="chip">Týždeň</button>
+          <button class="chip">Mesiac</button>
+          <button class="chip">Všetko</button>
+        </div>
+        <div id="duelLeaderboard" class="list" style="margin-top:10px">
+          <div class="small muted">Načítavam rebríček…</div>
+        </div>
+      </div>
+      <div id="senatLeaderboardBox" style="display:none;margin-top:10px">
+        <div id="senatLeaderboard" class="list">
+          <div class="small muted">Načítavam rebríček…</div>
+        </div>
       </div>
     </div>
 

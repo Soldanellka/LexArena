@@ -18,6 +18,7 @@ from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { econAward } from './economy.js';
 import { ECONOMY_CONFIG } from './economyConfig.js';
 import { showRewardToast } from '../ui.js';
+import { pickQuestions, waitForQuestions } from './duels.js';
 
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
@@ -261,6 +262,309 @@ export async function disbandSenat(senatId, nick) {
   await set(ref(db, `senatInvites/${senatId}`), null);
 
   return { ok: true };
+}
+
+/* ============================================================
+   SENÁTNE SPORY – agregát individuálnych pojednávaní medzi senátmi.
+
+   senatSpory/{sporId}: { areaTitle, questions, challenger, opponent,
+     deadline, scores:{senatId:{nick:body|null}}, status, winner }
+
+   Skóre senátu = PRIEMER bodov členov (nie súčet), aby 3-členný senát
+   nebol znevýhodnený voči 5-člennému. Vyhodnotenie je lazy (pri
+   načítaní po deadline), transakčne uzamknuté rovnako ako
+   settlePeriod v economy.js – result.committed, nie vlajka v
+   callbacku (tá sa pri kontencii môže spustiť viackrát).
+============================================================ */
+const SPOR_DURATION_MS = 48 * 60 * 60 * 1000;
+
+function sharedMember(senatA, senatB) {
+  const membersA = Object.keys(senatA.members || {});
+  const membersB = new Set(Object.keys(senatB.members || {}));
+  return membersA.some(m => membersB.has(m));
+}
+
+export async function getSenatSpor(sporId) {
+  const db = getDb();
+  if (!db || !sporId) return null;
+  const snap = await get(ref(db, `senatSpory/${sporId}`));
+  return snap.exists() ? { id: sporId, ...snap.val() } : null;
+}
+
+export async function getSporyForSenat(senatId) {
+  const db = getDb();
+  if (!db || !senatId) return [];
+  const snap = await get(ref(db, 'senatSpory'));
+  if (!snap.exists()) return [];
+  return Object.entries(snap.val())
+    .map(([id, s]) => ({ id, ...s }))
+    .filter(s => s.challenger === senatId || s.opponent === senatId);
+}
+
+/* Predseda aktívneho senátu vyzve iný aktívny senát bez spoločného člena. */
+export async function challengeSenat(challengerSenatId, opponentSenatId, areaName, nick) {
+  const db = getDb();
+  if (!db || !nick) return { ok: false, message: 'Musíš byť prihlásený.' };
+  if (challengerSenatId === opponentSenatId) return { ok: false, message: 'Nemôžeš vyzvať vlastný senát.' };
+
+  const challenger = await getSenat(challengerSenatId);
+  const opponent = await getSenat(opponentSenatId);
+  if (!challenger || !opponent) return { ok: false, message: 'Senát neexistuje.' };
+  if (!isPredseda(challenger, nick)) return { ok: false, message: 'Len predseda môže vyzvať iný senát.' };
+  if (challenger.status !== 'active' || opponent.status !== 'active') {
+    return { ok: false, message: 'Oba senáty musia byť súťažné (aspoň 3 členovia).' };
+  }
+  if (sharedMember(challenger, opponent)) {
+    return { ok: false, message: 'Senáty majú spoločného člena – spor medzi nimi nie je povolený.' };
+  }
+
+  await waitForQuestions(areaName);
+  const questions = pickQuestions(areaName);
+  if (!questions || !questions.length) {
+    return { ok: false, message: 'Nepodarilo sa načítať otázky pre túto oblasť.' };
+  }
+
+  const sporRef = push(ref(db, 'senatSpory'));
+  const sporId = sporRef.key;
+  const now = Date.now();
+
+  await set(sporRef, {
+    areaTitle: areaName,
+    questions,
+    challenger: challengerSenatId,
+    opponent: opponentSenatId,
+    deadline: now + SPOR_DURATION_MS,
+    scores: { [challengerSenatId]: {}, [opponentSenatId]: {} },
+    status: 'running',
+    winner: null,
+    createdAt: now
+  });
+
+  return { ok: true, sporId };
+}
+
+/* Spustí bežný kvíz engine (window.startDuelQuiz) so spoločnou bankou
+   otázok sporu; quiz.js po dohraní zavolá recordSenatSporScore. */
+export async function startSenatSporPlay(sporId, senatId) {
+  const spor = await getSenatSpor(sporId);
+  if (!spor) return { ok: false, message: 'Spor neexistuje.' };
+  if (Date.now() > spor.deadline) return { ok: false, message: 'Termín na odohratie sporu už vypršal.' };
+
+  window.currentSenatSpor = { sporId, senatId, areaTitle: spor.areaTitle };
+  if (typeof window.startDuelQuiz === 'function') {
+    window.startDuelQuiz(spor.questions);
+  }
+  return { ok: true };
+}
+
+/* Volané z quiz.js finishQuiz() po dohraní sporových otázok. */
+export async function recordSenatSporScore(sporId, senatId, nick, score) {
+  const db = getDb();
+  if (!db) return;
+  await update(ref(db, `senatSpory/${sporId}/scores/${senatId}`), { [nick]: score });
+  showRewardToast(`⚖️ Tvoj výsledok (${score}/10) bol zaznamenaný do senátneho sporu.`);
+}
+
+async function applySporResult(senat, senatId, outcome) {
+  const db = getDb();
+  const patch = {};
+  if (outcome === 'win') { patch.wins = (senat.wins || 0) + 1; patch.points = (senat.points || 0) + 3; }
+  else if (outcome === 'draw') { patch.draws = (senat.draws || 0) + 1; patch.points = (senat.points || 0) + 1; }
+  else { patch.losses = (senat.losses || 0) + 1; }
+  await update(ref(db, `senaty/${senatId}`), patch);
+
+  const rewardAmount = outcome === 'win' ? ECONOMY_CONFIG.SENATY.SPOR_WIN
+    : outcome === 'draw' ? ECONOMY_CONFIG.SENATY.SPOR_DRAW
+    : ECONOMY_CONFIG.SENATY.SPOR_LOSS;
+  const members = Object.keys(senat.members || {});
+  await Promise.all(members.map(m => econAward(m, rewardAmount, `senátny spor – ${outcome}`, { skipCap: true })));
+}
+
+/* Lazy vyhodnotenie jedného sporu po termíne. Uzamknuté transakčne
+   (senatSpory/{id}/settling), aby dvaja súbežne otvorení hráči
+   nevyhodnotili (a nevyplatili) ten istý spor dvakrát. */
+async function settleSenatSpor(sporId) {
+  const db = getDb();
+  const spor = await getSenatSpor(sporId);
+  if (!spor || spor.status !== 'running' || Date.now() < spor.deadline) return null;
+
+  const lockRef = ref(db, `senatSpory/${sporId}/settling`);
+  const lockResult = await runTransaction(lockRef, (current) => {
+    if (current === true) return; // abort – už sa vyhodnocuje/vyhodnotené
+    return true;
+  });
+  if (!lockResult || !lockResult.committed) return null;
+
+  const challengerSenat = await getSenat(spor.challenger);
+  const opponentSenat = await getSenat(spor.opponent);
+  if (!challengerSenat || !opponentSenat) return null;
+
+  const challengerMembers = Object.keys(challengerSenat.members || {});
+  const opponentMembers = Object.keys(opponentSenat.members || {});
+  const challengerScores = (spor.scores && spor.scores[spor.challenger]) || {};
+  const opponentScores = (spor.scores && spor.scores[spor.opponent]) || {};
+
+  const challengerPlayed = challengerMembers.filter(m => typeof challengerScores[m] === 'number');
+  const opponentPlayed = opponentMembers.filter(m => typeof opponentScores[m] === 'number');
+  const halfChallenger = Math.ceil(challengerMembers.length / 2);
+  const halfOpponent = Math.ceil(opponentMembers.length / 2);
+
+  if (challengerPlayed.length < halfChallenger || opponentPlayed.length < halfOpponent) {
+    await update(ref(db, `senatSpory/${sporId}`), { status: 'done', winner: null, voided: true });
+    return { voided: true };
+  }
+
+  // Priemer, nie súčet – kto neodohral do deadline počíta 0 bodov.
+  const avg = (members, scores) => members.reduce((sum, m) => sum + (scores[m] || 0), 0) / members.length;
+  const challengerAvg = avg(challengerMembers, challengerScores);
+  const opponentAvg = avg(opponentMembers, opponentScores);
+
+  const winner = Math.abs(challengerAvg - opponentAvg) < 1
+    ? 'draw'
+    : (challengerAvg > opponentAvg ? spor.challenger : spor.opponent);
+
+  await update(ref(db, `senatSpory/${sporId}`), { status: 'done', winner, challengerAvg, opponentAvg });
+
+  if (winner === 'draw') {
+    await applySporResult(challengerSenat, spor.challenger, 'draw');
+    await applySporResult(opponentSenat, spor.opponent, 'draw');
+  } else if (winner === spor.challenger) {
+    await applySporResult(challengerSenat, spor.challenger, 'win');
+    await applySporResult(opponentSenat, spor.opponent, 'loss');
+  } else {
+    await applySporResult(opponentSenat, spor.opponent, 'win');
+    await applySporResult(challengerSenat, spor.challenger, 'loss');
+  }
+
+  return { winner, challengerAvg, opponentAvg };
+}
+
+/* Volané raz pri načítaní stránky – prejde VŠETKY bežiace spory po
+   termíne a vyhodnotí ich (lazy, bez servera/cronu). */
+export async function settlePendingSenatSpory() {
+  const db = getDb();
+  if (!db) return;
+  try {
+    const snap = await get(ref(db, 'senatSpory'));
+    if (!snap.exists()) return;
+    const now = Date.now();
+    const entries = Object.entries(snap.val());
+    for (const [id, s] of entries) {
+      if (s.status === 'running' && s.deadline < now) {
+        await settleSenatSpor(id);
+      }
+    }
+  } catch (e) {
+    console.warn('senaty: vyhodnotenie senátnych sporov zlyhalo', e);
+  }
+}
+
+/* ============================================================
+   REBRÍČEK SENÁTOV – týždenné/mesačné výplaty (lazy, transakčne
+   uzamknuté, rovnaký vzor ako economy.js econSettleLeaderboards).
+   Body sa NEresetujú medzi obdobiami (kumulatívne za celý senát) –
+   rebríček pri výplate berie aktuálny stav `points` v danom momente.
+============================================================ */
+/* Rovnaký vzor ako getPreviousWeekPeriod/getPreviousMonthPeriod v
+   economy.js – vyhodnocuje sa PREDCHÁDZAJÚCE (už skončené) obdobie,
+   nie prebiehajúce, inak by sa výplata spúšťala priebežne počas
+   celého týždňa/mesiaca namiesto raz po jeho skončení. */
+function isoWeekInfo(date) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const week = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  return { year: d.getUTCFullYear(), week };
+}
+
+function getWeekStartLocal(date) {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = (day === 0 ? -6 : 1) - day;
+  d.setDate(d.getDate() + diff);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+function getPreviousWeekKey(now = new Date()) {
+  const thisWeekStart = getWeekStartLocal(now);
+  const prevWeekStart = new Date(thisWeekStart);
+  prevWeekStart.setDate(prevWeekStart.getDate() - 7);
+  const { year, week } = isoWeekInfo(prevWeekStart);
+  return { key: `W-${year}-${String(week).padStart(2, '0')}`, isPastPeriod: now.getTime() >= thisWeekStart.getTime() };
+}
+
+function getPreviousMonthKey(now = new Date()) {
+  const thisMonthStart = new Date(now.getFullYear(), now.getMonth(), 1, 0, 0, 0, 0);
+  const prevMonthStart = new Date(now.getFullYear(), now.getMonth() - 1, 1, 0, 0, 0, 0);
+  return { key: `M-${prevMonthStart.getFullYear()}-${String(prevMonthStart.getMonth() + 1).padStart(2, '0')}` };
+}
+
+export async function getSenatLeaderboard() {
+  const db = getDb();
+  if (!db) return [];
+  const snap = await get(ref(db, 'senaty'));
+  if (!snap.exists()) return [];
+  return Object.entries(snap.val())
+    .map(([id, s]) => ({ id, ...s }))
+    .filter(s => s.status === 'active')
+    .sort((a, b) => (b.points || 0) - (a.points || 0));
+}
+
+async function settleSenatLeaderboardPeriod(periodKey, rewardTable) {
+  const db = getDb();
+  const evaluatedRef = ref(db, `senatRewards/${periodKey}/evaluated`);
+  const result = await runTransaction(evaluatedRef, (current) => {
+    if (current === true) return;
+    return true;
+  });
+  if (!result || !result.committed) return;
+
+  const top3 = (await getSenatLeaderboard()).slice(0, 3);
+  const winners = [];
+  for (let i = 0; i < top3.length; i++) {
+    const amount = rewardTable[i] || 0;
+    if (!amount) continue;
+    const members = Object.keys(top3[i].members || {});
+    await Promise.all(members.map(m =>
+      econAward(m, amount, `${i + 1}. miesto senátu v rebríčku`, { skipCap: true })
+    ));
+    winners.push({ senatId: top3[i].id, name: top3[i].name, place: i + 1, amount });
+  }
+  await set(ref(db, `senatRewards/${periodKey}/winners`), winners);
+}
+
+/* Ak je hráč členom senátu, ktorý práve vyhral a ešte to nevidel,
+   zobraz toast raz (rovnaký vzor ako announceLeaderboardWinIfAny). */
+async function announceSenatLeaderboardWinIfAny(nick, periodKeys) {
+  const db = getDb();
+  if (!db || !nick) return;
+  for (const periodKey of periodKeys) {
+    const snap = await get(ref(db, `senatRewards/${periodKey}/winners`));
+    if (!snap.exists()) continue;
+    const winners = snap.val() || [];
+    for (const w of winners) {
+      const senat = await getSenat(w.senatId);
+      if (!senat || !senat.members || !senat.members[nick]) continue;
+      const seenRef = ref(db, `senatRewards/${periodKey}/seen/${nick}`);
+      const seenSnap = await get(seenRef);
+      if (seenSnap.exists()) continue;
+      await set(seenRef, true);
+      showRewardToast(`⚖️ Váš senát ${senat.name} skončil ${w.place}. v rebríčku! +${w.amount}§`);
+    }
+  }
+}
+
+export async function settleSenatLeaderboards() {
+  const db = getDb();
+  if (!db) return;
+  const nick = getNick();
+  const { key: weekKey } = getPreviousWeekKey();
+  const { key: monthKey } = getPreviousMonthKey();
+  await settleSenatLeaderboardPeriod(weekKey, ECONOMY_CONFIG.SENATY.LB_WEEKLY);
+  await settleSenatLeaderboardPeriod(monthKey, ECONOMY_CONFIG.SENATY.LB_MONTHLY);
+  await announceSenatLeaderboardWinIfAny(nick, [weekKey, monthKey]);
 }
 
 window.getMojeSenaty = getMojeSenaty;

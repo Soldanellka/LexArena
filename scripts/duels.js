@@ -49,7 +49,7 @@ function shuffleQuestionOptions(q) {
   return q;
 }
 
-function pickQuestions(areaName) {
+export function pickQuestions(areaName) {
   let questions = [];
 
   // 🔥 PRACOVNÉ PRÁVO – páry A1+A2, A3+A4, …
@@ -168,7 +168,7 @@ function pickQuestions(areaName) {
 /* ============================================================
    ČAKANIE NA NAČÍTANIE OTÁZOK (asynchrónne z data.js)
 ============================================================ */
-function waitForQuestions(areaName) {
+export function waitForQuestions(areaName) {
   return new Promise((resolve) => {
     const areasToCheck = areaName === "Trestné právo"
       ? ["Trestné právo hmotné", "Trestné právo procesné"]
