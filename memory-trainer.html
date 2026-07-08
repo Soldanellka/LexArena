@@ -130,16 +130,18 @@
   @media (prefers-reduced-motion: reduce) {
     .bf-video-bg { animation: none; background-position: 30% 50%; }
   }
-  /* Moderátor a text sú samostatné flex položky vedľa seba (nie
-     prekrývajúce sa absolútne pozicionovanie) – text tak nikdy
-     nerenderuje cez postavu moderátora. */
+  /* Moderátor je VIZUÁLNE ZA textom (nižší z-index), centrálne/mierne
+     vpravo. Text sedí na polopriehľadnom páse s blur pozadím, nech je
+     čitateľný aj cez postavu – pás je len taký široký ako text, nie
+     na celú šírku obrazovky. */
   .bf-video-main {
-    position: relative; z-index: 2;
-    flex: 1; min-height: 0;
-    display: flex; align-items: flex-end; gap: 24px;
+    position: relative; flex: 1; min-height: 0;
+    display: flex; align-items: center; justify-content: center;
   }
   .bf-video-moderator {
-    flex: 0 0 auto; height: 55%; max-height: 55vh; pointer-events: none;
+    position: absolute; z-index: 1; bottom: 0;
+    left: 50%; transform: translateX(-15%);
+    height: 80%; max-height: 80vh; pointer-events: none;
   }
   .bf-video-moderator img {
     height: 100%; width: auto; object-fit: contain;
@@ -147,16 +149,22 @@
     transition: opacity 260ms ease;
   }
   .bf-video-content {
-    flex: 1; min-width: 0; display: flex; flex-direction: column;
-    align-items: flex-start; justify-content: center; text-align: left;
-    padding: 20px 20px 20px 0; max-width: 640px;
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    width: fit-content; max-width: 92%;
+    background: rgba(20,16,24,0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 0 16px;
   }
   .bf-video-question {
     font-family: 'Lora', serif; font-weight: 700;
-    font-size: 26px; line-height: 1.3; margin-bottom: 18px;
+    font-size: 24px; line-height: 1.3; margin-bottom: 14px;
     text-shadow: 0 2px 12px rgba(0,0,0,0.4);
   }
-  .bf-video-answer { font-size: 18px; line-height: 1.7; }
+  .bf-video-answer { font-size: 17px; line-height: 1.7; }
   .bf-sentence {
     color: rgba(255,255,255,0.45);
     transition: color 200ms ease;
@@ -166,6 +174,12 @@
     color: #fff; font-weight: 600;
     text-shadow: 0 0 14px rgba(240,138,166,0.75);
   }
+  .bf-video-dim {
+    position: absolute; inset: 0; z-index: 1;
+    background: rgba(0,0,0,0); pointer-events: none;
+    transition: background 900ms ease;
+  }
+  .bf-video-dim.active { background: rgba(0,0,0,0.5); }
   .bf-video-bottom { position: relative; z-index: 2; }
   .bf-video-progress {
     height: 4px; border-radius: 999px; background: rgba(255,255,255,0.2);
@@ -178,16 +192,15 @@
   .bf-video-controls { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
   .bf-video-controls .btn { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
   .bf-video-end {
-    position: absolute; inset: 0; z-index: 3;
-    display: flex; align-items: center; justify-content: center; gap: 12px;
+    position: absolute; inset: 0; z-index: 4;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
     background: rgba(10,5,10,0.55); flex-wrap: wrap; padding: 20px;
   }
+  .bf-video-end-msg { font-size: 22px; font-weight: 600; text-align: center; }
 
   @media (max-width: 640px) {
-    .bf-video-main { flex-direction: column-reverse; align-items: center; gap: 10px; }
-    .bf-video-moderator { height: 32%; max-height: 32vh; opacity: 0.9; }
-    .bf-video-content { align-items: center; text-align: center; padding: 8px 4px; }
-    .bf-video-question { font-size: 20px; }
+    .bf-video-moderator { height: 55%; max-height: 55vh; transform: translateX(-8%); }
+    .bf-video-question { font-size: 19px; }
     .bf-video-answer { font-size: 15px; }
     .bf-video-controls .btn, .bf-video-end .btn { width: 100%; }
     .bf-video-controls, .bf-video-end { flex-direction: column; }
@@ -254,6 +267,7 @@
         <button class="btn mt-joker" id="jokerSkeleton" type="button">🃏 Kostra</button>
         <button class="btn mt-joker" id="jokerInitials" type="button">🔤 Iniciály</button>
         <button class="btn mt-joker" id="jokerReplay" type="button">🔊 Vypočuť</button>
+        <button class="btn mt-joker" id="jokerVideo" type="button">🔁 Video znova</button>
         <span class="mt-joker-balance" id="mtJokerBalance"></span>
       </div>
       <div class="mt-joker-hint" id="mtJokerHint" style="display:none"></div>
@@ -414,7 +428,8 @@ function setupYoutubeModal() {
 const JOKER_DEFS = [
   { id: 'jokerSkeleton', type: 'skeleton', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_SKELETON, label: '🃏 Kostra' },
   { id: 'jokerInitials', type: 'initials', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_INITIALS, label: '🔤 Iniciály' },
-  { id: 'jokerReplay',   type: 'replay',   price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_REPLAY,   label: '🔊 Vypočuť' }
+  { id: 'jokerReplay',   type: 'replay',   price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_REPLAY,   label: '🔊 Vypočuť' },
+  { id: 'jokerVideo',    type: 'video',    price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY,   label: '🔁 Video znova' }
 ];
 
 let jokerUsed = null;
@@ -429,6 +444,24 @@ function updateJokerButtonsUI() {
     const btn = $(def.id);
     if (!btn) return;
     btn.textContent = `${def.label} (${def.price}§)`;
+
+    /* "Video znova" má VLASTNÝ limit (videoPlays, max 3, zdieľaný
+       s tlačidlom v prehrávači) – nezávislý od jokerUsed zámku
+       textových pomôcok (kostra/iniciály/vypočuť). */
+    if (def.type === 'video') {
+      if (videoPlays >= 3) {
+        btn.disabled = true;
+        btn.title = 'Dosiahnutý limit 3 pozretí tejto definície.';
+      } else if (jokerBalance < def.price) {
+        btn.disabled = true;
+        btn.title = `Potrebuješ ${def.price}§, máš ${jokerBalance}§`;
+      } else {
+        btn.disabled = false;
+        btn.title = '';
+      }
+      return;
+    }
+
     if (jokerUsed) {
       btn.disabled = true;
       btn.title = 'Na jednu definíciu len jeden žolík';
@@ -462,7 +495,16 @@ function resetJokers() {
 }
 
 async function handleJokerClick(def) {
-  if (jokerUsed || !currentItem) return;
+  if (!currentItem) return;
+
+  /* "Video znova" má vlastnú platbu/počítadlo (requestVideoReplay,
+     zdieľané s tlačidlom v prehrávači) – nejde cez jokerUsed zámok. */
+  if (def.type === 'video') {
+    await handleVideoJokerClick();
+    return;
+  }
+
+  if (jokerUsed) return;
   const nick = localStorage.getItem('playerNick');
   if (!nick) return;
 
@@ -574,6 +616,7 @@ function showReviewItem(areaSlug) {
   $('mtReviewAnswerBox').textContent = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
   updateSealBadge($('mtReviewSealBadge'), currentItem);
   updateYoutubeButton('mtReviewYoutubeBtn', currentItem);
+  resetVideoPlays();
   $('mtReviewPhase').style.display = 'block';
 }
 
@@ -626,13 +669,71 @@ function setupReviewMode() {
    Moderátor rotuje podľa pozície definície v načítanom balíčku
    (defIndex), nie podľa aktuálneho hráčovho avatara.
 ============================================================ */
+/* ============================================================
+   🎥 Video režim – tri prehratia na definíciu (videoPlays 1/2/3),
+   zdieľané s "🔁 Video znova" žolíkom v odpovedacej fáze. Reset
+   pri prechode na inú definíciu (resetVideoPlays, volané zo
+   showNextItem/retryItem/showReviewItem).
+============================================================ */
+let videoPlays = 0;
+
+function resetVideoPlays() { videoPlays = 0; }
+
+async function canReplayVideo() {
+  if (videoPlays >= 3) return { allowed: false, reason: 'Dosiahnutý limit 3 pozretí tejto definície.' };
+  const price = ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY;
+  const nick = localStorage.getItem('playerNick');
+  const bal = nick ? await econBalance(nick) : 0;
+  if (bal < price) return { allowed: false, reason: `Potrebuješ ${price}§, máš ${bal}§.`, price };
+  return { allowed: true, price };
+}
+
+async function requestVideoReplay() {
+  if (videoPlays >= 3) return { ok: false };
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return { ok: false };
+  const ok = await econSpend(nick, ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY, 'video znova v bifľovačke');
+  if (!ok) return { ok: false };
+  videoPlays++;
+  await refreshJokerBalance();
+  return { ok: true, playNumber: videoPlays };
+}
+
 function watchCurrentAsVideo() {
   if (!currentItem || !slug) return;
   const items = getAllMemoryItems(slug);
   const defIndex = Math.max(0, items.findIndex(p => p.id === currentItem.id));
-  const question = currentItem.question || '';
-  const reference = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
-  openVideoPlayer({ question, reference, defIndex });
+  videoPlays = Math.max(1, videoPlays); // prvé pozretie je vždy zadarmo
+  openVideoPlayer({
+    question: currentItem.question || '',
+    reference: referenceText(),
+    defIndex,
+    playNumber: videoPlays,
+    canReplay: canReplayVideo,
+    onRequestReplay: requestVideoReplay
+  });
+}
+
+/* Žolík "🔁 Video znova" v odpovedacej fáze – vždy platí (aj keby
+   šlo o úplne prvé pozretie tejto definície), zdieľa videoPlays
+   s tlačidlom v prehrávači. */
+async function handleVideoJokerClick() {
+  if (!currentItem || !slug) return;
+  const result = await requestVideoReplay();
+  if (!result.ok) { updateJokerButtonsUI(); return; }
+
+  const items = getAllMemoryItems(slug);
+  const defIndex = Math.max(0, items.findIndex(p => p.id === currentItem.id));
+  openVideoPlayer({
+    question: currentItem.question || '',
+    reference: referenceText(),
+    defIndex,
+    playNumber: result.playNumber,
+    canReplay: canReplayVideo,
+    onRequestReplay: requestVideoReplay,
+    onExit: updateJokerButtonsUI,
+    onNext: updateJokerButtonsUI
+  });
 }
 
 function setupVideoButtons() {
@@ -700,6 +801,7 @@ function showNextItem(areaSlug) {
   updateSealBadge($('mtSealBadge'), item);
   updateYoutubeButton('mtYoutubeBtn', item);
   resetJokers();
+  resetVideoPlays();
 }
 
 /* Len informačný odhad – žiadny odpočet, definícia visí kým klikneš na tlačidlo. */
@@ -715,6 +817,7 @@ function revealToAnswerPhase() {
   $('mtRevealPhase').style.display = 'none';
   $('mtAnswerPhase').style.display = 'block';
   $('mtAnswerInput').focus();
+  updateJokerButtonsUI(); // videoPlays sa mohol zmeniť, kým bola viditeľná fáza odhalenia
 }
 
 async function submitAnswer(areaSlug) {
