@@ -130,9 +130,16 @@
   @media (prefers-reduced-motion: reduce) {
     .bf-video-bg { animation: none; background-position: 30% 50%; }
   }
+  /* Moderátor a text sú samostatné flex položky vedľa seba (nie
+     prekrývajúce sa absolútne pozicionovanie) – text tak nikdy
+     nerenderuje cez postavu moderátora. */
+  .bf-video-main {
+    position: relative; z-index: 2;
+    flex: 1; min-height: 0;
+    display: flex; align-items: flex-end; gap: 24px;
+  }
   .bf-video-moderator {
-    position: absolute; left: 0; bottom: 0; z-index: 1;
-    height: 70%; max-height: 70vh; pointer-events: none;
+    flex: 0 0 auto; height: 55%; max-height: 55vh; pointer-events: none;
   }
   .bf-video-moderator img {
     height: 100%; width: auto; object-fit: contain;
@@ -140,10 +147,9 @@
     transition: opacity 260ms ease;
   }
   .bf-video-content {
-    position: relative; z-index: 2;
-    flex: 1; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; text-align: center;
-    padding: 20px; max-width: 720px; margin: 0 auto;
+    flex: 1; min-width: 0; display: flex; flex-direction: column;
+    align-items: flex-start; justify-content: center; text-align: left;
+    padding: 20px 20px 20px 0; max-width: 640px;
   }
   .bf-video-question {
     font-family: 'Lora', serif; font-weight: 700;
@@ -178,7 +184,9 @@
   }
 
   @media (max-width: 640px) {
-    .bf-video-moderator { height: 42%; max-height: 42vh; opacity: 0.9; }
+    .bf-video-main { flex-direction: column-reverse; align-items: center; gap: 10px; }
+    .bf-video-moderator { height: 32%; max-height: 32vh; opacity: 0.9; }
+    .bf-video-content { align-items: center; text-align: center; padding: 8px 4px; }
     .bf-video-question { font-size: 20px; }
     .bf-video-answer { font-size: 15px; }
     .bf-video-controls .btn, .bf-video-end .btn { width: 100%; }

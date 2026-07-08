@@ -585,14 +585,16 @@ window.renderMemoryTiles = renderMemoryTiles;
    Zvuková podpora – prehratie definície (SpeechSynthesis)
    a nahratie odpovede hlasom (SpeechRecognition).
 ============================================================ */
-export function speakText(text, { onEnd, onBoundary, cancelPrevious = true, volume = 1 } = {}) {
+export function speakText(text, { onEnd, onBoundary, cancelPrevious = true, volume = 1, voice = null, pitch = 1 } = {}) {
   if (!text || !('speechSynthesis' in window)) return false;
   try {
     if (cancelPrevious) window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = 'sk-SK';
+    utter.lang = voice ? voice.lang : 'sk-SK';
     utter.rate = 0.95;
+    utter.pitch = pitch;
     utter.volume = volume;
+    if (voice) utter.voice = voice;
     if (onEnd) utter.onend = onEnd;
     if (onBoundary) utter.onboundary = onBoundary;
     window.speechSynthesis.speak(utter);

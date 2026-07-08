@@ -10,20 +10,22 @@
    kódu.
 
    Položka: { id, name, type: 'basic'|'talar', base, price,
-   grantedBy, active }. `base` je cesta bez prípony, presne ako
-   AVATAR_CONFIG.AVATARS[...].base v scripts/avatar.js.
+   grantedBy, active, gender: 'f'|'m' }. `base` je cesta bez prípony,
+   presne ako AVATAR_CONFIG.AVATARS[...].base v scripts/avatar.js.
+   `gender` volí hlas TTS moderátora vo video režime – pri pridávaní
+   nového taláru ho vyplň (bez neho sa háda z id, viď getAvatarGender).
 ============================================================ */
 
 import { ref, get, set }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const BASIC_SEED = [
-  { id: 'studentka-tmava',  name: 'Študentka (tmavé vlasy)',  type: 'basic', base: 'avatars/studentka-tmava',  price: 0, grantedBy: null, active: true },
-  { id: 'studentka-medena', name: 'Študentka (medené vlasy)', type: 'basic', base: 'avatars/studentka-medena', price: 0, grantedBy: null, active: true },
-  { id: 'studentka-blond',  name: 'Študentka (blond vlasy)',  type: 'basic', base: 'avatars/studentka-blond',  price: 0, grantedBy: null, active: true },
-  { id: 'student-tmavy',    name: 'Študent (tmavé vlasy)',    type: 'basic', base: 'avatars/student-tmavy',    price: 0, grantedBy: null, active: true },
-  { id: 'student-medeny',   name: 'Študent (medené vlasy)',   type: 'basic', base: 'avatars/student-medeny',   price: 0, grantedBy: null, active: true },
-  { id: 'student-blond',    name: 'Študent (blond vlasy)',    type: 'basic', base: 'avatars/student-blond',    price: 0, grantedBy: null, active: true }
+  { id: 'studentka-tmava',  name: 'Študentka (tmavé vlasy)',  type: 'basic', base: 'avatars/studentka-tmava',  price: 0, grantedBy: null, active: true, gender: 'f' },
+  { id: 'studentka-medena', name: 'Študentka (medené vlasy)', type: 'basic', base: 'avatars/studentka-medena', price: 0, grantedBy: null, active: true, gender: 'f' },
+  { id: 'studentka-blond',  name: 'Študentka (blond vlasy)',  type: 'basic', base: 'avatars/studentka-blond',  price: 0, grantedBy: null, active: true, gender: 'f' },
+  { id: 'student-tmavy',    name: 'Študent (tmavé vlasy)',    type: 'basic', base: 'avatars/student-tmavy',    price: 0, grantedBy: null, active: true, gender: 'm' },
+  { id: 'student-medeny',   name: 'Študent (medené vlasy)',   type: 'basic', base: 'avatars/student-medeny',   price: 0, grantedBy: null, active: true, gender: 'm' },
+  { id: 'student-blond',    name: 'Študent (blond vlasy)',    type: 'basic', base: 'avatars/student-blond',    price: 0, grantedBy: null, active: true, gender: 'm' }
 ];
 
 let cachedCatalog = null;
@@ -73,4 +75,13 @@ export function avatarStateSrc(avatarEntry, state, bust = false) {
   if (!avatarEntry || !avatarEntry.base) return '';
   const suffix = bust ? '-bust' : '';
   return `${avatarEntry.base}-${state}${suffix}.png`;
+}
+
+/* 'f'|'m' pre výber hlasu TTS. Katalógy zapísané pred pridaním
+   gender poľa (staršie config/avatarCatalog vo Firebase) nemajú
+   toto pole – vtedy sa háda z id (studentka-* = f, inak m). */
+export function getAvatarGender(avatarEntry) {
+  if (!avatarEntry) return 'f';
+  if (avatarEntry.gender === 'f' || avatarEntry.gender === 'm') return avatarEntry.gender;
+  return avatarEntry.id && avatarEntry.id.startsWith('studentka') ? 'f' : 'm';
 }

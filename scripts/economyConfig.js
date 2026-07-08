@@ -93,7 +93,8 @@ export const ECONOMY_CONFIG = {
     PRESTIGE_AVATAR_MIN: 300, // cenové pásmo prestige avatarov (300–500§), viď Sinky
     BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
     BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
-    BIFLOVACKA_JOKER_REPLAY: 1    // žolík: vypočuť definíciu znova cez TTS
+    BIFLOVACKA_JOKER_REPLAY: 1,   // žolík: vypočuť definíciu znova cez TTS (v odpovedacej fáze)
+    BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
   },
 
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
