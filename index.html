@@ -125,8 +125,8 @@
     </div>
 
     <div class="card section-card" id="leaderboardSection">
-      <h3 style="margin:0">Rebríček duelov</h3>
-      <div class="small">Najlepší hráči duelových kvízov</div>
+      <h3 style="margin:0">Rebríček pojednávaní</h3>
+      <div class="small">Najlepší hráči pojednávaní</div>
       <div style="display:flex;gap:8px;margin-top:10px">
         <button class="chip">Týždeň</button>
         <button class="chip">Mesiac</button>
@@ -185,10 +185,10 @@
         <div class="video-item" data-video-id="v2">
           <div class="video-thumb" onclick="openVideo('v2')">
             <div class="video-play-btn">▶</div>
-            <div class="video-label">Ako hrať duelový kvíz?</div>
+            <div class="video-label">Ako hrať pojednávanie?</div>
           </div>
           <div class="video-meta">
-            <span class="small muted">Duely krok za krokom • 2 min</span>
+            <span class="small muted">Pojednávania krok za krokom • 2 min</span>
             <span class="video-reward-badge" id="reward-v2">+12§</span>
           </div>
         </div>
@@ -255,8 +255,8 @@
   <div class="right">
 
     <div class="card highlight-bank" id="duelBankCard">
-      <h3 style="margin:0">Banka duelov</h3>
-      <div class="small">Balíky otázok a uložené výzvy na duelový kvíz</div>
+      <h3 style="margin:0">Register pojednávaní</h3>
+      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
       <div style="display:flex;gap:8px;margin-top:8px">
         <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
       </div>
@@ -265,9 +265,9 @@
 
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">
-        <div class="small">Duelový kvíz</div>
-        <h2 id="quizTitle">Vyber oblasť do duelu, hry a prípady</h2>
-        <div class="small">Po odohraní sa tvoja 10‑otázková výzva uloží do banky duelov.</div>
+        <div class="small">Pojednávanie</div>
+        <h2 id="quizTitle">Vyber oblasť pojednávania, hry a prípady</h2>
+        <div class="small">Po odohraní sa tvoja 10‑otázková výzva uloží do registra pojednávaní.</div>
 
         <!-- Oblasti priamo v kvíze -->
         <div id="areasInQuiz" style="margin-top:14px">
@@ -276,7 +276,7 @@
         </div>
 
         <div style="margin-top:12px;display:flex;gap:8px">
-          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť duel</button>
+          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť pojednávanie</button>
           <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
           <button class="btn" id="helpBtn" type="button">
             <img src="assets/icons/info.svg" width="18" height="18" alt="">
@@ -294,7 +294,7 @@
             <div class="small">Otázka</div>
             <div id="qIndex" style="font-weight:700">1 / 10</div>
           </div>
-          <button class="btn icon-btn" id="quizCancelBtn" title="Ukončiť duel"
+          <button class="btn icon-btn" id="quizCancelBtn" title="Ukončiť pojednávanie"
             onclick="typeof window.cancelQuiz==='function' && window.cancelQuiz()">✕</button>
         </div>
         <div class="question-box">
@@ -332,7 +332,7 @@
 
     <div class="card highlight-challenges" id="incomingChallengeCard" style="display:none; margin-top:16px;">
       <h3 style="margin:0">Výzvy od spoluhráčov</h3>
-      <div class="small">Prijaté výzvy na duelový kvíz</div>
+      <div class="small">Prijaté výzvy na pojednávanie</div>
       <div id="incomingChallengeList" class="list" style="margin-top:10px"></div>
       <div style="display:flex;gap:8px;margin-top:10px">
         <button class="btn btn-primary" id="acceptAnyChallenge">Prijať prvú výzvu</button>
@@ -403,7 +403,7 @@
         <summary>🎯 Čo je LexArena</summary>
         <div class="guide-content">
           <p>LexArena je študijná aréna pre študentov práva. Precvičuješ štátnicové okruhy
-          z pracovného, trestného a občianskeho práva formou duelov, kartičiek, prípadov
+          z pracovného, trestného a občianskeho práva formou pojednávaní, kartičiek, prípadov
           z praxe a bifľovačky – a za aktivitu zbieraš paragrafy (§), našu hernú menu.</p>
           <p><strong>Dôležité – obsah tvoríme spoločne:</strong> Otázky a definície pripravujeme s odbornou
           starostlivosťou, no kvalita obsahu je v rukách celej komunity. Každý hráč sa
@@ -416,12 +416,12 @@
       </details>
 
       <details class="guide-section">
-        <summary>⚔️ Duel</summary>
+        <summary>⚔️ Pojednávanie</summary>
         <div class="guide-content">
-          <p>Vyber si oblasť práva a vyzvi súpera. Duel má 10 otázok – pri kombinovaných
+          <p>Vyber si oblasť práva a vyzvi súpera. Pojednávanie má 10 otázok – pri kombinovaných
           oblastiach (trestné, občianske právo) 5 z hmotného a 5 z procesného práva,
           vždy z náhodného štátnicového okruhu. Súper odpovedá na tie isté otázky.</p>
-          <p>Svoj odohraný duel nájdeš v banke duelov – tlačidlom „📤 Poslať" vygeneruješ
+          <p>Svoje odohrané pojednávanie nájdeš v registri pojednávaní – tlačidlom „📤 Poslať" vygeneruješ
           link na výzvu a pošleš ho komukoľvek. Kto výzvu prijme, hrá proti tebe tie
           isté otázky.</p>
           <table class="guide-table">
@@ -469,7 +469,7 @@
           <p>Tvoj avatar má energiu 0–100 %. Hranie ju spotrebúva:</p>
           <table class="guide-table">
             <tr><th>Aktivita</th><th>Energia</th></tr>
-            <tr><td>Duel</td><td>−5 %</td></tr>
+            <tr><td>Pojednávanie</td><td>−5 %</td></tr>
             <tr><td>Bifľovačka</td><td>−1 % / kartičku</td></tr>
             <tr><td>Kartičky</td><td>−2 % / sadu</td></tr>
             <tr><td>Prípady</td><td>−4 % / sadu</td></tr>
@@ -498,7 +498,7 @@
       <details class="guide-section">
         <summary>🏆 Rebríčky</summary>
         <div class="guide-content">
-          <p>Body z duelov ťa posúvajú v rebríčku. Vyhodnocuje sa automaticky:</p>
+          <p>Body z pojednávaní ťa posúvajú v rebríčku. Vyhodnocuje sa automaticky:</p>
           <table class="guide-table">
             <tr><th>Rebríček</th><th>1. miesto</th><th>2. miesto</th><th>3. miesto</th></tr>
             <tr><td>Týždenný (nedeľa polnoc)</td><td>+50§</td><td>+30§</td><td>+10§</td></tr>
@@ -1019,7 +1019,7 @@ console.log('✅ Reports system inline načítaný');
 <!-- Spodná navigácia (len mobil) -->
 <nav class="bottom-nav" aria-label="Rýchla navigácia">
   <button data-target="top">🏠<span>Domov</span></button>
-  <button data-target="quizCard">⚔️<span>Duel</span></button>
+  <button data-target="quizCard">⚔️<span>Pojednávanie</span></button>
   <button data-target="gamesSection">🎮<span>Hry</span></button>
   <button data-target="leaderboardSection">🏆<span>Rebríček</span></button>
   <button data-target="profile">👤<span>Profil</span></button>

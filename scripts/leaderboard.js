@@ -79,7 +79,7 @@ async function renderLeaderboardList(list) {
   if (!box) return;
 
   if (!list.length) {
-    box.innerHTML = '<div class="small muted">Zatiaľ žiadne odohrané duely v tomto období.</div>';
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne odohrané pojednávania v tomto období.</div>';
     return;
   }
 

@@ -67,12 +67,12 @@ function renderAreas() {
       const quizTitle = $('quizTitle');
       const areaTitle = $('areaTitle');
 
-      if (quizTitle) quizTitle.textContent = 'Vyber oblasť do duelu, hry a prípady';
+      if (quizTitle) quizTitle.textContent = 'Vyber oblasť pojednávania, hry a prípady';
       if (areaTitle) areaTitle.textContent = name;
 
       if (startBtn) {
         startBtn.disabled = false;
-        startBtn.textContent = 'Spustiť duel';
+        startBtn.textContent = 'Spustiť pojednávanie';
         startBtn.onclick = () => {
           console.log("Spúšťam duel pre oblasť:", name);
           startDuel(name);

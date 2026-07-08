@@ -402,7 +402,7 @@ export function renderDuelBank() {
     box.innerHTML = "";
 
     if (!stored.length) {
-      box.innerHTML = "<p class='small muted'>Žiadne uložené duely.</p>";
+      box.innerHTML = "<p class='small muted'>Žiadne uložené pojednávania.</p>";
       return;
     }
 
@@ -415,7 +415,7 @@ export function renderDuelBank() {
 
       div.innerHTML = `
         <div class="duel-banner">
-          ⚔️ <strong>${duel.from}</strong> vyzýva do duelu<br>
+          ⚔️ <strong>${duel.from}</strong> vyzýva na pojednávanie<br>
           <span class="duel-topic">téma: <em>${duel.areaTitle}</em></span>
         </div>
 
@@ -440,7 +440,7 @@ export function renderDuelBank() {
       if (sendBtn) {
         sendBtn.onclick = async () => {
           const link = `https://www.lexarena.sk/?duel=${duel.id}`;
-          const message = `⚔️ ${duel.from} ťa vyzýva na duel z oblasti ${duel.areaTitle} v LexAréne! Prijmi výzvu: ${link}`;
+          const message = `⚔️ ${duel.from} ťa vyzýva na pojednávanie z oblasti ${duel.areaTitle} v LexAréne! Prijmi výzvu: ${link}`;
           try {
             await navigator.clipboard.writeText(message);
             showRewardToast('Výzva skopírovaná – stačí vložiť ✅');
@@ -449,7 +449,7 @@ export function renderDuelBank() {
           }
           if (navigator.share) {
             navigator.share({
-              title: 'Výzva na duel – LexArena',
+              title: 'Výzva na pojednávanie – LexArena',
               text: message,
               url: link
             }).catch(() => {});
