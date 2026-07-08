@@ -936,14 +936,15 @@ body {
 
   .left > .card,
   .right > .card {
-    order: 6; /* 6. zvyšok – ostatné karty si zachovajú vzájomné poradie */
+    order: 7; /* 7. zvyšok – ostatné karty si zachovajú vzájomné poradie */
   }
 
   #tilesSection      { order: 1; } /* 1. dlaždice / študijné moduly */
-  #duelBankCard      { order: 2; } /* 2. banka duelov */
-  #quizCard          { order: 3; } /* 3. vyber oblasť do duelu */
-  #gamesSection      { order: 4; } /* 4. hry */
-  #leaderboardSection{ order: 5; } /* 5. rebríček */
+  #duelBankCard      { order: 2; } /* 2. register pojednávaní */
+  #senatyCard        { order: 3; } /* 3. senáty */
+  #quizCard          { order: 4; } /* 4. vyber oblasť pojednávania */
+  #gamesSection      { order: 5; } /* 5. hry */
+  #leaderboardSection{ order: 6; } /* 6. rebríček */
 }
 
 /* ============================================================

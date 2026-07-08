@@ -17,6 +17,10 @@ import {
   econAdStatus, econAdComplete, econRedeemCode
 } from './scripts/economy.js';
 import { MEMORY_AREAS } from './memoryDefinitions.js';
+import {
+  createSenat, joinSenat, getMojeSenaty, getSenat, buildInviteMessage, getInviteLink,
+  renameSenat, kickMember, leaveSenat, disbandSenat
+} from './scripts/senaty.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -287,6 +291,10 @@ export function init() {
 
     /* 🔹 Nahlásenie z inej stránky (Bifľovačka, ob-pravo-app) cez ?report=1&area=&src=&qtext= */
     checkReportLink();
+
+    /* 🔹 Senáty – skupinová súťaž */
+    initSenaty();
+    checkSenatInviteLink();
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
@@ -1349,6 +1357,330 @@ async function loadPromoList(panel, db, ref, get, update) {
       await loadPromoList(panel, db, ref, get, update);
     };
   });
+}
+
+/* =====================================================
+   ⚖️ SENÁTY – skupinová súťaž
+   ===================================================== */
+let senatyMineCache = [];
+
+async function initSenaty() {
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return;
+  await renderSenatyCard(nick);
+  setupSenatyButtons(nick);
+  renderSenatyMiniLeaderboard();
+}
+
+async function renderSenatyCard(nick) {
+  const noneBox = document.getElementById('senatyNoneBox');
+  const mineBox = document.getElementById('senatyMineBox');
+  if (!noneBox || !mineBox) return;
+
+  senatyMineCache = await getMojeSenaty(nick);
+
+  if (!senatyMineCache.length) {
+    noneBox.style.display = 'block';
+    mineBox.innerHTML = '';
+    return;
+  }
+
+  noneBox.style.display = 'none';
+  mineBox.innerHTML = senatyMineCache.map(s => {
+    const count = Object.keys(s.members || {}).length;
+    const iamPredseda = s.members && s.members[nick] && s.members[nick].role === 'predseda';
+    const statusLabel = s.status === 'active' ? '🟢 Súťažný' : `🟡 Zostavuje sa (${count}/3)`;
+    return `
+      <div class="senat-item" style="border:1px solid var(--card-border, rgba(0,0,0,0.08));border-radius:10px;padding:10px 12px;margin-bottom:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <strong>${escapeHtml(s.name)}</strong>
+          <span class="small muted">${statusLabel}</span>
+        </div>
+        <div class="small muted" style="margin-top:4px">${count} členov · V/R/P ${s.wins || 0}/${s.draws || 0}/${s.losses || 0} · ${s.points || 0} b.</div>
+        <button class="btn senat-manage-btn" data-senat-id="${s.id}" style="margin-top:8px;font-size:12px;padding:4px 10px">
+          ${iamPredseda ? 'Spravovať' : 'Zobraziť'}
+        </button>
+      </div>
+    `;
+  }).join('');
+
+  mineBox.querySelectorAll('.senat-manage-btn').forEach(btn => {
+    btn.onclick = () => openSenatDetailModal(btn.dataset.senatId, nick);
+  });
+
+  // Ak ešte nie je uložená explicitná localStorage preferencia zbalenia,
+  // rozbal kartu (hráč je v senáte -> default rozbalená).
+  const card = document.querySelector('.highlight-senaty');
+  if (card && localStorage.getItem('mColl:senaty') === null) {
+    card.classList.remove('m-collapsed');
+  }
+}
+
+function setupSenatyButtons(nick) {
+  const foundBtn = document.getElementById('foundSenatBtn');
+  if (foundBtn) foundBtn.onclick = () => openFoundSenatModal(nick);
+
+  const inviteBtn = document.getElementById('haveInviteBtn');
+  if (inviteBtn) inviteBtn.onclick = () => openHaveInviteModal(nick);
+}
+
+function openFoundSenatModal(nick) {
+  const old = document.getElementById('foundSenatModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'foundSenatModal';
+  modal.className = 'avatar-modal';
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="margin:0">⚖️ Založiť senát</h3>
+        <button class="btn" id="closeFoundSenatModal">✕</button>
+      </div>
+      <input type="text" id="foundSenatNameInput" class="form-input" placeholder="Názov senátu (napr. Senát Snežienky z UK)" maxlength="30" style="margin-bottom:8px"/>
+      <div id="foundSenatMsg" class="small" style="min-height:16px;margin-bottom:8px;color:var(--muted)"></div>
+      <button class="btn btn-primary" id="foundSenatSubmitBtn" style="width:100%">Založiť</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  document.getElementById('closeFoundSenatModal').onclick = () => modal.remove();
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+
+  document.getElementById('foundSenatSubmitBtn').onclick = async () => {
+    const name = document.getElementById('foundSenatNameInput').value;
+    const msg = document.getElementById('foundSenatMsg');
+    msg.textContent = 'Zakladám...';
+    const result = await createSenat(name);
+    if (!result.ok) {
+      msg.textContent = `❌ ${result.message}`;
+      msg.style.color = '#dc2626';
+      return;
+    }
+    modal.remove();
+    showRewardToast(`⚖️ Senát ${result.name} založený!`);
+    await renderSenatyCard(nick);
+    openSenatDetailModal(result.senatId, nick);
+  };
+}
+
+function openHaveInviteModal(nick) {
+  const raw = window.prompt('Vlož pozývací link alebo ID senátu:');
+  if (!raw) return;
+  let senatId = raw.trim();
+  try {
+    const url = new URL(raw);
+    const param = url.searchParams.get('senat');
+    if (param) senatId = param;
+  } catch (e) {
+    // nie je URL – berieme ako priame ID
+  }
+  handleSenatJoin(senatId, nick);
+}
+
+async function handleSenatJoin(senatId, nick) {
+  const result = await joinSenat(senatId, nick);
+  if (!result.ok) {
+    alert(result.message || 'Nepodarilo sa pridať do senátu.');
+    return;
+  }
+  showRewardToast(`⚖️ Pridal/a si sa do senátu ${result.senatName}!`);
+  await renderSenatyCard(nick);
+}
+
+/* ?senat=ID – otvorenie pozývacieho linku (rovnaký vzor ako ?duel=ID) */
+async function checkSenatInviteLink() {
+  const params = new URLSearchParams(window.location.search);
+  const senatId = params.get('senat');
+  if (!senatId) return;
+
+  const senat = await getSenat(senatId);
+  const nick = localStorage.getItem('playerNick');
+
+  const modal = document.createElement('div');
+  modal.id = 'senatInviteModal';
+  modal.className = 'avatar-modal';
+
+  if (!senat) {
+    modal.innerHTML = `
+      <div class="avatar-panel">
+        <h3>⚖️ Senát neexistuje</h3>
+        <p class="small muted">Pozývací link už nie je platný.</p>
+        <button class="btn btn-primary" id="closeSenatInviteModal" style="width:100%">Zavrieť</button>
+      </div>`;
+  } else {
+    const count = Object.keys(senat.members || {}).length;
+    modal.innerHTML = `
+      <div class="avatar-panel">
+        <h3>⚖️ Senát ${escapeHtml(senat.name)} ťa pozýva!</h3>
+        <p class="small muted">${count}/5 členov · ${senat.status === 'active' ? 'súťažný senát' : 'zostavuje sa'}</p>
+        <div id="senatInviteMsg" class="small" style="min-height:16px;margin:8px 0;color:var(--muted)"></div>
+        <button class="btn btn-primary" id="senatInviteJoinBtn" style="width:100%;margin-bottom:8px">Pridať sa</button>
+        <button class="btn" id="closeSenatInviteModal" style="width:100%">Zavrieť</button>
+      </div>`;
+  }
+
+  document.body.appendChild(modal);
+
+  function closeSenatInvite() {
+    modal.remove();
+    const url = new URL(window.location.href);
+    url.searchParams.delete('senat');
+    window.history.replaceState({}, '', url);
+  }
+
+  modal.onclick = e => { if (e.target === modal) closeSenatInvite(); };
+  document.getElementById('closeSenatInviteModal').onclick = closeSenatInvite;
+
+  const joinBtn = document.getElementById('senatInviteJoinBtn');
+  if (joinBtn) {
+    joinBtn.onclick = async () => {
+      if (!nick) {
+        document.getElementById('senatInviteMsg').textContent = 'Zadaj najprv nick v hlavičke.';
+        return;
+      }
+      const result = await joinSenat(senatId, nick);
+      if (!result.ok) {
+        document.getElementById('senatInviteMsg').textContent = `❌ ${result.message}`;
+        return;
+      }
+      closeSenatInvite();
+      showRewardToast(`⚖️ Pridal/a si sa do senátu ${result.senatName}!`);
+      await renderSenatyCard(nick);
+    };
+  }
+}
+
+/* Detail/správa senátu (predseda: premenovať/pozvať/vyhodiť/zrušiť;
+   člen: zobraziť/odísť) */
+function openSenatDetailModal(senatId, nick) {
+  const senat = senatyMineCache.find(s => s.id === senatId);
+  if (!senat) return;
+  const iamPredseda = senat.members && senat.members[nick] && senat.members[nick].role === 'predseda';
+
+  const old = document.getElementById('senatDetailModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'senatDetailModal';
+  modal.className = 'avatar-modal';
+
+  const membersHtml = Object.entries(senat.members || {}).map(([mNick, m]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0">
+      <span>${escapeHtml(mNick)} ${m.role === 'predseda' ? '👑' : ''}</span>
+      ${iamPredseda && mNick !== nick ? `<button class="btn senat-kick-btn" data-nick="${escapeHtml(mNick)}" style="font-size:11px;padding:2px 8px">Vyhodiť</button>` : ''}
+    </div>
+  `).join('');
+
+  const inviteLink = getInviteLink(senatId);
+
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <h3 style="margin:0">⚖️ ${escapeHtml(senat.name)}</h3>
+        <button class="btn" id="closeSenatDetailModal">✕</button>
+      </div>
+      <div class="small muted" style="margin-bottom:10px">${senat.status === 'active' ? '🟢 Súťažný senát' : '🟡 Zostavuje sa'} · V/R/P ${senat.wins || 0}/${senat.draws || 0}/${senat.losses || 0} · ${senat.points || 0} b.</div>
+      <div style="margin-bottom:12px">${membersHtml}</div>
+      ${iamPredseda ? `
+        <button class="btn btn-primary" id="senatInviteShareBtn" style="width:100%;margin-bottom:8px">📤 Pozvať</button>
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <input type="text" id="senatRenameInput" class="form-input" placeholder="Nový názov" value="${escapeHtml(senat.name)}"/>
+          <button class="btn" id="senatRenameBtn">Premenovať</button>
+        </div>
+        <button class="btn" id="senatDisbandBtn" style="width:100%;color:#dc2626">🗑️ Zrušiť senát</button>
+      ` : `
+        <button class="btn" id="senatLeaveBtn" style="width:100%">Odísť zo senátu</button>
+      `}
+      <div id="senatDetailMsg" class="small" style="margin-top:8px;color:var(--muted)"></div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  document.getElementById('closeSenatDetailModal').onclick = () => modal.remove();
+
+  const msgEl = () => document.getElementById('senatDetailMsg');
+
+  const shareBtn = document.getElementById('senatInviteShareBtn');
+  if (shareBtn) {
+    shareBtn.onclick = async () => {
+      const message = buildInviteMessage(nick, senat.name, senatId);
+      try {
+        await navigator.clipboard.writeText(message);
+        msgEl().textContent = '✅ Pozvánka skopírovaná – stačí vložiť.';
+      } catch (e) {
+        window.prompt('Skopíruj správu manuálne:', message);
+      }
+      if (navigator.share) {
+        navigator.share({ title: 'Pozvánka do senátu – LexArena', text: message, url: inviteLink }).catch(() => {});
+      }
+    };
+  }
+
+  const renameBtn = document.getElementById('senatRenameBtn');
+  if (renameBtn) {
+    renameBtn.onclick = async () => {
+      const newName = document.getElementById('senatRenameInput').value;
+      const result = await renameSenat(senatId, newName, nick);
+      if (!result.ok) { msgEl().textContent = `❌ ${result.message}`; return; }
+      msgEl().textContent = '✅ Premenované.';
+      await renderSenatyCard(nick);
+      modal.remove();
+    };
+  }
+
+  const disbandBtn = document.getElementById('senatDisbandBtn');
+  if (disbandBtn) {
+    disbandBtn.onclick = async () => {
+      if (!confirm(`Naozaj zrušiť senát ${senat.name}?`)) return;
+      const result = await disbandSenat(senatId, nick);
+      if (!result.ok) { msgEl().textContent = `❌ ${result.message}`; return; }
+      modal.remove();
+      await renderSenatyCard(nick);
+    };
+  }
+
+  const leaveBtn = document.getElementById('senatLeaveBtn');
+  if (leaveBtn) {
+    leaveBtn.onclick = async () => {
+      if (!confirm(`Naozaj odísť zo senátu ${senat.name}?`)) return;
+      const result = await leaveSenat(senatId, nick);
+      if (!result.ok) { msgEl().textContent = `❌ ${result.message}`; return; }
+      modal.remove();
+      await renderSenatyCard(nick);
+    };
+  }
+
+  modal.querySelectorAll('.senat-kick-btn').forEach(btn => {
+    btn.onclick = async () => {
+      const targetNick = btn.dataset.nick;
+      if (!confirm(`Naozaj vyhodiť ${targetNick} zo senátu?`)) return;
+      const result = await kickMember(senatId, targetNick, nick);
+      if (!result.ok) { msgEl().textContent = `❌ ${result.message}`; return; }
+      modal.remove();
+      await renderSenatyCard(nick);
+    };
+  });
+}
+
+/* Mini rebríček TOP 3 senátov (plný prepínateľný rebríček je samostatná úloha) */
+async function renderSenatyMiniLeaderboard() {
+  const box = document.getElementById('senatyMiniLeaderboard');
+  if (!box || !window.db) return;
+  try {
+    const { ref, get } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+    const snap = await get(ref(window.db, 'senaty'));
+    const all = snap.exists() ? Object.values(snap.val()) : [];
+    const top3 = all.filter(s => s.status === 'active').sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 3);
+    if (!top3.length) {
+      box.textContent = 'Zatiaľ žiadne súťažné senáty.';
+      return;
+    }
+    box.innerHTML = top3.map((s, i) => `${i + 1}. ${escapeHtml(s.name)} – ${s.points || 0} b.`).join('<br>');
+  } catch (e) {
+    box.textContent = 'Rebríček sa nepodarilo načítať.';
+  }
 }
 
 /* =====================================================

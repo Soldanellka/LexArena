@@ -97,6 +97,18 @@ export const ECONOMY_CONFIG = {
     BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
   },
 
+  // SENÁTY – skupinová súťaž (skipCap: true pri econAward, sú to udalosti, nie grind)
+  SENATY: {
+    FOUND_COMPLETE: 10,   // predsedovi, keď senát dosiahne 3 členov
+    RECRUIT: 5,           // pozývateľovi za každého člena po dokončení senátu (raz na člena)
+    JOIN_NEW_PLAYER: 7,   // úplne nový nick, čo sa pridá cez senátny pozývací link
+    SPOR_WIN: 15,         // každému členovi víťazného senátu v senátnom spore
+    SPOR_DRAW: 6,         // každému členovi pri remíze
+    SPOR_LOSS: 2,         // každému členovi prehrávajúceho senátu (útecha, nie 0)
+    LB_WEEKLY: [40, 25, 10],   // každému členovi senátu na 1./2./3. mieste týždenného rebríčka
+    LB_MONTHLY: [150, 80, 40] // rovnako, mesačný rebríček
+  },
+
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
   PACKS: {
     small:  { sg: 100, eur: 1.99 },

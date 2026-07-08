@@ -72,7 +72,8 @@ const COLLAPSIBLE_SECTIONS = [
   { selector: '.highlight-feedback',    key: 'feedback',    defaultCollapsed: true },
   { selector: '.highlight-video',       key: 'videos',      defaultCollapsed: true },
   { selector: '#leaderboardSection',    key: 'leaderboard', defaultCollapsed: false },
-  { selector: '.highlight-bank',        key: 'duelbank',    defaultCollapsed: true }
+  { selector: '.highlight-bank',        key: 'duelbank',    defaultCollapsed: true },
+  { selector: '.highlight-senaty',      key: 'senaty',      defaultCollapsed: true }
 ];
 
 function initCollapsibleSections() {
