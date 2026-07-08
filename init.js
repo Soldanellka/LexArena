@@ -969,6 +969,12 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
           <button class="btn" id="listPromoBtn" style="width:100%;margin-bottom:6px">🎟️ Zobraziť kódy</button>
           <div id="promoList" style="display:none;max-height:220px;overflow-y:auto"></div>
         </div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border)">
+          <div style="font-weight:600;margin-bottom:8px">🧠 Bifľovačka – opravy garanta</div>
+          <button class="btn" id="exportBiflovackaBtn" style="width:100%">📥 Export opráv bifľovačky</button>
+          <div id="exportBiflovackaMsg" class="small" style="margin-top:6px;color:var(--muted)"></div>
+        </div>
       ` : ''}
       <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
         <div style="font-weight:600;margin-bottom:6px">💰 Poslať § hráčovi</div>
@@ -1142,6 +1148,32 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
       if (!isHidden) { listEl.style.display = 'none'; return; }
       listEl.style.display = 'block';
       await loadPromoList(panel, db, ref, get, update);
+    };
+
+    // Export opráv bifľovačky (biflovackaOverrides) – JSON na neskoršie
+    // ručné zapracovanie do biflovacka/{slug}.json cez Code.
+    panel.querySelector('#exportBiflovackaBtn').onclick = async () => {
+      const msg = panel.querySelector('#exportBiflovackaMsg');
+      msg.textContent = 'Načítavam...';
+      try {
+        const snap = await get(ref(db, 'biflovackaOverrides'));
+        const data = snap.exists() ? snap.val() : {};
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `biflovacka-overrides-${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        msg.textContent = `✅ Stiahnuté (${Object.keys(data).length} oblastí).`;
+        msg.style.color = 'var(--accent-3)';
+      } catch (e) {
+        console.error('Export opráv bifľovačky zlyhal:', e);
+        msg.textContent = '❌ Export zlyhal.';
+        msg.style.color = '#dc2626';
+      }
     };
   }
 }

@@ -62,6 +62,29 @@
     word-break: break-word;
   }
 
+  /* 🎓 Garant/admin – prepínač režimu kontroly + pečať overenia */
+  .mt-review-toggle {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    padding: 8px 14px; border-radius: 10px;
+    background: rgba(0,0,0,0.04); margin-bottom: 14px;
+  }
+  .mt-seal-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 600;
+    border-radius: 999px; padding: 4px 12px;
+    border: 1px solid rgba(212,175,55,0.55);
+    background: rgba(212,175,55,0.12);
+    color: #8a6d1a;
+    margin-bottom: 10px;
+  }
+  .mt-review-question { font-weight: 600; margin-bottom: 10px; font-size: 16px; }
+  .mt-review-textarea {
+    width: 100%; min-height: 90px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.12);
+    padding: 12px 14px; font-size: 15px; font-family: inherit; resize: vertical; box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
   @media (max-width: 640px) {
     .mt-wrap { padding: 16px 12px 40px; }
     .mt-reveal-box { padding: 20px 16px; font-size: 16px; }
@@ -85,6 +108,15 @@
 
   <h2 id="mtTitle">🧠 Bifľovačka</h2>
 
+  <!-- Prepínač režimu kontroly – vloží sa do DOM len pre admin/garant,
+       inak sa element odstráni (setup v initReviewToggle). -->
+  <div id="mtReviewToggleWrap" style="display:none">
+    <label class="mt-review-toggle">
+      <input type="checkbox" id="mtReviewToggle">
+      🔍 Režim kontroly
+    </label>
+  </div>
+
   <!-- Výber oblasti (ak nie je zadaný ?area=) -->
   <div id="mtAreaPicker" style="display:none">
     <p class="small muted">Vyber právnu oblasť, ktorú si chceš vybifľovať.</p>
@@ -98,6 +130,7 @@
 
     <!-- Fáza 1: odhalenie -->
     <div id="mtRevealPhase">
+      <div class="mt-seal-badge" id="mtSealBadge" style="display:none"></div>
       <div class="mt-reveal-box" id="mtRevealText"></div>
       <div class="mt-reveal-actions">
         <button class="btn" id="mtSpeakBtn" type="button">🔊 Prečítať nahlas</button>
@@ -140,6 +173,29 @@
       <div class="mt-reveal-answer" id="mtRevealAnswer"></div>
       <div class="mt-actions" id="mtResultActions"></div>
     </div>
+
+    <!-- Fáza kontroly (garant/admin s aktívnym prepínačom) – definícia
+         celá naraz, žiadne učenie/odmeny, len prechádzanie + opravy. -->
+    <div id="mtReviewPhase" style="display:none">
+      <div class="mt-seal-badge" id="mtReviewSealBadge" style="display:none"></div>
+      <div class="mt-review-question" id="mtReviewQuestion"></div>
+      <div class="mt-reveal-box" id="mtReviewAnswerBox"></div>
+      <div class="mt-actions" id="mtReviewActions" style="margin-top:14px">
+        <button class="btn btn-primary" id="mtReviewNextBtn" type="button">Ďalej →</button>
+        <button class="btn" id="mtReviewEditBtn" type="button">✏️ Opraviť</button>
+        <button class="btn" id="mtReviewCourtBtn" type="button">⚖️ Do súdnej siene</button>
+      </div>
+      <div id="mtReviewEditForm" style="display:none;margin-top:14px">
+        <div class="small" style="margin-bottom:4px;font-weight:600">Otázka:</div>
+        <textarea id="mtReviewEditQuestion" class="mt-review-textarea"></textarea>
+        <div class="small" style="margin-bottom:4px;font-weight:600">Odpoveď:</div>
+        <textarea id="mtReviewEditAnswer" class="mt-review-textarea"></textarea>
+        <div class="mt-actions">
+          <button class="btn btn-primary" id="mtReviewSaveBtn" type="button">💾 Uložiť</button>
+          <button class="btn" id="mtReviewCancelBtn" type="button">Zrušiť</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Dokončenie oblasti -->
@@ -160,9 +216,12 @@ import {
   loadMemoryArea, getNextMemoryItem, compareText,
   saveMemoryScore, calculateCompletion, renderMemoryTiles,
   speakText, isSpeechRecognitionSupported, createSpeechRecognizer,
-  canPlayBiflovacka, buildSkeleton, buildInitials
+  canPlayBiflovacka, buildSkeleton, buildInitials,
+  getAllMemoryItems, saveDefinitionOverride
 } from './memoryTrainer.js';
 import { econSpend, econBalance, ECONOMY_CONFIG } from './scripts/economy.js';
+import { getRole } from './scripts/economyConfig.js';
+import { showRewardToast } from './ui.js';
 
 const $ = id => document.getElementById(id);
 
@@ -269,6 +328,126 @@ function setupJokers() {
   updateJokerButtonsUI();
 }
 
+/* ============================================================
+   🎓 GARANT/ADMIN – REŽIM KONTROLY
+   Prepínač sa vloží do DOM len pre admin/garant (čerstvé čítanie
+   users/{nick}/role, nie localStorage view-prepínač). Bežný hráč
+   ho v DOM vôbec nemá – element sa pri neúspešnej kontrole odstráni.
+============================================================ */
+let reviewMode = false;
+let reviewList = [];
+let reviewIndex = 0;
+
+function updateSealBadge(el, item) {
+  if (!el) return;
+  if (item && item.seal === 'garant') {
+    el.textContent = `🎓 Overené · ${item.sealedBy || 'garant'}`;
+    el.style.display = 'inline-flex';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
+async function initReviewToggle() {
+  const nick = localStorage.getItem('playerNick');
+  const wrap = $('mtReviewToggleWrap');
+  const phase = $('mtReviewPhase');
+  if (!nick) { wrap.remove(); phase.remove(); return; }
+
+  const role = await getRole(nick);
+  if (role !== 'admin' && role !== 'garant') {
+    wrap.remove();
+    phase.remove();
+    return;
+  }
+
+  wrap.style.display = 'block';
+  $('mtReviewToggle').addEventListener('change', (e) => {
+    reviewMode = e.target.checked;
+    if (!slug) return;
+    if (reviewMode) startReviewMode(slug);
+    else exitReviewMode(slug);
+  });
+}
+
+function startReviewMode(areaSlug) {
+  reviewList = getAllMemoryItems(areaSlug);
+  reviewIndex = 0;
+  $('mtRevealPhase').style.display = 'none';
+  $('mtAnswerPhase').style.display = 'none';
+  $('mtResultPhase').style.display = 'none';
+  showReviewItem(areaSlug);
+}
+
+function exitReviewMode(areaSlug) {
+  $('mtReviewPhase').style.display = 'none';
+  $('mtReviewEditForm').style.display = 'none';
+  showNextItem(areaSlug);
+}
+
+function showReviewItem(areaSlug) {
+  $('mtReviewEditForm').style.display = 'none';
+
+  if (reviewIndex >= reviewList.length) {
+    $('mtReviewQuestion').textContent = '';
+    $('mtReviewAnswerBox').textContent = '✅ Kontrola oblasti dokončená – prešiel/prešla si všetky definície.';
+    $('mtReviewActions').style.display = 'none';
+    $('mtReviewSealBadge').style.display = 'none';
+    $('mtReviewPhase').style.display = 'block';
+    return;
+  }
+
+  currentItem = reviewList[reviewIndex];
+  $('mtReviewActions').style.display = 'flex';
+  $('mtReviewQuestion').textContent = currentItem.question || '';
+  $('mtReviewAnswerBox').textContent = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
+  updateSealBadge($('mtReviewSealBadge'), currentItem);
+  $('mtReviewPhase').style.display = 'block';
+}
+
+function setupReviewMode() {
+  $('mtReviewNextBtn').addEventListener('click', () => {
+    reviewIndex++;
+    showReviewItem(slug);
+  });
+
+  $('mtReviewEditBtn').addEventListener('click', () => {
+    if (!currentItem) return;
+    $('mtReviewEditQuestion').value = currentItem.question || '';
+    $('mtReviewEditAnswer').value = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
+    $('mtReviewActions').style.display = 'none';
+    $('mtReviewEditForm').style.display = 'block';
+  });
+
+  $('mtReviewCancelBtn').addEventListener('click', () => {
+    $('mtReviewEditForm').style.display = 'none';
+    $('mtReviewActions').style.display = 'flex';
+  });
+
+  $('mtReviewSaveBtn').addEventListener('click', async () => {
+    const question = $('mtReviewEditQuestion').value.trim();
+    const answer = $('mtReviewEditAnswer').value.trim();
+    if (!answer) { alert('Odpoveď nemôže byť prázdna.'); return; }
+
+    const result = await saveDefinitionOverride(slug, currentItem, { question, answer });
+    if (!result.ok) { alert(result.message || 'Uloženie zlyhalo.'); return; }
+
+    showRewardToast('✅ Opravené – definícia nesie pečať garanta');
+    reviewIndex++;
+    showReviewItem(slug);
+  });
+
+  $('mtReviewCourtBtn').addEventListener('click', () => {
+    if (!currentItem) return;
+    const area = getAreaBySlug(slug);
+    const qtext = currentItem.question || currentItem.definition || '';
+    const url = `/?report=1&area=${encodeURIComponent(area ? area.name : '')}` +
+      `&src=${encodeURIComponent(currentItem.okruhId || currentItem.source || '')}` +
+      `&qtext=${encodeURIComponent(qtext)}`;
+    window.open(url, '_blank');
+  });
+}
+
 function showAreaPicker() {
   $('mtTitle').textContent = '🧠 Bifľovačka';
   $('mtAreaPicker').style.display = 'block';
@@ -322,6 +501,7 @@ function showNextItem(areaSlug) {
   $('mtRevealText').textContent = revealText;
   $('mtAnswerInput').value = '';
   updateReadTimeHint(revealText);
+  updateSealBadge($('mtSealBadge'), item);
   resetJokers();
 }
 
@@ -387,6 +567,7 @@ function retryItem(areaSlug) {
   const revealText = currentItem.definition || currentItem.summary || currentItem.legalSentence;
   $('mtRevealText').textContent = revealText;
   updateReadTimeHint(revealText);
+  updateSealBadge($('mtSealBadge'), currentItem);
   resetJokers();
 }
 
@@ -499,6 +680,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReportButton();
   setupReadyButton();
   setupJokers();
+  setupReviewMode();
+  initReviewToggle();
 
   if (slug) {
     startArea(slug);

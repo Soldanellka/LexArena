@@ -12,6 +12,7 @@
 import { MEMORY_AREAS, getAreaBySlug, generateMemoryPackages } from './memoryDefinitions.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, econCanPlay, ECONOMY_CONFIG } from './scripts/economy.js';
+import { getRole } from './scripts/economyConfig.js';
 
 /* ============================================================
    Slovenské stopslová + detekcia právnych pojmov
@@ -412,6 +413,69 @@ export async function getAreaStats(slug) {
   // Presné číslo sa doplní, keď používateľ oblasť skutočne otvorí (loadMemoryArea).
   const estimatedTotal = area ? area.count * 5 : 0;
   return computeStatsFromProgress(progress, estimatedTotal);
+}
+
+/* ============================================================
+   GARANT/ADMIN – režim kontroly (prechádzanie bez učenia)
+============================================================ */
+
+/* Všetky balíčky oblasti bez ohľadu na progres (kontrola ide cez
+   VŠETKY definície, nielen nedokončené). Vyžaduje loadMemoryArea. */
+export function getAllMemoryItems(slug) {
+  const state = areaState.get(slug);
+  return state ? state.packages : [];
+}
+
+/* Uloží opravu definície do Firebase overrides. Rola sa overuje
+   ČERSTVO tesne pred zápisom (nie z cache) – ochrana proti
+   podvrhnutej localStorage. Zároveň aktualizuje balíček v pamäti
+   pre túto reláciu, nech sa pečať zobrazí okamžite bez refreshu. */
+export async function saveDefinitionOverride(slug, pkg, { question, answer }) {
+  const nick = getNick();
+  const db = getDb();
+  if (!nick || !db || !pkg || !pkg.defKey) {
+    return { ok: false, message: 'Chýba prihlásenie alebo definícia.' };
+  }
+
+  const role = await getRole(nick);
+  if (role !== 'admin' && role !== 'garant') {
+    return { ok: false, message: 'Len garant alebo admin môže opravovať definície.' };
+  }
+
+  const override = {
+    question: question || '',
+    answer: answer || '',
+    editedBy: nick,
+    role,
+    ts: Date.now(),
+    seal: 'garant'
+  };
+
+  try {
+    const { ref, set } = await fbImport();
+    await set(ref(db, `biflovackaOverrides/${slug}/${pkg.defKey}`), override);
+  } catch (e) {
+    console.warn('Bifľovačka: zápis opravy zlyhal', e);
+    return { ok: false, message: 'Zápis opravy zlyhal.' };
+  }
+
+  const state = areaState.get(slug);
+  if (state) {
+    const idx = state.packages.findIndex(p => p.defKey === pkg.defKey);
+    if (idx !== -1) {
+      state.packages[idx] = {
+        ...state.packages[idx],
+        question: override.question,
+        correctAnswer: override.answer,
+        definition: override.answer,
+        legalSentence: override.answer,
+        seal: 'garant',
+        sealedBy: nick
+      };
+    }
+  }
+
+  return { ok: true, sealedBy: nick };
 }
 
 /* ============================================================

@@ -104,6 +104,8 @@ function packagesFromManualFile(slug, manual) {
       if (!def || !def.answer) return;
       packages.push({
         id: `${slug}_${okruh.id}_${idx + 1}`,
+        defKey: `${okruh.id}_${idx + 1}`,
+        okruhId: okruh.id,
         area: slug,
         source: okruh.title || '',
         question: def.question || '',
@@ -115,6 +117,44 @@ function packagesFromManualFile(slug, manual) {
     });
   });
   return packages;
+}
+
+/* ============================================================
+   GARANT/ADMIN OPRAVY – biflovackaOverrides/{slug}/{defKey}
+   Statické JSON súbory sa z klienta prepísať nedajú, preto opravy
+   žijú vo Firebase a prekryjú zodpovedajúcu definíciu pri každom
+   načítaní balíčkov (jedno čítanie na oblasť). Balíček s opravou
+   dostane pkg.seal = 'garant' + pkg.sealedBy, nech ho hráči vidia
+   ako overený.
+============================================================ */
+async function loadOverrides(slug) {
+  try {
+    const db = window.db;
+    if (!db) return {};
+    const { ref, get } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
+    const snap = await get(ref(db, `biflovackaOverrides/${slug}`));
+    return snap.exists() ? snap.val() : {};
+  } catch (e) {
+    console.warn(`⚠️ Bifľovačka: chyba pri načítaní opráv pre ${slug}`, e);
+    return {};
+  }
+}
+
+function applyOverrides(packages, overrides) {
+  if (!overrides || !Object.keys(overrides).length) return packages;
+  return packages.map(pkg => {
+    const override = pkg.defKey ? overrides[pkg.defKey] : null;
+    if (!override) return pkg;
+    return {
+      ...pkg,
+      question: override.question || pkg.question,
+      correctAnswer: override.answer || pkg.correctAnswer,
+      definition: override.answer || pkg.definition,
+      legalSentence: override.answer || pkg.legalSentence,
+      seal: 'garant',
+      sealedBy: override.editedBy || ''
+    };
+  });
 }
 
 /* ============================================================
@@ -142,8 +182,10 @@ export async function generateMemoryPackages(slug) {
     const manualRes = await fetch(`biflovacka/${slug}.json`);
     if (manualRes.ok) {
       const manual = await manualRes.json();
-      const manualPackages = packagesFromManualFile(slug, manual);
+      let manualPackages = packagesFromManualFile(slug, manual);
       if (manualPackages.length) {
+        const overrides = await loadOverrides(slug);
+        manualPackages = applyOverrides(manualPackages, overrides);
         packageCache.set(slug, manualPackages);
         return manualPackages;
       }
