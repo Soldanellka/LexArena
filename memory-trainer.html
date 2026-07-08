@@ -306,6 +306,20 @@
 
 </div>
 
+<!-- 🎬 YouTube video priradené ku konkrétnej definícii (Koľaj B) -->
+<div id="bfYoutubeModal" class="avatar-modal" style="display:none">
+  <div class="avatar-panel video-modal-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <h3 id="bfYoutubeModalTitle" style="margin:0">Video</h3>
+      <button class="btn" id="bfYoutubeModalClose" type="button">✕</button>
+    </div>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:#000">
+      <iframe id="bfYoutubePlayer" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 <script type="module" src="firebase.js"></script>
 <script type="module">
 import { MEMORY_AREAS, getAreaBySlug } from './memoryDefinitions.js';
@@ -332,6 +346,56 @@ const SEAL_ICON = { bronze: '🥉', silver: '🥈', gold: '🥇' };
 let currentItem = null;
 let recognizer = null;
 let recognizing = false;
+let videoMap = {};
+
+/* ============================================================
+   🎬 YOUTUBE VIDEÁ K DEFINÍCIÁM (Koľaj B) – biflovackaVideos/{slug}
+   Jedno čítanie na oblasť (nie per definícia), cache vo videoMap.
+   Vlastný minimálny modal (rovnaké .avatar-modal/.avatar-panel
+   triedy ako #videoModal v index.html – tá stránka ale žije v
+   inom dokumente, takže DOM element nie je možné zdieľať priamo).
+============================================================ */
+async function loadVideoMap(areaSlug) {
+  try {
+    const { ref, get } = await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js');
+    const snap = await get(ref(window.db, `biflovackaVideos/${areaSlug}`));
+    videoMap = snap.exists() ? snap.val() : {};
+  } catch (e) {
+    console.warn('Bifľovačka: čítanie video mapovania zlyhalo', e);
+    videoMap = {};
+  }
+}
+
+function updateYoutubeButton(btnId, item) {
+  const btn = $(btnId);
+  if (!btn) return;
+  const mapping = item && item.defKey ? videoMap[item.defKey] : null;
+  if (mapping) {
+    btn.style.display = 'inline-flex';
+    btn.onclick = () => openBfYoutubeModal(mapping.youtubeId, mapping.title);
+  } else {
+    btn.style.display = 'none';
+    btn.onclick = null;
+  }
+}
+
+function openBfYoutubeModal(youtubeId, title) {
+  $('bfYoutubeModalTitle').textContent = title || 'Video';
+  $('bfYoutubePlayer').src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+  $('bfYoutubeModal').style.display = 'flex';
+}
+
+function closeBfYoutubeModal() {
+  $('bfYoutubeModal').style.display = 'none';
+  $('bfYoutubePlayer').src = '';
+}
+
+function setupYoutubeModal() {
+  $('bfYoutubeModalClose').addEventListener('click', closeBfYoutubeModal);
+  $('bfYoutubeModal').addEventListener('click', (e) => {
+    if (e.target === $('bfYoutubeModal')) closeBfYoutubeModal();
+  });
+}
 
 /* ============================================================
    Žolíky – platené pomôcky vo fáze odpovede.
@@ -491,6 +555,7 @@ function showReviewItem(areaSlug) {
     $('mtReviewAnswerBox').textContent = '✅ Kontrola oblasti dokončená – prešiel/prešla si všetky definície.';
     $('mtReviewActions').style.display = 'none';
     $('mtReviewSealBadge').style.display = 'none';
+    updateYoutubeButton('mtReviewYoutubeBtn', null);
     $('mtReviewPhase').style.display = 'block';
     return;
   }
@@ -500,6 +565,7 @@ function showReviewItem(areaSlug) {
   $('mtReviewQuestion').textContent = currentItem.question || '';
   $('mtReviewAnswerBox').textContent = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
   updateSealBadge($('mtReviewSealBadge'), currentItem);
+  updateYoutubeButton('mtReviewYoutubeBtn', currentItem);
   $('mtReviewPhase').style.display = 'block';
 }
 
@@ -594,6 +660,7 @@ async function startArea(areaSlug) {
   $('mtRevealText').textContent = 'Načítavam balíčky…';
 
   await loadMemoryArea(areaSlug);
+  await loadVideoMap(areaSlug);
   showNextItem(areaSlug);
 }
 
@@ -623,6 +690,7 @@ function showNextItem(areaSlug) {
   $('mtAnswerInput').value = '';
   updateReadTimeHint(revealText);
   updateSealBadge($('mtSealBadge'), item);
+  updateYoutubeButton('mtYoutubeBtn', item);
   resetJokers();
 }
 
@@ -689,6 +757,7 @@ function retryItem(areaSlug) {
   $('mtRevealText').textContent = revealText;
   updateReadTimeHint(revealText);
   updateSealBadge($('mtSealBadge'), currentItem);
+  updateYoutubeButton('mtYoutubeBtn', currentItem);
   resetJokers();
 }
 
@@ -804,6 +873,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReviewMode();
   initReviewToggle();
   setupVideoButtons();
+  setupYoutubeModal();
 
   if (slug) {
     startArea(slug);

@@ -16,6 +16,7 @@ import {
   econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG,
   econAdStatus, econAdComplete, econRedeemCode
 } from './scripts/economy.js';
+import { MEMORY_AREAS } from './memoryDefinitions.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -882,7 +883,7 @@ async function initRoleSystem() {
   }
 
   try {
-    const { ref, get, update } =
+    const { ref, get, update, remove } =
       await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
 
     // Načítaj rolu z Firebase - skontroluj obe miesta
@@ -917,7 +918,7 @@ async function initRoleSystem() {
 
     // Zobraz admin panel podľa view roly
     if (viewRole === 'admin' || viewRole === 'garant') {
-      renderAdminPanel(viewRole, db, ref, get, update, null);
+      renderAdminPanel(viewRole, db, ref, get, update, null, remove);
     } else {
       const panel = document.getElementById('adminPanel');
       if (panel) panel.innerHTML = '<span class="small muted">Pre zobrazenie prepni rolu na garant.</span>';
@@ -927,7 +928,7 @@ async function initRoleSystem() {
   }
 }
 
-function renderAdminPanel(role, db, ref, get, update, onValue) {
+function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
   const panel = document.getElementById('adminPanel');
   if (!panel) return;
 
@@ -974,6 +975,28 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
           <div style="font-weight:600;margin-bottom:8px">🧠 Bifľovačka – opravy garanta</div>
           <button class="btn" id="exportBiflovackaBtn" style="width:100%">📥 Export opráv bifľovačky</button>
           <div id="exportBiflovackaMsg" class="small" style="margin-top:6px;color:var(--muted)"></div>
+        </div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border)">
+          <div style="font-weight:600;margin-bottom:8px">🎬 Videá k definíciám</div>
+          <select id="bfVideoAreaSelect" class="form-input" style="margin-bottom:6px">
+            <option value="">Vyber oblasť...</option>
+            ${MEMORY_AREAS.map(a => `<option value="${a.slug}">${escapeHtml(a.name)}</option>`).join('')}
+          </select>
+          <input id="bfVideoDefKeyInput" class="form-input" type="text"
+            placeholder="defKey (napr. 2_1 = okruh 2, definícia 1)" style="margin-bottom:6px"/>
+          <input id="bfVideoUrlInput" class="form-input" type="text"
+            placeholder="YouTube ID alebo URL" style="margin-bottom:6px"/>
+          <input id="bfVideoTitleInput" class="form-input" type="text"
+            placeholder="Názov videa" style="margin-bottom:6px"/>
+          <div style="display:flex;gap:6px;margin-bottom:6px">
+            <button class="btn btn-primary" id="bfVideoAssignBtn" style="flex:1">Priradiť</button>
+            <button class="btn" id="bfVideoRemoveBtn" style="flex:1">Odstrániť</button>
+          </div>
+          <div id="bfVideoMsg" class="small" style="margin-bottom:8px;color:var(--muted)"></div>
+          <button class="btn" id="bfVideoListBtn" style="width:100%;margin-bottom:6px">🎬 Zobraziť priradenia oblasti</button>
+          <div id="bfVideoList" style="display:none;max-height:220px;overflow-y:auto"></div>
+          <div class="small muted" style="margin-top:8px">Odporúčaný formát: 9:16 alebo 1:1, 1080p, do 60 s.</div>
         </div>
       ` : ''}
       <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
@@ -1175,7 +1198,121 @@ function renderAdminPanel(role, db, ref, get, update, onValue) {
         msg.style.color = '#dc2626';
       }
     };
+
+    // 🎬 Videá k definíciám (biflovackaVideos/{slug}/{defKey}) – Koľaj B
+    panel.querySelector('#bfVideoAssignBtn').onclick = async () => {
+      const areaSelect = panel.querySelector('#bfVideoAreaSelect');
+      const defKeyInput = panel.querySelector('#bfVideoDefKeyInput');
+      const urlInput = panel.querySelector('#bfVideoUrlInput');
+      const titleInput = panel.querySelector('#bfVideoTitleInput');
+      const msg = panel.querySelector('#bfVideoMsg');
+
+      const slug = areaSelect.value;
+      const defKey = defKeyInput.value.trim();
+      const youtubeId = extractYoutubeId(urlInput.value.trim());
+      const title = titleInput.value.trim();
+
+      if (!slug) { msg.textContent = '❌ Vyber oblasť.'; msg.style.color = '#dc2626'; return; }
+      if (!defKey) { msg.textContent = '❌ Zadaj defKey.'; msg.style.color = '#dc2626'; return; }
+      if (!youtubeId) { msg.textContent = '❌ Neplatné YouTube ID/URL (očakáva sa 11-znakové ID).'; msg.style.color = '#dc2626'; return; }
+
+      await update(ref(db, `biflovackaVideos/${slug}/${defKey}`), {
+        youtubeId, title: title || '', addedBy: localStorage.getItem('playerNick') || 'admin', ts: Date.now()
+      });
+
+      msg.innerHTML = `✅ Priradené (${defKey} → ${youtubeId}). Náhľad: <a href="https://youtu.be/${youtubeId}" target="_blank" rel="noopener">youtu.be/${youtubeId}</a>`;
+      msg.style.color = 'var(--accent-3)';
+      defKeyInput.value = ''; urlInput.value = ''; titleInput.value = '';
+
+      const listEl = panel.querySelector('#bfVideoList');
+      if (listEl.style.display !== 'none') await loadBiflovackaVideoList(panel, db, ref, get, update, remove);
+    };
+
+    panel.querySelector('#bfVideoRemoveBtn').onclick = async () => {
+      const areaSelect = panel.querySelector('#bfVideoAreaSelect');
+      const defKeyInput = panel.querySelector('#bfVideoDefKeyInput');
+      const msg = panel.querySelector('#bfVideoMsg');
+
+      const slug = areaSelect.value;
+      const defKey = defKeyInput.value.trim();
+      if (!slug || !defKey) { msg.textContent = '❌ Vyber oblasť a zadaj defKey.'; msg.style.color = '#dc2626'; return; }
+
+      await remove(ref(db, `biflovackaVideos/${slug}/${defKey}`));
+      msg.textContent = `✅ Priradenie ${defKey} odstránené.`;
+      msg.style.color = 'var(--muted)';
+
+      const listEl = panel.querySelector('#bfVideoList');
+      if (listEl.style.display !== 'none') await loadBiflovackaVideoList(panel, db, ref, get, update, remove);
+    };
+
+    panel.querySelector('#bfVideoListBtn').onclick = async () => {
+      const listEl = panel.querySelector('#bfVideoList');
+      const isHidden = listEl.style.display === 'none';
+      if (!isHidden) { listEl.style.display = 'none'; return; }
+      listEl.style.display = 'block';
+      await loadBiflovackaVideoList(panel, db, ref, get, update, remove);
+    };
   }
+}
+
+/* Vyparsuje YouTube video ID z URL (v=... alebo youtu.be/...) alebo
+   overí surové 11-znakové ID. Vráti null pri neplatnom vstupe. */
+function extractYoutubeId(raw) {
+  if (!raw) return null;
+  const idPattern = /^[a-zA-Z0-9_-]{11}$/;
+  if (idPattern.test(raw)) return raw;
+
+  try {
+    const url = new URL(raw);
+    const vParam = url.searchParams.get('v');
+    if (vParam && idPattern.test(vParam)) return vParam;
+    if (url.hostname.includes('youtu.be')) {
+      const id = url.pathname.replace('/', '');
+      if (idPattern.test(id)) return id;
+    }
+  } catch (e) {
+    // nie je platná URL – skús vytiahnuť ID regexom priamo z textu
+    const m = raw.match(/(?:v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11})/);
+    if (m) return m[1];
+  }
+  return null;
+}
+
+async function loadBiflovackaVideoList(panel, db, ref, get, update, remove) {
+  const listEl = panel.querySelector('#bfVideoList');
+  const slug = panel.querySelector('#bfVideoAreaSelect').value;
+  if (!slug) {
+    listEl.innerHTML = '<div class="small muted">Vyber oblasť.</div>';
+    return;
+  }
+
+  listEl.innerHTML = '<div class="small muted">Načítavam...</div>';
+  const snap = await get(ref(db, `biflovackaVideos/${slug}`));
+  const videos = snap.val() || {};
+  const entries = Object.entries(videos).sort(([a], [b]) => a.localeCompare(b));
+
+  if (!entries.length) {
+    listEl.innerHTML = '<div class="small muted">Zatiaľ žiadne priradenia v tejto oblasti.</div>';
+    return;
+  }
+
+  listEl.innerHTML = entries.map(([defKey, v]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:6px 8px;border-bottom:1px solid var(--card-border);font-size:13px">
+      <div>
+        <strong>${escapeHtml(defKey)}</strong>
+        <span class="small muted" style="margin-left:6px">${escapeHtml(v.title || '')} · ${escapeHtml(v.youtubeId)}</span>
+      </div>
+      <button class="btn bf-video-remove-btn" data-defkey="${escapeHtml(defKey)}" style="font-size:11px;padding:3px 8px">Odstrániť</button>
+    </div>
+  `).join('');
+
+  listEl.querySelectorAll('.bf-video-remove-btn').forEach(btn => {
+    btn.onclick = async () => {
+      await remove(ref(db, `biflovackaVideos/${slug}/${btn.dataset.defkey}`));
+      await loadBiflovackaVideoList(panel, db, ref, get, update, remove);
+    };
+  });
 }
 
 async function loadPromoList(panel, db, ref, get, update) {
@@ -1422,7 +1559,7 @@ function openRoleSwitcher(firebaseRole) {
 
       // Obnov admin panel
       const db = window.db;
-      if (db) renderAdminPanel(newRole, db, null, null, null, null);
+      if (db) renderAdminPanel(newRole, db, null, null, null, null, null);
       initRoleSystem();
     };
   });
