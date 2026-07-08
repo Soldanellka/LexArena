@@ -1,0 +1,76 @@
+'use strict';
+
+/* ============================================================
+   AVATAR CATALOG
+   Jediný zdroj pravdy pre "celé postavy" avatarov (základná sada
+   + budúce taláre), používané ako moderátori vo video režime
+   Bifľovačky (a neskôr v obchode). Pridanie nového taláru =
+   nová položka v Firebase config/avatarCatalog + nahranie PNG
+   súborov ({base}-full/-tired/-sleep(-bust).png) – ŽIADNA zmena
+   kódu.
+
+   Položka: { id, name, type: 'basic'|'talar', base, price,
+   grantedBy, active }. `base` je cesta bez prípony, presne ako
+   AVATAR_CONFIG.AVATARS[...].base v scripts/avatar.js.
+============================================================ */
+
+import { ref, get, set }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+const BASIC_SEED = [
+  { id: 'studentka-tmava',  name: 'Študentka (tmavé vlasy)',  type: 'basic', base: 'avatars/studentka-tmava',  price: 0, grantedBy: null, active: true },
+  { id: 'studentka-medena', name: 'Študentka (medené vlasy)', type: 'basic', base: 'avatars/studentka-medena', price: 0, grantedBy: null, active: true },
+  { id: 'studentka-blond',  name: 'Študentka (blond vlasy)',  type: 'basic', base: 'avatars/studentka-blond',  price: 0, grantedBy: null, active: true },
+  { id: 'student-tmavy',    name: 'Študent (tmavé vlasy)',    type: 'basic', base: 'avatars/student-tmavy',    price: 0, grantedBy: null, active: true },
+  { id: 'student-medeny',   name: 'Študent (medené vlasy)',   type: 'basic', base: 'avatars/student-medeny',   price: 0, grantedBy: null, active: true },
+  { id: 'student-blond',    name: 'Študent (blond vlasy)',    type: 'basic', base: 'avatars/student-blond',    price: 0, grantedBy: null, active: true }
+];
+
+let cachedCatalog = null;
+
+/* Jedno čítanie za reláciu (modul-level cache). Ak katalóg ešte
+   v Firebase neexistuje, vytvorí ho a naplní základnou sadou. */
+export async function getAvatarCatalog() {
+  if (cachedCatalog) return cachedCatalog;
+
+  const db = window.db;
+  if (!db) return BASIC_SEED;
+
+  try {
+    const snap = await get(ref(db, 'config/avatarCatalog'));
+    if (snap.exists()) {
+      const val = snap.val();
+      cachedCatalog = Array.isArray(val) ? val.filter(Boolean) : Object.values(val);
+      return cachedCatalog;
+    }
+
+    await set(ref(db, 'config/avatarCatalog'), BASIC_SEED);
+    cachedCatalog = BASIC_SEED;
+    return cachedCatalog;
+  } catch (e) {
+    console.warn('avatarCatalog: čítanie zlyhalo, používam základnú sadu', e);
+    return BASIC_SEED;
+  }
+}
+
+export function getTalarAvatars(catalog) {
+  return (catalog || []).filter(a => a && a.type === 'talar' && a.active);
+}
+
+/* Moderátor pre danú definíciu: rotuje naprieč talárovými avatarmi.
+   Kým žiadny talár neexistuje (nová repo bez nahratých súborov),
+   spadne na základnú sadu, aby video režim fungoval hneď. */
+export function getModeratorForIndex(catalog, index) {
+  const talars = getTalarAvatars(catalog);
+  const pool = talars.length ? talars : (catalog || []).filter(a => a && a.active);
+  if (!pool.length) return null;
+  const i = ((index % pool.length) + pool.length) % pool.length;
+  return pool[i];
+}
+
+/* Cesta k PNG pre daný stav ('full'|'tired'|'sleep'), voliteľne bust. */
+export function avatarStateSrc(avatarEntry, state, bust = false) {
+  if (!avatarEntry || !avatarEntry.base) return '';
+  const suffix = bust ? '-bust' : '';
+  return `${avatarEntry.base}-${state}${suffix}.png`;
+}
