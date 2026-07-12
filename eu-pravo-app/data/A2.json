@@ -1,8 +1,104 @@
 {
-  "id": "2",
+  "id": "A2",
   "title": "Občianstvo Európskej únie, hodnoty a demokratické zásady Únie",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Občianstvo Európskej únie bolo zavedené Maastrichtskou zmluvou (1992) a predstavuje nadstavbu nad štátnym občianstvom členského štátu. Každý občan členského štátu je automaticky občanom EÚ (čl. 20 ZFEÚ). Občianstvo EÚ neexistuje samostatne – je odvodené od štátneho občianstva. Poskytuje súbor práv: voľný pohyb a pobyt, právo voliť a byť volený v komunálnych voľbách a vo voľbách do Európskeho parlamentu, právo na diplomatickú a konzulárnu ochranu, právo petície a právo obrátiť sa na európske inštitúcie.\n\nHodnoty Európskej únie sú zakotvené v čl. 2 ZEÚ: úcta k ľudskej dôstojnosti, slobode, demokracii, rovnosti, právnemu štátu a ľudským právam. Tieto hodnoty sú právne záväzné a predstavujú základný predpoklad členstva. Ich porušenie môže viesť k postupu podľa čl. 7 ZEÚ.\n\nDemokratické zásady Únie sú upravené v čl. 10 – 12 ZEÚ. Únia funguje na princípe zastupiteľskej demokracie: občania sú priamo zastúpení v Európskom parlamente, členské štáty v Európskej rade a Rade. Únia rešpektuje zásadu rovnosti občanov, podporuje participáciu verejnosti, transparentnosť a otvorenosť rozhodovania. Občania majú právo zúčastňovať sa na demokratickom živote Únie, vrátane európskej iniciatívy občanov (EIO).\n\nJudikatúra Súdneho dvora EÚ významne rozvíja obsah občianstva EÚ. Rozsudky ako Ruiz Zambrano, Rottmann či Delvigne potvrdzujú, že občianstvo EÚ je základným statusom občanov členských štátov a že zásahy členských štátov do štátneho občianstva musia rešpektovať práva vyplývajúce z práva Únie.",
+  "quiz": [
+    {
+      "q": "Ktorý článok zakotvuje občianstvo Európskej únie?",
+      "options": ["Čl. 2 ZEÚ", "Čl. 20 ZFEÚ", "Čl. 49 ZEÚ", "Čl. 10 ZEÚ"],
+      "correct": 1,
+      "explanation": "Občianstvo EÚ je upravené v čl. 20 ZFEÚ."
+    },
+    {
+      "q": "Ktoré hodnoty sú zakotvené v čl. 2 ZEÚ?",
+      "options": ["Právny štát, demokracia, ľudské práva", "Neutralita štátu", "Daňová suverenita", "Zákaz dvojitého občianstva"],
+      "correct": 0,
+      "explanation": "Čl. 2 ZEÚ upravuje hodnoty: ľudská dôstojnosť, sloboda, demokracia, rovnosť, právny štát a ľudské práva."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil, že občianstvo EÚ je základným statusom občanov členských štátov?",
+      "options": ["C‑34/09 Ruiz Zambrano", "C‑157/21 Komisia/Maďarsko", "C‑619/18 Komisia/Poľsko", "C‑64/16 Associação Sindical dos Juízes Portugueses"],
+      "correct": 0,
+      "explanation": "V rozsudku Ruiz Zambrano Súdny dvor uviedol, že občianstvo EÚ je základným statusom občanov členských štátov."
+    },
+    {
+      "q": "Ktorý článok upravuje demokratické zásady fungovania Únie?",
+      "options": ["Čl. 10 – 12 ZEÚ", "Čl. 50 ZEÚ", "Čl. 288 ZFEÚ", "Čl. 7 ZEÚ"],
+      "correct": 0,
+      "explanation": "Demokratické zásady sú upravené v čl. 10 – 12 ZEÚ."
+    },
+    {
+      "q": "Ktoré právo patrí medzi práva občanov EÚ?",
+      "options": ["Právo voliť do Európskeho parlamentu", "Právo určovať zloženie Európskej rady", "Právo veta v Rade EÚ", "Právo vydávať smernice"],
+      "correct": 0,
+      "explanation": "Občania EÚ majú právo voliť a byť volení vo voľbách do Európskeho parlamentu."
+    }
+  ],
+  "tiles": [
+    { "term": "Občianstvo EÚ", "definition": "Status občana členského štátu, ktorý poskytuje práva podľa čl. 20 ZFEÚ." },
+    { "term": "Hodnoty Únie", "definition": "Ľudská dôstojnosť, sloboda, demokracia, rovnosť, právny štát a ľudské práva (čl. 2 ZEÚ)." },
+    { "term": "Demokratické zásady", "definition": "Zastupiteľská demokracia, rovnosť občanov, participácia, transparentnosť (čl. 10 – 12 ZEÚ)." },
+    { "term": "Ruiz Zambrano", "definition": "Rozsudok C‑34/09: občianstvo EÚ je základným statusom občanov členských štátov." },
+    { "term": "Európska iniciatíva občanov", "definition": "Mechanizmus priamej participácie občanov na tvorbe práva EÚ (čl. 11 ZEÚ)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Ruiz Zambrano: základný status občianstva EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Belgicko odmietlo udeliť pracovné povolenie rodičovi maloletých detí, ktoré sú občanmi EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2011:124 (C‑34/09 Ruiz Zambrano)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o práve detí – občanov EÚ?",
+          "options": [
+            "Deti môžu byť nútené opustiť územie EÚ",
+            "Deti nesmú byť zbavené účinného výkonu práv občianstva EÚ",
+            "Rodič nemá žiadne práva odvodené od občianstva detí"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty nesmú prijať opatrenia, ktoré zbavujú občanov EÚ účinného výkonu práv vyplývajúcich z občianstva.",
+            "wrong": "Nesprávne. Občianstvo EÚ poskytuje práva, ktoré členské štáty musia rešpektovať."
+          },
+          "source": "ECLI:EU:C:2011:124 (C‑34/09 Ruiz Zambrano)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rottmann: odňatie štátneho občianstva a občianstvo EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Nemecko odňalo štátne občianstvo osobe, ktorá predtým získala občianstvo podvodom.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2010:104 (C‑135/08 Rottmann)"
+        },
+        {
+          "question": "Musí členský štát pri odnímaní občianstva zohľadniť právo EÚ?",
+          "options": [
+            "Nie, ide o výlučnú kompetenciu štátu",
+            "Áno, ak odňatie vedie k strate občianstva EÚ",
+            "Nie, ak osoba žije mimo EÚ"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty musia pri odnímaní občianstva zohľadniť právo EÚ, ak to vedie k strate občianstva EÚ.",
+            "wrong": "Nesprávne. Odňatie občianstva nesmie byť svojvoľné, ak má dopad na práva občana EÚ."
+          },
+          "source": "ECLI:EU:C:2010:104 (C‑135/08 Rottmann)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2011:124; ECLI:EU:C:2010:104; čl. 2 ZEÚ; čl. 10 – 12 ZEÚ; čl. 20 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
