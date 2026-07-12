@@ -130,6 +130,93 @@ async function pickCommission() {
 }
 
 /* ============================================================
+   REZERVNÝ ZOZNAM TALÁROVÝCH OBRÁZKOV (mimo Firebase katalógu)
+   Zámerne PRÁZDNY – ku dňu úpravy (over cez `ls avatars/`) v repe
+   neexistuje ANI JEDEN súbor s menom akademik/prokurátor/sudca/
+   advokát/talár-čierny (skontrolované aj v celej git histórii,
+   nikdy neboli commitnuté). Kandidátne mená zo zadania nechávam
+   tu ako komentár – keď niekto nahrá zodpovedajúce PNG do avatars/,
+   stačí pridať ich cestu do tohto zoznamu (akademické/zlaté prvé)
+   a komisia ich automaticky začne používať bez ďalšej úpravy kódu.
+   Zámerne sa tu NEuvádzajú cesty na súbory, ktoré neexistujú – to by
+   pri každom otvorení siene spôsobilo zbytočné 404 na tieto obrázky.
+
+   Očakávané mená (zo zadania), zatiaľ chýbajú:
+   avatars/studentka-tmava-akademik-full.png
+   avatars/studentka-blond-akademik-full.png
+   avatars/studentka-tmava-prokurator-full.png
+   avatars/studentka-blond-prokurator-full.png
+   avatars/studentka-tmava-sudca-full.png
+   avatars/studentka-blond-sudca-full.png
+   avatars/studentka-blond-advokat-full.png
+   avatars/student-blond-advokat-full.png
+   avatars/student-tmavy-talar-cierny-full.png
+   avatars/student-medeny-talar-cierny-full.png
+   avatars/studentka-medena-talar-cierny-full.png
+============================================================ */
+const RESERVE_TALAR_CANDIDATES = [];
+
+/* Pre každú z 3 pozícií komisie postaví zoznam kandidátov na
+   vyskúšanie (najprv katalógový avatar, ak existuje, potom rezervný
+   zoznam pootočený tak, aby rôzne pozície neskúšali ten istý súbor
+   ako prvý). Renderer nižšie cez onerror prechádza kandidátov, kým
+   jeden nenačíta, alebo kým sa nevyčerpajú (vtedy sa daná pozícia
+   jednoducho vynechá – žiadny rozbitý obrázok). */
+function buildCommissionCandidates(commission) {
+  const reserve = RESERVE_TALAR_CANDIDATES;
+  return [0, 1, 2].map(i => {
+    const primary = commission[i] ? avatarStateSrc(commission[i], 'full') : null;
+    const rotated = reserve.length
+      ? reserve.slice(i % reserve.length).concat(reserve.slice(0, i % reserve.length))
+      : [];
+    return primary ? [primary, ...rotated] : rotated;
+  });
+}
+
+/* Vykreslí komisiu s onerror-reťazením cez kandidátov; ak sa ani
+   pre jednu z 3 pozícií nepodarí nič načítať, celá sekcia sa nahradí
+   dekoratívnym fallbackom (nikdy civilný avatar, nikdy prázdno/
+   rozbitý obrázok). */
+function renderCommission(commissionEl, commission) {
+  commissionEl.innerHTML = '';
+  const slots = buildCommissionCandidates(commission);
+
+  if (slots.every(c => c.length === 0)) {
+    commissionEl.innerHTML = `<div class="statnice-commission-fallback">⚖️ ⚖️ ⚖️</div>`;
+    return;
+  }
+
+  let successCount = 0;
+  let settledCount = 0;
+  const total = slots.length;
+
+  function settle() {
+    settledCount++;
+    if (settledCount === total && successCount === 0) {
+      commissionEl.innerHTML = `<div class="statnice-commission-fallback">⚖️ ⚖️ ⚖️</div>`;
+    }
+  }
+
+  slots.forEach(candidates => {
+    if (!candidates.length) { settle(); return; }
+
+    const img = document.createElement('img');
+    img.className = 'statnice-commissioner';
+    img.alt = 'Člen komisie';
+    commissionEl.appendChild(img);
+
+    let idx = 0;
+    function tryNext() {
+      if (idx >= candidates.length) { img.remove(); settle(); return; }
+      img.src = candidates[idx++];
+    }
+    img.onload = () => { successCount++; settle(); };
+    img.onerror = tryNext;
+    tryNext();
+  });
+}
+
+/* ============================================================
    HODNOTENIE ODPOVEDE – lokálny substitút za Claude API.
    Vracia rovnaký tvar: { onTopic, coverage, missing, followUp, reason }
 ============================================================ */
@@ -381,15 +468,7 @@ export async function openStatniceHall(areaName) {
   overlayEl = buildOverlay();
   document.body.style.overflow = 'hidden';
 
-  const commissionEl = overlayEl.querySelector('#statniceCommission');
-  if (commission.length) {
-    commissionEl.innerHTML = commission.map(av => av
-      ? `<img class="statnice-commissioner" src="${avatarStateSrc(av, 'full')}" alt="Člen komisie" onerror="this.style.display='none'">`
-      : ''
-    ).join('');
-  } else {
-    commissionEl.innerHTML = `<div class="statnice-commission-fallback">⚖️ ⚖️ ⚖️</div>`;
-  }
+  renderCommission(overlayEl.querySelector('#statniceCommission'), commission);
 
   const topicsEl = overlayEl.querySelector('#statniceTopics');
   topicsEl.innerHTML = topics.map((t, i) => `
