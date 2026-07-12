@@ -1,8 +1,77 @@
 {
-  "id": "1",
+  "id": "A1",
   "title": "Vývoj zmluvnej základne Spoločenstiev a Únie, členstvo v Európskej únii",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Vývoj zmluvnej základne Európskych spoločenstiev a Európskej únie predstavuje postupný proces prehlbovania integrácie, rozširovania právomocí a demokratizácie fungovania európskych inštitúcií. Základ tvorili tri zakladajúce zmluvy: Parížska zmluva (1951) o založení Európskeho spoločenstva uhlia a ocele a Rímske zmluvy (1957) o založení Európskeho hospodárskeho spoločenstva a Európskeho spoločenstva pre atómovú energiu. Tieto zmluvy vytvorili spoločný trh, colnú úniu a mechanizmy nadnárodného rozhodovania.\n\nV 60. – 80. rokoch sa integrácia prehlbovala najmä judikatúrou Súdneho dvora (princíp prednosti, priameho účinku), jednotným európskym aktom (1986) a postupným rozširovaním členských štátov. Kľúčový zlom nastal Maastrichtskou zmluvou (1992), ktorá vytvorila Európsku úniu ako politický celok, zaviedla občianstvo Únie, menovú úniu a tri piliere (ES, SZBP, justičná a policajná spolupráca). Amsterdamská (1997) a Nicejská zmluva (2001) upravili inštitucionálnu rovnováhu a pripravili Úniu na veľké rozšírenie.\n\nLisabonská zmluva (2007) zásadne prepracovala štruktúru Únie: zrušila pilierový systém, posilnila právnu subjektivitu EÚ, rozšírila spolurozhodovanie, zakotvila Chartu základných práv EÚ a upravila postupy prijímania nových členov. Článok 49 ZEÚ stanovuje podmienky členstva: štát musí rešpektovať hodnoty EÚ (čl. 2 ZEÚ), byť európskym štátom, splniť politické, ekonomické a právne kritériá (kodaňské kritériá) a viesť prístupové rokovania o prevzatí acquis. O prijatí rozhoduje jednomyseľne Európska rada po konzultácii s Komisiou a súhlase Európskeho parlamentu.\n\nČlenstvo v EÚ prináša práva a povinnosti: účasť na vnútornom trhu, voľný pohyb osôb, tovaru, služieb a kapitálu, účasť na tvorbe práva EÚ, povinnosť implementovať a dodržiavať acquis, prispievať do rozpočtu a rešpektovať zásady lojálnej spolupráce. Členské štáty sa podieľajú na rozhodovaní prostredníctvom Rady, Európskej rady, Európskeho parlamentu a Komisie. Článok 50 ZEÚ umožňuje vystúpenie z Únie, čo bolo prvýkrát využité Spojeným kráľovstvom (Brexit).",
+  "quiz": [
+    {
+      "q": "Ktorá zmluva vytvorila Európsku úniu ako politický celok?",
+      "options": ["Lisabonská zmluva", "Maastrichtská zmluva", "Amsterdamská zmluva", "Jednotný európsky akt"],
+      "correct": 1,
+      "explanation": "Maastrichtská zmluva z roku 1992 založila Európsku úniu a zaviedla občianstvo Únie."
+    },
+    {
+      "q": "Ktorý článok upravuje postup prijatia nového členského štátu do EÚ?",
+      "options": ["Čl. 2 ZEÚ", "Čl. 49 ZEÚ", "Čl. 50 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 1,
+      "explanation": "Článok 49 ZEÚ stanovuje podmienky a postup prijatia nového členského štátu."
+    },
+    {
+      "q": "Ktoré kritériá musí splniť štát uchádzajúci sa o členstvo v EÚ?",
+      "options": ["Kodaňské kritériá", "Ženevské kritériá", "Schengenské kritériá", "Lisabonské kritériá"],
+      "correct": 0,
+      "explanation": "Kodaňské kritériá zahŕňajú politické, ekonomické a právne požiadavky na členstvo."
+    },
+    {
+      "q": "Ktorá zmluva zrušila pilierový systém EÚ?",
+      "options": ["Maastrichtská zmluva", "Nicejská zmluva", "Lisabonská zmluva", "Jednotný európsky akt"],
+      "correct": 2,
+      "explanation": "Lisabonská zmluva zrušila pilierový systém a posilnila právnu subjektivitu EÚ."
+    },
+    {
+      "q": "Ktorý orgán rozhoduje o prijatí nového členského štátu?",
+      "options": ["Európsky parlament", "Rada EÚ", "Európska rada", "Európska komisia"],
+      "correct": 2,
+      "explanation": "O prijatí rozhoduje jednomyseľne Európska rada po konzultácii s Komisiou a súhlase Parlamentu."
+    }
+  ],
+  "tiles": [
+    {
+      "term": "Zakladajúce zmluvy",
+      "definition": "Parížska zmluva (1951) a Rímske zmluvy (1957), základ európskej integrácie."
+    },
+    {
+      "term": "Maastrichtská zmluva",
+      "definition": "Založila Európsku úniu, občianstvo Únie a tri piliere."
+    },
+    {
+      "term": "Lisabonská zmluva",
+      "definition": "Zrušila pilierový systém, posilnila právnu subjektivitu EÚ a spolurozhodovanie."
+    },
+    {
+      "term": "Kodaňské kritériá",
+      "definition": "Politické, ekonomické a právne podmienky pre vstup do EÚ."
+    },
+    {
+      "term": "Čl. 49 ZEÚ",
+      "definition": "Upravuje postup prijatia nového členského štátu do Európskej únie."
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "Štát X podal žiadosť o členstvo v EÚ, ale má vážne problémy s nezávislosťou súdnictva.",
+      "question": "Môže EÚ začať prístupové rokovania?",
+      "answer": "Nie, štát musí najprv splniť politické kodaňské kritériá, vrátane stability inštitúcií garantujúcich právny štát."
+    },
+    {
+      "scenario": "Členský štát uvažuje o vystúpení z EÚ a informuje Európsku radu.",
+      "question": "Aký článok upravuje postup vystúpenia?",
+      "answer": "Článok 50 ZEÚ stanovuje postup vystúpenia členského štátu z Európskej únie."
+    }
+  ],
+  "zdroj": {
+    "type": "zakon",
+    "citation": "čl. 49 a čl. 50 Zmluvy o Európskej únii (konsolidované znenie)",
+    "url": "https://eur-lex.europa.eu/legal-content/SK/TXT/?uri=CELEX:12012M/TXT",
+    "accessed": "2026-01"
+  }
 }
