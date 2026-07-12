@@ -109,6 +109,11 @@ export const ECONOMY_CONFIG = {
     LB_MONTHLY: [150, 80, 40] // rovnako, mesačný rebríček
   },
 
+  // FAKULTY – tretia úroveň súťaže (skipCap: true pri econAward, mesačná udalosť)
+  FACULTIES: {
+    MONTHLY_BONUS: 20 // každému aktívnemu hráčovi víťaznej fakulty na konci mesiaca
+  },
+
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
   PACKS: {
     small:  { sg: 100, eur: 1.99 },

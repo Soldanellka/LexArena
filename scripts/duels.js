@@ -12,6 +12,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { econAward, econEnergy, econCanPlay, ECONOMY_CONFIG } from './economy.js';
 import { showRewardToast } from '../ui.js';
+import { awardFacultyPoints } from './faculties.js';
 
 /* Bezpečný prístup k db */
 function getDb() {
@@ -341,6 +342,10 @@ function finalizeDuel(duel, opponentNick, opponentQuestions) {
   // 🔥 Rebríček
   updateLeaderboardWithResult(firstNick, scoreA, winner === firstNick);
   updateLeaderboardWithResult(opponentNick, scoreB, winner === opponentNick);
+
+  // 🏛️ Fakulty – každé odohrané pojednávanie pripíše body fakulte hráča
+  awardFacultyPoints(firstNick, scoreA);
+  awardFacultyPoints(opponentNick, scoreB);
 
   // 🔥 Uloženie výsledku
   const duelRef = ref(db, `duels/${duel.id}`);

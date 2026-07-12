@@ -1456,6 +1456,7 @@ body {
 .seal-badge.silver   { background: rgba(148,163,184,0.1); border-color: rgba(148,163,184,0.4); color: #64748b; }
 .seal-badge.bronze   { background: rgba(180,83,9,0.1);  border-color: rgba(180,83,9,0.3);   color: #92400e; }
 .seal-badge.academic { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.4); color: #4f46e5; }
+.seal-badge.faculty  { background: rgba(240,138,166,0.12); border-color: rgba(240,138,166,0.45); color: #b23b63; }
 
 /* Pečať na otázke v kvíze – pilulka v pravom hornom rohu bloku otázky */
 .question-seal {

@@ -23,6 +23,10 @@ import {
   getSporyForSenat, challengeSenat, startSenatSporPlay, settlePendingSenatSpory,
   getSenatLeaderboard, settleSenatLeaderboards
 } from './scripts/senaty.js';
+import {
+  getFacultyList, getPlayerFaculty, setPlayerFaculty,
+  getFacultyLeaderboard, settleFacultyLeaderboard, getFacultyBadgeInfo
+} from './scripts/faculties.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -298,6 +302,9 @@ export function init() {
     /* 🔹 Senáty – skupinová súťaž */
     initSenaty();
     checkSenatInviteLink();
+
+    /* 🔹 Fakulty – tretia úroveň súťaže */
+    initFaculty();
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
@@ -1765,34 +1772,115 @@ async function openChallengeSenatModal(challengerSenatId, nick) {
   }
 }
 
-/* Prepínač Jednotlivci/Senáty pri #leaderboardSection. */
+/* =====================================================
+   🏛️ FAKULTY – tretia úroveň súťaže
+   ===================================================== */
+async function initFaculty() {
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return;
+
+  const select = document.getElementById('facultySelect');
+  const statusLine = document.getElementById('facultyStatusLine');
+  if (!select) return;
+
+  select.innerHTML = getFacultyList().map(f => `<option value="${f.id}">${escapeHtml(f.name)}</option>`).join('');
+
+  const current = await getPlayerFaculty(nick);
+  if (current) select.value = current;
+
+  await settleFacultyLeaderboard();
+  renderFacultyMiniLeaderboard();
+
+  const saveBtn = document.getElementById('saveFacultyBtn');
+  if (saveBtn) {
+    saveBtn.onclick = async () => {
+      const facultyId = select.value;
+      statusLine.textContent = 'Ukladám...';
+      const result = await setPlayerFaculty(nick, facultyId);
+      if (!result.ok) {
+        statusLine.textContent = `❌ ${result.message}`;
+        return;
+      }
+      statusLine.textContent = '✅ Fakulta uložená.';
+      renderFacultyMiniLeaderboard();
+    };
+  }
+}
+
+async function renderFacultyMiniLeaderboard() {
+  const box = document.getElementById('facultyLeaderboardBox');
+  if (!box) return;
+  const list = await getFacultyLeaderboard();
+  if (!list.length) {
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne aktívne fakulty.</div>';
+    return;
+  }
+  box.innerHTML = list.map((f, i) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:8px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
+      <div><strong>${i + 1}.</strong> ${escapeHtml(f.name)}
+        <span class="small muted">(${f.activePlayers} aktívnych)</span></div>
+      <div>${f.average.toFixed(1)} b./hráč <span class="small muted">(spolu ${f.points})</span></div>
+    </div>
+  `).join('');
+}
+
+/* Prepínač Jednotlivci/Senáty/Fakulty pri #leaderboardSection. */
 function setupLeaderboardModeToggle() {
   const chips = document.querySelectorAll('.lb-mode-chip');
   const individualBox = document.getElementById('individualLeaderboardBox');
   const senatBox = document.getElementById('senatLeaderboardBox');
+  const facultyBox = document.getElementById('facultyFullLeaderboardBox');
   const title = document.getElementById('leaderboardTitle');
   const subtitle = document.getElementById('leaderboardSubtitle');
   if (!chips.length) return;
+
+  const boxesByMode = {
+    individual: individualBox,
+    senaty: senatBox,
+    fakulty: facultyBox
+  };
+  const titlesByMode = {
+    individual: ['Rebríček pojednávaní', 'Najlepší hráči pojednávaní'],
+    senaty: ['Rebríček senátov', 'Najlepšie senáty podľa bodov'],
+    fakulty: ['Rebríček fakúlt', 'Priemer bodov na aktívneho hráča']
+  };
 
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
       chips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
       const mode = chip.dataset.lbMode;
-      if (mode === 'senaty') {
-        individualBox.style.display = 'none';
-        senatBox.style.display = 'block';
-        title.textContent = 'Rebríček senátov';
-        subtitle.textContent = 'Najlepšie senáty podľa bodov';
-        renderSenatLeaderboardFull();
-      } else {
-        individualBox.style.display = 'block';
-        senatBox.style.display = 'none';
-        title.textContent = 'Rebríček pojednávaní';
-        subtitle.textContent = 'Najlepší hráči pojednávaní';
-      }
+
+      Object.entries(boxesByMode).forEach(([m, box]) => {
+        if (box) box.style.display = m === mode ? 'block' : 'none';
+      });
+      const [t, s] = titlesByMode[mode] || titlesByMode.individual;
+      title.textContent = t;
+      subtitle.textContent = s;
+
+      if (mode === 'senaty') renderSenatLeaderboardFull();
+      else if (mode === 'fakulty') renderFacultyLeaderboardFull();
     });
   });
+}
+
+async function renderFacultyLeaderboardFull() {
+  const box = document.getElementById('facultyFullLeaderboard');
+  if (!box) return;
+  const list = await getFacultyLeaderboard();
+  if (!list.length) {
+    box.innerHTML = '<div class="small muted">Zatiaľ žiadne aktívne fakulty.</div>';
+    return;
+  }
+  box.innerHTML = list.map((f, i) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:8px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
+      <div><strong>${i + 1}.</strong> ${escapeHtml(f.name)}
+        <span class="small muted">(${f.activePlayers} aktívnych)</span></div>
+      <div>${f.average.toFixed(1)} b./hráč <span class="small muted">(spolu ${f.points})</span></div>
+    </div>
+  `).join('');
 }
 
 async function renderSenatLeaderboardFull() {
@@ -1947,13 +2035,16 @@ async function displayPlayerSeals() {
     const badges = document.getElementById('sealBadges');
     if (!display || !badges) return;
 
-    if (approved > 0 || isAcademic) {
+    const facultyBadge = await getFacultyBadgeInfo(nick);
+
+    if (approved > 0 || isAcademic || facultyBadge) {
       display.style.display = 'block';
       badges.innerHTML = [
         isAcademic   ? `<span class="seal-badge academic">🎓 Akademická pečať</span>` : '',
         seals.gold   ? `<span class="seal-badge gold">🥇 Zlatá ×${seals.gold}</span>` : '',
         seals.silver ? `<span class="seal-badge silver">🥈 Strieborná ×${seals.silver}</span>` : '',
         seals.bronze ? `<span class="seal-badge bronze">🥉 Bronzová ×${seals.bronze}</span>` : '',
+        facultyBadge ? `<span class="seal-badge faculty">🏛️ Putovná pečať fakulty</span>` : '',
         `<span class="small muted">Uznaných: ${approved}</span>`
       ].join('');
     }

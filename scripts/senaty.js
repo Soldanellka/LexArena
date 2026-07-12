@@ -19,6 +19,7 @@ import { econAward } from './economy.js';
 import { ECONOMY_CONFIG } from './economyConfig.js';
 import { showRewardToast } from '../ui.js';
 import { pickQuestions, waitForQuestions } from './duels.js';
+import { awardFacultyPoints } from './faculties.js';
 
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
@@ -365,7 +366,7 @@ export async function recordSenatSporScore(sporId, senatId, nick, score) {
   showRewardToast(`⚖️ Tvoj výsledok (${score}/10) bol zaznamenaný do senátneho sporu.`);
 }
 
-async function applySporResult(senat, senatId, outcome) {
+async function applySporResult(senat, senatId, outcome, scores) {
   const db = getDb();
   const patch = {};
   if (outcome === 'win') { patch.wins = (senat.wins || 0) + 1; patch.points = (senat.points || 0) + 3; }
@@ -378,6 +379,12 @@ async function applySporResult(senat, senatId, outcome) {
     : ECONOMY_CONFIG.SENATY.SPOR_LOSS;
   const members = Object.keys(senat.members || {});
   await Promise.all(members.map(m => econAward(m, rewardAmount, `senátny spor – ${outcome}`, { skipCap: true })));
+
+  // 🏛️ Fakulty – individuálny výsledok každého člena, čo odohral, pripíše body jeho fakulte
+  await Promise.all(members.map(m => {
+    const score = scores && typeof scores[m] === 'number' ? scores[m] : 0;
+    return score ? awardFacultyPoints(m, score) : Promise.resolve();
+  }));
 }
 
 /* Lazy vyhodnotenie jedného sporu po termíne. Uzamknuté transakčne
@@ -426,14 +433,14 @@ async function settleSenatSpor(sporId) {
   await update(ref(db, `senatSpory/${sporId}`), { status: 'done', winner, challengerAvg, opponentAvg });
 
   if (winner === 'draw') {
-    await applySporResult(challengerSenat, spor.challenger, 'draw');
-    await applySporResult(opponentSenat, spor.opponent, 'draw');
+    await applySporResult(challengerSenat, spor.challenger, 'draw', challengerScores);
+    await applySporResult(opponentSenat, spor.opponent, 'draw', opponentScores);
   } else if (winner === spor.challenger) {
-    await applySporResult(challengerSenat, spor.challenger, 'win');
-    await applySporResult(opponentSenat, spor.opponent, 'loss');
+    await applySporResult(challengerSenat, spor.challenger, 'win', challengerScores);
+    await applySporResult(opponentSenat, spor.opponent, 'loss', opponentScores);
   } else {
-    await applySporResult(opponentSenat, spor.opponent, 'win');
-    await applySporResult(challengerSenat, spor.challenger, 'loss');
+    await applySporResult(opponentSenat, spor.opponent, 'win', opponentScores);
+    await applySporResult(challengerSenat, spor.challenger, 'loss', challengerScores);
   }
 
   return { winner, challengerAvg, opponentAvg };

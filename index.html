@@ -50,6 +50,16 @@
     </div>
 
     <div id="playerNickDisplay" class="player-nick-display"></div>
+
+    <div class="nick-box" style="margin-top:8px">
+      <label for="facultySelect">🏛️ Tvoja fakulta</label>
+      <div class="nick-row">
+        <select id="facultySelect" class="form-input"></select>
+        <button id="saveFacultyBtn">Uložiť</button>
+      </div>
+      <div class="small muted" id="facultyStatusLine" style="margin-top:4px"></div>
+      <div id="facultyLeaderboardBox" class="small muted" style="margin-top:6px"></div>
+    </div>
   </div>
 
   <div class="header-right">
@@ -127,9 +137,10 @@
     <div class="card section-card" id="leaderboardSection">
       <h3 style="margin:0" id="leaderboardTitle">Rebríček pojednávaní</h3>
       <div class="small" id="leaderboardSubtitle">Najlepší hráči pojednávaní</div>
-      <div style="display:flex;gap:8px;margin-top:10px">
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
         <button class="chip lb-mode-chip active" data-lb-mode="individual">Jednotlivci</button>
         <button class="chip lb-mode-chip" data-lb-mode="senaty">Senáty</button>
+        <button class="chip lb-mode-chip" data-lb-mode="fakulty">Fakulty</button>
       </div>
       <div id="individualLeaderboardBox">
         <div style="display:flex;gap:8px;margin-top:10px">
@@ -143,6 +154,11 @@
       </div>
       <div id="senatLeaderboardBox" style="display:none;margin-top:10px">
         <div id="senatLeaderboard" class="list">
+          <div class="small muted">Načítavam rebríček…</div>
+        </div>
+      </div>
+      <div id="facultyFullLeaderboardBox" style="display:none;margin-top:10px">
+        <div id="facultyFullLeaderboard" class="list">
           <div class="small muted">Načítavam rebríček…</div>
         </div>
       </div>
