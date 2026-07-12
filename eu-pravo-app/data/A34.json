@@ -1,8 +1,130 @@
 {
-  "id": "34",
+  "id": "A34",
   "title": "Európske konanie s nízkou hodnotou sporu a Európsky platobný rozkaz",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Európske konanie s nízkou hodnotou sporu (Small Claims) je upravené v nariadení č. 861/2007. Umožňuje rýchle, jednoduché a lacné riešenie cezhraničných sporov do hodnoty 5 000 EUR. Konanie je prevažne písomné, využíva štandardizované formuláre a rozhodnutia sú automaticky vykonateľné v celej EÚ bez exequatur.\n\nEurópsky platobný rozkaz (EPR) je upravený v nariadení č. 1896/2006. Slúži na rýchle vymáhanie nesporných peňažných nárokov v cezhraničných veciach. Konanie je písomné, založené na formulároch a nevyžaduje dokazovanie. Ak žalovaný nepodá odpor, platobný rozkaz sa stáva vykonateľným v celej EÚ bez exequatur.\n\nObe konania zjednodušujú prístup k spravodlivosti, skracujú čas konania a znižujú náklady. Small Claims rieši spory, kde existuje spor o nárok, zatiaľ čo EPR rieši nesporné nároky. Obe konania sú kompatibilné s Brusel Ia a umožňujú rýchly výkon rozhodnutí.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje zásady efektívnosti, právo na obhajobu a cezhraničný charakter konaní, najmä v rozsudkoch Pannon GSM, Zulfikarpašić a Pilatus Bank.",
+  "quiz": [
+    {
+      "q": "Aká je maximálna hodnota sporu v európskom konaní s nízkou hodnotou sporu?",
+      "options": ["5 000 EUR", "10 000 EUR", "2 000 EUR", "20 000 EUR"],
+      "correct": 0,
+      "explanation": "Small Claims sa vzťahuje na spory do 5 000 EUR."
+    },
+    {
+      "q": "Čo je Európsky platobný rozkaz?",
+      "options": ["Konanie o nesporných peňažných nárokoch", "Konanie o rodinných veciach", "Konanie o nehnuteľnostiach", "Konanie o trestných sankciách"],
+      "correct": 0,
+      "explanation": "EPR rieši nesporné peňažné nároky."
+    },
+    {
+      "q": "Je Európsky platobný rozkaz vykonateľný v celej EÚ bez exequatur?",
+      "options": ["Áno", "Nie", "Len v štáte pôvodu", "Len pri spotrebiteľských sporoch"],
+      "correct": 0,
+      "explanation": "EPR je vykonateľný bez exequatur."
+    },
+    {
+      "q": "Ktoré konanie je určené pre spory, kde existuje spor o nárok?",
+      "options": ["Small Claims", "Európsky platobný rozkaz", "Brusel IIa", "EET"],
+      "correct": 0,
+      "explanation": "Small Claims rieši sporné nároky."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka vykonateľnosti rozhodnutí v konaniach EPR?",
+      "options": ["Zulfikarpašić", "Owusu", "Kolassa", "Mercredi"],
+      "correct": 0,
+      "explanation": "Zulfikarpašić sa týka vykonateľnosti rozhodnutí v EPR."
+    }
+  ],
+  "tiles": [
+    { "term": "Small Claims", "definition": "Rýchle konanie pre spory do 5 000 EUR." },
+    { "term": "Európsky platobný rozkaz", "definition": "Konanie o nesporných peňažných nárokoch." },
+    { "term": "Bez exequatur", "definition": "Rozhodnutie je vykonateľné v celej EÚ bez ďalšieho konania." },
+    { "term": "Formulárové konanie", "definition": "Obe konania používajú štandardizované formuláre." },
+    { "term": "Nesporný nárok", "definition": "Podmienka pre vydanie EPR." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pannon GSM: právo na obhajobu v zrýchlených konaniach",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Spotrebiteľ namietal neprijateľnú zmluvnú podmienku v zrýchlenom konaní.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2009:350 (C‑243/08 Pannon GSM)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o ochrane spotrebiteľa?",
+          "options": [
+            "Súd nemusí skúmať neprijateľné podmienky",
+            "Súd musí skúmať neprijateľné podmienky aj v zrýchlených konaniach",
+            "Spotrebiteľ nemá právo na obhajobu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súd musí skúmať neprijateľné podmienky aj v zrýchlených konaniach.",
+            "wrong": "Nesprávne. Spotrebiteľ má právo na obhajobu."
+          },
+          "source": "ECLI:EU:C:2009:350"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Zulfikarpašić: vykonateľnosť rozhodnutí v EPR",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Súd riešil otázku, či je možné odmietnuť výkon EPR pre formálne nedostatky.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2017:199 (C‑484/15 Zulfikarpašić)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o výkone?",
+          "options": [
+            "Výkon možno odmietnuť pre akékoľvek formálne chyby",
+            "Výkon možno odmietnuť len z dôvodov uvedených v nariadení",
+            "EPR nie je vykonateľný v iných štátoch"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Výkon možno odmietnuť len z taxatívnych dôvodov uvedených v nariadení.",
+            "wrong": "Nesprávne. EPR je vykonateľný v celej EÚ."
+          },
+          "source": "ECLI:EU:C:2017:199"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Pilatus Bank: procesné záruky v EPR",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Žalovaný namietal, že mu nebol riadne doručený návrh na vydanie EPR.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2019:558 (C‑694/17 Pilatus Bank)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o doručovaní?",
+          "options": [
+            "Doručenie nie je dôležité",
+            "Doručenie musí byť riadne a preukázateľné",
+            "Stačí elektronické doručenie bez potvrdenia"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Doručenie musí byť riadne a preukázateľné, inak nemožno vydať EPR.",
+            "wrong": "Nesprávne. Doručenie je základná procesná záruka."
+          },
+          "source": "ECLI:EU:C:2019:558"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2009:350; ECLI:EU:C:2017:199; ECLI:EU:C:2019:558; nariadenia 861/2007 a 1896/2006",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
