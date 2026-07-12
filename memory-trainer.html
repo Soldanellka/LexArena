@@ -337,6 +337,14 @@
     <div style="margin-top:20px"><a href="index.html" class="btn btn-primary">Späť na dashboard</a></div>
   </div>
 
+  <!-- Oblasť zatiaľ bez definícií (obsah sa ešte pripravuje) -->
+  <div id="mtEmptyArea" class="mt-finish" style="display:none">
+    <div class="seal">📚</div>
+    <h2>Obsah sa pripravuje</h2>
+    <p class="small muted">Pre túto oblasť ešte nie sú nahraté definície na bifľovanie. Skús to prosím neskôr.</p>
+    <div style="margin-top:20px"><a href="index.html" class="btn btn-primary">Späť na dashboard</a></div>
+  </div>
+
 </div>
 
 <!-- 🎬 YouTube video priradené ku konkrétnej definícii (Koľaj B) -->
@@ -796,8 +804,15 @@ async function startArea(areaSlug) {
   $('mtFlow').style.display = 'block';
   $('mtRevealText').textContent = 'Načítavam balíčky…';
 
-  await loadMemoryArea(areaSlug);
+  const { packages } = await loadMemoryArea(areaSlug);
   await loadVideoMap(areaSlug);
+
+  if (!packages.length) {
+    $('mtFlow').style.display = 'none';
+    $('mtEmptyArea').style.display = 'block';
+    return;
+  }
+
   showNextItem(areaSlug);
 }
 

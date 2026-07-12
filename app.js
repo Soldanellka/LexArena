@@ -95,14 +95,28 @@ function renderAreas() {
 /* ===============================
    PRELOAD MEMORY + CASES pre vybranú oblasť
    =============================== */
+function isAreaLoaded(areaName) {
+  if (areaName === 'Trestné právo') {
+    return !!(window.areasLoaded?.['Trestné právo hmotné'] && window.areasLoaded?.['Trestné právo procesné']);
+  }
+  if (areaName === 'Občianske právo') {
+    return !!(window.areasLoaded?.['Občianske právo hmotné'] && window.areasLoaded?.['Občianske právo procesné']);
+  }
+  return !!window.areasLoaded?.[areaName];
+}
+
 function preloadAreaGames(areaName) {
-  // Počkaj kým sú otázky načítané
+  /* 🔥 OPRAVA: čaká na príznak "načítanie dokončené" (nie na dĺžku
+     otázok) – oblasť s čiastočne/zatiaľ nenaplnenými dátami (napr.
+     Európske právo pred doplnením obsahu) inak nikdy nesplní
+     "length > 0" a __areaTilesForGames/__areaQuestionsForGames
+     ostanú navždy zo STARŠEJ vybranej oblasti (zavádzajúce). */
   let attempts = 0;
   const check = setInterval(() => {
     attempts++;
-    const questions = getQuestionsForArea(areaName);
-    if (questions && questions.length > 0) {
+    if (isAreaLoaded(areaName)) {
       clearInterval(check);
+      const questions = getQuestionsForArea(areaName);
       window.__areaQuestionsForGames = questions;
       window.__areaTilesForGames = getTilesForArea(areaName);
       window.__areaCasesForGames = getCasesForArea(areaName);
@@ -113,9 +127,15 @@ function preloadAreaGames(areaName) {
       // 🎮 Aktualizuj indikátor pri tlačidlách hier
       const hint = document.getElementById('gamesAreaHint');
       if (hint) {
-        hint.classList.add('games-hint-ready');
-        hint.innerHTML = `<span class="games-hint-dot ready"></span>
-          <strong>${areaName}</strong> – pripravené: ${nTiles} kartičiek, ${nCases} prípadov`;
+        if (nTiles || nCases || questions.length) {
+          hint.classList.add('games-hint-ready');
+          hint.innerHTML = `<span class="games-hint-dot ready"></span>
+            <strong>${areaName}</strong> – pripravené: ${nTiles} kartičiek, ${nCases} prípadov`;
+        } else {
+          hint.classList.remove('games-hint-ready');
+          hint.innerHTML = `<span class="games-hint-dot"></span>
+            <strong>${areaName}</strong> – obsah sa ešte pripravuje`;
+        }
       }
     }
     if (attempts > 50) clearInterval(check);

@@ -2593,6 +2593,11 @@ function attachEvents() {
       } else if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
         // Fallback: otázka ↔ správna odpoveď
         window.buildMemoryFromQuestions(areaQs);
+      } else if (window.__selectedAreaName) {
+        // Vybraná oblasť je zatiaľ bez obsahu (napr. čiastočne naplnené dáta) –
+        // nikdy nenahrádzať tichou náhradou z inej oblasti (mätúce).
+        if (modal) { modal.style.display = 'none'; modal.classList.remove('open'); }
+        showRewardToast(`🃏 Pre oblasť "${window.__selectedAreaName}" zatiaľ nie sú kartičky.`);
       } else if (typeof window.buildMemory === 'function') {
         window.buildMemory('TPH-A1');
       }
@@ -2611,7 +2616,7 @@ function attachEvents() {
         window.buildMemoryFromTiles(areaTiles);
       } else if (areaQs && areaQs.length && typeof window.buildMemoryFromQuestions === 'function') {
         window.buildMemoryFromQuestions(areaQs);
-      } else if (typeof window.buildMemory === 'function') {
+      } else if (!window.__selectedAreaName && typeof window.buildMemory === 'function') {
         window.buildMemory('TPH-A1');
       }
     });
@@ -2644,6 +2649,9 @@ function attachEvents() {
       } else if (areaQs && areaQs.length && typeof window.loadCasesFromQuestions === 'function') {
         // Fallback: otázky ako jednoduché prípady
         window.loadCasesFromQuestions(areaQs, areaName);
+      } else if (areaName) {
+        if (modal) { modal.style.display = 'none'; modal.classList.remove('open'); }
+        showRewardToast(`📋 Pre oblasť "${areaName}" zatiaľ nie sú prípady z praxe.`);
       }
     });
   }

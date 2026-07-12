@@ -156,6 +156,14 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
   window.areaCases = window.areaCases || {};
   window.areaTiles[areaTitle] = tiles;
   window.areaCases[areaTitle] = cases;
+
+  /* 🏁 Príznak "načítanie dokončené" – nezávisí od počtu otázok,
+     aby waitForQuestions() vedel odlíšiť "ešte sa načítava" od
+     "načítané, ale zatiaľ prázdne" (napr. oblasť s čiastočne
+     doplnenými JSON súbormi) a zbytočne nečakal celých 10 sekúnd. */
+  window.areasLoaded = window.areasLoaded || {};
+  window.areasLoaded[areaTitle] = true;
+
   console.log(`✅ ${areaTitle}: ${questions.length} otázok, ${tiles.length} dlaždíc, ${cases.length} prípadov`);
 }
 

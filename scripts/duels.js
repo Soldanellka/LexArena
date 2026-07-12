@@ -181,7 +181,7 @@ export function waitForQuestions(areaName) {
     const timer = setInterval(() => {
       attempts++;
       const ready = areasToCheck.every(a =>
-        window.areas[a] && window.areas[a].length > 0
+        window.areasLoaded && window.areasLoaded[a]
       );
       if (ready) {
         clearInterval(timer);
@@ -213,6 +213,12 @@ export async function startDuel(areaName) {
   const selected = pickQuestions(areaName);
 
   console.log("🔥 Vybrané otázky:", selected);
+
+  if (!selected.length) {
+    console.warn(`⚠️ Oblasť "${areaName}" zatiaľ nemá dostatok otázok.`);
+    showRewardToast('📚 Táto oblasť zatiaľ nemá dostatok otázok. Skús inú oblasť alebo to skús neskôr.');
+    return;
+  }
 
   const nick = localStorage.getItem("playerNick") || "Unknown";
 
