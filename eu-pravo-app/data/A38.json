@@ -1,8 +1,130 @@
 {
-  "id": "38",
-  "title": "Kontrola koncentrácií a štátna pomoc v EÚ",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A38",
+  "title": "Kontrola koncentrácií a štátna pomoc v Európskej únii",
+  "summary": "Kontrola koncentrácií je upravená v nariadení o fúziách (č. 139/2004). Koncentráciou je fúzia, nadobudnutie kontroly alebo vytvorenie spoločného podniku. Koncentrácie s európskym rozmerom podliehajú povinnému oznamovaniu Európskej komisii. Komisia posudzuje, či koncentrácia významne nebráni účinnej hospodárskej súťaži (SIEC test). Môže koncentráciu povoliť, podmienečne povoliť (záväzky) alebo zakázať.\n\nŠtátna pomoc je upravená v čl. 107 – 109 ZFEÚ. Zakázaná je pomoc poskytovaná štátom alebo zo štátnych zdrojov, ktorá narúša alebo hrozí narušením súťaže tým, že zvýhodňuje určité podniky. Pomoc musí byť notifikovaná Komisii, ktorá ju môže schváliť, zakázať alebo nariadiť jej vrátenie. Existujú výnimky – regionálna pomoc, pomoc na výskum a inovácie, environmentálna pomoc, pomoc pri prírodných katastrofách.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „koncentrácia“, „kontrola“, „štátne zdroje“, „selektívnosť“, „výhoda“ a „narušenie súťaže“, najmä v rozsudkoch Airtours, Continental Can, Altmark, Leipzig‑Halle a Eventech.",
+  "quiz": [
+    {
+      "q": "Ktoré nariadenie upravuje kontrolu koncentrácií?",
+      "options": ["Nariadenie o fúziách (139/2004)", "Brusel Ia", "Rím I", "Smernica 2004/38/ES"],
+      "correct": 0,
+      "explanation": "Kontrola koncentrácií je upravená v nariadení č. 139/2004."
+    },
+    {
+      "q": "Čo je koncentrácia podľa práva EÚ?",
+      "options": ["Fúzia alebo nadobudnutie kontroly", "Kartel", "Štátna pomoc", "Zneužitie dominancie"],
+      "correct": 0,
+      "explanation": "Koncentrácia je fúzia, nadobudnutie kontroly alebo spoločný podnik."
+    },
+    {
+      "q": "Ktorý článok upravuje štátnu pomoc?",
+      "options": ["Čl. 107 ZFEÚ", "Čl. 102 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 45 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Štátna pomoc je upravená v čl. 107 ZFEÚ."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje kritériá štátnej pomoci?",
+      "options": ["Altmark", "Dassonville", "Gebhard", "UPA"],
+      "correct": 0,
+      "explanation": "Altmark stanovuje kritériá, kedy kompenzácia nie je štátnou pomocou."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka posúdenia kontroly pri koncentráciách?",
+      "options": ["Airtours", "Costa/ENEL", "Keck", "Cartes Bancaires"],
+      "correct": 0,
+      "explanation": "Airtours upravuje posúdenie spoločnej kontroly."
+    }
+  ],
+  "tiles": [
+    { "term": "Koncentrácia", "definition": "Fúzia, nadobudnutie kontroly alebo spoločný podnik." },
+    { "term": "SIEC test", "definition": "Test významného obmedzenia účinnej súťaže." },
+    { "term": "Štátna pomoc", "definition": "Výhoda zo štátnych zdrojov zvýhodňujúca podnik." },
+    { "term": "Altmark kritériá", "definition": "Podmienky, kedy kompenzácia nie je štátnou pomocou." },
+    { "term": "Záväzky", "definition": "Opatrenia navrhnuté podnikmi na odstránenie súťažných obáv." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Airtours: spoločná kontrola",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Komisia posudzovala, či cestovné kancelárie majú spoločnú kontrolu nad trhom.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:T:2002:146 (T‑342/99 Airtours)"
+        },
+        {
+          "question": "Ako súd vyložil spoločnú kontrolu?",
+          "options": [
+            "Stačí akákoľvek spolupráca",
+            "Musí existovať stabilná koordinácia správania",
+            "Kontrola sa nehodnotí"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Spoločná kontrola vyžaduje stabilnú koordináciu správania.",
+            "wrong": "Nesprávne. Spolupráca sama osebe nestačí."
+          },
+          "source": "ECLI:EU:T:2002:146"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Altmark: kritériá štátnej pomoci",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Štát kompenzoval dopravcu za poskytovanie verejnej služby.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2003:415 (C‑280/00 Altmark)"
+        },
+        {
+          "question": "Ako Súdny dvor určil, či ide o štátnu pomoc?",
+          "options": [
+            "Každá kompenzácia je štátna pomoc",
+            "Kompenzácia nie je pomoc, ak spĺňa štyri Altmark kritériá",
+            "Kompenzácia je pomoc len pri súkromných podnikoch"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Kompenzácia nie je štátna pomoc, ak spĺňa štyri Altmark kritériá.",
+            "wrong": "Nesprávne. Nie každá kompenzácia je pomoc."
+          },
+          "source": "ECLI:EU:C:2003:415"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Leipzig-Halle: štátne zdroje",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Štát financoval výstavbu letiska, čo zvýhodnilo jeho prevádzkovateľa.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2011:24 (C‑288/09 Leipzig-Halle)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil pojem štátne zdroje?",
+          "options": [
+            "Len priame dotácie",
+            "Aj financovanie infraštruktúry môže byť štátnou pomocou",
+            "Štátne zdroje sa neuplatňujú na letiská"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Aj financovanie infraštruktúry môže byť štátnou pomocou.",
+            "wrong": "Nesprávne. Štátne zdroje zahŕňajú aj nepriame výhody."
+          },
+          "source": "ECLI:EU:C:2011:24"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:T:2002:146; ECLI:EU:C:2003:415; ECLI:EU:C:2011:24; nariadenie 139/2004; čl. 107 – 109 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
