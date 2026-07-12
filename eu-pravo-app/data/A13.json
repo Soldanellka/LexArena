@@ -1,8 +1,130 @@
 {
-  "id": "13",
-  "title": "Primárne právo Únie (charakteristika, publikácia, revízia), zmluvy o pristúpení",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A13",
+  "title": "Primárne právo Európskej únie – charakteristika, publikácia, revízia, zmluvy o pristúpení",
+  "summary": "Primárne právo Európskej únie tvorí základný právny rámec fungovania Únie. Zahŕňa zakladajúce zmluvy (ZEÚ, ZFEÚ), Chartu základných práv EÚ, protokoly, prílohy, zmluvy o pristúpení a všeobecné zásady práva. Primárne právo má najvyššiu právnu silu v právnom poriadku EÚ.\n\nPrimárne právo je publikované v Úradnom vestníku Európskej únie (Ú. v. EÚ) a je dostupné v elektronickej podobe na portáli EUR-Lex. Zmluvy sú autentické vo všetkých úradných jazykoch EÚ.\n\nRevízia primárneho práva sa vykonáva podľa čl. 48 ZEÚ. Existujú dva postupy: riadny postup revízie (vyžaduje medzivládnu konferenciu a ratifikáciu všetkými členskými štátmi) a zjednodušený postup revízie (používa sa v oblastiach vnútorných politík EÚ). Európska rada môže jednomyseľne rozhodnúť o zmene zmlúv.\n\nZmluvy o pristúpení sú medzinárodné zmluvy medzi členskými štátmi a štátom, ktorý vstupuje do EÚ. Obsahujú podmienky pristúpenia, prechodné obdobia, úpravu inštitucionálnych otázok a záväzok prevziať acquis. Zmluvy o pristúpení sú súčasťou primárneho práva.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje autonómiu primárneho práva, jeho najvyššiu právnu silu a povinnosť členských štátov rešpektovať zmluvy, najmä v rozsudkoch C‑370/12, C‑621/18 a C‑149/96.",
+  "quiz": [
+    {
+      "q": "Čo tvorí primárne právo EÚ?",
+      "options": ["Smernice a nariadenia", "Zakladajúce zmluvy, Charta, protokoly, zmluvy o pristúpení", "Rozhodnutia Komisie", "Judikatúra vnútroštátnych súdov"],
+      "correct": 1,
+      "explanation": "Primárne právo zahŕňa zmluvy, Chartu, protokoly a zmluvy o pristúpení."
+    },
+    {
+      "q": "Kde sa publikuje primárne právo EÚ?",
+      "options": ["V národných vestníkoch", "V Úradnom vestníku EÚ", "V rozhodnutiach Komisie", "V rozsudkoch Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Primárne právo je publikované v Úradnom vestníku EÚ."
+    },
+    {
+      "q": "Ktorý článok upravuje revíziu zmlúv?",
+      "options": ["Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 288 ZFEÚ", "Čl. 49 ZEÚ"],
+      "correct": 0,
+      "explanation": "Revízia zmlúv je upravená v čl. 48 ZEÚ."
+    },
+    {
+      "q": "Čo sú zmluvy o pristúpení?",
+      "options": ["Sekundárne právo", "Medzinárodné zmluvy upravujúce vstup štátu do EÚ", "Rozhodnutia Komisie", "Protokoly k nariadeniam"],
+      "correct": 1,
+      "explanation": "Zmluvy o pristúpení sú medzinárodné zmluvy upravujúce vstup štátu do EÚ."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil autonómiu primárneho práva?",
+      "options": ["C‑370/12 Pringle", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal"],
+      "correct": 0,
+      "explanation": "V rozsudku Pringle Súdny dvor potvrdil autonómiu primárneho práva."
+    }
+  ],
+  "tiles": [
+    { "term": "Primárne právo", "definition": "Zmluvy, Charta, protokoly, zmluvy o pristúpení." },
+    { "term": "Čl. 48 ZEÚ", "definition": "Upravuje postup revízie zmlúv." },
+    { "term": "Zmluvy o pristúpení", "definition": "Medzinárodné zmluvy upravujúce vstup štátu do EÚ." },
+    { "term": "Úradný vestník EÚ", "definition": "Oficiálna publikácia právnych aktov EÚ." },
+    { "term": "Autonómia práva EÚ", "definition": "Právny poriadok EÚ je samostatný a nadradený vnútroštátnym právnym poriadkom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pringle: autonómia primárneho práva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Európska rada prijala rozhodnutie o zmene čl. 136 ZFEÚ, aby umožnila vznik ESM.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil autonómiu primárneho práva?",
+          "options": [
+            "Primárne právo je podriadené vnútroštátnemu právu",
+            "Primárne právo má najvyššiu právnu silu a jeho revízia musí rešpektovať zmluvy",
+            "Primárne právo možno meniť rozhodnutím Komisie"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že primárne právo má najvyššiu právnu silu a jeho revízia musí rešpektovať postupy podľa čl. 48 ZEÚ.",
+            "wrong": "Nesprávne. Primárne právo nie je podriadené vnútroštátnemu právu."
+          },
+          "source": "ECLI:EU:C:2012:756"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Wightman: revízia a vystúpenie z Únie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Spojené kráľovstvo oznámilo úmysel vystúpiť z EÚ podľa čl. 50 ZEÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2018:999 (C‑621/18 Wightman)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil čl. 50 ZEÚ?",
+          "options": [
+            "Oznámenie o vystúpení je neodvolateľné",
+            "Členský štát môže jednostranne odvolať oznámenie o vystúpení",
+            "Vystúpenie musí schváliť Súdny dvor"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členský štát môže jednostranne odvolať oznámenie o vystúpení, pokiaľ ešte nevstúpila do platnosti dohoda o vystúpení.",
+            "wrong": "Nesprávne. Oznámenie o vystúpení nie je neodvolateľné."
+          },
+          "source": "ECLI:EU:C:2018:999"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Portugalsko v. Rada: právna sila zmlúv o pristúpení",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát namietal, že zmluva o pristúpení nemôže meniť primárne právo.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1999:574 (C‑149/96 Portugalsko v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právnej sile zmlúv o pristúpení?",
+          "options": [
+            "Zmluvy o pristúpení sú sekundárnym právom",
+            "Zmluvy o pristúpení sú súčasťou primárneho práva",
+            "Zmluvy o pristúpení nemajú právnu záväznosť"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že zmluvy o pristúpení sú súčasťou primárneho práva a majú rovnakú právnu silu ako zakladajúce zmluvy.",
+            "wrong": "Nesprávne. Zmluvy o pristúpení nie sú sekundárnym právom."
+          },
+          "source": "ECLI:EU:C:1999:574"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2018:999; ECLI:EU:C:1999:574; čl. 48 ZEÚ; čl. 49 ZEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
