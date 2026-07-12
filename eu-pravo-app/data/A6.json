@@ -1,8 +1,104 @@
 {
-  "id": "6",
+  "id": "A6",
   "title": "Európska rada – zloženie, organizácia a právomoci",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Európska rada je najvyšším politickým orgánom Európskej únie. Je upravená v čl. 15 ZEÚ. Tvoria ju hlavy štátov alebo predsedovia vlád členských štátov, predseda Európskej rady a predseda Európskej komisie. Európska rada určuje všeobecné politické smerovanie a priority Únie, ale neprijíma legislatívne akty.\n\nEurópska rada zasadá najmenej dvakrát za polrok, spravidla v Bruseli. Jej rokovania vedie predseda Európskej rady, ktorý je volený na dva a pol roka a môže byť raz znovuzvolený. Predseda zabezpečuje prípravu a kontinuitu práce Európskej rady, podporuje konsenzus a zastupuje Úniu navonok v otázkach spoločnej zahraničnej a bezpečnostnej politiky.\n\nPrávomoci Európskej rady zahŕňajú určovanie strategických smerovaní Únie, rozhodovanie o zložitých politických otázkach, menovanie vysokých predstaviteľov (predseda Komisie, vysoký predstaviteľ pre SZBP), rozhodovanie o zmene zmlúv, aktiváciu článku 50 ZEÚ (vystúpenie členského štátu), či rozhodovanie o sankciách podľa čl. 7 ZEÚ.\n\nEurópska rada má kľúčovú úlohu pri riešení kríz, koordinácii politík a určovaní dlhodobých priorít Únie. Judikatúra Súdneho dvora EÚ potvrdzuje, že Európska rada musí konať v súlade so zmluvami a rešpektovať inštitucionálnu rovnováhu, najmä v rozsudkoch C‑370/12 a C‑62/14.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje Európsku radu?",
+      "options": ["Čl. 15 ZEÚ", "Čl. 14 ZEÚ", "Čl. 49 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 15 ZEÚ upravuje zloženie a úlohy Európskej rady."
+    },
+    {
+      "q": "Kto tvorí Európsku radu?",
+      "options": ["Poslanci Európskeho parlamentu", "Hlavy štátov alebo predsedovia vlád členských štátov", "Komisári", "Sudcovia Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Európsku radu tvoria hlavy štátov alebo predsedovia vlád členských štátov."
+    },
+    {
+      "q": "Má Európska rada legislatívne právomoci?",
+      "options": ["Áno", "Nie", "Len v oblasti SZBP", "Len pri rozpočte"],
+      "correct": 1,
+      "explanation": "Európska rada neprijíma legislatívne akty."
+    },
+    {
+      "q": "Kto predsedá Európskej rade?",
+      "options": ["Predseda Komisie", "Predseda Európskej rady", "Predseda Parlamentu", "Rotujúci predseda Rady EÚ"],
+      "correct": 1,
+      "explanation": "Európskej rade predsedá jej predseda volený na 2,5 roka."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka právomocí Európskej rady?",
+      "options": ["C‑370/12 Pringle", "C‑34/09 Ruiz Zambrano", "C‑409/13 Parlament v. Rada", "C‑64/16 ASJP"],
+      "correct": 0,
+      "explanation": "V rozsudku Pringle Súdny dvor posudzoval právomoci Európskej rady pri prijímaní rozhodnutí o stabilizačných mechanizmoch."
+    }
+  ],
+  "tiles": [
+    { "term": "Európska rada", "definition": "Najvyšší politický orgán EÚ, určuje strategické smerovanie Únie." },
+    { "term": "Predseda Európskej rady", "definition": "Vedie zasadnutia, zabezpečuje kontinuitu práce a zastupuje Úniu navonok." },
+    { "term": "Čl. 15 ZEÚ", "definition": "Upravuje zloženie, úlohy a fungovanie Európskej rady." },
+    { "term": "Inštitucionálna rovnováha", "definition": "Zásada, že inštitúcie musia konať v rámci svojich právomocí." },
+    { "term": "Čl. 7 ZEÚ", "definition": "Mechanizmus sankcií pri porušení hodnôt Únie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pringle: právomoci Európskej rady pri stabilizačných mechanizmoch",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Európska rada prijala rozhodnutie o zmene čl. 136 ZFEÚ, aby umožnila vznik Európskeho stabilizačného mechanizmu (ESM).",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil právomoci Európskej rady?",
+          "options": [
+            "Európska rada prekročila svoje právomoci",
+            "Európska rada konala v súlade so zmluvami",
+            "Európska rada môže prijímať legislatívne akty"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Európska rada konala v súlade so zmluvami, keď prijala rozhodnutie umožňujúce vznik ESM.",
+            "wrong": "Nesprávne. Európska rada nemôže prijímať legislatívne akty."
+          },
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Gauweiler: úloha Európskej rady pri koordinácii hospodárskych politík",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Európska rada prijala politické smerovanie týkajúce sa reakcie na finančnú krízu a koordinácie hospodárskych politík.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil úlohu Európskej rady?",
+          "options": [
+            "Európska rada môže prijímať záväzné právne akty",
+            "Európska rada určuje politické smerovanie, ale musí rešpektovať právomoci ostatných inštitúcií",
+            "Európska rada je nadradená ECB"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že Európska rada určuje politické smerovanie, ale nesmie zasahovať do právomocí ECB ani legislatívnych právomocí Parlamentu a Rady.",
+            "wrong": "Nesprávne. Európska rada nemá právomoc prijímať záväzné právne akty."
+          },
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2015:400; čl. 15 ZEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
