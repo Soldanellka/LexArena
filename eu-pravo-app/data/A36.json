@@ -1,8 +1,130 @@
 {
-  "id": "36",
+  "id": "A36",
   "title": "Dohody obmedzujúce hospodársku súťaž a ich kontrola",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Dohody obmedzujúce hospodársku súťaž sú upravené v čl. 101 ZFEÚ. Zakázané sú všetky dohody medzi podnikmi, rozhodnutia združení podnikov a zosúladené postupy, ktoré majú za cieľ alebo následok narušenie hospodárskej súťaže na vnútornom trhu. Typickými zakázanými praktikami sú kartely, cenové dohody, rozdelenie trhu, obmedzovanie výroby, výmeny citlivých informácií či koordinácia ponúk.\n\nČl. 101 ods. 1 ZFEÚ zakazuje dohody s cieľom alebo následkom obmedzenia súťaže. Niektoré dohody môžu byť výnimkou podľa čl. 101 ods. 3 ZFEÚ, ak prispievajú k zlepšeniu výroby alebo distribúcie, podporujú technický pokrok a umožňujú spotrebiteľom spravodlivý podiel na výhodách.\n\nKontrola dohôd obmedzujúcich súťaž je vykonávaná Európskou komisiou a vnútroštátnymi orgánmi hospodárskej súťaže. Komisia môže ukladať vysoké pokuty, vykonávať inšpekcie (tzv. dawn raids), nariaďovať ukončenie protisúťažného správania a prijímať záväzky. Podniky môžu žiadať o program zhovievavosti (leniency), ak spolupracujú pri odhaľovaní kartelu.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „dohoda“, „zosúladený postup“, „podnik“, „cieľ obmedzenia súťaže“ a „výnimka podľa čl. 101 ods. 3“, najmä v rozsudkoch Consten & Grundig, IAZ, T‑Mobile Netherlands, Allianz Hungária a Cartes Bancaires.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje dohody obmedzujúce hospodársku súťaž?",
+      "options": ["Čl. 101 ZFEÚ", "Čl. 102 ZFEÚ", "Čl. 106 ZFEÚ", "Čl. 107 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Dohody obmedzujúce súťaž sú upravené v čl. 101 ZFEÚ."
+    },
+    {
+      "q": "Čo je zakázané podľa čl. 101 ods. 1 ZFEÚ?",
+      "options": ["Dohody obmedzujúce súťaž", "Dominantné postavenie", "Štátna pomoc", "Zneužitie verejnej moci"],
+      "correct": 0,
+      "explanation": "Čl. 101 ods. 1 zakazuje protisúťažné dohody."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje zákaz rozdelenia trhu?",
+      "options": ["Consten & Grundig", "T‑Mobile Netherlands", "Cartes Bancaires", "IAZ"],
+      "correct": 0,
+      "explanation": "Consten & Grundig upravuje zákaz rozdelenia trhu."
+    },
+    {
+      "q": "Čo je program zhovievavosti (leniency)?",
+      "options": ["Zníženie pokuty za spoluprácu pri odhalení kartelu", "Daňová úľava", "Výnimka pre malé podniky", "Zákaz vyšetrovania"],
+      "correct": 0,
+      "explanation": "Leniency umožňuje zníženie pokuty pri spolupráci."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje zosúladený postup?",
+      "options": ["T‑Mobile Netherlands", "Costa/ENEL", "Gebhard", "UPA"],
+      "correct": 0,
+      "explanation": "T‑Mobile Netherlands upravuje zosúladený postup."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 101 ZFEÚ", "definition": "Zakazuje dohody obmedzujúce hospodársku súťaž." },
+    { "term": "Kartel", "definition": "Dohoda medzi podnikmi o koordinácii cien, trhu alebo výroby." },
+    { "term": "Zosúladený postup", "definition": "Koordinácia správania bez formálnej dohody." },
+    { "term": "Leniency", "definition": "Program zhovievavosti pri odhaľovaní kartelov." },
+    { "term": "Výnimka podľa čl. 101 ods. 3", "definition": "Dohody, ktoré zlepšujú výrobu alebo inovácie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Consten & Grundig: zákaz rozdelenia trhu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Podniky uzavreli exkluzívnu distribučnú dohodu rozdeľujúcu trhy medzi členské štáty.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1966:41 (56/64 Consten & Grundig)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o rozdelení trhu?",
+          "options": [
+            "Rozdelenie trhu je prípustné",
+            "Rozdelenie trhu je zakázané ako obmedzenie súťaže",
+            "Rozdelenie trhu je prípustné pri malých podnikoch"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Rozdelenie trhu je zakázané ako obmedzenie súťaže.",
+            "wrong": "Nesprávne. Rozdelenie trhu narúša vnútorný trh."
+          },
+          "source": "ECLI:EU:C:1966:41"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – T‑Mobile Netherlands: zosúladený postup",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Mobilní operátori sa stretli a vymenili si citlivé informácie o províziách.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2009:343 (C‑8/08 T‑Mobile Netherlands)"
+        },
+        {
+          "question": "Ako Súdny dvor definoval zosúladený postup?",
+          "options": [
+            "Musí ísť o formálnu dohodu",
+            "Stačí koordinácia správania alebo výmena citlivých informácií",
+            "Zosúladený postup neexistuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Stačí koordinácia správania alebo výmena citlivých informácií.",
+            "wrong": "Nesprávne. Nemusí ísť o formálnu dohodu."
+          },
+          "source": "ECLI:EU:C:2009:343"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Cartes Bancaires: výklad cieľa obmedzenia súťaže",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Bankový systém zaviedol pravidlá zvyšujúce náklady pre konkurentov.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:2204 (C‑67/13 Cartes Bancaires)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil pojem „cieľ obmedzenia súťaže“?",
+          "options": [
+            "Cieľ sa uplatňuje široko na všetky dohody",
+            "Cieľ sa uplatňuje len na dohody, ktoré sú svojou povahou škodlivé",
+            "Cieľ sa neuplatňuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Cieľ sa uplatňuje len na dohody, ktoré sú svojou povahou škodlivé.",
+            "wrong": "Nesprávne. Cieľ nie je automatický."
+          },
+          "source": "ECLI:EU:C:2014:2204"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1966:41; ECLI:EU:C:2009:343; ECLI:EU:C:2014:2204; čl. 101 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
