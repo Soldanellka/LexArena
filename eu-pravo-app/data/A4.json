@@ -1,8 +1,104 @@
 {
-  "id": "4",
+  "id": "A4",
   "title": "Štruktúra inštitucionálneho systému Únie, rozdelenie mocí",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Inštitucionálny systém Európskej únie je založený na zásade rovnováhy medzi inštitúciami, ktoré spolupracujú pri tvorbe, vykonávaní a kontrole práva EÚ. Základné inštitúcie sú upravené v čl. 13 ZEÚ: Európsky parlament, Európska rada, Rada, Európska komisia, Súdny dvor Európskej únie, Európska centrálna banka a Dvor audítorov. Každá inštitúcia má vlastné právomoci a úlohy, ktoré sú presne vymedzené v zmluvách.\n\nLegislatívnu moc vykonávajú Európsky parlament a Rada, ktoré prijímajú právne akty EÚ v rámci riadneho legislatívneho postupu. Parlament zastupuje občanov EÚ, Rada zastupuje členské štáty. Európska rada určuje všeobecné politické smerovanie Únie, ale neprijíma právne akty.\n\nExekutívnu moc vykonáva Európska komisia, ktorá má právomoc navrhovať legislatívu, dohliadať na uplatňovanie práva EÚ a zastupovať Úniu navonok. Komisia je „strážkyňou zmlúv“ a môže začať konanie o porušení povinnosti členského štátu.\n\nSúdnu moc vykonáva Súdny dvor Európskej únie, ktorý zabezpečuje jednotný výklad a uplatňovanie práva EÚ. Rozhoduje o žalobách členských štátov, inštitúcií, jednotlivcov, o prejudiciálnych otázkach a o porušení povinností členských štátov.\n\nZásada inštitucionálnej rovnováhy znamená, že žiadna inštitúcia nesmie prekročiť právomoci, ktoré jej zmluvy priznávajú. Súdny dvor túto zásadu potvrdil v judikatúre, najmä v rozsudkoch C‑70/88 a C‑409/13. Rovnováha medzi inštitúciami je základom fungovania Únie a chráni demokratickú legitimitu rozhodovania.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje inštitúcie Európskej únie?",
+      "options": ["Čl. 13 ZEÚ", "Čl. 20 ZFEÚ", "Čl. 288 ZFEÚ", "Čl. 49 ZEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 13 ZEÚ upravuje základné inštitúcie EÚ."
+    },
+    {
+      "q": "Ktoré inštitúcie vykonávajú legislatívnu moc?",
+      "options": ["Európska rada a Komisia", "Parlament a Rada", "Komisia a ECB", "Súdny dvor a Parlament"],
+      "correct": 1,
+      "explanation": "Legislatívnu moc vykonávajú Európsky parlament a Rada."
+    },
+    {
+      "q": "Ktorá inštitúcia je strážkyňou zmlúv?",
+      "options": ["Európska rada", "Európska komisia", "Súdny dvor", "Dvor audítorov"],
+      "correct": 1,
+      "explanation": "Komisia dohliada na uplatňovanie práva EÚ."
+    },
+    {
+      "q": "Ktorá inštitúcia zabezpečuje jednotný výklad práva EÚ?",
+      "options": ["Európska rada", "Komisia", "Súdny dvor EÚ", "ECB"],
+      "correct": 2,
+      "explanation": "Súdny dvor zabezpečuje jednotný výklad a uplatňovanie práva EÚ."
+    },
+    {
+      "q": "Čo znamená zásada inštitucionálnej rovnováhy?",
+      "options": ["Inštitúcie majú rovnaké právomoci", "Inštitúcie musia konať v rámci právomocí určených zmluvami", "Komisia má právo veta", "Parlament je nadradený Rade"],
+      "correct": 1,
+      "explanation": "Zásada rovnováhy znamená, že inštitúcie nesmú prekročiť právomoci určené zmluvami."
+    }
+  ],
+  "tiles": [
+    { "term": "Európsky parlament", "definition": "Zastupuje občanov EÚ, vykonáva legislatívnu a kontrolnú funkciu." },
+    { "term": "Rada EÚ", "definition": "Zastupuje členské štáty, spolu s Parlamentom prijíma legislatívu." },
+    { "term": "Európska komisia", "definition": "Strážkyňa zmlúv, navrhuje legislatívu a dohliada na jej uplatňovanie." },
+    { "term": "Súdny dvor EÚ", "definition": "Zabezpečuje jednotný výklad a uplatňovanie práva EÚ." },
+    { "term": "Inštitucionálna rovnováha", "definition": "Zásada, že inštitúcie musia konať v rámci svojich právomocí." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Inštitucionálna rovnováha a právomoci Komisie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Komisia prijala rozhodnutie, ktoré podľa členského štátu prekročilo právomoci zverené zmluvami.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil zásadu inštitucionálnej rovnováhy?",
+          "options": [
+            "Komisia môže konať bez obmedzení",
+            "Komisia musí konať v rámci právomocí určených zmluvami",
+            "Komisia je nadradená Rade"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že každá inštitúcia musí konať v rámci právomocí určených zmluvami.",
+            "wrong": "Nesprávne. Komisia nemôže prekračovať právomoci určené zmluvami."
+          },
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rovnováha medzi Parlamentom a Radou",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Parlament napadol rozhodnutie Rady, ktoré podľa neho obchádzalo jeho legislatívne právomoci.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o rozdelení mocí?",
+          "options": [
+            "Rada môže konať bez Parlamentu",
+            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
+            "Parlament nemá legislatívne právomoci"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
+            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+          },
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1990:153; ECLI:EU:C:2015:217; čl. 13 ZEÚ; čl. 2 – 6 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
