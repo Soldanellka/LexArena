@@ -1,8 +1,130 @@
 {
-  "id": "10",
+  "id": "A10",
   "title": "Postupy prijímania právnych aktov Únie, účasť SR na rozhodovacích procesoch EÚ",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Právne akty Európskej únie sa prijímajú podľa postupov upravených v čl. 289 – 294 ZFEÚ. Základným postupom je riadny legislatívny postup (ordinary legislative procedure), v ktorom Európsky parlament a Rada spoločne prijímajú právne akty na návrh Komisie. Mimoriadne legislatívne postupy zahŕňajú konzultačný postup a súhlasný postup, v ktorých má Parlament obmedzenú úlohu.\n\nRiadny legislatívny postup zahŕňa návrh Komisie, prvé čítanie v Parlamente a Rade, druhé čítanie, prípadne zmierovací výbor a tretie čítanie. Mimoriadne postupy sa používajú v špecifických oblastiach, napríklad v daňovej politike, SZBP alebo v oblasti sociálneho zabezpečenia.\n\nSlovenská republika sa zúčastňuje na rozhodovacích procesoch EÚ prostredníctvom svojich zástupcov v Rade EÚ, Európskej rade, prostredníctvom poslancov Európskeho parlamentu, členov Výboru regiónov a Hospodárskeho a sociálneho výboru. SR sa podieľa aj na tvorbe pozícií v rámci COREPER a pracovných skupín Rady. Národná rada SR vykonáva kontrolu subsidiarity a proporcionality podľa Protokolu č. 2.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje zásady legislatívneho procesu, úlohu Komisie ako iniciátora legislatívy a povinnosť inštitúcií rešpektovať inštitucionálnu rovnováhu, najmä v rozsudkoch C‑409/13, C‑65/13 a C‑270/12.",
+  "quiz": [
+    {
+      "q": "Ktorý postup je základným legislatívnym postupom EÚ?",
+      "options": ["Konzultačný postup", "Súhlasný postup", "Riadny legislatívny postup", "Zmierovací postup"],
+      "correct": 2,
+      "explanation": "Riadny legislatívny postup je základným postupom podľa čl. 289 ZFEÚ."
+    },
+    {
+      "q": "Kto má legislatívnu iniciatívu v EÚ?",
+      "options": ["Európsky parlament", "Rada EÚ", "Komisia", "Európska rada"],
+      "correct": 2,
+      "explanation": "Komisia má legislatívnu iniciatívu podľa čl. 17 ZEÚ."
+    },
+    {
+      "q": "Ako sa SR zúčastňuje na rozhodovaní v EÚ?",
+      "options": ["Prostredníctvom Komisie", "Prostredníctvom ministrov v Rade EÚ", "Prostredníctvom Súdneho dvora", "Prostredníctvom ECB"],
+      "correct": 1,
+      "explanation": "SR sa zúčastňuje prostredníctvom svojich ministrov v Rade EÚ."
+    },
+    {
+      "q": "Ktorý orgán kontroluje subsidiaritu na úrovni SR?",
+      "options": ["Vláda SR", "Národná rada SR", "Súdny dvor EÚ", "Európska rada"],
+      "correct": 1,
+      "explanation": "Kontrolu subsidiarity vykonáva Národná rada SR podľa Protokolu č. 2."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka legislatívnych právomocí Parlamentu a Rady?",
+      "options": ["C‑409/13 Parlament v. Rada", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑157/21 Komisia/Maďarsko"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑409/13 Súdny dvor posudzoval legislatívne právomoci Parlamentu a Rady."
+    }
+  ],
+  "tiles": [
+    { "term": "Riadny legislatívny postup", "definition": "Parlament a Rada spoločne prijímajú právne akty (čl. 289 ZFEÚ)." },
+    { "term": "Konzultačný postup", "definition": "Parlament je konzultovaný, ale Rada rozhoduje sama." },
+    { "term": "Súhlasný postup", "definition": "Parlament musí dať súhlas, ale nemôže navrhovať zmeny." },
+    { "term": "COREPER", "definition": "Výbor stálych zástupcov pripravujúci prácu Rady." },
+    { "term": "Kontrola subsidiarity", "definition": "Národná rada SR môže namietať porušenie subsidiarity podľa Protokolu č. 2." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Parlament v. Rada: rešpektovanie legislatívneho postupu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Parlament tvrdil, že Rada prijala akt mimo riadneho legislatívneho postupu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o legislatívnom postupe?",
+          "options": [
+            "Rada môže obísť Parlament",
+            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
+            "Parlament nemá úlohu v legislatívnom procese"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
+            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+          },
+          "source": "ECLI:EU:C:2015:217 (C‑409/13)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Komisia ako iniciátor legislatívy",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát napadol návrh Komisie s tvrdením, že Komisia prekročila svoje právomoci pri legislatívnej iniciatíve.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:742 (C‑65/13 Parlament v. Komisia)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právomoci Komisie?",
+          "options": [
+            "Komisia nemá legislatívnu iniciatívu",
+            "Komisia má širokú právomoc navrhovať legislatívu",
+            "Komisia môže prijímať legislatívne akty sama"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že Komisia má širokú právomoc navrhovať legislatívu podľa čl. 17 ZEÚ.",
+            "wrong": "Nesprávne. Komisia nemôže sama prijímať legislatívne akty."
+          },
+          "source": "ECLI:EU:C:2015:742 (C‑65/13)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Právomoci agentúr a inštitucionálna rovnováha",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Bola napadnutá právomoc agentúry EÚ prijímať rozhodnutia v rámci finančného dohľadu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:18 (C‑270/12 UK v. Parlament a Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil úlohu agentúr v legislatívnom procese?",
+          "options": [
+            "Agentúry môžu prijímať legislatívne akty",
+            "Agentúry môžu konať len v rámci právomocí určených právom EÚ",
+            "Agentúry sú nadradené Komisii"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že agentúry môžu konať len v rámci právomocí jasne určených právom EÚ.",
+            "wrong": "Nesprávne. Agentúry nemajú legislatívne právomoci."
+          },
+          "source": "ECLI:EU:C:2014:18 (C‑270/12)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2015:742; ECLI:EU:C:2014:18; čl. 289 – 294 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
