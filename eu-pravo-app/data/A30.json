@@ -1,8 +1,130 @@
 {
-  "id": "30",
-  "title": "Sloboda usadzovania a voľný pohyb služieb – charakteristika, pôsobnosť, obmedzenia",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A30",
+  "title": "Sloboda usadzovania a voľný pohyb služieb – charakteristika, pôsobnosť, prípustné obmedzenia",
+  "summary": "Sloboda usadzovania a voľný pohyb služieb patria medzi základné hospodárske slobody vnútorného trhu EÚ. Sloboda usadzovania je upravená v čl. 49 – 55 ZFEÚ a umožňuje občanom EÚ vykonávať samostatnú zárobkovú činnosť v inom členskom štáte, zakladať podniky, pobočky a vykonávať stabilnú hospodársku činnosť. Voľný pohyb služieb je upravený v čl. 56 – 62 ZFEÚ a umožňuje poskytovať služby cez hranice bez potreby usadenia sa v inom členskom štáte.\n\nSloboda usadzovania zahŕňa právo začať a vykonávať samostatnú činnosť, zakladať podniky, pôsobiť ako advokát, lekár, architekt či iný profesionál v inom členskom štáte. Voľný pohyb služieb zahŕňa dočasné poskytovanie služieb, cezhraničné poradenstvo, finančné služby, telekomunikačné služby, dopravu a ďalšie činnosti.\n\nPôsobnosť oboch slobôd sa vzťahuje na fyzické osoby (profesionálov), právnické osoby (spoločnosti), poskytovateľov služieb aj príjemcov služieb. Sloboda usadzovania sa uplatňuje pri stabilnej činnosti, zatiaľ čo voľný pohyb služieb pri dočasnej činnosti.\n\nPrípustné obmedzenia sú taxatívne: verejný poriadok, verejná bezpečnosť a ochrana zdravia. Okrem toho existujú naliehavé požiadavky všeobecného záujmu (rule of reason), ako ochrana spotrebiteľa, kvalita služieb, profesionálna etika či finančný dohľad. Obmedzenia musia byť nediskriminačné, odôvodnené legitímnym cieľom a primerané.\n\nJudikatúra Súdneho dvora EÚ rozvíja obsah slobôd, test proporcionality a zákaz skrytých obmedzení, najmä v rozsudkoch Gebhard, Reyners, Alpine Investments a Säger.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje slobodu usadzovania?",
+      "options": ["Čl. 49 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 56 ZFEÚ", "Čl. 28 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Sloboda usadzovania je upravená v čl. 49 ZFEÚ."
+    },
+    {
+      "q": "Ktorý článok upravuje voľný pohyb služieb?",
+      "options": ["Čl. 56 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 101 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Voľný pohyb služieb je upravený v čl. 56 ZFEÚ."
+    },
+    {
+      "q": "Čo je charakteristické pre slobodu usadzovania?",
+      "options": ["Dočasná činnosť", "Stabilná hospodárska činnosť", "Len práca zamestnanca", "Len poskytovanie služieb online"],
+      "correct": 1,
+      "explanation": "Sloboda usadzovania sa týka stabilnej hospodárskej činnosti."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje test proporcionality pri slobode usadzovania?",
+      "options": ["Gebhard", "Keck", "Dassonville", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "Gebhard upravuje test proporcionality."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje obmedzenia voľného pohybu služieb?",
+      "options": ["Alpine Investments", "Cassis de Dijon", "Simmenthal", "UPA"],
+      "correct": 0,
+      "explanation": "Alpine Investments upravuje obmedzenia služieb."
+    }
+  ],
+  "tiles": [
+    { "term": "Sloboda usadzovania", "definition": "Právo vykonávať stabilnú samostatnú činnosť v inom členskom štáte." },
+    { "term": "Voľný pohyb služieb", "definition": "Dočasné poskytovanie služieb cez hranice bez usadenia sa." },
+    { "term": "Gebhard", "definition": "Test proporcionality pri slobode usadzovania." },
+    { "term": "Reyners", "definition": "Zákaz diskriminácie pri prístupe k regulovaným povolaniam." },
+    { "term": "Alpine Investments", "definition": "Obmedzenia služieb musia byť odôvodnené a primerané." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Reyners: zákaz diskriminácie pri slobode usadzovania",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Belgicko odmietlo prístup k advokátskej profesii pre občana iného členského štátu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1974:68 (C‑2/74 Reyners)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o diskriminácii?",
+          "options": [
+            "Členské štáty môžu obmedziť prístup k profesiám",
+            "Zákaz diskriminácie sa vzťahuje aj na regulované povolania",
+            "Sloboda usadzovania sa neuplatňuje na advokátov"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že zákaz diskriminácie sa vzťahuje aj na regulované povolania.",
+            "wrong": "Nesprávne. Sloboda usadzovania sa vzťahuje aj na advokátov."
+          },
+          "source": "ECLI:EU:C:1974:68"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Gebhard: test proporcionality",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Talianske orgány obmedzili činnosť nemeckého právnika pôsobiaceho v Taliansku.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1995:411 (C‑55/94 Gebhard)"
+        },
+        {
+          "question": "Ako Súdny dvor upravil test proporcionality?",
+          "options": [
+            "Obmedzenia sú vždy zakázané",
+            "Obmedzenia musia byť nediskriminačné, odôvodnené a primerané",
+            "Obmedzenia nemusia byť odôvodnené"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Obmedzenia musia byť nediskriminačné, odôvodnené a primerané.",
+            "wrong": "Nesprávne. Obmedzenia musia byť odôvodnené verejným záujmom."
+          },
+          "source": "ECLI:EU:C:1995:411"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Alpine Investments: obmedzenia voľného pohybu služieb",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Holandsko zakázalo telefonické marketingové služby poskytované do zahraničia.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1995:126 (C‑384/93 Alpine Investments)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o obmedzeniach služieb?",
+          "options": [
+            "Obmedzenia služieb sú vždy zakázané",
+            "Obmedzenia musia byť odôvodnené legitímnym cieľom a primerané",
+            "Členské štáty môžu zakázať akékoľvek služby"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Obmedzenia musia byť odôvodnené legitímnym cieľom a primerané.",
+            "wrong": "Nesprávne. Obmedzenia nemôžu byť svojvoľné."
+          },
+          "source": "ECLI:EU:C:1995:126"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1974:68; ECLI:EU:C:1995:411; ECLI:EU:C:1995:126; čl. 49 – 62 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
