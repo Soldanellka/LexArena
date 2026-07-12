@@ -1,8 +1,104 @@
 {
-  "id": "3",
+  "id": "A3",
   "title": "Právomoci Európskej únie, zásady subsidiarity, proporcionality a lojality",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Právomoci Európskej únie sú upravené v čl. 2 – 6 ZFEÚ. Únia má výlučné právomoci (napr. colná únia, pravidlá hospodárskej súťaže, menová politika pre eurozónu), zdieľané právomoci (napr. vnútorný trh, životné prostredie, doprava, energetika) a právomoci na koordináciu, podporu a dopĺňanie činností členských štátov (napr. kultúra, vzdelávanie, šport). Rozdelenie právomocí je základom fungovania Únie a určuje, v akých oblastiach môže EÚ prijímať právne akty.\n\nZásada subsidiarity (čl. 5 ods. 3 ZEÚ) stanovuje, že v oblastiach, ktoré nepatria do výlučných právomocí Únie, môže EÚ konať len vtedy, ak ciele navrhovaného opatrenia nemožno dostatočne dosiahnuť na úrovni členských štátov. Subsidiarita chráni kompetencie členských štátov a zabezpečuje, aby EÚ konala len tam, kde je to efektívne.\n\nZásada proporcionality (čl. 5 ods. 4 ZEÚ) vyžaduje, aby obsah a forma opatrení EÚ neprekračovali rámec toho, čo je potrebné na dosiahnutie cieľov zmlúv. Proporcionalita je kľúčová pri posudzovaní primeranosti zásahov EÚ.\n\nZásada lojálnej spolupráce (čl. 4 ods. 3 ZEÚ) ukladá členským štátom povinnosť prijať všetky vhodné opatrenia na zabezpečenie plnenia záväzkov vyplývajúcich zo zmlúv. Členské štáty nesmú prijímať opatrenia, ktoré ohrozujú dosiahnutie cieľov Únie. Súdny dvor EÚ túto zásadu často uplatňuje pri konaniach o porušení povinnosti členského štátu.\n\nJudikatúra Súdneho dvora EÚ (napr. rozsudky C‑84/94, C‑233/94, C‑64/16) významne rozvíja obsah subsidiarity, proporcionality a lojality a stanovuje hranice zásahov EÚ aj povinnosti členských štátov pri implementácii práva Únie.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje zásadu subsidiarity?",
+      "options": ["Čl. 4 ods. 3 ZEÚ", "Čl. 5 ods. 3 ZEÚ", "Čl. 20 ZFEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 1,
+      "explanation": "Subsidiarita je upravená v čl. 5 ods. 3 ZEÚ."
+    },
+    {
+      "q": "Ktoré právomoci patria medzi výlučné právomoci EÚ?",
+      "options": ["Životné prostredie", "Colná únia", "Kultúra", "Šport"],
+      "correct": 1,
+      "explanation": "Colná únia je výlučnou právomocou EÚ podľa čl. 3 ZFEÚ."
+    },
+    {
+      "q": "Čo vyžaduje zásada proporcionality?",
+      "options": ["Aby EÚ konala len v oblastiach výlučných právomocí", "Aby opatrenia EÚ neprekračovali rámec potrebný na dosiahnutie cieľov", "Aby členské štáty mali právo veta", "Aby EÚ konala vždy pred členskými štátmi"],
+      "correct": 1,
+      "explanation": "Proporcionalita vyžaduje primeranosť opatrení EÚ."
+    },
+    {
+      "q": "Ktorý článok upravuje zásadu lojálnej spolupráce?",
+      "options": ["Čl. 4 ods. 3 ZEÚ", "Čl. 5 ods. 4 ZEÚ", "Čl. 10 ZEÚ", "Čl. 49 ZEÚ"],
+      "correct": 0,
+      "explanation": "Zásada lojality je upravená v čl. 4 ods. 3 ZEÚ."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka zásady lojálnej spolupráce?",
+      "options": ["C‑64/16 ASJP", "C‑34/09 Ruiz Zambrano", "C‑135/08 Rottmann", "C‑157/21 Komisia/Maďarsko"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑64/16 Súdny dvor zdôraznil povinnosť členských štátov zabezpečiť nezávislosť súdnictva ako súčasť lojálnej spolupráce."
+    }
+  ],
+  "tiles": [
+    { "term": "Výlučné právomoci", "definition": "Oblasti, v ktorých môže konať iba EÚ (čl. 3 ZFEÚ)." },
+    { "term": "Zdieľané právomoci", "definition": "Oblasti, v ktorých konajú EÚ aj členské štáty (čl. 4 ZFEÚ)." },
+    { "term": "Subsidiarita", "definition": "EÚ koná len vtedy, ak ciele nemožno dosiahnuť na úrovni členských štátov (čl. 5 ods. 3 ZEÚ)." },
+    { "term": "Proporcionalita", "definition": "Opatrenia EÚ nesmú prekračovať rámec potrebný na dosiahnutie cieľov (čl. 5 ods. 4 ZEÚ)." },
+    { "term": "Lojálna spolupráca", "definition": "Členské štáty musia zabezpečiť plnenie záväzkov vyplývajúcich zo zmlúv (čl. 4 ods. 3 ZEÚ)." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Subsidiarita a zásah EÚ do sociálnej politiky",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát napadol smernicu EÚ s tvrdením, že Únia prekročila svoje právomoci v oblasti sociálnej politiky.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1996:431 (C‑84/94 UK v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil subsidiaritu?",
+          "options": [
+            "Smernica bola neprimeraná a mala byť zrušená",
+            "EÚ mohla konať, pretože ciele nebolo možné dosiahnuť na úrovni členských štátov",
+            "Subsidiarita sa na sociálnu politiku nevzťahuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že opatrenie EÚ bolo v súlade so subsidiaritou, keďže koordinovaný postup členských štátov nebol dostatočný.",
+            "wrong": "Nesprávne. Subsidiarita sa vzťahuje na všetky zdieľané právomoci."
+          },
+          "source": "ECLI:EU:C:1996:431 (C‑84/94 UK v. Rada)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Lojálna spolupráca a nezávislosť súdnictva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát prijal opatrenia ohrozujúce nezávislosť súdnictva, čo môže ovplyvniť uplatňovanie práva EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2018:117 (C‑64/16 ASJP)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil zásadu lojálnej spolupráce?",
+          "options": [
+            "Členské štáty majú úplnú autonómiu v organizácii súdnictva",
+            "Členské štáty musia zabezpečiť nezávislosť súdnictva, aby sa právo EÚ mohlo účinne uplatňovať",
+            "Zásada lojality sa vzťahuje len na vlády, nie na súdy"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že nezávislosť súdnictva je nevyhnutná na zabezpečenie účinného uplatňovania práva EÚ, čo vyplýva zo zásady lojálnej spolupráce.",
+            "wrong": "Nesprávne. Organizácia súdnictva musí rešpektovať záväzky vyplývajúce z práva EÚ."
+          },
+          "source": "ECLI:EU:C:2018:117 (C‑64/16 ASJP)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1996:431; ECLI:EU:C:2018:117; čl. 2 – 6 ZFEÚ; čl. 4 ods. 3 ZEÚ; čl. 5 ods. 3 – 4 ZEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
