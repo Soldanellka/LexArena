@@ -132,5 +132,11 @@
         }
       ]
     }
-  ]
+  ],
+  "zdroj": {
+    "type": "zakon",
+    "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
+    "url": "https://www.slov-lex.sk/",
+    "accessed": "2026-01"
+  }
 }

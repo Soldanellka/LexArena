@@ -111,5 +111,11 @@
         }
       ]
     }
-  ]
+  ],
+  "zdroj": {
+    "type": "zakon",
+    "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
+    "url": "https://www.slov-lex.sk/",
+    "accessed": "2026-01"
+  }
 }
