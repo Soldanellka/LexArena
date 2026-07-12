@@ -1,8 +1,130 @@
 {
-  "id": "11",
-  "title": "Právny poriadok EÚ – charakteristika, prednosť práva Únie v právnom poriadku EÚ a SR",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A11",
+  "title": "Právny poriadok Európskej únie – charakteristika, prednosť práva Únie v právnom poriadku EÚ a SR",
+  "summary": "Právny poriadok Európskej únie je autonómny právny systém, ktorý vznikol s vytvorením Európskych spoločenstiev. Súdny dvor EÚ v rozsudkoch Van Gend en Loos (1963) a Costa/ENEL (1964) potvrdil, že právo EÚ je samostatným právnym poriadkom, ktorý má priame účinky a prednosť pred právom členských štátov.\n\nPrávny poriadok EÚ zahŕňa primárne právo (zmluvy), sekundárne právo (nariadenia, smernice, rozhodnutia), judikatúru Súdneho dvora, medzinárodné dohody a všeobecné zásady práva. Nariadenia sú priamo záväzné, smernice vyžadujú transpozíciu, rozhodnutia sú záväzné pre adresátov.\n\nPrednosť práva EÚ znamená, že v prípade konfliktu medzi právom EÚ a vnútroštátnym právom má prednosť právo EÚ. Prednosť sa vzťahuje na všetky vnútroštátne normy, vrátane ústavných. Súdny dvor EÚ potvrdil túto zásadu v rozsudkoch Costa/ENEL, Simmenthal a ďalších.\n\nV právnom poriadku Slovenskej republiky je prednosť práva EÚ zakotvená v čl. 7 ods. 2 Ústavy SR, podľa ktorého majú právne záväzné akty EÚ prednosť pred zákonmi SR. Slovenské súdy sú povinné zabezpečiť súlad vnútroštátneho práva s právom EÚ a v prípade konfliktu aplikovať právo EÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje autonómiu právneho poriadku EÚ, jeho prednosť a povinnosť vnútroštátnych súdov zabezpečiť účinné uplatňovanie práva EÚ, najmä v rozsudkoch C‑6/64, C‑106/77 a C‑399/11.",
+  "quiz": [
+    {
+      "q": "Ktorý rozsudok potvrdil autonómiu právneho poriadku EÚ?",
+      "options": ["Costa/ENEL (C‑6/64)", "Rottmann (C‑135/08)", "Gauweiler (C‑62/14)", "Ruiz Zambrano (C‑34/09)"],
+      "correct": 0,
+      "explanation": "V rozsudku Costa/ENEL Súdny dvor potvrdil autonómiu právneho poriadku EÚ."
+    },
+    {
+      "q": "Čo znamená prednosť práva EÚ?",
+      "options": ["Právo EÚ sa použije len subsidiárne", "Právo EÚ má prednosť pred vnútroštátnym právom", "Vnútroštátne právo má prednosť pred právom EÚ", "Prednosť sa vzťahuje len na nariadenia"],
+      "correct": 1,
+      "explanation": "Prednosť znamená, že právo EÚ má prednosť pred vnútroštátnym právom."
+    },
+    {
+      "q": "Kde je prednosť práva EÚ upravená v Ústave SR?",
+      "options": ["Čl. 1 ods. 1", "Čl. 7 ods. 2", "Čl. 12 ods. 1", "Čl. 125"],
+      "correct": 1,
+      "explanation": "Čl. 7 ods. 2 Ústavy SR upravuje prednosť práva EÚ."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil povinnosť vnútroštátnych súdov neuplatniť odporujúcu vnútroštátnu normu?",
+      "options": ["Simmenthal (C‑106/77)", "Pringle (C‑370/12)", "Gauweiler (C‑62/14)", "Rottmann (C‑135/08)"],
+      "correct": 0,
+      "explanation": "V rozsudku Simmenthal Súdny dvor rozhodol, že vnútroštátne súdy musia neuplatniť odporujúcu vnútroštátnu normu."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil priamy účinok práva EÚ?",
+      "options": ["Van Gend en Loos (1963)", "Costa/ENEL (1964)", "Gauweiler (C‑62/14)", "ASJP (C‑64/16)"],
+      "correct": 0,
+      "explanation": "Van Gend en Loos potvrdil priamy účinok práva EÚ."
+    }
+  ],
+  "tiles": [
+    { "term": "Prednosť práva EÚ", "definition": "Právo EÚ má prednosť pred vnútroštátnym právom, vrátane ústavných noriem." },
+    { "term": "Priamy účinok", "definition": "Právo EÚ môže zakladať práva jednotlivcom priamo." },
+    { "term": "Autonómia práva EÚ", "definition": "Právny poriadok EÚ je samostatný a nezávislý od vnútroštátnych právnych poriadkov." },
+    { "term": "Simmenthal", "definition": "Rozsudok C‑106/77: vnútroštátne súdy musia neuplatniť odporujúcu normu." },
+    { "term": "Čl. 7 ods. 2 Ústavy SR", "definition": "Upravuje prednosť právne záväzných aktov EÚ pred zákonmi SR." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Costa/ENEL: prednosť práva EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny zákon odporoval právu EÚ v oblasti energetiky.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1964:66 (C‑6/64 Costa/ENEL)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o prednosti práva EÚ?",
+          "options": [
+            "Vnútroštátne právo má prednosť",
+            "Právo EÚ má prednosť pred vnútroštátnym právom",
+            "Prednosť sa neuplatní v ekonomických otázkach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že právo EÚ má prednosť pred vnútroštátnym právom, aj keď je vnútroštátna norma neskoršia.",
+            "wrong": "Nesprávne. Prednosť sa uplatňuje vo všetkých oblastiach práva EÚ."
+          },
+          "source": "ECLI:EU:C:1964:66 (C‑6/64)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Simmenthal: povinnosť vnútroštátnych súdov neuplatniť odporujúcu normu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny súd riešil konflikt medzi zákonom členského štátu a priamo uplatniteľným právom EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1978:49 (C‑106/77 Simmenthal)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil povinnosť vnútroštátnych súdov?",
+          "options": [
+            "Súd musí najprv požiadať ústavný súd o zrušenie normy",
+            "Súd musí neuplatniť odporujúcu vnútroštátnu normu",
+            "Súd musí aplikovať vnútroštátnu normu aj pri rozpore"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že vnútroštátne súdy musia neuplatniť odporujúcu vnútroštátnu normu bez potreby jej formálneho zrušenia.",
+            "wrong": "Nesprávne. Prednosť práva EÚ nevyžaduje zásah ústavného súdu."
+          },
+          "source": "ECLI:EU:C:1978:49 (C‑106/77)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Melloni: prednosť práva EÚ pred ústavným právom členského štátu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Španielsky ústavný súd tvrdil, že vnútroštátna ústavná norma poskytuje vyššiu ochranu ako právo EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2013:107 (C‑399/11 Melloni)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o vzťahu medzi právom EÚ a ústavným právom?",
+          "options": [
+            "Ústavné právo má vždy prednosť",
+            "Právo EÚ má prednosť aj pred ústavným právom členského štátu",
+            "Prednosť sa neuplatní v trestných veciach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že právo EÚ má prednosť aj pred ústavným právom členského štátu, ak ide o vykonávanie práva EÚ.",
+            "wrong": "Nesprávne. Prednosť sa uplatňuje aj v trestných veciach."
+          },
+          "source": "ECLI:EU:C:2013:107 (C‑399/11)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1964:66; ECLI:EU:C:1978:49; ECLI:EU:C:2013:107; čl. 7 ods. 2 Ústavy SR; čl. 288 – 294 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
