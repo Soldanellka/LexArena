@@ -1,8 +1,130 @@
 {
-  "id": "32",
-  "title": "Určenie medzinárodnej súdnej príslušnosti podľa nariadení Brusel Ia a IIa",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A32",
+  "title": "Určenie medzinárodnej súdnej príslušnosti podľa nariadení Brusel Ia a Brusel IIa",
+  "summary": "Nariadenie Brusel Ia (č. 1215/2012) upravuje medzinárodnú súdnu príslušnosť v občianskych a obchodných veciach. Základným pravidlom je príslušnosť súdov štátu, v ktorom má žalovaný domicil (čl. 4). Nariadenie obsahuje aj osobitné príslušnosti (napr. zmluvy, delikty, spotrebitelia, zamestnanci), výlučné príslušnosti (napr. nehnuteľnosti, korporácie, priemyselné práva), prorogačné dohody a pravidlá lis pendens.\n\nNariadenie Brusel IIa (č. 2201/2003) upravuje príslušnosť vo veciach manželských a vo veciach rodičovských práv a povinností. Príslušnosť sa spravidla určuje podľa obvyklého pobytu dieťaťa alebo manželov. Obsahuje pravidlá pre únosy detí, naliehavé opatrenia a koordináciu medzi členskými štátmi.\n\nJudikatúra Súdneho dvora EÚ spresňuje výklad pojmov ako „obvyklý pobyt“, „miesto plnenia zmluvy“, „škoda vzniknutá v delikte“, „spotrebiteľská zmluva“ či „prorogačná doložka“. Kľúčové rozsudky zahŕňajú Owusu, Kolassa, Shevill, Pammer/Alpenhof, A, Mercredi a Detiček.",
+  "quiz": [
+    {
+      "q": "Ktoré nariadenie upravuje súdnu príslušnosť v občianskych a obchodných veciach?",
+      "options": ["Brusel Ia", "Brusel IIa", "Rím I", "Rím II"],
+      "correct": 0,
+      "explanation": "Brusel Ia upravuje občianske a obchodné veci."
+    },
+    {
+      "q": "Ktoré nariadenie upravuje veci manželské a rodičovské práva?",
+      "options": ["Brusel IIa", "Brusel Ia", "Rím III", "Haagsky protokol"],
+      "correct": 0,
+      "explanation": "Brusel IIa upravuje rodinné veci."
+    },
+    {
+      "q": "Základné pravidlo Brusel Ia je príslušnosť podľa:",
+      "options": ["Domicilu žalovaného", "Miesta uzavretia zmluvy", "Miesta podnikania žalobcu", "Miesta vzniku škody"],
+      "correct": 0,
+      "explanation": "Základom je domicil žalovaného."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje obvyklý pobyt dieťaťa?",
+      "options": ["Mercredi", "Owusu", "Kolassa", "Shevill"],
+      "correct": 0,
+      "explanation": "Mercredi upravuje obvyklý pobyt dieťaťa."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje výlučnú príslušnosť pri nehnuteľnostiach?",
+      "options": ["Owusu", "Kolassa", "Shevill", "Detiček"],
+      "correct": 0,
+      "explanation": "Owusu potvrdzuje výlučnú príslušnosť pri nehnuteľnostiach."
+    }
+  ],
+  "tiles": [
+    { "term": "Brusel Ia", "definition": "Nariadenie o súdnej príslušnosti v občianskych a obchodných veciach." },
+    { "term": "Brusel IIa", "definition": "Nariadenie o manželských veciach a rodičovských právach." },
+    { "term": "Domicil žalovaného", "definition": "Základné kritérium príslušnosti podľa Brusel Ia." },
+    { "term": "Obvyklý pobyt", "definition": "Kľúčové kritérium v rodinných veciach podľa Brusel IIa." },
+    { "term": "Výlučná príslušnosť", "definition": "Príslušnosť, ktorú nemožno zmeniť prorogáciou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Owusu: výlučná príslušnosť a zákaz forum non conveniens",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Žalovaný mal domicil v členskom štáte, ale škoda vznikla mimo EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2005:120 (C‑281/02 Owusu)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o príslušnosti?",
+          "options": [
+            "Súd môže odmietnuť príslušnosť pre nevhodné fórum",
+            "Súd musí rozhodovať, ak má žalovaný domicil v členskom štáte",
+            "Príslušnosť závisí od miesta škody"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súd musí rozhodovať, ak má žalovaný domicil v členskom štáte.",
+            "wrong": "Nesprávne. Forum non conveniens nie je prípustné."
+          },
+          "source": "ECLI:EU:C:2005:120"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Kolassa: miesto vzniku škody pri deliktoch",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Investor žaloval emitenta cenných papierov za škodu vzniknutú v jeho domovskom štáte.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:37 (C‑375/13 Kolassa)"
+        },
+        {
+          "question": "Ako Súdny dvor určil príslušnosť?",
+          "options": [
+            "Príslušnosť je vždy v štáte emitenta",
+            "Príslušnosť môže byť v štáte, kde sa prejavila škoda",
+            "Príslušnosť je v štáte burzy"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Príslušnosť môže byť v štáte, kde sa prejavila škoda.",
+            "wrong": "Nesprávne. Príslušnosť nezávisí od burzy."
+          },
+          "source": "ECLI:EU:C:2015:37"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Mercredi: obvyklý pobyt dieťaťa",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dieťa sa presťahovalo do iného štátu krátko pred začatím konania.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2010:829 (C‑497/10 PPU Mercredi)"
+        },
+        {
+          "question": "Ako Súdny dvor určil obvyklý pobyt?",
+          "options": [
+            "Podľa formálneho prihlásenia",
+            "Podľa centra života dieťaťa a integrácie",
+            "Podľa štátnej príslušnosti"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Obvyklý pobyt sa určuje podľa centra života dieťaťa a jeho integrácie.",
+            "wrong": "Nesprávne. Formálne prihlásenie nie je rozhodujúce."
+          },
+          "source": "ECLI:EU:C:2010:829"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2005:120; ECLI:EU:C:2015:37; ECLI:EU:C:2010:829; nariadenia Brusel Ia a Brusel IIa",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
