@@ -30,10 +30,30 @@ const BASIC_SEED = [
 
 let cachedCatalog = null;
 
-/* Jedno čítanie za reláciu (modul-level cache). Ak katalóg ešte
-   v Firebase neexistuje, vytvorí ho a naplní základnou sadou. */
+/* Jedno čítanie za reláciu (modul-level cache). Jediný zdroj pravdy
+   je statický avatars/Catalog.json (presne toto meno – veľké C, Vercel
+   je case-sensitive; deploynutý s appkou spolu s PNG súbormi – pridanie
+   nového taláru = pridať položku + nahrať súbory, žiadna zmena kódu).
+   Súbor môže mať tvar buď holého poľa [...], alebo { avatars: [...] }
+   (obe podporené). Ak sa súbor nenačíta (chýba/poškodený JSON), spadne
+   na Firebase config/avatarCatalog ako záložný zdroj a napokon na
+   vstavanú základnú sadu, nech appka nikdy nezostane bez avatarov. */
 export async function getAvatarCatalog() {
   if (cachedCatalog) return cachedCatalog;
+
+  try {
+    const res = await fetch('avatars/Catalog.json');
+    if (res.ok) {
+      const raw = await res.json();
+      const val = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.avatars) ? raw.avatars : null);
+      if (val && val.length) {
+        cachedCatalog = val.filter(Boolean);
+        return cachedCatalog;
+      }
+    }
+  } catch (e) {
+    console.warn('avatarCatalog: avatars/Catalog.json sa nepodarilo načítať, skúšam Firebase', e);
+  }
 
   const db = window.db;
   if (!db) return BASIC_SEED;

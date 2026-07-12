@@ -123,38 +123,37 @@ async function pickCommission() {
   const talars = getTalarAvatars(catalog);
   if (!talars.length) return [];
 
+  // Zaruč aspoň jedného akademika (ak existuje), zvyšok iné taláre pre pestrosť –
+  // pri len 1-2 akademických položkách by čisto náhodný výber z celého poolu
+  // mohol ľahko vybrať 3× to isté "iné" a žiadneho akademika.
   const academic = talars.filter(isAcademicLike);
-  const pool = academic.length >= 3 ? academic : talars;
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  return [0, 1, 2].map(i => shuffled[i % shuffled.length]);
+  const nonAcademic = talars.filter(a => !isAcademicLike(a));
+
+  const chosen = [];
+  if (academic.length) chosen.push(academic[Math.floor(Math.random() * academic.length)]);
+
+  const restPool = nonAcademic.length ? nonAcademic : talars;
+  const shuffledRest = [...restPool].sort(() => Math.random() - 0.5);
+  while (chosen.length < 3) {
+    if (!shuffledRest.length) shuffledRest.push(...[...talars].sort(() => Math.random() - 0.5));
+    chosen.push(shuffledRest.shift());
+  }
+
+  console.log('[ŠTÁTNICE] Komisia:', chosen.map(a => a?.id));
+  return chosen;
 }
 
 /* ============================================================
-   REZERVNÝ ZOZNAM TALÁROVÝCH OBRÁZKOV (mimo Firebase katalógu)
-   Zámerne PRÁZDNY – ku dňu úpravy (over cez `ls avatars/`) v repe
-   neexistuje ANI JEDEN súbor s menom akademik/prokurátor/sudca/
-   advokát/talár-čierny (skontrolované aj v celej git histórii,
-   nikdy neboli commitnuté). Kandidátne mená zo zadania nechávam
-   tu ako komentár – keď niekto nahrá zodpovedajúce PNG do avatars/,
-   stačí pridať ich cestu do tohto zoznamu (akademické/zlaté prvé)
-   a komisia ich automaticky začne používať bez ďalšej úpravy kódu.
-   Zámerne sa tu NEuvádzajú cesty na súbory, ktoré neexistujú – to by
-   pri každom otvorení siene spôsobilo zbytočné 404 na tieto obrázky.
-
-   Očakávané mená (zo zadania), zatiaľ chýbajú:
-   avatars/studentka-tmava-akademik-full.png
-   avatars/studentka-blond-akademik-full.png
-   avatars/studentka-tmava-prokurator-full.png
-   avatars/studentka-blond-prokurator-full.png
-   avatars/studentka-tmava-sudca-full.png
-   avatars/studentka-blond-sudca-full.png
-   avatars/studentka-blond-advokat-full.png
-   avatars/student-blond-advokat-full.png
-   avatars/student-tmavy-talar-cierny-full.png
-   avatars/student-medeny-talar-cierny-full.png
-   avatars/studentka-medena-talar-cierny-full.png
+   REZERVNÝ ZOZNAM TALÁROVÝCH OBRÁZKOV (mimo katalógu) – posledná
+   poistka, ak by sa avatars/Catalog.json nenačítal alebo filter na
+   type==='talar' vrátil prázdno. Cesty overené, že reálne existujú
+   v avatars/ (nahraté spolu s katalógom v tomto commite).
 ============================================================ */
-const RESERVE_TALAR_CANDIDATES = [];
+const RESERVE_TALAR_CANDIDATES = [
+  'avatars/studentka-blond-akademik-full.png',
+  'avatars/studentka-tmava-prokurator-full.png',
+  'avatars/student-blond-advokat-full.png'
+];
 
 /* Pre každú z 3 pozícií komisie postaví zoznam kandidátov na
    vyskúšanie (najprv katalógový avatar, ak existuje, potom rezervný
