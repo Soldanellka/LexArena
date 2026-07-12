@@ -1,8 +1,130 @@
 {
-  "id": "33",
-  "title": "Uznanie a výkon rozhodnutí podľa Brusel Ia a IIa, Európsky exekučný titul",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A33",
+  "title": "Uznanie a výkon rozhodnutí podľa nariadení Brusel Ia a Brusel IIa, Európsky exekučný titul",
+  "summary": "Nariadenie Brusel Ia (č. 1215/2012) upravuje uznávanie a výkon rozhodnutí v občianskych a obchodných veciach. Základným pravidlom je automatické uznanie rozhodnutí bez osobitného konania (čl. 36). Výkon rozhodnutia sa uskutočňuje bez potreby vyhlásenia vykonateľnosti (exequatur), ktoré bolo zrušené. Odmietnutie uznania alebo výkonu je možné len z taxatívnych dôvodov (čl. 45), najmä rozpor s verejným poriadkom, nesúlad s právom na obhajobu alebo nezlučiteľnosť s iným rozhodnutím.\n\nNariadenie Brusel IIa (č. 2201/2003) upravuje uznávanie a výkon rozhodnutí vo veciach manželských a vo veciach rodičovských práv a povinností. Uznanie je automatické, ale výkon môže vyžadovať vyhlásenie vykonateľnosti, najmä pri rozhodnutiach o styku s dieťaťom alebo návrate dieťaťa. Nariadenie obsahuje osobitné pravidlá pre únosy detí a naliehavé opatrenia.\n\nEurópsky exekučný titul (EET) podľa nariadenia č. 805/2004 umožňuje výkon rozhodnutí vo veciach nesporných nárokov bez akéhokoľvek medzičlánku. Rozhodnutie musí spĺňať procesné záruky (riadne doručenie, právo na obhajobu). Po vydaní EET je rozhodnutie vykonateľné v celej EÚ bez exequatur.\n\nJudikatúra Súdneho dvora EÚ spresňuje výklad dôvodov odmietnutia uznania, rozsah verejného poriadku, právo na obhajobu a pravidlá výkonu, najmä v rozsudkoch Krombach, Trade Agency, Povse a Rinau.",
+  "quiz": [
+    {
+      "q": "Je uznanie rozhodnutí podľa Brusel Ia automatické?",
+      "options": ["Áno", "Nie", "Len pri rodinných veciach", "Len pri trestných veciach"],
+      "correct": 0,
+      "explanation": "Brusel Ia zavádza automatické uznanie bez konania."
+    },
+    {
+      "q": "Ktorý článok Brusel Ia upravuje dôvody odmietnutia uznania?",
+      "options": ["Čl. 45", "Čl. 4", "Čl. 36", "Čl. 21"],
+      "correct": 0,
+      "explanation": "Čl. 45 obsahuje taxatívne dôvody odmietnutia."
+    },
+    {
+      "q": "Čo je Európsky exekučný titul?",
+      "options": ["Mechanizmus výkonu nesporných nárokov", "Trestný rozsudok", "Rodinné rozhodnutie", "Colné povolenie"],
+      "correct": 0,
+      "explanation": "EET umožňuje výkon nesporných nárokov bez exequatur."
+    },
+    {
+      "q": "Ktoré nariadenie upravuje uznávanie rozhodnutí vo veciach rodičovských práv?",
+      "options": ["Brusel IIa", "Brusel Ia", "Rím I", "Haagsky protokol"],
+      "correct": 0,
+      "explanation": "Rodinné veci upravuje Brusel IIa."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje verejný poriadok pri odmietnutí uznania?",
+      "options": ["Krombach", "Owusu", "Kolassa", "Mercredi"],
+      "correct": 0,
+      "explanation": "Krombach upravuje verejný poriadok pri uznávaní."
+    }
+  ],
+  "tiles": [
+    { "term": "Brusel Ia", "definition": "Automatické uznanie a výkon rozhodnutí v občianskych a obchodných veciach." },
+    { "term": "Brusel IIa", "definition": "Uznanie a výkon rozhodnutí vo veciach manželských a rodičovských práv." },
+    { "term": "Európsky exekučný titul", "definition": "Výkon nesporných nárokov bez exequatur." },
+    { "term": "Verejný poriadok", "definition": "Dôvod odmietnutia uznania podľa čl. 45 Brusel Ia." },
+    { "term": "Právo na obhajobu", "definition": "Kľúčová procesná záruka pri uznávaní rozhodnutí." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Krombach: verejný poriadok",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Nemecko odmietlo uznať francúzsky rozsudok pre porušenie práva na obhajobu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2000:164 (C‑7/98 Krombach)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil verejný poriadok?",
+          "options": [
+            "Široko, členské štáty môžu odmietať akékoľvek rozhodnutia",
+            "Úzko, len pri závažnom porušení základných práv",
+            "Verejný poriadok sa neuplatňuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Verejný poriadok sa uplatňuje úzko, len pri závažnom porušení základných práv.",
+            "wrong": "Nesprávne. Verejný poriadok nie je široký dôvod."
+          },
+          "source": "ECLI:EU:C:2000:164"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Trade Agency: výkon rozhodnutí podľa Brusel Ia",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Súd riešil otázku, či je možné odmietnuť výkon rozhodnutia pre procesné chyby.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2016:40 (C‑384/14 Trade Agency)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o výkone?",
+          "options": [
+            "Výkon možno odmietnuť pre akékoľvek procesné chyby",
+            "Výkon možno odmietnuť len z dôvodov uvedených v čl. 45",
+            "Výkon je vždy automatický bez výnimiek"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Výkon možno odmietnuť len z taxatívnych dôvodov podľa čl. 45.",
+            "wrong": "Nesprávne. Procesné chyby mimo čl. 45 nie sú dôvodom odmietnutia."
+          },
+          "source": "ECLI:EU:C:2016:40"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Povse: výkon rozhodnutí o návrate dieťaťa",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Rakúsko odmietlo vykonať talianske rozhodnutie o návrate dieťaťa.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2010:400 (C‑211/10 PPU Povse)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o výkone?",
+          "options": [
+            "Členské štáty môžu odmietnuť výkon podľa vlastného uváženia",
+            "Výkon je povinný, ak rozhodnutie spĺňa podmienky Brusel IIa",
+            "Výkon nie je možný pri cezhraničných únosoch"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Výkon je povinný, ak rozhodnutie spĺňa podmienky Brusel IIa.",
+            "wrong": "Nesprávne. Brusel IIa obsahuje jasné pravidlá pre únosy detí."
+          },
+          "source": "ECLI:EU:C:2010:400"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2000:164; ECLI:EU:C:2016:40; ECLI:EU:C:2010:400; nariadenia Brusel Ia, Brusel IIa, EET",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
