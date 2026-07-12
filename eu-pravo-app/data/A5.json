@@ -1,8 +1,104 @@
 {
-  "id": "5",
+  "id": "A5",
   "title": "Európsky parlament – zloženie, organizácia a právomoci",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Európsky parlament je jednou z hlavných inštitúcií Európskej únie a predstavuje demokratický prvok jej inštitucionálnej štruktúry. Je upravený v čl. 14 ZEÚ a čl. 223 – 234 ZFEÚ. Parlament zastupuje občanov Európskej únie a je jedinou priamo volenou inštitúciou EÚ. Má legislatívne, rozpočtové, kontrolné a politické právomoci.\n\nZloženie Parlamentu je založené na zásade degresívnej proporcionality: väčšie štáty majú viac poslancov, ale menšie štáty sú relatívne zvýhodnené. Počet poslancov je najviac 750 + predseda. Poslanci sú volení na päť rokov vo všeobecných priamych voľbách.\n\nOrganizácia Parlamentu zahŕňa predsedu, 14 podpredsedov, konferenciu predsedov, výbory, delegácie a politické skupiny. Politické skupiny sú kľúčové pre fungovanie Parlamentu, keďže organizujú prácu poslancov, určujú priority a koordinujú legislatívne procesy.\n\nPrávomoci Parlamentu zahŕňajú legislatívnu moc (spolu s Radou), rozpočtovú moc, kontrolu Komisie (vrátane práva vysloviť nedôveru), voľbu predsedu Komisie, schvaľovanie Komisie ako celku, dohľad nad činnosťou ostatných inštitúcií a účasť na medzinárodných dohodách. Parlament má tiež právo petície a ombudsman je pod jeho dohľadom.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam Parlamentu v inštitucionálnej rovnováhe, najmä v rozsudkoch C‑70/88 a C‑409/13, ktoré zdôrazňujú, že Rada ani Komisia nesmú obchádzať legislatívne právomoci Parlamentu.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje Európsky parlament?",
+      "options": ["Čl. 14 ZEÚ", "Čl. 20 ZFEÚ", "Čl. 49 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 14 ZEÚ upravuje zloženie a úlohy Európskeho parlamentu."
+    },
+    {
+      "q": "Ako sú poslanci Európskeho parlamentu volení?",
+      "options": ["Nepriamo členskými štátmi", "Priamymi voľbami občanov EÚ", "Menovaním Komisiou", "Menovaním Európskou radou"],
+      "correct": 1,
+      "explanation": "Poslanci sú volení vo všeobecných priamych voľbách každých päť rokov."
+    },
+    {
+      "q": "Čo znamená degresívna proporcionalita?",
+      "options": ["Každý štát má rovnaký počet poslancov", "Menšie štáty majú relatívne viac poslancov na obyvateľa", "Väčšie štáty majú absolútne viac poslancov", "Počet poslancov sa mení každý rok"],
+      "correct": 1,
+      "explanation": "Degresívna proporcionalita zvýhodňuje menšie štáty v počte poslancov."
+    },
+    {
+      "q": "Ktoré právomoci má Európsky parlament?",
+      "options": ["Len poradné", "Legislatívne, rozpočtové a kontrolné", "Len kontrolné", "Len rozpočtové"],
+      "correct": 1,
+      "explanation": "Parlament má legislatívne, rozpočtové a kontrolné právomoci."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka legislatívnych právomocí Parlamentu?",
+      "options": ["C‑409/13 Parlament v. Rada", "C‑34/09 Ruiz Zambrano", "C‑135/08 Rottmann", "C‑64/16 ASJP"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑409/13 Súdny dvor potvrdil legislatívne právomoci Parlamentu."
+    }
+  ],
+  "tiles": [
+    { "term": "Degresívna proporcionalita", "definition": "Menšie štáty majú relatívne viac poslancov na obyvateľa." },
+    { "term": "Politické skupiny", "definition": "Organizujú prácu poslancov a určujú legislatívne priority." },
+    { "term": "Legislatívna moc", "definition": "Parlament a Rada spoločne prijímajú právne akty EÚ." },
+    { "term": "Kontrolná funkcia", "definition": "Parlament dohliada na Komisiu a môže vysloviť nedôveru." },
+    { "term": "Rozpočtová moc", "definition": "Parlament spolu s Radou schvaľuje rozpočet EÚ." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Parlament v. Rada: obchádzanie legislatívnych právomocí",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Parlament tvrdil, že Rada prijala rozhodnutie mimo legislatívneho postupu, čím obchádzala jeho právomoci.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právomociach Parlamentu?",
+          "options": [
+            "Rada môže konať bez Parlamentu",
+            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
+            "Parlament nemá legislatívne právomoci"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
+            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+          },
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Parlament v. Rada: inštitucionálna rovnováha",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Parlament namietal, že Rada prijala akt, ktorý mal byť prijatý v riadnom legislatívnom postupe.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil zásadu inštitucionálnej rovnováhy?",
+          "options": [
+            "Inštitúcie môžu konať mimo svojich právomocí",
+            "Každá inštitúcia musí konať v rámci právomocí určených zmluvami",
+            "Komisia je nadradená Parlamentu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že žiadna inštitúcia nesmie prekročiť právomoci určené zmluvami.",
+            "wrong": "Nesprávne. Inštitúcie musia rešpektovať rovnováhu právomocí."
+          },
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:1990:153; čl. 14 ZEÚ; čl. 223 – 234 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
