@@ -59,4 +59,19 @@
   "cases": [
     {
       "scenario": "Členský štát porušuje zásady právneho štátu a nezávislosť súdnictva, čo je v rozpore s hodnotami podľa čl. 2 ZEÚ.",
-      "question": "Ako Súdny dvor EÚ vy
+      "question": "Ako Súdny dvor EÚ vykladá povinnosť členských štátov rešpektovať hodnoty Únie?",
+      "answer": "V rozsudku C‑619/18 Komisia/Poľsko Súdny dvor potvrdil, že členské štáty musia zabezpečiť nezávislosť súdnictva ako súčasť hodnoty právneho štátu podľa čl. 2 ZEÚ. Hodnoty Únie sú právne záväzné a ich porušenie môže viesť k konaniu podľa čl. 7 ZEÚ."
+    },
+    {
+      "scenario": "Štát, ktorý sa uchádza o členstvo v EÚ, má vážne systémové nedostatky v ochrane základných práv.",
+      "question": "Môže byť štát prijatý do EÚ, ak nespĺňa hodnoty podľa čl. 2 ZEÚ?",
+      "answer": "Nie. V rozsudku C‑157/21 Komisia/Maďarsko Súdny dvor zdôraznil, že rešpektovanie základných práv a právneho štátu je nevyhnutnou podmienkou fungovania Únie. Štát, ktorý nerešpektuje hodnoty čl. 2 ZEÚ, nemôže splniť podmienky čl. 49 ZEÚ na prijatie."
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2019:531 (C‑619/18), ECLI:EU:C:2022:481 (C‑157/21), čl. 49 a čl. 2 ZEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
+}
