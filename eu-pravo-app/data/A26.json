@@ -1,8 +1,130 @@
 {
-  "id": "26",
-  "title": "Stupne integrácie, vnútorný trh EÚ a jeho prípustné obmedzenia",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A26",
+  "title": "Stupne integrácie, vnútorný trh Európskej únie a jeho prípustné obmedzenia",
+  "summary": "Európska integrácia prechádza viacerými stupňami: zóna voľného obchodu, colná únia, spoločný trh, vnútorný trh, hospodárska a menová únia. Vnútorný trh EÚ je najpokročilejšou formou ekonomickej integrácie pred vznikom hospodárskej a menovej únie.\n\nVnútorný trh EÚ je definovaný v čl. 26 ZFEÚ ako priestor bez vnútorných hraníc, v ktorom je zabezpečený voľný pohyb tovaru, osôb, služieb a kapitálu. Základnými zásadami sú zákaz diskriminácie, zákaz kvantitatívnych obmedzení, zákaz opatrení s rovnocenným účinkom a zásada vzájomného uznávania (Cassis de Dijon).\n\nObmedzenia vnútorného trhu sú prípustné len výnimočne – ak sú odôvodnené verejným záujmom, sú primerané, nevyhnutné a nediskriminačné. Medzi prípustné obmedzenia patria dôvody verejného poriadku, verejnej bezpečnosti, ochrany zdravia, ochrany spotrebiteľa, ochrany životného prostredia a naliehavé požiadavky všeobecného záujmu (rule of reason).\n\nJudikatúra Súdneho dvora EÚ rozvinula zásadu vzájomného uznávania, zákaz skrytých obmedzení a test proporcionality, najmä v rozsudkoch Cassis de Dijon, Keck, Gebhard a Alpine Investments.",
+  "quiz": [
+    {
+      "q": "Ktorý článok definuje vnútorný trh EÚ?",
+      "options": ["Čl. 26 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 45 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Vnútorný trh je definovaný v čl. 26 ZFEÚ."
+    },
+    {
+      "q": "Ktorý rozsudok zaviedol zásadu vzájomného uznávania?",
+      "options": ["Cassis de Dijon", "Keck", "Gebhard", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "Zásada vzájomného uznávania pochádza z Cassis de Dijon."
+    },
+    {
+      "q": "Ktorý stupeň integrácie je najpokročilejší pred vznikom hospodárskej a menovej únie?",
+      "options": ["Zóna voľného obchodu", "Colná únia", "Vnútorný trh", "Spoločná poľnohospodárska politika"],
+      "correct": 2,
+      "explanation": "Vnútorný trh je najpokročilejšia forma ekonomickej integrácie pred HMÚ."
+    },
+    {
+      "q": "Ktorý rozsudok rozlišuje medzi predajnými a obchodnými modalitami?",
+      "options": ["Keck", "Cassis de Dijon", "Gebhard", "Alpine Investments"],
+      "correct": 0,
+      "explanation": "Rozsudok Keck zaviedol toto rozlíšenie."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje test proporcionality pri slobode usadiť sa?",
+      "options": ["Gebhard", "Keck", "Cassis de Dijon", "Simmenthal"],
+      "correct": 0,
+      "explanation": "Gebhard upravuje test proporcionality pri slobode usadiť sa."
+    }
+  ],
+  "tiles": [
+    { "term": "Vnútorný trh", "definition": "Priestor bez vnútorných hraníc so štyrmi slobodami." },
+    { "term": "Cassis de Dijon", "definition": "Zásada vzájomného uznávania a rule of reason." },
+    { "term": "Keck", "definition": "Rozlíšenie medzi predajnými a obchodnými modalitami." },
+    { "term": "Gebhard", "definition": "Test proporcionality pri slobode usadiť sa." },
+    { "term": "Alpine Investments", "definition": "Obmedzenia služieb musia byť odôvodnené a primerané." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Cassis de Dijon: zásada vzájomného uznávania",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Nemecko odmietlo dovoz francúzskeho likéru pre nesplnenie vnútroštátnych požiadaviek na obsah alkoholu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1979:42 (C‑120/78 Cassis de Dijon)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o voľnom pohybe tovaru?",
+          "options": [
+            "Členské štáty môžu odmietnuť akýkoľvek tovar",
+            "Tovar legálne vyrobený v jednom štáte musí byť uznaný v druhom",
+            "Vzájomné uznávanie neexistuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor zaviedol zásadu vzájomného uznávania.",
+            "wrong": "Nesprávne. Vnútroštátne požiadavky nesmú byť skrytými obmedzeniami."
+          },
+          "source": "ECLI:EU:C:1979:42"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Keck: predajné modality",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Francúzsko zakázalo predaj tovaru pod nákupnú cenu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1993:905 (C‑267/91 a C‑268/91 Keck)"
+        },
+        {
+          "question": "Ako Súdny dvor rozlíšil obmedzenia?",
+          "options": [
+            "Všetky obmedzenia sú zakázané",
+            "Predajné modality nie sú obmedzeniami, ak sa uplatňujú rovnako na všetkých",
+            "Predajné modality sú vždy zakázané"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Predajné modality nie sú obmedzeniami, ak sa uplatňujú rovnako na všetkých obchodníkov.",
+            "wrong": "Nesprávne. Nie všetky modality sú zakázané."
+          },
+          "source": "ECLI:EU:C:1993:905"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Gebhard: test proporcionality pri slobode usadiť sa",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Talianske orgány obmedzili činnosť nemeckého právnika pôsobiaceho v Taliansku.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1995:411 (C‑55/94 Gebhard)"
+        },
+        {
+          "question": "Ako Súdny dvor upravil test proporcionality?",
+          "options": [
+            "Obmedzenia sú vždy zakázané",
+            "Obmedzenia musia byť nediskriminačné, odôvodnené a primerané",
+            "Obmedzenia nemusia byť odôvodnené"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor stanovil, že obmedzenia musia byť nediskriminačné, odôvodnené a primerané.",
+            "wrong": "Nesprávne. Obmedzenia musia byť odôvodnené verejným záujmom."
+          },
+          "source": "ECLI:EU:C:1995:411"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1979:42; ECLI:EU:C:1993:905; ECLI:EU:C:1995:411; čl. 26 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
