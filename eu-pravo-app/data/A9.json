@@ -1,8 +1,130 @@
 {
-  "id": "9",
+  "id": "A9",
   "title": "Dvor audítorov, Európska centrálna banka, orgány EÚ",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Dvor audítorov, Európska centrálna banka (ECB) a ďalšie orgány Európskej únie tvoria dôležitú súčasť inštitucionálneho systému Únie. Ich úlohy sú upravené v čl. 13 ZEÚ a v príslušných ustanoveniach ZFEÚ.\n\nDvor audítorov je nezávislou inštitúciou, ktorá kontroluje plnenie rozpočtu EÚ. Je upravený v čl. 285 – 287 ZFEÚ. Tvoria ho audítori z každého členského štátu, ktorí sú nezávislí a konajú v záujme Únie. Dvor audítorov preveruje zákonnosť a správnosť finančných operácií, vydáva správy a odporúčania a zohráva kľúčovú úlohu pri ochrane finančných záujmov EÚ.\n\nEurópska centrálna banka je upravená v čl. 282 – 284 ZFEÚ. ECB je nezávislou inštitúciou zodpovednou za menovú politiku eurozóny. Jej hlavným cieľom je udržiavanie cenovej stability. ECB tvorí Eurosystém spolu s národnými centrálnymi bankami členských štátov eurozóny. ECB prijíma rozhodnutia prostredníctvom Rady guvernérov, Výkonnej rady a Generálnej rady.\n\nOrgány EÚ zahŕňajú napríklad Európsky ombudsman, Európsky hospodársky a sociálny výbor, Výbor regiónov, agentúry EÚ (napr. Frontex, Europol, EMA, EASA) a ďalšie špecializované orgány. Tieto orgány podporujú činnosť inštitúcií, vykonávajú technické, regulačné alebo poradné úlohy a zabezpečujú efektívne fungovanie Únie.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje nezávislosť ECB, právomoci Dvora audítorov a úlohu agentúr EÚ, najmä v rozsudkoch C‑11/00, C‑62/14 a C‑270/12.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje Dvor audítorov?",
+      "options": ["Čl. 285 – 287 ZFEÚ", "Čl. 17 ZEÚ", "Čl. 14 ZEÚ", "Čl. 49 ZEÚ"],
+      "correct": 0,
+      "explanation": "Dvor audítorov je upravený v čl. 285 – 287 ZFEÚ."
+    },
+    {
+      "q": "Aký je hlavný cieľ Európskej centrálnej banky?",
+      "options": ["Plná zamestnanosť", "Cenová stabilita", "Znižovanie daní", "Riadenie rozpočtu EÚ"],
+      "correct": 1,
+      "explanation": "ECB má za cieľ udržiavať cenovú stabilitu v eurozóne."
+    },
+    {
+      "q": "Kto tvorí Dvor audítorov?",
+      "options": ["Komisári", "Audítori z členských štátov", "Poslanci EP", "Sudcovia Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Dvor audítorov tvoria audítori z členských štátov."
+    },
+    {
+      "q": "Ktorý orgán je zodpovedný za menovú politiku eurozóny?",
+      "options": ["Rada EÚ", "Komisia", "ECB", "Európska rada"],
+      "correct": 2,
+      "explanation": "Menovú politiku eurozóny vykonáva ECB."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka nezávislosti ECB?",
+      "options": ["C‑62/14 Gauweiler", "C‑34/09 Ruiz Zambrano", "C‑409/13 Parlament v. Rada", "C‑157/21 Komisia/Maďarsko"],
+      "correct": 0,
+      "explanation": "V rozsudku Gauweiler Súdny dvor potvrdil nezávislosť ECB pri menovej politike."
+    }
+  ],
+  "tiles": [
+    { "term": "Dvor audítorov", "definition": "Kontroluje plnenie rozpočtu EÚ a chráni finančné záujmy Únie." },
+    { "term": "ECB", "definition": "Nezávislá inštitúcia zodpovedná za menovú politiku eurozóny." },
+    { "term": "Cenová stabilita", "definition": "Hlavný cieľ ECB podľa čl. 282 ZFEÚ." },
+    { "term": "Agentúry EÚ", "definition": "Špecializované orgány vykonávajúce technické a regulačné úlohy." },
+    { "term": "Eurosystém", "definition": "ECB a národné centrálne banky členských štátov eurozóny." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezávislosť ECB pri menovej politike",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "ECB prijala program nákupu štátnych dlhopisov, ktorý bol napadnutý pre údajné prekročenie právomocí.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil nezávislosť ECB?",
+          "options": [
+            "ECB musí žiadať súhlas členských štátov",
+            "ECB má nezávislosť pri vykonávaní menovej politiky",
+            "ECB nemôže nakupovať štátne dlhopisy"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že ECB má nezávislosť pri vykonávaní menovej politiky a môže prijímať opatrenia potrebné na udržanie cenovej stability.",
+            "wrong": "Nesprávne. ECB nemusí žiadať súhlas členských štátov."
+          },
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Právomoci Dvora audítorov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dvor audítorov požadoval prístup k dokumentom členského štátu týkajúcim sa finančných operácií súvisiacich s fondmi EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2003:479 (C‑11/00 Komisia v. Európsky parlament a Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právomoci Dvora audítorov?",
+          "options": [
+            "Dvor audítorov nemá právo na prístup k dokumentom",
+            "Dvor audítorov má právo požadovať dokumenty potrebné na výkon kontroly",
+            "Dvor audítorov môže ukladať sankcie členským štátom"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Dvor audítorov má právo požadovať dokumenty potrebné na výkon svojich kontrolných právomocí.",
+            "wrong": "Nesprávne. Dvor audítorov nemá právomoc ukladať sankcie."
+          },
+          "source": "ECLI:EU:C:2003:479 (C‑11/00)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Právomoci agentúr EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Bola napadnutá právomoc agentúry EÚ prijímať záväzné rozhodnutia v oblasti finančného dohľadu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:18 (C‑270/12 UK v. Parlament a Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právomoci agentúr?",
+          "options": [
+            "Agentúry nemôžu prijímať žiadne rozhodnutia",
+            "Agentúry môžu prijímať rozhodnutia, ak sú jasne vymedzené zmluvami alebo sekundárnym právom",
+            "Agentúry sú nadradené Komisii"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že agentúry môžu prijímať rozhodnutia, ak sú ich právomoci jasne vymedzené právom EÚ.",
+            "wrong": "Nesprávne. Agentúry nie sú nadradené Komisii."
+          },
+          "source": "ECLI:EU:C:2014:18 (C‑270/12)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2015:400; ECLI:EU:C:2003:479; ECLI:EU:C:2014:18; čl. 282 – 287 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
