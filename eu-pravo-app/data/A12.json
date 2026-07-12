@@ -1,8 +1,130 @@
 {
-  "id": "12",
+  "id": "A12",
   "title": "Priamy a nepriamy účinok práva Únie, aplikácia práva Únie súdmi členských štátov",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Priamy účinok práva Európskej únie znamená, že ustanovenia práva EÚ môžu zakladať práva a povinnosti jednotlivcom priamo, bez potreby ďalšej implementácie. Túto zásadu zaviedol Súdny dvor EÚ v rozsudku Van Gend en Loos (1963). Priamy účinok sa vzťahuje na nariadenia, niektoré ustanovenia zmlúv a za určitých podmienok aj na smernice.\n\nNepriamy účinok (výklad v súlade) znamená, že vnútroštátne súdy musia vykladať vnútroštátne právo v súlade s cieľmi a účelom smerníc EÚ. Túto zásadu zaviedol Súdny dvor v rozsudku Von Colson (1984) a rozvinul v rozsudku Marleasing (1990).\n\nAplikácia práva EÚ súdmi členských štátov je založená na zásade prednosti, zásade efektivity a zásade lojálnej spolupráce. Vnútroštátne súdy musia zabezpečiť plný účinok práva EÚ, neuplatniť odporujúce vnútroštátne normy (Simmenthal), zabezpečiť účinnú súdnu ochranu (Unibet) a v prípade potreby predložiť prejudiciálnu otázku Súdnemu dvoru (čl. 267 ZFEÚ).\n\nSlovenské súdy sú povinné aplikovať právo EÚ priamo, vykladať vnútroštátne právo v súlade s právom EÚ a zabezpečiť prednosť práva EÚ podľa čl. 7 ods. 2 Ústavy SR.",
+  "quiz": [
+    {
+      "q": "Ktorý rozsudok zaviedol zásadu priameho účinku?",
+      "options": ["Costa/ENEL", "Van Gend en Loos", "Simmenthal", "Marleasing"],
+      "correct": 1,
+      "explanation": "Van Gend en Loos (1963) zaviedol zásadu priameho účinku."
+    },
+    {
+      "q": "Čo znamená nepriamy účinok?",
+      "options": ["Priama aplikácia smerníc", "Výklad vnútroštátneho práva v súlade so smernicami", "Prednosť vnútroštátneho práva", "Zrušenie vnútroštátneho zákona"],
+      "correct": 1,
+      "explanation": "Nepriamy účinok znamená výklad vnútroštátneho práva v súlade so smernicami."
+    },
+    {
+      "q": "Ktorý článok upravuje prejudiciálne konanie?",
+      "options": ["Čl. 7 ods. 2 Ústavy SR", "Čl. 267 ZFEÚ", "Čl. 288 ZFEÚ", "Čl. 49 ZEÚ"],
+      "correct": 1,
+      "explanation": "Prejudiciálne konanie je upravené v čl. 267 ZFEÚ."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil povinnosť neuplatniť odporujúcu vnútroštátnu normu?",
+      "options": ["Simmenthal", "Marleasing", "Von Colson", "Pringle"],
+      "correct": 0,
+      "explanation": "V rozsudku Simmenthal Súdny dvor potvrdil povinnosť neuplatniť odporujúcu normu."
+    },
+    {
+      "q": "Ktorý rozsudok zaviedol nepriamy účinok smerníc?",
+      "options": ["Von Colson", "Costa/ENEL", "Gauweiler", "Melloni"],
+      "correct": 0,
+      "explanation": "Von Colson (1984) zaviedol zásadu nepriameho účinku."
+    }
+  ],
+  "tiles": [
+    { "term": "Priamy účinok", "definition": "Ustanovenia práva EÚ môžu zakladať práva jednotlivcom priamo." },
+    { "term": "Nepriamy účinok", "definition": "Vnútroštátne právo sa vykladá v súlade s cieľmi smerníc." },
+    { "term": "Prejudiciálne konanie", "definition": "Mechanizmus výkladu práva EÚ podľa čl. 267 ZFEÚ." },
+    { "term": "Simmenthal", "definition": "Rozsudok C‑106/77: súdy musia neuplatniť odporujúcu normu." },
+    { "term": "Marleasing", "definition": "Rozsudok C‑106/89: povinnosť výkladu vnútroštátneho práva v súlade so smernicami." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Van Gend en Loos: priame účinky práva EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Holandská colná správa uložila clo odporujúce ustanoveniu zmluvy EHS.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1963:1 (Van Gend en Loos)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o priamom účinku?",
+          "options": [
+            "Ustanovenia zmluvy nemajú priamy účinok",
+            "Ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo",
+            "Priamy účinok sa vzťahuje len na nariadenia"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo.",
+            "wrong": "Nesprávne. Priamy účinok sa vzťahuje aj na niektoré ustanovenia zmlúv."
+          },
+          "source": "ECLI:EU:C:1963:1"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Von Colson: nepriamy účinok smerníc",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátne právo neobsahovalo sankcie požadované smernicou o rovnakom zaobchádzaní.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1984:153 (Von Colson)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil nepriamy účinok?",
+          "options": [
+            "Smernica má priamy účinok vo všetkých prípadoch",
+            "Vnútroštátne právo sa musí vykladať v súlade so smernicou",
+            "Smernica sa neuplatní"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že vnútroštátne právo sa musí vykladať v súlade s cieľmi smernice.",
+            "wrong": "Nesprávne. Nepriamy účinok je povinnosť výkladu, nie automatická aplikácia."
+          },
+          "source": "ECLI:EU:C:1984:153"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Marleasing: povinnosť výkladu vnútroštátneho práva v súlade so smernicami",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátna právna úprava odporovala cieľom smernice o nekalých podmienkach v spotrebiteľských zmluvách.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1990:395 (C‑106/89 Marleasing)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o výklade vnútroštátneho práva?",
+          "options": [
+            "Súd musí aplikovať vnútroštátnu normu aj pri rozpore",
+            "Súd musí vykladať vnútroštátne právo v súlade so smernicou",
+            "Smernica sa neuplatní, ak nebola transponovaná"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že vnútroštátne právo sa musí vykladať v súlade so smernicou, aj keď nebolo transponované.",
+            "wrong": "Nesprávne. Nepriamy účinok sa uplatňuje aj pri netransponovaných smerniciach."
+          },
+          "source": "ECLI:EU:C:1990:395"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1963:1; ECLI:EU:C:1984:153; ECLI:EU:C:1990:395; čl. 267 ZFEÚ; čl. 7 ods. 2 Ústavy SR",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
