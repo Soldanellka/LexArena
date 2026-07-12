@@ -28,13 +28,13 @@ function getNick() { return localStorage.getItem('playerNick') || null; }
 const FACULTY_CHANGE_COOLDOWN_MS = 30 * 24 * 60 * 60 * 1000;
 
 export const FACULTY_LIST = [
-  { id: 'uk-ba', name: 'Právnická fakulta UK Bratislava' },
-  { id: 'upjs-ke', name: 'Právnická fakulta UPJŠ Košice' },
-  { id: 'truni-tt', name: 'Právnická fakulta TRUNI Trnava' },
-  { id: 'umb-bb', name: 'Právnická fakulta UMB Banská Bystrica' },
-  { id: 'pevs', name: 'Fakulta práva PEVŠ' },
-  { id: 'ina', name: 'Iná fakulta' },
-  { id: 'nezaradeny', name: 'Nezaradený' }
+  { id: 'uk-ba', name: 'Právnická fakulta UK Bratislava', abbrev: 'UK' },
+  { id: 'upjs-ke', name: 'Právnická fakulta UPJŠ Košice', abbrev: 'UPJŠ' },
+  { id: 'truni-tt', name: 'Právnická fakulta TRUNI Trnava', abbrev: 'TRUNI' },
+  { id: 'umb-bb', name: 'Právnická fakulta UMB Banská Bystrica', abbrev: 'UMB' },
+  { id: 'pevs', name: 'Fakulta práva PEVŠ', abbrev: 'PEVŠ' },
+  { id: 'ina', name: 'Iná fakulta', abbrev: 'iná' },
+  { id: 'nezaradeny', name: 'Nezaradený', abbrev: '' }
 ];
 
 function getFacultyName(facultyId) {
@@ -51,6 +51,16 @@ export async function getPlayerFaculty(nick) {
   if (!db || !nick) return null;
   const snap = await get(ref(db, `users/${nick}/faculty`));
   return snap.exists() ? snap.val() : null;
+}
+
+/* Krátky odznak fakulty pri nicku (namiesto celého názvu v hlavičke).
+   Vráti null pre nezaradeného/bez fakulty – vtedy sa odznak nezobrazuje. */
+export async function getFacultyBadge(nick) {
+  const facultyId = await getPlayerFaculty(nick);
+  if (!facultyId || facultyId === 'nezaradeny') return null;
+  const f = FACULTY_LIST.find(x => x.id === facultyId);
+  if (!f || !f.abbrev) return null;
+  return { abbrev: f.abbrev, name: f.name };
 }
 
 /* Zmena fakulty max 1× za 30 dní. Prvá voľba (bez predchádzajúcej

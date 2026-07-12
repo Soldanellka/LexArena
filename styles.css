@@ -1458,6 +1458,24 @@ body {
 .seal-badge.academic { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.4); color: #4f46e5; }
 .seal-badge.faculty  { background: rgba(240,138,166,0.12); border-color: rgba(240,138,166,0.45); color: #b23b63; }
 
+/* Krátky odznak fakulty pri nicku v hlavičke (namiesto celého názvu) */
+.faculty-badge-mini {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+  background: rgba(240,138,166,0.12);
+  border: 1px solid rgba(240,138,166,0.4);
+  color: #b23b63;
+  white-space: nowrap;
+  cursor: default;
+  vertical-align: middle;
+}
+
 /* Pečať na otázke v kvíze – pilulka v pravom hornom rohu bloku otázky */
 .question-seal {
   position: absolute;

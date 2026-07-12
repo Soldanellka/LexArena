@@ -25,7 +25,7 @@ import {
 } from './scripts/senaty.js';
 import {
   getFacultyList, getPlayerFaculty, setPlayerFaculty,
-  getFacultyLeaderboard, settleFacultyLeaderboard, getFacultyBadgeInfo
+  getFacultyLeaderboard, settleFacultyLeaderboard, getFacultyBadgeInfo, getFacultyBadge
 } from './scripts/faculties.js';
 
 /* =====================================================
@@ -64,6 +64,7 @@ async function openAvatarSelectModal() {
   const existing = document.getElementById('avatarSelectModal');
   if (existing) {
     existing.style.display = 'flex';
+    initFaculty();
     return;
   }
 
@@ -132,6 +133,15 @@ async function openAvatarSelectModal() {
         </div>
       `).join('')}
     </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border,#eee)">
+      <div style="font-weight:600;font-size:13px;margin-bottom:6px">🏛️ Tvoja fakulta</div>
+      <div style="display:flex;gap:8px">
+        <select id="facultySelect" class="form-input" style="flex:1"></select>
+        <button id="saveFacultyBtn" class="btn">Uložiť</button>
+      </div>
+      <div class="small muted" id="facultyStatusLine" style="margin-top:4px"></div>
+      <div id="facultyLeaderboardBox" class="small muted" style="margin-top:6px"></div>
+    </div>
   `;
 
   modal.appendChild(panel);
@@ -166,6 +176,8 @@ async function openAvatarSelectModal() {
       modal.style.display = 'none';
     };
   });
+
+  initFaculty();
 }
 
 /* =====================================================
@@ -303,8 +315,10 @@ export function init() {
     initSenaty();
     checkSenatInviteLink();
 
-    /* 🔹 Fakulty – tretia úroveň súťaže */
-    initFaculty();
+    /* 🔹 Fakulty – tretia úroveň súťaže (výber žije v avatar/profil paneli,
+       tu len lazy vyhodnotenie mesačného rebríčka + krátky odznak pri nicku) */
+    settleFacultyLeaderboard();
+    updateFacultyBadge();
 
     /* 🔹 Avatar systém */
     initAvatarSystem();
@@ -1775,6 +1789,23 @@ async function openChallengeSenatModal(challengerSenatId, nick) {
 /* =====================================================
    🏛️ FAKULTY – tretia úroveň súťaže
    ===================================================== */
+/* Krátky odznak fakulty pri nicku v hlavičke (napr. "UK") namiesto
+   plného názvu – výber/zmena fakulty žije v avatar/profil paneli. */
+async function updateFacultyBadge() {
+  const nick = localStorage.getItem('playerNick');
+  const badge = document.getElementById('facultyBadge');
+  if (!nick || !badge) return;
+
+  const info = await getFacultyBadge(nick);
+  if (!info) {
+    badge.style.display = 'none';
+    return;
+  }
+  badge.textContent = info.abbrev;
+  badge.title = info.name;
+  badge.style.display = 'inline-flex';
+}
+
 async function initFaculty() {
   const nick = localStorage.getItem('playerNick');
   if (!nick) return;
@@ -1788,7 +1819,6 @@ async function initFaculty() {
   const current = await getPlayerFaculty(nick);
   if (current) select.value = current;
 
-  await settleFacultyLeaderboard();
   renderFacultyMiniLeaderboard();
 
   const saveBtn = document.getElementById('saveFacultyBtn');
@@ -1803,6 +1833,7 @@ async function initFaculty() {
       }
       statusLine.textContent = '✅ Fakulta uložená.';
       renderFacultyMiniLeaderboard();
+      updateFacultyBadge();
     };
   }
 }
