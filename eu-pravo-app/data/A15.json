@@ -1,8 +1,130 @@
 {
-  "id": "15",
+  "id": "A15",
   "title": "Všeobecné zásady práva Únie, medzinárodné dohody Únie a členských štátov",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Všeobecné zásady práva Európskej únie sú základné právne princípy, ktoré Súdny dvor EÚ vyvodil z ústavných tradícií členských štátov, medzinárodného práva a z povahy práva EÚ. Medzi najdôležitejšie patria zásada právnej istoty, ochrany legitímnych očakávaní, proporcionality, rovnosti, zákazu diskriminácie, efektívnej súdnej ochrany, lojálnej spolupráce a zásada dobrej správy.\n\nTieto zásady majú rovnakú právnu silu ako primárne právo a sú záväzné pre inštitúcie EÚ aj členské štáty pri vykonávaní práva EÚ. Súdny dvor ich používa pri kontrole zákonnosti aktov EÚ a pri výklade práva Únie.\n\nMedzinárodné dohody Únie sú upravené v čl. 216 – 218 ZFEÚ. Únia môže uzatvárať medzinárodné dohody v oblastiach, v ktorých má právomoc konať. Dohody sú záväzné pre inštitúcie EÚ aj členské štáty. Majú vyššiu právnu silu ako sekundárne právo, ale nesmú odporovať primárnemu právu.\n\nČlenské štáty môžu uzatvárať medzinárodné dohody, ak sú v súlade s právom EÚ. Ak je oblasť výlučnou právomocou EÚ, členské štáty nemôžu konať samostatne. V oblastiach zdieľaných právomocí môžu členské štáty uzatvárať dohody, ak tým neohrozia ciele práva EÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam všeobecných zásad, právnu silu medzinárodných dohôd a hranice právomocí členských štátov, najmä v rozsudkoch C‑157/02, C‑104/16 a stanovisku 1/91.",
+  "quiz": [
+    {
+      "q": "Čo sú všeobecné zásady práva EÚ?",
+      "options": ["Sekundárne právo", "Základné právne princípy odvodené zo zmlúv a ústavných tradícií", "Rozhodnutia Komisie", "Právne akty členských štátov"],
+      "correct": 1,
+      "explanation": "Všeobecné zásady sú základné právne princípy odvodené zo zmlúv a ústavných tradícií."
+    },
+    {
+      "q": "Ktorý článok upravuje medzinárodné dohody Únie?",
+      "options": ["Čl. 216 – 218 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Medzinárodné dohody sú upravené v čl. 216 – 218 ZFEÚ."
+    },
+    {
+      "q": "Môžu členské štáty uzatvárať medzinárodné dohody?",
+      "options": ["Nie, nikdy", "Áno, ak sú v súlade s právom EÚ", "Áno, aj v oblastiach výlučných právomocí EÚ", "Len so súhlasom Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Členské štáty môžu uzatvárať dohody, ak sú v súlade s právom EÚ."
+    },
+    {
+      "q": "Ktorá zásada chráni jednotlivca pred retroaktívnymi zásahmi?",
+      "options": ["Proporcionalita", "Právna istota", "Lojálna spolupráca", "Efektívna súdna ochrana"],
+      "correct": 1,
+      "explanation": "Zásada právnej istoty chráni pred retroaktívnymi zásahmi."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka právnej sily medzinárodných dohôd?",
+      "options": ["C‑104/16", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑104/16 Súdny dvor riešil právnu silu medzinárodných dohôd."
+    }
+  ],
+  "tiles": [
+    { "term": "Všeobecné zásady práva", "definition": "Základné princípy ako právna istota, proporcionalita, rovnosť, efektívna súdna ochrana." },
+    { "term": "Medzinárodné dohody EÚ", "definition": "Dohody uzatvárané Úniou podľa čl. 216 – 218 ZFEÚ." },
+    { "term": "Výlučné právomoci", "definition": "Oblasti, v ktorých môže konať iba EÚ." },
+    { "term": "Zdieľané právomoci", "definition": "Oblasti, v ktorých môžu konať EÚ aj členské štáty." },
+    { "term": "Stanovisko 1/91", "definition": "Súdny dvor potvrdil autonómiu právneho poriadku EÚ vo vzťahu k medzinárodným súdnym orgánom." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nádasdi a Németh: zásada právnej istoty a legitímnych očakávaní",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátne orgány zmenili pravidlá registrácie vozidiel, čo ovplyvnilo daňové povinnosti občanov.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2006:491 (C‑290/05 Nádasdi; C‑333/05 Németh)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil zásadu právnej istoty?",
+          "options": [
+            "Vnútroštátne orgány môžu retroaktívne meniť povinnosti",
+            "Zmeny nesmú porušiť legitímne očakávania jednotlivcov",
+            "Zásada právnej istoty sa neuplatňuje v daňových veciach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že vnútroštátne opatrenia nesmú porušiť legitímne očakávania jednotlivcov.",
+            "wrong": "Nesprávne. Zásada právnej istoty sa uplatňuje aj v daňových veciach."
+          },
+          "source": "ECLI:EU:C:2006:491"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Komisia v. Grécko: zásada lojálnej spolupráce",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Grécko uzatvorilo medzinárodnú dohodu v oblasti, ktorá patrila do výlučnej právomoci EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2009:624 (C‑45/07 Komisia v. Grécko)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právomociach členských štátov?",
+          "options": [
+            "Členské štáty môžu uzatvárať dohody aj vo výlučných právomociach EÚ",
+            "Členské štáty nesmú konať v oblastiach výlučných právomocí EÚ",
+            "Členské štáty môžu uzatvárať dohody bez obmedzení"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty nesmú uzatvárať dohody v oblastiach výlučných právomocí EÚ.",
+            "wrong": "Nesprávne. Výlučné právomoci patria výhradne EÚ."
+          },
+          "source": "ECLI:EU:C:2009:624"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Air Transport Agreement: právna sila medzinárodných dohôd",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Medzinárodná dohoda o leteckej doprave bola napadnutá pre údajný rozpor so sekundárnym právom EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2017:703 (C‑104/16 P Council v. Front Polisario)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právnu silu medzinárodných dohôd?",
+          "options": [
+            "Medzinárodné dohody majú nižšiu právnu silu ako sekundárne právo",
+            "Medzinárodné dohody majú vyššiu právnu silu ako sekundárne právo",
+            "Medzinárodné dohody nemajú právnu záväznosť"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že medzinárodné dohody majú vyššiu právnu silu ako sekundárne právo, ale nesmú odporovať primárnemu právu.",
+            "wrong": "Nesprávne. Medzinárodné dohody sú záväzné pre EÚ aj členské štáty."
+          },
+          "source": "ECLI:EU:C:2017:703"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2006:491; ECLI:EU:C:2009:624; ECLI:EU:C:2017:703; čl. 216 – 218 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
