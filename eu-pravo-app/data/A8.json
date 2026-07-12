@@ -1,8 +1,104 @@
 {
-  "id": "8",
-  "title": "Rada EÚ – zloženie, organizácia a právomoci",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A8",
+  "title": "Rada Európskej únie – zloženie, organizácia a právomoci",
+  "summary": "Rada Európskej únie je jednou z hlavných legislatívnych a rozhodovacích inštitúcií Európskej únie. Je upravená v čl. 16 ZEÚ a čl. 237 – 243 ZFEÚ. Rada zastupuje členské štáty a spolu s Európskym parlamentom vykonáva legislatívnu a rozpočtovú moc.\n\nRada sa skladá z ministrov členských štátov, ktorí zasadnú podľa prerokúvanej agendy (napr. ECOFIN, AGRIFISH, EPSCO, TRANSPORT). Každý štát má jedného zástupcu na úrovni ministra. Predsedníctvo Rady sa rotuje každých šesť mesiacov medzi členskými štátmi.\n\nOrganizácia Rady zahŕňa Výbor stálych zástupcov (COREPER I a COREPER II), pracovné skupiny, Generálny sekretariát Rady a rotujúce predsedníctvo. COREPER pripravuje prácu Rady a zabezpečuje kontinuitu rozhodovania.\n\nPrávomoci Rady zahŕňajú prijímanie legislatívnych aktov spolu s Parlamentom, koordináciu politík členských štátov, uzatváranie medzinárodných dohôd, prijímanie opatrení v oblasti SZBP, rozhodovanie o rozpočte EÚ a vykonávanie právomocí v oblasti hospodárskej politiky. Rada rozhoduje spravidla kvalifikovanou väčšinou, v niektorých oblastiach jednomyseľne.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje právomoci Rady, jej úlohu v legislatívnom procese a povinnosť rešpektovať inštitucionálnu rovnováhu, najmä v rozsudkoch C‑409/13 a C‑81/13.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje Radu Európskej únie?",
+      "options": ["Čl. 16 ZEÚ", "Čl. 14 ZEÚ", "Čl. 49 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 16 ZEÚ upravuje zloženie a právomoci Rady EÚ."
+    },
+    {
+      "q": "Kto tvorí Radu EÚ?",
+      "options": ["Poslanci Európskeho parlamentu", "Ministri členských štátov", "Komisári", "Sudcovia Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Radu tvoria ministri členských štátov podľa prerokúvanej agendy."
+    },
+    {
+      "q": "Ako Rada rozhoduje vo väčšine oblastí?",
+      "options": ["Jednomyseľne", "Kvalifikovanou väčšinou", "Jednoduchou väčšinou občanov EÚ", "Rozhoduje predseda Rady"],
+      "correct": 1,
+      "explanation": "Rada rozhoduje spravidla kvalifikovanou väčšinou."
+    },
+    {
+      "q": "Ktorý orgán pripravuje prácu Rady?",
+      "options": ["COREPER", "Komisia", "Európska rada", "ECB"],
+      "correct": 0,
+      "explanation": "COREPER pripravuje prácu Rady a zabezpečuje kontinuitu."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka legislatívnych právomocí Rady?",
+      "options": ["C‑409/13 Parlament v. Rada", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑157/21 Komisia/Maďarsko"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑409/13 Súdny dvor posudzoval právomoci Rady v legislatívnom procese."
+    }
+  ],
+  "tiles": [
+    { "term": "Rada EÚ", "definition": "Legislatívna a rozhodovacia inštitúcia zastupujúca členské štáty." },
+    { "term": "COREPER", "definition": "Výbor stálych zástupcov pripravujúci prácu Rady." },
+    { "term": "Kvalifikovaná väčšina", "definition": "Štandardný spôsob hlasovania v Rade." },
+    { "term": "Rotujúce predsedníctvo", "definition": "Každý členský štát predsedá Rade na 6 mesiacov." },
+    { "term": "SZBP", "definition": "Spoločná zahraničná a bezpečnostná politika, kde Rada zohráva kľúčovú úlohu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Parlament v. Rada: rešpektovanie legislatívnych právomocí",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Parlament tvrdil, že Rada prijala akt mimo legislatívneho postupu, čím obchádzala jeho právomoci.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právomociach Rady?",
+          "options": [
+            "Rada môže konať bez Parlamentu",
+            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
+            "Parlament nemá legislatívne právomoci"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
+            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+          },
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Rada a právomoci v oblasti SZBP",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Rada prijala rozhodnutie v oblasti spoločnej zahraničnej a bezpečnostnej politiky, ktoré bolo napadnuté pre údajné prekročenie právomocí.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:244 (C‑81/13 UK v. Rada)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právomoci Rady v SZBP?",
+          "options": [
+            "Rada môže prijímať legislatívne akty v SZBP",
+            "Rada má široké právomoci, ale musí rešpektovať zmluvy a inštitucionálnu rovnováhu",
+            "SZBP patrí výlučne Parlamentu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že Rada má široké právomoci v SZBP, ale musí konať v súlade so zmluvami.",
+            "wrong": "Nesprávne. SZBP nie je legislatívna oblasť a Parlament nemá rozhodovaciu právomoc."
+          },
+          "source": "ECLI:EU:C:2014:244 (C‑81/13 UK v. Rada)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2014:244; čl. 16 ZEÚ; čl. 237 – 243 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
