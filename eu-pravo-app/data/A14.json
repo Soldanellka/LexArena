@@ -1,8 +1,130 @@
 {
-  "id": "14",
+  "id": "A14",
   "title": "Základné práva Európskej únie, Charta – záväznosť, výklad a vzťah k Dohovoru",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Základné práva Európskej únie sú upravené v Charte základných práv Európskej únie, ktorá bola vyhlásená v roku 2000 a stala sa právne záväznou Lisabonskou zmluvou v roku 2009 (čl. 6 ods. 1 ZEÚ). Charta má rovnakú právnu silu ako zmluvy. Obsahuje práva v oblastiach dôstojnosti, slobody, rovnosti, solidarity, občianskych práv a súdnej ochrany.\n\nCharta sa uplatňuje, keď členské štáty vykonávajú právo EÚ (čl. 51 Charty). Neplatí pre čisto vnútroštátne situácie bez väzby na právo EÚ. Súdny dvor EÚ vykladá Chartu autonómne, pričom zohľadňuje judikatúru Európskeho súdu pre ľudské práva (ESĽP), ale nie je ňou viazaný.\n\nVzťah Charty k Dohovoru o ochrane ľudských práv a základných slobôd (EDĽP) je upravený v čl. 52 ods. 3 Charty: práva zodpovedajúce právam Dohovoru majú rovnaký význam a rozsah ako práva podľa Dohovoru. Únia zatiaľ nie je zmluvnou stranou Dohovoru, keďže Súdny dvor EÚ v stanovisku 2/13 rozhodol, že návrh na pristúpenie EÚ k Dohovoru nebol v súlade s právom Únie.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje záväznosť Charty, jej autonómny výklad a vzťah k Dohovoru, najmä v rozsudkoch C‑617/10, C‑131/12 a stanovisku 2/13.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje záväznosť Charty základných práv EÚ?",
+      "options": ["Čl. 6 ods. 1 ZEÚ", "Čl. 2 ZEÚ", "Čl. 49 ZEÚ", "Čl. 288 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 6 ods. 1 ZEÚ stanovuje, že Charta má rovnakú právnu silu ako zmluvy."
+    },
+    {
+      "q": "Kedy sa Charta uplatňuje?",
+      "options": ["Vždy, aj pri čisto vnútroštátnych situáciách", "Len keď členské štáty vykonávajú právo EÚ", "Len pri rozhodovaní Súdneho dvora", "Len pri legislatíve EÚ"],
+      "correct": 1,
+      "explanation": "Charta sa uplatňuje, keď členské štáty vykonávajú právo EÚ."
+    },
+    {
+      "q": "Ktorý článok upravuje vzťah Charty k Dohovoru?",
+      "options": ["Čl. 52 ods. 3 Charty", "Čl. 7 ZEÚ", "Čl. 10 ZEÚ", "Čl. 20 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 52 ods. 3 Charty upravuje vzťah k Dohovoru."
+    },
+    {
+      "q": "Je EÚ zmluvnou stranou Dohovoru?",
+      "options": ["Áno", "Nie", "Len čiastočne", "Len v oblasti trestného práva"],
+      "correct": 1,
+      "explanation": "EÚ zatiaľ nie je zmluvnou stranou Dohovoru."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka záväznosti Charty?",
+      "options": ["C‑617/10 Åkerberg Fransson", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal", "C‑399/11 Melloni"],
+      "correct": 0,
+      "explanation": "V rozsudku Åkerberg Fransson Súdny dvor potvrdil záväznosť Charty pri vykonávaní práva EÚ."
+    }
+  ],
+  "tiles": [
+    { "term": "Charta základných práv EÚ", "definition": "Záväzný katalóg základných práv s rovnakou právnou silou ako zmluvy." },
+    { "term": "Čl. 51 Charty", "definition": "Charta sa uplatňuje pri vykonávaní práva EÚ." },
+    { "term": "Čl. 52 ods. 3 Charty", "definition": "Práva zodpovedajúce Dohovoru majú rovnaký význam a rozsah." },
+    { "term": "Autonómny výklad", "definition": "Súdny dvor vykladá Chartu nezávisle, hoci zohľadňuje Dohovor." },
+    { "term": "Stanovisko 2/13", "definition": "Súdny dvor rozhodol, že návrh na pristúpenie EÚ k Dohovoru nebol v súlade s právom Únie." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Åkerberg Fransson: záväznosť Charty",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny orgán uložil sankcie v oblasti DPH, ktorá je upravená právom EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2013:105 (C‑617/10 Åkerberg Fransson)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o uplatnení Charty?",
+          "options": [
+            "Charta sa neuplatní pri DPH",
+            "Charta sa uplatní, keď členské štáty vykonávajú právo EÚ",
+            "Charta sa uplatní len pri legislatíve EÚ"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že Charta sa uplatňuje, keď členské štáty vykonávajú právo EÚ, vrátane oblasti DPH.",
+            "wrong": "Nesprávne. Charta sa uplatňuje aj pri vnútroštátnych opatreniach vykonávajúcich právo EÚ."
+          },
+          "source": "ECLI:EU:C:2013:105"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Google Spain: právo na ochranu osobných údajov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Jednotlivec požadoval odstránenie výsledkov vyhľadávania obsahujúcich jeho osobné údaje.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:317 (C‑131/12 Google Spain)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právo na ochranu údajov podľa Charty?",
+          "options": [
+            "Právo na ochranu údajov je obmedzené len na štátne orgány",
+            "Jednotlivec má právo požadovať odstránenie výsledkov vyhľadávania za určitých podmienok",
+            "Charta sa neuplatní na súkromné spoločnosti"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že jednotlivec má právo požadovať odstránenie výsledkov vyhľadávania, ak sú neaktuálne alebo neprimerané.",
+            "wrong": "Nesprávne. Charta sa uplatňuje aj na súkromné subjekty pri vykonávaní práva EÚ."
+          },
+          "source": "ECLI:EU:C:2014:317"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Stanovisko 2/13: vzťah Charty a Dohovoru",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "EÚ pripravila návrh na pristúpenie k Dohovoru o ochrane ľudských práv.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:2454 (Stanovisko 2/13)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o návrhu na pristúpenie?",
+          "options": [
+            "Návrh bol v súlade s právom EÚ",
+            "Návrh nebol v súlade s právom EÚ a nemohol byť prijatý",
+            "EÚ je povinná pristúpiť k Dohovoru"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že návrh na pristúpenie EÚ k Dohovoru nebol v súlade s právom Únie, najmä kvôli zásade autonómie práva EÚ.",
+            "wrong": "Nesprávne. EÚ nie je povinná pristúpiť k Dohovoru."
+          },
+          "source": "ECLI:EU:C:2014:2454"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2013:105; ECLI:EU:C:2014:317; ECLI:EU:C:2014:2454; čl. 6 ZEÚ; čl. 51 – 52 Charty",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
