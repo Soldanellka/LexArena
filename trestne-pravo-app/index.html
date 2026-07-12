@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trestné právo – LexArena</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../pravo-app/engine.css"/>
+  <style>
+    :root {
+      --app-accent: #a83250;
+      --app-accent2: #8b1538;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a href="../index.html" class="back-link">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    LexArena
+  </a>
+  <div class="header-title">
+    <span class="logo-dot"></span>
+    Trestné právo
+  </div>
+  <button class="theme-btn" id="themeBtn" title="Prepnúť tému">
+    <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+  </button>
+</header>
+
+<!-- SWITCHER -->
+<div class="area-switcher">
+  <button class="area-btn active" data-area="hmotne">⚖️ Hmotné právo</button>
+  <button class="area-btn" data-area="procesne">📋 Procesné právo</button>
+</div>
+
+<!-- MAIN -->
+<main class="app-container">
+
+  <!-- ĽAVÝ PANEL: Zoznam okruhov -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2 id="sidebarTitle">Okruhy</h2>
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20" fill="none" stroke="var(--border)" stroke-width="4"/>
+          <circle id="progressRing" cx="24" cy="24" r="20" fill="none"
+            stroke="var(--app-accent)" stroke-width="4"
+            stroke-dasharray="125.6" stroke-dashoffset="125.6"
+            stroke-linecap="round" transform="rotate(-90 24 24)"/>
+        </svg>
+        <span id="progressText" class="progress-text">0%</span>
+      </div>
+    </div>
+    <div id="okruhyList" class="okruhy-list">
+      <div class="loading-spinner">Načítavam okruhy…</div>
+    </div>
+  </aside>
+
+  <!-- PRAVÝ PANEL: Obsah -->
+  <section class="content">
+
+    <!-- ÚVODNÁ OBRAZOVKA -->
+    <div id="welcomeScreen" class="welcome-screen">
+      <div class="welcome-icon">⚖️</div>
+      <h1 class="welcome-title">Trestné právo</h1>
+      <p class="welcome-sub">Vyber okruh zo zoznamu vľavo a začni študovať.</p>
+      <div class="welcome-stats">
+        <div class="stat-box">
+          <div class="stat-num" id="statTotal">—</div>
+          <div class="stat-label">okruhov</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statDone">0</div>
+          <div class="stat-label">dokončených</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statStreak">—</div>
+          <div class="stat-label">správnych</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OKRUH DETAIL -->
+    <div id="okruhDetail" style="display:none">
+
+      <!-- SUMMARY karta -->
+      <div id="summaryCard" class="summary-card">
+        <div class="summary-tag" id="summaryTag"></div>
+        <h2 class="summary-title" id="summaryTitle"></h2>
+        <div class="summary-text" id="summaryText"></div>
+        <div class="summary-source" id="summarySource"></div>
+        <button class="start-btn" id="startQuizBtn">
+          Spustiť kvíz
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- KVÍZ -->
+      <div id="quizArea" style="display:none">
+
+        <!-- Progres kvízu -->
+        <div class="quiz-header">
+          <div class="quiz-progress-bar">
+            <div id="quizProgressFill" class="quiz-progress-fill"></div>
+          </div>
+          <div class="quiz-meta">
+            <span id="qNum">1 / 5</span>
+            <span class="score-badge">
+              ✓ <span id="qCorrect">0</span>
+              &nbsp;✗ <span id="qWrong">0</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Otázka -->
+        <div class="question-card">
+          <div class="question-number" id="questionNumber">Otázka 1</div>
+          <div class="question-text" id="questionText"></div>
+          <div class="question-source" id="questionSource"></div>
+          <div style="margin:-6px 0 10px">
+            <button class="report-q-btn" id="questionReportBtn" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+          </div>
+          <div class="options-grid" id="optionsGrid"></div>
+
+          <!-- Vysvetlenie -->
+          <div id="explanationBox" class="explanation-box" style="display:none">
+            <div class="explanation-icon" id="explanationIcon"></div>
+            <div class="explanation-text" id="explanationText"></div>
+          </div>
+
+          <!-- Navigácia -->
+          <div class="quiz-nav" id="quizNav" style="display:none">
+            <button class="nav-btn secondary" id="prevQBtn">← Späť</button>
+            <button class="nav-btn primary" id="nextQBtn">Ďalšia →</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TABS po kvíze -->
+      <div id="postQuizTabs" style="display:none;margin-bottom:16px">
+        <div class="pq-tabs">
+          <button class="pq-tab active" data-tab="results">📊 Výsledky</button>
+          <button class="pq-tab" data-tab="memory">🃏 Kartičky</button>
+          <button class="pq-tab" data-tab="cases">📋 Prípady</button>
+        </div>
+      </div>
+
+      <!-- VÝSLEDKY -->
+      <div id="resultsCard" class="results-card" style="display:none">
+        <div class="results-emoji" id="resultsEmoji"></div>
+        <h2 class="results-title" id="resultsTitle"></h2>
+        <div class="results-score">
+          <div class="results-num" id="resultsPct"></div>
+          <div class="results-label">správnych odpovedí</div>
+        </div>
+        <div class="results-breakdown">
+          <div class="breakdown-item correct">
+            <span id="resCorrect">0</span> správnych
+          </div>
+          <div class="breakdown-item wrong">
+            <span id="resWrong">0</span> nesprávnych
+          </div>
+        </div>
+        <div class="results-actions">
+          <button class="nav-btn primary" id="retryBtn">🔄 Zopakovať</button>
+          <button class="nav-btn secondary" id="nextOkruhBtn">Ďalší okruh →</button>
+        </div>
+        <div id="parReward" class="par-reward" style="display:none">
+          <span>+1§ za dokončenie okruhu</span>
+        </div>
+      </div>
+
+      <!-- KARTIČKY (MEMORY) -->
+      <div id="memorySection" style="display:none">
+        <div class="section-header">
+          <h3>🃏 Kartičky – Pojem ↔ Definícia</h3>
+          <span id="memoryStats" class="score-badge"></span>
+        </div>
+        <div id="memoryBoard" class="memory-board"></div>
+        <div class="results-actions" style="margin-top:16px">
+          <button class="nav-btn secondary" id="memoryRestartBtn">🔄 Zamiešať znova</button>
+        </div>
+      </div>
+
+      <!-- PRÍPADY Z PRAXE -->
+      <div id="casesSection" style="display:none">
+        <div class="section-header">
+          <h3>📋 Prípady z praxe</h3>
+          <span id="casesProgress" class="score-badge"></span>
+        </div>
+        <div id="casesBoard"></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<script>
+  window.PRAVO_APP_ID = 'trestne';
+  window.PRAVO_CONFIG = {
+    hmotne: {
+      label: 'Hmotné právo',
+      path: '../Trestné právo hmotné/data/',
+      count: 30,
+      emoji: '⚖️',
+      reportArea: 'Trestné právo hmotné'
+    },
+    procesne: {
+      label: 'Procesné právo',
+      path: '../Trestné právo procesné/data/',
+      count: 30,
+      emoji: '📋',
+      reportArea: 'Trestné právo procesné'
+    }
+  };
+</script>
+<script type="module" src="../pravo-app/engine.js"></script>
+</body>
+</html>

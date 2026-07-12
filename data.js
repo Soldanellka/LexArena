@@ -17,7 +17,8 @@ window.areas = {
   "Trestné právo hmotné": [],
   "Trestné právo procesné": [],
   "Občianske právo hmotné": [],
-  "Občianske právo procesné": []
+  "Občianske právo procesné": [],
+  "Európske právo": []
 };
 
 /* =====================================================
@@ -25,11 +26,18 @@ window.areas = {
 ===================================================== */
 
 window.catalog = {
-  "LuluLaw duel Pracovné právo": {
+  "Pracovné právo": {
     id: "pracovne",
-    openExternal: LIVE + "LuluLaw duel Pracovné právo/",
+    openExternal: LIVE + "pracovne-pravo-app/",
     externalPath: LIVE + "LuluLaw duel Pracovné právo/data/",
-    desc: "Kompletná appka pracovného práva."
+    desc: "Individuálne a kolektívne pracovné právo, kvízy, kartičky a prípady."
+  },
+
+  "Trestné právo": {
+    id: "trestne",
+    openExternal: LIVE + "trestne-pravo-app/",
+    externalPath: LIVE + "Trestné právo hmotné/data/",
+    desc: "Kompletná appka trestného práva: hmotné + procesné, kvízy, kartičky a prípady."
   },
 
   "Občianske právo – hmotné a procesné": {
@@ -37,6 +45,13 @@ window.catalog = {
     openExternal: LIVE + "ob-pravo-app/",
     externalPath: LIVE + "ob-pravo-app/data/",
     desc: "Kompletná appka občianskeho práva: 40 okruhov hmotného + 45 procesného, kvízy, kartičky a prípady."
+  },
+
+  "Európske právo": {
+    id: "eu",
+    openExternal: LIVE + "eu-pravo-app/",
+    externalPath: LIVE + "eu-pravo-app/data/",
+    desc: "38 okruhov európskeho práva, kvízy, kartičky a prípady."
   },
 
   "Občan - teória a veľký kvíz": {
@@ -65,20 +80,6 @@ window.catalog = {
     openExternal: LIVE + "Trestné právo - teória a prípady/",
     externalPath: LIVE + "Trestné právo - teória a prípady/data/",
     desc: "Teória + prípady."
-  },
-
-  "Trestné právo hmotné": {
-    id: "tph",
-    openExternal: LIVE + "Trestné právo hmotné/",
-    externalPath: LIVE + "Trestné právo hmotné/data/",
-    desc: "Kompletná TPH appka."
-  },
-
-  "Trestné právo procesné": {
-    id: "tpp",
-    openExternal: LIVE + "Trestné právo procesné/",
-    externalPath: LIVE + "Trestné právo procesné/data/",
-    desc: "Kompletná TPP appka."
   }
 };
 
@@ -195,6 +196,13 @@ loadJsonQuestions(
   "Občianske právo procesné",
   LIVE + "ob-pravo-app/data/procesne/",
   45
+);
+
+// Európske právo → 38 JSON (jednoúrovňové, nie hmotné/procesné)
+loadJsonQuestions(
+  "Európske právo",
+  LIVE + "eu-pravo-app/data/",
+  38
 );
 
 /* =====================================================

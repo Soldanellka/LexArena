@@ -39,6 +39,12 @@ export const MEMORY_AREAS = [
     slug: "ob_procesne",
     path: "ob-pravo-app/data/procesne/",
     count: 45
+  },
+  {
+    name: "Európske právo",
+    slug: "eu",
+    path: "eu-pravo-app/data/",
+    count: 38
   }
 ];
 

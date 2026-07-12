@@ -15,7 +15,8 @@ export const duelAreas = [
   "Trestné právo",
   "Rímske právo",
   "Občianske právo",
-  "Dejiny práva"
+  "Dejiny práva",
+  "Európske právo"
 ];
 
 /* =====================================================
