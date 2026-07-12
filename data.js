@@ -1,5 +1,7 @@
 'use strict';
 
+import { normalizeOkruh } from './scripts/contentNormalize.js';
+
 console.log("DATAJS NAČÍTANÝ");
 
 /* =====================================================
@@ -100,7 +102,11 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       const res = await fetch(folderUrl + file);
       if (!res.ok) continue;
 
-      const json = await res.json();
+      const raw = await res.json();
+      /* Normalizácia na jeden vnútorný tvar (summary/theory, question/q,
+         explanation v 3 tvaroch, zdroj/source) – nech engine prijme
+         všetky existujúce tvary JSON bez prepisovania súborov. */
+      const json = normalizeOkruh(raw);
 
       /* 🃏 Dlaždice pre memory (pojem ↔ definícia) */
       if (Array.isArray(json.tiles)) {
@@ -118,7 +124,7 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
             cases.push({
               title: c.title || 'Prípad',
               difficulty: c.difficulty || '',
-              steps: c.steps,
+              steps: c.steps, // už normalizované (question/explanation/zdroj na krok)
               source: file.replace('.json',''),
               zdroj: c.zdroj || null
             });
@@ -129,10 +135,10 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       if (json.quiz) {
         json.quiz.forEach(q => {
           questions.push({
-            question: q.question,
+            question: q.question, // už normalizované (question || q)
             options: q.options,
             correct: q.correct,
-            explanation: q.explanation || null,
+            explanation: q.explanation, // už normalizované na {correct,wrong} | null
             zdroj: q.zdroj || null,
             /* =========================
                🔥 OPRAVA: source sa nastavuje podľa

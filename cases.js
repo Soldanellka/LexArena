@@ -13,6 +13,15 @@ import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
 
+/* Per-step zdroj: na rozdiel od case-level/okruh-level renderSource() (kde
+   chýbajúci zdroj zámerne zobrazí "Zdroj: doplní sa"), tu sa má krok bez
+   vlastného zdroja/source úplne vynechať – inak by pod každým jedným krokom
+   viselo rovnaké "doplní sa", aj keď väčšina oblastí per-step zdroj vôbec
+   nepoužíva. */
+function renderStepSource(step) {
+  return step && step.zdroj ? renderSource(step.zdroj) : '';
+}
+
 /* =========================
    Storage keys
    ========================= */
@@ -428,6 +437,7 @@ function renderJsonCase(container, areaTitle) {
 
     if (isScenario) {
       html += `<div class="case-scenario">📄 ${escapeHtml(s.question)}</div>`;
+      html += renderStepSource(s);
       return;
     }
 
@@ -451,11 +461,16 @@ function renderJsonCase(container, areaTitle) {
 
     if (answered !== undefined) {
       const ok = answered === s.correct;
-      html += `<div class="case-step-feedback ${ok ? 'ok' : 'no'}">
-        ${ok ? '✅ Správne!' : '❌ Nesprávne. Správna odpoveď: ' + escapeHtml(s.options[s.correct])}
-      </div>`;
+      /* Vysvetlenie z JSON-u (normalizované na {correct,wrong} pri načítaní),
+         ak existuje; inak generický fallback text ako doteraz. */
+      const exp = s.explanation;
+      const text = ok
+        ? escapeHtml((exp && exp.correct) || '') || '✅ Správne!'
+        : escapeHtml((exp && exp.wrong) || '') || ('❌ Nesprávne. Správna odpoveď: ' + escapeHtml(s.options[s.correct]));
+      html += `<div class="case-step-feedback ${ok ? 'ok' : 'no'}">${text}</div>`;
     }
 
+    html += renderStepSource(s);
     html += `</div>`;
   });
 

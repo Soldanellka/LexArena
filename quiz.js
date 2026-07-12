@@ -133,6 +133,8 @@ export function renderQuestion(first = false){
       if (oldSeal) oldSeal.remove();
       const oldSource = parent.querySelector('#questionSourceLine');
       if (oldSource) oldSource.remove();
+      const oldExplanation = parent.querySelector('#questionExplanationBox');
+      if (oldExplanation) oldExplanation.remove();
 
       /* 🏅 Pečať auditu – ak má otázka schválené nahlásenie (z cache, žiadne čítanie Firebase tu) */
       const areaTitle = resolveAreaTitle();
@@ -150,6 +152,17 @@ export function renderQuestion(first = false){
       sourceLine.id = 'questionSourceLine';
       sourceLine.innerHTML = renderSource(q.zdroj);
       parent.appendChild(sourceLine);
+
+      /* 💬 Vysvetlenie (normalizované na {correct,wrong} pri načítaní) –
+         skryté, kým hráč nevyberie odpoveď; chýbajúce vysvetlenie =
+         box sa vôbec nevykreslí (žiadny prázdny rámik). */
+      if (q.explanation) {
+        const explanationBox = document.createElement('div');
+        explanationBox.id = 'questionExplanationBox';
+        explanationBox.className = 'question-explanation';
+        explanationBox.style.display = 'none';
+        parent.appendChild(explanationBox);
+      }
 
       /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
       const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
@@ -243,6 +256,14 @@ export function selectOption(btn, correct, index){
     });
 
     playSound(window.soundNoMatch);
+  }
+
+  const explanationBox = $('questionExplanationBox');
+  if (explanationBox && current && current.explanation) {
+    const exp = current.explanation;
+    explanationBox.textContent = correct ? (exp.correct || '') : (exp.wrong || '');
+    explanationBox.className = `question-explanation ${correct ? 'ok' : 'no'}`;
+    explanationBox.style.display = 'block';
   }
 
   updateStats();
@@ -473,6 +494,7 @@ window.startDuelQuiz = function(questions){
     id: q.id || null,
     source: q.source || null,
     zdroj: q.zdroj || null,
+    explanation: q.explanation || null,
     selectedIndex: null
   }));
 

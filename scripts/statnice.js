@@ -36,6 +36,7 @@ import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
 import { speakText } from '../memoryTrainer.js';
+import { normalizeOkruhText } from './contentNormalize.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -141,8 +142,10 @@ async function fetchOkruh(n) {
     const res = await fetch(`${PRACOVNE_DATA_PATH}A${n}.json`);
     if (!res.ok) return null;
     const json = await res.json();
-    if (!json || !json.summary || !json.title) return null;
-    const keyPoints = extractKeyPoints(json.summary, json.title);
+    if (!json || !json.title) return null;
+    const summaryText = normalizeOkruhText(json);
+    if (!summaryText) return null;
+    const keyPoints = extractKeyPoints(summaryText, json.title);
     if (!keyPoints.length) return null;
     return { id: `A${n}`, title: json.title, keyPoints };
   } catch (e) {

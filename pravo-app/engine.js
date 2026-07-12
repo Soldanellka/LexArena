@@ -18,14 +18,17 @@
    zoznam čísel/názvov súborov bez prípony – pre appky, kde okruhy
    nie sú v jednom kontinuálnom rozsahu, napr. Pracovné právo).
 
-   Normalizácia dát: staršie JSON schémy (napr. Trestné právo:
-   theory[] namiesto summary, explanation_correct/incorrect namiesto
-   explanation:{correct,wrong}) sa tu prevedú na jednotný tvar,
-   BEZ zásahu do pôvodných JSON súborov – jedna oprava tu opraví
-   zobrazenie vo všetkých appkách, ktoré tento engine zdieľajú.
+   Normalizácia dát: rôzne existujúce JSON schémy (napr. Trestné
+   právo: theory[] namiesto summary; Európske právo: q namiesto
+   question; explanation_correct/incorrect namiesto explanation:
+   {correct,wrong}) sa prevádzajú na jednotný tvar cez zdieľaný
+   scripts/contentNormalize.js, BEZ zásahu do pôvodných JSON súborov
+   – jedna oprava tam opraví zobrazenie vo všetkých miestach, ktoré
+   ho používajú (tento engine, data.js, memoryDefinitions.js, ...).
 ============================================================ */
 
 import { renderSource } from '../scripts/sourceUtil.js';
+import { normalizeOkruh } from '../scripts/contentNormalize.js';
 
 const CONFIG = window.PRAVO_CONFIG || {};
 
@@ -62,33 +65,6 @@ function loadDone() {
 
 function saveDone() {
   localStorage.setItem(storageKey(), JSON.stringify([...state.done]));
-}
-
-/* ============================================================
-   NORMALIZÁCIA DÁT – zjednotí staršie/iné JSON schémy
-============================================================ */
-function normalizeExplanation(item) {
-  if (item.explanation) return item.explanation;
-  if (item.explanation_correct || item.explanation_incorrect) {
-    return { correct: item.explanation_correct, wrong: item.explanation_incorrect };
-  }
-  return undefined;
-}
-
-function normalizeOkruh(raw) {
-  const summary = raw.summary
-    ? raw.summary
-    : (Array.isArray(raw.theory)
-      ? raw.theory.map(t => (t && t.heading ? `${t.heading}: ` : '') + (t && t.text ? t.text : '')).join(' ')
-      : '');
-
-  const quiz = (raw.quiz || []).map(q => ({ ...q, explanation: normalizeExplanation(q) }));
-  const cases = (raw.cases || []).map(c => ({
-    ...c,
-    steps: (c.steps || []).map(s => ({ ...s, explanation: normalizeExplanation(s) }))
-  }));
-
-  return { ...raw, summary, quiz, cases };
 }
 
 /* ============================================================

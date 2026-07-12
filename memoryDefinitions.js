@@ -9,6 +9,8 @@
    z quiz[] poľa sa stáva jedným bifľovacím balíčkom.
 ============================================================ */
 
+import { normalizeOkruh } from './scripts/contentNormalize.js';
+
 export const MEMORY_AREAS = [
   {
     name: "Pracovné právo",
@@ -210,7 +212,11 @@ export async function generateMemoryPackages(slug) {
     try {
       const res = await fetch(area.path + file);
       if (!res.ok) continue;
-      const data = await res.json();
+      const raw = await res.json();
+      /* Normalizácia na jeden vnútorný tvar (summary/theory, question/q,
+         zdroj) – nech bifľovačka funguje aj pre oblasti, ktoré doteraz
+         nemali `summary` (napr. Trestné právo hmotné má len `theory`). */
+      const data = normalizeOkruh(raw);
       const summary = data.summary || '';
 
       (data.quiz || []).forEach(q => {
