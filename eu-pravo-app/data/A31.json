@@ -1,8 +1,130 @@
 {
-  "id": "31",
+  "id": "A31",
   "title": "Voľný pohyb kapitálu a platieb, európska hospodárska a menová únia",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Voľný pohyb kapitálu a platieb je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 63 – 66 ZFEÚ. Zahŕňa zákaz všetkých obmedzení pohybu kapitálu medzi členskými štátmi a tretími krajinami, ako aj zákaz obmedzení platieb. Kapitál zahŕňa investície, nákup nehnuteľností, prevody peňazí, finančné operácie, bankové služby a portfóliové investície.\n\nVoľný pohyb kapitálu má širokú pôsobnosť – vzťahuje sa na fyzické aj právnické osoby, členské štáty aj tretie krajiny. Obmedzenia sú prípustné len výnimočne: z dôvodov verejného poriadku, verejnej bezpečnosti, daňového dohľadu, boja proti praniu špinavých peňazí alebo pri makroekonomických krízach (čl. 65 – 66 ZFEÚ). Obmedzenia musia byť primerané a nediskriminačné.\n\nEurópska hospodárska a menová únia (HMÚ) je najpokročilejším stupňom ekonomickej integrácie. Je upravená v čl. 119 – 144 ZFEÚ. Zahŕňa koordináciu hospodárskych politík, jednotnú menovú politiku, nezávislosť Európskej centrálnej banky (ECB), stabilitu cien a spoločnú menu euro. Členské štáty musia spĺňať konvergenčné kritériá (Maastrichtské kritériá): cenová stabilita, verejné financie, stabilita výmenného kurzu a dlhodobé úrokové sadzby.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje široký rozsah voľného pohybu kapitálu, prípustné obmedzenia a zásady HMÚ, najmä v rozsudkoch Sanz de Lera, Trummer a Mayer, Pringle a Gauweiler.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje voľný pohyb kapitálu?",
+      "options": ["Čl. 63 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 56 ZFEÚ", "Čl. 28 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Voľný pohyb kapitálu je upravený v čl. 63 ZFEÚ."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje zákaz obmedzení kapitálu?",
+      "options": ["Sanz de Lera", "Keck", "Gebhard", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "Sanz de Lera upravuje zákaz obmedzení kapitálu."
+    },
+    {
+      "q": "Čo je súčasťou hospodárskej a menovej únie?",
+      "options": ["Jednotná menová politika a euro", "Len colná únia", "Len voľný pohyb osôb", "Len spoločná poľnohospodárska politika"],
+      "correct": 0,
+      "explanation": "HMÚ zahŕňa jednotnú menovú politiku a euro."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil právny rámec eurozóny?",
+      "options": ["Pringle", "Dassonville", "UPA", "Simmenthal"],
+      "correct": 0,
+      "explanation": "Pringle potvrdil právny rámec eurozóny a ESM."
+    },
+    {
+      "q": "Ktorý článok umožňuje výnimočné obmedzenia kapitálu pri krízach?",
+      "options": ["Čl. 66 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 21 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 66 ZFEÚ umožňuje výnimočné obmedzenia kapitálu."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 63 ZFEÚ", "definition": "Zákaz obmedzení pohybu kapitálu a platieb." },
+    { "term": "Sanz de Lera", "definition": "Široký zákaz obmedzení kapitálu." },
+    { "term": "HMÚ", "definition": "Najpokročilejší stupeň ekonomickej integrácie." },
+    { "term": "ECB", "definition": "Nezávislá centrálna banka eurozóny." },
+    { "term": "Pringle", "definition": "Rozsudok o právnom rámci eurozóny a ESM." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Sanz de Lera: zákaz obmedzení kapitálu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Španielsko vyžadovalo povolenie na prevod kapitálu do zahraničia.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1995:451 (C‑163/94, C‑165/94, C‑250/94 Sanz de Lera)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o obmedzeniach kapitálu?",
+          "options": [
+            "Členské štáty môžu voľne obmedzovať kapitál",
+            "Obmedzenia sú zakázané, ak nie sú odôvodnené legitímnym cieľom",
+            "Kapitál sa neuplatňuje na fyzické osoby"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že obmedzenia kapitálu sú zakázané, ak nie sú odôvodnené legitímnym cieľom.",
+            "wrong": "Nesprávne. Kapitál sa vzťahuje aj na fyzické osoby."
+          },
+          "source": "ECLI:EU:C:1995:451"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Trummer a Mayer: obmedzenia pri nehnuteľnostiach",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Rakúsko vyžadovalo, aby hypotéky boli denominované v domácej mene.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1999:143 (C‑222/97 Trummer a Mayer)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o obmedzeniach kapitálu?",
+          "options": [
+            "Obmedzenia sú prípustné bez podmienok",
+            "Obmedzenia musia byť primerané a odôvodnené",
+            "Obmedzenia sa neuplatňujú na nehnuteľnosti"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Obmedzenia musia byť primerané a odôvodnené legitímnym cieľom.",
+            "wrong": "Nesprávne. Nehnuteľnosti patria pod voľný pohyb kapitálu."
+          },
+          "source": "ECLI:EU:C:1999:143"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Pringle: právny rámec eurozóny",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Írsko napadlo Európsky stabilizačný mechanizmus (ESM).",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o ESM?",
+          "options": [
+            "ESM je v rozpore s právom EÚ",
+            "ESM je v súlade s právom EÚ a podporuje stabilitu eurozóny",
+            "Eurozóna nemá právny základ"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že ESM je v súlade s právom EÚ a podporuje stabilitu eurozóny.",
+            "wrong": "Nesprávne. Eurozóna má pevný právny základ v ZFEÚ."
+          },
+          "source": "ECLI:EU:C:2012:756"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1995:451; ECLI:EU:C:1999:143; ECLI:EU:C:2012:756; čl. 63 – 66 ZFEÚ; čl. 119 – 144 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
