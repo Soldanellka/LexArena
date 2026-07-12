@@ -130,18 +130,18 @@
   @media (prefers-reduced-motion: reduce) {
     .bf-video-bg { animation: none; background-position: 30% 50%; }
   }
-  /* Moderátor je VIZUÁLNE ZA textom (nižší z-index), centrálne/mierne
-     vpravo. Text sedí na polopriehľadnom páse s blur pozadím, nech je
-     čitateľný aj cez postavu – pás je len taký široký ako text, nie
-     na celú šírku obrazovky. */
+  /* Moderátor stojí NA OKRAJI (nie za textom) – strana sa strieda podľa
+     párnosti defIndex (.side-right modifikátor = avatar vpravo, text
+     vľavo). Text sedí na polopriehľadnom páse s blur pozadím. */
   .bf-video-main {
     position: relative; flex: 1; min-height: 0;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    gap: 16px;
   }
+  .bf-video-main.side-right { flex-direction: row-reverse; }
   .bf-video-moderator {
-    position: absolute; z-index: 1; bottom: 0;
-    left: 50%; transform: translateX(-15%);
-    height: 80%; max-height: 80vh; pointer-events: none;
+    position: relative; z-index: 1; flex: 0 0 auto;
+    height: 70%; max-height: 70vh; pointer-events: none;
   }
   .bf-video-moderator img {
     height: 100%; width: auto; object-fit: contain;
@@ -149,9 +149,9 @@
     transition: opacity 260ms ease;
   }
   .bf-video-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: 2; flex: 1 1 auto;
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    width: fit-content; max-width: 92%;
+    width: fit-content; max-width: 55%;
     background: rgba(20,16,24,0.55);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -200,7 +200,9 @@
   .bf-video-end-msg { font-size: 22px; font-weight: 600; text-align: center; }
 
   @media (max-width: 640px) {
-    .bf-video-moderator { height: 55%; max-height: 55vh; transform: translateX(-8%); }
+    .bf-video-main { flex-direction: column !important; gap: 8px; }
+    .bf-video-moderator { height: 30%; max-height: 30vh; }
+    .bf-video-content { max-width: 92%; }
     .bf-video-question { font-size: 19px; }
     .bf-video-answer { font-size: 15px; }
     .bf-video-controls .btn, .bf-video-end .btn { width: 100%; }
@@ -455,13 +457,13 @@ function updateJokerButtonsUI() {
     if (!btn) return;
     btn.textContent = `${def.label} (${def.price}§)`;
 
-    /* "Video znova" má VLASTNÝ limit (videoPlays, max 3, zdieľaný
+    /* "Video znova" má VLASTNÝ limit (videoPlays, max 2, zdieľaný
        s tlačidlom v prehrávači) – nezávislý od jokerUsed zámku
        textových pomôcok (kostra/iniciály/vypočuť). */
     if (def.type === 'video') {
-      if (videoPlays >= 3) {
+      if (videoPlays >= 2) {
         btn.disabled = true;
-        btn.title = 'Dosiahnutý limit 3 pozretí tejto definície.';
+        btn.title = 'Dosiahnutý limit 2 pozretí tejto definície.';
       } else if (jokerBalance < def.price) {
         btn.disabled = true;
         btn.title = `Potrebuješ ${def.price}§, máš ${jokerBalance}§`;
@@ -695,7 +697,7 @@ function setupReviewMode() {
    (defIndex), nie podľa aktuálneho hráčovho avatara.
 ============================================================ */
 /* ============================================================
-   🎥 Video režim – tri prehratia na definíciu (videoPlays 1/2/3),
+   🎥 Video režim – max DVE prehratia na definíciu (videoPlays 1/2),
    zdieľané s "🔁 Video znova" žolíkom v odpovedacej fáze. Reset
    pri prechode na inú definíciu (resetVideoPlays, volané zo
    showNextItem/retryItem/showReviewItem).
@@ -705,7 +707,7 @@ let videoPlays = 0;
 function resetVideoPlays() { videoPlays = 0; }
 
 async function canReplayVideo() {
-  if (videoPlays >= 3) return { allowed: false, reason: 'Dosiahnutý limit 3 pozretí tejto definície.' };
+  if (videoPlays >= 2) return { allowed: false, reason: 'Dosiahnutý limit 2 pozretí tejto definície.' };
   const price = ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY;
   const nick = localStorage.getItem('playerNick');
   const bal = nick ? await econBalance(nick) : 0;
@@ -714,7 +716,7 @@ async function canReplayVideo() {
 }
 
 async function requestVideoReplay() {
-  if (videoPlays >= 3) return { ok: false };
+  if (videoPlays >= 2) return { ok: false };
   const nick = localStorage.getItem('playerNick');
   if (!nick) return { ok: false };
   const ok = await econSpend(nick, ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY, 'video znova v bifľovačke');
@@ -758,8 +760,7 @@ async function handleVideoJokerClick() {
     playNumber: result.playNumber,
     canReplay: canReplayVideo,
     onRequestReplay: requestVideoReplay,
-    onExit: updateJokerButtonsUI,
-    onNext: updateJokerButtonsUI
+    onExit: updateJokerButtonsUI
   });
 }
 

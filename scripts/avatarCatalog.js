@@ -70,6 +70,15 @@ export function getModeratorForIndex(catalog, index) {
   return pool[i];
 }
 
+/* Náhodný talárový avatar (na striedačku pri každom spustení videa).
+   Kým žiadny talár neexistuje, spadne na základnú sadu. */
+export function getRandomTalarAvatar(catalog) {
+  const talars = getTalarAvatars(catalog);
+  const pool = talars.length ? talars : (catalog || []).filter(a => a && a.active);
+  if (!pool.length) return null;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
 /* Cesta k PNG pre daný stav ('full'|'tired'|'sleep'), voliteľne bust. */
 export function avatarStateSrc(avatarEntry, state, bust = false) {
   if (!avatarEntry || !avatarEntry.base) return '';

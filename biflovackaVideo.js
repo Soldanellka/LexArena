@@ -1,22 +1,23 @@
 'use strict';
 
 /* ============================================================
-   biflovackaVideo.js (v2)
+   biflovackaVideo.js (v3)
    In-app "video režim" pre Bifľovačku – definícia sa premieta cez
-   celoobrazovkový prehrávač: avatar-moderátor (celá postava, rotuje
-   naprieč talárovými avatarmi z avatarCatalog) za textom, text na
-   polopriehľadnom páse s blur pozadím sa odkrýva po písmenkách
-   (alebo po vetách) synchronizovane s TTS hlasom prispôsobeným
-   pohlaviu moderátora.
+   celoobrazovkový prehrávač: avatar-moderátor (celá postava, náhodne
+   vybraný z talárových avatarov pri každom spustení) stojí NA OKRAJI
+   (strieda strany podľa párnosti defIndex), text je na druhej strane.
+   Text sa odkrýva po písmenkách (alebo po vetách) synchronizovane
+   s TTS hlasom prispôsobeným pohlaviu moderátora.
 
-   Tri prehratia na definíciu (videoPlays 1/2/3, spravuje volajúci
+   Dve prehratia na definíciu (videoPlays 1/2, spravuje volajúci
    v memory-trainer.html – zdieľané so žolíkom "Video znova"):
-   1. free/full, 2. za § (canReplay/onRequestReplay)/tired,
-   3. za §/sleep s "zaspávacím" outrom na konci.
+   1. zadarmo/full, 2. za § (canReplay/onRequestReplay)/tired, ku
+   koncu (posledná ~1/4 textu) sa moderátor prepne na sleep a hlas
+   stíchne. Po 2. prehratí je "Znova" natrvalo zamknuté.
 ============================================================ */
 
 import { speakText } from './memoryTrainer.js';
-import { getAvatarCatalog, getModeratorForIndex, avatarStateSrc, getAvatarGender } from './scripts/avatarCatalog.js';
+import { getAvatarCatalog, getRandomTalarAvatar, avatarStateSrc, getAvatarGender } from './scripts/avatarCatalog.js';
 import { ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
 
@@ -189,9 +190,12 @@ function playSentences(sentences, { voice, pitch, sleepy, onSentenceStart, onBou
   let fallbackHandle = null;
 
   function volumeFor(i) {
-    if (!sleepy) return muted ? 0 : 1;
     if (muted) return 0;
-    return Math.max(0.15, 1 - 0.6 * (i / Math.max(1, sentences.length - 1)));
+    if (!sleepy) return 1;
+    const progress = i / Math.max(1, sentences.length - 1);
+    if (progress < 0.75) return 1;
+    const t = (progress - 0.75) / 0.25;
+    return Math.max(0.15, 1 - 0.85 * t);
   }
 
   function next() {
@@ -225,12 +229,12 @@ function playSentences(sentences, { voice, pitch, sleepy, onSentenceStart, onBou
   };
 }
 
-function buildOverlay() {
+function buildOverlay(side) {
   const el = document.createElement('div');
   el.className = 'bf-video-overlay';
   el.innerHTML = `
     <div class="bf-video-bg"></div>
-    <div class="bf-video-main">
+    <div class="bf-video-main ${side === 'right' ? 'side-right' : ''}">
       <div class="bf-video-moderator"><img id="bfVideoModImg" alt="Moderátor" /></div>
       <div class="bf-video-content">
         <div class="bf-video-question" id="bfVideoQuestion"></div>
@@ -252,7 +256,7 @@ function buildOverlay() {
     <div class="bf-video-end" id="bfVideoEnd" style="display:none">
       <div class="bf-video-end-msg" id="bfVideoEndMsg" style="display:none"></div>
       <button class="btn" id="bfVideoReplayBtn" type="button">🔁 Pozrieť znova</button>
-      <button class="btn btn-primary" id="bfVideoNextBtn" type="button">➡️ Ďalšia definícia</button>
+      <button class="btn btn-primary" id="bfVideoEndCloseBtn" type="button">✕ Zavrieť</button>
     </div>
   `;
   document.body.appendChild(el);
@@ -264,19 +268,22 @@ function setModeratorState(mod, state) {
   if (img && mod) img.src = avatarStateSrc(mod, state);
 }
 
-function stateForPlayNumber(n) {
-  return n >= 3 ? 'sleep' : n === 2 ? 'tired' : 'full';
+/* Počiatočný stav moderátora pre dané prehratie – 1. je vždy full,
+   2. začína tired a ku koncu (posledná ~1/4) prejde na sleep (viď
+   highlightSentence). Max 2 prehratia na definíciu. */
+function initialStateForPlay(n) {
+  return n >= 2 ? 'tired' : 'full';
 }
 
 export async function openVideoPlayer({
   question, reference, zdroj = null, defIndex = 0, playNumber = 1,
   canReplay, onRequestReplay,
-  onExit, onNext, nextLabel = '➡️ Ďalšia definícia'
+  onExit
 } = {}) {
   closeVideoPlayer();
 
   const catalog = await getAvatarCatalog();
-  const moderator = getModeratorForIndex(catalog, defIndex);
+  const moderator = getRandomTalarAvatar(catalog);
   preloadModerator(moderator);
   const baseGender = getAvatarGender(moderator);
   let { voice, pitch } = await resolveVoice(baseGender);
@@ -285,8 +292,10 @@ export async function openVideoPlayer({
   let paused = false;
   let curPlayNumber = playNumber;
   let sentenceTypewriter = null;
+  let moderatorState = initialStateForPlay(curPlayNumber);
 
-  overlayEl = buildOverlay();
+  const side = defIndex % 2 === 0 ? 'left' : 'right';
+  overlayEl = buildOverlay(side);
   document.body.style.overflow = 'hidden';
 
   document.getElementById('bfVideoQuestion').textContent = question || '';
@@ -305,9 +314,8 @@ export async function openVideoPlayer({
   const voiceBtn = document.getElementById('bfVideoVoiceBtn');
   const textModeBtn = document.getElementById('bfVideoTextModeBtn');
   const replayBtn = document.getElementById('bfVideoReplayBtn');
-  const nextBtn = document.getElementById('bfVideoNextBtn');
+  const endCloseBtn = document.getElementById('bfVideoEndCloseBtn');
   muteBtn.textContent = muted ? '🔇' : '🔊';
-  nextBtn.textContent = nextLabel;
 
   if (prefersReducedMotion()) {
     textModeBtn.disabled = true;
@@ -324,17 +332,24 @@ export async function openVideoPlayer({
       if (node) { node.classList.add('done'); node.textContent = sentences[i]; }
     }
 
+    const progress = idx / Math.max(1, sentences.length);
+    const nearEnd = curPlayNumber === 2 && progress >= 0.75;
+    if (nearEnd && moderatorState !== 'sleep') {
+      moderatorState = 'sleep';
+      setModeratorState(moderator, moderatorState);
+    }
+
     const cur = answerEl.querySelector(`[data-idx="${idx}"]`);
     if (cur) {
       cur.classList.add('active');
       cur.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       if (getTextMode() === 'letters') {
-        sentenceTypewriter = createTypewriter(cur, sentenceText, { sleepy: curPlayNumber >= 3 && SLEEPY_OUTRO });
+        sentenceTypewriter = createTypewriter(cur, sentenceText, { sleepy: nearEnd && SLEEPY_OUTRO });
       } else {
         cur.textContent = sentenceText;
       }
     }
-    progressFill.style.width = `${Math.round((idx / Math.max(1, sentences.length)) * 100)}%`;
+    progressFill.style.width = `${Math.round(progress * 100)}%`;
   }
 
   function finish() {
@@ -345,11 +360,12 @@ export async function openVideoPlayer({
       node.classList.add('done');
       node.textContent = sentences[i];
     });
-    setModeratorState(moderator, stateForPlayNumber(curPlayNumber));
+    if (curPlayNumber >= 2) moderatorState = 'sleep';
+    setModeratorState(moderator, moderatorState);
 
-    if (curPlayNumber >= 3 && SLEEPY_OUTRO) {
+    if (curPlayNumber >= 2 && SLEEPY_OUTRO) {
       dimEl.classList.add('active');
-      endMsg.textContent = '😴 Poďme na ďalšiu definíciu';
+      endMsg.textContent = '😴 Definícia sa uložila do pamäte – pokračuj v odpovedacej fáze';
       endMsg.style.display = 'block';
     } else {
       dimEl.classList.remove('active');
@@ -361,7 +377,7 @@ export async function openVideoPlayer({
   }
 
   async function updateEndScreen() {
-    if (curPlayNumber >= 3) {
+    if (curPlayNumber >= 2) {
       replayBtn.style.display = 'none';
       return;
     }
@@ -384,9 +400,10 @@ export async function openVideoPlayer({
     dimEl.classList.remove('active');
     paused = false;
     pauseBtn.textContent = '⏸️ Pauza';
-    setModeratorState(moderator, stateForPlayNumber(curPlayNumber));
+    moderatorState = initialStateForPlay(curPlayNumber);
+    setModeratorState(moderator, moderatorState);
     ttsController = playSentences(sentences, {
-      voice, pitch, sleepy: curPlayNumber >= 3 && SLEEPY_OUTRO,
+      voice, pitch, sleepy: curPlayNumber === 2 && SLEEPY_OUTRO,
       onSentenceStart: (idx, text) => highlightSentence(idx, text),
       onBoundary: (charIndex) => { if (sentenceTypewriter) sentenceTypewriter.onBoundary(charIndex); },
       onDone: finish
@@ -443,10 +460,9 @@ export async function openVideoPlayer({
     start();
   });
 
-  nextBtn.addEventListener('click', () => {
+  endCloseBtn.addEventListener('click', () => {
     closeVideoPlayer();
-    if (onNext) onNext();
-    else if (onExit) onExit();
+    if (onExit) onExit();
   });
 }
 
