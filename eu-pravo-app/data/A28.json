@@ -1,8 +1,130 @@
 {
-  "id": "28",
-  "title": "Voľný pohyb pracovníkov v EÚ, uznávanie odborných kvalifikácií",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A28",
+  "title": "Voľný pohyb pracovníkov v Európskej únii a uznávanie odborných kvalifikácií",
+  "summary": "Voľný pohyb pracovníkov je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 45 ZFEÚ a zahŕňa právo občanov EÚ pracovať v inom členskom štáte bez diskriminácie na základe štátnej príslušnosti. Pracovníci majú právo uchádzať sa o zamestnanie, pracovať, zostať v štáte po skončení práce a využívať rovnaké sociálne a daňové výhody ako domáci pracovníci.\n\nVoľný pohyb pracovníkov zahŕňa zákaz diskriminácie v prístupe k zamestnaniu, v pracovných podmienkach, odmeňovaní, sociálnych výhodách a prístupe k odbornej príprave. Obmedzenia sú prípustné len z dôvodov verejného poriadku, verejnej bezpečnosti a ochrany zdravia.\n\nUznávanie odborných kvalifikácií je upravené v smernici 2005/36/ES. Cieľom je umožniť odborníkom vykonávať regulované povolania v inom členskom štáte. Smernica zavádza automatické uznávanie (lekári, sestry, architekti) a všeobecný systém uznávania (ostatné povolania). Členské štáty môžu požadovať kompenzačné opatrenia (skúška, adaptačné obdobie), ak existujú podstatné rozdiely v kvalifikácii.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje široký rozsah voľného pohybu pracovníkov, zákaz diskriminácie a povinnosť uznávať kvalifikácie, najmä v rozsudkoch Lawrie‑Blum, Angonese, Collins a Vlassopoulou.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje voľný pohyb pracovníkov?",
+      "options": ["Čl. 45 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 56 ZFEÚ", "Čl. 28 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Voľný pohyb pracovníkov je upravený v čl. 45 ZFEÚ."
+    },
+    {
+      "q": "Čo zahŕňa voľný pohyb pracovníkov?",
+      "options": ["Len právo pracovať", "Právo uchádzať sa o prácu, pracovať a využívať rovnaké výhody", "Len právo zostať v štáte", "Len právo na sociálne dávky"],
+      "correct": 1,
+      "explanation": "Voľný pohyb zahŕňa prístup k práci, výkon práce a rovnaké výhody."
+    },
+    {
+      "q": "Ktorá smernica upravuje uznávanie odborných kvalifikácií?",
+      "options": ["2005/36/ES", "2014/24/EÚ", "2006/123/ES", "2018/1808/EÚ"],
+      "correct": 0,
+      "explanation": "Uznávanie kvalifikácií upravuje smernica 2005/36/ES."
+    },
+    {
+      "q": "Ktorý rozsudok definuje pojem pracovník?",
+      "options": ["Lawrie-Blum", "Angonese", "Vlassopoulou", "Keck"],
+      "correct": 0,
+      "explanation": "Lawrie-Blum definuje pojem pracovník."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje povinnosť uznávať kvalifikácie?",
+      "options": ["Vlassopoulou", "Dassonville", "Gebhard", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "Vlassopoulou upravuje povinnosť uznávať kvalifikácie."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 45 ZFEÚ", "definition": "Zákaz diskriminácie pracovníkov na základe štátnej príslušnosti." },
+    { "term": "Pracovník", "definition": "Osoba vykonávajúca skutočnú a efektívnu činnosť za odmenu (Lawrie-Blum)." },
+    { "term": "Smernica 2005/36/ES", "definition": "Upravuje uznávanie odborných kvalifikácií." },
+    { "term": "Automatické uznávanie", "definition": "Platí pre lekárov, sestry, architektov a ďalšie regulované profesie." },
+    { "term": "Kompenzačné opatrenia", "definition": "Skúška alebo adaptačné obdobie pri podstatných rozdieloch v kvalifikácii." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Lawrie-Blum: definícia pracovníka",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Uchádzačka o učiteľské miesto bola odmietnutá, pretože nebola považovaná za pracovníčku.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1986:284 (C‑66/85 Lawrie-Blum)"
+        },
+        {
+          "question": "Ako Súdny dvor definoval pracovníka?",
+          "options": [
+            "Osoba vykonávajúca dobrovoľnícku činnosť",
+            "Osoba vykonávajúca skutočnú a efektívnu činnosť za odmenu",
+            "Len osoby s vysokoškolským vzdelaním"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Pracovník je osoba vykonávajúca skutočnú a efektívnu činnosť za odmenu.",
+            "wrong": "Nesprávne. Pracovník nemusí mať vysokoškolské vzdelanie."
+          },
+          "source": "ECLI:EU:C:1986:284"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Angonese: zákaz diskriminácie pri prístupe k zamestnaniu",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Bankový zamestnávateľ vyžadoval certifikát jazykovej skúšky dostupný len v jednom členskom štáte.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2000:296 (C‑281/98 Angonese)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o diskriminácii?",
+          "options": [
+            "Súkromní zamestnávatelia môžu diskriminovať",
+            "Zákaz diskriminácie platí aj pre súkromných zamestnávateľov",
+            "Diskriminácia je prípustná pri jazykových skúškach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Zákaz diskriminácie sa vzťahuje aj na súkromných zamestnávateľov.",
+            "wrong": "Nesprávne. Diskriminácia pri prístupe k zamestnaniu je zakázaná."
+          },
+          "source": "ECLI:EU:C:2000:296"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Vlassopoulou: uznávanie kvalifikácií",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Právnička s gréckym diplomom žiadala o uznanie kvalifikácie v Nemecku.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1991:193 (C‑340/89 Vlassopoulou)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o uznávaní kvalifikácií?",
+          "options": [
+            "Členské štáty nemusia uznávať kvalifikácie",
+            "Členské štáty musia posúdiť kvalifikáciu a uznať ju, ak je rovnocenná",
+            "Uznávanie je automatické pre všetky povolania"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Členské štáty musia posúdiť kvalifikáciu a uznať ju, ak je rovnocenná.",
+            "wrong": "Nesprávne. Uznávanie nie je automatické pre všetky povolania."
+          },
+          "source": "ECLI:EU:C:1991:193"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1986:284; ECLI:EU:C:2000:296; ECLI:EU:C:1991:193; čl. 45 ZFEÚ; smernica 2005/36/ES",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
