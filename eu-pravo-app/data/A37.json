@@ -1,8 +1,130 @@
 {
-  "id": "37",
+  "id": "A37",
   "title": "Zneužitie dominantného postavenia a jeho kontrola",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Zneužitie dominantného postavenia je upravené v čl. 102 ZFEÚ. Dominantné postavenie znamená ekonomickú silu podniku, ktorá mu umožňuje správať sa nezávisle od konkurentov, zákazníkov a spotrebiteľov. Samotné dominantné postavenie nie je zakázané – zakázané je jeho zneužitie.\n\nZneužitie môže mať formu: (1) vykorisťovacie praktiky (neprimerané ceny, neprimerané obchodné podmienky), (2) vylučovacie praktiky (predátorské ceny, vernostné rabaty, odmietnutie dodávok, viazanie produktov, diskriminácia), (3) obmedzovanie inovácie alebo prístupu na trh.\n\nKontrolu vykonáva Európska komisia a vnútroštátne orgány hospodárskej súťaže. Komisia môže ukladať vysoké pokuty, nariaďovať ukončenie praktík, prijímať záväzky a vykonávať inšpekcie. Dominantné podniky majú osobitnú zodpovednosť nepoškodzovať efektívnu súťaž.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „dominancia“, „zneužitie“, „vernostné rabaty“, „odmietnutie dodávok“ a „predátorské ceny“, najmä v rozsudkoch United Brands, Hoffmann‑La Roche, Michelin, AKZO, Intel a Google Shopping.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje zneužitie dominantného postavenia?",
+      "options": ["Čl. 102 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 107 ZFEÚ", "Čl. 106 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Zneužitie dominantného postavenia je upravené v čl. 102 ZFEÚ."
+    },
+    {
+      "q": "Je samotné dominantné postavenie zakázané?",
+      "options": ["Nie, zakázané je len zneužitie", "Áno, vždy", "Len pri karteloch", "Len pri štátnej pomoci"],
+      "correct": 0,
+      "explanation": "Dominancia nie je zakázaná, zakázané je jej zneužitie."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje vernostné rabaty?",
+      "options": ["Hoffmann-La Roche", "AKZO", "United Brands", "Intel"],
+      "correct": 0,
+      "explanation": "Hoffmann-La Roche upravuje vernostné rabaty."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje predátorské ceny?",
+      "options": ["AKZO", "Costa/ENEL", "Gebhard", "UPA"],
+      "correct": 0,
+      "explanation": "AKZO upravuje predátorské ceny."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka odmietnutia dodávok?",
+      "options": ["United Brands", "Dassonville", "Keck", "Cartes Bancaires"],
+      "correct": 0,
+      "explanation": "United Brands sa týka odmietnutia dodávok."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 102 ZFEÚ", "definition": "Zakazuje zneužitie dominantného postavenia." },
+    { "term": "Dominantné postavenie", "definition": "Ekonomická sila umožňujúca nezávislé správanie." },
+    { "term": "Vernostné rabaty", "definition": "Rabaty motivujúce zákazníkov kupovať len od dominantného podniku." },
+    { "term": "Predátorské ceny", "definition": "Ceny pod nákladmi s cieľom vytlačiť konkurentov." },
+    { "term": "Odmietnutie dodávok", "definition": "Zneužitie, ak podnik odmieta dodať tovar bez objektívneho dôvodu." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – United Brands: odmietnutie dodávok a neprimerané ceny",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dominantný podnik odmietol dodávať banány distribútorovi bez objektívneho dôvodu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1978:22 (27/76 United Brands)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil odmietnutie dodávok?",
+          "options": [
+            "Je vždy prípustné",
+            "Môže byť zneužitím, ak nie je objektívne odôvodnené",
+            "Nie je nikdy zneužitím"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Odmietnutie dodávok môže byť zneužitím, ak nie je objektívne odôvodnené.",
+            "wrong": "Nesprávne. Dominantný podnik má osobitnú zodpovednosť."
+          },
+          "source": "ECLI:EU:C:1978:22"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Hoffmann-La Roche: vernostné rabaty",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dominantný podnik poskytoval rabaty viazané na exkluzívny odber.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1979:36 (85/76 Hoffmann-La Roche)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil vernostné rabaty?",
+          "options": [
+            "Sú vždy prípustné",
+            "Sú zakázané, ak motivujú zákazníkov kupovať len od dominantného podniku",
+            "Sú zakázané len pri karteloch"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Vernostné rabaty sú zakázané, ak motivujú zákazníkov kupovať len od dominantného podniku.",
+            "wrong": "Nesprávne. Rabaty môžu byť protisúťažné aj mimo kartelov."
+          },
+          "source": "ECLI:EU:C:1979:36"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – AKZO: predátorské ceny",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dominantný podnik predával pod nákladmi, aby vytlačil konkurenta z trhu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1991:286 (C‑62/86 AKZO)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil predátorské ceny?",
+          "options": [
+            "Sú vždy prípustné",
+            "Sú zneužitím, ak sú pod nákladmi a majú vylučovací účinok",
+            "Nie sú nikdy zneužitím"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Predátorské ceny sú zneužitím, ak sú pod nákladmi a majú vylučovací účinok.",
+            "wrong": "Nesprávne. Predátorské ceny sú typickým zneužitím."
+          },
+          "source": "ECLI:EU:C:1991:286"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1978:22; ECLI:EU:C:1979:36; ECLI:EU:C:1991:286; čl. 102 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
