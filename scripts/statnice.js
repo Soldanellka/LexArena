@@ -2,23 +2,30 @@
 
 /* ============================================================
    scripts/statnice.js
-   Štátnicová sieň – interaktívna komisia (v2), zatiaľ len pre
+   Štátnicová sieň – interaktívna komisia (v3), zatiaľ len pre
    Pracovné právo.
 
-   ⚠️ VYHODNOTENIE JE LOKÁLNE, NIE CEZ CLAUDE API.
-   Zadanie žiada volať api.anthropic.com/v1/messages bez API kľúča
-   ("rieši prostredie"). To z reálneho statického Vercel hostingu
-   (žiadne /api, žiadne miesto pre tajný kľúč) nie je technicky
-   možné – buď by kľúč musel byť verejne vystavený v klientskom
-   kóde (bezpečnostná chyba), alebo by bolo treba serverless
-   funkciu (čo appka explicitne nemá). Namiesto tichého obchádzania
-   tohto komunikujem: HODNOTENIE aj ZÁVER nižšie robí evaluateAnswer()/
-   buildFinalFeedback() lokálne (rovnaký kľúčovo-slovný mechanizmus
-   ako Bifľovačka, porovnávaný oproti plnému `summary` okruhu), ale
-   VRACIA PRESNE TEN ISTÝ JSON TVAR, aký by vrátilo Claude API
-   ({ onTopic, coverage, missing, followUp, reason } / { znamka,
-   silne, medzery, odporucania, zaver }) – reálne API volanie sa dá
-   neskôr zapojiť len výmenou tela týchto dvoch funkcií za fetch().
+   ⚠️ HODNOTENIE JE LOKÁLNE, NIE CEZ CLAUDE API.
+   Zadanie žiada dvojkrokové volanie Claude API (Krok A: extrakcia
+   kľúčových bodov z `summary`; Krok B: hodnotenie pokrytia odpovede
+   voči nim). Statický Vercel hosting (žiadne /api, žiadne miesto pre
+   tajný kľúč) to neumožňuje bez buď verejne vystaveného kľúča
+   (bezpečnostná chyba) alebo serverless funkcie (appka ju nemá).
+
+   Namiesto tichého obchádzania: extractKeyPoints() nahrádza Krok A
+   (parsuje existujúcu sekciu "Kľúčové slová (štátnicové):" v každom
+   `summary` – to sú presne tie isté "kľúčové body", ktoré by Claude
+   vytiahol, len už vopred pripravené autorkou obsahu) a
+   evaluateCoverage() nahrádza Krok B: namiesto porovnania CELÉHO
+   textu odpovede s CELÝM summary (staré, príliš doslovné vyhodnotenie)
+   sa KAŽDÝ kľúčový bod overuje samostatne cez prítomnosť jeho
+   vlastných podstatných slov v odpovedi – parafráza/iné poradie viet
+   bodu neuškodí, kým zaznejú jeho nosné pojmy. `incorrect` (vecne zlé
+   tvrdenia) lokálne spoľahlivo nevieme rozpoznať – ostáva vždy
+   prázdne pole; toto je poctivo priznané obmedzenie substitútu, nie
+   niečo, čo appka predstiera, že rieši. Oba výstupy majú presne ten
+   istý JSON tvar, aký by vrátilo Claude API, takže reálne API volanie
+   sa dá neskôr zapojiť len výmenou tiel týchto dvoch funkcií za fetch().
 
    Prepis odpovede a poznámky sa NIKDY neukladajú verejne – len
    dočasne v pamäti tejto relácie. Voliteľne sa ukladá len výsledná
@@ -28,7 +35,7 @@
 import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
-import { speakText, compareText } from '../memoryTrainer.js';
+import { speakText } from '../memoryTrainer.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -40,7 +47,6 @@ const SILENCE_TIMEOUT_MS = 8000;
 const SPEECH_START_FALLBACK_MS = 2000;
 const TTS_FALLBACK_MS = 6000; // ak sa onEnd z TTS nespustí (nepodporovaný prehliadač a pod.)
 const ON_TOPIC_MIN_THRESHOLD = 15;   // pod týmto = úplne mimo témy (guard proti falošne kladnému skóre)
-const FOLLOWUP_COVERAGE_THRESHOLD = 50; // "coverage < 50" zo zadania – spúšťa doplňujúcu
 const MAX_FOLLOWUPS_PER_QUESTION = 2;
 
 function getDb() { return window.db || null; }
@@ -53,26 +59,81 @@ export function isStatniceAvailable(areaName) {
 /* ============================================================
    VÝBER DVOJICE OKRUHOV (A1+A2, A3+A4, …, A49+A50) – rovnaké
    párovanie ako pojednávania (scripts/duels.js pickQuestions).
-   Referenčný obsah pre komisiu = plné `summary` oboch okruhov,
-   NIE kvízové otázky.
 ============================================================ */
-/* `summary` v A*.json obsahuje okrem hlavného textu aj sekcie "Príklad:",
-   "Kľúčové slová (štátnicové):" a "Zapamätaj si:" – tie sú študijná
-   pomôcka (opakujú/zhrnujú tie isté pojmy), nie súvislý text, ktorý by
-   niekto reprodukoval nahlas. Ponechané by umelo nafúkli počet
-   extrahovaných kľúčových slov (compareText) a robili by pokrytie
-   nespravodlivo prísnejšie. Pre HODNOTENIE sa preto porovnáva len
-   hlavný súvislý text pred prvou z týchto sekcií. */
-function trimSummaryForEvaluation(summary) {
-  const text = String(summary || '');
-  const markers = ['\n\nPríklad:', '\nPríklad:', '\n\nKľúčové slová', '\nKľúčové slová'];
+
+/* ------------------------------------------------------------
+   Lokálny tokenizér pre porovnávanie kľúčových bodov (nezávislý
+   od memoryTrainer.js – tento súbor porovnáva JEDNOTLIVÉ krátke
+   body, nie celé odseky, takže si vystačí s vlastnou jednoduchou
+   verziou bez závislosti na inom module).
+------------------------------------------------------------ */
+const SK_STOPWORDS = new Set([
+  'a', 'alebo', 'ale', 'je', 'sa', 'na', 'v', 'vo', 'do', 'z', 'zo', 'za', 'pre', 'ako', 'pri', 'po', 'od',
+  'ku', 'k', 's', 'so', 'ktory', 'ktora', 'ktore', 'ktori', 'tento', 'tato', 'toto', 'tieto', 'nie', 'ano',
+  'aj', 'uz', 'len', 'iba', 'teda', 'preto', 'ak', 'ci', 'no', 'tak', 'byt', 'bol', 'bola', 'boli', 'ma',
+  'maju', 'mat', 'su', 'bude', 'budu', 'ich', 'jej', 'jeho', 'im', 'mu', 'ju', 'ho', 'ten', 'ta', 'to', 'ti', 'tie'
+]);
+const DIACRITIC_MAP = {
+  'á': 'a', 'ä': 'a', 'č': 'c', 'ď': 'd', 'é': 'e', 'í': 'i', 'ĺ': 'l', 'ľ': 'l',
+  'ň': 'n', 'ó': 'o', 'ô': 'o', 'ŕ': 'r', 'š': 's', 'ť': 't', 'ú': 'u', 'ý': 'y', 'ž': 'z'
+};
+function stripDiacritics(s) {
+  return String(s).split('').map(ch => DIACRITIC_MAP[ch] || ch).join('');
+}
+function normalizeWords(text) {
+  return stripDiacritics(String(text || '').toLowerCase())
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+}
+function significantWords(text) {
+  return normalizeWords(text).filter(w => w.length > 3 && !SK_STOPWORDS.has(w));
+}
+
+/* ------------------------------------------------------------
+   extractKeyPoints() – lokálny substitút za "Krok A" (Claude API
+   extrakcia kľúčových bodov). Každý A*.json má v `summary` sekciu
+   "Kľúčové slová (štátnicové):" – presne zoznam bodov, ktoré má
+   Claude podľa zadania vytiahnuť, tu už vopred pripravený autorkou
+   obsahu. Fallback (ak sekcia chýba): rozdeliť hlavný text na vety.
+------------------------------------------------------------ */
+function extractKeyPoints(rawSummary, title) {
+  const text = String(rawSummary || '');
+  const sectionMatch = text.match(/Kľúčové slová[^:]*:\s*\n([\s\S]*?)(?=\n\nZapamätaj si|\n\n$|$)/i);
+  if (sectionMatch) {
+    const rawLines = sectionMatch[1]
+      .split('\n')
+      .map(l => l.replace(/^[-•]\s*/, '').trim())
+      .filter(Boolean);
+
+    // Niektoré okruhy majú "Kľúčové slová:" ako JEDEN riadok pojmov oddelených
+    // bodkočiarkou namiesto odrážky na riadok – bez rozdelenia by z toho vznikol
+    // jeden obrovský "bod" namiesto samostatne overiteľných kľúčových bodov.
+    const points = [];
+    rawLines.forEach(line => {
+      const segments = line.split(';').map(s => s.replace(/[.,]\s*$/, '').trim()).filter(Boolean);
+      if (segments.length > 1) points.push(...segments);
+      else points.push(line.replace(/[.,;]\s*$/, '').trim());
+    });
+    if (points.length) return points.filter(Boolean);
+  }
+
+  const cutMarkers = ['\n\nPríklad:', '\nPríklad:', '\n\nKľúčové slová', '\nKľúčové slová'];
   let cutIdx = text.length;
-  for (const m of markers) {
+  for (const m of cutMarkers) {
     const idx = text.indexOf(m);
     if (idx !== -1 && idx < cutIdx) cutIdx = idx;
   }
-  const trimmed = text.slice(0, cutIdx).trim();
-  return trimmed || text;
+  const narrative = text.slice(0, cutIdx).trim();
+  // Bežné skratky (napr., resp., atď., zák., čl., ods., písm., tzv.) majú bodku,
+  // ktorá NIE je koniec vety – bez ochrany by sa veta rozsekla uprostred a bod
+  // by pôsobil ako polovičatá, gramaticky rozbitá veta (najmä v doplňujúcej otázke).
+  const protectedText = narrative.replace(/\b(napr|resp|atď|atd|zák|čl|ods|písm|tzv|tzn|str|tj)\.(\s)/gi, '$1∎$2');
+  const sentences = protectedText
+    .split(/(?<=[.!?])\s+/)
+    .map(s => s.replace(/∎/g, '.').trim())
+    .filter(s => s.length > 25);
+  return sentences.length ? sentences.slice(0, 6) : (title ? [title] : []);
 }
 
 async function fetchOkruh(n) {
@@ -81,7 +142,9 @@ async function fetchOkruh(n) {
     if (!res.ok) return null;
     const json = await res.json();
     if (!json || !json.summary || !json.title) return null;
-    return { id: `A${n}`, title: json.title, summary: trimSummaryForEvaluation(json.summary) };
+    const keyPoints = extractKeyPoints(json.summary, json.title);
+    if (!keyPoints.length) return null;
+    return { id: `A${n}`, title: json.title, keyPoints };
   } catch (e) {
     return null;
   }
@@ -107,15 +170,24 @@ async function pickExamTopics() {
 }
 
 /* ============================================================
-   KOMISIA – 3 talárové avatary, preferencia akademických (zlatý
-   pás). Katalóg zatiaľ nemá samostatné pole pre "subtyp" taláru,
-   preto sa preferencia rieši mäkko cez id/name (akademik/zlatý/
-   dekan/profesor/rektor); inak hocijaký talár. AK žiadny talár
-   neexistuje, radšej žiadny obrázok ako civilný avatar (zadanie:
-   "Nie základné civilné avatary") – zobrazí sa dekoratívny fallback.
+   KOMISIA – 3 RÔZNI talárové avatary (žiadny duplikát), mix
+   chlapec/dievča, rôzne taláre, preferencia akademika (zlatý pás).
+   Katalóg zatiaľ nemá samostatné pole pre "subtyp" taláru, preto sa
+   pohlavie/rola odvodzujú mäkko z `id` (studentka-* = dievča, inak
+   chlapec; -akademik/-prokurator/-sudca/-advokat/-talar-cierny =
+   rola). AK žiadny talár neexistuje, radšej žiadny obrázok ako
+   civilný avatar (zadanie: "Nie základné civilné avatary") –
+   zobrazí sa dekoratívny fallback.
 ============================================================ */
 function isAcademicLike(a) {
   return /akadem|zlat|dekan|profesor|rektor/i.test(`${a?.id || ''} ${a?.name || ''}`);
+}
+function getGender(a) {
+  return /^studentka/i.test(a?.id || '') ? 'f' : 'm';
+}
+function getRoleType(a) {
+  const m = (a?.id || '').match(/-(akademik|prokurator|sudca|advokat|talar-cierny)$/);
+  return m ? m[1] : 'ine';
 }
 
 async function pickCommission() {
@@ -123,20 +195,37 @@ async function pickCommission() {
   const talars = getTalarAvatars(catalog);
   if (!talars.length) return [];
 
-  // Zaruč aspoň jedného akademika (ak existuje), zvyšok iné taláre pre pestrosť –
-  // pri len 1-2 akademických položkách by čisto náhodný výber z celého poolu
-  // mohol ľahko vybrať 3× to isté "iné" a žiadneho akademika.
-  const academic = talars.filter(isAcademicLike);
-  const nonAcademic = talars.filter(a => !isAcademicLike(a));
-
+  const usedIds = new Set();
+  const usedGenders = new Set();
+  const usedRoleTypes = new Set();
   const chosen = [];
-  if (academic.length) chosen.push(academic[Math.floor(Math.random() * academic.length)]);
 
-  const restPool = nonAcademic.length ? nonAcademic : talars;
-  const shuffledRest = [...restPool].sort(() => Math.random() - 0.5);
+  function tryAdd(candidate) {
+    if (!candidate || usedIds.has(candidate.id)) return false;
+    chosen.push(candidate);
+    usedIds.add(candidate.id);
+    usedGenders.add(getGender(candidate));
+    usedRoleTypes.add(getRoleType(candidate));
+    return true;
+  }
+
+  // 1. Aspoň jeden akademik (ak existuje v katalógu).
+  const academic = talars.filter(isAcademicLike);
+  if (academic.length) tryAdd(academic[Math.floor(Math.random() * academic.length)]);
+
+  // 2. Zvyšné pozície: prefer opačné pohlavie a nepoužitý typ taláru;
+  //    postupne poľavuj z požiadaviek, kým niečo ostáva, ale NIKDY
+  //    nevyber duplicitné `id`.
   while (chosen.length < 3) {
-    if (!shuffledRest.length) shuffledRest.push(...[...talars].sort(() => Math.random() - 0.5));
-    chosen.push(shuffledRest.shift());
+    const remaining = talars.filter(a => !usedIds.has(a.id));
+    if (!remaining.length) break;
+
+    let pool = remaining.filter(a => !usedGenders.has(getGender(a)) && !usedRoleTypes.has(getRoleType(a)));
+    if (!pool.length) pool = remaining.filter(a => !usedRoleTypes.has(getRoleType(a)));
+    if (!pool.length) pool = remaining.filter(a => !usedGenders.has(getGender(a)));
+    if (!pool.length) pool = remaining;
+
+    tryAdd(pool[Math.floor(Math.random() * pool.length)]);
   }
 
   console.log('[ŠTÁTNICE] Komisia:', chosen.map(a => a?.id));
@@ -216,52 +305,97 @@ function renderCommission(commissionEl, commission) {
 }
 
 /* ============================================================
-   HODNOTENIE ODPOVEDE – lokálny substitút za Claude API.
-   Vracia rovnaký tvar: { onTopic, coverage, missing, followUp, reason }
+   HODNOTENIE ODPOVEDE PROTI KĽÚČOVÝM BODOM – lokálny substitút za
+   "Krok B" Claude API. Vracia rovnaký tvar:
+   { covered, missing, incorrect, coverage, onTopic }
+
+   Hodnotí sa POKRYTIE, nie doslovná zhoda: každý bod sa overuje cez
+   prítomnosť JEHO VLASTNÝCH podstatných slov v odpovedi (parafráza/
+   iné poradie/iná učebnica neprekáža, pokým zaznejú nosné pojmy bodu).
+   `incorrect` (vecne zlé tvrdenia) lokálne spoľahlivo nevieme
+   rozpoznať – ostáva vždy prázdne (poctivo priznané obmedzenie).
 ============================================================ */
-function evaluateAnswer(userText, topic) {
-  const result = compareText(userText, topic); // pkg.summary = referencia (compareText už to podporuje)
-  const coverage = result.score;
+const POINT_COVERAGE_RATIO = 0.34; // aký podiel vlastných slov bodu musí zaznieť, aby bol "covered"
 
-  const [matchedStr, totalStr] = (result.keywordsMatched || '0/0').split('/');
-  const matchedCount = parseInt(matchedStr, 10) || 0;
-  const totalCount = parseInt(totalStr, 10) || 0;
-
-  // onTopic podľa POČTU zasiahnutých kľúčových pojmov (nie len blended skóre –
-  // to obsahuje aj znakovú podobnosť, ktorá pri krátkom texte vie vyjsť nenulová).
-  const onTopic = matchedCount >= 1 && coverage >= ON_TOPIC_MIN_THRESHOLD;
-
-  const missing = totalCount > matchedCount
-    ? [`Chýba ${totalCount - matchedCount} z ${totalCount} kľúčových pojmov k téme „${topic.title}".`]
-    : [];
-
-  const followUp = (!onTopic || coverage < FOLLOWUP_COVERAGE_THRESHOLD)
-    ? `Môžete to rozviesť a doplniť podstatné náležitosti k otázke „${topic.title}"?`
-    : null;
-
-  return { onTopic, coverage, missing, followUp, reason: result.notes, keywordsMatched: result.keywordsMatched };
+/* Slovenčina má bohatú pádovú/číselnú deklináciu ("závislá" vs "o závislej
+   práci" vs "závislých vzťahoch") – rovnaké slovo sa v odpovedi takmer
+   vždy objaví v inom tvare ako v referenčnom bode. Čisté porovnanie
+   celých slov by preto neprávom penalizovalo aj vecne správnu odpoveď.
+   Namiesto skutočnej lematizácie (mimo rozsahu lokálneho substitútu)
+   stačí zdieľaný začiatok slova (~70 % dĺžky kratšieho, min. 4 znaky) –
+   pádové/číselné koncovky sú spravidla len 1-3 znaky na konci slova. */
+function wordsMatch(a, b) {
+  if (a === b) return true;
+  const minLen = Math.min(a.length, b.length);
+  const prefixLen = Math.max(4, Math.floor(minLen * 0.7));
+  if (a.slice(0, prefixLen) === b.slice(0, prefixLen)) return true;
+  return a.includes(b) || b.includes(a);
 }
 
-/* Záverečná spätná väzba – lokálny substitút, rovnaký tvar ako Claude API. */
+function isPointCovered(point, userWordsSet) {
+  const pointWords = significantWords(point);
+  if (!pointWords.length) return true; // bod bez rozlíšiteľných slov – nedá sa vyhodnotiť, neblokuj študenta
+  let matched = 0;
+  pointWords.forEach(w => {
+    for (const uw of userWordsSet) {
+      if (wordsMatch(w, uw)) { matched++; return; }
+    }
+  });
+  return (matched / pointWords.length) >= POINT_COVERAGE_RATIO;
+}
+
+function evaluateCoverage(userText, keyPoints) {
+  const userWords = new Set(significantWords(userText));
+  const covered = [];
+  const missing = [];
+
+  (keyPoints || []).forEach(point => {
+    if (userWords.size && isPointCovered(point, userWords)) covered.push(point);
+    else missing.push(point);
+  });
+
+  const total = keyPoints ? keyPoints.length : 0;
+  const coverage = total ? Math.round((covered.length / total) * 100) : 0;
+  const onTopic = userWords.size > 0 && (covered.length >= 1 || coverage >= ON_TOPIC_MIN_THRESHOLD);
+
+  return { covered, missing, incorrect: [], coverage, onTopic };
+}
+
+/* Doplňujúca otázka cielená na KONKRÉTNY chýbajúci bod (missing[0]),
+   nie opakovanie pôvodnej otázky – lokálny substitút za Claude API
+   volanie "polož jednu doplňujúcu otázku smerujúcu na tento bod". */
+function buildFollowUpMessage(missing, title) {
+  if (!missing || !missing.length) {
+    return `Môžete to rozviesť a doplniť podstatné náležitosti k otázke „${title}"?`;
+  }
+  return `Spomenuli ste tému, no chýba mi konkrétny bod – ${missing[0]}. Viete to bližšie vysvetliť?`;
+}
+
+/* Záverečná spätná väzba – lokálny substitút, rovnaký tvar ako Claude API.
+   Kalibrácia presne podľa zadania: 1 = coverage≥85 a žiadne incorrect,
+   2 = 65-84, 3 = 45-64, 4 = <45 alebo závažné vecné chyby. */
 function buildFinalFeedback(evaluations, topics) {
   const avg = evaluations.reduce((s, e) => s + e.coverage, 0) / evaluations.length;
+  const anyIncorrect = evaluations.some(e => e.incorrect && e.incorrect.length);
+
   let znamka;
-  if (avg >= 85) znamka = 1;
-  else if (avg >= 65) znamka = 2;
+  if (avg >= 85 && !anyIncorrect) znamka = 1;
+  else if (avg >= 65 && !anyIncorrect) znamka = 2;
   else if (avg >= 45) znamka = 3;
   else znamka = 4;
+  if (anyIncorrect && avg < 45) znamka = 4;
 
   const silne = [];
   const medzery = [];
   evaluations.forEach((e, i) => {
     const title = topics[i].title;
-    if (e.coverage >= 65) silne.push(`Téma „${title}" – dobré pokrytie kľúčových pojmov (${e.keywordsMatched}).`);
-    else medzery.push(`Téma „${title}" – chýbajú kľúčové pojmy (${e.keywordsMatched}), formulácia bola nepresná.`);
+    if (e.covered.length) silne.push(`Téma „${title}" – pokryté: ${e.covered.join('; ')}.`);
+    if (e.missing.length) medzery.push(`Téma „${title}" – doštudovať: ${e.missing.join('; ')}.`);
   });
   if (!silne.length) silne.push('Snaha odpovedať na obe otázky.');
 
   const odporucania = medzery.length
-    ? ['Zopakuj si dané okruhy (plné vypracovanie v štúdijnom module) a skús presnejšie právne pojmy.', 'Drž sa štruktúry: pojem → znaky → príklad → judikatúra.']
+    ? ['Zameraj sa na vymenované chýbajúce body – doštuduj ich v plnom vypracovaní okruhu.', 'Drž sa štruktúry: pojem → znaky → príklad → judikatúra.']
     : ['Pokračuj v tomto tempe, skús aj náročnejšie okruhy.'];
 
   const zaverByZnamka = {
@@ -661,16 +795,18 @@ export async function openStatniceHall(areaName) {
     answers[idx] = transcript;
 
     const topic = topics[idx];
-    const result = evaluateAnswer(transcript, topic);
-    console.log('[ŠTÁTNICE] API hodnotenie:', result);
+    const result = evaluateCoverage(transcript, topic.keyPoints);
+    console.log('[ŠTÁTNICE] Hodnotenie:', result);
     evaluations[idx] = result;
 
-    const needsFollowUp = (!result.onTopic || result.coverage < FOLLOWUP_COVERAGE_THRESHOLD || triggeredBySilence)
+    // "Ak missing nie je prázdne → komisia sa spýta konkrétne naň" (zadanie) –
+    // doplňujúca sa cieli na konkrétny chýbajúci bod, nie na hocijaké nízke skóre.
+    const needsFollowUp = (result.missing.length > 0 || triggeredBySilence)
       && followUpCounts[idx] < MAX_FOLLOWUPS_PER_QUESTION;
 
     if (needsFollowUp) {
       followUpCounts[idx]++;
-      const followUpText = result.followUp || 'Môžete to rozviesť a doplniť podstatné náležitosti?';
+      const followUpText = buildFollowUpMessage(result.missing, topic.title);
       msgEl.style.display = 'block';
       msgEl.innerHTML = `<strong>Komisia (doplňujúca otázka):</strong> ${followUpText}`;
       liveTranscriptEl.textContent = '';

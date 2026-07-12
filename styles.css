@@ -2721,11 +2721,18 @@ body {
 .statnice-close-btn { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
 
 .statnice-commission {
-  display: flex; justify-content: center; gap: 16px; margin-bottom: 16px;
+  display: flex; justify-content: center; align-items: flex-end; gap: 16px;
+  margin-bottom: 16px; padding: 18px 16px 14px;
+  background: linear-gradient(180deg, #efe7dd, #d9cdbc);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 .statnice-commissioner {
   height: 110px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+  /* Tmavý drop-shadow, aby čierne/tmavé taláre nesplývali s (teraz
+     svetlým) podkladom za komisiou – kontrastný obrys namiesto
+     splynutia postavy s pozadím. */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.35));
 }
 .statnice-commission-fallback {
   font-size: 42px; letter-spacing: 10px; opacity: .85;
