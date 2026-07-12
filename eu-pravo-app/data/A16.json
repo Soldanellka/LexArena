@@ -1,8 +1,130 @@
 {
-  "id": "16",
-  "title": "Sekundárne právo Únie – triedenie, právny základ, publikácia, jazykový režim",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A16",
+  "title": "Sekundárne právo Európskej únie – triedenie, právny základ, publikácia, jazykový režim",
+  "summary": "Sekundárne právo Európskej únie je súbor právnych aktov prijímaných inštitúciami EÚ na základe primárneho práva. Je upravené v čl. 288 ZFEÚ. Sekundárne právo zahŕňa nariadenia, smernice, rozhodnutia, odporúčania a stanoviská.\n\nNariadenia sú všeobecne záväzné a priamo uplatniteľné vo všetkých členských štátoch. Smernice sú záväzné pre členské štáty, pokiaľ ide o výsledok, ktorý sa má dosiahnuť, ale ponechávajú voľbu formy a prostriedkov. Rozhodnutia sú záväzné pre adresátov. Odporúčania a stanoviská nie sú právne záväzné.\n\nPrávny základ sekundárneho práva vyplýva z konkrétnych ustanovení zmlúv, ktoré splnomocňujú inštitúcie EÚ konať v určitej oblasti. Právny základ musí byť jasne uvedený v každom právnom akte.\n\nSekundárne právo sa publikuje v Úradnom vestníku Európskej únie (Ú. v. EÚ), najmä v sérii L (Legislatíva). Jazykový režim je založený na zásade viacjazyčnosti: všetky právne akty sú autentické vo všetkých úradných jazykoch EÚ. Preklad je právne záväzný.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje právnu silu sekundárneho práva, povinnosť členských štátov transponovať smernice a význam jazykového režimu, najmä v rozsudkoch C‑161/06, C‑83/14 a C‑449/21.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje sekundárne právo EÚ?",
+      "options": ["Čl. 288 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 20 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Sekundárne právo je upravené v čl. 288 ZFEÚ."
+    },
+    {
+      "q": "Ktorý právny akt je priamo uplatniteľný?",
+      "options": ["Smernica", "Nariadenie", "Rozhodnutie", "Odporúčanie"],
+      "correct": 1,
+      "explanation": "Nariadenie je priamo uplatniteľné vo všetkých členských štátoch."
+    },
+    {
+      "q": "Čo musí obsahovať každý právny akt EÚ?",
+      "options": ["Stanovisko členských štátov", "Právny základ", "Preklad do národného vestníka", "Podpis všetkých ministrov"],
+      "correct": 1,
+      "explanation": "Každý právny akt musí obsahovať právny základ."
+    },
+    {
+      "q": "Kde sa publikuje sekundárne právo?",
+      "options": ["V národných vestníkoch", "V Úradnom vestníku EÚ", "V rozhodnutiach Komisie", "V rozsudkoch Súdneho dvora"],
+      "correct": 1,
+      "explanation": "Sekundárne právo sa publikuje v Úradnom vestníku EÚ."
+    },
+    {
+      "q": "Sú všetky jazykové verzie právnych aktov autentické?",
+      "options": ["Nie", "Áno", "Len anglická verzia", "Len francúzska verzia"],
+      "correct": 1,
+      "explanation": "Všetky jazykové verzie právnych aktov EÚ sú autentické."
+    }
+  ],
+  "tiles": [
+    { "term": "Nariadenie", "definition": "Všeobecne záväzné, priamo uplatniteľné (čl. 288 ZFEÚ)." },
+    { "term": "Smernica", "definition": "Záväzná pre členské štáty, ponecháva voľbu formy a prostriedkov." },
+    { "term": "Rozhodnutie", "definition": "Záväzné pre adresátov." },
+    { "term": "Úradný vestník EÚ", "definition": "Oficiálna publikácia právnych aktov EÚ (séria L)." },
+    { "term": "Viacjazyčnosť", "definition": "Všetky jazykové verzie právnych aktov sú autentické." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Pfeiffer: povinnosť správnej transpozície smerníc",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát transponoval smernicu o pracovnom čase neúplne.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2004:584 (C‑161/06 Pfeiffer)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o transpozícii smerníc?",
+          "options": [
+            "Členské štáty môžu transponovať smernice len čiastočne",
+            "Členské štáty musia zabezpečiť úplnú a presnú transpozíciu",
+            "Smernice nie sú záväzné"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty musia zabezpečiť úplnú a presnú transpozíciu smerníc.",
+            "wrong": "Nesprávne. Smernice sú záväzné pre členské štáty."
+          },
+          "source": "ECLI:EU:C:2004:584"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Commission v. Spain: jazykový režim a autentickosť verzií",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Španielsko namietalo rozdiely medzi jazykovými verziami nariadenia.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:84 (C‑83/14 Komisia v. Španielsko)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o jazykových verziách?",
+          "options": [
+            "Len anglická verzia je autentická",
+            "Všetky jazykové verzie sú autentické a rovnocenné",
+            "Členské štáty si môžu vybrať záväznú verziu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že všetky jazykové verzie právnych aktov sú autentické a rovnocenné.",
+            "wrong": "Nesprávne. EÚ nemá jedinú privilegovanú jazykovú verziu."
+          },
+          "source": "ECLI:EU:C:2015:84"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Xella: právny základ sekundárneho práva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Právny akt EÚ bol napadnutý pre údajne nesprávny právny základ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2023:123 (C‑449/21 Xella)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právny základ?",
+          "options": [
+            "Právny základ nie je potrebné uvádzať",
+            "Právny základ musí presne zodpovedať obsahu a cieľu právneho aktu",
+            "Právny základ môže byť uvedený dodatočne po prijatí aktu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že právny základ musí presne zodpovedať obsahu a cieľu právneho aktu.",
+            "wrong": "Nesprávne. Právny základ je povinnou súčasťou každého právneho aktu."
+          },
+          "source": "ECLI:EU:C:2023:123"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2004:584; ECLI:EU:C:2015:84; ECLI:EU:C:2023:123; čl. 288 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
