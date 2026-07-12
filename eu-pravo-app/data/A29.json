@@ -1,8 +1,130 @@
 {
-  "id": "29",
-  "title": "Voľný pohyb a pobyt osôb v EÚ – charakteristika, pôsobnosť, prípustné obmedzenia",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A29",
+  "title": "Voľný pohyb a pobyt osôb v Európskej únii – charakteristika, pôsobnosť, prípustné obmedzenia",
+  "summary": "Voľný pohyb a pobyt osôb je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 20 – 21 ZFEÚ a v smernici 2004/38/ES. Zahŕňa právo občanov EÚ voľne sa pohybovať, vstupovať na územie členských štátov, zdržiavať sa tam, pracovať, študovať, podnikať a trvalo sa usadiť.\n\nPrávo na voľný pohyb zahŕňa: vstup do členského štátu s platným občianskym preukazom alebo pasom, pobyt do 3 mesiacov bez podmienok, pobyt nad 3 mesiace pri splnení podmienok (zamestnanie, samostatná zárobková činnosť, dostatočné prostriedky a zdravotné poistenie, štúdium), právo trvalého pobytu po 5 rokoch.\n\nPôsobnosť voľného pohybu osôb sa vzťahuje na občanov EÚ, ich rodinných príslušníkov (aj z tretích krajín), študentov, dôchodcov, uchádzačov o zamestnanie a ďalšie kategórie. Rodinní príslušníci majú odvodené práva na pobyt.\n\nPrípustné obmedzenia sú taxatívne: verejný poriadok, verejná bezpečnosť a ochrana zdravia (čl. 27 smernice 2004/38/ES). Opatrenia musia byť individuálne, primerané, založené na osobnom správaní a nesmú byť ekonomicky motivované. Vyhostenie je možné len pri skutočnom, aktuálnom a dostatočne závažnom ohrození verejného záujmu.\n\nJudikatúra Súdneho dvora EÚ rozvíja práva občanov EÚ a ich rodín, najmä v rozsudkoch Baumbast, Metock, Zhu a Chen a Tsakouridis.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje právo občanov EÚ na voľný pohyb a pobyt?",
+      "options": ["Čl. 21 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 56 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Voľný pohyb a pobyt osôb je upravený v čl. 21 ZFEÚ."
+    },
+    {
+      "q": "Ktorá smernica upravuje voľný pohyb osôb?",
+      "options": ["Smernica 2004/38/ES", "Smernica 2005/36/ES", "Smernica 2006/123/ES", "Smernica 2014/24/EÚ"],
+      "correct": 0,
+      "explanation": "Voľný pohyb osôb upravuje smernica 2004/38/ES."
+    },
+    {
+      "q": "Kto má odvodené právo na pobyt?",
+      "options": ["Len občania EÚ", "Rodinní príslušníci občanov EÚ", "Len študenti", "Len zamestnanci"],
+      "correct": 1,
+      "explanation": "Rodinní príslušníci majú odvodené právo na pobyt."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje právo na pobyt bez podmienok pre deti občanov EÚ?",
+      "options": ["Zhu a Chen", "Metock", "Baumbast", "Tsakouridis"],
+      "correct": 0,
+      "explanation": "Zhu a Chen upravuje právo na pobyt pre deti občanov EÚ."
+    },
+    {
+      "q": "Ktoré obmedzenia voľného pohybu sú prípustné?",
+      "options": ["Verejný poriadok, bezpečnosť, ochrana zdravia", "Ekonomické dôvody", "Daňové dôvody", "Ochrana trhu práce"],
+      "correct": 0,
+      "explanation": "Obmedzenia sú prípustné len z dôvodov verejného poriadku, bezpečnosti a zdravia."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 21 ZFEÚ", "definition": "Základné právo občanov EÚ na voľný pohyb a pobyt." },
+    { "term": "Smernica 2004/38/ES", "definition": "Upravuje podmienky vstupu, pobytu a vyhostenia občanov EÚ." },
+    { "term": "Rodinní príslušníci", "definition": "Majú odvodené právo na pobyt aj keď sú z tretích krajín." },
+    { "term": "Baumbast", "definition": "Právo na pobyt aj bez splnenia všetkých formálnych podmienok." },
+    { "term": "Metock", "definition": "Rodinní príslušníci majú právo na pobyt bez ohľadu na predchádzajúci pobyt." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Baumbast: právo na pobyt občanov EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Občan EÚ žiadal o pobyt, hoci nesplnil všetky formálne podmienky zdravotného poistenia.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2002:493 (C‑413/99 Baumbast)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o práve na pobyt?",
+          "options": [
+            "Právo na pobyt je striktne podmienené",
+            "Právo na pobyt môže existovať aj bez splnenia všetkých podmienok",
+            "Právo na pobyt neexistuje"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že právo na pobyt môže existovať aj bez splnenia všetkých formálnych podmienok.",
+            "wrong": "Nesprávne. Právo na pobyt je základným právom občanov EÚ."
+          },
+          "source": "ECLI:EU:C:2002:493"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Metock: práva rodinných príslušníkov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Rodinní príslušníci občanov EÚ z tretích krajín žiadali o pobyt, hoci predtým nelegálne pobývali v inom členskom štáte.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2008:449 (C‑127/08 Metock)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o odvodených právach?",
+          "options": [
+            "Rodinní príslušníci nemajú právo na pobyt",
+            "Rodinní príslušníci majú právo na pobyt bez ohľadu na predchádzajúci pobyt",
+            "Právo na pobyt závisí od ekonomickej aktivity"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že rodinní príslušníci majú právo na pobyt bez ohľadu na predchádzajúci pobyt.",
+            "wrong": "Nesprávne. Právo na pobyt nie je ekonomicky podmienené."
+          },
+          "source": "ECLI:EU:C:2008:449"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Zhu a Chen: právo detí občanov EÚ na pobyt",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Dieťa občana EÚ žiadalo o pobyt v inom členskom štáte spolu s matkou z tretieho štátu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2004:639 (C‑200/02 Zhu a Chen)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o práve na pobyt?",
+          "options": [
+            "Dieťa nemá právo na pobyt",
+            "Dieťa má právo na pobyt a matka má odvodené právo",
+            "Právo na pobyt závisí od príjmu rodičov"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Dieťa občana EÚ má právo na pobyt a matka má odvodené právo na pobyt.",
+            "wrong": "Nesprávne. Právo na pobyt nie je podmienené príjmom."
+          },
+          "source": "ECLI:EU:C:2004:639"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2002:493; ECLI:EU:C:2008:449; ECLI:EU:C:2004:639; čl. 21 ZFEÚ; smernica 2004/38/ES",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
