@@ -1,8 +1,130 @@
 {
-  "id": "17",
-  "title": "Nariadenie Únie – základné znaky, implementácia, účinky",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A17",
+  "title": "Nariadenie Európskej únie – základné znaky, implementácia, účinky",
+  "summary": "Nariadenie je jedným zo základných právnych aktov sekundárneho práva Európskej únie. Je upravené v čl. 288 ZFEÚ. Nariadenie má všeobecnú pôsobnosť, je záväzné v celom rozsahu a priamo uplatniteľné vo všetkých členských štátoch. Nevyžaduje transpozíciu do vnútroštátneho práva.\n\nZákladné znaky nariadenia zahŕňajú jeho všeobecnú záväznosť, priamu uplatniteľnosť, jednotnú aplikáciu v celej Únii a zákaz vnútroštátnej implementácie, ktorá by menila alebo dopĺňala jeho obsah. Členské štáty môžu prijímať len vykonávacie opatrenia, ak to nariadenie výslovne umožňuje.\n\nÚčinky nariadenia sú priame a okamžité. Nariadenie zakladá práva a povinnosti jednotlivcom aj orgánom členských štátov. Vnútroštátne súdy musia aplikovať nariadenie priamo a neuplatniť odporujúce vnútroštátne normy. Nariadenie má prednosť pred vnútroštátnym právom.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje priamu uplatniteľnosť nariadení, zákaz ich transpozície a povinnosť vnútroštátnych súdov zabezpečiť ich plný účinok, najmä v rozsudkoch C‑39/72, C‑103/88 a C‑278/84.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje nariadenie?",
+      "options": ["Čl. 288 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 20 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Nariadenie je upravené v čl. 288 ZFEÚ."
+    },
+    {
+      "q": "Je nariadenie priamo uplatniteľné?",
+      "options": ["Nie", "Áno", "Len po transpozícii", "Len v niektorých štátoch"],
+      "correct": 1,
+      "explanation": "Nariadenie je priamo uplatniteľné vo všetkých členských štátoch."
+    },
+    {
+      "q": "Môže členský štát transponovať nariadenie?",
+      "options": ["Áno, vždy", "Nie, nariadenie sa netransponuje", "Len ak to umožní Komisia", "Len ak to umožní Parlament"],
+      "correct": 1,
+      "explanation": "Nariadenie sa netransponuje, môže sa len vykonávať."
+    },
+    {
+      "q": "Má nariadenie prednosť pred vnútroštátnym právom?",
+      "options": ["Nie", "Áno", "Len pred zákonmi", "Len pred podzákonnými predpismi"],
+      "correct": 1,
+      "explanation": "Nariadenie má prednosť pred všetkými vnútroštátnymi normami."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil zákaz transpozície nariadení?",
+      "options": ["C‑39/72", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal", "C‑399/11 Melloni"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑39/72 Súdny dvor potvrdil zákaz transpozície nariadení."
+    }
+  ],
+  "tiles": [
+    { "term": "Nariadenie", "definition": "Všeobecne záväzné, priamo uplatniteľné vo všetkých členských štátoch." },
+    { "term": "Priama uplatniteľnosť", "definition": "Nariadenie sa aplikuje bez potreby transpozície." },
+    { "term": "Prednosť práva EÚ", "definition": "Nariadenie má prednosť pred vnútroštátnym právom." },
+    { "term": "Vykonávacie opatrenia", "definition": "Členské štáty môžu prijať opatrenia len ak to nariadenie umožňuje." },
+    { "term": "Čl. 288 ZFEÚ", "definition": "Upravuje právne akty EÚ vrátane nariadení." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Variola: zákaz transpozície nariadení",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát prijal zákon, ktorý opakoval obsah nariadenia o colných sadzbách.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1973:101 (C‑39/72 Variola)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o transpozícii nariadení?",
+          "options": [
+            "Členské štáty môžu opakovať obsah nariadenia",
+            "Členské štáty nesmú transponovať nariadenia ani ich opakovať",
+            "Transpozícia je povinná"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty nesmú transponovať nariadenia ani ich opakovať vo vnútroštátnych normách.",
+            "wrong": "Nesprávne. Nariadenie sa uplatňuje priamo."
+          },
+          "source": "ECLI:EU:C:1973:101"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Commission v. France: povinnosť zabezpečiť účinnosť nariadenia",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Francúzsko neprijalo opatrenia potrebné na praktické uplatnenie nariadenia o poľnohospodárskych produktoch.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1989:606 (C‑103/88 Komisia v. Francúzsko)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil povinnosti členských štátov?",
+          "options": [
+            "Členské štáty nemajú povinnosti pri nariadeniach",
+            "Členské štáty musia zabezpečiť účinné uplatňovanie nariadení",
+            "Členské štáty môžu nariadenia nahradiť vlastnými predpismi"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že členské štáty musia zabezpečiť účinné uplatňovanie nariadení.",
+            "wrong": "Nesprávne. Nariadenia nemožno nahradiť vnútroštátnymi predpismi."
+          },
+          "source": "ECLI:EU:C:1989:606"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Commission v. Germany: priame účinky nariadení",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Nemecko aplikovalo vnútroštátnu normu odporujúcu nariadeniu o spoločnej organizácii trhu.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1987:356 (C‑278/84 Komisia v. Nemecko)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o účinkoch nariadenia?",
+          "options": [
+            "Nariadenie nemá priamy účinok",
+            "Nariadenie má priamy účinok a vnútroštátne normy mu musia ustúpiť",
+            "Nariadenie sa uplatní len po transpozícii"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že nariadenie má priamy účinok a vnútroštátne normy mu musia ustúpiť.",
+            "wrong": "Nesprávne. Nariadenie sa neuplatňuje po transpozícii."
+          },
+          "source": "ECLI:EU:C:1987:356"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1973:101; ECLI:EU:C:1989:606; ECLI:EU:C:1987:356; čl. 288 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
