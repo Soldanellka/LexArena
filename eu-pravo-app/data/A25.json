@@ -1,8 +1,130 @@
 {
-  "id": "25",
-  "title": "Judikatúra Súdneho dvora EÚ ako prameň práva Únie, metódy výkladu",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A25",
+  "title": "Judikatúra Súdneho dvora Európskej únie ako prameň práva Únie, metódy výkladu práva Únie",
+  "summary": "Judikatúra Súdneho dvora Európskej únie (SDEÚ) je základným prameňom práva EÚ. SDEÚ zabezpečuje jednotný výklad a uplatňovanie práva Únie vo všetkých členských štátoch. Rozsudky SDEÚ majú záväzný účinok a tvoria autonómny právny poriadok EÚ. Judikatúra dopĺňa, spresňuje a rozvíja primárne aj sekundárne právo.\n\nJudikatúra vytvára zásady ako prednosť práva EÚ (Costa/ENEL), priame účinky (Van Gend en Loos), zákaz horizontálneho priameho účinku smerníc (Marshall), zákaz rušiť akty EÚ vnútroštátnymi súdmi (Foto-Frost), povinnosť predkladať prejudiciálne otázky (CILFIT) či zodpovednosť štátu za škodu (Francovich).\n\nMetódy výkladu práva EÚ zahŕňajú: jazykový výklad (analýza textu vo všetkých autentických jazykových verziách), systematický výklad (kontext ustanovenia v rámci práva EÚ), teleologický výklad (výklad podľa cieľov a účelu práva EÚ), historický výklad (vývoj ustanovenia), autonómny výklad (nezávislý od vnútroštátnych právnych pojmov) a zásadu efektivity (výklad zabezpečujúci plný účinok práva EÚ).\n\nSDEÚ často kombinuje viaceré metódy výkladu, pričom teleologický a autonómny výklad sú dominantné. Cieľom je zabezpečiť efektívne fungovanie práva EÚ a jednotný výklad vo všetkých členských štátoch.",
+  "quiz": [
+    {
+      "q": "Je judikatúra Súdneho dvora prameňom práva EÚ?",
+      "options": ["Nie", "Áno", "Len v trestných veciach", "Len pri nariadeniach"],
+      "correct": 1,
+      "explanation": "Judikatúra je základným prameňom práva EÚ."
+    },
+    {
+      "q": "Ktorý rozsudok zaviedol zásadu prednosti práva EÚ?",
+      "options": ["Costa/ENEL", "CILFIT", "Foto-Frost", "Marshall"],
+      "correct": 0,
+      "explanation": "Costa/ENEL zaviedol zásadu prednosti práva EÚ."
+    },
+    {
+      "q": "Ktorá metóda výkladu je typická pre právo EÚ?",
+      "options": ["Teleologická", "Literalistická", "Čisto historická", "Len vnútroštátna"],
+      "correct": 0,
+      "explanation": "Teleologický výklad je dominantný v práve EÚ."
+    },
+    {
+      "q": "Ktorý rozsudok zaviedol priamy účinok práva EÚ?",
+      "options": ["Van Gend en Loos", "Costa/ENEL", "Marshall", "UPA"],
+      "correct": 0,
+      "explanation": "Van Gend en Loos zaviedol priamy účinok."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje zákaz rušiť akty EÚ vnútroštátnymi súdmi?",
+      "options": ["Foto-Frost", "CILFIT", "Francovich", "Simmenthal"],
+      "correct": 0,
+      "explanation": "Foto-Frost zakazuje vnútroštátnym súdom rušiť akty EÚ."
+    }
+  ],
+  "tiles": [
+    { "term": "Judikatúra SDEÚ", "definition": "Záväzný prameň práva EÚ, zabezpečuje jednotný výklad." },
+    { "term": "Teleologický výklad", "definition": "Výklad podľa cieľov a účelu práva EÚ." },
+    { "term": "Autonómny výklad", "definition": "Výklad nezávislý od vnútroštátnych právnych pojmov." },
+    { "term": "Prednosť práva EÚ", "definition": "Zásada zavedená v Costa/ENEL." },
+    { "term": "Priamy účinok", "definition": "Zásada zavedená v Van Gend en Loos." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Costa/ENEL: prednosť práva EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny zákon odporoval ustanoveniam práva EÚ.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1964:66 (C‑6/64 Costa/ENEL)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o prednosti práva EÚ?",
+          "options": [
+            "Vnútroštátne právo má prednosť",
+            "Právo EÚ má prednosť pred vnútroštátnym právom",
+            "Prednosť závisí od ústavného súdu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že právo EÚ má prednosť pred vnútroštátnym právom.",
+            "wrong": "Nesprávne. Prednosť je absolútna."
+          },
+          "source": "ECLI:EU:C:1964:66"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Van Gend en Loos: priamy účinok",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Colná správa uložila clo odporujúce ustanoveniu zmluvy EHS.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1963:1 (Van Gend en Loos)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o priamom účinku?",
+          "options": [
+            "Ustanovenia zmluvy nemajú priamy účinok",
+            "Ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo",
+            "Priamy účinok sa vzťahuje len na nariadenia"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo.",
+            "wrong": "Nesprávne. Priamy účinok sa vzťahuje aj na niektoré ustanovenia zmlúv."
+          },
+          "source": "ECLI:EU:C:1963:1"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Foto-Frost: zákaz rušiť akty EÚ",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
+          "options": [
+            "Vnútroštátne súdy môžu rušiť akty EÚ",
+            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
+            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor.",
+            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
+          },
+          "source": "ECLI:EU:C:1987:452"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1964:66; ECLI:EU:C:1963:1; ECLI:EU:C:1987:452; čl. 267 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
