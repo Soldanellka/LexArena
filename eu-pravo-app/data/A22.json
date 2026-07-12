@@ -1,8 +1,130 @@
 {
-  "id": "22",
-  "title": "Fakultatívne a obligatórne podávanie prejudiciálnych otázok, dôsledky nepoloženia",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A22",
+  "title": "Fakultatívne a obligatórne podávanie prejudiciálnych otázok, dôsledky ich nepoloženia",
+  "summary": "Prejudiciálne konanie podľa čl. 267 ZFEÚ je základným mechanizmom spolupráce medzi vnútroštátnymi súdmi a Súdnym dvorom Európskej únie (SDEÚ). Vnútroštátne súdy môžu alebo musia predkladať prejudiciálne otázky v závislosti od ich postavenia a povahy právnej otázky.\n\nFakultatívne podávanie prejudiciálnych otázok znamená, že každý vnútroštátny súd môže predložiť otázku SDEÚ, ak vznikne problém výkladu alebo platnosti práva EÚ. Ide o všeobecnú možnosť, ktorá podporuje jednotný výklad práva EÚ.\n\nObligatórne podávanie prejudiciálnych otázok sa týka súdov, proti rozhodnutiam ktorých už nemožno podať opravný prostriedok podľa vnútroštátneho práva. Tieto súdy musia predložiť otázku, ak vznikne problém výkladu alebo platnosti práva EÚ. Povinnosť bola potvrdená v rozsudku CILFIT.\n\nDôsledky nepoloženia prejudiciálnej otázky môžu zahŕňať porušenie práva EÚ, zodpovednosť štátu za škodu (Köbler), porušenie zásady prednosti práva EÚ a nesprávnu aplikáciu práva EÚ. Nepredloženie otázky môže viesť k tomu, že vnútroštátny súd nesprávne vyloží právo EÚ alebo uplatní odporujúcu vnútroštátnu normu.\n\nJudikatúra SDEÚ potvrdzuje povinnosť najvyšších súdov predkladať otázky (CILFIT), zákaz rušiť akty EÚ vnútroštátnymi súdmi (Foto-Frost) a zodpovednosť štátu za porušenie práva EÚ zo strany súdu (Köbler).",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje prejudiciálne konanie?",
+      "options": ["Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 19 ZEÚ"],
+      "correct": 0,
+      "explanation": "Prejudiciálne konanie je upravené v čl. 267 ZFEÚ."
+    },
+    {
+      "q": "Kto môže fakultatívne predkladať prejudiciálne otázky?",
+      "options": ["Len najvyššie súdy", "Každý vnútroštátny súd", "Len ústavné súdy", "Len správne súdy"],
+      "correct": 1,
+      "explanation": "Každý vnútroštátny súd môže fakultatívne predložiť otázku."
+    },
+    {
+      "q": "Kto má obligatórnu povinnosť predkladať prejudiciálne otázky?",
+      "options": ["Súdy prvého stupňa", "Súdy, proti rozhodnutiam ktorých nemožno podať opravný prostriedok", "Komisia", "Vláda"],
+      "correct": 1,
+      "explanation": "Obligatórnu povinnosť majú najvyššie súdy podľa CILFIT."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje povinnosť najvyšších súdov predkladať otázky?",
+      "options": ["CILFIT", "Foto-Frost", "Simmenthal", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "CILFIT upravuje povinnosť najvyšších súdov predkladať otázky."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje zodpovednosť štátu za porušenie práva EÚ súdom?",
+      "options": ["Köbler", "CILFIT", "Foto-Frost", "Van Gend en Loos"],
+      "correct": 0,
+      "explanation": "Köbler upravuje zodpovednosť štátu za porušenie práva EÚ súdom."
+    }
+  ],
+  "tiles": [
+    { "term": "Fakultatívne podanie", "definition": "Každý súd môže predložiť otázku, ak vznikne problém výkladu práva EÚ." },
+    { "term": "Obligatórne podanie", "definition": "Najvyššie súdy musia predložiť otázku, ak vznikne problém výkladu alebo platnosti." },
+    { "term": "CILFIT", "definition": "Rozsudok o povinnosti najvyšších súdov predkladať otázky." },
+    { "term": "Köbler", "definition": "Zodpovednosť štátu za porušenie práva EÚ súdom." },
+    { "term": "Foto-Frost", "definition": "Vnútroštátne súdy nesmú rušiť akty EÚ." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – CILFIT: obligatórne podanie prejudiciálnej otázky",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Najvyšší súd členského štátu riešil otázku výkladu práva EÚ, ale nechcel ju predložiť Súdnemu dvoru.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1982:335 (C‑283/81 CILFIT)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o povinnosti predkladať otázky?",
+          "options": [
+            "Najvyššie súdy nemajú povinnosť predkladať otázky",
+            "Najvyššie súdy musia predložiť otázku, ak existuje problém výkladu práva EÚ",
+            "Predkladanie otázok je dobrovoľné"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Najvyššie súdy musia predložiť prejudiciálnu otázku, ak existuje problém výkladu práva EÚ.",
+            "wrong": "Nesprávne. Povinnosť je záväzná."
+          },
+          "source": "ECLI:EU:C:1982:335"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Foto-Frost: zákaz rušiť akty EÚ vnútroštátnymi súdmi",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
+          "options": [
+            "Vnútroštátne súdy môžu rušiť akty EÚ",
+            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
+            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor. Vnútroštátne súdy ich nesmú rušiť.",
+            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
+          },
+          "source": "ECLI:EU:C:1987:452"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Köbler: dôsledky nepoloženia prejudiciálnej otázky",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Najvyšší súd členského štátu nesprávne vyložil právo EÚ a nepoložil prejudiciálnu otázku.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2003:513 (C‑224/01 Köbler)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o dôsledkoch nepoloženia otázky?",
+          "options": [
+            "Štát nenesie žiadnu zodpovednosť",
+            "Štát môže niesť zodpovednosť za škodu spôsobenú porušením práva EÚ súdom",
+            "Zodpovednosť nesie len súdca osobne"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že štát môže niesť zodpovednosť za škodu spôsobenú porušením práva EÚ súdom.",
+            "wrong": "Nesprávne. Zodpovednosť nesie štát, nie súdca."
+          },
+          "source": "ECLI:EU:C:2003:513"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1982:335; ECLI:EU:C:1987:452; ECLI:EU:C:2003:513; čl. 267 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
