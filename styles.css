@@ -2727,6 +2727,9 @@ body {
   height: 110px; width: auto; object-fit: contain;
   filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
 }
+.statnice-commission-fallback {
+  font-size: 42px; letter-spacing: 10px; opacity: .85;
+}
 
 .statnice-content {
   max-width: 640px; width: 100%; margin: 0 auto;
@@ -2769,9 +2772,14 @@ body {
 .statnice-answer-actions .btn { flex: 1; min-width: 140px; }
 
 .statnice-followup {
-  margin-top: 14px; padding: 12px 14px; border-radius: 10px;
+  margin: 10px 0 14px; padding: 12px 14px; border-radius: 10px;
   background: rgba(240,138,166,0.15); border: 1px solid rgba(240,138,166,0.35);
   font-size: 14px; line-height: 1.5;
+}
+
+.statnice-live-transcript {
+  min-height: 20px; font-size: 13px; font-style: italic; opacity: .75;
+  margin-bottom: 6px; line-height: 1.4;
 }
 
 .statnice-grade {
