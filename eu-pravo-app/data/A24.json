@@ -1,8 +1,130 @@
 {
-  "id": "24",
-  "title": "Konanie o neplatnosť aktu EÚ, konanie o nečinnosť inštitúcie Únie",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A24",
+  "title": "Konanie o neplatnosť aktu Európskej únie a konanie o nečinnosť inštitúcie Únie",
+  "summary": "Konanie o neplatnosť aktu Európskej únie je upravené v čl. 263 ZFEÚ. Umožňuje preskúmať zákonnosť aktov inštitúcií, orgánov a úradov EÚ. Cieľom je zabezpečiť, aby právne akty EÚ boli v súlade so zmluvami, všeobecnými zásadami práva a základnými právami. Konanie môžu začať privilegovaní žalobcovia (členské štáty, Parlament, Rada, Komisia) a neprivilegovaní žalobcovia (jednotlivci a podniky), ak sú aktom priamo dotknutí.\n\nKonanie o nečinnosť inštitúcie Únie je upravené v čl. 265 ZFEÚ. Umožňuje žalovať inštitúciu EÚ za to, že nekonala, hoci mala právnu povinnosť konať. Konanie môžu začať privilegovaní aj neprivilegovaní žalobcovia, ak inštitúcia neodpovedala na žiadosť alebo nevykonala povinnosť vyplývajúcu zo zmlúv.\n\nPriebeh oboch konaní zahŕňa podanie žaloby, písomnú fázu, ústnu fázu, stanovisko generálneho advokáta (ak je vypracované) a rozsudok Súdneho dvora. Rozhodnutie môže viesť k zrušeniu aktu, vyhláseniu nečinnosti a povinnosti inštitúcie konať.\n\nDôsledky neplatnosti zahŕňajú zrušenie aktu, jeho retroaktívne účinky (s obmedzeniami), povinnosť inštitúcie prijať nový akt a možnosť vzniku zodpovednosti EÚ za škodu. Dôsledky nečinnosti zahŕňajú povinnosť inštitúcie konať a možnosť žaloby o náhradu škody.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje podmienky aktívnej legitimácie, rozsah preskúmania a účinky rozhodnutí, najmä v rozsudkoch C‑25/62, C‑50/00 P a C‑68/95.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje konanie o neplatnosť aktu EÚ?",
+      "options": ["Čl. 263 ZFEÚ", "Čl. 265 ZFEÚ", "Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Konanie o neplatnosť je upravené v čl. 263 ZFEÚ."
+    },
+    {
+      "q": "Ktorý článok upravuje konanie o nečinnosť inštitúcie?",
+      "options": ["Čl. 265 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 267 ZFEÚ", "Čl. 7 ZEÚ"],
+      "correct": 0,
+      "explanation": "Konanie o nečinnosť je upravené v čl. 265 ZFEÚ."
+    },
+    {
+      "q": "Kto môže podať žalobu o neplatnosť?",
+      "options": ["Len členské štáty", "Privilegovaní aj neprivilegovaní žalobcovia", "Len Komisia", "Len jednotlivci"],
+      "correct": 1,
+      "explanation": "Žalobu môžu podať privilegovaní aj neprivilegovaní žalobcovia."
+    },
+    {
+      "q": "Aký je dôsledok úspešnej žaloby o nečinnosť?",
+      "options": ["Zrušenie aktu", "Povinnosť inštitúcie konať", "Pokuta pre členský štát", "Zastavenie konania"],
+      "correct": 1,
+      "explanation": "Súdny dvor môže uložiť inštitúcii povinnosť konať."
+    },
+    {
+      "q": "Ktorý rozsudok upravuje aktívnu legitimáciu jednotlivcov pri žalobe o neplatnosť?",
+      "options": ["Plaumann (C‑25/62)", "CILFIT", "Foto-Frost", "Costa/ENEL"],
+      "correct": 0,
+      "explanation": "Plaumann upravuje podmienky aktívnej legitimácie jednotlivcov."
+    }
+  ],
+  "tiles": [
+    { "term": "Čl. 263 ZFEÚ", "definition": "Konanie o neplatnosť aktu EÚ." },
+    { "term": "Čl. 265 ZFEÚ", "definition": "Konanie o nečinnosť inštitúcie EÚ." },
+    { "term": "Plaumann", "definition": "Rozsudok o aktívnej legitimácii jednotlivcov." },
+    { "term": "Zrušenie aktu", "definition": "Dôsledok úspešnej žaloby o neplatnosť." },
+    { "term": "Nečinnosť", "definition": "Inštitúcia nekoná napriek povinnosti konať." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Plaumann: aktívna legitimácia jednotlivcov",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Jednotlivec napadol rozhodnutie Komisie, ale nebolo jasné, či je priamo dotknutý.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1963:17 (C‑25/62 Plaumann)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o aktívnej legitimácii?",
+          "options": [
+            "Jednotlivec môže žalovať vždy",
+            "Jednotlivec môže žalovať, ak je dotknutý individuálne a priamo",
+            "Jednotlivec nemôže nikdy žalovať"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že jednotlivec môže žalovať, ak je dotknutý individuálne a priamo.",
+            "wrong": "Nesprávne. Aktívna legitimácia je obmedzená."
+          },
+          "source": "ECLI:EU:C:1963:17"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Unión de Pequeños Agricultores: neprivilegovaní žalobcovia",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Organizácia poľnohospodárov napadla nariadenie, ale nebolo jasné, či je priamo dotknutá.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2002:197 (C‑50/00 P UPA)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o prístupe jednotlivcov k súdu?",
+          "options": [
+            "Jednotlivci majú širokú legitimáciu",
+            "Jednotlivci majú obmedzenú legitimáciu podľa Plaumann",
+            "Jednotlivci nemajú žiadnu legitimáciu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil obmedzenú legitimáciu podľa Plaumann.",
+            "wrong": "Nesprávne. Legitimácia nie je široká."
+          },
+          "source": "ECLI:EU:C:2002:197"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Dorsch Consult: konanie o nečinnosť",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Inštitúcia EÚ nekonala napriek povinnosti rozhodnúť o žiadosti.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1997:413 (C‑68/95 Dorsch Consult)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o nečinnosti?",
+          "options": [
+            "Nečinnosť nie je žalovateľná",
+            "Inštitúcia môže byť žalovaná za nečinnosť",
+            "Nečinnosť rieši len Komisia"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že inštitúcia môže byť žalovaná za nečinnosť podľa čl. 265 ZFEÚ.",
+            "wrong": "Nesprávne. Nečinnosť je žalovateľná."
+          },
+          "source": "ECLI:EU:C:1997:413"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1963:17; ECLI:EU:C:2002:197; ECLI:EU:C:1997:413; čl. 263 – 265 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
