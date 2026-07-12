@@ -275,7 +275,15 @@ export function init() {
 
     /* 🔹 Získaj § – tlačidlo viditeľné len prihlásenému hráčovi */
     const earnBtn = $('earnBtn');
-    if (earnBtn) earnBtn.style.display = localStorage.getItem('playerNick') ? 'inline-flex' : 'none';
+    const initNick = localStorage.getItem('playerNick');
+    if (earnBtn) earnBtn.style.display = initNick ? 'inline-flex' : 'none';
+
+    /* 🔹 Analytics návratnosti – beží na pozadí, nič neblokuje */
+    if (initNick) {
+      import('./scripts/analytics.js')
+        .then(({ logVisit }) => logVisit(initNick))
+        .catch(e => console.warn('⚠️ analytics: import zlyhal', e));
+    }
 
     /* 🔹 Téma */
     applyTheme(localStorage.getItem('theme') || 'light');
@@ -1030,6 +1038,12 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
           <div id="bfVideoList" style="display:none;max-height:220px;overflow-y:auto"></div>
           <div class="small muted" style="margin-top:8px">Odporúčaný formát: 9:16 alebo 1:1, 1080p, do 60 s.</div>
         </div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border)">
+          <div style="font-weight:600;margin-bottom:8px">📊 Návštevnosť</div>
+          <button class="btn" id="analyticsLoadBtn" style="width:100%;margin-bottom:8px">📊 Načítať prehľad</button>
+          <div id="analyticsBox" style="display:none"></div>
+        </div>
       ` : ''}
       <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
         <div style="font-weight:600;margin-bottom:6px">💰 Poslať § hráčovi</div>
@@ -1284,7 +1298,75 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
       listEl.style.display = 'block';
       await loadBiflovackaVideoList(panel, db, ref, get, update, remove);
     };
+
+    // 📊 Návštevnosť – jedno čítanie analytics/* + analyticsDaily/*
+    panel.querySelector('#analyticsLoadBtn').onclick = async () => {
+      const box = panel.querySelector('#analyticsBox');
+      const isHidden = box.style.display === 'none';
+      if (!isHidden) { box.style.display = 'none'; return; }
+      box.style.display = 'block';
+      box.innerHTML = '<div class="small muted">Načítavam…</div>';
+      const { getAnalyticsOverview } = await import('./scripts/analytics.js');
+      const overview = await getAnalyticsOverview();
+      renderAnalyticsBox(box, overview);
+    };
   }
+}
+
+function renderAnalyticsBox(box, overview) {
+  if (!overview) { box.innerHTML = '<div class="small muted">Firebase nedostupná.</div>'; return; }
+
+  const { totalUsers, returningCount, returningPct, today, d1RetentionPct, d1CohortTotal, d1ReturnedTotal, last14 } = overview;
+  const maxVisits = Math.max(1, ...last14.map(d => d.visits));
+
+  box.innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+      <div class="small"><strong>${totalUsers}</strong> hráčov celkom</div>
+      <div class="small"><strong>${today.visits}</strong> návštev dnes</div>
+      <div class="small"><strong>${today.newUsers}</strong> nových dnes</div>
+      <div class="small"><strong>${today.returningUsers}</strong> vracajúcich sa dnes</div>
+    </div>
+    <div class="small" style="margin-bottom:6px">
+      Vracajúci sa: <strong>${returningPct} %</strong> (${returningCount} z ${totalUsers})
+    </div>
+    <div class="small" style="margin-bottom:10px">
+      D1 retencia (7 dní): <strong>${d1RetentionPct} %</strong> (${d1ReturnedTotal} z ${d1CohortTotal})
+    </div>
+    <canvas id="analyticsChart" width="300" height="100" style="width:100%;height:100px;margin-bottom:10px"></canvas>
+    <table style="width:100%;font-size:11px;border-collapse:collapse">
+      <thead>
+        <tr style="text-align:left;color:var(--muted)">
+          <th style="padding:2px 4px">Dátum</th><th style="padding:2px 4px">Návštevy</th>
+          <th style="padding:2px 4px">Noví</th><th style="padding:2px 4px">Vracajúci</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${last14.map(d => `
+          <tr style="border-top:1px solid var(--card-border, rgba(0,0,0,0.06))">
+            <td style="padding:2px 4px">${d.day.slice(5)}</td>
+            <td style="padding:2px 4px">${d.visits}</td>
+            <td style="padding:2px 4px">${d.newUsers}</td>
+            <td style="padding:2px 4px">${d.returningUsers}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+
+  const canvas = box.querySelector('#analyticsChart');
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width, h = canvas.height;
+  const barW = w / last14.length;
+  ctx.clearRect(0, 0, w, h);
+  last14.forEach((d, i) => {
+    const barH = Math.round((d.visits / maxVisits) * (h - 16));
+    ctx.fillStyle = '#f08aa6';
+    ctx.fillRect(i * barW + 2, h - barH - 14, barW - 4, barH);
+    ctx.fillStyle = '#7b6f78';
+    ctx.font = '8px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(String(d.visits), i * barW + barW / 2, h - barH - 18 < 8 ? 8 : h - barH - 18);
+  });
 }
 
 /* Vyparsuje YouTube video ID z URL (v=... alebo youtu.be/...) alebo
