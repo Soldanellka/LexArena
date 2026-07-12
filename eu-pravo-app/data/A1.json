@@ -43,13 +43,14 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Hodnoty právneho štátu ako podmienka členstva",
+      "title": "Prípad 1 – Nezávislosť súdnictva ako podmienka členstva",
       "difficulty": "stredná",
       "steps": [
         {
           "question": "Členský štát porušuje zásady právneho štátu a nezávislosť súdnictva, čo je v rozpore s hodnotami podľa čl. 2 ZEÚ.",
           "options": [],
-          "correct": 0
+          "correct": 0,
+          "source": "ECLI:EU:C:2019:531 (C‑619/18 Komisia/Poľsko)"
         },
         {
           "question": "Ako Súdny dvor EÚ vykladá povinnosť členských štátov rešpektovať hodnoty Únie?",
@@ -60,9 +61,10 @@
           ],
           "correct": 1,
           "explanation": {
-            "correct": "V rozsudku C‑619/18 Komisia/Poľsko Súdny dvor potvrdil, že členské štáty musia zabezpečiť nezávislosť súdnictva ako súčasť hodnoty právneho štátu podľa čl. 2 ZEÚ.",
+            "correct": "Súdny dvor potvrdil, že nezávislosť súdnictva je súčasťou hodnoty právneho štátu podľa čl. 2 ZEÚ.",
             "wrong": "Nesprávne. Hodnoty Únie sú právne záväzné a ich porušenie môže viesť k sankciám podľa čl. 7 ZEÚ."
-          }
+          },
+          "source": "ECLI:EU:C:2019:531 (C‑619/18 Komisia/Poľsko)"
         }
       ]
     },
@@ -73,7 +75,8 @@
         {
           "question": "Štát uchádzajúci sa o členstvo v EÚ má vážne systémové nedostatky v ochrane základných práv.",
           "options": [],
-          "correct": 0
+          "correct": 0,
+          "source": "ECLI:EU:C:2022:481 (C‑157/21 Komisia/Maďarsko)"
         },
         {
           "question": "Môže byť štát prijatý do EÚ, ak nespĺňa hodnoty podľa čl. 2 ZEÚ?",
@@ -84,16 +87,17 @@
           ],
           "correct": 1,
           "explanation": {
-            "correct": "V rozsudku C‑157/21 Komisia/Maďarsko Súdny dvor zdôraznil, že rešpektovanie základných práv a právneho štátu je nevyhnutnou podmienkou fungovania Únie.",
-            "wrong": "Nesprávne. Štát, ktorý nerešpektuje hodnoty čl. 2 ZEÚ, nemôže splniť podmienky čl. 49 ZEÚ na prijatie."
-          }
+            "correct": "Súdny dvor zdôraznil, že rešpektovanie základných práv je nevyhnutnou podmienkou fungovania Únie.",
+            "wrong": "Nesprávne. Štát, ktorý nerešpektuje hodnoty čl. 2 ZEÚ, nemôže splniť podmienky čl. 49 ZEÚ."
+          },
+          "source": "ECLI:EU:C:2022:481 (C‑157/21 Komisia/Maďarsko)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2019:531 (C‑619/18), ECLI:EU:C:2022:481 (C‑157/21), čl. 49 a čl. 2 ZEÚ",
+    "citation": "ECLI:EU:C:2019:531; ECLI:EU:C:2022:481; čl. 49 a čl. 2 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }
