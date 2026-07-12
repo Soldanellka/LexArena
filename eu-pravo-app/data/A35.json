@@ -1,8 +1,130 @@
 {
-  "id": "35",
-  "title": "Rozhodné právo pre zmluvné a mimozmluvné záväzky podľa Rím I a II",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A35",
+  "title": "Rozhodné právo pre zmluvné a mimozmluvné záväzky podľa nariadení Rím I a Rím II",
+  "summary": "Nariadenie Rím I (č. 593/2008) upravuje rozhodné právo pre zmluvné záväzky. Základným pravidlom je autonómia vôle – strany si môžu zvoliť rozhodné právo (čl. 3). Ak voľba práva chýba, rozhodné právo sa určuje podľa typu zmluvy (čl. 4), napr. pri kúpe tovaru je to právo obvyklého pobytu predávajúceho, pri poskytovaní služieb právo poskytovateľa. Spotrebiteľské a pracovné zmluvy majú osobitnú ochranu – voľba práva nesmie zbaviť slabšiu stranu ochrany podľa práva jej obvyklého pobytu.\n\nNariadenie Rím II (č. 864/2007) upravuje rozhodné právo pre mimozmluvné záväzky (delikty, bezdôvodné obohatenie, nekalosúťaž, škoda na životnom prostredí). Základným pravidlom je lex loci damni – právo štátu, kde vznikla škoda (čl. 4). Existujú výnimky: spoločný obvyklý pobyt strán, zjavne užší vzťah k inému štátu, osobitné pravidlá pre nekalosúťaž, výrobkovú zodpovednosť, environmentálne škody či porušenie osobnostných práv.\n\nObe nariadenia sú univerzálne – rozhodné právo môže byť aj právo štátu mimo EÚ. Judikatúra Súdneho dvora EÚ spresňuje výklad pojmov ako „škoda“, „obvyklý pobyt“, „zmluva“, „slabšia strana“ či „zjavne užší vzťah“, najmä v rozsudkoch Intercontainer, Lazar, Kainz a Verein für Konsumenteninformation.",
+  "quiz": [
+    {
+      "q": "Ktoré nariadenie upravuje rozhodné právo pre zmluvné záväzky?",
+      "options": ["Rím I", "Rím II", "Brusel Ia", "Haagsky protokol"],
+      "correct": 0,
+      "explanation": "Zmluvné záväzky upravuje nariadenie Rím I."
+    },
+    {
+      "q": "Ktoré nariadenie upravuje rozhodné právo pre delikty?",
+      "options": ["Rím II", "Rím I", "Brusel Ia", "EET"],
+      "correct": 0,
+      "explanation": "Delikty upravuje nariadenie Rím II."
+    },
+    {
+      "q": "Základné pravidlo Rím I je:",
+      "options": ["Autonómia vôle strán", "Lex loci damni", "Právo štátu súdu", "Právo žalovaného"],
+      "correct": 0,
+      "explanation": "Rím I vychádza z autonómie vôle."
+    },
+    {
+      "q": "Základné pravidlo Rím II je:",
+      "options": ["Lex loci damni", "Voľba práva", "Právo žalobcu", "Právo štátu súdu"],
+      "correct": 0,
+      "explanation": "Rím II vychádza z práva štátu, kde vznikla škoda."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka škody pri dopravných nehodách?",
+      "options": ["Lazar", "Kainz", "Intercontainer", "Verein für Konsumenteninformation"],
+      "correct": 0,
+      "explanation": "Lazar sa týka škody pri dopravných nehodách."
+    }
+  ],
+  "tiles": [
+    { "term": "Rím I", "definition": "Rozhodné právo pre zmluvné záväzky." },
+    { "term": "Rím II", "definition": "Rozhodné právo pre mimozmluvné záväzky." },
+    { "term": "Autonómia vôle", "definition": "Strany si môžu zvoliť rozhodné právo." },
+    { "term": "Lex loci damni", "definition": "Právo štátu, kde vznikla škoda." },
+    { "term": "Slabšia strana", "definition": "Spotrebiteľ alebo zamestnanec s osobitnou ochranou." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Intercontainer: voľba práva v obchodných zmluvách",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Strany si zvolili právo mimo EÚ, ale vznikol spor o rozsah voľby práva.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2010:40 (C‑133/08 Intercontainer)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil voľbu práva?",
+          "options": [
+            "Voľba práva musí byť výslovná alebo jasne vyplývať zo zmluvy",
+            "Voľba práva môže byť predpokladaná",
+            "Voľba práva nie je možná"
+          ],
+          "correct": 0,
+          "explanation": {
+            "correct": "Voľba práva musí byť výslovná alebo jasne vyplývať zo zmluvy.",
+            "wrong": "Nesprávne. Voľba práva nemôže byť len predpokladaná."
+          },
+          "source": "ECLI:EU:C:2010:40"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Lazar: škoda pri dopravných nehodách",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Rodina obete dopravnej nehody žiadala náhradu škody v inom členskom štáte.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2015:802 (C‑350/14 Lazar)"
+        },
+        {
+          "question": "Ako Súdny dvor určil rozhodné právo?",
+          "options": [
+            "Právo štátu súdu",
+            "Právo štátu, kde vznikla škoda",
+            "Právo štátu, kde má žalobca pobyt"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Rozhodné právo je právo štátu, kde vznikla škoda.",
+            "wrong": "Nesprávne. Pobyt žalobcu nie je rozhodujúci."
+          },
+          "source": "ECLI:EU:C:2015:802"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Kainz: výrobková zodpovednosť",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Spotrebiteľ utrpel škodu spôsobenú vadným výrobkom zakúpeným v inom štáte.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2013:568 (C‑45/13 Kainz)"
+        },
+        {
+          "question": "Ako Súdny dvor určil rozhodné právo?",
+          "options": [
+            "Právo štátu výrobcu",
+            "Právo štátu, kde bol výrobok zakúpený",
+            "Právo štátu, kde vznikla škoda"
+          ],
+          "correct": 2,
+          "explanation": {
+            "correct": "Rozhodné právo je právo štátu, kde vznikla škoda.",
+            "wrong": "Nesprávne. Miesto výroby nie je rozhodujúce."
+          },
+          "source": "ECLI:EU:C:2013:568"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2010:40; ECLI:EU:C:2015:802; ECLI:EU:C:2013:568; nariadenia Rím I a Rím II",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
