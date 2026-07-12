@@ -624,6 +624,8 @@
 
 <!-- REPORTS SYSTEM – inline pre spoľahlivé načítanie -->
 <script type="module">
+import { renderSource } from './scripts/sourceUtil.js';
+
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
@@ -718,9 +720,17 @@ window.openReportModal = function(prefill = {}) {
               maxlength="2000"></textarea>
             <div style="text-align:right"><span id="rArgCount" class="small muted">0 / 2000</span></div>
           </div>
-          <div style="margin-bottom:16px">
-            <label class="form-label">Právny zdroj (zákon, judikát)</label>
+          <div style="margin-bottom:12px">
+            <label class="form-label">Zdroj (paragraf zákona alebo odkaz) *</label>
             <input id="rSrc" class="form-input" type="text" placeholder="napr. § 42 Zákonníka práce, NS SR 3Cdo/123/2020" maxlength="200"/>
+          </div>
+          <div style="margin-bottom:12px">
+            <label class="form-label">URL zdroja <span class="small muted">(voliteľné)</span></label>
+            <input id="rSrcUrl" class="form-input" type="text" placeholder="https://www.slov-lex.sk/..." maxlength="300"/>
+          </div>
+          <div style="margin-bottom:16px" id="rSrcAccessedRow">
+            <label class="form-label">Mesiac prístupu <span class="small muted">(ak si uviedol/la URL)</span></label>
+            <input id="rSrcAccessed" class="form-input" type="month"/>
           </div>
           <div id="rError" style="display:none;color:#dc2626;font-size:13px;margin-bottom:8px"></div>
           <div style="display:flex;gap:8px">
@@ -759,12 +769,20 @@ window.openReportModal = function(prefill = {}) {
       const area = modal.querySelector('#rArea').value;
       const qid  = modal.querySelector('#rQid').value.trim();
       const arg  = modal.querySelector('#rArg').value.trim();
+      const srcCitation = modal.querySelector('#rSrc').value.trim();
+      const srcUrl = modal.querySelector('#rSrcUrl').value.trim();
+      const srcAccessed = modal.querySelector('#rSrcAccessed').value.trim();
       const errEl = modal.querySelector('#rError');
 
       if (!area) { errEl.textContent='Vyber oblasť.'; errEl.style.display='block'; return; }
       if (!qid)  { errEl.textContent='Zadaj číslo otázky.'; errEl.style.display='block'; return; }
       if (arg.length < 50) { errEl.textContent='Argumentácia musí mať aspoň 50 znakov.'; errEl.style.display='block'; return; }
+      if (!srcCitation) { errEl.textContent='Zadaj zdroj (paragraf zákona alebo odkaz).'; errEl.style.display='block'; return; }
+      if (srcUrl && !srcAccessed) { errEl.textContent='Pri URL zdroji zadaj aj mesiac prístupu.'; errEl.style.display='block'; return; }
       errEl.style.display = 'none';
+
+      const zdroj = { type: srcUrl ? 'web' : 'zakon', citation: srcCitation };
+      if (srcUrl) { zdroj.url = srcUrl; zdroj.accessed = srcAccessed; }
 
       const btn = modal.querySelector('#rSubmit');
       btn.disabled = true; btn.textContent = 'Odosielam...';
@@ -786,7 +804,8 @@ window.openReportModal = function(prefill = {}) {
             questionText: modal.querySelector('#rQtext').value.trim(),
             type: selType,
             argument: arg,
-            source: modal.querySelector('#rSrc').value.trim(),
+            source: srcCitation,
+            zdroj,
             status: 'in_court',
             createdAt: Date.now(),
             votes: { for: 0, against: 0 }
@@ -908,7 +927,7 @@ window.openCourtroomModal = async function() {
         </div>
         ${r.questionText ? `<div class="courtroom-question-text small">"${r.questionText}"</div>` : ''}
         <div class="courtroom-argument">${r.argument}</div>
-        ${r.source ? `<div class="small muted" style="margin-top:4px">📚 ${r.source}</div>` : ''}
+        ${r.zdroj ? renderSource(r.zdroj) : (r.source ? `<div class="small muted" style="margin-top:4px">📚 ${r.source}</div>` : '')}
         ${verdictHtml}
         <div class="courtroom-actions">
           <div style="display:flex;gap:6px">

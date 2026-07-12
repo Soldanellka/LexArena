@@ -165,6 +165,7 @@
     text-shadow: 0 2px 12px rgba(0,0,0,0.4);
   }
   .bf-video-answer { font-size: 17px; line-height: 1.7; }
+  .bf-video-source, .bf-video-source * { color: rgba(255,255,255,0.55) !important; }
   .bf-sentence {
     color: rgba(255,255,255,0.45);
     transition: color 200ms ease;
@@ -251,6 +252,7 @@
       </div>
       <div class="small muted" style="text-align:center;margin-top:8px">Zapamätaj si definíciu a klikni, keď si pripravený/á</div>
       <div class="small muted" style="text-align:center;margin-top:4px" id="mtReadTimeHint"></div>
+      <div id="mtSourceLine" style="text-align:center"></div>
       <div style="margin-top:10px">
         <button class="btn btn-primary" id="mtReadyBtn" type="button" style="width:100%">Zapamätal/a som si ✅</button>
       </div>
@@ -295,6 +297,7 @@
       <div class="mt-seal-badge" id="mtReviewSealBadge" style="display:none"></div>
       <div class="mt-review-question" id="mtReviewQuestion"></div>
       <div class="mt-reveal-box" id="mtReviewAnswerBox"></div>
+      <div id="mtReviewSourceLine"></div>
       <div class="mt-video-row">
         <button class="btn mt-video-btn" id="mtReviewWatchVideoBtn" type="button">▶️ Pozrieť ako video</button>
         <button class="btn mt-video-btn" id="mtReviewYoutubeBtn" type="button" style="display:none">🎬 Video</button>
@@ -309,6 +312,12 @@
         <textarea id="mtReviewEditQuestion" class="mt-review-textarea"></textarea>
         <div class="small" style="margin-bottom:4px;font-weight:600">Odpoveď:</div>
         <textarea id="mtReviewEditAnswer" class="mt-review-textarea"></textarea>
+        <div class="small" style="margin-bottom:4px;font-weight:600">Zdroj (paragraf zákona alebo odkaz) *</div>
+        <input id="mtReviewEditSrc" class="form-input" type="text" placeholder="napr. § 42 Zákonníka práce" style="width:100%;box-sizing:border-box"/>
+        <div class="small" style="margin:8px 0 4px;font-weight:600">URL zdroja <span class="small muted">(voliteľné)</span></div>
+        <input id="mtReviewEditSrcUrl" class="form-input" type="text" placeholder="https://www.slov-lex.sk/..." style="width:100%;box-sizing:border-box"/>
+        <div class="small" style="margin:8px 0 4px;font-weight:600">Mesiac prístupu <span class="small muted">(ak je URL)</span></div>
+        <input id="mtReviewEditSrcAccessed" class="form-input" type="month" style="width:100%;box-sizing:border-box"/>
         <div class="mt-actions">
           <button class="btn btn-primary" id="mtReviewSaveBtn" type="button">💾 Uložiť</button>
           <button class="btn" id="mtReviewCancelBtn" type="button">Zrušiť</button>
@@ -356,6 +365,7 @@ import { econSpend, econBalance, ECONOMY_CONFIG } from './scripts/economy.js';
 import { getRole } from './scripts/economyConfig.js';
 import { showRewardToast } from './ui.js';
 import { openVideoPlayer } from './biflovackaVideo.js';
+import { renderSource } from './scripts/sourceUtil.js';
 
 const $ = id => document.getElementById(id);
 
@@ -603,6 +613,7 @@ function showReviewItem(areaSlug) {
   if (reviewIndex >= reviewList.length) {
     $('mtReviewQuestion').textContent = '';
     $('mtReviewAnswerBox').textContent = '✅ Kontrola oblasti dokončená – prešiel/prešla si všetky definície.';
+    $('mtReviewSourceLine').innerHTML = '';
     $('mtReviewActions').style.display = 'none';
     $('mtReviewSealBadge').style.display = 'none';
     updateYoutubeButton('mtReviewYoutubeBtn', null);
@@ -614,6 +625,7 @@ function showReviewItem(areaSlug) {
   $('mtReviewActions').style.display = 'flex';
   $('mtReviewQuestion').textContent = currentItem.question || '';
   $('mtReviewAnswerBox').textContent = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
+  $('mtReviewSourceLine').innerHTML = renderSource(currentItem.zdroj);
   updateSealBadge($('mtReviewSealBadge'), currentItem);
   updateYoutubeButton('mtReviewYoutubeBtn', currentItem);
   resetVideoPlays();
@@ -630,6 +642,10 @@ function setupReviewMode() {
     if (!currentItem) return;
     $('mtReviewEditQuestion').value = currentItem.question || '';
     $('mtReviewEditAnswer').value = currentItem.definition || currentItem.summary || currentItem.legalSentence || '';
+    const zdroj = currentItem.zdroj || null;
+    $('mtReviewEditSrc').value = zdroj ? (zdroj.citation || '') : '';
+    $('mtReviewEditSrcUrl').value = zdroj ? (zdroj.url || '') : '';
+    $('mtReviewEditSrcAccessed').value = zdroj ? (zdroj.accessed || '') : '';
     $('mtReviewActions').style.display = 'none';
     $('mtReviewEditForm').style.display = 'block';
   });
@@ -644,7 +660,16 @@ function setupReviewMode() {
     const answer = $('mtReviewEditAnswer').value.trim();
     if (!answer) { alert('Odpoveď nemôže byť prázdna.'); return; }
 
-    const result = await saveDefinitionOverride(slug, currentItem, { question, answer });
+    const srcCitation = $('mtReviewEditSrc').value.trim();
+    const srcUrl = $('mtReviewEditSrcUrl').value.trim();
+    const srcAccessed = $('mtReviewEditSrcAccessed').value.trim();
+    if (!srcCitation) { alert('Zdroj (paragraf zákona alebo odkaz) je povinný.'); return; }
+    if (srcUrl && !srcAccessed) { alert('Pri URL zdroji zadaj aj mesiac prístupu.'); return; }
+
+    const zdroj = { type: srcUrl ? 'web' : 'zakon', citation: srcCitation };
+    if (srcUrl) { zdroj.url = srcUrl; zdroj.accessed = srcAccessed; }
+
+    const result = await saveDefinitionOverride(slug, currentItem, { question, answer, zdroj });
     if (!result.ok) { alert(result.message || 'Uloženie zlyhalo.'); return; }
 
     showRewardToast('✅ Opravené – definícia nesie pečať garanta');
@@ -707,6 +732,7 @@ function watchCurrentAsVideo() {
   openVideoPlayer({
     question: currentItem.question || '',
     reference: referenceText(),
+    zdroj: currentItem.zdroj,
     defIndex,
     playNumber: videoPlays,
     canReplay: canReplayVideo,
@@ -727,6 +753,7 @@ async function handleVideoJokerClick() {
   openVideoPlayer({
     question: currentItem.question || '',
     reference: referenceText(),
+    zdroj: currentItem.zdroj,
     defIndex,
     playNumber: result.playNumber,
     canReplay: canReplayVideo,
@@ -798,6 +825,7 @@ function showNextItem(areaSlug) {
   $('mtRevealText').textContent = revealText;
   $('mtAnswerInput').value = '';
   updateReadTimeHint(revealText);
+  $('mtSourceLine').innerHTML = renderSource(item.zdroj);
   updateSealBadge($('mtSealBadge'), item);
   updateYoutubeButton('mtYoutubeBtn', item);
   resetJokers();
@@ -867,6 +895,7 @@ function retryItem(areaSlug) {
   const revealText = currentItem.definition || currentItem.summary || currentItem.legalSentence;
   $('mtRevealText').textContent = revealText;
   updateReadTimeHint(revealText);
+  $('mtSourceLine').innerHTML = renderSource(currentItem.zdroj);
   updateSealBadge($('mtSealBadge'), currentItem);
   updateYoutubeButton('mtYoutubeBtn', currentItem);
   resetJokers();

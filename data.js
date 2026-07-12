@@ -105,7 +105,7 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       if (Array.isArray(json.tiles)) {
         json.tiles.forEach(t => {
           if (t && t.term && t.definition) {
-            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json','') });
+            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json',''), zdroj: t.zdroj || null });
           }
         });
       }
@@ -118,7 +118,8 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
               title: c.title || 'Prípad',
               difficulty: c.difficulty || '',
               steps: c.steps,
-              source: file.replace('.json','')
+              source: file.replace('.json',''),
+              zdroj: c.zdroj || null
             });
           }
         });
@@ -131,6 +132,7 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
             options: q.options,
             correct: q.correct,
             explanation: q.explanation || null,
+            zdroj: q.zdroj || null,
             /* =========================
                🔥 OPRAVA: source sa nastavuje podľa
                skutočného súboru (napr. "A23"), nie podľa

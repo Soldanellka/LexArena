@@ -108,6 +108,7 @@ function packagesFromManualFile(slug, manual) {
         okruhId: okruh.id,
         area: slug,
         source: okruh.title || '',
+        zdroj: def.zdroj || null,
         question: def.question || '',
         correctAnswer: def.answer,
         definition: def.answer,
@@ -151,6 +152,7 @@ function applyOverrides(packages, overrides) {
       correctAnswer: override.answer || pkg.correctAnswer,
       definition: override.answer || pkg.definition,
       legalSentence: override.answer || pkg.legalSentence,
+      zdroj: override.zdroj || pkg.zdroj || null,
       seal: 'garant',
       sealedBy: override.editedBy || ''
     };
@@ -217,6 +219,7 @@ export async function generateMemoryPackages(slug) {
           id: `${slug}_${String(n).padStart(3, '0')}`,
           area: slug,
           source: `A${i}`,
+          zdroj: q.zdroj || null,
           question: q.question || '',
           correctAnswer,
           definition: matchedTile ? matchedTile.definition : '',

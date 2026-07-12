@@ -18,6 +18,7 @@
 import { speakText } from './memoryTrainer.js';
 import { getAvatarCatalog, getModeratorForIndex, avatarStateSrc, getAvatarGender } from './scripts/avatarCatalog.js';
 import { ECONOMY_CONFIG } from './scripts/economy.js';
+import { renderSource } from './scripts/sourceUtil.js';
 
 const SLEEPY_OUTRO = true;
 const TEXT_MODE_KEY = 'bfVideoTextMode';       // 'letters' | 'sentences'
@@ -234,6 +235,7 @@ function buildOverlay() {
       <div class="bf-video-content">
         <div class="bf-video-question" id="bfVideoQuestion"></div>
         <div class="bf-video-answer" id="bfVideoAnswer"></div>
+        <div class="bf-video-source" id="bfVideoSource"></div>
       </div>
     </div>
     <div class="bf-video-dim" id="bfVideoDim"></div>
@@ -267,7 +269,7 @@ function stateForPlayNumber(n) {
 }
 
 export async function openVideoPlayer({
-  question, reference, defIndex = 0, playNumber = 1,
+  question, reference, zdroj = null, defIndex = 0, playNumber = 1,
   canReplay, onRequestReplay,
   onExit, onNext, nextLabel = '➡️ Ďalšia definícia'
 } = {}) {
@@ -292,6 +294,7 @@ export async function openVideoPlayer({
   answerEl.innerHTML = sentences.map((s, i) =>
     `<span class="bf-sentence" data-idx="${i}"></span>`
   ).join(' ');
+  document.getElementById('bfVideoSource').innerHTML = renderSource(zdroj);
 
   const progressFill = document.getElementById('bfVideoProgressFill');
   const endBox = document.getElementById('bfVideoEnd');

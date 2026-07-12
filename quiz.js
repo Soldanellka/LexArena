@@ -16,6 +16,7 @@ import { incrementGamesPlayed } from './avatars.js';
 import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js';
 import { playSound } from './audio.js';
 import { econEnergy, econSpend, ECONOMY_CONFIG } from './scripts/economy.js';
+import { renderSource } from './scripts/sourceUtil.js';
 
 const SEAL_EMOJI = { bronze: '🥉', silver: '🥈', gold: '🥇', academic: '🎓' };
 
@@ -130,6 +131,8 @@ export function renderQuestion(first = false){
       if (oldHint) oldHint.remove();
       const oldSeal = parent.querySelector('#questionSealBadge');
       if (oldSeal) oldSeal.remove();
+      const oldSource = parent.querySelector('#questionSourceLine');
+      if (oldSource) oldSource.remove();
 
       /* 🏅 Pečať auditu – ak má otázka schválené nahlásenie (z cache, žiadne čítanie Firebase tu) */
       const areaTitle = resolveAreaTitle();
@@ -142,6 +145,11 @@ export function renderQuestion(first = false){
         badge.textContent = `${SEAL_EMOJI[seal.seal] || '🥉'} Auditované · ${seal.nick}${seal.byGarant ? ' 🎓' : ''}`;
         parent.appendChild(badge);
       }
+
+      const sourceLine = document.createElement('div');
+      sourceLine.id = 'questionSourceLine';
+      sourceLine.innerHTML = renderSource(q.zdroj);
+      parent.appendChild(sourceLine);
 
       /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
       const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
@@ -464,6 +472,7 @@ window.startDuelQuiz = function(questions){
     correct: typeof q.correct === 'number' ? q.correct : 0,
     id: q.id || null,
     source: q.source || null,
+    zdroj: q.zdroj || null,
     selectedIndex: null
   }));
 

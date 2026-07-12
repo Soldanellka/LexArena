@@ -11,6 +11,7 @@ import {
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
+import { renderSource } from './scripts/sourceUtil.js';
 
 /* =========================
    Storage keys
@@ -459,6 +460,7 @@ function renderJsonCase(container, areaTitle) {
   });
 
   html += `</div>`;
+  html += renderSource(c.zdroj);
 
   // Výsledok prípadu
   if (allAnswered && questionSteps.length) {

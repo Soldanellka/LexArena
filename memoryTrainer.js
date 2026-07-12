@@ -430,11 +430,14 @@ export function getAllMemoryItems(slug) {
    ČERSTVO tesne pred zápisom (nie z cache) – ochrana proti
    podvrhnutej localStorage. Zároveň aktualizuje balíček v pamäti
    pre túto reláciu, nech sa pečať zobrazí okamžite bez refreshu. */
-export async function saveDefinitionOverride(slug, pkg, { question, answer }) {
+export async function saveDefinitionOverride(slug, pkg, { question, answer, zdroj }) {
   const nick = getNick();
   const db = getDb();
   if (!nick || !db || !pkg || !pkg.defKey) {
     return { ok: false, message: 'Chýba prihlásenie alebo definícia.' };
+  }
+  if (!zdroj || !zdroj.citation) {
+    return { ok: false, message: 'Zdroj (paragraf zákona alebo odkaz) je povinný.' };
   }
 
   const role = await getRole(nick);
@@ -445,6 +448,7 @@ export async function saveDefinitionOverride(slug, pkg, { question, answer }) {
   const override = {
     question: question || '',
     answer: answer || '',
+    zdroj,
     editedBy: nick,
     role,
     ts: Date.now(),
@@ -469,6 +473,7 @@ export async function saveDefinitionOverride(slug, pkg, { question, answer }) {
         correctAnswer: override.answer,
         definition: override.answer,
         legalSentence: override.answer,
+        zdroj: override.zdroj,
         seal: 'garant',
         sealedBy: nick
       };
