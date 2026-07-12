@@ -114,6 +114,12 @@ export const ECONOMY_CONFIG = {
     MONTHLY_BONUS: 20 // každému aktívnemu hráčovi víťaznej fakulty na konci mesiaca
   },
 
+  // ŠTÁTNICOVÁ SIEŇ – prototyp (skipCap: true pri odmene, je to výkon, nie grind)
+  STATNICE: {
+    EXAM_COST: 15,                          // econSpend pred štartom (admin zadarmo – rieši econSpend)
+    EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 } // podľa známky zo záverečnej spätnej väzby
+  },
+
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
   PACKS: {
     small:  { sg: 100, eur: 1.99 },

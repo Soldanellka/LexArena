@@ -2689,6 +2689,115 @@ body {
   box-shadow: 0 6px 16px rgba(240,138,166,0.35);
 }
 
+/* ============================================================
+   ⚖️ ŠTÁTNICOVÁ SIEŇ – prototyp (Pracovné právo)
+============================================================ */
+.statnice-overlay {
+  position: fixed; inset: 0; z-index: 5000;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+  padding: calc(14px + env(safe-area-inset-top)) 16px calc(14px + env(safe-area-inset-bottom));
+  color: #fff;
+}
+.statnice-bg {
+  position: fixed; inset: 0; z-index: -1;
+  background: linear-gradient(135deg, #1e3a6e, #0f0d12, #4a1942);
+  background-size: 200% 200%;
+  animation: statniceBgMove 20s ease infinite;
+}
+@keyframes statniceBgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .statnice-bg { animation: none; }
+}
+.statnice-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+}
+.statnice-title { font-family: 'Lora', serif; font-weight: 700; font-size: 18px; }
+.statnice-close-btn { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+.statnice-commission {
+  display: flex; justify-content: center; gap: 16px; margin-bottom: 16px;
+}
+.statnice-commissioner {
+  height: 110px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+}
+
+.statnice-content {
+  max-width: 640px; width: 100%; margin: 0 auto;
+  background: rgba(20,16,24,0.55);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px; padding: 20px 24px;
+}
+
+.statnice-timer {
+  text-align: center; font-family: 'Lora', serif; font-size: 32px; font-weight: 700;
+  margin-bottom: 14px;
+}
+.statnice-topics { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.statnice-topic-card {
+  background: rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px;
+}
+.statnice-topic-num { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; margin-bottom: 4px; }
+.statnice-topic-text { font-weight: 600; line-height: 1.4; }
+
+.statnice-notes {
+  width: 100%; min-height: 100px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08); color: #fff; padding: 10px 12px; font-size: 14px;
+  margin-bottom: 14px; resize: vertical;
+}
+.statnice-notes::placeholder { color: rgba(255,255,255,0.5); }
+
+.statnice-ready-btn { width: 100%; padding: 12px; font-weight: 700; }
+
+.statnice-question-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; margin-bottom: 6px; }
+.statnice-current-question { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; }
+
+.statnice-answer-input {
+  width: 100%; min-height: 120px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08); color: #fff; padding: 10px 12px; font-size: 14px;
+  margin: 8px 0 12px; resize: vertical;
+}
+.statnice-answer-input::placeholder { color: rgba(255,255,255,0.5); }
+
+.statnice-answer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.statnice-answer-actions .btn { flex: 1; min-width: 140px; }
+
+.statnice-followup {
+  margin-top: 14px; padding: 12px 14px; border-radius: 10px;
+  background: rgba(240,138,166,0.15); border: 1px solid rgba(240,138,166,0.35);
+  font-size: 14px; line-height: 1.5;
+}
+
+.statnice-grade {
+  text-align: center; font-family: 'Lora', serif; font-size: 28px; font-weight: 700;
+  margin-bottom: 16px;
+}
+.statnice-fb-section { margin-bottom: 14px; }
+.statnice-fb-section strong { display: block; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; opacity: .8; }
+.statnice-fb-section ul { padding-left: 20px; margin: 0; }
+.statnice-fb-section li { margin-bottom: 4px; line-height: 1.5; }
+.statnice-fb-zaver { font-style: italic; margin: 14px 0; line-height: 1.5; }
+.statnice-fb-reward {
+  text-align: center; font-weight: 700; font-size: 16px;
+  background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.35);
+  border-radius: 10px; padding: 10px; margin-bottom: 14px;
+}
+.statnice-finish-btn { width: 100%; padding: 12px; font-weight: 700; }
+
+@media (max-width: 640px) {
+  .statnice-content { padding: 16px 18px; }
+  .statnice-commissioner { height: 80px; }
+  .statnice-title { font-size: 15px; }
+  .statnice-timer { font-size: 26px; }
+  .statnice-answer-actions .btn { min-width: 100%; }
+}
+
 @media (max-width: 480px) {
   .duel-challenge-modal {
     padding: 20px 16px;

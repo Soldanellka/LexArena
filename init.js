@@ -2656,6 +2656,16 @@ function attachEvents() {
     });
   }
 
+  /* ⚖️ Štátnicová sieň – prototyp (len Pracovné právo) */
+  const openStatniceBtn = $('openStatniceBtn');
+  if (openStatniceBtn) {
+    openStatniceBtn.addEventListener('click', async () => {
+      const areaName = window.__selectedAreaName || '';
+      const { openStatniceHall } = await import('./scripts/statnice.js');
+      openStatniceHall(areaName);
+    });
+  }
+
   /* 🔥 Banka duelov */
   const toggleDuelBankBtn = $('toggleDuelBankBtn');
   const duelBankBox = $('duelBank');
