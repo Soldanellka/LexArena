@@ -1,8 +1,104 @@
 {
-  "id": "7",
+  "id": "A7",
   "title": "Európska komisia – zloženie, organizácia a právomoci",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "summary": "Európska komisia je exekutívnym orgánom Európskej únie a predstavuje „strážkyňu zmlúv“. Je upravená v čl. 17 ZEÚ a čl. 244 – 250 ZFEÚ. Komisia dohliada na uplatňovanie práva EÚ, navrhuje legislatívu, vykonáva rozpočet a zastupuje Úniu navonok v oblastiach, ktoré jej zmluvy zverujú.\n\nKomisia pozostáva z jedného komisára za každý členský štát, vrátane predsedu a vysokého predstaviteľa pre zahraničné veci a bezpečnostnú politiku. Predsedu Komisie navrhuje Európska rada a volí Európsky parlament. Komisári sú menovaní na päť rokov a musia byť úplne nezávislí od vlád členských štátov.\n\nOrganizácia Komisie zahŕňa kolégium komisárov, generálne riaditeľstvá (DG), kabinet predsedu a kabinet jednotlivých komisárov. Komisia prijíma rozhodnutia kolektívne, pričom každý komisár má rovnaké hlasovacie právo.\n\nPrávomoci Komisie zahŕňajú legislatívnu iniciatívu, dohľad nad implementáciou práva EÚ, vedenie konaní o porušení povinnosti členského štátu, správu rozpočtu, zastupovanie Únie v medzinárodných rokovaniach a vykonávanie politík EÚ. Komisia má tiež právomoc prijímať vykonávacie akty.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje nezávislosť Komisie, jej právomoci pri dohľade nad členskými štátmi a jej úlohu v inštitucionálnej rovnováhe, najmä v rozsudkoch C‑424/99, C‑427/12 a C‑270/12.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje Európsku komisiu?",
+      "options": ["Čl. 17 ZEÚ", "Čl. 14 ZEÚ", "Čl. 288 ZFEÚ", "Čl. 49 ZEÚ"],
+      "correct": 0,
+      "explanation": "Čl. 17 ZEÚ upravuje úlohy a zloženie Európskej komisie."
+    },
+    {
+      "q": "Kto volí predsedu Európskej komisie?",
+      "options": ["Rada EÚ", "Európsky parlament", "Európska rada", "Súdny dvor"],
+      "correct": 1,
+      "explanation": "Predsedu Komisie volí Európsky parlament na návrh Európskej rady."
+    },
+    {
+      "q": "Aká je hlavná úloha Komisie?",
+      "options": ["Prijímať legislatívne akty", "Dohliadať na uplatňovanie práva EÚ", "Zastupovať členské štáty", "Riadiť Európsku centrálnu banku"],
+      "correct": 1,
+      "explanation": "Komisia je strážkyňou zmlúv a dohliada na uplatňovanie práva EÚ."
+    },
+    {
+      "q": "Ako Komisia prijíma rozhodnutia?",
+      "options": ["Predseda rozhoduje sám", "Každý komisár má právo veta", "Kolektívne ako kolégium", "Rozhoduje Rada EÚ"],
+      "correct": 2,
+      "explanation": "Komisia prijíma rozhodnutia kolektívne ako kolégium."
+    },
+    {
+      "q": "Ktorý rozsudok sa týka nezávislosti Komisie?",
+      "options": ["C‑424/99", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑157/21 Komisia/Maďarsko"],
+      "correct": 0,
+      "explanation": "V rozsudku C‑424/99 Súdny dvor zdôraznil nezávislosť Komisie."
+    }
+  ],
+  "tiles": [
+    { "term": "Strážkyňa zmlúv", "definition": "Komisia dohliada na uplatňovanie práva EÚ (čl. 17 ZEÚ)." },
+    { "term": "Kolégium komisárov", "definition": "Komisia prijíma rozhodnutia kolektívne, každý komisár má rovnaký hlas." },
+    { "term": "Legislatívna iniciatíva", "definition": "Komisia navrhuje legislatívu EÚ." },
+    { "term": "Konanie o porušení povinnosti", "definition": "Komisia môže žalovať členský štát za porušenie práva EÚ." },
+    { "term": "Nezávislosť komisárov", "definition": "Komisári nesmú prijímať pokyny od vlád členských štátov." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Nezávislosť Komisie",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát sa pokúsil ovplyvniť rozhodovanie komisára v oblasti hospodárskej súťaže.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2001:134 (C‑424/99 Komisia v. Rakúsko)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil nezávislosť Komisie?",
+          "options": [
+            "Komisári môžu prijímať pokyny od vlád",
+            "Komisári musia konať úplne nezávisle",
+            "Komisári sú podriadení Rade EÚ"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že komisári musia konať úplne nezávisle od vlád členských štátov.",
+            "wrong": "Nesprávne. Komisári nesmú prijímať pokyny od vlád."
+          },
+          "source": "ECLI:EU:C:2001:134 (C‑424/99 Komisia v. Rakúsko)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Právomoci Komisie pri dohľade nad členskými štátmi",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Členský štát odmietol implementovať smernicu v stanovenej lehote.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v. Belgicko)"
+        },
+        {
+          "question": "Ako Súdny dvor vyložil právomoci Komisie?",
+          "options": [
+            "Komisia nemôže začať konanie o porušení povinnosti",
+            "Komisia môže žalovať členský štát za neimplementovanie práva EÚ",
+            "Komisia môže sama implementovať smernicu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor potvrdil, že Komisia môže začať konanie o porušení povinnosti, ak členský štát neimplementuje smernicu.",
+            "wrong": "Nesprávne. Komisia nemôže sama implementovať smernicu."
+          },
+          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v. Belgicko)"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:2001:134; ECLI:EU:C:2014:231; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
