@@ -1,8 +1,130 @@
 {
-  "id": "18",
-  "title": "Smernica Únie – základné znaky, transpozícia, účinky",
-  "summary": "",
-  "quiz": [],
-  "tiles": [],
-  "cases": []
+  "id": "A18",
+  "title": "Smernica Európskej únie – základné znaky, transpozícia, účinky",
+  "summary": "Smernica je právny akt sekundárneho práva Európskej únie upravený v čl. 288 ZFEÚ. Je záväzná pre členské štáty, pokiaľ ide o výsledok, ktorý sa má dosiahnuť, ale ponecháva im voľbu formy a prostriedkov. Smernica nie je priamo uplatniteľná, vyžaduje transpozíciu do vnútroštátneho práva.\n\nTranspozícia smernice znamená prijatie vnútroštátnych právnych predpisov, ktoré zabezpečia dosiahnutie cieľov smernice. Transpozícia musí byť úplná, presná a včasná. Členské štáty nesmú transponovať smernicu spôsobom, ktorý by menil jej podstatu alebo obmedzoval jej účinky.\n\nÚčinky smernice môžu byť priame (vertikálne), ak sú splnené podmienky: ustanovenie je jasné, presné a bezpodmienečné, a členský štát smernicu netransponoval alebo ju transponoval nesprávne. Smernica nemá horizontálny priamy účinok. Nepriamy účinok znamená povinnosť vnútroštátnych súdov vykladať vnútroštátne právo v súlade so smernicou (Von Colson, Marleasing).\n\nJudikatúra Súdneho dvora EÚ potvrdzuje povinnosť členských štátov transponovať smernice, podmienky priameho účinku a povinnosť výkladu v súlade so smernicami, najmä v rozsudkoch C‑41/74, C‑152/84 a C‑106/89.",
+  "quiz": [
+    {
+      "q": "Ktorý článok upravuje smernicu?",
+      "options": ["Čl. 288 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 20 ZFEÚ"],
+      "correct": 0,
+      "explanation": "Smernica je upravená v čl. 288 ZFEÚ."
+    },
+    {
+      "q": "Vyžaduje smernica transpozíciu?",
+      "options": ["Nie", "Áno", "Len v niektorých štátoch", "Len pri nariadeniach"],
+      "correct": 1,
+      "explanation": "Smernica vyžaduje transpozíciu do vnútroštátneho práva."
+    },
+    {
+      "q": "Má smernica horizontálny priamy účinok?",
+      "options": ["Áno", "Nie", "Len pri nariadeniach", "Len pri rozhodnutiach"],
+      "correct": 1,
+      "explanation": "Smernica nemá horizontálny priamy účinok."
+    },
+    {
+      "q": "Čo znamená nepriamy účinok smernice?",
+      "options": ["Priama aplikácia smernice", "Výklad vnútroštátneho práva v súlade so smernicou", "Prednosť vnútroštátneho práva", "Zrušenie vnútroštátneho zákona"],
+      "correct": 1,
+      "explanation": "Nepriamy účinok znamená výklad vnútroštátneho práva v súlade so smernicou."
+    },
+    {
+      "q": "Ktorý rozsudok potvrdil podmienky priameho účinku smerníc?",
+      "options": ["C‑41/74 Van Duyn", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal", "C‑399/11 Melloni"],
+      "correct": 0,
+      "explanation": "V rozsudku Van Duyn Súdny dvor potvrdil podmienky priameho účinku smerníc."
+    }
+  ],
+  "tiles": [
+    { "term": "Smernica", "definition": "Záväzná pre členské štáty, ponecháva voľbu formy a prostriedkov." },
+    { "term": "Transpozícia", "definition": "Prenesenie smernice do vnútroštátneho práva." },
+    { "term": "Priamy účinok", "definition": "Vertikálny účinok pri jasných, presných a bezpodmienečných ustanoveniach." },
+    { "term": "Nepriamy účinok", "definition": "Výklad vnútroštátneho práva v súlade so smernicou." },
+    { "term": "Čl. 288 ZFEÚ", "definition": "Upravuje právne akty EÚ vrátane smerníc." }
+  ],
+  "cases": [
+    {
+      "title": "Prípad 1 – Van Duyn: podmienky priameho účinku smerníc",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Jednotlivec sa dovolával smernice, ktorú členský štát netransponoval.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1974:133 (C‑41/74 Van Duyn)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o priamom účinku smerníc?",
+          "options": [
+            "Smernice nikdy nemajú priamy účinok",
+            "Smernica môže mať vertikálny priamy účinok, ak je jasná, presná a bezpodmienečná",
+            "Smernica má horizontálny priamy účinok"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že smernica môže mať vertikálny priamy účinok, ak je jasná, presná a bezpodmienečná.",
+            "wrong": "Nesprávne. Smernica nemá horizontálny priamy účinok."
+          },
+          "source": "ECLI:EU:C:1974:133"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Marshall: zákaz horizontálneho priameho účinku",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Jednotlivec sa dovolával smernice voči súkromnému zamestnávateľovi.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1986:84 (C‑152/84 Marshall)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o horizontálnom účinku?",
+          "options": [
+            "Smernica má horizontálny účinok",
+            "Smernica nemá horizontálny priamy účinok",
+            "Smernica sa neuplatňuje voči štátu"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že smernica nemá horizontálny priamy účinok.",
+            "wrong": "Nesprávne. Smernica sa uplatňuje voči štátu a jeho orgánom."
+          },
+          "source": "ECLI:EU:C:1986:84"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Marleasing: nepriamy účinok smerníc",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Vnútroštátna právna úprava odporovala cieľom smernice o nekalých podmienkach.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1990:395 (C‑106/89 Marleasing)"
+        },
+        {
+          "question": "Ako Súdny dvor rozhodol o výklade vnútroštátneho práva?",
+          "options": [
+            "Súd musí aplikovať vnútroštátnu normu aj pri rozpore",
+            "Súd musí vykladať vnútroštátne právo v súlade so smernicou",
+            "Smernica sa neuplatní, ak nebola transponovaná"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor rozhodol, že vnútroštátne právo sa musí vykladať v súlade so smernicou, aj keď nebolo transponované.",
+            "wrong": "Nesprávne. Nepriamy účinok sa uplatňuje aj pri netransponovaných smerniciach."
+          },
+          "source": "ECLI:EU:C:1990:395"
+        }
+      ]
+    }
+  ],
+  "zdroj": {
+    "type": "judikat",
+    "citation": "ECLI:EU:C:1974:133; ECLI:EU:C:1986:84; ECLI:EU:C:1990:395; čl. 288 ZFEÚ",
+    "url": "https://eur-lex.europa.eu/",
+    "accessed": "2026-01"
+  }
 }
