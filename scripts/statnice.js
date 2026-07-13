@@ -605,6 +605,16 @@ function createRecognizer({ onInterim, onFinalChunk, onSilence, onFatalError }) 
 ============================================================ */
 let overlayEl = null;
 
+/* Poistka proti dvojitému otvoreniu (mobil: ghost-click po touchende,
+   netrpezlivý dvojitý ťuk kým sa čaká na econSpend/pickExamTopics/
+   pickCommission bez okamžitej vizuálnej odozvy). Bez nej druhé
+   prekrývajúce sa volanie openStatniceHall() môže cez closeStatniceHall()
+   odstrániť overlay, ktorý práve zostavilo PRVÉ volanie – na pomalšom
+   mobilnom pripojení (širšie časové okno medzi awaitmi) sa to prejaví
+   ako "obrazovka preblysne a zmizne", zatiaľ čo na rýchlom PC/localhost
+   je okno na kolíziu prakticky nulové. */
+let statniceOpening = false;
+
 function buildOverlay(areaName) {
   const el = document.createElement('div');
   el.className = 'statnice-overlay';
@@ -651,6 +661,9 @@ export function closeStatniceHall() {
 }
 
 export async function openStatniceHall(areaName) {
+  if (statniceOpening) return; // už prebieha otváranie (ghost-click/dvojitý ťuk na mobile)
+  statniceOpening = true;
+  try {
   if (!isStatniceAvailable(areaName)) {
     const available = Object.keys(AREA_CONFIG).join(', ');
     showRewardToast(`⚖️ Štátnicová sieň je zatiaľ dostupná len pre: ${available}.`);
@@ -976,4 +989,7 @@ export async function openStatniceHall(areaName) {
     }
     closeStatniceHall();
   };
+  } finally {
+    statniceOpening = false;
+  }
 }
