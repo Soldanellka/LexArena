@@ -107,6 +107,7 @@ async function openAvatarSelectModal() {
   panel.style.cssText = `
     background:var(--surface,#fff); border-radius:20px;
     padding:28px; max-width:400px; width:90%;
+    max-height:90vh; overflow-y:auto;
     box-shadow:0 20px 60px rgba(0,0,0,0.25);
   `;
 
