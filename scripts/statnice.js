@@ -2,8 +2,11 @@
 
 /* ============================================================
    scripts/statnice.js
-   Štátnicová sieň – interaktívna komisia (v3), zatiaľ len pre
-   Pracovné právo.
+   Štátnicová sieň – interaktívna komisia (v3). Podporované oblasti:
+   Pracovné právo (jeden bazén, dvojica okruhov A(2k-1)+A(2k)) a
+   Občianske právo (DVA oddelené bazény – hmotné + procesné, po
+   jednom náhodnom okruhu z každého). Nová oblasť sa pridáva do
+   AREA_CONFIG nižšie, bez zásahu do existujúcich oblastí.
 
    ⚠️ HODNOTENIE JE LOKÁLNE, NIE CEZ CLAUDE API.
    Zadanie žiada dvojkrokové volanie Claude API (Krok A: extrakcia
@@ -36,12 +39,41 @@ import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
 import { speakText } from '../memoryTrainer.js';
-import { normalizeOkruhText } from './contentNormalize.js';
+import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
+import { renderSource } from './sourceUtil.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
 const PRACOVNE_OKRUH_COUNT = 50; // rovnaký limit ako data.js (A1-A50, A51-53 sa nepoužívajú)
 const PROTOTYPE_AREA_NAME = 'Pracovné právo';
+
+const CIVIL_AREA_NAME = 'Občianske právo';
+const CIVIL_HMOTNE_PATH = LIVE + 'ob-pravo-app/data/hmotne/';
+const CIVIL_HMOTNE_COUNT = 40;
+const CIVIL_PROCESNE_PATH = LIVE + 'ob-pravo-app/data/procesne/';
+const CIVIL_PROCESNE_COUNT = 45;
+
+/* ============================================================
+   REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
+   bez zásahu do existujúcich záznamov.
+   - mode "pair": JEDEN bazén, dvojica okruhov A(2k-1)+A(2k)
+     (rovnaké párovanie ako pojednávania v scripts/duels.js).
+   - mode "dual-pool": DVA oddelené bazény, po JEDNOM náhodnom
+     okruhu z každého (napr. hmotné + procesné právo).
+============================================================ */
+const AREA_CONFIG = {
+  [PROTOTYPE_AREA_NAME]: {
+    mode: 'pair',
+    pool: { path: PRACOVNE_DATA_PATH, count: PRACOVNE_OKRUH_COUNT }
+  },
+  [CIVIL_AREA_NAME]: {
+    mode: 'dual-pool',
+    pools: [
+      { path: CIVIL_HMOTNE_PATH, count: CIVIL_HMOTNE_COUNT, label: 'Hmotné právo' },
+      { path: CIVIL_PROCESNE_PATH, count: CIVIL_PROCESNE_COUNT, label: 'Procesné právo' }
+    ]
+  }
+};
 
 const PREP_SECONDS = 5 * 60;
 const SILENCE_TIMEOUT_MS = 8000;
@@ -54,7 +86,7 @@ function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
 export function isStatniceAvailable(areaName) {
-  return areaName === PROTOTYPE_AREA_NAME;
+  return Object.prototype.hasOwnProperty.call(AREA_CONFIG, areaName);
 }
 
 /* ============================================================
@@ -137,9 +169,9 @@ function extractKeyPoints(rawSummary, title) {
   return sentences.length ? sentences.slice(0, 6) : (title ? [title] : []);
 }
 
-async function fetchOkruh(n) {
+async function fetchOkruh(basePath, n) {
   try {
-    const res = await fetch(`${PRACOVNE_DATA_PATH}A${n}.json`);
+    const res = await fetch(`${basePath}A${n}.json`);
     if (!res.ok) return null;
     const json = await res.json();
     if (!json || !json.title) return null;
@@ -147,14 +179,14 @@ async function fetchOkruh(n) {
     if (!summaryText) return null;
     const keyPoints = extractKeyPoints(summaryText, json.title);
     if (!keyPoints.length) return null;
-    return { id: `A${n}`, title: json.title, keyPoints };
+    return { id: `A${n}`, title: json.title, keyPoints, zdroj: normalizeZdroj(json) };
   } catch (e) {
     return null;
   }
 }
 
-async function pickExamTopics() {
-  const pairCount = Math.floor(PRACOVNE_OKRUH_COUNT / 2); // 25 dvojíc: (A1,A2)…(A49,A50)
+async function pickPairTopics(path, count) {
+  const pairCount = Math.floor(count / 2); // 25 dvojíc: (A1,A2)…(A49,A50)
   const triedPairs = new Set();
   const maxAttempts = Math.min(6, pairCount);
 
@@ -166,10 +198,53 @@ async function pickExamTopics() {
 
     const n1 = pairIdx * 2 + 1;
     const n2 = pairIdx * 2 + 2;
-    const [t1, t2] = await Promise.all([fetchOkruh(n1), fetchOkruh(n2)]);
+    const [t1, t2] = await Promise.all([fetchOkruh(path, n1), fetchOkruh(path, n2)]);
     if (t1 && t2) return [t1, t2];
   }
   return [];
+}
+
+/* Náhodné poradie 1..count (Fisher-Yates) – použité na VYČERPÁVAJÚCE
+   hľadanie jedného platného okruhu v bazéne (skúša každý index nanajvýš
+   raz, kým nenájde okruh s neprázdnym summary, alebo kým bazén
+   nevyčerpá). Zaručuje, že "bazén je prázdny" hlásime len vtedy, keď
+   naozaj ŽIADEN okruh v ňom nemá použiteľné summary. */
+function shuffledIndices(count) {
+  const arr = Array.from({ length: count }, (_, i) => i + 1);
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+async function pickSingleFromPool(path, count) {
+  const order = shuffledIndices(count);
+  for (const n of order) {
+    const t = await fetchOkruh(path, n);
+    if (t) return t;
+  }
+  return null;
+}
+
+/* ============================================================
+   LOSOVANIE KOLA – dispatch podľa AREA_CONFIG danej oblasti.
+============================================================ */
+async function pickExamTopics(areaName) {
+  const config = AREA_CONFIG[areaName];
+  if (!config) return [];
+
+  if (config.mode === 'dual-pool') {
+    const results = await Promise.all(
+      config.pools.map(p => pickSingleFromPool(p.path, p.count))
+    );
+    if (results.some(t => !t)) return []; // niektorý bazén nemá ani jeden okruh so summary
+    results.forEach((t, i) => { t.label = config.pools[i].label; });
+    return results;
+  }
+
+  // mode === 'pair'
+  return pickPairTopics(config.pool.path, config.pool.count);
 }
 
 /* ============================================================
@@ -530,13 +605,13 @@ function createRecognizer({ onInterim, onFinalChunk, onSilence, onFatalError }) 
 ============================================================ */
 let overlayEl = null;
 
-function buildOverlay() {
+function buildOverlay(areaName) {
   const el = document.createElement('div');
   el.className = 'statnice-overlay';
   el.innerHTML = `
     <div class="statnice-bg"></div>
     <div class="statnice-header">
-      <div class="statnice-title">⚖️ Štátnicová sieň – ${PROTOTYPE_AREA_NAME}</div>
+      <div class="statnice-title">⚖️ Štátnicová sieň – ${areaName}</div>
       <button class="btn statnice-close-btn" id="statniceCloseBtn" type="button">✕ Zavrieť</button>
     </div>
     <div class="statnice-commission" id="statniceCommission"></div>
@@ -577,7 +652,8 @@ export function closeStatniceHall() {
 
 export async function openStatniceHall(areaName) {
   if (!isStatniceAvailable(areaName)) {
-    showRewardToast('⚖️ Štátnicová sieň je zatiaľ dostupná len pre Pracovné právo.');
+    const available = Object.keys(AREA_CONFIG).join(', ');
+    showRewardToast(`⚖️ Štátnicová sieň je zatiaľ dostupná len pre: ${available}.`);
     return;
   }
 
@@ -591,9 +667,9 @@ export async function openStatniceHall(areaName) {
     return;
   }
 
-  const topics = await pickExamTopics();
+  const topics = await pickExamTopics(areaName);
   if (topics.length < 2) {
-    // vráť § – skúška sa nedá spustiť (nedostatok obsahu / "výpadok" pred prvou otázkou)
+    // vráť § – skúška sa nedá spustiť (nedostatok obsahu / prázdny bazén / "výpadok" pred prvou otázkou)
     await econAward(nick, cost, 'štátnicová skúška – vrátenie (nedostatok obsahu)', { skipCap: true });
     showRewardToast('⚖️ Komisia teraz nie je dostupná, skús neskôr.');
     return;
@@ -601,7 +677,7 @@ export async function openStatniceHall(areaName) {
   const commission = await pickCommission();
 
   closeStatniceHall();
-  overlayEl = buildOverlay();
+  overlayEl = buildOverlay(areaName);
   document.body.style.overflow = 'hidden';
 
   renderCommission(overlayEl.querySelector('#statniceCommission'), commission);
@@ -609,8 +685,9 @@ export async function openStatniceHall(areaName) {
   const topicsEl = overlayEl.querySelector('#statniceTopics');
   topicsEl.innerHTML = topics.map((t, i) => `
     <div class="statnice-topic-card">
-      <div class="statnice-topic-num">Otázka ${i + 1}</div>
+      <div class="statnice-topic-num">${t.label || `Otázka ${i + 1}`}</div>
       <div class="statnice-topic-text">${t.title}</div>
+      ${renderSource(t.zdroj)}
     </div>
   `).join('');
 
@@ -683,7 +760,7 @@ export async function openStatniceHall(areaName) {
     setPhase('VYZVANIE');
     const topic = topics[idx];
 
-    qNumEl.textContent = `Otázka ${idx + 1} / ${topics.length}`;
+    qNumEl.textContent = topic.label || `Otázka ${idx + 1} / ${topics.length}`;
     qTextEl.textContent = topic.title;
     answerInput.value = answers[idx] || '';
     liveTranscriptEl.textContent = '';
@@ -854,7 +931,7 @@ export async function openStatniceHall(areaName) {
 
     const rewardAmount = await awardExamResult(nick, feedback.znamka);
     rewardGranted = true;
-    await saveExamResult(nick, feedback.znamka, PROTOTYPE_AREA_NAME);
+    await saveExamResult(nick, feedback.znamka, areaName);
 
     const fbEl = overlayEl.querySelector('#statniceFeedback');
     fbEl.innerHTML = `
