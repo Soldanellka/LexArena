@@ -1872,7 +1872,10 @@ async function openChallengeSenatModal(challengerSenatId, nick) {
    🏛️ FAKULTY – tretia úroveň súťaže
    ===================================================== */
 /* Krátky odznak fakulty pri nicku v hlavičke (napr. "UK") namiesto
-   plného názvu – výber/zmena fakulty žije v avatar/profil paneli. */
+   plného názvu – výber/zmena fakulty žije v avatar/profil paneli.
+   Kým hráč fakultu nezvolí, odznak sa NESKRÝVA, ale zobrazí výzvu
+   "Vyber školu" – inak by výber fakulty nemal v hlavičke žiadnu
+   viditeľnú stopu a hráč by netušil, že klik na avatara ho otvorí. */
 async function updateFacultyBadge() {
   const nick = localStorage.getItem('playerNick');
   const badge = document.getElementById('facultyBadge');
@@ -1880,7 +1883,9 @@ async function updateFacultyBadge() {
 
   const info = await getFacultyBadge(nick);
   if (!info) {
-    badge.style.display = 'none';
+    badge.textContent = '🏛️ Vyber školu';
+    badge.title = 'Klikni a vyber si fakultu/vysokú školu';
+    badge.style.display = 'inline-flex';
     return;
   }
   badge.textContent = info.abbrev;
@@ -2535,6 +2540,12 @@ function attachEvents() {
   const changeAvatarBtn = $('changeAvatarBtn');
   if (changeAvatarBtn) {
     changeAvatarBtn.addEventListener('click', () => openAvatarPickerModal(false));
+  }
+
+  /* 🏛️ Odznak fakulty (aj výzva "Vyber školu") → ten istý panel ako klik na avatara */
+  const facultyBadgeEl = $('facultyBadge');
+  if (facultyBadgeEl) {
+    facultyBadgeEl.addEventListener('click', openAvatarSelectModal);
   }
 
   /* 🔥 Rola badge */
