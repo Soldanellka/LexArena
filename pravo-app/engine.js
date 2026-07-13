@@ -29,6 +29,7 @@
 
 import { renderSource } from '../scripts/sourceUtil.js';
 import { normalizeOkruh } from '../scripts/contentNormalize.js';
+import { shuffleOptions } from '../core.js';
 
 const CONFIG = window.PRAVO_CONFIG || {};
 
@@ -241,8 +242,11 @@ function startQuiz() {
     return;
   }
 
+  /* Premiešané poradie možností pri každom spustení kvízu (aj pri
+     "Skúsiť znova") – shuffleOptions vracia nové objekty, takže
+     kanonické okruh.quiz zostáva nedotknuté. */
   state.quiz = {
-    questions: [...questions],
+    questions: questions.map(shuffleOptions),
     current: 0,
     correct: 0,
     wrong: 0,
@@ -544,7 +548,12 @@ function buildCases() {
   }
 
   cases.forEach((c, ci) => {
-    const steps = c.steps || [];
+    /* Premiešané raz pri zostavení tabu (nie v render(), ktoré sa
+       volá znova po každej odpovedi – inak by sa poradie menilo
+       spod už zodpovedaného kroku). */
+    const steps = (c.steps || []).map(s =>
+      Array.isArray(s.options) && s.options.length ? shuffleOptions(s) : s
+    );
     const answers = new Array(steps.length).fill(null);
     let revealed = steps.length ? 1 : 0;
 

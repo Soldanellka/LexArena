@@ -1,5 +1,7 @@
 'use strict';
 
+import { shuffleOptions } from '../core.js';
+
 /* ============================================================
    KONFIGURÁCIA – počet JSON súborov pre každú oblasť
    Zmeň čísla keď pridáš viac okruhov
@@ -221,7 +223,7 @@ function startQuiz() {
   }
 
   state.quiz = {
-    questions: [...questions],
+    questions: questions.map(shuffleOptions),
     current: 0,
     correct: 0,
     wrong: 0,
@@ -536,7 +538,11 @@ function buildCases() {
   }
 
   cases.forEach((c, ci) => {
-    const steps = c.steps || [];
+    // Premiešané raz pri zostavení tabu, nie v render() (inak by sa
+    // poradie menilo spod už zodpovedaného kroku).
+    const steps = (c.steps || []).map(s =>
+      Array.isArray(s.options) && s.options.length ? shuffleOptions(s) : s
+    );
     const answers = new Array(steps.length).fill(null);
     let revealed = steps.length ? 1 : 0;
 

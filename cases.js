@@ -1,6 +1,6 @@
 'use strict';
 
-import { $, escapeHtml, LS, saveParagrafy, closeModal } from './core.js';
+import { $, escapeHtml, LS, saveParagrafy, closeModal, shuffleOptions } from './core.js';
 import {
   paragrafy,
   setParagrafy,
@@ -239,14 +239,17 @@ export function loadCasesFromQuestions(questions, areaTitle) {
     return;
   }
 
-  // Konvertuj otázky do formátu prípadov
-  const cases = questions.map((q, i) => ({
-    id: `case_${i}`,
-    title: q.question || `Prípad ${i + 1}`,
-    options: q.options || [],
-    correct: typeof q.correct === 'number' ? q.correct : 0,
-    source: q.source || areaTitle
-  }));
+  // Konvertuj otázky do formátu prípadov (premiešané poradie možností)
+  const cases = questions.map((q, i) => {
+    const shuffled = shuffleOptions({ options: q.options || [], correct: typeof q.correct === 'number' ? q.correct : 0 });
+    return {
+      id: `case_${i}`,
+      title: q.question || `Prípad ${i + 1}`,
+      options: shuffled.options,
+      correct: shuffled.correct,
+      source: q.source || areaTitle
+    };
+  });
 
   // Ulož do window pre renderovanie
   window.__currentCases = cases;
@@ -381,7 +384,15 @@ export function loadCasesFromJson(casesArr, areaTitle) {
     return;
   }
 
-  window.__jsonCases = casesArr;
+  /* Premiešané poradie možností pri každom načítaní prípadov (nie pri
+     každom re-renderi - inak by sa poradie menilo spod už zodpovedaného
+     kroku pri každom kliknutí). Uložené do window.__jsonCases, takže
+     renderJsonCase() číta stabilné, raz zamiešané poradie počas celej
+     návštevy tejto oblasti. */
+  window.__jsonCases = casesArr.map(c => ({
+    ...c,
+    steps: (c.steps || []).map(s => Array.isArray(s.options) && s.options.length ? shuffleOptions(s) : s)
+  }));
   window.__jsonCaseIndex = 0;
   window.__jsonCaseAnswers = {}; // { caseIdx: { stepIdx: chosenOption } }
 

@@ -51,6 +51,23 @@ export function shuffleArray(arr){
   return arr;
 }
 
+/* Zamieša poradie `options` danej otázky/kroku a dopočíta novú pozíciu
+   `correct` podľa PÔVODNÉHO textu správnej odpovede (rovnaký vzor ako
+   quiz.js startQuiz() / scripts/duels.js shuffleQuestionOptions()).
+   Vracia NOVÝ objekt (nemutuje vstup), aby kanonické dáta z A*.json
+   ostali nedotknuté a každé volanie dostalo čerstvé poradie. Report/
+   nahlasovanie a admin/garant panel pracujú len s textom otázky a
+   zdrojom (nikdy s indexom možnosti), takže mapovanie späť na originál
+   netreba – nič v appke index možnosti neukladá ani nezobrazuje. */
+export function shuffleOptions(item){
+  if (!item || !Array.isArray(item.options)) return item;
+  const correctText = typeof item.correct === 'number' ? item.options[item.correct] : null;
+  const options = shuffleArray([...item.options]);
+  let correct = correctText != null ? options.findIndex(opt => opt === correctText) : (typeof item.correct === 'number' ? item.correct : 0);
+  if (correct < 0) correct = 0;
+  return { ...item, options, correct };
+}
+
 export function safeId(s){
   return String(s || '').replace(/[^\w\-]/g, '_');
 }
