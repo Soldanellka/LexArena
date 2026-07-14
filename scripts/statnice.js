@@ -41,6 +41,7 @@ import { showRewardToast } from '../ui.js';
 import { speakText } from '../memoryTrainer.js';
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
 import { renderSource } from './sourceUtil.js';
+import { ensureVoicesLoaded, pickVoice } from '../biflovackaVideo.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -74,6 +75,109 @@ const AREA_CONFIG = {
     ]
   }
 };
+
+/* ============================================================
+   PERSÓNY SKÚŠAJÚCEHO – menia VÝHRADNE TÓN/ZNENIE spätnej väzby.
+   Hodnotenie je 100% lokálne (extractKeyPoints + evaluateCoverage,
+   pozri vyššie) – žiadny LLM prompt v appke neexistuje, takže tu nejde
+   o rozdelenie "hodnotiaci prompt vs. podávací prompt", ale presne o to,
+   čo pýta zadanie pre lokálne hodnotenie: persóna mení len textové
+   šablóny (buildPersonaFeedback nižšie), NIKDY evaluateCoverage() ani
+   znamka v buildFinalFeedback() – tá sa počíta úplne rovnako pre
+   všetky tri, priamo z tej istej `evaluations` štruktúry.
+============================================================ */
+const EXAM_PERSONA_KEY = 'lexExamPersona';
+const EXAM_VOICE_KEY = 'lexExamVoice'; // 'm' | 'f' | 'off'
+const DEFAULT_PERSONA = 'rational';
+
+const PERSONAS = {
+  strict: {
+    emoji: '⚖️', label: 'Prísny',
+    desc: 'Náročný a vecný, žiadne chválenie navyše.',
+    greet: (title) => `Začnite prosím prvou otázkou: ${title}.`,
+    next: (title) => `Ďalšia otázka: ${title}.`,
+    followUp: (point) => `Toto je neúplné – chýba: ${point}. Doplňte to.`,
+    followUpGeneric: (title) => `Odpoveď je nedostatočná. Rozveďte podstatné náležitosti k otázke „${title}".`,
+    coveredLine: (title, covered) => `Téma „${title}" – zvládnuté body: ${covered.join('; ')}.`,
+    missingLine: (title, missing) => `Téma „${title}" – chýba, doštudujte: ${missing.join('; ')}.`,
+    noCoveredFallback: 'Žiadny bod nebol pokrytý dostatočne.',
+    odporucaniaWithGaps: ['Zamerajte sa presne na vymenované chýbajúce body – bez toho skúška neobstojí.', 'Držte štruktúru: pojem → znaky → príklad → judikatúra.'],
+    odporucaniaClean: ['Držte túto úroveň, netreba poľaviť.'],
+    zaver: {
+      1: 'Solídny výkon, bez zásadných výhrad.',
+      2: 'Priemer – medzery sú viditeľné, doriešte ich.',
+      3: 'Slabé. Toto si musíte zásadne doštudovať.',
+      4: 'Nedostatočné. Pri reálnej komisii by ste takto neuspeli.'
+    }
+  },
+  supportive: {
+    emoji: '🤝', label: 'Podporujúci',
+    desc: 'Povzbudí, oceňuje, medzery pomenuje láskavo.',
+    greet: (title) => `Poď smelo na prvú otázku: ${title}. Netreba sa báť, poďme na to spolu.`,
+    next: (title) => `Skvele, ideme ďalej. Ďalšia otázka: ${title}.`,
+    followUp: (point) => `Dobrý základ! Ešte by som privítal/a doplniť: ${point}. Skús to rozviesť.`,
+    followUpGeneric: (title) => `Skús sa k otázke „${title}" vrátiť a doplniť, čo ťa napadne navyše – pokojne aj krok za krokom.`,
+    coveredLine: (title, covered) => `Pri téme „${title}" ti pekne sadli tieto body: ${covered.join('; ')}.`,
+    missingLine: (title, missing) => `Pri téme „${title}" ešte doplň: ${missing.join('; ')} – je to len kúsok práce navyše.`,
+    noCoveredFallback: 'Aspoň si sa pokúsil/a odpovedať na obe otázky – budeme na tom stavať ďalej.',
+    odporucaniaWithGaps: ['Zameraj sa na chýbajúce body vyššie, zvládneš to.', 'Skús si pri učení držať štruktúru pojem → znaky → príklad → judikatúra, pomôže ti to zapamätať si viac.'],
+    odporucaniaClean: ['Skvelá práca, pokojne skús aj náročnejšie okruhy!'],
+    zaver: {
+      1: 'Výborne, naozaj pekný výkon! Obe témy zvládaš na vysokej úrovni.',
+      2: 'Veľmi pekné, drobné medzery vôbec neubrali na dojme.',
+      3: 'Základ máš, len to ešte chce doladiť – nevzdávaj to.',
+      4: 'Tentokrát to ešte nesedelo, ale máš čas si to doštudovať – dáš to.'
+    }
+  },
+  rational: {
+    emoji: '📊', label: 'Racionálny',
+    desc: 'Bez emócií – fakty: čo odznelo, čo chýba, čo je správne.',
+    greet: (title) => `Nech sa páči, môžete začať odpovedať na prvú otázku: ${title}.`,
+    next: (title) => `Ďakujeme. Ďalšia otázka: ${title}.`,
+    followUp: (point) => `Spomenuli ste tému, no chýba mi konkrétny bod – ${point}. Viete to bližšie vysvetliť?`,
+    followUpGeneric: (title) => `Môžete to rozviesť a doplniť podstatné náležitosti k otázke „${title}"?`,
+    coveredLine: (title, covered) => `Téma „${title}" – pokryté: ${covered.join('; ')}.`,
+    missingLine: (title, missing) => `Téma „${title}" – doštudovať: ${missing.join('; ')}.`,
+    noCoveredFallback: 'Snaha odpovedať na obe otázky.',
+    odporucaniaWithGaps: ['Zameraj sa na vymenované chýbajúce body – doštuduj ich v plnom vypracovaní okruhu.', 'Drž sa štruktúry: pojem → znaky → príklad → judikatúra.'],
+    odporucaniaClean: ['Pokračuj v tomto tempe, skús aj náročnejšie okruhy.'],
+    zaver: {
+      1: 'Výborný výkon – ovládaš obe témy na vysokej úrovni.',
+      2: 'Veľmi dobrý výkon, drobné medzery neubrali na celkovom dojme.',
+      3: 'Solídny základ, ale je čo doťahovať – pozri si odporúčania.',
+      4: 'Zatiaľ to nestačí – over si obe témy znova a skús to nabudúce.'
+    }
+  }
+};
+
+function getPersona(key) {
+  return PERSONAS[key] || PERSONAS[DEFAULT_PERSONA];
+}
+
+/* ============================================================
+   HLAS KOMISIE – nadväzuje na existujúci mechanizmus z bifľovačky
+   (pickVoice/ensureVoicesLoaded z biflovackaVideo.js), NEROBÍ druhý.
+   Prísnejšia politika než video: video akceptuje aj cs alebo hocijaký
+   hlas ako náhradu, štátnica NIE – ak nie je žiadny sk hlas, radšej
+   ticho (len text) než cudzojazyčný hlas v skúškovej situácii.
+============================================================ */
+async function resolveExamVoice(voicePref) {
+  if (voicePref === 'off' || !('speechSynthesis' in window)) return null;
+  await ensureVoicesLoaded();
+  const voices = window.speechSynthesis.getVoices();
+  const hasSk = voices.some(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
+  if (!hasSk) return null; // žiadny SK hlas → ticho, len text (bez chyby, bez mätúcej hlášky)
+  return pickVoice(voicePref === 'f' ? 'f' : 'm');
+}
+
+/* Prehrá text daným hlasom komisie, alebo ak examVoice===null (vypnuté
+   / žiadny sk hlas), rovno zavolá onEnd bez čakania – žiadna 6s pauza
+   na TTS fallback, keď sa ani nepokúšame hovoriť. */
+function speakOrSkip(text, examVoice, { onEnd }) {
+  if (!examVoice) { if (onEnd) onEnd(); return; }
+  const played = speakText(text, { voice: examVoice.voice, pitch: examVoice.pitch, onEnd });
+  if (!played && onEnd) onEnd();
+}
 
 const PREP_SECONDS = 5 * 60;
 const SILENCE_TIMEOUT_MS = 8000;
@@ -442,17 +546,22 @@ function evaluateCoverage(userText, keyPoints) {
 /* Doplňujúca otázka cielená na KONKRÉTNY chýbajúci bod (missing[0]),
    nie opakovanie pôvodnej otázky – lokálny substitút za Claude API
    volanie "polož jednu doplňujúcu otázku smerujúcu na tento bod". */
-function buildFollowUpMessage(missing, title) {
-  if (!missing || !missing.length) {
-    return `Môžete to rozviesť a doplniť podstatné náležitosti k otázke „${title}"?`;
-  }
-  return `Spomenuli ste tému, no chýba mi konkrétny bod – ${missing[0]}. Viete to bližšie vysvetliť?`;
+function buildFollowUpMessage(missing, title, personaKey) {
+  const p = getPersona(personaKey);
+  if (!missing || !missing.length) return p.followUpGeneric(title);
+  return p.followUp(missing[0]);
 }
 
 /* Záverečná spätná väzba – lokálny substitút, rovnaký tvar ako Claude API.
    Kalibrácia presne podľa zadania: 1 = coverage≥85 a žiadne incorrect,
-   2 = 65-84, 3 = 45-64, 4 = <45 alebo závažné vecné chyby. */
-function buildFinalFeedback(evaluations, topics) {
+   2 = 65-84, 3 = 45-64, 4 = <45 alebo závažné vecné chyby.
+
+   ⚠️ NEMENNÁ ZÁSADA: znamka sa počíta VÝLUČNE z `evaluations` (avg
+   coverage + anyIncorrect), úplne rovnako bez ohľadu na personaKey –
+   ten sa použije AŽ NIŽŠIE, len na sformulovanie textu (silne/medzery/
+   odporucania/zaver). Rovnaká odpoveď => rovnaká známka u všetkých
+   troch persón, vždy. */
+function buildFinalFeedback(evaluations, topics, personaKey) {
   const avg = evaluations.reduce((s, e) => s + e.coverage, 0) / evaluations.length;
   const anyIncorrect = evaluations.some(e => e.incorrect && e.incorrect.length);
 
@@ -463,27 +572,21 @@ function buildFinalFeedback(evaluations, topics) {
   else znamka = 4;
   if (anyIncorrect && avg < 45) znamka = 4;
 
+  // Od tohto miesta nižšie sa persóna prejaví LEN v znení textu.
+  const p = getPersona(personaKey);
+
   const silne = [];
   const medzery = [];
   evaluations.forEach((e, i) => {
     const title = topics[i].title;
-    if (e.covered.length) silne.push(`Téma „${title}" – pokryté: ${e.covered.join('; ')}.`);
-    if (e.missing.length) medzery.push(`Téma „${title}" – doštudovať: ${e.missing.join('; ')}.`);
+    if (e.covered.length) silne.push(p.coveredLine(title, e.covered));
+    if (e.missing.length) medzery.push(p.missingLine(title, e.missing));
   });
-  if (!silne.length) silne.push('Snaha odpovedať na obe otázky.');
+  if (!silne.length) silne.push(p.noCoveredFallback);
 
-  const odporucania = medzery.length
-    ? ['Zameraj sa na vymenované chýbajúce body – doštuduj ich v plnom vypracovaní okruhu.', 'Drž sa štruktúry: pojem → znaky → príklad → judikatúra.']
-    : ['Pokračuj v tomto tempe, skús aj náročnejšie okruhy.'];
+  const odporucania = medzery.length ? p.odporucaniaWithGaps : p.odporucaniaClean;
 
-  const zaverByZnamka = {
-    1: 'Výborný výkon – ovládaš obe témy na vysokej úrovni.',
-    2: 'Veľmi dobrý výkon, drobné medzery neubrali na celkovom dojme.',
-    3: 'Solídny základ, ale je čo doťahovať – pozri si odporúčania.',
-    4: 'Zatiaľ to nestačí – over si obe témy znova a skús to nabudúce.'
-  };
-
-  return { znamka, silne, medzery, odporucania, zaver: zaverByZnamka[znamka] };
+  return { znamka, silne, medzery, odporucania, zaver: p.zaver[znamka] };
 }
 
 /* ============================================================
@@ -615,6 +718,107 @@ let overlayEl = null;
    je okno na kolíziu prakticky nulové. */
 let statniceOpening = false;
 
+/* Výber persóny + hlasu komisie, PRED minutím § / losovaním okruhov –
+   zrušenie tu nič nestojí. Vracia Promise<{personaKey,voicePref}|null>
+   (null = zatvorené bez potvrdenia). Ponúka LEN hlasy, ktoré appka
+   vie reálne prehrať (žiadny sľub hlasu, ktorý zariadenie nemá) –
+   ak nie je k dispozícii žiadny sk hlas, mužská/ženská voľba sa
+   vôbec nezobrazí, ostane len "Bez hlasu". */
+async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
+  const el = document.createElement('div');
+  el.className = 'statnice-overlay';
+
+  const hasSkVoice = await (async () => {
+    if (!('speechSynthesis' in window)) return false;
+    await ensureVoicesLoaded();
+    return window.speechSynthesis.getVoices().some(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
+  })();
+
+  const voiceOptionsHtml = hasSkVoice
+    ? `
+      <button class="btn statnice-voice-btn" data-voice="m" type="button">🎙️ Mužský</button>
+      <button class="btn statnice-voice-btn" data-voice="f" type="button">🎙️ Ženský</button>
+      <button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu</button>
+    `
+    : `<button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu (na tomto zariadení nie je k dispozícii slovenský hlas)</button>`;
+
+  el.innerHTML = `
+    <div class="statnice-bg"></div>
+    <div class="statnice-header">
+      <div class="statnice-title">⚖️ Štátnicová sieň – ${areaName}</div>
+      <button class="btn statnice-close-btn" id="statnicePersonaCloseBtn" type="button">✕ Zavrieť</button>
+    </div>
+    <div class="statnice-content">
+      <h3 style="margin-top:0;text-align:center">Vyber si skúšajúceho</h3>
+      <div class="statnice-persona-grid" id="statnicePersonaGrid">
+        ${Object.entries(PERSONAS).map(([key, p]) => `
+          <button class="btn statnice-persona-btn" data-key="${key}" type="button">
+            <div class="statnice-persona-emoji">${p.emoji}</div>
+            <div class="statnice-persona-label">${p.label}</div>
+            <div class="small muted">${p.desc}</div>
+          </button>
+        `).join('')}
+      </div>
+      <div style="margin-top:20px">
+        <div style="font-weight:600;margin-bottom:8px">Hlas komisie</div>
+        <div class="statnice-voice-grid" id="statniceVoiceGrid">${voiceOptionsHtml}</div>
+      </div>
+      <button class="btn btn-primary statnice-ready-btn" id="statnicePersonaContinueBtn" type="button" disabled style="margin-top:24px">Pokračovať →</button>
+    </div>
+  `;
+  document.body.appendChild(el);
+  document.body.style.overflow = 'hidden';
+
+  return new Promise((resolve) => {
+    let personaKey = hasOwnPersona(defaultPersona) ? defaultPersona : null;
+    let voicePref = hasSkVoice ? (defaultVoice || null) : 'off';
+    let settled = false;
+
+    function finish(result) {
+      if (settled) return;
+      settled = true;
+      el.remove();
+      document.body.style.overflow = '';
+      resolve(result);
+    }
+
+    function updateContinueEnabled() {
+      el.querySelector('#statnicePersonaContinueBtn').disabled = !(personaKey && voicePref);
+    }
+
+    el.querySelectorAll('.statnice-persona-btn').forEach(btn => {
+      if (btn.dataset.key === personaKey) btn.classList.add('active');
+      btn.onclick = () => {
+        personaKey = btn.dataset.key;
+        el.querySelectorAll('.statnice-persona-btn').forEach(b => b.classList.toggle('active', b === btn));
+        updateContinueEnabled();
+      };
+    });
+
+    el.querySelectorAll('.statnice-voice-btn').forEach(btn => {
+      if (btn.dataset.voice === voicePref) btn.classList.add('active');
+      btn.onclick = () => {
+        voicePref = btn.dataset.voice;
+        el.querySelectorAll('.statnice-voice-btn').forEach(b => b.classList.toggle('active', b === btn));
+        updateContinueEnabled();
+      };
+    });
+
+    updateContinueEnabled();
+
+    el.querySelector('#statnicePersonaContinueBtn').onclick = () => {
+      if (!personaKey || !voicePref) return;
+      finish({ personaKey, voicePref });
+    };
+    el.querySelector('#statnicePersonaCloseBtn').onclick = () => finish(null);
+    el.onclick = (e) => { if (e.target === el) finish(null); };
+  });
+}
+
+function hasOwnPersona(key) {
+  return Object.prototype.hasOwnProperty.call(PERSONAS, key || '');
+}
+
 function buildOverlay(areaName) {
   const el = document.createElement('div');
   el.className = 'statnice-overlay';
@@ -672,6 +876,17 @@ export async function openStatniceHall(areaName) {
 
   const nick = getNick();
   if (!nick) { showRewardToast('Najprv si zadaj nick.'); return; }
+
+  // Výber persóny skúšajúceho + hlasu, PRED minutím § – zrušenie tu je zadarmo.
+  const savedPersona = localStorage.getItem(EXAM_PERSONA_KEY) || DEFAULT_PERSONA;
+  const savedVoice = localStorage.getItem(EXAM_VOICE_KEY) || 'off';
+  const choice = await buildPersonaOverlay(areaName, savedPersona, savedVoice);
+  if (!choice) return; // zrušené na výberovej obrazovke
+  const { personaKey, voicePref } = choice;
+  localStorage.setItem(EXAM_PERSONA_KEY, personaKey);
+  localStorage.setItem(EXAM_VOICE_KEY, voicePref);
+  const persona = getPersona(personaKey);
+  const examVoice = await resolveExamVoice(voicePref);
 
   const cost = ECONOMY_CONFIG.STATNICE.EXAM_COST;
   const paid = await econSpend(nick, cost, 'štátnicová skúška – vstup');
@@ -779,11 +994,9 @@ export async function openStatniceHall(areaName) {
     liveTranscriptEl.textContent = '';
     micStatusEl.textContent = '';
 
-    const prompt = idx === 0
-      ? `Nech sa páči, môžete začať odpovedať na prvú otázku: ${topic.title}.`
-      : `Ďakujeme. Ďalšia otázka: ${topic.title}.`;
+    const prompt = idx === 0 ? persona.greet(topic.title) : persona.next(topic.title);
     msgEl.style.display = 'block';
-    msgEl.innerHTML = `<strong>Komisia:</strong> ${prompt}`;
+    msgEl.innerHTML = `<strong>Komisia (${persona.emoji} ${persona.label}):</strong> ${prompt}`;
 
     let advanced = false;
     const goToListening = () => {
@@ -793,10 +1006,14 @@ export async function openStatniceHall(areaName) {
       enterPocuvanie(idx);
     };
 
-    speakText(prompt, { onEnd: goToListening });
-    // Poistka: ak TTS zlyhá/nepodporené (onEnd sa nikdy nespustí), pokračuj sám.
-    clearTimeout(ttsFallbackTimer);
-    ttsFallbackTimer = setTimeout(goToListening, TTS_FALLBACK_MS);
+    if (examVoice) {
+      speakOrSkip(prompt, examVoice, { onEnd: goToListening });
+      // Poistka: ak TTS zlyhá/nepodporené (onEnd sa nikdy nespustí), pokračuj sám.
+      clearTimeout(ttsFallbackTimer);
+      ttsFallbackTimer = setTimeout(goToListening, TTS_FALLBACK_MS);
+    } else {
+      goToListening(); // bez hlasu (vypnuté alebo žiadny sk hlas) – rovno ďalej, žiadne čakanie
+    }
   }
 
   /* ---------- POCUVANIE – robustné rozpoznávanie + poistky ---------- */
@@ -899,9 +1116,9 @@ export async function openStatniceHall(areaName) {
 
     if (needsFollowUp) {
       followUpCounts[idx]++;
-      const followUpText = buildFollowUpMessage(result.missing, topic.title);
+      const followUpText = buildFollowUpMessage(result.missing, topic.title, personaKey);
       msgEl.style.display = 'block';
-      msgEl.innerHTML = `<strong>Komisia (doplňujúca otázka):</strong> ${followUpText}`;
+      msgEl.innerHTML = `<strong>Komisia (${persona.emoji} doplňujúca otázka):</strong> ${followUpText}`;
       liveTranscriptEl.textContent = '';
 
       let advanced = false;
@@ -911,9 +1128,13 @@ export async function openStatniceHall(areaName) {
         clearTimeout(followUpFallbackTimer);
         enterPocuvanie(idx);
       };
-      speakText(followUpText, { onEnd: goBack });
-      clearTimeout(followUpFallbackTimer);
-      followUpFallbackTimer = setTimeout(goBack, TTS_FALLBACK_MS);
+      if (examVoice) {
+        speakOrSkip(followUpText, examVoice, { onEnd: goBack });
+        clearTimeout(followUpFallbackTimer);
+        followUpFallbackTimer = setTimeout(goBack, TTS_FALLBACK_MS);
+      } else {
+        goBack();
+      }
       return;
     }
 
@@ -936,7 +1157,7 @@ export async function openStatniceHall(areaName) {
     overlayEl.querySelector('#statniceAnswerPhase').style.display = 'none';
     overlayEl.querySelector('#statniceResultsPhase').style.display = 'block';
 
-    const feedback = buildFinalFeedback(evaluations, topics);
+    const feedback = buildFinalFeedback(evaluations, topics, personaKey);
     console.log('[ŠTÁTNICE] Záverečná spätná väzba:', feedback);
 
     const gradeEl = overlayEl.querySelector('#statniceGrade');

@@ -77,7 +77,7 @@ function preloadModerator(mod) {
    výškou hlasu (pitch): žena +0.2, muž −0.2 oproti základu 1.
 ============================================================ */
 let voicesReadyPromise = null;
-function ensureVoicesLoaded() {
+export function ensureVoicesLoaded() {
   if (!('speechSynthesis' in window)) return Promise.resolve([]);
   if (voicesReadyPromise) return voicesReadyPromise;
 
@@ -95,7 +95,7 @@ function ensureVoicesLoaded() {
   return voicesReadyPromise;
 }
 
-function pickVoice(gender) {
+export function pickVoice(gender) {
   const voices = window.speechSynthesis.getVoices();
   const sk = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
   const cs = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('cs'));

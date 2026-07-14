@@ -2816,6 +2816,34 @@ body {
 }
 .statnice-finish-btn { width: 100%; padding: 12px; font-weight: 700; }
 
+.statnice-persona-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.statnice-persona-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 16px 10px; text-align: center;
+  background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 12px; color: #fff; cursor: pointer; transition: all .15s ease;
+}
+.statnice-persona-btn:hover { background: rgba(255,255,255,0.14); }
+.statnice-persona-btn.active {
+  border-color: var(--accent-3, #f08ab0); background: rgba(240,138,166,0.18);
+}
+.statnice-persona-emoji { font-size: 26px; }
+.statnice-persona-label { font-weight: 700; }
+
+.statnice-voice-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.statnice-voice-btn {
+  background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.15); color: #fff;
+}
+.statnice-voice-btn.active {
+  border-color: var(--accent-3, #f08ab0); background: rgba(240,138,166,0.18);
+}
+
+@media (max-width: 640px) {
+  .statnice-persona-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 640px) {
   .statnice-content { padding: 16px 18px; }
   .statnice-commissioner { height: 80px; }
