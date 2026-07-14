@@ -1045,6 +1045,20 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
           <button class="btn" id="analyticsLoadBtn" style="width:100%;margin-bottom:8px">📊 Načítať prehľad</button>
           <div id="analyticsBox" style="display:none"></div>
         </div>
+
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border)">
+          <div style="font-weight:600;margin-bottom:8px">🔄 Synchronizácia obsahu do GitHubu</div>
+          <div class="small muted" style="margin-bottom:6px">
+            Zapečie schválené úpravy (Úloha 2 overridy) späť do data/*.json v repe. Manuálne, nikdy automaticky.
+          </div>
+          <input id="syncSecretInput" class="form-input" type="password"
+            placeholder="Admin heslo pre synchronizáciu" style="margin-bottom:6px"
+            autocomplete="off"/>
+          <button class="btn" id="syncPreviewBtn" style="width:100%;margin-bottom:6px">👁️ Zobraziť náhľad</button>
+          <div id="syncPreviewBox" style="display:none;margin-bottom:8px"></div>
+          <button class="btn btn-primary" id="syncConfirmBtn" style="width:100%;display:none">✅ Potvrdiť a synchronizovať</button>
+          <div id="syncMsg" class="small" style="margin-top:6px;color:var(--muted)"></div>
+        </div>
       ` : ''}
       <div style="margin:10px 0;padding-top:10px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
         <div style="font-weight:600;margin-bottom:6px">💰 Poslať § hráčovi</div>
@@ -1310,6 +1324,84 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
       const { getAnalyticsOverview } = await import('./scripts/analytics.js');
       const overview = await getAnalyticsOverview();
       renderAnalyticsBox(box, overview);
+    };
+
+    // 🔄 Synchronizácia obsahu do GitHubu (Úloha 3) – náhľad, potom
+    // explicitné potvrdenie, potom skutočné volanie servera.
+    let syncPreviewData = null;
+    panel.querySelector('#syncPreviewBtn').onclick = async () => {
+      const secretInput = panel.querySelector('#syncSecretInput');
+      const box = panel.querySelector('#syncPreviewBox');
+      const confirmBtn = panel.querySelector('#syncConfirmBtn');
+      const msg = panel.querySelector('#syncMsg');
+      const secret = secretInput.value.trim();
+      if (!secret) { msg.textContent = 'Zadaj admin heslo.'; msg.style.color = '#b91c1c'; return; }
+
+      msg.textContent = '';
+      box.style.display = 'block';
+      box.innerHTML = '<div class="small muted">Načítavam náhľad…</div>';
+      confirmBtn.style.display = 'none';
+
+      try {
+        const resp = await fetch('/api/sync-content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${secret}` },
+          body: JSON.stringify({ preview: true })
+        });
+        const data = await resp.json();
+        if (!resp.ok || !data.ok) {
+          box.innerHTML = `<div class="small" style="color:#b91c1c">❌ ${escapeHtml(data.error || 'Neznáma chyba.')}</div>`;
+          return;
+        }
+        syncPreviewData = data;
+        if (!data.affected.length) {
+          box.innerHTML = '<div class="small muted">Žiadne nevybavené zmeny na zapečenie.</div>';
+          return;
+        }
+        box.innerHTML = `
+          <div class="small" style="margin-bottom:6px"><strong>${data.totalOverrides}</strong> zmien v <strong>${data.affected.length}</strong> okruhoch:</div>
+          <ul style="margin:0 0 6px 18px;padding:0;font-size:13px">
+            ${data.affected.map(a => `<li>${escapeHtml(a.path)} (${a.overridesCount})</li>`).join('')}
+          </ul>`;
+        confirmBtn.style.display = 'block';
+      } catch (e) {
+        box.innerHTML = `<div class="small" style="color:#b91c1c">❌ Chyba spojenia: ${escapeHtml(e.message)}</div>`;
+      }
+    };
+
+    panel.querySelector('#syncConfirmBtn').onclick = async () => {
+      const secret = panel.querySelector('#syncSecretInput').value.trim();
+      const confirmBtn = panel.querySelector('#syncConfirmBtn');
+      const msg = panel.querySelector('#syncMsg');
+      if (!secret || !syncPreviewData) return;
+      if (!confirm(`Naozaj zapísať ${syncPreviewData.totalOverrides} zmien do ${syncPreviewData.affected.length} súborov v GitHub repe?`)) return;
+
+      confirmBtn.disabled = true;
+      msg.style.color = 'var(--muted)';
+      msg.textContent = 'Synchronizujem…';
+
+      try {
+        const resp = await fetch('/api/sync-content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${secret}` },
+          body: JSON.stringify({ preview: false })
+        });
+        const data = await resp.json();
+        if (!resp.ok || !data.ok) {
+          msg.textContent = `❌ ${data.error || 'Neznáma chyba.'}`;
+          msg.style.color = '#b91c1c';
+          return;
+        }
+        msg.textContent = `✅ Hotovo: ${data.overridesBaked} zmien zapečených do ${data.files.length} súborov (commit ${(data.commitSha || '').slice(0, 7)}).`;
+        msg.style.color = 'var(--accent-3)';
+        confirmBtn.style.display = 'none';
+        syncPreviewData = null;
+      } catch (e) {
+        msg.textContent = `❌ Chyba spojenia: ${e.message}`;
+        msg.style.color = '#b91c1c';
+      } finally {
+        confirmBtn.disabled = false;
+      }
     };
   }
 }
