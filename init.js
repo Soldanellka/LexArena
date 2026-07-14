@@ -27,6 +27,10 @@ import {
   getFacultyList, getPlayerFaculty, setPlayerFaculty,
   getFacultyLeaderboard, settleFacultyLeaderboard, getFacultyBadgeInfo, getFacultyBadge
 } from './scripts/faculties.js';
+import {
+  createGroup, getMyGarantGroups, getMyMemberGroups,
+  renameGroup, deleteGroup, joinGroupByCode, leaveGroup
+} from './scripts/groups.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -65,6 +69,7 @@ async function openAvatarSelectModal() {
   if (existing) {
     existing.style.display = 'flex';
     initFaculty();
+    initGroupsProfile();
     return;
   }
 
@@ -143,6 +148,16 @@ async function openAvatarSelectModal() {
       <div class="small muted" id="facultyStatusLine" style="margin-top:4px"></div>
       <div id="facultyLeaderboardBox" class="small muted" style="margin-top:6px"></div>
     </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border,#eee)">
+      <div style="font-weight:600;font-size:13px;margin-bottom:6px">👥 Moje skupiny</div>
+      <div style="display:flex;gap:8px">
+        <input id="joinGroupCodeInput" class="form-input" type="text" maxlength="6"
+          placeholder="Pripojovací kód (napr. AB12CD)" style="flex:1;text-transform:uppercase"/>
+        <button id="joinGroupBtn" class="btn">Pripojiť sa</button>
+      </div>
+      <div class="small muted" id="joinGroupStatusLine" style="margin-top:4px"></div>
+      <div id="myGroupsList" class="small muted" style="margin-top:8px">Načítavam…</div>
+    </div>
   `;
 
   modal.appendChild(panel);
@@ -179,6 +194,7 @@ async function openAvatarSelectModal() {
   });
 
   initFaculty();
+  initGroupsProfile();
 }
 
 /* =====================================================
@@ -978,6 +994,15 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
       <div style="font-weight:600;margin-bottom:4px">
         ${role === 'admin' ? '👑 Admin panel' : '🔏 Garant panel'}
       </div>
+
+      <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--card-border)">
+        <div style="font-weight:600;margin-bottom:6px">👥 Moje skupiny</div>
+        <input id="groupNameInput" class="form-input" type="text"
+          placeholder="Názov skupiny (napr. Pracovné právo 2026 – skupina B)" style="margin-bottom:6px"/>
+        <button class="btn btn-primary" id="groupCreateBtn" style="width:100%;margin-bottom:6px">➕ Vytvoriť skupinu</button>
+        <div id="groupMsg" class="small" style="margin-bottom:8px;color:var(--muted)"></div>
+        <div id="groupList" class="small muted">Načítavam…</div>
+      </div>
       ${role === 'admin' ? `
         <div style="margin-bottom:10px">
           <input id="adminNickInput" class="form-input" type="text"
@@ -1080,6 +1105,69 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
       </div>
     </div>
   `;
+
+  // 👥 Moje skupiny (garant aj admin)
+  const myNick = localStorage.getItem('playerNick');
+  const groupMsg = panel.querySelector('#groupMsg');
+  const groupListEl = panel.querySelector('#groupList');
+
+  async function renderGroupList() {
+    if (!myNick) { groupListEl.textContent = ''; return; }
+    const myGroups = await getMyGarantGroups(myNick);
+    if (!myGroups.length) {
+      groupListEl.textContent = 'Zatiaľ nemáš žiadne skupiny.';
+      return;
+    }
+    groupListEl.innerHTML = myGroups.map(g => `
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid var(--card-border)">
+        <div>
+          <div style="font-weight:600">${escapeHtml(g.name)}</div>
+          <div class="small muted">Kód: <strong>${escapeHtml(g.code)}</strong> · ${Object.keys(g.members || {}).length} členov</div>
+        </div>
+        <div style="display:flex;gap:4px">
+          <button class="btn group-rename-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:4px 8px;font-size:12px">✏️</button>
+          <button class="btn group-delete-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:4px 8px;font-size:12px">🗑️</button>
+        </div>
+      </div>
+    `).join('');
+
+    groupListEl.querySelectorAll('.group-rename-btn').forEach(btn => {
+      btn.onclick = async () => {
+        const newName = prompt('Nový názov skupiny:', btn.dataset.name);
+        if (newName === null) return;
+        const result = await renameGroup(btn.dataset.id, newName, myNick);
+        if (!result.ok) { groupMsg.textContent = `❌ ${result.message}`; groupMsg.style.color = '#b91c1c'; return; }
+        renderGroupList();
+      };
+    });
+    groupListEl.querySelectorAll('.group-delete-btn').forEach(btn => {
+      btn.onclick = async () => {
+        if (!confirm(`Naozaj zmazať skupinu "${btn.dataset.name}"? (Tréningové dáta študentov ostanú nedotknuté, zmaže sa len členstvo.)`)) return;
+        const result = await deleteGroup(btn.dataset.id, myNick);
+        if (!result.ok) { groupMsg.textContent = `❌ ${result.message}`; groupMsg.style.color = '#b91c1c'; return; }
+        renderGroupList();
+      };
+    });
+  }
+
+  panel.querySelector('#groupCreateBtn').onclick = async () => {
+    const input = panel.querySelector('#groupNameInput');
+    const name = input.value.trim();
+    if (!name) { groupMsg.textContent = 'Zadaj názov skupiny.'; groupMsg.style.color = '#b91c1c'; return; }
+
+    const result = await createGroup(name);
+    if (!result.ok) {
+      groupMsg.textContent = `❌ ${result.message}`;
+      groupMsg.style.color = '#b91c1c';
+      return;
+    }
+    groupMsg.textContent = `✅ Skupina vytvorená. Pripojovací kód: ${result.code}`;
+    groupMsg.style.color = 'var(--accent-3)';
+    input.value = '';
+    renderGroupList();
+  };
+
+  renderGroupList();
 
   // 💰 Poslať § – admin aj garant (limit garanta rieši econGrant)
   const grantBtn = panel.querySelector('#grantSendBtn');
@@ -2016,6 +2104,59 @@ async function initFaculty() {
       updateFacultyBadge();
     };
   }
+}
+
+/* =====================================================
+   👥 SKUPINY (akademická vrstva) – študentský pohľad v profile
+   modáli: pripojenie kódom + zoznam vlastných členstiev s odpojením.
+   ===================================================== */
+async function renderMyGroupsList(nick) {
+  const box = document.getElementById('myGroupsList');
+  if (!box) return;
+  const myGroups = await getMyMemberGroups(nick);
+  if (!myGroups.length) {
+    box.textContent = 'Zatiaľ nie si členom žiadnej skupiny.';
+    return;
+  }
+  box.innerHTML = myGroups.map(g => `
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:4px 0">
+      <span>${escapeHtml(g.name)}</span>
+      <button class="btn leave-group-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:2px 8px;font-size:12px">Odpojiť sa</button>
+    </div>
+  `).join('');
+
+  box.querySelectorAll('.leave-group-btn').forEach(btn => {
+    btn.onclick = async () => {
+      if (!confirm(`Naozaj sa odpojiť zo skupiny "${btn.dataset.name}"?`)) return;
+      const result = await leaveGroup(btn.dataset.id, nick);
+      if (!result.ok) { alert(result.message); return; }
+      renderMyGroupsList(nick);
+    };
+  });
+}
+
+async function initGroupsProfile() {
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return;
+
+  const joinBtn = document.getElementById('joinGroupBtn');
+  const codeInput = document.getElementById('joinGroupCodeInput');
+  const statusLine = document.getElementById('joinGroupStatusLine');
+  if (!joinBtn) return;
+
+  joinBtn.onclick = async () => {
+    statusLine.textContent = 'Pripájam...';
+    const result = await joinGroupByCode(codeInput.value, nick);
+    if (!result.ok) {
+      statusLine.textContent = `❌ ${result.message}`;
+      return;
+    }
+    statusLine.textContent = `✅ Pripojil/a si sa do skupiny "${result.groupName}".`;
+    codeInput.value = '';
+    renderMyGroupsList(nick);
+  };
+
+  renderMyGroupsList(nick);
 }
 
 async function renderFacultyMiniLeaderboard() {
