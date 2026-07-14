@@ -30,6 +30,9 @@
 import { renderSource } from '../scripts/sourceUtil.js';
 import { normalizeOkruh } from '../scripts/contentNormalize.js';
 import { shuffleOptions } from '../core.js';
+import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
+import { getRole } from '../scripts/economyConfig.js';
+import { openContentEditModal } from '../scripts/contentEditModal.js';
 
 const CONFIG = window.PRAVO_CONFIG || {};
 
@@ -56,6 +59,19 @@ let state = {
 ============================================================ */
 const $ = id => document.getElementById(id);
 const storageKey = () => `${window.PRAVO_APP_ID || 'pravo_app'}_done_${state.area}`;
+
+/* ============================================================
+   ROLA (admin/garant edit UI) – jedno čítanie skutočnej Firebase
+   roly za návštevu appky, nikdy lokálny "view" prepínač (ten sa
+   dá zneužiť na obídenie ekonomiky/pečatí).
+============================================================ */
+let myRoleCache = null;
+function getMyNick() { return localStorage.getItem('playerNick') || 'Anonymous'; }
+async function getMyRole() {
+  if (myRoleCache !== null) return myRoleCache;
+  myRoleCache = await getRole(getMyNick());
+  return myRoleCache;
+}
 
 function loadDone() {
   try {
@@ -98,12 +114,13 @@ async function awardPar() {
 /* ============================================================
    NAČÍTANIE OKRUHOV
 ============================================================ */
-async function fetchOkruh(path, fileBase) {
+async function fetchOkruh(path, fileBase, areaTitle) {
   try {
     const res = await fetch(`${path}${fileBase}.json`);
     if (!res.ok) return null;
     const data = await res.json();
-    return normalizeOkruh({ ...data, _file: fileBase });
+    const normalized = normalizeOkruh({ ...data, _file: fileBase });
+    return await applyOverridesForOkruh(normalized, areaTitle, fileBase);
   } catch {
     return null;
   }
@@ -117,12 +134,12 @@ async function loadOkruhy(area) {
 
   if (Array.isArray(cfg.files)) {
     for (const n of cfg.files) {
-      const okruh = await fetchOkruh(cfg.path, `A${n}`);
+      const okruh = await fetchOkruh(cfg.path, `A${n}`, cfg.reportArea);
       if (okruh) results.push({ ...okruh, _index: results.length });
     }
   } else {
     for (let i = 1; i <= (cfg.count || 0); i++) {
-      const okruh = await fetchOkruh(cfg.path, `A${i}`);
+      const okruh = await fetchOkruh(cfg.path, `A${i}`, cfg.reportArea);
       if (!okruh) break; // zastav pri prvom chýbajúcom súbore (rovnaké ako predtým)
       results.push({ ...okruh, _index: results.length });
     }
@@ -223,11 +240,55 @@ function selectOkruh(idx) {
   $('summaryTitle').textContent = okruh.title || okruh.id || `Okruh ${idx + 1}`;
   $('summaryText').textContent = (okruh.summary || 'Žiadne zhrnutie.').trim();
   $('summarySource').innerHTML = renderSource(okruh.zdroj);
+  setupSummaryControls(okruh, cfg);
 
   state.phase = 'summary';
   renderSidebar();
 
   document.querySelector('.content').scrollTop = 0;
+}
+
+/* ============================================================
+   NAHLÁSENIE + ÚPRAVA ZHRNUTIA (admin/garant)
+============================================================ */
+function setupSummaryControls(okruh, cfg) {
+  const sealEl = $('summarySeal');
+  if (sealEl) sealEl.textContent = okruh._summarySeal ? '🎓 overené garantom' : '';
+
+  const reportBtn = $('summaryReportBtn');
+  if (reportBtn) {
+    reportBtn.onclick = () => {
+      const url = `/?report=1&area=${encodeURIComponent(cfg.reportArea)}` +
+        `&src=${encodeURIComponent(okruh._file || '')}` +
+        `&qtext=${encodeURIComponent('Zhrnutie okruhu')}`;
+      window.open(url, '_blank');
+    };
+  }
+
+  const editBtn = $('summaryEditBtn');
+  if (!editBtn) return;
+  editBtn.style.display = 'none';
+  getMyRole().then(role => {
+    if (role !== 'admin' && role !== 'garant') return;
+    editBtn.style.display = 'inline-block';
+    editBtn.onclick = () => {
+      openContentEditModal({
+        app: AREA_SLUGS[cfg.reportArea],
+        okruh: okruh._file,
+        cast: 'summary',
+        kind: 'summary',
+        current: { summary: okruh.summary || '' },
+        autor: getMyNick(),
+        rola: role,
+        title: `Upraviť zhrnutie – ${okruh._file}`,
+        onSaved: (saved) => {
+          okruh.summary = saved.novyObsah.summary;
+          okruh._summarySeal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+          selectOkruh(state.currentOkruh);
+        }
+      });
+    };
+  });
 }
 
 /* ============================================================
@@ -277,6 +338,7 @@ function renderQuestion() {
   $('questionText').textContent = question.question;
   $('questionSource').innerHTML = renderSource(question.zdroj);
   setupReportButton(question);
+  setupQuestionEditButton(q.current);
 
   const grid = $('optionsGrid');
   const letters = ['A', 'B', 'C', 'D', 'E'];
@@ -331,6 +393,40 @@ function setupReportButton(question) {
       `&qtext=${encodeURIComponent(question.question || '')}`;
     window.open(url, '_blank');
   };
+}
+
+/* ÚPRAVA OTÁZKY (admin/garant) – pracuje s KANONICKÝM (nezamiešaným)
+   znením z okruh.quiz[idx], nie so zamiešaným zobrazením v kvíze. */
+function setupQuestionEditButton(idx) {
+  const btn = $('questionEditBtn');
+  if (!btn) return;
+  btn.style.display = 'none';
+  getMyRole().then(role => {
+    if (role !== 'admin' && role !== 'garant') return;
+    const okruh = state.okruhy[state.currentOkruh];
+    const cfg = CONFIG[state.area];
+    const canonical = okruh.quiz[idx];
+    btn.style.display = 'inline-block';
+    btn.onclick = () => {
+      openContentEditModal({
+        app: AREA_SLUGS[cfg.reportArea],
+        okruh: okruh._file,
+        cast: `quiz_${idx}`,
+        kind: 'question',
+        current: canonical,
+        autor: getMyNick(),
+        rola: role,
+        title: `Upraviť otázku – ${okruh._file} #${idx + 1}`,
+        onSaved: (saved) => {
+          Object.assign(okruh.quiz[idx], saved.novyObsah);
+          okruh.quiz[idx]._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+          state.quiz.questions[idx] = shuffleOptions(okruh.quiz[idx]);
+          state.quiz.answered[idx] = null;
+          renderQuestion();
+        }
+      });
+    };
+  });
 }
 
 function selectAnswer(optIdx) {
@@ -602,6 +698,11 @@ function buildCases() {
           html += `<div class="case-explanation ${isCorrect ? 'correct' : 'wrong'}">${
             isCorrect ? (exp.correct || '✅ Správne!') : (exp.wrong || `❌ Správna odpoveď: ${step.options[step.correct]}`)
           }</div>`;
+          html += `<div style="margin:4px 0 2px;display:flex;gap:10px">
+            <button class="report-q-btn case-report-btn" data-si="${si}" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+            <button class="report-q-btn case-edit-btn" data-si="${si}" type="button" style="display:none">✏️ Upraviť</button>
+          </div>`;
+          if (step._seal) html += `<div class="small muted">🎓 overené garantom</div>`;
         }
       }
 
@@ -628,6 +729,46 @@ function buildCases() {
           if (revealed < steps.length) revealed++;
           render();
         };
+      });
+
+      card.querySelectorAll('.case-report-btn').forEach(btn => {
+        btn.onclick = () => {
+          const si = parseInt(btn.dataset.si);
+          const cfg = CONFIG[state.area];
+          const url = `/?report=1&area=${encodeURIComponent(cfg.reportArea)}` +
+            `&src=${encodeURIComponent(okruh._file || '')}` +
+            `&qtext=${encodeURIComponent(steps[si].question || '')}`;
+          window.open(url, '_blank');
+        };
+      });
+
+      card.querySelectorAll('.case-edit-btn').forEach(btn => {
+        const si = parseInt(btn.dataset.si);
+        getMyRole().then(role => {
+          if (role !== 'admin' && role !== 'garant') return;
+          btn.style.display = 'inline-block';
+          btn.onclick = () => {
+            const cfg = CONFIG[state.area];
+            const canonical = (okruh.cases[ci].steps || [])[si];
+            openContentEditModal({
+              app: AREA_SLUGS[cfg.reportArea],
+              okruh: okruh._file,
+              cast: `case_${ci}_step_${si}`,
+              kind: 'question',
+              current: canonical,
+              autor: getMyNick(),
+              rola: role,
+              title: `Upraviť krok prípadu – ${okruh._file} · prípad ${ci + 1}`,
+              onSaved: (saved) => {
+                Object.assign(okruh.cases[ci].steps[si], saved.novyObsah);
+                okruh.cases[ci].steps[si]._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+                steps[si] = shuffleOptions(okruh.cases[ci].steps[si]);
+                answers[si] = null;
+                render();
+              }
+            });
+          };
+        });
       });
     }
 

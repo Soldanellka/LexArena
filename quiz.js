@@ -17,8 +17,21 @@ import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js'
 import { playSound } from './audio.js';
 import { econEnergy, econSpend, ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
+import { AREA_SLUGS } from './scripts/contentOverrides.js';
+import { openContentEditModal } from './scripts/contentEditModal.js';
+import { getRole } from './scripts/economyConfig.js';
 
 const SEAL_EMOJI = { bronze: '🥉', silver: '🥈', gold: '🥇', academic: '🎓' };
+
+/* ROLA (admin/garant edit UI) – skutočná Firebase rola, nikdy lokálny
+   "view" prepínač. */
+let myRoleCache = null;
+function getMyNick() { return localStorage.getItem('playerNick') || 'Anonymous'; }
+async function getMyRole() {
+  if (myRoleCache !== null) return myRoleCache;
+  myRoleCache = await getRole(getMyNick());
+  return myRoleCache;
+}
 
 /* Oblasť aktuálnej otázky – funguje pre študijný aj duelový režim. */
 function resolveAreaTitle() {
@@ -127,6 +140,8 @@ export function renderQuestion(first = false){
     if (parent) {
       const oldReport = parent.querySelector('#reportQuestionBtn');
       if (oldReport) oldReport.remove();
+      const oldEdit = parent.querySelector('#editQuestionBtn');
+      if (oldEdit) oldEdit.remove();
       const oldHint = parent.querySelector('#hint5050Btn');
       if (oldHint) oldHint.remove();
       const oldSeal = parent.querySelector('#questionSealBadge');
@@ -206,6 +221,43 @@ export function renderQuestion(first = false){
       });
 
       parent.appendChild(reportBtn);
+
+      /* ✏️ Úprava (admin/garant) – pracuje s KANONICKÝM (nezamiešaným)
+         znením z window.areas[q._area], nie so zamiešanou kópiou v
+         quiz.questions (startQuiz() robí hlboký klon + zamieša options). */
+      if (q._area && typeof q._quizIndex === 'number') {
+        getMyRole().then(role => {
+          if (role !== 'admin' && role !== 'garant') return;
+          const canonicalList = window.areas?.[q._area];
+          const canonical = Array.isArray(canonicalList)
+            ? canonicalList.find(cq => cq.source === q.source && cq._quizIndex === q._quizIndex)
+            : null;
+          if (!canonical) return;
+
+          const editBtn = document.createElement('button');
+          editBtn.id = 'editQuestionBtn';
+          editBtn.className = 'report-q-btn';
+          editBtn.textContent = '✏️ Upraviť';
+          editBtn.addEventListener('click', () => {
+            openContentEditModal({
+              app: AREA_SLUGS[q._area],
+              okruh: q.source,
+              cast: `quiz_${q._quizIndex}`,
+              kind: 'question',
+              current: canonical,
+              autor: getMyNick(),
+              rola: role,
+              title: `Upraviť otázku – ${q.source}`,
+              onSaved: (saved) => {
+                Object.assign(canonical, saved.novyObsah);
+                canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+                showRewardToast('✅ Zmena uložená. Prejaví sa pri ďalšom načítaní otázky.');
+              }
+            });
+          });
+          parent.appendChild(editBtn);
+        });
+      }
     }
 
     qText.style.transition = 'opacity 260ms ease';

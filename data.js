@@ -1,6 +1,7 @@
 'use strict';
 
 import { normalizeOkruh } from './scripts/contentNormalize.js';
+import { applyOverridesForOkruh } from './scripts/contentOverrides.js';
 
 console.log("DATAJS NAČÍTANÝ");
 
@@ -106,7 +107,11 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       /* Normalizácia na jeden vnútorný tvar (summary/theory, question/q,
          explanation v 3 tvaroch, zdroj/source) – nech engine prijme
          všetky existujúce tvary JSON bez prepisovania súborov. */
-      const json = normalizeOkruh(raw);
+      const normalized = normalizeOkruh(raw);
+      /* Firebase override (admin/garant oprava) navrství sa nad pôvodný
+         JSON – chýbajúci override alebo nedostupná Firebase necháva
+         pôvodný obsah bez zmeny. */
+      const json = await applyOverridesForOkruh(normalized, areaTitle, file.replace('.json', ''));
 
       /* 🃏 Dlaždice pre memory (pojem ↔ definícia) */
       if (Array.isArray(json.tiles)) {
@@ -126,6 +131,12 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
               difficulty: c.difficulty || '',
               steps: c.steps, // už normalizované (question/explanation/zdroj na krok)
               source: file.replace('.json',''),
+              /* Pôvodná (nezlúčená) oblasť tohto prípadu – niektoré výbery
+                 v cases.js zlučujú viac oblastí do jedného poľa (napr.
+                 "Trestné právo" = hmotné + procesné), takže areaTitle
+                 parameter v renderJsonCase() by nebol spoľahlivý na
+                 identifikáciu contentOverrides app slugu. */
+              area: areaTitle,
               zdroj: c.zdroj || null
             });
           }
@@ -133,13 +144,20 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       }
 
       if (json.quiz) {
-        json.quiz.forEach(q => {
+        json.quiz.forEach((q, qi) => {
           questions.push({
             question: q.question, // už normalizované (question || q)
             options: q.options,
             correct: q.correct,
             explanation: q.explanation, // už normalizované na {correct,wrong} | null
             zdroj: q.zdroj || null,
+            _seal: q._seal || null,
+            /* Kanonický index v okruh.quiz[] (pred zamiešaním) + oblasť –
+               potrebné pre admin/garant inline editáciu (contentOverrides
+               cast kľúč quiz_{i}), keďže toto pole je zlúčené naprieč
+               všetkými súbormi danej oblasti a stráca pôvodný index. */
+            _quizIndex: qi,
+            _area: areaTitle,
             /* =========================
                🔥 OPRAVA: source sa nastavuje podľa
                skutočného súboru (napr. "A23"), nie podľa

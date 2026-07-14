@@ -12,6 +12,9 @@ import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
+import { AREA_SLUGS } from './scripts/contentOverrides.js';
+import { openContentEditModal } from './scripts/contentEditModal.js';
+import { getRole } from './scripts/economyConfig.js';
 
 /* Per-step zdroj: na rozdiel od case-level/okruh-level renderSource() (kde
    chýbajúci zdroj zámerne zobrazí "Zdroj: doplní sa"), tu sa má krok bez
@@ -371,6 +374,18 @@ function renderCasesFromQuestions(container) {
 
 window.loadCasesFromQuestions = loadCasesFromQuestions;
 
+/* ============================================================
+   ROLA (admin/garant edit UI) – skutočná Firebase rola, nikdy
+   lokálny "view" prepínač.
+============================================================ */
+let myRoleCache = null;
+function getMyNick() { return localStorage.getItem('playerNick') || 'Anonymous'; }
+async function getMyRole() {
+  if (myRoleCache !== null) return myRoleCache;
+  myRoleCache = await getRole(getMyNick());
+  return myRoleCache;
+}
+
 /* =========================
    MULTI-STEP PRÍPADY Z JSON
    Jeden prípad = scenár + viac otázok (steps)
@@ -389,8 +404,12 @@ export function loadCasesFromJson(casesArr, areaTitle) {
      kroku pri každom kliknutí). Uložené do window.__jsonCases, takže
      renderJsonCase() číta stabilné, raz zamiešané poradie počas celej
      návštevy tejto oblasti. */
+  /* _original: referencia na KANONICKÝ (nezamiešaný) prípad z
+     window.areaCases – admin/garant editácia z neho číta/zapisuje,
+     nikdy zo zamiešanej kópie nižšie (Task 1 ↔ Task 2 prepojenie). */
   window.__jsonCases = casesArr.map(c => ({
     ...c,
+    _original: c,
     steps: (c.steps || []).map(s => Array.isArray(s.options) && s.options.length ? shuffleOptions(s) : s)
   }));
   window.__jsonCaseIndex = 0;
@@ -479,6 +498,11 @@ function renderJsonCase(container, areaTitle) {
         ? escapeHtml((exp && exp.correct) || '') || '✅ Správne!'
         : escapeHtml((exp && exp.wrong) || '') || ('❌ Nesprávne. Správna odpoveď: ' + escapeHtml(s.options[s.correct]));
       html += `<div class="case-step-feedback ${ok ? 'ok' : 'no'}">${text}</div>`;
+      html += `<div style="margin:4px 0 2px;display:flex;gap:10px">
+        <button class="report-q-btn case-report-btn" data-si="${i}" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+        <button class="report-q-btn case-edit-btn" data-si="${i}" type="button" style="display:none">✏️ Upraviť</button>
+      </div>`;
+      if (s._seal) html += `<div class="small muted">🎓 overené garantom</div>`;
     }
 
     html += renderStepSource(s);
@@ -514,6 +538,47 @@ function renderJsonCase(container, areaTitle) {
       window.__jsonCaseAnswers[idx][si] = oi;
       renderJsonCase(container, areaTitle);
     };
+  });
+
+  container.querySelectorAll('.case-report-btn').forEach(btn => {
+    btn.onclick = () => {
+      const si = parseInt(btn.dataset.si);
+      const step = c.steps[si];
+      const url = `/?report=1&area=${encodeURIComponent(c.area || areaTitle)}` +
+        `&src=${encodeURIComponent(c.source || '')}` +
+        `&qtext=${encodeURIComponent(step.question || '')}`;
+      window.open(url, '_blank');
+    };
+  });
+
+  container.querySelectorAll('.case-edit-btn').forEach(btn => {
+    const si = parseInt(btn.dataset.si);
+    getMyRole().then(role => {
+      if (role !== 'admin' && role !== 'garant') return;
+      btn.style.display = 'inline-block';
+      btn.onclick = () => {
+        const app = AREA_SLUGS[c.area];
+        const canonical = c._original?.steps?.[si];
+        if (!app || !canonical) return;
+        openContentEditModal({
+          app,
+          okruh: c.source,
+          cast: `case_${idx}_step_${si}`,
+          kind: 'question',
+          current: canonical,
+          autor: getMyNick(),
+          rola: role,
+          title: `Upraviť krok prípadu – ${c.source} · prípad ${idx + 1}`,
+          onSaved: (saved) => {
+            Object.assign(canonical, saved.novyObsah);
+            canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+            c.steps[si] = shuffleOptions(canonical);
+            delete window.__jsonCaseAnswers[idx]?.[si];
+            renderJsonCase(container, areaTitle);
+          }
+        });
+      };
+    });
   });
 
   container.querySelector('.case-prev')?.addEventListener('click', () => {

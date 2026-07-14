@@ -85,6 +85,11 @@
         <div class="summary-tag" id="summaryTag"></div>
         <h2 class="summary-title" id="summaryTitle"></h2>
         <div class="summary-text" id="summaryText"></div>
+        <div style="margin:-4px 0 10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <button class="report-q-btn" id="summaryReportBtn" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+          <button class="report-q-btn" id="summaryEditBtn" type="button" style="display:none">✏️ Upraviť</button>
+          <span class="small muted" id="summarySeal"></span>
+        </div>
         <button class="start-btn" id="startQuizBtn">
           Spustiť kvíz
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -112,8 +117,9 @@
         <div class="question-card">
           <div class="question-number" id="questionNumber">Otázka 1</div>
           <div class="question-text" id="questionText"></div>
-          <div style="margin:-6px 0 10px">
+          <div style="margin:-6px 0 10px;display:flex;gap:10px">
             <button class="report-q-btn" id="questionReportBtn" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
+            <button class="report-q-btn" id="questionEditBtn" type="button" style="display:none">✏️ Upraviť</button>
           </div>
           <div class="options-grid" id="optionsGrid"></div>
 
@@ -192,6 +198,7 @@
 
 </main>
 
+<script type="module" src="../firebase.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
