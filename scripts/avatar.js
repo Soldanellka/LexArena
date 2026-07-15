@@ -72,20 +72,53 @@ const AVATAR_CONFIG = {
        talár "oblieka" (kombinovaný PNG render, nie vrstvenie) – obchod
        v init.js ponúka hráčovi len taláre patriace k JEHO aktuálnemu
        základnému avataru. `talarRole` je kľúč do ECONOMY_CONFIG.TALARE
-       (cena, jediný zdroj pravdy pre sumy). Nie každý zo 6 základných
-       avatarov má zatiaľ hotový render pre každú farbu taláru –
-       chýbajúce kombinácie tu jednoducho nie sú (žiadny fiktívny
-       nákup niečoho, čo appka nevie zobraziť).
+       (cena, jediný zdroj pravdy pre sumy).
+
+       `fallbackBase` (voliteľné): DOČASNÉ požičanie obrázka od inej
+       variantY, kým zadávateľka nedodá vlastnú grafiku – VÝHRADNE pre
+       základný čierny talár (bez lemu) v rámci ROVNAKÉHO pohlavia,
+       nikdy pre taláre s lemom a nikdy naprieč pohlaviami (na čiernej
+       látke bez lemu je rozdiel vo vlasoch prakticky neviditeľný, pri
+       lemoch by bol nápadný). `base` vždy ukazuje na VLASTNÚ (zatiaľ
+       neexistujúcu) cestu tejto položky – avatarSrc()/renderTalarShop
+       skúsia najprv ju, a až keď 404, prepnú na fallbackBase. Až
+       zadávateľka nahrá skutočný súbor na `base` ceste, fallback sa už
+       nikdy nepoužije – ŽIADNA zmena kódu nie je potrebná.
+
+       `hidden` (voliteľné): položka má vlastný súbor, ale s NESPRÁVNOU
+       farbou lemu (zistené pri audite) – kým nepríde opravená grafika,
+       v obchode sa nezobrazuje a nedá sa kúpiť (pozri buyTalar/
+       getTalarShopEntries nižšie). Existujúci vlastníci (ak nejakí sú)
+       o ňu neprídu, len sa nedá znova nakúpiť/objaviť v obchode.
+
+       Nie každý zo 6 základných avatarov má zatiaľ hotový vlastný render
+       pre každú farbu taláru – chýbajúce kombinácie s lemom tu jednoducho
+       NIE SÚ (žiadny fiktívny nákup niečoho, čo appka nevie zobraziť).
     ============================================================ */
     'student-blond-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-blond-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'student-medeny-talar-cierny':  { name: 'Študent – základný talár',                base: 'avatars/student-medeny-talar-cierny',  unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'student-tmavy-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-tmavy-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
-    'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    /* Vlastný render zatiaľ chýba – požičaný od student-medeny-talar-cierny
+       (rovnaké pohlavie, len čierny talár bez lemu). */
+    'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   fallbackBase: 'avatars/student-medeny-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Skryté – vlastný súbor existuje, ale má nesprávnu farbu lemu
+       (fialový namiesto modrého, zistené pri audite). Čaká na opravenú
+       grafiku od zadávateľky; odstráň `hidden` hneď ako príde. */
+    'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT, hidden: true },
     'studentka-blond-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-blond-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
-    'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
+    /* Skryté – súbor existuje, ale je bajtovo identický s
+       studentka-blond-prokurator (duplikát pri nahrávaní, zlá farba
+       lemu). Čaká na opravenú grafiku od zadávateľky. */
+    'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA, hidden: true },
     'studentka-medena-talar-cierny':{ name: 'Študentka – základný talár',              base: 'avatars/studentka-medena-talar-cierny',unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'studentka-tmava-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-tmava-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     'studentka-tmava-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-tmava-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
+    /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
+       (rovnaké pohlavie, len čierny talár bez lemu). */
+    'studentka-tmava-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-tmava-talar-cierny', fallbackBase: 'avatars/studentka-medena-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-tmava', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
+       (rovnaké pohlavie, len čierny talár bez lemu). */
+    'studentka-blond-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-blond-talar-cierny', fallbackBase: 'avatars/studentka-medena-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
 
     /* Akademický talár – NIKDY na predaj. Priradený výhradne podľa
        aktuálnej (živej) Firebase roly, nie kúpou ani jednorazovým
@@ -428,7 +461,7 @@ export async function buyTalar(avatarId) {
   if (!db || !nick) return { ok: false, message: 'Musíš byť prihlásený.' };
 
   const avatarDef = AVATAR_CONFIG.AVATARS[avatarId];
-  if (!avatarDef || avatarDef.unlock !== 'talar_purchase' || !avatarDef.talarPrice) {
+  if (!avatarDef || avatarDef.unlock !== 'talar_purchase' || !avatarDef.talarPrice || avatarDef.hidden) {
     return { ok: false, message: 'Tento talár sa nedá kúpiť.' };
   }
 
@@ -469,6 +502,7 @@ export async function getTalarShopEntries(currentBaseId) {
 
   const entries = Object.entries(AVATAR_CONFIG.AVATARS)
     .filter(([id, def]) => {
+      if (def.hidden) return false; // čaká na opravenú grafiku, pozri komentár pri definícii
       if (def.unlock === 'talar_purchase') return def.talarBaseId === currentBaseId;
       if (def.unlock === 'talar_role') return role === 'garant' || role === 'admin';
       return false;
@@ -476,6 +510,8 @@ export async function getTalarShopEntries(currentBaseId) {
     .map(([id, def]) => ({
       id,
       name: def.name,
+      base: def.base,
+      fallbackBase: def.fallbackBase || null,
       price: def.talarPrice || null,
       academic: def.unlock === 'talar_role',
       owned: def.unlock === 'talar_role' ? true : !!owned[id]
@@ -494,13 +530,25 @@ export async function getTalarShopEntries(currentBaseId) {
      sekcia).
    - Staré/obchodné avatary (def.awake/def.sleep): pôvodné 2 stavy, bust
      nemajú – variant sa ignoruje, bez zmeny správania. */
+function avatarSrcFromBase(base, energy, variant = 'full') {
+  const state = energy <= 0 ? 'sleep' : energy <= 50 ? 'tired' : 'full';
+  const suffix = variant === 'bust' ? '-bust' : '';
+  return `${base}-${state}${suffix}.png`;
+}
 function avatarSrc(def, energy, variant = 'full') {
-  if (def.base) {
-    const state = energy <= 0 ? 'sleep' : energy <= 50 ? 'tired' : 'full';
-    const suffix = variant === 'bust' ? '-bust' : '';
-    return `${def.base}-${state}${suffix}.png`;
-  }
+  if (def.base) return avatarSrcFromBase(def.base, energy, variant);
   return energy <= AVATAR_CONFIG.SLEEP_THRESHOLD ? def.sleep : def.awake;
+}
+/* Nastaví <img>.src na def.base a zapojí onerror na def.fallbackBase (ak
+   existuje) – DOČASNÉ požičanie obrázka, kým zadávateľka nedodá vlastnú
+   grafiku (pozri komentár pri fallbackBase v AVATAR_CONFIG.AVATARS vyššie).
+   Len jeden pokus o fallback, potom sa onerror odpojí, aby nekonečne
+   necyklovalo, ak by aj fallback chýbal. */
+function setAvatarImgSrc(imgEl, def, energy, variant = 'full') {
+  imgEl.src = avatarSrc(def, energy, variant);
+  imgEl.onerror = def.fallbackBase
+    ? () => { imgEl.onerror = null; imgEl.src = avatarSrcFromBase(def.fallbackBase, energy, variant); }
+    : null;
 }
 
 /* Pre iné moduly (napr. scripts/leaderboard.js), ktoré potrebujú bust cestu
@@ -520,6 +568,13 @@ function preloadAvatarStates(def) {
     new Image().src = `${def.base}-${state}.png`;
     new Image().src = `${def.base}-${state}-bust.png`;
   });
+  // Ak vlastný render zatiaľ chýba, predhraj rovno požičaný obrázok tiež.
+  if (def.fallbackBase) {
+    ['full', 'tired', 'sleep'].forEach(state => {
+      new Image().src = `${def.fallbackBase}-${state}.png`;
+      new Image().src = `${def.fallbackBase}-${state}-bust.png`;
+    });
+  }
 }
 
 export function updateAvatarUI(energy, avatarType) {
@@ -529,7 +584,7 @@ export function updateAvatarUI(energy, avatarType) {
   // Obrázok avatara – hlavička VŽDY bust (portrét), aj pre základnú sadu
   const imgEl = document.getElementById('userAvatar');
   if (imgEl) {
-    imgEl.src = avatarSrc(avatarDef, energy, 'bust');
+    setAvatarImgSrc(imgEl, avatarDef, energy, 'bust');
     imgEl.alt = avatarDef.name;
     // Animácia pri spánku – len staré avatary (2 stavy); nová sada má vlastný spiaci render
     imgEl.style.filter = (!avatarDef.base && isSleeping) ? 'saturate(0.5) brightness(0.8)' : '';

@@ -317,8 +317,8 @@ async function renderTalarShop(baseId) {
     <div class="talar-shop-card ${e.academic ? 'talar-academic' : ''}" data-id="${e.id}" style="
       border:2px solid ${e.academic ? '#d4af37' : 'var(--card-border,#eee)'}; border-radius:12px; padding:8px; text-align:center;
     ">
-      <img src="avatars/${e.id}-full.png" alt="${escapeHtml(e.name)}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px"
-        onerror="this.style.display='none'"/>
+      <img class="talar-shop-img" data-fallback="${e.fallbackBase ? `${e.fallbackBase}-full.png` : ''}"
+        src="${e.base}-full.png" alt="${escapeHtml(e.name)}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px"/>
       <div class="small" style="margin-top:4px;font-weight:600">${escapeHtml(e.name)}</div>
       ${e.academic
         ? `<div class="small" style="color:#b8860b;font-weight:600">🎓 automaticky (garant/admin)</div>`
@@ -328,6 +328,19 @@ async function renderTalarShop(baseId) {
       }
     </div>
   `).join('');
+
+  // Vlastný obrázok najprv; ak 404 (grafika ešte nedodaná), skús požičaný
+  // (data-fallback), a ak zlyhá aj ten, kartu skry (nikdy nenechaj rozbitú ikonu).
+  grid.querySelectorAll('.talar-shop-img').forEach(img => {
+    img.onerror = () => {
+      if (img.dataset.fallback && !img.dataset.triedFallback) {
+        img.dataset.triedFallback = '1';
+        img.src = img.dataset.fallback;
+      } else {
+        img.style.display = 'none';
+      }
+    };
+  });
 
   grid.querySelectorAll('.talar-equip-btn').forEach(btn => {
     btn.onclick = async () => {
