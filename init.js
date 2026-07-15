@@ -28,9 +28,15 @@ import {
   getFacultyLeaderboard, settleFacultyLeaderboard, getFacultyBadgeInfo, getFacultyBadge
 } from './scripts/faculties.js';
 import {
-  createGroup, getMyGarantGroups, getMyMemberGroups,
+  createGroup, getMyGarantGroups, getMyMemberGroups, getGroup,
   renameGroup, deleteGroup, joinGroupByCode, leaveGroup
 } from './scripts/groups.js';
+import {
+  createAssignment, deleteAssignment, getAssignment,
+  getAssignmentsForGroup, getAssignmentsForGroupIds,
+  listOkruhy, listAreaTitles, assignmentStatus, getMyResult,
+  submitAssignment, getAssignmentResults
+} from './scripts/assignments.js';
 
 /* =====================================================
    ČAKANIE NA DATA.JS + AREAS.JS + CATALOG
@@ -157,6 +163,10 @@ async function openAvatarSelectModal() {
       </div>
       <div class="small muted" id="joinGroupStatusLine" style="margin-top:4px"></div>
       <div id="myGroupsList" class="small muted" style="margin-top:8px">Načítavam…</div>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border,#eee)">
+      <div style="font-weight:600;font-size:13px;margin-bottom:6px">📝 Moje testy</div>
+      <div id="myAssignmentsList" class="small muted">Načítavam…</div>
     </div>
   `;
 
@@ -1191,12 +1201,16 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
           <div class="small muted">Kód: <strong>${escapeHtml(g.code)}</strong> · ${Object.keys(g.members || {}).length} členov</div>
         </div>
         <div style="display:flex;gap:4px">
+          <button class="btn group-tests-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:4px 8px;font-size:12px">📝</button>
           <button class="btn group-rename-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:4px 8px;font-size:12px">✏️</button>
           <button class="btn group-delete-btn" data-id="${g.id}" data-name="${escapeHtml(g.name)}" style="padding:4px 8px;font-size:12px">🗑️</button>
         </div>
       </div>
     `).join('');
 
+    groupListEl.querySelectorAll('.group-tests-btn').forEach(btn => {
+      btn.onclick = () => openGroupTestsModal(btn.dataset.id, btn.dataset.name, myNick);
+    });
     groupListEl.querySelectorAll('.group-rename-btn').forEach(btn => {
       btn.onclick = async () => {
         const newName = prompt('Nový názov skupiny:', btn.dataset.name);
@@ -1558,6 +1572,231 @@ function renderAdminPanel(role, db, ref, get, update, onValue, remove) {
       }
     };
   }
+}
+
+/* ============================================================
+   AKADEMICKÁ VRSTVA – KROK 2: Testy pre skupinu (garant pohľad)
+   ============================================================ */
+function formatAssignmentDate(ts) {
+  const d = new Date(ts);
+  return d.toLocaleString('sk-SK', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+
+function assignmentStatusBadge(assignment) {
+  const status = assignmentStatus(assignment);
+  if (status === 'upcoming') return `<span class="small" style="color:var(--muted)">🕓 Otvorí sa ${formatAssignmentDate(assignment.opensAt)}</span>`;
+  if (status === 'open') return `<span class="small" style="color:var(--accent-3, #15803d)">🟢 Aktívny do ${formatAssignmentDate(assignment.closesAt)}</span>`;
+  return `<span class="small muted">⚪ Uzavretý ${formatAssignmentDate(assignment.closesAt)}</span>`;
+}
+
+function openGroupTestsModal(groupId, groupName, myNick) {
+  const old = document.getElementById('groupTestsModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'groupTestsModal';
+  modal.className = 'avatar-modal';
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="margin:0">📝 Testy – ${escapeHtml(groupName)}</h3>
+        <button class="btn" id="closeGroupTestsModal">✕</button>
+      </div>
+      <button class="btn btn-primary" id="newTestBtn" style="width:100%;margin-bottom:12px">➕ Nový test</button>
+      <div id="groupTestsList" class="small muted">Načítavam…</div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  document.getElementById('closeGroupTestsModal').onclick = () => modal.remove();
+
+  async function renderList() {
+    const listEl = document.getElementById('groupTestsList');
+    if (!listEl) return;
+    const tests = await getAssignmentsForGroup(groupId);
+    if (!tests.length) { listEl.textContent = 'Zatiaľ žiadne testy v tejto skupine.'; return; }
+    listEl.innerHTML = tests.map(a => `
+      <div style="padding:8px 0;border-bottom:1px solid var(--card-border)">
+        <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+          <div>
+            <div style="font-weight:600;color:var(--text,inherit)">${escapeHtml(a.title)}</div>
+            <div class="small muted">${a.questions.length} otázok · ${escapeHtml(a.areaTitle)}</div>
+            <div style="margin-top:2px">${assignmentStatusBadge(a)}</div>
+          </div>
+          <div style="display:flex;gap:4px;flex-shrink:0">
+            <button class="btn test-results-btn" data-id="${a.id}" style="padding:4px 8px;font-size:12px">📊</button>
+            <button class="btn test-delete-btn" data-id="${a.id}" data-title="${escapeHtml(a.title)}" style="padding:4px 8px;font-size:12px">🗑️</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    listEl.querySelectorAll('.test-results-btn').forEach(btn => {
+      btn.onclick = () => openTestResultsModal(btn.dataset.id);
+    });
+    listEl.querySelectorAll('.test-delete-btn').forEach(btn => {
+      btn.onclick = async () => {
+        if (!confirm(`Naozaj zmazať test "${btn.dataset.title}"? Zmažú sa aj výsledky.`)) return;
+        await deleteAssignment(btn.dataset.id, myNick);
+        renderList();
+      };
+    });
+  }
+
+  document.getElementById('newTestBtn').onclick = () => openTestBuilderModal(groupId, groupName, renderList);
+
+  renderList();
+}
+
+function openTestBuilderModal(groupId, groupName, onCreated) {
+  const old = document.getElementById('testBuilderModal');
+  if (old) old.remove();
+
+  const areas = listAreaTitles();
+  const modal = document.createElement('div');
+  modal.id = 'testBuilderModal';
+  modal.className = 'avatar-modal';
+  modal.style.zIndex = '10000';
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="margin:0">➕ Nový test – ${escapeHtml(groupName)}</h3>
+        <button class="btn" id="closeTestBuilderModal">✕</button>
+      </div>
+      <input id="tbTitleInput" class="form-input" type="text" maxlength="80"
+        placeholder="Názov testu (napr. Test č. 1 – Pracovné právo)" style="margin-bottom:8px"/>
+      <select id="tbAreaSelect" class="form-input" style="margin-bottom:8px">
+        <option value="">Vyber oblasť...</option>
+        ${areas.map(a => `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`).join('')}
+      </select>
+      <div style="display:flex;gap:12px;margin-bottom:8px">
+        <label class="small"><input type="radio" name="tbMode" value="okruhy" checked/> podľa okruhov</label>
+        <label class="small"><input type="radio" name="tbMode" value="oblast"/> celá oblasť</label>
+      </div>
+      <div id="tbOkruhyBox" class="small muted" style="max-height:140px;overflow-y:auto;border:1px solid var(--card-border);border-radius:8px;padding:6px;margin-bottom:8px">
+        Najprv vyber oblasť.
+      </div>
+      <input id="tbCountInput" class="form-input" type="number" min="1" max="100" value="10"
+        placeholder="Počet otázok" style="margin-bottom:8px"/>
+      <label class="small muted">Otvorenie testu</label>
+      <input id="tbOpensInput" class="form-input" type="datetime-local" style="margin-bottom:8px"/>
+      <label class="small muted">Uzavretie testu</label>
+      <input id="tbClosesInput" class="form-input" type="datetime-local" style="margin-bottom:8px"/>
+      <div id="tbMsg" class="small" style="min-height:16px;margin-bottom:8px;color:var(--muted)"></div>
+      <button class="btn btn-primary" id="tbSubmitBtn" style="width:100%">Vytvoriť test</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  document.getElementById('closeTestBuilderModal').onclick = () => modal.remove();
+
+  const areaSelect = document.getElementById('tbAreaSelect');
+  const okruhyBox = document.getElementById('tbOkruhyBox');
+
+  function renderOkruhyBox() {
+    const areaTitle = areaSelect.value;
+    if (!areaTitle) { okruhyBox.innerHTML = 'Najprv vyber oblasť.'; return; }
+    const okruhy = listOkruhy(areaTitle);
+    if (!okruhy.length) { okruhyBox.innerHTML = 'Pre túto oblasť nie sú okruhy.'; return; }
+    okruhyBox.innerHTML = okruhy.map(o => `
+      <label class="small" style="display:block;padding:2px 0">
+        <input type="checkbox" class="tb-okruh-check" value="${escapeHtml(o.source)}"/> ${escapeHtml(o.source)} (${o.count})
+      </label>
+    `).join('');
+  }
+  areaSelect.onchange = renderOkruhyBox;
+
+  function updateModeUI() {
+    const mode = modal.querySelector('input[name="tbMode"]:checked').value;
+    okruhyBox.style.display = mode === 'okruhy' ? 'block' : 'none';
+  }
+  modal.querySelectorAll('input[name="tbMode"]').forEach(r => { r.onchange = updateModeUI; });
+
+  document.getElementById('tbSubmitBtn').onclick = async () => {
+    const msg = document.getElementById('tbMsg');
+    const title = document.getElementById('tbTitleInput').value;
+    const areaTitle = areaSelect.value;
+    const mode = modal.querySelector('input[name="tbMode"]:checked').value;
+    const count = document.getElementById('tbCountInput').value;
+    const opensRaw = document.getElementById('tbOpensInput').value;
+    const closesRaw = document.getElementById('tbClosesInput').value;
+    const opensAt = opensRaw ? new Date(opensRaw).getTime() : null;
+    const closesAt = closesRaw ? new Date(closesRaw).getTime() : null;
+    const okruhIds = Array.from(modal.querySelectorAll('.tb-okruh-check:checked')).map(c => c.value);
+
+    msg.textContent = 'Vytváram...';
+    msg.style.color = 'var(--muted)';
+    const result = await createAssignment({ title, groupId, mode, areaTitle, okruhIds, count, opensAt, closesAt });
+    if (!result.ok) {
+      msg.textContent = `❌ ${result.message}`;
+      msg.style.color = '#b91c1c';
+      return;
+    }
+    msg.textContent = `✅ Test vytvorený (${result.count} otázok).`;
+    msg.style.color = 'var(--accent-3, #15803d)';
+    setTimeout(() => { modal.remove(); if (onCreated) onCreated(); }, 700);
+  };
+}
+
+async function openTestResultsModal(assignmentId) {
+  const old = document.getElementById('testResultsModal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'testResultsModal';
+  modal.className = 'avatar-modal';
+  modal.style.zIndex = '10000';
+  modal.innerHTML = `
+    <div class="avatar-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="margin:0" id="trTitle">📊 Výsledky</h3>
+        <button class="btn" id="closeTestResultsModal">✕</button>
+      </div>
+      <div id="trBody" class="small muted">Načítavam…</div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  document.getElementById('closeTestResultsModal').onclick = () => modal.remove();
+
+  const assignment = await getAssignment(assignmentId);
+  if (!assignment) { document.getElementById('trBody').textContent = 'Test neexistuje.'; return; }
+  document.getElementById('trTitle').textContent = `📊 Výsledky – ${assignment.title}`;
+
+  const [group, results] = await Promise.all([
+    getGroup(assignment.groupId),
+    getAssignmentResults(assignmentId)
+  ]);
+  const members = Object.keys((group && group.members) || {});
+  const body = document.getElementById('trBody');
+
+  if (!members.length) {
+    body.textContent = 'Skupina nemá žiadnych členov.';
+    return;
+  }
+
+  body.innerHTML = members.map(nick => {
+    const r = results[nick];
+    if (!r) {
+      return `
+        <div style="padding:8px 0;border-bottom:1px solid var(--card-border)">
+          <strong>${escapeHtml(nick)}</strong> <span class="small muted">– nenapísal/a</span>
+        </div>`;
+    }
+    const pct = r.total ? Math.round((r.score / r.total) * 100) : 0;
+    const wrongList = (r.wrongIdx || []).map(i => {
+      const q = assignment.questions[i];
+      return q ? `<li>${escapeHtml(q.question)}</li>` : '';
+    }).join('');
+    return `
+      <div style="padding:8px 0;border-bottom:1px solid var(--card-border)">
+        <div style="display:flex;justify-content:space-between">
+          <strong>${escapeHtml(nick)}</strong>
+          <span>${r.score}/${r.total} (${pct}%)</span>
+        </div>
+        ${wrongList ? `<details style="margin-top:4px"><summary class="small muted" style="cursor:pointer">Zlé otázky (${r.wrongIdx.length})</summary><ul class="small" style="margin:4px 0 0 18px">${wrongList}</ul></details>` : '<div class="small muted" style="margin-top:2px">Bez chyby 🎉</div>'}
+      </div>`;
+  }).join('');
 }
 
 function renderAnalyticsBox(box, overview) {
@@ -2220,9 +2459,170 @@ async function initGroupsProfile() {
     statusLine.textContent = `✅ Pripojil/a si sa do skupiny "${result.groupName}".`;
     codeInput.value = '';
     renderMyGroupsList(nick);
+    renderMyAssignmentsList(nick);
   };
 
   renderMyGroupsList(nick);
+  renderMyAssignmentsList(nick);
+}
+
+/* =====================================================
+   📝 MOJE TESTY (akademická vrstva KROK 2) – študentský pohľad
+   v profile modáli: zoznam testov naprieč vlastnými skupinami,
+   stav (nadchádzajúci/aktívny/uzavretý), spustenie a odovzdanie.
+   ===================================================== */
+async function renderMyAssignmentsList(nick) {
+  const box = document.getElementById('myAssignmentsList');
+  if (!box) return;
+
+  const myGroups = await getMyMemberGroups(nick);
+  const groupIds = myGroups.map(g => g.id);
+  const groupNameById = {};
+  myGroups.forEach(g => { groupNameById[g.id] = g.name; });
+
+  const tests = await getAssignmentsForGroupIds(groupIds);
+  if (!tests.length) {
+    box.textContent = 'Zatiaľ nemáš žiadne priradené testy.';
+    return;
+  }
+
+  const rows = await Promise.all(tests.map(async a => ({
+    a, status: assignmentStatus(a), myResult: await getMyResult(a.id, nick)
+  })));
+
+  box.innerHTML = rows.map(({ a, status, myResult }) => {
+    let right;
+    if (myResult) {
+      const pct = myResult.total ? Math.round((myResult.score / myResult.total) * 100) : 0;
+      right = `<span style="color:var(--accent-3,#15803d)">✅ ${myResult.score}/${myResult.total} (${pct}%)</span>`;
+    } else if (status === 'upcoming') {
+      right = `<span class="small muted">🕓 Otvorí sa ${formatAssignmentDate(a.opensAt)}</span>`;
+    } else if (status === 'closed') {
+      right = `<span class="small muted">⚪ Uzavretý, nenapísal/a si</span>`;
+    } else {
+      right = `<button class="btn take-assignment-btn" data-id="${a.id}" style="padding:2px 10px;font-size:12px">▶️ Spustiť</button>`;
+    }
+    return `
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid var(--card-border)">
+        <div>
+          <div style="font-weight:600">${escapeHtml(a.title)}</div>
+          <div class="small muted">${escapeHtml(groupNameById[a.groupId] || '')} · ${a.questions.length} otázok</div>
+        </div>
+        <div style="flex-shrink:0">${right}</div>
+      </div>`;
+  }).join('');
+
+  box.querySelectorAll('.take-assignment-btn').forEach(btn => {
+    btn.onclick = () => openTakeAssignmentModal(btn.dataset.id, nick);
+  });
+}
+
+function shuffleArrayCopy(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+async function openTakeAssignmentModal(assignmentId, nick) {
+  const old = document.getElementById('takeAssignmentModal');
+  if (old) old.remove();
+
+  const assignment = await getAssignment(assignmentId);
+  if (!assignment) { alert('Test neexistuje.'); return; }
+
+  const status = assignmentStatus(assignment);
+  if (status !== 'open') { alert('Tento test momentálne nie je možné spustiť.'); return; }
+
+  const modal = document.createElement('div');
+  modal.id = 'takeAssignmentModal';
+  modal.className = 'avatar-modal';
+  modal.style.zIndex = '10000';
+  document.body.appendChild(modal);
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+
+  function renderIntro() {
+    modal.innerHTML = `
+      <div class="avatar-panel">
+        <h3 style="margin-top:0">📝 ${escapeHtml(assignment.title)}</h3>
+        <p class="small muted">${assignment.questions.length} otázok · garant tvojej skupiny uvidí tvoje meno, skóre a chybné otázky z tohto testu. Máš len JEDEN pokus.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" id="taCancelBtn" style="flex:1">Zrušiť</button>
+          <button class="btn btn-primary" id="taStartBtn" style="flex:1">Spustiť test</button>
+        </div>
+      </div>
+    `;
+    document.getElementById('taCancelBtn').onclick = () => modal.remove();
+    document.getElementById('taStartBtn').onclick = renderForm;
+  }
+
+  function renderForm() {
+    const shuffledQuestions = assignment.questions.map(q => ({
+      question: q.question,
+      options: shuffleArrayCopy(q.options)
+    }));
+
+    modal.innerHTML = `
+      <div class="avatar-panel">
+        <h3 style="margin-top:0">📝 ${escapeHtml(assignment.title)}</h3>
+        <form id="taForm">
+          ${shuffledQuestions.map((q, i) => `
+            <div style="margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--card-border)">
+              <div style="font-weight:600;margin-bottom:6px">${i + 1}. ${escapeHtml(q.question)}</div>
+              ${q.options.map(opt => `
+                <label class="small" style="display:block;padding:3px 0">
+                  <input type="radio" name="ta-q${i}" value="${escapeHtml(opt)}"/> ${escapeHtml(opt)}
+                </label>
+              `).join('')}
+            </div>
+          `).join('')}
+          <div id="taMsg" class="small" style="min-height:16px;margin-bottom:8px;color:var(--muted)"></div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Odovzdať test</button>
+        </form>
+      </div>
+    `;
+
+    document.getElementById('taForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const submitBtn = modal.querySelector('button[type="submit"]');
+      const msg = document.getElementById('taMsg');
+      const answers = {};
+      shuffledQuestions.forEach((q, i) => {
+        const checked = modal.querySelector(`input[name="ta-q${i}"]:checked`);
+        if (checked) answers[i] = checked.value;
+      });
+      submitBtn.disabled = true;
+      msg.textContent = 'Odovzdávam...';
+      const result = await submitAssignment(assignmentId, answers);
+      if (!result.ok) {
+        submitBtn.disabled = false;
+        msg.textContent = `❌ ${result.message}`;
+        msg.style.color = '#b91c1c';
+        return;
+      }
+      renderResult(result);
+    };
+  }
+
+  function renderResult(result) {
+    modal.innerHTML = `
+      <div class="avatar-panel">
+        <h3 style="margin-top:0">✅ Test odovzdaný</h3>
+        <p>Skóre: <strong>${result.score}/${result.total}</strong> (${result.pct}%)</p>
+        ${result.reward > 0 ? `<p class="small" style="color:var(--accent-3,#15803d)">+${result.reward}§</p>` : ''}
+        <button class="btn btn-primary" id="taCloseBtn" style="width:100%;margin-top:8px">Zavrieť</button>
+      </div>
+    `;
+    document.getElementById('taCloseBtn').onclick = () => {
+      modal.remove();
+      renderMyAssignmentsList(nick);
+    };
+    if (result.reward > 0) showRewardToast(`+${result.reward}§ za test!`);
+  }
+
+  renderIntro();
 }
 
 async function renderFacultyMiniLeaderboard() {

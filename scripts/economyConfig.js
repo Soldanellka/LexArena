@@ -120,6 +120,21 @@ export const ECONOMY_CONFIG = {
     EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 } // podľa známky zo záverečnej spätnej väzby
   },
 
+  // AKADEMICKÁ VRSTVA – KROK 2: testy pre skupinu (garant zadá, študent píše
+  // raz). Odmena sa udeľuje JEDNORAZOVO cez econAward() BEZ skipCap – teda
+  // počíta sa do existujúceho denného stropu LIMITS.DAILY_EARN_CAP, presne
+  // ako bežná hra (rozdiel od SENATY/FACULTIES/STATNICE, ktoré cap obchádzajú
+  // ako výnimočné udalosti – test je opakovateľná aktivita garanta, preto
+  // musí ostať v strope, inak by šlo o nekonečný zdroj §).
+  ASSIGNMENTS: {
+    REWARD_BY_PCT: [
+      { min: 90, reward: 15 },
+      { min: 70, reward: 10 },
+      { min: 50, reward: 5 },
+      { min: 0,  reward: 2 }   // účasť sa oplatí odovzdať aj pri neúspechu, nie 0§
+    ]
+  },
+
   // TALÁRE – čisto kozmetické kúpy avatara (scripts/avatar.js AVATAR_CONFIG.AVATARS,
   // unlock:'talar_purchase'). Akademický talár (unlock:'talar_role') sa NIKDY
   // nekupuje – tu zámerne nemá cenu, priraďuje sa len podľa skutočnej Firebase
