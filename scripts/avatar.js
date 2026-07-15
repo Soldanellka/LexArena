@@ -64,7 +64,35 @@ const AVATAR_CONFIG = {
     'studentka-blond':  { name: 'Študentka (blond vlasy)',  base: 'avatars/studentka-blond',  unlock: 'default', isBasic: true },
     'student-tmavy':    { name: 'Študent (tmavé vlasy)',    base: 'avatars/student-tmavy',    unlock: 'default', isBasic: true },
     'student-medeny':   { name: 'Študent (medené vlasy)',   base: 'avatars/student-medeny',   unlock: 'default', isBasic: true },
-    'student-blond':    { name: 'Študent (blond vlasy)',    base: 'avatars/student-blond',    unlock: 'default', isBasic: true }
+    'student-blond':    { name: 'Študent (blond vlasy)',    base: 'avatars/student-blond',    unlock: 'default', isBasic: true },
+
+    /* ============================================================
+       TALÁRE – čisto kozmetické kúpy za § (žiadny herný bonus).
+       `talarBaseId` = ktorý zo 6 základných avatarov vyššie tento
+       talár "oblieka" (kombinovaný PNG render, nie vrstvenie) – obchod
+       v init.js ponúka hráčovi len taláre patriace k JEHO aktuálnemu
+       základnému avataru. `talarRole` je kľúč do ECONOMY_CONFIG.TALARE
+       (cena, jediný zdroj pravdy pre sumy). Nie každý zo 6 základných
+       avatarov má zatiaľ hotový render pre každú farbu taláru –
+       chýbajúce kombinácie tu jednoducho nie sú (žiadny fiktívny
+       nákup niečoho, čo appka nevie zobraziť).
+    ============================================================ */
+    'student-blond-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-blond-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    'student-medeny-talar-cierny':  { name: 'Študent – základný talár',                base: 'avatars/student-medeny-talar-cierny',  unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    'student-tmavy-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-tmavy-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    'studentka-blond-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-blond-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
+    'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
+    'studentka-medena-talar-cierny':{ name: 'Študentka – základný talár',              base: 'avatars/studentka-medena-talar-cierny',unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    'studentka-tmava-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-tmava-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
+    'studentka-tmava-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-tmava-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
+
+    /* Akademický talár – NIKDY na predaj. Priradený výhradne podľa
+       aktuálnej (živej) Firebase roly, nie kúpou ani jednorazovým
+       udelením – selectAvatar() nižšie ho preto vždy overuje voči
+       getRole(), nie voči uloženému vlastníctvu. Vizuálne odlíšený
+       zlatým pásom priamo v PNG renderi (obsah assetu, nie CSS). */
+    'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
@@ -359,6 +387,23 @@ export async function selectAvatar(avatarType) {
         return;
       }
     }
+    if (avatarDef.unlock === 'talar_purchase') {
+      const owned = data.ownedTalars && data.ownedTalars[avatarType] === true;
+      if (!owned) {
+        showRewardToast(`🔒 Tento talár si ešte nekúpil/a (${avatarDef.talarPrice}§ v obchode).`);
+        return;
+      }
+    }
+    if (avatarDef.unlock === 'talar_role') {
+      // Vždy živá kontrola skutočnej Firebase roly – NIKDY uložené
+      // vlastníctvo. Akademický talár sa nedá "kúpiť" ani raz získať
+      // natrvalo – ak rola prestane byť garant/admin, prestane platiť aj tu.
+      const role = await getRole(nick);
+      if (role !== 'garant' && role !== 'admin') {
+        showRewardToast('🔒 Akademický talár je vyhradený pre garantov a adminov.');
+        return;
+      }
+    }
   }
 
   const state = await loadAvatarState(nick);
@@ -366,6 +411,77 @@ export async function selectAvatar(avatarType) {
   preloadAvatarStates(avatarDef);
   updateAvatarUI(state.energy || 100, avatarType);
   showRewardToast(`Avatar zmenený na: ${avatarDef.name}`);
+}
+
+/* ============================================================
+   TALÁRE – OBCHOD (čisto kozmetika, žiadny herný bonus)
+============================================================ */
+/* Kúpi talár za § (jednorazovo, natrvalo). Cena sa číta VÝLUČNE z
+   AVATAR_CONFIG.AVATARS[avatarId].talarPrice (odvodené z
+   ECONOMY_CONFIG.TALARE) – nikdy natvrdo tu. Akademický talár
+   (unlock !== 'talar_purchase') sa týmto spôsobom kúpiť nedá vôbec –
+   štrukturálna poistka navyše k tomu, že v obchode sa mu nezobrazí
+   žiadne tlačidlo "Kúpiť". */
+export async function buyTalar(avatarId) {
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick) return { ok: false, message: 'Musíš byť prihlásený.' };
+
+  const avatarDef = AVATAR_CONFIG.AVATARS[avatarId];
+  if (!avatarDef || avatarDef.unlock !== 'talar_purchase' || !avatarDef.talarPrice) {
+    return { ok: false, message: 'Tento talár sa nedá kúpiť.' };
+  }
+
+  const ownedSnap = await get(ref(db, `users/${nick}/ownedTalars/${avatarId}`));
+  if (ownedSnap.exists() && ownedSnap.val() === true) {
+    return { ok: false, message: 'Tento talár už vlastníš.' };
+  }
+
+  const paid = await spendParagrafy(avatarDef.talarPrice, `talár – ${avatarDef.name}`);
+  if (!paid) return { ok: false, message: `Nemáš dosť § (${avatarDef.talarPrice}§).` };
+
+  await update(ref(db, `users/${nick}/ownedTalars`), { [avatarId]: true });
+  return { ok: true, price: avatarDef.talarPrice };
+}
+
+/* Ak je avatarType talár, vráti jeho základný avatar (pre zistenie,
+   ktoré ďalšie taláre patria k tej istej postave); inak vráti nezmenené. */
+export function getBaseIdFor(avatarType) {
+  const def = AVATAR_CONFIG.AVATARS[avatarType];
+  return (def && def.talarBaseId) || avatarType;
+}
+
+/* Taláre relevantné pre AKTUÁLNY základný avatar hráča (talarBaseId),
+   plus akademický (ak naň má rolu) – pre vykreslenie obchodu v init.js.
+   Vlastníctvo sa číta jedným čítaním users/{nick}/ownedTalars, nie
+   opakovane per položka. Chýbajúce kombinácie (žiadny render pre daný
+   pár základ+farba) sa sem vôbec nedostanú – nie sú v AVATAR_CONFIG. */
+export async function getTalarShopEntries(currentBaseId) {
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick) return [];
+
+  const [ownedSnap, role] = await Promise.all([
+    get(ref(db, `users/${nick}/ownedTalars`)),
+    getRole(nick)
+  ]);
+  const owned = ownedSnap.exists() ? ownedSnap.val() : {};
+
+  const entries = Object.entries(AVATAR_CONFIG.AVATARS)
+    .filter(([id, def]) => {
+      if (def.unlock === 'talar_purchase') return def.talarBaseId === currentBaseId;
+      if (def.unlock === 'talar_role') return role === 'garant' || role === 'admin';
+      return false;
+    })
+    .map(([id, def]) => ({
+      id,
+      name: def.name,
+      price: def.talarPrice || null,
+      academic: def.unlock === 'talar_role',
+      owned: def.unlock === 'talar_role' ? true : !!owned[id]
+    }));
+
+  return entries;
 }
 
 /* ============================================================
@@ -513,8 +629,21 @@ export async function initAvatarSystem() {
   await checkDailyLogin();
 
   // Načítaj stav
-  const state = await loadAvatarState(nick);
+  let state = await loadAvatarState(nick);
   if (state) {
+    // Poistka: akademický talár je viazaný na ŽIVÚ rolu, nikdy na
+    // uložené vlastníctvo. Ak niekto medzičasom prestal byť garant/admin
+    // (a stále ho má nasadený z minula), vráť ho na základný avatar –
+    // pečať 🎓 nesmie zostať visieť na niekom, kto už rolu nemá.
+    const wornDef = AVATAR_CONFIG.AVATARS[state.type];
+    if (wornDef && wornDef.unlock === 'talar_role') {
+      const role = await getRole(nick);
+      if (role !== 'garant' && role !== 'admin') {
+        state = { ...state, type: 'studentka-tmava' };
+        await saveAvatarState(nick, state);
+      }
+    }
+
     const avatarDef = AVATAR_CONFIG.AVATARS[state.type];
     updateAvatarUI(state.energy || 100, state.type || 'student-f');
     preloadAvatarStates(avatarDef);

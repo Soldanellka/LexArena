@@ -11,7 +11,7 @@ import { applyTheme } from './theme.js';
 import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
-import { initAvatarSystem, selectAvatar } from './scripts/avatar.js';
+import { initAvatarSystem, selectAvatar, getTalarShopEntries, buyTalar, getBaseIdFor } from './scripts/avatar.js';
 import {
   econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG,
   econAdStatus, econAdComplete, econRedeemCode
@@ -234,7 +234,15 @@ function openAvatarPickerModal(mandatory = false) {
             </div>
           `).join('')}
         </div>
-        <button class="btn btn-primary" id="avatarPickerConfirmBtn" style="width:100%" disabled>Potvrdiť</button>
+        <button class="btn btn-primary" id="avatarPickerConfirmBtn" style="width:100%;margin-bottom:16px" disabled>Potvrdiť</button>
+
+        <div style="border-top:1px solid var(--card-border,#eee);padding-top:14px">
+          <div style="font-weight:600;margin-bottom:4px">⚖️ Taláre</div>
+          <div class="small muted" style="margin-bottom:10px">Čisto kozmetické – žiadny herný bonus. Kúpené ostávajú natrvalo.</div>
+          <div id="talarShopGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+            <div class="small muted">Načítavam…</div>
+          </div>
+        </div>
       </div>
     `;
     document.body.appendChild(modal);
@@ -249,6 +257,7 @@ function openAvatarPickerModal(mandatory = false) {
         card.style.borderColor = '#f08aa6';
         selected = card.dataset.id;
         confirmBtn.disabled = false;
+        renderTalarShop(selected);
       };
     });
 
@@ -276,6 +285,63 @@ function openAvatarPickerModal(mandatory = false) {
   if (closeBtn) closeBtn.style.display = mandatory ? 'none' : 'inline-flex';
 
   modal.style.display = 'flex';
+  renderTalarShop(getBaseIdFor(window.__currentAvatarType || 'studentka-tmava'));
+}
+
+/* Vykreslí taláre patriace k danému základnému avataru (+ akademický,
+   ak naň má hráč rolu) – jedno čítanie vlastníctva na render, nie na
+   položku. Kúpa aj nasadenie idú cez existujúci selectAvatar()/buyTalar()
+   v scripts/avatar.js – žiadny paralelný mechanizmus. */
+async function renderTalarShop(baseId) {
+  const grid = document.getElementById('talarShopGrid');
+  if (!grid) return;
+  grid.innerHTML = '<div class="small muted">Načítavam…</div>';
+
+  const entries = await getTalarShopEntries(baseId);
+  if (!entries.length) {
+    grid.innerHTML = '<div class="small muted">Pre tohto avatara zatiaľ nie sú dostupné žiadne taláre.</div>';
+    return;
+  }
+
+  grid.innerHTML = entries.map(e => `
+    <div class="talar-shop-card ${e.academic ? 'talar-academic' : ''}" data-id="${e.id}" style="
+      border:2px solid ${e.academic ? '#d4af37' : 'var(--card-border,#eee)'}; border-radius:12px; padding:8px; text-align:center;
+    ">
+      <img src="avatars/${e.id}-full.png" alt="${escapeHtml(e.name)}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px"
+        onerror="this.style.display='none'"/>
+      <div class="small" style="margin-top:4px;font-weight:600">${escapeHtml(e.name)}</div>
+      ${e.academic
+        ? `<div class="small" style="color:#b8860b;font-weight:600">🎓 automaticky (garant/admin)</div>`
+        : e.owned
+          ? `<button class="btn talar-equip-btn" data-id="${e.id}" style="width:100%;margin-top:6px">Nasadiť</button>`
+          : `<button class="btn btn-primary talar-buy-btn" data-id="${e.id}" style="width:100%;margin-top:6px">Kúpiť za ${e.price}§</button>`
+      }
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.talar-equip-btn').forEach(btn => {
+    btn.onclick = async () => {
+      await selectAvatar(btn.dataset.id);
+      const modal = document.getElementById('avatarPickerModal');
+      if (modal) modal.style.display = 'none';
+    };
+  });
+
+  grid.querySelectorAll('.talar-buy-btn').forEach(btn => {
+    btn.onclick = async () => {
+      btn.disabled = true;
+      btn.textContent = 'Kupujem...';
+      const result = await buyTalar(btn.dataset.id);
+      if (!result.ok) {
+        showRewardToast(`❌ ${result.message}`);
+        btn.disabled = false;
+        renderTalarShop(baseId);
+        return;
+      }
+      showRewardToast(`✅ Talár kúpený za ${result.price}§!`);
+      renderTalarShop(baseId);
+    };
+  });
 }
 window.openAvatarPickerModal = openAvatarPickerModal;
 

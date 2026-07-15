@@ -120,6 +120,17 @@ export const ECONOMY_CONFIG = {
     EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 } // podľa známky zo záverečnej spätnej väzby
   },
 
+  // TALÁRE – čisto kozmetické kúpy avatara (scripts/avatar.js AVATAR_CONFIG.AVATARS,
+  // unlock:'talar_purchase'). Akademický talár (unlock:'talar_role') sa NIKDY
+  // nekupuje – tu zámerne nemá cenu, priraďuje sa len podľa skutočnej Firebase
+  // roly (users/{nick}/role === 'garant'|'admin'), viď scripts/avatar.js.
+  TALARE: {
+    CIERNY: 200,      // ⚫ základný talár
+    ADVOKAT: 500,     // 🔵 advokátsky talár
+    PROKURATOR: 700,  // 🔴 prokurátorský talár
+    SUDCA: 1000       // ⚖️ sudcovský talár
+  },
+
   // MONETIZÁCIA – pripraviť, NEZOBRAZOVAŤ v UI
   PACKS: {
     small:  { sg: 100, eur: 1.99 },
