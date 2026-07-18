@@ -149,6 +149,17 @@ export const ECONOMY_CONFIG = {
     ]
   },
 
+  // OSOBNÝ PREHĽAD PROGRESU – Fáza 3 (dashboard). Jednorazové odmeny.
+  // ⚠️ CESTA B (2026-07-18): idú s { skipCap: true } (scripts/dashboardRewards.js)
+  // – NEPOČÍTAJÚ sa do LIMITS.DAILY_EARN_CAP, presne ako streak/rebríčky/videá.
+  // Sú to jednorazové nefarmovateľné míľniky, nie opakovateľná aktivita, proti
+  // ktorej denný strop existuje. Jednorazovosť sa vynucuje cez
+  // users/{nick}/dashboardRewards/... flag, zapísaný AŽ PO úspešnom econAward.
+  DASHBOARD: {
+    TEMA_80: 5,      // prvý raz, čo téma (okruh) dosiahne priemer ≥ 80 %
+    OBLAST_100: 50   // prvý raz, čo VŠETKY témy oblasti dosiahnu 100 %
+  },
+
   // AKADEMICKÁ VRSTVA – KROK 2: testy pre skupinu (garant zadá, študent píše
   // raz). Odmena sa udeľuje JEDNORAZOVO cez econAward() BEZ skipCap – teda
   // počíta sa do existujúceho denného stropu LIMITS.DAILY_EARN_CAP, presne

@@ -358,6 +358,7 @@
         <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
         <button class="btn" id="openCasesBtn">Prípady z praxe</button>
         <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">⚖️ Štátnicová sieň</button>
+        <button class="btn" id="openDashboardBtn">📊 Môj progres</button>
         <div id="gamesAreaHint" class="games-hint">
           <span class="games-hint-dot"></span>
           Najprv vyber oblasť vyššie – načítajú sa k nej kartičky aj prípady
@@ -427,6 +428,26 @@
       <button class="btn" id="closeCases">Zavrieť</button>
     </div>
     <div id="caseContainer" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<div id="dashboardModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+  <div class="avatar-panel game-panel">
+    <div class="game-panel-header">
+      <h3>📊 Môj progres</h3>
+      <button class="btn" id="closeDashboard">Zavrieť</button>
+    </div>
+    <div class="small muted" style="margin-top:4px">
+      Súkromný prehľad – vidíš len ty. Počíta sa od 17. 7. 2026: staršia aktivita sa nezapočítava,
+      takže aj témy, ktoré už dávno vieš, tu môžu ukazovať 0 %, kým si ich znovu neprejdeš.
+    </div>
+    <div id="dashboardAreaTabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px"></div>
+    <div id="dashboardBody" style="margin-top:12px">Načítavam…</div>
+    <div id="dashboardStatniceSection" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
+      <h4 style="margin:0 0 8px 0">⚖️ Skúšky (štátnicová sieň)</h4>
+      <div class="small muted">Nepočíta sa do % tém vyššie – zobrazená samostatne.</div>
+      <div id="dashboardStatniceList" style="margin-top:8px">Načítavam…</div>
+    </div>
   </div>
 </div>
 
@@ -1081,6 +1102,9 @@ console.log('✅ Reports system inline načítaný');
 <!-- DUEL ENGINE -->
 <script type="module" src="scripts/duels.js"></script>
 <script type="module" src="scripts/leaderboard.js"></script>
+
+<!-- OSOBNÝ PREHĽAD PROGRESU (Fáza 3) -->
+<script type="module" src="scripts/dashboardUI.js"></script>
 
 <!-- QUIZ ENGINE -->
 <script type="module" src="quiz.js"></script>
