@@ -78,26 +78,35 @@ const COLLAPSIBLE_SECTIONS = [
   { selector: '.highlight-senaty',      key: 'senaty',      defaultCollapsed: true }
 ];
 
+/* export: pripojí zbaľovacie správanie na ĽUBOVOĽNÝ card+header pár, nielen
+   COLLAPSIBLE_SECTIONS zo statickej stránky (initCollapsibleSections nižšie
+   je len jej najbežnejší volajúci). Používa aj scripts/dashboardUI.js pre
+   sekcie VNÚTRI dashboard modálu – tie sa generujú dynamicky (existujú až
+   po renderBody()/renderStatnice(), nie pri DOMContentLoaded), takže ich
+   nemožno pridať do statického poľa COLLAPSIBLE_SECTIONS nižšie; volajúci
+   preto volá túto funkciu priamo, nie initCollapsibleSections(). */
+export function makeCollapsible(card, header, storageKey, defaultCollapsed) {
+  if (!card || !header) return;
+  card.classList.add('m-collapsible');
+
+  const stored = localStorage.getItem(storageKey);
+  const collapsed = stored !== null ? stored === '1' : defaultCollapsed;
+  card.classList.toggle('m-collapsed', collapsed);
+
+  header.addEventListener('click', () => {
+    const nowCollapsed = !card.classList.contains('m-collapsed');
+    card.classList.toggle('m-collapsed', nowCollapsed);
+    localStorage.setItem(storageKey, nowCollapsed ? '1' : '0');
+  });
+}
+
 function initCollapsibleSections() {
   COLLAPSIBLE_SECTIONS.forEach(({ selector, key, defaultCollapsed }) => {
     const card = document.querySelector(selector);
     if (!card) return;
-
     const header = card.querySelector('h3');
     if (!header) return;
-
-    card.classList.add('m-collapsible');
-
-    const storageKey = `mColl:${key}`;
-    const stored = localStorage.getItem(storageKey);
-    const collapsed = stored !== null ? stored === '1' : defaultCollapsed;
-    card.classList.toggle('m-collapsed', collapsed);
-
-    header.addEventListener('click', () => {
-      const nowCollapsed = !card.classList.contains('m-collapsed');
-      card.classList.toggle('m-collapsed', nowCollapsed);
-      localStorage.setItem(storageKey, nowCollapsed ? '1' : '0');
-    });
+    makeCollapsible(card, header, `mColl:${key}`, defaultCollapsed);
   });
 }
 

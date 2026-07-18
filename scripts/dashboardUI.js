@@ -10,6 +10,8 @@ import { ref, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-da
 import { DASHBOARD_AREAS, computeFullDashboard } from './dashboardStats.js';
 import { checkAndAwardDashboardRewards } from './dashboardRewards.js';
 import { getAvatarType, getAvatarBustSrcForState } from './avatar.js';
+import { ECONOMY_CONFIG } from './economyConfig.js';
+import { makeCollapsible } from '../mobile-nav.js';
 
 const $ = id => document.getElementById(id);
 
@@ -59,6 +61,12 @@ function renderAreaTabs() {
   });
 }
 
+function temaWord(n) {
+  if (n === 1) return 'téma';
+  if (n >= 2 && n <= 4) return 'témy';
+  return 'tém';
+}
+
 function renderBody() {
   const body = $('dashboardBody');
   if (!body || !cachedDashboard) return;
@@ -75,13 +83,20 @@ function renderBody() {
     .filter(o => o.percent < 80)
     .sort((a, b) => a.percent - b.percent);
 
-  let html = '<div class="small" style="font-weight:600;margin-bottom:6px">Témy</div>';
+  /* "Ešte N tém do 100 %" – ROVNAKÝ prah ako odmena OBLAST_100 (tá vyžaduje
+     VŠETKY témy oblasti na 100 %, viď dashboardRewards.js allTemy100). */
+  const remainingTo100 = allOkruhy.filter(o => o.percent < 100).length;
+  let html = remainingTo100 === 0
+    ? `<div class="small" style="margin-bottom:10px;color:var(--muted)">🎉 Všetky témy tejto oblasti sú na 100 %!</div>`
+    : `<div class="small" style="margin-bottom:10px;color:var(--muted)">Ešte ${remainingTo100} ${temaWord(remainingTo100)} do 100 % v tejto oblasti (odmena +${ECONOMY_CONFIG.DASHBOARD.OBLAST_100}§ za celú oblasť).</div>`;
+
+  html += '<div class="small" style="font-weight:600;margin-bottom:6px">Témy</div>';
   html += '<div class="dashboard-tema-list">';
   allOkruhy.forEach(o => {
     const mood = moodBadge(o.percent);
     const avatarHtml = moodAvatarImgHtml(mood.state);
     html += `
-      <div class="dashboard-tema-row" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
+      <div class="dashboard-tema-row mood-${mood.state}" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
         <div style="flex:1">${escapeHtml(o.title)} — ${o.percent} %</div>
         <div class="dashboard-mood-badge" style="display:flex;align-items:center;gap:5px;font-size:12px;padding:2px 6px;border:1px solid var(--card-border, rgba(0,0,0,0.15));border-radius:10px;white-space:nowrap">
           ${avatarHtml}${mood.emoji} ${mood.label}
@@ -90,19 +105,32 @@ function renderBody() {
   });
   html += '</div>';
 
-  html += '<div class="small" style="font-weight:600;margin:14px 0 6px 0">Čo dobrať</div>';
+  // Zbaliteľné, defaultne ZBALENÉ (dashboard je dlhý) – makeCollapsible sa
+  // volá NANOVO po každom renderi nižšie, keďže tento kus DOM sa tu
+  // zakaždým vytvára odznova (na rozdiel od štátnicovej sekcie, tá je
+  // statická v index.html a volá sa len raz, viď wireStatniceCollapse()).
+  html += `
+    <div id="dashboardTodoSection" class="m-collapsible" style="margin-top:14px">
+      <div class="dashboard-collapsible-header small" style="font-weight:600">Čo dobrať</div>
+      <div class="dashboard-collapsible-body" style="margin-top:6px">`;
   if (!toDobrat.length) {
     html += '<div class="small muted">Všetky témy tejto oblasti sú na ≥80 % – skvelá práca!</div>';
   } else {
     html += '<div class="dashboard-todo-list">';
     toDobrat.forEach(o => {
       const missing = o.missingActivities.length ? o.missingActivities.join(', ') : '—';
-      html += `<div class="small" style="padding:3px 0">${escapeHtml(o.title)} – ${o.percent} %: chýbajú ${escapeHtml(missing)}</div>`;
+      const zvysok = 100 - o.percent;
+      html += `<div class="small" style="padding:3px 0">${escapeHtml(o.title)} – ${o.percent} % (ešte ${zvysok} % do zvládnutia): chýbajú ${escapeHtml(missing)}</div>`;
     });
     html += '</div>';
   }
+  html += '</div></div>';
 
   body.innerHTML = html;
+
+  const todoSection = $('dashboardTodoSection');
+  const todoHeader = todoSection ? todoSection.querySelector('.dashboard-collapsible-header') : null;
+  makeCollapsible(todoSection, todoHeader, 'mColl:dashboardTodo', true);
 }
 
 function skuskaWord(n) {
@@ -154,6 +182,19 @@ async function renderStatnice(nick) {
   }
 }
 
+// Štátnicová sekcia je STATICKÁ v index.html (na rozdiel od "Čo dobrať"
+// vyššie, ktoré sa prekresľuje pri každom renderBody()) – stačí pripojiť
+// zbaľovanie RAZ, nie pri každom openDashboard().
+let statniceCollapseWired = false;
+function wireStatniceCollapse() {
+  if (statniceCollapseWired) return;
+  const section = $('dashboardStatniceSection');
+  const header = section ? section.querySelector('.dashboard-collapsible-header') : null;
+  if (!section || !header) return;
+  makeCollapsible(section, header, 'mColl:dashboardStatnice', true);
+  statniceCollapseWired = true;
+}
+
 export async function openDashboard() {
   const modal = $('dashboardModal');
   if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); }
@@ -162,6 +203,7 @@ export async function openDashboard() {
   if (body) body.textContent = 'Načítavam…';
 
   renderAreaTabs();
+  wireStatniceCollapse();
 
   const nick = getNick();
   if (!nick) {

@@ -156,6 +156,11 @@ export const ECONOMY_CONFIG = {
   // ktorej denný strop existuje. Jednorazovosť sa vynucuje cez
   // users/{nick}/dashboardRewards/... flag, zapísaný AŽ PO úspešnom econAward.
   DASHBOARD: {
+    // MEDZIMEDAILY (2026-07-18) – proti "dlhému tichu" medzi 0 a 80 %,
+    // motivujú priebežne. Malé sumy zámerne (nefarmovateľné jednorazovky,
+    // ale netreba ich robiť rovnocenné s TEMA_80).
+    TEMA_30: 1,      // prvý raz, čo téma (okruh) dosiahne priemer ≥ 30 %
+    TEMA_50: 2,      // prvý raz, čo téma (okruh) dosiahne priemer ≥ 50 %
     TEMA_80: 5,      // prvý raz, čo téma (okruh) dosiahne priemer ≥ 80 %
     OBLAST_100: 50   // prvý raz, čo VŠETKY témy oblasti dosiahnu 100 %
   },

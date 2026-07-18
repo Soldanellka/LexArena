@@ -1,11 +1,13 @@
 'use strict';
 
 /* ============================================================
-   ODMENY OSOBNÉHO PREHĽADU PROGRESU – Fáza 3, bod 4
-   +5§ jednorazovo za tému (okruh), ktorá prvýkrát dosiahne ≥80 %.
-   +50§ jednorazovo za oblasť, kde sú VŠETKY témy na 100 %.
+   ODMENY OSOBNÉHO PREHĽADU PROGRESU – Fáza 3, bod 4 + MEDZIMEDAILY (2026-07-18)
+   +1§ prvýkrát téma ≥30 %, +2§ prvýkrát ≥50 %, +5§ prvýkrát ≥80 %,
+   +50§ oblasť na 100 % (VŠETKY jej témy). Medzimedaily (30/50 %) existujú
+   proti "dlhému tichu" medzi 0 a 80 % – priebežná motivácia namiesto
+   jedinej vzdialenej odmeny.
 
-   ⚠️ CESTA B (2026-07-18) – oprava § pasce: obe idú cez econAward
+   ⚠️ CESTA B (2026-07-18) – oprava § pasce: VŠETKY idú cez econAward
    S { skipCap: true }. Sú to jednorazové nefarmovateľné míľniky (flag
    nižšie zaručuje jednorazovosť) presne ako streak/rebríčky/videá, nie
    opakovateľná grindovateľná aktivita, proti ktorej denný strop
@@ -18,7 +20,9 @@
 
    Jednorazovosť: users/{nick}/dashboardRewards/... flag – nedá sa
    získať opakovane ani po resete/zopakovaní aktivity (reset/zhoršenie
-   flag nezmaže).
+   flag nezmaže). Každý prah má VLASTNÝ podstrom (tema30/, tema50/,
+   tema/ – posledný beze zmeny, pôvodný názov pre 80 % zámerne nemenený,
+   aby sa nesplietol/neduplikoval s už udelenými flagmi z produkcie).
 
    ⚠️ OBRANNÁ POISTKA nezávislá od skipCap: flag sa zapíše AŽ PO tom,
    čo econAward reálne uspeje (vráti nie-null) – nie vopred. Ak by
@@ -48,6 +52,15 @@ async function markClaimed(nick, path) {
   await set(ref(db, `users/${nick}/dashboardRewards/${path}`), true);
 }
 
+/* Jeden míľnik: over → udeľ (skipCap) → flag AŽ PO úspechu. Zdieľané všetkými
+   prahmi nižšie, aby sa vzor isClaimed→econAward→markClaimed neopakoval
+   4-krát s rizikom, že sa niektorá kópia časom rozíde od ostatných. */
+async function maybeAwardMilestone(nick, path, amount, reason) {
+  if (await isClaimed(nick, path)) return;
+  const result = await econAward(nick, amount, reason, { skipCap: true });
+  if (result !== null) await markClaimed(nick, path);
+}
+
 /*
   dashboard: výstup computeFullDashboard(nick) zo scripts/dashboardStats.js.
   Prejde všetky témy/oblasti a udelí nové odmeny (ak nejaké pribudli od
@@ -63,28 +76,23 @@ export async function checkAndAwardDashboardRewards(nick, dashboard) {
       for (const okruh of sub.okruhy) {
         if (okruh.percent < 100) allTemy100 = false;
 
+        const base = `${area.appId}/${sub.subArea}/${okruh.key}`;
+        const title = okruh.title || okruh.key;
+
+        if (okruh.percent >= 30) {
+          await maybeAwardMilestone(nick, `tema30/${base}`, ECONOMY_CONFIG.DASHBOARD.TEMA_30, `téma "${title}" dosiahla ≥30 %`);
+        }
+        if (okruh.percent >= 50) {
+          await maybeAwardMilestone(nick, `tema50/${base}`, ECONOMY_CONFIG.DASHBOARD.TEMA_50, `téma "${title}" dosiahla ≥50 %`);
+        }
         if (okruh.percent >= 80) {
-          const path = `tema/${area.appId}/${sub.subArea}/${okruh.key}`;
-          if (!(await isClaimed(nick, path))) {
-            const result = await econAward(
-              nick, ECONOMY_CONFIG.DASHBOARD.TEMA_80, `téma ${okruh.key} dosiahla ≥80 %`,
-              { skipCap: true }
-            );
-            if (result !== null) await markClaimed(nick, path);
-          }
+          await maybeAwardMilestone(nick, `tema/${base}`, ECONOMY_CONFIG.DASHBOARD.TEMA_80, `téma "${title}" dosiahla ≥80 %`);
         }
       }
     }
 
     if (allTemy100) {
-      const path = `oblast/${area.appId}`;
-      if (!(await isClaimed(nick, path))) {
-        const result = await econAward(
-          nick, ECONOMY_CONFIG.DASHBOARD.OBLAST_100, `oblasť ${area.title} na 100 %`,
-          { skipCap: true }
-        );
-        if (result !== null) await markClaimed(nick, path);
-      }
+      await maybeAwardMilestone(nick, `oblast/${area.appId}`, ECONOMY_CONFIG.DASHBOARD.OBLAST_100, `oblasť ${area.title} na 100 %`);
     }
   }
 }

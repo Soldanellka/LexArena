@@ -197,6 +197,32 @@ body {
   flex-shrink: 0;
 }
 
+/* Farba riadku témy podľa % v Osobnom prehľade progresu – ROVNAKÉ prahy ako
+   moodBadge()/avatar stavy (scripts/dashboardUI.js): <30 spiaci/červená,
+   30–80 unavený/žltá, >80 čerstvý/zelená. Jemné (priehľadné) odtiene – appka
+   je študijná, nie krikľavá. Rovnaké rgba tóny ako existujúce .correct/
+   .wrong (kvízová spätná väzba, index.html <style>) pre vizuálnu zhodu. */
+.dashboard-tema-row {
+  border-left: 3px solid transparent;
+  padding-left: 6px;
+  border-radius: 4px;
+}
+
+.dashboard-tema-row.mood-sleep {
+  background: rgba(239, 68, 68, 0.05);
+  border-left-color: rgba(239, 68, 68, 0.4);
+}
+
+.dashboard-tema-row.mood-tired {
+  background: rgba(245, 158, 11, 0.06);
+  border-left-color: rgba(245, 158, 11, 0.4);
+}
+
+.dashboard-tema-row.mood-full {
+  background: rgba(34, 197, 94, 0.06);
+  border-left-color: rgba(34, 197, 94, 0.4);
+}
+
 /* ----------------------------------------------------------
    BUTTONS
 ---------------------------------------------------------- */
@@ -946,6 +972,37 @@ body {
   .m-collapsible.m-collapsed > *:not(h3) {
     display: none;
   }
+}
+
+/* ============================================================
+   👋 ZBALITEĽNÉ SEKCIE V DASHBOARDE ("Čo dobrať", "Skúšky") – VŠETKY
+   šírky, nie len mobil. Dashboard je v modáli s obmedzenou výškou bez
+   ohľadu na zariadenie ("dashboard je dlhý"), na rozdiel od sekcií vyššie
+   (tie sú na celej stránke, kde má zmysel zbaľovanie len na mobile).
+   Rovnaké triedy m-collapsible/m-collapsed (mobile-nav.js makeCollapsible),
+   len vlastný, nie media-query-viazaný vizuál a vlastná hlavička
+   (.dashboard-collapsible-header – dashboard nepoužíva <h3> vnútri). */
+.dashboard-collapsible-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.dashboard-collapsible-header::after {
+  content: '▾';
+  color: var(--muted);
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.m-collapsible.m-collapsed .dashboard-collapsible-header::after {
+  content: '▸';
+}
+
+.m-collapsible.m-collapsed .dashboard-collapsible-body {
+  display: none;
 }
 
 /* ============================================================
