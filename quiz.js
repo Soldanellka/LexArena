@@ -545,6 +545,11 @@ window.startDuelQuiz = function(questions){
     correct: typeof q.correct === 'number' ? q.correct : 0,
     id: q.id || null,
     source: q.source || null,
+    // 🔥 _area (napr. "Trestné právo procesné") sa musí zachovať aj sem –
+    // hmotné aj procesné majú vlastné A1..A30/A40/A45 súbory s ROVNAKÝMI
+    // source kľúčmi, takže per-okruh progres (scripts/progressTracking.js)
+    // potrebuje _area na rozlíšenie, ku ktorej podoblasti okruh patrí.
+    _area: q._area || null,
     zdroj: q.zdroj || null,
     explanation: q.explanation || null,
     selectedIndex: null

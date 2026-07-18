@@ -95,18 +95,36 @@ export function ensureVoicesLoaded() {
   return voicesReadyPromise;
 }
 
+/* Zdieľané rozpoznávanie pohlavia hlasu podľa mena – JEDINÉ miesto s týmito
+   vzormi, nech pickVoice() (video – akceptuje substitút) a
+   getAvailableSkGenders() (štátnica – prísnejšia politika, viď statnice.js)
+   nikdy nemôžu tvrdiť dve rôzne veci o tom istom hlase. */
+const FEMALE_VOICE_HINT = /female|žen|zuzana|katarína|iveta|google.*žensk/i;
+const MALE_VOICE_HINT = /male|muž|filip|tomáš|google.*mužsk/i;
+
 export function pickVoice(gender) {
   const voices = window.speechSynthesis.getVoices();
   const sk = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
   const cs = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('cs'));
   const pool = sk.length ? sk : (cs.length ? cs : voices);
 
-  const femaleHint = /female|žen|zuzana|katarína|iveta|google.*žensk/i;
-  const maleHint = /male|muž|filip|tomáš|google.*mužsk/i;
-  const hint = gender === 'f' ? femaleHint : maleHint;
+  const hint = gender === 'f' ? FEMALE_VOICE_HINT : MALE_VOICE_HINT;
 
   const match = pool.find(v => hint.test(v.name));
   return { voice: match || pool[0] || null, pitch: match ? 1 : (gender === 'f' ? 1.2 : 0.8) };
+}
+
+/* Reálne rozlíšiteľné pohlasie MEDZI SK hlasmi tohto zariadenia (podľa mena) –
+   na rozdiel od pickVoice() TU sa nič nesimuluje pitch-shiftom. Použi na
+   rozhodnutie, či má zmysel ponúknuť voľbu "Mužský/Ženský", alebo len jeden
+   neutrálny "Hlas" (viď scripts/statnice.js buildPersonaOverlay). */
+export function getAvailableSkGenders() {
+  const voices = window.speechSynthesis.getVoices();
+  const sk = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
+  return {
+    hasMale: sk.some(v => MALE_VOICE_HINT.test(v.name)),
+    hasFemale: sk.some(v => FEMALE_VOICE_HINT.test(v.name))
+  };
 }
 
 function effectiveGender(baseGender) {

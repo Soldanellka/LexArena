@@ -279,7 +279,7 @@
       "definitions": [
         { "question": "Čo je zásada rovnakého zaobchádzania v pracovnoprávnych vzťahoch?", "answer": "Zásada rovnakého zaobchádzania znamená zákaz diskriminácie zamestnancov z dôvodu pohlavia, veku, náboženstva, rasy, národnosti či sexuálnej orientácie pri prístupe k zamestnaniu, v pracovných podmienkach aj pri odmeňovaní. Túto zásadu rozpracúva antidiskriminačný zákon spolu so Zákonníkom práce." },
         { "question": "Čo je nepriama diskriminácia v pracovnom práve?", "answer": "Nepriama diskriminácia nastáva vtedy, keď zdanlivo neutrálny predpis, kritérium alebo prax zamestnávateľa znevýhodňuje osobu na základe niektorého z chránených dôvodov bez objektívneho odôvodnenia. Zamestnávateľ sa jej môže dopustiť aj neúmyselne pri stanovení pracovných podmienok." },
-        { "question": "Kedy sa rozdielne zaobchádzanie nepovažuje za diskrimináciu?", "answer": "Rozdielne zaobchádzanie sa nepovažuje za diskrimináciu, ak je odôvodnené povahou vykonávanej práce, primerané a nevyhnutné na dosiahnutie sledovaného cieľa, napríklad pri vekovom obmedzení fyzicky náročnej profesie. Diskrimináciou nie sú ani opatrenia na vyrovnanie znevýhodnenia určitých skupín zamestnancov." }
+        { "question": "Kedy sa rozdielne zaobchádzanie nepovažuje za diskrimináciu?", "answer": "Rozdielne zaobchádzanie sa nepovažuje za diskrimináciu, ak je odôvodnené povahou práce, primerané a nevyhnutné na dosiahnutie sledovaného cieľa, napríklad pri vekovom obmedzení fyzicky náročnej profesie. Diskrimináciou nie sú ani opatrenia na vyrovnanie znevýhodnenia určitých skupín zamestnancov." }
       ]
     },
     {
@@ -295,7 +295,7 @@
       "id": "33",
       "title": "Pracovné podmienky žien a mladistvých",
       "definitions": [
-        { "question": "Aké osobitné pracovné podmienky platia pre tehotné zamestnankyne?", "answer": "Tehotné zamestnankyne a zamestnankyne do konca deviateho mesiaca po pôrode nesmú byť zamestnávané prácami fyzicky neprimeranými alebo škodlivými ich organizmu a zamestnávateľ ich nesmie zamestnávať prácou nadčas. Zamestnávateľ je tiež povinný prispôsobiť im pracovné podmienky podľa ich zdravotného stavu." },
+        { "question": "Aké osobitné pracovné podmienky platia pre tehotné zamestnankyne?", "answer": "Tehotné zamestnankyne a zamestnankyne do konca deviateho mesiaca po pôrode nesmú byť zamestnávané prácami fyzicky neprimeranými alebo škodlivými ich organizmu a nesmú pracovať nadčas. Zamestnávateľ je tiež povinný prispôsobiť im pracovné podmienky podľa ich zdravotného stavu." },
         { "question": "Kto je mladistvý zamestnanec?", "answer": "Mladistvým zamestnancom sa podľa Zákonníka práce rozumie zamestnanec mladší ako osemnásť rokov, pre ktorého platia osobitné pracovné podmienky zamerané na ochranu jeho zdravia a vývoja. Mladistvého nemožno zamestnávať prácou nadčas ani prácou v noci s výnimkou osobitne vymedzených prípadov." },
         { "question": "Aká je maximálna dĺžka pracovného času mladistvého zamestnanca?", "answer": "Pracovný čas mladistvého zamestnanca nesmie v priemere prekročiť tridsať hodín týždenne, aj keby pracoval pre viacerých zamestnávateľov, a v jednotlivých dňoch nesmie presiahnuť osem hodín. Tento limit má chrániť telesný a duševný vývoj mladistvého zamestnanca." }
       ]
@@ -394,7 +394,7 @@
       "id": "44",
       "title": "Verejná služba – osobitosti pracovnoprávneho vzťahu",
       "definitions": [
-        { "question": "Čo je verejná služba?", "answer": "Verejná služba je výkon práce vo verejnom záujme pre zamestnávateľov, akými sú obce, vyššie územné celky alebo príspevkové organizácie, uskutočňovaný v pracovnom pomere podľa Zákonníka práce s osobitosťami podľa zákona o výkone práce vo verejnom záujme. Odlišuje sa od štátnej služby, ktorá je verejnoprávnou kategóriou." },
+        { "question": "Čo je verejná služba?", "answer": "Verejná služba je výkon práce vo verejnom záujme pre zamestnávateľov, akými sú obce, vyššie územné celky alebo príspevkové organizácie, v pracovnom pomere podľa Zákonníka práce s osobitosťami podľa zákona o výkone práce vo verejnom záujme. Líši sa od štátnej služby ako verejnoprávnej kategórie." },
         { "question": "Aké osobitosti má odmeňovanie zamestnancov vo verejnej službe?", "answer": "Zamestnanci vo verejnej službe sú odmeňovaní podľa osobitného zákona o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme, ktorý určuje tarifné triedy a platové stupne podľa vzdelania a praxe. Ich mzda sa označuje ako plat a jej zložky sú presne stanovené zákonom." },
         { "question": "Kedy sa na zamestnanca vo verejnej službe vzťahuje Zákonník práce?", "answer": "Na zamestnanca vo verejnej službe sa Zákonník práce vzťahuje vždy, keď osobitný zákon o výkone práce vo verejnom záujme neustanovuje inak, napríklad pri vzniku a skončení pracovného pomeru. Osobitná úprava sa týka najmä odmeňovania a niektorých obmedzení súvisiacich s výkonom vo verejnom záujme." }
       ]
@@ -440,15 +440,15 @@
       "title": "Skončenie pracovného pomeru so zdravotne postihnutým zamestnancom",
       "definitions": [
         { "question": "Aká je osobitná ochrana zdravotne postihnutého zamestnanca pri výpovedi?", "answer": "Zamestnávateľ potrebuje predchádzajúci súhlas príslušného úradu práce, sociálnych vecí a rodiny na výpoveď danú zamestnancovi so zdravotným postihnutím, s výnimkou niektorých výpovedných dôvodov, akým je napríklad zrušenie zamestnávateľa. Bez tohto súhlasu je výpoveď z takéhoto dôvodu neplatná." },
-        { "question": "Kedy môže zamestnávateľ skončiť pracovný pomer so zamestnancom so zdravotným postihnutím bez súhlasu úradu práce?", "answer": "Súhlas úradu práce sa nevyžaduje, ak sa zamestnávateľ zrušuje alebo premiestňuje, ak zamestnanec stratil vzhľadom na zdravotný stav dlhodobo spôsobilosť vykonávať doterajšiu prácu, alebo pri okamžitom skončení pracovného pomeru. V ostatných prípadoch je súhlas nevyhnutnou podmienkou platnosti výpovede." },
-        { "question": "Aké povinnosti má zamestnávateľ voči zamestnancovi so zmenenou pracovnou schopnosťou pred skončením pracovného pomeru?", "answer": "Zamestnávateľ je povinný zabezpečovať zamestnancom so zdravotným postihnutím osobitné pracovné podmienky a podľa možností im utvárať podmienky zodpovedajúce ich zdravotnému stavu skôr, než pristúpi k skončeniu pracovného pomeru. Táto povinnosť vyplýva zo Zákonníka práce a zo zákona o službách zamestnanosti." }
+        { "question": "Kedy môže zamestnávateľ skončiť pracovný pomer so zamestnancom so zdravotným postihnutím bez súhlasu úradu práce?", "answer": "Súhlas sa nevyžaduje, ak sa zamestnávateľ zrušuje alebo premiestňuje, ak zamestnanec stratil vzhľadom na zdravotný stav dlhodobo spôsobilosť vykonávať doterajšiu prácu, alebo pri okamžitom skončení pracovného pomeru. V ostatných prípadoch je súhlas nevyhnutnou podmienkou platnosti výpovede." },
+        { "question": "Aké povinnosti má zamestnávateľ voči zamestnancovi so zmenenou pracovnou schopnosťou pred skončením pracovného pomeru?", "answer": "Zamestnávateľ je povinný zabezpečovať zamestnancom so zdravotným postihnutím osobitné podmienky a podľa možností im utvárať podmienky zodpovedajúce ich zdravotnému stavu skôr, než pristúpi k skončeniu pracovného pomeru. Táto povinnosť vyplýva zo Zákonníka práce a zo zákona o službách zamestnanosti." }
       ]
     },
     {
       "id": "50",
       "title": "Medzinárodné a európske pracovné právo, vplyv práva EÚ",
       "definitions": [
-        { "question": "Aký vplyv má právo Európskej únie na slovenské pracovné právo?", "answer": "Právo Európskej únie výrazne ovplyvňuje slovenské pracovné právo prostredníctvom smerníc transponovaných do vnútroštátnych predpisov, napríklad v oblasti rovnakého zaobchádzania, pracovného času či informovania zamestnancov. Zákonník práce je v mnohých ustanoveniach priamym výsledkom harmonizácie s právom Únie." },
+        { "question": "Aký vplyv má právo Európskej únie na slovenské pracovné právo?", "answer": "Právo Únie výrazne ovplyvňuje slovenské pracovné právo prostredníctvom smerníc transponovaných do predpisov, napríklad v oblasti rovnakého zaobchádzania, pracovného času či informovania zamestnancov. Zákonník práce je v mnohých ustanoveniach priamym výsledkom harmonizácie s právom Únie." },
         { "question": "Čo sú dohovory Medzinárodnej organizácie práce?", "answer": "Dohovory Medzinárodnej organizácie práce sú medzinárodné zmluvy, ktoré po ratifikácii zaväzujú Slovenskú republiku a stávajú sa súčasťou jej právneho poriadku s prednosťou pred zákonom. Upravujú napríklad slobodu združovania, zákaz nútenej práce či minimálny vek na vstup do zamestnania." },
         { "question": "Ako Ústava Slovenskej republiky zaručuje pracovné práva?", "answer": "Ústava Slovenskej republiky v článkoch tridsaťpäť a tridsaťšesť zaručuje právo na slobodnú voľbu povolania, na prácu, na spravodlivé pracovné podmienky a na primerané odmeňovanie za vykonanú prácu. Tieto ústavné práva sú bližšie rozvedené v Zákonníku práce a súvisiacich predpisoch." }
       ]

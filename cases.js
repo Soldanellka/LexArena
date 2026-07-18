@@ -11,6 +11,7 @@ import {
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
+import { recordOkruhResult, PROGRESS_ACTIVITIES } from './scripts/progressTracking.js';
 import { renderSource } from './scripts/sourceUtil.js';
 import { AREA_SLUGS } from './scripts/contentOverrides.js';
 import { openContentEditModal } from './scripts/contentEditModal.js';
@@ -414,6 +415,7 @@ export function loadCasesFromJson(casesArr, areaTitle) {
   }));
   window.__jsonCaseIndex = 0;
   window.__jsonCaseAnswers = {}; // { caseIdx: { stepIdx: chosenOption } }
+  window.__jsonCaseRecorded = new Set(); // ktoré indexy už zapísali progres (Fáza 2)
 
   renderJsonCase(container, areaTitle);
 }
@@ -518,6 +520,17 @@ function renderJsonCase(container, areaTitle) {
     html += `<div class="case-result ${pct >= 60 ? 'ok' : 'no'}">
       ${pct >= 60 ? '🏆' : '📚'} Prípad vyriešený: ${correctCount}/${questionSteps.length} správne (${pct}%)
     </div>`;
+
+    // 📊 Osobný prehľad progresu (Fáza 2) – najlepší % prípadov per okruh.
+    // Zapíš len raz (nie pri každom re-renderi po kliknutí v už dokončenom
+    // prípade) a len ak má prípad presnú atribúciu oblasti aj okruhu.
+    if (!window.__jsonCaseRecorded.has(idx)) {
+      window.__jsonCaseRecorded.add(idx);
+      const nick = localStorage.getItem('playerNick');
+      if (nick && c.area && c.source) {
+        recordOkruhResult(nick, c.area, c.source, PROGRESS_ACTIVITIES.CASES, pct);
+      }
+    }
   }
 
   // Navigácia

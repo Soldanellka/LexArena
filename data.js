@@ -117,7 +117,7 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
       if (Array.isArray(json.tiles)) {
         json.tiles.forEach(t => {
           if (t && t.term && t.definition) {
-            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json',''), zdroj: t.zdroj || null });
+            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json',''), _area: areaTitle, zdroj: t.zdroj || null });
           }
         });
       }

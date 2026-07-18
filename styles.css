@@ -210,6 +210,19 @@ body {
   box-shadow: 0 8px 20px rgba(10,30,50,0.18);
 }
 
+/* Štátnicová sieň – hlavná príprava na reálne štátnice, nech vynikne
+   medzi ostatnými hrami (zlatý rámik + jemný pulz, nie kričiaci). */
+.statnice-cta-btn {
+  position: relative;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 0 2px rgba(212,175,55,0.25), 0 8px 20px rgba(212,175,55,0.25);
+  animation: statnice-cta-glow 2.4s ease-in-out infinite;
+}
+@keyframes statnice-cta-glow {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(212,175,55,0.25), 0 8px 20px rgba(212,175,55,0.25); }
+  50% { box-shadow: 0 0 0 4px rgba(212,175,55,0.4), 0 8px 24px rgba(212,175,55,0.4); }
+}
+
 /* ----------------------------------------------------------
    LAYOUT & CARDS
 ---------------------------------------------------------- */
@@ -2788,6 +2801,17 @@ body {
 
 .statnice-answer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .statnice-answer-actions .btn { flex: 1; min-width: 140px; }
+
+.statnice-mic-recording {
+  background: rgba(229,62,62,0.18) !important;
+  border-color: rgba(229,62,62,0.55) !important;
+  color: #e53e3e !important;
+  animation: statnice-mic-pulse 1.2s ease-in-out infinite;
+}
+@keyframes statnice-mic-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
 
 .statnice-followup {
   margin: 10px 0 14px; padding: 12px 14px; border-radius: 10px;

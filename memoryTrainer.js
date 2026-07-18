@@ -617,15 +617,19 @@ export function isSpeechRecognitionSupported() {
 /**
  * Vytvorí rozpoznávač reči pre jednu nahrávku.
  * callbacks: { onStart, onResult(transcript), onEnd, onError }
+ * options: { continuous } – voliteľné, default false (doterajšie správanie,
+ *   nezmenené pre existujúcich volajúcich). JEDNO rozhranie pre prípadnú
+ *   budúcu platform-špecifickú potrebu (napr. desktop), namiesto dvoch
+ *   nezávislých implementácií, ktoré by sa časom rozišli.
  * Vráti inštanciu s .start()/.stop(), alebo null ak nie je podporované.
  */
-export function createSpeechRecognizer(callbacks = {}) {
+export function createSpeechRecognizer(callbacks = {}, { continuous = false } = {}) {
   const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!Ctor) return null;
 
   const recognizer = new Ctor();
   recognizer.lang = 'sk-SK';
-  recognizer.continuous = false;
+  recognizer.continuous = continuous;
   recognizer.interimResults = false;
   recognizer.maxAlternatives = 1;
 

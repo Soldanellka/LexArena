@@ -7,6 +7,7 @@ import { playSound } from './audio.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { LS } from './core.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
+import { recordOkruhResult, PROGRESS_ACTIVITIES } from './scripts/progressTracking.js';
 
 /* ===============================
    Memory state
@@ -20,10 +21,31 @@ let memoryState = {
   wrongs: 0,
   startTime: null,
   timer: null,
-  elapsed: 0
+  elapsed: 0,
+  perSource: {} // { [okruh source]: { matches, wrongs } } – per-karta atribúcia (Fáza 2 dodatok)
 };
 
 let memoryFocusedIndex = 0;
+
+/* Zložený kľúč (_area::source), NIE holý source – hmotné aj procesné
+   podoblasti majú vlastné A1..A30/A40/A45 súbory s ROVNAKÝMI source kľúčmi
+   (napr. Občianske právo: hmotné A1-A40 × procesné A1-A45 → ~40 zhôd z 1800
+   kombinácií, teda kolízia pri ~2 % hier, nie výnimka). Bez _area v kľúči by
+   sa takéto dva odlišné okruhy omylom zliali do jedného zápisu, a keďže
+   writeOkruhBest drží najlepší doteraz dosiahnutý výsledok TRVALO, zlúčenie
+   by sa už nikdy neopravilo. */
+function cardSourceKey(card) {
+  if (!card || !card.source) return null;
+  return card._area ? `${card._area}::${card.source}` : card.source;
+}
+
+/* Karty bez source (napr. legacy buildMemory(setKey) pevná sada) sa
+   jednoducho ignorujú – cardSourceKey() im vráti null. */
+function bumpPerSource(key, field) {
+  if (!key) return;
+  if (!memoryState.perSource[key]) memoryState.perSource[key] = { matches: 0, wrongs: 0 };
+  memoryState.perSource[key][field]++;
+}
 
 /* ===============================
    Build memory board
@@ -132,6 +154,7 @@ function onMemoryClick(uid, el){
     firstCard.matched = true;
     secondCard.matched = true;
     memoryState.matches++;
+    bumpPerSource(cardSourceKey(firstCard), 'matches'); // firstCard/secondCard majú rovnaký (_area,source) pri matchi
 
     try { playSound(window.soundMatch); } catch(e){}
 
@@ -174,6 +197,9 @@ function onMemoryClick(uid, el){
     try { playSound(window.soundNoMatch); } catch(e){}
 
     memoryState.wrongs++;
+    // 1 wrong sa počíta KAŽDÉMU dotknutému okruhu (dedup – ak sú obe karty
+    // z toho istého (_area,source), počíta sa mu len raz, nie dvakrát).
+    [...new Set([cardSourceKey(firstCard), cardSourceKey(secondCard)])].forEach(k => bumpPerSource(k, 'wrongs'));
 
     // visual feedback: wrong + shake
     memoryState.first.el.classList.add('wrong','shake');
@@ -282,6 +308,27 @@ function finishMemoryGame(){
     if (memoryState.wrongs === 0) {
       econAward(nick, ECONOMY_CONFIG.REWARDS.MEMORY_PERFECT, 'pexeso bez chyby');
     }
+  }
+
+  /* 📊 Osobný prehľad progresu (Fáza 2) – presná per-karta atribúcia podľa
+     ZLOŽENÉHO kľúča (_area::source), NIE holého source: hmotné aj procesné
+     podoblasti majú vlastné A1..A30/A40/A45 súbory s ROVNAKÝMI source kľúčmi
+     (napr. Občianske právo hmotné A1-A40 × procesné A1-A45 → kolízia pri
+     ~2 % náhodných párov), takže bez _area v kľúči by sa dva rôzne okruhy
+     omylom zlúčili do jedného zápisu – a keďže writeOkruhBest drží najlepší
+     výsledok TRVALO, takéto zlúčenie by sa už nikdy neopravilo. Ak sa do
+     8-karticového výberu tejto session nedostala žiadna dlaždica z
+     niektorého okruhu, pre ten sa nezapisuje nič (radšej žiadny zápis ako
+     vymyslené číslo). */
+  const pair = window.__selectedOkruhPair;
+  if (nick && pair && Array.isArray(pair.sources) && pair.sources.length) {
+    pair.sources.forEach(({ area, key }) => {
+      const tally = memoryState.perSource[`${area}::${key}`];
+      if (!tally) return; // žiadna karta z tohto okruhu sa v tejto session neobjavila
+      const attempts = tally.matches + tally.wrongs;
+      const pct = attempts > 0 ? Math.round((tally.matches / attempts) * 100) : 100;
+      recordOkruhResult(nick, area, key, PROGRESS_ACTIVITIES.FLASHCARDS, pct);
+    });
   }
 
   if(mode === 'exam'){
@@ -511,7 +558,9 @@ export function buildMemoryFromQuestions(questions) {
     return {
       id: `q${i}`,
       left: shortQ,
-      right: correctAnswer
+      right: correctAnswer,
+      source: q.source || null,
+      _area: q._area || null
     };
   }).filter(p => p.right); // len páry so správnou odpoveďou
 
@@ -522,8 +571,8 @@ export function buildMemoryFromQuestions(questions) {
 
   const cards = [];
   pairs.forEach(p => {
-    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false });
-    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false });
+    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false, source: p.source, _area: p._area });
+    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false, source: p.source, _area: p._area });
   });
 
   shuffleArray(cards);
@@ -534,6 +583,7 @@ export function buildMemoryFromQuestions(questions) {
   memoryState.lock = false;
   memoryState.matches = 0;
   memoryState.wrongs = 0;
+  memoryState.perSource = {};
   memoryState.elapsed = 0;
   memoryState.startTime = Date.now();
 
@@ -568,13 +618,15 @@ export function buildMemoryFromTiles(tiles) {
   const pairs = pool.slice(0, 8).map((t, i) => ({
     id: `t${i}`,
     left: t.term,
-    right: t.definition
+    right: t.definition,
+    source: t.source || null,
+    _area: t._area || null
   }));
 
   const cards = [];
   pairs.forEach(p => {
-    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false });
-    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false });
+    cards.push({ uid: p.id + "-L", pairId: p.id, text: p.left,  side: 'L', matched: false, source: p.source, _area: p._area });
+    cards.push({ uid: p.id + "-R", pairId: p.id, text: p.right, side: 'R', matched: false, source: p.source, _area: p._area });
   });
 
   shuffleArray(cards);
@@ -585,6 +637,7 @@ export function buildMemoryFromTiles(tiles) {
   memoryState.lock = false;
   memoryState.matches = 0;
   memoryState.wrongs = 0;
+  memoryState.perSource = {};
   memoryState.elapsed = 0;
   memoryState.startTime = Date.now();
 

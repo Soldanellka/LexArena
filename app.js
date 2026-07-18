@@ -2,7 +2,7 @@
 
 import { $ } from './core.js';
 import { renderAdminPanel } from './admin.js';
-import { startDuel } from './scripts/duels.js';
+import { startDuel, pickOkruhPair } from './scripts/duels.js';
 
 /* =====================================================
    RENDER ŠTUDIJNÝCH MODULOV (externé appky z catalog)
@@ -40,12 +40,22 @@ function renderModules() {
 /* =====================================================
    RENDER OBLASTÍ NA DUEL (interné balíky z areas)
    ===================================================== */
+
+/* Posledný zvolený režim výberu dvojice okruhov – prežíva prepnutie
+   oblasti (pohodlnejšie pre študenta), default je 🎲 náhodne. */
+let currentOkruhMode = 'random';
+
+const OKRUH_MODES = [
+  { key: 'random', label: '🎲 Náhodne' },
+  { key: 'studied', label: '📗 Preštudované' },
+  { key: 'unstudied', label: '📕 Nepreštudované' }
+];
+
 function renderAreas() {
   const list = $('areasList');
   if (!list || typeof window.areas === 'undefined') return;
 
   list.innerHTML = '';
-  let selectedName = null;
 
   Object.keys(window.areas).forEach(name => {
     const btn = document.createElement('button');
@@ -61,31 +71,59 @@ function renderAreas() {
 
       // Zvýrazni vybraný
       btn.classList.add('chip-active');
-      selectedName = name;
 
-      const startBtn = $('startQuizBtn');
       const quizTitle = $('quizTitle');
       const areaTitle = $('areaTitle');
 
       if (quizTitle) quizTitle.textContent = 'Vyber oblasť pojednávania, hry a prípady';
       if (areaTitle) areaTitle.textContent = name;
 
-      if (startBtn) {
-        startBtn.disabled = false;
-        startBtn.textContent = 'Spustiť pojednávanie';
-        startBtn.onclick = () => {
-          console.log("Spúšťam duel pre oblasť:", name);
-          startDuel(name);
-        };
-      }
-
-      // 🔥 Načítaj otázky pre Memory a Prípady z tejto oblasti
       window.__selectedAreaName = name;
-      preloadAreaGames(name);
+      renderOkruhModePicker(name);
+      applyOkruhPairSelection(name, currentOkruhMode);
     };
 
     list.appendChild(btn);
   });
+}
+
+/* =====================================================
+   VÝBER REŽIMU DVOJICE OKRUHOV (🎲/📗/📕)
+   ===================================================== */
+function renderOkruhModePicker(areaName) {
+  let box = document.getElementById('okruhModePicker');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'okruhModePicker';
+    box.style.cssText = 'margin-top:10px;display:flex;gap:6px;flex-wrap:wrap';
+    const areasInQuiz = document.getElementById('areasInQuiz');
+    if (areasInQuiz) areasInQuiz.appendChild(box);
+  }
+
+  box.innerHTML = '';
+  OKRUH_MODES.forEach(m => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip mode-chip' + (m.key === currentOkruhMode ? ' chip-active' : '');
+    b.textContent = m.label;
+    b.onclick = () => {
+      currentOkruhMode = m.key;
+      box.querySelectorAll('.mode-chip').forEach(x => x.classList.remove('chip-active'));
+      b.classList.add('chip-active');
+      applyOkruhPairSelection(areaName, currentOkruhMode);
+    };
+    box.appendChild(b);
+  });
+}
+
+function modeEmptyMessage(mode) {
+  if (mode === 'studied') {
+    return 'Zatiaľ nemáš žiadnu tému preštudovanú na ≥80 % – vyberáme náhodne.';
+  }
+  if (mode === 'unstudied') {
+    return 'Nenašli sa témy pod 30 % – super, skoro všetko máš rozbehnuté! Vyberáme náhodne.';
+  }
+  return '';
 }
 
 /* =====================================================
@@ -105,83 +143,108 @@ function isAreaLoaded(areaName) {
   return !!window.areasLoaded?.[areaName];
 }
 
-function preloadAreaGames(areaName) {
+function waitAreaLoaded(areaName) {
   /* 🔥 OPRAVA: čaká na príznak "načítanie dokončené" (nie na dĺžku
      otázok) – oblasť s čiastočne/zatiaľ nenaplnenými dátami (napr.
      Európske právo pred doplnením obsahu) inak nikdy nesplní
      "length > 0" a __areaTilesForGames/__areaQuestionsForGames
      ostanú navždy zo STARŠEJ vybranej oblasti (zavádzajúce). */
-  let attempts = 0;
-  const check = setInterval(() => {
-    attempts++;
-    if (isAreaLoaded(areaName)) {
-      clearInterval(check);
-      const questions = getQuestionsForArea(areaName);
-      window.__areaQuestionsForGames = questions;
-      window.__areaTilesForGames = getTilesForArea(areaName);
-      window.__areaCasesForGames = getCasesForArea(areaName);
-      const nTiles = (window.__areaTilesForGames||[]).length;
-      const nCases = (window.__areaCasesForGames||[]).length;
-      console.log(`🎮 ${areaName}: ${questions.length} otázok, ${nTiles} dlaždíc, ${nCases} prípadov`);
+  return new Promise(resolve => {
+    let attempts = 0;
+    const check = setInterval(() => {
+      attempts++;
+      if (isAreaLoaded(areaName) || attempts > 50) {
+        clearInterval(check);
+        resolve();
+      }
+    }, 100);
+  });
+}
 
-      // 🎮 Aktualizuj indikátor pri tlačidlách hier
-      const hint = document.getElementById('gamesAreaHint');
-      if (hint) {
-        if (nTiles || nCases || questions.length) {
-          hint.classList.add('games-hint-ready');
-          hint.innerHTML = `<span class="games-hint-dot ready"></span>
-            <strong>${areaName}</strong> – pripravené: ${nTiles} kartičiek, ${nCases} prípadov`;
-        } else {
-          hint.classList.remove('games-hint-ready');
-          hint.innerHTML = `<span class="games-hint-dot"></span>
-            <strong>${areaName}</strong> – obsah sa ešte pripravuje`;
-        }
+/* Filtruje dlaždice/prípady presne podľa dvojice { area, key } – NIE podľa
+   holého source kľúča naprieč zlúčenou oblasťou. Hmotné aj procesné podoblasti
+   majú vlastné A1..A30/A40/A45 súbory s ROVNAKÝMI source kľúčmi (napr. "A15"
+   existuje v oboch), takže filter len podľa kľúča by omylom zobral obsah
+   z oboch okruhov naraz. */
+function filterBySources(store, sources) {
+  if (!Array.isArray(sources) || !sources.length) return [];
+  const out = [];
+  sources.forEach(({ area, key }) => {
+    const list = store?.[area] || [];
+    out.push(...list.filter(item => item.source === key));
+  });
+  return out;
+}
+
+/* Poradové číslo session-u – zabráni tomu, aby výsledok pomalšieho
+   (starého) volania prepísal medzičasom vybranú novú oblasť/režim. */
+let okruhSelectionToken = 0;
+
+async function applyOkruhPairSelection(areaName, mode) {
+  const token = ++okruhSelectionToken;
+
+  const hint = document.getElementById('gamesAreaHint');
+  if (hint) {
+    hint.classList.remove('games-hint-ready');
+    hint.innerHTML = `<span class="games-hint-dot"></span><strong>${areaName}</strong> – vyberám okruhy…`;
+  }
+
+  // Kým sa nevyberie nová dvojica, nedovoľ spustiť pojednávanie so starou (z inej oblasti/režimu).
+  const startBtnEarly = $('startQuizBtn');
+  if (startBtnEarly) {
+    startBtnEarly.disabled = true;
+    startBtnEarly.onclick = null;
+  }
+
+  await waitAreaLoaded(areaName);
+  if (token !== okruhSelectionToken) return; // medzitým sa zvolila iná oblasť/režim
+
+  const nick = localStorage.getItem('playerNick') || null;
+  const result = await pickOkruhPair(areaName, mode, nick);
+  if (token !== okruhSelectionToken) return;
+
+  window.__selectedOkruhPair = { area: areaName, mode, ...result };
+  window.__areaQuestionsForGames = result.questions;
+  window.__areaTilesForGames = filterBySources(window.areaTiles, result.sources);
+  window.__areaCasesForGames = filterBySources(window.areaCases, result.sources);
+
+  const nTiles = window.__areaTilesForGames.length;
+  const nCases = window.__areaCasesForGames.length;
+  console.log(`🎮 ${areaName} [${mode}]: okruhy ${result.keys.join('+') || '—'}, ${result.questions.length} otázok, ${nTiles} dlaždíc, ${nCases} prípadov`);
+
+  const startBtn = $('startQuizBtn');
+  if (startBtn) {
+    if (result.empty || !result.questions.length) {
+      startBtn.disabled = true;
+      startBtn.onclick = null;
+    } else {
+      startBtn.disabled = false;
+      startBtn.textContent = 'Spustiť pojednávanie';
+      startBtn.onclick = () => {
+        console.log('Spúšťam duel pre oblasť:', areaName, 'okruhy:', result.keys);
+        startDuel(areaName, result);
+      };
+    }
+  }
+
+  if (hint) {
+    if (result.empty) {
+      hint.classList.remove('games-hint-ready');
+      hint.innerHTML = `<span class="games-hint-dot"></span><strong>${areaName}</strong> – obsah sa ešte pripravuje`;
+    } else {
+      const okruhLabel = result.keys.join(' + ');
+      const fallbackMsg = result.usedFallback ? ` ${modeEmptyMessage(mode)}` : '';
+      if (nTiles || nCases || result.questions.length) {
+        hint.classList.add('games-hint-ready');
+        hint.innerHTML = `<span class="games-hint-dot ready"></span>
+          <strong>${areaName}</strong> – okruhy ${okruhLabel}: pripravené ${nTiles} kartičiek, ${nCases} prípadov${fallbackMsg}`;
+      } else {
+        hint.classList.remove('games-hint-ready');
+        hint.innerHTML = `<span class="games-hint-dot"></span>
+          <strong>${areaName}</strong> – okruhy ${okruhLabel} zatiaľ nemajú obsah${fallbackMsg}`;
       }
     }
-    if (attempts > 50) clearInterval(check);
-  }, 100);
-}
-
-function getQuestionsForArea(areaName) {
-  if (areaName === 'Trestné právo') {
-    const tph = window.areas?.['Trestné právo hmotné'] || [];
-    const tpp = window.areas?.['Trestné právo procesné'] || [];
-    return [...tph.slice(0,5), ...tpp.slice(0,5)];
   }
-  if (areaName === 'Občianske právo') {
-    const oph = window.areas?.['Občianske právo hmotné'] || [];
-    const opp = window.areas?.['Občianske právo procesné'] || [];
-    return [...oph.slice(0,5), ...opp.slice(0,5)];
-  }
-  return window.areas?.[areaName] || [];
-}
-
-function getTilesForArea(areaName) {
-  if (areaName === 'Trestné právo') {
-    const tph = window.areaTiles?.['Trestné právo hmotné'] || [];
-    const tpp = window.areaTiles?.['Trestné právo procesné'] || [];
-    return [...tph, ...tpp];
-  }
-  if (areaName === 'Občianske právo') {
-    const oph = window.areaTiles?.['Občianske právo hmotné'] || [];
-    const opp = window.areaTiles?.['Občianske právo procesné'] || [];
-    return [...oph, ...opp];
-  }
-  return window.areaTiles?.[areaName] || [];
-}
-
-function getCasesForArea(areaName) {
-  if (areaName === 'Trestné právo') {
-    const tph = window.areaCases?.['Trestné právo hmotné'] || [];
-    const tpp = window.areaCases?.['Trestné právo procesné'] || [];
-    return [...tph, ...tpp];
-  }
-  if (areaName === 'Občianske právo') {
-    const oph = window.areaCases?.['Občianske právo hmotné'] || [];
-    const opp = window.areaCases?.['Občianske právo procesné'] || [];
-    return [...oph, ...opp];
-  }
-  return window.areaCases?.[areaName] || [];
 }
 
 export { renderAreas, renderModules };

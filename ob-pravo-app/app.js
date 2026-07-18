@@ -5,6 +5,18 @@ import { normalizeOkruh } from '../scripts/contentNormalize.js';
 import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
 import { getRole } from '../scripts/economyConfig.js';
 import { openContentEditModal } from '../scripts/contentEditModal.js';
+import { writeOkruhBest, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
+
+/* 📊 Osobný prehľad progresu (Fáza 2) – najlepší výsledok per okruh.
+   appId 'obcianske' zodpovedá window.catalog['Občianske právo...'].id
+   v data.js aj resolveProgressLocation() v scripts/progressTracking.js –
+   duely z root pojednávania a solo štúdium v tejto appke tak zdieľajú
+   rovnaké okruhy v rovnakej vetve (users/{nick}/progress/obcianske/...). */
+function recordEngineProgress(okruh, activity, percent) {
+  const nick = localStorage.getItem('playerNick');
+  if (!nick || !okruh || !okruh._file) return;
+  writeOkruhBest(nick, 'obcianske', state.area, okruh._file, activity, percent);
+}
 
 /* ============================================================
    KONFIGURÁCIA – počet JSON súborov pre každú oblasť
@@ -452,6 +464,9 @@ async function showResults() {
   $('resultsCard').style.display = 'block';
   state.phase = 'results';
 
+  // 📊 Osobný prehľad progresu (Fáza 2) – najlepší % kvízu per okruh.
+  recordEngineProgress(state.okruhy[state.currentOkruh], PROGRESS_ACTIVITIES.QUIZ, pct);
+
   // Emoji a správa podľa výsledku
   let emoji, title;
   if (pct >= 90)      { emoji = '🏆'; title = 'Výborne! Skvelý výsledok!'; }
@@ -584,6 +599,9 @@ function buildMemory() {
           setTimeout(() => {
             board.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:16px;font-size:18px;font-weight:700;color:var(--success)">🎉 Všetky páry nájdené!</div>');
           }, 300);
+          // 📊 Osobný prehľad progresu (Fáza 2) – najlepší % kartičiek per okruh.
+          const successPct = attempts > 0 ? Math.round((matched / attempts) * 100) : 100;
+          recordEngineProgress(okruh, PROGRESS_ACTIVITIES.FLASHCARDS, successPct);
         }
       } else {
         // Zlý pár
@@ -642,6 +660,24 @@ function buildCases() {
     );
     const answers = new Array(steps.length).fill(null);
     let revealed = steps.length ? 1 : 0;
+    let caseRecorded = false;
+    const questionStepIndices = steps
+      .map((s, si) => si)
+      .filter(si => Array.isArray(steps[si].options) && steps[si].options.length);
+
+    /* 📊 Osobný prehľad progresu (Fáza 2) – najlepší % prípadov per okruh.
+       Zapíše sa raz, keď sú zodpovedané všetky kroky TOHTO prípadu (okruh
+       môže mať viac prípadov – zapisuje sa za každý dokončený, best-of
+       zápis vo writeOkruhBest si podrží najvyšší z nich). */
+    function maybeRecordCaseProgress() {
+      if (caseRecorded || !questionStepIndices.length) return;
+      const allAnswered = questionStepIndices.every(si => answers[si] !== null);
+      if (!allAnswered) return;
+      caseRecorded = true;
+      const correct = questionStepIndices.filter(si => answers[si] === steps[si].correct).length;
+      const pct = Math.round((correct / questionStepIndices.length) * 100);
+      recordEngineProgress(okruh, PROGRESS_ACTIVITIES.CASES, pct);
+    }
 
     const card = document.createElement('div');
     card.className = 'case-card';
@@ -715,6 +751,7 @@ function buildCases() {
           answers[si] = i;
           answeredCount++;
           updateProgress();
+          maybeRecordCaseProgress();
           if (revealed < steps.length) revealed++;
           render();
         };

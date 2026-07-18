@@ -38,10 +38,10 @@
 import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
-import { speakText } from '../memoryTrainer.js';
+import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer } from '../memoryTrainer.js';
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
 import { renderSource } from './sourceUtil.js';
-import { ensureVoicesLoaded, pickVoice } from '../biflovackaVideo.js';
+import { ensureVoicesLoaded, pickVoice, getAvailableSkGenders } from '../biflovackaVideo.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -167,24 +167,58 @@ async function resolveExamVoice(voicePref) {
   const voices = window.speechSynthesis.getVoices();
   const hasSk = voices.some(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
   if (!hasSk) return null; // žiadny SK hlas → ticho, len text (bez chyby, bez mätúcej hlášky)
-  return pickVoice(voicePref === 'f' ? 'f' : 'm');
+
+  if (voicePref === 'm' || voicePref === 'f') return pickVoice(voicePref);
+
+  // voicePref === 'voice' – neutrálna voľba bez sľubu pohlavia (buildPersonaOverlay
+  // ju ponúka len keď je k dispozícii PRÁVE JEDNO rozlíšiteľné pohlasie); zober to,
+  // ktoré reálne existuje, nech pickVoice() nájde skutočnú zhodu, nie náhodný pool[0].
+  const { hasMale, hasFemale } = getAvailableSkGenders();
+  return pickVoice(hasFemale && !hasMale ? 'f' : 'm');
 }
 
 /* Prehrá text daným hlasom komisie, alebo ak examVoice===null (vypnuté
    / žiadny sk hlas), rovno zavolá onEnd bez čakania – žiadna 6s pauza
-   na TTS fallback, keď sa ani nepokúšame hovoriť. */
+   na TTS fallback, keď sa ani nepokúšame hovoriť.
+
+   ⚠️ cancelPrevious:false – speakText() by inak PRED KAŽDÝM (aj druhým,
+   tretím...) prejavom nepodmienene zavolal speechSynthesis.cancel().
+   Zdokumentovaný Chrome/Android bug: cancel() tesne pred ďalším .speak()
+   v tej istej relácii vie spôsobiť, že onend NASLEDUJÚCEJ utterance
+   vystrelí takmer okamžite – predtým, než z reproduktora reálne čokoľvek
+   zaznie. Presne to vysvetľuje vzor "prvá otázka OK, druhá+ nie" (prvý
+   prejav na stránke nemá čo cancelovať, každý ďalší áno). Cancelujeme
+   preto LEN keď je reálne čo cancelovať (niečo ešte beží/čaká na
+   prehratie) – nikdy nepodmienene pred každým volaním. */
 function speakOrSkip(text, examVoice, { onEnd }) {
   if (!examVoice) { if (onEnd) onEnd(); return; }
-  const played = speakText(text, { voice: examVoice.voice, pitch: examVoice.pitch, onEnd });
+  if (window.speechSynthesis && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+  }
+  const played = speakText(text, { voice: examVoice.voice, pitch: examVoice.pitch, onEnd, cancelPrevious: false });
   if (!played && onEnd) onEnd();
 }
 
 const PREP_SECONDS = 5 * 60;
-const SILENCE_TIMEOUT_MS = 8000;
-const SPEECH_START_FALLBACK_MS = 2000;
-const TTS_FALLBACK_MS = 6000; // ak sa onEnd z TTS nespustí (nepodporovaný prehliadač a pod.)
 const ON_TOPIC_MIN_THRESHOLD = 15;   // pod týmto = úplne mimo témy (guard proti falošne kladnému skóre)
 const MAX_FOLLOWUPS_PER_QUESTION = 2;
+
+/* ⚠️ ODHAD, nie meranie – rôzne hlasy/zariadenia hovoria rôzne rýchlo, takže
+   toto NIKDY nesmie byť to, čo primárne spúšťa počúvanie. Skutočný spúšťač
+   JE VŽDY utterance.onend (viď speakThenListen nižšie) – tento časovač
+   slúži VÝHRADNE ako poistka pre prípad, že onend v danom prehliadači/
+   zariadení vôbec nepríde (zdokumentovaný okrajový prípad Web Speech API,
+   nie bežný stav). Preto ×3 rezerva navyše oproti odhadu (2026-07-18:
+   zdvihnuté z ×2.5 – aj pri podstatne pomalšom hlase/zariadení má poistka
+   spustiť počúvanie AŽ PO reálnom konci reči, nikdy pred ním; radšej pár
+   sekúnd zbytočne čaká, než aby zachytila vlastný hlas komisie). */
+function estimateSpeechMs(text) {
+  const words = String(text || '').trim().split(/\s+/).filter(Boolean).length || 1;
+  return Math.min(30000, Math.max(4000, words * 450 + 2000));
+}
+function ttsFallbackDelay(text) {
+  return Math.min(60000, estimateSpeechMs(text) * 3);
+}
 
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
@@ -283,7 +317,11 @@ async function fetchOkruh(basePath, n) {
     if (!summaryText) return null;
     const keyPoints = extractKeyPoints(summaryText, json.title);
     if (!keyPoints.length) return null;
-    return { id: `A${n}`, title: json.title, keyPoints, zdroj: normalizeZdroj(json) };
+    // Glosár okruhu (Fáza D.3) – tiles = 5 kurátorovaných pojmov + definícií,
+    // rovnaký zdroj ako kartičky/duel. Použité v evaluateCoverage() na
+    // hodnotenie právnej terminológie ako ZLOŽKY známky, nie celej známky.
+    const glossary = Array.isArray(json.tiles) ? json.tiles.map(t => t && t.term).filter(Boolean) : [];
+    return { id: `A${n}`, title: json.title, keyPoints, glossary, zdroj: normalizeZdroj(json) };
   } catch (e) {
     return null;
   }
@@ -488,8 +526,9 @@ function renderCommission(commissionEl, commission) {
 
 /* ============================================================
    HODNOTENIE ODPOVEDE PROTI KĽÚČOVÝM BODOM – lokálny substitút za
-   "Krok B" Claude API. Vracia rovnaký tvar:
-   { covered, missing, incorrect, coverage, onTopic }
+   "Krok B" Claude API. Vracia rovnaký tvar ako predtým + terminológiu:
+   { covered, missing, incorrect, coverage, contentCoverage,
+     terminologyScore, missingTerms, onTopic }
 
    Hodnotí sa POKRYTIE, nie doslovná zhoda: každý bod sa overuje cez
    prítomnosť JEHO VLASTNÝCH podstatných slov v odpovedi (parafráza/
@@ -497,7 +536,12 @@ function renderCommission(commissionEl, commission) {
    `incorrect` (vecne zlé tvrdenia) lokálne spoľahlivo nevieme
    rozpoznať – ostáva vždy prázdne (poctivo priznané obmedzenie).
 ============================================================ */
-const POINT_COVERAGE_RATIO = 0.34; // aký podiel vlastných slov bodu musí zaznieť, aby bol "covered"
+/* POINT_COVERAGE_RATIO, TERMINOLOGY_WEIGHT, MIN_ANSWER_WORDS a
+   GRADE_THRESHOLDS žijú v ECONOMY_CONFIG.STATNICE (economyConfig.js) –
+   rekalibrácia 2026-07-17, dôvod tamtiež v komentári. Lokálne aliasy len
+   pre čitateľnosť nižšie. */
+const POINT_COVERAGE_RATIO = ECONOMY_CONFIG.STATNICE.POINT_COVERAGE_RATIO;
+const TERMINOLOGY_WEIGHT = ECONOMY_CONFIG.STATNICE.TERMINOLOGY_WEIGHT;
 
 /* Slovenčina má bohatú pádovú/číselnú deklináciu ("závislá" vs "o závislej
    práci" vs "závislých vzťahoch") – rovnaké slovo sa v odpovedi takmer
@@ -526,7 +570,7 @@ function isPointCovered(point, userWordsSet) {
   return (matched / pointWords.length) >= POINT_COVERAGE_RATIO;
 }
 
-function evaluateCoverage(userText, keyPoints) {
+function evaluateCoverage(userText, keyPoints, glossary) {
   const userWords = new Set(significantWords(userText));
   const covered = [];
   const missing = [];
@@ -537,10 +581,39 @@ function evaluateCoverage(userText, keyPoints) {
   });
 
   const total = keyPoints ? keyPoints.length : 0;
-  const coverage = total ? Math.round((covered.length / total) * 100) : 0;
-  const onTopic = userWords.size > 0 && (covered.length >= 1 || coverage >= ON_TOPIC_MIN_THRESHOLD);
+  const contentCoverage = total ? Math.round((covered.length / total) * 100) : 0;
 
-  return { covered, missing, incorrect: [], coverage, onTopic };
+  // Terminológia: koľko z 5 kurátorovaných pojmov okruhu (tiles) študent
+  // reálne použil. Rovnaké prefixové porovnanie ako pri kľúčových bodoch,
+  // aby skloňované tvary pojmu neboli nespravodlivo "nepoužité".
+  const glossaryTerms = glossary || [];
+  const usedTerms = [];
+  const missingTerms = [];
+  glossaryTerms.forEach(term => {
+    const termWords = significantWords(term);
+    const isUsed = userWords.size > 0 && termWords.length > 0 &&
+      termWords.some(w => [...userWords].some(uw => wordsMatch(w, uw)));
+    if (isUsed) usedTerms.push(term); else missingTerms.push(term);
+  });
+  const terminologyScore = glossaryTerms.length ? Math.round((usedTerms.length / glossaryTerms.length) * 100) : null;
+
+  // Ak okruh nemá glosár (napr. staršie dáta bez tiles), terminológia sa
+  // nezapočítava (vypadne, nie 0 %) – rovnaká zásada ako pri chýbajúcej
+  // aktivite v osobnom prehľade progresu (Fáza 3).
+  const coverage = terminologyScore === null
+    ? contentCoverage
+    : Math.round(contentCoverage * (1 - TERMINOLOGY_WEIGHT) + terminologyScore * TERMINOLOGY_WEIGHT);
+
+  const onTopic = userWords.size > 0 && (covered.length >= 1 || contentCoverage >= ON_TOPIC_MIN_THRESHOLD);
+
+  // Anti-gaming (Fáza D rekalibrácia): odpoveď kratšia než rozumné minimum
+  // nemôže dostať 1 ani 2 bez ohľadu na to, čo skóre napočíta – bráni sa tým
+  // holému vymenovaniu pojmov naraz s ich terminologickým "bonusom" vyššie.
+  // Počíta sa zo VŠETKÝCH slov (nie len significantWords), aby aj odpoveď
+  // zložená hlavne zo spojok/predložiek nedostala kredit za dĺžku.
+  const tooShort = normalizeWords(userText).length < ECONOMY_CONFIG.STATNICE.MIN_ANSWER_WORDS;
+
+  return { covered, missing, incorrect: [], coverage, contentCoverage, terminologyScore, missingTerms, onTopic, tooShort };
 }
 
 /* Doplňujúca otázka cielená na KONKRÉTNY chýbajúci bod (missing[0]),
@@ -557,36 +630,56 @@ function buildFollowUpMessage(missing, title, personaKey) {
    2 = 65-84, 3 = 45-64, 4 = <45 alebo závažné vecné chyby.
 
    ⚠️ NEMENNÁ ZÁSADA: znamka sa počíta VÝLUČNE z `evaluations` (avg
-   coverage + anyIncorrect), úplne rovnako bez ohľadu na personaKey –
-   ten sa použije AŽ NIŽŠIE, len na sformulovanie textu (silne/medzery/
-   odporucania/zaver). Rovnaká odpoveď => rovnaká známka u všetkých
+   coverage + anyIncorrect) a `hintsUsed` (rovnaký strop pre všetky
+   persóny, ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR) – ÚPLNE rovnako
+   bez ohľadu na personaKey. Ten sa použije AŽ NIŽŠIE, len na
+   sformulovanie textu (silne/medzery/odporucania/zaver). Rovnaká
+   odpoveď + rovnaký počet nápovied => rovnaká známka u všetkých
    troch persón, vždy. */
-function buildFinalFeedback(evaluations, topics, personaKey) {
+function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
   const avg = evaluations.reduce((s, e) => s + e.coverage, 0) / evaluations.length;
   const anyIncorrect = evaluations.some(e => e.incorrect && e.incorrect.length);
+  const anyTooShort = evaluations.some(e => e.tooShort);
 
-  let znamka;
-  if (avg >= 85 && !anyIncorrect) znamka = 1;
-  else if (avg >= 65 && !anyIncorrect) znamka = 2;
-  else if (avg >= 45) znamka = 3;
-  else znamka = 4;
-  if (anyIncorrect && avg < 45) znamka = 4;
+  // Prahy sú v ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS (zoradené zhora),
+  // prvý riadok, do ktorého avg "zapadne" (avg >= min), určuje známku.
+  let znamka = ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS.find(t => avg >= t.min).znamka;
+  // Vecná chyba (keby ju lokálny substitút niekedy vedel rozpoznať) nikdy
+  // nesmie vyzerať ako "výborne" – rovnaký floor-vzor ako nižšie pri nápovedi/dĺžke.
+  if (anyIncorrect) znamka = Math.max(znamka, 3);
+
+  // Nápoveda na žiadosť (Fáza D.2) znižuje NAJLEPŠIU dosiahnuteľnú známku –
+  // nikdy ju nezlepší, len ju zdola obmedzí (Math.max = "aspoň takto zlá").
+  const floorTable = ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR;
+  const hintFloor = floorTable[Math.min(hintsUsed, floorTable.length - 1)];
+  znamka = Math.max(znamka, hintFloor);
+
+  // Rekalibrácia: príliš krátka odpoveď (aspoň na jednu tému) nemôže dostať
+  // 1 ani 2 – nedokáže reálne demonštrovať zvládnutie látky, nech je
+  // keyword-skóre akékoľvek. Rovnaký floor-vzor ako vyššie.
+  if (anyTooShort) znamka = Math.max(znamka, 3);
 
   // Od tohto miesta nižšie sa persóna prejaví LEN v znení textu.
   const p = getPersona(personaKey);
 
   const silne = [];
   const medzery = [];
+  const missingTermsAll = [];
   evaluations.forEach((e, i) => {
     const title = topics[i].title;
     if (e.covered.length) silne.push(p.coveredLine(title, e.covered));
     if (e.missing.length) medzery.push(p.missingLine(title, e.missing));
+    // Právna terminológia (Fáza D.3) – v spätnej väzbe uveď, ktoré pojmy
+    // chýbali (učí to), samostatne od obsahových medzier vyššie.
+    if (e.missingTerms && e.missingTerms.length) {
+      missingTermsAll.push(`Téma „${title}" – vynechané pojmy: ${e.missingTerms.join(', ')}.`);
+    }
   });
   if (!silne.length) silne.push(p.noCoveredFallback);
 
   const odporucania = medzery.length ? p.odporucaniaWithGaps : p.odporucaniaClean;
 
-  return { znamka, silne, medzery, odporucania, zaver: p.zaver[znamka] };
+  return { znamka, silne, medzery, odporucania, terminologyGaps: missingTermsAll, zaver: p.zaver[znamka], anyTooShort };
 }
 
 /* ============================================================
@@ -614,94 +707,40 @@ async function saveExamResult(nick, znamka, areaName) {
 }
 
 /* ============================================================
-   SPEECHRECOGNITION – sk-SK, continuous + interim, s poistkami:
-   - onend počas POCUVANIE → auto-reštart (Chrome ho vie sám ukončiť)
-   - samostatný 8s časovač ticha od posledného rozpoznaného slova
-   - manuálne zastavenie (mic toggle) sa NEreštartuje
+   SPEECHRECOGNITION – Zjednotené s bifľovačkou (memoryTrainer.js
+   createSpeechRecognizer/isSpeechRecognitionSupported), rovnaký
+   konštruktor a nastavenia. Dve vrstvy poistiek, ktoré medzi sebou
+   NESMÚ kolidovať:
+
+   1. PRVÝ .start() jednej nahrávacej relácie je VŽDY priamo vnútri
+      click handlera mikrofónu (fresh user gesture) – nikdy z async
+      reťazca (TTS onend / timer). Mobilné prehliadače (najmä Android
+      Chrome) berú getUserMedia-viazané API ako SpeechRecognition
+      seriózne (skutočne sa spýtajú/udelia povolenie) len pri priamom
+      geste – to bol koreň pôvodnej mobilnej chyby ("otvorí sa, ale
+      nepočúva").
+
+   2. V RÁMCI JEDNEJ relácie (recordingSessionActive === true) sa
+      prirodzené ticho (onEnd bez manuálneho zastavenia) NEberie ako
+      koniec odpovede – rozpoznávanie sa potichu REŠTARTUJE (rovnaké
+      povolenie, netreba nové gesto) a zbiera ĎALEJ do tej istej
+      odpovede. Skúška NIKDY neprejde na ďalšiu otázku na základe
+      ticha – jedine tlačidlom "Dokončiť odpoveď" alebo manuálnym
+      zastavením mikrofónu. Bez tejto vrstvy by ústny výklad
+      s prirodzenou pauzou na premýšľanie appka predčasne odstrihla.
+
+   Prehrávanie otázky (TTS) sa NIKDY neprekrýva s počúvaním – mikrofón sa
+   sprístupní na SKUTOČNEJ udalosti utterance.onend, vždy cez JEDNU zdieľanú
+   funkciu speakThenListen() (jedna cesta pre úvodnú otázku aj každú
+   doplňujúcu – žiadna druhá kópia), nikdy primárne na časovači.
+   ttsFallbackDelay() je len poistka pre prípad, že onend v danom
+   prehliadači vôbec nepríde – veľkorysá (odhad × 3), nech nikdy nestrieľa
+   pred reálnym koncom reči. Ako druhá poistka: aj keby ju predsa spustila
+   poistka priskoro, speakThenListen() aj startOrRestartRecording pred
+   prechodom/pred .start() explicitne zavolajú speechSynthesis.cancel(), ak
+   by TTS ešte bežalo – mikrofón sa preto nikdy nemôže spustiť do stále
+   znejúcej reči komisie.
 ============================================================ */
-const FATAL_SPEECH_ERRORS = new Set(['not-allowed', 'service-not-allowed']);
-const MAX_AUTO_RESTARTS = 4; // poistka proti nekonečnej slučke (napr. trvalo zamietnuté povolenie mikrofónu)
-
-function createRecognizer({ onInterim, onFinalChunk, onSilence, onFatalError }) {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) return null;
-
-  let recognizer;
-  try {
-    recognizer = new SR();
-  } catch (e) {
-    return null;
-  }
-  recognizer.lang = 'sk-SK';
-  recognizer.continuous = true;
-  recognizer.interimResults = true;
-
-  let silenceTimer = null;
-  let started = false;
-  let manuallyStopped = false;
-  let fatallyFailed = false;
-  let consecutiveAutoRestarts = 0;
-
-  function resetSilenceTimer() {
-    if (silenceTimer) clearTimeout(silenceTimer);
-    silenceTimer = setTimeout(() => {
-      console.log('[ŠTÁTNICE] Odmlka 8s zaznamenaná');
-      onSilence();
-    }, SILENCE_TIMEOUT_MS);
-  }
-
-  recognizer.onstart = () => { started = true; console.log('[ŠTÁTNICE] Speech onstart'); };
-
-  recognizer.onresult = (e) => {
-    let interim = '';
-    let finalChunk = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      const t = e.results[i][0].transcript;
-      if (e.results[i].isFinal) finalChunk += t + ' ';
-      else interim += t;
-    }
-    console.log('[ŠTÁTNICE] Speech onresult:', { finalChunk: finalChunk.trim(), interim });
-    if (finalChunk) onFinalChunk(finalChunk);
-    onInterim(interim);
-    resetSilenceTimer();
-  };
-
-  recognizer.onerror = (e) => {
-    console.warn('⚠️ [ŠTÁTNICE] Speech onerror', e.error);
-    if (FATAL_SPEECH_ERRORS.has(e.error)) fatallyFailed = true;
-  };
-
-  recognizer.onend = () => {
-    console.log('[ŠTÁTNICE] Speech onend', { manuallyStopped, fatallyFailed, consecutiveAutoRestarts });
-    if (silenceTimer) clearTimeout(silenceTimer);
-    if (manuallyStopped) return;
-
-    // Poistka: trvalo zamietnuté povolenie (alebo iná neopraviteľná chyba) či priveľa
-    // reštartov za sebou → prestaň skúšať donekonečna a prepni na písanú odpoveď.
-    if (fatallyFailed || ++consecutiveAutoRestarts > MAX_AUTO_RESTARTS) {
-      console.warn('⚠️ [ŠTÁTNICE] Rozpoznávanie reči trvalo zlyhalo – končím s pokusmi o reštart');
-      if (typeof onFatalError === 'function') onFatalError();
-      return;
-    }
-    if (typeof api.onAutoEnd === 'function') api.onAutoEnd();
-  };
-
-  const api = {
-    start() {
-      manuallyStopped = false;
-      started = false;
-      try { recognizer.start(); resetSilenceTimer(); } catch (e) { console.warn('⚠️ [ŠTÁTNICE] recognizer.start zlyhalo', e); }
-    },
-    stop() {
-      manuallyStopped = true;
-      if (silenceTimer) clearTimeout(silenceTimer);
-      try { recognizer.stop(); } catch (e) {}
-    },
-    hasStarted: () => started,
-    onAutoEnd: null
-  };
-  return api;
-}
 
 /* ============================================================
    UI – FULLSCREEN OVERLAY
@@ -728,19 +767,32 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
   const el = document.createElement('div');
   el.className = 'statnice-overlay';
 
-  const hasSkVoice = await (async () => {
-    if (!('speechSynthesis' in window)) return false;
+  const { hasSkVoice, hasMale, hasFemale } = await (async () => {
+    if (!('speechSynthesis' in window)) return { hasSkVoice: false, hasMale: false, hasFemale: false };
     await ensureVoicesLoaded();
-    return window.speechSynthesis.getVoices().some(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
+    const anySk = window.speechSynthesis.getVoices().some(v => v.lang && v.lang.toLowerCase().startsWith('sk'));
+    const genders = getAvailableSkGenders();
+    return { hasSkVoice: anySk, ...genders };
   })();
 
-  const voiceOptionsHtml = hasSkVoice
-    ? `
-      <button class="btn statnice-voice-btn" data-voice="m" type="button">🎙️ Mužský</button>
-      <button class="btn statnice-voice-btn" data-voice="f" type="button">🎙️ Ženský</button>
-      <button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu</button>
-    `
-    : `<button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu (na tomto zariadení nie je k dispozícii slovenský hlas)</button>`;
+  /* Voľba v UI musí vždy zodpovedať tomu, čo sa reálne stane:
+     - oba gendery rozlíšiteľné podľa mena hlasu → skutočná voľba Mužský/Ženský
+     - žiadny SK hlas vôbec → len "Bez hlasu"
+     - SK hlas JE, ale gendery sa nedajú (spoľahlivo) rozlíšiť → jeden neutrálny
+       "🔊 Hlas" namiesto sľubu pohlavia, ktoré zariadenie nevie splniť */
+  const canOfferBothGenders = hasMale && hasFemale;
+  const voiceOptionsHtml = !hasSkVoice
+    ? `<button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu (na tomto zariadení nie je k dispozícii slovenský hlas)</button>`
+    : canOfferBothGenders
+      ? `
+        <button class="btn statnice-voice-btn" data-voice="m" type="button">🎙️ Mužský</button>
+        <button class="btn statnice-voice-btn" data-voice="f" type="button">🎙️ Ženský</button>
+        <button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu</button>
+      `
+      : `
+        <button class="btn statnice-voice-btn" data-voice="voice" type="button">🔊 Hlas</button>
+        <button class="btn statnice-voice-btn" data-voice="off" type="button">🔇 Bez hlasu</button>
+      `;
 
   el.innerHTML = `
     <div class="statnice-bg"></div>
@@ -771,7 +823,12 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
 
   return new Promise((resolve) => {
     let personaKey = hasOwnPersona(defaultPersona) ? defaultPersona : null;
-    let voicePref = hasSkVoice ? (defaultVoice || null) : 'off';
+    // Ulož. voľba z minula sa prevezme LEN ak zodpovedá tomu, čo sa TERAZ na
+    // tomto zariadení reálne dá splniť – inak (napr. uložené 'f' z iného
+    // zariadenia, tu je gender neistý/chýba) sa nepoužije potichu, nech si
+    // študent vyberie znova z toho, čo je naozaj k dispozícii.
+    const validVoicePrefs = !hasSkVoice ? ['off'] : canOfferBothGenders ? ['m', 'f', 'off'] : ['voice', 'off'];
+    let voicePref = validVoicePrefs.includes(defaultVoice) ? defaultVoice : (hasSkVoice ? null : 'off');
     let settled = false;
 
     function finish(result) {
@@ -845,7 +902,7 @@ function buildOverlay(areaName) {
         <textarea class="statnice-answer-input" id="statniceAnswerInput" placeholder="Odpoveď (hovor nahlas alebo píš)…"></textarea>
         <div class="statnice-answer-actions">
           <button class="btn" id="statniceMicBtn" type="button">🎤 Mikrofón</button>
-          <button class="btn btn-primary" id="statniceSubmitBtn" type="button">✅ Skončil/a som</button>
+          <button class="btn btn-primary" id="statniceSubmitBtn" type="button">✅ Dokončiť odpoveď</button>
         </div>
       </div>
       <div id="statniceResultsPhase" style="display:none">
@@ -935,13 +992,26 @@ export async function openStatniceHall(areaName) {
   const answers = ['', ''];
   const evaluations = [];
   const followUpCounts = [0, 0];
+  // Ktoré konkrétne body sa v tejto téme UŽ pýtali cez doplňujúcu otázku –
+  // zabraňuje opakovaniu TOHO ISTÉHO bodu, aj keby ho matcher po doplnení
+  // stále vyhodnotil ako nepokrytý (parafráza/skratka mimo dosahu prefix-
+  // matchingu). Pozri enterHodnotenie/offerHint nižšie.
+  const hintedPoints = [[], []];
   let currentIdx = 0;
 
   let recognizer = null;
   let listening = false;
+  // true od prvého klepnutia na mikrofón (skutočné gesto) až po manuálne
+  // zastavenie/odoslanie – kým je true, prirodzené ticho (onEnd) REŠTARTUJE
+  // rozpoznávanie namiesto ukončenia odpovede (viď startOrRestartRecording).
+  let recordingSessionActive = false;
+  let restartFailCount = 0;
+  const MAX_RECORDING_RESTART_FAILS = 3;
   let prepTimerHandle = null;
-  let speechFallbackTimer = null;
-  let ttsFallbackTimer = null;
+  // JEDNA zdieľaná poistková časomiera pre CELÝ prechod "komisia dohovorila
+  // → mikrofón dostupný" – používa ju výhradne speakThenListen() nižšie,
+  // naprieč úvodnou otázkou aj každou doplňujúcou (žiadna druhá kópia).
+  let speechTransitionTimer = null;
 
   const timerEl = overlayEl.querySelector('#statniceTimer');
   const qNumEl = overlayEl.querySelector('#statniceQNum');
@@ -977,10 +1047,74 @@ export async function openStatniceHall(areaName) {
   }
 
   function stopListening() {
-    clearTimeout(speechFallbackTimer);
-    if (recognizer) { recognizer.stop(); }
+    recordingSessionActive = false; // manuálne/definitívne zastavenie – onEnd nižšie nesmie reštartovať
+    if (recognizer) { try { recognizer.stop(); } catch (e) {} }
     listening = false;
+    micBtn.classList.remove('statnice-mic-recording');
     micBtn.textContent = '🎤 Mikrofón';
+  }
+
+  /* ============================================================
+     speakThenListen() – JEDNA cesta pre "komisia hovorí → mikrofón
+     dostupný", spoločná pre ÚVODNÚ otázku aj KAŽDÚ doplňujúcu (predtým dve
+     štruktúrne zhodné, ale samostatne udržiavané kópie – goToListening v
+     enterVyzvanie a goBack v offerHint – teraz jedna funkcia, žiadna
+     možnosť, aby sa časom rozišli).
+
+     PRAVIDLO BEZ VÝNIMKY: kým komisia hovorí, mikrofón je VŽDY zatvorený –
+     recognizer sa vytvára VÝHRADNE na klik (startOrRestartRecording sa
+     volá len z micBtn.onclick alebo z jeho vlastného onEnd/onError počas
+     UŽ AKTÍVNEJ relácie, pozri nižšie). Táto funkcia teda nikdy nespúšťa
+     nahrávanie – len prepne fázu do POCUVANIE (zobrazí tlačidlo mikrofónu),
+     AŽ POTOM čo skutočne skončí reč komisie.
+
+     SKUTOČNÝ spúšťač je vždy utterance.onend (odovzdané ako onEnd nižšie).
+     ttsFallbackDelay() časovač je VÝHRADNE poistka pre prípad, že onend v
+     danom prehliadači/zariadení vôbec nepríde (zdokumentovaný okrajový
+     prípad Web Speech API) – nikdy primárny mechanizmus. Pred prechodom do
+     POCUVANIE (nech prišiel z onend, alebo z poistky) ešte raz explicitne
+     umlčí prípadne stále bežiace TTS, nech sa za žiadnych okolností
+     nezachytí vlastný hlas komisie.
+
+     ⚠️ DOLNÁ HRANICA (druhá, nezávislá poistka): aj SKUTOČNÝ onend, ktorý
+     príde nápadne skoro, je nedôveryhodný – ten istý zdokumentovaný
+     Chrome/Android bug (viď speakOrSkip vyššie) vie spôsobiť takmer
+     okamžitý onend ešte predtým, než z reproduktora zaznie čokoľvek.
+     Preto sa fáza nikdy neprepne skôr, než uplynie aspoň minElapsedMs
+     (úmerné dĺžke textu) od začiatku prejavu – ak onend/poistka prídu
+     skôr, počká sa do tejto hranice namiesto okamžitého prechodu. Toto
+     robí chybu "mikrofón chytí hlas avatara" neopakovateľnou KONŠTRUKČNE,
+     bez ohľadu na to, či je onend v danom prehliadači spoľahlivý. */
+  function speakThenListen(text, afterSpeaking) {
+    let advanced = false;
+    let minWaitTimer = null;
+    const minElapsedMs = examVoice ? Math.max(1200, Math.round(estimateSpeechMs(text) * 0.4)) : 0;
+    const startedAt = Date.now();
+
+    const proceed = () => {
+      if (advanced) return;
+      const remaining = minElapsedMs - (Date.now() - startedAt);
+      if (remaining > 0) {
+        clearTimeout(minWaitTimer);
+        minWaitTimer = setTimeout(proceed, remaining);
+        return;
+      }
+      advanced = true;
+      clearTimeout(speechTransitionTimer);
+      clearTimeout(minWaitTimer);
+      if (window.speechSynthesis && window.speechSynthesis.speaking) {
+        try { window.speechSynthesis.cancel(); } catch (e) {}
+      }
+      afterSpeaking();
+    };
+
+    if (examVoice) {
+      speakOrSkip(text, examVoice, { onEnd: proceed });
+      clearTimeout(speechTransitionTimer);
+      speechTransitionTimer = setTimeout(proceed, ttsFallbackDelay(text));
+    } else {
+      proceed(); // bez hlasu (vypnuté alebo žiadny sk hlas) – rovno ďalej, žiadne čakanie
+    }
   }
 
   /* ---------- VYZVANIE – komisia AKTÍVNE vyzve, vždy sa vykoná ---------- */
@@ -998,94 +1132,121 @@ export async function openStatniceHall(areaName) {
     msgEl.style.display = 'block';
     msgEl.innerHTML = `<strong>Komisia (${persona.emoji} ${persona.label}):</strong> ${prompt}`;
 
-    let advanced = false;
-    const goToListening = () => {
-      if (advanced) return;
-      advanced = true;
-      clearTimeout(ttsFallbackTimer);
-      enterPocuvanie(idx);
-    };
-
-    if (examVoice) {
-      speakOrSkip(prompt, examVoice, { onEnd: goToListening });
-      // Poistka: ak TTS zlyhá/nepodporené (onEnd sa nikdy nespustí), pokračuj sám.
-      clearTimeout(ttsFallbackTimer);
-      ttsFallbackTimer = setTimeout(goToListening, TTS_FALLBACK_MS);
-    } else {
-      goToListening(); // bez hlasu (vypnuté alebo žiadny sk hlas) – rovno ďalej, žiadne čakanie
-    }
+    speakThenListen(prompt, enterPocuvanie);
   }
 
-  /* ---------- POCUVANIE – robustné rozpoznávanie + poistky ---------- */
-  function enterPocuvanie(idx) {
+  /* ---------- POCUVANIE – nahrávanie s prirodzenými pauzami ---------- */
+  function enterPocuvanie() {
     setPhase('POCUVANIE');
-    let baseTranscript = answers[idx] || '';
+    recordingSessionActive = false;
+    restartFailCount = 0;
 
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) {
-      micStatusEl.textContent = '🔇 Rozpoznávanie reči nie je v tomto prehliadači dostupné – napíš odpoveď a klikni „Skončil/a som".';
+    if (!isSpeechRecognitionSupported()) {
+      micStatusEl.textContent = '🔇 Rozpoznávanie reči nie je v tomto prehliadači dostupné – napíš odpoveď a klikni „Dokončiť odpoveď".';
       micBtn.style.display = 'none';
       return; // textarea je vždy viditeľná a funkčná – skúška beží aj bez mikrofónu
     }
     micBtn.style.display = '';
+    resetMicUI('Klikni na mikrofón a hovor – pauzy na premýšľanie nevadia, mikrofón sám pokračuje v počúvaní. Odpoveď ukonči tlačidlom „Dokončiť odpoveď", alebo píš rovno do poľa nižšie.');
+  }
 
-    recognizer = createRecognizer({
-      onInterim: (interim) => {
-        liveTranscriptEl.textContent = `${baseTranscript} ${interim}`.trim();
+  function resetMicUI(message) {
+    micBtn.classList.remove('statnice-mic-recording');
+    micBtn.textContent = '🎤 Mikrofón';
+    if (message) micStatusEl.textContent = message;
+  }
+
+  /* Spustí (alebo po prirodzenom tichu AUTO-REŠTARTUJE) rozpoznávanie v rámci
+     JEDNEJ nahrávacej relácie (recordingSessionActive). Volané buď:
+     a) PRIAMO z klik handlera mikrofónu – prvý štart tejto relácie, VŽDY
+        skutočné user gesto (rovnaký vzor ako memory-trainer.html
+        setupMicButton – tu sa reálne prvýkrát pýta povolenie mikrofónu), alebo
+     b) z onEnd() callbacku PO tichu, KEĎ relácia ešte beží – toto je reštart
+        PO UŽ UDELENOM povolení pre tento pôvod (origin), nie nová žiadosť oň.
+        Web Speech API (Chrome/Android aj desktop) vyžaduje gesto len na PRVÉ
+        schválenie povolenia; ďalšie .start() v tej istej relácii bez gesta
+        bežne funguje presne z tohto dôvodu. Ak by na niektorom mobile predsa
+        len zlyhávalo (nedá sa to overiť bez fyzického zariadenia), onError
+        nižšie po MAX_RECORDING_RESTART_FAILS pokusoch prestane skúšať a
+        vráti študenta na manuálne klikanie (bezpečná záloha, nie ticho). */
+  function startOrRestartRecording() {
+    if (window.speechSynthesis && window.speechSynthesis.speaking) {
+      // Poistka proti zachyteniu vlastného hlasu komisie – ak by TTS z
+      // akéhokoľvek dôvodu ešte fyzicky dobiehalo, radšej ho rovno utíš,
+      // než riskovať, že mikrofón nahrá ozvenu avatara.
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    }
+
+    recognizer = createSpeechRecognizer({
+      onStart: () => {
+        listening = true;
+        restartFailCount = 0;
+        micBtn.classList.add('statnice-mic-recording');
+        micBtn.textContent = '⏹️ Dokončiť nahrávanie';
+        micStatusEl.textContent = '🔴 Počúvam… (pauzy nevadia, pokračujem)';
       },
-      onFinalChunk: (chunk) => {
-        baseTranscript = `${baseTranscript} ${chunk}`.trim();
-        answers[idx] = baseTranscript;
-        answerInput.value = baseTranscript;
-        liveTranscriptEl.textContent = baseTranscript;
-      },
-      onSilence: () => {
-        stopListening();
-        enterHodnotenie(idx, (answerInput.value || '').trim(), true);
-      },
-      onFatalError: () => {
-        // Trvalo zamietnuté povolenie mikrofónu alebo opakované zlyhanie – prestaň
-        // sa pokúšať o rozpoznávanie a nechaj hráča odpovedať písaním (Poistka A).
+      onEnd: () => {
         listening = false;
-        micBtn.style.display = 'none';
-        micStatusEl.textContent = '🔇 Mikrofón nie je dostupný (povolenie zamietnuté alebo opakovaná chyba) – napíš odpoveď a klikni „Skončil/a som".';
+        if (recordingSessionActive) {
+          // Prirodzené ticho, NIE manuálne zastavenie – pokračuj v TEJ ISTEJ
+          // odpovedi, neposúvaj na ďalšiu otázku.
+          micStatusEl.textContent = '⏳ Krátka pauza… pokračujem v počúvaní.';
+          startOrRestartRecording();
+          return;
+        }
+        resetMicUI('⏸️ Mikrofón vypnutý – klikni pre pokračovanie, alebo „Dokončiť odpoveď".');
+      },
+      onError: (e) => {
+        listening = false;
+        restartFailCount++;
+        console.warn('⚠️ [ŠTÁTNICE] Rozpoznávanie hlasu zlyhalo', e, 'pokus', restartFailCount);
+        const fatal = e && (e.error === 'not-allowed' || e.error === 'service-not-allowed');
+        if (!recordingSessionActive) return; // už manuálne zastavené, nič nereštartuj
+        if (fatal || restartFailCount > MAX_RECORDING_RESTART_FAILS) {
+          // ⚠️ VYPNI auto-reštart a VYZVI študenta – NIKDY nezavolaj odtiaľto
+          // enterHodnotenie()/advanceQuestion(). Doteraz nadiktovaný text v
+          // answerInput.value ostáva netknutý, len prestane pribúdať; skúšku
+          // dokončí výhradne explicitný klik na "Dokončiť odpoveď" nižšie.
+          recordingSessionActive = false;
+          resetMicUI('🔇 Mikrofón nezachytil odpoveď (povolenie zamietnuté alebo opakovaná chyba) – pokojne napíš odpoveď a klikni „Dokončiť odpoveď".');
+          return;
+        }
+        // Prechodná chyba (napr. no-speech) – skús znova v tej istej relácii.
+        startOrRestartRecording();
+      },
+      onResult: (transcript) => {
+        // ⚠️ Vždy PRIPÁJA k aktuálnej hodnote textarey – tá sa naprieč reštartmi
+        // (onEnd → startOrRestartRecording) NIKDE nemaže, takže doteraz
+        // zozbieraný text prežije každý reštart aj v polovici vety.
+        if (!transcript) return;
+        const current = (answerInput.value || '').trim();
+        answerInput.value = current ? `${current} ${transcript}` : transcript;
+        answers[currentIdx] = answerInput.value;
+        liveTranscriptEl.textContent = answerInput.value;
       }
     });
 
     if (!recognizer) {
-      micStatusEl.textContent = '🔇 Rozpoznávanie reči zlyhalo – napíš odpoveď a klikni „Skončil/a som".';
+      recordingSessionActive = false;
+      micStatusEl.textContent = '🔇 Rozpoznávanie reči zlyhalo – napíš odpoveď a klikni „Dokončiť odpoveď".';
       micBtn.style.display = 'none';
       return;
     }
-
-    recognizer.onAutoEnd = () => {
-      if (examPhase === 'POCUVANIE') {
-        console.log('[ŠTÁTNICE] Speech onend počas POCUVANIE → auto-reštart');
-        try { recognizer.start(); } catch (e) {}
-      }
-    };
-
     recognizer.start();
-    listening = true;
-    micBtn.textContent = '⏹️ Stlmiť mikrofón';
-    micStatusEl.textContent = '🔴 Počúvam…';
-
-    clearTimeout(speechFallbackTimer);
-    speechFallbackTimer = setTimeout(() => {
-      if (recognizer && !recognizer.hasStarted()) {
-        console.warn('[ŠTÁTNICE] Speech nenaskočilo do 2 s – napíš odpoveď');
-        micStatusEl.textContent = '🔇 Rozpoznávanie reči nereaguje – pokojne napíš odpoveď a klikni „Skončil/a som".';
-      }
-    }, SPEECH_START_FALLBACK_MS);
   }
 
   micBtn.onclick = () => {
-    if (listening) {
+    if (recordingSessionActive) {
+      // Manuálne zastavenie – na rozdiel od prirodzeného ticha sa NEreštartuje.
       stopListening();
-      micStatusEl.textContent = '⏸️ Mikrofón vypnutý – môžeš písať.';
+      resetMicUI('⏸️ Mikrofón vypnutý – klikni pre pokračovanie, alebo „Dokončiť odpoveď".');
       return;
     }
-    if (examPhase === 'POCUVANIE') enterPocuvanie(currentIdx);
+    if (examPhase === 'POCUVANIE') {
+      recordingSessionActive = true;
+      restartFailCount = 0;
+      startOrRestartRecording(); // priamo v klik handleri = skutočné user gesto
+    }
   };
 
   overlayEl.querySelector('#statniceSubmitBtn').onclick = () => {
@@ -1094,51 +1255,78 @@ export async function openStatniceHall(areaName) {
     if (examPhase !== 'POCUVANIE') return;
     answered = true;
     stopListening();
-    enterHodnotenie(currentIdx, (answerInput.value || '').trim(), false);
+    enterHodnotenie(currentIdx, (answerInput.value || '').trim());
   };
 
   /* ---------- HODNOTENIE – Claude API kontrakt (lokálny substitút) ---------- */
-  let followUpFallbackTimer = null;
-  function enterHodnotenie(idx, transcript, triggeredBySilence) {
+  /* ⚠️ NÁPOVEDA JE NA ŽIADOSŤ ŠTUDENTA, nikdy automaticky od komisie – ak by
+     komisia navádzala sama od seba, persóna by nepriamo ovplyvňovala známku
+     (podporujúci pôsobí "ochotnejšie" navádzať → vyššie skóre → žiadna
+     persóna by nemenila skóre rovnako), čo porušuje zásadu "persóna nemení
+     známku". Študent vidí VOPRED presne o koľko si nápoveda zníži najlepšiu
+     dosiahnuteľnú známku (HINT_GRADE_FLOOR), a počet/cena sú identické pre
+     všetky tri persóny – len ZNENIE nápovede sa líši (buildFollowUpMessage). */
+  let hintsUsed = 0;
+
+  function enterHodnotenie(idx, transcript) {
     setPhase('HODNOTENIE');
     answered = true;
     answers[idx] = transcript;
 
     const topic = topics[idx];
-    const result = evaluateCoverage(transcript, topic.keyPoints);
+    // ⚠️ VŽDY prepočítané NANOVO z aktuálneho (celého, priebežne doplneného)
+    // prepisu – nikdy sa neopakuje/nedrží predchádzajúci výsledok. Toto je
+    // jediné miesto, kde sa `missing` počíta, a volá sa pri KAŽDOM uzavretí
+    // odpovede (aj po doplňujúcej otázke), nie len pri prvom pokuse.
+    const result = evaluateCoverage(transcript, topic.keyPoints, topic.glossary);
     console.log('[ŠTÁTNICE] Hodnotenie:', result);
     evaluations[idx] = result;
 
-    // "Ak missing nie je prázdne → komisia sa spýta konkrétne naň" (zadanie) –
-    // doplňujúca sa cieli na konkrétny chýbajúci bod, nie na hocijaké nízke skóre.
-    const needsFollowUp = (result.missing.length > 0 || triggeredBySilence)
-      && followUpCounts[idx] < MAX_FOLLOWUPS_PER_QUESTION;
+    // Nepýtaj sa druhýkrát na TEN ISTÝ bod, na ktorý sa komisia už raz
+    // pýtala doplňujúcou otázkou v tejto téme – ak ho matcher aj po
+    // doplnení stále vyhodnotí ako nepokrytý (napr. skratka vyslovená po
+    // písmenách sa neprepíše na skratku v texte), opakovaná identická
+    // otázka pôsobí, akoby komisia nepočúvala, čo je pre dôveryhodnosť
+    // skúšky horšie než príp. neistota v samotnej známke. Známka/spätná
+    // väzba (evaluations[idx] vyššie) zostáva na plnom, neupravenom
+    // výsledku – filtruje sa LEN výber ďalšej doplňujúcej otázky.
+    const offerable = result.missing.filter(p => !hintedPoints[idx].includes(p));
 
-    if (needsFollowUp) {
+    const canOfferHint = offerable.length > 0 && followUpCounts[idx] < MAX_FOLLOWUPS_PER_QUESTION;
+    if (canOfferHint) {
+      offerHint(idx, { ...result, missing: offerable });
+    } else {
+      advanceQuestion(idx);
+    }
+  }
+
+  function offerHint(idx, result) {
+    const floorTable = ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR;
+    const nextFloor = floorTable[Math.min(hintsUsed + 1, floorTable.length - 1)];
+
+    msgEl.style.display = 'block';
+    msgEl.innerHTML = `
+      <strong>Komisia (${persona.emoji} ${persona.label}):</strong> Odpoveď má medzery.
+      Môžeš požiadať o nápovedu, ale KAŽDÁ nápoveda zníži najlepšiu dosiahnuteľnú
+      známku (táto by ju obmedzila najviac na ${nextFloor}).
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" id="statniceHintBtn" type="button">💡 Chcem nápovedu (max. ${nextFloor})</button>
+        <button class="btn btn-primary" id="statniceSkipHintBtn" type="button">➡️ Pokračovať bez nápovedy</button>
+      </div>
+    `;
+
+    overlayEl.querySelector('#statniceHintBtn').onclick = () => {
       followUpCounts[idx]++;
-      const followUpText = buildFollowUpMessage(result.missing, topic.title, personaKey);
-      msgEl.style.display = 'block';
+      hintsUsed++;
+      hintedPoints[idx].push(result.missing[0]); // presne ten bod, na ktorý sa teraz spýta – nabudúce sa naň už nespýta znova
+      const followUpText = buildFollowUpMessage(result.missing, topics[idx].title, personaKey);
       msgEl.innerHTML = `<strong>Komisia (${persona.emoji} doplňujúca otázka):</strong> ${followUpText}`;
       liveTranscriptEl.textContent = '';
 
-      let advanced = false;
-      const goBack = () => {
-        if (advanced) return;
-        advanced = true;
-        clearTimeout(followUpFallbackTimer);
-        enterPocuvanie(idx);
-      };
-      if (examVoice) {
-        speakOrSkip(followUpText, examVoice, { onEnd: goBack });
-        clearTimeout(followUpFallbackTimer);
-        followUpFallbackTimer = setTimeout(goBack, TTS_FALLBACK_MS);
-      } else {
-        goBack();
-      }
-      return;
-    }
+      speakThenListen(followUpText, enterPocuvanie);
+    };
 
-    advanceQuestion(idx);
+    overlayEl.querySelector('#statniceSkipHintBtn').onclick = () => advanceQuestion(idx);
   }
 
   function advanceQuestion(idx) {
@@ -1157,7 +1345,7 @@ export async function openStatniceHall(areaName) {
     overlayEl.querySelector('#statniceAnswerPhase').style.display = 'none';
     overlayEl.querySelector('#statniceResultsPhase').style.display = 'block';
 
-    const feedback = buildFinalFeedback(evaluations, topics, personaKey);
+    const feedback = buildFinalFeedback(evaluations, topics, personaKey, hintsUsed);
     console.log('[ŠTÁTNICE] Záverečná spätná väzba:', feedback);
 
     const gradeEl = overlayEl.querySelector('#statniceGrade');
@@ -1169,8 +1357,11 @@ export async function openStatniceHall(areaName) {
 
     const fbEl = overlayEl.querySelector('#statniceFeedback');
     fbEl.innerHTML = `
+      ${hintsUsed > 0 ? `<div class="small muted">Použité nápovede: ${hintsUsed} (znížili najlepšiu dosiahnuteľnú známku).</div>` : ''}
+      ${feedback.anyTooShort ? `<div class="small muted">Odpoveď na aspoň jednu tému bola príliš krátka na spoľahlivé posúdenie – obmedzilo to najlepšiu dosiahnuteľnú známku.</div>` : ''}
       <div class="statnice-fb-section"><strong>Silné stránky</strong><ul>${feedback.silne.map(s => `<li>${s}</li>`).join('')}</ul></div>
       ${feedback.medzery.length ? `<div class="statnice-fb-section"><strong>Medzery</strong><ul>${feedback.medzery.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
+      ${feedback.terminologyGaps.length ? `<div class="statnice-fb-section"><strong>Právna terminológia – chýbajúce pojmy</strong><ul>${feedback.terminologyGaps.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
       <div class="statnice-fb-section"><strong>Odporúčania</strong><ul>${feedback.odporucania.map(s => `<li>${s}</li>`).join('')}</ul></div>
       <div class="statnice-fb-zaver">${feedback.zaver}</div>
       ${rewardAmount > 0 ? `<div class="statnice-fb-reward">+${rewardAmount}§ za skúšku</div>` : ''}
@@ -1183,23 +1374,24 @@ export async function openStatniceHall(areaName) {
     const phaseBeforeClose = examPhase;
     const wasListening = listening;
     setPhase('CLOSED');
+    // recordingSessionActive MUSÍ ísť na false PRED recognizer.stop() – inak by
+    // onEnd() (asynchrónny, príde chvíľu po .stop()) videl reláciu stále ako
+    // "aktívnu" a nečakane by ju sám reštartoval aj počas zatvárania/potvrdenia.
+    recordingSessionActive = false;
     if (recognizer) { try { recognizer.stop(); } catch (e) {} }
     clearInterval(prepTimerHandle);
-    clearTimeout(speechFallbackTimer);
-    clearTimeout(ttsFallbackTimer);
-    clearTimeout(followUpFallbackTimer);
+    clearTimeout(speechTransitionTimer);
 
     if (answered && !rewardGranted) {
       const ok = window.confirm('Ukončiť skúšku? § sa nevráti, ak si už odpovedal/a.');
       if (!ok) {
-        // Návrat presne do stavu pred pokusom o zatvorenie (nie natvrdo do POCUVANIE) –
-        // ak sme počúvali, treba recognizer aj reálne znova spustiť (stop() vyššie ho zastavil).
+        // Návrat presne do stavu pred pokusom o zatvorenie (nie natvrdo do POCUVANIE).
+        // Nahrávanie (ak bežalo) sa nerestartuje automaticky – rozpoznávač je teraz
+        // jednorazový na klik (fresh gesture), nie continuous session; študent
+        // jednoducho klikne mikrofón znova, ak chce pokračovať v diktovaní.
         setPhase(phaseBeforeClose);
-        if (phaseBeforeClose === 'POCUVANIE' && wasListening && recognizer) {
-          recognizer.start();
-          listening = true;
-          micBtn.textContent = '⏹️ Stlmiť mikrofón';
-          micStatusEl.textContent = '🔴 Počúvam…';
+        if (phaseBeforeClose === 'POCUVANIE' && wasListening) {
+          micStatusEl.textContent = '⏸️ Nahrávanie sa zastavilo – klikni na mikrofón pre pokračovanie, alebo píš.';
         }
         return;
       }
@@ -1210,6 +1402,13 @@ export async function openStatniceHall(areaName) {
     }
     closeStatniceHall();
   };
+  } catch (e) {
+    // Bez tohto by akákoľvek chyba pred vykreslením overlaya (napr. sieťová
+    // chyba pri sťahovaní okruhov na nestabilnom mobilnom pripojení) skončila
+    // ako tichý "unhandled promise rejection" – klik na tlačidlo by vyzeral,
+    // akoby sa nestalo vôbec nič. Radšej viditeľná hláška než ticho.
+    console.error('⚠️ [ŠTÁTNICE] openStatniceHall zlyhalo', e);
+    showRewardToast('⚖️ Štátnicovú sieň sa nepodarilo otvoriť. Skús to prosím znova.');
   } finally {
     statniceOpening = false;
   }

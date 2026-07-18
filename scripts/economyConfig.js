@@ -117,7 +117,36 @@ export const ECONOMY_CONFIG = {
   // ŠTÁTNICOVÁ SIEŇ – prototyp (skipCap: true pri odmene, je to výkon, nie grind)
   STATNICE: {
     EXAM_COST: 15,                          // econSpend pred štartom (admin zadarmo – rieši econSpend)
-    EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 } // podľa známky zo záverečnej spätnej väzby
+    EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 }, // podľa známky zo záverečnej spätnej väzby
+    // Nápoveda JE NA ŽIADOSŤ ŠTUDENTA (tlačidlo), nikdy automaticky od komisie –
+    // inak by voľba persóny nepriamo ovplyvňovala známku. Každá vyžiadaná
+    // nápoveda ZNÍŽI najlepšiu dosiahnuteľnú známku (číslo horšie = nižšia
+    // kvalita): index = celkový počet nápovied za skúšku (3+ nápovede → posledná
+    // hodnota). Rovnaké pre všetky tri persóny, žiadna výnimka.
+    HINT_GRADE_FLOOR: [1, 2, 3, 4], // 0 nápovied→max 1, 1→max 2, 2→max 3, 3+→max 4
+
+    // REKALIBRÁCIA HODNOTENIA (2026-07-17) – lokálny textový substitút
+    // (evaluateCoverage v statnice.js) NEVIE posúdiť právnu SPRÁVNOSŤ ani
+    // SÚVISLOSŤ odpovede, len prítomnosť kľúčových slov. Zámerne prísnejšie
+    // než "na pohľad rozumné" hodnoty – falošné "si pripravený/á" tesne
+    // pred reálnou štátnicou je horšie než príliš prísna miestna známka.
+    POINT_COVERAGE_RATIO: 0.55,  // predtým 0.34 – bod je "pokrytý" až od
+                                  // nadpolovičnej zhody jeho slov, nie tretiny
+    TERMINOLOGY_WEIGHT: 0.35,    // predtým 0.2 – ale ZÁMERNE < 0.45 (prah pre
+                                  // známku 3 nižšie): pri nulovom obsahovom
+                                  // pokrytí (holé vymenovanie pojmov bez
+                                  // súvislostí) skóre 0*(1-0.35)+100*0.35=35
+                                  // NIKDY neprekročí pásmo "nedostatočné"
+    MIN_ANSWER_WORDS: 25,        // odpoveď kratšia než toto (počet slov za
+                                  // JEDNU tému) nemôže dosiahnuť známku 1
+                                  // ani 2 bez ohľadu na coverage skóre
+    GRADE_THRESHOLDS: [          // avg coverage % → znamka (prvý vyhovujúci
+                                  // riadok zhora, min je dolná hranica)
+      { min: 90, znamka: 1 },
+      { min: 75, znamka: 2 },
+      { min: 55, znamka: 3 },
+      { min: 0,  znamka: 4 }
+    ]
   },
 
   // AKADEMICKÁ VRSTVA – KROK 2: testy pre skupinu (garant zadá, študent píše

@@ -33,8 +33,28 @@ import { shuffleOptions } from '../core.js';
 import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
 import { getRole } from '../scripts/economyConfig.js';
 import { openContentEditModal } from '../scripts/contentEditModal.js';
+import { writeOkruhBest, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
 
 const CONFIG = window.PRAVO_CONFIG || {};
+
+/* ============================================================
+   OSOBNÝ PREHĽAD PROGRESU (Fáza 2) – najlepší výsledok per okruh.
+   Appky s JEDNOU oblasťou v CONFIG (pracovne, eu) používajú kľúč
+   'hmotne' len ako interný názov (žiadne skutočné hmotné/procesné
+   delenie) – aby ich progres skončil v tej istej vetve ako duely z
+   root pojednávania (users/{nick}/progress/{appId}/main/...), musí
+   sa tu vždy zapisovať pod subArea 'main'. Appky s DVOMA oblasťami
+   (trestne) používajú skutočné state.area ('hmotne'/'procesne').
+============================================================ */
+function progressSubArea() {
+  return Object.keys(CONFIG).length > 1 ? state.area : 'main';
+}
+
+function recordEngineProgress(okruh, activity, percent) {
+  const nick = localStorage.getItem('playerNick');
+  if (!nick || !okruh || !okruh._file || !window.PRAVO_APP_ID) return;
+  writeOkruhBest(nick, window.PRAVO_APP_ID, progressSubArea(), okruh._file, activity, percent);
+}
 
 /* ============================================================
    STAV APPKY
@@ -470,6 +490,9 @@ async function showResults() {
   $('resultsCard').style.display = 'block';
   state.phase = 'results';
 
+  // 📊 Osobný prehľad progresu (Fáza 2) – najlepší % kvízu per okruh.
+  recordEngineProgress(state.okruhy[state.currentOkruh], PROGRESS_ACTIVITIES.QUIZ, pct);
+
   let emoji, title;
   if (pct >= 90) { emoji = '🏆'; title = 'Výborne! Skvelý výsledok!'; }
   else if (pct >= 70) { emoji = '🎉'; title = 'Dobrá práca! Takmer perfektné!'; }
@@ -594,6 +617,9 @@ function buildMemory() {
           setTimeout(() => {
             board.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:16px;font-size:18px;font-weight:700;color:var(--success)">🎉 Všetky páry nájdené!</div>');
           }, 300);
+          // 📊 Osobný prehľad progresu (Fáza 2) – najlepší % kartičiek per okruh.
+          const successPct = attempts > 0 ? Math.round((matched / attempts) * 100) : 100;
+          recordEngineProgress(okruh, PROGRESS_ACTIVITIES.FLASHCARDS, successPct);
         }
       } else {
         [selected, el].forEach(e => e.classList.add('wrong-flash'));
@@ -652,6 +678,24 @@ function buildCases() {
     );
     const answers = new Array(steps.length).fill(null);
     let revealed = steps.length ? 1 : 0;
+    let caseRecorded = false;
+    const questionStepIndices = steps
+      .map((s, si) => si)
+      .filter(si => Array.isArray(steps[si].options) && steps[si].options.length);
+
+    /* 📊 Osobný prehľad progresu (Fáza 2) – najlepší % prípadov per okruh.
+       Zapíše sa raz, keď sú zodpovedané všetky kroky TOHTO prípadu (okruh
+       môže mať viac prípadov – zapisuje sa za každý dokončený, best-of
+       zápis v writeOkruhBest si podrží najvyšší z nich). */
+    function maybeRecordCaseProgress() {
+      if (caseRecorded || !questionStepIndices.length) return;
+      const allAnswered = questionStepIndices.every(si => answers[si] !== null);
+      if (!allAnswered) return;
+      caseRecorded = true;
+      const correct = questionStepIndices.filter(si => answers[si] === steps[si].correct).length;
+      const pct = Math.round((correct / questionStepIndices.length) * 100);
+      recordEngineProgress(okruh, PROGRESS_ACTIVITIES.CASES, pct);
+    }
 
     const card = document.createElement('div');
     card.className = 'case-card';
@@ -726,6 +770,7 @@ function buildCases() {
           answers[si] = i;
           answeredCount++;
           updateProgress();
+          maybeRecordCaseProgress();
           if (revealed < steps.length) revealed++;
           render();
         };
