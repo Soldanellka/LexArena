@@ -327,7 +327,11 @@ async function fetchOkruh(basePath, n) {
     // rovnaký zdroj ako kartičky/duel. Použité v evaluateCoverage() na
     // hodnotenie právnej terminológie ako ZLOŽKY známky, nie celej známky.
     const glossary = Array.isArray(json.tiles) ? json.tiles.map(t => t && t.term).filter(Boolean) : [];
-    return { id: `A${n}`, title: json.title, keyPoints, glossary, zdroj: normalizeZdroj(json) };
+    // summary: surový text zhrnutia okruhu – dnešný lokálny grader ho
+    // nepotrebuje (pracuje z už extrahovaných keyPoints), ale budúci LLM
+    // grader (Fáza 2/3) ho bude potrebovať na posúdenie vecnej správnosti,
+    // preto sa nesie na topic objekte už teraz.
+    return { id: `A${n}`, title: json.title, summary: summaryText, keyPoints, glossary, zdroj: normalizeZdroj(json) };
   } catch (e) {
     return null;
   }
@@ -776,6 +780,34 @@ function evaluateCoverage(userText, keyPoints, glossary) {
   const tooShort = normalizeWords(userText).length < ECONOMY_CONFIG.STATNICE.MIN_ANSWER_WORDS;
 
   return { covered, missing, incorrect: [], coverage, contentCoverage, terminologyScore, missingTerms, onTopic, tooShort };
+}
+
+/* ============================================================
+   GRADER ROZHRANIE (Fáza 1, 2026-07-18) – jednotné rozhranie okolo
+   hodnotenia odpovede, NEZÁVISLÉ od toho, ČÍM sa reálne počíta (dnes:
+   lokálny evaluateCoverage() vyššie; neskôr: LLM endpoint /api/grade-answer,
+   Fáza 2/3). Zvyšok statnice.js volá VÝHRADNE gradeAnswer(), NIKDY priamo
+   evaluateCoverage() – to umožňuje vymeniť backend (Fáza 3) bez zásahu
+   kdekoľvek inde.
+
+   ⚠️ FÁZA 1: SPRÁVANIE SA NEMENÍ. Toto je tenký async wrapper, ktorý vo
+   vnútri volá dnešný lokálny evaluateCoverage() a vráti PRESNE to isté
+   (vrátane polí coverage/missingTerms/onTopic/tooShort, ktoré zvyšok
+   súboru už používa – nie sú súčasťou minimálneho kontraktu nižšie, ale
+   ich odstránenie by TERAZ zmenilo správanie, čo táto fáza výslovne
+   zakazuje). Fáza 3 tu pridá skutočné POST volanie na server s fallbackom
+   späť na evaluateCoverage() – volajúci (enterHodnotenie) sa nezmení.
+
+   `summary` parameter je zatiaľ NEPOUŽITÝ – dnešný lokálny evaluátor ho
+   nepotrebuje (pracuje z už extrahovaných keyPoints), ale budúci LLM
+   grader ho bude potrebovať na posúdenie vecnej správnosti (incorrect[]),
+   preto je v signatúre už teraz (topic.summary od fetchOkruh() vyššie).
+
+   Minimálny kontrakt (spoločný pre lokálny aj budúci LLM grader):
+   { covered, missing, incorrect, contentCoverage, terminologyScore }
+============================================================ */
+async function gradeAnswer({ summary, keyPoints, glossary, answerText }) {
+  return evaluateCoverage(answerText, keyPoints, glossary);
 }
 
 /* Doplňujúca otázka cielená na KONKRÉTNY chýbajúci bod (missing[0]),
@@ -1411,13 +1443,13 @@ export async function openStatniceHall(areaName) {
     }
   };
 
-  overlayEl.querySelector('#statniceSubmitBtn').onclick = () => {
+  overlayEl.querySelector('#statniceSubmitBtn').onclick = async () => {
     // Poistka proti rýchlemu dvojkliku počas VYZVANIE/HODNOTENIE (kým komisia ešte
     // "hovorí"/vyhodnocuje) – zabraňuje pretekaniu dvoch stavových prechodov naraz.
     if (examPhase !== 'POCUVANIE') return;
     answered = true;
     stopListening();
-    enterHodnotenie(currentIdx, (answerInput.value || '').trim());
+    await enterHodnotenie(currentIdx, (answerInput.value || '').trim());
   };
 
   /* ---------- HODNOTENIE – Claude API kontrakt (lokálny substitút) ---------- */
@@ -1430,7 +1462,7 @@ export async function openStatniceHall(areaName) {
      všetky tri persóny – len ZNENIE nápovede sa líši (buildFollowUpMessage). */
   let hintsUsed = 0;
 
-  function enterHodnotenie(idx, transcript) {
+  async function enterHodnotenie(idx, transcript) {
     setPhase('HODNOTENIE');
     answered = true;
     answers[idx] = transcript;
@@ -1440,7 +1472,11 @@ export async function openStatniceHall(areaName) {
     // prepisu – nikdy sa neopakuje/nedrží predchádzajúci výsledok. Toto je
     // jediné miesto, kde sa `missing` počíta, a volá sa pri KAŽDOM uzavretí
     // odpovede (aj po doplňujúcej otázke), nie len pri prvom pokuse.
-    const result = evaluateCoverage(transcript, topic.keyPoints, topic.glossary);
+    // gradeAnswer() – JEDINÉ miesto, cez ktoré statnice.js hodnotenie volá
+    // (nikdy priamo evaluateCoverage() – pozri komentár pri gradeAnswer()).
+    const result = await gradeAnswer({
+      summary: topic.summary, keyPoints: topic.keyPoints, glossary: topic.glossary, answerText: transcript
+    });
     console.log('[ŠTÁTNICE] Hodnotenie:', result);
     evaluations[idx] = result;
 
