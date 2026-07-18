@@ -1713,7 +1713,7 @@ function openTestBuilderModal(groupId, groupName, onCreated) {
     if (!okruhy.length) { okruhyBox.innerHTML = 'Pre túto oblasť nie sú okruhy.'; return; }
     okruhyBox.innerHTML = okruhy.map(o => `
       <label class="small" style="display:block;padding:2px 0">
-        <input type="checkbox" class="tb-okruh-check" value="${escapeHtml(o.source)}"/> ${escapeHtml(o.source)} (${o.count})
+        <input type="checkbox" class="tb-okruh-check" value="${escapeHtml(o.source)}"/> ${escapeHtml(o.title)} (${o.count})
       </label>
     `).join('');
   }

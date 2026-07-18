@@ -65,9 +65,13 @@ function snapshotQuestions(list) {
   }));
 }
 
-/* Zoznam okruhov (A1, A2, ...) danej oblasti s počtom otázok –
+/* Zoznam okruhov (A1, A2, ...) danej oblasti s počtom otázok a NÁZVOM –
    pre výber v spôsobe (a). Číta z window.areas, rovnaký zdroj ako
-   duely/kvíz (musí byť už načítané cez data.js loadJsonQuestions). */
+   duely/kvíz (musí byť už načítané cez data.js loadJsonQuestions).
+   title z window.areaOkruhTitles (naplnené v data.js loadJsonQuestions
+   z A*.json title, bez ďalšieho fetchu) – source zostáva interný kľúč
+   (checkbox value, posiela sa do createAssignment ako okruhIds), title
+   je LEN zobrazenie. */
 export function listOkruhy(areaTitle) {
   const all = window.areas?.[areaTitle] || [];
   const counts = {};
@@ -75,7 +79,11 @@ export function listOkruhy(areaTitle) {
   return Object.keys(counts)
     .filter(k => /^A\d+$/.test(k))
     .sort((a, b) => Number(a.replace('A', '')) - Number(b.replace('A', '')))
-    .map(source => ({ source, count: counts[source] }));
+    .map(source => ({
+      source,
+      count: counts[source],
+      title: window.areaOkruhTitles?.[areaTitle]?.[source] || source
+    }));
 }
 
 export function listAreaTitles() {

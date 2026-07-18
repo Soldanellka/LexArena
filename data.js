@@ -113,6 +113,14 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
          pôvodný obsah bez zmeny. */
       const json = await applyOverridesForOkruh(normalized, areaTitle, file.replace('.json', ''));
 
+      /* 📛 Názov okruhu (title z A*.json) – doteraz sa načítal, ale nikde
+         sa neukladal, takže dashboard/garant test builder mali k dispozícii
+         len interný kľúč "A1". Uloženie tu (bez ďalšieho fetchu) rieši oba
+         naraz – jeden zdroj pravdy pre názov okruhu naprieč appkou. */
+      window.areaOkruhTitles = window.areaOkruhTitles || {};
+      window.areaOkruhTitles[areaTitle] = window.areaOkruhTitles[areaTitle] || {};
+      window.areaOkruhTitles[areaTitle][file.replace('.json', '')] = json.title || null;
+
       /* 🃏 Dlaždice pre memory (pojem ↔ definícia) */
       if (Array.isArray(json.tiles)) {
         json.tiles.forEach(t => {

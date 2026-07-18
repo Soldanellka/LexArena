@@ -126,6 +126,10 @@ function computeBiflovackaPercent(slug, okruhKey, data) {
    % TÉMY PRE JEDEN OKRUH
    Vráti { percent, missingActivities: [...], hasAnyContent }.
 ============================================================ */
+function titleFor(areaTitle, okruhKey) {
+  return window.areaOkruhTitles?.[areaTitle]?.[okruhKey] || okruhKey;
+}
+
 export function computeOkruhStats(okruhKey, subAreaCfg, appId, data) {
   const progressNode = (data.progressByApp?.[appId]?.[subAreaCfg.subArea]?.[okruhKey]) || {};
   const parts = [];
@@ -146,8 +150,9 @@ export function computeOkruhStats(okruhKey, subAreaCfg, appId, data) {
 
   const percent = parts.length ? Math.round(parts.reduce((s, p) => s + p.value, 0) / parts.length) : 0;
   const missingActivities = parts.filter(p => p.value === 0).map(p => ACTIVITY_LABELS[p.key]);
+  const title = titleFor(subAreaCfg.areaTitle, okruhKey);
 
-  return { percent, missingActivities, hasAnyContent: parts.length > 0 };
+  return { percent, missingActivities, hasAnyContent: parts.length > 0, title };
 }
 
 /* ============================================================

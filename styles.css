@@ -184,6 +184,19 @@ body {
   pointer-events: none;
 }
 
+/* Malý avatar hráča (spiaci/unavený/čerstvý) v odznaku Osobného prehľadu
+   progresu – scripts/dashboardUI.js moodAvatarImgHtml(). Talár (ak si ho
+   hráč kúpil a nosí) je súčasťou tohto obrázka automaticky, viď
+   getAvatarBustSrcForState v scripts/avatar.js. */
+.dashboard-mood-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
 /* ----------------------------------------------------------
    BUTTONS
 ---------------------------------------------------------- */

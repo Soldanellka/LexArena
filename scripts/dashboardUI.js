@@ -9,18 +9,29 @@
 import { ref, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { DASHBOARD_AREAS, computeFullDashboard } from './dashboardStats.js';
 import { checkAndAwardDashboardRewards } from './dashboardRewards.js';
+import { getAvatarType, getAvatarBustSrcForState } from './avatar.js';
 
 const $ = id => document.getElementById(id);
 
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
-/* <30 % spiaci · 30–80 % unavený · >80 % čerstvý. Zámerne INÝ vizuál (malý
-   odznak s rámikom + textový popis) ako energia hlavného avatara, nech
-   nevzniknú dva významy pre tú istú grafiku (viď zadanie). */
+/* <30 % spiaci · 30–80 % unavený · >80 % čerstvý. Obrázok je AVATAR HRÁČA
+   (aktuálne pridelený typ vrátane taláru, ak si ho kúpil/a a nosí – viď
+   getAvatarType/getAvatarBustSrcForState v scripts/avatar.js), nie
+   generický – len prahy % témy sú vlastné tomuto odznaku, nie energii
+   hlavného avatara v hlavičke. */
 function moodBadge(pct) {
-  if (pct < 30) return { emoji: '😴', label: 'spiaci' };
-  if (pct <= 80) return { emoji: '😪', label: 'unavený' };
-  return { emoji: '😃', label: 'čerstvý' };
+  if (pct < 30) return { emoji: '😴', label: 'spiaci', state: 'sleep' };
+  if (pct <= 80) return { emoji: '😪', label: 'unavený', state: 'tired' };
+  return { emoji: '😃', label: 'čerstvý', state: 'full' };
+}
+
+let cachedAvatarType = 'student-f';
+
+function moodAvatarImgHtml(state) {
+  const src = getAvatarBustSrcForState(cachedAvatarType, state);
+  if (!src) return ''; // starý typ avatara bez bust verzie – bez obrázka, len emoji/label nižšie
+  return `<img src="${src}" alt="" class="dashboard-mood-avatar" onerror="this.remove()" />`;
 }
 
 function escapeHtml(s) {
@@ -68,12 +79,12 @@ function renderBody() {
   html += '<div class="dashboard-tema-list">';
   allOkruhy.forEach(o => {
     const mood = moodBadge(o.percent);
+    const avatarHtml = moodAvatarImgHtml(mood.state);
     html += `
       <div class="dashboard-tema-row" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
-        <div style="min-width:44px;font-weight:600">${escapeHtml(o.key)}</div>
-        <div style="flex:1">${o.percent} %</div>
-        <div class="dashboard-mood-badge" style="font-size:12px;padding:2px 6px;border:1px solid var(--card-border, rgba(0,0,0,0.15));border-radius:10px;white-space:nowrap">
-          ${mood.emoji} ${mood.label}
+        <div style="flex:1">${escapeHtml(o.title)} — ${o.percent} %</div>
+        <div class="dashboard-mood-badge" style="display:flex;align-items:center;gap:5px;font-size:12px;padding:2px 6px;border:1px solid var(--card-border, rgba(0,0,0,0.15));border-radius:10px;white-space:nowrap">
+          ${avatarHtml}${mood.emoji} ${mood.label}
         </div>
       </div>`;
   });
@@ -86,7 +97,7 @@ function renderBody() {
     html += '<div class="dashboard-todo-list">';
     toDobrat.forEach(o => {
       const missing = o.missingActivities.length ? o.missingActivities.join(', ') : '—';
-      html += `<div class="small" style="padding:3px 0">${escapeHtml(o.key)} – ${o.percent} %: chýbajú ${escapeHtml(missing)}</div>`;
+      html += `<div class="small" style="padding:3px 0">${escapeHtml(o.title)} – ${o.percent} %: chýbajú ${escapeHtml(missing)}</div>`;
     });
     html += '</div>';
   }
@@ -94,6 +105,16 @@ function renderBody() {
   body.innerHTML = html;
 }
 
+function skuskaWord(n) {
+  if (n === 1) return 'skúška';
+  if (n >= 2 && n <= 4) return 'skúšky';
+  return 'skúšok';
+}
+
+/* PO OBLASTIACH, nie chronologicky deň-po-dni – zaujíma "koľko som
+   zvládol/zvládla v jednotlivých oblastiach", nie presné dátumy. Zoskupené
+   podľa e.area (rovnaký reťazec ako DASHBOARD_AREAS[].title – pozri
+   scripts/statnice.js saveExamResult, ktoré ho tam ukladá). */
 async function renderStatnice(nick) {
   const box = $('dashboardStatniceList');
   if (!box) return;
@@ -108,10 +129,24 @@ async function renderStatnice(nick) {
       box.innerHTML = '<div class="small muted">Zatiaľ žiadna skúška v štátnicovej sieni.</div>';
       return;
     }
-    const entries = Object.values(snap.val() || {}).sort((a, b) => (b.ts || 0) - (a.ts || 0));
-    box.innerHTML = entries.map(e => {
-      const date = e.ts ? new Date(e.ts).toLocaleDateString('sk-SK') : '—';
-      return `<div class="small" style="padding:3px 0">${escapeHtml(date)} – ${escapeHtml(e.area || '—')} – známka ${escapeHtml(e.znamka ?? '—')}</div>`;
+
+    const entries = Object.values(snap.val() || {});
+    const byArea = {};
+    entries.forEach(e => {
+      const area = e.area || '—';
+      if (!byArea[area]) byArea[area] = { count: 0, best: null, latest: null, latestTs: -1 };
+      const g = byArea[area];
+      g.count++;
+      if (typeof e.znamka === 'number' && (g.best === null || e.znamka < g.best)) g.best = e.znamka;
+      if ((e.ts || 0) >= g.latestTs) { g.latestTs = e.ts || 0; g.latest = e.znamka; }
+    });
+
+    const areaNames = Object.keys(byArea).sort((a, b) => a.localeCompare(b, 'sk'));
+    box.innerHTML = areaNames.map(area => {
+      const g = byArea[area];
+      const bestTxt = g.best ?? '—';
+      const latestTxt = g.latest ?? '—';
+      return `<div class="small" style="padding:3px 0">${escapeHtml(area)} – ${g.count} ${skuskaWord(g.count)}, najlepšia známka ${escapeHtml(bestTxt)}, posledná ${escapeHtml(latestTxt)}</div>`;
     }).join('') || '<div class="small muted">Zatiaľ žiadna skúška v štátnicovej sieni.</div>';
   } catch (e) {
     console.warn('⚠️ Dashboard: čítanie examResults zlyhalo', e);
@@ -135,6 +170,7 @@ export async function openDashboard() {
     return;
   }
 
+  cachedAvatarType = await getAvatarType(nick);
   cachedDashboard = await computeFullDashboard(nick);
   renderBody();
   renderStatnice(nick);

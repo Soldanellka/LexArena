@@ -560,6 +560,28 @@ export function getAvatarBustSrc(avatarType, energy) {
   return avatarSrc(def, energy, 'bust');
 }
 
+/* Bust cesta pre KONKRÉTNY stav ('full'|'tired'|'sleep'), nie odvodený z
+   energie – pre moduly s VLASTNÝMI prahmi (napr. scripts/dashboardUI.js:
+   spiaci/unavený/čerstvý podľa % témy, iné hranice než energia hlavného
+   avatara). avatarType je state.type hráča (users/{nick}/avatar/type) –
+   ak má hráč obliekky talár, JE to jeho type (viď selectAvatar vyššie),
+   takže táto funkcia automaticky vráti bust s talárom bez ďalšej vrstvy. */
+export function getAvatarBustSrcForState(avatarType, state) {
+  const def = AVATAR_CONFIG.AVATARS[avatarType];
+  if (!def || !def.base) return null;
+  return `${def.base}-${state}-bust.png`;
+}
+
+/* Pre iné moduly – aktuálny typ avatara hráča BEZ zápisu default stavu
+   (na rozdiel od loadAvatarState, ktoré pri prvom volaní zapisuje default –
+   tu chceme len číst, napr. pre dashboard). */
+export async function getAvatarType(nick) {
+  const db = getDb();
+  if (!db || !nick) return 'student-f';
+  const snap = await get(ref(db, `users/${nick}/avatar/type`));
+  return snap.exists() ? snap.val() : 'student-f';
+}
+
 /* Preloadne všetky 3 stavy základnej sady (celá postava aj bust), nech
    full→tired→sleep neblikne ani v hlavičke, ani v obchode/sekcii avatara. */
 function preloadAvatarStates(def) {
