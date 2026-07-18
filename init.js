@@ -12,6 +12,7 @@ import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge } from './scripts/duels.js';
 import { initAvatarSystem, selectAvatar, getTalarShopEntries, buyTalar, getBaseIdFor } from './scripts/avatar.js';
+import { scrollToTarget, uncollapseSection } from './mobile-nav.js';
 import {
   econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG,
   econAdStatus, econAdComplete, econRedeemCode
@@ -686,6 +687,70 @@ function initGuideSystem() {
       e.preventDefault();
       openGuideModal();
     });
+  }
+}
+
+/* =====================================================
+   👋 UVÍTACIE OKNO – nový návštevník
+   Vlastný flag lexWelcomeSeen (LEX_WELCOME_SEEN_KEY), oddelený od
+   LEX_GUIDE_SEEN_KEY vyššie – rôzne okná, rôzne správanie (toto sa pri
+   prvej návšteve otvorí AUTOMATICKY, návod nikdy). Čisto informačné,
+   nezasahuje do registrácie/identity – jediný vstup je klik na tlačidlo.
+   ===================================================== */
+const LEX_WELCOME_SEEN_KEY = 'lexWelcomeSeen';
+
+function openWelcomeModal() {
+  const modal = $('welcomeModal');
+  if (!modal) return;
+  modal.style.display = 'flex';
+  const dot = $('welcomeHintDot');
+  if (dot) dot.style.display = 'none';
+}
+
+function closeWelcomeModal() {
+  const modal = $('welcomeModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function initWelcomeSystem() {
+  const dot = $('welcomeHintDot');
+  if (dot) dot.style.display = localStorage.getItem(LEX_WELCOME_SEEN_KEY) ? 'none' : '';
+
+  const welcomeBtn = $('welcomeBtn');
+  if (welcomeBtn) welcomeBtn.addEventListener('click', openWelcomeModal);
+
+  /* "Rozumiem" – JEDINÉ miesto, ktoré nastavuje flag (na rozdiel od
+     zavretia cez pozadie/"Otvoriť nástenku" nižšie, ktoré okno len
+     zavrú bez potvrdenia – nabudúce sa preto uvítacie okno zobrazí znova). */
+  const understoodBtn = $('welcomeUnderstoodBtn');
+  if (understoodBtn) {
+    understoodBtn.addEventListener('click', () => {
+      localStorage.setItem(LEX_WELCOME_SEEN_KEY, '1');
+      closeWelcomeModal();
+    });
+  }
+
+  /* "Otvoriť nástenku" – znovupoužije scrollToTarget/uncollapseSection
+     z mobile-nav.js (žiadna vlastná kópia scroll/rozbaľovacej logiky). */
+  const noticeboardBtn = $('welcomeNoticeboardBtn');
+  if (noticeboardBtn) {
+    noticeboardBtn.addEventListener('click', () => {
+      uncollapseSection('noticeboard');
+      scrollToTarget('publishedFeedbackBox');
+      closeWelcomeModal();
+    });
+  }
+
+  const modal = $('welcomeModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeWelcomeModal();
+    });
+  }
+
+  // Automaticky LEN pri prvej návšteve (flag ešte neexistuje).
+  if (!localStorage.getItem(LEX_WELCOME_SEEN_KEY)) {
+    openWelcomeModal();
   }
 }
 
@@ -3285,6 +3350,9 @@ function attachEvents() {
 
   /* 🔥 Návod „Ako funguje LexArena" */
   initGuideSystem();
+
+  /* 🔥 Uvítacie okno pre nového návštevníka */
+  initWelcomeSystem();
 
   /* 🔥 Modal prístupového kódu */
   const loginDeviceBtn = $('loginDeviceBtn');

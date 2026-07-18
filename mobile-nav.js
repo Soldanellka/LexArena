@@ -15,7 +15,9 @@ function getScrollTop() {
   return document.body.scrollTop || document.documentElement.scrollTop || window.scrollY || 0;
 }
 
-function scrollToTarget(target) {
+/* export: iné moduly (napr. init.js – uvítacie okno, tlačidlo "Otvoriť
+   nástenku") znovupoužívajú TENTO scroll, nie vlastnú kópiu. */
+export function scrollToTarget(target) {
   if (target === 'top') {
     const opts = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
@@ -97,6 +99,19 @@ function initCollapsibleSections() {
       localStorage.setItem(storageKey, nowCollapsed ? '1' : '0');
     });
   });
+}
+
+/* export: rozbalí danú sekciu (key z COLLAPSIBLE_SECTIONS vyššie), ak je
+   zbalená – rovnaký stav/trieda ako klik na hlavičku. Na desktope je
+   .m-collapsed vizuálne bez efektu (viď styles.css media query), takže
+   toto je bezpečné volať bez ohľadu na zariadenie. */
+export function uncollapseSection(key) {
+  const entry = COLLAPSIBLE_SECTIONS.find(s => s.key === key);
+  if (!entry) return;
+  const card = document.querySelector(entry.selector);
+  if (!card) return;
+  card.classList.remove('m-collapsed');
+  localStorage.setItem(`mColl:${entry.key}`, '0');
 }
 
 function initMobileArchitecture() {

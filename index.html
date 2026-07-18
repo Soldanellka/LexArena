@@ -75,6 +75,12 @@
       <span id="roleLabel">student</span>
     </div>
 
+    <!-- Uvítacie okno -->
+    <button class="btn icon-btn header-info-btn" id="welcomeBtn" title="Vitaj v LexArene">
+      👋
+      <span class="games-hint-dot" id="welcomeHintDot"></span>
+    </button>
+
     <!-- Návod -->
     <button class="btn icon-btn header-info-btn" id="infoBtn" title="Ako funguje LexArena">
       ℹ️
@@ -447,6 +453,39 @@
       <h4 style="margin:0 0 8px 0">⚖️ Skúšky (štátnicová sieň)</h4>
       <div class="small muted">Nepočíta sa do % tém vyššie – zobrazená samostatne.</div>
       <div id="dashboardStatniceList" style="margin-top:8px">Načítavam…</div>
+    </div>
+  </div>
+</div>
+
+<div id="welcomeModal" class="avatar-modal" aria-hidden="true" style="display:none;">
+  <div class="avatar-panel welcome-panel">
+    <div class="game-panel-header">
+      <h3>👋 Vitaj v LexArene</h3>
+    </div>
+
+    <div class="welcome-body">
+      <p>LexArena je študijná pomôcka pre študentov práva — precvič si štátnicové okruhy
+      formou pojednávaní, kartičiek, prípadov, bifľovačky a štátnicovej siene.</p>
+
+      <p>🧪 Sme v testovacej fáze. Všetky funkcie sú zatiaľ bezplatné. Za aktivitu
+      zbieraš paragrafy (§) — ak ti dôjdu a avatar zaspí, napíš nám cez nástenku
+      a radi ti nejaké pridáme.</p>
+
+      <p>🙏 Ďakujeme za každý príspevok — či už nahlásiš právnu nezrovnalosť, alebo
+      napíšeš pripomienku. Pomáhaš tým zlepšovať obsah pre všetkých.</p>
+
+      <p>🔒 Súkromie: Na používanie stačí prezývka — nezbierame e-mail, meno ani iné
+      osobné údaje. Odporúčame nepoužívať ako prezývku svoje pravé meno, nech
+      zostaneš anonymný/á. (Ak sa pripojíš ku skupine vyučujúceho a napíšeš zadaný
+      test, tvoj výsledok uvidí daný vyučujúci — tvoj bežný tréning ostáva súkromný.)</p>
+
+      <p class="small muted">LexArena je študijná pomôcka, nie právne poradenstvo —
+      kľúčové informácie si vždy over v aktuálnom znení predpisov na slov-lex.sk.</p>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;justify-content:flex-end">
+      <button class="btn" id="welcomeNoticeboardBtn">📋 Otvoriť nástenku</button>
+      <button class="btn btn-primary" id="welcomeUnderstoodBtn">Rozumiem</button>
     </div>
   </div>
 </div>
