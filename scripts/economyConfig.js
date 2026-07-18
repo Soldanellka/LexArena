@@ -146,7 +146,15 @@ export const ECONOMY_CONFIG = {
       { min: 75, znamka: 2 },
       { min: 55, znamka: 3 },
       { min: 0,  znamka: 4 }
-    ]
+    ],
+
+    // ZMIEŠANÝ VÝBER OKRUHOV (2026-07-18) – "na precvičenie" (slabé <80 %) +
+    // "zmiešaný" (prevažne silné ≥80 %, občas nedotknuté 0 %) namiesto
+    // dnešného čisto náhodného ťahania. Poistka nováčika: ak má študent v
+    // danej oblasti/bazéne menej než toto číslo okruhov s progresom > 0 %,
+    // niet z čoho robiť "dôraz na slabé" (a samé 0 % okruhy by boli
+    // demotivujúce) – použije sa dnešný čisto náhodný výber.
+    MIXED_SELECTION_MIN_STUDIED: 3
   },
 
   // OSOBNÝ PREHĽAD PROGRESU – Fáza 3 (dashboard). Jednorazové odmeny.
