@@ -17,22 +17,21 @@ const $ = id => document.getElementById(id);
 
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
-/* <30 % spiaci · 30–80 % unavený · >80 % čerstvý. Obrázok je AVATAR HRÁČA
-   (aktuálne pridelený typ vrátane taláru, ak si ho kúpil/a a nosí – viď
-   getAvatarType/getAvatarBustSrcForState v scripts/avatar.js), nie
-   generický – len prahy % témy sú vlastné tomuto odznaku, nie energii
-   hlavného avatara v hlavičke. */
-function moodBadge(pct) {
-  if (pct < 30) return { emoji: '😴', label: 'spiaci', state: 'sleep' };
-  if (pct <= 80) return { emoji: '😪', label: 'unavený', state: 'tired' };
-  return { emoji: '😃', label: 'čerstvý', state: 'full' };
+/* <30 % spiaci · 30–80 % unavený · >80 % čerstvý. Určuje AJ farbu riadku
+   (mood-sleep/tired/full, styles.css), AJ ktorý stav avatara sa vykreslí
+   (moodAvatarImgHtml nižšie) – žiadne emoji/textový label sa už nezobrazuje,
+   stav nesie výhradne avatar + farba pozadia riadku (2026-07-19). */
+function moodState(pct) {
+  if (pct < 30) return 'sleep';
+  if (pct <= 80) return 'tired';
+  return 'full';
 }
 
 let cachedAvatarType = 'student-f';
 
 function moodAvatarImgHtml(state) {
   const src = getAvatarBustSrcForState(cachedAvatarType, state);
-  if (!src) return ''; // starý typ avatara bez bust verzie – bez obrázka, len emoji/label nižšie
+  if (!src) return ''; // starý typ avatara bez bust verzie – riadok ostane bez avatara (farba pozadia stavu nesie naďalej)
   return `<img src="${src}" alt="" class="dashboard-mood-avatar" onerror="this.remove()" />`;
 }
 
@@ -93,14 +92,12 @@ function renderBody() {
   html += '<div class="small" style="font-weight:600;margin-bottom:6px">Témy</div>';
   html += '<div class="dashboard-tema-list">';
   allOkruhy.forEach(o => {
-    const mood = moodBadge(o.percent);
-    const avatarHtml = moodAvatarImgHtml(mood.state);
+    const state = moodState(o.percent);
+    const avatarHtml = moodAvatarImgHtml(state);
     html += `
-      <div class="dashboard-tema-row mood-${mood.state}" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
+      <div class="dashboard-tema-row mood-${state}" style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--card-border, rgba(0,0,0,0.06))">
         <div style="flex:1">${escapeHtml(o.title)} — ${o.percent} %</div>
-        <div class="dashboard-mood-badge" style="display:flex;align-items:center;gap:5px;font-size:12px;padding:2px 6px;border:1px solid var(--card-border, rgba(0,0,0,0.15));border-radius:10px;white-space:nowrap">
-          ${avatarHtml}${mood.emoji} ${mood.label}
-        </div>
+        ${avatarHtml}
       </div>`;
   });
   html += '</div>';
