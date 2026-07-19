@@ -1571,6 +1571,17 @@ export async function openStatniceHall(areaName) {
       try { window.speechSynthesis.cancel(); } catch (e) {}
     }
 
+    // ⚠️ continuous:true na pravdepodobnom desktope (2026-07-19, C-2) – bez toho
+    // Chrome sám ukončí reláciu po krátkej prirodzenej pauze medzi vetami
+    // (continuous:false default), a kým sa nižšie onEnd→startOrRestartRecording
+    // reštart stihne pripojiť k rozpoznávaciemu servisu, mikrofón chvíľu
+    // nepočúva – presne tam sa strácali slová na začiatku ďalšej vety. Rovnaký
+    // isLikelyDesktop() signál ako auto-štart vyššie – ak sa pomýli na
+    // dotykovom zariadení, onEnd nižšie je RESERVE (dnešné mobilné správanie:
+    // reštart pri tichu), nie tvrdá bariéra. Mobil ostáva continuous:false,
+    // úplne nedotknuté. Vyžaduje opravený onresult v memoryTrainer.js
+    // (iteruje resultIndex..results.length, nie natvrdo index 0), inak by
+    // continuous:true po prvej vete ignoroval všetko ďalšie.
     recognizer = createSpeechRecognizer({
       onStart: () => {
         listening = true;
@@ -1627,7 +1638,7 @@ export async function openStatniceHall(areaName) {
         answers[currentIdx] = answerInput.value;
         liveTranscriptEl.textContent = answerInput.value;
       }
-    });
+    }, { continuous: isLikelyDesktop() });
 
     if (!recognizer) {
       recordingSessionActive = false;

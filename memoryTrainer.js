@@ -636,9 +636,21 @@ export function createSpeechRecognizer(callbacks = {}, { continuous = false } = 
   recognizer.onstart = () => callbacks.onStart && callbacks.onStart();
   recognizer.onend = () => callbacks.onEnd && callbacks.onEnd();
   recognizer.onerror = (e) => callbacks.onError && callbacks.onError(e);
+  /* ⚠️ Iteruje e.resultIndex..e.results.length, NIE natvrdo index 0
+     (2026-07-19 – oprava pre continuous:true). Pri continuous:false (default,
+     jediné doterajšie použitie) má každá udalosť VŽDY resultIndex===0 a
+     results.length===1, takže táto iterácia prebehne presne raz a vráti
+     to isté ako predtým – správanie existujúcich volajúcich (memory-trainer.html)
+     sa nemení. Pri continuous:true (statnice.js, len na desktope) Chrome
+     PRIDÁVA nové výsledky do results namiesto novej relácie – natvrdo index 0
+     by po prvej vete navždy opakoval len ju a každú ďalšiu ticho ignoroval. */
   recognizer.onresult = (e) => {
-    const transcript = e.results?.[0]?.[0]?.transcript || '';
-    callbacks.onResult && callbacks.onResult(transcript);
+    let combined = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const result = e.results[i];
+      if (result.isFinal) combined += (combined ? ' ' : '') + result[0].transcript;
+    }
+    if (combined) callbacks.onResult && callbacks.onResult(combined);
   };
 
   return recognizer;
