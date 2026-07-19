@@ -8,27 +8,29 @@
    jednom náhodnom okruhu z každého). Nová oblasť sa pridáva do
    AREA_CONFIG nižšie, bez zásahu do existujúcich oblastí.
 
-   ⚠️ HODNOTENIE JE LOKÁLNE, NIE CEZ CLAUDE API.
-   Zadanie žiada dvojkrokové volanie Claude API (Krok A: extrakcia
-   kľúčových bodov z `summary`; Krok B: hodnotenie pokrytia odpovede
-   voči nim). Statický Vercel hosting (žiadne /api, žiadne miesto pre
-   tajný kľúč) to neumožňuje bez buď verejne vystaveného kľúča
-   (bezpečnostná chyba) alebo serverless funkcie (appka ju nemá).
+   ⚠️ HODNOTENIE (Fáza 3, 2026-07-19): PRIMÁRNE cez /api/grade-answer
+   (Claude Haiku, serverless, viď api/grade-answer.js) – posudzuje aj
+   VECNÚ SPRÁVNOSŤ (`incorrect`), čo lokálny substitút nikdy nevedel.
+   Pri AKOMKOĽVEK zlyhaní volania (sieť/timeout/HTTP chyba/neplatný
+   JSON/neplatný tvar) sa TICHO spadne na lokálny evaluateCoverage()
+   nižšie – študent NIKDY nezostane bez hodnotenia. Do konzoly sa
+   vždy zaloguje, keď sa fallback použil, viď gradeAnswer() nižšie.
 
-   Namiesto tichého obchádzania: extractKeyPoints() nahrádza Krok A
-   (parsuje existujúcu sekciu "Kľúčové slová (štátnicové):" v každom
-   `summary` – to sú presne tie isté "kľúčové body", ktoré by Claude
-   vytiahol, len už vopred pripravené autorkou obsahu) a
-   evaluateCoverage() nahrádza Krok B: namiesto porovnania CELÉHO
-   textu odpovede s CELÝM summary (staré, príliš doslovné vyhodnotenie)
-   sa KAŽDÝ kľúčový bod overuje samostatne cez prítomnosť jeho
-   vlastných podstatných slov v odpovedi – parafráza/iné poradie viet
-   bodu neuškodí, kým zaznejú jeho nosné pojmy. `incorrect` (vecne zlé
-   tvrdenia) lokálne spoľahlivo nevieme rozpoznať – ostáva vždy
-   prázdne pole; toto je poctivo priznané obmedzenie substitútu, nie
-   niečo, čo appka predstiera, že rieši. Oba výstupy majú presne ten
-   istý JSON tvar, aký by vrátilo Claude API, takže reálne API volanie
-   sa dá neskôr zapojiť len výmenou tiel týchto dvoch funkcií za fetch().
+   extractKeyPoints() zostáva lokálna substitúcia "Krok A" (parsuje
+   existujúcu sekciu "Kľúčové slová (štátnicové):" v každom `summary`
+   – to sú presne tie isté "kľúčové body", ktoré by Claude vytiahol,
+   len už vopred pripravené autorkou obsahu) – server dostáva tieto
+   už-extrahované keyPoints, nerobí extrakciu sám.
+
+   evaluateCoverage() zostáva ako FALLBACK substitút "Kroku B": každý
+   kľúčový bod sa overuje samostatne cez prítomnosť jeho vlastných
+   podstatných slov v odpovedi – parafráza/iné poradie viet bodu
+   neuškodí, kým zaznejú jeho nosné pojmy. `incorrect` (vecne zlé
+   tvrdenia) lokálne spoľahlivo nevieme rozpoznať – vo fallbacku
+   ostáva vždy prázdne pole (poctivo priznané obmedzenie substitútu).
+   Oba výstupy (LLM aj lokálny fallback) majú po namapovaní presne
+   ten istý JSON tvar, takže zvyšok súboru (enterHodnotenie a ďalej)
+   nevie a nepotrebuje vedieť, ktorý z nich práve odpovedal.
 
    Prepis odpovede a poznámky sa NIKDY neukladajú verejne – len
    dočasne v pamäti tejto relácie. Voliteľne sa ukladá len výsledná
@@ -736,6 +738,72 @@ function isPointCovered(point, userWordsSet) {
   return (matched / pointWords.length) >= POINT_COVERAGE_RATIO;
 }
 
+/* Namapuje text bodu (napr. missing[0] od gradera) na jeho INDEX v
+   topic.keyPoints cez rovnaké fuzzy porovnanie slov ako isPointCovered
+   vyššie. Fáza 3 (2026-07-19): LLM grader nevráti text nutne byte-
+   identicky ako v keyPoints (iné poradie slov/drobná parafráza pri
+   opakovanom volaní) – de-dup nápovede (viď hintedPoints v
+   enterHodnotenie) sa preto NESMIE spoliehať na textovú zhodu, len na
+   tento index. Vráti -1, ak sa nenájde dostatočne istá zhoda – radšej
+   bez de-dup pre tento jeden bod, než mylne stotožniť dva rôzne body. */
+function resolveKeyPointIndex(text, keyPoints) {
+  const textWords = significantWords(text);
+  if (!textWords.length) return -1;
+  let bestIdx = -1, bestScore = 0;
+  (keyPoints || []).forEach((kp, i) => {
+    const kpWords = significantWords(kp);
+    if (!kpWords.length) return;
+    let matched = 0;
+    kpWords.forEach(w => { if (textWords.some(tw => wordsMatch(w, tw))) matched++; });
+    const score = matched / kpWords.length;
+    if (score > bestScore) { bestScore = score; bestIdx = i; }
+  });
+  return bestScore >= POINT_COVERAGE_RATIO ? bestIdx : -1;
+}
+
+/* Terminológia: koľko z kurátorovaných pojmov okruhu (tiles) študent
+   reálne použil. Rovnaké prefixové porovnanie ako pri kľúčových bodoch,
+   aby skloňované tvary pojmu neboli nespravodlivo "nepoužité". Zdieľané
+   MEDZI lokálnym fallbackom (evaluateCoverage) aj LLM cestou (mapLlmResult)
+   – "chýbajúce pojmy" v spätnej väzbe sú vždy lokálny výpočet nad
+   answerText/glossary, bez ohľadu na to, ktorý grader určil samotné skóre. */
+function computeTerminologyGaps(userText, glossary) {
+  const userWords = new Set(significantWords(userText));
+  const glossaryTerms = glossary || [];
+  const usedTerms = [];
+  const missingTerms = [];
+  glossaryTerms.forEach(term => {
+    const termWords = significantWords(term);
+    const isUsed = userWords.size > 0 && termWords.length > 0 &&
+      termWords.some(w => [...userWords].some(uw => wordsMatch(w, uw)));
+    if (isUsed) usedTerms.push(term); else missingTerms.push(term);
+  });
+  const localTerminologyScore = glossaryTerms.length ? Math.round((usedTerms.length / glossaryTerms.length) * 100) : null;
+  return { usedTerms, missingTerms, localTerminologyScore };
+}
+
+// Ak okruh nemá glosár (napr. staršie dáta bez tiles), alebo terminológia
+// je null, terminológia sa nezapočítava (vypadne, nie 0 %).
+function combineCoverage(contentCoverage, terminologyScore) {
+  return terminologyScore === null
+    ? contentCoverage
+    : Math.round(contentCoverage * (1 - TERMINOLOGY_WEIGHT) + terminologyScore * TERMINOLOGY_WEIGHT);
+}
+
+function computeOnTopic(userText, coveredCount, contentCoverage) {
+  const userWords = new Set(significantWords(userText));
+  return userWords.size > 0 && (coveredCount >= 1 || contentCoverage >= ON_TOPIC_MIN_THRESHOLD);
+}
+
+// Anti-gaming (Fáza D rekalibrácia): odpoveď kratšia než rozumné minimum
+// nemôže dostať 1 ani 2 bez ohľadu na to, čo skóre napočíta – bráni sa tým
+// holému vymenovaniu pojmov naraz s ich terminologickým "bonusom". Počíta
+// sa zo VŠETKÝCH slov (nie len significantWords), aby aj odpoveď zložená
+// hlavne zo spojok/predložiek nedostala kredit za dĺžku.
+function isTooShort(userText) {
+  return normalizeWords(userText).length < ECONOMY_CONFIG.STATNICE.MIN_ANSWER_WORDS;
+}
+
 function evaluateCoverage(userText, keyPoints, glossary) {
   const userWords = new Set(significantWords(userText));
   const covered = [];
@@ -749,65 +817,109 @@ function evaluateCoverage(userText, keyPoints, glossary) {
   const total = keyPoints ? keyPoints.length : 0;
   const contentCoverage = total ? Math.round((covered.length / total) * 100) : 0;
 
-  // Terminológia: koľko z 5 kurátorovaných pojmov okruhu (tiles) študent
-  // reálne použil. Rovnaké prefixové porovnanie ako pri kľúčových bodoch,
-  // aby skloňované tvary pojmu neboli nespravodlivo "nepoužité".
-  const glossaryTerms = glossary || [];
-  const usedTerms = [];
-  const missingTerms = [];
-  glossaryTerms.forEach(term => {
-    const termWords = significantWords(term);
-    const isUsed = userWords.size > 0 && termWords.length > 0 &&
-      termWords.some(w => [...userWords].some(uw => wordsMatch(w, uw)));
-    if (isUsed) usedTerms.push(term); else missingTerms.push(term);
-  });
-  const terminologyScore = glossaryTerms.length ? Math.round((usedTerms.length / glossaryTerms.length) * 100) : null;
+  const { missingTerms, localTerminologyScore } = computeTerminologyGaps(userText, glossary);
+  const coverage = combineCoverage(contentCoverage, localTerminologyScore);
+  const onTopic = computeOnTopic(userText, covered.length, contentCoverage);
+  const tooShort = isTooShort(userText);
 
-  // Ak okruh nemá glosár (napr. staršie dáta bez tiles), terminológia sa
-  // nezapočítava (vypadne, nie 0 %) – rovnaká zásada ako pri chýbajúcej
-  // aktivite v osobnom prehľade progresu (Fáza 3).
-  const coverage = terminologyScore === null
-    ? contentCoverage
-    : Math.round(contentCoverage * (1 - TERMINOLOGY_WEIGHT) + terminologyScore * TERMINOLOGY_WEIGHT);
-
-  const onTopic = userWords.size > 0 && (covered.length >= 1 || contentCoverage >= ON_TOPIC_MIN_THRESHOLD);
-
-  // Anti-gaming (Fáza D rekalibrácia): odpoveď kratšia než rozumné minimum
-  // nemôže dostať 1 ani 2 bez ohľadu na to, čo skóre napočíta – bráni sa tým
-  // holému vymenovaniu pojmov naraz s ich terminologickým "bonusom" vyššie.
-  // Počíta sa zo VŠETKÝCH slov (nie len significantWords), aby aj odpoveď
-  // zložená hlavne zo spojok/predložiek nedostala kredit za dĺžku.
-  const tooShort = normalizeWords(userText).length < ECONOMY_CONFIG.STATNICE.MIN_ANSWER_WORDS;
-
-  return { covered, missing, incorrect: [], coverage, contentCoverage, terminologyScore, missingTerms, onTopic, tooShort };
+  return { covered, missing, incorrect: [], coverage, contentCoverage, terminologyScore: localTerminologyScore, missingTerms, onTopic, tooShort };
 }
 
 /* ============================================================
-   GRADER ROZHRANIE (Fáza 1, 2026-07-18) – jednotné rozhranie okolo
-   hodnotenia odpovede, NEZÁVISLÉ od toho, ČÍM sa reálne počíta (dnes:
-   lokálny evaluateCoverage() vyššie; neskôr: LLM endpoint /api/grade-answer,
-   Fáza 2/3). Zvyšok statnice.js volá VÝHRADNE gradeAnswer(), NIKDY priamo
-   evaluateCoverage() – to umožňuje vymeniť backend (Fáza 3) bez zásahu
-   kdekoľvek inde.
+   GRADER ROZHRANIE (Fáza 1, 2026-07-18; napojené na LLM Fáza 3, 2026-07-19)
+   – jednotné rozhranie okolo hodnotenia odpovede. Zvyšok statnice.js volá
+   VÝHRADNE gradeAnswer(), NIKDY priamo evaluateCoverage() ani
+   callGradeAnswerApi() – to umožňuje meniť backend bez zásahu kdekoľvek inde.
 
-   ⚠️ FÁZA 1: SPRÁVANIE SA NEMENÍ. Toto je tenký async wrapper, ktorý vo
-   vnútri volá dnešný lokálny evaluateCoverage() a vráti PRESNE to isté
-   (vrátane polí coverage/missingTerms/onTopic/tooShort, ktoré zvyšok
-   súboru už používa – nie sú súčasťou minimálneho kontraktu nižšie, ale
-   ich odstránenie by TERAZ zmenilo správanie, čo táto fáza výslovne
-   zakazuje). Fáza 3 tu pridá skutočné POST volanie na server s fallbackom
-   späť na evaluateCoverage() – volajúci (enterHodnotenie) sa nezmení.
+   Minimálny kontrakt (spoločný pre LLM aj lokálny fallback grader):
+   { covered, missing, incorrect, contentCoverage, terminologyScore } +
+   odvodené polia coverage/missingTerms/onTopic/tooShort, ktoré zvyšok
+   súboru používa (dopočítané rovnako z oboch ciest, viď mapLlmResult
+   a evaluateCoverage vyššie – zdieľajú computeTerminologyGaps/
+   combineCoverage/computeOnTopic/isTooShort, takže volajúci nevie a
+   nepotrebuje vedieť, ktorá cesta odpovedala).
 
-   `summary` parameter je zatiaľ NEPOUŽITÝ – dnešný lokálny evaluátor ho
-   nepotrebuje (pracuje z už extrahovaných keyPoints), ale budúci LLM
-   grader ho bude potrebovať na posúdenie vecnej správnosti (incorrect[]),
-   preto je v signatúre už teraz (topic.summary od fetchOkruh() vyššie).
-
-   Minimálny kontrakt (spoločný pre lokálny aj budúci LLM grader):
-   { covered, missing, incorrect, contentCoverage, terminologyScore }
+   ⚠️ OCHRANA (2026-07-19): endpoint už NEVYŽADUJE žiadny secret/hlavičku
+   z klienta – server overuje pôvod požiadavky (Origin, nastavuje ho
+   prehliadač sám, JS ho nemôže sfalšovať) namiesto shared secretu (ten by
+   aj tak bol len verejne viditeľný reťazec v tomto súbore – appka nemá
+   build krok). Pozri api/grade-answer.js hlavičku pre plný rozbor tejto
+   ochrany aj jej hraníc.
 ============================================================ */
+const GRADE_ANSWER_ENDPOINT = '/api/grade-answer';
+const GRADE_ANSWER_TIMEOUT_MS = 18000; // radšej rýchly fallback než visiaca skúška, ak LLM mlčí
+
+function isStringArray(v) {
+  return Array.isArray(v) && v.every(x => typeof x === 'string');
+}
+
+/* Zavolá /api/grade-answer a validuje tvar odpovede. Pri AKOMKOĽVEK
+   probléme (network/abort/HTTP chyba/neplatný JSON/neplatný tvar/neplatné
+   skóre) throw-ne – volajúci (gradeAnswer nižšie) to chytí a spadne na
+   lokálny fallback. Táto funkcia sama NIKDY fallback nerieši. */
+async function callGradeAnswerApi({ summary, keyPoints, glossary, answerText }) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), GRADE_ANSWER_TIMEOUT_MS);
+  let res;
+  try {
+    res = await fetch(GRADE_ANSWER_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ summary, keyPoints, glossary, answerText }),
+      signal: controller.signal
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
+
+  if (!res.ok) throw new Error(`/api/grade-answer HTTP ${res.status}`);
+  const data = await res.json();
+  if (!data || data.ok !== true) throw new Error('/api/grade-answer: ok !== true');
+  if (!isStringArray(data.covered) || !isStringArray(data.missing) || !isStringArray(data.incorrect)) {
+    throw new Error('/api/grade-answer: neplatný tvar covered/missing/incorrect');
+  }
+  if (typeof data.contentCoverage !== 'number' || typeof data.terminologyScore !== 'number') {
+    throw new Error('/api/grade-answer: neplatné skóre');
+  }
+  return data;
+}
+
+/* Namapuje surovú odpoveď LLM endpointu na PRESNE ten istý tvar, aký vracia
+   evaluateCoverage() – missingTerms je vždy lokálny dopočet (glosár nie je
+   súčasťou LLM kontraktu, viď komentár pri computeTerminologyGaps), skóre
+   terminológie/obsahu berie z LLM (to je celý zmysel migrácie – LLM vie
+   posúdiť použitie pojmov V KONTEXTE, nielen ich holú prítomnosť). Ak okruh
+   nemá glosár, terminologyScore sa ignoruje (null) rovnako ako v lokálnom
+   fallbacku – LLM by inak (schéma vyžaduje integer) mohol vrátiť napr. 0,
+   čo by sa nesprávne započítalo do coverage. */
+function mapLlmResult(llmResult, userText, glossary) {
+  const hasGlossary = (glossary || []).length > 0;
+  const { missingTerms } = computeTerminologyGaps(userText, glossary);
+  const terminologyScore = hasGlossary ? llmResult.terminologyScore : null;
+  const coverage = combineCoverage(llmResult.contentCoverage, terminologyScore);
+  const onTopic = computeOnTopic(userText, llmResult.covered.length, llmResult.contentCoverage);
+  const tooShort = isTooShort(userText);
+  return {
+    covered: llmResult.covered,
+    missing: llmResult.missing,
+    incorrect: llmResult.incorrect,
+    coverage,
+    contentCoverage: llmResult.contentCoverage,
+    terminologyScore,
+    missingTerms,
+    onTopic,
+    tooShort
+  };
+}
+
 async function gradeAnswer({ summary, keyPoints, glossary, answerText }) {
-  return evaluateCoverage(answerText, keyPoints, glossary);
+  try {
+    const llmResult = await callGradeAnswerApi({ summary, keyPoints, glossary, answerText });
+    return mapLlmResult(llmResult, answerText, glossary);
+  } catch (e) {
+    console.warn('[ŠTÁTNICE] LLM hodnotenie (/api/grade-answer) zlyhalo, fallback na lokálny grader:', e);
+    return evaluateCoverage(answerText, keyPoints, glossary);
+  }
 }
 
 /* Doplňujúca otázka cielená na KONKRÉTNY chýbajúci bod (missing[0]),
@@ -1189,7 +1301,10 @@ export async function openStatniceHall(areaName) {
   // Ktoré konkrétne body sa v tejto téme UŽ pýtali cez doplňujúcu otázku –
   // zabraňuje opakovaniu TOHO ISTÉHO bodu, aj keby ho matcher po doplnení
   // stále vyhodnotil ako nepokrytý (parafráza/skratka mimo dosahu prefix-
-  // matchingu). Pozri enterHodnotenie/offerHint nižšie.
+  // matchingu). Uchováva INDEXY do topic.keyPoints (resolveKeyPointIndex),
+  // NIE text – LLM grader (Fáza 3) nevráti text bodu byte-identicky pri
+  // každom volaní, takže textové porovnanie by de-dup nespoľahlivo zlyhalo.
+  // Pozri enterHodnotenie/offerHint nižšie.
   const hintedPoints = [[], []];
   let currentIdx = 0;
 
@@ -1481,24 +1596,26 @@ export async function openStatniceHall(areaName) {
     evaluations[idx] = result;
 
     // Nepýtaj sa druhýkrát na TEN ISTÝ bod, na ktorý sa komisia už raz
-    // pýtala doplňujúcou otázkou v tejto téme – ak ho matcher aj po
-    // doplnení stále vyhodnotí ako nepokrytý (napr. skratka vyslovená po
-    // písmenách sa neprepíše na skratku v texte), opakovaná identická
-    // otázka pôsobí, akoby komisia nepočúvala, čo je pre dôveryhodnosť
-    // skúšky horšie než príp. neistota v samotnej známke. Známka/spätná
-    // väzba (evaluations[idx] vyššie) zostáva na plnom, neupravenom
-    // výsledku – filtruje sa LEN výber ďalšej doplňujúcej otázky.
-    const offerable = result.missing.filter(p => !hintedPoints[idx].includes(p));
+    // pýtala doplňujúcou otázkou v tejto téme – de-dup podľa INDEXU bodu
+    // v topic.keyPoints (resolveKeyPointIndex), nie podľa textu (viď
+    // komentár pri hintedPoints vyššie). Ak sa index nedá spoľahlivo
+    // určiť (-1), bod sa radšej ponúkne znova, než aby sa mylne stotožnil
+    // s iným bodom. Známka/spätná väzba (evaluations[idx] vyššie) zostáva
+    // na plnom, neupravenom výsledku – filtruje sa LEN výber ďalšej
+    // doplňujúcej otázky.
+    const offerable = result.missing
+      .map(text => ({ text, kpIdx: resolveKeyPointIndex(text, topic.keyPoints) }))
+      .filter(m => m.kpIdx === -1 || !hintedPoints[idx].includes(m.kpIdx));
 
     const canOfferHint = offerable.length > 0 && followUpCounts[idx] < MAX_FOLLOWUPS_PER_QUESTION;
     if (canOfferHint) {
-      offerHint(idx, { ...result, missing: offerable });
+      offerHint(idx, { ...result, missing: offerable.map(m => m.text) }, offerable[0].kpIdx);
     } else {
       advanceQuestion(idx);
     }
   }
 
-  function offerHint(idx, result) {
+  function offerHint(idx, result, missingKpIdx) {
     const floorTable = ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR;
     const nextFloor = floorTable[Math.min(hintsUsed + 1, floorTable.length - 1)];
 
@@ -1516,7 +1633,10 @@ export async function openStatniceHall(areaName) {
     overlayEl.querySelector('#statniceHintBtn').onclick = () => {
       followUpCounts[idx]++;
       hintsUsed++;
-      hintedPoints[idx].push(result.missing[0]); // presne ten bod, na ktorý sa teraz spýta – nabudúce sa naň už nespýta znova
+      // presne ten bod (podľa indexu), na ktorý sa teraz spýta – nabudúce
+      // sa naň už nespýta znova; -1 (nejasná zhoda) sa nezaznamenáva, nech
+      // sa nabudúce neschová za falošnú zhodu s iným bodom.
+      if (missingKpIdx !== -1) hintedPoints[idx].push(missingKpIdx);
       const followUpText = buildFollowUpMessage(result.missing, topics[idx].title, personaKey);
       msgEl.innerHTML = `<strong>Komisia (${persona.emoji} doplňujúca otázka):</strong> ${followUpText}`;
       liveTranscriptEl.textContent = '';

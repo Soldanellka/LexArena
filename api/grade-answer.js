@@ -25,32 +25,44 @@
    premenná, Production aj Preview) – nikdy v klientskom kóde, nikdy sa
    neposiela ani nezobrazuje v žiadnej odpovedi tohto endpointu.
 
-   ⚠️ OCHRANA PRED ZNEUŽITÍM (2026-07-18) – endpoint je verejný, hocikto
-   pozná URL. Tri vrstvy, v tomto poradí (najlacnejšie/najskôr zamietajúce
-   prvé):
+   ⚠️ OCHRANA PRED ZNEUŽITÍM (2026-07-18, prepracované 2026-07-19) – endpoint
+   je verejný, hocikto pozná URL. Tri vrstvy, v tomto poradí (najlacnejšie/
+   najskôr zamietajúce prvé):
    1. Rate limit per IP (best-effort, pozri poznámku pri rateLimitMap
       nižšie – NIE je to spoľahlivé naprieč všetkými instanciami).
-   2. Shared secret (GRADE_ANSWER_SECRET) v `Authorization: Bearer <secret>`
-      hlavičke, rovnaký vzor ako ADMIN_SYNC_SECRET v sync-content.js.
-      ⚠️ Tento projekt nemá build krok (žiadny bundler, žiadne build-time
-      env injection ako v Next.js/Vite) – klientsky kód (scripts/statnice.js)
-      je servovaný AKO JE, takže secret v ňom bude doslovný reťazec, verejne
-      viditeľný v zdrojovom kóde stránky/repe. Odfiltruje NÁHODNÉ zneužitie
-      (niekto skúša URL naslepo), NIE cieleného útočníka, ktorý si secret
-      vytiahne z JS – to je vedomý, akceptovaný kompromis (viď zadanie).
+   2. Origin check (ALLOWED_ORIGINS nižšie) – NAHRADIL pôvodný shared secret
+      (2026-07-19). Secret v klientskom kóde by bol (rovnako ako appka
+      nemá build krok) doslovný reťazec, verejne viditeľný v zdrojovom kóde
+      stránky – teda v skutočnosti len iná forma "žiadnej ochrany", nie
+      slabšia verzia niečoho reálneho. Origin hlavičku naopak nemôže JS
+      bežiaceho na inej stránke z prehliadača sfalšovať (forbidden header
+      name) – blokuje teda reálne cudzie weby/CSRF z prehliadača. Cielený
+      útočník, ktorý si endpoint volá priamo (curl/skript, nie prehliadač),
+      si Origin hlavičku samozrejme nastaví sám – pred TÝMTO originom
+      check nechráni, presne ako predtým nechránil secret vytiahnutý z JS.
+      Skutočný strop nákladov pri cielenom zneužití je rate limit + limity
+      dĺžky nižšie, nie táto vrstva.
    3. Limit dĺžky vstupu (MAX_SUMMARY_LENGTH/MAX_ANSWER_LENGTH nižšie) –
       zabráni nafúknutiu ceny jedného volania aj legitímnym, no príliš
       veľkým vstupom.
 
-   POVINNÉ ENV PREMENNÉ:
+   POVINNÁ ENV PREMENNÁ:
    - ANTHROPIC_API_KEY
-   - GRADE_ANSWER_SECRET
+   (GRADE_ANSWER_SECRET sa už nepoužíva – endpoint ju nikde nečíta, môže sa
+   z Vercel env zmazať.)
 
    Nič iné tento endpoint nerobí – žiadny zápis do Firebase, žiadne §,
    žiadna identita. Čisto: vstup → Claude → štruktúrovaný JSON výstup.
-============================================================ */
 
-const crypto = require('crypto');
+   ⚠️ CORS: appka aj endpoint bežia na TEJ ISTEJ doméne (klient volá
+   fetch('/api/grade-answer') relatívnou cestou) – ide teda vždy o
+   same-origin požiadavku z pohľadu prehliadača, nie cross-origin. Žiadne
+   Access-Control-Allow-Origin hlavičky ani OPTIONS/preflight handling
+   nie sú potrebné – prehliadač preflight vôbec nespúšťa pre same-origin
+   požiadavky. (Origin hlavička sa napriek tomu posiela aj pri same-origin
+   POST – prehliadače ju od istého času posielajú pri všetkých "unsafe"
+   metódach, nielen cross-origin, viď isAllowedOrigin nižšie.)
+============================================================ */
 
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 const ANTHROPIC_MODEL = 'claude-haiku-4-5';
@@ -81,11 +93,36 @@ const RATE_LIMIT_MAX_REQUESTS = 10;
    spoľahlivú ochranu, toto je miesto na doplnenie neskôr. */
 const rateLimitMap = new Map();
 
-function timingSafeEqualStr(a, b) {
-  const bufA = Buffer.from(String(a || ''));
-  const bufB = Buffer.from(String(b || ''));
-  if (bufA.length !== bufB.length) return false;
-  return crypto.timingSafeEqual(bufA, bufB);
+// Povolené pôvody požiadavky (viď komentár "Origin check" v hlavičke vyššie).
+// lex-arena-seven.vercel.app je primárna Vercel doména projektu (appka je
+// odtiaľ reálne dostupná – napr. zdieľané výzvy pojednávaní z lexarena/arena.js
+// linkujú priamo na ňu), nie len cez vlastnú doménu – preto je v zozname,
+// na rozdiel od náhodných *.vercel.app preview URL jednotlivých branchov/PR.
+const ALLOWED_ORIGINS = new Set([
+  'https://www.lexarena.sk',
+  'https://lexarena.sk',
+  'https://lex-arena-seven.vercel.app'
+]);
+
+/* Origin sa nedá sfalšovať z JS bežiaceho v prehliadači (forbidden header
+   name) – Referer sa dá teoreticky ovplyvniť menej priamo, používa sa preto
+   len ako FALLBACK, ak Origin chýba (niektoré požiadavky ho nemajú, napr.
+   staršie/niektoré non-fetch cesty). Chýbajúci/nerozpoznateľný pôvod (Origin
+   AJ Referer chýba, alebo Referer nie je platná URL) sa berie ako
+   NEPOVOLENÝ – bezpečnejšie zamietnuť legitímny okrajový prípad, než
+   omylom prepustiť niečo bez zisteného pôvodu. */
+function isAllowedOrigin(req) {
+  const origin = req.headers['origin'];
+  if (origin) return ALLOWED_ORIGINS.has(origin);
+  const referer = req.headers['referer'];
+  if (referer) {
+    try {
+      return ALLOWED_ORIGINS.has(new URL(referer).origin);
+    } catch (e) {
+      return false;
+    }
+  }
+  return false;
 }
 
 function getClientIp(req) {
@@ -164,21 +201,16 @@ module.exports = async (req, res) => {
     return res.status(405).json({ ok: false, error: 'Len POST.' });
   }
 
-  // 1) Rate limit per IP – najlacnejšia kontrola, PRED overením secretu
-  //    (chráni aj proti bruteforce hádaniu secretu, nielen proti volaniam
-  //    s platným secretom). Best-effort, pozri poznámku pri rateLimitMap.
+  // 1) Rate limit per IP – najlacnejšia kontrola, PRED overením originu.
+  //    Best-effort, pozri poznámku pri rateLimitMap.
   const clientIp = getClientIp(req);
   if (!checkRateLimit(clientIp)) {
     return res.status(429).json({ ok: false, error: 'Príliš veľa požiadaviek, skús to o chvíľu znova.' });
   }
 
-  // 2) Shared secret – PRED volaním Anthropicu, nech neplatný/chýbajúci
-  //    secret nič nestojí.
-  const expectedSecret = process.env.GRADE_ANSWER_SECRET || '';
-  const authHeader = req.headers['authorization'] || '';
-  const providedSecret = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : '';
-  if (!expectedSecret || !timingSafeEqualStr(providedSecret, expectedSecret)) {
-    return res.status(403).json({ ok: false, error: 'Neplatný alebo chýbajúci secret.' });
+  // 2) Origin check – PRED volaním Anthropicu, nech neplatný pôvod nič nestojí.
+  if (!isAllowedOrigin(req)) {
+    return res.status(403).json({ ok: false, error: 'Neplatný pôvod požiadavky.' });
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
