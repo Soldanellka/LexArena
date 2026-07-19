@@ -258,6 +258,31 @@ function ttsFallbackDelay(text) {
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
+/* ============================================================
+   AUTO-ŠTART MIKROFÓNU NA DESKTOPE (2026-07-19) – regresia zo záznamu 87fd5c9
+   (mobilná oprava): predtým sa mikrofón spúšťal AUTOMATICKY hneď po skončení
+   otázky, čo na PC fungovalo dobre. Mobilná oprava to zmenila na "čakaj na
+   klik" (Android vyžaduje čerstvé gesto na prvé povolenie) – na PC to
+   znamenalo, že prvé slová odpovede sa strácali, kým si používateľ nevšimol
+   a neklikol na mikrofón.
+
+   ⚠️ TOTO JE LEN SIGNÁL, ČI SKÚSIŤ auto-štart – NIKDY bariéra. Tlačidlo
+   mikrofónu ostáva VŽDY viditeľné a funkčné (viď enterPocuvanie/micBtn.onclick)
+   bez ohľadu na výsledok tejto detekcie:
+   - detekcia sa pomýli → auto-štart sa nespustí → používateľ má stále
+     tlačidlo (najhorší dôsledok: musí kliknúť, nikdy "nefunguje")
+   - detekcia sa pomýli opačne (dotykový notebook vyhodnotený ako desktop,
+     auto-štart zlyhá lebo chýba gesto) → onError nižšie to zachytí a
+     používateľa vyzve kliknúť na mikrofón manuálne (viď startOrRestartRecording)
+
+   navigator.maxTouchPoints ani User-Agent nie sú spoľahlivé (dotykové
+   notebooky sú "touch", ale sú to PC) – pointer:fine + hover:hover (myš/
+   trackpad vie hoverovať, prst na dotykovej ploche nie) je najlepší dostupný
+   best-effort signál, nie istota. */
+function isLikelyDesktop() {
+  return !!(window.matchMedia && window.matchMedia('(pointer: fine) and (hover: hover)').matches);
+}
+
 export function isStatniceAvailable(areaName) {
   return Object.prototype.hasOwnProperty.call(AREA_CONFIG, areaName);
 }
@@ -1342,12 +1367,19 @@ export async function openStatniceHall(areaName) {
 
   let recognizer = null;
   let listening = false;
-  // true od prvého klepnutia na mikrofón (skutočné gesto) až po manuálne
+  // true od prvého spustenia nahrávania (klik na mikrofón, ALEBO auto-štart
+  // na desktope – viď enterPocuvanie/isLikelyDesktop nižšie) až po manuálne
   // zastavenie/odoslanie – kým je true, prirodzené ticho (onEnd) REŠTARTUJE
   // rozpoznávanie namiesto ukončenia odpovede (viď startOrRestartRecording).
   let recordingSessionActive = false;
   let restartFailCount = 0;
   const MAX_RECORDING_RESTART_FAILS = 3;
+  // Rozlišuje "prvý pokus tejto otázky ešte vôbec nenabehol" (auto-štart aj
+  // klik zlyhali hneď) od "bežalo to, len teraz opakovane zlyháva" – prvý
+  // prípad dostane VÝSLOVNÚ výzvu kliknúť na mikrofón (2026-07-19 zadanie,
+  // bod 5), druhý ostáva pri pôvodnom znení. Reset v enterPocuvanie, nastaví
+  // sa v onStart v startOrRestartRecording.
+  let micEverStarted = false;
   let prepTimerHandle = null;
   // JEDNA zdieľaná poistková časomiera pre CELÝ prechod "komisia dohovorila
   // → mikrofón dostupný" – používa ju výhradne speakThenListen() nižšie,
@@ -1481,6 +1513,7 @@ export async function openStatniceHall(areaName) {
     setPhase('POCUVANIE');
     recordingSessionActive = false;
     restartFailCount = 0;
+    micEverStarted = false;
 
     if (!isSpeechRecognitionSupported()) {
       micStatusEl.textContent = '🔇 Rozpoznávanie reči nie je v tomto prehliadači dostupné – napíš odpoveď a klikni „Dokončiť odpoveď".';
@@ -1488,7 +1521,18 @@ export async function openStatniceHall(areaName) {
       return; // textarea je vždy viditeľná a funkčná – skúška beží aj bez mikrofónu
     }
     micBtn.style.display = '';
-    resetMicUI('Klikni na mikrofón a hovor – pauzy na premýšľanie nevadia, mikrofón sám pokračuje v počúvaní. Odpoveď ukonči tlačidlom „Dokončiť odpoveď", alebo píš rovno do poľa nižšie.');
+
+    // Auto-štart ako BONUS na pravdepodobnom desktope (návrat k správaniu
+    // spred 87fd5c9) – tlačidlo NIŽŠIE ostáva vždy funkčné rovnako, či auto-
+    // štart prebehol, zlyhal, alebo sa vôbec neskúsil (mobil/nesprávna detekcia).
+    if (isLikelyDesktop()) {
+      resetMicUI('🎤 Automaticky počúvam – môžeš hovoriť hneď. (Ak sa nerozbehlo, klikni na mikrofón.)');
+      recordingSessionActive = true;
+      restartFailCount = 0;
+      startOrRestartRecording();
+    } else {
+      resetMicUI('Klikni na mikrofón a hovor – pauzy na premýšľanie nevadia, mikrofón sám pokračuje v počúvaní. Odpoveď ukonči tlačidlom „Dokončiť odpoveď", alebo píš rovno do poľa nižšie.');
+    }
   }
 
   function resetMicUI(message) {
@@ -1499,9 +1543,18 @@ export async function openStatniceHall(areaName) {
 
   /* Spustí (alebo po prirodzenom tichu AUTO-REŠTARTUJE) rozpoznávanie v rámci
      JEDNEJ nahrávacej relácie (recordingSessionActive). Volané buď:
-     a) PRIAMO z klik handlera mikrofónu – prvý štart tejto relácie, VŽDY
-        skutočné user gesto (rovnaký vzor ako memory-trainer.html
-        setupMicButton – tu sa reálne prvýkrát pýta povolenie mikrofónu), alebo
+     a) PRIAMO z klik handlera mikrofónu – VŽDY skutočné user gesto (rovnaký
+        vzor ako memory-trainer.html setupMicButton – tu sa reálne prvýkrát
+        pýta povolenie mikrofónu), alebo
+     a') AUTOMATICKY z enterPocuvanie() na pravdepodobnom desktope
+        (isLikelyDesktop) – BEZ gesta. Na desktope Web Speech API gesto na
+        .start() nevyžaduje (to je mobilné/Android obmedzenie), takže toto
+        je bezpečné; ak by detekcia bola nesprávna (dotykový notebook) a
+        .start() by zlyhal, onError nižšie to zachytí a vyzve na manuálny
+        klik – nikdy ticho, viď micEverStarted nižšie. Toto je presne
+        správanie spred záznamu 87fd5c9 (mobilná oprava ho odstránila pre
+        VŠETKY zariadenia – regresia na PC, teraz vrátená len tam, kde je
+        bezpečná), alebo
      b) z onEnd() callbacku PO tichu, KEĎ relácia ešte beží – toto je reštart
         PO UŽ UDELENOM povolení pre tento pôvod (origin), nie nová žiadosť oň.
         Web Speech API (Chrome/Android aj desktop) vyžaduje gesto len na PRVÉ
@@ -1522,6 +1575,7 @@ export async function openStatniceHall(areaName) {
       onStart: () => {
         listening = true;
         restartFailCount = 0;
+        micEverStarted = true;
         micBtn.classList.add('statnice-mic-recording');
         micBtn.textContent = '⏹️ Dokončiť nahrávanie';
         micStatusEl.textContent = '🔴 Počúvam… (pauzy nevadia, pokračujem)';
@@ -1549,7 +1603,15 @@ export async function openStatniceHall(areaName) {
           // answerInput.value ostáva netknutý, len prestane pribúdať; skúšku
           // dokončí výhradne explicitný klik na "Dokončiť odpoveď" nižšie.
           recordingSessionActive = false;
-          resetMicUI('🔇 Mikrofón nezachytil odpoveď (povolenie zamietnuté alebo opakovaná chyba) – pokojne napíš odpoveď a klikni „Dokončiť odpoveď".');
+          // Ak toto bol prvý pokus tejto otázky a ešte NIKDY nenabehol (typicky
+          // zlyhaný AUTO-ŠTART na desktope, viď enterPocuvanie) – výslovne
+          // vyzvi na manuálny klik na mikrofón (2026-07-19 zadanie, bod 5),
+          // nie len na písanie. Ak už predtým bežalo a zlyhalo až teraz,
+          // ostáva pôvodné znenie (mikrofón dostal reálnu šancu, netreba
+          // opakovane núkať klik).
+          resetMicUI(micEverStarted
+            ? '🔇 Mikrofón nezachytil odpoveď (povolenie zamietnuté alebo opakovaná chyba) – pokojne napíš odpoveď a klikni „Dokončiť odpoveď".'
+            : '🔇 Automatické spustenie mikrofónu sa nepodarilo – klikni na mikrofón a skús to manuálne, alebo napíš odpoveď.');
           return;
         }
         // Prechodná chyba (napr. no-speech) – skús znova v tej istej relácii.

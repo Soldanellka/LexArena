@@ -404,7 +404,7 @@ export function finishQuiz(){
   if (isDuel) {
 
     showRewardToast(
-      `Pojednávanie dokončené. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}.`
+      `Pojednávanie dokončené. Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. Tip: sprav aj kartičky a prípady v tejto oblasti, zdvihneš si progres.`
     );
 
     const nick = localStorage.getItem('playerNick') || 'Unknown';

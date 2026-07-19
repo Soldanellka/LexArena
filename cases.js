@@ -533,11 +533,17 @@ function renderJsonCase(container, areaTitle) {
     }
   }
 
-  // Navigácia
+  // Navigácia – na POSLEDNOM prípade nahraď mŕtve "Ďalší prípad →" (predtým
+  // len disabled, nikam neviedlo) za "Koniec", ktoré zatvorí modal – rovnaký
+  // mechanizmus ako #closeCases v init.js (closeModal() z core.js sa tu
+  // zámerne nepoužíva, na #casesModal nemá žiadny CSS efekt, viď closeCases).
+  const isLast = idx >= total - 1;
   html += `<div class="case-nav">
     <button class="btn case-prev" ${idx === 0 ? 'disabled' : ''}>← Predchádzajúci</button>
     <span class="small muted">${answeredCount}/${questionSteps.length} otázok</span>
-    <button class="btn btn-primary case-next" ${idx >= total - 1 ? 'disabled' : ''}>Ďalší prípad →</button>
+    ${isLast
+      ? `<button class="btn btn-primary case-finish">Koniec ✓</button>`
+      : `<button class="btn btn-primary case-next">Ďalší prípad →</button>`}
   </div>`;
 
   container.innerHTML = html;
@@ -601,6 +607,10 @@ function renderJsonCase(container, areaTitle) {
   container.querySelector('.case-next')?.addEventListener('click', () => {
     window.__jsonCaseIndex = Math.min(total - 1, idx + 1);
     renderJsonCase(container, areaTitle);
+  });
+  container.querySelector('.case-finish')?.addEventListener('click', () => {
+    const modal = $('casesModal');
+    if (modal) { modal.style.display = 'none'; modal.classList.remove('open'); }
   });
 }
 
