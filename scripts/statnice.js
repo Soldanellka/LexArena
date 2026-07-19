@@ -107,7 +107,19 @@ const PERSONAS = {
     followUp: (point) => `Toto je neúplné – chýba: ${point}. Doplňte to.`,
     followUpGeneric: (title) => `Odpoveď je nedostatočná. Rozveďte podstatné náležitosti k otázke „${title}".`,
     coveredLine: (title, covered) => `Téma „${title}" – zvládnuté body: ${covered.join('; ')}.`,
-    missingLine: (title, missing) => `Téma „${title}" – chýba, doštudujte: ${missing.join('; ')}.`,
+    // znamka 1-2: pôvodné znenie (nemenené – tón má ostať uznanlivý/vecný,
+    // nie sa sprísniť). znamka 3-4: kritickejšie, BEZ zľahčovania rozsahu
+    // medzery (žiadne "len doplňte") – presne podľa zadania 2026-07-19.
+    missingLine: (title, missing, znamka) => {
+      if (znamka >= 4) return `Téma „${title}" – zásadne nezodpovedané, chýba: ${missing.join('; ')}.`;
+      if (znamka >= 3) return `Téma „${title}" – odpoveď má podstatné medzery, chýba: ${missing.join('; ')}.`;
+      return `Téma „${title}" – chýba, doštudujte: ${missing.join('; ')}.`;
+    },
+    // Vecná chyba (LLM incorrect[]) – ODLIŠNÉ od missingLine: toto NIE JE
+    // chýbajúci bod na doplnenie, je to NESPRÁVNE tvrdenie. anyIncorrect vždy
+    // vynúti znamka>=3 (buildFinalFeedback), takže táto veta sa nikdy
+    // nezobrazí pri znamke 1-2 – netreba pre ne samostatné, jemnejšie znenie.
+    incorrectLine: (title, incorrect) => `Téma „${title}" – vecná chyba (nesprávne tvrdenie, nie chýbajúci bod): ${incorrect.join('; ')}.`,
     noCoveredFallback: 'Žiadny bod nebol pokrytý dostatočne.',
     odporucaniaWithGaps: ['Zamerajte sa presne na vymenované chýbajúce body – bez toho skúška neobstojí.', 'Držte štruktúru: pojem → znaky → príklad → judikatúra.'],
     odporucaniaClean: ['Držte túto úroveň, netreba poľaviť.'],
@@ -126,15 +138,24 @@ const PERSONAS = {
     followUp: (point) => `Dobrý základ! Ešte by som privítal/a doplniť: ${point}. Skús to rozviesť.`,
     followUpGeneric: (title) => `Skús sa k otázke „${title}" vrátiť a doplniť, čo ťa napadne navyše – pokojne aj krok za krokom.`,
     coveredLine: (title, covered) => `Pri téme „${title}" ti pekne sadli tieto body: ${covered.join('; ')}.`,
-    missingLine: (title, missing) => `Pri téme „${title}" ešte doplň: ${missing.join('; ')} – je to len kúsok práce navyše.`,
+    // znamka 1-2: pôvodné znenie (nemenené). znamka 3-4: aj podporujúca
+    // persóna smie zostať vecná v DELIVERY tónu (voľba slov "poďme sa
+    // pozrieť"), ale nesmie MINIMALIZOVAŤ rozsah medzery – preč "len kúsok
+    // práce navyše", ktoré presne zodpovedalo nahlásenému problému.
+    missingLine: (title, missing, znamka) => {
+      if (znamka >= 4) return `Pri téme „${title}" toto zásadne chýba, nie je to drobnosť: ${missing.join('; ')}.`;
+      if (znamka >= 3) return `Pri téme „${title}" chýba podstatná časť, poďme sa na to pozrieť: ${missing.join('; ')}.`;
+      return `Pri téme „${title}" ešte doplň: ${missing.join('; ')} – je to len kúsok práce navyše.`;
+    },
+    incorrectLine: (title, incorrect) => `Pri téme „${title}" si niečo povedal/a nesprávne, nie len neúplne – to treba opraviť, nie doplniť: ${incorrect.join('; ')}.`,
     noCoveredFallback: 'Aspoň si sa pokúsil/a odpovedať na obe otázky – budeme na tom stavať ďalej.',
     odporucaniaWithGaps: ['Zameraj sa na chýbajúce body vyššie, zvládneš to.', 'Skús si pri učení držať štruktúru pojem → znaky → príklad → judikatúra, pomôže ti to zapamätať si viac.'],
     odporucaniaClean: ['Skvelá práca, pokojne skús aj náročnejšie okruhy!'],
     zaver: {
       1: 'Výborne, naozaj pekný výkon! Obe témy zvládaš na vysokej úrovni.',
       2: 'Veľmi pekné, drobné medzery vôbec neubrali na dojme.',
-      3: 'Základ máš, len to ešte chce doladiť – nevzdávaj to.',
-      4: 'Tentokrát to ešte nesedelo, ale máš čas si to doštudovať – dáš to.'
+      3: 'Odpoveď má podstatné medzery – poďme sa na ne pozrieť, nech to nabudúce sedí.',
+      4: 'Táto odpoveď zásadne nezodpovedá téme – viaceré veci chýbali alebo boli vecne nesprávne. Poďme sa na okruh pozrieť odznova, nech budúca odpoveď sedí.'
     }
   },
   rational: {
@@ -145,15 +166,21 @@ const PERSONAS = {
     followUp: (point) => `Spomenuli ste tému, no chýba mi konkrétny bod – ${point}. Viete to bližšie vysvetliť?`,
     followUpGeneric: (title) => `Môžete to rozviesť a doplniť podstatné náležitosti k otázke „${title}"?`,
     coveredLine: (title, covered) => `Téma „${title}" – pokryté: ${covered.join('; ')}.`,
-    missingLine: (title, missing) => `Téma „${title}" – doštudovať: ${missing.join('; ')}.`,
+    // znamka 1-2: pôvodné znenie (nemenené). znamka 3-4: kritickejšie.
+    missingLine: (title, missing, znamka) => {
+      if (znamka >= 4) return `Téma „${title}" – zásadne nezodpovedané: ${missing.join('; ')}.`;
+      if (znamka >= 3) return `Téma „${title}" – podstatná medzera, chýba: ${missing.join('; ')}.`;
+      return `Téma „${title}" – doštudovať: ${missing.join('; ')}.`;
+    },
+    incorrectLine: (title, incorrect) => `Téma „${title}" – vecne nesprávne (nie chýbajúce, ale NESPRÁVNE tvrdenie): ${incorrect.join('; ')}.`,
     noCoveredFallback: 'Snaha odpovedať na obe otázky.',
     odporucaniaWithGaps: ['Zameraj sa na vymenované chýbajúce body – doštuduj ich v plnom vypracovaní okruhu.', 'Drž sa štruktúry: pojem → znaky → príklad → judikatúra.'],
     odporucaniaClean: ['Pokračuj v tomto tempe, skús aj náročnejšie okruhy.'],
     zaver: {
       1: 'Výborný výkon – ovládaš obe témy na vysokej úrovni.',
       2: 'Veľmi dobrý výkon, drobné medzery neubrali na celkovom dojme.',
-      3: 'Solídny základ, ale je čo doťahovať – pozri si odporúčania.',
-      4: 'Zatiaľ to nestačí – over si obe témy znova a skús to nabudúce.'
+      3: 'Odpoveď má podstatné medzery, viaceré kľúčové body chýbajú – pozri si odporúčania.',
+      4: 'Odpoveď zásadne nezodpovedá požadovanému rozsahu – chýbajú kľúčové body alebo obsahuje vecné chyby. Obe témy si dôkladne preštuduj znova.'
     }
   }
 };
@@ -970,11 +997,16 @@ function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
 
   const silne = [];
   const medzery = [];
+  const nespravne = [];
   const missingTermsAll = [];
   evaluations.forEach((e, i) => {
     const title = topics[i].title;
     if (e.covered.length) silne.push(p.coveredLine(title, e.covered));
-    if (e.missing.length) medzery.push(p.missingLine(title, e.missing));
+    // Vecná chyba (incorrect) je ZÁMERNE samostatná od medzery (missing) –
+    // "doplňte X" a "X ste povedali nesprávne" sú rôzne veci (2026-07-19
+    // zadanie, bod A3). Skôr než medzery, nech vynikne ako prvá/závažnejšia.
+    if (e.incorrect && e.incorrect.length) nespravne.push(p.incorrectLine(title, e.incorrect));
+    if (e.missing.length) medzery.push(p.missingLine(title, e.missing, znamka));
     // Právna terminológia (Fáza D.3) – v spätnej väzbe uveď, ktoré pojmy
     // chýbali (učí to), samostatne od obsahových medzier vyššie.
     if (e.missingTerms && e.missingTerms.length) {
@@ -985,7 +1017,7 @@ function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
 
   const odporucania = medzery.length ? p.odporucaniaWithGaps : p.odporucaniaClean;
 
-  return { znamka, silne, medzery, odporucania, terminologyGaps: missingTermsAll, zaver: p.zaver[znamka], anyTooShort };
+  return { znamka, silne, medzery, nespravne, odporucania, terminologyGaps: missingTermsAll, zaver: p.zaver[znamka], anyTooShort };
 }
 
 /* ============================================================
@@ -1207,7 +1239,7 @@ function buildOverlay(areaName) {
         <div class="statnice-live-transcript" id="statniceLiveTranscript"></div>
         <textarea class="statnice-answer-input" id="statniceAnswerInput" placeholder="Odpoveď (hovor nahlas alebo píš)…"></textarea>
         <div class="statnice-answer-actions">
-          <button class="btn" id="statniceMicBtn" type="button">🎤 Mikrofón</button>
+          <button class="btn statnice-mic-btn" id="statniceMicBtn" type="button">🎤 Mikrofón</button>
           <button class="btn btn-primary" id="statniceSubmitBtn" type="button">✅ Dokončiť odpoveď</button>
         </div>
       </div>
@@ -1678,6 +1710,7 @@ export async function openStatniceHall(areaName) {
       ${hintsUsed > 0 ? `<div class="small muted">Použité nápovede: ${hintsUsed} (znížili najlepšiu dosiahnuteľnú známku).</div>` : ''}
       ${feedback.anyTooShort ? `<div class="small muted">Odpoveď na aspoň jednu tému bola príliš krátka na spoľahlivé posúdenie – obmedzilo to najlepšiu dosiahnuteľnú známku.</div>` : ''}
       <div class="statnice-fb-section"><strong>Silné stránky</strong><ul>${feedback.silne.map(s => `<li>${s}</li>`).join('')}</ul></div>
+      ${feedback.nespravne.length ? `<div class="statnice-fb-section statnice-fb-incorrect"><strong>Vecné chyby</strong><ul>${feedback.nespravne.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
       ${feedback.medzery.length ? `<div class="statnice-fb-section"><strong>Medzery</strong><ul>${feedback.medzery.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
       ${feedback.terminologyGaps.length ? `<div class="statnice-fb-section"><strong>Právna terminológia – chýbajúce pojmy</strong><ul>${feedback.terminologyGaps.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
       <div class="statnice-fb-section"><strong>Odporúčania</strong><ul>${feedback.odporucania.map(s => `<li>${s}</li>`).join('')}</ul></div>

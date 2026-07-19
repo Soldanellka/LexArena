@@ -2888,6 +2888,22 @@ body {
 .statnice-answer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .statnice-answer-actions .btn { flex: 1; min-width: 140px; }
 
+/* Mikrofón bol predtým čisto priehľadné .btn – na tmavom pozadí komory
+   splývalo, ľahko sa prehliadlo (nahlásené 2026-07-19). Solid zlatý akcent
+   (rovnaký odtieň ako .statnice-cta-btn dlaždica) ho jasne odlíši od
+   ružového btn-primary (Dokončiť odpoveď) AJ od červeného aktívneho
+   nahrávania (.statnice-mic-recording nižšie, prepíše cez !important).
+   Čisto vizuálne – NEMENÍ click handler ani .start() logiku. */
+.statnice-mic-btn {
+  background: rgba(212,175,55,0.18);
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 14px;
+}
+.statnice-mic-btn:hover { background: rgba(212,175,55,0.28); }
+
 .statnice-mic-recording {
   background: rgba(229,62,62,0.18) !important;
   border-color: rgba(229,62,62,0.55) !important;
@@ -2918,6 +2934,16 @@ body {
 .statnice-fb-section strong { display: block; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; opacity: .8; }
 .statnice-fb-section ul { padding-left: 20px; margin: 0; }
 .statnice-fb-section li { margin-bottom: 4px; line-height: 1.5; }
+
+/* Vecné chyby (incorrect[] – LLM hodnotenie, 2026-07-19) – ODLÍŠENÉ od
+   bežných "Medzery" (chýbajúce, nie nesprávne) rovnakým červeným tónom ako
+   existujúce .wrong/.opt.wrong v appke (kvíz/kartičky), pre konzistentnú
+   sémantiku farby "toto je zle", nie len "toto chýba". */
+.statnice-fb-incorrect {
+  padding: 8px 12px; border-radius: 8px;
+  background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3);
+}
+.statnice-fb-incorrect strong { color: #dc2626; opacity: 1; }
 .statnice-fb-zaver { font-style: italic; margin: 14px 0; line-height: 1.5; }
 .statnice-fb-reward {
   text-align: center; font-weight: 700; font-size: 16px;
