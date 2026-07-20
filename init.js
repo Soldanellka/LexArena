@@ -1,6 +1,7 @@
 'use strict';
 
 import { $, loadParagrafy, escapeHtml } from './core.js';
+import { isValidPin, isPinHashingAvailable, setPin, getPinStatus } from './scripts/pinAuth.js';
 import { setParagrafy } from './state.js';
 import { showRewardToast } from './ui.js';
 import { renderAreas, renderModules } from './app.js';
@@ -3037,7 +3038,80 @@ function openRoleSwitcher(firebaseRole) {
 /* =====================================================
    MODAL PRÍSTUPOVÉHO KÓDU
    ===================================================== */
-function openLoginCodeModal() {
+/* ⚠️ Veľký, VÝRAZNÝ (nie drobný text) blok – zabudnutý PIN znamená
+   trvalú stratu prístupu k účtu z iného zariadenia (appka nemá e-mail
+   ani inú cestu na reset), viď pinAuth.js. */
+const PIN_WARNING_HTML = `
+  <div style="background:rgba(239,68,68,0.12);border:2px solid rgba(239,68,68,0.5);
+       border-radius:12px;padding:14px 16px;margin-bottom:16px">
+    <div style="font-weight:800;font-size:15px;color:#dc2626;margin-bottom:4px">⚠️ PIN sa NEDÁ obnoviť</div>
+    <div class="small" style="line-height:1.5">
+      Appka nemá e-mail ani iný spôsob obnovy. Ak PIN zabudneš, o prístup
+      k účtu z iného zariadenia prídeš natrvalo. <strong>Zapíš si ho hneď teraz.</strong>
+    </div>
+  </div>`;
+
+/* Sekcia PIN-u, pripojená pod existujúci obsah "kódu" v oboch vetvách
+   nižšie (Fáza 1 – zatiaľ POPRI starom kóde, nie namiesto neho;
+   vyčistenie starého kódu je až Fáza 4). */
+function renderPinSection(hasPin) {
+  return `
+    <div style="border-top:1px solid var(--card-border,#eee);margin-top:16px;padding-top:16px">
+      <div style="font-weight:600;margin-bottom:6px">🔒 PIN pre prenos účtu</div>
+      ${hasPin
+        ? `<p class="small muted" style="margin-bottom:10px">PIN je nastavený ✓ – použi ho spolu s nickom na inom zariadení.</p>
+           <button class="btn" id="pinSetupBtn" style="width:100%">Zmeniť PIN</button>`
+        : `<p class="small muted" style="margin-bottom:10px">Zatiaľ nenastavený – bez PIN-u ťa na inom zariadení pustí už len samotný nick (menej bezpečné, ale nič sa nezamyká).</p>
+           <button class="btn btn-primary" id="pinSetupBtn" style="width:100%">Nastaviť PIN</button>`}
+    </div>`;
+}
+
+/* Prepne obsah modalu na zadanie/zmenu PIN-u. NEPÝTA starý PIN – na
+   tomto zariadení je nick už v localStorage, čo je jediný dôkaz
+   identity, ktorý appka má (pozri hlavičku pinAuth.js). */
+function showPinEntryView(nick, hasPin) {
+  const content = document.getElementById('loginModalContent');
+  if (!content) return;
+
+  content.innerHTML = `
+    <p class="small" style="margin-bottom:12px">${hasPin ? 'Nový PIN pre' : 'Nastav PIN pre'} nick <strong>${escapeHtml(nick)}</strong>:</p>
+    ${PIN_WARNING_HTML}
+    <input type="text" inputmode="numeric" pattern="[0-9]*" id="pinInput1" placeholder="PIN (4-6 číslic)"
+      style="width:100%;box-sizing:border-box;padding:10px 12px;border-radius:8px;border:1px solid var(--card-border,#ccc);margin-bottom:8px;font-size:16px;letter-spacing:2px;text-align:center" />
+    <input type="text" inputmode="numeric" pattern="[0-9]*" id="pinInput2" placeholder="Zopakuj PIN"
+      style="width:100%;box-sizing:border-box;padding:10px 12px;border-radius:8px;border:1px solid var(--card-border,#ccc);margin-bottom:12px;font-size:16px;letter-spacing:2px;text-align:center" />
+    <div id="pinEntryError" class="small" style="color:#dc2626;margin-bottom:8px;display:none"></div>
+    <button class="btn btn-primary" id="pinSaveBtn" style="width:100%;margin-bottom:8px">Uložiť PIN</button>
+    <button class="btn" id="pinCancelBtn" style="width:100%">Zrušiť</button>`;
+
+  const errEl = document.getElementById('pinEntryError');
+  const showErr = (msg) => { errEl.textContent = msg; errEl.style.display = 'block'; };
+
+  document.getElementById('pinCancelBtn').onclick = () => openLoginCodeModal();
+
+  document.getElementById('pinSaveBtn').onclick = async () => {
+    const p1 = document.getElementById('pinInput1').value.trim();
+    const p2 = document.getElementById('pinInput2').value.trim();
+    if (!isValidPin(p1)) { showErr('PIN musí mať 4 až 6 číslic.'); return; }
+    if (p1 !== p2) { showErr('PIN-y sa nezhodujú.'); return; }
+
+    const saveBtn = document.getElementById('pinSaveBtn');
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Ukladám...';
+    try {
+      await setPin(nick, p1);
+      alert('PIN uložený. Zapamätaj/zapíš si ho – nedá sa obnoviť.');
+      openLoginCodeModal();
+    } catch (e) {
+      console.warn('⚠️ pinAuth: setPin zlyhalo', e);
+      showErr(e.message || 'Uloženie PIN-u zlyhalo, skús to znova.');
+      saveBtn.disabled = false;
+      saveBtn.textContent = 'Uložiť PIN';
+    }
+  };
+}
+
+async function openLoginCodeModal() {
   const modal = document.getElementById('loginCodeModal');
   const content = document.getElementById('loginModalContent');
   if (!modal || !content) return;
@@ -3050,7 +3124,17 @@ function openLoginCodeModal() {
       <p class="small" style="margin-bottom:16px">
         Zadaj najprv nick v hlavičke. Potom ti vygenerujeme tvoj prístupový kód.
       </p>`;
-  } else if (!code) {
+    modal.style.display = 'flex';
+    return;
+  }
+
+  // ⚠️ Zobraz modal HNEĎ so stavom "Načítavam...", nech nečaká na Firebase
+  // predtým, než sa vôbec niečo ukáže (getPinStatus je async).
+  modal.style.display = 'flex';
+
+  const pinStatusPromise = getPinStatus(nick);
+
+  if (!code) {
     // Vygeneruj nový kód
     const words = ['modrý','červený','zlatý','právny','rýchly','múdry','silný','tichý',
                    'zákon','súd','sova','mačka','kniha','duel','právo','hviezda',
@@ -3074,7 +3158,8 @@ function openLoginCodeModal() {
       </p>
       <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${newCode}').then(()=>alert('Kód skopírovaný!'))" style="width:100%">
         Kopírovať kód
-      </button>`;
+      </button>
+      <div id="pinSectionSlot">${renderPinSection(false)}</div>`;
   } else {
     content.innerHTML = `
       <p class="small" style="margin-bottom:8px">
@@ -3093,31 +3178,36 @@ function openLoginCodeModal() {
       </button>
       <button class="btn" id="enterCodeBtn" style="width:100%">
         Zadať kód iného hráča
-      </button>`;
+      </button>
+      <div id="pinSectionSlot">${renderPinSection(false)}</div>`;
 
-    setTimeout(() => {
-      const enterBtn = document.getElementById('enterCodeBtn');
-      if (enterBtn) {
-        enterBtn.onclick = () => {
-          const input = prompt('Zadaj prístupový kód:');
-          if (input && input.trim()) {
-            const trimmed = input.trim();
-            const storedCode = localStorage.getItem('lexarena_code');
-            if (trimmed === storedCode) {
-              alert('Toto je tvoj vlastný kód 😊');
-            } else {
-              localStorage.setItem('lexarena_code', trimmed);
-              // Nick z kódu nie je uložený lokálne, hráč ho musí zadať
-              alert('Kód uložený. Zadaj aj svoj nick a stránka sa prepne na tvoj účet.');
-              window.location.reload();
-            }
+    const enterBtn = document.getElementById('enterCodeBtn');
+    if (enterBtn) {
+      enterBtn.onclick = () => {
+        const input = prompt('Zadaj prístupový kód:');
+        if (input && input.trim()) {
+          const trimmed = input.trim();
+          const storedCode = localStorage.getItem('lexarena_code');
+          if (trimmed === storedCode) {
+            alert('Toto je tvoj vlastný kód 😊');
+          } else {
+            localStorage.setItem('lexarena_code', trimmed);
+            // Nick z kódu nie je uložený lokálne, hráč ho musí zadať
+            alert('Kód uložený. Zadaj aj svoj nick a stránka sa prepne na tvoj účet.');
+            window.location.reload();
           }
-        };
-      }
-    }, 100);
+        }
+      };
+    }
   }
 
-  modal.style.display = 'flex';
+  // Dorenderuj PIN sekciu, keď dôjde Firebase odpoveď (bez blokovania
+  // zvyšku modalu vyššie).
+  const { hasPin } = await pinStatusPromise;
+  const slot = document.getElementById('pinSectionSlot');
+  if (slot) slot.innerHTML = renderPinSection(hasPin);
+  const pinBtn = document.getElementById('pinSetupBtn');
+  if (pinBtn) pinBtn.onclick = () => showPinEntryView(nick, hasPin);
 }
 
 /* =====================================================

@@ -1,0 +1,92 @@
+'use strict';
+
+/* ============================================================
+   scripts/pinAuth.js
+   PIN logika pre prenos účtu medzi zariadeniami (Fáza 1, 2026-07-19).
+   Appka nemá skutočné prihlasovanie (žiadny Firebase Auth) – identita
+   je nick v localStorage. PIN chráni PRIVLASTNENIE nicku pri prenose na
+   iné zariadenie, NIE surový prístup k databáze (database.rules.json
+   ostáva zámerne otvorené – iná téma, appka nemá citlivé dáta).
+
+   ⚠️ Nesolený SHA-256 krátkeho číselného PIN-u (4-6 číslic, max ~1M
+   kombinácií) by bol proti niekomu s prístupom k DB triviálne
+   prelomiteľný cez JEDNU dúhovú tabuľku platnú naprieč VŠETKÝMI účtami
+   naraz (rovnaký PIN = rovnaký hash u každého). Per-účet soľ
+   (users/{nick}/pinSalt) toto nerieši dokonale (stále len 4-6 číslic –
+   pri znalosti soli je brute-force jedného účtu stále rýchly), ale
+   zabraňuje ZDIEĽANEJ dúhovej tabuľke – dvaja hráči s rovnakým PIN-om
+   (napr. obaja "1234") dostanú KAŽDÝ inú soľ, teda iný výsledný hash;
+   nikto nevidí "aha, tento hash sa opakuje, to je 1234". Primeraná
+   úroveň pre appku bez citlivých dát, nie kryptograficky nedobytná.
+
+   ⚠️ PIN sa NEDÁ OBNOVIŤ – appka nemá e-mail ani inú kontaktnú cestu.
+   Jediná "záchrana" pri zabudnutí je zmena PIN-u na PÔVODNOM zariadení
+   (nick už je v localStorage = dôkaz identity) – setPin() nižšie preto
+   zámerne NEOVERUJE starý PIN, o to sa musí postarať volajúci (UI smie
+   ponúknuť zmenu PIN-u len v kontexte vlastného zariadenia, nikdy pri
+   cudzom prihlásení cez iný nick).
+============================================================ */
+
+import { ref, get, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+function getDb() { return window.db || null; }
+
+export function isValidPin(pin) {
+  return /^\d{4,6}$/.test(pin || '');
+}
+
+/* crypto.subtle vyžaduje secure context (HTTPS alebo localhost) – chýba
+   napr. na file:// alebo vo veľmi starom prehliadači. Zámerne ŽIADNY
+   fallback na slabší/nesolený hash – radšej jasná chyba volajúcemu,
+   než ticho uložiť PIN nebezpečným spôsobom. */
+export function isPinHashingAvailable() {
+  return !!(window.crypto && window.crypto.subtle);
+}
+
+async function sha256Hex(text) {
+  const enc = new TextEncoder().encode(text);
+  const digest = await window.crypto.subtle.digest('SHA-256', enc);
+  return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+/* 16 bajtov náhodnosti (32 hex znakov) – viac než dosť na to, aby
+   nemalo zmysel budovať zdieľanú dúhovú tabuľku; samotný PIN priestor
+   (4-6 číslic) ostáva úzke hrdlo, soľ rieši len "zdieľané" lámanie. */
+function generateSalt() {
+  const bytes = new Uint8Array(16);
+  window.crypto.getRandomValues(bytes);
+  return Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function hashPin(pin, salt) {
+  return sha256Hex(`${salt}:${pin}`);
+}
+
+/* Nastaví/zmení PIN pre daný nick. Vygeneruje NOVÚ soľ pri každom
+   volaní (aj pri zmene existujúceho PIN-u) – jednoduchšie než
+   znovupoužívať starú soľ, a nemá to žiadnu nevýhodu. */
+export async function setPin(nick, pin) {
+  if (!isValidPin(pin)) throw new Error('PIN musí mať 4 až 6 číslic.');
+  if (!isPinHashingAvailable()) throw new Error('Tento prehliadač nepodporuje bezpečné hashovanie PIN-u (crypto.subtle nie je dostupné – over, že appka beží cez HTTPS alebo localhost).');
+  const db = getDb();
+  if (!db || !nick) throw new Error('Chýba pripojenie k databáze alebo nick.');
+
+  const salt = generateSalt();
+  const hash = await hashPin(pin, salt);
+  await set(ref(db, `users/${nick}/pin`), hash);
+  await set(ref(db, `users/${nick}/pinSalt`), salt);
+}
+
+/* Pre UI (modal "Môj účet") aj pre claimNick() vo Fáze 2 – zisti, či
+   daný nick už má nastavený PIN, bez toho, aby sa čokoľvek menilo. */
+export async function getPinStatus(nick) {
+  const db = getDb();
+  if (!db || !nick) return { hasPin: false };
+  try {
+    const snap = await get(ref(db, `users/${nick}/pin`));
+    return { hasPin: snap.exists() && !!snap.val() };
+  } catch (e) {
+    console.warn('⚠️ pinAuth: getPinStatus zlyhalo', e);
+    return { hasPin: false };
+  }
+}
