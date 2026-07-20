@@ -614,6 +614,29 @@ export function isSpeechRecognitionSupported() {
   return !!(window.SpeechRecognition || window.webkitSpeechRecognition);
 }
 
+/* ============================================================
+   isLikelyDesktop() – zdieľané medzi statnice.js (štátnicová sieň) a
+   memory-trainer.html (bifľovačka), presunuté sem 2026-07-19 (predtým
+   duplicitne v statnice.js), nech obe miesta majú JEDEN zdroj pravdy.
+
+   ⚠️ TOTO JE LEN SIGNÁL, ČI SKÚSIŤ auto-štart/continuous mikrofón – NIKDY
+   bariéra. Tlačidlo mikrofónu ostáva VŽDY viditeľné a funkčné bez ohľadu na
+   výsledok tejto detekcie:
+   - detekcia sa pomýli → auto-štart/continuous sa nespustí → používateľ má
+     stále tlačidlo (najhorší dôsledok: musí kliknúť, nikdy "nefunguje")
+   - detekcia sa pomýli opačne (dotykový notebook vyhodnotený ako desktop,
+     continuous/auto-štart je tam nespoľahlivý) → volajúci musí mať vlastnú
+     záložku (napr. onError → výzva na manuálny klik, viď statnice.js
+     startOrRestartRecording)
+
+   navigator.maxTouchPoints ani User-Agent nie sú spoľahlivé (dotykové
+   notebooky sú "touch", ale sú to PC) – pointer:fine + hover:hover (myš/
+   trackpad vie hoverovať, prst na dotykovej ploche nie) je najlepší dostupný
+   best-effort signál, nie istota. */
+export function isLikelyDesktop() {
+  return !!(window.matchMedia && window.matchMedia('(pointer: fine) and (hover: hover)').matches);
+}
+
 /**
  * Vytvorí rozpoznávač reči pre jednu nahrávku.
  * callbacks: { onStart, onResult(transcript), onEnd, onError }

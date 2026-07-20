@@ -40,7 +40,7 @@
 import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
-import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer } from '../memoryTrainer.js';
+import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLikelyDesktop } from '../memoryTrainer.js';
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
 import { renderSource } from './sourceUtil.js';
 import { ensureVoicesLoaded, pickVoice, getAvailableSkGenders } from '../biflovackaVideo.js';
@@ -258,30 +258,9 @@ function ttsFallbackDelay(text) {
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
 
-/* ============================================================
-   AUTO-ŠTART MIKROFÓNU NA DESKTOPE (2026-07-19) – regresia zo záznamu 87fd5c9
-   (mobilná oprava): predtým sa mikrofón spúšťal AUTOMATICKY hneď po skončení
-   otázky, čo na PC fungovalo dobre. Mobilná oprava to zmenila na "čakaj na
-   klik" (Android vyžaduje čerstvé gesto na prvé povolenie) – na PC to
-   znamenalo, že prvé slová odpovede sa strácali, kým si používateľ nevšimol
-   a neklikol na mikrofón.
-
-   ⚠️ TOTO JE LEN SIGNÁL, ČI SKÚSIŤ auto-štart – NIKDY bariéra. Tlačidlo
-   mikrofónu ostáva VŽDY viditeľné a funkčné (viď enterPocuvanie/micBtn.onclick)
-   bez ohľadu na výsledok tejto detekcie:
-   - detekcia sa pomýli → auto-štart sa nespustí → používateľ má stále
-     tlačidlo (najhorší dôsledok: musí kliknúť, nikdy "nefunguje")
-   - detekcia sa pomýli opačne (dotykový notebook vyhodnotený ako desktop,
-     auto-štart zlyhá lebo chýba gesto) → onError nižšie to zachytí a
-     používateľa vyzve kliknúť na mikrofón manuálne (viď startOrRestartRecording)
-
-   navigator.maxTouchPoints ani User-Agent nie sú spoľahlivé (dotykové
-   notebooky sú "touch", ale sú to PC) – pointer:fine + hover:hover (myš/
-   trackpad vie hoverovať, prst na dotykovej ploche nie) je najlepší dostupný
-   best-effort signál, nie istota. */
-function isLikelyDesktop() {
-  return !!(window.matchMedia && window.matchMedia('(pointer: fine) and (hover: hover)').matches);
-}
+// isLikelyDesktop() – zdieľané s bifľovačkou (memory-trainer.html), presunuté
+// a exportované z memoryTrainer.js (2026-07-19), kde žije aj createSpeechRecognizer.
+// Pozri jeho JSDoc tam pre plný rozbor (best-effort signál, nikdy bariéra).
 
 export function isStatniceAvailable(areaName) {
   return Object.prototype.hasOwnProperty.call(AREA_CONFIG, areaName);

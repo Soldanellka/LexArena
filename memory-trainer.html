@@ -367,7 +367,7 @@ import { MEMORY_AREAS, getAreaBySlug } from './memoryDefinitions.js';
 import {
   loadMemoryArea, getNextMemoryItem, compareText,
   saveMemoryScore, calculateCompletion, renderMemoryTiles,
-  speakText, isSpeechRecognitionSupported, createSpeechRecognizer,
+  speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLikelyDesktop,
   canPlayBiflovacka, buildSkeleton, buildInitials,
   getAllMemoryItems, saveDefinitionOverride
 } from './memoryTrainer.js';
@@ -865,6 +865,14 @@ function revealToAnswerPhase() {
 }
 
 async function submitAnswer(areaSlug) {
+  // Ukončenie odpovede (toto tlačidlo) je nezávislé od mikrofónu – ak ešte
+  // beží, radšej ho vypni, nech nepočúva na pozadí do prázdna po prechode
+  // do výsledkovej fázy (continuous:true na desktope by inak držal stream
+  // otvorený aj potom, čo už niet kam zapisovať).
+  if (recognizing && recognizer) {
+    try { recognizer.stop(); } catch (e) {}
+  }
+
   const userText = $('mtAnswerInput').value;
   const result = compareText(userText, currentItem);
 
@@ -993,6 +1001,15 @@ function setupMicButton() {
       return;
     }
 
+    // ⚠️ continuous:true na pravdepodobnom desktope (2026-07-19, rovnaký fix
+    // ako štátnica/statnice.js C-2) – bez toho Chrome ukončí reláciu po
+    // krátkej prirodzenej pauze medzi vetami. Mobil ostáva continuous:false,
+    // nedotknuté. Bifľovačka NEMÁ (a nepotrebuje) reštart-slučku ako štátnica
+    // – ak by continuous relácia predsa len spadla (dlhé ticho/výpadok),
+    // onEnd nižšie jednoducho vráti tlačidlo do pokoja; študent klikne znova,
+    // rovnaké UX ako manuálne zastavenie. "✅ Vyhodnotiť" (submitAnswer) je
+    // aj tak jediné miesto, kde sa odpoveď reálne uzatvára – nezávisle od
+    // stavu mikrofónu.
     recognizer = createSpeechRecognizer({
       onStart: () => {
         recognizing = true;
@@ -1014,7 +1031,7 @@ function setupMicButton() {
         const ta = $('mtAnswerInput');
         ta.value = (ta.value.trim() ? ta.value.trim() + ' ' : '') + transcript;
       }
-    });
+    }, { continuous: isLikelyDesktop() });
 
     recognizer.start();
   });
