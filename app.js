@@ -3,6 +3,7 @@
 import { $ } from './core.js';
 import { renderAdminPanel } from './admin.js';
 import { startDuel, pickOkruhPair } from './scripts/duels.js';
+import { claimNick } from './scripts/pinAuth.js';
 
 /* =====================================================
    RENDER ŠTUDIJNÝCH MODULOV (externé appky z catalog)
@@ -255,7 +256,7 @@ export { renderAreas, renderModules };
 
 const saveNickBtn = $('saveNick');
 if (saveNickBtn) {
-  saveNickBtn.addEventListener("click", () => {
+  saveNickBtn.addEventListener("click", async () => {
     const nick = $('nickname').value.trim();
 
     if (nick.length < 2) {
@@ -263,14 +264,45 @@ if (saveNickBtn) {
       return;
     }
 
-    localStorage.setItem("playerNick", nick);
-    alert("Nick uložený!");
+    // ⚠️ Obyčajné znovu-uloženie toho istého nicku (napr. po reloade stránky
+    // s už predvyplneným poľom) – NIKDY Firebase check, NIKDY PIN prompt.
+    // Vracajúci sa hráč sa tu nesmie stretnúť so žiadnym novým trením
+    // (Fáza 2, 2026-07-20, bod 2/4 zadania).
+    if (nick === localStorage.getItem("playerNick")) return;
 
-    const nickDisplay = $('playerNickDisplay');
-    if (nickDisplay) nickDisplay.textContent = nick;
+    const originalLabel = saveNickBtn.textContent;
+    saveNickBtn.disabled = true;
+    saveNickBtn.textContent = 'Overujem...';
 
-    const earnBtn = $('earnBtn');
-    if (earnBtn) earnBtn.style.display = 'inline-flex';
+    try {
+      let result = await claimNick(nick, null);
+
+      // Nick existuje a je chránený PIN-om – vyžiadaj ho a skús znova
+      // s tým istým claimNick() (jedna zdieľaná logika, nie dve kópie).
+      if (!result.ok && result.reason === 'pin-required') {
+        const pinAttempt = prompt(`Nick „${nick}" existuje a je chránený PIN-om.\nZadaj PIN:`);
+        if (!pinAttempt) return; // zrušené používateľom, nič sa nemení
+        result = await claimNick(nick, pinAttempt);
+      }
+
+      if (!result.ok) {
+        // ⚠️ Nesedí PIN – ODMIETNI, NIKDY nezaložiť nový prázdny účet
+        // namiesto pôvodného (presne to pôvodne chýbalo).
+        alert('Nesprávny PIN pre tento nick. Skús znova, alebo si over, či si nick nezadal preklepom.');
+        return;
+      }
+
+      // VETVA A (nový nick) sa tu zámerne NEPOTVRDZUJE dodatočným dialógom –
+      // pridalo by to trenie KAŽDÉMU novému hráčovi (drvivá väčšina "nových
+      // nickov" sú skutočne noví hráči, nie preklepy), zatiaľ čo pôvodný bug
+      // (tichá strata existujúceho účtu) rieši už samotné rozlíšenie
+      // vetiev A/B/C vyššie – existujúci nick sa už nikdy nezamení za nový.
+      localStorage.setItem("playerNick", nick);
+      window.location.reload();
+    } finally {
+      saveNickBtn.disabled = false;
+      saveNickBtn.textContent = originalLabel;
+    }
   });
 }
 

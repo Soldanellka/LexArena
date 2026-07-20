@@ -90,3 +90,60 @@ export async function getPinStatus(nick) {
     return { hasPin: false };
   }
 }
+
+/* ============================================================
+   claimNick() – Fáza 2 (2026-07-20). Vyhodnotí pokus o "prihlásenie sa"
+   daným nickom (+ voliteľný PIN pokus). Použité v saveNick (app.js,
+   hlavné pole nicku) AJ v cross-device prihlásení (modal "Môj účet",
+   Fáza 3) – JEDNA spoločná logika, nie dve kópie.
+
+   ⚠️ NEROBÍ žiadne localStorage zápisy ani reload – to je vždy na
+   volajúcom (UI). Táto funkcia len ROZHODNE a vráti výsledok.
+
+   Návratový tvar:
+   { ok: true,  isNew: boolean, hadPin: boolean, degraded?: true }
+   { ok: false, reason: 'pin-required' | 'pin-mismatch' }
+
+   Vetvy (presne podľa zadania):
+   A) users/{nick} neexistuje → nový účet, PIN sa TU nevynucuje (voliteľný,
+      ponúkne sa neskôr cez modal "Môj účet").
+   B) existuje, ale NEMÁ pin pole → legacy účet (všetci dnešní hráči pred
+      Fázou 1) → VŽDY prepustí, nikdy nezablokuje.
+   C) existuje A MÁ pin pole → vyžaduje zhodu hashu. Nesedí/chýba pokus →
+      odmietne (ok:false), NIKDY nezaloží nový prázdny účet namiesto toho.
+
+   ⚠️ Ak Firebase get() zlyhá (výpadok siete a pod.) – NIKDY nezablokuj
+   hráča kvôli tomu. Degraduj na "prepusti ho" (presne dnešné správanie
+   spred PIN systému) – radšej občas vynechať kontrolu pri výpadku, než
+   appku niekomu uzamknúť kvôli sieti, ktorá s jeho PIN-om nemá nič spoločné. */
+export async function claimNick(nick, pinAttempt) {
+  const db = getDb();
+  if (!db || !nick) return { ok: true, isNew: false, hadPin: false, degraded: true };
+
+  let snap;
+  try {
+    snap = await get(ref(db, `users/${nick}`));
+  } catch (e) {
+    console.warn('⚠️ pinAuth: claimNick – Firebase get() zlyhalo (výpadok?), prepúšťam bez kontroly PIN-u (degradované správanie)', e);
+    return { ok: true, isNew: false, hadPin: false, degraded: true };
+  }
+
+  if (!snap.exists()) {
+    return { ok: true, isNew: true, hadPin: false };
+  }
+
+  const data = snap.val() || {};
+  if (!data.pin) {
+    return { ok: true, isNew: false, hadPin: false };
+  }
+
+  if (!pinAttempt) {
+    return { ok: false, reason: 'pin-required' };
+  }
+
+  const attemptHash = await hashPin(pinAttempt, data.pinSalt || '');
+  if (attemptHash === data.pin) {
+    return { ok: true, isNew: false, hadPin: true };
+  }
+  return { ok: false, reason: 'pin-mismatch' };
+}
