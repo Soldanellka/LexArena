@@ -3066,6 +3066,67 @@ function renderPinSection(hasPin) {
     </div>`;
 }
 
+/* Odhlásenie = LEN lokálne vyčistenie identity na TOMTO zariadení.
+   Firebase (users/{nick}/...) sa NIKDY nemaže – progres ostáva na
+   serveri a po opätovnom zadaní rovnakého nicku (+ PIN-u, ak je
+   nastavený) sa načíta späť cez claimNick() (pinAuth.js). */
+function renderLogoutSection() {
+  return `
+    <div style="border-top:1px solid var(--card-border,#eee);margin-top:16px;padding-top:16px">
+      <button class="btn" id="logoutBtn" style="width:100%;color:#dc2626;border-color:rgba(220,38,38,0.4)">🚪 Odhlásiť sa (prepnúť účet)</button>
+    </div>`;
+}
+
+/* Kľúče, ktoré na tomto zariadení tvoria "identitu"/lokálnu cache
+   nick-viazaných dát. NEMAZAŤ: čisto UI preferencie, ktoré s nickom
+   nesúvisia (lex_theme/theme, lexWelcomeSeen, lexGuideSeen, mColl:*
+   zbalené sekcie, lexExamPersona/lexExamVoice) – tie majú ostať
+   zachované aj po prepnutí účtu. */
+function clearIdentityLocalStorage() {
+  const keys = [
+    'playerNick',
+    'playerFirebaseRole',
+    'playerRole',
+    'lexarena_code',
+    'lexarena_nick',
+    'lex_paragrafy',
+    'lex_avatar',
+    'lex_games_played',
+    'lex_memory_state',
+    'lex_memory_leaderboard',
+    'lex_reports'
+  ];
+  keys.forEach(k => localStorage.removeItem(k));
+
+  // Viaceré cache typy sú PREFIXY (jeden kľúč na tému/oblasť), nie jeden
+  // pevný kľúč – lex_answered_cases_ (cases.js), lex_memory_progress_ a
+  // lex_memory_meta_ (memoryTrainer.js, bifľovačka – tieto sú lokálny
+  // fallback keď Firebase nie je dostupné, takže bez nick-namespace v
+  // kľúči samotnom; bez vyčistenia by po prepnutí nicku na tomto
+  // zariadení mohli krátkodobo presvitať bifľovačka-dáta PREDCHÁDZAJÚCEHO
+  // hráča, kým sa nenačíta Firebase).
+  const prefixes = ['lex_answered_cases_', 'lex_memory_progress_', 'lex_memory_meta_'];
+  const prefixed = Object.keys(localStorage).filter(k => prefixes.some(p => k.startsWith(p)));
+  prefixed.forEach(k => localStorage.removeItem(k));
+
+  return [...keys, ...prefixed];
+}
+
+function handleLogout(nick, hasPin) {
+  const pinNote = hasPin
+    ? '\n\n🔒 Máš nastavený PIN – budeš ho potrebovať pri návrate na tento účet.'
+    : '';
+  const ok = confirm(
+    `Naozaj sa odhlásiť?\n\nProgres pod nickom „${nick}" zostáva bezpečne uložený na serveri – nič sa nezmaže. ` +
+    `Späť sa dostaneš zadaním rovnakého nicku.${pinNote}`
+  );
+  if (!ok) return;
+
+  const cleared = clearIdentityLocalStorage();
+  console.log('🚪 Odhlásenie – vyčistené localStorage kľúče:', cleared);
+  window.location.reload();
+}
+
 /* Prepne obsah modalu na zadanie/zmenu PIN-u. NEPÝTA starý PIN – na
    tomto zariadení je nick už v localStorage, čo je jediný dôkaz
    identity, ktorý appka má (pozri hlavičku pinAuth.js). */
@@ -3159,7 +3220,8 @@ async function openLoginCodeModal() {
       <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${newCode}').then(()=>alert('Kód skopírovaný!'))" style="width:100%">
         Kopírovať kód
       </button>
-      <div id="pinSectionSlot">${renderPinSection(false)}</div>`;
+      <div id="pinSectionSlot">${renderPinSection(false)}</div>
+      ${renderLogoutSection()}`;
   } else {
     content.innerHTML = `
       <p class="small" style="margin-bottom:8px">
@@ -3179,7 +3241,8 @@ async function openLoginCodeModal() {
       <button class="btn" id="enterCodeBtn" style="width:100%">
         Zadať kód iného hráča
       </button>
-      <div id="pinSectionSlot">${renderPinSection(false)}</div>`;
+      <div id="pinSectionSlot">${renderPinSection(false)}</div>
+      ${renderLogoutSection()}`;
 
     const enterBtn = document.getElementById('enterCodeBtn');
     if (enterBtn) {
@@ -3208,6 +3271,8 @@ async function openLoginCodeModal() {
   if (slot) slot.innerHTML = renderPinSection(hasPin);
   const pinBtn = document.getElementById('pinSetupBtn');
   if (pinBtn) pinBtn.onclick = () => showPinEntryView(nick, hasPin);
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) logoutBtn.onclick = () => handleLogout(nick, hasPin);
 }
 
 /* =====================================================
