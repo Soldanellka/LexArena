@@ -543,12 +543,37 @@ function avatarSrc(def, energy, variant = 'full') {
    existuje) – DOČASNÉ požičanie obrázka, kým zadávateľka nedodá vlastnú
    grafiku (pozri komentár pri fallbackBase v AVATAR_CONFIG.AVATARS vyššie).
    Len jeden pokus o fallback, potom sa onerror odpojí, aby nekonečne
-   necyklovalo, ak by aj fallback chýbal. */
+   necyklovalo, ak by aj fallback chýbal.
+
+   ⚠️ Poistka (2026-07-19): ak zlyhá AJ fallbackBase (alebo žiadny nie je),
+   posledný onerror krok skryje <img> a ukáže dekoratívne emoji namiesto
+   rozbitej ikonky prehliadača – nech budúce premenovanie avatarov v
+   avatars/ appku v hlavičke ticho nerozbije. */
+function showAvatarImgFallback(imgEl) {
+  imgEl.onerror = null;
+  imgEl.style.display = 'none';
+  const existing = imgEl.parentElement && imgEl.parentElement.querySelector('.avatar-img-fallback');
+  if (existing) return;
+  const fallback = document.createElement('span');
+  fallback.className = 'avatar-img-fallback';
+  fallback.textContent = '🧑‍🎓';
+  fallback.style.fontSize = '28px';
+  imgEl.after(fallback);
+}
 function setAvatarImgSrc(imgEl, def, energy, variant = 'full') {
+  // Self-heal: ak predchádzajúce volanie skončilo fallbackom (skrytý <img> +
+  // emoji vedľa), nová snaha o načítanie ho musí vrátiť do pôvodného stavu.
+  imgEl.style.display = '';
+  const staleFallback = imgEl.parentElement && imgEl.parentElement.querySelector('.avatar-img-fallback');
+  if (staleFallback) staleFallback.remove();
+
   imgEl.src = avatarSrc(def, energy, variant);
   imgEl.onerror = def.fallbackBase
-    ? () => { imgEl.onerror = null; imgEl.src = avatarSrcFromBase(def.fallbackBase, energy, variant); }
-    : null;
+    ? () => {
+        imgEl.onerror = () => showAvatarImgFallback(imgEl);
+        imgEl.src = avatarSrcFromBase(def.fallbackBase, energy, variant);
+      }
+    : () => showAvatarImgFallback(imgEl);
 }
 
 /* Pre iné moduly (napr. scripts/leaderboard.js), ktoré potrebujú bust cestu

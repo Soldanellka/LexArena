@@ -240,7 +240,8 @@ function openAvatarPickerModal(mandatory = false) {
         <div id="avatarPickerGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
           ${BASIC_AVATARS.map(av => `
             <div class="avatar-picker-card" data-id="${av.id}" style="cursor:pointer;border:2px solid var(--card-border,#eee);border-radius:12px;padding:8px;text-align:center;transition:border-color .15s ease">
-              <img src="avatars/${av.id}-full.png" alt="${av.name}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px" />
+              <img src="avatars/${av.id}-full.png" alt="${av.name}" style="width:100%;aspect-ratio:600/800;object-fit:contain;border-radius:8px"
+                onerror="this.replaceWith(Object.assign(document.createElement('div'), {textContent:'🧑‍🎓', style:'font-size:48px;line-height:1.4'}))" />
               <div class="small" style="margin-top:6px;font-weight:600">${av.name}</div>
             </div>
           `).join('')}

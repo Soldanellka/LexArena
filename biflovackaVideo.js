@@ -253,7 +253,7 @@ function buildOverlay(side) {
   el.innerHTML = `
     <div class="bf-video-bg"></div>
     <div class="bf-video-main ${side === 'right' ? 'side-right' : ''}">
-      <div class="bf-video-moderator"><img id="bfVideoModImg" alt="Moderátor" /></div>
+      <div class="bf-video-moderator" id="bfVideoModWrap"><img id="bfVideoModImg" alt="Moderátor" /></div>
       <div class="bf-video-content">
         <div class="bf-video-question" id="bfVideoQuestion"></div>
         <div class="bf-video-answer" id="bfVideoAnswer"></div>
@@ -278,6 +278,20 @@ function buildOverlay(side) {
     </div>
   `;
   document.body.appendChild(el);
+
+  // ⚠️ Poistka (2026-07-19): ak PNG moderátora chýba (404 – napr. nekonzistentné
+  // premenovanie avatarov v avatars/), NIKDY nenechaj prehliadačovú "rozbitú"
+  // ikonku – nahraď dekoratívnym emoji, rovnaký vzor ako fallback komisie
+  // v scripts/statnice.js renderCommission.
+  const modImg = el.querySelector('#bfVideoModImg');
+  if (modImg) {
+    modImg.onerror = () => {
+      modImg.onerror = null;
+      const wrap = document.getElementById('bfVideoModWrap');
+      if (wrap) wrap.innerHTML = '<div class="bf-video-moderator-fallback">⚖️</div>';
+    };
+  }
+
   return el;
 }
 
