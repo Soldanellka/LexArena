@@ -1,7 +1,7 @@
 'use strict';
 
 import { $, loadParagrafy, escapeHtml } from './core.js';
-import { isValidPin, isPinHashingAvailable, setPin, getPinStatus } from './scripts/pinAuth.js';
+import { isValidPin, isPinHashingAvailable, setPin, getPinStatus, claimNick } from './scripts/pinAuth.js';
 import { setParagrafy } from './state.js';
 import { showRewardToast } from './ui.js';
 import { renderAreas, renderModules } from './app.js';
@@ -3403,9 +3403,24 @@ async function acceptDuelChallenge(duel, duelId, nick, msgEl) {
     return;
   }
 
-  // Nový hráč = nick ešte neexistuje v users/
-  const userSnap = await get(ref(db, `users/${nick}`));
-  const isNewPlayer = !userSnap.exists();
+  // Rovnaká ochrana ako hlavné pole nicku (Fáza 2, app.js) – duel-link
+  // NESMIE obísť PIN. Nový hráč (vetva A) aj legacy účet bez PIN-u
+  // (vetva B) prejdú bez promptu; len chránený nick (vetva C) si PIN
+  // vypýta – presne tak, ako pri ručnom zadaní nicku v hlavičke.
+  let claim = await claimNick(nick, null);
+  if (!claim.ok && claim.reason === 'pin-required') {
+    const pinAttempt = prompt(`Nick „${nick}" existuje a je chránený PIN-om.\nZadaj PIN:`);
+    if (!pinAttempt) return;
+    claim = await claimNick(nick, pinAttempt);
+  }
+  if (!claim.ok) {
+    if (msgEl) {
+      msgEl.textContent = 'Nesprávny PIN pre tento nick. Skús znova, alebo si over, či si nick nezadal preklepom.';
+      msgEl.style.color = 'var(--accent-3)';
+    }
+    return;
+  }
+  const isNewPlayer = claim.isNew;
 
   // Bežný flow registrácie nicku (rovnaký ako pri manuálnom zadaní v hlavičke)
   localStorage.setItem('playerNick', nick);
