@@ -3178,12 +3178,11 @@ async function openLoginCodeModal() {
   if (!modal || !content) return;
 
   const nick = localStorage.getItem('playerNick');
-  const code = localStorage.getItem('lexarena_code');
 
   if (!nick) {
     content.innerHTML = `
       <p class="small" style="margin-bottom:16px">
-        Zadaj najprv nick v hlavičke. Potom ti vygenerujeme tvoj prístupový kód.
+        Zadaj najprv nick v hlavičke.
       </p>`;
     modal.style.display = 'flex';
     return;
@@ -3195,52 +3194,15 @@ async function openLoginCodeModal() {
 
   const pinStatusPromise = getPinStatus(nick);
 
-  if (!code) {
-    // Vygeneruj nový kód
-    const words = ['modrý','červený','zlatý','právny','rýchly','múdry','silný','tichý',
-                   'zákon','súd','sova','mačka','kniha','duel','právo','hviezda',
-                   'hora','rieka','vietor','oheň','ľad','more','les','obloha'];
-    const pick = () => words[Math.floor(Math.random() * words.length)];
-    const num = Math.floor(Math.random() * 900) + 100;
-    const newCode = `${pick()}-${pick()}-${pick()}-${num}`;
-    localStorage.setItem('lexarena_code', newCode);
-
-    content.innerHTML = `
-      <p class="small" style="margin-bottom:8px">
-        Tvoj prístupový kód pre nick <strong>${nick}</strong>:
-      </p>
-      <div style="background:var(--surface);border:2px dashed var(--accent-3);border-radius:12px;
-           padding:16px;text-align:center;font-size:20px;font-weight:700;letter-spacing:2px;
-           color:var(--accent-3);margin-bottom:16px">
-        ${newCode}
-      </div>
-      <p class="small muted" style="margin-bottom:16px">
-        📋 Ulož si ho! Na inom zariadení zadaj tento kód a načíta sa tvoj účet.
-      </p>
-      <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${newCode}').then(()=>alert('Kód skopírovaný!'))" style="width:100%">
-        Kopírovať kód
-      </button>
-      <div id="pinSectionSlot">${renderPinSection(false)}</div>
-      ${renderLogoutSection()}`;
-  } else {
-    content.innerHTML = `
-      <p class="small" style="margin-bottom:8px">
-        Tvoj prístupový kód pre nick <strong>${nick}</strong>:
-      </p>
-      <div style="background:var(--surface);border:2px dashed var(--accent-3);border-radius:12px;
-           padding:16px;text-align:center;font-size:20px;font-weight:700;letter-spacing:2px;
-           color:var(--accent-3);margin-bottom:16px">
-        ${code}
-      </div>
-      <p class="small muted" style="margin-bottom:12px">
-        Na inom zariadení zadaj tento kód pre načítanie tvojho účtu.
-      </p>
-      <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${code}').then(()=>alert('Kód skopírovaný!'))" style="width:100%;margin-bottom:8px">
-        Kopírovať kód
-      </button>
-      <div id="pinSectionSlot">${renderPinSection(false)}</div>
-      ${renderLogoutSection()}`;
-  }
+  // Cross-device prihlásenie rieši hlavné pole nicku (claimNick, Fáza 2) –
+  // stačí zadať rovnaký nick (+ PIN, ak je nastavený) na inom zariadení.
+  content.innerHTML = `
+    <p class="small" style="margin-bottom:12px">
+      Prihlásený/-á ako <strong>${nick}</strong>. Na inom zariadení sa k tomuto
+      účtu dostaneš zadaním rovnakého nicku (+ PIN-u, ak ho máš nastavený).
+    </p>
+    <div id="pinSectionSlot">${renderPinSection(false)}</div>
+    ${renderLogoutSection()}`;
 
   // Dorenderuj PIN sekciu, keď dôjde Firebase odpoveď (bez blokovania
   // zvyšku modalu vyššie).
