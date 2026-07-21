@@ -125,7 +125,8 @@ const AVATAR_CONFIG = {
        udelením – selectAvatar() nižšie ho preto vždy overuje voči
        getRole(), nie voči uloženému vlastníctvu. Vizuálne odlíšený
        zlatým pásom priamo v PNG renderi (obsah assetu, nie CSS). */
-    'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
+    'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
+    'studentka-tmava-akademik': { name: 'Študentka (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-tmava-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
