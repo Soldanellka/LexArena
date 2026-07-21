@@ -31,32 +31,4 @@ export function showRewardToast(text){
     setTimeout(()=> t.remove(), 260);
   }, 2200);
 }
-/* =========================
-   Nickname handling
-   ========================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const nicknameInput = document.getElementById("nickname");
-  const saveNickBtn = document.getElementById("saveNick");
-  const nickBox = document.querySelector(".nick-box");
-  const nickDisplay = document.getElementById("playerNickDisplay");
-
-  // 1) Načítanie nicku z localStorage
-  const savedNick = localStorage.getItem("lexarena_nick");
-  if (savedNick) {
-    nickDisplay.textContent = savedNick;
-    nickBox.style.display = "none"; // skryjeme box
-  }
-
-  // 2) Uloženie nicku
-  saveNickBtn.addEventListener("click", () => {
-    const nick = nicknameInput.value.trim();
-    if (nick.length < 2) return;
-
-    localStorage.setItem("lexarena_nick", nick);
-
-    nickDisplay.textContent = nick;
-    nickBox.style.display = "none"; // skryjeme box po uložení
-  });
-});
 
