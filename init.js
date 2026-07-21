@@ -4,7 +4,7 @@ import { $, loadParagrafy, escapeHtml } from './core.js';
 import { isValidPin, isPinHashingAvailable, setPin, getPinStatus, claimNick } from './scripts/pinAuth.js';
 import { setParagrafy } from './state.js';
 import { showRewardToast } from './ui.js';
-import { renderAreas, renderModules } from './app.js';
+import { renderAreas, renderModules, updateNickUI } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
 import { loadReports, openReportModal, makeQuestionKey, initSealCache } from './reports.js';
 import { loadAnsweredCases } from './cases.js';
@@ -3124,6 +3124,7 @@ function handleLogout(nick, hasPin) {
 
   const cleared = clearIdentityLocalStorage();
   console.log('🚪 Odhlásenie – vyčistené localStorage kľúče:', cleared);
+  updateNickUI(null);
   window.location.reload();
 }
 
@@ -3364,8 +3365,7 @@ async function acceptDuelChallenge(duel, duelId, nick, msgEl) {
 
   // Bežný flow registrácie nicku (rovnaký ako pri manuálnom zadaní v hlavičke)
   localStorage.setItem('playerNick', nick);
-  const nickDisplay = document.getElementById('playerNickDisplay');
-  if (nickDisplay) nickDisplay.textContent = nick;
+  updateNickUI(nick);
   const nickInput = document.getElementById('nickname');
   if (nickInput) nickInput.value = nick;
 

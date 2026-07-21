@@ -248,11 +248,25 @@ async function applyOkruhPairSelection(areaName, mode) {
   }
 }
 
-export { renderAreas, renderModules };
+export { renderAreas, renderModules, updateNickUI };
 
 /* =====================================================
    NICK HRÁČA – uloženie a načítanie
    ===================================================== */
+
+/* Jednotné miesto pre stav hlavičky podľa nicku – volá sa pri štarte appky,
+   po úspešnom claimNick() (hlavné pole aj duel-link) a pri odhlásení.
+   nick = meno hráča → schová .nick-box, ukáže meno v #playerNickDisplay.
+   nick = null (odhlásenie) → opačne, nech má hráč kam zadať nový nick.
+   Predtým toto (len schovanie boxu) robil paralelný lexarena_nick handler
+   v ui.js, odstránený vo Fáze 4 Kroku 1 – táto funkcia nahrádza jeho
+   jedinú živú funkciu na jednom mieste namiesto duplicity na 3 miestach. */
+function updateNickUI(nick) {
+  const nickBox = document.querySelector('.nick-box');
+  const nickDisplay = $('playerNickDisplay');
+  if (nickDisplay) nickDisplay.textContent = nick || '';
+  if (nickBox) nickBox.style.display = nick ? 'none' : '';
+}
 
 const saveNickBtn = $('saveNick');
 if (saveNickBtn) {
@@ -298,6 +312,7 @@ if (saveNickBtn) {
       // (tichá strata existujúceho účtu) rieši už samotné rozlíšenie
       // vetiev A/B/C vyššie – existujúci nick sa už nikdy nezamení za nový.
       localStorage.setItem("playerNick", nick);
+      updateNickUI(nick);
       window.location.reload();
     } finally {
       saveNickBtn.disabled = false;
@@ -310,9 +325,7 @@ const savedNick = localStorage.getItem("playerNick");
 if (savedNick) {
   const nickInput = $('nickname');
   if (nickInput) nickInput.value = savedNick;
-
-  const nickDisplay = $('playerNickDisplay');
-  if (nickDisplay) nickDisplay.textContent = savedNick;
+  updateNickUI(savedNick);
 }
 
 /* =====================================================
