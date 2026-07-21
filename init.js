@@ -3238,30 +3238,8 @@ async function openLoginCodeModal() {
       <button class="btn btn-primary" onclick="navigator.clipboard.writeText('${code}').then(()=>alert('Kód skopírovaný!'))" style="width:100%;margin-bottom:8px">
         Kopírovať kód
       </button>
-      <button class="btn" id="enterCodeBtn" style="width:100%">
-        Zadať kód iného hráča
-      </button>
       <div id="pinSectionSlot">${renderPinSection(false)}</div>
       ${renderLogoutSection()}`;
-
-    const enterBtn = document.getElementById('enterCodeBtn');
-    if (enterBtn) {
-      enterBtn.onclick = () => {
-        const input = prompt('Zadaj prístupový kód:');
-        if (input && input.trim()) {
-          const trimmed = input.trim();
-          const storedCode = localStorage.getItem('lexarena_code');
-          if (trimmed === storedCode) {
-            alert('Toto je tvoj vlastný kód 😊');
-          } else {
-            localStorage.setItem('lexarena_code', trimmed);
-            // Nick z kódu nie je uložený lokálne, hráč ho musí zadať
-            alert('Kód uložený. Zadaj aj svoj nick a stránka sa prepne na tvoj účet.');
-            window.location.reload();
-          }
-        }
-      };
-    }
   }
 
   // Dorenderuj PIN sekciu, keď dôjde Firebase odpoveď (bez blokovania
