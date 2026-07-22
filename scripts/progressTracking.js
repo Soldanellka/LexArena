@@ -93,3 +93,38 @@ export async function recordOkruhResult(nick, areaTitle, okruhKey, activity, per
   if (!appId) return; // neznáma/nepodporovaná oblasť – nič neukladaj
   return writeOkruhBest(nick, appId, subArea, okruhKey, activity, percent);
 }
+
+/*
+  Fáza 3 – cross-device "preštudované okruhy".
+  Prečíta CELÚ vetvu users/{nick}/progress/{appId}/{subArea} jedným get()
+  a vráti Set INDEXOV tých okruhov z poľa `okruhy`, ktoré študent aspoň raz
+  zvládol na `threshold` % v KVÍZE. To presne zodpovedá pôvodnej lokálnej
+  logike "done" (okruh sa označil za dokončený pri kvíze ≥ 60 %). Best % je
+  monotónne (writeOkruhBest nikdy neznižuje), takže raz dokončené ostáva
+  dokončené. Data už v Firebase SÚ (píše ich writeOkruhBest) – doteraz sa
+  len čítalo z localStorage, preto sa progres neprenášal medzi zariadeniami.
+
+  Sanitizácia kľúča ostáva v tomto module (rovnaká ako pri zápise), aby sa
+  read/write nerozišli – volajúci posiela okruhy s ._file a dostane indexy.
+*/
+export async function readDoneOkruhIndices(nick, appId, subArea, okruhy, threshold = 60) {
+  const done = new Set();
+  const db = getDb();
+  if (!db || !nick || !appId || !subArea || !Array.isArray(okruhy)) return done;
+
+  const path = `users/${sanitizeKey(nick)}/progress/${appId}/${subArea}`;
+  try {
+    const snap = await get(ref(db, path));
+    if (!snap.exists()) return done;
+    const bySubArea = snap.val() || {};
+    okruhy.forEach((o, i) => {
+      if (!o || !o._file) return;
+      const acts = bySubArea[sanitizeKey(o._file)];
+      const q = acts && acts.quiz;
+      if (q && typeof q.best === 'number' && q.best >= threshold) done.add(i);
+    });
+  } catch (e) {
+    console.warn('⚠️ readDoneOkruhIndices zlyhalo:', path, e);
+  }
+  return done;
+}

@@ -5,7 +5,7 @@ import { normalizeOkruh } from '../scripts/contentNormalize.js';
 import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
 import { getRole } from '../scripts/economyConfig.js';
 import { openContentEditModal } from '../scripts/contentEditModal.js';
-import { writeOkruhBest, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
+import { writeOkruhBest, readDoneOkruhIndices, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
 
 /* 📊 Osobný prehľad progresu (Fáza 2) – najlepší výsledok per okruh.
    appId 'obcianske' zodpovedá window.catalog['Občianske právo...'].id
@@ -16,6 +16,23 @@ function recordEngineProgress(okruh, activity, percent) {
   const nick = localStorage.getItem('playerNick');
   if (!nick || !okruh || !okruh._file) return;
   writeOkruhBest(nick, 'obcianske', state.area, okruh._file, activity, percent);
+}
+
+/* Fáza 3 – "done" (preštudované okruhy) sa zloží z Firebase (best kvízu
+   ≥ 60 %) ZJEDNOTENÉ s lokálnou cache → prenos medzi zariadeniami.
+   localStorage ostáva offline fallback/cache. Volať až po state.okruhy. */
+async function resolveDoneSet() {
+  const local = loadDone();
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return local;
+  try {
+    const remote = await readDoneOkruhIndices(
+      nick, 'obcianske', state.area, state.okruhy
+    );
+    return remote.size ? new Set([...local, ...remote]) : local;
+  } catch {
+    return local;
+  }
 }
 
 /* ============================================================
@@ -135,7 +152,8 @@ async function loadOkruhy(area) {
   }
 
   state.okruhy = results;
-  state.done = loadDone();
+  state.done = await resolveDoneSet();
+  saveDone(); // zapíš (prípadne obohatenú) množinu späť do lokálnej cache
 
   renderSidebar();
   updateStats();

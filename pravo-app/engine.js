@@ -33,7 +33,7 @@ import { shuffleOptions } from '../core.js';
 import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
 import { getRole } from '../scripts/economyConfig.js';
 import { openContentEditModal } from '../scripts/contentEditModal.js';
-import { writeOkruhBest, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
+import { writeOkruhBest, readDoneOkruhIndices, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
 
 const CONFIG = window.PRAVO_CONFIG || {};
 
@@ -54,6 +54,24 @@ function recordEngineProgress(okruh, activity, percent) {
   const nick = localStorage.getItem('playerNick');
   if (!nick || !okruh || !okruh._file || !window.PRAVO_APP_ID) return;
   writeOkruhBest(nick, window.PRAVO_APP_ID, progressSubArea(), okruh._file, activity, percent);
+}
+
+/* Fáza 3 – "done" (preštudované okruhy) sa zloží z Firebase (best kvízu
+   ≥ 60 %) ZJEDNOTENÉ s lokálnou cache. Vďaka tomu sa preštudované okruhy
+   prenášajú medzi zariadeniami; localStorage ostáva ako offline fallback
+   a cache. Volať AŽ po naplnení state.okruhy (potrebuje ._file per okruh). */
+async function resolveDoneSet() {
+  const local = loadDone();
+  const nick = localStorage.getItem('playerNick');
+  if (!nick || !window.PRAVO_APP_ID) return local;
+  try {
+    const remote = await readDoneOkruhIndices(
+      nick, window.PRAVO_APP_ID, progressSubArea(), state.okruhy
+    );
+    return remote.size ? new Set([...local, ...remote]) : local;
+  } catch {
+    return local;
+  }
 }
 
 /* ============================================================
@@ -166,7 +184,8 @@ async function loadOkruhy(area) {
   }
 
   state.okruhy = results;
-  state.done = loadDone();
+  state.done = await resolveDoneSet();
+  saveDone(); // zapíš (prípadne obohatenú) množinu späť do lokálnej cache
 
   renderSidebar();
   updateStats();
