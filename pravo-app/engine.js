@@ -96,7 +96,14 @@ let state = {
    POMOCNÉ
 ============================================================ */
 const $ = id => document.getElementById(id);
-const storageKey = () => `${window.PRAVO_APP_ID || 'pravo_app'}_done_${state.area}`;
+/* Lokálne cache kľúče MUSIA byť scopované nickom – inak sa na zdieľanom
+   zariadení miešajú dáta viacerých hráčov (a s nickom-agnostickým "anon"
+   blobom spred prihlásenia). Pozri podklad "kontaminovaná lokálna cache". */
+const cacheNick = () => localStorage.getItem('playerNick') || 'anon';
+const storageKey = () =>
+  `${window.PRAVO_APP_ID || 'pravo_app'}_done_${cacheNick()}_${state.area}`;
+const counterKey = () =>
+  `${window.PRAVO_APP_ID || 'pravo_app'}_correct_${cacheNick()}_${state.area}`;
 
 /* ============================================================
    ROLA (admin/garant edit UI) – jedno čítanie skutočnej Firebase
@@ -252,7 +259,7 @@ function updateStats() {
   const done = state.done.size;
   $('statTotal').textContent = total || '—';
   $('statDone').textContent = done;
-  const correct = parseInt(localStorage.getItem(`${window.PRAVO_APP_ID || 'pravo_app'}_correct_${state.area}`) || '0');
+  const correct = parseInt(localStorage.getItem(counterKey()) || '0');
   $('statStreak').textContent = correct || '—';
 }
 
@@ -532,7 +539,7 @@ async function showResults() {
     const reward = $('parReward');
     if (reward && awarded) reward.style.display = 'inline-flex';
 
-    const key = `${window.PRAVO_APP_ID || 'pravo_app'}_correct_${state.area}`;
+    const key = counterKey();
     const prev = parseInt(localStorage.getItem(key) || '0');
     localStorage.setItem(key, prev + q.correct);
   }
