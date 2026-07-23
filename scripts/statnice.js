@@ -399,6 +399,11 @@ async function pickExamTopics(areaName, nick) {
     // "zmiešaný" – nezávislé od hmotné/procesné delenia, ktoré zostáva
     // zachované (vždy presne 1 z každého bazéna).
     const weakPoolIdx = Math.random() < 0.5 ? 0 : 1;
+    // Diagnostika (commit 2) – per-bazén stav pre log nižšie; každý bazén
+    // sa vyhodnocuje NEZÁVISLE (viď fetchPercentMapSafe/studied vyššie),
+    // takže jeden môže byť 'na precvičenie'/'zmiešaný' a druhý 'fallback'
+    // v tom istom kole – diag[] to zachytáva presne, nič nedomýšľa.
+    const diag = [];
 
     const results = await Promise.all(config.pools.map(async (p, idx) => {
       const fetchTopic = (n) => fetchOkruh(p.path, n);
@@ -406,14 +411,26 @@ async function pickExamTopics(areaName, nick) {
       const studied = percentMap ? countStudied(percentMap, p.count) : -1;
 
       if (!percentMap || studied < minStudied) {
+        diag[idx] = { label: p.label, count: p.count, percentMap, studied, status: 'fallback' };
         return pickSingleFromPool(p.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
       }
       const buckets = bucketizeByPercent(percentMap, p.count);
-      return idx === weakPoolIdx ? pickWeakTopic(buckets, fetchTopic) : pickMixedTopic(buckets, fetchTopic);
+      const isWeak = idx === weakPoolIdx;
+      diag[idx] = { label: p.label, count: p.count, percentMap, studied, status: isWeak ? 'na precvičenie' : 'zmiešaný' };
+      return isWeak ? pickWeakTopic(buckets, fetchTopic) : pickMixedTopic(buckets, fetchTopic);
     }));
 
     if (results.some(t => !t)) return [];
     results.forEach((t, i) => { t.label = config.pools[i].label; });
+
+    // 🩺 Diagnostický log (commit 2, žiadny vplyv na výber) – bez labelu
+    // bazéna pri každom okruhu by dvojica "A15+A22" vyzerala ako susedný
+    // pár z JEDNÉHO bazéna (formát pojednávaní), čo tu nikdy neplatí –
+    // hmotné aj procesné majú vlastné A1..A40/A45 s rovnakými číslami.
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[dual-pool]', diag.map((d, i) =>
+      `${d.label} ${results[i].id} (${d.status}, preštudované ${d.percentMap ? `${d.studied}/${d.count}` : 'percentMap zlyhal'})`
+    ).join(' + '));
+
     return results;
   }
 
@@ -421,10 +438,18 @@ async function pickExamTopics(areaName, nick) {
   const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
   const percentMap = await fetchPercentMapSafe(nick, config.progressAreaTitle, config.pool.count);
   const studied = percentMap ? countStudied(percentMap, config.pool.count) : -1;
+  const studiedLabel = percentMap ? `${studied}/${config.pool.count}` : 'percentMap zlyhal';
+
   if (!percentMap || studied < minStudied) {
-    return pickPairTopics(config.pool.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
+    const topics = await pickPairTopics(config.pool.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-fallback]',
+      topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
+    return topics;
   }
-  return pickPairMixedTopics(config.pool.count, percentMap, fetchTopic);
+  const topics = await pickPairMixedTopics(config.pool.count, percentMap, fetchTopic);
+  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-mixed]',
+    topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
+  return topics;
 }
 
 
