@@ -44,7 +44,16 @@ import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLike
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
 import { renderSource } from './sourceUtil.js';
 import { ensureVoicesLoaded, pickVoice, getAvailableSkGenders } from '../biflovackaVideo.js';
-import { getOkruhPercentMap } from './dashboardStats.js';
+import {
+  fetchPercentMapSafe,
+  countStudied,
+  bucketizeByPercent,
+  pickWeakTopic,
+  pickMixedTopic,
+  pickPairTopics,
+  pickPairMixedTopics,
+  pickSingleFromPool
+} from './okruhSelector.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -370,185 +379,14 @@ async function fetchOkruh(basePath, n) {
   }
 }
 
-async function pickPairTopics(path, count) {
-  const pairCount = Math.floor(count / 2); // 25 dvojíc: (A1,A2)…(A49,A50)
-  const triedPairs = new Set();
-  const maxAttempts = Math.min(6, pairCount);
-
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    let pairIdx;
-    do { pairIdx = Math.floor(Math.random() * pairCount); }
-    while (triedPairs.has(pairIdx) && triedPairs.size < pairCount);
-    triedPairs.add(pairIdx);
-
-    const n1 = pairIdx * 2 + 1;
-    const n2 = pairIdx * 2 + 2;
-    const [t1, t2] = await Promise.all([fetchOkruh(path, n1), fetchOkruh(path, n2)]);
-    if (t1 && t2) return [t1, t2];
-  }
-  return [];
-}
-
-/* Náhodné poradie 1..count (Fisher-Yates) – použité na VYČERPÁVAJÚCE
-   hľadanie jedného platného okruhu v bazéne (skúša každý index nanajvýš
-   raz, kým nenájde okruh s neprázdnym summary, alebo kým bazén
-   nevyčerpá). Zaručuje, že "bazén je prázdny" hlásime len vtedy, keď
-   naozaj ŽIADEN okruh v ňom nemá použiteľné summary. */
-function shuffledIndices(count) {
-  const arr = Array.from({ length: count }, (_, i) => i + 1);
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-async function pickSingleFromPool(path, count) {
-  const order = shuffledIndices(count);
-  for (const n of order) {
-    const t = await fetchOkruh(path, n);
-    if (t) return t;
-  }
-  return null;
-}
-
 /* ============================================================
-   ZMIEŠANÝ VÝBER PODĽA PROGRESU (2026-07-18)
-   Namiesto čisto náhodného ťahania: 1 okruh "na precvičenie" (slabý,
-   progres 0 %<x<80 %) + 1 "zmiešaný" (prevažne silný ≥80 %, občas
-   nedotknutý 0 %). Progres cez getOkruhPercentMap() z dashboardStats.js
-   – ROVNAKÁ funkcia, ktorú už používa duels.js mode picker; číta
-   users/{nick}/progress/{appId}/... vrátane externých appiek (pravo-app,
-   ob-pravo-app zapisujú do tej istej vetvy cez scripts/progressTracking.js
-   writeOkruhBest, nie len hlavná appka).
-
-   POISTKA ZLYHANIA: getOkruhPercentMap je async a číta Firebase – ak
-   zlyhá/timeoutne, fetchPercentMapSafe() to premení na null namiesto
-   toho, aby nechala výnimku zhodiť celé losovanie; null ďalej spúšťa
-   presne tú istú vetvu ako poistka nováčika nižšie (dnešný čisto náhodný
-   výber cez existujúce pickPairTopics/pickSingleFromPool – ŽIADNA nová
-   implementácia pre fallback, len znovupoužitie toho, čo funguje dnes).
-
-   POISTKA NOVÁČIKA: ak má študent v danej oblasti/bazéne menej než
-   ECONOMY_CONFIG.STATNICE.MIXED_SELECTION_MIN_STUDIED okruhov s
-   progresom > 0 %, niet z čoho robiť "dôraz na slabé" (samé 0 % okruhy
-   by pôsobili demotivujúco) – rovnaký fallback na dnešný náhodný výber.
-============================================================ */
-async function fetchPercentMapSafe(nick, areaTitle, count) {
-  if (!nick || !areaTitle) return null;
-  const keys = Array.from({ length: count }, (_, i) => `A${i + 1}`);
-  try {
-    const map = await getOkruhPercentMap(nick, areaTitle, keys);
-    return (map && typeof map === 'object') ? map : null;
-  } catch (e) {
-    console.warn('[ŠTÁTNICE] getOkruhPercentMap zlyhalo – fallback na dnešný náhodný výber', e);
-    return null;
-  }
-}
-
-function classifyOkruhPercent(percentMap, n) {
-  const pct = percentMap[`A${n}`] || 0;
-  if (pct >= 80) return 'silne';
-  if (pct > 0) return 'slabe';
-  return 'nedotknute';
-}
-
-function bucketizeByPercent(percentMap, count) {
-  const slabe = [], silne = [], nedotknute = [];
-  for (let n = 1; n <= count; n++) {
-    const bucket = classifyOkruhPercent(percentMap, n);
-    (bucket === 'slabe' ? slabe : bucket === 'silne' ? silne : nedotknute).push(n);
-  }
-  return { slabe, silne, nedotknute };
-}
-
-function countStudied(percentMap, count) {
-  let n = 0;
-  for (let i = 1; i <= count; i++) if ((percentMap[`A${i}`] || 0) > 0) n++;
-  return n;
-}
-
-/* Zamieša kandidátov, vráti prvý s validným obsahom (rovnaká kontrola ako
-   fetchOkruh vždy robil – title/summary/key points) – vyčerpávajúce
-   hľadanie v rámci koša, rovnaký vzor ako existujúce pickSingleFromPool. */
-async function pickValidFromCandidates(path, candidates) {
-  const order = [...candidates];
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  for (const n of order) {
-    const t = await fetchOkruh(path, n);
-    if (t) return t;
-  }
-  return null;
-}
-
-/* Okruh "na precvičenie": slabé → nedotknuté → silné (presne poradie fallbacku zo zadania). */
-async function pickWeakTopic(path, buckets) {
-  for (const bucket of [buckets.slabe, buckets.nedotknute, buckets.silne]) {
-    if (!bucket.length) continue;
-    const t = await pickValidFromCandidates(path, bucket);
-    if (t) return t;
-  }
-  return null;
-}
-
-/* Okruh "zmiešaný": ~70 % silné / ~30 % nedotknuté, s fallbackom na
-   opačný z tejto dvojice a napokon na slabé. */
-async function pickMixedTopic(path, buckets) {
-  const preferSilne = Math.random() < 0.7;
-  const primary = preferSilne ? buckets.silne : buckets.nedotknute;
-  const secondary = preferSilne ? buckets.nedotknute : buckets.silne;
-  for (const bucket of [primary, secondary, buckets.slabe]) {
-    if (!bucket.length) continue;
-    const t = await pickValidFromCandidates(path, bucket);
-    if (t) return t;
-  }
-  return null;
-}
-
-/* PRE mode 'pair': páry sú PEVNÁ štruktúra A(2k-1)+A(2k) (nezávisle voliteľné
-   okruhy tu neexistujú, na rozdiel od dual-pool) – "topic1 na precvičenie"
-   preto znamená: nájdi pár, KTORÉHO JEDEN člen padne do cieľového koša
-   (slabé→nedotknuté→silné fallback), ten člen polož ako topic1, druhý
-   člen páru (nevyhnutne "čokoľvek to je" – páry sa nedajú rozpojiť) ako
-   topic2. Presnú 70/30 váhu na topic2 tu preto NEVIEME zaručiť (štruktúra
-   páru ju neumožňuje) – zdokumentované, nie obídené. */
-async function pickPairMixedTopics(path, count, percentMap) {
-  const pairCount = Math.floor(count / 2);
-  const pairs = [];
-  for (let k = 0; k < pairCount; k++) {
-    const n1 = k * 2 + 1, n2 = k * 2 + 2;
-    pairs.push({ n1, n2, b1: classifyOkruhPercent(percentMap, n1), b2: classifyOkruhPercent(percentMap, n2) });
-  }
-
-  let candidatePairs = null;
-  let matchedBucket = null;
-  for (const bucket of ['slabe', 'nedotknute', 'silne']) {
-    const found = pairs.filter(p => p.b1 === bucket || p.b2 === bucket);
-    if (found.length) { candidatePairs = found; matchedBucket = bucket; break; }
-  }
-  if (!candidatePairs) return [];
-
-  const order = [...candidatePairs];
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  const maxAttempts = Math.min(6, order.length);
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const p = order[attempt];
-    const weakN = p.b1 === matchedBucket ? p.n1 : p.n2;
-    const otherN = weakN === p.n1 ? p.n2 : p.n1;
-    const [t1, t2] = await Promise.all([fetchOkruh(path, weakN), fetchOkruh(path, otherN)]);
-    if (t1 && t2) return [t1, t2]; // t1 = "na precvičenie", vždy prvý
-  }
-  return [];
-}
-
-/* ============================================================
-   LOSOVANIE KOLA – dispatch podľa AREA_CONFIG danej oblasti.
+   VÝBER TÉM PODĽA PROGRESU – triediaca logika (klasifikácia
+   slabé/nedotknuté/silné, "na precvičenie"/"zmiešaný" výber, párové
+   aj jednotlivé poistky bez dostatočného progresu) žije v
+   scripts/okruhSelector.js (zdieľané, pripravené aj pre pojednávania/
+   kartičky/prípady/bifľovačku). Tu ostáva len fetchOkruh (štátnicovo-
+   špecifický tvar dát s keyPoints/glossary pre hodnotenie, pozri vyššie)
+   a dispatch podľa AREA_CONFIG danej oblasti.
 ============================================================ */
 async function pickExamTopics(areaName, nick) {
   const config = AREA_CONFIG[areaName];
@@ -563,14 +401,15 @@ async function pickExamTopics(areaName, nick) {
     const weakPoolIdx = Math.random() < 0.5 ? 0 : 1;
 
     const results = await Promise.all(config.pools.map(async (p, idx) => {
+      const fetchTopic = (n) => fetchOkruh(p.path, n);
       const percentMap = await fetchPercentMapSafe(nick, p.progressAreaTitle, p.count);
       const studied = percentMap ? countStudied(percentMap, p.count) : -1;
 
       if (!percentMap || studied < minStudied) {
-        return pickSingleFromPool(p.path, p.count); // poistka (zlyhanie/nováčik) – dnešné správanie
+        return pickSingleFromPool(p.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
       }
       const buckets = bucketizeByPercent(percentMap, p.count);
-      return idx === weakPoolIdx ? pickWeakTopic(p.path, buckets) : pickMixedTopic(p.path, buckets);
+      return idx === weakPoolIdx ? pickWeakTopic(buckets, fetchTopic) : pickMixedTopic(buckets, fetchTopic);
     }));
 
     if (results.some(t => !t)) return [];
@@ -579,12 +418,13 @@ async function pickExamTopics(areaName, nick) {
   }
 
   // mode === 'pair'
+  const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
   const percentMap = await fetchPercentMapSafe(nick, config.progressAreaTitle, config.pool.count);
   const studied = percentMap ? countStudied(percentMap, config.pool.count) : -1;
   if (!percentMap || studied < minStudied) {
-    return pickPairTopics(config.pool.path, config.pool.count); // poistka (zlyhanie/nováčik) – dnešné správanie
+    return pickPairTopics(config.pool.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
   }
-  return pickPairMixedTopics(config.pool.path, config.pool.count, percentMap);
+  return pickPairMixedTopics(config.pool.count, percentMap, fetchTopic);
 }
 
 
