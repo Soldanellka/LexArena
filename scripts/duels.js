@@ -14,7 +14,7 @@ import { econAward, econEnergy, econCanPlay, ECONOMY_CONFIG } from './economy.js
 import { showRewardToast } from '../ui.js';
 import { awardFacultyPoints } from './faculties.js';
 import { getOkruhDoneKeys } from './dashboardStats.js';
-import { fetchPercentMapSafe, bucketizeKeysByPercent } from './okruhSelector.js';
+import { fetchPercentMapSafe, bucketizeKeysByPercent, buildConsecutivePairs } from './okruhSelector.js';
 import { recordOkruhResult, PROGRESS_ACTIVITIES } from './progressTracking.js';
 
 /* Bezpečný prístup k db */
@@ -70,15 +70,6 @@ function sortedOkruhKeys(groups) {
   return Object.keys(groups).filter(k => /^A\d+$/.test(k)).sort(
     (a, b) => Number(a.replace("A", "")) - Number(b.replace("A", ""))
   );
-}
-
-/* Vytvor páry po dvoch (A1+A2, A3+A4...); nepárny posledný kľúč sa vynechá */
-function buildConsecutivePairs(keys) {
-  const pairs = [];
-  for (let i = 0; i < keys.length - 1; i += 2) {
-    pairs.push([keys[i], keys[i + 1]]);
-  }
-  return pairs;
 }
 
 function pickOneRandomOkruh(areaQuestions, maxPerOkruh) {

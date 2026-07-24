@@ -52,8 +52,11 @@ import {
   pickMixedTopic,
   pickPairTopics,
   pickPairMixedTopics,
-  pickSingleFromPool
+  pickSingleFromPool,
+  buildConsecutivePairs,
+  OKRUH_MODES
 } from './okruhSelector.js';
+import { getOkruhDoneKeys } from './dashboardStats.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -106,6 +109,12 @@ const AREA_CONFIG = {
 const EXAM_PERSONA_KEY = 'lexExamPersona';
 const EXAM_VOICE_KEY = 'lexExamVoice'; // 'm' | 'f' | 'off'
 const DEFAULT_PERSONA = 'rational';
+// Vlastný stav, NEZDIEĽANÝ s pojednávaniami (tie majú currentOkruhMode v
+// app.js) – rovnaká trvalá voľba ako persóna/hlas vyššie. Predvolené
+// 'unstudied' (📕) = presne dnešné automatické správanie pred týmto
+// commitom, pre každého, kto sa prepínača nedotkne.
+const EXAM_OKRUH_MODE_KEY = 'lexExamOkruhMode';
+const DEFAULT_OKRUH_MODE = 'unstudied';
 
 const PERSONAS = {
   strict: {
@@ -386,12 +395,27 @@ async function fetchOkruh(basePath, n) {
    scripts/okruhSelector.js (zdieľané, pripravené aj pre pojednávania/
    kartičky/prípady/bifľovačku). Tu ostáva len fetchOkruh (štátnicovo-
    špecifický tvar dát s keyPoints/glossary pre hodnotenie, pozri vyššie)
-   a dispatch podľa AREA_CONFIG danej oblasti.
-============================================================ */
-async function pickExamTopics(areaName, nick) {
-  const config = AREA_CONFIG[areaName];
-  if (!config) return [];
+   a dispatch podľa AREA_CONFIG danej oblasti aj podľa zvoleného
+   okruhMode (commit 4 – 🎲/📗/📕 prepínač, pozri buildPersonaOverlay).
 
+   Vracia { topics, usedFallback }. usedFallback=true znamená: zvolený
+   mód nevrátil použiteľné témy, tichý prechod na 🎲 (rovnaké témy ako
+   by vrátilo 'random') – volajúci (openStatniceHall) na to upozorní
+   hláškou, ale skúška SA spustí (na rozdiel od topics.length<2, čo je
+   úplne iný, existujúci prípad – nedostatok obsahu vôbec, tam sa §
+   vracajú a skúška sa nespustí, pozri :1163-1168 pred týmto commitom).
+============================================================ */
+async function pickExamTopics(areaName, nick, okruhMode = DEFAULT_OKRUH_MODE) {
+  const config = AREA_CONFIG[areaName];
+  if (!config) return { topics: [], usedFallback: false };
+
+  if (okruhMode === 'random') return pickExamTopicsRandom(areaName, config);
+  if (okruhMode === 'studied') return pickExamTopicsStudied(areaName, config, nick);
+
+  // okruhMode === 'unstudied' (📕, predvolené) – PRESNE DNEŠNÉ AUTOMATICKÉ
+  // SPRÁVANIE spred commitu 4, ani riadok logiky sa nezmenil (len return
+  // je zabalený do {topics, usedFallback:false} a log dostal prefix
+  // 'unstudied → ' namiesto holého '[dual-pool]'/'[pair-...]').
   const minStudied = ECONOMY_CONFIG.STATNICE.MIXED_SELECTION_MIN_STUDIED ?? 3;
 
   if (config.mode === 'dual-pool') {
@@ -420,18 +444,18 @@ async function pickExamTopics(areaName, nick) {
       return isWeak ? pickWeakTopic(buckets, fetchTopic) : pickMixedTopic(buckets, fetchTopic);
     }));
 
-    if (results.some(t => !t)) return [];
+    if (results.some(t => !t)) return { topics: [], usedFallback: false };
     results.forEach((t, i) => { t.label = config.pools[i].label; });
 
     // 🩺 Diagnostický log (commit 2, žiadny vplyv na výber) – bez labelu
     // bazéna pri každom okruhu by dvojica "A15+A22" vyzerala ako susedný
     // pár z JEDNÉHO bazéna (formát pojednávaní), čo tu nikdy neplatí –
     // hmotné aj procesné majú vlastné A1..A40/A45 s rovnakými číslami.
-    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[dual-pool]', diag.map((d, i) =>
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[unstudied → dual-pool]', diag.map((d, i) =>
       `${d.label} ${results[i].id} (${d.status}, preštudované ${d.percentMap ? `${d.studied}/${d.count}` : 'percentMap zlyhal'})`
     ).join(' + '));
 
-    return results;
+    return { topics: results, usedFallback: false };
   }
 
   // mode === 'pair'
@@ -442,14 +466,96 @@ async function pickExamTopics(areaName, nick) {
 
   if (!percentMap || studied < minStudied) {
     const topics = await pickPairTopics(config.pool.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
-    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-fallback]',
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[unstudied → pair-fallback]',
       topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
-    return topics;
+    return { topics, usedFallback: false };
   }
   const topics = await pickPairMixedTopics(config.pool.count, percentMap, fetchTopic);
-  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-mixed]',
+  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[unstudied → pair-mixed]',
     topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
-  return topics;
+  return { topics, usedFallback: false };
+}
+
+/* 🎲 Náhodne – dnešná poistka nováčika, teraz aj ako explicitná voľba
+   (nie len fallback). Žiadne čítanie progresu, čisto náhodný výber –
+   presne pickPairTopics/pickSingleFromPool, rovnaké funkcie ako poistka
+   vyššie. */
+async function pickExamTopicsRandom(areaName, config) {
+  if (config.mode === 'dual-pool') {
+    const results = await Promise.all(
+      config.pools.map(p => pickSingleFromPool(p.count, (n) => fetchOkruh(p.path, n)))
+    );
+    if (results.some(t => !t)) return { topics: [], usedFallback: false };
+    results.forEach((t, i) => { t.label = config.pools[i].label; });
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[random]', results.map(t => t.id).join('+'));
+    return { topics: results, usedFallback: false };
+  }
+  const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
+  const topics = await pickPairTopics(config.pool.count, fetchTopic);
+  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[random]', topics.length ? topics.map(t => t.id).join('+') : '—');
+  return { topics, usedFallback: false };
+}
+
+/* 📗 Preštudované – NOVÉ. Pool ∩ getOkruhDoneKeys(threshold=60, rovnaké
+   ako študijný modul), potom náhodne z prieniku. Žiadna nová triediaca
+   logika – len filter existujúcich kandidátov (buildConsecutivePairs pre
+   pár, priama množina pre dual-pool) a náhodný výber medzi nimi.
+   getOkruhDoneKeys má vlastný try/catch (commit 3) – nikdy nezamietne
+   promise, najhorší prípad je prázdny Set → nižšie prázdny prienik →
+   tichý pád na pickExamTopicsRandom (usedFallback:true). */
+async function pickExamTopicsStudied(areaName, config, nick) {
+  const keyToN = k => Number(String(k).replace(/^A/, ''));
+
+  if (config.mode === 'dual-pool') {
+    const perPool = await Promise.all(config.pools.map(async p => {
+      const allKeys = Array.from({ length: p.count }, (_, i) => `A${i + 1}`);
+      const doneKeys = await getOkruhDoneKeys(nick, p.progressAreaTitle, allKeys, 60, 'ŠTÁTNICE');
+      return { p, candidates: allKeys.filter(k => doneKeys.has(k)), doneCount: doneKeys.size };
+    }));
+
+    if (perPool.some(x => !x.candidates.length)) {
+      console.log('[ŠTÁTNICE] Výber tém:', areaName, '[studied → fallback]',
+        perPool.map(x => `${x.p.label} preštudované ${x.doneCount}/${x.p.count}`).join(' + '));
+      const fallback = await pickExamTopicsRandom(areaName, config);
+      return { topics: fallback.topics, usedFallback: true };
+    }
+
+    const results = await Promise.all(perPool.map(async ({ p, candidates }) => {
+      const k = candidates[Math.floor(Math.random() * candidates.length)];
+      return fetchOkruh(p.path, keyToN(k));
+    }));
+
+    if (results.some(t => !t)) {
+      const fallback = await pickExamTopicsRandom(areaName, config);
+      return { topics: fallback.topics, usedFallback: true };
+    }
+    results.forEach((t, i) => { t.label = config.pools[i].label; });
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[studied]', perPool.map((x, i) =>
+      `${x.p.label} ${results[i].id} (preštudované ${x.doneCount}/${x.p.count})`
+    ).join(' + '));
+    return { topics: results, usedFallback: false };
+  }
+
+  // mode === 'pair'
+  const allKeys = Array.from({ length: config.pool.count }, (_, i) => `A${i + 1}`);
+  const doneKeys = await getOkruhDoneKeys(nick, config.progressAreaTitle, allKeys, 60, 'ŠTÁTNICE');
+  const donePairs = buildConsecutivePairs(allKeys).filter(([k1, k2]) => doneKeys.has(k1) && doneKeys.has(k2));
+
+  if (!donePairs.length) {
+    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[studied → fallback]', `preštudované ${doneKeys.size}/${config.pool.count}`);
+    const fallback = await pickExamTopicsRandom(areaName, config);
+    return { topics: fallback.topics, usedFallback: true };
+  }
+
+  const [k1, k2] = donePairs[Math.floor(Math.random() * donePairs.length)];
+  const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
+  const [t1, t2] = await Promise.all([fetchTopic(keyToN(k1)), fetchTopic(keyToN(k2))]);
+  if (!t1 || !t2) {
+    const fallback = await pickExamTopicsRandom(areaName, config);
+    return { topics: fallback.topics, usedFallback: true };
+  }
+  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[studied]', `${t1.id}+${t2.id} (preštudované ${doneKeys.size}/${config.pool.count})`);
+  return { topics: [t1, t2], usedFallback: false };
 }
 
 
@@ -964,13 +1070,17 @@ let overlayEl = null;
    je okno na kolíziu prakticky nulové. */
 let statniceOpening = false;
 
-/* Výber persóny + hlasu komisie, PRED minutím § / losovaním okruhov –
-   zrušenie tu nič nestojí. Vracia Promise<{personaKey,voicePref}|null>
-   (null = zatvorené bez potvrdenia). Ponúka LEN hlasy, ktoré appka
-   vie reálne prehrať (žiadny sľub hlasu, ktorý zariadenie nemá) –
-   ak nie je k dispozícii žiadny sk hlas, mužská/ženská voľba sa
-   vôbec nezobrazí, ostane len "Bez hlasu". */
-async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
+/* Výber persóny + hlasu + módu výberu okruhov, PRED minutím § / losovaním
+   okruhov – zrušenie tu nič nestojí. Vracia
+   Promise<{personaKey,voicePref,okruhMode}|null> (null = zatvorené bez
+   potvrdenia). Ponúka LEN hlasy, ktoré appka vie reálne prehrať (žiadny
+   sľub hlasu, ktorý zariadenie nemá) – ak nie je k dispozícii žiadny sk
+   hlas, mužská/ženská voľba sa vôbec nezobrazí, ostane len "Bez hlasu".
+
+   Mód výberu okruhov (🎲/📗/📕) NEOVPLYVŇUJE povolenie "Pokračovať →" –
+   má vždy platnú predvolenú hodnotu (DEFAULT_OKRUH_MODE), na rozdiel od
+   persóny/hlasu, ktoré musia byť explicitne zvolené. */
+async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice, defaultOkruhMode) {
   const el = document.createElement('div');
   el.className = 'statnice-overlay';
 
@@ -1022,6 +1132,14 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
         <div style="font-weight:600;margin-bottom:8px">Hlas komisie</div>
         <div class="statnice-voice-grid" id="statniceVoiceGrid">${voiceOptionsHtml}</div>
       </div>
+      <div style="margin-top:20px">
+        <div style="font-weight:600;margin-bottom:8px">Výber tém</div>
+        <div class="statnice-voice-grid" id="statniceOkruhModeGrid">
+          ${OKRUH_MODES.map(m => `
+            <button class="btn statnice-voice-btn statnice-okruhmode-btn" data-okruh-mode="${m.key}" type="button">${m.label}</button>
+          `).join('')}
+        </div>
+      </div>
       <button class="btn btn-primary statnice-ready-btn" id="statnicePersonaContinueBtn" type="button" disabled style="margin-top:24px">Pokračovať →</button>
     </div>
   `;
@@ -1036,6 +1154,9 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
     // študent vyberie znova z toho, čo je naozaj k dispozícii.
     const validVoicePrefs = !hasSkVoice ? ['off'] : canOfferBothGenders ? ['m', 'f', 'off'] : ['voice', 'off'];
     let voicePref = validVoicePrefs.includes(defaultVoice) ? defaultVoice : (hasSkVoice ? null : 'off');
+    // Vlastná, nezdieľaná voľba (pozri EXAM_OKRUH_MODE_KEY vyššie) – vždy
+    // platná hodnota, nikdy null (na rozdiel od persóny/hlasu vyššie).
+    let okruhMode = OKRUH_MODES.some(m => m.key === defaultOkruhMode) ? defaultOkruhMode : DEFAULT_OKRUH_MODE;
     let settled = false;
 
     function finish(result) {
@@ -1059,12 +1180,24 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
       };
     });
 
-    el.querySelectorAll('.statnice-voice-btn').forEach(btn => {
+    // Presný selektor '.statnice-voice-btn' BEZ '.statnice-okruhmode-btn' –
+    // módové tlačidlá zdieľajú vizuálnu triedu s hlasovými (rovnaký CSS),
+    // ale majú vlastný querySelectorAll nižšie, nech sa cykly nemiešajú.
+    el.querySelectorAll('.statnice-voice-btn:not(.statnice-okruhmode-btn)').forEach(btn => {
       if (btn.dataset.voice === voicePref) btn.classList.add('active');
       btn.onclick = () => {
         voicePref = btn.dataset.voice;
-        el.querySelectorAll('.statnice-voice-btn').forEach(b => b.classList.toggle('active', b === btn));
+        el.querySelectorAll('.statnice-voice-btn:not(.statnice-okruhmode-btn)').forEach(b => b.classList.toggle('active', b === btn));
         updateContinueEnabled();
+      };
+    });
+
+    el.querySelectorAll('.statnice-okruhmode-btn').forEach(btn => {
+      if (btn.dataset.okruhMode === okruhMode) btn.classList.add('active');
+      btn.onclick = () => {
+        okruhMode = btn.dataset.okruhMode;
+        el.querySelectorAll('.statnice-okruhmode-btn').forEach(b => b.classList.toggle('active', b === btn));
+        // Mód nevplýva na updateContinueEnabled() – vždy má platnú hodnotu.
       };
     });
 
@@ -1072,7 +1205,7 @@ async function buildPersonaOverlay(areaName, defaultPersona, defaultVoice) {
 
     el.querySelector('#statnicePersonaContinueBtn').onclick = () => {
       if (!personaKey || !voicePref) return;
-      finish({ personaKey, voicePref });
+      finish({ personaKey, voicePref, okruhMode });
     };
     el.querySelector('#statnicePersonaCloseBtn').onclick = () => finish(null);
     el.onclick = (e) => { if (e.target === el) finish(null); };
@@ -1141,14 +1274,17 @@ export async function openStatniceHall(areaName) {
   const nick = getNick();
   if (!nick) { showRewardToast('Najprv si zadaj nick.'); return; }
 
-  // Výber persóny skúšajúceho + hlasu, PRED minutím § – zrušenie tu je zadarmo.
+  // Výber persóny skúšajúceho + hlasu + módu výberu okruhov, PRED minutím
+  // § – zrušenie tu je zadarmo.
   const savedPersona = localStorage.getItem(EXAM_PERSONA_KEY) || DEFAULT_PERSONA;
   const savedVoice = localStorage.getItem(EXAM_VOICE_KEY) || 'off';
-  const choice = await buildPersonaOverlay(areaName, savedPersona, savedVoice);
+  const savedOkruhMode = localStorage.getItem(EXAM_OKRUH_MODE_KEY) || DEFAULT_OKRUH_MODE;
+  const choice = await buildPersonaOverlay(areaName, savedPersona, savedVoice, savedOkruhMode);
   if (!choice) return; // zrušené na výberovej obrazovke
-  const { personaKey, voicePref } = choice;
+  const { personaKey, voicePref, okruhMode } = choice;
   localStorage.setItem(EXAM_PERSONA_KEY, personaKey);
   localStorage.setItem(EXAM_VOICE_KEY, voicePref);
+  localStorage.setItem(EXAM_OKRUH_MODE_KEY, okruhMode);
   const persona = getPersona(personaKey);
   const examVoice = await resolveExamVoice(voicePref);
 
@@ -1159,12 +1295,18 @@ export async function openStatniceHall(areaName) {
     return;
   }
 
-  const topics = await pickExamTopics(areaName, nick);
+  const { topics, usedFallback: okruhModeFallback } = await pickExamTopics(areaName, nick, okruhMode);
   if (topics.length < 2) {
     // vráť § – skúška sa nedá spustiť (nedostatok obsahu / prázdny bazén / "výpadok" pred prvou otázkou)
+    // NEZMENENÉ oproti pred commitom 4 – rovnaká podmienka, rovnaký refund.
     await econAward(nick, cost, 'štátnicová skúška – vrátenie (nedostatok obsahu)', { skipCap: true });
     showRewardToast('⚖️ Komisia teraz nie je dostupná, skús neskôr.');
     return;
+  }
+  // Skúška SA spustí (2 platné témy) – len iným (náhodným) výberom, než si
+  // študent zvolil. § sa NEVRACAJÚ, lebo skúška reálne prebehne.
+  if (okruhModeFallback) {
+    showRewardToast('⚖️ Podľa zvoleného výberu sa nenašli vhodné témy – vyberáme náhodne.');
   }
   const commission = await pickCommission();
 
