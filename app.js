@@ -4,7 +4,6 @@ import { $ } from './core.js';
 import { renderAdminPanel } from './admin.js';
 import { startDuel, pickOkruhPair } from './scripts/duels.js';
 import { claimNick } from './scripts/pinAuth.js';
-import { OKRUH_MODES } from './scripts/okruhSelector.js';
 
 /* =====================================================
    RENDER ŠTUDIJNÝCH MODULOV (externé appky z catalog)
@@ -46,6 +45,12 @@ function renderModules() {
 /* Posledný zvolený režim výberu dvojice okruhov – prežíva prepnutie
    oblasti (pohodlnejšie pre študenta), default je 🎲 náhodne. */
 let currentOkruhMode = 'random';
+
+const OKRUH_MODES = [
+  { key: 'random', label: '🎲 Náhodne' },
+  { key: 'studied', label: '📗 Preštudované' },
+  { key: 'unstudied', label: '📕 Na precvičenie' }
+];
 
 function renderAreas() {
   const list = $('areasList');

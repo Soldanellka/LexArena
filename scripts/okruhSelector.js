@@ -207,25 +207,3 @@ export async function pickPairMixedTopics(count, percentMap, fetchTopic) {
   }
   return [];
 }
-
-/* Vytvor páry po dvoch (A1+A2, A3+A4...); nepárny posledný kľúč sa
-   vynechá. Predpokladá súvislý zoznam kľúčov od A1 (rovnaký predpoklad
-   ako inde v tomto module) – pozicia v poli = poradie čísla.
-   Presunuté zo scripts/duels.js (commit 4) – používajú ho pojednávania
-   (výber náhodného/preštudovaného páru) aj štátnica (📗 Preštudované). */
-export function buildConsecutivePairs(keys) {
-  const pairs = [];
-  for (let i = 0; i < keys.length - 1; i += 2) {
-    pairs.push([keys[i], keys[i + 1]]);
-  }
-  return pairs;
-}
-
-/* Zoznam módov výberu okruhov – zdieľané medzi app.js (pojednávania) a
-   scripts/statnice.js (štátnica). Len dáta ({key,label}), žiadne UI/DOM –
-   render aj stav (aktívny mód) si každé miesto drží vlastné. */
-export const OKRUH_MODES = [
-  { key: 'random', label: '🎲 Náhodne' },
-  { key: 'studied', label: '📗 Preštudované' },
-  { key: 'unstudied', label: '📕 Na precvičenie' }
-];
