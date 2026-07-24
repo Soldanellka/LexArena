@@ -407,7 +407,7 @@ async function pickExamTopics(areaName, nick) {
 
     const results = await Promise.all(config.pools.map(async (p, idx) => {
       const fetchTopic = (n) => fetchOkruh(p.path, n);
-      const percentMap = await fetchPercentMapSafe(nick, p.progressAreaTitle, p.count);
+      const percentMap = await fetchPercentMapSafe(nick, p.progressAreaTitle, p.count, 'ŠTÁTNICE');
       const studied = percentMap ? countStudied(percentMap, p.count) : -1;
 
       if (!percentMap || studied < minStudied) {
@@ -436,7 +436,7 @@ async function pickExamTopics(areaName, nick) {
 
   // mode === 'pair'
   const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
-  const percentMap = await fetchPercentMapSafe(nick, config.progressAreaTitle, config.pool.count);
+  const percentMap = await fetchPercentMapSafe(nick, config.progressAreaTitle, config.pool.count, 'ŠTÁTNICE');
   const studied = percentMap ? countStudied(percentMap, config.pool.count) : -1;
   const studiedLabel = percentMap ? `${studied}/${config.pool.count}` : 'percentMap zlyhal';
 

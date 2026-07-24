@@ -177,6 +177,43 @@ export async function getOkruhPercentMap(nick, areaTitle, okruhKeys) {
 }
 
 /* ============================================================
+   OKRUHY S "ZELENOU FAJKOU" ŠTUDIJNÉHO MODULU – na rozdiel od
+   getOkruhPercentMap() vyššie (priemer quiz/flashcards/cases/
+   bifľovačka) číta VÝHRADNE progress.{appId}.{subArea}.{okruh}.quiz.best.
+   Rovnaká definícia "preštudované" ako readDoneOkruhIndices() v
+   scripts/progressTracking.js (prah 60 %, len tam vracia INDEXY do
+   poľa okruhov, tu "A{n}" kľúče – zdroj dát aj prah sú duplikované na
+   dvoch miestach zámerne, pozri dlh #12). Používa scripts/duels.js
+   (📗 mode picker pojednávaní).
+
+   try/catch rovnako ako fetchPercentMapSafe() v scripts/okruhSelector.js
+   – zlyhanie Firebase nesmie zhodiť volajúceho, len tichý fallback na
+   prázdny Set (spustí existujúci usedFallback → 🎲). logLabel ide do
+   console.warn prefixu, rovnaká konvencia ako pri dlhu #1. */
+export async function getOkruhDoneKeys(nick, areaTitle, okruhKeys, threshold = 60, logLabel = 'dashboardStats') {
+  const found = findAreaAndSubArea(areaTitle);
+  if (!found) return new Set();
+
+  try {
+    const data = await loadDashboardData(nick, {
+      appIds: [found.area.appId],
+      biflovackaSlugs: []
+    });
+
+    const bySubArea = data.progressByApp?.[found.area.appId]?.[found.subAreaCfg.subArea] || {};
+    const done = new Set();
+    okruhKeys.forEach(k => {
+      const best = bySubArea[k]?.quiz?.best;
+      if (typeof best === 'number' && best >= threshold) done.add(k);
+    });
+    return done;
+  } catch (e) {
+    console.warn(`[${logLabel}] getOkruhDoneKeys zlyhalo – fallback na náhodný výber`, e);
+    return new Set();
+  }
+}
+
+/* ============================================================
    CELÝ DASHBOARD – všetky oblasti, všetky okruhy, s dátami
    načítanými raz (na použitie v UI aj pri kontrole odmien).
 ============================================================ */

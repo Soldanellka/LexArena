@@ -21,15 +21,28 @@ import { getOkruhPercentMap } from './dashboardStats.js';
 
 /* Bezpečné načítanie percentMap – ak zlyhá/timeoutne Firebase, vráti null
    namiesto toho, aby nechalo výnimku zhodiť celé losovanie; null ďalej
-   spúšťa rovnakú vetvu ako poistka nováčika (čisto náhodný výber). */
-export async function fetchPercentMapSafe(nick, areaTitle, count) {
+   spúšťa rovnakú vetvu ako poistka nováčika (čisto náhodný výber).
+
+   Tretí argument prijíma ČÍSLO alebo POLE:
+   - číslo n  → kľúče sa odvodia ako A1..An (pôvodné správanie, používa
+     štátnica – tam sú okruhy vždy súvislé A1..count, žiadna zmena).
+   - pole keys → použije sa priamo. Nutné pre volajúcich (pojednávania),
+     kde `keys` môže byť podmnožina/nesúvislý zoznam a odvodenie z dĺžky
+     poľa by pri medzere v číslovaní posunulo mapovanie kľúč↔percento.
+
+   logLabel ide do console.warn prefixu – volajúci sa tak identifikuje
+   v logu (predtým natvrdo "[ŠTÁTNICE]", zavádzajúce odkedy funkciu volajú
+   aj pojednávania). */
+export async function fetchPercentMapSafe(nick, areaTitle, countOrKeys, logLabel = 'okruhSelector') {
   if (!nick || !areaTitle) return null;
-  const keys = Array.from({ length: count }, (_, i) => `A${i + 1}`);
+  const keys = Array.isArray(countOrKeys)
+    ? countOrKeys
+    : Array.from({ length: countOrKeys }, (_, i) => `A${i + 1}`);
   try {
     const map = await getOkruhPercentMap(nick, areaTitle, keys);
     return (map && typeof map === 'object') ? map : null;
   } catch (e) {
-    console.warn('[ŠTÁTNICE] getOkruhPercentMap zlyhalo – fallback na dnešný náhodný výber', e);
+    console.warn(`[${logLabel}] getOkruhPercentMap zlyhalo – fallback na dnešný náhodný výber`, e);
     return null;
   }
 }
@@ -47,6 +60,20 @@ export function bucketizeByPercent(percentMap, count) {
     const bucket = classifyOkruhPercent(percentMap, n);
     (bucket === 'slabe' ? slabe : bucket === 'silne' ? silne : nedotknute).push(n);
   }
+  return { slabe, silne, nedotknute };
+}
+
+/* Rovnaké triedenie ako bucketizeByPercent, ale nad ĽUBOVOĽNÝM polom
+   kľúčov namiesto súvislého 1..count rozsahu – bezpečné aj pri medzere
+   v číslovaní. Vracia "A{n}" kľúče priamo (nie čísla), lebo volajúci
+   (duels.js) pracuje s kľúčmi, nie s indexmi. */
+export function bucketizeKeysByPercent(percentMap, keys) {
+  const slabe = [], silne = [], nedotknute = [];
+  keys.forEach(k => {
+    const n = Number(String(k).replace(/^A/, ''));
+    const bucket = classifyOkruhPercent(percentMap, n);
+    (bucket === 'slabe' ? slabe : bucket === 'silne' ? silne : nedotknute).push(k);
+  });
   return { slabe, silne, nedotknute };
 }
 

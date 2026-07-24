@@ -49,7 +49,7 @@ let currentOkruhMode = 'random';
 const OKRUH_MODES = [
   { key: 'random', label: '🎲 Náhodne' },
   { key: 'studied', label: '📗 Preštudované' },
-  { key: 'unstudied', label: '📕 Nepreštudované' }
+  { key: 'unstudied', label: '📕 Na precvičenie' }
 ];
 
 function renderAreas() {
@@ -119,10 +119,10 @@ function renderOkruhModePicker(areaName) {
 
 function modeEmptyMessage(mode) {
   if (mode === 'studied') {
-    return 'Zatiaľ nemáš žiadnu tému preštudovanú na ≥80 % – vyberáme náhodne.';
+    return 'Zatiaľ nemáš žiadnu tému preštudovanú v študijnom module – vyberáme náhodne.';
   }
   if (mode === 'unstudied') {
-    return 'Nenašli sa témy pod 30 % – super, skoro všetko máš rozbehnuté! Vyberáme náhodne.';
+    return 'Nepodarilo sa vybrať témy podľa progresu – vyberáme náhodne.';
   }
   return '';
 }

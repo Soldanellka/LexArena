@@ -13,7 +13,8 @@ import {
 import { econAward, econEnergy, econCanPlay, ECONOMY_CONFIG } from './economy.js';
 import { showRewardToast } from '../ui.js';
 import { awardFacultyPoints } from './faculties.js';
-import { getOkruhPercentMap } from './dashboardStats.js';
+import { getOkruhDoneKeys } from './dashboardStats.js';
+import { fetchPercentMapSafe, bucketizeKeysByPercent } from './okruhSelector.js';
 import { recordOkruhResult, PROGRESS_ACTIVITIES } from './progressTracking.js';
 
 /* Bezpečný prístup k db */
@@ -152,18 +153,34 @@ export function pickQuestions(areaName) {
 ============================================================ */
 async function filterKeysByMode(keys, mode, nick, poolAreaName) {
   if (mode === "random") return keys;
-  // Bez nicku niet čo čítať z Firebase – správaj sa, akoby mal každý okruh 0 %
-  // (rovnaké ako čerstvo prihlásený študent bez histórie).
-  const pctMap = nick ? await getOkruhPercentMap(nick, poolAreaName, keys) : {};
-  const wantStudied = mode === "studied";
-  return keys.filter(k => {
-    const pct = pctMap[k] ?? 0;
-    return wantStudied ? pct >= 80 : pct < 30;
-  });
+
+  if (mode === "studied") {
+    // Bez nicku niet čo čítať z Firebase – prázdna množina (rovnaké ako
+    // čerstvo prihlásený študent bez histórie) spustí usedFallback nižšie.
+    if (!nick) return [];
+    const doneKeys = await getOkruhDoneKeys(nick, poolAreaName, keys, 60, 'POJEDNÁVANIA');
+    return keys.filter(k => doneKeys.has(k));
+  }
+
+  // mode === "unstudied" – percentMap ide cez fetchPercentMapSafe (nie
+  // priamo getOkruhPercentMap), aby zlyhanie Firebase spôsobilo tichý
+  // fallback (usedFallback), nie nezachytenú výnimku. Bez nicku sa
+  // percentMap necháva prázdny objekt – classifyOkruhPercent vtedy
+  // zaradí všetko do "nedotknuté", čiže vráti celé `keys` nezmenené
+  // (rovnaký efekt ako pôvodné "pct=0 < 30 pre všetko").
+  const percentMap = nick ? await fetchPercentMapSafe(nick, poolAreaName, keys, 'POJEDNÁVANIA') : {};
+  if (!percentMap) return []; // skutočné zlyhanie Firebase (nick bol, fetch zlyhal)
+  const buckets = bucketizeKeysByPercent(percentMap, keys);
+  if (buckets.slabe.length) return buckets.slabe;
+  if (buckets.nedotknute.length) return buckets.nedotknute;
+  return buckets.silne;
 }
 
 /*
-  mode: 'random' (🎲, default) | 'studied' (📗 ≥80 %) | 'unstudied' (📕 <30 %)
+  mode: 'random' (🎲, default) | 'studied' (📗 zelená fajka študijného
+  modulu, quiz.best ≥ 60 %) | 'unstudied' (📕 na precvičenie – relatívne
+  najslabšie, fallback poradie slabé → nedotknuté → silné, rovnaká
+  konvencia ako štátnica – žiadny pevný prah)
   Vráti { keys, questions, usedFallback, empty }.
   Ak filtrovaná množina pre zvolený režim vyjde prázdna, potichu spadne
   na náhodný výber z celej množiny (usedFallback = true) – volajúci si
