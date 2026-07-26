@@ -55,7 +55,7 @@ export const DASHBOARD_AREAS = [
   }
 ];
 
-const ACTIVITY_LABELS = { quiz: 'kvíz', flashcards: 'kartičky', cases: 'prípady', biflovacka: 'bifľovačka' };
+const ACTIVITY_LABELS = { quiz: 'kvíz', flashcards: 'kartičky', cases: 'prípady', biflovacka: 'bifľovačka', statnica: 'štátnica' };
 
 function okruhKeysFor(subAreaCfg) {
   return Array.from({ length: subAreaCfg.maxOkruh }, (_, i) => `A${i + 1}`);
@@ -142,6 +142,11 @@ export function computeOkruhStats(okruhKey, subAreaCfg, appId, data) {
   }
   if (contentExists(window.areaCases, subAreaCfg.areaTitle, okruhKey)) {
     parts.push({ key: 'cases', value: progressNode.cases?.best ?? 0 });
+  }
+  // 5b: štátnica sa do priemeru okruhu zaráta LEN ak preň existuje zápis (best je number).
+  // Žiadny contentExists – štátnica nemá predformovaný obsah; bránou je existencia výsledku.
+  if (typeof progressNode?.statnica?.best === 'number') {
+    parts.push({ key: 'statnica', value: progressNode.statnica.best });
   }
   if (subAreaCfg.biflovackaSlug) {
     const bifPct = computeBiflovackaPercent(subAreaCfg.biflovackaSlug, okruhKey, data);
