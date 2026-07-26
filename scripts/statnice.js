@@ -54,6 +54,7 @@ import {
   pickPairMixedTopics,
   pickSingleFromPool
 } from './okruhSelector.js';
+import { recordOkruhResult, PROGRESS_ACTIVITIES } from './progressTracking.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const PRACOVNE_DATA_PATH = LIVE + 'LuluLaw duel Pracovné právo/data/';
@@ -870,6 +871,21 @@ function mapLlmResult(llmResult, userText, glossary) {
 }
 
 async function gradeAnswer({ summary, keyPoints, glossary, answerText }) {
+  // #17: prázdnu odpoveď negrádujeme (žiadny zbytočný POST → 400), označíme skipped
+  if (!answerText || !answerText.trim()) {
+    return {
+      covered: [],
+      missing: keyPoints || [],
+      incorrect: [],
+      coverage: 0,
+      contentCoverage: 0,
+      terminologyScore: (glossary && glossary.length) ? 0 : null,
+      missingTerms: [],
+      onTopic: false,
+      tooShort: true,
+      skipped: true
+    };
+  }
   try {
     const llmResult = await callGradeAnswerApi({ summary, keyPoints, glossary, answerText });
     return mapLlmResult(llmResult, answerText, glossary);
@@ -1708,6 +1724,29 @@ export async function openStatniceHall(areaName) {
       <div class="statnice-fb-zaver">${feedback.zaver}</div>
       ${rewardAmount > 0 ? `<div class="statnice-fb-reward">+${rewardAmount}§ za skúšku</div>` : ''}
     `;
+
+    // --- Commit 5a: per-okruh coverage zo štátnice (BEST, izolované od examResults) ---
+    try {
+      const pair = window.__selectedOkruhPair;
+      if (pair && Array.isArray(pair.sources)) {
+        await Promise.allSettled(pair.sources.map((src, i) => {
+          const ev = evaluations[i];
+          if (!src || !ev) return Promise.resolve();
+          if (ev.skipped === true) return Promise.resolve();          // #17: prázdna odpoveď
+          const pct = Number(ev.coverage);
+          if (!Number.isFinite(pct)) return Promise.resolve();
+          if (topics[i] && topics[i].id && topics[i].id !== src.key) { // poistka na poradie
+            console.warn('[ŠTÁTNICE] preskakujem – nesúlad poradia', src.key, topics[i].id);
+            return Promise.resolve();
+          }
+          return recordOkruhResult(nick, src.area, src.key, PROGRESS_ACTIVITIES.STATNICA, pct)
+            .then(() => console.log('[ŠTÁTNICE] progres zapísaný:', src.area, src.key, pct))
+            .catch(e => console.warn('[ŠTÁTNICE] zápis zlyhal:', src.key, e));
+        }));
+      }
+    } catch (e) {
+      console.warn('[ŠTÁTNICE] per-okruh zápis zlyhal (examResults ostáva):', e);
+    }
   }
 
   overlayEl.querySelector('#statniceFinishBtn').onclick = () => closeStatniceHall();

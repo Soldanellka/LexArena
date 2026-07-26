@@ -20,11 +20,11 @@
             oddelené, lebo hmotné aj procesné majú vlastné A1..A30/A40/A45
             súbory s rovnakými source kľúčmi – bez rozlíšenia by sa
             progres dvoch rôznych okruhov omylom zlial do jedného).
-   activity: 'quiz' | 'flashcards' | 'cases'
+   activity: 'quiz' | 'flashcards' | 'cases' | 'statnica'
 ============================================================ */
 import { ref, get, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-export const PROGRESS_ACTIVITIES = { QUIZ: 'quiz', FLASHCARDS: 'flashcards', CASES: 'cases' };
+export const PROGRESS_ACTIVITIES = { QUIZ: 'quiz', FLASHCARDS: 'flashcards', CASES: 'cases', STATNICA: 'statnica' };
 
 function getDb() {
   const db = window.db;
