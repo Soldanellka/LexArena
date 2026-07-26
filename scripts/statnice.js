@@ -380,6 +380,61 @@ async function fetchOkruh(basePath, n) {
 }
 
 /* ============================================================
+   COMMIT 4b – PREKLAD ZDIEĽANÉHO VÝBERU (window.__selectedOkruhPair
+   z app.js/scripts/duels.js) NA basePath, KTORÝ POTREBUJE fetchOkruh.
+
+   Postavené DYNAMICKY z AREA_CONFIG (žiadna ručná duplicita ciest) –
+   kľúčuje podľa progressAreaTitle, presne to isté pole, aké nesie
+   sources[i].area zo zdieľaného výberu:
+   - mode 'pair'      → jeden bazén, progressAreaTitle == top-level kľúč
+                        (napr. "Pracovné právo"), žiadny label.
+   - mode 'dual-pool' → hľadá v pools[] podľa progressAreaTitle, vráti
+                        aj label ("Hmotné právo"/"Procesné právo"), nech
+                        vie štátnica označiť, z ktorého bazéna téma je.
+   Ak pribudne nová oblasť do AREA_CONFIG (napr. Trestné/Európske), táto
+   funkcia ju pokryje bez akejkoľvek úpravy – nič tu nie je naviazané na
+   konkrétny názov oblasti.
+============================================================ */
+function findAreaPoolInfo(areaTitle) {
+  for (const config of Object.values(AREA_CONFIG)) {
+    if (config.mode === 'pair' && config.progressAreaTitle === areaTitle) {
+      return { path: config.pool.path };
+    }
+    if (config.mode === 'dual-pool') {
+      const pool = config.pools.find(p => p.progressAreaTitle === areaTitle);
+      if (pool) return { path: pool.path, label: pool.label };
+    }
+  }
+  return null;
+}
+
+/* Preloží zdieľaný výber (shared.sources – dve { area, key } dvojice,
+   pozri diagnostiku 4b) na presne ten istý tvar topics[], aký doteraz
+   staval pickExamTopics cez fetchOkruh – render/gradeAnswer/záver sa
+   nemenia, dostávajú rovnaké objekty ako dnes.
+
+   Vráti [] pri AKOMKOĽVEK zlyhaní (neznáma oblasť v lookupe, fetchOkruh
+   vráti null čo i len pre jeden z dvoch okruhov) – volajúci (openStatniceHall)
+   to musí ošetriť identicky ako dnešné topics.length < 2 (refund, nespustiť).
+   Táto funkcia sama NIKDY nevracia čiastočný/neúplný pár. */
+async function buildTopicsFromSharedSelection(shared) {
+  const results = await Promise.all(shared.sources.map(async (source) => {
+    const info = findAreaPoolInfo(source.area);
+    if (!info) return null;
+    const n = Number(String(source.key).replace(/^A/, ''));
+    if (!Number.isFinite(n)) return null;
+    const topic = await fetchOkruh(info.path, n);
+    if (topic && info.label) topic.label = info.label;
+    return topic;
+  }));
+
+  if (results.some(t => !t)) return [];
+
+  console.log('[ŠTÁTNICE] Témy zo zdieľaného výberu:', shared.area, `[${shared.mode}]`, results.map(t => t.id).join('+'));
+  return results;
+}
+
+/* ============================================================
    VÝBER TÉM PODĽA PROGRESU – triediaca logika (klasifikácia
    slabé/nedotknuté/silné, "na precvičenie"/"zmiešaný" výber, párové
    aj jednotlivé poistky bez dostatočného progresu) žije v
@@ -387,6 +442,12 @@ async function fetchOkruh(basePath, n) {
    kartičky/prípady/bifľovačku). Tu ostáva len fetchOkruh (štátnicovo-
    špecifický tvar dát s keyPoints/glossary pre hodnotenie, pozri vyššie)
    a dispatch podľa AREA_CONFIG danej oblasti.
+
+   ⚠️ DLH #18 (commit 4b): táto funkcia (pickExamTopics) a jej pomocníci
+   nižšie (pickExamTopicsRandom, pickExamTopicsStudied – ak existujú) sa
+   od commitu 4b Z OPENSTATNICEHALL UŽ NEVOLAJÚ – štátnica preberá výber
+   zo zdieľaného stavu cez buildTopicsFromSharedSelection() vyššie.
+   Ponechané zámerne ako poistka pre tento commit, zmazať samostatne.
 ============================================================ */
 async function pickExamTopics(areaName, nick) {
   const config = AREA_CONFIG[areaName];
@@ -1138,6 +1199,17 @@ export async function openStatniceHall(areaName) {
     return;
   }
 
+  // Commit 4b: štátnica už nevyberá témy sama – preberá dvojicu okruhov
+  // zo zdieľaného výberu (window.__selectedOkruhPair, nastavuje
+  // app.js:applyOkruhPairSelection pri výbere oblasti/módu na hlavnej
+  // obrazovke). Bez platného výberu PRE TÚTO oblasť sa nespustí – over
+  // PRED buildPersonaOverlay aj PRED econSpend, nech sa § nikdy nestrhnú.
+  const shared = window.__selectedOkruhPair;
+  if (!shared || shared.area !== areaName || shared.empty === true) {
+    showRewardToast('⚖️ Najprv si na hlavnej obrazovke vyber oblasť a mód (🎲/📗/📕) pre pojednávanie – štátnica použije tú istú dvojicu okruhov.');
+    return;
+  }
+
   const nick = getNick();
   if (!nick) { showRewardToast('Najprv si zadaj nick.'); return; }
 
@@ -1159,9 +1231,11 @@ export async function openStatniceHall(areaName) {
     return;
   }
 
-  const topics = await pickExamTopics(areaName, nick);
+  const topics = await buildTopicsFromSharedSelection(shared);
   if (topics.length < 2) {
-    // vráť § – skúška sa nedá spustiť (nedostatok obsahu / prázdny bazén / "výpadok" pred prvou otázkou)
+    // vráť § – skúška sa nedá spustiť (nepodarilo sa načítať oba zdieľané
+    // okruhy / neznáma oblasť v lookupe) – NEZMENENÉ oproti pred 4b,
+    // rovnaká podmienka aj rovnaký refund, len iný zdroj topics.
     await econAward(nick, cost, 'štátnicová skúška – vrátenie (nedostatok obsahu)', { skipCap: true });
     showRewardToast('⚖️ Komisia teraz nie je dostupná, skús neskôr.');
     return;

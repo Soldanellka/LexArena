@@ -2107,11 +2107,18 @@ body {
   gap: 8px;
 }
 
-.area-chip {
+.area-chip,
+.mode-chip {
   transition: all .18s ease;
 }
 
-.area-chip.chip-active {
+/* Commit 4b – .mode-chip.chip-active nemalo doteraz žiadne CSS (chýbalo
+   aj pred prepínačom v pojednávaniach), hoci JS triedu 'chip-active'
+   správne prepínal (app.js renderOkruhModePicker). Rovnaký vizuál ako
+   aktívna oblasť vyššie – ten istý akcent (--accent-2 → --accent-3),
+   nič nové sa nevymýšľa. */
+.area-chip.chip-active,
+.mode-chip.chip-active {
   background: linear-gradient(90deg, var(--accent-2), var(--accent-3)) !important;
   color: white !important;
   border-color: transparent !important;
@@ -2120,7 +2127,8 @@ body {
   font-weight: 600;
 }
 
-.area-chip:hover:not(.chip-active) {
+.area-chip:hover:not(.chip-active),
+.mode-chip:hover:not(.chip-active) {
   border-color: var(--accent-3);
   color: var(--accent-3);
 }
