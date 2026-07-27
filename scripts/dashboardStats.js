@@ -71,7 +71,13 @@ function findAreaAndSubArea(areaTitle) {
 
 function contentExists(store, areaTitle, okruhKey) {
   const list = store?.[areaTitle];
-  return Array.isArray(list) && list.some(item => item && item.source === okruhKey);
+  const exists = Array.isArray(list) && list.some(item => item && item.source === okruhKey);
+  if (areaTitle === 'Pracovné právo' || areaTitle === 'Európske právo') {
+    console.log('[DIAG contentExists]', areaTitle, okruhKey,
+      'listLength=', Array.isArray(list) ? list.length : 'NOT ARRAY',
+      'exists=', exists, 'areasLoaded=', window.areasLoaded?.[areaTitle]);
+  }
+  return exists;
 }
 
 /* ============================================================
