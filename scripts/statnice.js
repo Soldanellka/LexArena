@@ -44,16 +44,6 @@ import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLike
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
 import { renderSource } from './sourceUtil.js';
 import { ensureVoicesLoaded, pickVoice, getAvailableSkGenders } from '../biflovackaVideo.js';
-import {
-  fetchPercentMapSafe,
-  countStudied,
-  bucketizeByPercent,
-  pickWeakTopic,
-  pickMixedTopic,
-  pickPairTopics,
-  pickPairMixedTopics,
-  pickSingleFromPool
-} from './okruhSelector.js';
 import { recordOkruhResult, PROGRESS_ACTIVITIES } from './progressTracking.js';
 
 const LIVE = 'https://www.lexarena.sk/';
@@ -434,86 +424,6 @@ async function buildTopicsFromSharedSelection(shared) {
   console.log('[ŠTÁTNICE] Témy zo zdieľaného výberu:', shared.area, `[${shared.mode}]`, results.map(t => t.id).join('+'));
   return results;
 }
-
-/* ============================================================
-   VÝBER TÉM PODĽA PROGRESU – triediaca logika (klasifikácia
-   slabé/nedotknuté/silné, "na precvičenie"/"zmiešaný" výber, párové
-   aj jednotlivé poistky bez dostatočného progresu) žije v
-   scripts/okruhSelector.js (zdieľané, pripravené aj pre pojednávania/
-   kartičky/prípady/bifľovačku). Tu ostáva len fetchOkruh (štátnicovo-
-   špecifický tvar dát s keyPoints/glossary pre hodnotenie, pozri vyššie)
-   a dispatch podľa AREA_CONFIG danej oblasti.
-
-   ⚠️ DLH #18 (commit 4b): táto funkcia (pickExamTopics) a jej pomocníci
-   nižšie (pickExamTopicsRandom, pickExamTopicsStudied – ak existujú) sa
-   od commitu 4b Z OPENSTATNICEHALL UŽ NEVOLAJÚ – štátnica preberá výber
-   zo zdieľaného stavu cez buildTopicsFromSharedSelection() vyššie.
-   Ponechané zámerne ako poistka pre tento commit, zmazať samostatne.
-============================================================ */
-async function pickExamTopics(areaName, nick) {
-  const config = AREA_CONFIG[areaName];
-  if (!config) return [];
-
-  const minStudied = ECONOMY_CONFIG.STATNICE.MIXED_SELECTION_MIN_STUDIED ?? 3;
-
-  if (config.mode === 'dual-pool') {
-    // Náhodne urč, ktorý bazén dostane rolu "na precvičenie" a ktorý
-    // "zmiešaný" – nezávislé od hmotné/procesné delenia, ktoré zostáva
-    // zachované (vždy presne 1 z každého bazéna).
-    const weakPoolIdx = Math.random() < 0.5 ? 0 : 1;
-    // Diagnostika (commit 2) – per-bazén stav pre log nižšie; každý bazén
-    // sa vyhodnocuje NEZÁVISLE (viď fetchPercentMapSafe/studied vyššie),
-    // takže jeden môže byť 'na precvičenie'/'zmiešaný' a druhý 'fallback'
-    // v tom istom kole – diag[] to zachytáva presne, nič nedomýšľa.
-    const diag = [];
-
-    const results = await Promise.all(config.pools.map(async (p, idx) => {
-      const fetchTopic = (n) => fetchOkruh(p.path, n);
-      const percentMap = await fetchPercentMapSafe(nick, p.progressAreaTitle, p.count, 'ŠTÁTNICE');
-      const studied = percentMap ? countStudied(percentMap, p.count) : -1;
-
-      if (!percentMap || studied < minStudied) {
-        diag[idx] = { label: p.label, count: p.count, percentMap, studied, status: 'fallback' };
-        return pickSingleFromPool(p.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
-      }
-      const buckets = bucketizeByPercent(percentMap, p.count);
-      const isWeak = idx === weakPoolIdx;
-      diag[idx] = { label: p.label, count: p.count, percentMap, studied, status: isWeak ? 'na precvičenie' : 'zmiešaný' };
-      return isWeak ? pickWeakTopic(buckets, fetchTopic) : pickMixedTopic(buckets, fetchTopic);
-    }));
-
-    if (results.some(t => !t)) return [];
-    results.forEach((t, i) => { t.label = config.pools[i].label; });
-
-    // 🩺 Diagnostický log (commit 2, žiadny vplyv na výber) – bez labelu
-    // bazéna pri každom okruhu by dvojica "A15+A22" vyzerala ako susedný
-    // pár z JEDNÉHO bazéna (formát pojednávaní), čo tu nikdy neplatí –
-    // hmotné aj procesné majú vlastné A1..A40/A45 s rovnakými číslami.
-    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[dual-pool]', diag.map((d, i) =>
-      `${d.label} ${results[i].id} (${d.status}, preštudované ${d.percentMap ? `${d.studied}/${d.count}` : 'percentMap zlyhal'})`
-    ).join(' + '));
-
-    return results;
-  }
-
-  // mode === 'pair'
-  const fetchTopic = (n) => fetchOkruh(config.pool.path, n);
-  const percentMap = await fetchPercentMapSafe(nick, config.progressAreaTitle, config.pool.count, 'ŠTÁTNICE');
-  const studied = percentMap ? countStudied(percentMap, config.pool.count) : -1;
-  const studiedLabel = percentMap ? `${studied}/${config.pool.count}` : 'percentMap zlyhal';
-
-  if (!percentMap || studied < minStudied) {
-    const topics = await pickPairTopics(config.pool.count, fetchTopic); // poistka (zlyhanie/nováčik) – dnešné správanie
-    console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-fallback]',
-      topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
-    return topics;
-  }
-  const topics = await pickPairMixedTopics(config.pool.count, percentMap, fetchTopic);
-  console.log('[ŠTÁTNICE] Výber tém:', areaName, '[pair-mixed]',
-    topics.length ? topics.map(t => t.id).join('+') : '—', `(preštudované ${studiedLabel})`);
-  return topics;
-}
-
 
 /* ============================================================
    KOMISIA – 3 RÔZNI talárové avatary (žiadny duplikát), mix
