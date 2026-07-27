@@ -157,7 +157,7 @@ export function computeOkruhStats(okruhKey, subAreaCfg, appId, data) {
   const missingActivities = parts.filter(p => p.value === 0).map(p => ACTIVITY_LABELS[p.key]);
   const title = titleFor(subAreaCfg.areaTitle, okruhKey);
 
-  return { percent, missingActivities, hasAnyContent: parts.length > 0, title };
+  return { percent, missingActivities, hasAnyContent: parts.length > 0, title, parts };
 }
 
 /* ============================================================
