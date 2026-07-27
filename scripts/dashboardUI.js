@@ -192,6 +192,29 @@ function wireStatniceCollapse() {
   statniceCollapseWired = true;
 }
 
+/* Race-condition fix – rovnaký mechanizmus ako app.js:waitAreaLoaded()
+   pred pojednávaním. computeFullDashboard() iteruje presne DASHBOARD_AREAS,
+   takže stačí čakať na window.areasLoaded[title] pre týchto 6 areaTitle
+   hodnôt (nie na dĺžku obsahu – niektorá oblasť môže mať 0 otázok a byť
+   napriek tomu "dokončene načítaná", pozri data.js:192-197). Bez tohto
+   čakania contentExists() (dashboardStats.js) číta window.areas skôr, než
+   dobehnú fetchy z data.js, najmä pre Pracovné právo (50 sekvenčných
+   fetchov) a Európske právo (38) – vtedy sa okruhy bez obsahu tíško
+   vyfiltrujú z "Témy" zoznamu (computeFullDashboard – .filter(o =>
+   o.hasAnyContent)). */
+function waitDashboardAreasLoaded() {
+  const titles = DASHBOARD_AREAS.flatMap(a => a.subAreas.map(s => s.areaTitle));
+  return new Promise(resolve => {
+    let attempts = 0;
+    const check = setInterval(() => {
+      attempts++;
+      if (titles.every(t => !!window.areasLoaded?.[t]) || attempts > 50) {
+        clearInterval(check); resolve();
+      }
+    }, 100);
+  });
+}
+
 export async function openDashboard() {
   const modal = $('dashboardModal');
   if (modal) { modal.style.display = 'flex'; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); }
@@ -210,6 +233,7 @@ export async function openDashboard() {
   }
 
   cachedAvatarType = await getAvatarType(nick);
+  await waitDashboardAreasLoaded();
   cachedDashboard = await computeFullDashboard(nick);
   renderBody();
   renderStatnice(nick);
