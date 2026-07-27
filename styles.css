@@ -3005,3 +3005,169 @@ body {
     font-size: 15px;
   }
 }
+
+/* ============================================================
+   ⚖️ Judikatúra – plávajúci panel vpravo dole (scripts/judikatura.js)
+
+   Kolízia s inými position:fixed prvkami vpravo dole:
+   - ui.js showRewardToast(): right:20px; bottom:20px; z-index:9999
+     (transientný toast, ~2.4s). FAB je preto posadený na bottom:90px
+     na desktope (nad toastovou zónou), z-index 8500 (POD toastom,
+     takže toast sa vždy zobrazí nad panelom, ak vyskočí súčasne).
+   - .bottom-nav (mobile <640px): fixed, bottom:0, výška
+     ~56px + safe-area, z-index:900. FAB na mobile preto sedí nad ňou
+     (bottom: calc(56px + safe-area + 16px)), z-index 8500 je nad
+     900, takže je pred lištou vidno, no stále pod plnoobrazovkovými
+     modalmi appky (9999–10500), ktoré ho žiaduco prekryjú, ak sa
+     otvoria súčasne.
+============================================================ */
+#judikaturaFab {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 8500;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(240,138,166,0.28);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#judikaturaFab:hover { transform: scale(1.06); }
+#judikaturaFab:active { transform: scale(0.97); }
+
+:root[data-theme="dark"] #judikaturaFab {
+  box-shadow: 0 8px 22px rgba(2,6,23,0.5);
+}
+
+@media (max-width: 640px) {
+  #judikaturaFab {
+    bottom: calc(56px + env(safe-area-inset-bottom) + 16px);
+  }
+}
+
+.judikatura-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 154px;
+  z-index: 8500;
+  width: 360px;
+  max-width: calc(100vw - 40px);
+  max-height: min(70vh, 560px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(16,16,16,0.18);
+  overflow: hidden;
+}
+:root[data-theme="dark"] .judikatura-panel {
+  box-shadow: 0 20px 50px rgba(2,6,23,0.6);
+}
+
+@media (max-width: 640px) {
+  .judikatura-panel {
+    bottom: calc(56px + env(safe-area-inset-bottom) + 78px);
+  }
+}
+
+.judikatura-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+  color: #fff;
+  flex-shrink: 0;
+}
+.judikatura-panel-title { font-weight: 700; }
+#judikaturaCloseBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.judikatura-panel-body {
+  padding: 14px;
+  overflow-y: auto;
+}
+
+.judikatura-hint {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+.judikatura-error { color: var(--danger); }
+
+.judikatura-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.judikatura-institut-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+  width: 100%;
+}
+.judikatura-oblast {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.judikatura-back-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.judikatura-active-nazov {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.judikatura-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.judikatura-result-card {
+  padding: 12px;
+  margin-bottom: 0;
+}
+.judikatura-result-cislo {
+  font-weight: 700;
+  font-size: 13px;
+}
+.judikatura-result-merito {
+  font-size: 13px;
+  color: var(--text);
+  margin-top: 2px;
+}
+.judikatura-result-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.judikatura-result-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
