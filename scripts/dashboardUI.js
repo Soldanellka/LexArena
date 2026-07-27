@@ -125,9 +125,59 @@ function renderBody() {
 
   body.innerHTML = html;
 
+  const rows = body.querySelectorAll('.dashboard-tema-row');
+  rows.forEach((row, i) => {
+    row.style.cursor = 'pointer';
+    row.onclick = () => showOkruhDetail(allOkruhy[i]);
+  });
+
   const todoSection = $('dashboardTodoSection');
   const todoHeader = todoSection ? todoSection.querySelector('.dashboard-collapsible-header') : null;
   makeCollapsible(todoSection, todoHeader, 'mColl:dashboardTodo', true);
+}
+
+/* Klik na riadok okruhu (renderBody vyššie) – malé, na požiadanie vytvorené
+   okno s rozpadom % podľa aktivít. Rovnaký vzor ako openVerdictModal
+   (index.html, inline reports script) – .avatar-modal/.avatar-panel,
+   žiadne nové CSS, zavrie sa klikom mimo panelu alebo tlačidlom, .remove()
+   namiesto skrytia. Bifľovačka sa v tomto okne zámerne nezobrazuje. */
+const OKRUH_DETAIL_ROWS = [
+  { key: 'quiz', label: 'Kvíz' },
+  { key: 'flashcards', label: 'Kartičky' },
+  { key: 'cases', label: 'Prípady' },
+  { key: 'statnica', label: 'Štátnica' }
+];
+
+function showOkruhDetail(o) {
+  const existing = document.getElementById('okruhDetailModal');
+  if (existing) existing.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'okruhDetailModal';
+  modal.className = 'avatar-modal';
+  modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:10000;padding:16px;box-sizing:border-box;';
+
+  const rowsHtml = OKRUH_DETAIL_ROWS.map(({ key, label }) => {
+    const part = (o.parts || []).find(p => p.key === key);
+    if (part) return `<div class="small" style="padding:3px 0">${label}: ${part.value} %</div>`;
+    if (key === 'statnica') return `<div class="small muted" style="padding:3px 0">${label}: zatiaľ neabsolvované</div>`;
+    return `<div class="small muted" style="padding:3px 0">${label}: — (nie je)</div>`;
+  }).join('');
+
+  modal.innerHTML = `
+    <div class="avatar-panel" style="background:var(--surface,#fff);border-radius:20px;padding:24px;max-width:400px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.25);">
+      <h3 style="margin:0 0 8px 0">${escapeHtml(o.title)}</h3>
+      <div class="small" style="font-weight:600;margin-bottom:12px">Celkovo: ${o.percent} %</div>
+      ${rowsHtml}
+      <div style="margin-top:16px">
+        <button class="btn" id="okruhDetailCloseBtn" style="width:100%">Zavrieť</button>
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const close = () => modal.remove();
+  modal.querySelector('#okruhDetailCloseBtn').onclick = close;
+  modal.onclick = e => { if (e.target === modal) close(); };
 }
 
 function skuskaWord(n) {
