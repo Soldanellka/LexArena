@@ -115,7 +115,7 @@ function renderTree(container, json, branches, state) {
 
   container.innerHTML = `
     <div class="spider-tree">
-      <div class="spider-center">${escapeHtml(json.title)}</div>
+      <div class="spider-center">${escapeHtml(json.spider?.center || json.title)}</div>
       <div class="spider-branches">${branchesHtml}</div>
     </div>`;
 }
