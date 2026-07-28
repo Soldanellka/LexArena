@@ -1,22 +1,21 @@
 'use strict';
 
 /* ============================================================
-   Rešerš judikatúry NS SR – plávajúci panel vpravo dole
-   Variant A: kurátorovaný zoznam inštitútov (JUDIKATURA_CONFIG) →
-   klik → api/nsud-proxy.js (searchDecision/getDecision) → zoznam
-   reálnych rozhodnutí s odkazom na originál. Bez LLM, bez § ceny.
+   Rešerš judikatúry NS SR – statická sekcia v pravom (.right) stĺpci,
+   hneď pod #gamesSection ("Hry a prípady"). Variant A: kurátorovaný
+   zoznam inštitútov (JUDIKATURA_CONFIG) → klik → api/nsud-proxy.js
+   (searchDecision/getDecision) → zoznam reálnych rozhodnutí s odkazom
+   na originál. Bez LLM, bez § ceny.
 
    Poradie výsledkov = NATÍVNE poradie z API (žiadne triedenie podľa
    ID/dátumu – getDecision sa volá až na finálnych ≤15 ID, dátum teda
    ani nie je k dispozícii skôr, než by sa dalo podľa neho triediť).
 
-   ⚠️ position:fixed kolízia: ui.js showRewardToast() používa
-   right:20px; bottom:20px; z-index:9999 (transientný, ~2.4s). FAB
-   tlačidlo je preto posadené vyššie (bottom:90px na desktope,
-   nad .bottom-nav na mobile), aby s ním nesplynulo. z-index panelu
-   (8500) je pod toastom (9999) aj pod všetkými fullscreen modalmi
-   (9999–10500) – ak sa niektorý z nich otvorí súčasne, prekryje
-   panel, čo je žiaduce (modal je vždy nad plávajúcim panelom).
+   Pôvodne plávajúci panel vpravo dole (position:fixed FAB + panel) –
+   nahradené statickou sekciou (2026-07-27), zoznam inštitútov ostáva
+   vždy viditeľný, výsledky sa rozbaľujú inline pod kliknutým
+   inštitútom (žiadny samostatný view/back-stack, žiadny position:fixed
+   kolízny súboj s toastami/bottom-nav).
 ============================================================ */
 
 import { JUDIKATURA_CONFIG } from './judikaturaConfig.js';
@@ -120,77 +119,16 @@ async function fetchInstitutResults(institutId) {
 }
 
 /* =========================
-   UI – plávajúci panel
+   UI – statická sekcia, inline rozbaľovanie
    ========================= */
 
 const resultsCache = new Map(); // institutId -> results[] (v rámci session, nie je to proxy cache)
 
-function renderInstitutListView(bodyEl) {
-  bodyEl.innerHTML = `
-    <p class="judikatura-hint">Vyber štátnicový inštitút – appka vytiahne reálne rozhodnutia NS SR.</p>
-    <div class="judikatura-list">
-      ${JUDIKATURA_CONFIG.instituty.map(i => `
-        <button type="button" class="chip judikatura-institut-btn" data-institut="${escapeHtml(i.id)}">
-          ${escapeHtml(i.nazov)}
-          <span class="judikatura-oblast">${escapeHtml(i.oblast)}</span>
-        </button>
-      `).join('')}
-    </div>
-  `;
-  bodyEl.querySelectorAll('.judikatura-institut-btn').forEach(btn => {
-    btn.addEventListener('click', () => openInstitut(bodyEl, btn.dataset.institut));
-  });
-}
-
-function renderBackRow(bodyEl, nazov) {
-  const row = document.createElement('div');
-  row.className = 'judikatura-back-row';
-  row.innerHTML = `
-    <button type="button" class="btn judikatura-back-btn">← Späť na zoznam</button>
-    <span class="judikatura-active-nazov">${escapeHtml(nazov)}</span>
-  `;
-  row.querySelector('.judikatura-back-btn').addEventListener('click', () => renderInstitutListView(bodyEl));
-  bodyEl.appendChild(row);
-}
-
-function renderLoadingView(bodyEl, config) {
-  bodyEl.innerHTML = '';
-  renderBackRow(bodyEl, config.nazov);
-  const p = document.createElement('p');
-  p.className = 'judikatura-hint';
-  p.textContent = 'Načítavam rozhodnutia z NS SR…';
-  bodyEl.appendChild(p);
-}
-
-function renderErrorView(bodyEl, config, message) {
-  bodyEl.innerHTML = '';
-  renderBackRow(bodyEl, config.nazov);
-  const p = document.createElement('p');
-  p.className = 'judikatura-hint judikatura-error';
-  p.textContent = message;
-  bodyEl.appendChild(p);
-}
-
-function renderResultsView(bodyEl, config, results) {
-  bodyEl.innerHTML = '';
-  renderBackRow(bodyEl, config.nazov);
-
+function renderResultsHtml(results) {
   if (!results.length) {
-    const p = document.createElement('p');
-    p.className = 'judikatura-hint';
-    p.textContent = 'Žiadne rozhodnutia sa nepodarilo načítať.';
-    bodyEl.appendChild(p);
-    return;
+    return `<p class="judikatura-hint">Žiadne rozhodnutia sa nepodarilo načítať.</p>`;
   }
-
-  const count = document.createElement('p');
-  count.className = 'judikatura-hint';
-  count.textContent = `Nájdených ${results.length} rozhodnutí (poradie podľa API):`;
-  bodyEl.appendChild(count);
-
-  const list = document.createElement('div');
-  list.className = 'judikatura-results';
-  list.innerHTML = results.map(r => `
+  const cards = results.map(r => `
     <div class="card judikatura-result-card">
       <div class="judikatura-result-cislo">${escapeHtml(r.cislo || '(bez čísla)')}</div>
       <div class="judikatura-result-merito">${escapeHtml(r.merito || '(bez merita)')}</div>
@@ -201,58 +139,91 @@ function renderResultsView(bodyEl, config, results) {
       ${r.url ? `<a href="${escapeHtml(r.url)}" target="_blank" rel="noopener" class="btn btn-primary judikatura-result-link">Otvoriť rozhodnutie ↗</a>` : ''}
     </div>
   `).join('');
-  bodyEl.appendChild(list);
+  return `
+    <p class="judikatura-hint">Nájdených ${results.length} rozhodnutí (poradie podľa API):</p>
+    <div class="judikatura-results">${cards}</div>
+  `;
 }
 
-async function openInstitut(bodyEl, institutId) {
+function collapseInstitut(resultsEl, btn) {
+  resultsEl.hidden = true;
+  btn.setAttribute('aria-expanded', 'false');
+  btn.classList.remove('judikatura-institut-active');
+}
+
+// Jediné miesto, ktoré zapisuje obsah resultsEl a napája "← Zbaliť" –
+// loading/error/results stavy ním prechádzajú všetky rovnako, žiadny
+// z nich preto nezostane bez funkčného collapse tlačidla.
+function setInlineContent(resultsEl, btn, innerHtml) {
+  resultsEl.innerHTML = innerHtml + `<button type="button" class="btn judikatura-collapse-btn">← Zbaliť</button>`;
+  resultsEl.querySelector('.judikatura-collapse-btn').addEventListener('click', () => collapseInstitut(resultsEl, btn));
+}
+
+function expandInstitut(resultsEl, btn) {
+  resultsEl.hidden = false;
+  btn.setAttribute('aria-expanded', 'true');
+  btn.classList.add('judikatura-institut-active');
+}
+
+async function toggleInstitut(resultsEl, btn, institutId) {
   const config = JUDIKATURA_CONFIG.instituty.find(i => i.id === institutId);
   if (!config) return;
 
-  if (resultsCache.has(institutId)) {
-    renderResultsView(bodyEl, config, resultsCache.get(institutId));
+  // Druhý klik na už rozbalený inštitút = zbaliť (bez znovunačítania).
+  if (!resultsEl.hidden) {
+    collapseInstitut(resultsEl, btn);
     return;
   }
 
-  renderLoadingView(bodyEl, config);
+  expandInstitut(resultsEl, btn);
+
+  if (resultsCache.has(institutId)) {
+    setInlineContent(resultsEl, btn, renderResultsHtml(resultsCache.get(institutId)));
+    return;
+  }
+
+  setInlineContent(resultsEl, btn, `<p class="judikatura-hint">Načítavam rozhodnutia z NS SR…</p>`);
   try {
     const results = await fetchInstitutResults(institutId);
     resultsCache.set(institutId, results);
-    renderResultsView(bodyEl, config, results);
+    setInlineContent(resultsEl, btn, renderResultsHtml(results));
   } catch (e) {
-    renderErrorView(bodyEl, config, e.message || 'Načítanie zlyhalo.');
+    setInlineContent(resultsEl, btn, `<p class="judikatura-hint judikatura-error">${escapeHtml(e.message || 'Načítanie zlyhalo.')}</p>`);
   }
 }
 
-function mountJudikaturaWidget() {
-  if (document.getElementById('judikaturaWidget')) return; // ochrana pred dvojitým mountom
+function mountJudikaturaSection() {
+  if (document.getElementById('judikaturaSection')) return; // ochrana pred dvojitým mountom
 
-  const root = document.createElement('div');
-  root.id = 'judikaturaWidget';
-  root.innerHTML = `
-    <button type="button" id="judikaturaFab" aria-label="Judikatúra" title="Judikatúra">⚖️</button>
-    <div id="judikaturaPanel" class="judikatura-panel" hidden>
-      <div class="judikatura-panel-header">
-        <span class="judikatura-panel-title">⚖️ Judikatúra</span>
-        <button type="button" id="judikaturaCloseBtn" aria-label="Zavrieť">✕</button>
-      </div>
-      <div id="judikaturaPanelBody" class="judikatura-panel-body"></div>
+  const gamesSection = document.getElementById('gamesSection');
+  if (!gamesSection || !gamesSection.parentNode) return; // #gamesSection chýba – nemontovať naslepo inde
+
+  const section = document.createElement('div');
+  section.className = 'card';
+  section.id = 'judikaturaSection';
+  section.innerHTML = `
+    <h3 style="margin:0">⚖️ Judikatúra NS SR</h3>
+    <p class="judikatura-hint">Vyber štátnicový inštitút – appka vytiahne reálne rozhodnutia NS SR.</p>
+    <div class="judikatura-list">
+      ${JUDIKATURA_CONFIG.instituty.map(i => `
+        <div class="judikatura-institut-row">
+          <button type="button" class="chip judikatura-institut-btn" data-institut="${escapeHtml(i.id)}" aria-expanded="false">
+            ${escapeHtml(i.nazov)}
+            <span class="judikatura-oblast">${escapeHtml(i.oblast)}</span>
+          </button>
+          <div class="judikatura-institut-results" hidden></div>
+        </div>
+      `).join('')}
     </div>
   `;
-  document.body.appendChild(root);
 
-  const fab = document.getElementById('judikaturaFab');
-  const panel = document.getElementById('judikaturaPanel');
-  const closeBtn = document.getElementById('judikaturaCloseBtn');
-  const bodyEl = document.getElementById('judikaturaPanelBody');
+  gamesSection.insertAdjacentElement('afterend', section);
 
-  renderInstitutListView(bodyEl);
-
-  fab.addEventListener('click', () => {
-    panel.hidden = !panel.hidden;
-  });
-  closeBtn.addEventListener('click', () => {
-    panel.hidden = true;
+  section.querySelectorAll('.judikatura-institut-btn').forEach(btn => {
+    const row = btn.closest('.judikatura-institut-row');
+    const resultsEl = row.querySelector('.judikatura-institut-results');
+    btn.addEventListener('click', () => toggleInstitut(resultsEl, btn, btn.dataset.institut));
   });
 }
 
-mountJudikaturaWidget();
+mountJudikaturaSection();
