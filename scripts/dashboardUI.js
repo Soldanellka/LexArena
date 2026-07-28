@@ -169,7 +169,8 @@ function showOkruhDetail(o) {
       <h3 style="margin:0 0 8px 0">${escapeHtml(o.title)}</h3>
       <div class="small" style="font-weight:600;margin-bottom:12px">Celkovo: ${o.percent} %</div>
       ${rowsHtml}
-      <div style="margin-top:16px">
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+        <button class="btn" id="okruhSpiderBtn" style="width:100%">🕸️ Štruktúra otázky</button>
         <button class="btn" id="okruhDetailCloseBtn" style="width:100%">Zavrieť</button>
       </div>
     </div>`;
@@ -177,6 +178,12 @@ function showOkruhDetail(o) {
 
   const close = () => modal.remove();
   modal.querySelector('#okruhDetailCloseBtn').onclick = close;
+  modal.querySelector('#okruhSpiderBtn').onclick = async () => {
+    try {
+      const { openSpider } = await import('./spider.js');
+      openSpider(o.key, o.areaTitle);
+    } catch (e) { console.error('spider load failed', e); }
+  };
   modal.onclick = e => { if (e.target === modal) close(); };
 }
 

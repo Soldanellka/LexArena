@@ -138,5 +138,13 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "branches": [
+      { "label": "Pojem OP", "leaves": ["súkromné právo", "rovnosť subjektov", "autonómia vôle", "zmluvná sloboda", "ochrana vlastníctva"] },
+      { "label": "Predmet OP", "leaves": ["majetkové vzťahy", "osobné nemajetkové", "rodinné", "dedičské"] },
+      { "label": "Systém OP", "leaves": ["všeobecná časť", "vecné právo", "záväzkové právo", "dedičské právo", "rodinné právo"] },
+      { "label": "Pramene OP", "leaves": ["OZ 40/1964 Zb.", "Zákon o rodine 36/2005", "Ústava SR", "osobitné zákony", "judikatúra", "právo EÚ"] }
+    ]
   }
 }
