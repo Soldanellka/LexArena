@@ -256,6 +256,22 @@ function selectOkruh(idx) {
   $('summaryText').textContent = (okruh.summary || 'Žiadne zhrnutie.').trim();
   setupSummaryControls(okruh, cfg);
 
+  /* 🕸️ Pavúk okruhu – inline pod summary. Lazy import v try/catch (spider.js
+     nešiel cez node --check, statický import by zhodil celý študijný modul).
+     Synchrónne vyčistenie diva HNEĎ (nie až po await) + token-check po
+     await import() aj po fetche v renderSpiderInto – rýchle preklikávanie
+     okruhov nesmie prekresliť starý strom nad novo otvoreným okruhom. */
+  const spiderEl = document.getElementById('okruhSpider');
+  if (spiderEl) spiderEl.innerHTML = '';
+  const myIdx = idx;
+  (async () => {
+    try {
+      const m = await import('../scripts/spider.js');
+      if (state.currentOkruh !== myIdx) return; // medzitým sa prepol okruh
+      await m.renderSpiderInto(spiderEl, okruh._file, cfg.reportArea);
+    } catch (e) { console.error('spider inline failed', e); }
+  })();
+
   state.phase = 'summary';
   renderSidebar();
 
