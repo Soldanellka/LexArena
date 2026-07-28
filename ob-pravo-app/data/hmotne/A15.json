@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Podielové spoluvlastníctvo, § 137–142 OZ (viac osôb vlastní tú istú vec, ideálne podiely)",
+    "branches": [
+      { "label": "Pojem podielového spoluvlastníctva", "leaves": ["viac osôb vlastní tú istú vec", "každý má ideálny podiel (matematický, nie fyzický)", "ak nie je určené inak, podiely sú rovnaké", "podiel vyjadruje mieru účasti na právach a povinnostiach"] },
+      { "label": "Práva a povinnosti spoluvlastníkov", "leaves": ["právo vec držať, užívať, nakladať podľa veľkosti podielu", "o hospodárení rozhoduje väčšina podľa podielov", "rozhodnutie väčšiny nesmie byť v rozpore s dobrými mravmi", "nesmie neprimerane zasahovať do práv menšinového spoluvlastníka"] },
+      { "label": "Predkupné právo (§ 140 OZ)", "leaves": ["zákonné, automatické", "pri prevode podielu majú ostatní spoluvlastníci predkupné právo", "výnimka: prevod medzi blízkymi osobami", "porušenie: relatívna neplatnosť a možnosť požadovať nahradenie prejavu vôle", "chráni stabilitu spoluvlastníckych vzťahov"] },
+      { "label": "Zánik spoluvlastníctva (§ 142 OZ)", "leaves": ["dohodou spoluvlastníkov: rozdelenie veci alebo zrušenie spoluvlastníctva", "súdnym rozhodnutím, ak sa spoluvlastníci nedohodnú", "súd môže vec rozdeliť, prikázať jednému spoluvlastníkovi za náhradu alebo nariadiť predaj", "predajom v dražbe, ak je to najvhodnejší spôsob vyporiadania", "nikto nesmie byť nútený zotrvať v spoluvlastníctve"] },
+      { "label": "Význam pre prax", "leaves": ["časté pri nehnuteľnostiach, dedičstve, spoločnom majetku", "predkupné právo stabilizuje vlastnícke vzťahy", "súdne vyporiadanie chráni menšinu", "vysoká právna istota vďaka jasným pravidlám OZ"] }
+    ]
   }
 }

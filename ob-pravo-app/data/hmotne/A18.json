@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zabezpečenie záväzkov – druhy, funkcie, účinky (posilnenie veriteľa, motivácia dlžníka, istota plnenia)",
+    "branches": [
+      { "label": "Pojem zabezpečenia záväzkov", "leaves": ["právne prostriedky posilňujúce postavenie veriteľa", "motivujú dlžníka k riadnemu plneniu", "poskytujú alternatívne možnosti uspokojenia pohľadávky", "zvyšujú právnu istotu"] },
+      { "label": "Zmluvná pokuta (§ 544 OZ)", "leaves": ["paušalizovaná náhrada škody", "dlžník zaplatí pokutu pri porušení povinnosti", "veriteľ ju môže požadovať aj bez vzniku škody", "súd môže pokutu primerane znížiť", "silný preventívny účinok"] },
+      { "label": "Ručenie (§ 546–550 OZ)", "leaves": ["ručiteľ plní, ak dlžník nesplní po výzve veriteľa", "subsidiárne: veriteľ sa najprv obracia na dlžníka", "ručiteľ môže uplatniť námietky dlžníka", "vzniká najčastejšie písomnou zmluvou"] },
+      { "label": "Záložné právo", "leaves": ["vecné právo umožňujúce uspokojenie zo zálohu", "predmet: vec, nehnuteľnosť, pohľadávka, podnik", "droit de préférence: prednostné uspokojenie", "droit de suite: právo nasleduje vec"] },
+      { "label": "Záloha", "leaves": ["dlžník odovzdá veriteľovi vec ako zabezpečenie", "pri nesplnení záväzku môže veriteľ vec použiť na uspokojenie pohľadávky", "jednoduchý a praktický prostriedok"] },
+      { "label": "Uznanie záväzku (§ 558 OZ)", "leaves": ["dlžník písomne uzná svoj dlh", "posilňuje postavenie veriteľa", "má účinok prerušenia premlčania"] },
+      { "label": "Zádržné právo", "leaves": ["veriteľ môže zadržať vec dlžníka, ktorú má u seba", "trvá do splnenia záväzku", "rýchly a efektívny zabezpečovací prostriedok"] },
+      { "label": "Význam pre prax", "leaves": ["zvyšujú istotu veriteľa", "motivujú dlžníka k riadnemu plneniu", "umožňujú rýchlejšie a efektívnejšie uspokojenie pohľadávok", "kľúčové v obchodných vzťahoch, úveroch, zmluvách"] }
+    ]
   }
 }

@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zmena záväzkov – subjekty, obsah, právne formy (flexibilná úprava záväzkov bez ich zániku)",
+    "branches": [
+      { "label": "Postúpenie pohľadávky (cesia, § 524 OZ)", "leaves": ["pôvodný veriteľ je postupca, nový veriteľ postupník", "nevyžaduje sa súhlas dlžníka", "dlžník musí byť o postúpení informovaný", "postupuje sa pohľadávka s príslušenstvom: úroky, zabezpečenie", "dlžník môže voči postupníkovi uplatniť všetky námietky, ktoré mal voči postupcovi"] },
+      { "label": "Prevzatie dlhu (§ 531 OZ)", "leaves": ["tretia osoba preberá záväzok dlžníka", "vyžaduje sa súhlas veriteľa", "pôvodný dlžník je záväzku zbavený", "mení sa osoba, od ktorej má veriteľ právo požadovať plnenie"] },
+      { "label": "Pristúpenie k záväzku (§ 533 OZ)", "leaves": ["tretia osoba vstupuje ako ďalší dlžník", "nový dlžník plní solidárne s pôvodným", "veriteľ môže požadovať plnenie od ktoréhokoľvek", "pôvodný dlžník nie je zbavený záväzku"] },
+      { "label": "Novácia", "leaves": ["dohoda strán, pôvodný záväzok sa ruší", "nahrádza sa novým záväzkom", "musí byť zrejmé, že strany chcú pôvodný záväzok zrušiť", "mení sa predmet plnenia, rozsah povinností alebo právny dôvod"] },
+      { "label": "Iné formy zmeny záväzkov", "leaves": ["uznanie dlhu: posilňuje veriteľa, prerušuje premlčanie", "zmena podmienok plnenia: splátky, lehota, spôsob plnenia", "dohoda o zmene zmluvy, ak to zákon alebo zmluva umožňuje"] },
+      { "label": "Význam pre prax", "leaves": ["umožňuje flexibilné prispôsobenie záväzkov novým okolnostiam", "zabraňuje zbytočnému zániku a opätovnému vytváraniu záväzkov", "kľúčové pri úveroch, obchodných vzťahoch, dlhovej reštrukturalizácii", "posilňuje právnu istotu a stabilitu záväzkových vzťahov"] }
+    ]
   }
 }

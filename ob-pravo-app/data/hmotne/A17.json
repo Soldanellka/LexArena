@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Záväzkové právne vzťahy – pojem, prvky, vznik (veriteľ – pohľadávka, dlžník – dlh, inter partes)",
+    "branches": [
+      { "label": "Pojem záväzkového právneho vzťahu (§ 488 OZ)", "leaves": ["právny vzťah medzi veriteľom a dlžníkom", "veriteľ má pohľadávku, dlžník má dlh", "pôsobí inter partes, len medzi účastníkmi", "základ výmeny plnení, obchodu a spolupráce"] },
+      { "label": "Subjekty", "leaves": ["veriteľ: oprávnený požadovať plnenie", "dlžník: povinný plniť"] },
+      { "label": "Obsah", "leaves": ["práva a povinnosti strán", "dlžník poskytuje plnenie, veriteľ ho môže požadovať"] },
+      { "label": "Predmet (plnenie)", "leaves": ["dare: niečo dať", "facere: niečo vykonať", "non facere: niečoho sa zdržať", "pati: niečo strpieť", "plnenie musí byť možné, dovolené, určité"] },
+      { "label": "Vznik záväzkov zo zmluvy", "leaves": ["najčastejší a najdôležitejší zdroj záväzkov", "zmluva je dvojstranný právny úkon", "OZ upravuje všeobecné pravidlá a typové zmluvy", "kúpna, darovacia, nájomná, zmluva o dielo"] },
+      { "label": "Vznik záväzkov z protiprávneho konania", "leaves": ["zodpovednosť za škodu (§ 420 a nasl.)", "porušenie právnej povinnosti → škoda → povinnosť nahradiť", "bezdôvodné obohatenie (§ 451 a nasl.)", "obohatenie bez právneho dôvodu → povinnosť vydať"] },
+      { "label": "Vznik záväzkov z iných právnych skutočností", "leaves": ["nálezné (§ 135 OZ): nález cudzej veci", "rozhodnutie orgánu verejnej moci", "zákon", "vydanie veci z držby", "konanie bez príkazu"] },
+      { "label": "Význam pre prax", "leaves": ["dynamická časť občianskeho práva", "umožňuje ekonomické a spoločenské procesy", "základ obchodných vzťahov, služieb, zmlúv", "jasné pravidlá pre vznik, zmenu a zánik práv a povinností"] }
+    ]
   }
 }

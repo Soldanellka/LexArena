@@ -138,5 +138,19 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zánik záväzkov – spôsoby, účinky, právna istota (zánik povinnosti dlžníka plniť)",
+    "branches": [
+      { "label": "Splnenie (§ 559 OZ)", "leaves": ["najčastejší a prirodzený spôsob zániku záväzku", "dlžník poskytne riadne, včas a úplné plnenie", "plnenie musí byť podľa zmluvy a na správnom mieste", "záväzok zaniká definitívne"] },
+      { "label": "Kompenzácia – vzájomný zápočet (§ 580 OZ)", "leaves": ["veriteľ a dlžník majú voči sebe vzájomné pohľadávky", "podmienky: rovnaký druh plnenia, splatnosť", "môže byť jednostranná alebo dohodou", "záväzok zaniká v rozsahu, v akom sa pohľadávky kryjú"] },
+      { "label": "Dohoda o narovnaní (§ 585 OZ)", "leaves": ["strany odstránia sporné alebo pochybné práva", "nahradia ich novým záväzkom", "pôvodný záväzok zaniká", "narovnanie stabilizuje právny vzťah"] },
+      { "label": "Odstúpenie od zmluvy (§ 48 OZ)", "leaves": ["zmluva sa ruší ex tunc, od začiatku", "strany si musia vrátiť plnenia", "možné len ak to umožňuje zákon alebo zmluva"] },
+      { "label": "Nemožnosť plnenia (§ 575 OZ)", "leaves": ["záväzok zaniká, ak sa plnenie stane objektívne nemožným", "nemožnosť musí byť skutočná, nie subjektívna", "finančná neschopnosť dlžníka nie je nemožnosť plnenia"] },
+      { "label": "Konfúzia (splynutie)", "leaves": ["veriteľ a dlžník sa stanú tou istou osobou", "typicky: dedenie, zlúčenie spoločností", "záväzok zaniká automaticky"] },
+      { "label": "Preklúzia", "leaves": ["zánik práva uplynutím prekluzívnej lehoty", "ak zanikne právo, zaniká aj záväzok"] },
+      { "label": "Smrť dlžníka alebo veriteľa", "leaves": ["záväzok zaniká, ak je plnenie viazané na osobu", "napr. umelecké dielo, osobné služby"] },
+      { "label": "Význam pre prax", "leaves": ["uzatvára právny vzťah", "odstraňuje povinnosť dlžníka plniť", "poskytuje právnu istotu a stabilitu", "umožňuje efektívne riešenie sporov a vyrovnanie pohľadávok"] }
+    ]
   }
 }

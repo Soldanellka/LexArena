@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Záložné právo – funkcie, vznik, výkon, zánik (zabezpečenie pohľadávky, erga omnes, droit de préférence a droit de suite)",
+    "branches": [
+      { "label": "Pojem záložného práva (§ 151a OZ)", "leaves": ["vecné právo na zabezpečenie pohľadávky", "veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok", "pôsobí erga omnes", "droit de préférence: prednostné uspokojenie", "droit de suite: právo nasleduje vec"] },
+      { "label": "Funkcie záložného práva", "leaves": ["zabezpečovacia: motivuje dlžníka plniť", "uspokojovacia: veriteľ sa uspokojí zo zálohu", "preventívna: znižuje riziko veriteľa"] },
+      { "label": "Vznik záložného práva", "leaves": ["zmluvou: najčastejší spôsob, pri nehnuteľnostiach vklad do katastra (konštitutívny účinok)", "zo zákona: napr. záložné právo prenajímateľa", "rozhodnutím súdu alebo správneho orgánu: napr. zabezpečenie výživného", "vydržaním: dlhodobé vykonávanie práva zodpovedajúceho záložnému právu"] },
+      { "label": "Predmet záložného práva", "leaves": ["hnuteľná vec", "nehnuteľnosť", "pohľadávka", "podnik", "majetkové právo"] },
+      { "label": "Výkon záložného práva (§ 151j–151ma OZ)", "leaves": ["ak dlžník nesplní záväzok, veriteľ môže vykonať záložné právo", "dohodnutý spôsob: predaj mimo dražby", "verejná dražba", "predaj podľa osobitných predpisov: exekučný predaj", "výkon musí byť primeraný a nesmie poškodiť dlžníka nad nevyhnutnú mieru"] },
+      { "label": "Zánik záložného práva", "leaves": ["zánikom zabezpečenej pohľadávky", "zánikom zálohu", "výmazom z katastra pri nehnuteľnostiach", "vzdanie sa záložného práva veriteľom", "splnením účelu zabezpečenia"] },
+      { "label": "Význam pre prax", "leaves": ["najdôležitejší zabezpečovací inštitút", "vysoká právna istota: kataster, NCRP", "kľúčové pre úvery, hypotéky, podnikanie", "silná ochrana veriteľa cez prednostné uspokojenie"] }
+    ]
   }
 }

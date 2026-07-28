@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "BSM – pojem, predmet, správa, zánik, vyporiadanie (osobitná forma spoluvlastníctva bez podielov)",
+    "branches": [
+      { "label": "Pojem BSM", "leaves": ["vzniká automaticky uzavretím manželstva", "manželia nemajú podiely", "každý má rovnaké práva k celému spoločnému majetku", "ide o majetkové spoločenstvo manželov"] },
+      { "label": "Čo patrí do BSM (§ 143 OZ)", "leaves": ["príjmy z práce", "veci kúpené z týchto príjmov", "majetok získaný spoločnou činnosťou"] },
+      { "label": "Čo nepatrí do BSM", "leaves": ["majetok nadobudnutý pred manželstvom", "dedenie a darovanie", "veci osobnej potreby alebo výkonu povolania", "majetok patriaci výlučne jednému z manželov zo zákona"] },
+      { "label": "Správa majetku BSM", "leaves": ["manželia majú rovnaké práva pri správe", "bežné úkony: každý môže konať samostatne", "závažné úkony, napr. prevod nehnuteľnosti, vyžadujú súhlas oboch", "povinnosť konať v záujme rodiny"] },
+      { "label": "Zánik BSM (§ 148 OZ)", "leaves": ["zánik manželstva: rozvod, smrť", "rozhodnutie súdu o zrušení alebo obmedzení BSM", "napr. z dôvodu podnikania jedného z manželov", "dohoda manželov, ak to zákon umožňuje"] },
+      { "label": "Vyporiadanie BSM (§ 149–150 OZ)", "leaves": ["dohoda manželov", "súdne rozhodnutie, ak sa nedohodnú", "zákonná fikcia po 3 rokoch: hnuteľné veci užívané jedným sa stávajú jeho vlastníctvom", "ostatné veci prechádzajú do podielového spoluvlastníctva", "pohľadávky a dlhy sa stávajú podielovými"] },
+      { "label": "Kritériá súdu pri vyporiadaní", "leaves": ["zásada rovnosti podielov", "starostlivosť o rodinu", "príspevok k nadobudnutiu majetku", "správanie manželov"] },
+      { "label": "Význam pre prax", "leaves": ["základ majetkového režimu manželov", "chráni ekonomickú stabilitu rodiny", "jasné pravidlá pri rozvode a dedičstve", "významné pri prevodoch nehnuteľností a podnikaní"] }
+    ]
   }
 }
