@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Následky vadnosti právnych úkonov (neplatnosť – absolútna / relatívna – účinky)",
+    "branches": [
+      { "label": "Vadnosť právneho úkonu", "leaves": ["úkon nespĺňa zákonné náležitosti", "následok: neplatnosť", "môže byť absolútna alebo relatívna", "ovplyvňuje vznik, zmenu, zánik práv a povinností"] },
+      { "label": "Absolútna neplatnosť (§ 39 OZ)", "leaves": ["nastáva ex lege (automaticky)", "súd prihliada z úradnej povinnosti", "účinky ex tunc (od začiatku)", "chráni verejný záujem"] },
+      { "label": "Dôvody absolútnej neplatnosti", "leaves": ["rozpor so zákonom", "rozpor s dobrými mravmi", "obchádzanie zákona", "nedodržanie zákonnej formy", "úkon osoby nespôsobilej na právne úkony"] },
+      { "label": "Relatívna neplatnosť (§ 40a OZ)", "leaves": ["úkon je neplatný, len ak sa oprávnená osoba dovolá", "súd neprihliada automaticky", "chráni individuálne záujmy"] },
+      { "label": "Dôvody relatívnej neplatnosti", "leaves": ["omyl v podstatnej náležitosti (§ 49a OZ)", "tieseň", "lesť (podvod)", "výhrážka (§ 49 OZ)", "omyl vyvolaný druhou stranou alebo jej vedomosť o omyle"] },
+      { "label": "Účinky neplatnosti", "leaves": ["úkon nevyvoláva zamýšľané právne následky", "strany si vracajú plnenia → bezdôvodné obohatenie", "pri relatívnej neplatnosti sa úkon považuje za platný, kým sa neplatnosti niekto nedovolá"] },
+      { "label": "Význam pre prax", "leaves": ["kontrola platnosti právnych úkonov", "ochrana verejného záujmu (absolútna)", "ochrana slabšej strany (relatívna)", "zásadné pre zmluvné právo, rodinné právo, vecné práva"] }
+    ]
   }
 }

@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zastúpenie v občianskom práve (konanie v mene a na účet zastúpeného)",
+    "branches": [
+      { "label": "Pojem zastúpenia (§ 22–33a OZ)", "leaves": ["zástupca koná v mene a na účet zastúpeného", "právne účinky vznikajú priamo zastúpenému", "umožňuje konať osobám bez spôsobilosti alebo s potrebou odbornej pomoci", "základný inštitút civilného práva"] },
+      { "label": "Zákonné zastúpenie", "leaves": ["vzniká priamo zo zákona", "rodičia zastupujú maloletých", "opatrovník osoby s obmedzenou spôsobilosťou", "ďalšie zákonné situácie bez plnej moci", "rozsah určuje zákon alebo rozhodnutie súdu"] },
+      { "label": "Zmluvné zastúpenie (plná moc, § 31 OZ)", "leaves": ["vzniká na základe prejavu vôle zastúpeného", "formy plnej moci: ústna, písomná, konkludentná", "ak úkon vyžaduje písomnú formu, plná moc musí byť písomná", "splnomocnenec koná v medziach plnej moci", "prekročenie oprávnenia: úkon je účinný len po schválení zastúpeným"] },
+      { "label": "Prokúra (Obchodný zákonník)", "leaves": ["osobitný druh obchodného zastúpenia", "udeľuje ju podnikateľ", "prokurista môže konať vo všetkých úkonoch súvisiacich s prevádzkou podniku", "výnimka: scudzenie a zaťaženie nehnuteľností, ak nie je výslovne uvedené", "musí byť zapísaná v obchodnom registri"] },
+      { "label": "Účinky zastúpenia", "leaves": ["právne následky konania zástupcu vznikajú priamo zastúpenému", "ak zástupca koná v rámci oprávnenia, úkon je účinný", "pri prekročení oprávnenia je úkon účinný až po schválení", "chráni právnu istotu a umožňuje flexibilné právne konanie"] },
+      { "label": "Význam pre prax", "leaves": ["umožňuje konať osobám bez spôsobilosti", "zjednodušuje právne úkony v bežnom živote aj podnikaní", "kľúčové pre zmluvy, rodinné právo, obchodné právo", "chráni zastúpeného pred konaním mimo oprávnenia"] }
+    ]
   }
 }

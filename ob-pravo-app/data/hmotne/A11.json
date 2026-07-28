@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Vecné práva – pojem, druhy, zásady (absolútne práva pôsobiace erga omnes)",
+    "branches": [
+      { "label": "Pojem vecných práv", "leaves": ["absolútne práva pôsobiace voči každému", "upravujú priame právne panstvo nad vecou", "poskytujú silnejšiu ochranu než záväzkové práva", "verejná evidencia, najmä kataster"] },
+      { "label": "Zásady vecných práv", "leaves": ["numerus clausus: taxatívny výpočet, nemožno vytvárať zmluvne", "droit de suite: právo nasleduje vec aj k nadobúdateľom", "droit de préférence: prednostné uspokojenie, najmä záložné právo"] },
+      { "label": "Vlastnícke právo", "leaves": ["najširšie vecné právo", "držba", "užívanie", "nakladanie", "umožňuje vylúčiť iných z užívania veci"] },
+      { "label": "Spoluvlastníctvo", "leaves": ["vlastnícke právo viacerých osôb k jednej veci", "podielové spoluvlastníctvo: podiel vyjadruje mieru účasti", "bezpodielové spoluvlastníctvo manželov (BSM)", "spoločné rozhodovanie o veci"] },
+      { "label": "Záložné právo", "leaves": ["zabezpečovací inštitút", "veriteľ sa môže uspokojiť z predmetu záložného práva", "silný preferenčný účinok", "pôsobí voči každému (erga omnes)"] },
+      { "label": "Vecné bremená", "leaves": ["obmedzujú vlastníka nehnuteľnosti v prospech inej osoby", "povinnosť niečo strpieť: prechod, prejazd", "alebo niečo konať: udržiavať studňu", "viažu sa na nehnuteľnosť, prechádzajú na nadobúdateľov"] },
+      { "label": "Význam pre prax", "leaves": ["vysoká právna istota", "verejná evidencia v katastri", "zásadné pre vlastníctvo, nehnuteľnosti, zabezpečenie pohľadávok", "pôsobia voči každému, teda silná ochrana oprávneného"] }
+    ]
   }
 }

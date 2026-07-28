@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právnické osoby – pojem, druhy, vznik, zánik, konanie (umelý subjekt práva s vlastnou právnou subjektivitou)",
+    "branches": [
+      { "label": "Pojem právnickej osoby (§ 18 OZ)", "leaves": ["umelý subjekt odlišný od fyzickej osoby", "má právnu subjektivitu", "môže nadobúdať práva a povinnosti", "vystupuje v právnych vzťahoch, uzatvára zmluvy", "nesie právnu zodpovednosť"] },
+      { "label": "Druhy právnických osôb", "leaves": ["združenia osôb: spolky, občianske združenia, obchodné spoločnosti", "účelové združenia majetku: nadácie, neziskové fondy", "jednotky územnej samosprávy: obce, VÚC", "iné právnické osoby podľa osobitných zákonov: komory, verejnoprávne inštitúcie"] },
+      { "label": "Vznik právnickej osoby (§ 19 OZ)", "leaves": ["vzniká zápisom do registra", "zápis má konštitutívny účinok", "právnická osoba existuje až odo dňa zápisu"] },
+      { "label": "Registre", "leaves": ["obchodný register", "register mimovládnych organizácií", "register nadácií", "register neziskových organizácií", "osobitné registre"] },
+      { "label": "Zánik právnickej osoby (§ 19a OZ)", "leaves": ["zánik: výmaz z registra (konštitutívny účinok)", "predchádza mu zrušenie (s likvidáciou alebo bez)", "rozhodnutie orgánu právnickej osoby", "rozhodnutie súdu", "uplynutie doby, na ktorú bola založená"] },
+      { "label": "Konanie právnickej osoby (§ 20 OZ)", "leaves": ["štatutárne orgány: konateľ, predstavenstvo, predseda", "zamestnanci alebo poverené osoby v rámci oprávnenia", "zástupcovia na základe plnej moci", "úkony štatutára zaväzujú právnickú osobu priamo"] },
+      { "label": "Význam pre prax", "leaves": ["umožňujú organizovanú činnosť osôb a majetku", "sú základom podnikania, verejnej správy, neziskového sektora", "právna istota: jasné pravidlá vzniku, zániku a konania", "kľúčové pre zmluvné právo, obchodné právo, správne právo"] }
+    ]
   }
 }

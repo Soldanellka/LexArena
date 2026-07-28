@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Čas ako právna skutočnosť – premlčanie, preklúzia (plynutie času → vznik, zmena, zánik práv a povinností)",
+    "branches": [
+      { "label": "Čas ako právna skutočnosť", "leaves": ["právny poriadok spája následky s plynutím času", "vznik, zmena, zánik práv a povinností", "význam pri lehotách, premlčaní, preklúzii, vydržaní", "čas ako objektívna právna udalosť"] },
+      { "label": "Premlčanie (§ 100–114 OZ)", "leaves": ["právo nezaniká, ale stáva sa nevymáhateľným", "súd neprihliada automaticky", "dlžník musí vzniesť námietku premlčania", "všeobecná lehota: 3 roky", "týka sa majetkových práv, škody, bezdôvodného obohatenia"] },
+      { "label": "Priebeh premlčania", "leaves": ["začiatok: deň, keď sa právo mohlo vykonať po prvý raz", "prerušenie: uznanie dlhu, uplatnenie práva na súde", "stavanie: prekážky brániace uplatneniu práva"] },
+      { "label": "Preklúzia", "leaves": ["právo zaniká po uplynutí lehoty", "súd prihliada z úradnej povinnosti", "nemožno požadovať splnenie ani náhradu", "týka sa práv viazaných na presnú lehotu", "prísnejší následok ako premlčanie"] },
+      { "label": "Čas a vydržanie", "leaves": ["dlhodobá držba → nadobudnutie vlastníctva", "podmienky: dobrá viera, nepretržitá držba", "čas je rozhodujúci prvok vydržania"] },
+      { "label": "Význam pre prax", "leaves": ["právna istota", "motivácia konať v primeranom čase", "ochrana veriteľa aj dlžníka", "zásadné pre majetkové práva, zmluvy, držbu"] }
+    ]
   }
 }

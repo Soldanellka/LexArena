@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Fyzické osoby – subjektivita, spôsobilosť, ochrana osobnosti (základný subjekt občianskoprávnych vzťahov)",
+    "branches": [
+      { "label": "Právna subjektivita (§ 7 OZ)", "leaves": ["vznik: narodením", "zánik: smrťou", "neodňateľná, trvá celý život", "schopnosť byť nositeľom práv a povinností"] },
+      { "label": "Spôsobilosť na právne úkony", "leaves": ["vznik: plnoletosť (18 rokov)", "schopnosť vlastným konaním nadobúdať práva a povinnosti", "môže byť obmedzená alebo odňatá súdom", "dôvod: duševná porucha brániaca samostatnému konaniu"] },
+      { "label": "Maloletí a obmedzenie spôsobilosti", "leaves": ["maloletí konajú cez zákonných zástupcov", "môžu robiť úkony primerané veku", "pri obmedzení spôsobilosti koná opatrovník", "rozsah obmedzenia určuje súd"] },
+      { "label": "Ochrana osobnosti (§ 11–16 OZ)", "leaves": ["život a zdravie", "česť a dôstojnosť", "meno", "súkromie", "prejavy osobnej povahy (fotky, záznamy)", "na použitie podoby, mena, prejavov je potrebný súhlas osoby"] },
+      { "label": "Práva pri zásahu do osobnosti", "leaves": ["právo na zdržanie sa zásahu", "právo na odstránenie následkov", "právo na primerané zadosťučinenie", "možnosť žiadať nemajetkovú ujmu v peniazoch", "osobnostné práva sú neprevoditeľné, nepostúpiteľné, nepremlčateľné"] },
+      { "label": "Význam pre prax", "leaves": ["základ subjektov občianskoprávnych vzťahov", "ochrana integrity človeka", "limity autonómie vôle pri úkonoch maloletých", "zásadné pre zmluvy, rodinné právo, osobnostné spory"] }
+    ]
   }
 }

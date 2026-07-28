@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Ochrana osobnosti fyzickej osoby, § 11–16 OZ (telesná integrita, dôstojnosť, súkromie, prejavy osobnej povahy)",
+    "branches": [
+      { "label": "Pojem a povaha osobnostných práv", "leaves": ["chránia fyzickú osobu ako jedinečnú ľudskú bytosť", "neprevoditeľné", "nepostúpiteľné", "nepremlčateľné", "nemožno sa ich platne vzdať"] },
+      { "label": "Chránené hodnoty (§ 11 OZ)", "leaves": ["život a zdravie", "občianska česť a ľudská dôstojnosť", "meno", "súkromie", "prejavy osobnej povahy (fotografie, obrazové a zvukové záznamy)"] },
+      { "label": "Súhlas so zásahom", "leaves": ["potrebný na použitie podoby, mena, prejavov osobnej povahy", "výnimky: zákonné prípady, napr. spravodajské účely v primeranom rozsahu", "bez súhlasu ide o zásah do osobnostných práv"] },
+      { "label": "Formy zásahu", "leaves": ["neoprávnené konanie alebo opomenutie", "zverejnenie informácií bez súhlasu", "šírenie nepravdivých tvrdení", "neprimeraný zásah do súkromia", "neoprávnené nakladanie s fotografiami alebo záznamami"] },
+      { "label": "Prostriedky ochrany (§ 13 OZ)", "leaves": ["upustenie od zásahu", "odstránenie následkov: ospravedlnenie, stiahnutie článku, zničenie záznamu", "primerané zadosťučinenie morálne alebo peňažné (nemajetková ujma)", "výška závisí od intenzity zásahu, následkov, úmyslu, verejnosti, opakovania"] },
+      { "label": "Konanie vo veciach ochrany osobnosti", "leaves": ["právomoc: krajský súd ako súd prvého stupňa", "dôvod: závažnosť a osobitný charakter sporov", "rozhoduje o zásahu, následkoch, zadosťučinení"] },
+      { "label": "Význam pre prax", "leaves": ["chráni ľudskú dôstojnosť a integritu", "kľúčové pri mediálnych sporoch, online zásahoch, fotografiách, reputácii", "poskytuje účinné nástroje proti nepravdivým tvrdeniam a zásahom do súkromia", "posilňuje ochranu jednotlivca v digitálnom priestore"] }
+    ]
   }
 }

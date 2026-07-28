@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Vlastnícke právo – pojem, obsah, nadobúdanie, ochrana (najúplnejšie vecné právo, pôsobí erga omnes)",
+    "branches": [
+      { "label": "Pojem vlastníckeho práva (§ 123 OZ)", "leaves": ["najúplnejšie vecné právo", "absolútne právo pôsobiace voči každému", "každý musí rešpektovať vlastnícke postavenie", "najširšie právne panstvo nad vecou"] },
+      { "label": "Obsah vlastníckeho práva", "leaves": ["ius possidendi: právo vec držať", "ius utendi: právo vec užívať", "ius fruendi: právo požívať plody a úžitky", "ius disponendi: právo nakladať (previesť, zaťažiť, zničiť)", "obmedzenia: zákon (susedské práva, životné prostredie) alebo zmluva"] },
+      { "label": "Nadobúdanie vlastníctva", "leaves": ["zmluvou: pri nehnuteľnostiach uzavretie zmluvy a vklad do katastra (konštitutívny účinok)", "vydržaním (§ 134 OZ): originárny spôsob, oprávnená držba, dobrá viera, nepretržitá držba", "lehoty vydržania: 10 rokov nehnuteľnosti, 3 roky hnuteľné veci", "dedičstvom: vlastníctvo prechádza smrťou poručiteľa", "rozhodnutím orgánu verejnej moci: exekúcia, konkurz, vyvlastnenie"] },
+      { "label": "Ochrana vlastníckeho práva", "leaves": ["reivindikačná žaloba (§ 126 OZ): žaloba na vydanie veci proti tomu, kto ju neoprávnene drží", "negatórna žaloba (§ 127 OZ): odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov", "typicky: imisie, obťažovanie, zásahy do pozemku", "ochrana vlastníctva je absolútna", "súdy chránia vlastníka aj proti zásahom verejnej moci, ak nie sú zákonné"] },
+      { "label": "Význam pre prax", "leaves": ["základ nehnuteľností, podnikania, majetkových vzťahov", "vysoká právna istota: kataster, verejnosť údajov", "silná súdna ochrana", "kľúčové pre spory o držbu, hranice pozemkov, imisie, dedičstvo"] }
+    ]
   }
 }
