@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právne úkony – pojem a náležitosti (prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností)",
+    "branches": [
+      { "label": "Pojem právneho úkonu", "leaves": ["prejav vôle podľa § 34 OZ", "smeruje k právnym následkom", "základ autonómie vôle", "musí byť platný, aby vyvolal účinky"] },
+      { "label": "Subjekt právneho úkonu", "leaves": ["spôsobilosť na právne úkony", "fyzická osoba: plnoletosť", "právnická osoba: štatutárny orgán", "nedostatok spôsobilosti → neplatnosť"] },
+      { "label": "Vôľa", "leaves": ["musí byť slobodná", "vážna, určitá, zrozumiteľná", "nesmie byť v omyle, tiesni, pod nátlakom", "omyl v podstatnej náležitosti → neplatnosť"] },
+      { "label": "Prejav vôle", "leaves": ["musí byť určitý a zrozumiteľný", "formy: ústne, písomne, konkludentne", "konkludentné konanie, ak zákon nevyžaduje formu", "prejav musí umožniť určiť obsah úkonu"] },
+      { "label": "Forma právneho úkonu", "leaves": ["voľná forma, ak zákon neustanovuje inak", "písomná forma pri nehnuteľnostiach", "prevod vlastníctva, vecné práva, niektoré rodinné úkony", "nedodržanie formy → neplatnosť"] },
+      { "label": "Význam právnych úkonov", "leaves": ["základný nástroj autonómie vôle", "určujú vznik, zmenu, zánik práv a povinností", "musia spĺňať všetky náležitosti, aby boli platné", "kľúčové pre fungovanie občianskoprávnych vzťahov"] }
+    ]
   }
 }

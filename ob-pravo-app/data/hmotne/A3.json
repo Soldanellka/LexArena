@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právne skutočnosti v občianskom práve – pojem, druhy (vznik, zmena, zánik práv a povinností)",
+    "branches": [
+      { "label": "Právne úkony", "leaves": ["prejav vôle smerujúci k právnym následkom", "jednostranné: výpoveď, závet", "dvojstranné: zmluvy", "podmienky platnosti: spôsobilosť, určitý prejav, súlad so zákonom a dobrými mravmi"] },
+      { "label": "Protiprávne úkony (delikty)", "leaves": ["konanie v rozpore s právom", "spôsobenie škody alebo ujmy", "následok: povinnosť nahradiť škodu", "patria sem: škoda porušením povinnosti, bezdôvodné obohatenie, zásah do osobnostných práv"] },
+      { "label": "Právne udalosti", "leaves": ["nastávajú nezávisle od vôle človeka", "právne následky automaticky", "príklady: narodenie, smrť, uplynutie času, plynutie lehôt, prírodné udalosti", "objektívne, nevyžadujú prejav vôle"] },
+      { "label": "Právne stavy", "leaves": ["dlhodobejšie právne situácie", "trvajú určitý čas", "príklady: manželstvo, rodičovstvo, držba, podnikateľský status", "vznik: právny úkon, udalosť alebo rozhodnutie orgánu verejnej moci"] },
+      { "label": "Význam právnych skutočností", "leaves": ["určujú vznik, zmenu a zánik práv a povinností", "sú základom dynamiky občianskoprávnych vzťahov", "určujú, kedy sa mení právne postavenie subjektov", "sú nevyhnutné pre aplikáciu OZ"] }
+    ]
   }
 }

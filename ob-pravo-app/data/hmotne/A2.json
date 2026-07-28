@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Základné zásady občianskeho práva (hodnotový základ súkromného práva, interpretačné pravidlá OZ)",
+    "branches": [
+      { "label": "Zásada zákonnosti", "leaves": ["konanie v medziach zákona", "právne následky len z právnych skutočností", "právna istota"] },
+      { "label": "Rovnosť subjektov", "leaves": ["rovnaké postavenie účastníkov", "štát ako subjekt, nie autorita", "zákaz diskriminácie"] },
+      { "label": "Autonómia vôle a zmluvná sloboda", "leaves": ["slobodné formovanie vzťahov", "limity: zákon, dobré mravy, verejný poriadok", "pacta sunt servanda"] },
+      { "label": "Ochrana osobnosti", "leaves": ["dôstojnosť, česť, súkromie", "meno a prejavy osobnosti", "§ 11 a nasl. OZ"] },
+      { "label": "Ochrana dobrých mravov", "leaves": ["právne úkony odporujúce dobrým mravom sú neplatné", "korektív autonómie vôle", "judikatúra NS SR"] },
+      { "label": "Zákaz zneužívania práv", "leaves": ["výkon práva nesmie poškodiť iného", "šikanózny výkon práva nepožíva ochranu", "princíp proporcionality"] },
+      { "label": "Subsidiarita OZ", "leaves": ["OZ ako všeobecný predpis súkromného práva", "použitie pri absencii osobitnej úpravy", "význam pri výklade"] },
+      { "label": "Normatívny význam zásad", "leaves": ["zásady usmerňujú výklad právnych noriem", "pomáhajú pri posudzovaní platnosti právnych úkonov", "usmerňujú rozhodovanie súdov", "dopĺňajú medzery v zákone"] }
+    ]
   }
 }
