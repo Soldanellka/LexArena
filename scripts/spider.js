@@ -83,76 +83,41 @@ function findDefinition(json, label) {
   return tile ? tile.definition : null;
 }
 
-function wrapLabel(label, maxChars) {
-  const words = String(label).split(/\s+/);
-  const lines = [];
-  let cur = '';
-  words.forEach(w => {
-    const next = cur ? `${cur} ${w}` : w;
-    if (next.length > maxChars && cur) { lines.push(cur); cur = w; }
-    else cur = next;
-  });
-  if (cur) lines.push(cur);
-  return lines.slice(0, 3);
-}
-
-function tileSvg({ x, y, w, h, colorClass, label, nodeId, hasChildren, collapsed }) {
-  const lines = wrapLabel(label, 14);
-  const lineHeight = 13;
-  const startY = y - ((lines.length - 1) * lineHeight) / 2;
-  const textSpans = lines.map((line, i) =>
-    `<tspan x="${x}" y="${startY + i * lineHeight}">${escapeHtml(line)}</tspan>`
-  ).join('');
-  const marker = hasChildren ? `<text x="${x + w / 2 - 10}" y="${y - h / 2 + 14}" class="spider-marker" text-anchor="middle">${collapsed ? '+' : '−'}</text>` : '';
-  return `
-    <g class="spider-node ${colorClass}" data-node-id="${nodeId}" tabindex="0" role="button">
-      <rect x="${x - w / 2}" y="${y - h / 2}" width="${w}" height="${h}" rx="14" class="spider-tile"></rect>
-      <text text-anchor="middle" dominant-baseline="middle" class="spider-label">${textSpans}</text>
-      ${marker}
-    </g>`;
-}
-
-/* Radiálny layout: stred → vetvy na kružnici (radius R1) → listy vetvy
-   rozložené vo výseči okolo uhla svojej vetvy (radius R2). Vetva bez
-   listov (fallback hviezdica) sa správa ako list – klik rovno otvorí detail. */
+/* Top-down HTML/CSS strom (krok A, prepracované): centrálna dlaždica hore,
+   pod ňou rad farebných vetiev (zbalené), pod rozbalenou vetvou jej listy
+   zvisle pod sebou. Žiadna SVG geometria (R1/R2/wedge/wrapLabel/measureTile)
+   – HTML/CSS rieši zalamovanie textu, výšku dlaždice a zalomenie riadkov
+   vetiev samo (flex-wrap), nič sa nepočíta ručne. Vetva bez listov (fallback
+   hviezdica z tiles) sa vykreslí ako obyčajná vetva bez šípky/listov –
+   klik na ňu rovno otvorí detail (rovnaká click-logika ako predtým). */
 function renderTree(container, json, branches, state) {
-  const W = 720, H = 720, cx = W / 2, cy = H / 2;
-  const R1 = branches.length > 4 ? 220 : 190;
-  const R2 = R1 + 150;
-  const N = branches.length;
-
-  let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="spider-svg">`;
-  const lines = [];
-  const nodes = [];
-
-  nodes.push(tileSvg({ x: cx, y: cy, w: 150, h: 60, colorClass: 'spider-center', label: json.title, nodeId: 'center', hasChildren: false, collapsed: false }));
-
-  branches.forEach((branch, i) => {
-    const angle = (i / N) * 2 * Math.PI - Math.PI / 2;
-    const bx = cx + R1 * Math.cos(angle);
-    const by = cy + R1 * Math.sin(angle);
+  const branchesHtml = branches.map((branch, i) => {
     const colorClass = BRANCH_COLORS[i % BRANCH_COLORS.length];
     const collapsed = !!state.collapsed[i];
     const hasChildren = branch.leaves.length > 0;
+    const toggle = hasChildren
+      ? `<span class="spider-toggle">${collapsed ? `▸ (${branch.leaves.length})` : '▾'}</span>`
+      : '';
+    const leavesHtml = (hasChildren && !collapsed)
+      ? `<div class="spider-leaves">${branch.leaves.map((leaf, j) =>
+          `<div class="spider-leaf spider-node" data-node-id="b${i}l${j}" tabindex="0" role="button">${escapeHtml(leaf)}</div>`
+        ).join('')}</div>`
+      : '';
+    return `
+      <div class="spider-branch-col">
+        <div class="spider-branch spider-node ${colorClass}" data-node-id="b${i}" tabindex="0" role="button">
+          <span class="spider-branch-label">${escapeHtml(branch.label)}</span>
+          ${toggle}
+        </div>
+        ${leavesHtml}
+      </div>`;
+  }).join('');
 
-    lines.push(`<line x1="${cx}" y1="${cy}" x2="${bx}" y2="${by}" class="spider-line"></line>`);
-    nodes.push(tileSvg({ x: bx, y: by, w: 130, h: 52, colorClass, label: branch.label, nodeId: `b${i}`, hasChildren, collapsed }));
-
-    if (hasChildren && !collapsed) {
-      const spread = Math.min(Math.PI / 3, (Math.PI / N) * 1.8);
-      const leafCount = branch.leaves.length;
-      branch.leaves.forEach((leaf, j) => {
-        const leafAngle = angle - spread / 2 + (leafCount > 1 ? (j / (leafCount - 1)) * spread : spread / 2);
-        const lx = cx + R2 * Math.cos(leafAngle);
-        const ly = cy + R2 * Math.sin(leafAngle);
-        lines.push(`<line x1="${bx}" y1="${by}" x2="${lx}" y2="${ly}" class="spider-line spider-line-leaf"></line>`);
-        nodes.push(tileSvg({ x: lx, y: ly, w: 120, h: 48, colorClass, label: leaf, nodeId: `b${i}l${j}`, hasChildren: false, collapsed: false }));
-      });
-    }
-  });
-
-  svg += lines.join('') + nodes.join('') + '</svg>';
-  container.innerHTML = svg;
+  container.innerHTML = `
+    <div class="spider-tree">
+      <div class="spider-center">${escapeHtml(json.title)}</div>
+      <div class="spider-branches">${branchesHtml}</div>
+    </div>`;
 }
 
 function ensureSpiderCss() {
@@ -161,29 +126,47 @@ function ensureSpiderCss() {
   style.id = 'spider-css';
   style.textContent = `
     .spider-panel { max-width: 760px; }
-    .spider-svg { width: 100%; height: auto; display: block; }
-    .spider-line { stroke: var(--card-border, rgba(0,0,0,0.15)); stroke-width: 2; }
-    .spider-line-leaf { stroke-width: 1.5; opacity: 0.7; }
-    .spider-tile { stroke: rgba(0,0,0,0.08); stroke-width: 1; cursor: pointer; }
+    .spider-tree-host { overflow: auto; max-width: 100%; max-height: 60vh; border-radius: 12px; }
+    .spider-tree { display: flex; flex-direction: column; align-items: center; padding: 8px 4px 4px; }
+    .spider-center {
+      font-weight: 700; font-size: 14px; text-align: center; line-height: 1.3;
+      background: var(--surface, #fff); border: 2px solid var(--accent-3, #ff6f91);
+      border-radius: 14px; padding: 10px 16px; max-width: 280px;
+    }
+    .spider-center::after { content: ''; display: block; width: 2px; height: 14px; background: var(--card-border, rgba(0,0,0,0.15)); margin: 4px auto 0; }
+    .spider-branches { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 14px 10px; margin-top: 4px; }
+    .spider-branch-col { display: flex; flex-direction: column; align-items: stretch; width: 150px; }
     .spider-node { cursor: pointer; }
-    .spider-label { font-size: 11px; fill: var(--text, #2b2b2b); font-family: inherit; pointer-events: none; }
-    .spider-marker { font-size: 13px; font-weight: 700; fill: var(--muted, #7b6f78); pointer-events: none; }
-    .spider-center .spider-tile { fill: var(--surface, #fff); stroke: var(--accent-3, #ff6f91); stroke-width: 2; }
-    .spider-center .spider-label { font-weight: 700; font-size: 12px; }
-    .spider-c0 .spider-tile { fill: #cfe3fb; }
-    .spider-c1 .spider-tile { fill: #cdeed9; }
-    .spider-c2 .spider-tile { fill: #e3d6f7; }
-    .spider-c3 .spider-tile { fill: #fce0bd; }
-    .spider-c4 .spider-tile { fill: #fbd0dd; }
-    .spider-c5 .spider-tile { fill: #c9ece7; }
-    :root[data-theme="dark"] .spider-c0 .spider-tile { fill: #1f3a5c; }
-    :root[data-theme="dark"] .spider-c1 .spider-tile { fill: #1f4a38; }
-    :root[data-theme="dark"] .spider-c2 .spider-tile { fill: #3a2d54; }
-    :root[data-theme="dark"] .spider-c3 .spider-tile { fill: #5a4322; }
-    :root[data-theme="dark"] .spider-c4 .spider-tile { fill: #5a2c3a; }
-    :root[data-theme="dark"] .spider-c5 .spider-tile { fill: #1f4e48; }
-    :root[data-theme="dark"] .spider-tile { stroke: rgba(255,255,255,0.12); }
-    :root[data-theme="dark"] .spider-label { fill: var(--text, #e6eef6); }
+    .spider-branch {
+      border-radius: 12px; padding: 8px 10px; font-size: 12px; font-weight: 600;
+      text-align: center; color: var(--text, #2b2b2b); border: 1px solid rgba(0,0,0,0.08);
+      overflow-wrap: break-word;
+    }
+    .spider-branch-label { display: block; }
+    .spider-toggle { display: block; font-size: 11px; font-weight: 400; opacity: 0.75; margin-top: 2px; }
+    .spider-leaves { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; padding-left: 10px; border-left: 2px solid var(--card-border, rgba(0,0,0,0.15)); }
+    .spider-leaf {
+      background: var(--surface, #fff); border: 1px solid var(--card-border, rgba(0,0,0,0.08));
+      border-radius: 10px; padding: 6px 8px; font-size: 11px; color: var(--text, #2b2b2b);
+      overflow-wrap: break-word;
+    }
+    .spider-c0 { background: #cfe3fb; }
+    .spider-c1 { background: #cdeed9; }
+    .spider-c2 { background: #e3d6f7; }
+    .spider-c3 { background: #fce0bd; }
+    .spider-c4 { background: #fbd0dd; }
+    .spider-c5 { background: #c9ece7; }
+    :root[data-theme="dark"] .spider-c0 { background: #1f3a5c; }
+    :root[data-theme="dark"] .spider-c1 { background: #1f4a38; }
+    :root[data-theme="dark"] .spider-c2 { background: #3a2d54; }
+    :root[data-theme="dark"] .spider-c3 { background: #5a4322; }
+    :root[data-theme="dark"] .spider-c4 { background: #5a2c3a; }
+    :root[data-theme="dark"] .spider-c5 { background: #1f4e48; }
+    :root[data-theme="dark"] .spider-branch { border-color: rgba(255,255,255,0.12); color: var(--text, #e6eef6); }
+    :root[data-theme="dark"] .spider-leaf { border-color: rgba(255,255,255,0.12); color: var(--text, #e6eef6); }
+    @media (max-width: 480px) {
+      .spider-branch-col { width: 130px; }
+    }
     .spider-detail { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: var(--bg, #fffafc); border: 1px solid var(--card-border, rgba(0,0,0,0.06)); }
   `;
   document.head.appendChild(style);
@@ -214,7 +197,7 @@ export async function openSpider(key, areaTitle) {
     <div class="avatar-panel spider-panel">
       <h3 style="margin:0 0 4px 0">${escapeHtml(json.title)}</h3>
       <div class="small muted" style="margin-bottom:10px">Klik na vetvu skryje/odkryje listy · klik na list ukáže definíciu</div>
-      <div id="spiderTreeHost"></div>
+      <div id="spiderTreeHost" class="spider-tree-host"></div>
       <div id="spiderDetailHost"></div>
       <div style="margin-top:16px">
         <button class="btn" id="spiderCloseBtn" style="width:100%">Zavrieť</button>
@@ -225,6 +208,7 @@ export async function openSpider(key, areaTitle) {
   const treeHost = modal.querySelector('#spiderTreeHost');
   const detailHost = modal.querySelector('#spiderDetailHost');
   const state = { collapsed: {} };
+  branches.forEach((b, i) => { if (b.leaves.length > 0) state.collapsed[i] = true; }); // A1: vetvy zbalené na začiatku
 
   function showDetail(label) {
     const def = findDefinition(json, label);
@@ -240,7 +224,6 @@ export async function openSpider(key, areaTitle) {
     treeHost.querySelectorAll('.spider-node').forEach(node => {
       node.addEventListener('click', () => {
         const id = node.getAttribute('data-node-id');
-        if (id === 'center') return;
         const m = id.match(/^b(\d+)(?:l(\d+))?$/);
         if (!m) return;
         const bi = Number(m[1]);
@@ -295,13 +278,14 @@ export async function renderSpiderInto(el, key, areaTitle) {
 
   el.innerHTML = `
     <div class="small muted" style="margin:10px 0">Klik na vetvu skryje/odkryje listy · klik na list ukáže definíciu</div>
-    <div class="spider-inline-tree"></div>
+    <div class="spider-inline-tree spider-tree-host"></div>
     <div class="spider-inline-detail"></div>`;
   if (el.dataset.spiderToken !== myToken) return;
 
   const treeHost = el.querySelector('.spider-inline-tree');
   const detailHost = el.querySelector('.spider-inline-detail');
   const state = { collapsed: {} };
+  branches.forEach((b, i) => { if (b.leaves.length > 0) state.collapsed[i] = true; }); // A1: vetvy zbalené na začiatku
 
   function showDetail(label) {
     const def = findDefinition(json, label);
@@ -317,7 +301,6 @@ export async function renderSpiderInto(el, key, areaTitle) {
     treeHost.querySelectorAll('.spider-node').forEach(node => {
       node.addEventListener('click', () => {
         const id = node.getAttribute('data-node-id');
-        if (id === 'center') return;
         const m = id.match(/^b(\d+)(?:l(\d+))?$/);
         if (!m) return;
         const bi = Number(m[1]);
