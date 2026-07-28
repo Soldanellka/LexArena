@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dedenie zo zákona – dedičské skupiny, postupnosť, odúmrť (nastupuje, ak niet závetu alebo nepokrýva celý majetok)",
+    "branches": [
+      { "label": "1. dedičská skupina (§ 473 OZ)", "leaves": ["dedia deti poručiteľa a manžel alebo manželka", "každé dieťa dedí rovnaký diel", "manžel dedí rovnaký diel ako deti", "ak dieťa nededí, nastupujú jeho potomkovia (právo reprezentácie)"] },
+      { "label": "2. dedičská skupina (§ 474 OZ)", "leaves": ["ak niet potomkov, dedia manžel alebo manželka a rodičia poručiteľa", "osoby žijúce s poručiteľom najmenej rok v spoločnej domácnosti", "ktoré sa starali o domácnosť alebo boli odkázané na výživu", "manžel dedí najmenej polovicu dedičstva"] },
+      { "label": "3. dedičská skupina (§ 475 OZ)", "leaves": ["ak niet dedičov z 1. ani 2. skupiny, dedia súrodenci poručiteľa", "osoby žijúce s poručiteľom v spoločnej domácnosti ako v 2. skupine", "ak súrodenec nededí, nastupujú jeho deti (právo reprezentácie)"] },
+      { "label": "4. dedičská skupina (§ 475a OZ)", "leaves": ["ak niet dedičov z predchádzajúcich skupín, dedia prarodičia poručiteľa", "ak prarodič nededí, dedí jeho línia, teda ďalší predkovia v tej vetve"] },
+      { "label": "Dedenie štátom (§ 462 OZ)", "leaves": ["ak niet žiadnych dedičov, dedičstvo pripadne štátu", "ide o odúmrť", "štát dedí bez povinnosti prijatia"] },
+      { "label": "Podstata zákonného dedenia", "leaves": ["chráni rodinné väzby", "zabezpečuje, aby majetok prešiel na osoby s najbližším vzťahom k poručiteľovi", "nastupuje len vtedy, ak poručiteľ neurčil inak závetom"] },
+      { "label": "Význam pre prax", "leaves": ["jasná postupnosť dedičských skupín zabezpečuje právnu istotu", "reprezentácia chráni potomkov pred vylúčením", "štát dedí len ako posledná možnosť", "kľúčové pri dedičských sporoch, neplatných závetoch, neúplnom pokrytí majetku"] }
+    ]
   }
 }

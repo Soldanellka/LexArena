@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Náhrada škody – rozsah, spôsob, korekcie (úplná reparácia ujmy a spravodlivé úpravy)",
+    "branches": [
+      { "label": "Rozsah náhrady škody (§ 442 OZ)", "leaves": ["cieľ: uviesť poškodeného do stavu, v ktorom by bol bez škody", "skutočná škoda (damnum emergens): priame zmenšenie majetku", "ušlý zisk (lucrum cessans): to, čo by poškodený získal", "poškodený musí preukázať vznik škody, jej výšku a príčinnú súvislosť"] },
+      { "label": "Spôsob náhrady škody", "leaves": ["naturálna reštitúcia: uvedenie do pôvodného stavu", "oprava veci, obnovenie stavu, vrátenie veci", "preferovaná, ak je možná a účelná", "peňažná náhrada, ak naturálna reštitúcia nie je možná alebo účelná", "výška podľa ceny v čase vzniku škody"] },
+      { "label": "Spoluzavinenie poškodeného (§ 441 OZ)", "leaves": ["ak poškodený prispel k vzniku škody, náhrada sa zníži", "nedbanlivosť", "nerešpektovanie pokynov", "nebezpečné správanie", "pri hrubom spoluzavinení výrazná redukcia náhrady"] },
+      { "label": "Zníženie náhrady škody (§ 450 OZ)", "leaves": ["súd môže náhradu primerane znížiť, ak škodca konal v tiesni", "ak škoda vznikla za mimoriadnych okolností", "ak by plná náhrada bola vzhľadom na pomery škodcu neprimerane tvrdá", "umožňuje zohľadniť sociálne a ľudské okolnosti"] },
+      { "label": "Význam pre prax", "leaves": ["zabezpečuje úplnú reparáciu poškodeného", "umožňuje spravodlivé korekcie pri spoluzavinení a mimoriadnych okolnostiach", "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti", "jasné pravidlá pre výpočet a spôsob náhrady"] }
+    ]
   }
 }

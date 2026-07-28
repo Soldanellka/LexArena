@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Predpoklady dedenia – smrť, dedič, spôsobilosť, tituly, nespôsobilosť, konanie (dedičstvo prechádza smrťou poručiteľa)",
+    "branches": [
+      { "label": "Smrť poručiteľa (§ 460 OZ)", "leaves": ["dedičstvo sa otvára smrťou poručiteľa", "môže ísť aj o vyhlásenie za mŕtveho", "až týmto okamihom vzniká dedičské právo"] },
+      { "label": "Existencia dedičov", "leaves": ["dedičom môže byť fyzická alebo právnická osoba", "musí byť živý v okamihu smrti poručiteľa", "alebo počatý a narodiť sa živý"] },
+      { "label": "Spôsobilosť dediť (§ 469 OZ)", "leaves": ["dedič musí mať právnu subjektivitu", "nesmie existovať dôvod dedičskej nespôsobilosti", "spôsobilosť je základnou podmienkou dedenia"] },
+      { "label": "Tituly dedenia", "leaves": ["závet: prejav poslednej vôle, má prednosť", "zákon: ak niet závetu alebo nepokrýva celý majetok", "dohoda dedičov v rámci dedičského konania", "závet musí byť platný a spôsobilý vyvolať právne účinky"] },
+      { "label": "Dedičská nespôsobilosť (§ 469a OZ)", "leaves": ["úmyselný trestný čin proti poručiteľovi, jeho manželovi, deťom alebo rodičom", "závažné porušenie povinností voči poručiteľovi", "konanie proti prejavu poslednej vôle, napr. falšovanie závetu", "nespôsobilosť pôsobí automaticky, dedič sa posudzuje, akoby neexistoval"] },
+      { "label": "Dedičské konanie", "leaves": ["prechod dedičstva sa realizuje pred súdom a notárom ako súdnym komisárom", "dedičstvo sa nadobúda právoplatným rozhodnutím", "konanie zabezpečuje určenie dedičov, rozsahu dedičstva a jeho rozdelenie"] },
+      { "label": "Význam pre prax", "leaves": ["zabezpečuje, aby dedičstvo prešlo na osoby určené zákonom alebo poručiteľom", "vylučuje osoby, ktoré sa voči poručiteľovi závažne previnili", "vytvára právnu istotu pri prechode majetku po smrti", "kľúčové pri sporoch o dedičské právo, platnosť závetu, nespôsobilosť"] }
+    ]
   }
 }

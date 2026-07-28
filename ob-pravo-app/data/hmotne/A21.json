@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zodpovednosť za vady a omeškanie – práva veriteľa, povinnosti dlžníka (kľúčové inštitúty záväzkového práva)",
+    "branches": [
+      { "label": "Zodpovednosť za vady (§ 499–510 OZ)", "leaves": ["vzniká, keď odovzdaná vec nezodpovedá zmluve", "vady zjavné: odhaliteľné pri prevzatí", "vady skryté: prejavia sa neskôr", "dlžník zodpovedá za vady existujúce pri odovzdaní, aj keď sa prejavia neskôr", "vady musia byť uplatnené v záručnej dobe; pri spotrebiteľskej kúpe podľa OZ 2 roky"] },
+      { "label": "Práva kupujúceho pri vadách", "leaves": ["oprava veci", "výmena za bezvadnú", "primeraná zľava z ceny", "odstúpenie od zmluvy pri podstatnom porušení zmluvy", "pri skrytých vadách lehota primeraná povahe veci"] },
+      { "label": "Zodpovednosť za omeškanie dlžníka (§ 517 OZ)", "leaves": ["dlžník nesplní záväzok v dobe plnenia", "veriteľ môže požadovať úrok z omeškania", "pri peňažných záväzkoch je zákonná sadzba určená ako sadzba ECB + 5 p. b.", "dlžník zodpovedá za škodu spôsobenú omeškaním, ak ju veriteľ preukáže", "veriteľ nemusí prijímať čiastkové plnenia, ak by mu to spôsobilo ťažkosti"] },
+      { "label": "Omeškanie veriteľa (§ 520 OZ)", "leaves": ["veriteľ neprijme riadne ponúknuté plnenie", "dlžník nezodpovedá za škodu", "dlžník môže plnenie uložiť do súdnej úschovy"] },
+      { "label": "Význam pre prax", "leaves": ["chráni kupujúceho pred nekvalitným plnením", "motivuje dlžníka plniť včas", "umožňuje veriteľovi kompenzovať škodu a omeškanie", "stabilizuje zmluvné vzťahy a podporuje právnu istotu"] }
+    ]
   }
 }

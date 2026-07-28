@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dedenie zo závetu – formy, podstata, neopomenuteľní dediči, obsah, neplatnosť (závet ako prejav poslednej vôle poručiteľa)",
+    "branches": [
+      { "label": "Vlastnoručný závet (holografný)", "leaves": ["celý napísaný vlastnou rukou", "poručiteľ ho musí podpísať", "nepotrebuje svedkov"] },
+      { "label": "Alografický závet", "leaves": ["napísaný inou osobou alebo technicky", "poručiteľ ho vlastnoručne podpíše", "prítomnosť dvoch svedkov, ktorí potvrdia prejav vôle"] },
+      { "label": "Notárska zápisnica", "leaves": ["najbezpečnejšia forma", "spisuje notár", "ukladá sa do centrálneho registra závetov"] },
+      { "label": "Podstata závetu", "leaves": ["osobný právny úkon, nemožno ho urobiť cez zástupcu", "odvolateľný, poručiteľ ho môže kedykoľvek zmeniť alebo zrušiť", "musí byť urobený slobodne, vážne, určito, zrozumiteľne", "má prednosť pred zákonom, ak je platný a účinný"] },
+      { "label": "Neopomenuteľní dediči (§ 479 OZ)", "leaves": ["poručiteľ nemôže úplne vylúčiť svoje deti bez dôvodu", "maloleté deti majú nárok na celý zákonný podiel", "plnoleté deti aspoň na polovicu zákonného podielu", "pri opomenutí je závet v tejto časti relatívne neplatný"] },
+      { "label": "Obsah závetu", "leaves": ["určenie dedičov", "určenie podielov", "odkaz (legát)", "podmienky a príkazy, ak nie sú v rozpore so zákonom"] },
+      { "label": "Neplatnosť závetu", "leaves": ["nebola dodržaná forma", "poručiteľ nebol spôsobilý", "závet bol urobený pod nátlakom", "obsahuje nezrozumiteľné alebo neurčité ustanovenia"] },
+      { "label": "Význam pre prax", "leaves": ["umožňuje poručiteľovi autonómne rozhodnúť o majetku", "chráni deti cez povinný podiel", "poskytuje flexibilitu: odkazy, podmienky, príkazy", "jasné formálne pravidlá zabezpečujú právnu istotu pri dedičských sporoch"] }
+    ]
   }
 }

@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Osobitné režimy zodpovednosti za škodu (objektívna zodpovednosť, posilnená ochrana poškodeného)",
+    "branches": [
+      { "label": "Prevádzková činnosť (§ 420a OZ)", "leaves": ["objektívna zodpovednosť", "škoda spôsobená okolnosťami majúcimi pôvod v prevádzke: stroje, technológie, doprava", "zavinenie sa nevyžaduje", "liberačné dôvody: neodvrátiteľná udalosť, konanie poškodeného"] },
+      { "label": "Vadný výrobok (zákon č. 294/1999 Z. z.)", "leaves": ["výrobca zodpovedá za škodu spôsobenú vadou výrobku", "objektívna zodpovednosť", "poškodený musí preukázať škodu, vadu výrobku a príčinnú súvislosť"] },
+      { "label": "Škoda na vnesených veciach (§ 433 OZ)", "leaves": ["prevádzkovateľ ubytovania zodpovedá za veci vnesené hosťom", "objektívna zodpovednosť", "obmedzený limit zodpovednosti, ak vec nebola prevzatá do úschovy"] },
+      { "label": "Škoda spôsobená zvieraťom (§ 431 OZ)", "leaves": ["zodpovedá ten, kto zviera držal alebo nad ním vykonával dohľad", "objektívna zodpovednosť", "liberačný dôvod: preukázanie, že dohľad nezanedbal"] },
+      { "label": "Škoda spôsobená osobou nespôsobilou (§ 422 OZ)", "leaves": ["zodpovedá ten, kto vykonáva dohľad nad osobou nespôsobilou posúdiť následky", "napr. dieťa, osoba s duševnou poruchou", "objektívna zodpovednosť", "liberačný dôvod: riadny výkon dohľadu"] },
+      { "label": "Podstata objektívnej zodpovednosti", "leaves": ["nezisťuje sa zavinenie", "stačí vznik škody a príčinná súvislosť", "zbavenie zodpovednosti len preukázaním zákonných liberačných dôvodov"] },
+      { "label": "Význam pre prax", "leaves": ["posilňuje ochranu poškodeného", "zjednodušuje dokazovanie, netreba preukazovať zavinenie", "kľúčové pri dopravných nehodách, ubytovaní, výrobkoch, zvieratách", "dopĺňa všeobecnú zodpovednosť za škodu a preventívnu povinnosť"] }
+    ]
   }
 }

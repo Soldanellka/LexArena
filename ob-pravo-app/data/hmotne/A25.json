@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Bezdôvodné obohatenie – podstata, predmet vydania, špeciálne prípady, premlčanie (navrátenie majetkovej rovnováhy)",
+    "branches": [
+      { "label": "Podstata bezdôvodného obohatenia (§ 451 OZ)", "leaves": ["majetkový prospech bez právneho dôvodu, napr. omylom zaslané peniaze", "prospech z neplatného právneho úkonu", "prospech z právneho dôvodu, ktorý odpadol", "prospech z konania bez príkazu, ak nie je v súlade so zákonom", "prospech z majetku iného bez právneho odôvodnenia", "obohatený musí vydať vec alebo jej hodnotu"] },
+      { "label": "Predmet vydania (§ 456 OZ)", "leaves": ["skutočný prospech", "úžitky, ktoré obohatený získal", "hodnota, ak vec nemožno vrátiť", "pri dobrej viere vydáva len to, čo mu zostalo", "pri zlej viere vydáva všetko vrátane úžitkov"] },
+      { "label": "Špeciálne prípady (§ 458 OZ)", "leaves": ["plnenie za iného: kto plnil za niekoho iného, má právo požadovať náhradu od tejto osoby", "neplatný právny úkon: strany si vracajú plnenia navzájom"] },
+      { "label": "Premlčanie (§ 107 OZ)", "leaves": ["subjektívna lehota 2 roky odo dňa, keď sa poškodený dozvedel o obohatení a o tom, kto sa obohatil", "objektívna lehota 3 roky odo dňa, keď k obohateniu došlo", "úmyselné obohatenie: predĺžená objektívna lehota 10 rokov"] },
+      { "label": "Význam pre prax", "leaves": ["zabraňuje neoprávnenému obohateniu na úkor iného", "obnovuje majetkovú rovnováhu", "kľúčové pri omylom zaslaných platbách, neplatných zmluvách, konaní bez príkazu", "jasné pravidlá pre vydanie prospechu a premlčanie"] }
+    ]
   }
 }

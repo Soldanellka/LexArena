@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prevencia (§ 415–419 OZ) a všeobecná zodpovednosť za škodu (§ 420 OZ) (predchádzanie škodám a reparácia škody pri porušení povinnosti)",
+    "branches": [
+      { "label": "Preventívna povinnosť (§ 415 OZ)", "leaves": ["každý je povinný konať tak, aby nedochádzalo ku škodám", "platí pre zdravie, majetok, prírodu, práva iných", "základný princíp civilnej zodpovednosti", "porušenie prevencie býva prvým krokom k vzniku škody"] },
+      { "label": "Obsah preventívnej povinnosti", "leaves": ["zdržať sa konania, ktoré môže spôsobiť škodu", "vykonať opatrenia na odvrátenie škody", "upozorniť na hroziacu škodu, ak jej nemožno zabrániť", "povinnosť predvídať následky svojho konania"] },
+      { "label": "Všeobecná zodpovednosť za škodu (§ 420 OZ)", "leaves": ["založená na zavinení", "domnienka zavinenia, dlžník sa musí liberovať", "chráni poškodeného, posilňuje jeho postavenie", "základ civilného deliktu"] },
+      { "label": "Podmienky vzniku zodpovednosti", "leaves": ["protiprávny úkon: konanie alebo opomenutie porušujúce právnu povinnosť", "škoda majetková: skutočná škoda a ušlý zisk", "škoda nemajetková: nemajetková ujma", "príčinná súvislosť: škoda musí byť následkom protiprávneho konania", "zavinenie: úmysel alebo nedbanlivosť, predpokladá sa"] },
+      { "label": "Formy náhrady škody (§ 442 OZ)", "leaves": ["uvedenie do pôvodného stavu", "peňažná náhrada, ak uvedenie nie je možné alebo účelné", "cieľ: úplná reparácia škody"] },
+      { "label": "Význam pre prax", "leaves": ["prevencia minimalizuje riziko sporov", "všeobecná zodpovednosť poskytuje poškodenému účinnú ochranu", "domnienka zavinenia uľahčuje dokazovanie", "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti"] }
+    ]
   }
 }
