@@ -17,7 +17,15 @@
    Chýba topic.spider → fallback "hviezdica" z topic.tiles[].term (uzly
    bez detí, žiadna druhá úroveň). Chýba aj tiles → nič sa nevykreslí
    (fail-soft, len console.warn).
+   Browser (openSpiderBrowser): oblasť→okruh výber pre globálnu dlaždicu.
+   Počty okruhov NEDUPLIKUJEME lokálne – čítame DASHBOARD_AREAS (už
+   exportovaná, čistý dátový modul, žiadny top-level Firebase/DOM side
+   effect – overené pred importom). Názvy tém sú oportunistické z
+   window.areaOkruhTitles (vypĺňa ho data.js pri štarte appky, žiadny
+   nový fetch) – kým sa oblasť nenaloadovala, ukáže sa holé "A{n}".
 ============================================================ */
+
+import { DASHBOARD_AREAS } from './dashboardStats.js';
 
 const LIVE = 'https://www.lexarena.sk/';
 const AREA_PATHS = {
@@ -28,6 +36,9 @@ const AREA_PATHS = {
   'Občianske právo procesné': LIVE + 'ob-pravo-app/data/procesne/',
   'Európske právo': LIVE + 'eu-pravo-app/data/'
 };
+
+const AREA_COUNTS = DASHBOARD_AREAS.flatMap(a => a.subAreas)
+  .reduce((acc, s) => { acc[s.areaTitle] = s.maxOkruh; return acc; }, {});
 
 const BRANCH_COLORS = ['spider-c0', 'spider-c1', 'spider-c2', 'spider-c3', 'spider-c4', 'spider-c5'];
 
@@ -248,4 +259,145 @@ export async function openSpider(key, areaTitle) {
   const close = () => modal.remove();
   modal.querySelector('#spiderCloseBtn').onclick = close;
   modal.onclick = e => { if (e.target === modal) close(); };
+}
+
+/* Inline variant pre študijný modul (krok 2, pilot ob-pravo-app) – kreslí
+   priamo do zadaného kontajnera namiesto modalu, žiadny Zavrieť. openSpider
+   vyššie ostáva NEDOTKNUTÁ (vlastný modal wrapper) – táto funkcia zdieľa tie
+   isté nízkoúrovňové kúsky (fetchTopicJson/buildBranches/renderTree/
+   findDefinition/ensureSpiderCss), interaktivitu (redraw/detail) má vlastnú,
+   keďže openSpider sa kvôli containmentu nesmie meniť.
+
+   `el` sa môže volať opakovane pri rýchlom preklikávaní okruhov (študijný
+   modul volá pri KAŽDOM výbere okruhu) – token na `el.dataset.spiderToken`
+   chráni pred tým, aby neskôr-doletený fetch staršieho okruhu prepísal
+   medzičasom vykreslený novší strom. */
+let spiderInlineSeq = 0;
+export async function renderSpiderInto(el, key, areaTitle) {
+  if (!el) return;
+  const myToken = String(++spiderInlineSeq);
+  el.dataset.spiderToken = myToken;
+  el.innerHTML = '';
+
+  const json = await fetchTopicJson(key, areaTitle);
+  if (el.dataset.spiderToken !== myToken) return; // medzitým prekreslené novším volaním
+  if (!json) {
+    console.warn(`[PAVÚK] Okruh ${key} (${areaTitle}) sa nepodarilo načítať – inline pavúk sa nezobrazí.`);
+    return;
+  }
+  const branches = buildBranches(json);
+  if (!branches.length) {
+    console.warn(`[PAVÚK] Okruh ${key} nemá ani spider, ani tiles – niet čo vykresliť.`);
+    return;
+  }
+
+  ensureSpiderCss();
+
+  el.innerHTML = `
+    <div class="small muted" style="margin:10px 0">Klik na vetvu skryje/odkryje listy · klik na list ukáže definíciu</div>
+    <div class="spider-inline-tree"></div>
+    <div class="spider-inline-detail"></div>`;
+  if (el.dataset.spiderToken !== myToken) return;
+
+  const treeHost = el.querySelector('.spider-inline-tree');
+  const detailHost = el.querySelector('.spider-inline-detail');
+  const state = { collapsed: {} };
+
+  function showDetail(label) {
+    const def = findDefinition(json, label);
+    detailHost.innerHTML = `
+      <div class="spider-detail">
+        <div style="font-weight:600">${escapeHtml(label)}</div>
+        ${def ? `<div class="small" style="margin-top:4px">${escapeHtml(def)}</div>` : ''}
+      </div>`;
+  }
+
+  function redraw() {
+    renderTree(treeHost, json, branches, state);
+    treeHost.querySelectorAll('.spider-node').forEach(node => {
+      node.addEventListener('click', () => {
+        const id = node.getAttribute('data-node-id');
+        if (id === 'center') return;
+        const m = id.match(/^b(\d+)(?:l(\d+))?$/);
+        if (!m) return;
+        const bi = Number(m[1]);
+        if (m[2] === undefined && branches[bi].leaves.length > 0) {
+          state.collapsed[bi] = !state.collapsed[bi];
+          redraw();
+        } else {
+          const label = m[2] !== undefined ? branches[bi].leaves[Number(m[2])] : branches[bi].label;
+          showDetail(label);
+        }
+      });
+    });
+  }
+  redraw();
+}
+
+/* Globálna dlaždica ("Hry a prípady") nemá kontext okruhu – dvojúrovňový
+   výber oblasť → okruh, potom deleguje na openSpider (nezmenená). Čisto
+   synchrónne/read-only: žiadny nový fetch, len AREA_PATHS (lokálne) a
+   window.areaOkruhTitles (už naplnené data.js, ak stihlo doletieť). */
+export function openSpiderBrowser() {
+  ensureSpiderCss();
+
+  const existing = document.getElementById('spiderBrowserModal');
+  if (existing) existing.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'spiderBrowserModal';
+  modal.className = 'avatar-modal';
+  document.body.appendChild(modal);
+
+  const state = { view: 'areas', area: null };
+
+  function renderAreas() {
+    const items = Object.keys(AREA_PATHS).map(area =>
+      `<button class="btn" style="width:100%;text-align:left;margin-bottom:6px" data-area="${escapeHtml(area)}">${escapeHtml(area)}</button>`
+    ).join('');
+    modal.innerHTML = `
+      <div class="avatar-panel spider-panel">
+        <h3 style="margin:0 0 12px 0">🕸️ Štruktúra otázok – vyber oblasť</h3>
+        <div>${items}</div>
+        <div style="margin-top:16px">
+          <button class="btn" id="spiderBrowserCloseBtn" style="width:100%">Zavrieť</button>
+        </div>
+      </div>`;
+    modal.querySelectorAll('[data-area]').forEach(btn => {
+      btn.onclick = () => { state.view = 'okruhy'; state.area = btn.getAttribute('data-area'); renderOkruhy(); };
+    });
+    modal.querySelector('#spiderBrowserCloseBtn').onclick = () => modal.remove();
+  }
+
+  function renderOkruhy() {
+    const count = AREA_COUNTS[state.area] || 0;
+    const titles = window.areaOkruhTitles?.[state.area] || {};
+    const items = Array.from({ length: count }, (_, i) => {
+      const key = `A${i + 1}`;
+      const label = titles[key] || key;
+      return `<button class="btn" style="width:100%;text-align:left;margin-bottom:6px" data-key="${key}">${escapeHtml(label)}</button>`;
+    }).join('');
+    modal.innerHTML = `
+      <div class="avatar-panel spider-panel">
+        <h3 style="margin:0 0 4px 0">🕸️ ${escapeHtml(state.area)}</h3>
+        <div class="small muted" style="margin-bottom:10px">Vyber okruh</div>
+        <div style="max-height:50vh;overflow-y:auto">${items || '<div class="small muted">Žiadne okruhy.</div>'}</div>
+        <div style="margin-top:16px;display:flex;gap:8px">
+          <button class="btn" id="spiderBrowserBackBtn" style="flex:1">← Späť</button>
+          <button class="btn" id="spiderBrowserCloseBtn" style="flex:1">Zavrieť</button>
+        </div>
+      </div>`;
+    modal.querySelectorAll('[data-key]').forEach(btn => {
+      btn.onclick = () => {
+        const key = btn.getAttribute('data-key');
+        modal.remove();
+        openSpider(key, state.area);
+      };
+    });
+    modal.querySelector('#spiderBrowserBackBtn').onclick = () => { state.view = 'areas'; state.area = null; renderAreas(); };
+    modal.querySelector('#spiderBrowserCloseBtn').onclick = () => modal.remove();
+  }
+
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
+  renderAreas();
 }

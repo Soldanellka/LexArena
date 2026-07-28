@@ -3577,6 +3577,19 @@ function attachEvents() {
     });
   }
 
+  /* 🕸️ Pamäťový pavúk – globálna dlaždica, vlastný oblasť→okruh výber
+     (spider.js nešiel cez node --check, preto lazy import v try/catch –
+     pád modulu = len rozbité tlačidlo, nie zhodený init.js). */
+  const openSpiderBtn = $('openSpiderBtn');
+  if (openSpiderBtn) {
+    openSpiderBtn.addEventListener('click', async () => {
+      try {
+        const m = await import('./scripts/spider.js');
+        m.openSpiderBrowser();
+      } catch (e) { console.error('spider load failed', e); }
+    });
+  }
+
   /* 🔥 Banka duelov */
   const toggleDuelBankBtn = $('toggleDuelBankBtn');
   const duelBankBox = $('duelBank');
