@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Príkaz, sprostredkovanie a obstaranie – pojem, náležitosti, rozdiely (konanie v mene príkazcu, vyhľadanie záujemcu, konanie vo vlastnom mene)",
+    "branches": [
+      { "label": "Príkazná zmluva (§ 724–736 OZ)", "leaves": ["príkazník sa zaväzuje obstarať vec alebo vykonať právny úkon pre príkazcu", "môže byť bezodplatná alebo odplatná", "príkazník koná v mene príkazcu", "povinnosť konať s odbornou starostlivosťou", "príkazca poskytuje súčinnosť a nahrádza náklady", "príkaz možno vypovedať, ale príkazník musí dokončiť úkony, ktoré neznesú odklad"] },
+      { "label": "Sprostredkovateľská zmluva (§ 642–651 ObchZ)", "leaves": ["sprostredkovateľ sa zaväzuje vyhľadať záujemcu na uzavretie určitej zmluvy", "sprostredkovateľ nevykonáva právny úkon", "odmena sa platí spravidla až po uzavretí zmluvy", "povinnosť konať čestne, informovať a chrániť záujmy objednávateľa", "v občianskoprávnych vzťahoch sa OZ použije subsidiárne", "typické príklady: realitné služby, pracovné agentúry, obchodné kontakty"] },
+      { "label": "Zmluva o obstaraní veci (§ 733 OZ)", "leaves": ["obstaranie kúpy alebo dodania veci", "obstarávateľ koná vlastným menom, ale na účet objednávateľa", "objednávateľ nahrádza náklady a platí odmenu", "obstarávateľ musí konať podľa pokynov objednávateľa"] },
+      { "label": "Zmluva o obstaraní predaja veci (§ 734 OZ)", "leaves": ["obstaranie predaja veci objednávateľa", "obstarávateľ predáva vo vlastnom mene, ale na účet objednávateľa", "odmena býva percentuálna", "podobná komisionárskej zmluve"] },
+      { "label": "Rozdiely medzi zmluvami", "leaves": ["príkazná zmluva: príkazník koná v mene príkazcu", "sprostredkovanie: sprostredkovateľ len vyhľadá záujemcu, právny úkon nevykonáva", "obstarávacie zmluvy: obstarávateľ koná vo vlastnom mene, ale na účet objednávateľa"] },
+      { "label": "Význam pre prax", "leaves": ["príkaz sa využíva pri právnych úkonoch, zastupovaní, správe majetku", "sprostredkovanie pri realitných službách, obchodných kontaktoch, pracovných agentúrach", "obstaranie pri nákupe, predaji, komisionárskych vzťahoch", "jasné odlíšenie bráni sporom o zodpovednosť, odmenu a právne účinky konania"] }
+    ]
   }
 }

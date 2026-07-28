@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Poistná zmluva – pojem, náležitosti, poistná udalosť, druhy poistenia, zánik (finančná ochrana pred náhodnými udalosťami)",
+    "branches": [
+      { "label": "Pojem poistnej zmluvy (§ 788 OZ)", "leaves": ["poisťovateľ sa zaväzuje poskytnúť poistné plnenie pri vzniku poistnej udalosti", "poistník sa zaväzuje platiť poistné", "účel: finančná ochrana pred následkami náhodných udalostí", "zmluva upravuje rozsah poistenia, výluky a podmienky plnenia"] },
+      { "label": "Podstatné náležitosti", "leaves": ["poistná udalosť: náhodná skutočnosť zakladajúca povinnosť poisťovateľa plniť", "poistná suma: horná hranica poistného plnenia", "poistné: cena poistenia, platená jednorazovo alebo pravidelne", "rozsah poistenia, výluky, poistné obdobie", "podmienky vzniku nároku na plnenie"] },
+      { "label": "Poistná udalosť", "leaves": ["musí byť náhodná", "nezávislá od vôle poistníka", "presne definovaná", "poisťovateľ neplní pri úmyselnom konaní, podvode alebo konaní v rozpore s poistnými podmienkami"] },
+      { "label": "Druhy poistenia", "leaves": ["životné poistenie: smrť, dožitie, úraz, choroba, invalidita", "životné poistenie býva spojené so sporením alebo investovaním", "neživotné poistenie: majetok, zodpovednosť, cestovné, úrazové", "povinné poistenie uložené zákonom, napr. PZP", "dobrovoľné poistenie podľa potreby poistníka"] },
+      { "label": "Zánik poistenia", "leaves": ["uplynutím poistného obdobia", "nezaplatením poistného", "výpoveďou", "dohodou strán"] },
+      { "label": "Význam pre prax", "leaves": ["chráni pred finančnými následkami škôd, úrazov, chorôb", "umožňuje plánovanie rizík a stabilitu majetku", "povinné poistenia chránia tretie osoby", "jasné pravidlá zmluvy bránia sporom o plnenie"] }
+    ]
   }
 }

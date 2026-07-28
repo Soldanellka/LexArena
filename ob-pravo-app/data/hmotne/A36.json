@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zmluvy o preprave – pojem, náležitosti, druhy, zodpovednosť dopravcu (bezpečné a riadne vykonanie prepravy osôb alebo vecí)",
+    "branches": [
+      { "label": "Pojem prepravnej zmluvy", "leaves": ["dopravca sa zaväzuje prepraviť osobu alebo vec do určeného miesta", "odosielateľ alebo cestujúci sa zaväzuje zaplatiť odplatu", "podstatou je bezpečné, riadne a včasné vykonanie prepravy", "dopravca zodpovedá za škodu, ak nepreukáže liberačné dôvody"] },
+      { "label": "Podstatné náležitosti", "leaves": ["dopravca", "cestujúci alebo odosielateľ", "predmet prepravy: osoba, zásielka, náklad", "miesto určenia", "odplata: cestovné, prepravné"] },
+      { "label": "Preprava osôb (§ 760–764 OZ)", "leaves": ["dopravca sa zaväzuje bezpečne prepraviť cestujúceho", "cestujúci má právo na bezpečnú prepravu", "cestujúci je povinný dodržiavať prepravný poriadok", "dopravca zodpovedá za škodu na zdraví cestujúceho a na veciach, ktoré mal pri sebe", "zmluva vzniká nastúpením do dopravného prostriedku alebo zakúpením cestovného lístka"] },
+      { "label": "Preprava nákladu a zásielky (§ 765–773 OZ)", "leaves": ["odosielateľ odovzdáva zásielku dopravcovi, dopravca ju doručí príjemcovi", "povinnosť dopravcu dodať zásielku v neporušenom stave", "odosielateľ platí prepravné", "dopravca zodpovedá za škodu na zásielke od prevzatia po vydanie", "môže požadovať prepravný doklad, nákladný list"] },
+      { "label": "Cestovná zmluva (organizovaný zájazd)", "leaves": ["komplexná zmluva o kombinácii služieb cestovného ruchu", "upravená zákonom o zájazdoch", "organizátor poskytuje dopravu, ubytovanie a program", "vysoká ochrana spotrebiteľa"] },
+      { "label": "Význam pre prax", "leaves": ["kľúčové pri cestovaní, logistike, doručovaní zásielok", "jasné pravidlá zodpovednosti dopravcu", "ochrana cestujúceho pri úrazoch a škodách", "cestovná zmluva chráni spotrebiteľa pri zájazdoch"] }
+    ]
   }
 }

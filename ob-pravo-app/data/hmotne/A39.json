@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dôchodok, stávka a hra – pojem, náležitosti, právne účinky, rozdiely (pravidelné plnenie, naturálna obligácia, hazardné hry)",
+    "branches": [
+      { "label": "Zmluva o dôchodku (§ 842–844 OZ)", "leaves": ["jedna strana sa zaväzuje vyplácať dôchodkové dávky", "pravidelné plnenie, mesačné alebo ročné", "dlhodobý charakter", "môže byť odplatná aj bezodplatná", "doživotný dôchodok trvá až do smrti oprávneného", "časovo obmedzený dôchodok, napr. na 10 rokov"] },
+      { "label": "Podstatné náležitosti dôchodku", "leaves": ["výška dávok", "periodicita", "podmienky zániku", "zánik uplynutím doby alebo smrťou oprávneného pri doživotnom dôchodku"] },
+      { "label": "Stávka a hra (§ 845–846 OZ)", "leaves": ["ide o naturálnu obligáciu", "víťaz nemá žalovateľný nárok na výhru", "ak bola výhra dobrovoľne vyplatená, nemožno žiadať jej vrátenie", "výsledok závisí od náhody alebo zručnosti", "právny poriadok nechráni nárok na výhru"] },
+      { "label": "Hazardné hry – zákonná výnimka", "leaves": ["pri hazardných hrách povolených zákonom vzniká vymáhateľný nárok na výhru", "lotérie", "stávkové hry", "kasínové hry a kurzové stávky", "prevádzkovateľ je povinný vyplatiť výhru podľa pravidiel hry"] },
+      { "label": "Rozdiely", "leaves": ["dôchodok: dlhodobé pravidelné plnenie, žalovateľný záväzok", "stávka a hra: naturálna obligácia, výhra nie je vymáhateľná", "hazardné hry: výnimka, výhra je vymáhateľná, ak je hra povolená"] },
+      { "label": "Význam pre prax", "leaves": ["dôchodok slúži na dlhodobé finančné zabezpečenie", "stávka a hra sú právne nevymáhateľné záväzky spojené s rizikovým správaním", "hazardné hry sú regulované s povinnosťou vyplatiť výhru", "jasné odlíšenie bráni sporom o vymáhateľnosť plnenia"] }
+    ]
   }
 }

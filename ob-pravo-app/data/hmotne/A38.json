@@ -138,5 +138,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Úschova a združenie – pojem, náležitosti, povinnosti, zodpovednosť, zánik (držanie cudzej veci vs. spolupráca na spoločnom účele)",
+    "branches": [
+      { "label": "Zmluva o úschove (§ 747–753 OZ)", "leaves": ["schovateľ prevezme vec a zaväzuje sa ju uschovať a vrátiť", "predmetom je individuálne určená vec", "schovateľ vec len drží, nevyužíva ju", "úschova môže byť odplatná aj bezodplatná"] },
+      { "label": "Povinnosti schovateľa a uschovateľa", "leaves": ["schovateľ: starať sa o vec s odbornou starostlivosťou", "schovateľ: chrániť ju pred poškodením, stratou, zničením", "schovateľ: vrátiť ju v stave, v akom ju prevzal", "uschovateľ: nahradiť náklady spojené s úschovou", "uschovateľ: prevziať vec späť po skončení úschovy"] },
+      { "label": "Zodpovednosť pri úschove", "leaves": ["schovateľ zodpovedá za škodu pri porušení povinností", "zodpovedá aj za škodu spôsobenú osobou, ktorú pri úschove použil", "ak vec zanikne alebo sa poškodí bez jeho zavinenia, nezodpovedá"] },
+      { "label": "Zmluva o združení (§ 829–841 OZ)", "leaves": ["viac osôb sa združí na dosiahnutie dohodnutého účelu", "združenie nie je právnickou osobou", "ide o záväzkový vzťah medzi účastníkmi", "účastníci sa zaväzujú spolupracovať", "vkladajú prácu, majetok alebo iné hodnoty", "nesú spoločné záväzky voči tretím osobám, ak vzniknú pri plnení účelu"] },
+      { "label": "Majetok a práva účastníkov", "leaves": ["majetok získaný činnosťou združenia je spoločným majetkom účastníkov", "právo podieľať sa na rozhodovaní", "právo kontrolovať činnosť združenia", "právo vystúpiť, ak tým neohrozí účel združenia"] },
+      { "label": "Zánik združenia", "leaves": ["dohodou účastníkov", "splnením účelu", "vystúpením účastníkov, ak tým združenie stratí zmysel"] },
+      { "label": "Rozdiely medzi úschovou a združením", "leaves": ["úschova: držanie cudzej veci, povinnosť chrániť a vrátiť", "združenie: spolupráca viacerých osôb na spoločnom účele", "úschova sa týka individuálnej veci, združenie spoločného majetku a záväzkov", "úschova je pasívna starostlivosť, združenie aktívna činnosť"] },
+      { "label": "Význam pre prax", "leaves": ["úschova: hotely, sklady, garáže, bezpečnostné schránky", "združenie: spoločné projekty, hobby skupiny, investičné aktivity", "jasné pravidlá bránia sporom o zodpovednosť, majetok a povinnosti"] }
+    ]
   }
 }

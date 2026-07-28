@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Verejná súťaž a verejný prísľub – pojem, náležitosti, odvolanie, rozdiely (jednostranné právne úkony s odmenou za návrh alebo výkon)",
+    "branches": [
+      { "label": "Verejná súťaž (§ 847–849 OZ)", "leaves": ["vyhlasovateľ vyhlási súťaž na najlepší návrh a zaväzuje sa poskytnúť odmenu víťazovi", "vyhlásenie musí byť verejné", "musia byť určené podmienky súťaže, kritériá hodnotenia a odmena", "návrhy sa posudzujú podľa kritérií vo vyhlásení", "vyhlasovateľ je povinný odmenu poskytnúť víťazovi", "návrh možno odvolať len do uplynutia lehoty na podanie návrhov"] },
+      { "label": "Podmienky a priebeh súťaže", "leaves": ["verejné vyhlásenie", "presné kritériá hodnotenia", "určená odmena", "objektívne posúdenie návrhov", "povinnosť vyhlasovateľa odmenu vyplatiť"] },
+      { "label": "Verejný prísľub (§ 850–852 OZ)", "leaves": ["vyhlasovateľ sa verejne zaväzuje poskytnúť odmenu tomu, kto vykoná určitý výkon", "prísľub musí byť verejný: oznámenie, reklama, vyhlásenie", "výkon musí byť určitý a uskutočniteľný", "odmenu získava ten, kto výkon splní ako prvý", "vyhlasovateľ je povinný odmenu poskytnúť, ak bol výkon splnený"] },
+      { "label": "Odvolanie súťaže a prísľubu", "leaves": ["prísľub možno odvolať rovnakým spôsobom, akým bol vyhlásený", "odvolanie neúčinkuje voči tomu, kto už výkon splnil", "súťaž možno zrušiť len zo zákonných dôvodov, napr. podstatná zmena okolností", "návrh možno odvolať len pred uplynutím lehoty"] },
+      { "label": "Rozdiely medzi súťažou a prísľubom", "leaves": ["verejná súťaž: odmena za najlepší návrh", "verejný prísľub: odmena za splnený výkon", "súťaž hodnotí návrhy, prísľub vyžaduje splnenie výkonu", "oba sú jednostranné právne úkony, záväzok vzniká len na strane vyhlasovateľa", "nejde o zmluvu, druhá strana nevstupuje do záväzku, len vykoná výkon"] },
+      { "label": "Význam pre prax", "leaves": ["verejná súťaž: architektonické, literárne, dizajnérske súťaže", "verejný prísľub: odmeny za nález veci, za informácie, za splnenie úlohy", "jasné pravidlá bránia sporom o odmenu a platnosť odvolania"] }
+    ]
   }
 }
