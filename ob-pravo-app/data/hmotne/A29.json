@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Spotrebiteľská zmluva – pojem, subjekty, neprijateľné podmienky, ochrana spotrebiteľa (zmluva medzi podnikateľom a spotrebiteľom)",
+    "branches": [
+      { "label": "Pojem spotrebiteľskej zmluvy (§ 52 OZ)", "leaves": ["zmluva medzi dodávateľom (podnikateľom) a spotrebiteľom (nepodnikateľom)", "cieľ: ochrana slabšej strany", "špeciálne pravidlá obmedzujú zmluvnú voľnosť dodávateľa"] },
+      { "label": "Subjekty spotrebiteľskej zmluvy", "leaves": ["dodávateľ: podnikateľ konajúci v rámci podnikania", "spotrebiteľ: fyzická osoba nekonajúca v rámci podnikania", "spotrebiteľ sa nemôže vopred vzdať práv, ktoré mu zákon priznáva"] },
+      { "label": "Pojmové znaky", "leaves": ["asymetria medzi stranami", "štandardizované podmienky, formulárové zmluvy", "informačná povinnosť dodávateľa", "výklad v prospech spotrebiteľa (§ 54 OZ)"] },
+      { "label": "Neprijateľné podmienky (§ 53 OZ)", "leaves": ["sú v rozpore s dobrou vierou", "spôsobujú výraznú nerovnováhu v neprospech spotrebiteľa", "sú neplatné", "príklady: vylúčenie alebo obmedzenie zodpovednosti dodávateľa", "jednostranné zmeny zmluvy bez dôvodu, neprimerané sankcie, obmedzenie práva odstúpiť"] },
+      { "label": "Zmluvy na diaľku a mimo prevádzkových priestorov", "leaves": ["spotrebiteľ má právo odstúpiť do 14 dní bez uvedenia dôvodu", "ak dodávateľ nepoučí, lehota sa predlžuje na 12 mesiacov", "upravené zákonom č. 108/2024 Z. z. o ochrane spotrebiteľa (účinný od 1. 7. 2024)"] },
+      { "label": "Ochranné mechanizmy", "leaves": ["zákaz neprijateľných podmienok", "informačné povinnosti", "právo na reklamáciu", "právo na odstúpenie", "výklad v prospech spotrebiteľa"] },
+      { "label": "Význam pre prax", "leaves": ["chráni spotrebiteľa pred nekalými praktikami", "zabezpečuje férové zmluvné podmienky", "posilňuje transparentnosť a rovnováhu medzi stranami", "kľúčové pri e-commerce, službách, telekomunikáciách, bankových produktoch"] }
+    ]
   }
 }

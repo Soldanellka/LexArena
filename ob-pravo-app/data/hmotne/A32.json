@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pôžička a výpožička – pojem, náležitosti, povinnosti, rozdiely (zastupiteľné vs. individuálne veci, prechod vlastníctva vs. užívanie)",
+    "branches": [
+      { "label": "Zmluva o pôžičke (§ 657–658 OZ)", "leaves": ["reálna zmluva, vzniká až odovzdaním veci", "predmet: zastupiteľné veci, napr. peniaze, potraviny, suroviny", "dlžník vracia rovnaké množstvo rovnakého druhu a kvality", "prechádza vlastnícke právo na dlžníka, ktorý môže vec spotrebovať", "odmena vo forme úrokov môže byť dohodnutá, inak ide o bezodplatnú pôžičku"] },
+      { "label": "Zmluva o výpožičke (§ 659–662 OZ)", "leaves": ["požičiavateľ prenecháva vec na dočasné a bezodplatné užívanie", "predmet: individuálne určená vec", "vracia sa tá istá vec, nie vec rovnakého druhu", "vypožičiavateľ musí vec užívať riadne a chrániť ju pred poškodením", "vlastníctvo neprechádza na vypožičiavateľa"] },
+      { "label": "Rozdiely medzi pôžičkou a výpožičkou", "leaves": ["pôžička: zastupiteľné veci, prechod vlastníctva, vracia sa množstvo", "výpožička: individuálna vec, bez prechodu vlastníctva, vracia sa tá istá vec", "pôžička je reálna zmluva, výpožička konsenzuálna", "pôžička môže byť odplatná, výpožička je vždy bezodplatná"] },
+      { "label": "Praktické príklady", "leaves": ["pôžička: 100 eur, 5 kg múky, liter benzínu", "výpožička: bicykel, kniha, náradie, hudobný nástroj"] },
+      { "label": "Význam pre prax", "leaves": ["pôžička sa uplatňuje vo finančných vzťahoch, krátkodobých aj dlhodobých", "výpožička je typická pre bežné občianske, susedské a rodinné vzťahy", "jasné odlíšenie bráni sporom o vlastníctvo, poškodenie veci či povinnosť vrátiť"] }
+    ]
   }
 }

@@ -138,5 +138,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Kúpna, zámenná a darovacia zmluva – podstata, náležitosti, rozdiely (tri základné typy prevodových zmlúv v OZ)",
+    "branches": [
+      { "label": "Kúpna zmluva (§ 588–600 OZ)", "leaves": ["predávajúci odovzdá vec a prevedie vlastníctvo", "kupujúci zaplatí kúpnu cenu", "podstatné náležitosti: predmet kúpy a cena alebo spôsob jej určenia", "zodpovednosť za vady podľa § 597–600 OZ: oprava, výmena, zľava, odstúpenie", "pri nehnuteľnostiach písomná forma"] },
+      { "label": "Zámenná zmluva (§ 611 OZ)", "leaves": ["obe strany si navzájom prevádzajú vlastnícke právo", "každá strana je súčasne predávajúcim aj kupujúcim", "pravidlá o kúpe sa použijú primerane", "ak sú veci nerovnakej hodnoty, je možný doplatok", "vhodná pri výmene nehnuteľností, pozemkov, hnuteľných vecí"] },
+      { "label": "Darovacia zmluva (§ 628–630 OZ)", "leaves": ["darca bezodplatne prenechá dar obdarovanému", "obdarovaný dar prijíma", "podstatné znaky: bezodplatnosť, dobrovoľnosť, prejav vôle darcu dar odovzdať", "forma: ústna, ak sa dar odovzdá pri uzavretí; pri nehnuteľnostiach písomná", "vrátenie daru (§ 630 OZ) pri hrubej nevďačnosti obdarovaného"] },
+      { "label": "Rozdiely medzi zmluvami", "leaves": ["kúpna zmluva: odplatná, synallagmatická, plnenie za plnenie", "zámenná zmluva: obojstranné prevody, odplatná, ale bez ceny", "darovacia zmluva: bezodplatná, jednostranné obohatenie obdarovaného"] },
+      { "label": "Význam pre prax", "leaves": ["kúpna zmluva je najčastejší typ prevodu majetku", "zámena je praktická pri výmene nehnuteľností", "darovanie je časté v rodine, s možnosťou vrátenia daru pri nevďačnosti", "jasné odlíšenie pomáha pri voľbe správnej zmluvy a riešení sporov"] }
+    ]
   }
 }

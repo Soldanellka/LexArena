@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zmluva o dielo – pojem, náležitosti, vady, osobitné druhy, odovzdanie (zmluva výsledku, cieľom je hotové dielo)",
+    "branches": [
+      { "label": "Pojem diela (§ 631 OZ)", "leaves": ["zhotovenie veci", "oprava", "úprava", "údržba", "hmotná alebo nehmotná zmena veci: softvér, projektová dokumentácia", "dielo môže byť vykonané osobne alebo cez subdodávateľov, ak to zmluva nevylučuje"] },
+      { "label": "Podstatné náležitosti zmluvy", "leaves": ["predmet diela musí byť určitý, vykonateľný, jasne definovaný", "odmena: pevná suma, podľa rozpočtu alebo spôsob výpočtu", "ak je odmena určená rozpočtom, zhotoviteľ ju nesmie jednostranne zvýšiť bez súhlasu objednávateľa", "lehota a spôsob vykonania; ak nie je dohodnuté, vykonanie v primeranej lehote"] },
+      { "label": "Zodpovednosť za vady diela (§ 633–637 OZ)", "leaves": ["zhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní", "odstránenie vady", "zľava z ceny", "odstúpenie od zmluvy pri podstatných vadách", "pri stavbách minimálna záručná doba 24 mesiacov, ak sa strany nedohodnú inak"] },
+      { "label": "Osobitné druhy zmluvy o dielo", "leaves": ["dielo na nehnuteľnosti: často vyžaduje písomnú formu, odovzdanie protokolom", "projektové práce: výsledkom je dokumentácia, nie fyzická vec", "opravy a údržba: zhotoviteľ zodpovedá za správne vykonanie zásahu", "dielo na veci objednávateľa: zhotoviteľ musí vec chrániť a po vykonaní diela ju vrátiť"] },
+      { "label": "Odovzdanie diela (§ 642 OZ)", "leaves": ["dielo je splnené jeho riadnym dokončením a odovzdaním", "objednávateľ je povinný dielo prevziať, ak nemá podstatné vady"] },
+      { "label": "Význam pre prax", "leaves": ["kľúčová zmluva pre stavebníctvo, IT, opravy, kreatívne práce", "jasné pravidlá pre odmenu, vady a odovzdanie", "flexibilná úprava umožňuje široké využitie", "chráni objednávateľa aj zhotoviteľa cez presné povinnosti"] }
+    ]
   }
 }

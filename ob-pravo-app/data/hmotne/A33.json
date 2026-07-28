@@ -138,5 +138,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Nájomná zmluva – pojem, náležitosti, práva a povinnosti, osobitné druhy nájmu (dočasné užívanie cudzej veci za odplatu)",
+    "branches": [
+      { "label": "Pojem nájomnej zmluvy (§ 663 OZ)", "leaves": ["prenajímateľ prenechá vec na dočasné užívanie", "nájomca platí nájomné", "vlastníkom zostáva prenajímateľ", "typická zmluva užívania, nie prevodu"] },
+      { "label": "Podstatné náležitosti", "leaves": ["predmet nájmu: určitá vec spôsobilá na užívanie", "nájomné: pevne dohodnuté alebo určené spôsobom výpočtu", "čas nájmu: určitý alebo neurčitý", "pri neurčitom čase je možná výpoveď"] },
+      { "label": "Práva a povinnosti strán (§ 665–676 OZ)", "leaves": ["prenajímateľ: odovzdať vec v stave spôsobilom na užívanie", "prenajímateľ: zabezpečiť nerušené užívanie a vykonávať potrebné opravy", "nájomca: platiť nájomné a užívať vec riadne podľa zmluvy", "nájomca: vykonávať bežnú údržbu a drobné opravy", "nájomca: vrátiť vec v stave zodpovedajúcom obvyklému opotrebeniu", "pri vadách veci môže nájomca požadovať zľavu alebo odstúpiť od zmluvy"] },
+      { "label": "Nájom bytu (§ 685–716 OZ)", "leaves": ["zvýšená ochrana nájomcu", "nájomné možno zvyšovať len podľa zákona", "prenajímateľ môže vypovedať len zo zákonných dôvodov", "nájomca platí úhrady za služby a má právo na nerušené užívanie"] },
+      { "label": "Nájom nebytových priestorov (zákon č. 116/1990 Zb.)", "leaves": ["používa sa pri podnikaní", "vyžaduje sa písomná forma", "širšie výpovedné dôvody", "väčšia zmluvná voľnosť, bez osobitnej ochrany nájomcu"] },
+      { "label": "Podnájom", "leaves": ["nájomca môže prenechať vec tretej osobe, ak to prenajímateľ dovolí", "podnájom zaniká najneskôr so zánikom nájmu"] },
+      { "label": "Význam pre prax", "leaves": ["stabilizuje užívanie majetku bez prechodu vlastníctva", "jasné rozdelenie opráv a povinností", "špeciálna ochrana pri nájme bytu", "dôležité pri podnikaní v nebytových priestoroch"] }
+    ]
   }
 }

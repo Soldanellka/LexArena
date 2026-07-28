@@ -138,5 +138,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Nájom bytu podľa OZ a krátkodobý nájom – pojem, ochrana, výpoveď, rozdiely (osobitná ochrana nájomcu vs. flexibilita krátkodobého nájmu)",
+    "branches": [
+      { "label": "Nájom bytu podľa OZ (§ 685–716 OZ)", "leaves": ["prenajímateľ prenechá byt na užívanie za nájomné", "nájomca byt riadne užíva, platí nájomné a služby", "prenajímateľ musí zabezpečiť byt v stave spôsobilom na užívanie", "prenajímateľ musí zabezpečiť nerušené bývanie", "nájomca vykonáva bežnú údržbu a drobné opravy"] },
+      { "label": "Výpoveď nájmu bytu (§ 711 OZ)", "leaves": ["prenajímateľ môže vypovedať nájom len z taxatívnych dôvodov", "hrubé porušenie povinností nájomcu: neplatenie, poškodzovanie", "potreba bytu pre prenajímateľa alebo jeho blízkych", "užívanie bytu inak, než bolo dohodnuté, bez súhlasu", "výpovedná lehota spravidla 3 mesiace"] },
+      { "label": "Ochrana nájomcu", "leaves": ["výpoveď musí byť písomná", "nájomca môže podať žalobu na neplatnosť výpovede", "prenajímateľ nemôže jednostranne zvyšovať nájomné bez zákonného postupu", "silná ochrana nájomcu ako slabšej strany"] },
+      { "label": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)", "leaves": ["určený na flexibilné bývanie, najviac 6 rokov", "zmluva musí byť písomná", "musí byť registrovaná v Notárskom centrálnom registri nájmov", "výpovedná lehota len 15 dní, jednoduchšie ukončenie nájmu", "prenajímateľ má širšie možnosti výpovede a väčšiu kontrolu"] },
+      { "label": "Rozdiely medzi OZ nájmom a krátkodobým nájmom", "leaves": ["nájom podľa OZ: silná ochrana nájomcu, dlhodobé bývanie", "nájom podľa OZ: prísne výpovedné dôvody, 3-mesačná výpovedná lehota", "krátkodobý nájom: flexibilita, rýchle ukončenie do 15 dní", "krátkodobý nájom: slabšia ochrana nájomcu, vhodný na krátkodobé bývanie"] },
+      { "label": "Význam pre prax", "leaves": ["nájom podľa OZ chráni stabilitu bývania", "krátkodobý nájom umožňuje rýchle a flexibilné riešenia", "prenajímateľ má pri krátkodobom nájme väčšiu kontrolu", "nájomca musí poznať rozdiely, aby si zvolil vhodný typ bývania"] }
+    ]
   }
 }
