@@ -98,5 +98,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovné právo – závislá práca × individuálne × kolektívne × funkcie × zákaz švarcsystému",
+    "branches": [
+      { "label": "Pojem pracovného práva", "leaves": ["Pracovné právo upravuje právne vzťahy vznikajúce pri výkone závislej práce medzi zamestnancom a zamestnávateľom.", "Zahŕňa: pracovný pomer, práva a povinnosti účastníkov, kolektívne vzťahy, služby zamestnanosti a súvisiace oblasti"] },
+      { "label": "Predmet pracovného práva", "leaves": ["Pracovné právo pokrýva: individuálne pracovnoprávne vzťahy (pracovný pomer, pracovná zmluva, pracovný čas, mzda)", "Pracovné právo pokrýva: kolektívne pracovnoprávne vzťahy (kolektívne zmluvy, štrajk, výluka)", "Pracovné právo pokrýva: súvisiace vzťahy (zamestnanosť, BOZP, sociálny dialóg)"] },
+      { "label": "Systém pracovného práva", "leaves": ["Rozdelenie: Individuálne pracovné právo – pracovný pomer, pracovná zmluva, práva a povinnosti zamestnanca a zamestnávateľa", "Kolektívne pracovné právo – odbory, kolektívne vyjednávanie, štrajk, výluka."] },
+      { "label": "Funkcie pracovného práva", "leaves": ["Ochranná – chráni zamestnanca ako slabšiu stranu.", "Regulačná – upravuje pracovné vzťahy.", "Kontrolná – dohľad nad dodržiavaním predpisov.", "Výchovná – kultivuje pracovné prostredie a správanie účastníkov."] },
+      { "label": "Závislá práca – definícia", "leaves": ["Závislá práca je osobná práca, ktorá sa vykonáva: podľa pokynov zamestnávateľa, v jeho mene, v pracovnom čase určenom zamestnávateľom, vo vzťahu nadriadenosti a podriadenosti, za mzdu", "Rozhoduje skutočný obsah práce, nie názov zmluvy."] },
+      { "label": "Judikatúra", "leaves": ["R 19/1977 – rozhoduje obsah práce, nie formálne označenie zmluvy.", "R 9/1971 – používanie vlastného pracovného nástroja nevylučuje pracovný pomer."] },
+      { "label": "Švarcsystém", "leaves": ["Nezákonné predstieranie podnikania pri práci, ktorá má znaky závislej práce.", "Ak práca má znaky závislej práce → musí byť vykonávaná v pracovnom pomere, nie na živnosť."] }
+    ]
   }
 }

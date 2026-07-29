@@ -102,5 +102,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Kolektívne vyjednávanie – sociálny dialóg × kolektívna zmluva × sprostredkovanie × rozhodca × štrajk/výluka",
+    "branches": [
+      { "label": "Pojem kolektívneho vyjednávania", "leaves": ["Kolektívne vyjednávanie je proces rokovania medzi: odborovou organizáciou, zamestnávateľom alebo združením zamestnávateľov", "Cieľom je uzavrieť kolektívnu zmluvu, ktorá upravuje pracovné a mzdové podmienky."] },
+      { "label": "Kolektívna zmluva", "leaves": ["Môže upravovať: mzdy a odmeňovanie, pracovný čas, dovolenku, BOZP, benefity, sociálny fond, ďalšie pracovné podmienky", "Kolektívna zmluva môže byť výhodnejšia ako zákon, nikdy nie horšia."] },
+      { "label": "Zásady kolektívneho vyjednávania", "leaves": ["Vyjednávanie sa riadi zásadami: dobrovoľnosti, rovnosti strán, dobrej viery, povinnosti rokovať, rešpektovania sociálneho dialógu", "Strany musia rokovať čestne, pravdivo a s cieľom dosiahnuť dohodu."] },
+      { "label": "Postup pri nedohode", "leaves": ["Ak sa strany nedohodnú: sprostredkovanie – povinný krok, nestranný sprostredkovateľ", "Ak sa strany nedohodnú: rozhodca – nestranná osoba, ktorá môže spor vyriešiť", "Ak sa strany nedohodnú: až potom štrajk (zamestnanci) alebo výluka (zamestnávateľ)"] },
+      { "label": "Typy kolektívnych zmlúv", "leaves": ["Podniková kolektívna zmluva – u konkrétneho zamestnávateľa.", "Kolektívna zmluva vyššieho stupňa – medzi odborovým zväzom a združením zamestnávateľov.", "Kolektívna zmluva je záväzná pre všetkých zamestnancov, na ktorých sa vzťahuje."] },
+      { "label": "Krajné opatrenia – štrajk a výluka", "leaves": ["Štrajk – krajné opatrenie zamestnancov; kolektívne prerušenie práce.", "Výluka – krajné opatrenie zamestnávateľa; neprideľovanie práce.", "Obe opatrenia sú možné až po neúspešnom sprostredkovaní a rozhodcovi."] }
+    ]
   }
 }

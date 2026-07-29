@@ -108,5 +108,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pramene pracovného práva – Ústava × Zákonník práce × osobitné zákony × kolektívne zmluvy × interné predpisy × MOP × EÚ",
+    "branches": [
+      { "label": "Ústava SR", "leaves": ["Ústava garantuje základné pracovné práva: právo na prácu, spravodlivé pracovné podmienky, ochranu práce, právo na štrajk", "Je najvyšším prameňom pracovného práva."] },
+      { "label": "Zákonník práce (zákon č. 311/2001 Z. z.)", "leaves": ["Základný zákonný prameň pracovného práva.", "Upravuje: individuálne pracovné právo (pracovný pomer, pracovná zmluva, pracovný čas, mzda), kolektívne pracovné právo (kolektívne zmluvy, štrajk, výluka)"] },
+      { "label": "Osobitné zákony", "leaves": ["Doplňujú Zákonník práce v špecifických oblastiach: zákon o inšpekcii práce, zákon o BOZP, zákon o kolektívnom vyjednávaní, zákon o službách zamestnanosti", "Patria sem aj vykonávacie predpisy, nariadenia vlády a vyhlášky."] },
+      { "label": "Autonómne pramene – kolektívne zmluvy", "leaves": ["uzatvárajú ich odbory a zamestnávateľ,", "môžu len zlepšovať postavenie zamestnanca, nikdy nie zhoršovať,", "upravujú mzdy, benefity, pracovné podmienky, sociálne istoty."] },
+      { "label": "Interné predpisy zamestnávateľa", "leaves": ["najnižší prameň pracovného práva,", "musia byť v súlade so zákonom,", "nemôžu odnímať zákonné práva zamestnanca.", "Príklad: interná smernica nemôže zrušiť zákonný príplatok."] },
+      { "label": "Právo EÚ", "leaves": ["Najmä smernice: pracovný čas, rovnaké zaobchádzanie, BOZP, informovanie a konzultácie so zamestnancami", "Smernice harmonizujú pracovné podmienky v EÚ."] },
+      { "label": "Medzinárodné pramene – MOP", "leaves": ["Dohovory a odporúčania Medzinárodnej organizácie práce: minimálne pracovné štandardy, ochrana zamestnancov, zákaz nútenej práce, rovnaké zaobchádzanie"] },
+      { "label": "Hierarchia prameňov", "leaves": ["Od najvyššieho po najnižší: Ústava SR, Zákony (Zákonník práce + osobitné zákony), Kolektívne zmluvy, Pracovná zmluva, Interné predpisy, Zásada: výhodnejšie pre zamestnanca má prednosť"] }
+    ]
   }
 }

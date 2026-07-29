@@ -102,5 +102,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovná zmluva – vznik pracovného pomeru × povinné náležitosti × forma × informovanie × skúšobná doba",
+    "branches": [
+      { "label": "Pojem pracovnej zmluvy", "leaves": ["Pracovná zmluva je dohoda medzi zamestnancom a zamestnávateľom, ktorou sa zakladá pracovný pomer.", "Zamestnanec sa zaväzuje vykonávať závislú prácu, zamestnávateľ vytvára pracovné podmienky a poskytuje mzdu."] },
+      { "label": "Forma pracovnej zmluvy", "leaves": ["má byť písomná,", "ak písomná forma chýba → pracovný pomer je platný,", "zamestnávateľ musí formu doplniť bezodkladne.", "Písomná forma je povinnosť zamestnávateľa, nie podmienka platnosti."] },
+      { "label": "Podstatné náležitosti pracovnej zmluvy", "leaves": ["Musí obsahovať štyri povinné údaje: druh práce, miesto výkonu práce, deň nástupu do práce, mzdové podmienky", "Bez týchto náležitostí je zmluva neúplná."] },
+      { "label": "Fakultatívne náležitosti", "leaves": ["Možno dohodnúť: pracovný čas, výpovedné doby, benefity, konkurenčnú doložku, ďalšie podmienky podľa potrieb strán"] },
+      { "label": "Skúšobná doba", "leaves": ["musí byť dohodnutá písomne,", "najneskôr v deň nástupu do práce,", "umožňuje obom stranám overiť vhodnosť pracovného pomeru."] },
+      { "label": "Informačná povinnosť zamestnávateľa", "leaves": ["Do 7 dní od vzniku pracovného pomeru musí zamestnávateľ informovať o: pracovnom čase, dovolenke, výpovedných dobách, odmeňovaní, kolektívnej zmluve, orgánoch sociálneho zabezpečenia", "Povinnosť vychádza aj zo smernice EÚ o transparentných a predvídateľných pracovných podmienkach."] },
+      { "label": "Odstúpenie od pracovnej zmluvy", "leaves": ["Možné len do začiatku výkonu práce.", "Typicky ak: sa zamestnanec nedostaví do práce, existuje dôvod na okamžité skončenie pracovného pomeru"] },
+      { "label": "Judikatúra", "leaves": ["R 19/1977 – rozhoduje skutočný obsah práce.", "R 9/1971 – vlastný pracovný nástroj nevylučuje pracovný pomer.", "R 26/1995 – kolektívna zmluva nemôže rozširovať účasť odborov nad rámec zákona.", "R 44/2012 – pracovné miesto ostáva voľné aj pri prisľúbení obsadenia."] }
+    ]
   }
 }

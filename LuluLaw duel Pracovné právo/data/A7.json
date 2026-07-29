@@ -111,5 +111,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovný pomer – synalagmatický vzťah × vznik × pracovná zmluva × povinnosti strán × faktický pracovný pomer",
+    "branches": [
+      { "label": "Charakteristika pracovného pomeru", "leaves": ["Pracovný pomer je synalagmatický vzťah: zamestnanec vykonáva osobne závislú prácu, zamestnávateľ poskytuje mzdu a pracovné podmienky", "Obsah pracovného pomeru tvoria: práva a povinnosti strán, pracovné podmienky, režim BOZP, rovnaké zaobchádzanie"] },
+      { "label": "Vznik pracovného pomeru", "leaves": ["Najčastejšie vzniká: pracovnou zmluvou, dňom uvedeným v pracovnej zmluve", "Môže vzniknúť aj: zo zákona (napr. fikcia pracovného pomeru pri nedovolenom dočasnom pridelení), fakticky (zamestnanec pracuje so súhlasom zamestnávateľa bez zmluvy)"] },
+      { "label": "Pracovná zmluva", "leaves": ["Musí byť písomná, ale jej absencia nespôsobuje neplatnosť pracovného pomeru.", "Musí obsahovať: druh práce, miesto výkonu práce, deň nástupu, mzdové podmienky"] },
+      { "label": "Predzmluvné vzťahy", "leaves": ["Zamestnávateľ musí: informovať uchádzača o pracovných a mzdových podmienkach", "Zamestnávateľ musí: informovať o rizikách práce", "Zamestnávateľ musí: nesmie požadovať informácie zasahujúce do osobnostných práv (rodinný stav, tehotenstvo, politické názory)"] },
+      { "label": "Faktický pracovný pomer", "leaves": ["Vzniká, keď: zamestnanec vykonáva závislú prácu, zamestnávateľ o tom vie, neexistuje platná pracovná zmluva", "Zamestnanec má rovnaké práva ako pri riadnom pracovnom pomere: mzda, dovolenka, náhrady, BOZP"] },
+      { "label": "Povinnosti zamestnávateľa", "leaves": ["Zamestnávateľ musí: prideľovať prácu podľa zmluvy", "Zamestnávateľ musí: platiť mzdu", "Zamestnávateľ musí: zabezpečiť BOZP", "Zamestnávateľ musí: vytvárať pracovné podmienky", "Zamestnávateľ musí: dodržiavať rovnaké zaobchádzanie", "Zamestnávateľ musí: prihlásiť zamestnanca do Sociálnej poisťovne pred začiatkom práce"] },
+      { "label": "Povinnosti zamestnanca", "leaves": ["Zamestnanec musí: vykonávať prácu osobne, riadne a včas, dodržiavať pracovnú disciplínu, dodržiavať BOZP, chrániť majetok zamestnávateľa"] },
+      { "label": "Judikatúra", "leaves": ["R 28/2011 – ak po odvolaní z funkcie nie je dohodnutý druh práce, ide o prekážku na strane zamestnávateľa.", "R 44/2012 – pracovné miesto ostáva voľné aj pri prisľúbení obsadenia."] }
+    ]
   }
 }

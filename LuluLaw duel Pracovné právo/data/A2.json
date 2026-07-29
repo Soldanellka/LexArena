@@ -93,5 +93,15 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Štrajk × výluka × kolektívny spor × sprostredkovanie × zodpovednosť za škodu",
+    "branches": [
+      { "label": "Právo na štrajk", "leaves": ["ústavne garantované čl. 37 ods. 4 Ústavy SR", "upravené v zákone o kolektívnom vyjednávaní", "ide o kolektívny prostriedok riešenia sporov medzi zamestnancami a zamestnávateľom"] },
+      { "label": "Štrajk – definícia a podmienky", "leaves": ["Štrajk je kolektívne prerušenie práce zamestnancami.", "Podmienky: možno ho vyhlásiť len v spore o uzavretie kolektívnej zmluvy", "Podmienky: až po neúspešnom sprostredkovaní", "Podmienky: vyhlasuje ho výlučne odborová organizácia", "Podmienky: nesmie ohroziť život, zdravie, bezpečnosť", "Počas štrajku: zamestnancom nepatrí mzda, ide o prekážku na strane zamestnanca"] },
+      { "label": "Výluka", "leaves": ["Výluka je jednostranné neprideľovanie práce zo strany zamestnávateľa.", "Charakteristika: krajné opatrenie v kolektívnom spore, počas výluky ide o prekážku v práci na strane zamestnávateľa, dopad na náhradu mzdy závisí od typu výluky (zákonná × nezákonná)"] },
+      { "label": "Nezákonný štrajk alebo výluka", "leaves": ["Nezákonnosť nastáva najmä vtedy, ak: štrajk bol vyhlásený bez sprostredkovania, štrajk/výluka nesplnili zákonné podmienky, ohrozujú život, zdravie alebo bezpečnosť", "Následky: vzniká zodpovednosť za škodu, odbory alebo zamestnávateľ nesú následky nezákonného konania"] },
+      { "label": "Dopady na mzdu", "leaves": ["štrajk → mzda nepatrí", "výluka → prekážka na strane zamestnávateľa → náhrada mzdy podľa zákona"] }
+    ]
   }
 }

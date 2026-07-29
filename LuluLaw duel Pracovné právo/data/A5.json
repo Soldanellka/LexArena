@@ -115,5 +115,14 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "MOP × právo EÚ × smernice × Súdny dvor EÚ × Európska sociálna charta × EDĽP",
+    "branches": [
+      { "label": "Právo EÚ – smernice", "leaves": ["Smernice EÚ určujú minimálne štandardy, ktoré musia členské štáty transponovať do svojho práva.", "Témy: pracovný čas (max. týždenný čas, prestávky), rovnaké zaobchádzanie a zákaz diskriminácie, BOZP, vysielanie pracovníkov, transparentné pracovné podmienky", "Smernice harmonizujú pracovné podmienky v EÚ."] },
+      { "label": "Súdny dvor EÚ", "leaves": ["zabezpečuje jednotný výklad pracovného práva EÚ,", "jeho rozhodnutia sú záväzné pre členské štáty,", "často dopĺňa alebo spresňuje obsah smerníc (napr. pracovný čas, dovolenka, rovnaké zaobchádzanie)."] },
+      { "label": "Európska sociálna charta", "leaves": ["Dokument Rady Európy, ktorý chráni: sociálne práva, pracovné práva, právo na spravodlivé pracovné podmienky, právo na kolektívne vyjednávanie", "Európsky dohovor o ľudských právach (EDĽP)", "Hoci nejde o pracovný kódex, EDĽP ovplyvňuje pracovné právo", "zákaz nútenej práce (čl. 4)", "zákaz diskriminácie (čl. 14)", "ochrana ľudskej dôstojnosti", "právo na spravodlivé konanie (pracovné spory pred súdom)"] },
+      { "label": "Transpozícia a prednosť práva EÚ", "leaves": ["smernice sa musia premietnuť do vnútroštátneho práva,", "v prípade rozporu má právo EÚ prednosť,", "vnútroštátne predpisy sa musia prispôsobiť európskym normám."] }
+    ]
   }
 }
