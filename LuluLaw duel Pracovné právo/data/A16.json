@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zástupcovia zamestnancov – odbory × zamestnanecká rada × dôverník × informovanie × prerokovanie × ochrana",
+    "branches": [
+      { "label": "Formy zastúpenia (§ 11a ZP)", "leaves": ["Tri formy zastúpenia zamestnancov: odborová organizácia, zamestnanecká rada, zamestnanecký dôverník", "Všetky sú legitímnymi zástupcami, ale s rozdielnou intenzitou právomocí."] },
+      { "label": "Odborová organizácia – najsilnejší zástupca", "leaves": ["Odbory majú najširšie právomoci", "vedú kolektívne vyjednávanie", "uzatvárajú kolektívne zmluvy", "kontrolujú dodržiavanie pracovnoprávnych predpisov", "poskytujú právnu ochranu zamestnancom", "majú právo na informácie a prerokovanie", "sú partnerom pri štrajku a výluke", "Kolektívnu zmluvu môže uzavrieť len odborová organizácia."] },
+      { "label": "Zamestnanecká rada", "leaves": ["volený orgán zamestnancov,", "pôsobí najmä v oblasti informovania a prerokovania,", "nemá právomoc uzatvárať kolektívne zmluvy,", "zastupuje zamestnancov tam, kde nepôsobia odbory."] },
+      { "label": "Zamestnanecký dôverník", "leaves": ["individuálny zástupca zamestnancov,", "pôsobí v menších podnikoch,", "má práva podobné zamestnaneckej rade,", "zameraný na informovanie, prerokovanie a komunikáciu so zamestnávateľom."] },
+      { "label": "Práva zástupcov – informovanie a prerokovanie (§ 12 ZP)", "leaves": ["Zamestnávateľ musí informovať a prerokovať: zásadné otázky pracovných podmienok, organizačné zmeny, hromadné prepúšťanie, BOZP, zmeny v odmeňovaní, opatrenia týkajúce sa zamestnancov", "Nesplnenie povinnosti je porušením zákona."] },
+      { "label": "Ochrana zástupcov zamestnancov", "leaves": ["Zástupcovia majú osobitnú ochranu pred výpoveďou", "zamestnávateľ im môže dať výpoveď len so súhlasom odborovej organizácie", "alebo po splnení zákonných podmienok", "zákaz diskriminácie a postihovania za výkon funkcie"] },
+      { "label": "Zákazy postihovania", "leaves": ["Zamestnávateľ nesmie: brániť činnosti zástupcov, postihovať zamestnancov za výkon práv, zasahovať do nezávislosti odborov, rady či dôverníka"] }
+    ]
   }
 }

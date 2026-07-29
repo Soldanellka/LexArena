@@ -122,5 +122,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Neurčitý čas × určitá doba × reťazenie × automatická premena × výnimky",
+    "branches": [
+      { "label": "Pracovný pomer na neurčitý čas", "leaves": ["základná a preferovaná forma pracovného pomeru", "poskytuje najvyššiu stabilitu a ochranu", "ak zmluva neobsahuje dobu trvania → automaticky ide o neurčitý čas", "ak zmluva na dobu určitú nespĺňa zákonné podmienky → považuje sa za neurčitý čas"] },
+      { "label": "Pracovný pomer na určitú dobu", "leaves": ["výnimka, nie pravidlo", "možno ho dohodnúť len za zákonných podmienok", "trvanie max. 2 roky", "v rámci 2 rokov možno predĺžiť alebo opätovne dohodnúť najviac dvakrát", "cieľ: zabrániť zneužívaniu dočasných pracovných pomerov"] },
+      { "label": "Reťazenie zmlúv", "leaves": ["max. 2 predĺženia/opätovné dohodnutia v rámci 2 rokov", "ak zamestnávateľ prekročí limity → pracovný pomer sa považuje za neurčitý čas", "prísna regulácia chráni zamestnanca pred neistotou"] },
+      { "label": "Automatická premena na neurčitý čas", "leaves": ["Nastáva, ak: zamestnanec po uplynutí dohodnutej doby pokračuje vo výkone práce, zamestnávateľ o tom vie", "V takom prípade sa pracovný pomer zo zákona mení na pracovný pomer na neurčitý čas."] },
+      { "label": "Výnimky pri dobe určitej", "leaves": ["Dlhšie trvanie alebo viacnásobné predĺženie je možné pri", "zastupovaní zamestnanca", "sezónnych prácach", "prechodnom zvýšení počtu zamestnancov", "vysokoškolských učiteľoch", "osobitných zákonných situáciách"] },
+      { "label": "Ochrana zamestnanca", "leaves": ["Zamestnanec na dobu určitú nesmie byť: znevýhodnený oproti porovnateľnému zamestnancovi na neurčitý čas, diskriminovaný pri odmeňovaní, BOZP, benefitoch či pracovných podmienkach"] }
+    ]
   }
 }

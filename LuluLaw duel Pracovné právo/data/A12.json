@@ -123,5 +123,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Druhy pracovného pomeru – neurčitý čas × určitá doba × kratší pracovný čas × sezónna práca × telepráca",
+    "branches": [
+      { "label": "Pracovný pomer na neurčitý čas", "leaves": ["základná a preferovaná forma pracovného pomeru", "poskytuje najvyššiu stabilitu a ochranu", "ak zmluva neobsahuje dobu trvania → ide o neurčitý čas", "ak pracovný pomer na určitú dobu nie je dohodnutý písomne alebo nespĺňa zákonné podmienky → považuje sa za neurčitý čas"] },
+      { "label": "Pracovný pomer na určitú dobu (§ 48 ZP)", "leaves": ["výnimka, nie pravidlo", "trvanie max. 2 roky", "v rámci 2 rokov možno predĺžiť alebo opätovne dohodnúť najviac dvakrát", "cieľ: zabrániť zneužívaniu dočasných pracovných pomerov", "zamestnanec na dobu určitú nesmie byť znevýhodnený oproti zamestnancovi na neurčitý čas"] },
+      { "label": "Reťazenie zmlúv", "leaves": ["max. 2 predĺženia/opätovné dohodnutia v rámci 2 rokov", "ak zamestnanec po uplynutí doby určitej pokračuje vo výkone práce s vedomím zamestnávateľa → pracovný pomer sa automaticky mení na neurčitý čas"] },
+      { "label": "Kratší pracovný čas (§ 49 ZP)", "leaves": ["zamestnanec môže požiadať o kratší pracovný čas", "zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody", "typické pri rodičoch, zdravotných dôvodoch, štúdiu"] },
+      { "label": "Osobitné druhy pracovného pomeru", "leaves": ["Patria sem: sezónna práca – výnimka umožňujúca flexibilitu pri dobe určitej", "Patria sem: zastupovanie – pri materskej/rodičovskej dovolenke", "Patria sem: projekty – časovo obmedzené úlohy", "Patria sem: vysokoškolskí učitelia – osobitné pravidlá pre dobu určitú"] },
+      { "label": "Telepráca a domácka práca (§ 52 ZP)", "leaves": ["práca vykonávaná mimo pracoviska zamestnávateľa", "pravidelne a s využitím informačných technológií", "musí byť dohodnutá, nemožno ju jednostranne nariadiť", "zamestnanec má rovnaké práva ako pri práci na pracovisku"] }
+    ]
   }
 }

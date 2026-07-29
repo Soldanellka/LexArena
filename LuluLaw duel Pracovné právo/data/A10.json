@@ -117,5 +117,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Kolektívna zmluva – autonómny prameň × odbory × zamestnávateľ × obsah × uzatváranie × sprostredkovanie × rozhodca",
+    "branches": [
+      { "label": "Charakteristika kolektívnej zmluvy", "leaves": ["Kolektívna zmluva je výsledok kolektívneho vyjednávania medzi: odborovou organizáciou, zamestnávateľom alebo zamestnávateľským združením", "Je autonómnym prameňom pracovného práva a môže: zlepšovať pracovné podmienky, nikdy zhoršovať postavenie zamestnanca oproti zákonu"] },
+      { "label": "Druhy kolektívnych zmlúv", "leaves": ["Podniková kolektívna zmluva – medzi odbormi a konkrétnym zamestnávateľom.", "Kolektívna zmluva vyššieho stupňa – medzi odborovým zväzom a združením zamestnávateľov.", "Kolektívna zmluva pre verejnú službu – špecifická úprava pre verejný sektor."] },
+      { "label": "Forma kolektívnej zmluvy", "leaves": ["musí byť písomná,", "účinnosť nadobúda dňom podpisu alebo neskorším dňom uvedeným v zmluve,", "je záväzná pre všetkých zamestnancov, na ktorých sa vzťahuje."] },
+      { "label": "Obsah kolektívnej zmluvy", "leaves": ["Môže upravovať: mzdy a odmeňovanie, pracovný čas, dovolenku, BOZP, sociálny fond, benefity, ďalšie pracovné podmienky", "Obsah musí byť v súlade so zákonom a môže byť výhodnejší pre zamestnancov."] },
+      { "label": "Uzatváranie kolektívnej zmluvy", "leaves": ["Proces sa riadi zákonom o kolektívnom vyjednávaní a zásadami: dobrovoľnosti, rovnosti strán, dobrej viery, povinnosti rokovať", "Vyjednávanie vedú odbory, nie jednotliví zamestnanci."] },
+      { "label": "Sprostredkovanie a rozhodca", "leaves": ["Ak sa strany nedohodnú: Sprostredkovanie – povinný krok, nestranný sprostredkovateľ", "Rozhodca – nestranná osoba, ktorá môže spor vyriešiť.", "Až potom je možné vyhlásiť štrajk alebo výluku."] },
+      { "label": "Rozšírenie záväznosti", "leaves": ["Kolektívna zmluva vyššieho stupňa môže byť: rozšírená na ďalších zamestnávateľov, rozhodnutím ministerstva práce"] }
+    ]
   }
 }

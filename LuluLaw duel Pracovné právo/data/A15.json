@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovnoprávne vzťahy – závislá práca × pracovný pomer × dohody × kolektívne vzťahy × BOZP",
+    "branches": [
+      { "label": "Charakteristika pracovnoprávnych vzťahov", "leaves": ["Pracovnoprávne vzťahy vznikajú pri výkone závislej práce medzi: zamestnancom, zamestnávateľom", "Základom je pracovný pomer, ktorý je najtypickejšou formou realizácie závislej práce podľa § 1 ods. 2 ZP.", "Zahŕňajú aj: dohody mimo pracovného pomeru, kolektívne vzťahy, BOZP, ďalšie súvisiace vzťahy"] },
+      { "label": "Závislá práca", "leaves": ["Závislá práca sa vyznačuje: osobným výkonom práce, podriadenosťou zamestnanca, pokynovou právomocou zamestnávateľa, výkonom práce v mene zamestnávateľa, za mzdu", "Rozhoduje skutočný obsah práce, nie názov zmluvy."] },
+      { "label": "Obsah pracovnoprávnych vzťahov", "leaves": ["Obsah tvoria práva a povinnosti účastníkov.", "Zamestnávateľ musí: prideľovať prácu, platiť mzdu, zabezpečiť BOZP, vytvárať pracovné podmienky, dodržiavať rovnaké zaobchádzanie", "Zamestnanec musí: vykonávať prácu osobne, riadne a včas, dodržiavať pracovnú disciplínu, dodržiavať BOZP, chrániť majetok zamestnávateľa"] },
+      { "label": "Druhy pracovnoprávnych vzťahov", "leaves": ["Individuálne pracovnoprávne vzťahy", "pracovný pomer,", "dohody o prácach mimo pracovného pomeru."] },
+      { "label": "Kolektívne pracovnoprávne vzťahy", "leaves": ["kolektívne vyjednávanie,", "kolektívne zmluvy,", "štrajk,", "výluka.", "Vzťahy súvisiace s BOZP", "povinnosti zamestnávateľa,", "práva zamestnanca,", "kontrola inšpekcie práce.", "Kolektívne vzťahy", "Zahŕňajú: sociálny dialóg, kolektívne vyjednávanie, uzatváranie kolektívnych zmlúv, riešenie sporov (sprostredkovanie, rozhodca), štrajk a výluku"] },
+      { "label": "BOZP ako súčasť pracovnoprávnych vzťahov", "leaves": ["BOZP je neoddeliteľnou súčasťou pracovnoprávnych vzťahov", "zamestnávateľ musí zabezpečiť bezpečné pracovné prostredie", "zamestnanec musí dodržiavať predpisy BOZP", "inšpekcia práce kontroluje dodržiavanie BOZP"] }
+    ]
   }
 }

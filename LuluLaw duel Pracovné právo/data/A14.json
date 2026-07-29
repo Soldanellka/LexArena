@@ -146,5 +146,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Ochrana rodičovstva – materská × otcovská × rodičovská × náhradná starostlivosť × návrat do práce",
+    "branches": [
+      { "label": "Materská dovolenka", "leaves": ["Patrí žene v súvislosti s pôrodom a starostlivosťou o dieťa.", "Trvanie: 34 týždňov, 37 týždňov osamelá žena, 43 týždňov pri viacpočetnom pôrode, 14 týždňov, ak sa dieťa narodí mŕtve", "Začiatok: spravidla 6 týždňov pred pôrodom, najskôr 8 týždňov pred pôrodom", "Mužovi patrí rovnaký rozsah, ak sa stará o narodené dieťa."] },
+      { "label": "Otcovská dovolenka", "leaves": ["Patrí mužovi odo dňa narodenia dieťaťa.", "Trvanie: 28 týždňov, 31 týždňov osamelý muž, 37 týždňov pri viacpočetných deťoch", "Osobitný nárok: prvých 14 dní po pôrode"] },
+      { "label": "Rodičovská dovolenka (§ 166 ods. 2 ZP)", "leaves": ["Patrí žene alebo mužovi po skončení materskej/otcovskej dovolenky.", "Trvanie: do 3 rokov veku dieťaťa, do 6 rokov, ak má dieťa dlhodobo nepriaznivý zdravotný stav", "Možnosť predĺženia: po dohode so zamestnávateľom možno čerpať do 5 rokov, pri zdravotnom postihnutí do 8 rokov"] },
+      { "label": "Náhradná starostlivosť", "leaves": ["Pri prevzatí dieťaťa do náhradnej starostlivosti patrí: materská/rodičovská dovolenka v trvaní 28, 31 alebo 37 týždňov podľa situácie"] },
+      { "label": "Oznamovacia povinnosť rodiča", "leaves": ["Rodič musí oznámiť: nástup na dovolenku, prerušenie, skončenie, najmenej mesiac vopred"] },
+      { "label": "Návrat do práce", "leaves": ["Zamestnávateľ je povinný: zaradiť rodiča na pôvodnú prácu, ak to nie je možné → na inú vhodnú prácu", "Rodič je v ochrannej dobe – zamestnávateľ mu nesmie dať výpoveď (s výnimkami podľa zákona)."] }
+    ]
   }
 }

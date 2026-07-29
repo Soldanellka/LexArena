@@ -95,5 +95,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pôsobnosť ZP – vecná × osobná × územná × časová × závislá práca × vysielanie pracovníkov",
+    "branches": [
+      { "label": "Vecná pôsobnosť (§ 1 ZP)", "leaves": ["Zahŕňa úpravu: závislej práce (kľúčový základ pôsobnosti), pracovného pomeru, dohôd mimo pracovného pomeru, kolektívnych pracovnoprávnych vzťahov, BOZP", "Typy vecnej pôsobnosti: priama úplná – ZP sa uplatní v plnom rozsahu", "Typy vecnej pôsobnosti: priama obmedzená – len niektoré ustanovenia", "Typy vecnej pôsobnosti: delegovaná – ZP sa použije, ak osobitný predpis odkáže", "Typy vecnej pôsobnosti: subsidiárna – použije sa, ak osobitný predpis neobsahuje úpravu (napr. zdravotníci, doprava, cirkvi, umelci)"] },
+      { "label": "Osobná pôsobnosť", "leaves": ["ZP sa vzťahuje na: zamestnancov vykonávajúcich závislú prácu, zamestnávateľov", "Osobitné predpisy platia pre: štátnu službu, verejnú službu, ozbrojené zbory, cirkvi, zdravotníkov, dopravu, umelcov"] },
+      { "label": "Územná pôsobnosť", "leaves": ["ZP platí na území SR.", "Pri vysielaní pracovníkov do iného štátu EÚ sa uplatňuje: slovenské pracovné právo, minimálne pracovné podmienky hostiteľského štátu (smernica 96/71/ES)"] },
+      { "label": "Časová pôsobnosť", "leaves": ["Určuje: odkedy právna norma platí, dokedy účinkuje, ako sa uplatňuje pri novelách (prechodné ustanovenia)"] },
+      { "label": "Delegovaná a subsidiárna pôsobnosť", "leaves": ["Delegovaná – osobitný predpis výslovne odkáže na použitie ZP.", "Subsidiárna – ZP sa použije tam, kde osobitný predpis nemá vlastnú úpravu."] },
+      { "label": "Vysielanie pracovníkov", "leaves": ["Pri vyslaní zamestnanca do iného štátu EÚ: vzťahuje sa naňho slovenský ZP, musí mať zabezpečené minimálne podmienky hostiteľského štátu (mzda, pracovný čas, BOZP)"] },
+      { "label": "Judikatúra", "leaves": ["R 9/1971 – vlastný pracovný nástroj nevylučuje pracovný pomer.", "R 19/1977 – rozhoduje skutočný obsah práce.", "R 36/2005 – zákaz diskriminácie pri informovaní zamestnancov.", "R 44/2012 – voľné pracovné miesto pri výpovedi.", "R 57/2014 – úrok z omeškania aj pre štátnych zamestnancov."] }
+    ]
   }
 }

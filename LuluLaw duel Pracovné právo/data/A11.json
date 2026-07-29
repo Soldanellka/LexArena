@@ -129,5 +129,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pôsobnosť pracovného práva – vecná × osobná × územná × časová × osobitné predpisy × vysielanie pracovníkov",
+    "branches": [
+      { "label": "Vecná pôsobnosť", "leaves": ["Zákonník práce upravuje: závislú prácu, pracovný pomer, dohody mimo pracovného pomeru, kolektívne pracovnoprávne vzťahy, BOZP, niektoré súvisiace vzťahy (zamestnanosť, sociálny dialóg)", "Vecná pôsobnosť odpovedá na otázku: aké typy vzťahov Zákonník práce upravuje."] },
+      { "label": "Osobná pôsobnosť", "leaves": ["Vzťahuje sa najmä na: zamestnancov vykonávajúcich závislú prácu, zamestnávateľov, osoby v pracovnoprávnych vzťahoch", "Osobitná úprava platí pre: štátnu službu, verejnú službu, ozbrojené zbory, niektoré profesie s osobitným režimom"] },
+      { "label": "Územná pôsobnosť", "leaves": ["Zákonník práce platí na území SR.", "Pri vysielaní pracovníkov do iného štátu EÚ sa uplatňuje: slovenské pracovné právo, minimálne štandardy hostiteľského štátu (pracovný čas, minimálna mzda, BOZP)", "Územná pôsobnosť rieši otázku: kde právna úprava platí."] },
+      { "label": "Časová pôsobnosť", "leaves": ["Určuje: odkedy právna norma platí, dokedy účinkuje, ako sa uplatňuje pri zmenách zákona (prechodné ustanovenia)", "Časová pôsobnosť odpovedá na otázku: kedy právna úprava platí."] },
+      { "label": "Vysielanie pracovníkov", "leaves": ["Pri vyslaní zamestnanca do iného štátu EÚ platí", "slovenské pracovné právo", "povinnosť zabezpečiť minimálne pracovné podmienky hostiteľského štátu", "povinnosti podľa smernice o vysielaní pracovníkov"] },
+      { "label": "Osobitné predpisy", "leaves": ["Niektoré skupiny zamestnancov sa riadia osobitnými zákonmi: zákon o štátnej službe, zákon o výkone práce vo verejnom záujme, zákony o ozbrojených zboroch"] }
+    ]
   }
 }
