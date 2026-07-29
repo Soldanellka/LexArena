@@ -7,7 +7,6 @@ Formát zhodný s podklady/pavuky_hmotne.md:
 "- položka" → branches[].leaves[]
 
 POZOR: zdrojom je pamäťový dump, NIE oficiálny sylabus ŠZS.
-Pri procesnom práve sa ukázalo, že takýto dump obsahoval vecné chyby.
 Pred nasadením porovnaj s ŠZS pre pracovné právo.
 
 ## A1 — Pojem, predmet, systém a funkcie pracovného práva; závislá práca
@@ -64,10 +63,9 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 
 ### Výluka
 - Výluka je jednostranné neprideľovanie práce zo strany zamestnávateľa.
-- Charakteristika: krajné opatrenie v kolektívnom spore
-- Charakteristika: počas výluky ide o prekážku v práci na strane zamestnávateľa
-- Charakteristika: dopad na náhradu mzdy závisí od typu výluky (zákonná × nezákonná)
-- Charakteristika: Nezákonný štrajk alebo výluka
+- Charakteristika: krajné opatrenie v kolektívnom spore, počas výluky ide o prekážku v práci na strane zamestnávateľa, dopad na náhradu mzdy závisí od typu výluky (zákonná × nezákonná)
+
+### Nezákonný štrajk alebo výluka
 - Nezákonnosť nastáva najmä vtedy, ak: štrajk bol vyhlásený bez sprostredkovania, štrajk/výluka nesplnili zákonné podmienky, ohrozujú život, zdravie alebo bezpečnosť
 - Následky: vzniká zodpovednosť za škodu, odbory alebo zamestnávateľ nesú následky nezákonného konania
 
@@ -105,7 +103,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 ### Právo EÚ
 - Najmä smernice: pracovný čas, rovnaké zaobchádzanie, BOZP, informovanie a konzultácie so zamestnancami
 - Smernice harmonizujú pracovné podmienky v EÚ.
-- Medzinárodné pramene – MOP
+
+### Medzinárodné pramene – MOP
 - Dohovory a odporúčania Medzinárodnej organizácie práce: minimálne pracovné štandardy, ochrana zamestnancov, zákaz nútenej práce, rovnaké zaobchádzanie
 
 ### Hierarchia prameňov
@@ -261,7 +260,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 ### Kolektívna zmluva
 - Môže upravovať: mzdy a odmeňovanie, pracovný čas, dovolenku, BOZP, benefity, sociálny fond, ďalšie pracovné podmienky
 - Kolektívna zmluva môže byť výhodnejšia ako zákon, nikdy nie horšia.
-- Zásady kolektívneho vyjednávania
+
+### Zásady kolektívneho vyjednávania
 - Vyjednávanie sa riadi zásadami: dobrovoľnosti, rovnosti strán, dobrej viery, povinnosti rokovať, rešpektovania sociálneho dialógu
 - Strany musia rokovať čestne, pravdivo a s cieľom dosiahnuť dohodu.
 
@@ -389,9 +389,9 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 - základná a preferovaná forma pracovného pomeru
 - poskytuje najvyššiu stabilitu a ochranu
 - ak zmluva neobsahuje dobu trvania → ide o neurčitý čas
-- ak pracovný pomer na určitú dobu nie je dohodnutý písomne alebo nespĺňa zákonné podmienky → považuje sa za neurčitý čas
 
-### Pracovný pomer na určitú dobu (§ 48 ZP)
+### ak pracovný pomer na určitú dobu nie je dohodnutý písomne alebo nespĺňa zákonné podmienky → považuje sa za neurčitý čas
+- Pracovný pomer na určitú dobu (§ 48 ZP)
 - výnimka, nie pravidlo
 - trvanie max. 2 roky
 - v rámci 2 rokov možno predĺžiť alebo opätovne dohodnúť najviac dvakrát
@@ -400,9 +400,9 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 
 ### Reťazenie zmlúv
 - max. 2 predĺženia/opätovné dohodnutia v rámci 2 rokov
-- ak zamestnanec po uplynutí doby určitej pokračuje vo výkone práce s vedomím zamestnávateľa → pracovný pomer sa automaticky mení na neurčitý čas
 
-### Kratší pracovný čas (§ 49 ZP)
+### ak zamestnanec po uplynutí doby určitej pokračuje vo výkone práce s vedomím zamestnávateľa → pracovný pomer sa automaticky mení na neurčitý čas
+- Kratší pracovný čas (§ 49 ZP)
 - zamestnanec môže požiadať o kratší pracovný čas
 - zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody
 - typické pri rodičoch, zdravotných dôvodoch, štúdiu
@@ -507,7 +507,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 - Individuálne pracovnoprávne vzťahy
 - pracovný pomer,
 - dohody o prácach mimo pracovného pomeru.
-- Kolektívne pracovnoprávne vzťahy
+
+### Kolektívne pracovnoprávne vzťahy
 - kolektívne vyjednávanie,
 - kolektívne zmluvy,
 - štrajk,
@@ -516,10 +517,10 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 - povinnosti zamestnávateľa,
 - práva zamestnanca,
 - kontrola inšpekcie práce.
-
-### Kolektívne vzťahy
+- Kolektívne vzťahy
 - Zahŕňajú: sociálny dialóg, kolektívne vyjednávanie, uzatváranie kolektívnych zmlúv, riešenie sporov (sprostredkovanie, rozhodca), štrajk a výluku
-- BOZP ako súčasť pracovnoprávnych vzťahov
+
+### BOZP ako súčasť pracovnoprávnych vzťahov
 - BOZP je neoddeliteľnou súčasťou pracovnoprávnych vzťahov
 - zamestnávateľ musí zabezpečiť bezpečné pracovné prostredie
 - zamestnanec musí dodržiavať predpisy BOZP
@@ -586,7 +587,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 - právne úkony nesmú odporovať dobrým mravom,
 - zákaz šikany, nátlaku, bossingu, mobbingu,
 - zákaz zneužitia právomoci zamestnávateľa (napr. účelové výpovede).
-- Právo na mzdu a vhodné pracovné podmienky
+
+### Právo na mzdu a vhodné pracovné podmienky
 - zamestnanec má právo na spravodlivú odmenu,
 - zamestnávateľ musí zabezpečiť vhodné pracovné podmienky,
 - zásada sociálnej ochrany zamestnanca.
@@ -867,7 +869,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 ### Všeobecný záujem (§ 136 – 138 ZP)
 - Zamestnanec má pracovné voľno pri činnostiach vo verejnom záujme, napr.: darovanie krvi, svadba, pohreb, účasť na súdnom konaní ako svedok, výkon verejnej funkcie, činnosť odborov
 - Náhrada mzdy sa poskytuje podľa zákona – niekedy plná, niekedy čiastočná, niekedy žiadna.
-- Branná povinnosť, ozbrojené sily (§ 138 – 138b ZP)
+
+### Branná povinnosť, ozbrojené sily (§ 138 – 138b ZP)
 - Patrí sem: pravidelné cvičenie, úlohy ozbrojených síl, dobrovoľná vojenská príprava
 - Zamestnanec má nárok na pracovné voľno, niekedy aj na náhradu mzdy alebo dávky zo sociálneho poistenia.
 
@@ -904,7 +907,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 ### Sviatky
 - Sviatky sú zákonom určené dni pracovného pokoja (napr. 1. január, Veľká noc, 1. máj, 29. august, Vianoce).
 - Práca je možná len: pri nevyhnutných službách, pri naliehavých opravách, v zdravotníctve, v doprave, pri nepretržitej prevádzke
-- Práca v dňoch pracovného pokoja
+
+### Práca v dňoch pracovného pokoja
 - Práca je výnimočná a musí byť: odôvodnená, v súlade so zákonom, kompenzovaná mzdovým zvýhodnením
 - Zamestnávateľ musí rešpektovať zásadu odpočinku a regenerácie.
 
@@ -1232,7 +1236,8 @@ Pred nasadením porovnaj s ŠZS pre pracovné právo.
 - Majú najvyššiu úroveň ochrany: povinnosť zamestnávateľa preradiť na dennú prácu
 - Majú najvyššiu úroveň ochrany: zákaz prác ohrozujúcich tehotenstvo (zoznam podľa nariadenia vlády č. 272/2004 Z. z.)
 - Majú najvyššiu úroveň ochrany: zákaz vysielania na pracovné cesty bez súhlasu (§ 57 ZP)
-- Matky do 9 mesiacov po pôrode a dojčiace ženy
+
+### Matky do 9 mesiacov po pôrode a dojčiace ženy
 - Majú rovnakú ochranu ako tehotné: zákaz nočnej práce, zákaz nadčasov, povinnosť preradenia pri rizikovej práci
 - právo na prestávky na dojčenie (§ 170 ZP): 2× 30 minút denne, po 9 mesiacoch 1× 30 minút
 
