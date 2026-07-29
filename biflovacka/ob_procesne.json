@@ -63,7 +63,7 @@
       "definitions": [
         { "question": "Čo je vecná príslušnosť súdu?", "answer": "Vecná príslušnosť určuje, ktorý stupeň súdnej sústavy má vec prejednať ako súd prvej inštancie. Spravidla ňou je poverený okresný súd, no zákon môže pre osobitné veci určiť príslušnosť krajského súdu. Nedostatok sa rieši postúpením veci." },
         { "question": "Čo je miestna príslušnosť súdu?", "answer": "Miestna príslušnosť určuje, ktorý konkrétny súd rovnakého stupňa má vec prejednať, spravidla podľa bydliska či sídla žalovaného. Zákon pripúšťa aj výlučnú miestnu príslušnosť, napríklad podľa polohy nehnuteľnosti. Niekedy ju možno dohodnúť." },
-        { "question": "Kedy ide o kaušálnu príslušnosť súdu?", "answer": "Kaušálna príslušnosť sa uplatňuje, keď zákon zveruje určitý druh vecí konkrétne určenému súdu bez ohľadu na bežné pravidlá, napríklad insolvenčnú agendu jedinému súdu. Cieľom je sústrediť špecializovanú agendu. Táto príslušnosť je výlučná a nemenná dohodou." }
+        { "question": "Kedy ide o kauzálnu príslušnosť súdu?", "answer": "Kauzálna príslušnosť sa uplatňuje, keď zákon zveruje určitý druh vecí konkrétne určenému súdu bez ohľadu na bežné pravidlá, napríklad insolvenčnú agendu jedinému súdu. Cieľom je sústrediť špecializovanú agendu. Táto príslušnosť je výlučná a nemenná dohodou." }
       ]
     },
     {
