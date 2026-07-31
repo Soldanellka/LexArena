@@ -85,10 +85,12 @@ const AVATAR_CONFIG = {
        zadávateľka nahrá skutočný súbor na `base` ceste, fallback sa už
        nikdy nepoužije – ŽIADNA zmena kódu nie je potrebná.
 
-       `hidden` (voliteľné): položka má vlastný súbor, ale s NESPRÁVNOU
-       farbou lemu (zistené pri audite) – kým nepríde opravená grafika,
-       v obchode sa nezobrazuje a nedá sa kúpiť (pozri buyTalar/
-       getTalarShopEntries nižšie). Existujúci vlastníci (ak nejakí sú)
+       `hidden` (voliteľné): položka sa v obchode nezobrazuje a nedá sa
+       kúpiť (pozri buyTalar/getTalarShopEntries nižšie) – buď preto, že
+       vlastný súbor má NESPRÁVNU grafiku (zlá farba lemu, zistené pri
+       audite), alebo preto, že vlastná grafika ešte NIE JE nahratá v
+       avatars/ (scaffold pripravený vopred). Odstráň `hidden` hneď, ako
+       sa nahrá/dodá správna grafika. Existujúci vlastníci (ak nejakí sú)
        o ňu neprídu, len sa nedá znova nakúpiť/objaviť v obchode.
 
        Nie každý zo 6 základných avatarov má zatiaľ hotový vlastný render
@@ -96,20 +98,28 @@ const AVATAR_CONFIG = {
        NIE SÚ (žiadny fiktívny nákup niečoho, čo appka nevie zobraziť).
     ============================================================ */
     'student-blond-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-blond-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 0dc16ba, 6 PNG:
+       student-tmavy-advokat-{full,tired,sleep}{,-bust}.png). Žiadny
+       fallbackBase zámerne: fallback je len pre čierny talár bez lemu,
+       nikdy pre modrý lem (viď pravidlo vyššie). */
+    'student-tmavy-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-tmavy-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'student-medeny-talar-cierny':  { name: 'Študent – základný talár',                base: 'avatars/student-medeny-talar-cierny',  unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'student-tmavy-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-tmavy-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     /* Vlastný render zatiaľ chýba – požičaný od student-medeny-talar-cierny
        (rovnaké pohlavie, len čierny talár bez lemu). */
     'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   fallbackBase: 'avatars/student-medeny-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
-    /* Skryté – vlastný súbor existuje, ale má nesprávnu farbu lemu
-       (fialový namiesto modrého, zistené pri audite). Čaká na opravenú
-       grafiku od zadávateľky; odstráň `hidden` hneď ako príde. */
+    /* Skryté – vlastná grafika VÔBEC NEEXISTUJE v avatars/ (audit
+       2026-07-31: žiadny studentka-blond-advokat*.png; predošlý komentár
+       o „zlej farbe lemu" bol nepravdivý – súbor sa nikdy nenahral).
+       Žiadny fallbackBase: ženský advokátsky render neexistuje a fallback
+       je vyhradený len pre čierny talár bez lemu (viď pravidlo vyššie).
+       Po nahratí 6 PNG súborov odstráň `hidden`. */
     'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT, hidden: true },
     'studentka-blond-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-blond-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
-    /* Skryté – súbor existuje, ale je bajtovo identický s
-       studentka-blond-prokurator (duplikát pri nahrávaní, zlá farba
-       lemu). Čaká na opravenú grafiku od zadávateľky. */
-    'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA, hidden: true },
+    /* Overené (audit 2026-07-31): vlastný súbor má správny fialový pás a
+       NIE JE identický s prokurátorom (odlišná veľkosť aj hash) – pôvodný
+       „duplikát" bol medzitým opravený, preto zobrazené v obchode. */
+    'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     'studentka-medena-talar-cierny':{ name: 'Študentka – základný talár',              base: 'avatars/studentka-medena-talar-cierny',unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'studentka-tmava-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-tmava-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     'studentka-tmava-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-tmava-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
