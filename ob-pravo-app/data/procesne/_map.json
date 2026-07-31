@@ -1,0 +1,16 @@
+{
+  "area": "Občianske procesné",
+  "clusters": [
+    { "id": "zaklady", "label": "Základy a princípy", "okruhy": [1, 2] },
+    { "id": "sudy-subjekty", "label": "Súdna moc a subjekty", "okruhy": [3, 4, 5, 6, 7, 8, 9] },
+    { "id": "priebeh", "label": "Priebeh sporového konania", "okruhy": [10, 11, 12, 13, 14, 15, 16, 17, 20, 27] },
+    { "id": "neodkladne", "label": "Neodkladné a zabezpečovacie opatrenia", "okruhy": [18, 19] },
+    { "id": "dokazovanie", "label": "Dokazovanie", "okruhy": [21, 22] },
+    { "id": "rozhodnutia", "label": "Rozhodnutia súdu", "okruhy": [23, 24, 25, 26] },
+    { "id": "opravne", "label": "Opravné prostriedky", "okruhy": [28, 29, 30, 31, 32, 33] },
+    { "id": "cmp", "label": "Mimosporové konania (CMP)", "okruhy": [34, 35, 36, 37, 38] },
+    { "id": "exekucia", "label": "Exekúcia", "okruhy": [39, 40, 41, 42] },
+    { "id": "mimo-sporu", "label": "Mimo civilného sporu", "okruhy": [43, 44, 45] }
+  ],
+  "links": []
+}
