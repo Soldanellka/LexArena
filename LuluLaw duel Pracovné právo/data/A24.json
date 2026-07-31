@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zodpovednosť zamestnávateľa – objektívna × všeobecná × osobitná × náhrada škody × BOZP",
+    "branches": [
+      { "label": "Všeobecná zodpovednosť (§ 192 ZP)", "leaves": ["Vzniká pri škode spôsobenej: porušením právnych povinností zamestnávateľa, porušením povinností jeho zamestnancov, nedostatočnou organizáciou práce, porušením BOZP", "Je objektívna – nezávisí od zavinenia."] },
+      { "label": "Osobitná zodpovednosť (§ 193 – 198 ZP)", "leaves": ["Zahŕňa škodu: na odložených veciach (kabáty, tašky, osobné predmety), pri odvracaní škody (zamestnanec koná v záujme zamestnávateľa), pri pracovných úrazoch, pri chorobách z povolania"] },
+      { "label": "Pracovné úrazy", "leaves": ["Pracovný úraz je: náhle, krátkodobé, násilné poškodenie zdravia, spôsobené vonkajšími vplyvmi, pri plnení pracovných úloh alebo v priamej súvislosti s nimi", "Zamestnávateľ zodpovedá bez ohľadu na zavinenie."] },
+      { "label": "Choroby z povolania", "leaves": ["Choroba z povolania je: ochorenie uvedené v zozname chorôb z povolania, spôsobené dlhodobým pôsobením rizikových faktorov, potvrdené pracovným lekárstvom"] },
+      { "label": "Zbavenie sa zodpovednosti", "leaves": ["Zamestnávateľ sa môže zbaviť zodpovednosti: celkom, ak škodu spôsobil zamestnanec úmyselne", "sčasti, ak: porušil BOZP, bol pod vplyvom alkoholu alebo drog, konal ľahkomyseľne", "Dôkazné bremeno nesie zamestnávateľ."] },
+      { "label": "Náhrady škody", "leaves": ["Zamestnancovi patrí: skutočná škoda, ušlý zárobok, náklady liečenia, vecná škoda, pri úrazoch: bolesť a sťaženie spoločenského uplatnenia", "Náhrady sú kryté úrazovým poistením podľa zákona o sociálnom poistení."] },
+      { "label": "Prevencia a BOZP", "leaves": ["Cieľom právnej úpravy je: motivovať zamestnávateľa k prevencii, zabezpečiť bezpečné pracovné prostredie, minimalizovať riziká"] }
+    ]
   }
 }

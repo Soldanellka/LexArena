@@ -150,5 +150,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zmena pracovnej zmluvy – dohoda × preradenie × zdravotné dôvody × tehotenstvo × vhodná práca",
+    "branches": [
+      { "label": "Zmena pracovnej zmluvy", "leaves": ["mení obsah pracovného pomeru (druh práce, miesto, čas, mzda),", "je možná len písomnou dohodou zamestnanca a zamestnávateľa,", "zamestnávateľ nemôže jednostranne meniť pracovnú zmluvu,", "výnimkou je preradenie podľa § 55 ZP."] },
+      { "label": "Preradenie – podstata (§ 55 ZP)", "leaves": ["jediný prípad, keď môže zamestnávateľ jednostranne zmeniť druh práce,", "ide o dočasnú zmenu, nie o trvalú úpravu pracovnej zmluvy,", "musí byť odôvodnené zákonom."] },
+      { "label": "Povinné preradenie", "leaves": ["Zamestnávateľ musí preradiť zamestnanca: zo zdravotných dôvodov (lekársky posudok), pri tehotenstve, pri chorobe z povolania, pri karanténnych opatreniach, na základe rozhodnutia súdu", "Zamestnanec je povinný preradenie akceptovať."] },
+      { "label": "Fakultatívne preradenie", "leaves": ["Možné len vo výnimočných situáciách: odvracanie následkov havárie, mimoriadne okolnosti, naliehavé potreby prevádzky", "Musí byť časovo obmedzené a primerané."] },
+      { "label": "Vhodnosť práce", "leaves": ["Preradenie musí byť: vhodné vzhľadom na zdravotný stav, primerané schopnostiam a kvalifikácii, nesmie byť ponižujúce alebo neprimerané", "Ak vhodná práca neexistuje, môže ísť o výpovedný dôvod podľa § 63 ods. 1 písm. c)."] },
+      { "label": "Písomné oznámenie", "leaves": ["Ak preradenie spôsobí zmenu pracovnej zmluvy, zamestnávateľ musí vydať: písomné oznámenie, s uvedením dôvodu a trvania preradenia"] },
+      { "label": "Návrat na pôvodnú prácu", "leaves": ["Po odpadnutí dôvodov preradenia je zamestnávateľ povinný: zaradiť zamestnanca späť na pôvodnú prácu, alebo na inú rovnocennú prácu, ak pôvodná už neexistuje"] }
+    ]
   }
 }

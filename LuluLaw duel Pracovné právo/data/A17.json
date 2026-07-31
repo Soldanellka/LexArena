@@ -155,5 +155,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zásady pracovného práva – rovnosť × zákaz diskriminácie × dobré mravy × BOZP × koaličná sloboda × ochrana zamestnanca",
+    "branches": [
+      { "label": "Rovnaké zaobchádzanie a zákaz diskriminácie", "leaves": ["zakazuje akúkoľvek diskrimináciu (pohlavie, vek, rasa, náboženstvo, zdravotný stav, tehotenstvo, odborová činnosť),", "vychádza z Ústavy SR, antidiskriminačného zákona a smerníc EÚ,", "zamestnávateľ musí zabezpečiť rovnaké podmienky pre porovnateľných zamestnancov."] },
+      { "label": "Zmluvná sloboda", "leaves": ["strany si môžu dohodnúť pracovné podmienky,", "limitom je ochrana zamestnanca – nemožno sa odchýliť v neprospech zamestnanca,", "zásada autonómie vôle je obmedzená kogentnými ustanoveniami ZP."] },
+      { "label": "Dobré mravy a zákaz zneužitia práva", "leaves": ["právne úkony nesmú odporovať dobrým mravom,", "zákaz šikany, nátlaku, bossingu, mobbingu,", "zákaz zneužitia právomoci zamestnávateľa (napr. účelové výpovede)."] },
+      { "label": "Právo na mzdu a vhodné pracovné podmienky", "leaves": ["zamestnanec má právo na spravodlivú odmenu,", "zamestnávateľ musí zabezpečiť vhodné pracovné podmienky,", "zásada sociálnej ochrany zamestnanca."] },
+      { "label": "Participácia zamestnancov", "leaves": ["právo zamestnancov byť informovaní a prerokovať zásadné otázky,", "účasť zástupcov zamestnancov na rozhodovaní,", "súčasť sociálneho dialógu."] },
+      { "label": "Ochrana života a zdravia – BOZP", "leaves": ["zamestnávateľ musí zabezpečiť bezpečné pracovné prostredie,", "povinnosť predchádzať rizikám,", "zásada prevencie a ochrany zdravia."] },
+      { "label": "Koaličná sloboda", "leaves": ["právo zakladať odbory,", "právo na kolektívne vyjednávanie,", "právo na štrajk a výluku,", "zákaz postihovania za odborovú činnosť."] },
+      { "label": "Ochrana súkromia zamestnanca", "leaves": ["zákaz neoprávneného monitorovania,", "zásada primeranosti pri kontrole,", "ochrana osobných údajov."] }
+    ]
   }
 }

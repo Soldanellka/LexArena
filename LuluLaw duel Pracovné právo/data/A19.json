@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Diskriminácia – priama × nepriama × pozitívna × rovnaké zaobchádzanie × chránené znaky",
+    "branches": [
+      { "label": "Pojem diskriminácie", "leaves": ["Diskriminácia je nerovnaké, nespravodlivé alebo znevýhodňujúce zaobchádzanie so zamestnancom alebo uchádzačom o zamestnanie.", "Zákaz diskriminácie vyplýva z: Ústavy SR, § 13 Zákonníka práce, antidiskriminačného zákona", "Vzťahuje sa na všetky fázy pracovnoprávneho vzťahu: prijímanie, odmeňovanie, pracovné podmienky, kariérny postup, vzdelávanie, disciplinárne opatrenia, skončenie pracovného pomeru"] },
+      { "label": "Chránené znaky", "leaves": ["Patria sem: pohlavie, rasa, etnický pôvod, vek, zdravotné postihnutie, náboženstvo, sexuálna orientácia, manželský a rodinný stav, politické zmýšľanie, odborová činnosť"] },
+      { "label": "Priama diskriminácia", "leaves": ["Priama diskriminácia = menej priaznivé zaobchádzanie priamo z dôvodu chráneného znaku.", "Príklad: zamestnávateľ odmietne prijať ženu s odôvodnením, že „ženy túto prácu nezvládnu“."] },
+      { "label": "Nepriama diskriminácia", "leaves": ["Nepriama diskriminácia = navonok neutrálne pravidlo, ktoré v praxi znevýhodňuje určitú skupinu.", "Príklad: pracovný čas do 18:00 výrazne znevýhodňuje rodičov malých detí."] },
+      { "label": "Pozitívna diskriminácia", "leaves": ["Pozitívna diskriminácia = zákonom dovolené opatrenia na odstránenie znevýhodnenia.", "Príklady: podpora osôb so zdravotným postihnutím, podpora rodičov pri zosúladení práce a rodiny"] },
+      { "label": "Zákaz postihovania (§ 13 ods. 3 ZP)", "leaves": ["Zamestnávateľ nesmie: postihovať zamestnanca za uplatňovanie jeho práv, brániť mu v podaní sťažnosti, znevýhodniť ho za činnosť odborov alebo zástupcov zamestnancov"] },
+      { "label": "Judikatúra", "leaves": ["R 24/2009 – nevyplatenie odmeny za podanie sťažnosti = diskriminácia.", "R 36/2005 – neinformovanie zamestnankýň na materskej = diskriminácia.", "R 83/2021 – odmena za skutočne vykonanú prácu aj pri interných obmedzeniach."] }
+    ]
   }
 }

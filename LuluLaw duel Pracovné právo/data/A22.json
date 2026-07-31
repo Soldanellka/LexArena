@@ -146,5 +146,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zodpovednosť zamestnávateľa – objektívna × pracovný úraz × choroba z povolania × náhrada škody × úrazové poistenie",
+    "branches": [
+      { "label": "Podstata zodpovednosti (§ 192 – 198 ZP)", "leaves": ["zodpovednosť je objektívna – nezávisí od zavinenia zamestnávateľa,", "zamestnávateľ zodpovedá za škodu vzniknutú pri plnení pracovných úloh alebo v priamej súvislosti s nimi,", "zahŕňa všeobecnú aj osobitnú zodpovednosť."] },
+      { "label": "Pracovný úraz", "leaves": ["Pracovný úraz je: náhle, krátkodobé, násilné poškodenie zdravia, spôsobené vonkajšími vplyvmi, pri práci alebo v priamej súvislosti s ňou", "Príklady: pád z rebríka, úraz strojom, zranenie pri manipulácii s materiálom"] },
+      { "label": "Choroba z povolania", "leaves": ["Choroba z povolania je: ochorenie uvedené v zozname chorôb z povolania, vzniká v dôsledku dlhodobého pôsobenia rizikových faktorov, potvrdzuje ju odborné pracovné lekárstvo", "Príklady: karpálny tunel, silikóza, hlukové poškodenie sluchu"] },
+      { "label": "Možnosti zbavenia sa zodpovednosti", "leaves": ["Zamestnávateľ sa môže zbaviť zodpovednosti: celkom, ak škodu spôsobil zamestnanec úmyselne", "sčasti, ak: zamestnanec porušil BOZP, bol pod vplyvom alkoholu alebo omamných látok, konal ľahkomyseľne", "Dôkazné bremeno nesie zamestnávateľ."] },
+      { "label": "Náhrady škody", "leaves": ["Zamestnancovi patrí: náhrada za bolesť", "Zamestnancovi patrí: náhrada za sťaženie spoločenského uplatnenia", "Zamestnancovi patrí: strata na zárobku počas PN aj po jej skončení", "Zamestnancovi patrí: náklady liečenia", "Zamestnancovi patrí: vecná škoda (napr. poškodené okuliare, oblečenie)"] },
+      { "label": "Úrazové poistenie", "leaves": ["náhrady poskytuje zamestnávateľ,", "sú kryté úrazovým poistením podľa zákona o sociálnom poistení,", "Sociálna poisťovňa prepláca zamestnávateľovi časť nákladov."] }
+    ]
   }
 }

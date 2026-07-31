@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Subjekty pracovného práva – zamestnanec × zamestnávateľ × subjektivita × spôsobilosť × osobitné subjekty",
+    "branches": [
+      { "label": "Zamestnanec", "leaves": ["Zamestnancom je: fyzická osoba vykonávajúca závislú prácu, podľa pokynov zamestnávateľa, v jeho mene, za mzdu", "Závislá práca je definovaná v § 1 ods. 2 ZP – osobný výkon, podriadenosť, pokyny, pracovný čas, odmena."] },
+      { "label": "Zamestnávateľ", "leaves": ["Zamestnávateľom je: fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca", "Vznik subjektivity: právnická osoba – zápis do registra, fyzická osoba – vznik SZČO alebo iné zákonné formy"] },
+      { "label": "Pracovnoprávna subjektivita", "leaves": ["Zahŕňa štyri zložky: spôsobilosť mať práva a povinnosti (pasívna)", "Zahŕňa štyri zložky: spôsobilosť vlastnými úkonmi ich nadobúdať (aktívna)", "Zahŕňa štyri zložky: deliktuálna spôsobilosť – niesť následky porušenia povinností", "Zahŕňa štyri zložky: procesná spôsobilosť – vystupovať v konaní pred súdom", "Zamestnanec ju nadobúda: dovŕšením 15 rokov, ukončením povinnej školskej dochádzky"] },
+      { "label": "Spôsobilosť na právne úkony", "leaves": ["Zamestnanec musí byť schopný vykonávať právne úkony súvisiace s pracovným pomerom.", "Mladiství majú osobitnú ochranu a obmedzenia (ľahké práce, skrátený čas, zákaz rizikových činností)."] },
+      { "label": "Deliktuálna a procesná spôsobilosť", "leaves": ["Deliktuálna spôsobilosť = schopnosť niesť následky porušenia pracovných povinností (napr. zodpovednosť za škodu).", "Procesná spôsobilosť = schopnosť vystupovať v konaní pred súdom alebo inšpekciou práce."] },
+      { "label": "Osobitné subjekty pracovného práva", "leaves": ["Patria sem: odbory, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP, štát (inšpekcia práce, ministerstvo)", "Ich funkcie: kontrolná, informačná, zastupiteľská, ochranná"] }
+    ]
   }
 }

@@ -150,5 +150,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Okamžité skončenie – mimoriadny spôsob × písomná forma × doručenie × presný dôvod × zákonné lehoty",
+    "branches": [
+      { "label": "Podstata okamžitého skončenia", "leaves": ["najprísnejší spôsob skončenia pracovného pomeru,", "pôsobí okamžite dňom doručenia,", "ide o jednostranný právny úkon,", "dôvod musí byť presne skutkovo vymedzený – nemožno ho meniť ani dopĺňať."] },
+      { "label": "Dôvody zamestnávateľa (§ 68 ZP)", "leaves": ["Zamestnávateľ môže okamžite skončiť pracovný pomer len v dvoch prípadoch: právoplatné odsúdenie za úmyselný trestný čin, závažné porušenie pracovnej disciplíny", "Judikatúra zdôrazňuje potrebu hodnotiť intenzitu porušenia podľa okolností prípadu."] },
+      { "label": "Dôvody zamestnanca (§ 69 ZP)", "leaves": ["Zamestnanec môže okamžite skončiť pracovný pomer, ak", "zamestnávateľ nevyplatil mzdu do 15 dní po splatnosti", "podľa lekárskeho posudku nemôže ďalej vykonávať prácu bez ohrozenia zdravia a zamestnávateľ ho nepreradil", "je bezprostredne ohrozený život alebo zdravie", "mladistvý aj pri ohrození morálky"] },
+      { "label": "Forma a doručenie", "leaves": ["musí byť písomné,", "musí byť doručené druhej strane,", "musí obsahovať konkrétny skutkový opis (čo, kedy, ako)."] },
+      { "label": "Lehoty", "leaves": ["zamestnávateľ: 2 mesiace od zistenia dôvodu, najneskôr 1 rok od vzniku dôvodu,", "zamestnanec: 1 mesiac od zistenia dôvodu."] },
+      { "label": "Neplatnosť a náhrada mzdy", "leaves": ["Pri neplatnom okamžitom skončení má zamestnanec nárok na: náhradu mzdy za 2 mesiace priemerného zárobku"] },
+      { "label": "Ochranná doba", "leaves": ["Zamestnávateľ nemôže okamžite skončiť pracovný pomer s", "tehotnou zamestnankyňou", "zamestnankyňou na materskej", "zamestnancom na rodičovskej alebo otcovskej dovolenke", "osamelým rodičom starajúcim sa o dieťa do 3 rokov", "osobou starajúcou sa o osobu s ŤZP"] }
+    ]
   }
 }

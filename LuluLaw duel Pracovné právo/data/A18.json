@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "DVP × DPČ × DBPŠ – výnimočné vzťahy × limity × písomná forma × BOZP × zákaz nadčasov",
+    "branches": [
+      { "label": "Charakteristika dohôd (§ 223 – § 228a ZP)", "leaves": ["Dohody sú osobitné pracovnoprávne vzťahy, ktoré", "nezakladajú pracovný pomer", "sú určené na príležitostné, krátkodobé, sezónne práce", "nesmú nahrádzať závislú prácu vykonávanú pravidelne, v podriadenosti a podľa pokynov zamestnávateľa"] },
+      { "label": "Dohoda o vykonaní práce (DVP)", "leaves": ["vhodná na jednorazové úlohy, projekty, krátke práce,", "limit: max. 350 hodín ročne,", "musí obsahovať: druh práce, odmenu, rozsah, dobu trvania,", "zákaz nadčasov a pracovnej pohotovosti."] },
+      { "label": "Dohoda o pracovnej činnosti (DPČ)", "leaves": ["vhodná na pravidelnejšie, ale obmedzené činnosti,", "limit: max. 10 hodín týždenne,", "písomná forma povinná,", "zákaz nadčasov, pracovnej pohotovosti,", "možnosť dlhšieho trvania ako DVP."] },
+      { "label": "Dohoda o brigádnickej práci študentov (DBPŠ)", "leaves": ["len pre študentov do 26 rokov,", "limit: max. 20 hodín týždenne (v priemere),", "vhodná na sezónne práce, brigády, letné zamestnanie,", "písomná forma povinná,", "zákaz nadčasov a pracovnej pohotovosti."] },
+      { "label": "Spoločné znaky dohôd", "leaves": ["Všetky dohody musia byť: písomné", "Všetky dohody musia byť: obsahovať druh práce, odmenu, rozsah práce, dobu trvania", "Všetky dohody musia byť: rešpektovať BOZP", "Všetky dohody musia byť: rešpektovať zákaz nadčasov a pracovnej pohotovosti", "Všetky dohody musia byť: rešpektovať zásadu rovnakého zaobchádzania"] },
+      { "label": "Limity pracovného času", "leaves": ["DVP – 350 hodín ročne,", "DPČ – 10 hodín týždenne,", "DBPŠ – 20 hodín týždenne (priemerne).", "Limity chránia zamestnanca pred zneužívaním dohôd namiesto pracovného pomeru."] },
+      { "label": "Skončenie dohôd", "leaves": ["Dohody možno skončiť: dohodou strán, výpoveďou (bez uvedenia dôvodu), okamžitým skončením (pri závažnom porušení povinností)", "Výpovedná lehota je spravidla 15 dní, ak sa strany nedohodnú inak."] }
+    ]
   }
 }
