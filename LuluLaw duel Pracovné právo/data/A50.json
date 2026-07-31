@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dohody vs. pracovný pomer – flexibilita × limity × nároky × ochrana × závislá práca",
+    "branches": [
+      { "label": "Dohody – všeobecne (§ 223–228a ZP)", "leaves": ["Dohody sú: DoVP – dohoda o vykonaní práce, DBPŠ – dohoda o brigádnickej práci študentov, DPČ – dohoda o pracovnej činnosti", "Charakteristika: uzatvárajú sa výnimočne, sú vhodné na krátkodobú, sezónnu, príležitostnú prácu, nezakladajú pracovný pomer, poskytujú obmedzené práva"] },
+      { "label": "Pracovný pomer", "leaves": ["Pracovný pomer je: základná forma závislej práce, poskytuje dovolenku, výpovednú ochranu, odstupné, obsahuje pracovný čas, prestávky, prekážky v práci, garantuje sociálne istoty a stabilitu"] },
+      { "label": "Limity dohôd", "leaves": ["DoVP – max. 350 hodín ročne,", "DBPŠ – max. 20 hodín týždenne v priemere,", "DPČ – max. 10 hodín týždenne,", "pri dohodách nemožno nariadiť nadčas,", "pracovný čas pri dohodách max. 12 hodín denne (mladiství 8 hodín)."] },
+      { "label": "Práva pri dohodách", "leaves": ["Pri dohodách nepatrí: dovolenka, odstupné, výpovedná doba (ak nie je dohodnutá), prekážky v práci s náhradou mzdy, ochrana pri výpovedi ako v pracovnom pomere", "Patrí: odmena za vykonanú prácu, príplatky podľa zákona (napr. sviatok, noc, víkend)"] },
+      { "label": "Závislá práca (§ 1 ZP)", "leaves": ["Ak práca má znaky závislej práce: vykonáva sa osobne, podľa pokynov zamestnávateľa, v pracovnom čase, v mene zamestnávateľa, za mzdu, musí byť vykonávaná v pracovnom pomere, nie na dohodu"] },
+      { "label": "Skončenie dohôd", "leaves": ["dohody musia byť písomné,", "skončenie podľa podmienok v dohode,", "ak nie je dohodnuté – skončenie výpoveďou alebo uplynutím času,", "bez výpovednej ochrany ako v pracovnom pomere."] },
+      { "label": "Porovnanie výhod", "leaves": ["Pracovný pomer poskytuje: stabilitu, dovolenku, odstupné, ochranu pri výpovedi, prekážky v práci, sociálne istoty", "Dohody poskytujú: flexibilitu, jednoduché skončenie, vhodné na doplnkovú prácu"] }
+    ]
   }
 }

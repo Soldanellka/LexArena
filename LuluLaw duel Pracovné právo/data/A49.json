@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Nadčas – limity × nočná práca × zdravotná spôsobilosť × evidencia × ochrana zamestnancov",
+    "branches": [
+      { "label": "Práca nadčas (§ 97 ZP)", "leaves": ["Nadčas je práca: nad určený týždenný pracovný čas, vykonávaná na príkaz zamestnávateľa alebo s jeho súhlasom, musí byť výnimočná, nie pravidelná"] },
+      { "label": "Limity nadčasov", "leaves": ["Zákon stanovuje: 150 hodín nariadeného nadčasu ročne, 400 hodín celkového nadčasu (vrátane dohodnutého), vyššie limity sú možné len pri kolektívnej zmluve"] },
+      { "label": "Zákazy nadčasov", "leaves": ["Nadčas nemožno nariadiť: tehotným ženám, matkám do 9 mesiacov po pôrode, dojčiacim ženám, osamelým rodičom bez súhlasu, mladistvým (<18 rokov)"] },
+      { "label": "Nočná práca (§ 98 ZP)", "leaves": ["Nočná práca je práca: medzi 22:00 – 6:00, vyžaduje zdravotnú spôsobilosť, zamestnávateľ musí zabezpečiť posúdenie zdravotného stavu", "Osobitná ochrana: tehotné ženy, matky do 9 mesiacov po pôrode, dojčiace ženy, osamelí rodičia"] },
+      { "label": "Zdravotná spôsobilosť", "leaves": ["Zamestnávateľ musí: zabezpečiť lekárske posúdenie, pravidelne kontrolovať zdravotný stav nočných pracovníkov, preradiť zamestnanca, ak nočnú prácu nemôže vykonávať"] },
+      { "label": "Príplatky", "leaves": ["Za nadčas a nočnú prácu patrí: príplatok za nadčas, príplatok za nočnú prácu, príplatok za sviatok, príplatok za víkend"] },
+      { "label": "Evidencia pracovného času (§ 99 ZP)", "leaves": ["Zamestnávateľ musí viesť presnú evidenciu: začiatok a koniec pracovného času, prestávky, nadčasy, nočnú prácu, pracovnú pohotovosť", "Nestačí evidovať len počet hodín – musí byť presná a podrobná."] }
+    ]
   }
 }
