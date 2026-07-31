@@ -165,6 +165,16 @@
       "active": true
     },
     {
+      "id": "studentka-tmava-talar-cierny",
+      "name": "Študentka (tmavé vlasy) – základný talár",
+      "type": "talar",
+      "base": "avatars/studentka-tmava-talar-cierny",
+      "price": 200,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "studentka-tmava-advokat",
       "name": "Študentka (tmavé vlasy) – advokátsky talár (modrý lem)",
       "type": "talar",

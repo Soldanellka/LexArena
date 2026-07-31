@@ -125,9 +125,11 @@ const AVATAR_CONFIG = {
     'studentka-tmava-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-tmava-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'studentka-tmava-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-tmava-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     'studentka-tmava-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-tmava-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
-    /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
-       (rovnaké pohlavie, len čierny talár bez lemu). */
-    'studentka-tmava-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-tmava-talar-cierny', fallbackBase: 'avatars/studentka-medena-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-tmava', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 2418ebc, 6 PNG:
+       studentka-tmava-talar-cierny-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením studentka-tmava-sudca (fialová štóla/kniha → čierna,
+       splýva s plášťom, bez lemu). fallbackBase už netreba. */
+    'studentka-tmava-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-tmava-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-tmava', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'studentka-blond-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-blond-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
 
     /* Akademický talár – NIKDY na predaj. Priradený výhradne podľa
