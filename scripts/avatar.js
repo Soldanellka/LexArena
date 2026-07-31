@@ -108,13 +108,10 @@ const AVATAR_CONFIG = {
     /* Vlastný render zatiaľ chýba – požičaný od student-medeny-talar-cierny
        (rovnaké pohlavie, len čierny talár bez lemu). */
     'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   fallbackBase: 'avatars/student-medeny-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
-    /* Skryté – vlastná grafika VÔBEC NEEXISTUJE v avatars/ (audit
-       2026-07-31: žiadny studentka-blond-advokat*.png; predošlý komentár
-       o „zlej farbe lemu" bol nepravdivý – súbor sa nikdy nenahral).
-       Žiadny fallbackBase: ženský advokátsky render neexistuje a fallback
-       je vyhradený len pre čierny talár bez lemu (viď pravidlo vyššie).
-       Po nahratí 6 PNG súborov odstráň `hidden`. */
-    'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT, hidden: true },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 4edf72b, 6 PNG:
+       studentka-blond-advokat-{full,tired,sleep}{,-bust}.png). Modrý lem
+       vizuálne overený (2026-07-31). */
+    'studentka-blond-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-blond-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'studentka-blond-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-blond-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     /* Overené (audit 2026-07-31): vlastný súbor má správny fialový pás a
        NIE JE identický s prokurátorom (odlišná veľkosť aj hash) – pôvodný
@@ -126,9 +123,7 @@ const AVATAR_CONFIG = {
     /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
        (rovnaké pohlavie, len čierny talár bez lemu). */
     'studentka-tmava-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-tmava-talar-cierny', fallbackBase: 'avatars/studentka-medena-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-tmava', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
-    /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
-       (rovnaké pohlavie, len čierny talár bez lemu). */
-    'studentka-blond-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-blond-talar-cierny', fallbackBase: 'avatars/studentka-medena-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    'studentka-blond-talar-cierny': { name: 'Študentka – základný talár',              base: 'avatars/studentka-blond-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'studentka-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
 
     /* Akademický talár – NIKDY na predaj. Priradený výhradne podľa
        aktuálnej (živej) Firebase roly, nie kúpou ani jednorazovým

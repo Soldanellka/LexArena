@@ -95,6 +95,16 @@
       "active": true
     },
     {
+      "id": "studentka-blond-advokat",
+      "name": "Študentka – advokátsky talár (modrý lem)",
+      "type": "talar",
+      "base": "avatars/studentka-blond-advokat",
+      "price": 500,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "studentka-blond-akademik",
       "name": "Študentka – akademický talár (zlatý pás)",
       "type": "talar",
@@ -130,6 +140,16 @@
       "type": "talar",
       "base": "avatars/studentka-blond-sudca",
       "price": 1000,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
+      "id": "studentka-blond-talar-cierny",
+      "name": "Študentka – základný talár",
+      "type": "talar",
+      "base": "avatars/studentka-blond-talar-cierny",
+      "price": 200,
       "grantedBy": "shop",
       "grantNote": "obchod za §",
       "active": true
