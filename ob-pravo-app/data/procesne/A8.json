@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Strany sporu × Účastníci × Spoločenstvo × Intervenient",
+    "branches": [
+      { "label": "Strany sporu (§ 60 CSP)", "leaves": ["žalobca × žalovaný", "procesná legitimácia (kto môže byť stranou podľa procesného práva)", "vecná legitimácia (vyplýva z hmotného práva – kto je nositeľom tvrdeného nároku/povinnosti)", "majú vlastný právny záujem na výsledku konania", "vykonávajú dispozičné úkony (žaloba, späťvzatie, uznanie nároku, zmier)"] },
+      { "label": "Účastníci konania (§ 7 CMP)", "leaves": ["účastníkom je ten, koho zákon označí", "v konaniach začínajúcich ex offo: všetci, o právach a povinnostiach ktorých sa má konať", "príklady: dedičia, rodičia v opatrovníckych veciach", "musia mať procesnú subjektivitu (byť stranou konania)", "musia mať procesnú spôsobilosť (konať vlastnými úkonmi)", "osoby bez spôsobilosti konajú cez zákonných zástupcov"] },
+      { "label": "Vecná legitimácia", "leaves": ["vyplýva z hmotného práva", "odlišná od procesnej legitimácie", "nedostatok vecnej legitimácie → zamietnutie žaloby, nie zastavenie konania"] },
+      { "label": "Subjektívna kumulácia a spoločenstvo účastníkov", "leaves": ["aktívna kumulácia – viac osôb na strane žalobcu", "pasívna kumulácia – viac osôb na strane žalovaného", "dobrovoľné spoločenstvo – strany sa rozhodnú vystupovať spolu", "nútené spoločenstvo – vyplýva z hmotného práva (nedeliteľné práva)"] },
+      { "label": "Samostatné spoločenstvo (§ 76 CSP)", "leaves": ["práva a povinnosti každého sa posudzujú samostatne", "úkon jedného nemá účinky voči ostatným", "typické pri deliteľných nárokoch"] },
+      { "label": "Nerozlučné spoločenstvo (§ 77 CSP)", "leaves": ["musí sa rozhodnúť rovnako voči všetkým", "dispozičný úkon jedného účinkuje len ak ho urobia všetci", "typické pri nedeliteľných právach (napr. spoluvlastníci)"] },
+      { "label": "Intervenient (vedľajší účastník)", "leaves": ["osoba s vlastným právnym záujmom na víťazstve jednej zo strán", "vstupuje do konania: – z vlastného podnetu, alebo – na výzvu strany", "„pomáha vyhrať spor“ strane, ku ktorej sa pridáva", "má rovnaké procesné práva ako strana, ktorú podporuje", "nemôže disponovať predmetom konania: – späťvzatie žaloby – uznanie nároku – uzavretie zmieru", "príklad: poisťovňa v spore o náhradu škody"] }
+    ]
   }
 }

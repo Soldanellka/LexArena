@@ -116,5 +116,14 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Civilné právo procesné – pojem, pramene, druhy konaní (CSP, CMP, SSP)",
+    "branches": [
+      { "label": "Pojem civilného práva procesného", "leaves": ["odvetvie verejného práva", "upravuje postup súdov a účastníkov pri prejednávaní súkromnoprávnych vecí", "neupravuje obsah práv → to robí hmotné právo", "upravuje uplatnenie a ochranu práv pred súdom", "účel: ochrana ohrozených práv"] },
+      { "label": "Rekodifikácia od 1. 7. 2016", "leaves": ["Zrušený OSP → nahradili ho tri kódexy", "CSP – Civilný sporový poriadok", "sporové konanie", "dve rovnocenné strany", "kontradiktórnosť, koncentrácia, moderné princípy", "CMP – Civilný mimosporový poriadok", "dedičské, opatrovnícke, statusové veci", "zisťuje sa objektívny stav", "súd chráni verejný záujem", "SSP – Správny súdny poriadok", "preskúmavanie zákonnosti rozhodnutí orgánov verejnej správy", "Rekodifikácia: modernizácia procesných pravidiel, jasné oddelenie sporového, mimosporového a správneho konania"] },
+      { "label": "Pramene civilného procesu", "leaves": ["Ústava SR (čl. 46–50) – právo na súdnu ochranu, spravodlivý proces", "vnútroštátne pramene: CSP, CMP, SSP – základné procesné kódexy", "CSP – zákon č. 160/2015 Z. z.", "Medzinárodné zmluvy – napr. Dohovor o ochrane ľudských práv", "Právo EÚ – nariadenia, Brusel Ia (1215/2012), nariadenia o uznávaní rozhodnutí", "Exekučný poriadok (233/1995 Z. z.) – úprava exekučného konania"] },
+      { "label": "Klasifikácia (druhy civilného procesu)", "leaves": ["Sporové konanie (CSP):", "kontradiktórne", "dve strany", "rozhoduje sa o nároku", "Mimosporové konanie (CMP):", "zisťuje sa objektívny stav", "súd chráni verejný záujem", "Správne súdnictvo (SSP):", "preskúmavanie zákonnosti rozhodnutí verejnej správy", "Exekučné konanie:", "nútený výkon súdnych rozhodnutí", "Alternatívne riešenie sporov:", "rozhodcovské konanie", "mediácia"] }
+    ]
   }
 }

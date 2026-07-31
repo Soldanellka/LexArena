@@ -116,5 +116,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právomoc súdov – rozsah oprávnenia súdov rozhodovať veci, vylúčenie právomoci, medzinárodná právomoc",
+    "branches": [
+      { "label": "Pojem právomoci", "leaves": ["Právomoc súdov = zákonom vymedzený rozsah oprávnení prejednať a rozhodnúť danú vec.", "Určuje, či súdy vôbec môžu rozhodovať určitý typ veci → hranice súdnej moci navonok.", "Odlišná od príslušnosti (tá určuje konkrétny súd).", "Právomoc je procesná podmienka – súd ju skúma ex offo."] },
+      { "label": "Druhy právomoci", "leaves": ["Generálna právomoc – všeobecné súdy rozhodujú všetky súkromnoprávne veci, ak nie sú vylúčené.", "Rozšírená právomoc – zákon výslovne rozširuje právomoc súdov.", "Zúžená právomoc – zákon vylučuje určité veci z právomoci súdov."] },
+      { "label": "Nedostatok právomoci", "leaves": ["Nedostatok právomoci = neodstrániteľná vada konania.", "Ak právomoc chýba → konanie sa zastaví.", "Ak existuje iný orgán s právomocou → vec sa postúpi."] },
+      { "label": "Kompetenčný konflikt", "leaves": ["Spor o právomoc medzi súdom a iným orgánom.", "Pozitívny konflikt – oba orgány tvrdia, že majú právomoc.", "Negatívny konflikt – oba tvrdia, že právomoc nemajú.", "Rieši sa zákonom stanoveným postupom (NS SR / NSS SR)."] },
+      { "label": "Rozhodcovská zmluva", "leaves": ["Zákon č. 244/2002 Z. z.", "V súkromnoprávnych veciach môžu strany vylúčiť právomoc súdu uzavretím rozhodcovskej zmluvy.", "Ak existuje platná rozhodcovská zmluva → súd na námietku žalovaného ustúpi zo svojej právomoci.", "Rozhoduje rozhodcovský súd.", "Typické v obchodných sporoch."] },
+      { "label": "Medzinárodná právomoc – EÚ", "leaves": ["Nariadenie Brusel Ia (1215/2012).", "Všeobecná právomoc: podľa domicilu žalovaného.", "Osobitná právomoc: zmluvy (miesto plnenia), delikty (miesto škodnej udalosti).", "Výlučná právomoc: nehnuteľnosti, korporácie, verejné registre.", "Rozhodnutia sa automaticky uznávajú v celej EÚ."] },
+      { "label": "Medzinárodná právomoc – mimo EÚ", "leaves": ["Zákon o medzinárodnom práve súkromnom a procesnom.", "Dopĺňajú ho medzinárodné zmluvy (napr. dvojstranné dohody)."] },
+      { "label": "Zapamätaj si (štátnicové jadro)", "leaves": ["Právomoc = oprávnenie súdov ako celku prejednávať určitý druh vecí.", "Nedostatok právomoci → zastavenie konania alebo postúpenie veci.", "Rozhodcovská zmluva môže vylúčiť právomoc súdu (244/2002 Z. z.).", "Medzinárodná právomoc v EÚ: Brusel Ia (1215/2012).", "Právomoc ≠ príslušnosť.", "Právomoc je procesná podmienka a jej nedostatok je neodstrániteľná vada.", "Existujú: generálna, rozšírená, zúžená právomoc.", "Kompetenčný konflikt rieši NS SR alebo NSS SR."] }
+    ]
   }
 }

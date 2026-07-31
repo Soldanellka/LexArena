@@ -116,5 +116,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zloženie súdu × Zákonný sudca × Vylúčenie sudcu (§ 49 a nasl. CSP)",
+    "branches": [
+      { "label": "Zloženie súdu – samosudca", "leaves": ["samosudca: spravidla prvý stupeň v sporových veciach", "vyšší súdny úradník (VSÚ) – vykonáva zákonom určené úkony", "notár ako súdny komisár – dedičské konanie", "exekútor – rozhoduje v rozsahu zákona", "zloženie musí byť určené vopred rozvrhom práce"] },
+      { "label": "Zloženie súdu – senát", "leaves": ["senát: 3, 5, 7 alebo 8 členov", "odvolacie konanie – spravidla 3-členný senát", "dovolacie konanie – spravidla 3-členný senát", "väčší senát pri zjednocovaní judikatúry", "porada senátu a hlasovanie – neverejná, rozhodnutie väčšinou hlasov, možnosť odlišného stanoviska"] },
+      { "label": "Zásada zákonného sudcu", "leaves": ["čl. 48 Ústavy SR", "sudca/senát musí byť určený rozvrhom práce", "zákaz účelového výberu sudcu", "rozvrh práce určuje: – ktorý sudca rozhoduje, – zloženie senátov, – prideľovanie vecí"] },
+      { "label": "Dôvody vylúčenia sudcu", "leaves": ["sudca je vylúčený, ak existuje okolnosť vzbudzujúca pochybnosť o jeho nezaujatosti", "pomer k veci – osobný záujem na výsledku", "pomer k účastníkom alebo ich zástupcom – rodinný, pracovný, nepriateľský vzťah", "predchádzajúce rozhodovanie v tej istej veci – sudca nemôže rozhodovať o odvolaní proti vlastnému rozsudku", "iné okolnosti vzbudzujúce pochybnosť o nestrannosti"] },
+      { "label": "Námietka zaujatosti", "leaves": ["môže ju vzniesť sudca aj strana", "účastník ju musí podať bez zbytočného odkladu, len čo sa o dôvode dozvedel", "koncentrácia – námietku možno uplatniť len do určitého štádia konania", "opakovaná bezdôvodná námietka sa nepripúšťa", "oneskorená alebo účelová námietka → odmietne sa", "o vylúčení rozhoduje nadriadený súd alebo iný senát", "úkony namietnutého sudcu: – môže vykonať len neodkladné a nevyhnutné úkony – nesmie rozhodovať vo veci samej", "cieľ: zachovať objektivitu a nestrannosť"] }
+    ]
   }
 }

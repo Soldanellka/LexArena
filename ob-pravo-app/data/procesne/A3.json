@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Súdnictvo v SR vykonávajú nezávislé a nestranné súdy; základnou garanciou je právo na zákonného sudcu.",
+    "branches": [
+      { "label": "Postavenie súdov podľa Ústavy", "leaves": ["súdy sú nezávislé a nestranné", "oddelené od zákonodarnej a výkonnej moci", "rozhodujú podľa Ústavy, zákonov, medzinárodných zmlúv", "právo na zákonného sudcu", "súčasť práva na spravodlivý súdny proces", "sudca/senát určený rozvrhom práce, nie účelovo"] },
+      { "label": "Sústava všeobecných súdov", "leaves": ["všeobecná súdna sústava: 3 stupne, 2 inštancie", "Okresné súdy", "spravidla prvá inštancia", "Krajské súdy", "spravidla odvolacie súdy", "v niektorých veciach aj prvá inštancia", "Najvyšší súd SR", "najvyššia inštancia všeobecného súdnictva", "rozhoduje o dovolaniach", "zjednocuje judikatúru"] },
+      { "label": "Základné zásady súdnej organizácie a činnosti", "leaves": ["nezávislosť súdov a sudcov", "nestrannosť", "právo na zákonného sudcu", "rozhodovanie podľa rozvrhu práce"] },
+      { "label": "Najvyšší správny súd SR", "leaves": ["od 1. 8. 2021", "samostatná vrcholná inštancia správneho súdnictva", "rozhoduje o správnych žalobách", "rozhoduje o kasačných sťažnostiach", "rozhoduje o disciplinárnych konaniach sudcov, prokurátorov, advokátov a ďalších profesií", "oddelený od Najvyššieho súdu SR → špecializácia správneho súdnictva"] },
+      { "label": "Ústavný súd SR", "leaves": ["stojí mimo sústavy všeobecných súdov", "chráni ústavnosť", "rozhoduje o súlade zákonov s Ústavou", "rozhoduje o ústavných sťažnostiach", "rozhoduje o volebných veciach", "rozhoduje o kompetenčných sporoch"] },
+      { "label": "Organizácia súdov", "leaves": ["súdy rozhodujú samosudcom", "súdy rozhodujú senátmi", "štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR", "Súdna rada SR: dohliada na nezávislosť súdnictva, navrhuje kandidátov na sudcov, rieši etické otázky"] }
+    ]
   }
 }

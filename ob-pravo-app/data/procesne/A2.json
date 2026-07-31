@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zásady civilného procesu – CSP × CMP × SSP",
+    "branches": [
+      { "label": "Význam a členenie princípov", "leaves": ["význam princípov pre výklad a aplikáciu procesných noriem", "určujú spôsob uplatňovania a ochrany práv pred súdom", "ovplyvňujú priebeh konania a postavenie strán", "ústavné princípy – právo na súdnu ochranu, spravodlivý proces, zákonný sudca, verejnosť, ústnosť", "spoločné princípy konaní podľa CSP, CMP a SSP (verejnosť, ústnosť, voľné hodnotenie dôkazov)", "osobitné princípy CSP, CMP a SSP podľa povahy konania"] },
+      { "label": "Princípy ako dvojice protikladov", "leaves": ["dispozičný princíp × zásada oficiality", "formálna pravda × materiálna pravda", "vyšetrovací princíp × prejednací princíp"] },
+      { "label": "Zásady CSP", "leaves": ["CSP = kontradiktórny model → dve rovnocenné strany, súd rozhoduje na základe ich tvrdení a dôkazov.", "Dispozičná zásada (§ 2 CSP): strany disponujú predmetom konania (žaloba, späťvzatie, zmier)", "Prejednacia zásada: strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli", "Kontradiktórnosť (§ 9 CSP): každá strana sa vyjadruje k tvrdeniam a dôkazom protistrany", "Rovnosť strán: rovnaké procesné postavenie", "Ústnosť a verejnosť: základný spôsob vykonávania dokazovania", "Voľné hodnotenie dôkazov: súd hodnotí dôkazy podľa svojej úvahy", "Hospodárnosť konania: konanie má byť rýchle, efektívne, bez zbytočných nákladov", "Formálna pravda: súd rozhoduje na základe toho, čo strany tvrdia a preukážu"] },
+      { "label": "Zásady CMP", "leaves": ["CMP = konania s verejným záujmom → dedičské, opatrovnícke, statusové veci.", "Zásada oficiality: súd môže konať aj bez návrhu", "Vyšetrovacia zásada: súd nie je viazaný tvrdeniami účastníkov, vykonáva dôkazy z vlastnej iniciatívy", "Materiálna pravda: súd zisťuje skutočný stav veci", "Ochrana slabších subjektov: najmä maloletí, osoby s obmedzenou spôsobilosťou"] },
+      { "label": "Zásady SSP", "leaves": ["SSP = súdny prieskum rozhodnutí verejnej správy", "Viazanosť žalobnými bodmi: súd preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe", "výnimky len ak zákon ustanoví inak"] },
+      { "label": "Zapamätaj si (štátnicové jadro)", "leaves": ["CSP: dispozičná + prejednacia zásada, kontradiktórnosť, rovnosť strán", "CMP: oficialita + vyšetrovacia zásada, materiálna pravda, aktívna úloha súdu", "SSP: súd viazaný žalobnými bodmi", "Hospodárnosť: konanie rýchlo, efektívne, bez ujmy práv", "rozdiel: formálna pravda (CSP) × materiálna pravda (CMP)"] }
+    ]
   }
 }

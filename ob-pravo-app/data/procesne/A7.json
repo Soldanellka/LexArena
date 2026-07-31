@@ -116,5 +116,20 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Príslušnosť súdov – vecná × miestna × výlučná × prorogácia × delegácia",
+    "branches": [
+      { "label": "Pojem príslušnosti", "leaves": ["vymedzenie rozsahu oprávnení prejednať a rozhodnúť vec medzi súdmi navzájom", "určuje, ktorý konkrétny súd má vec prejednať", "právomoc = či súdy vôbec; príslušnosť = ktorý súd", "rozdeľuje vec medzi súdy podľa stupňa a územia", "procesná podmienka na strane súdu"] },
+      { "label": "Nedostatok príslušnosti – odstrániteľná vada", "leaves": ["ide o odstrániteľnú vadu konania", "vec sa postúpi príslušnému súdu", "postúpenie bez rozhodnutia vo veci samej", "účinky podanej žaloby zostávajú zachované"] },
+      { "label": "Vecná príslušnosť", "leaves": ["určuje stupeň súdu, ktorý koná na prvom stupni", "Okresný súd: spravidla prvostupňový súd vo všetkých sporových veciach", "Krajský súd ako prvostupňový súd vo vybraných veciach: – ochrana osobnosti – hospodárska súťaž – priemyselné vlastníctvo", "súd skúma vecnú príslušnosť kedykoľvek počas konania, aj bez návrhu"] },
+      { "label": "Miestna príslušnosť", "leaves": ["určuje konkrétny súd daného stupňa"] },
+      { "label": "Všeobecná miestna príslušnosť (obligatórna)", "leaves": ["Zásada actor sequitur forum rei – podľa žalovaného:", "FO → podľa bydliska", "PO → podľa sídla"] },
+      { "label": "Osobitná miestna príslušnosť", "leaves": ["výlučná (obligatórna) – nemožno ju zmeniť dohodou", "fakultatívna (daná na výber) – žalobca si môže vybrať súd", "miestnu nepríslušnosť súd skúma spravidla len na začiatku konania a na námietku žalovaného"] },
+      { "label": "Výlučná a fakultatívna príslušnosť", "leaves": ["výlučná miestna príslušnosť – obligatórna, nemožno ju zmeniť dohodou – práva k nehnuteľnosti → podľa jej polohy – niektoré statusové veci", "fakultatívna príslušnosť – žalobca má možnosť výberu súdu"] },
+      { "label": "Skúmanie súdnej príslušnosti (§ 40, § 41 CSP)", "leaves": ["súd skúma príslušnosť zákonom stanoveným spôsobom", "vecná príslušnosť → ex offo", "miestna príslušnosť → na začiatku konania a na námietku"] },
+      { "label": "Prorogácia (§ 17 CSP)", "leaves": ["strany si môžu písomne dohodnúť miestnu príslušnosť iného súdu", "len v sporových veciach", "typicky medzi podnikateľmi", "dohoda musí byť písomná"] },
+      { "label": "Delegácia (§ 41 CSP)", "leaves": ["nadriadený súd môže vec delegovať inému súdu", "ak by prejednanie pred príslušným súdom bolo neefektívne", "typicky: vylúčenie všetkých sudcov"] }
+    ]
   }
 }
