@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rozhodcovské konanie × mediácia × konciliácia × arbitrabilita × výhody ADR",
+    "branches": [
+      { "label": "Podstata alternatívneho riešenia sporov", "leaves": ["ide o mimosúdne riešenie sporov", "založené na dobrovoľnosti", "vyznačuje sa flexibilitou", "výsledkom môže byť dohoda strán (mediácia, konciliácia)", "alebo záväzné rozhodnutie tretej osoby (arbitráž, expertné rozhodnutie)"] },
+      { "label": "Rozhodcovské konanie", "leaves": ["zákon č. 244/2002 Z. z. o rozhodcovskom konaní", "alternatívny spôsob riešenia majetkových sporov mimo všeobecných súdov", "základom je rozhodcovská zmluva: rozhodcovská doložka v zmluve alebo samostatná rozhodcovská zmluva", "strany ňou vylučujú právomoc súdu v prospech rozhodcu alebo rozhodcovského súdu", "vplyv na právomoc súdu upravuje § 5 a nasl. CSP", "delenie: všeobecné a spotrebiteľské rozhodcovské konanie", "delenie: národné a medzinárodné", "delenie: obligatórne a fakultatívne", "rozhodovať môžu stále rozhodcovské súdy alebo jednotlivý rozhodca"] },
+      { "label": "Arbitrabilita", "leaves": ["určuje, ktoré spory možno riešiť v rozhodcovskom konaní", "arbitrabilné sú spravidla majetkové spory", "arbitrabilné nie sú statusové veci", "arbitrabilné nie sú rodinné veci", "arbitrabilné nie sú pracovné veci"] },
+      { "label": "Rozhodcovský rozsudok", "leaves": ["má účinky právoplatného súdneho rozsudku", "je exekučným titulom", "rozhodcovské konanie je jednoinštančné", "opravným prostriedkom je žaloba o zrušenie rozhodcovského rozsudku, len z taxatívnych dôvodov"] },
+      { "label": "Ochrana spotrebiteľa v rozhodcovskom konaní", "leaves": ["rozhodcovské doložky musia byť jasné, zrozumiteľné a férové", "nesmú byť pre spotrebiteľa nevýhodné", "spotrebiteľské rozhodcovské konanie má osobitnú úpravu"] },
+      { "label": "Mediácia", "leaves": ["zákon č. 420/2004 Z. z.", "dobrovoľný, dôverný, mimosúdny proces", "mediátor je nezávislý a nestranný", "mediátor spor nerozhoduje, len pomáha stranám nájsť dohodu", "výsledkom je dohoda o mediácii, ktorú možno dať schváliť súdu alebo spísať ako notársku zápisnicu → môže byť exekučným titulom", "vhodná tam, kde je potrebné zachovať vzťahy (rodinné, obchodné, susedské)"] },
+      { "label": "Konciliácia a výhody ADR", "leaves": ["konciliácia je podobná mediácii, ale konciliátor je aktívnejší", "konciliátor môže navrhovať konkrétne riešenia, konečné slovo však majú strany", "výhody ADR: rýchlosť, dôvernosť, nižšie náklady", "zachovanie vzťahov – menej konfrontačné", "flexibilita – strany si môžu prispôsobiť postup"] }
+    ]
   }
 }

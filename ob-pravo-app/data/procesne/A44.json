@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Notár – verejná funkcia × zápisnice × osvedčovanie × úschova × dedičstvo × exekučný titul",
+    "branches": [
+      { "label": "Postavenie notára", "leaves": ["zákon č. 323/1992 Zb., Notársky poriadok", "notár je verejný činiteľ poverený štátom výkonom časti štátnej moci", "pôsobí ako nositeľ fidei publica (verejnej viery)", "nezávislosť, nestrannosť, povinnosť mlčanlivosti, viazanosť zákonmi", "nie je podnikateľom v bežnom zmysle, jeho činnosť je verejnoprávna a regulovaná zákonom"] },
+      { "label": "Notárske zápisnice", "leaves": ["verejné listiny o právnych úkonoch (zmluvy, vyhlásenia, dohody)", "majú vysokú dôkaznú silu", "ak obsahujú zákonné náležitosti + súhlas povinného s vykonateľnosťou, sú exekučným titulom"] },
+      { "label": "Osvedčovanie skutočností a podpisov", "leaves": ["osvedčovanie právne významných skutočností", "osvedčovanie pravosti podpisov (legalizácia)", "vidimácia – osvedčenie zhody odpisu s originálom", "zabezpečujú právnu istotu v civilnom styku"] },
+      { "label": "Notárska úschova", "leaves": ["úschova listín, peňazí alebo iných hodnôt", "typicky pri prevodoch nehnuteľností alebo zmluvách s vyšším rizikom", "chráni strany pred podvodom a zabezpečuje bezpečný priebeh právneho úkonu"] },
+      { "label": "Notár ako súdny komisár v dedičskom konaní", "leaves": ["notára poverí súd podľa rozvrhu", "v dedičskom konaní vystupuje v postavení prvoinštančného súdu", "podľa § 16 CMP súdny komisár rozhoduje", "vykonáva procesné úkony, zisťuje dedičov, majetok a záväzky", "rozhoduje uznesením", "proti jeho uzneseniu je vždy prípustné odvolanie"] },
+      { "label": "Notárska zápisnica ako exekučný titul", "leaves": ["Musí obsahovať:", "presné označenie povinnosti", "splatnosť", "výslovný súhlas povinného s vykonateľnosťou → umožňuje vymáhanie bez súdneho konania o veci samej"] },
+      { "label": "Centrálne registre a stavovský orgán", "leaves": ["notár vedie a spravuje centrálne registre (napr. register záložných práv)", "stavovským orgánom je Notárska komora SR"] }
+    ]
   }
 }

@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Správne súdnictvo – kontrola verejnej správy × SSP × krajské súdy × NSS SR × žalobné body",
+    "branches": [
+      { "label": "Účel správneho súdnictva", "leaves": ["kontrola výkonu verejnej správy súdmi", "súd preskúmava, či správny orgán rozhodol v súlade so zákonom", "či neprekročil svoje právomoci", "či dodržal procesné predpisy", "chráni subjektívne práva fyzických a právnických osôb voči nezákonným zásahom štátu"] },
+      { "label": "Základné princípy", "leaves": ["zákonnosť", "ochrana práv", "rovnosť účastníkov", "nezávislosť súdu"] },
+      { "label": "Predmet preskúmania", "leaves": ["rozhodnutia správnych orgánov", "opatrenia, napr. všeobecné opatrenia", "postupy správnych orgánov", "nečinnosť", "nezákonné zásahy", "kompetenčné spory medzi orgánmi"] },
+      { "label": "Osobitné žaloby ako prostriedky súdnej ochrany", "leaves": ["žaloba proti rozhodnutiu orgánu verejnej správy", "žaloba proti nečinnosti orgánu verejnej správy", "žaloba proti nezákonnému zásahu", "kompetenčná žaloba", "volebné veci a veci politických strán", "disciplinárne veci", "azylové veci"] },
+      { "label": "Sústava správneho súdnictva", "leaves": ["Krajské súdy: správne súdy prvej inštancie, preskúmavajú zákonnosť rozhodnutí a postupov správnych orgánov", "Najvyšší správny súd SR: od 1. 8. 2021 je kasačným súdom", "rozhoduje o kasačných sťažnostiach proti rozhodnutiam krajských súdov", "pôsobí aj ako súd prvej inštancie v osobitných veciach (voľby, politické strany)"] },
+      { "label": "Opravné prostriedky v správnom súdnictve", "leaves": ["riadny opravný prostriedok: odvolanie", "mimoriadny opravný prostriedok: kasačná sťažnosť", "mimoriadny opravný prostriedok: obnova konania", "iné osobitné prípady preskúmania"] },
+      { "label": "Viazanosť žalobnými bodmi", "leaves": ["správny súd je spravidla viazaný rozsahom žaloby", "a dôvodmi uvedenými v žalobe", "výnimky: niektoré procesné vady", "nedostatok podmienok konania", "iné situácie, kde musí súd konať ex offo"] }
+    ]
   }
 }

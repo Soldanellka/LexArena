@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odklad (§ 56 EP) × Zastavenie (§ 57 EP) × dočasnosť × definitívnosť × ochrana povinného aj oprávneného",
+    "branches": [
+      { "label": "Odklad exekúcie (§ 56 EP)", "leaves": ["dočasné prerušenie vykonávania exekúcie", "exekúcia je nariadená, ale nevykonáva sa", "cieľ: umožniť povinnému prekonať krátkodobé, nezavinené ťažkosti, bez vážneho poškodenia oprávneného", "odklad je časovo obmedzený – po odpadnutí dôvodu môže exekúcia pokračovať"] },
+      { "label": "Druhy odkladu", "leaves": ["odklad s blokovaním majetku povinného", "odklad bez blokovania majetku", "o odklade rozhoduje súdny exekútor alebo exekučný súd, podľa povahy dôvodu"] },
+      { "label": "Dôvody odkladu", "leaves": ["povinný sa bez vlastnej viny prechodne ocitol v nepriaznivej situácii", "okamžitá exekúcia by mala osobitne nepriaznivé následky pre povinného alebo jeho rodinu", "možno dôvodne očakávať, že exekúcia bude neskôr zastavená (napr. prebieha konanie o zrušení exekučného titulu)"] },
+      { "label": "Zastavenie exekúcie (§ 57 EP)", "leaves": ["definitívne skončenie exekučného konania", "exekúcia sa už nevykonáva a exekútor nemôže pokračovať", "môže byť úplné (celá exekúcia) alebo čiastočné (len časť plnenia)", "o zastavení rozhoduje exekútor alebo exekučný súd, podľa dôvodu"] },
+      { "label": "Dôvody zastavenia", "leaves": ["exekúcia bola nariadená napriek nesplneniu zákonných predpokladov", "exekučný titul bol zrušený (napr. odvolacím súdom)", "vymáhaná povinnosť zanikla (splnením, premlčaním, započítaním)", "exekúcia postihuje vec vylúčenú z exekúcie", "oprávnený vezme návrh späť", "osobitná úprava zastavenia starých exekúcií (ex lege)"] },
+      { "label": "Rozdiel: odklad × zastavenie", "leaves": ["odklad = dočasné prerušenie výkonu; exekúcia môže pokračovať", "zastavenie = definitívne ukončenie konania; exekúcia sa už nevykonáva"] }
+    ]
   }
 }

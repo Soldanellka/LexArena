@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Exekučný súd × exekútor × oprávnený × povinný × tretie osoby × excindačná žaloba",
+    "branches": [
+      { "label": "Exekučný súd", "leaves": ["jediným exekučným súdom je Okresný súd Banská Bystrica", "v konaní koná aj vyšší súdny úradník (VSÚ)", "rozhoduje o poverení exekútora", "rozhoduje o námietkach povinného", "rozhoduje o excindačných žalobách", "rozhoduje o ďalších procesných otázkach"] },
+      { "label": "Súdny exekútor", "leaves": ["vykonáva exekúciu na základe poverenia súdu", "koná ako verejný činiteľ pod dohľadom súdu", "spôsob jeho určenia stanovuje zákon", "je možná zmena exekútora", "realizuje úkony smerujúce k vymoženiu pohľadávky: zrážky zo mzdy, prikázanie pohľadávky, predaj hnuteľných vecí, predaj nehnuteľností", "v určitom úseku konania vystupuje aj ako účastník"] },
+      { "label": "Oprávnený a povinný", "leaves": ["oprávnený: veriteľ, v prospech ktorého sa exekúcia vedie, podáva exekučný návrh", "povinný: dlžník, voči ktorému exekúcia smeruje", "na ich strane musia byť splnené procesné podmienky", "je možná zmena oprávneného aj povinného", "povinný má právo podávať námietky, návrhy a brániť sa proti nezákonnému postupu", "manžel povinného je účastníkom za zákonom stanovených podmienok, najmä pri postihovaní majetku v BSM"] },
+      { "label": "Subjekty povinné súčinnosťou", "leaves": ["Policajný zbor", "obec", "vydavatelia tlače", "ďalšie subjekty, ktoré musia poskytnúť exekútorovi súčinnosť", "pri nesplnení povinnosti im hrozí sankcia"] },
+      { "label": "Tretie osoby", "leaves": ["subjekty, ktoré nie sú stranami konania, ale exekúcia sa ich dotýka", "platiteľ mzdy (zamestnávateľ) – vykonáva zrážky zo mzdy a odvádza ich exekútorovi", "banka – blokuje a vypláca prostriedky pri prikázaní pohľadávky z účtu", "dlžník povinného", "subjekty s odvodenými právami pri predaji hnuteľných vecí a nehnuteľností: spoluvlastníci, osoby s predkupným právom, záložný veriteľ", "depozitár cenných papierov", "obec pri úschove"] },
+      { "label": "Excindačná (vylučovacia) žaloba", "leaves": ["podáva ju tretia osoba, ak exekúcia postihla vec, ku ktorej má právo (napr. vlastníctvo)", "cieľ: dosiahnuť, aby súd rozhodol, že vec má byť vylúčená z exekúcie", "chráni vlastnícke a iné majetkové práva tretích osôb pred neoprávneným zásahom"] }
+    ]
   }
 }
