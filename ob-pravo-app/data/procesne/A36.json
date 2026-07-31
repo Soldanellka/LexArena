@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dedičské konanie – oficialita × súdny komisár × fázy × likvidácia × odúmrť",
+    "branches": [
+      { "label": "Začatie konania a príslušnosť", "leaves": ["dedičské konanie sa začína bez návrhu, keď sa súd dozvie o úmrtí poručiteľa", "najčastejšie na základe oznámenia matriky", "ide o prejav zásady oficiality", "príslušnosť: podľa posledného bydliska poručiteľa", "cieľ: zabezpečiť právnu istotu v majetkových pomeroch po smrti osoby"] },
+      { "label": "Súdny komisár (notár)", "leaves": ["notár je poverený súdom podľa rozvrhu", "koná v mene súdu ako súdny komisár", "vykonáva dokazovanie, zisťuje majetok, záväzky, dedičov", "podľa § 16 CMP môže súdny komisár aj rozhodovať", "vo veci samej sa rozhoduje uznesením", "proti uzneseniu je vždy možné odvolanie"] },
+      { "label": "Príprava na prejednanie dedičstva", "leaves": ["zisťovanie okruhu účastníkov", "lustrácia – zisťovanie majetku a záväzkov poručiteľa v registroch", "neodkladné opatrenia na zabezpečenie dedičstva", "zastavenie konania pre nemajetnosť, ak poručiteľ nezanechal majetok"] },
+      { "label": "Pojednávanie v dedičskom konaní", "leaves": ["pojednávanie je neverejné", "nevyhotovuje sa zvukový záznam", "prejednáva sa závet", "prejednáva sa dohoda dedičov a veriteľov", "rieši sa BSM"] },
+      { "label": "Rozhodnutie a vyporiadanie dedičstva", "leaves": ["vyporiadanie dohodou dedičov, ktorú súd schváli", "alebo rozhodnutím podľa dedičských podielov, ak dohoda nie je možná", "súd vydá uznesenie o dedičstve, ktorým určí, kto a v akom rozsahu dedí"] },
+      { "label": "Postup po skončení konania", "leaves": ["konanie o novoobjavenom majetku", "zrušenie uznesenia o dedičstve, ak sa zistí, že poručiteľ je nažive", "likvidácia predlženého dedičstva: ak dlhy prevyšujú hodnotu majetku, súd môže nariadiť likvidáciu", "odúmrť: ak niet dedičov alebo dedičstvo nikto neprijme, majetok prechádza na štát"] }
+    ]
   }
 }

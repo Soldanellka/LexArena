@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Výkon rozhodnutia o maloletých – výzva × pokuta × odňatie × odborníci × najlepší záujem dieťaťa",
+    "branches": [
+      { "label": "Právna úprava a povaha výkonu", "leaves": ["upravený v 4. časti CMP, nie v Exekučnom poriadku", "ide o iné ako peňažné plnenie", "výkon rodičovských práv a povinností", "výkon rozhodnutia o styku rodiča s dieťaťom", "výkon rozhodnutia o odovzdaní maloletého oprávnenej osobe", "postup upravuje Vyhláška MS SR o výkone rozhodnutí vo veciach maloletých (tzv. personálna exekúcia)", "cieľ: ochrana dieťaťa, nie represia povinného"] },
+      { "label": "Účastníci a forma rozhodnutia", "leaves": ["dieťa je vždy účastníkom konania", "zastupuje ho kolízny opatrovník", "vykonávacie konanie sa začína nariadením výkonu rozhodnutia", "rozhoduje sa vždy uznesením"] },
+      { "label": "Výzva na dobrovoľné plnenie", "leaves": ["pred nariadením výkonu súd vyzve povinného na dobrovoľné splnenie", "výzva je písomná", "súd poučí povinného o následkoch nepodrobenia sa", "môže nariadiť pojednávanie", "cieľ: predísť zásahu do dieťaťa"] },
+      { "label": "Právne nástroje na vnútenie plnenia", "leaves": ["poriadková pokuta – motivačný nástroj, možno ju uložiť opakovane", "náhrada trov", "zmena exekučného titulu", "pozastavenie výplaty sociálnych dávok", "odňatie dieťaťa ako krajný prostriedok"] },
+      { "label": "Nútený výkon – odňatie maloletého", "leaves": ["ak povinný nesplní povinnosť ani po výzve a pokute, súd môže nariadiť výkon odňatím maloletého", "postup upravuje Vyhláška MS SR", "zabezpečuje sa súčinnosť dotknutých orgánov", "priebeh sa zaznamenáva", "povinný sa poučí", "výkon možno opakovať", "súd musí prihliadať na najlepší záujem dieťaťa, jeho psychickú pohodu a minimalizáciu stresu"] },
+      { "label": "Spolupráca odborníkov", "leaves": ["orgán sociálnoprávnej ochrany detí a sociálnej kurately", "psychológ", "ďalšie odborné osoby", "cieľ: výkon bez traumatizácie dieťaťa"] }
+    ]
   }
 }

@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Statusové konania – svojprávnosť × navrátenie × vyhlásenie za mŕtveho × detenčné × opatrovnícke",
+    "branches": [
+      { "label": "Ktoré konania sem patria", "leaves": ["konanie o vyhlásení za mŕtveho", "konanie o spôsobilosti na právne úkony", "detenčné konanie – konanie o prípustnosti prevzatia a držania v zdravotníckom zariadení", "opatrovnícke konanie"] },
+      { "label": "Obmedzenie spôsobilosti na právne úkony", "leaves": ["súd môže obmedziť spôsobilosť osoby len v rozsahu, v akom pre duševnú poruchu nie je schopná robiť právne úkony", "obligatórne znalecké dokazovanie", "povinný výsluch znalca", "vzhliadnutie dotknutej osoby súdom", "dôsledné zisťovanie skutkového stavu (vyšetrovacia zásada)", "obmedzenie svojprávnosti je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované"] },
+      { "label": "Procesná ochrana dotknutej osoby", "leaves": ["zákon priznáva procesnú spôsobilosť aj inak nespôsobilým subjektom", "zvýšená poučovacia povinnosť súdu", "dotknutá osoba si môže zvoliť dôverníka", "evidencia rozhodnutia v Centrálnom notárskom registri listín (CNRL)"] },
+      { "label": "Navrátenie svojprávnosti", "leaves": ["ak dôvody obmedzenia pominú, možno podať návrh na navrátenie svojprávnosti", "súd opätovne skúma zdravotný stav", "vykonáva znalecké dokazovanie", "rozhoduje uznesením"] },
+      { "label": "Vyhlásenie za mŕtveho a dôkaz smrti", "leaves": ["používa sa, ak osoba zmizla za okolností ohrozujúcich život", "alebo ak o nej dlhodobo niet správ a uplynula zákonom stanovená lehota", "právoplatné rozhodnutie má účinky smrti", "zásadný dopad na dedičstvo, manželstvo, majetkové vzťahy", "dôkaz smrti: ak smrť nastala, ale nemožno ju preukázať obvyklým spôsobom", "súd zisťuje okolnosti smrti, dôkazy o úmrtí, svedectvá, listiny, znalecké posudky"] },
+      { "label": "Forma rozhodnutia a účinky", "leaves": ["rozhoduje sa uznesením, v niektorých konaniach rozsudkom", "statusové rozhodnutia pôsobia erga omnes", "preto CMP kladie dôraz na zvýšenú procesnú ochranu a odborné dokazovanie"] }
+    ]
   }
 }

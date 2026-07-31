@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "CMP – všeobecná časť × osobitná časť × lex specialis × oficialita × vyšetrovacia zásada",
+    "branches": [
+      { "label": "Členenie CMP", "leaves": ["Všeobecná časť – základné princípy mimosporového konania – procesné podmienky – účastníci – príslušnosť – doručovanie – dokazovanie – rozhodovanie – opravné prostriedky", "Osobitná časť – konania vo veciach maloletých – dedičské konanie – konanie o spôsobilosti na právne úkony – konanie o vyhlásení za mŕtveho – konania na ochranu osôb, majetku a statusových otázok"] },
+      { "label": "Numerus clausus konaní", "leaves": ["CMP upravuje len konania výslovne vymenované v zákone", "ide o uzavretý počet konaní", "mimosporové konanie nemožno rozširovať výkladom"] },
+      { "label": "Vzťah CMP k CSP – subsidiarita", "leaves": ["CMP je lex specialis vo vzťahu k CSP", "poradie použitia:", "osobitná časť CMP", "všeobecná časť CMP", "primerané použitie CSP", "cieľ: jednotnosť civilného procesu + zachovanie osobitostí mimosporových konaní"] },
+      { "label": "Odlišné princípy CMP", "leaves": ["verejný záujem", "potlačenie autonómie vôle strán", "zásada oficiality – súd môže konať aj bez návrhu (napr. dedičské konanie ex offo)", "vyšetrovací princíp – súd aktívne zisťuje skutkový stav, vykonáva dôkazy aj bez návrhu", "materiálna pravda – súd prispieva k zisteniu skutočného stavu veci"] },
+      { "label": "Ďalšie osobitosti konaní podľa CMP", "leaves": ["odlišné začatie konania (aj bez návrhu)", "príslušnosť sa skúma počas celého konania", "konanie môže prebehnúť bez pojednávania, ak to zákon umožňuje", "priznáva sa procesná spôsobilosť inak nespôsobilým subjektom vo vybraných konaniach", "vo veci samej sa rozhoduje uznesením, nie rozsudkom", "vylúčenie prvkov formálnosti: – koncentrácia – rozkazné konanie – kontumácia", "zvýšená ochrana maloletých, osôb s obmedzenou spôsobilosťou a zraniteľných osôb"] },
+      { "label": "Prokurátor a právno‑ochranné subjekty", "leaves": ["prokurátor má vstupové oprávnenie", "súd môže pribrať iné právno‑ochranné subjekty", "cieľ: ochrana verejného záujmu a osôb, ktoré sa nemôžu samy brániť"] }
+    ]
   }
 }

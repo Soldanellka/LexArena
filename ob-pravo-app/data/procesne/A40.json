@@ -116,5 +116,21 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Exekúcia – dispozičnosť × priorita × proporcionalita × prednosť × exekučné tituly",
+    "branches": [
+      { "label": "Základné princípy exekučného konania", "leaves": ["exekúcia je nútený výkon povinností vyplývajúcich z exekučného titulu", "ide o prísne formálny proces, ktorý chráni právnu istotu a bráni zneužitiu"] },
+      { "label": "Dispozičný princíp", "leaves": ["exekúcia sa začína na návrh oprávneného", "súd ani exekútor nemôžu konať ex offo", "oprávnený určuje rozsah a predmet exekúcie"] },
+      { "label": "Princíp priority", "leaves": ["uplatňuje sa poradie podľa času uplatnenia", "skôr uplatnený nárok má prednosť pri uspokojení"] },
+      { "label": "Princíp proporcionality", "leaves": ["spôsob výkonu musí byť primeraný výške pohľadávky", "zákon chráni nepostihnuteľné minimum povinného (časť mzdy, základné veci osobnej potreby)", "cieľom je zabrániť zásahu do dôstojnosti a základných životných potrieb"] },
+      { "label": "Princíp prednosti", "leaves": ["niektoré pohľadávky sa uspokojujú prednostne", "zákon určuje poradie uspokojovania"] },
+      { "label": "Ochrana a obrana povinného a tretích osôb", "leaves": ["povinný sa môže brániť námietkami, návrhom na zastavenie exekúcie, návrhom na odklad", "tretie osoby chráni excindačná žaloba", "platí zákaz zneužitia exekúcie"] },
+      { "label": "Exekučné tituly (§ 41 EP)", "leaves": ["exekúciu možno viesť len na základe vykonateľného exekučného titulu", "vykonateľnosť je vlastnosť rozhodnutia (formálna + materiálna)"] },
+      { "label": "Vykonateľné rozhodnutia súdu", "leaves": ["rozsudok", "platobný rozkaz", "súdom schválený zmier"] },
+      { "label": "Iné vykonateľné rozhodnutia", "leaves": ["rozhodnutia rozhodcovského súdu", "rozhodnutia správnych orgánov"] },
+      { "label": "Notárska zápisnica", "leaves": ["Musí obsahovať:", "presné označenie povinnosti", "splatnosť", "výslovný súhlas povinného s vykonateľnosťou"] },
+      { "label": "Doložka vykonateľnosti", "leaves": ["potvrdzuje, že rozhodnutie je vykonateľné", "bez platného a vykonateľného titulu exekúciu nemožno začať"] }
+    ]
   }
 }

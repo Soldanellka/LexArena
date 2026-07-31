@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Exekučné konanie – nútený výkon × exekučný titul × exekútor × OS Banská Bystrica × spôsoby výkonu",
+    "branches": [
+      { "label": "Pojem a povaha exekučného konania", "leaves": ["exekučné konanie je druhom civilného procesu", "zahŕňa výkon rozhodnutia podľa CMP a exekúciu podľa Exekučného poriadku (233/1995 Z. z.)", "ide o štátnu formu vynútenia si judikovaného práva", "uplatní sa, ak povinný nesplnil povinnosť dobrovoľne", "vzťah EP a CSP: CSP sa použije subsidiárne, ak EP neustanovuje inak"] },
+      { "label": "Funkcie exekučného konania", "leaves": ["donucovacia funkcia – núti povinného splniť povinnosť", "satisfakčná funkcia – reálne uspokojuje oprávneného", "preventívna a výchovná funkcia – podporuje rešpektovanie súdnych rozhodnutí"] },
+      { "label": "Princípy typické pre exekučné konanie", "leaves": ["priorita", "proporcionalita", "prednosť", "ochrana a obrana povinného", "ochrana tretích osôb"] },
+      { "label": "Predpoklady začatia exekúcie", "leaves": ["vykonateľný exekučný titul, napr.: – rozsudok – platobný rozkaz – notárska zápisnica so súhlasom s vykonateľnosťou – rozhodnutie správneho orgánu", "formálne predpoklady exekučného titulu", "materiálne predpoklady exekučného titulu", "exekučný návrh oprávneného, spravidla elektronicky cez exekútora", "procesné podmienky a náležitosti návrhu", "exekútor následne žiada súd o poverenie"] },
+      { "label": "Exekučný súd a exekútor", "leaves": ["kauzálna príslušnosť: jediným exekučným súdom je Okresný súd Banská Bystrica", "exekučný súd rozhoduje o udelení poverenia", "exekútor je verejný činiteľ poverený vykonávaním exekúcie", "po vydaní poverenia exekútor vykonáva exekúciu spôsobom uvedeným v poverení"] },
+      { "label": "Priebeh exekúcie", "leaves": ["exekútor upovedomí povinného o začatí exekúcie", "poučí ho o možnosti obrany", "peňažné spôsoby exekúcie: – zrážky zo mzdy – prikázanie pohľadávky z účtu – predaj hnuteľných vecí – predaj nehnuteľností – postihnutie iných majetkových práv", "nepeňažné spôsoby exekúcie", "exekútor vydá exekučný príkaz", "obrana povinného: – návrh na zastavenie exekúcie – návrh na odklad exekúcie"] }
+    ]
   }
 }

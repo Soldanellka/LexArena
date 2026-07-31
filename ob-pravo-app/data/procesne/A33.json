@@ -116,5 +116,14 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dovolanie GP × zjavná nezákonnosť × subsidiarita × kasačná sťažnosť × kasačný princíp",
+    "branches": [
+      { "label": "Dovolanie generálneho prokurátora (§ 458 CSP)", "leaves": ["dovolanie GP — mimoriadny opravný prostriedok", "môže ho podať len generálny prokurátor SR", "smeruje proti právoplatnému rozhodnutiu odvolacieho súdu", "rozhoduje Najvyšší súd SR", "účel: ochrana práv pri zjavnej nezákonnosti", "subsidiárny prostriedok — použije sa len vtedy, keď ochranu nemožno dosiahnuť iným riadnym ani mimoriadnym OP"] },
+      { "label": "Podmienky prípustnosti dovolania GP", "leaves": ["GP musí preukázať zjavný rozpor rozhodnutia so zákonom", "zásah musí byť nevyhnutný na ochranu práv dotknutej osoby", "nemožnosť dosiahnuť nápravu iným prostriedkom", "ide o výnimočný zásah do právnej istoty právoplatných rozhodnutí"] },
+      { "label": "Spôsob rozhodnutia o dovolaní GP", "leaves": ["súd môže dovolanie odmietnuť", "môže ho zamietnuť, ak nie je dôvodné", "môže napadnuté rozhodnutie zrušiť a vec vrátiť"] },
+      { "label": "Kasačná sťažnosť (SSP)", "leaves": ["Povaha", "kasačná sťažnosť — mimoriadny opravný prostriedok v správnom súdnictve", "smeruje proti právoplatnému rozhodnutiu krajského súdu (rozsudok aj uznesenie)", "rozhoduje Najvyšší správny súd SR", "obligatórne zastúpenie advokátom", "lehota: 1 mesiac od doručenia rozhodnutia", "odpustenie zmeškania lehoty nie je prípustné", "Dôvody kasačnej sťažnosti", "nedostatok právomoci", "nesprávne právne posúdenie", "závažná procesná chyba", "ďalšie dôvody uvedené v SSP", "Účinky", "kasačná sťažnosť nemá suspenzívny účinok", "kasačný súd môže fakultatívne odložiť vykonateľnosť", "Kasačný princíp", "kasačný súd zruší napadnuté rozhodnutie", "vec vráti krajskému súdu na ďalšie konanie", "spravidla sám nerozhoduje vo veci (na rozdiel od civilného odvolania)", "cieľ: zabezpečiť zákonnosť rozhodovania správnych súdov a zachovať dvojstupňovosť konania"] }
+    ]
   }
 }

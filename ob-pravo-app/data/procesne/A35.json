@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rodinnoprávne konania – rozvod × rodičovstvo × osvojenie × výživné × neodkladné opatrenia",
+    "branches": [
+      { "label": "Ktoré konania sem patria", "leaves": ["konanie o rozvod manželstva", "konanie o úpravu výkonu rodičovských práv a povinností", "konanie o výživné", "určenie a zapretie rodičovstva", "osvojenie", "Všetky majú statusový charakter a rozhodnutia pôsobia erga omnes."] },
+      { "label": "Procesné inštitúty na ochranu záujmov dieťaťa", "leaves": ["právo dieťaťa vyjadriť svoj názor,", "právo dieťaťa na informácie,", "poučovacia povinnosť súdu,", "vysvetľovacia povinnosť súdu,", "súd zisťuje názor dieťaťa primerane veku a vyspelosti,", "názor dieťaťa je dôležitý, ale nie absolútne záväzný – hodnotí sa v kontexte najlepšieho záujmu dieťaťa."] },
+      { "label": "Rozvod manželstva a maloleté deti", "leaves": ["ak majú manželia maloleté dieťa, súd nemôže rozviesť manželstvo, kým neupraví: – zverenie dieťaťa, – styk rodičov s dieťaťom, – výživné, – ďalšie opatrenia v záujme dieťaťa.", "Základná charakteristika konania", "Začiatok: na návrh jedného z manželov", "Predmet: zánik manželstva + úprava pomerov k maloletým", "Účastníci: manželia, dieťa (kolízny opatrovník)", "Príslušnosť: okresný súd", "Forma rozhodnutia: uznesenie", "Účinky: statusové, erga omnes"] },
+      { "label": "Konanie o určení a zapretí rodičovstva", "leaves": ["statusové konanie s výrazným dopadom na osobné pomery dieťaťa", "rozsiahle dokazovanie (DNA, listiny, výsluchy)", "uplatňuje sa vyšetrovací princíp", "cieľ: materiálna pravda, stabilita rodinných vzťahov", "rozhodnutie pôsobí erga omnes", "Základná charakteristika", "Začiatok: na návrh matky, domnelého otca alebo dieťaťa", "Predmet: určenie alebo popretie rodičovstva", "Účastníci: matka, otec, dieťa", "Príslušnosť: okresný súd", "Forma: uznesenie", "Účinky: erga omnes"] },
+      { "label": "Konanie o osvojení", "leaves": ["zásah do rodičovských práv a povinností", "súd skúma: – osobné pomery osvojiteľov, – záujem dieťaťa, – vhodnosť prostredia, – stanovisko orgánu sociálnoprávnej ochrany", "rozhodnutie má dlhodobé následky pre dieťa aj osvojiteľov", "Základná charakteristika", "Začiatok: na návrh osvojiteľov", "Predmet: vznik rodičovského vzťahu medzi osvojiteľom a dieťaťom", "Účastníci: osvojiteľ, dieťa, rodičia (pri niektorých formách)", "Príslušnosť: okresný súd", "Forma: uznesenie", "Účinky: erga omnes"] },
+      { "label": "Konania o výživnom", "leaves": ["výživné pre maloleté deti", "výživné medzi manželmi", "výživné medzi rozvedenými manželmi", "výživné medzi rodičmi a deťmi", "uplatňuje sa vyšetrovací princíp a dôraz na záujem dieťaťa"] },
+      { "label": "Neodkladné opatrenia v rodinných veciach", "leaves": ["Používajú sa pri naliehavých situáciách:", "predbežná úprava styku,", "dočasné zverenie dieťaťa,", "zákaz kontaktu.", "Cieľ: okamžitá ochrana maloletého alebo inej zraniteľnej osoby."] }
+    ]
   }
 }
