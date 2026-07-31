@@ -128,5 +128,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zodpovednosť zamestnanca – subjektívna × zavinenie × všeobecná × osobitná × rozsah náhrady",
+    "branches": [
+      { "label": "Subjektívna zodpovednosť (§ 179 ZP)", "leaves": ["Zamestnanec zodpovedá za škodu, ktorú spôsobil: zavineným porušením povinností, pri plnení pracovných úloh alebo v priamej súvislosti s nimi, úmyselným konaním proti dobrým mravom", "Zavinenie môže byť: nedbanlivosť, úmysel"] },
+      { "label": "Všeobecná zodpovednosť", "leaves": ["Má dve formy: § 179 ZP – užší zmysel, Zamestnanec zodpovedá za škodu spôsobenú porušením povinností pri práci", "Platí prezumpcia neviny – zamestnávateľ musí preukázať zavinenie.", "§ 181 ZP – širší zmysel", "Zodpovednosť za porušenie oznamovacej a zakročovacej povinnosti.", "Zamestnanec musí zabrániť škode alebo ju oznámiť."] },
+      { "label": "Oznamovacia a zakročovacia povinnosť (§ 181 ZP)", "leaves": ["Zamestnanec je povinný: upozorniť na hroziacu škodu, zakročiť, ak je to možné, predchádzať škodám", "Porušenie zakladá zodpovednosť aj bez priameho spôsobenia škody."] },
+      { "label": "Osobitná zodpovednosť", "leaves": ["Má prezumpciu viny – zamestnanec zodpovedá, pokiaľ nepreukáže, že škoda nevznikla jeho zavinením.", "Patrí sem: schodok na zverených hodnotách (§ 182 – 184 ZP), strata zverených predmetov (§ 185 ZP)"] },
+      { "label": "Schodok na zverených hodnotách", "leaves": ["Zamestnanec zodpovedá za schodok, ak: prevzal hodnoty na základe písomného potvrdenia, má možnosť s nimi samostatne nakladať", "Zodpovedá v plnej výške, ak nepreukáže, že schodok nevznikol jeho zavinením."] },
+      { "label": "Strata zverených predmetov (§ 185 ZP)", "leaves": ["Zamestnanec zodpovedá za stratu: nástrojov, pracovných pomôcok, osobitných predmetov zverených na písomné potvrdenie", "Zodpovednosť je v plnej výške."] },
+      { "label": "Rozsah náhrady škody", "leaves": ["Závisí od formy zavinenia: Nedbanlivosť, Limit: 4-násobok priemerného mesačného zárobku", "Úmysel alebo alkohol/drogy", "Náhrada v plnej výške, vrátane ušlého zisku, ak to neodporuje dobrým mravom.", "Osobitná zodpovednosť", "Vždy plná výška, ak zamestnanec nepreukáže, že škoda nevznikla jeho zavinením."] }
+    ]
   }
 }

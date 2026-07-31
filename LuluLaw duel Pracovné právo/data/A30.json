@@ -128,5 +128,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovná disciplína – povinnosti × porušenia × sankcie × výpoveď × okamžité skončenie",
+    "branches": [
+      { "label": "Pracovná disciplína (§ 81 ZP + interné predpisy)", "leaves": ["Zahŕňa všetky povinnosti zamestnanca: povinnosti podľa Zákonníka práce, pracovnej zmluvy, kolektívnej zmluvy, pracovného poriadku, pokynov zamestnávateľa, BOZP", "Porušenie musí byť zavinené (úmysel alebo nedbanlivosť)."] },
+      { "label": "Druhy porušenia pracovnej disciplíny", "leaves": ["Posudzujú sa podľa: miery zavinenia, následkov, doterajšieho správania, charakteru povinnosti, okolností prípadu", "Tri úrovne: menej závažné, závažné, obzvlášť hrubé"] },
+      { "label": "Menej závažné porušenie", "leaves": ["Príklady: opakované meškanie, nedodržanie interných pravidiel, menšie nedostatky v práci", "Sankcia: výpoveď je možná až po písomnom upozornení na porušenie povinností"] },
+      { "label": "Závažné porušenie", "leaves": ["Príklady: hrubé porušenie BOZP, odmietnutie pokynu, príchod do práce pod vplyvom alkoholu", "Sankcia: okamžité skončenie pracovného pomeru, ak je intenzita dostatočná"] },
+      { "label": "Obzvlášť hrubé porušenie", "leaves": ["Najvyššia intenzita: úmyselné konanie proti záujmom zamestnávateľa, krádež, fyzické útoky, závažné ohrozenie života alebo zdravia", "Sankcia: okamžité skončenie je spravidla odôvodnené"] },
+      { "label": "Sankcie za porušenie disciplíny", "leaves": ["Zákon umožňuje len: krátenie dovolenky (§ 109 ods. 3 ZP), výpoveď (§ 63 ods. 1 písm. e) ZP), okamžité skončenie (§ 68 ods. 1 písm. b) ZP)", "Zamestnávateľ nesmie ukladať pokuty, zrážky zo mzdy ani iné disciplinárne tresty."] },
+      { "label": "Prekluzívne lehoty", "leaves": ["Zamestnávateľ musí konať: do 2 mesiacov od zistenia porušenia, najneskôr do 1 roka od jeho spáchania", "Po uplynutí lehoty už sankciu uložiť nemožno."] }
+    ]
   }
 }

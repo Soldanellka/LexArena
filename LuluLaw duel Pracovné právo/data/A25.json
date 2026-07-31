@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prekážky na strane zamestnanca – všeobecný záujem × branná povinnosť × kvalifikácia × osobné prekážky",
+    "branches": [
+      { "label": "Všeobecný záujem (§ 136 – 138 ZP)", "leaves": ["Zamestnanec má pracovné voľno pri činnostiach vo verejnom záujme, napr.: darovanie krvi, svadba, pohreb, účasť na súdnom konaní ako svedok, výkon verejnej funkcie, činnosť odborov", "Náhrada mzdy sa poskytuje podľa zákona – niekedy plná, niekedy čiastočná, niekedy žiadna."] },
+      { "label": "Branná povinnosť, ozbrojené sily (§ 138 – 138b ZP)", "leaves": ["Patrí sem: pravidelné cvičenie, úlohy ozbrojených síl, dobrovoľná vojenská príprava", "Zamestnanec má nárok na pracovné voľno, niekedy aj na náhradu mzdy alebo dávky zo sociálneho poistenia."] },
+      { "label": "Zvyšovanie kvalifikácie (§ 140 ZP)", "leaves": ["Zamestnanec má pracovné voľno pri: štúdiu, skúškach, vzdelávaní súvisiacom s výkonom práce", "Ak ide o prehlbovanie kvalifikácie, zamestnávateľ poskytuje pracovné voľno s náhradou mzdy.", "Pri zvyšovaní kvalifikácie je voľno bez náhrady, ak sa strany nedohodnú inak."] },
+      { "label": "Dôležité osobné prekážky (§ 141 ZP)", "leaves": ["Najčastejšie situácie: PN (práceneschopnosť) – dávka zo sociálneho poistenia, nie mzda", "Najčastejšie situácie: OČR – ošetrovanie člena rodiny, dávka zo SP", "Najčastejšie situácie: svadba zamestnanca", "Najčastejšie situácie: narodenie dieťaťa", "Najčastejšie situácie: úmrtie rodinného príslušníka", "Najčastejšie situácie: sťahovanie", "Najčastejšie situácie: návšteva lekára", "Najčastejšie situácie: starostlivosť o dieťa", "Zákon presne určuje počet dní a nárok na náhradu mzdy."] },
+      { "label": "Náhrada mzdy", "leaves": ["Podľa druhu prekážky: niekedy plná náhrada (napr. darovanie krvi), niekedy čiastočná, niekedy bez náhrady, pri PN a OČR sa poskytujú dávky sociálneho poistenia"] },
+      { "label": "Oznamovacia povinnosť", "leaves": ["Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať ju (napr. potvrdenie od lekára, predvolanie na súd)"] }
+    ]
   }
 }

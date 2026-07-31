@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dni pracovného pokoja – nedele × sviatky × odpočinok × pohotovosť × mzdové zvýhodnenie",
+    "branches": [
+      { "label": "Dni pracovného pokoja", "leaves": ["Patria sem: nedele, štátne sviatky, ďalšie dni, na ktoré pripadá týždenný odpočinok", "Zamestnanec má právo na nepretržitý odpočinok."] },
+      { "label": "Sviatky", "leaves": ["Sviatky sú zákonom určené dni pracovného pokoja (napr. 1. január, Veľká noc, 1. máj, 29. august, Vianoce).", "Práca je možná len: pri nevyhnutných službách, pri naliehavých opravách, v zdravotníctve, v doprave, pri nepretržitej prevádzke"] },
+      { "label": "Práca v dňoch pracovného pokoja", "leaves": ["Práca je výnimočná a musí byť: odôvodnená, v súlade so zákonom, kompenzovaná mzdovým zvýhodnením", "Zamestnávateľ musí rešpektovať zásadu odpočinku a regenerácie."] },
+      { "label": "Pracovná pohotovosť", "leaves": ["Pracovná pohotovosť je stav, keď je zamestnanec pripravený na výkon práce na pokyn zamestnávateľa.", "Druhy: pohotovosť na pracovisku – považuje sa za pracovný čas, pohotovosť mimo pracoviska – nie je pracovným časom, ale patrí za ňu náhrada", "Pohotovosť musí byť dohodnutá v pracovnej zmluve alebo kolektívnej zmluve."] },
+      { "label": "Mzdové zvýhodnenie", "leaves": ["Za prácu vo sviatok patrí: minimálne 100 % priemerného zárobku ako mzdové zvýhodnenie, možnosť náhradného voľna po dohode", "Za prácu v nedeľu patrí: minimálne 50 % priemerného zárobku"] },
+      { "label": "Zákaz maloobchodného predaja", "leaves": ["Zákon zakazuje maloobchodný predaj počas väčšiny sviatkov.", "Výnimky: čerpacie stanice, lekárne, predaj na letiskách, predaj v nemocniciach", "Cieľom je ochrana zamestnancov v maloobchode."] }
+    ]
   }
 }

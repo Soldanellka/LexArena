@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prestávky – 6 h × denný odpočinok 12 h × týždenný odpočinok 24 + 12 h × mladiství",
+    "branches": [
+      { "label": "Prestávky v práci (§ 91 ZP)", "leaves": ["prestávka na odpočinok a jedenie musí byť najneskôr po 6 hodinách práce,", "pri mladistvých po 4,5 hodinách,", "trvá minimálne 30 minút,", "spravidla sa nezapočítava do pracovného času,", "môže byť rozdelená na viac častí, ak to povaha práce vyžaduje."] },
+      { "label": "Denný odpočinok (§ 92 ZP)", "leaves": ["medzi dvoma zmenami musí byť minimálne 12 hodín,", "pri mladistvých 14 hodín,", "výnimky sú možné len pri nepretržitých prevádzkach, mimoriadnych udalostiach, sezónnych prácach, ale odpočinok nesmie klesnúť pod 8 hodín."] },
+      { "label": "Týždenný odpočinok (§ 93 ZP)", "leaves": ["musí trvať minimálne 24 hodín + denný odpočinok,", "spravidla pripadá na nedeľu,", "pri nepretržitých prevádzkach môže byť poskytnutý aj v iný deň,", "zamestnanec musí mať v týždni nepretržitý odpočinok."] },
+      { "label": "Mladiství", "leaves": ["prestávka po 4,5 hodinách,", "denný odpočinok 14 hodín,", "týždenný odpočinok musí byť poskytnutý v celku,", "zákaz nočnej práce (okrem výnimiek)."] },
+      { "label": "Výnimky", "leaves": ["Možné len v zákonom určených prípadoch: nepretržité prevádzky, poľnohospodárstvo, mimoriadne udalosti, naliehavé opravy"] },
+      { "label": "Ochrana zdravia", "leaves": ["Cieľom úpravy je: predchádzať preťaženiu, chrániť bezpečnosť a zdravie, zabezpečiť regeneráciu síl, podporiť rovnováhu medzi pracovným a súkromným životom"] }
+    ]
   }
 }

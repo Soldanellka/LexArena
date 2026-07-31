@@ -154,5 +154,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Skončenie pracovného pomeru – dohoda × výpoveď × okamžité skončenie × skúšobná doba × odstupné × odchodné",
+    "branches": [
+      { "label": "Spôsoby skončenia pracovného pomeru (§ 59 ZP)", "leaves": ["Kogentné, uzavretý výpočet: dohoda", "Kogentné, uzavretý výpočet: výpoveď", "Kogentné, uzavretý výpočet: okamžité skončenie", "Kogentné, uzavretý výpočet: skončenie v skúšobnej dobe", "Kogentné, uzavretý výpočet: uplynutie doby určitej", "Kogentné, uzavretý výpočet: smrť zamestnanca", "Kogentné, uzavretý výpočet: úradné rozhodnutie", "Kogentné, uzavretý výpočet: iné zákonné dôvody (napr. porušenie podmienok dočasného pridelenia)"] },
+      { "label": "Formálne náležitosti", "leaves": ["písomná forma (výpoveď, okamžité skončenie, dohoda),", "doručenie druhej strane,", "výpoveď zamestnávateľa musí byť odôvodnená,", "dôvod musí byť presne skutkovo vymedzený."] },
+      { "label": "Dohoda (§ 60 ZP)", "leaves": ["najflexibilnejší spôsob,", "musí byť písomná,", "na žiadosť zamestnanca musí obsahovať dôvod,", "účinky nastávajú dňom uvedeným v dohode."] },
+      { "label": "Výpoveď (§ 63 – 64 ZP)", "leaves": ["jednostranný právny úkon,", "zamestnávateľ musí uviesť konkrétny zákonný dôvod,", "výpovedná lehota: 1 – 3 mesiace podľa dĺžky trvania pomeru,", "zákaz výpovede v ochrannej dobe."] },
+      { "label": "Okamžité skončenie (§ 68 – 70 ZP)", "leaves": ["mimoriadny spôsob,", "pôsobí okamžite,", "prísne zákonné dôvody (úmyselný trestný čin, závažná disciplína; nevyplatenie mzdy, ohrozenie zdravia)."] },
+      { "label": "Skončenie v skúšobnej dobe (§ 72 ZP)", "leaves": ["bez uvedenia dôvodu,", "musí byť písomné,", "doručené pred uplynutím skúšobnej doby."] },
+      { "label": "Odstupné (§ 76 ZP)", "leaves": ["Patrí pri skončení pracovného pomeru", "z organizačných dôvodov (§ 63 ods. 1 písm. a – c)", "zo zdravotných dôvodov (strata spôsobilosti)", "pri pracovnom úraze alebo chorobe z povolania – 10-násobok priemerného zárobku", "Výška podľa dĺžky trvania pomeru: 1 – 4-násobok priemerného zárobku, pri úrazoch a chorobách z povolania až 10-násobok"] },
+      { "label": "Odchodné (§ 76a ZP)", "leaves": ["jednorazové plnenie,", "patrí pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok,", "výška: minimálne priemerný mesačný zárobok."] }
+    ]
   }
 }

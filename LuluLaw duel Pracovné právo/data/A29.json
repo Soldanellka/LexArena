@@ -129,5 +129,18 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovnoprávne skutočnosti – vznik × zmena × zánik × právne úkony × právne udalosti",
+    "branches": [
+      { "label": "Právne úkony", "leaves": ["Najčastejšie pracovnoprávne skutočnosti: pracovná zmluva, dohoda o skončení, výpoveď, okamžité skončenie, zmena pracovnej zmluvy", "Musí byť dodržaná: písomná forma, doručenie, určitosť a zrozumiteľnosť"] },
+      { "label": "Právne udalosti", "leaves": ["Skutočnosti, ktoré nastávajú nezávisle od vôle účastníkov: smrť zamestnanca, uplynutie doby určitej, vznik invalidity, iné udalosti, ktoré zákon spája so zánikom pomeru"] },
+      { "label": "Rozhodnutia orgánov", "leaves": ["Pracovnoprávne vzťahy ovplyvňujú: lekársky posudok (zdravotná nespôsobilosť), rozhodnutie súdu, rozhodnutie inšpekcie práce, rozhodnutie úradu práce (napr. zákaz činnosti)"] },
+      { "label": "Faktické úkony", "leaves": ["Skutočnosti založené na konaní: výkon práce, nástup do práce – pracovný pomer vzniká dňom nástupu, splnenie pracovných povinností, porušenie disciplíny"] },
+      { "label": "Protiprávne úkony", "leaves": ["Konania porušujúce pracovnoprávne povinnosti: závažné porušenie disciplíny, neoprávnené nakladanie s majetkom, porušenie BOZP, šikana, mobbing, bossing", "Môžu viesť k: výpovedi, okamžitému skončeniu, zodpovednosti za škodu"] },
+      { "label": "Pracovná zmluva (§ 43 ZP)", "leaves": ["Musí obsahovať: druh práce, miesto výkonu práce, deň nástupu, mzdu (ak nie je určená v kolektívnej zmluve)", "Môže obsahovať aj: skúšobnú dobu, benefity, pracovné podmienky, ďalšie dohodnuté náležitosti"] },
+      { "label": "Skúšobná doba (§ 45 ZP)", "leaves": ["musí byť písomná,", "max. 3 mesiace,", "pri vedúcich zamestnancoch 6 mesiacov,", "počas skúšobnej doby možno skončiť pomer bez uvedenia dôvodu."] },
+      { "label": "Vznik a zánik pracovného pomeru", "leaves": ["Vznik: uzavretím pracovnej zmluvy, nástupom do práce", "Zánik: právnym úkonom (výpoveď, dohoda, okamžité skončenie), právnou udalosťou (smrť, uplynutie doby), rozhodnutím orgánu, priamo zo zákona"] }
+    ]
   }
 }

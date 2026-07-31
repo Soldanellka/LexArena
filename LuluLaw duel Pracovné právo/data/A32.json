@@ -128,5 +128,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pracovný čas – limity × rozvrhnutie × konto × ochrana tehotných a rodičov",
+    "branches": [
+      { "label": "Pracovný čas (§ 85 ZP)", "leaves": ["Pracovný čas je čas, v ktorom je zamestnanec: k dispozícii zamestnávateľovi, vykonáva prácu, plní povinnosti podľa pracovnej zmluvy", "Je to kogentná úprava – nemožno sa odchýliť v neprospech zamestnanca."] },
+      { "label": "Limity pracovného času", "leaves": ["Maximálny týždenný pracovný čas: 40 hodín – základný, 38¾ hodiny – dvojzmenná prevádzka, 37½ hodiny – trojzmenná a nepretržitá prevádzka, 33½ hodiny – rizikové pracoviská", "Mladiství: max. 8 hodín denne, zákaz nadčasov a nočnej práce (s výnimkami)"] },
+      { "label": "Rovnomerné rozvrhnutie (§ 86 ZP)", "leaves": ["pracovný čas je rozvrhnutý rovnomerne na jednotlivé dni,", "max. 9 hodín denne,", "rozdiel medzi týždňami nesmie byť väčší ako 3 hodiny,", "vhodné pre stabilné prevádzky."] },
+      { "label": "Nerovnomerné rozvrhnutie (§ 87 ZP)", "leaves": ["pracovná zmena môže trvať až 12 hodín,", "priemerný týždenný pracovný čas nesmie prekročiť zákonný limit v období: 4 mesiacov, alebo 12 mesiacov (pri kolektívnej zmluve)", "Používa sa pri sezónnych, nepretržitých alebo kolísavých prevádzkach."] },
+      { "label": "Konto pracovného času (§ 87a ZP)", "leaves": ["Osobitný režim nerovnomerného rozvrhnutia", "vytvára sa kladný účet (viac odpracovaných hodín) a záporný účet (menej odpracovaných hodín)", "zamestnávateľ musí poskytovať stabilnú základnú mzdu", "vedie účet konta pracovného času", "vyrovnávacie obdobie max. 30 mesiacov", "cieľ: flexibilita pri kolísaní práce"] },
+      { "label": "Tehotné ženy", "leaves": ["Osobitná ochrana: zákaz nočnej práce (§ 98 ZP), zákaz nadčasov (§ 97 ZP), povinnosť preradiť na dennú prácu, povinnosť preradiť pri práci ohrozujúcej zdravie matky alebo plodu"] },
+      { "label": "Rodičia detí", "leaves": ["Rodičia detí mladších ako 15 rokov", "právo žiadať kratší pracovný čas alebo inú úpravu pracovného času (§ 49 ZP)", "zamestnávateľ musí vyhovieť, ak tomu nebránia vážne prevádzkové dôvody", "ochrana pri nočnej práci a nadčasoch"] }
+    ]
   }
 }
