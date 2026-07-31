@@ -3584,8 +3584,8 @@ function attachEvents() {
   if (openSpiderBtn) {
     openSpiderBtn.addEventListener('click', async () => {
       try {
-        const m = await import('./scripts/spider.js');
-        m.openSpiderBrowser();
+        const m = await import('./scripts/spiderMap.js');
+        m.openStructureBrowser();
       } catch (e) { console.error('spider load failed', e); }
     });
   }
