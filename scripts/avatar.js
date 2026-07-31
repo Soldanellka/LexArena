@@ -118,6 +118,11 @@ const AVATAR_CONFIG = {
        „duplikát" bol medzitým opravený, preto zobrazené v obchode. */
     'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     'studentka-medena-talar-cierny':{ name: 'Študentka – základný talár',              base: 'avatars/studentka-medena-talar-cierny',unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 9d51d37, 6 PNG:
+       studentka-tmava-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením studentka-tmava-prokurator (červený lem/štóla/kniha →
+       modrá, rovnaký odtieň ako studentka-blond-advokat). */
+    'studentka-tmava-advokat':      { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-tmava-advokat',      unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'studentka-tmava-prokurator':   { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-tmava-prokurator',   unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     'studentka-tmava-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-tmava-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-tmava',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     /* Vlastný render zatiaľ chýba – požičaný od studentka-medena-talar-cierny
