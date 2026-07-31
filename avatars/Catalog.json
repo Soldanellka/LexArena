@@ -165,6 +165,16 @@
       "active": true
     },
     {
+      "id": "studentka-medena-prokurator",
+      "name": "Študentka (medené vlasy) – prokurátorský talár (vínová štóla)",
+      "type": "talar",
+      "base": "avatars/studentka-medena-prokurator",
+      "price": 700,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "studentka-tmava-talar-cierny",
       "name": "Študentka (tmavé vlasy) – základný talár",
       "type": "talar",

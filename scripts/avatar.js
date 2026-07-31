@@ -118,6 +118,12 @@ const AVATAR_CONFIG = {
        „duplikát" bol medzitým opravený, preto zobrazené v obchode. */
     'studentka-blond-sudca':        { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-blond-sudca',        unlock: 'talar_purchase', talarBaseId: 'studentka-blond',  talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     'studentka-medena-talar-cierny':{ name: 'Študentka – základný talár',              base: 'avatars/studentka-medena-talar-cierny',unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render hotový a nahratý v avatars/ (commit d7e2af8, 6 PNG:
+       studentka-medena-prokurator-{full,tired,sleep}{,-bust}.png). Vínová
+       štóla/strapec/kniha, olemovanie štýlovo podľa studentka-blond-
+       prokurator. Prvý zakúpiteľný talár pre studentka-medena (doteraz len
+       talar-cierny). Vínová farba vizuálne overená. */
+    'studentka-medena-prokurator':  { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-medena-prokurator',  unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     /* Vlastný render hotový a nahratý v avatars/ (commit 9d51d37, 6 PNG:
        studentka-tmava-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
        prefarbením studentka-tmava-prokurator (červený lem/štóla/kniha →
