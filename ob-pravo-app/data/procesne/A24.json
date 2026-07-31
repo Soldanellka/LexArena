@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právoplatnosť × Vykonateľnosť × Predbežná vykonateľnosť × Res iudicata",
+    "branches": [
+      { "label": "Právoplatnosť – obsahová stránka", "leaves": ["záväznosť rozhodnutia", "relatívna nezmeniteľnosť", "stabilita právnych vzťahov"] },
+      { "label": "Právoplatnosť – formálna stránka", "leaves": ["riadne doručenie rozhodnutia", "nemožnosť podať riadny opravný prostriedok", "nastáva: – márnym uplynutím odvolacej lehoty – alebo právoplatným rozhodnutím odvolacieho súdu", "riadne a včas podané odvolanie bráni právoplatnosti až do rozhodnutia odvolacieho súdu"] },
+      { "label": "Právoplatnosť – subjektívna stránka", "leaves": ["určuje, pre koho je rozhodnutie záväzné", "spravidla pre strany konania a ich právnych nástupcov", "pri statusových veciach pôsobí erga omnes", "záväznosť aj pre orgány verejnej moci"] },
+      { "label": "Res iudicata a zmena pomerov", "leaves": ["res iudicata: o tej istej veci medzi tými istými stranami už nemožno znova konať", "bráni duplicitným sporom", "posilňuje právnu istotu", "zmena pomerov (§ 231 CSP): pri opakujúcich sa plneniach možno pri podstatnej zmene pomerov rozhodnúť nanovo"] },
+      { "label": "Vykonateľnosť rozsudku", "leaves": ["vykonateľnosť = rozsudok je spôsobilý byť exekučným titulom", "týka sa len rozhodnutí ukladajúcich povinnosť plniť", "nastáva: – právoplatnosťou – a uplynutím lehoty na plnenie uvedenej vo výroku", "paričná lehota: lehota na dobrovoľné splnenie povinnosti – plynie spravidla od právoplatnosti rozhodnutia", "po splnení podmienok môže oprávnený podať návrh na exekúciu"] },
+      { "label": "Predbežná vykonateľnosť", "leaves": ["súd môže priznať rozsudku predbežnú vykonateľnosť ešte pred právoplatnosťou", "povinný musí plniť okamžite, aj keď podá odvolanie", "odvolanie nemá odkladný účinok", "používa sa najmä pri: – výživnom – náhrade mzdy – situáciách vyžadujúcich okamžité plnenie"] }
+    ]
   }
 }

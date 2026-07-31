@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dôkazné prostriedky – svedok × listiny × znalec × ohliadka × výsluch účastníkov",
+    "branches": [
+      { "label": "Dôkaz a dôkazný prostriedok", "leaves": ["dôkazný prostriedok je nástroj, ktorým súd zisťuje skutkový stav", "dôkaz je výsledok vykonania dôkazného prostriedku", "výpočet dôkazných prostriedkov v CSP je demonštratívny"] },
+      { "label": "Svedok", "leaves": ["môže ním byť akákoľvek fyzická osoba odlišná od účastníka", "vypovedá o tom, čo vnímal vlastnými zmyslami", "povinnosť vypovedať pravdivo", "môže odmietnuť výpoveď, ak: – by porušil povinnosť mlčanlivosti – by spôsobil ujmu sebe alebo blízkej osobe – existuje iný zákonný dôvod"] },
+      { "label": "Listinné dôkazy", "leaves": ["Verejná listina – vydaná orgánom verejnej moci v rámci jeho právomoci – má osobitnú dôkaznú silu – pravdivosť sa predpokladá, kým sa nepreukáže opak", "Súkromná listina – nemá osobitnú dôkaznú silu – súd hodnotí jej vierohodnosť ako každý iný dôkaz"] },
+      { "label": "Znalecký posudok", "leaves": ["súd ho nariadi, ak zistenie alebo posúdenie skutočnosti vyžaduje odborné znalosti", "znalec je nezávislý odborník", "posudok nie je záväzný – súd ho hodnotí voľne, v spojení s ostatnými dôkazmi"] },
+      { "label": "Ohliadka", "leaves": ["umožňuje súdu priame zmyslové vnímanie predmetu dokazovania", "využíva sa najmä pri sporoch o nehnuteľnosti, škody, technické stavy"] },
+      { "label": "Výsluch účastníkov", "leaves": ["používa sa, ak skutočnosť nemožno preukázať inak", "dopĺňa ostatné dôkazy", "účastník vypovedá o vlastných vnímaniach a skúsenostiach", "hodnotí sa ako každý iný dôkaz"] },
+      { "label": "Dôkazná sila", "leaves": ["dôkazné prostriedky sú v zásade rovnocenné", "súd ich hodnotí voľne, jednotlivo aj vo vzájomnej súvislosti", "výnimkou je osobitná dôkazná sila verejnej listiny"] }
+    ]
   }
 }

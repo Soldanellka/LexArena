@@ -116,5 +116,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Neodkladné × Zabezpečovacie × Oficialita × Osvedčenie × Najlepší záujem maloletého",
+    "branches": [
+      { "label": "Neodkladné opatrenia CMP", "leaves": ["súd ich nariadi, ak je potrebné okamžite upraviť pomery účastníkov, najmä maloletého", "možno ich nariadiť: – pred začatím konania – počas konania – po skončení konania, ak je to nevyhnutné", "typické príklady: – predbežná úprava styku rodiča s dieťaťom – predbežné zverenie dieťaťa do starostlivosti rodiča alebo inej osoby – uloženie povinnosti zdržať sa konania ohrozujúceho dieťa – neodkladná ústavná starostlivosť, ak je dieťa bezprostredne ohrozené", "CMP umožňuje nariadiť opatrenie aj bez návrhu – zásada oficiality"] },
+      { "label": "Zabezpečovacie opatrenia CMP", "leaves": ["slúžia na ochranu budúceho výkonu rozhodnutia v mimosporových veciach", "CMP nepozná peňažné zabezpečovacie opatrenia typu záložné právo (to je len CSP)", "príklady: – zabezpečenie osoby (napr. ochrana osoby s obmedzenou spôsobilosťou) – zabezpečenie majetku maloletého alebo osoby pod ochranou súdu – uloženie povinnosti niečo zachovať alebo zdržať sa konania"] },
+      { "label": "Miera dokazovania – osvedčenie", "leaves": ["postačuje osvedčenie potreby a naliehavosti, nie úplné dokazovanie", "súd koná rýchlo, často bez pojednávania", "často aj bez vyjadrenia protistrany, ak by to ohrozilo účel opatrenia", "cieľ: zabrániť ohrozeniu maloletého alebo inej osoby"] },
+      { "label": "Najlepší záujem maloletého", "leaves": ["primárne kritérium pri rozhodovaní", "ochrana dieťaťa", "stabilita jeho pomerov", "bezpečnosť a zdravie", "psychická pohoda", "kontinuita starostlivosti", "CMP sa orientuje na záujem dieťaťa, nie na záujem rodičov"] },
+      { "label": "Rozdiely oproti CSP", "leaves": ["CMP = oficialita → súd môže konať bez návrhu", "CSP = dispozícia → súd koná spravidla na návrh", "CMP má širšie možnosti zásahov do osobného statusu", "CMP kladie dôraz na rýchlosť a ochranu maloletých", "CMP nepozná záložné právo ako zabezpečovacie opatrenie"] }
+    ]
   }
 }

@@ -116,5 +116,14 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Neodkladné × Zabezpečovacie × Osvedčenie × Dočasnosť × Zánik",
+    "branches": [
+      { "label": "Neodkladné opatrenie (§ 325 CSP)", "leaves": ["slúži na bezodkladnú úpravu pomerov strán alebo na odvrátenie ohrozenia budúceho výkonu rozhodnutia", "možno nariadiť: – pred začatím konania – počas konania – po jeho skončení", "menej formálny postup: často bez pojednávania, bez vyjadrenia protistrany", "rozhoduje sa uznesením, v krátkych lehotách", "príklady: – predbežná úprava výživného – zákaz nakladania s vecou – zákaz priblíženia sa", "má dočasný charakter – trvá do rozhodnutia vo veci samej alebo do splnenia účelu"] },
+      { "label": "Zabezpečovacie opatrenie (§ 343 CSP)", "leaves": ["účel: zabezpečiť pohľadávku, aby bola vymožiteľná po skončení konania", "priorita: určené najmä pre peňažné nároky (v CMP sa neuplatňuje)", "peňažná pohľadávka: – zriadenie záložného práva na majetok povinného – obmedzenie nakladania s majetkom", "nepeňažná pohľadávka: – uloženie povinnosti niečo zachovať alebo zdržať sa konania", "menej formálny postup, rozhoduje sa uznesením"] },
+      { "label": "Miera dokazovania – osvedčenie nároku", "leaves": ["postačuje osvedčenie nároku a naliehavosti potreby", "nevyžaduje sa úplné dokazovanie", "súd skúma pravdepodobnosť tvrdení, nie ich úplné preukázanie", "opatrenia možno nariadiť aj bez pojednávania a bez vyjadrenia protistrany"] },
+      { "label": "Zánik opatrenia", "leaves": ["splnením zabezpečenej povinnosti", "právoplatným rozhodnutím vo veci samej", "uplynutím doby, na ktorú bolo nariadené", "zrušením súdom, ak pominú dôvody jeho trvania"] }
+    ]
   }
 }

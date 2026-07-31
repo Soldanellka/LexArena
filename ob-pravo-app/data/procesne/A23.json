@@ -116,5 +116,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rozsudok – meritórne rozhodnutie × druhy × náležitosti × účinky",
+    "branches": [
+      { "label": "Pojem rozsudku", "leaves": ["meritórne rozhodnutie vo veci samej", "vydáva sa v mene Slovenskej republiky", "rieši predmet konania úplne alebo čiastočne", "základný výsledok sporového konania"] },
+      { "label": "Druhy rozsudkov", "leaves": ["Konečný rozsudok – rozhoduje o celom predmete konania", "Čiastočný rozsudok (§ 217 CSP) – rozhoduje o časti veci spôsobilej na samostatné prejednanie (viaceré nároky, viacerí žalovaní)", "Medzitýmny rozsudok (§ 216 CSP) – rozhoduje o základe nároku, o výške sa rozhodne až následne; musí obsahovať úplné právne posúdenie základu", "Prvoinštančný rozsudok", "Druhoinštančný rozsudok (odvolací súd môže rozhodnúť meritórne)"] },
+      { "label": "Osobitné rozsudky", "leaves": ["Rozsudok pre uznanie – žalovaný nárok uzná; súd je uznaním viazaný, rozhoduje bez dokazovania", "Rozsudok pre zmeškanie (kontumačný) – žalovaný sa nevyjadrí alebo sa nedostaví", "Rozsudok pre vzdanie sa nároku"] },
+      { "label": "Vyhlásenie a doručenie rozsudku", "leaves": ["vyhlásenie rozsudku je obligatórny úkon", "vyhlasuje sa spravidla verejne", "doručenie rozsudku je tiež obligatórne", "doručuje sa stranám (alebo ich zástupcom) do vlastných rúk", "doručenie spúšťa plynutie lehoty na odvolanie"] },
+      { "label": "Náležitosti písomného vyhotovenia (§ 220 CSP)", "leaves": ["Záhlavie – súd, sudca/senát, účastníci, predmet konania", "Výrok – presné rozhodnutie (priznáva, zamieta, určuje); je záväzný a vykonateľný", "Odôvodnenie – – zistený skutkový stav – vykonané dôkazy – právne posúdenie – úvahy súdu – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní", "Poučenie o opravnom prostriedku – možnosť podať odvolanie, lehota, príslušný súd"] }
+    ]
   }
 }

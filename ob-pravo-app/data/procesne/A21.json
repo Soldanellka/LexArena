@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dokazovanie – predmet × zásady × dôkazné bremeno × priebeh × hodnotenie dôkazov",
+    "branches": [
+      { "label": "Pojem dokazovania", "leaves": ["dokazovanie je zákonom upravený postup", "cieľ: získať právne relevantné poznatky potrebné pre rozhodnutie", "dôkaz = výsledok dokazovania, poznatok o skutočnosti", "dôkazný prostriedok = nástroj, ktorým sa dôkaz získava (svedok, listina, znalec, ohliadka)"] },
+      { "label": "Klasifikácia dôkazov", "leaves": ["priame × nepriame", "osobné × vecné", "písomné × ústne"] },
+      { "label": "Predmet dokazovania", "leaves": ["v pozitívnom zmysle: sporné skutočnosti významné pre rozhodnutie vo veci samej", "v negatívnom zmysle – čo sa nedokazuje: – notoriety (§ 186 CSP) – všeobecne známe skutočnosti alebo skutočnosti známe súdu z jeho činnosti – zhode tvrdené skutočnosti strán – právne predpisy"] },
+      { "label": "Zásady dokazovania", "leaves": ["prejednacia zásada – súd zisťuje skutkový stav na základe tvrdení a dôkazov strán", "súd dôkazy spravidla nedopĺňa za strany", "výnimky: ochrana slabšej strany, osobitné konania"] },
+      { "label": "Dôkazné bremeno", "leaves": ["nesie ho ten, kto tvrdí skutočnosť významnú pre rozhodnutie", "ak strana neunesie dôkazné bremeno → súd rozhodne v jej neprospech", "dôkazné bremeno sa môže presúvať podľa povahy právneho vzťahu (napr. diskriminácia, spotrebiteľské spory)"] },
+      { "label": "Priebeh dokazovania", "leaves": ["navrhovanie dôkazu – strana označí dôkazný prostriedok (svedok, listina, znalec, ohliadka)", "zadováženie dôkazu – obstaranie dôkazného prostriedku", "rozhodnutie súdu o vykonaní dôkazu – potrebnosť, prípustnosť, relevantnosť", "vykonanie dôkazu – výsluch svedka, oboznámenie s listinou, znalecké dokazovanie, ohliadka", "hodnotenie dôkazov"] },
+      { "label": "Voľné hodnotenie dôkazov (§ 191 CSP)", "leaves": ["súd hodnotí každý dôkaz jednotlivo", "súd hodnotí všetky dôkazy vo vzájomnej súvislosti", "bez predurčenej dôkaznej sily – žiaden dôkaz nemá absolútnu váhu", "cieľ: pravdivé a presvedčivé zistenie skutkového stavu"] }
+    ]
   }
 }

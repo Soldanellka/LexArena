@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Procesný útok × Procesná obrana × Sudcovská koncentrácia × Zákonná koncentrácia",
+    "branches": [
+      { "label": "Prostriedky procesného útoku", "leaves": ["tvrdenia, dôkazy a právne argumenty žalobcu, ktorými podporuje dôvodnosť žaloby", "vyplývajú z povinnosti tvrdiť a povinnosti dokázať", "skutkové tvrdenia", "návrhy na vykonanie dôkazov", "právne argumenty", "doplnenia a rozšírenia tvrdení v priebehu konania", "cieľ: preukázať opodstatnenosť žaloby"] },
+      { "label": "Prostriedky procesnej obrany", "leaves": ["tvrdenia, námietky a dôkazy žalovaného, ktorými spochybňuje žalobné tvrdenia", "námietka premlčania", "námietka započítania", "námietka nedostatku pasívnej legitimácie", "spochybnenie skutkových tvrdení žalobcu", "vlastné dôkazy", "cieľ: vyvrátiť alebo oslabiť žalobné tvrdenia"] },
+      { "label": "Kvalifikované popretie", "leaves": ["popretie tvrdenia protistrany musí byť kvalifikované", "strana musí uviesť, v čom a prečo tvrdenie popiera", "nekvalifikované popretie je neúčinné"] },
+      { "label": "Kontradiktórnosť konania", "leaves": ["jadro sporového konania", "strany vytvárajú skutkový a právny základ, z ktorého súd vychádza", "súd rozhoduje na základe toho, čo strany predložia"] },
+      { "label": "Sudcovská koncentrácia (§ 153 CSP)", "leaves": ["súd môže uznesením určiť lehotu, po ktorej už strany nemôžu predkladať nové tvrdenia a dôkazy", "výnimka: ak strana preukáže, že ich nemohla uplatniť skôr bez svojej viny", "flexibilná – súd ju nastavuje podľa povahy veci"] },
+      { "label": "Zákonná koncentrácia (§ 154 CSP)", "leaves": ["vyplýva priamo zo zákona", "strany môžu uplatňovať nové tvrdenia a dôkazy najneskôr do vyhlásenia rozhodnutia, ktorým sa dokazovanie končí", "po tomto okamihu súd na nové tvrdenia a dôkazy neprihliada, ak zákon neustanovuje výnimku"] }
+    ]
   }
 }

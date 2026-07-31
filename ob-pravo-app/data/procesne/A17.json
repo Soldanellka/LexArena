@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Pojednávanie – príprava × priebeh × verejnosť × neprítomnosť × odročenie",
+    "branches": [
+      { "label": "Príprava pojednávania", "leaves": ["súd zabezpečuje, aby sa pojednávanie mohlo riadne uskutočniť", "predvolanie musí obsahovať: – čas a miesto pojednávania – poučenie o následkoch nedostavenia sa – upozornenie na povinnosť ospravedlniť neúčasť", "súd zabezpečí prítomnosť svedkov, znalcov, tlmočníkov a ďalších osôb potrebných na dokazovanie", "určuje sa, koho prítomnosť je potrebná na pojednávaní"] },
+      { "label": "Priebeh pojednávania", "leaves": ["zásada ústnosti – strany prednášajú návrhy a vyjadrenia ústne", "zásada verejnosti – verejnosť môže byť prítomná, ak zákon neustanoví výnimku", "vykonáva sa dokazovanie", "prerokúvajú sa procesné návrhy strán", "prednášajú sa právne argumenty", "konanie smeruje k rozhodnutiu vo veci samej"] },
+      { "label": "Nenariadenie pojednávania", "leaves": ["ak súd pojednávanie nenariadi tam, kde ho nariadiť mal → vada konania", "výnimky, kedy netreba pojednávanie (§ 177 ods. 2 CSP): – rozsudok pre uznanie – rozsudok pre zmeškanie (kontumačný) – rozsudok pre vzdanie sa nároku – rozkazné konanie (platobný rozkaz, európsky platobný rozkaz)"] },
+      { "label": "Vylúčenie verejnosti", "leaves": ["súd môže verejnosť vylúčiť, ak by jej prítomnosť ohrozila: – utajovanú skutočnosť – mravnosť – bezpečnosť osôb", "vyhlásenie rozsudku je spravidla vždy verejné, aj keď bolo pojednávanie neverejné"] },
+      { "label": "Neprítomnosť strany", "leaves": ["ak sa riadne a včas predvolaná strana bez ospravedlnenia nedostaví, súd môže konať a rozhodnúť v jej neprítomnosti", "neúčasť nebráni vykonaniu dokazovania, ak sú splnené zákonné podmienky", "cieľ: zabrániť účelovému mareniu konania"] },
+      { "label": "Odročenie pojednávania", "leaves": ["možné len z dôležitého dôvodu – zdravotné dôvody – potreba doplniť dokazovanie – objektívne prekážky brániace účasti", "svojvoľné alebo neodôvodnené žiadosti sa nepripúšťajú"] }
+    ]
   }
 }
