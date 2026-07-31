@@ -93,7 +93,7 @@ function ensureSpiderMapCss() {
     .spider-map-labels { position: absolute; inset: 0; pointer-events: none; }
     .spider-map-label {
       position: absolute; box-sizing: border-box; display: -webkit-box; -webkit-box-orient: vertical;
-      align-items: center; justify-content: center; text-align: center;
+      -webkit-box-pack: center; -webkit-box-align: center; text-align: center;
       font-weight: 600; color: var(--text, #2b2b2b); padding: 4px 6px;
       overflow: hidden; overflow-wrap: break-word; line-height: 1.25; pointer-events: none;
     }
@@ -281,7 +281,7 @@ function setupPanZoom(svgEl, view, onChange) {
 function renderMapNodes(container, nodesData, viewBox, { rx, ariaLabel, labelLines }) {
   container.innerHTML = `
     <div class="spider-map-host">
-      <svg class="spider-map-svg" viewBox="${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}" role="group" aria-label="${escapeHtml(ariaLabel)}"></svg>
+      <svg class="spider-map-svg" viewBox="${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}" preserveAspectRatio="none" role="group" aria-label="${escapeHtml(ariaLabel)}"></svg>
       <div class="spider-map-labels"></div>
     </div>`;
   const svg = container.querySelector('.spider-map-svg');
