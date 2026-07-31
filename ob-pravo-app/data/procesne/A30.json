@@ -116,5 +116,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odvolanie – postup na 1. inštancii × postup na odvolacom súde × neúplná apelácia × výsledky rozhodnutia",
+    "branches": [
+      { "label": "Konanie na súde prvej inštancie", "leaves": ["súd prvej inštancie po podaní odvolania skúma včasnosť, prípustnosť a formálne náležitosti", "odvolanie doručí ostatným účastníkom na vyjadrenie", "ak odvolanie smeruje proti uzneseniu, súd môže využiť autoremedúru"] },
+      { "label": "Autoremedúra", "leaves": ["súd prvej inštancie môže sám vyhovieť odvolaniu", "zmení alebo zruší svoje rozhodnutie", "použiteľná najmä pri odvolaniach proti uzneseniam", "ak nevyhovie → vec postúpi odvolaciemu súdu"] },
+      { "label": "Konanie na odvolacom súde", "leaves": ["odvolací súd je viazaný rozsahom odvolania", "odvolací súd je viazaný odvolacími dôvodmi", "výnimky: skutočnosti, na ktoré musí prihliadnuť ex offo (nedostatok procesných podmienok, závažné vady konania)", "preskúmava: – právne posúdenie, – procesný postup, – skutkové zistenia"] },
+      { "label": "Neúplná apelácia (§ 366 CSP)", "leaves": ["novoty možno uplatniť len ak: – nastali po rozhodnutí súdu prvej inštancie, alebo – strana ich nemohla uplatniť skôr bez svojej viny", "cieľ: zabrániť taktickému predlžovaniu konania"] },
+      { "label": "Rozhodnutia odvolacieho súdu", "leaves": ["Potvrdenie rozhodnutia (§ 387 CSP): ak je rozhodnutie vecne správne a bez vád", "Zmena rozhodnutia (§ 388 CSP): ak možno rozhodnúť na základe existujúceho skutkového stavu bez potreby ďalšieho dokazovania", "Zrušenie a vrátenie veci (§ 389 CSP): ak je rozhodnutie nepreskúmateľné, trpí vadou konania alebo skutkový stav nie je dostatočne zistený"] }
+    ]
   }
 }

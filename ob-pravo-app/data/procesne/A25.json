@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Uznesenie – procesné rozhodnutie × náležitosti × sťažnosť × odvolanie × rozdiel CSP/CMP",
+    "branches": [
+      { "label": "Pojem uznesenia", "leaves": ["rozhodnutie súdu, ktoré spravidla rieši procesné otázky, nie vec samu", "typické: zastavenie konania, trovové rozhodnutie, prerušenie konania, neodkladné opatrenie, zmena žaloby, procesné návrhy strán"] },
+      { "label": "Uznesenie v CSP vs. CMP", "leaves": ["CSP (sporové konanie): uznesenie = procesné rozhodnutie, vec sama sa rieši rozsudkom", "výnimočne je uznesenie meritórne aj v CSP: schválenie zmieru, neodkladné opatrenie", "CMP (mimosporové konanie): uznesenie = meritórne rozhodnutie vo veci samej – dedičské konanie – konania vo veciach maloletých – konanie o spôsobilosti na právne úkony"] },
+      { "label": "Rozdiely medzi rozsudkom a uznesením", "leaves": ["vyhlasovanie: uznesenie sa nemusí vždy vyhlasovať", "doručovanie: nie každé uznesenie sa doručuje", "prípustnosť opravných prostriedkov: odvolanie len v taxatívnych prípadoch", "právoplatnosť a vykonateľnosť: procesné uznesenia sú vykonateľné okamžite"] },
+      { "label": "Náležitosti uznesenia", "leaves": ["Záhlavie: súd, sudca/senát, účastníci, predmet konania", "Výrok: presné rozhodnutie – pripustenie, zamietnutie, nariadenie, zastavenie", "Odôvodnenie: skutkové a právne dôvody; môže byť stručné alebo výnimočne vynechané, ak to zákon umožňuje – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní", "Poučenie o opravnom prostriedku: či je opravný prostriedok prípustný, lehota, príslušný súd"] },
+      { "label": "Sťažnosť proti uzneseniu", "leaves": ["sťažnosť je prostriedok procesnej nápravy", "smeruje proti uzneseniam vydaným vyšším súdnym úradníkom (VSÚ)", "doručujú sa účastníkom", "sťažnosť nemá devolutívny účinok – rozhoduje ten istý súd, nie nadriadený", "umožňuje nápravu na tom istom súde"] },
+      { "label": "Odvolanie proti uzneseniu (§ 357 CSP)", "leaves": ["Odvolanie je prípustné len v taxatívnych prípadoch, napríklad:", "uznesenie o zastavení konania", "uznesenie o neodkladnom opatrení", "uznesenie o trovách konania", "uznesenie o zmene žaloby", "uznesenie o procesnej spôsobilosti", "Proti bežným procesným uzneseniam (napr. o vedení dokazovania) odvolanie prípustné nie je."] }
+    ]
   }
 }

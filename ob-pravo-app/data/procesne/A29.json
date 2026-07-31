@@ -116,5 +116,15 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odvolanie – riadny opravný prostriedok × prípustnosť × dôvody × účinky",
+    "branches": [
+      { "label": "Pojem odvolania", "leaves": ["odvolanie = riadny opravný prostriedok proti neprávoplatnému rozhodnutiu súdu prvej inštancie", "podáva sa na súde prvej inštancie", "slúži na preskúmanie zákonnosti, správnosti a spravodlivosti rozhodnutia"] },
+      { "label": "Subjektívne podmienky prípustnosti", "leaves": ["odvolanie podáva účastník, ktorého sa rozhodnutie nepriaznivo dotýka", "musí mu vzniknúť ujma na právach", "lehota: 15 dní od doručenia (§ 362 CSP)"] },
+      { "label": "Objektívne podmienky prípustnosti", "leaves": ["proti rozsudku je odvolanie spravidla vždy prípustné (ak zákon neustanoví výnimku)", "proti uzneseniu je odvolanie prípustné len v taxatívnych prípadoch (§ 357 CSP): – uznesenie o zastavení konania – uznesenie o neodkladnom opatrení – uznesenie o trovách konania – uznesenie o zmene žaloby", "proti bežným procesným uzneseniam (napr. o vedení dokazovania) odvolanie nie je prípustné"] },
+      { "label": "Odvolacie dôvody (§ 365 CSP)", "leaves": ["demonštratívny výpočet – nie uzavretý", "nesprávne právne posúdenie veci", "vada konania, ktorá mohla mať vplyv na správnosť rozhodnutia", "neúplné zistenie skutkového stavu", "nesprávne vykonané dokazovanie", "subjektívna nespokojnosť bez dôvodu nestačí"] },
+      { "label": "Účinky a spôsob rozhodnutia", "leaves": ["devolutívny účinok – rozhoduje vyšší súd", "suspenzívny účinok – odkladá právoplatnosť (a často aj vykonateľnosť)", "odvolací súd môže rozhodnutie: – potvrdiť – zmeniť – zrušiť a vec vrátiť na nové konanie"] }
+    ]
   }
 }

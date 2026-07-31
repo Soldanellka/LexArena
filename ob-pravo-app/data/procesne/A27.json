@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Slabšia strana × Spotrebiteľ × Zamestnanec × Diskriminácia × Osobitné pravidlá",
+    "branches": [
+      { "label": "Prečo osobitosti", "leaves": ["cieľ: dorovnávanie nerovnovážneho postavenia strán", "slabšia strana má menšiu vyjednávaciu silu, horší prístup k informáciám a dôkazom", "patria sem: spotrebiteľské, individuálne pracovnoprávne, antidiskriminačné spory"] },
+      { "label": "Poučovacia (manudukčná) povinnosť", "leaves": ["súd má voči slabšej strane zvýšenú poučovaciu povinnosť", "poučuje ju o procesných právach a povinnostiach", "ide nad rámec bežnej poučovacej povinnosti"] },
+      { "label": "Zastúpenie slabšej strany", "leaves": ["advokát", "právno-ochranné subjekty: – Združenie na ochranu spotrebiteľa – odborová organizácia (ROH) – Slovenské národné stredisko pre ľudské práva (SNSĽP)"] },
+      { "label": "Spotrebiteľské spory (§ 292 CSP)", "leaves": ["spotrebiteľ je slabšia strana voči podnikateľovi", "súd prihliada na neprijateľné zmluvné podmienky aj bez námietky", "chráni spotrebiteľa pred nerovnosťou v informovanosti a vyjednávacej sile", "súd môže skúmať obsah zmluvy nad rámec tvrdení strán", "ide o výnimku z prejednacej zásady"] },
+      { "label": "Antidiskriminačné spory", "leaves": ["spory podľa zákona o rovnakom zaobchádzaní", "platí obrátené dôkazné bremeno: – žalobca preukazuje skutočnosti nasvedčujúce diskriminácii – žalovaný preukazuje, že k porušeniu zásady rovnakého zaobchádzania nedošlo", "chráni žalobcu, ktorý často nemá prístup k dôkazom o diskriminácii"] },
+      { "label": "Individuálne pracovnoprávne spory", "leaves": ["zamestnanec je slabšia strana voči zamestnávateľovi", "súd zohľadňuje jeho postavenie pri: – posudzovaní dôkazného bremena – rozhodovaní o trovách konania (aby zamestnanec nebol odradený od uplatnenia práv) – hodnotení procesných úkonov", "cieľ: zabrániť zneužívaniu ekonomickej a faktickej prevahy zamestnávateľa"] },
+      { "label": "Osobitné procesné pravidlá", "leaves": ["koncentrácia konania je obmedzená", "uplatňuje sa modifikovaný vyšetrovací princíp", "za určitých podmienok je vylúčené skrátené konanie (napr. PR pri spotrebiteľských úveroch)"] }
+    ]
   }
 }

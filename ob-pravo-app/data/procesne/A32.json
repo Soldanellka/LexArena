@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Obnova konania – mimoriadny prostriedok × nové skutočnosti × lehoty × rozhodnutie súdu",
+    "branches": [
+      { "label": "Pojem obnovy konania", "leaves": ["obnova konania = mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu", "umožňuje znovuotvorenie veci, ak existujú zákonné dôvody", "prejednáva ju súd prvej inštancie, ktorý rozhodol v pôvodnom konaní"] },
+      { "label": "Subjektívne podmienky prípustnosti", "leaves": ["žalobu podáva účastník pôvodného konania", "musí preukázať, že dôvod obnovy nemohol uplatniť skôr bez svojej viny", "žaloba sa podáva v subjektívnej lehote (od zistenia dôvodu)"] },
+      { "label": "Objektívne podmienky – dôvody obnovy (§ 397 CSP)", "leaves": ["Obnova je prípustná len z taxatívnych dôvodov:", "nové skutočnosti, rozhodnutia alebo dôkazy, ktoré účastník bez svojej viny nemohol použiť skôr a môžu viesť k priaznivejšiemu rozhodnutiu", "rozhodnutie záviselo od predbežnej otázky, o ktorej bolo neskôr rozhodnuté inak", "pôvodné rozhodnutie bolo dosiahnuté trestným činom sudcu alebo účastníka", "iné zákonom uvedené dôvody", "Obnova nie je prostriedkom na opätovné hodnotenie skutkového stavu bez splnenia týchto dôvodov."] },
+      { "label": "Lehoty na podanie žaloby (§ 398 CSP)", "leaves": ["subjektívna lehota: plynie odo dňa, keď sa účastník dozvedel o dôvode obnovy", "objektívna lehota: plynie od právoplatnosti napadnutého rozhodnutia", "po uplynutí objektívnej lehoty už obnovu nemožno podať, bez ohľadu na subjektívnu vedomosť", "cieľ: ochrana právnej istoty právoplatných rozhodnutí"] },
+      { "label": "Rozhodnutie vo fáze povolenia obnovy", "leaves": ["súd prvej inštancie najprv rozhodne, či žalobu povolí", "ak dôvody nie sú splnené → žalobu zamietne", "ak obnovu povolí → právoplatné rozhodnutie sa otvára"] },
+      { "label": "Rozhodnutie v obnovenom konaní", "leaves": ["vec sa vracia do štádia pred vydaním napadnutého rozhodnutia", "konanie sa znova prejednáva", "vykonajú sa nové dôkazy", "súd rozhodne nanovo"] }
+    ]
   }
 }

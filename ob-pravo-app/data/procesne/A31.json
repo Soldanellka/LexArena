@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dovolanie – mimoriadny opravný prostriedok × právna otázka × NS SR × odmietnutie/zamietnutie/zrušenie",
+    "branches": [
+      { "label": "Pojem dovolania", "leaves": ["dovolanie = mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu", "rozhoduje Najvyšší súd SR", "podáva sa na súde prvej inštancie, ktorý rozhodnutie vydal", "súd prvej inštancie preverí náležitosti a postúpi vec dovolaciemu súdu"] },
+      { "label": "Subjektívne podmienky prípustnosti", "leaves": ["dovolanie podáva strana, ktorej sa rozhodnutie nepriaznivo dotýka", "povinné zastúpenie advokátom (§ 429 CSP), ak dovolateľ nemá právnické vzdelanie 2. stupňa", "nedostatok zastúpenia = odstrániteľná vada; ak sa neodstráni → dovolanie sa odmietne", "dovolanie sa podáva v zákonnej lehote"] },
+      { "label": "Objektívne podmienky prípustnosti (§ 421 CSP)", "leaves": ["Dovolanie je prípustné len z taxatívnych dôvodov:", "odvolací súd rozhodol právnu otázku v rozpore s ustálenou praxou dovolacieho súdu", "odvolací súd sa odchýlil od ustálenej praxe", "ide o právnu otázku, ktorú dovolací súd doposiaľ neriešil", "právna otázka má zásadný význam", "Dovolanie nie je prostriedkom na opätovné hodnotenie skutkového stavu — jeho jadrom je právna otázka."] },
+      { "label": "Účinky dovolania", "leaves": ["dovolanie nemá odkladný účinok", "napadnuté rozhodnutie je vykonateľné aj počas dovolacieho konania", "odkladný účinok možno priznať len výnimočne, ak to zákon umožňuje"] },
+      { "label": "Priebeh konania o dovolaní", "leaves": ["Najvyšší súd SR preskúma prípustnosť dovolania", "preskúma dôvodnosť dovolania", "konanie je prevažne písomné, bez pojednávania", "zamerané na právne otázky, nie na skutkové zistenia"] },
+      { "label": "Rozhodnutia dovolacieho súdu", "leaves": ["Odmietnutie: neprípustné, oneskorené, podané neoprávnenou osobou, zjavne neopodstatnené", "Zamietnutie: dovolanie je prípustné, ale nie je dôvodné", "Zrušenie napadnutého rozhodnutia: dovolanie je dôvodné, vec sa vracia súdu nižšej inštancie na ďalšie konanie"] }
+    ]
   }
 }

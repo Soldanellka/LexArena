@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Opravné prostriedky – riadne × mimoriadne × apelácia × kasačný systém × autoremedúra",
+    "branches": [
+      { "label": "Pojem a účel opravného konania", "leaves": ["opravný prostriedok = procesný nástroj na preskúmanie rozhodnutia", "opravné konanie slúži na preskúmanie a prípadnú modifikáciu rozhodnutia", "účel: kontrola zákonnosti a správnosti rozhodnutí, ochrana práv účastníkov"] },
+      { "label": "Klasifikácia opravných prostriedkov", "leaves": ["riadne × mimoriadne", "s devolutívnym účinkom × bez devolutívneho účinku", "s právom novôt × bez práva novôt", "úplné × neúplné"] },
+      { "label": "Riadne opravné prostriedky", "leaves": ["Odvolanie – smeruje proti neprávoplatnému rozhodnutiu", "devolutívny účinok – rozhoduje vyšší súd", "suspenzívny účinok – odkladá právoplatnosť (a často aj vykonateľnosť)", "odvolanie je základný nástroj kontroly rozhodnutí v CSP", "sťažnosť proti uzneseniam VSÚ – bez devolutívneho účinku (rozhoduje ten istý súd)"] },
+      { "label": "Autoremedúra", "leaves": ["súd prvej inštancie môže sám vyhovieť odvolaniu", "len ak tým nezasiahne do práv iných strán", "zrýchľuje konanie a odbremeňuje odvolací súd"] },
+      { "label": "Mimoriadne opravné prostriedky", "leaves": ["Smerujú proti právoplatným rozhodnutiam:", "Dovolanie (§ 419 CSP)", "Žaloba na obnovu konania", "Dovolanie generálneho prokurátora", "Kasačná sťažnosť (v správnom súdnictve)", "Majú obmedzené dôvody – slúžia na odstránenie závažných chýb rozhodnutia."] },
+      { "label": "Opravné systémy", "leaves": ["Apelačný systém", "odvolací súd môže rozhodnutie zmeniť a sám vo veci rozhodnúť", "úplná apelácia: novoty bez obmedzenia", "neúplná apelácia: novoty sú obmedzené", "Kasačný systém", "odvolací súd môže rozhodnutie len zrušiť", "vec vráti na nové konanie", "nepreskúmava skutkový stav v plnom rozsahu", "Revízny systém", "preskúmanie sa obmedzuje na právne otázky", "skutkový stav je záväzný"] },
+      { "label": "CSP – neúplná apelácia", "leaves": ["CSP kombinuje apelačné a kasačné prvky", "odvolací súd môže rozhodnutie potvrdiť, zmeniť alebo zrušiť", "novoty sú obmedzené koncentráciou konania", "cieľ: efektívna kontrola rozhodnutí bez neprimeraného predlžovania konania"] }
+    ]
   }
 }

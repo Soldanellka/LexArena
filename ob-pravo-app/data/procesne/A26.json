@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Platobný rozkaz × Upomínacie konanie × Kontumácia × Odpor",
+    "branches": [
+      { "label": "V čom spočíva skrátenosť", "leaves": ["bez nariadenia pojednávania", "dokazovanie len v listinnej podobe", "alebo pri pasivite strán", "cieľ: rýchle a hospodárne vybavenie jednoduchých vecí"] },
+      { "label": "Skrátené rozhodnutia", "leaves": ["platobný rozkaz (PR)", "upomínací platobný rozkaz (EPR / UPR)", "kontumačný rozsudok (KR) – rozsudok pre zmeškanie", "rozsudok pre uznanie", "rozsudok pre vzdanie sa nároku"] },
+      { "label": "Platobný rozkaz (§ 265 CSP)", "leaves": ["súd ho vydá bez pojednávania", "bez dokazovania", "len na základe žalobných tvrdení a listín", "podmienka: peňažný nárok", "vhodný pri jednoduchých peňažných nárokoch, zmluvných pohľadávkach, listinne preukázateľných nárokoch", "osobitná obrana žalovaného: odpor", "právoplatnosť a vykonateľnosť nastávajú súčasne"] },
+      { "label": "Zmenkový a šekový platobný rozkaz", "leaves": ["osobitný druh PR", "vydáva sa na základe zmenky alebo šeku", "tieto listiny majú osobitnú dôkaznú silu"] },
+      { "label": "Upomínacie konanie", "leaves": ["zákon č. 307/2016 Z. z.", "samostatné, elektronizované konanie", "návrh sa podáva cez centrálny portál", "výsledkom je upomínací platobný rozkaz", "má rovnaké účinky ako PR podľa CSP", "cieľ: rýchle vymáhanie peňažných pohľadávok bez pojednávania"] },
+      { "label": "Podmienky kontumácie", "leaves": ["kontumačné rozhodnutie možno vydať: – pred nariadením pojednávania (PPS) – na predbežnom prejednaní sporu – počas ktoréhokoľvek pojednávania", "kontumácia je možná na oboch procesných stranách", "pasivita spočíva v: – nevyjadrení sa, – nedostavení sa, – nekonaní napriek riadnemu poučeniu"] },
+      { "label": "Odpor a návrh na zrušenie", "leaves": ["proti platobnému rozkazu nie je prípustné odvolanie", "riadnym opravným prostriedkom je odpor", "odpor zrušuje platobný rozkaz v celom rozsahu", "súd pokračuje v riadnom sporovom konaní, vykoná dokazovanie, nariadi pojednávanie", "proti kontumačnému rozsudku je osobitným prostriedkom nápravy návrh na zrušenie", "to isté platí pri rozsudku pre uznanie a pre vzdanie sa nároku", "mechanizmus umožňuje rýchle vybavenie nesporných vecí a zároveň zachováva právo na obranu"] }
+    ]
   }
 }
