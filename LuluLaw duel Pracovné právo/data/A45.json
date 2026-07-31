@@ -154,5 +154,15 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prekážky na strane zamestnávateľa – prestoje × počasie × vážne prevádzkové dôvody × kurzarbeit × náhrada mzdy",
+    "branches": [
+      { "label": "Prestoje (§ 142 ods. 1 ZP)", "leaves": ["Vznikajú pri: poruche stroja, výpadku surovín, technických poruchách, iných prevádzkových problémoch", "Náhrada mzdy: 100 % priemerného zárobku, ak zamestnanec nie je preradený na inú prácu", "Nepriaznivé poveternostné vplyvy (§ 142 ods. 2 ZP)", "Ide o situácie, keď: počasie znemožňuje výkon práce (napr. stavebné práce, poľnohospodárstvo)", "Náhrada mzdy: minimálne 50 % priemerného zárobku, môže byť vyššia podľa kolektívnej zmluvy"] },
+      { "label": "Iné prekážky na strane zamestnávateľa (§ 142 ods. 3 ZP)", "leaves": ["Patria sem: protiprávne konanie zamestnávateľa, organizačné zlyhania, chybné plánovanie práce", "Náhrada mzdy: 100 % priemerného zárobku"] },
+      { "label": "Vážne prevádzkové dôvody (§ 142 ods. 4 ZP)", "leaves": ["Podmienky: musia byť vymedzené v písomnej dohode so zástupcami zamestnancov, zamestnávateľ ich nemôže určiť jednostranne", "Náhrada mzdy: minimálne 60 % priemerného zárobku", "Možnosť: využitie konta pracovného času"] },
+      { "label": "Konto pracovného času", "leaves": ["Používa sa pri: kolísaní práce, vážnych prevádzkových dôvodoch", "Umožňuje: kladný účet (viac odpracovaných hodín), záporný účet (menej odpracovaných hodín)"] },
+      { "label": "Kurzarbeit (podpora v čase skrátenej práce)", "leaves": ["Podmienky: dohoda so zástupcami zamestnancov alebo so zamestnancom, prekážka na strane zamestnávateľa", "Náhrada mzdy: minimálne 80 % priemerného zárobku"] }
+    ]
   }
 }

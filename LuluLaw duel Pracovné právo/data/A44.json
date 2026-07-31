@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Kvalifikácia – prehlbovanie × zvyšovanie × kvalifikačná dohoda × náklady × pracovné voľno",
+    "branches": [
+      { "label": "Prehlbovanie kvalifikácie (§ 153 ZP)", "leaves": ["povinnosť zamestnanca,", "dopĺňanie, udržiavanie alebo obnovovanie vedomostí,", "BOZP, školenia, kurzy, rekvalifikácia pri zmene pracoviska,", "považuje sa za výkon práce – patrí mzda,", "náklady hradí zamestnávateľ.", "Možno uzavrieť dohodu len ak náklady presiahnu 1700 €."] },
+      { "label": "Zvyšovanie kvalifikácie (§ 154 – 155 ZP)", "leaves": ["získanie vyššieho stupňa vzdelania (napr. VŠ),", "dobrovoľné – zamestnávateľ nemusí umožniť,", "vyžaduje písomnú kvalifikačnú dohodu,", "zamestnávateľ poskytuje pracovné voľno, náhradu mzdy, úhradu nákladov."] },
+      { "label": "Kvalifikačná dohoda", "leaves": ["Musí byť: písomná, max. na 5 rokov, obsahovať záväzok zamestnanca zotrvať v pracovnom pomere, obsahovať presnú výšku nákladov a spôsob ich úhrady"] },
+      { "label": "Náhrada nákladov", "leaves": ["Zamestnanec uhrádza náklady len: ak poruší záväzok zotrvať, ak sú náklady preukázané, ak dohoda je platná a zákonná"] },
+      { "label": "Pracovné voľno a mzda", "leaves": ["Pri zvyšovaní kvalifikácie: patrí pracovné voľno, patrí náhrada mzdy, zamestnávateľ hradí náklady podľa dohody", "Pri prehlbovaní kvalifikácie: ide o výkon práce – patrí mzda"] },
+      { "label": "Výnimky z povinnosti uhradiť náklady", "leaves": ["Zamestnanec nehradí náklady, ak skončenie pracovného pomeru nastalo", "z organizačných dôvodov", "pre zdravotnú nespôsobilosť", "pre chorobu z povolania", "pri materskej alebo rodičovskej dovolenke", "pre porušenie povinností zamestnávateľa"] }
+    ]
   }
 }

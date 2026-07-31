@@ -151,5 +151,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Neplatné skončenie – žaloba × 2 mesiace × trvanie pomeru × náhrada mzdy × fikcia skončenia",
+    "branches": [
+      { "label": "Neplatnosť skončenia (§ 77 – 80 ZP)", "leaves": ["Neplatné skončenie nastáva, ak: právny úkon nespĺňa zákonné podmienky, je daný v ochrannej dobe, dôvod nie je skutkovo vymedzený, chýbajú formálne náležitosti", "Ide o relatívnu neplatnosť – musí sa jej dovolať dotknutý účastník."] },
+      { "label": "Lehota 2 mesiace", "leaves": ["Žalobu o neplatnosť treba podať: do 2 mesiacov od dňa, keď sa mal pracovný pomer skončiť, ide o prekluzívnu lehotu – po jej uplynutí nárok zaniká"] },
+      { "label": "Neplatné skončenie zo strany zamestnanca", "leaves": ["Ak zamestnanec neplatne skončí pracovný pomer", "zamestnávateľ môže trvať na ďalšom zamestnávaní", "pracovný pomer trvá", "zamestnanec je povinný nastúpiť do práce", "ak nenastúpi → zamestnávateľ môže požadovať náhradu škody", "Ak zamestnávateľ netrvá na ďalšom zamestnávaní: pracovný pomer sa považuje za skončený dohodou (fikcia skončenia)"] },
+      { "label": "Neplatné skončenie zo strany zamestnávateľa", "leaves": ["Ak zamestnávateľ neplatne skončí pracovný pomer", "zamestnanec môže oznámiť, že trvá na ďalšom zamestnávaní", "pracovný pomer trvá", "zamestnávateľ musí prideľovať prácu alebo poskytnúť náhradu mzdy", "Ak zamestnanec netrvá na ďalšom zamestnávaní: pracovný pomer sa považuje za skončený dohodou, patrí mu náhrada mzdy za výpovednú dobu"] },
+      { "label": "Náhrada mzdy (§ 79 ZP)", "leaves": ["Pri trvaní na ďalšom zamestnávaní", "patrí náhrada mzdy vo výške priemerného zárobku", "najviac za 36 mesiacov", "súd môže náhradu po 12 mesiacoch znížiť alebo nepriznať", "pri whistlebloweroch sa náhrada neobmedzuje", "Pri netrvaní: patrí náhrada mzdy za výpovednú dobu"] },
+      { "label": "Fikcia skončenia", "leaves": ["Ak dotknutá strana netrvá na ďalšom zamestnávaní: pracovný pomer sa považuje za skončený dohodou, vzniká nárok na náhradu mzdy za výpovednú dobu"] },
+      { "label": "Judikatúra", "leaves": ["R 39/1985 – treba skúmať, či po neplatnej výpovedi nedošlo k platnému skončeniu pracovného pomeru.", "R 47/1997 – ak zamestnávateľ neprideľuje prácu po oznámení zamestnanca, patrí náhrada mzdy podľa § 142."] }
+    ]
   }
 }

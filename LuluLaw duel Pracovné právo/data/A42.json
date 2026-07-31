@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Sociálna politika – povinné × dobrovoľné × BOZP × stravovanie × benefity",
+    "branches": [
+      { "label": "Povinná sociálna politika", "leaves": ["Zamestnávateľ musí zabezpečiť: BOZP – bezpečné pracovné prostredie, školenia, ochranné prostriedky, prevencia rizík", "Zamestnávateľ musí zabezpečiť: stravovanie – povinnosť zabezpečiť stravu alebo príspevok", "Zamestnávateľ musí zabezpečiť: pracovné podmienky – hygienické, technické, organizačné", "Zamestnávateľ musí zabezpečiť: prekážky v práci – poskytovanie voľna podľa zákona", "Zamestnávateľ musí zabezpečiť: ochranu zdravia – lekárske prehliadky, ergonomické podmienky", "Zamestnávateľ musí zabezpečiť: dodržiavanie Zákonníka práce – mzda, pracovný čas, odpočinok"] },
+      { "label": "Dobrovoľná sociálna politika", "leaves": ["Zamestnávateľ môže poskytovať: príspevky na šport, kultúru, vzdelávanie", "Zamestnávateľ môže poskytovať: príspevky na dopravu", "Zamestnávateľ môže poskytovať: zdravotnú starostlivosť (napr. preventívne prehliadky)", "Zamestnávateľ môže poskytovať: dôchodkové sporenie", "Zamestnávateľ môže poskytovať: flexibilný pracovný čas", "Zamestnávateľ môže poskytovať: home office", "Zamestnávateľ môže poskytovať: firemné akcie", "Zamestnávateľ môže poskytovať: programy well-beingu a duševného zdravia", "Cieľ: motivácia, lojalita, znižovanie fluktuácie.", "BOZP – základ sociálnej politiky", "Zamestnávateľ musí: hodnotiť riziká, poskytovať OOPP, zabezpečiť školenia, vytvoriť bezpečné pracovné prostredie, spolupracovať so zástupcami zamestnancov"] },
+      { "label": "Stravovanie (§ 152 ZP)", "leaves": ["Zamestnávateľ musí: zabezpečiť stravu alebo finančný príspevok, stravovanie je povinné, nie dobrovoľné, príspevok musí byť minimálne 55 % ceny jedla"] },
+      { "label": "Pracovné podmienky", "leaves": ["Zahŕňajú: pracovné prostredie, teplotu, osvetlenie, hluk, pracovné nástroje a vybavenie, organizáciu práce"] },
+      { "label": "Benefity", "leaves": ["Benefity musia byť: poskytované nediskriminačne, transparentné, často upravené v kolektívnej zmluve"] },
+      { "label": "Kolektívna zmluva", "leaves": ["Môže rozšíriť sociálnu politiku: vyššie príspevky, dlhšia dovolenka, príspevky na rekreáciu, sociálny fond, ďalšie benefity nad rámec zákona"] }
+    ]
   }
 }

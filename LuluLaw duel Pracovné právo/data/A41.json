@@ -150,5 +150,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Predzmluvné vzťahy – údaje × povinnosti × zákaz diskriminácie × práva uchádzača",
+    "branches": [
+      { "label": "Povolené údaje (§ 41 ZP)", "leaves": ["Zamestnávateľ môže požadovať len údaje", "súvisiace s prácou", "potrebné na posúdenie spôsobilosti uchádzača", "pri prvom zamestnaní len nevyhnutné informácie", "pri uchádzačovi, ktorý už pracoval: pracovný posudok, potvrdenie o zamestnaní"] },
+      { "label": "Zakázané údaje", "leaves": ["Zamestnávateľ nesmie zisťovať: tehotenstvo, rodinné pomery, politickú či odborovú príslušnosť, bezúhonnosť, ak to nevyžaduje osobitný predpis, informácie nesúvisiace s výkonom práce"] },
+      { "label": "Povinnosti zamestnávateľa", "leaves": ["Zamestnávateľ musí: oboznámiť uchádzača s pracovnými a mzdovými podmienkami", "Zamestnávateľ musí: informovať o právach a povinnostiach vyplývajúcich z pracovnej zmluvy", "Zamestnávateľ musí: overiť zdravotnú alebo psychickú spôsobilosť, ak to vyžaduje osobitný predpis", "Zamestnávateľ musí: pri mladistvom uchádzačovi zabezpečiť lekárske vyšetrenie a vyžiadať si vyjadrenie zákonného zástupcu"] },
+      { "label": "Práva uchádzača", "leaves": ["Uchádzač má právo: na rovnaké zaobchádzanie", "Uchádzač má právo: na ochranu pred diskrimináciou", "Uchádzač má právo: na primeranú peňažnú náhradu, ak zamestnávateľ poruší zákaz diskriminácie alebo požaduje zakázané údaje", "Uchádzač má právo: uvádzať len pravdivé údaje", "Uchádzač má právo: informovať o skutočnostiach, ktoré bránia výkonu práce"] },
+      { "label": "Mladiství uchádzači", "leaves": ["Zamestnávateľ musí: zabezpečiť lekársku prehliadku, vyžiadať stanovisko zákonného zástupcu, rešpektovať osobitné obmedzenia pri zamestnávaní mladistvých"] },
+      { "label": "Rovnaké zaobchádzanie", "leaves": ["Predzmluvné vzťahy sú chránené: zákazom diskriminácie, povinnosťou konať čestne a pravdivo, zásadou transparentnosti"] }
+    ]
   }
 }

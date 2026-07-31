@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Skončenie pracovného pomeru – dohoda × skúšobná doba × hromadné prepúšťanie × kogentné pravidlá",
+    "branches": [
+      { "label": "Spôsoby skončenia pracovného pomeru (§ 59 ZP)", "leaves": ["Kogentné spôsoby: dohoda", "Kogentné spôsoby: výpoveď", "Kogentné spôsoby: okamžité skončenie", "Kogentné spôsoby: skončenie v skúšobnej dobe", "Kogentné spôsoby: uplynutie času (pri pracovnom pomere na dobu určitú)", "Kogentné spôsoby: smrť zamestnanca", "Kogentné spôsoby: úradné rozhodnutie", "Kogentné spôsoby: skončenie priamo zo zákona (napr. § 58 ods. 7 ZP)"] },
+      { "label": "Dohoda o skončení pracovného pomeru (§ 60 ZP)", "leaves": ["Charakteristika: dvojstranný právny úkon, vyžaduje zhodný prejav vôle, musí byť písomná, ale jej nedodržanie nespôsobuje neplatnosť", "Obsah: deň skončenia môže byť určený dátumom alebo opisne", "dôvod sa uvádza len: na žiadosť zamestnanca, alebo pri dôvodoch podľa § 63 ods. 1 písm. a–c", "Dôležité: dohoda je dobrovoľná, zamestnávateľ nesmie zamestnanca nútiť k podpisu", "Skončenie pracovného pomeru v skúšobnej dobe (§ 72 ZP)", "jednostranný právny úkon,", "zamestnanec aj zamestnávateľ môžu skončiť bez uvedenia dôvodu,", "musí byť písomné,", "oznámenie sa má doručiť spravidla 3 dni vopred (poriadková lehota).", "Ochrana", "zákaz skončenia s: tehotnou ženou, matkou do 9 mesiacov po pôrode, dojčiacou ženou, mužom na otcovskej dovolenke, výnimka: dôvody nesúvisiace s tehotenstvom/materstvom"] },
+      { "label": "Hromadné prepúšťanie (§ 73 ZP)", "leaves": ["Nastáva, ak zamestnávateľ rozviaže pracovný pomer z organizačných dôvodov s väčším počtom zamestnancov v priebehu 30 dní", "20–100 zamestnancov → najmenej 10 prepustených", "100–300 zamestnancov → najmenej 10 %", "300+ zamestnancov → najmenej 30 prepustených", "Povinnosti zamestnávateľa: prerokovať so zástupcami zamestnancov, poskytnúť informácie, informovať úrad práce, dodržať zákonné lehoty", "Sankcia: pri porušení povinností patrí zamestnancovi náhrada mzdy najmenej vo výške dvojnásobku priemerného zárobku"] },
+      { "label": "Formálne náležitosti", "leaves": ["písomná forma,", "doručenie,", "presné skutkové vymedzenie dôvodu (pri výpovedi),", "prerokovanie so zástupcami zamestnancov."] },
+      { "label": "Ochrana vybraných zamestnancov", "leaves": ["tehotné ženy,", "matky do 9 mesiacov po pôrode,", "dojčiace ženy,", "muži na otcovskej dovolenke.", "Zamestnávateľ ich nemôže skončiť v skúšobnej dobe, okrem výnimočných dôvodov nesúvisiacich s tehotenstvom/materstvom."] },
+      { "label": "Náhrada mzdy pri porušení povinností", "leaves": ["Pri hromadnom prepúšťaní: náhrada mzdy min. dvojnásobok priemerného zárobku"] }
+    ]
   }
 }

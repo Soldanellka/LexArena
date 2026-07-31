@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Plat – tarifné tabuľky × trieda × stupeň × osobný príplatok × verejný sektor",
+    "branches": [
+      { "label": "Plat vs. mzda", "leaves": ["v podnikateľskej sfére → mzda,", "vo verejnom sektore → plat,", "plat je zákonom určený, nie dohodou."] },
+      { "label": "Tarifné tabuľky (zákon č. 553/2003 Z. z.)", "leaves": ["Plat sa určuje podľa: platovej triedy – náročnosť práce, platového stupňa – dĺžka započítanej praxe", "Zamestnávateľ nemôže určiť plat svojvoľne."] },
+      { "label": "Platová trieda", "leaves": ["Určuje sa podľa: katalógu pracovných činností, zložitosti, zodpovednosti a náročnosti práce", "Zaradenie do nižšej triedy je nezákonné."] },
+      { "label": "Platový stupeň", "leaves": ["Závisí od: započítanej praxe, prax sa započítava podľa pravidiel zákona (nie vždy 1:1)", "Vyšší stupeň = vyšší plat."] },
+      { "label": "Zložky platu", "leaves": ["Plat sa skladá z: tarifného platu, osobného príplatku, príplatkov (noc, sviatok, víkend), odmien, ďalších zákonných zložiek"] },
+      { "label": "Osobný príplatok", "leaves": ["Možno ho priznať: za kvalitný výkon, za špecifické schopnosti, musí byť objektívne odôvodnený, nesmie byť diskriminačný"] },
+      { "label": "Transparentnosť a rovnosť", "leaves": ["Odmeňovanie vo verejnom sektore musí byť: rovnaké, predvídateľné, nediskriminačné, kontrolovateľné"] }
+    ]
   }
 }

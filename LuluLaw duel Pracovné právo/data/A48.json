@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "BOZP – povinnosti zamestnávateľa × povinnosti zamestnanca × riziká × OOPP × kontrola",
+    "branches": [
+      { "label": "Povinnosti zamestnávateľa (§ 146 – 150 ZP, zákon č. 124/2006 Z. z.)", "leaves": ["Zamestnávateľ musí: sústavne zabezpečovať BOZP", "Zamestnávateľ musí: hodnotiť riziká a vypracovať dokument o posúdení rizík", "Zamestnávateľ musí: vydávať vnútorné predpisy BOZP", "Zamestnávateľ musí: zabezpečiť školenia BOZP", "Zamestnávateľ musí: poskytovať OOPP bezplatne", "Zamestnávateľ musí: zabezpečiť prvú pomoc, evakuáciu, PO", "Zamestnávateľ musí: organizovať rekondičné pobyty pre rizikové kategórie", "Zamestnávateľ musí: zriadiť komisiu BOZP (100+ zamestnancov)", "Zamestnávateľ musí: spolupracovať so zástupcami zamestnancov pre BOZP"] },
+      { "label": "Povinnosti zamestnanca", "leaves": ["Zamestnanec musí: dodržiavať predpisy BOZP", "Zamestnanec musí: používať OOPP", "Zamestnanec musí: zúčastňovať sa školení", "Zamestnanec musí: oznamovať nebezpečné situácie", "Zamestnanec musí: podrobiť sa testu na alkohol a omamné látky", "Zamestnanec musí: dodržiavať zákaz fajčenia", "Zamestnanec musí: zúčastniť sa rekondičných pobytov", "Má právo: odmietnuť prácu pri bezprostrednom ohrození života alebo zdravia"] },
+      { "label": "Hodnotenie rizík", "leaves": ["Zamestnávateľ musí: identifikovať nebezpečné faktory, vyhodnotiť ich závažnosť, prijať opatrenia na ich odstránenie alebo minimalizáciu, pravidelne aktualizovať dokumentáciu", "OOPP (osobné ochranné pracovné prostriedky)", "Zamestnávateľ musí: poskytovať OOPP bezplatne, zabezpečiť ich údržbu, výmenu a kontrolu, viesť evidenciu vydaných OOPP"] },
+      { "label": "Školenia BOZP", "leaves": ["sú povinné,", "považujú sa za výkon práce – patrí mzda,", "musia byť pravidelné a preukázateľné (podpisová listina)."] },
+      { "label": "Rekondičné pobyty", "leaves": ["Povinné pri práci v: 3. a 4. kategórii rizika, zamestnávateľ ich musí hradiť, cieľom je regenerácia zdravia"] },
+      { "label": "Kontrola BOZP", "leaves": ["Kontrolu vykonávajú: inšpekcia práce, odborové orgány, zástupcovia zamestnancov pre BOZP, komisia BOZP", "Pri porušení povinností: zamestnávateľ nesie zodpovednosť za pracovný úraz"] }
+    ]
   }
 }
