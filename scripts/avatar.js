@@ -404,6 +404,23 @@ export async function selectAvatar(avatarType) {
   const avatarDef = AVATAR_CONFIG.AVATARS[avatarType];
   if (!avatarDef) return;
 
+  // Aktuálny stav – načítaný RAZ a zdieľaný: použije sa na kontrolu
+  // talarBaseId nižšie aj na samotný zápis nového typu (žiadny druhý
+  // Firebase read). loadAvatarState defaultuje type na 'student-f', takže
+  // state.type je vždy definovaný.
+  const state = await loadAvatarState(nick);
+
+  // Talár musí patriť k AKTUÁLNEMU základnému avatarovi hráča – tá istá
+  // podmienka, akou shop (getTalarShopEntries) filtruje ponuku. Bráni
+  // priamemu volaniu selectAvatar() mimo shop UI (napr. z konzoly), ktoré
+  // by inak nasadilo napr. studentka-tmava-akademik na studentka-blond.
+  // Platí pre OBE talárové vetvy (talar_purchase aj talar_role); základné
+  // avatary talarBaseId nemajú, takže sa ich táto kontrola netýka.
+  if (avatarDef.talarBaseId && avatarDef.talarBaseId !== getBaseIdFor(state.type)) {
+    showRewardToast('🔒 Tento talár nepatrí k tvojmu základnému avatarovi.');
+    return;
+  }
+
   // Kontrola odomknutia
   if (avatarDef.unlock !== 'default') {
     const snap = await get(ref(db, `users/${nick}`));
@@ -445,7 +462,6 @@ export async function selectAvatar(avatarType) {
     }
   }
 
-  const state = await loadAvatarState(nick);
   await saveAvatarState(nick, { ...state, type: avatarType });
   preloadAvatarStates(avatarDef);
   updateAvatarUI(state.energy || 100, avatarType);
