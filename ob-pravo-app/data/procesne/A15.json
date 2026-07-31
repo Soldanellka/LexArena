@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dispozičné úkony – späťvzatie × zmena žaloby × uznanie × vzdanie sa × zmier",
+    "branches": [
+      { "label": "Podstata dispozičného princípu", "leaves": ["strany svojimi úkonmi ovplyvňujú predmet konania – o čom má súd rozhodnúť", "ovplyvňujú aj priebeh konania – či začne, pokračuje, zmení sa alebo skončí", "typicky ide o úkony žalobcu", "uznanie nároku a zmier sú úkonmi žalovaného, resp. oboch strán"] },
+      { "label": "Späťvzatie žaloby (§ 144 CSP)", "leaves": ["žalobca môže žalobu vziať späť kedykoľvek", "pred začatím pojednávania → súd späťvzatie pripustí vždy", "po začatí pojednávania → súd nepripustí, ak žalovaný z vážnych dôvodov nesúhlasí", "účinok: zastavenie konania"] },
+      { "label": "Zmena žaloby (§ 142 CSP)", "leaves": ["žalobca môže žalobu zmeniť len so súhlasom súdu", "súd súhlas neudelí, ak výsledky doterajšieho konania nemôžu byť podkladom pre konanie o zmenenej žalobe", "zmena žaloby = typický dispozičný úkon → mení predmet konania"] },
+      { "label": "Uznanie nároku žalovaným (§ 133 CSP)", "leaves": ["žalovaný môže nárok uznať (úplne alebo čiastočne)", "súd je uznaním viazaný", "môže vydať rozsudok pre uznanie bez dokazovania o základe nároku"] },
+      { "label": "Vzdanie sa nároku žalobcom (§ 134 CSP)", "leaves": ["žalobca sa môže nároku vzdať", "vzdanie sa je účinné okamihom doručenia súdu", "súd rozhodne rozsudkom, ktorý zodpovedá vzdaniu sa nároku"] },
+      { "label": "Súdny zmier (§ 145 CSP)", "leaves": ["najčastejší dispozičný úkon oboch strán", "strany uzavrú dohodu o predmete konania", "súd zmier schváli, ak: – nie je v rozpore so zákonom – neodporuje záujmu chránenému zákonom", "schválený zmier = účinky právoplatného rozsudku", "je exekučným titulom"] }
+    ]
   }
 }

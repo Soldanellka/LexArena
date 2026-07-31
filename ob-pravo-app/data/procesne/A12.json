@@ -116,5 +116,18 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Procesné úkony účastníkov – podania × náležitosti × vady × záväznosť × koncentrácia",
+    "branches": [
+      { "label": "Pojem a povaha procesného úkonu", "leaves": ["prejav vôle účastníka smerujúci voči súdu alebo protistrane", "má procesné účinky", "ide o dispozičné procesné úkony – uplatňuje sa dispozičný princíp", "účastník nimi uplatňuje svoje práva, reaguje na tvrdenia protistrany a ovplyvňuje priebeh konania"] },
+      { "label": "Obmedzenie lehotou", "leaves": ["realizácia úkonov je obmedzená lehotami", "zákonná koncentrácia", "sudcovská koncentrácia", "zákonné lehoty na podanie opravných prostriedkov"] },
+      { "label": "Interpretačné pravidlo a forma (§ 124, § 125 CSP)", "leaves": ["§ 124 CSP: rozhodujúci je obsah úkonu, nie jeho označenie", "§ 125 CSP: podanie sa robí v listinnej alebo elektronickej podobe", "úkony možno robiť aj ústne do zápisnice"] },
+      { "label": "Meritórne a nemeritórne úkony", "leaves": ["meritórne: žaloba, späťvzatie žaloby, odpor, odvolanie", "nemeritórne: návrh na odpustenie lehoty, návrh vo veci poplatku, námietka zaujatosti, návrh na odročenie pojednávania"] },
+      { "label": "Náležitosti podania (§ 127 CSP)", "leaves": ["označenie súdu", "kto podanie robí", "vec, ktorej sa týka", "čo sa podaním sleduje", "podpis", "Ak podanie nemá náležitosti alebo má vady → súd vyzve na ich odstránenie v lehote."] },
+      { "label": "Vadné podanie", "leaves": ["ak účastník vady neodstráni → súd na podanie neprihliadne", "alebo ho odmietne, ak to zákon stanovuje"] },
+      { "label": "Záväznosť procesných úkonov", "leaves": ["riadne urobený úkon je pre účastníka záväzný", "možno ho zmeniť alebo odvolať len spôsobom, ktorý zákon pripúšťa", "príklady: späťvzatie žaloby, zmena žaloby"] },
+      { "label": "Koncentrácia konania", "leaves": ["obmedzuje možnosť uplatňovať nové tvrdenia a dôkazy v neskorších fázach", "cieľ: zabrániť účelovému predlžovaniu sporu", "najvýraznejšia v sporovom konaní", "účastník musí tvrdenia a dôkazy predložiť včas, inak na ne súd nemusí prihliadnuť"] }
+    ]
   }
 }

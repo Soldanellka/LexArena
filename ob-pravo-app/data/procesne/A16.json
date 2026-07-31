@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Začiatok konania × Predbežné prejednanie × Prípravná fáza × Rozhodnutie bez pojednávania",
+    "branches": [
+      { "label": "Začatie konania", "leaves": ["sporové konanie sa začína dňom doručenia žaloby vecne a miestne príslušnému súdu", "tým vzniká procesnoprávny vzťah medzi súdom a stranami", "súd následne skúma, či môže konať (procesné podmienky) a či je žaloba bez vád"] },
+      { "label": "Písomná fáza konania", "leaves": ["skúmanie procesných podmienok", "odstraňovanie vád žaloby", "doručenie žaloby žalovanému", "vyjadrenie žalovaného", "replika žalobcu", "duplika žalovaného"] },
+      { "label": "Skúmanie procesných podmienok", "leaves": ["právomoc", "vecná a miestna príslušnosť", "procesná subjektivita a spôsobilosť", "zaplatenie súdneho poplatku", "vady žaloby", "ak žaloba trpí vadami → súd vyzve žalobcu na odstránenie → až potom ju doručí žalovanému"] },
+      { "label": "Predbežné prejednanie sporu (PPS)", "leaves": ["PPS je fakultatívne – súd ho nariadi, ak je to účelné", "preveriť procesné podmienky", "vyjasniť sporné skutkové a právne otázky", "predbežné právne posúdenie veci", "poučiť strany", "preskúmať možnosť zmieru", "pripraviť koncentráciu konania a rozvrhnúť ďalší postup", "môže prebehnúť s prítomnosťou strán aj bez nej", "na PPS možno vydať kontumačné rozhodnutie"] },
+      { "label": "Rozhodnutie bez pojednávania", "leaves": ["súd môže rozhodnúť vo veci samej bez pojednávania, ak to zákon umožňuje", "rozsudok pre uznanie – žalovaný nárok uzná, súd rozhodne bez dokazovania", "rozsudok pre zmeškanie (kontumačný) – žalovaný napriek riadnemu poučeniu zostane nečinný", "rozsudok pre vzdanie sa nároku"] },
+      { "label": "Pojednávanie a rozhodnutie vo veci samej", "leaves": ["ak nie je možné rozhodnúť bez pojednávania, súd nariadi pojednávanie", "vykoná dokazovanie", "rozhodne rozsudkom vo veci samej"] }
+    ]
   }
 }

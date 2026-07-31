@@ -116,5 +116,20 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Doručovanie – spôsoby × fikcia × právnické osoby × elektronické doručovanie × verejná vyhláška × vady",
+    "branches": [
+      { "label": "Účel a postup doručovania", "leaves": ["účel: sprostredkovanie informácie účastníkovi", "doručovanie = procesný úkon súdu, ktorým sa písomnosti dostávajú do dispozičnej sféry účastníkov", "postup doručovania (hierarchia):", "krátkou cestou", "do elektronickej schránky", "na e‑mail", "klasické doručovanie poštou", "verejná vyhláška"] },
+      { "label": "Druhy doručovania", "leaves": ["doručenie do vlastných rúk – najdôležitejšie písomnosti (žaloba, rozsudok, predvolanie, rozhodnutia o OP) – ak adresát neprevezme → náhradné doručenie", "obyčajné doručovanie – menej významné písomnosti (výzvy, upovedomenia)", "verejná vyhláška"] },
+      { "label": "Doručujúci subjekt", "leaves": ["poštový podnik", "súdny doručovateľ", "Ministerstvo zahraničných vecí SR", "Ministerstvo spravodlivosti SR", "Policajný zbor", "obecná polícia"] },
+      { "label": "Adresa na doručenie", "leaves": ["FO – trvalý pobyt", "PO – sídlo", "možné modifikácie: – určenie inej adresy, – zástupca pre doručovanie"] },
+      { "label": "Doručovanie žaloby (§ 116 CSP)", "leaves": ["osobitná úprava doručovania žaloby", "obdobne: – upovedomenie o dedičskom práve – upovedomenie o začatí exekúcie"] },
+      { "label": "Náhradné doručenie – fikcia", "leaves": ["ak si adresát zásielku do vlastných rúk neprevezme v odbernej lehote, považuje sa za doručenú", "fikcia sa neuplatní: – pri doručovaní do cudziny – ak adresát preukázateľne nebýva v mieste doručenia – ak zákon fikciu vylučuje", "bezdôvodné odmietnutie prevziať zásielku → považuje sa za doručenú"] },
+      { "label": "Doručovanie právnickým osobám", "leaves": ["doručuje sa na adresu zapísanú vo verejnom registri", "doručenie je účinné, aj keď sa PO na adrese fakticky nezdržiava", "PO má povinnosť adresu aktualizovať"] },
+      { "label": "Elektronické doručovanie", "leaves": ["podľa zákona o e‑Governmente", "doručuje sa do elektronickej schránky", "doručenie je účinné: – okamihom doručenia do schránky, alebo – uplynutím úložnej lehoty"] },
+      { "label": "Verejná vyhláška", "leaves": ["pri neznámom pobyte", "ak nemožno ustanoviť opatrovníka", "písomnosť sa zverejní na úradnej tabuli súdu → po uplynutí lehoty sa považuje za doručenú"] },
+      { "label": "Vadné doručenie", "leaves": ["môže byť vadou konania", "ovplyvňuje plynutie lehôt", "môže znemožniť podanie opravného prostriedku"] }
+    ]
   }
 }

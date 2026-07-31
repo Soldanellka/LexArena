@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Procesné úkony súdu – rozhodnutia × ostatné úkony × poučovacia povinnosť",
+    "branches": [
+      { "label": "Pojem procesného úkonu súdu", "leaves": ["procesný úkon = prejav vôle súdu", "platí teória prejavu – rozhodujúci je prejavený úkon, nie vnútorné vady vôle", "spravidla výslovne, výnimočne konkludentne (napr. súd „neprihliadne“ na oneskorený úkon)"] },
+      { "label": "Kto koná za súd", "leaves": ["samosudca", "senát", "vyšší súdny úradník (VSÚ)", "notár ako súdny komisár", "exekútor", "(všetci vykonávajú procesné úkony, ak im to zákon zveruje)"] },
+      { "label": "Rozhodnutia súdu", "leaves": ["prejavy vôle súdu, ktoré riešia merito veci alebo procesné otázky", "Rozsudok", "meritórne rozhodnutie", "rozhoduje vo veci samej", "môže byť: – medzitýmny – čiastočný – konečný", "Uznesenie", "spravidla rozhoduje o procesných otázkach", "príklady: – zastavenie konania – predbežné opatrenie – prerušenie konania – delegácia – rozhodnutie o trovách", "Formálne náležitosti", "výrok", "odôvodnenie", "poučenie o opravnom prostriedku"] },
+      { "label": "Ostatné procesné úkony", "leaves": ["Úkony, ktoré nie sú rozhodnutím, ale zabezpečujú priebeh konania:", "predvolania na pojednávanie", "výzvy na doplnenie podania alebo predloženie dôkazov", "upovedomenia o procesných krokoch", "poučenia o právach a povinnostiach", "doručovanie písomností účastníkom"] },
+      { "label": "Miesto a čas procesných úkonov", "leaves": ["spravidla sa vykonávajú v budove súdu", "výnimočne mimo budovy súdu (napr. ohliadka na mieste)", "čas procesných úkonov určuje súd v súlade so zákonom (pojednávanie, lehoty)"] },
+      { "label": "Poučovacia povinnosť", "leaves": ["súd poučuje účastníkov o ich procesných právach a povinnostiach", "najmä ak nie sú zastúpení", "opomenutie poučenia môže byť vadou konania, ktorú možno namietať v odvolaní", "súd nesmie suplovať tvrdenia a dôkazy strán → kontradiktórnosť"] },
+      { "label": "Zápisnica o pojednávaní", "leaves": ["verejná listina", "zachytáva priebeh pojednávania", "obsahuje: – čas a miesto – prítomných – vykonané dôkazy – procesné návrhy – výroky súdu"] }
+    ]
   }
 }

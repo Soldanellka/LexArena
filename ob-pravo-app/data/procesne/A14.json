@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Podanie × Žaloba × Petit × Druhy žalôb × Zmena žaloby",
+    "branches": [
+      { "label": "Podanie (§ 123 CSP)", "leaves": ["procesný úkon účastníka adresovaný súdu", "vždy sa určuje, kto úkon robí a komu je adresovaný", "meritórne a nemeritórne podania", "musí obsahovať: – označenie súdu – kto podanie robí – vec, ktorej sa týka – čo sa podaním sleduje – podpis", "formy: písomne, ústne do zápisnice, elektronicky (ak zákon umožňuje)", "odstraňovanie vád: súd vyzve na odstránenie; ak sa vady neodstránia → neprihliadne alebo odmietne"] },
+      { "label": "Žaloba", "leaves": ["najvýznamnejšie podanie – začína sporové konanie", "musí obsahovať všeobecné náležitosti podania", "opis rozhodujúcich skutočností", "označenie dôkazov", "žalobný návrh (petit) – presné vyjadrenie, čo žalobca žiada", "súd je petitom viazaný – nesmie prisúdiť viac ani niečo iné, než žalobca žiada"] },
+      { "label": "Účinky podania žaloby na súd", "leaves": ["začatie konania a vznik procesnoprávneho vzťahu", "vznik prekážky litispendencie", "zachovanie lehôt (premlčacích, prekluzívnych)", "stabilizácia predmetu konania a okruhu účastníkov"] },
+      { "label": "Petit a jeho druhy", "leaves": ["návrh výroku rozhodnutia", "určuje hranice rozhodovania súdu", "súd nesmie prisúdiť viac ani niečo iné, než žalobca žiada", "petit na plnenie", "petit určovací", "petit na vykonanie právneho úkonu"] },
+      { "label": "Druhy žalôb podľa petitu", "leaves": ["Žaloba na plnenie", "žalobca žiada uložiť povinnosť: dať, konať, zdržať sa, strpieť", "Určovacia žaloba", "určenie, či právny vzťah alebo právo je alebo nie je", "vyžaduje naliehavý právny záujem", "naliehavý právny záujem spravidla chýba, ak možno podať žalobu na plnenie", "Žaloba na vykonanie právneho úkonu", "súd nahradí prejav vôle žalovaného (napr. uzavretie zmluvy)"] },
+      { "label": "Zmena žaloby", "leaves": ["žalobca môže žalobu zmeniť len so súhlasom súdu", "súd súhlas neudelí, ak výsledky doterajšieho konania nemôžu byť podkladom pre konanie o zmenenej žalobe"] }
+    ]
   }
 }

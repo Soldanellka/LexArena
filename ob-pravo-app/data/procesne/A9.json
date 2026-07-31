@@ -116,5 +116,17 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zastúpenie v civilnom konaní – zmluvné × zákonné × procesný opatrovník × kolízny opatrovník × povinné zastúpenie",
+    "branches": [
+      { "label": "Pojem zastúpenia", "leaves": ["oprávnenie konať za iného", "zastúpenie je procesná podmienka", "nedostatok zastúpenia = odstrániteľná vada"] },
+      { "label": "Zmluvné zastúpenie", "leaves": ["plnomocenstvo", "vzniká udelením plnomocenstva – najčastejšie advokátovi", "zástupcom môže byť FO aj PO", "všeobecné plnomocenstvo – na všetky úkony", "špeciálne plnomocenstvo – na konkrétny úkon (napr. odvolanie)", "plnomocenstvo musí byť preukázané súdu; rozsah určuje, čo môže zástupca vykonať"] },
+      { "label": "Zákonné zastúpenie", "leaves": ["vyplýva priamo zo zákona", "rodič zastupuje maloleté dieťa", "štatutárny orgán koná za právnickú osobu", "opatrovník ustanovený podľa hmotného práva", "zákonný zástupca koná v rozsahu práv a povinností, ktoré mu zákon priznáva"] },
+      { "label": "Zastúpenie procesne spôsobilých a nespôsobilých subjektov", "leaves": ["procesne spôsobilý subjekt sa môže dať zastúpiť fakultatívne", "v zákonom stanovených prípadoch je zástupcom povinne advokát", "procesne nespôsobilý subjekt zastupuje zákonný zástupca", "ak niet zákonného zástupcu → súd ustanoví procesného opatrovníka"] },
+      { "label": "Procesný opatrovník (§ 78 CSP)", "leaves": ["súd ho ustanoví, ak je pobyt účastníka neznámy", "ak nemožno doručovať na známu adresu v cudzine", "ak by sa konanie inak neúmerne predĺžilo", "vykonáva úkony potrebné na ochranu práv účastníka"] },
+      { "label": "Kolízny opatrovník", "leaves": ["súd ho ustanoví na ochranu maloletého alebo osoby s obmedzenou spôsobilosťou", "ak sú jeho záujmy v rozpore so záujmami zákonného zástupcu", "má procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného"] },
+      { "label": "Povinné zastúpenie v dovolacom konaní (§ 429 CSP)", "leaves": ["pred Najvyšším súdom SR je povinné zastúpenie advokátom", "výnimka: dovolateľ má VŠ právnické vzdelanie druhého stupňa", "nedostatok povinného zastúpenia → odmietnutie dovolania, ak sa neodstráni"] }
+    ]
   }
 }

@@ -116,5 +116,16 @@
     "citation": "zákon č. 40/1964 Zb. (Občiansky zákonník)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Procesné podmienky – predpoklady konania a rozhodnutia × odstrániteľné × neodstrániteľné × prekážky konania",
+    "branches": [
+      { "label": "Pojem procesných podmienok", "leaves": ["podmienky stanovené zákonom", "predpoklady, aby súd mohol konať a meritórne rozhodnúť", "súd na ne prihliada ex offo počas celého konania", "ak chýbajú → súd sa vecou samej nemôže zaoberať", "odlišné od hmotnoprávnych predpokladov (tie rozhodujú o úspechu žaloby)"] },
+      { "label": "Procesné podmienky na strane súdu", "leaves": ["právomoc súdu – či vec patrí súdom ako celku", "vecná príslušnosť – ktorý stupeň súdu koná", "miestna príslušnosť – ktorý konkrétny súd koná", "riadne obsadenie súdu, nezaujatosť sudcu"] },
+      { "label": "Procesné podmienky na strane strán", "leaves": ["procesná subjektivita – byť stranou konania", "procesná spôsobilosť – konať vlastnými úkonmi", "riadne zastúpenie, ak je povinné (napr. advokát v dovolacom konaní)"] },
+      { "label": "Vecné procesné podmienky", "leaves": ["zaplatenie súdneho poplatku, ak sa vyžaduje", "riadne podanie bez vád", "určitosť a zrozumiteľnosť návrhu"] },
+      { "label": "Negatívne prekážky konania", "leaves": ["litispendencia – prekážka skoršieho konania", "res iudicata – prekážka právoplatne rozhodnutej veci", "ich existencia bráni konaniu"] },
+      { "label": "Odstrániteľné a neodstrániteľné vady", "leaves": ["Odstrániteľné vady", "nezaplatený súdny poplatok", "chýbajúce povinné zastúpenie", "vady podania", "→ súd vyzve účastníka na odstránenie nedostatku v lehote", "Neodstrániteľné vady", "nedostatok právomoci", "litispendencia", "res iudicata", "→ vedú k zastaveniu konania"] }
+    ]
   }
 }
