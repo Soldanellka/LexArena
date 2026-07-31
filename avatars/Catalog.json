@@ -125,6 +125,16 @@
       "active": true
     },
     {
+      "id": "studentka-medena-akademik",
+      "name": "Študentka (medené vlasy) – akademický talár (zlatý pás)",
+      "type": "talar",
+      "base": "avatars/studentka-medena-akademik",
+      "price": 0,
+      "grantedBy": "admin",
+      "grantNote": "akademická pečať / admin",
+      "active": true
+    },
+    {
       "id": "studentka-blond-prokurator",
       "name": "Študentka – prokurátorský talár (vínová štóla)",
       "type": "talar",
@@ -170,6 +180,16 @@
       "type": "talar",
       "base": "avatars/studentka-medena-prokurator",
       "price": 700,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
+      "id": "studentka-medena-sudca",
+      "name": "Študentka (medené vlasy) – sudcovský talár (fialový pás)",
+      "type": "talar",
+      "base": "avatars/studentka-medena-sudca",
+      "price": 1000,
       "grantedBy": "shop",
       "grantNote": "obchod za §",
       "active": true

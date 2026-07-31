@@ -124,6 +124,13 @@ const AVATAR_CONFIG = {
        prokurator. Prvý zakúpiteľný talár pre studentka-medena (doteraz len
        talar-cierny). Vínová farba vizuálne overená. */
     'studentka-medena-prokurator':  { name: 'Študentka – prokurátorský talár',         base: 'avatars/studentka-medena-prokurator',  unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
+    /* Vlastný render hotový a nahratý v avatars/ (commit ea9abc3, 6 PNG:
+       studentka-medena-sudca-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením studentka-medena-akademik (zlatý lem/štóla → fialová,
+       rovnaký odtieň ako studentka-blond-sudca). Kniha fialová len vo full
+       póze, v tired/sleep póze podľa rovnakej konvencie ako blond/tmava
+       sudca. Fialová farba vizuálne overená. */
+    'studentka-medena-sudca':       { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-medena-sudca',       unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     /* Vlastný render hotový a nahratý v avatars/ (commit 9d51d37, 6 PNG:
        studentka-tmava-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
        prefarbením studentka-tmava-prokurator (červený lem/štóla/kniha →
@@ -144,7 +151,8 @@ const AVATAR_CONFIG = {
        getRole(), nie voči uloženému vlastníctvu. Vizuálne odlíšený
        zlatým pásom priamo v PNG renderi (obsah assetu, nie CSS). */
     'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', talarBaseId: 'studentka-blond', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
-    'studentka-tmava-akademik': { name: 'Študentka (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-tmava-akademik', talarBaseId: 'studentka-tmava', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
+    'studentka-tmava-akademik': { name: 'Študentka (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-tmava-akademik', talarBaseId: 'studentka-tmava', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
+    'studentka-medena-akademik': { name: 'Študentka (medené vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-medena-akademik', talarBaseId: 'studentka-medena', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
