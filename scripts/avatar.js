@@ -130,8 +130,8 @@ const AVATAR_CONFIG = {
        udelením – selectAvatar() nižšie ho preto vždy overuje voči
        getRole(), nie voči uloženému vlastníctvu. Vizuálne odlíšený
        zlatým pásom priamo v PNG renderi (obsah assetu, nie CSS). */
-    'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
-    'studentka-tmava-akademik': { name: 'Študentka (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-tmava-akademik', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
+    'studentka-blond-akademik': { name: 'Študentka – akademický talár (zlatý pás)', base: 'avatars/studentka-blond-akademik', talarBaseId: 'studentka-blond', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
+    'studentka-tmava-akademik': { name: 'Študentka (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/studentka-tmava-akademik', talarBaseId: 'studentka-tmava', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
@@ -510,7 +510,7 @@ export async function getTalarShopEntries(currentBaseId) {
     .filter(([id, def]) => {
       if (def.hidden) return false; // čaká na opravenú grafiku, pozri komentár pri definícii
       if (def.unlock === 'talar_purchase') return def.talarBaseId === currentBaseId;
-      if (def.unlock === 'talar_role') return role === 'garant' || role === 'admin';
+      if (def.unlock === 'talar_role') return (role === 'garant' || role === 'admin') && def.talarBaseId === currentBaseId;
       return false;
     })
     .map(([id, def]) => ({
