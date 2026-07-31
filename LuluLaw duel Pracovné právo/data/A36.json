@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zodpovednosť za škodu – predpoklady × zamestnanec × zamestnávateľ × zavinenie × príčinná súvislosť",
+    "branches": [
+      { "label": "Predpoklady zodpovednosti", "leaves": ["Musí byť splnené všetkých päť podmienok: existencia pracovnoprávneho vzťahu, protiprávny úkon (porušenie povinnosti), vznik škody, príčinná súvislosť, zavinenie (len pri zamestnancovi)"] },
+      { "label": "Zodpovednosť zamestnanca (§ 179 a nasl. ZP)", "leaves": ["Je subjektívna – vyžaduje sa zavinenie.", "Zamestnanec zodpovedá za škodu spôsobenú: porušením povinností pri práci, úmyselným konaním proti dobrým mravom", "Pri všeobecnej zodpovednosti platí prezumpcia neviny – zamestnávateľ musí preukázať zavinenie."] },
+      { "label": "Zodpovednosť zamestnávateľa", "leaves": ["Je objektívna – zavinenie sa nevyžaduje.", "Predpoklady: pracovný úraz alebo choroba z povolania, vznik škody, príčinná súvislosť"] },
+      { "label": "Zavinenie", "leaves": ["Formy zavinenia: nedbanlivosť, úmysel", "Pri niektorých druhoch zodpovednosti sa zavinenie predpokladá: schodok na zverených hodnotách, strata zverených predmetov"] },
+      { "label": "Príčinná súvislosť", "leaves": ["Musí byť preukázané, že škoda vznikla v dôsledku konania zamestnanca alebo pracovného úrazu."] },
+      { "label": "Druhy škody", "leaves": ["Skutočná škoda – poškodenie majetku, náklady, strata hodnoty,", "Ušlý zisk – len pri úmysle alebo alkohole, ak to neodporuje dobrým mravom."] },
+      { "label": "Limity náhrady škody", "leaves": ["pri nedbanlivosti: max. 4–4,5-násobok priemerného zárobku,", "pri úmysle, alkohole, schodku alebo strate predmetov: plná náhrada."] }
+    ]
   }
 }

@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dovolenka – výmera × nárok × krátenie × 21 dní × 100 dní × PN × rodičovská",
+    "branches": [
+      { "label": "Výmera dovolenky (§ 103 ZP)", "leaves": ["Základná výmera: 4 týždne, 5 týždňov – zamestnanec nad 33 rokov, 8 týždňov – pedagogickí a odborní zamestnanci"] },
+      { "label": "Vznik nároku", "leaves": ["Nárok na celoročnú dovolenku vzniká po: 60 odpracovaných dňoch v kalendárnom roku", "Nárok vzniká aj pri kratšom trvaní pracovného pomeru – pomerná časť."] },
+      { "label": "Pomerná časť dovolenky", "leaves": ["Pri kratšom trvaní pracovného pomeru: za každý celý mesiac trvania pomeru patrí 1/12 ročnej výmery"] },
+      { "label": "Krátenie dovolenky (§ 109 ZP)", "leaves": ["Krátenie je možné len zo zákonných dôvodov: dlhodobá PN, rodičovská dovolenka, neospravedlnená absencia, iné prekážky na strane zamestnanca", "Limity: prvých 100 dní prekážok sa nekráti, za každých 21 dní prekážok možno krátiť o 1/12 ročnej výmery"] },
+      { "label": "Prekážky na strane zamestnanca", "leaves": ["Prekážky, ktoré môžu viesť ku kráteniu: PN nad 100 dní, rodičovská dovolenka, neospravedlnená absencia, dlhodobé osobné prekážky"] },
+      { "label": "PN a rodičovská dovolenka", "leaves": ["PN sa kráti až po 100 dňoch,", "rodičovská dovolenka sa kráti od začiatku (nie je chránená ako materská)."] },
+      { "label": "Materská dovolenka", "leaves": ["nikdy sa nekráti,", "materská dovolenka je chránená ako výkon práce."] }
+    ]
   }
 }

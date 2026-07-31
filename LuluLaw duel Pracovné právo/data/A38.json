@@ -154,5 +154,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Mladiství – <18 rokov × zákaz rizikových prác × zákaz nočnej práce × zákaz nadčasov × lekárske prehliadky",
+    "branches": [
+      { "label": "Pojem mladistvého (§ 40 ods. 3 ZP)", "leaves": ["Mladistvý zamestnanec je osoba: mladšia ako 18 rokov, s osobitnou právnou ochranou, ktorá vyplýva z ich fyzického, psychického a sociálneho vývoja"] },
+      { "label": "Zamestnávanie mladistvých", "leaves": ["Zamestnávateľ môže mladistvých zamestnávať len prácami: primeranými ich telesnému a rozumovému rozvoju, ktoré neohrozujú ich mravnosť, ktoré sú bezpečné a vhodné", "Zamestnávateľ musí: viesť evidenciu mladistvých, zabezpečiť vstupné a pravidelné lekárske prehliadky, spolupracovať so zákonným zástupcom"] },
+      { "label": "Zakázané práce (nariadenie vlády č. 286/2004 Z. z.)", "leaves": ["Mladistvým sú zakázané práce: pod zemou, so zvýšeným rizikom úrazu, neprimerané ich vývoju, ohrozujúce bezpečnosť iných osôb, s toxickými látkami, vibráciami, extrémnou fyzickou záťažou"] },
+      { "label": "Nočná práca a nadčasy", "leaves": ["Mladiství nesmú: vykonávať nočnú prácu, pracovať nadčas, byť zaradení do nepretržitých prevádzok", "Výnimka: mladiství nad 16 rokov v rámci prípravy na povolanie, max. 1 hodina nočnej práce, musí bezprostredne nadväzovať na dennú prácu"] },
+      { "label": "Pracovná pohotovosť", "leaves": ["Mladiství nesmú: vykonávať pracovnú pohotovosť, byť pripravení na výkon práce mimo pracovného času"] },
+      { "label": "Lekárske prehliadky", "leaves": ["Zamestnávateľ musí zabezpečiť: vstupnú lekársku prehliadku pred vznikom pracovného pomeru, pravidelné prehliadky počas trvania pomeru, zvýšenú kontrolu pri rizikových faktoroch"] },
+      { "label": "Zákonný zástupca", "leaves": ["Zamestnávateľ musí: informovať zákonného zástupcu o výpovedi", "Zamestnávateľ musí: informovať o okamžitom skončení", "Zamestnávateľ musí: vyžiadať si stanovisko pri skončení pracovného pomeru", "Zamestnávateľ musí: spolupracovať pri riešení pracovných podmienok"] }
+    ]
   }
 }

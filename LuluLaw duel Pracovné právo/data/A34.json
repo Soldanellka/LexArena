@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Osobné prekážky – ospravedlnenie × pracovné voľno × náhrada mzdy × PN × OČR",
+    "branches": [
+      { "label": "Pojem osobných prekážok (§ 141 ZP)", "leaves": ["Dôležité osobné prekážky sú situácie, keď zamestnanec: objektívne nemôže vykonávať prácu, prekážka je nezávislá od zamestnávateľa, zákon presne určuje, či patrí voľno a či patrí náhrada mzdy", "Cieľ: ochrana zamestnanca v neodkladných životných situáciách."] },
+      { "label": "Oznamovacia povinnosť", "leaves": ["Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať jej trvanie (napr. potvrdenie lekára, predvolanie na súd)"] },
+      { "label": "Prekážky bez náhrady mzdy", "leaves": ["Zamestnávateľ len ospravedlní neprítomnosť: PN (práceneschopnosť), karanténa, OČR – ošetrovanie člena rodiny, starostlivosť o dieťa, iné zdravotné prekážky kryté sociálnym poistením", "Náhradu mzdy poskytuje Sociálna poisťovňa formou dávok."] },
+      { "label": "Prekážky s náhradou mzdy", "leaves": ["Zamestnávateľ musí poskytnúť pracovné voľno s náhradou mzdy", "vyšetrenie alebo ošetrenie – nevyhnutný čas", "sprevádzanie rodinného príslušníka k lekárovi", "úmrtie blízkej osoby – 2 dni + 1 deň na pohreb", "svadba zamestnanca – 1 deň", "narodenie dieťaťa – 1 deň pre otca", "sťahovanie – 1 deň (pri zmene bydliska)", "Prekážky bez náhrady mzdy, ale s povinným voľnom", "Zamestnávateľ musí poskytnúť voľno, ale bez náhrady mzdy: súdne konanie (ako účastník), účasť na štátnych skúškach, iné osobné úkony, ak sú nevyhnutné"] },
+      { "label": "Prekážky podľa uváženia zamestnávateľa", "leaves": ["Zamestnávateľ môže poskytnúť voľno dobrovoľne: osobné záležitosti, rodinné udalosti mimo zákonného zoznamu, administratívne úkony (napr. vybavenie na úradoch)", "Rozsah pracovného voľna – nariadenie vlády č. 76/2005 Z. z.", "Príklady: úmrtie blízkej osoby – 2 + 1 deň, svadba zamestnanca – 1 deň, sťahovanie – 1 deň, vyšetrenie – nevyhnutný čas, sprevádzanie – 1 deň, narodenie dieťaťa – 1 deň"] },
+      { "label": "Prekážky z iných dôvodov (§ 136 – 140 ZP)", "leaves": ["Patria sem: všeobecný záujem (darovanie krvi, výkon verejnej funkcie), branná povinnosť, zvyšovanie kvalifikácie"] }
+    ]
   }
 }

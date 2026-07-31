@@ -128,5 +128,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Ochrana žien a rodičov – zákaz nočnej práce × preradenie × úprava pracovného času × ochranná doba",
+    "branches": [
+      { "label": "Tehotné ženy (§ 161 – § 164 ZP)", "leaves": ["Majú najvyššiu úroveň ochrany: zákaz nočnej práce", "Majú najvyššiu úroveň ochrany: zákaz nadčasov", "Majú najvyššiu úroveň ochrany: povinnosť zamestnávateľa preradiť na dennú prácu", "Majú najvyššiu úroveň ochrany: zákaz prác ohrozujúcich tehotenstvo (zoznam podľa nariadenia vlády č. 272/2004 Z. z.)", "Majú najvyššiu úroveň ochrany: zákaz vysielania na pracovné cesty bez súhlasu (§ 57 ZP)"] },
+      { "label": "Matky do 9 mesiacov po pôrode a dojčiace ženy", "leaves": ["Majú rovnakú ochranu ako tehotné: zákaz nočnej práce, zákaz nadčasov, povinnosť preradenia pri rizikovej práci", "právo na prestávky na dojčenie (§ 170 ZP): 2× 30 minút denne, po 9 mesiacoch 1× 30 minút"] },
+      { "label": "Rodičia detí mladších ako 15 rokov (§ 164 ZP)", "leaves": ["Majú právo: žiadať kratší pracovný čas, žiadať inú úpravu pracovného času, zamestnávateľ musí vyhovieť, ak tomu nebránia vážne prevádzkové dôvody", "Zamestnávateľ musí dôvody preukázať."] },
+      { "label": "Osamelí rodičia", "leaves": ["Majú osobitnú ochranu: zákaz nočnej práce, zákaz nadčasov bez súhlasu, zvýšená ochrana pri rozvrhovaní pracovného času"] },
+      { "label": "Preradenie a zakázané práce (§ 162 ZP)", "leaves": ["Zamestnávateľ musí preradiť: tehotnú ženu, matku do 9 mesiacov po pôrode, dojčiacu ženu", "ak vykonáva: zakázanú prácu, prácu ohrozujúcu zdravie, nočnú prácu", "Zoznam zakázaných prác je v nariadení vlády č. 272/2004 Z. z."] },
+      { "label": "Ochrana pred výpoveďou (§ 64 ZP)", "leaves": ["Zákaz výpovede platí pre: tehotné ženy, matky na materskej dovolenke, rodičov na rodičovskej dovolenke, osamelých rodičov starajúcich sa o dieťa do 3 rokov", "Výpoveď je možná len vo výnimočných prípadoch (napr. zrušenie zamestnávateľa)."] },
+      { "label": "Pracovné cesty a dojčenie", "leaves": ["tehotné ženy nesmú byť vyslané na pracovnú cestu bez súhlasu,", "dojčiace ženy majú nárok na špeciálne prestávky,", "zamestnávateľ musí prispôsobiť pracovné podmienky."] }
+    ]
   }
 }

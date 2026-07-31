@@ -150,5 +150,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Výpoveď – dôvody × forma × výpovedná doba × zákaz výpovede × ochranná doba",
+    "branches": [
+      { "label": "Pojem výpovede (§ 62 ZP)", "leaves": ["Výpoveď je: jednostranný právny úkon, smeruje k skončeniu pracovného pomeru, účinky nastávajú uplynutím výpovednej doby"] },
+      { "label": "Výpoveď zamestnanca", "leaves": ["Zamestnanec môže dať výpoveď: z akéhokoľvek dôvodu, alebo bez uvedenia dôvodu", "Musí byť: písomná, doručená zamestnávateľovi"] },
+      { "label": "Výpoveď zamestnávateľa (§ 63 ods. 1 ZP)", "leaves": ["Zamestnávateľ môže dať výpoveď len z taxatívnych dôvodov, napr.: organizačné dôvody, zrušenie zamestnávateľa, premiestnenie, nadbytočnosť", "zdravotné dôvody", "dlhodobá strata spôsobilosti.", "porušenie pracovnej disciplíny", "menej závažné porušenia po upozornení.", "neuspokojivé pracovné výsledky", "po písomnom upozornení.", "Dôvod musí byť: presne skutkovo vymedzený, nemenný – nemožno ho dodatočne meniť"] },
+      { "label": "Formálne náležitosti", "leaves": ["Zamestnávateľ musí: prerokovať výpoveď so zástupcami zamestnancov", "Zamestnávateľ musí: splniť ponukovú povinnosť", "Zamestnávateľ musí: získať súhlas úradu práce pri výpovedi ZŤP", "Zamestnávateľ musí: informovať zákonného zástupcu mladistvého", "Zamestnávateľ musí: doručiť výpoveď písomne"] },
+      { "label": "Ponuková povinnosť (§ 63 ods. 2 ZP)", "leaves": ["Zamestnávateľ musí ponúknuť: inú vhodnú prácu, ak ju má k dispozícii", "Ak ponukovú povinnosť nesplní, výpoveď je neplatná."] },
+      { "label": "Výpovedná doba (§ 62 ods. 6 ZP)", "leaves": ["Minimálne: 1 mesiac", "Pri organizačných a zdravotných dôvodoch: 1 mesiac – pomer < 1 rok, 2 mesiace – pomer 1–5 rokov, 3 mesiace – pomer > 5 rokov", "Začína plynúť: prvým dňom mesiaca nasledujúceho po doručení výpovede"] },
+      { "label": "Zákaz výpovede (§ 64 ZP)", "leaves": ["Zamestnanec je chránený v ochrannej dobe: PN, tehotenstvo, materská dovolenka, rodičovská dovolenka, mimoriadna služba, dobrovoľná vojenská príprava, dočasná nespôsobilosť na nočnú prácu", "Zákaz sa neuplatní pri: zrušení zamestnávateľa, organizačných dôvodoch, dôvodoch na okamžité skončenie"] }
+    ]
   }
 }

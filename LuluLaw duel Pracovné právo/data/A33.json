@@ -154,5 +154,16 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odmeňovanie – mzda × minimálna mzda × mzdové nároky × zvýhodnenia × rovnaká mzda",
+    "branches": [
+      { "label": "Minimálna mzda", "leaves": ["Zamestnávateľ nesmie poskytnúť mzdu nižšiu ako: minimálna mzda podľa zákona č. 663/2007 Z. z, alebo minimálny mzdový nárok podľa stupňa náročnosti práce (§ 120 ZP)", "Minimálne mzdové nároky zabezpečujú spravodlivé odmeňovanie podľa: zložitosti, zodpovednosti, namáhavosti práce"] },
+      { "label": "Minimálne mzdové nároky (§ 120 ZP)", "leaves": ["Stupeň náročnosti práce (1–6) určuje: minimálny koeficient, ktorý sa násobí minimálnou mzdou", "Vyšší stupeň = vyšší minimálny mzdový nárok."] },
+      { "label": "Rovnaká mzda (§ 119a ZP)", "leaves": ["Zamestnávateľ musí zabezpečiť: rovnakú mzdu za rovnakú prácu, alebo prácu rovnakej hodnoty", "Zákaz diskriminácie sa vzťahuje na: pohlavie, vek, rasu, etnický pôvod, zdravotné postihnutie, odborovú činnosť, ďalšie chránené znaky"] },
+      { "label": "Mzdové zvýhodnenia", "leaves": ["Zákonník práce upravuje povinné zvýhodnenia", "nadčas – min. 25 % priemerného zárobku", "sviatok – min. 100 %", "sobota – min. 50 %", "nedeľa – min. 100 %", "nočná práca – min. 40 %", "sťažený výkon práce – min. 20 %"] },
+      { "label": "Naturálna mzda (§ 119 ZP)", "leaves": ["musí byť dohodnutá,", "nesmie byť v rozpore s BOZP,", "nesmie byť poskytovaná vo forme alkoholu alebo omamných látok."] },
+      { "label": "Splatnosť a výplata mzdy (§ 129 – 130 ZP)", "leaves": ["Zamestnávateľ musí: vyplácať mzdu najneskôr v nasledujúcom mesiaci, poskytovať výplatnú pásku, vyplácať mzdu v eurách, mzdu v cudzej mene len ak je to dohodnuté"] }
+    ]
   }
 }

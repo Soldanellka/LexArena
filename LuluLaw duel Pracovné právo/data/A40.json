@@ -155,5 +155,17 @@
     "citation": "zákon č. 311/2001 Z. z. (Zákonník práce)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odbory – vznik × registrácia × kolektívne vyjednávanie × prerokovanie × ochrana funkcionárov",
+    "branches": [
+      { "label": "Vznik odborov", "leaves": ["Odbory vznikajú: na základe ústavného práva združovania, registráciou stanov na Ministerstve vnútra SR, podľa zákona o združovaní občanov", "Odbory sú: nezávislé od zamestnávateľa, nezávislé od štátu, financované z členských príspevkov"] },
+      { "label": "Postavenie odborov v pracovnoprávnych vzťahoch", "leaves": ["Odbory sú: najsilnejší zástupca zamestnancov, jediný subjekt oprávnený uzatvárať kolektívne zmluvy, partner zamestnávateľa pri prerokovaní zásadných otázok", "Zamestnávateľ je povinný: umožniť odborom pôsobenie na pracovisku, poskytovať im informácie, prerokovať zákonom určené otázky"] },
+      { "label": "Právomoci odborov", "leaves": ["Odbory majú právo: kontrolovať dodržiavanie pracovnoprávnych predpisov", "Odbory majú právo: prerokovať pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie", "Odbory majú právo: spolurozhodovať v otázkach sociálnej politiky", "Odbory majú právo: kolektívne vyjednávať a uzatvárať kolektívne zmluvy"] },
+      { "label": "Zástupcovia zamestnancov", "leaves": ["Patria sem: odborová organizácia, zamestnanecká rada, zamestnanecký dôverník, zástupca pre BOZP", "Odbory majú: najširšie právomoci (kontrola, spolurozhodovanie, vyjednávanie)", "Rada a dôverník majú: právo na informácie a prerokovanie, nie však právo uzatvárať kolektívne zmluvy"] },
+      { "label": "Kolektívne vyjednávanie", "leaves": ["Odbory sú jediným subjektom, ktorý môže: uzatvárať kolektívne zmluvy, vyjednávať o mzdách, pracovných podmienkach, sociálnych benefitoch, iniciovať kolektívny spor"] },
+      { "label": "Prerokovanie a informácie", "leaves": ["Zamestnávateľ musí odborom prerokovať: pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie, zásadné otázky pracovných podmienok"] },
+      { "label": "Ochrana odborových funkcionárov (§ 240 ZP)", "leaves": ["Odboroví funkcionári majú: zákaz výpovede počas výkonu funkcie, ochranu ešte 6 mesiacov po skončení funkcie, zamestnávateľ im môže dať výpoveď len so súhlasom odborov"] }
+    ]
   }
 }
