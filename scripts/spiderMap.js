@@ -92,9 +92,10 @@ function ensureSpiderMapCss() {
     .spider-map-node:focus { outline: 2px solid var(--accent-3, #ff6f91); outline-offset: 2px; }
     .spider-map-labels { position: absolute; inset: 0; pointer-events: none; }
     .spider-map-label {
-      position: absolute; display: flex; align-items: center; justify-content: center; text-align: center;
-      font-size: 12px; font-weight: 600; color: var(--text, #2b2b2b); padding: 4px 6px;
-      overflow-wrap: break-word; line-height: 1.25; pointer-events: none;
+      position: absolute; box-sizing: border-box; display: -webkit-box; -webkit-box-orient: vertical;
+      align-items: center; justify-content: center; text-align: center;
+      font-weight: 600; color: var(--text, #2b2b2b); padding: 4px 6px;
+      overflow: hidden; overflow-wrap: break-word; line-height: 1.25; pointer-events: none;
     }
     .spider-map-toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
     .spider-map-c0 { fill: #cfe3fb; }
@@ -146,11 +147,11 @@ function gridLayout(count, { cols, nodeW, nodeH, stepX, stepY, marginX, marginY 
 }
 
 function computeZ1Layout(count) {
-  return gridLayout(count, { cols: 5, nodeW: 150, nodeH: 70, stepX: 180, stepY: 180, marginX: 100, marginY: 110 });
+  return gridLayout(count, { cols: 5, nodeW: 150, nodeH: 90, stepX: 180, stepY: 180, marginX: 100, marginY: 110 });
 }
 
 function computeZ2Layout(count) {
-  return gridLayout(count, { cols: 5, nodeW: 130, nodeH: 60, stepX: 150, stepY: 110, marginX: 85, marginY: 70 });
+  return gridLayout(count, { cols: 5, nodeW: 130, nodeH: 84, stepX: 150, stepY: 110, marginX: 85, marginY: 70 });
 }
 
 /* Pan (mouse drag + 1-prst touch) a zoom (koliesko + pinch) cez SVG
@@ -277,7 +278,7 @@ function setupPanZoom(svgEl, view, onChange) {
    tento kód – líšia sa len vo vstupných dátach uzlov). SVG <rect> nesie
    klik/keyboard interakciu, HTML <div> nad ním len popisok (pointer-
    events: none, klik prejde na rect pod ním). */
-function renderMapNodes(container, nodesData, viewBox, { rx, ariaLabel }) {
+function renderMapNodes(container, nodesData, viewBox, { rx, ariaLabel, labelLines }) {
   container.innerHTML = `
     <div class="spider-map-host">
       <svg class="spider-map-svg" viewBox="${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}" role="group" aria-label="${escapeHtml(ariaLabel)}"></svg>
@@ -305,9 +306,20 @@ function renderMapNodes(container, nodesData, viewBox, { rx, ariaLabel }) {
     const label = document.createElement('div');
     label.className = 'spider-map-label';
     label.textContent = n.label;
+    label.title = n.label;
+    label.style.webkitLineClamp = String(labelLines);
     labelsHost.appendChild(label);
     n.labelEl = label;
   });
+
+  /* Font-size sa počíta z aktuálnej obrazovkovej výšky boxu (ph), nie
+     zo statickej CSS hodnoty – text a box tak vždy škálujú spolu, aj
+     pri zoome (predtým: box sa so zoomom menil, font nie – pri
+     oddialení sa pomer text:box zhoršoval). FONT_RATIO vyladený tak,
+     aby pri bežnom (nezoomovanom) zobrazení vyšlo cca 12px. */
+  const FONT_RATIO = 0.22;
+  const FONT_MIN = 9;
+  const FONT_MAX = 16;
 
   function updateLabels() {
     const rect = svg.getBoundingClientRect();
@@ -317,10 +329,12 @@ function renderMapNodes(container, nodesData, viewBox, { rx, ariaLabel }) {
       const py = ((n.cy - view.y) / view.h) * rect.height;
       const pw = (n.w / view.w) * rect.width;
       const ph = (n.h / view.h) * rect.height;
+      const fontSize = Math.max(FONT_MIN, Math.min(FONT_MAX, ph * FONT_RATIO));
       n.labelEl.style.left = `${px - pw / 2}px`;
       n.labelEl.style.top = `${py - ph / 2}px`;
       n.labelEl.style.width = `${pw}px`;
       n.labelEl.style.height = `${ph}px`;
+      n.labelEl.style.fontSize = `${fontSize}px`;
     });
   }
 
@@ -348,7 +362,7 @@ function renderZ1(container, mapData, onClusterClick) {
     colorClass: `spider-map-c${i % 10}`,
     onClick: () => onClusterClick(i)
   }));
-  return renderMapNodes(container, nodesData, layout.viewBox, { rx: 20, ariaLabel: 'Mapa klastrov' });
+  return renderMapNodes(container, nodesData, layout.viewBox, { rx: 20, ariaLabel: 'Mapa klastrov', labelLines: 2 });
 }
 
 /* Z2: bubliny okruhov vybraného klastra, zdedená farba klastra.
@@ -369,9 +383,12 @@ function renderZ2(container, mapData, clusterIndex, areaTitle, onOkruhClick) {
     colorClass,
     onClick: () => onOkruhClick(n)
   }));
-  const destroy = renderMapNodes(container, nodesData, layout.viewBox, { rx: 14, ariaLabel: `Okruhy klastra ${cluster.label}` });
+  const destroy = renderMapNodes(container, nodesData, layout.viewBox, { rx: 14, ariaLabel: `Okruhy klastra ${cluster.label}`, labelLines: 3 });
   nodesData.forEach(n => {
-    fetchOkruhTitle(n.label, areaTitle).then(title => { n.labelEl.textContent = title; });
+    fetchOkruhTitle(n.label, areaTitle).then(title => {
+      n.labelEl.textContent = title;
+      n.labelEl.title = title;
+    });
   });
   return destroy;
 }
