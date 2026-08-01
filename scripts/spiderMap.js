@@ -106,6 +106,15 @@ function ensureSpiderMapCss() {
       overflow-wrap: break-word; max-height: 7em; overflow: hidden;
     }
     .spider-map-node:focus { outline: 2px solid var(--accent-3, #ff6f91); outline-offset: 2px; }
+    .spider-map-node-sub { font-weight: 400; font-size: 0.82em; }
+    .spider-map-area-tile {
+      display: inline-block; box-sizing: border-box; padding: 10px 14px; margin: 0;
+      font: inherit; font-size: 13px; font-weight: 600; text-align: center; line-height: 1.3;
+      color: var(--text, #2b2b2b); border: 1px solid rgba(0,0,0,0.12); border-radius: 14px;
+      cursor: pointer; flex: 1 1 150px; max-width: 220px;
+    }
+    .spider-map-area-tile:focus { outline: 2px solid var(--accent-3, #ff6f91); outline-offset: 2px; }
+    :root[data-theme="dark"] .spider-map-area-tile { border-color: rgba(255,255,255,0.14); color: var(--text, #e6eef6); }
     .spider-map-toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
     .spider-map-c0 { background: #cfe3fb; }
     .spider-map-c1 { background: #cdeed9; }
@@ -156,11 +165,11 @@ function gridLayout(count, { cols, nodeW, nodeH, stepX, stepY, marginX, marginY 
 }
 
 function computeZ1Layout(count) {
-  return gridLayout(count, { cols: 5, nodeW: 150, nodeH: 90, stepX: 180, stepY: 180, marginX: 100, marginY: 110 });
+  return gridLayout(count, { cols: 4, nodeW: 150, nodeH: 90, stepX: 180, stepY: 180, marginX: 100, marginY: 110 });
 }
 
 function computeZ2Layout(count) {
-  return gridLayout(count, { cols: 5, nodeW: 130, nodeH: 84, stepX: 150, stepY: 110, marginX: 85, marginY: 70 });
+  return gridLayout(count, { cols: 3, nodeW: 130, nodeH: 84, stepX: 150, stepY: 110, marginX: 85, marginY: 70 });
 }
 
 /* Počiatočný scale/translate pri prvom vykreslení (aj po resize) –
@@ -171,7 +180,8 @@ function computeInitialTransform(hostEl, worldW, worldH) {
   const hostRect = hostEl.getBoundingClientRect();
   const hostW = hostRect.width || worldW || 1;
   const hostH = hostRect.height || worldH || 1;
-  const scale = Math.min(hostW / worldW, hostH / worldH) * 0.92;
+  const rawScale = Math.min(hostW / worldW, hostH / worldH) * 0.92;
+  const scale = Math.min(rawScale, 1.5);
   const tx = (hostW - worldW * scale) / 2;
   const ty = (hostH - worldH * scale) / 2;
   return { tx, ty, scale };
@@ -291,6 +301,30 @@ function setupPanZoom(worldEl, hostEl, state) {
   return { destroy, reset };
 }
 
+/* Rozdelenie popisku uzla na tučný "hlavný pojem" a tenší "popis" podľa
+   prvého výskytu " – " (en-dash) – typický tvar spider.center ("Nájomná
+   zmluva – pojem, náležitosti..."). Ak label oddeľovač neobsahuje
+   (viaceré nemajú), zobrazí sa celý text bez delenia – nehádame, kde
+   delenie nedáva zmysel. el.title je vždy plný pôvodný text, nezmenené
+   týmto delením. Používa sa na dvoch miestach (renderMapNodes aj
+   dofetchovanie titulu v renderZ2) – preto samostatná funkcia, aby
+   štýlovanie neplatilo len pri prvom vykreslení. */
+function setNodeLabel(el, label) {
+  el.textContent = '';
+  const idx = label.indexOf(' – ');
+  if (idx === -1) {
+    el.textContent = label;
+  } else {
+    const strong = document.createElement('strong');
+    strong.textContent = label.slice(0, idx);
+    const sub = document.createElement('span');
+    sub.className = 'spider-map-node-sub';
+    sub.textContent = label.slice(idx);
+    el.append(strong, sub);
+  }
+  el.title = label;
+}
+
 /* Spoločné vykreslenie jednej úrovne mapy (Z1 aj Z2 zdieľajú presne
    tento kód – líšia sa len vo vstupných dátach uzlov). Jeden <div> na
    uzol nesie tvar (farba cez triedu spider-map-cN), text aj klik/
@@ -313,8 +347,7 @@ function renderMapNodes(container, nodesData, worldSize, { ariaLabel, radius }) 
     node.style.top = `${n.cy - n.h / 2}px`;
     node.style.width = `${n.w}px`;
     node.style.borderRadius = `${radius}px`;
-    node.textContent = n.label;
-    node.title = n.label;
+    setNodeLabel(node, n.label);
     node.tabIndex = 0;
     node.setAttribute('role', 'button');
     node.setAttribute('aria-label', n.label);
@@ -381,8 +414,7 @@ function renderZ2(container, mapData, clusterIndex, areaTitle, onOkruhClick) {
   const destroy = renderMapNodes(container, nodesData, layout.viewBox, { ariaLabel: `Okruhy klastra ${cluster.label}`, radius: 14 });
   nodesData.forEach(n => {
     fetchOkruhTitle(n.label, areaTitle).then(title => {
-      n.el.textContent = title;
-      n.el.title = title;
+      setNodeLabel(n.el, title);
     });
   });
   return destroy;
@@ -419,19 +451,31 @@ export function openStructureBrowser() {
     try {
       const m = await import('./spider.js');
       await m.openSpider(key, areaTitle);
+      /* "← Späť" má zmysel len keď Z2 modal ostal pod Z3 (keepUnderneath) –
+         v plochom zozname (keepUnderneath=false) sa Z2/mapa modal už
+         pred otvorením Z3 zrušil, tam "Zavrieť" ostáva presné. Tlačidlo
+         hľadáme až PO await m.openSpider(...) – openSpider je async a
+         DOM (vrátane #spiderCloseBtn) vytvára synchrónne tesne pred
+         návratom, takže po vyriešení promisy je buď hotové, alebo (pri
+         zlyhaní fetchu/chýbajúcom obsahu) modal vôbec nevznikol – odtiaľ
+         null-check, nie čakanie na ďalší frame. spider.js sa nemení. */
+      if (keepUnderneath) {
+        const closeBtn = document.getElementById('spiderCloseBtn');
+        if (closeBtn) closeBtn.textContent = '← Späť';
+      }
     } catch (e) { console.error('spiderMap: openSpider load failed', e); }
   }
 
   function renderAreas() {
     cleanupLevel();
     state.mapData = null;
-    const items = Object.keys(AREA_PATHS).map(area =>
-      `<button class="btn" style="width:100%;text-align:left;margin-bottom:6px" data-area="${escapeHtml(area)}">${escapeHtml(area)}</button>`
+    const items = Object.keys(AREA_PATHS).map((area, i) =>
+      `<button class="spider-map-area-tile spider-map-c${i % 10}" data-area="${escapeHtml(area)}">${escapeHtml(area)}</button>`
     ).join('');
     modal.innerHTML = `
       <div class="avatar-panel spider-panel">
         <h3 style="margin:0 0 12px 0">🕸️ Štruktúra otázok – vyber oblasť</h3>
-        <div>${items}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">${items}</div>
         <div style="margin-top:16px">
           <button class="btn" id="spiderMapCloseBtn" style="width:100%">Zavrieť</button>
         </div>
