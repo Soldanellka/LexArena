@@ -628,6 +628,7 @@ export function openStructureBrowser() {
         <h3 style="margin:0 0 4px 0">🕸️ ${escapeHtml(state.area)} – mapa</h3>
         <div class="small muted" style="margin-bottom:10px">Klik na klaster · ťahaj / koliesko (pinch na mobile) na priblíženie</div>
         <div id="spiderMapZ1Host"></div>
+        <div id="spiderMapZ1GameBar" style="margin-top:12px"></div>
         <div class="spider-map-toolbar" style="margin-top:12px">
           <button class="btn" id="spiderMapBackBtn" style="flex:1">← Späť</button>
           <button class="btn" id="spiderMapListBtn" style="flex:1">📋 Zoznam</button>
@@ -639,6 +640,31 @@ export function openStructureBrowser() {
     modal.querySelector('#spiderMapBackBtn').onclick = renderAreas;
     modal.querySelector('#spiderMapListBtn').onclick = renderFlatScreen;
     modal.querySelector('#spiderMapCloseBtn').onclick = closeModal;
+    /* 🧭 Kde som? – hra na úrovni Z1 (pod mriežkou klastrov). Launcher žije
+       v scripts/spiderGames.js (lazy import, vlastný try/catch). Pred
+       odovzdaním modalu hre uprace Z1 pan/zoom + resize listenery cez
+       cleanupLevel() (state.destroyLevel = panzoom.destroy()+observer
+       disconnect, nič viac – overené). onExit vráti späť na čerstvý Z1
+       render. Idempotencia netreba: renderZ1Screen prepíše modal.innerHTML
+       nanovo pri každom vstupe (Z2→Z1 späť, 🗺️ Mapa toggle, výber oblasti). */
+    const gameBar = modal.querySelector('#spiderMapZ1GameBar');
+    if (gameBar) {
+      const kdeSomBtn = document.createElement('button');
+      kdeSomBtn.className = 'btn';
+      kdeSomBtn.style.width = '100%';
+      kdeSomBtn.textContent = '🧭 Kde som?';
+      kdeSomBtn.onclick = async () => {
+        try {
+          cleanupLevel();
+          const g = await import('./spiderGames.js');
+          g.startKdeSom(modal, state.area, state.mapData, () => renderZ1Screen());
+        } catch (e) {
+          console.error('spiderMap: kde som failed', e);
+          renderZ1Screen(); // import zlyhal → obnov čistý Z1 (cleanupLevel už prebehol, listenery treba znova)
+        }
+      };
+      gameBar.appendChild(kdeSomBtn);
+    }
   }
 
   function renderZ2Screen(clusterIndex) {

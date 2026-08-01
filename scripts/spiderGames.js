@@ -170,7 +170,7 @@ function showError(sec, msg, onBack) {
 
 /* Spoločný koniec sedenia – text výsledku aj oba callbacky sú
    parametrizované, takže ho zdieľajú obe hry. */
-function renderSessionEnd(sec, { title, scoreText, onAgain, onBack }) {
+function renderSessionEnd(sec, { title, scoreText, onAgain, onBack, backText = '← Späť na strom' }) {
   hideTree();
   sec.innerHTML = '';
   const header = document.createElement('div');
@@ -190,7 +190,7 @@ function renderSessionEnd(sec, { title, scoreText, onAgain, onBack }) {
   back.className = 'btn';
   back.style.width = '100%';
   back.style.marginTop = '8px';
-  back.textContent = '← Späť na strom';
+  back.textContent = backText;
   back.onclick = onBack;
 
   sec.append(header, score, again, back);
@@ -253,6 +253,21 @@ function ensureGameCss() {
     :root[data-theme="dark"] .spider-game-slot { border-color: rgba(255,255,255,0.18); }
     :root[data-theme="dark"] .spider-game-card-assigned { background: #1f4a38; border-color: #38a169; }
     :root[data-theme="dark"] .spider-game-card-wrong-blink { background: #5a2c3a; border-color: #e15563; }
+    /* --- Kde som? --- */
+    .spider-game-subhead { font-size: 13px; font-weight: 700; color: var(--text, #2b2b2b); margin: 4px 0 8px; }
+    .spider-game-card-static {
+      display: block; width: 100%; box-sizing: border-box; text-align: left;
+      background: var(--surface, #fff); border: 1px solid var(--card-border, rgba(0,0,0,0.12));
+      border-radius: 10px; padding: 8px 10px; font-size: 12px; line-height: 1.35;
+      color: var(--text, #2b2b2b); max-height: 7em; overflow: auto; cursor: default;
+    }
+    .spider-game-cluster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .spider-game-col-correct { background: #d7f4dd; border-color: #38a169; }
+    .spider-game-col-wrong { background: #fbdce0; border-color: #e15563; opacity: 0.7; }
+    :root[data-theme="dark"] .spider-game-subhead { color: var(--text, #e6eef6); }
+    :root[data-theme="dark"] .spider-game-card-static { background: var(--surface, #1c2430); border-color: rgba(255,255,255,0.12); color: var(--text, #e6eef6); }
+    :root[data-theme="dark"] .spider-game-col-correct { background: #1f4a38; border-color: #38a169; }
+    :root[data-theme="dark"] .spider-game-col-wrong { background: #5a2c3a; border-color: #e15563; }
   `;
   document.head.appendChild(style);
 }
@@ -712,6 +727,211 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
       errorBranches: new Set()   // indexy vetiev, pri ktorých padla chyba
     };
     nextRound();
+  }
+
+  startSession();
+}
+
+/* ---- Hra 3: Kde som? ------------------------------------------------- */
+
+/* Vstup je NOVÝ – tlačidlo na úrovni Z1 (nie Z3 launcher). spiderMap.js
+   odovzdá celý #spiderMapModal (modal), aktívnu oblasť, už načítané
+   mapData (_map.json – žiadny extra fetch klastrov) a onExit callback
+   (návrat na čerstvý Z1 render). Hra preberie modal.innerHTML vlastným
+   panelom; #spiderTreeHost/#spiderDetailHost v tomto modale NEEXISTUJÚ,
+   takže hideTree/restoreTree (volané zvnútra showError/renderSessionEnd)
+   sú no-op – ticho prejdú (getElementById vráti null, guard `if (t)`).
+
+   Kolo: náhodná vetva náhodného okruhu oblasti (len na čítanie) → hráč
+   dvojkrokovo háda klaster (krok A) a potom okruh v klastri (krok B).
+   Skóre = 0–10 (2 body/kolo za trafenie na prvý pokus). 5 kôl. */
+export function startKdeSom(modal, areaTitle, mapData, onExit) {
+  const exit = () => { if (typeof onExit === 'function') onExit(); };
+  if (!modal || !mapData || !Array.isArray(mapData.clusters) || !mapData.clusters.length) {
+    if (typeof onExit === 'function') onExit();
+    else console.error('[KDE SOM] chýbajú dáta (modal/mapData) – hra sa nespustí.');
+    return;
+  }
+  ensureGameCss();
+
+  // Únia okruhov naprieč klastrami (unikátne čísla).
+  const allOkruhy = [...new Set(mapData.clusters.flatMap(cl => (cl.okruhy || []).map(Number)))];
+
+  // Vlastný panel; sec = kontajner hry (dostáva ho showError/renderSessionEnd).
+  modal.innerHTML = '';
+  const panel = document.createElement('div');
+  panel.className = 'avatar-panel spider-panel';
+  const h3 = document.createElement('h3');
+  h3.style.margin = '0 0 10px 0';
+  h3.textContent = `🧭 Kde som? · ${areaTitle}`;
+  const sec = document.createElement('div');
+  sec.className = 'spiderGameSec';
+  panel.append(h3, sec);
+  modal.appendChild(panel);
+
+  let session = null;
+
+  /* Zostaví kolo: náhodný nepoužitý okruh s vetvou (>=2 listy). Guard 10
+     pokusov cez rôzne okruhy, potom null → showError. Po vyčerpaní
+     všetkých okruhov sa usedOkruhy vyčistí (recyklácia v dlhom sedení). */
+  async function buildRound() {
+    let avail = allOkruhy.filter(n => !session.usedOkruhy.has(n));
+    if (!avail.length) { session.usedOkruhy.clear(); avail = allOkruhy.slice(); }
+    const tried = new Set();
+    for (let guard = 0; guard < 10; guard++) {
+      const pool = avail.filter(n => !tried.has(n));
+      if (!pool.length) break;
+      const n = randOf(pool);
+      tried.add(n);
+      const okr = await getOkruh(areaTitle, n);
+      const eligible = okr.branches.filter(b => b.leaves.length >= 2);
+      if (!eligible.length) continue;
+      session.usedOkruhy.add(n);
+      const branch = randOf(eligible);
+      const leaves = shuffle(branch.leaves).slice(0, Math.min(4, branch.leaves.length));
+      const clusterIdx = mapData.clusters.findIndex(cl => (cl.okruhy || []).map(Number).includes(n));
+      return { okruh: n, okruhTitle: okr.title, branchLabel: branch.label, leaves, clusterIdx };
+    }
+    return null;
+  }
+
+  function renderRound(round) {
+    sec.innerHTML = '';
+
+    const header = document.createElement('div');
+    header.className = 'spider-game-header';
+    header.textContent = `Kolo ${session.round}/${ROUNDS}`;
+
+    const subhead = document.createElement('div');
+    subhead.className = 'spider-game-subhead';
+    subhead.textContent = round.branchLabel;
+
+    const cardsWrap = document.createElement('div');
+    cardsWrap.className = 'spider-game-cards';
+    round.leaves.forEach(text => {
+      const card = document.createElement('div');
+      card.className = 'spider-game-card-static';
+      card.textContent = text;
+      cardsWrap.appendChild(card);
+    });
+
+    const question = document.createElement('div');
+    question.className = 'spider-game-hint';
+
+    const choices = document.createElement('div');
+
+    const feedback = document.createElement('div');
+    feedback.className = 'spider-game-feedback';
+
+    const nextWrap = document.createElement('div');
+    nextWrap.className = 'spider-game-nextwrap';
+
+    const endBtn = document.createElement('button');
+    endBtn.className = 'btn spider-game-endbtn';
+    endBtn.style.width = '100%';
+    endBtn.textContent = 'Ukončiť hru';
+    endBtn.onclick = exit;
+
+    sec.append(header, subhead, cardsWrap, question, choices, feedback, nextWrap, endBtn);
+
+    function finishRound() {
+      feedback.className = 'spider-game-feedback spider-game-feedback-ok';
+      feedback.textContent = `Bola to vetva okruhu: ${round.okruhTitle}`;
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'btn';
+      nextBtn.style.width = '100%';
+      nextBtn.textContent = session.round >= ROUNDS ? 'Zobraziť výsledok →' : 'Ďalšie kolo →';
+      nextBtn.onclick = () => nextRound();
+      nextWrap.innerHTML = '';
+      nextWrap.appendChild(nextBtn);
+    }
+
+    /* Generický dvojkrokový výber: options = [{ label, correct }], po
+       vyriešení (trafené / 2 chyby) zavolá done(firstTry). */
+    function renderChoice(promptText, options, done) {
+      if (!sec.isConnected) return; // hráč medzitým ukončil (modal prepísaný)
+      question.textContent = promptText;
+      choices.className = 'spider-game-cluster-grid';
+      choices.innerHTML = '';
+      feedback.textContent = '';
+      feedback.className = 'spider-game-feedback';
+      let resolved = false;
+      let wrong = 0;
+      const btns = options.map(opt => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'spider-game-col';
+        btn.textContent = opt.label;
+        btn.onclick = () => {
+          if (resolved) return;
+          if (opt.correct) {
+            btn.classList.add('spider-game-col-correct');
+            resolved = true;
+            done(wrong === 0);
+          } else {
+            wrong++;
+            btn.classList.add('spider-game-col-wrong');
+            btn.disabled = true;
+            if (wrong >= 2) {
+              resolved = true;
+              const correctBtn = btns.find(b => b._correct);
+              if (correctBtn) correctBtn.classList.add('spider-game-col-correct');
+              done(false);
+            }
+          }
+        };
+        btn._correct = !!opt.correct;
+        choices.appendChild(btn);
+        return btn;
+      });
+    }
+
+    // Krok A – klaster
+    renderChoice(
+      'Do ktorého klastra patrí?',
+      mapData.clusters.map((cl, i) => ({ label: cl.label, correct: i === round.clusterIdx })),
+      firstTryA => {
+        if (firstTryA) session.score++;
+        // Krok B – okruh v (správnom) klastri
+        const cluster = mapData.clusters[round.clusterIdx];
+        const titles = window.areaOkruhTitles?.[areaTitle] || {};
+        const okruhy = (cluster.okruhy || []).map(Number);
+        setTimeout(() => {
+          renderChoice(
+            'Z ktorého okruhu je to vetva?',
+            okruhy.map(n => ({ label: titles['A' + n] || ('A' + n), correct: n === round.okruh })),
+            firstTryB => {
+              if (firstTryB) session.score++;
+              finishRound();
+            }
+          );
+        }, 550);
+      }
+    );
+  }
+
+  async function nextRound() {
+    session.round++;
+    if (session.round > ROUNDS) {
+      renderSessionEnd(sec, {
+        title: 'Koniec hry 🧭',
+        scoreText: `${session.score}/10`,
+        onAgain: () => startSession(),
+        onBack: exit,
+        backText: '← Späť na mapu'
+      });
+      return;
+    }
+    sec.innerHTML = '<div class="spider-game-loading">Pripravujem kolo…</div>';
+    const round = await buildRound();
+    if (!round) { showError(sec, 'Nepodarilo sa pripraviť kolo (nedostatok dát v oblasti).', exit); return; }
+    renderRound(round);
+  }
+
+  async function startSession() {
+    sec.innerHTML = '<div class="spider-game-loading">Načítavam hru…</div>';
+    session = { round: 0, score: 0, usedOkruhy: new Set() };
+    await nextRound();
   }
 
   startSession();
