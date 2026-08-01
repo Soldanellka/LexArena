@@ -114,7 +114,8 @@ async function getOkruh(areaTitle, n) {
   const cacheKey = `${areaTitle}:${n}`;
   if (okruhCache.has(cacheKey)) return okruhCache.get(cacheKey);
   const json = await fetchJson(areaTitle, `A${n}`);
-  const entry = { branches: branchesOf(json), title: okruhTitleOf(json, n) };
+  const title = okruhTitleOf(json, n);
+  const entry = { branches: branchesOf(json), title, center: (json && json.spider?.center) || title };
   okruhCache.set(cacheKey, entry);
   return entry;
 }
@@ -268,6 +269,32 @@ function ensureGameCss() {
     :root[data-theme="dark"] .spider-game-card-static { background: var(--surface, #1c2430); border-color: rgba(255,255,255,0.12); color: var(--text, #e6eef6); }
     :root[data-theme="dark"] .spider-game-col-correct { background: #1f4a38; border-color: #38a169; }
     :root[data-theme="dark"] .spider-game-col-wrong { background: #5a2c3a; border-color: #e15563; }
+    /* --- Recall --- */
+    .spider-game-card-hidden {
+      display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box;
+      background: var(--bg, #fffafc); border: 1px dashed var(--card-border, rgba(0,0,0,0.18));
+      border-radius: 10px; padding: 12px; min-height: 44px; font-size: 16px; font-weight: 700;
+      color: var(--muted, #6b7280);
+    }
+    .spider-game-selfcheck { display: flex; gap: 8px; margin-top: 8px; }
+    .spider-game-selfcheck .btn { flex: 1 1 0; }
+    .spider-game-revealed { margin-top: 8px; }
+    .spider-game-revealed-label { font-size: 13px; font-weight: 700; color: var(--text, #2b2b2b); margin-bottom: 6px; }
+    .spider-game-linkbtn {
+      background: none; border: none; padding: 4px 0; font: inherit; font-size: 12px;
+      color: var(--accent-3, #ff6f91); cursor: pointer; text-align: left;
+    }
+    .spider-game-leaf-static {
+      display: block; width: 100%; box-sizing: border-box; text-align: left; margin-top: 6px;
+      background: var(--surface, #fff); border: 1px solid var(--card-border, rgba(0,0,0,0.12));
+      border-radius: 8px; padding: 6px 8px; font-size: 11px; line-height: 1.35; color: var(--text, #2b2b2b);
+    }
+    .spider-game-missed { margin: 8px 0 12px; }
+    .spider-game-missed-head { font-size: 12px; font-weight: 700; color: var(--muted, #6b7280); margin-bottom: 4px; }
+    .spider-game-missed-item { font-size: 12px; color: var(--muted, #6b7280); padding: 2px 0; }
+    :root[data-theme="dark"] .spider-game-card-hidden { background: var(--bg, #141b24); border-color: rgba(255,255,255,0.18); color: var(--muted, #9aa7b4); }
+    :root[data-theme="dark"] .spider-game-revealed-label { color: var(--text, #e6eef6); }
+    :root[data-theme="dark"] .spider-game-leaf-static { background: var(--surface, #1c2430); border-color: rgba(255,255,255,0.12); color: var(--text, #e6eef6); }
   `;
   document.head.appendChild(style);
 }
@@ -300,7 +327,14 @@ export function mountLauncher(panel, areaTitle, okruhCislo) {
   rozBtn.textContent = '🧩 Rozpárovanie';
   rozBtn.onclick = () => startRozparovanie(areaTitle, okruhCislo, panel);
 
-  sec.append(cuckooBtn, rozBtn);
+  const recallBtn = document.createElement('button');
+  recallBtn.className = 'btn';
+  recallBtn.style.width = '100%';
+  recallBtn.style.marginTop = '8px';
+  recallBtn.textContent = '🧠 Recall';
+  recallBtn.onclick = () => startRecall(areaTitle, okruhCislo, panel);
+
+  sec.append(cuckooBtn, rozBtn, recallBtn);
 }
 
 /* ---- Hra 1: Kukučka -------------------------------------------------- */
@@ -935,4 +969,183 @@ export function startKdeSom(modal, areaTitle, mapData, onExit) {
   }
 
   startSession();
+}
+
+/* ---- Hra 4: Recall (self-check) ------------------------------------- */
+
+/* Vetvy okruhu sú zakryté; hráč si ich má vybaviť z pamäti a postupne
+   odkrývať s binárnym sebahodnotením (✓ vybavil / ✗ nevybavil). Center
+   okruhu je viditeľný ako pomôcka. Nehodnotené (žiadny zápis), skóre je
+   len sebareflexia v rámci sedenia. Vetvy v AUTORSKOM poradí (bez shuffle
+   – recall má rešpektovať štruktúru okruhu). renderSessionEnd sa tu
+   NEPOUŽÍVA (koniec má vlastný layout s "Na zopakovanie"). */
+export async function startRecall(areaTitle, okruhCislo, panel) {
+  if (!panel) return;
+  ensureGameCss();
+  const sec = resolveSec(panel);
+  const backToLauncher = () => mountLauncher(panel, areaTitle, okruhCislo);
+
+  hideTree();
+  sec.innerHTML = '<div class="spider-game-loading">Načítavam hru…</div>';
+
+  const okr = await getOkruh(areaTitle, Number(okruhCislo));
+  const branches = okr.branches; // autorské poradie, žiadny shuffle
+  if (!branches.length) {
+    showError(sec, 'Tento okruh nemá vetvy pre Recall.', backToLauncher);
+    return;
+  }
+
+  function render() {
+    hideTree();
+    sec.innerHTML = '';
+
+    const header = document.createElement('div');
+    header.className = 'spider-game-header';
+    header.textContent = '🧠 Recall';
+
+    const centerCard = document.createElement('div');
+    centerCard.className = 'spider-game-card-static';
+    centerCard.textContent = okr.center;
+
+    const hint = document.createElement('div');
+    hint.className = 'spider-game-hint';
+    hint.textContent = 'Vybav si z pamäti vetvy tohto okruhu, potom ich postupne odkrývaj.';
+
+    const cardsWrap = document.createElement('div');
+    cardsWrap.className = 'spider-game-cards';
+
+    const revealBtn = document.createElement('button');
+    revealBtn.className = 'btn';
+    revealBtn.style.width = '100%';
+    revealBtn.style.marginTop = '10px';
+    revealBtn.textContent = 'Odkry ďalšiu vetvu';
+
+    const endBtn = document.createElement('button');
+    endBtn.className = 'btn spider-game-endbtn';
+    endBtn.style.width = '100%';
+    endBtn.textContent = 'Ukončiť hru';
+    endBtn.onclick = backToLauncher;
+
+    let idx = 0;              // index ďalšej zakrytej vetvy
+    let okCount = 0;
+    const missedLabels = [];
+
+    // zakryté karty vopred (obsah "?"), odkrývajú sa v poradí
+    const cardEls = branches.map(() => {
+      const card = document.createElement('div');
+      card.className = 'spider-game-card-hidden';
+      card.textContent = '?';
+      cardsWrap.appendChild(card);
+      return card;
+    });
+
+    function finish() {
+      renderEnd(okCount, branches.length, missedLabels);
+    }
+
+    revealBtn.onclick = () => {
+      if (idx >= branches.length) return;
+      const branch = branches[idx];
+      const card = cardEls[idx];
+      idx++;
+      revealBtn.disabled = true; // kým hráč neoznačí ✓/✗
+
+      // premeň zakrytú kartu na odkrytú: label + selfcheck + "Ukáž listy"
+      card.className = 'spider-game-card-static';
+      card.textContent = '';
+      const label = document.createElement('div');
+      label.className = 'spider-game-revealed-label';
+      label.textContent = branch.label;
+
+      const selfcheck = document.createElement('div');
+      selfcheck.className = 'spider-game-selfcheck';
+      const okBtn = document.createElement('button');
+      okBtn.className = 'btn';
+      okBtn.textContent = '✓ Vybavila som si';
+      const noBtn = document.createElement('button');
+      noBtn.className = 'btn';
+      noBtn.textContent = '✗ Nevybavila';
+
+      const showLeavesBtn = document.createElement('button');
+      showLeavesBtn.className = 'spider-game-linkbtn';
+      showLeavesBtn.textContent = 'Ukáž listy';
+      showLeavesBtn.onclick = () => {
+        const box = document.createElement('div');
+        box.className = 'spider-game-revealed';
+        branch.leaves.forEach(text => {
+          const leaf = document.createElement('div');
+          leaf.className = 'spider-game-leaf-static';
+          leaf.textContent = text;
+          box.appendChild(leaf);
+        });
+        card.appendChild(box);
+        showLeavesBtn.remove(); // raz rozbalené ostáva
+      };
+
+      function mark(isOk) {
+        if (isOk) { okCount++; card.classList.add('spider-game-col-correct'); }
+        else { missedLabels.push(branch.label); card.classList.add('spider-game-col-wrong'); }
+        selfcheck.remove();
+        if (idx >= branches.length) finish();
+        else revealBtn.disabled = false;
+      }
+      okBtn.onclick = () => mark(true);
+      noBtn.onclick = () => mark(false);
+
+      selfcheck.append(okBtn, noBtn);
+      card.append(label, selfcheck, showLeavesBtn);
+    };
+
+    sec.append(header, centerCard, hint, cardsWrap, revealBtn, endBtn);
+  }
+
+  /* Vlastná koncová obrazovka (renderSessionEnd sa nepoužíva) – navyše
+     blok "Na zopakovanie". Štýl tlačidiel zhodný s renderSessionEnd. */
+  function renderEnd(okCount, total, missedLabels) {
+    hideTree();
+    sec.innerHTML = '';
+
+    const header = document.createElement('div');
+    header.className = 'spider-game-header';
+    header.textContent = 'Koniec – Recall 🧠';
+
+    const score = document.createElement('div');
+    score.className = 'spider-game-score';
+    score.textContent = `${okCount}/${total} vetiev`;
+
+    sec.append(header, score);
+
+    if (missedLabels.length) {
+      const missed = document.createElement('div');
+      missed.className = 'spider-game-missed';
+      const head = document.createElement('div');
+      head.className = 'spider-game-missed-head';
+      head.textContent = 'Na zopakovanie:';
+      missed.appendChild(head);
+      missedLabels.forEach(lbl => {
+        const item = document.createElement('div');
+        item.className = 'spider-game-missed-item';
+        item.textContent = `• ${lbl}`;
+        missed.appendChild(item);
+      });
+      sec.appendChild(missed);
+    }
+
+    const again = document.createElement('button');
+    again.className = 'btn';
+    again.style.width = '100%';
+    again.textContent = '↻ Ešte raz';
+    again.onclick = () => render();
+
+    const back = document.createElement('button');
+    back.className = 'btn';
+    back.style.width = '100%';
+    back.style.marginTop = '8px';
+    back.textContent = '← Späť na strom';
+    back.onclick = backToLauncher;
+
+    sec.append(again, back);
+  }
+
+  render();
 }
