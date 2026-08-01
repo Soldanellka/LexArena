@@ -514,8 +514,29 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
         pairs.push([eligible[a], eligible[b]]);
       }
     }
-    const unused = pairs.filter(p => !session.usedPairs.has(pairKey(p[0].i, p[1].i)));
-    const order = shuffle(unused.length ? unused : pairs);
+
+    /* Kandidáti zoradení do úrovní; losuje sa z najvyššej NEPRÁZDNEJ.
+       úr.1: dvojice s aspoň jednou vetvou, pri ktorej padla chyba
+             (opakovaný nácvik problémových vetiev) – len ak už chyby sú,
+       úr.2: OBE vetvy ešte nepoužité v sedení (max. variabilita),
+       úr.3: práve jedna vetva použitá,
+       úr.4: hocijaká dvojica (fallback pri malých okruhoch).
+       Prvé kolo: errorBranches aj usedBranches sú prázdne → padne to na
+       úr.2 = všetky dvojice, čo je pôvodné správanie. */
+    const inErr = p => session.errorBranches.has(p[0].i) || session.errorBranches.has(p[1].i);
+    const usedCount = p => (session.usedBranches.has(p[0].i) ? 1 : 0) + (session.usedBranches.has(p[1].i) ? 1 : 0);
+    const levels = [];
+    if (session.errorBranches.size) levels.push(pairs.filter(inErr));
+    levels.push(pairs.filter(p => usedCount(p) === 0));
+    levels.push(pairs.filter(p => usedCount(p) === 1));
+    levels.push(pairs);
+
+    let pool = [];
+    for (const lv of levels) { if (lv.length) { pool = lv; break; } }
+
+    // v rámci úrovne naďalej preferovať ešte nepoužité dvojice
+    const unused = pool.filter(p => !session.usedPairs.has(pairKey(p[0].i, p[1].i)));
+    const order = shuffle(unused.length ? unused : pool);
 
     for (const [x, y] of order) {
       for (let attempt = 0; attempt < 10; attempt++) {
@@ -529,7 +550,9 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
           const cards = shuffle(
             la.map(text => ({ text, bin: 0 })).concat(lb.map(text => ({ text, bin: 1 })))
           );
-          return { labels: [x.b.label, y.b.label], cards, pairKey: key };
+          // branchIdx: bin 0/1 -> skutočný index vetvy v okruhu (pre
+          // zápis do errorBranches/usedBranches)
+          return { labels: [x.b.label, y.b.label], branchIdx: [x.i, y.i], cards, pairKey: key };
         }
       }
     }
@@ -606,6 +629,8 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
 
     function finishRound() {
       roundDone = true;
+      session.usedBranches.add(round.branchIdx[0]);
+      session.usedBranches.add(round.branchIdx[1]);
       if (!chyba) session.cleanRounds++;
       feedback.className = 'spider-game-feedback ' + (chyba ? 'spider-game-feedback-bad' : 'spider-game-feedback-ok');
       feedback.textContent = chyba ? '✗ Dokončené s chybami' : '✓ Bez jedinej chyby';
@@ -630,6 +655,9 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
         remaining--;
         if (remaining === 0) finishRound();
       } else {
+        // karta správne patrí do vetvy round.branchIdx[cardBin] – zapíš ju
+        // ako "chybovú" pre prioritný nácvik v ďalších kolách
+        session.errorBranches.add(round.branchIdx[cardBin]);
         card.classList.add('spider-game-card-wrong-blink');
         setTimeout(() => card.classList.remove('spider-game-card-wrong-blink'), 500);
         chyba = true;
@@ -677,7 +705,12 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
       return;
     }
 
-    session = { round: 0, cleanRounds: 0, usedPairs: new Set() };
+    session = {
+      round: 0, cleanRounds: 0,
+      usedPairs: new Set(),      // dvojice vetiev už odohrané (kľúč i-j)
+      usedBranches: new Set(),   // indexy vetiev z odohraných kôl
+      errorBranches: new Set()   // indexy vetiev, pri ktorých padla chyba
+    };
     nextRound();
   }
 
