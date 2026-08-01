@@ -33,8 +33,11 @@
    že SVG <rect> a HTML popisok museli byť ručne synchronizované pri
    každom pan/zoome. Tento prepis ten koreň odstraňuje úplne.
 
-   Dáta: ob-pravo-app/data/procesne/_map.json { area, clusters[], links[] }
-   – links[] sa v tejto dávke ešte nevykresľuje (len kostra Z1/Z2).
+   Dáta: ob-pravo-app/data/procesne/_map.json { area, clusters[], links[] }.
+   links[] vykresľuje samostatný modul scripts/spiderRelated.js ("Súvisí
+   s" sekcia v Z3 strome + odznaky ⇄N na Z2 dlaždiciach) – rovnaký
+   containment vzor (lazy import, vlastný try/catch), spiderMap.js jeho
+   vnútro nepozná, len ho volá a odovzdá mu kontajner/kľúč oblasti.
    Žiadna hra, žiadny Firebase zápis, žiadny progres – rovnako ako
    spider.js, ide o nehodnotenú pomôcku.
 ============================================================ */
@@ -107,6 +110,13 @@ function ensureSpiderMapCss() {
     }
     .spider-map-node:focus { outline: 2px solid var(--accent-3, #ff6f91); outline-offset: 2px; }
     .spider-map-node-sub { font-weight: 400; font-size: 0.82em; }
+    .spider-map-node-has-badge { padding-bottom: 22px; }
+    .spider-map-related-badge {
+      position: absolute; right: 4px; bottom: 3px; font-size: 11px; font-weight: 600;
+      padding: 1px 5px; border-radius: 8px; background: rgba(0,0,0,0.28); color: #fff;
+      pointer-events: none; line-height: 1.4;
+    }
+    :root[data-theme="dark"] .spider-map-related-badge { background: rgba(255,255,255,0.28); color: #1c2430; }
     .spider-map-area-tile {
       display: inline-block; box-sizing: border-box; padding: 10px 14px; margin: 0;
       font: inherit; font-size: 13px; font-weight: 600; text-align: center; line-height: 1.3;
@@ -310,6 +320,12 @@ function setupPanZoom(worldEl, hostEl, state) {
    dofetchovanie titulu v renderZ2) – preto samostatná funkcia, aby
    štýlovanie neplatilo len pri prvom vykreslení. */
 function setNodeLabel(el, label) {
+  // Odznak ⇄N (pridáva addRelatedBadge, Z2-only) je tiež priamy potomok
+  // el – el.textContent='' by ho zmazal, ak by fetchOkruhTitle dobehol
+  // AŽ PO relatedCount fetchi. Poradie oboch async operácií nie je
+  // garantované, preto sa tu odznak pred vyčistením odloží a späť
+  // pripojí až na konci.
+  const badge = el.querySelector('.spider-map-related-badge');
   el.textContent = '';
   const idx = label.indexOf(' – ');
   if (idx === -1) {
@@ -323,6 +339,7 @@ function setNodeLabel(el, label) {
     el.append(strong, sub);
   }
   el.title = label;
+  if (badge) el.appendChild(badge);
 }
 
 /* Spoločné vykreslenie jednej úrovne mapy (Z1 aj Z2 zdieľajú presne
@@ -394,6 +411,19 @@ function renderZ1(container, mapData, onClusterClick) {
   return renderMapNodes(container, nodesData, layout.viewBox, { ariaLabel: 'Mapa klastrov', radius: 20, fontSize: 14 });
 }
 
+/* Odznak ⇄N vpravo dole na Z2 dlaždici (relatedCount z spiderRelated.js).
+   N=0 → nič sa nevykreslí. Vlastný try/catch: pád "Súvisí s" featuru
+   nesmie zhodiť Z2 mapu (rovnaký containment vzor ako pri Z3 nižšie). */
+function addRelatedBadge(nodeEl, count) {
+  nodeEl.classList.add('spider-map-node-has-badge');
+  const badge = document.createElement('span');
+  badge.className = 'spider-map-related-badge';
+  badge.textContent = `⇄ ${count}`;
+  nodeEl.appendChild(badge);
+  const existingLabel = nodeEl.getAttribute('aria-label') || '';
+  nodeEl.setAttribute('aria-label', `${existingLabel}, ${count} súvisiacich okruhov`);
+}
+
 /* Z2: bubliny okruhov vybraného klastra, zdedená farba klastra.
    Popisok je zo začiatku "A{n}" a dobehnutím fetchOkruhTitle sa
    prepíše na spider.center (fallback title) – progresívne, nezávisle
@@ -403,20 +433,25 @@ function renderZ2(container, mapData, clusterIndex, areaTitle, onOkruhClick) {
   const cluster = mapData.clusters[clusterIndex];
   const layout = computeZ2Layout(cluster.okruhy.length);
   const colorClass = `spider-map-c${clusterIndex % 10}`;
-  const nodesData = cluster.okruhy.map((n, i) => ({
+  const nodesData = cluster.okruhy.map((num, i) => ({
     cx: layout.positions[i].cx,
     cy: layout.positions[i].cy,
     w: layout.nodeW,
     h: layout.nodeH,
-    label: `A${n}`,
+    label: `A${num}`,
+    okruh: num,
     colorClass,
-    onClick: () => onOkruhClick(n)
+    onClick: () => onOkruhClick(num)
   }));
   const destroy = renderMapNodes(container, nodesData, layout.viewBox, { ariaLabel: `Okruhy klastra ${cluster.label}`, radius: 14 });
   nodesData.forEach(n => {
     fetchOkruhTitle(n.label, areaTitle).then(title => {
       setNodeLabel(n.el, title);
     });
+    import('./spiderRelated.js')
+      .then(rel => rel.relatedCount(areaTitle, n.okruh))
+      .then(count => { if (count > 0) addRelatedBadge(n.el, count); })
+      .catch(e => console.error('spiderMap: related badge failed', e));
   });
   return destroy;
 }
@@ -478,8 +513,40 @@ export function openStructureBrowser() {
           };
           closeBtn.insertAdjacentElement('afterend', fullCloseBtn);
         }
+        /* "Súvisí s" (Z1/Z2 mapa → Z3 strom, links[] z _map.json) –
+           nezávislý modul scripts/spiderRelated.js, vlastný try/catch:
+           pád tohto featuru nesmie zhodiť práve nastavené tlačidlá
+           vyššie. Kontajner sa pripojí vždy (aj bez dát) – renderRelatedInto
+           ho sama nechá prázdny pri N=0. Existujúca .spiderRelatedSec sa
+           pred pripojením zmaže – ochrana pred pretekaním, keď predošlý
+           async render ešte dobieha a užívateľ medzitým klikne na ďalší
+           riadok (reťazenie skokov cez openTreeWithRelated). */
+        try {
+          const spiderModal = document.getElementById('spiderModal');
+          const panel = spiderModal?.querySelector('.avatar-panel');
+          if (panel) {
+            const existingSec = panel.querySelector('.spiderRelatedSec');
+            if (existingSec) existingSec.remove();
+            const sec = document.createElement('div');
+            sec.className = 'spiderRelatedSec';
+            panel.appendChild(sec);
+            const n = Number(key.slice(1));
+            const rel = await import('./spiderRelated.js');
+            await rel.renderRelatedInto(sec, areaTitle, n, {
+              navigate: true,
+              onNavigate: peer => openTreeWithRelated(peer)
+            });
+          }
+        } catch (e) { console.error('spiderMap: related section failed', e); }
       }
     } catch (e) { console.error('spiderMap: openSpider load failed', e); }
+  }
+
+  /* Klik na riadok v rozbalenej "Súvisí s" sekcii – znova otvorí Z3
+     strom pre susedný okruh, s rovnakým keepUnderneath=true, aby
+     "← Späť"/"Zavrieť" aj nová "Súvisí s" sekcia fungovali ďalej. */
+  function openTreeWithRelated(peer) {
+    openOkruhTree(`A${peer}`, state.area, true);
   }
 
   function renderAreas() {
