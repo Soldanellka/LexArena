@@ -165,7 +165,7 @@ function gridLayout(count, { cols, nodeW, nodeH, stepX, stepY, marginX, marginY 
 }
 
 function computeZ1Layout(count) {
-  return gridLayout(count, { cols: 4, nodeW: 150, nodeH: 90, stepX: 180, stepY: 180, marginX: 100, marginY: 110 });
+  return gridLayout(count, { cols: 4, nodeW: 150, nodeH: 90, stepX: 180, stepY: 180, marginX: 70, marginY: 70 });
 }
 
 function computeZ2Layout(count) {
@@ -180,7 +180,7 @@ function computeInitialTransform(hostEl, worldW, worldH) {
   const hostRect = hostEl.getBoundingClientRect();
   const hostW = hostRect.width || worldW || 1;
   const hostH = hostRect.height || worldH || 1;
-  const rawScale = Math.min(hostW / worldW, hostH / worldH) * 0.92;
+  const rawScale = Math.min(hostW / worldW, hostH / worldH) * 0.97;
   const scale = Math.min(rawScale, 1.5);
   const tx = (hostW - worldW * scale) / 2;
   const ty = (hostH - worldH * scale) / 2;
@@ -330,7 +330,7 @@ function setNodeLabel(el, label) {
    uzol nesie tvar (farba cez triedu spider-map-cN), text aj klik/
    klávesovú interakciu naraz – žiadny samostatný popisok, žiadna
    druhá súradnicová sústava na synchronizáciu. */
-function renderMapNodes(container, nodesData, worldSize, { ariaLabel, radius }) {
+function renderMapNodes(container, nodesData, worldSize, { ariaLabel, radius, fontSize }) {
   container.innerHTML = `
     <div class="spider-map-host" role="group" aria-label="${escapeHtml(ariaLabel)}">
       <div class="spider-map-world"></div>
@@ -347,6 +347,7 @@ function renderMapNodes(container, nodesData, worldSize, { ariaLabel, radius }) 
     node.style.top = `${n.cy - n.h / 2}px`;
     node.style.width = `${n.w}px`;
     node.style.borderRadius = `${radius}px`;
+    if (fontSize) node.style.fontSize = `${fontSize}px`;
     setNodeLabel(node, n.label);
     node.tabIndex = 0;
     node.setAttribute('role', 'button');
@@ -390,7 +391,7 @@ function renderZ1(container, mapData, onClusterClick) {
     colorClass: `spider-map-c${i % 10}`,
     onClick: () => onClusterClick(i)
   }));
-  return renderMapNodes(container, nodesData, layout.viewBox, { ariaLabel: 'Mapa klastrov', radius: 20 });
+  return renderMapNodes(container, nodesData, layout.viewBox, { ariaLabel: 'Mapa klastrov', radius: 20, fontSize: 14 });
 }
 
 /* Z2: bubliny okruhov vybraného klastra, zdedená farba klastra.
@@ -461,7 +462,22 @@ export function openStructureBrowser() {
          null-check, nie čakanie na ďalší frame. spider.js sa nemení. */
       if (keepUnderneath) {
         const closeBtn = document.getElementById('spiderCloseBtn');
-        if (closeBtn) closeBtn.textContent = '← Späť';
+        if (closeBtn) {
+          closeBtn.textContent = '← Späť';
+          closeBtn.style.width = 'auto';
+          closeBtn.style.flex = '1';
+          const wrap = closeBtn.parentElement;
+          if (wrap) { wrap.style.display = 'flex'; wrap.style.gap = '8px'; }
+          const fullCloseBtn = document.createElement('button');
+          fullCloseBtn.className = 'btn';
+          fullCloseBtn.style.flex = '1';
+          fullCloseBtn.textContent = 'Zavrieť';
+          fullCloseBtn.onclick = () => {
+            document.getElementById('spiderModal')?.remove();
+            closeModal();
+          };
+          closeBtn.insertAdjacentElement('afterend', fullCloseBtn);
+        }
       }
     } catch (e) { console.error('spiderMap: openSpider load failed', e); }
   }
