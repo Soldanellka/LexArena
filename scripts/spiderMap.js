@@ -538,6 +538,39 @@ export function openStructureBrowser() {
             });
           }
         } catch (e) { console.error('spiderMap: related section failed', e); }
+
+        /* 🐦 Kukučka – edukačná hra (nájdi list, ktorý do vetvy nepatrí).
+           Samostatný modul scripts/spiderGames.js, lazy import + vlastný
+           try/catch (rovnaký containment vzor ako "Súvisí s" vyššie):
+           pád hry nesmie zhodiť Z3 ani "Súvisí s" sekciu. Tlačidlo sa
+           vešia do vlastnej .spiderGameSec na koniec panelu; existujúca
+           .spiderGameSec sa pred pridaním zmaže (idempotencia pri
+           reťazení skokov cez openTreeWithRelated). Beží len pri
+           keepUnderneath === true (vstup z mapy / "Súvisí s") – v prvej
+           verzii hra pri vstupe z plochého zoznamu nie je (zámer). */
+        try {
+          const gameModal = document.getElementById('spiderModal');
+          const gamePanel = gameModal?.querySelector('.avatar-panel');
+          if (gamePanel) {
+            const existingGameSec = gamePanel.querySelector('.spiderGameSec');
+            if (existingGameSec) existingGameSec.remove();
+            const gameSec = document.createElement('div');
+            gameSec.className = 'spiderGameSec';
+            const gameBtn = document.createElement('button');
+            gameBtn.className = 'btn';
+            gameBtn.style.width = '100%';
+            gameBtn.style.marginTop = '10px';
+            gameBtn.textContent = '🐦 Kukučka';
+            gameBtn.onclick = async () => {
+              try {
+                const g = await import('./spiderGames.js');
+                await g.startCuckoo(areaTitle, Number(key.slice(1)), gamePanel);
+              } catch (e) { console.error('spiderMap: cuckoo game failed', e); }
+            };
+            gameSec.appendChild(gameBtn);
+            gamePanel.appendChild(gameSec);
+          }
+        } catch (e) { console.error('spiderMap: cuckoo section failed', e); }
       }
     } catch (e) { console.error('spiderMap: openSpider load failed', e); }
   }
