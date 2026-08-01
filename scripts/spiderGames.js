@@ -1212,7 +1212,17 @@ export async function startRecall(areaTitle, okruhCislo, panel) {
       if (isOk) okCount++; else missedLabels.push(branches[i].label);
       if (resolvedCount >= branches.length) {
         stopRecognizer();
-        renderEnd(okCount, branches.length, missedLabels);
+        // posledná vetva: koniec sa NEukáže hneď – karty ostávajú viditeľné,
+        // hráč prejde na výsledok sám
+        micBtn.style.display = 'none';
+        doneBtn.style.display = 'none';
+        const resultBtn = document.createElement('button');
+        resultBtn.className = 'btn';
+        resultBtn.style.width = '100%';
+        resultBtn.style.marginTop = '10px';
+        resultBtn.textContent = 'Zobraziť výsledok →';
+        resultBtn.onclick = () => renderEnd(okCount, branches.length, missedLabels);
+        endBtn.insertAdjacentElement('beforebegin', resultBtn);
       }
     }
 
@@ -1406,7 +1416,18 @@ export async function startRecall(areaTitle, okruhCislo, panel) {
         if (isOk) { okCount++; card.classList.add('spider-game-col-correct'); }
         else { missedLabels.push(branch.label); card.classList.add('spider-game-col-wrong'); }
         selfcheck.remove();
-        if (idx >= branches.length) finish();
+        if (idx >= branches.length) {
+          // posledná vetva: koniec sa NEukáže hneď – karty ostávajú viditeľné,
+          // hráč prejde na výsledok sám
+          revealBtn.style.display = 'none';
+          const resultBtn = document.createElement('button');
+          resultBtn.className = 'btn';
+          resultBtn.style.width = '100%';
+          resultBtn.style.marginTop = '10px';
+          resultBtn.textContent = 'Zobraziť výsledok →';
+          resultBtn.onclick = () => finish();
+          revealBtn.insertAdjacentElement('afterend', resultBtn);
+        }
         else revealBtn.disabled = false;
       }
       okBtn.onclick = () => mark(true);
@@ -1647,7 +1668,18 @@ export async function startBlesk(areaTitle, okruhCislo, panel) {
         if (isOk) { okCount++; card.classList.add('spider-game-col-correct'); }
         else { missedLabels.push(branch.label); card.classList.add('spider-game-col-wrong'); }
         selfcheck.remove();
-        if (idx >= branches.length) finish();
+        if (idx >= branches.length) {
+          // posledná vetva: koniec sa NEukáže hneď – karty ostávajú viditeľné,
+          // hráč prejde na výsledok sám
+          revealBtn.style.display = 'none';
+          const resultBtn = document.createElement('button');
+          resultBtn.className = 'btn';
+          resultBtn.style.width = '100%';
+          resultBtn.style.marginTop = '10px';
+          resultBtn.textContent = 'Zobraziť výsledok →';
+          resultBtn.onclick = () => finish();
+          revealBtn.insertAdjacentElement('afterend', resultBtn);
+        }
         else revealBtn.disabled = false;
       }
       okBtn.onclick = () => mark(true);
