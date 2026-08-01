@@ -1,6 +1,6 @@
 'use strict';
 
-import { ref, onValue, get, set, update }
+import { ref, onValue, get }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 import { $, escapeHtml } from '../core.js';
@@ -19,21 +19,8 @@ function getWeekStart(date = new Date()) {
   return d.getTime();
 }
 
-function getWeekKey(date = new Date()) {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-  const dayNum = d.getUTCDay() || 7;
-  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
-  return `${d.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
-}
-
 function getMonthStart(date = new Date()) {
   return new Date(date.getFullYear(), date.getMonth(), 1, 0, 0, 0, 0).getTime();
-}
-
-function getMonthKey(date = new Date()) {
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 }
 
 function getCutoff(period) {
@@ -210,72 +197,11 @@ export function initDuelLeaderboard() {
 }
 
 /* ============================================================
-   🏆 ODMENY ZA TÝŽDEŇ / MESIAC
+   ODMENY ZA TÝŽDEŇ / MESIAC – zrušené (Etapa 1, bod 1.2)
+   Jediná rebríčková vetva je econSettleLeaderboards v
+   scripts/economy.js (tabuľka týždeň 50/30/10, mesiac 200/100/50).
+   Tento modul je odteraz čisto read-only zobrazenie rebríčka –
+   žiadne zatváranie období, žiadny zápis § do Firebase.
 ============================================================ */
 
-const WEEKLY_REWARDS = [50, 20, 10];
-const MONTHLY_REWARDS = [500, 200, 100];
-
-async function awardParagrafyDirect(db, nick, amount) {
-  if (!nick || !amount) return;
-  const userRef = ref(db, `users/${nick}`);
-  const snap = await get(userRef);
-  const data = snap.exists() ? snap.val() : {};
-  const current = data.paragrafy || 0;
-  await update(userRef, {
-    paragrafy: current + amount,
-    lastParUpdate: Date.now()
-  });
-}
-
-async function closePeriod(period) {
-  const db = window.db;
-  if (!db) {
-    console.error('❌ Firebase DB nie je inicializovaná.');
-    return null;
-  }
-
-  const key = period === 'week' ? getWeekKey() : getMonthKey();
-  const rewardsRef = ref(db, `rewards/${period}/${key}`);
-
-  const existing = await get(rewardsRef);
-  if (existing.exists()) {
-    console.warn(`⚠️ Obdobie ${key} (${period}) už bolo vyhodnotené.`);
-    return { alreadyClosed: true, key };
-  }
-
-  const duelsSnap = await get(ref(db, 'duels'));
-  const duelsData = duelsSnap.exists() ? duelsSnap.val() : {};
-  const top3 = aggregateStats(duelsData, period).slice(0, 3);
-
-  const rewardTable = period === 'week' ? WEEKLY_REWARDS : MONTHLY_REWARDS;
-  const results = [];
-
-  for (let i = 0; i < top3.length; i++) {
-    const amount = rewardTable[i] || 0;
-    if (amount > 0) {
-      await awardParagrafyDirect(db, top3[i].nick, amount);
-    }
-    results.push({ place: i + 1, nick: top3[i].nick, points: top3[i].points, awarded: amount });
-  }
-
-  await set(rewardsRef, {
-    closedAt: Date.now(),
-    results
-  });
-
-  console.log(`🏆 Obdobie ${key} (${period}) uzavreté, odmeny vyplatené:`, results);
-  return { alreadyClosed: false, key, results };
-}
-
-export function closeWeeklyPeriod() {
-  return closePeriod('week');
-}
-
-export function closeMonthlyPeriod() {
-  return closePeriod('month');
-}
-
 window.initDuelLeaderboard = initDuelLeaderboard;
-window.closeWeeklyPeriod = closeWeeklyPeriod;
-window.closeMonthlyPeriod = closeMonthlyPeriod;
