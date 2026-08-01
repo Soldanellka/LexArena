@@ -131,6 +131,12 @@ const AVATAR_CONFIG = {
        póze, v tired/sleep póze podľa rovnakej konvencie ako blond/tmava
        sudca. Fialová farba vizuálne overená. */
     'studentka-medena-sudca':       { name: 'Študentka – sudcovský talár',             base: 'avatars/studentka-medena-sudca',       unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 09a4f12, 6 PNG:
+       studentka-medena-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením studentka-medena-sudca (fialový lem/štóla/kniha → modrá,
+       rovnaký odtieň ako studentka-blond-advokat/studentka-tmava-advokat).
+       Modrá farba vizuálne overená. */
+    'studentka-medena-advokat':     { name: 'Študentka – advokátsky talár',            base: 'avatars/studentka-medena-advokat',     unlock: 'talar_purchase', talarBaseId: 'studentka-medena', talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     /* Vlastný render hotový a nahratý v avatars/ (commit 9d51d37, 6 PNG:
        studentka-tmava-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
        prefarbením studentka-tmava-prokurator (červený lem/štóla/kniha →

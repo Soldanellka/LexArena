@@ -195,6 +195,16 @@
       "active": true
     },
     {
+      "id": "studentka-medena-advokat",
+      "name": "Študentka (medené vlasy) – advokátsky talár (modrý lem)",
+      "type": "talar",
+      "base": "avatars/studentka-medena-advokat",
+      "price": 500,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "studentka-tmava-talar-cierny",
       "name": "Študentka (tmavé vlasy) – základný talár",
       "type": "talar",
