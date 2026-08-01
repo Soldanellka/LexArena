@@ -1556,7 +1556,7 @@ export async function startBlesk(areaTitle, okruhCislo, panel) {
     skipBtn.style.width = '100%';
     skipBtn.style.marginTop = '10px';
     skipBtn.textContent = 'Hotovo, skry skôr';
-    skipBtn.onclick = () => { clearTimer(); renderRecallPhase(); };
+    skipBtn.onclick = () => { clearTimer(); renderModeChoiceBlesk(); };
 
     const endBtn = document.createElement('button');
     endBtn.className = 'btn spider-game-endbtn';
@@ -1573,9 +1573,258 @@ export async function startBlesk(areaTitle, okruhCislo, panel) {
       // sec je odpojený → zruš visiaci interval a skonči
       if (!sec.isConnected) { clearTimer(); return; }
       remaining--;
-      if (remaining <= 0) { clearTimer(); renderRecallPhase(); }
+      if (remaining <= 0) { clearTimer(); renderModeChoiceBlesk(); }
       else countdown.textContent = `${remaining} s`;
     }, 1000);
+  }
+
+  /* Voľba režimu vybavovania – PO fáze štúdia (labely už nie sú viditeľné,
+     obrazovka voľby prepíše celý sec). Vzor renderModeChoice z Recallu:
+     lazy import memoryTrainer.js AŽ TU (zvolené namiesto prefetchu na
+     pozadí pri štarte štúdia – jednoduchšie: jedna kódová cesta bez
+     stavu navyše; po prvom použití Recallu/Blesku je modul aj tak v
+     cache prehliadača, takže prefetch by nič nezrýchlil). Pri
+     nepodporovanom STT alebo zlyhaní importu ROVNO renderRecallPhase()
+     bez voľby (nulová bariéra). memoryTrainer.js sa NEMENÍ. */
+  async function renderModeChoiceBlesk() {
+    hideTree();
+    sec.innerHTML = '<div class="spider-game-loading">Načítavam…</div>';
+    let mt = null;
+    try {
+      const mod = await import('../memoryTrainer.js');
+      if (mod.isSpeechRecognitionSupported()) mt = mod;
+    } catch (e) {
+      console.warn('[BLESK] memoryTrainer.js sa nepodarilo načítať – klikací režim', e);
+    }
+    if (!mt) { renderRecallPhase(); return; }
+
+    sec.innerHTML = '';
+    const header = document.createElement('div');
+    header.className = 'spider-game-header';
+    header.textContent = '⚡ Blesk';
+
+    const hint = document.createElement('div');
+    hint.className = 'spider-game-hint';
+    hint.textContent = 'Vyber si režim vybavovania vetiev.';
+
+    const clickBtn = document.createElement('button');
+    clickBtn.className = 'btn';
+    clickBtn.style.width = '100%';
+    clickBtn.textContent = 'Klikací režim';
+    clickBtn.onclick = () => renderRecallPhase();
+
+    const voiceBtn = document.createElement('button');
+    voiceBtn.className = 'btn';
+    voiceBtn.style.width = '100%';
+    voiceBtn.style.marginTop = '8px';
+    voiceBtn.textContent = '🎤 Hlasový režim';
+    voiceBtn.onclick = () => renderVoiceBlesk(mt);
+
+    const endBtn = document.createElement('button');
+    endBtn.className = 'btn spider-game-endbtn';
+    endBtn.style.width = '100%';
+    endBtn.textContent = 'Ukončiť hru';
+    endBtn.onclick = backToLauncher;
+
+    sec.append(header, hint, clickBtn, voiceBtn, endBtn);
+  }
+
+  /* Hlasová vybavovacia fáza – duplikát renderVoice z Recallu (konzistentne
+     s duplicitnou stratégiou Recall/Blesk dvojčiat; Recall sa NEMENÍ).
+     Dva rozdiely: header „⚡ Blesk – hlasový" a koniec ide do Bleskovho
+     renderEnd („Koniec – Blesk ⚡") s pauzou „Zobraziť výsledok →".
+     Všetko ostatné 1:1: kumulovaný transcript, matching >=50 % tokenov,
+     ručné „✓ povedala som", nápovedy iniciály/skeleton s globálnym
+     prepínačom, druhé kolo nahrávania, cleanup mikrofónu (Ukončiť/
+     Hotovo/koniec/!sec.isConnected). */
+  function renderVoiceBlesk(mt) {
+    hideTree();
+    sec.innerHTML = '';
+
+    const header = document.createElement('div');
+    header.className = 'spider-game-header';
+    header.textContent = '⚡ Blesk – hlasový';
+
+    const centerCard = document.createElement('div');
+    centerCard.className = 'spider-game-card-static';
+    centerCard.textContent = okr.center;
+
+    const hint = document.createElement('div');
+    hint.className = 'spider-game-hint';
+    hint.textContent = 'Hovor vetvy nahlas – rozpoznané sa odkryjú. Každú môžeš odškrtnúť aj ručne.';
+
+    const cardsWrap = document.createElement('div');
+    cardsWrap.className = 'spider-game-cards';
+
+    const feedback = document.createElement('div');
+    feedback.className = 'spider-game-feedback';
+
+    const micBtn = document.createElement('button');
+    micBtn.className = 'btn spider-game-mic';
+    micBtn.style.width = '100%';
+    micBtn.textContent = '🎤 Nahrať';
+
+    const doneBtn = document.createElement('button');
+    doneBtn.className = 'btn';
+    doneBtn.style.width = '100%';
+    doneBtn.style.marginTop = '8px';
+    doneBtn.textContent = 'Hotovo';
+
+    const endBtn = document.createElement('button');
+    endBtn.className = 'btn spider-game-endbtn';
+    endBtn.style.width = '100%';
+    endBtn.textContent = 'Ukončiť hru';
+
+    let okCount = 0;
+    const missedLabels = [];
+    let resolvedCount = 0;
+    let fullTranscript = ''; // kumulované za sedenie – neskorší výrok dopĺňa skoršie
+    let recognizer = null;
+    let recognizing = false;
+    let hintMode = 'initials'; // 'initials' | 'skeleton' (globálny prepínač)
+    const states = branches.map(() => 'hidden'); // 'hidden' | 'done'
+    const hintLines = []; // { line, i } – na prepnutie typu nápovedy
+
+    const stopRecognizer = () => { try { if (recognizer) recognizer.stop(); } catch (e) {} };
+    const hintTextOf = label => (hintMode === 'initials' ? buildInitialsHint(label) : buildSkeletonHint(label));
+
+    // Zakryté karty: „?" + ručná poistka „✓ povedala som"
+    const cardEls = branches.map((branch, i) => {
+      const card = document.createElement('div');
+      card.className = 'spider-game-card-hidden spider-game-card-hidden-voice';
+      const q = document.createElement('span');
+      q.textContent = '?';
+      const saidBtn = document.createElement('button');
+      saidBtn.type = 'button';
+      saidBtn.className = 'spider-game-saidbtn';
+      saidBtn.textContent = '✓ povedala som';
+      saidBtn.onclick = () => resolveCard(i, true);
+      card.append(q, saidBtn);
+      cardsWrap.appendChild(card);
+      return card;
+    });
+
+    function resolveCard(i, isOk) {
+      if (states[i] !== 'hidden') return;
+      states[i] = 'done';
+      resolvedCount++;
+      const card = cardEls[i];
+      card.className = 'spider-game-card-static ' + (isOk ? 'spider-game-col-correct' : 'spider-game-col-wrong');
+      card.textContent = branches[i].label;
+      if (isOk) okCount++; else missedLabels.push(branches[i].label);
+      if (resolvedCount >= branches.length) {
+        stopRecognizer();
+        // posledná vetva: koniec sa NEukáže hneď – karty ostávajú viditeľné,
+        // hráč prejde na výsledok sám
+        micBtn.style.display = 'none';
+        doneBtn.style.display = 'none';
+        const resultBtn = document.createElement('button');
+        resultBtn.className = 'btn';
+        resultBtn.style.width = '100%';
+        resultBtn.style.marginTop = '10px';
+        resultBtn.textContent = 'Zobraziť výsledok →';
+        resultBtn.onclick = () => renderEnd(okCount, branches.length, missedLabels);
+        endBtn.insertAdjacentElement('beforebegin', resultBtn);
+      }
+    }
+
+    /* Vetva je „povedaná", ak kumulovaný transcript obsahuje >=50 % jej
+       tokenov (substring zhoda tokenov; pri 1–2 tokenoch všetky). */
+    function applyTranscript() {
+      const norm = normalizeVoiceText(fullTranscript);
+      if (!norm) return;
+      branches.forEach((branch, i) => {
+        if (states[i] !== 'hidden') return;
+        const tokens = labelTokens(branch.label);
+        if (!tokens.length) return;
+        const matched = tokens.filter(t => norm.includes(t)).length;
+        const said = tokens.length <= 2 ? matched === tokens.length : matched / tokens.length >= 0.5;
+        if (said) resolveCard(i, true);
+      });
+    }
+
+    micBtn.onclick = () => {
+      if (recognizing) { stopRecognizer(); return; }
+      recognizer = mt.createSpeechRecognizer({
+        onStart: () => { recognizing = true; micBtn.textContent = '⏹️ Stop'; micBtn.classList.add('spider-game-mic-on'); },
+        onEnd: () => { recognizing = false; micBtn.textContent = '🎤 Nahrať'; micBtn.classList.remove('spider-game-mic-on'); },
+        onError: (e) => {
+          recognizing = false;
+          micBtn.textContent = '🎤 Nahrať';
+          micBtn.classList.remove('spider-game-mic-on');
+          feedback.className = 'spider-game-feedback spider-game-feedback-bad';
+          feedback.textContent = 'Mikrofón sa nepodarilo spustiť – skús znova alebo odkrývaj ručne.';
+          console.warn('[BLESK] rozpoznávanie zlyhalo', e);
+        },
+        onResult: (transcript) => {
+          if (!sec.isConnected) { stopRecognizer(); return; } // hráč medzitým odišiel z hry
+          fullTranscript += ' ' + transcript;
+          feedback.className = 'spider-game-feedback';
+          feedback.textContent = `Počula som: „${transcript}“`;
+          applyTranscript();
+        }
+      }, { continuous: mt.isLikelyDesktop() });
+      if (!recognizer) {
+        feedback.className = 'spider-game-feedback spider-game-feedback-bad';
+        feedback.textContent = 'Rozpoznávanie hlasu nie je dostupné – odkrývaj ručne.';
+        return;
+      }
+      // .start() PRIAMO v click handleri (user gesture – nutné na mobile)
+      try { recognizer.start(); } catch (e) { console.warn('[BLESK] recognizer.start zlyhal', e); }
+    };
+
+    // Globálny prepínač typu nápovedy (zobrazí sa až po „Hotovo")
+    const toggleRow = document.createElement('div');
+    toggleRow.className = 'spider-game-hinttoggle';
+    const initialsBtn = document.createElement('button');
+    initialsBtn.type = 'button';
+    initialsBtn.textContent = 'Iniciály';
+    const skeletonBtn = document.createElement('button');
+    skeletonBtn.type = 'button';
+    skeletonBtn.textContent = 'Skeleton';
+    toggleRow.append(initialsBtn, skeletonBtn);
+
+    function refreshHintUi() {
+      initialsBtn.classList.toggle('spider-game-hinttoggle-active', hintMode === 'initials');
+      skeletonBtn.classList.toggle('spider-game-hinttoggle-active', hintMode === 'skeleton');
+      hintLines.forEach(h => { if (states[h.i] === 'hidden') h.line.textContent = hintTextOf(branches[h.i].label); });
+    }
+    initialsBtn.onclick = () => { hintMode = 'initials'; refreshHintUi(); };
+    skeletonBtn.onclick = () => { hintMode = 'skeleton'; refreshHintUi(); };
+
+    // „Hotovo": nepovedané karty prejdú do nápovedného stavu (✓ Viem / ✗ Odkry)
+    doneBtn.onclick = () => {
+      stopRecognizer();
+      doneBtn.style.display = 'none'; // úlohu splnilo; mikrofón ostáva (druhé kolo)
+      sec.insertBefore(toggleRow, cardsWrap);
+      branches.forEach((branch, i) => {
+        if (states[i] !== 'hidden') return;
+        const card = cardEls[i];
+        card.classList.add('spider-game-card-hint');
+        card.textContent = '';
+        const line = document.createElement('div');
+        line.className = 'spider-game-hintline';
+        line.textContent = hintTextOf(branch.label);
+        hintLines.push({ line, i });
+        const chk = document.createElement('div');
+        chk.className = 'spider-game-selfcheck';
+        const knowBtn = document.createElement('button');
+        knowBtn.className = 'btn';
+        knowBtn.textContent = '✓ Viem';
+        knowBtn.onclick = () => resolveCard(i, true);
+        const openBtn = document.createElement('button');
+        openBtn.className = 'btn';
+        openBtn.textContent = '✗ Odkry';
+        openBtn.onclick = () => resolveCard(i, false);
+        chk.append(knowBtn, openBtn);
+        card.append(line, chk);
+      });
+      refreshHintUi();
+    };
+
+    endBtn.onclick = () => { stopRecognizer(); backToLauncher(); };
+
+    sec.append(header, centerCard, hint, cardsWrap, feedback, micBtn, doneBtn, endBtn);
   }
 
   /* Fáza VYBAVOVANIA – duplikát Recall reveal fázy. */
