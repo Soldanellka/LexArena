@@ -571,16 +571,24 @@ function renderJsonCase(container, areaTitle) {
       btn.onclick = () => {
         const app = AREA_SLUGS[c.area];
         const canonical = c._original?.steps?.[si];
-        if (!app || !canonical) return;
+        /* KANONICKÝ index prípadu v json.cases jeho okruhu (data.js ho nesie ako
+           _ci). NIE `idx` – to je pozícia v plochom, cez-okruhovom a ešte
+           filtrovanom zozname, takže pre druhý okruh vybranej dvojice je
+           posunutá o počet prípadov prvého okruhu. applyContentOverrides
+           (contentOverrides.js) číta case_${ci}_step_${si} podľa kanonického
+           poradia – rovnako ako zapisujú študijné appky. Bez _ci sa zápis
+           nedá adresovať správne, preto radšej neuložiť nič. */
+        const ci = c._ci;
+        if (!app || !canonical || typeof ci !== 'number') return;
         openContentEditModal({
           app,
           okruh: c.source,
-          cast: `case_${idx}_step_${si}`,
+          cast: `case_${ci}_step_${si}`,
           kind: 'question',
           current: canonical,
           autor: getMyNick(),
           rola: role,
-          title: `Upraviť krok prípadu – ${c.source} · prípad ${idx + 1}`,
+          title: `Upraviť krok prípadu – ${c.source} · prípad ${ci + 1}`,
           onSaved: (saved) => {
             Object.assign(canonical, saved.novyObsah);
             canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;

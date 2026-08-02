@@ -132,13 +132,20 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
 
       /* 📋 Prípady z praxe (jeden prípad = viac krokov) */
       if (Array.isArray(json.cases)) {
-        json.cases.forEach(c => {
+        json.cases.forEach((c, ci) => {
           if (c && Array.isArray(c.steps)) {
             cases.push({
               title: c.title || 'Prípad',
               difficulty: c.difficulty || '',
               steps: c.steps, // už normalizované (question/explanation/zdroj na krok)
               source: file.replace('.json',''),
+              /* Kanonický index prípadu v json.cases jeho okruhu. Zoznam nižšie
+                 je PLOCHÝ a cez-okruhový (a v cases.js sa ešte filtruje na
+                 vybranú dvojicu okruhov), takže pozícia v ňom NIE JE totožná
+                 s indexom, ktorý čaká applyContentOverrides (contentOverrides.js
+                 case_${ci}_step_${si}). Bez tohto poľa by sa admin úprava
+                 uložila pod cudzí/neexistujúci index. */
+              _ci: ci,
               /* Pôvodná (nezlúčená) oblasť tohto prípadu – niektoré výbery
                  v cases.js zlučujú viac oblastí do jedného poľa (napr.
                  "Trestné právo" = hmotné + procesné), takže areaTitle
