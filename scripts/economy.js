@@ -482,6 +482,71 @@ export async function econBridgeAward(amount, reason = '') {
   return await econAward(nick, amount, reason);
 }
 
+/* ============================================================
+   PAVÚKOVÉ HRY (Etapa 2) – § za výsledok sedenia Kukučky/Rozpárovania/
+   Kde som? Volá sa z koncovej obrazovky hry v scripts/spiderGames.js.
+   Recall a Blesk sa NEODMEŇUJÚ (nevolajú túto funkciu).
+
+   Poradie checkov (žiadna priama RTDB výplata – všetko cez econAward):
+     no nick → 'no_user'
+     score pod prah → 'zero_score' (počítadlá sa NEdotknú)
+     okruh dnes už odmenený → 'okruh_played'
+     spoločný denný strop 3 sedení vyčerpaný → 'daily_max'
+     inak → econAward; okruh flag AŽ PO úspešnej výplate → 'full' | 'near'
+   Ak econAward nevyplatí (napr. denný strop 60§) → 'daily_max' a okruh sa
+   NEZAMKNE (spresnenie 4). Vráti jeden z reťazcov vyššie (fail-soft: hra
+   ho len zobrazí, pád ekonomiky ju nezhodí).
+============================================================ */
+function sanitizeKey(s) {
+  // RTDB kľúč nesmie obsahovať . # $ [ ] / ; orez na 100 znakov.
+  return String(s || '').replace(/[.#$/[\]]/g, '_').slice(0, 100);
+}
+
+function spiderRewardFor(gameId, score) {
+  const table = ECONOMY_CONFIG.SPIDER_GAMES.REWARDS[gameId] || [];
+  for (const tier of table) {
+    if (score >= tier.min) return tier.sg;   // prvý vyhovujúci prah zhora
+  }
+  return 0;
+}
+
+export async function econSpiderGameReward(gameId, score, okruhKey) {
+  const db = getDb();
+  const nick = getNick();
+  if (!db || !nick) return 'no_user';
+
+  const sg = spiderRewardFor(gameId, score);
+  if (!sg) return 'zero_score';               // pod prah – počítadlá sa nedotknú
+
+  const day = todayKey();
+  const okKey = `${gameId}::${sanitizeKey(okruhKey)}`;   // per-hra + okruh (spresnenie 2)
+  const okruhRef = ref(db, `users/${nick}/spiderGameOkruhy/${day}/${okKey}`);
+
+  // (1) okruh dnes už odmenený?
+  const okSnap = await get(okruhRef);
+  if (okSnap.exists()) return 'okruh_played';
+
+  // (2) spoločný denný strop odmenených sedení – transakčne (vzor econAdComplete)
+  const max = ECONOMY_CONFIG.SPIDER_GAMES.DAILY_MAX_SESSIONS;
+  const playsRef = ref(db, `users/${nick}/spiderGamePlays/${day}`);
+  const tx = await runTransaction(playsRef, (current) => {
+    const count = current || 0;
+    if (count >= max) return;                 // abort – strop vyčerpaný
+    return count + 1;
+  });
+  if (!tx.committed) return 'daily_max';
+
+  // (3) výplata cez jednotnú bránu (bez skipCap – v dennom strope 60§)
+  const balanceAfter = await econAward(nick, sg, `pavúková hra – ${gameId}`);
+  if (balanceAfter === null) return 'daily_max';   // 60§ strop – okruh NEZAMYKAŤ
+
+  // (4) okruh flag AŽ PO úspešnej výplate (spresnenie 4)
+  await set(okruhRef, true);
+
+  const top = ECONOMY_CONFIG.SPIDER_GAMES.REWARDS[gameId]?.[0];
+  return (top && score >= top.min) ? 'full' : 'near';
+}
+
 // ECONOMY_CONFIG na window kvôli inline skriptom v index.html (napr. openVerdictModal),
 // ktoré nie sú ES moduly a nemôžu importovať – čerpajú sumy odtiaľto (žiadny hardcode).
 window.ECONOMY_CONFIG = ECONOMY_CONFIG;
@@ -499,3 +564,4 @@ window.econRedeemCode = econRedeemCode;
 window.econGrant = econGrant;
 window.econSettleLeaderboards = econSettleLeaderboards;
 window.econBridgeAward = econBridgeAward;
+window.econSpiderGameReward = econSpiderGameReward;

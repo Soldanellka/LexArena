@@ -197,6 +197,52 @@ function renderSessionEnd(sec, { title, scoreText, onAgain, onBack, backText = '
   sec.append(header, score, again, back);
 }
 
+/* ============================================================
+   EKONOMIKA PAVÚKOVÝCH HIER (Etapa 2) – lazy import, FAIL-SOFT.
+   Volá sa z KONCOVEJ obrazovky Kukučky/Rozpárovania/Kde som? (dosiahnutie
+   renderSessionEnd = dokončené sedenie). Energia −2 aj pri 0 skóre; § len za
+   výsledok cez econSpiderGameReward. Pád / nedostupnosť ekonomiky NIKDY nezhodí
+   hru – § sa len nepripíšu a poznámka sa nezobrazí. Presnú sumu (+X§) toastuje
+   econAward sám; sem pridáme len krátku poznámku do už vykreslenej obrazovky.
+   Recall a Blesk túto funkciu NEVOLAJÚ (bez § a energie – vylúčené rozhodnutím).
+============================================================ */
+function spiderResultNote(outcome) {
+  switch (outcome) {
+    case 'full':
+    case 'near':         return '💰 Odmena za sedenie pripísaná.';
+    case 'okruh_played': return 'Tento okruh dnes už bol odmenený – § sa nepripísali.';
+    case 'daily_max':    return 'Dnešný limit odmenených hier je vyčerpaný – § sa nepripísali.';
+    case 'zero_score':   return 'Bez odmeny – nabudúce skús vyššie skóre.';
+    default:             return '';   // 'no_user' / neznáme / pád → nič nezobrazíme
+  }
+}
+
+function runSpiderEconomy(sec, gameId, score, okruhKey) {
+  // Fire-and-forget: nemeníme signatúru ani logiku herných funkcií. Po dokončení
+  // sedenia doplníme ekonomiku a poznámku do už vykreslenej koncovej obrazovky.
+  (async () => {
+    try {
+      const nick = localStorage.getItem('playerNick');
+      if (!nick) return;
+      const econ = await import('./economy.js');
+      // Energia −2 pri KAŽDOM dokončenom sedení (spresnenie 5), aj pri 0 skóre.
+      econ.econEnergy(nick, econ.ECONOMY_CONFIG.ENERGY.SPIDER_GAME, `pavúková hra – ${gameId}`);
+      const outcome = await econ.econSpiderGameReward(gameId, score, okruhKey);
+      const note = spiderResultNote(outcome);
+      if (note && sec && sec.isConnected) {
+        const el = document.createElement('div');
+        el.style.cssText = 'margin:2px 0 12px;font-size:14px;font-weight:600;color:var(--muted,#667);';
+        el.textContent = note;
+        const scoreEl = sec.querySelector('.spider-game-score');
+        if (scoreEl && scoreEl.parentNode === sec) scoreEl.after(el);
+        else sec.append(el);
+      }
+    } catch (e) {
+      console.warn('[SPIDER] ekonomika zlyhala (hra pokračuje bez §):', e);
+    }
+  })();
+}
+
 function ensureGameCss() {
   if (document.getElementById('spider-games-css')) return;
   const style = document.createElement('style');
@@ -520,6 +566,7 @@ export async function startCuckoo(areaTitle, okruhCislo, panel) {
         onAgain: () => startSession(),
         onBack: backToLauncher
       });
+      runSpiderEconomy(sec, 'kukucka', session.correctFirstTry, `${areaTitle}::A${okruhCislo}`);
       return;
     }
     hideTree();
@@ -772,6 +819,7 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
         onAgain: () => startSession(),
         onBack: backToLauncher
       });
+      runSpiderEconomy(sec, 'rozparovanie', session.cleanRounds, `${areaTitle}::A${okruhCislo}`);
       return;
     }
     const round = buildRound();
@@ -994,6 +1042,7 @@ export function startKdeSom(modal, areaTitle, mapData, onExit) {
         onBack: exit,
         backText: '← Späť na mapu'
       });
+      runSpiderEconomy(sec, 'kdesom', session.score, areaTitle);
       return;
     }
     sec.innerHTML = '<div class="spider-game-loading">Pripravujem kolo…</div>';

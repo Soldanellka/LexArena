@@ -588,6 +588,25 @@
         </div>
       </details>
 
+      <!-- Etapa 2 – pavúkové hry. Čísla odmien sa plnia z ECONOMY_CONFIG.SPIDER_GAMES
+           cez data-econ (fillGuideEconomyValues v init.js) – cesty data-econ NEMENIŤ. -->
+      <details class="guide-section">
+        <summary>🕸️ Pavúkové hry na mape</summary>
+        <div class="guide-content">
+          <p>V mape štruktúry otázok nájdeš päť hier na precvičenie. Tri z nich – Kukučka, Rozpárovanie a Kde som? – ti za dobré skóre pripíšu §. Recall a Blesk sú čisto tréningové, bez odmeny.</p>
+          <table class="guide-table">
+            <tr><th>Hra – výsledok sedenia</th><th>Odmena</th></tr>
+            <tr><td>🐦 Kukučka – 5/5</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.kukucka.0.sg"></span>§</td></tr>
+            <tr><td>🐦 Kukučka – 4/5</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.kukucka.1.sg"></span>§</td></tr>
+            <tr><td>🧩 Rozpárovanie – 5/5</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.rozparovanie.0.sg"></span>§</td></tr>
+            <tr><td>🧩 Rozpárovanie – 4/5</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.rozparovanie.1.sg"></span>§</td></tr>
+            <tr><td>🧭 Kde som? – 10/10</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.kdesom.0.sg"></span>§</td></tr>
+            <tr><td>🧭 Kde som? – 8–9/10</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.kdesom.1.sg"></span>§</td></tr>
+          </table>
+          <p class="small muted">Max <span data-econ="SPIDER_GAMES.DAILY_MAX_SESSIONS"></span> odmenené sedenia denne (spoločne za všetky tri hry), ten istý okruh raz denne.</p>
+        </div>
+      </details>
+
       <details class="guide-section">
         <summary>⚡ Energia a avatar</summary>
         <div class="guide-content">

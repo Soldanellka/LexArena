@@ -38,6 +38,7 @@ export const ECONOMY_CONFIG = {
                            //  50 kartičiek = polovica energie, nie celá)
     MEMORY_SET: -2,        // za dohranú sadu pexesa
     CASES_SET: -4,         // za dohranú sadu prípadov
+    SPIDER_GAME: -2,       // za dokončené sedenie odmeňovanej pavúkovej hry (Kukučka/Rozpárovanie/Kde som?)
     FEED_COST: 12,         // § za nakŕmenie
     FEED_TO: 100           // kŕmenie doplní na 100 %
   },
@@ -210,6 +211,20 @@ export const ECONOMY_CONFIG = {
     ENABLED: true,            // "Získaj §" – zatiaľ placeholder videami, nie skutočným SDK
     REWARD: 3,                // § za pozretie odmeňovanej reklamy (rewarded ad)
     DAILY_MAX: 3              // max reklám denne (t. j. max +9§/deň z reklám)
+  },
+
+  // PAVÚKOVÉ HRY (Etapa 2) – § len za VÝSLEDOK celého sedenia, cez econAward
+  // BEZ skipCap (v dennom strope 60§). Recall a Blesk sa NEODMEŇUJÚ (nie sú tu).
+  // Odmena sa vyhodnocuje z prahov REWARDS[gameId] (prvý vyhovujúci zhora podľa
+  // score >= min); pod najnižší prah = 0§ (zero_score, nemíňa počítadlá).
+  // Doplnkový zdroj: max ~7§/deň (3 sedenia á 2–3§), pod úrovňou duelov/kartičiek.
+  SPIDER_GAMES: {
+    DAILY_MAX_SESSIONS: 3,        // spoločný strop ODMENENÝCH sedení/deň za všetky tri hry
+    REWARDS: {
+      kukucka:      [ { min: 5,  sg: 2 }, { min: 4, sg: 1 } ],  // skóre z 5 (correctFirstTry)
+      rozparovanie: [ { min: 5,  sg: 3 }, { min: 4, sg: 1 } ],  // skóre z 5 (cleanRounds)
+      kdesom:       [ { min: 10, sg: 2 }, { min: 8, sg: 1 } ]   // skóre z 10 (score)
+    }
   }
 };
 
