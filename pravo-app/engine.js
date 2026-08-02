@@ -328,16 +328,36 @@ function setupSummaryControls(okruh, cfg) {
 
     /* ✏️ Upraviť pavúka (Etapa 2) – vedľa summary editu, rovnaký rola-gate.
        Editor je samostatný overlay (spiderEditor.js), save cez saveSpiderOverride
-       – žiadna duplicitná ukladacia logika. Prefill = efektívny stav (override). */
-    const spiderBtn = document.createElement('button');
-    spiderBtn.textContent = '✏️ Upraviť pavúka';
-    spiderBtn.className = editBtn.className;
-    spiderBtn.style.marginLeft = '6px';
+       – žiadna duplicitná ukladacia logika. Prefill = efektívny stav (override).
+
+       IDEMPOTENCIA: setupSummaryControls beží pri KAŽDOM selectOkruh (prepnutie
+       okruhu), takže tlačidlo sa vytvorí len raz (lookup podľa id) a ďalšie
+       volania mu len prepíšu onclick – presne vzor statického #summaryEditBtn.
+       Bez toho pribúdalo nové tlačidlo pri každom prepnutí okruhu.
+
+       BEZ PRETEKOV: getMyRole().then() je async, takže staršie volanie môže
+       dobehnúť po novšom. Preto onclick NEČÍTA okruh zo svojej closure, ale
+       vždy AKTUÁLNE zobrazený okruh zo state (selectOkruh nastavuje
+       state.currentOkruh synchrónne hneď na začiatku) – aj handler nainštalovaný
+       oneskoreným .then() teda pracuje so správnym okruhom. */
+    let spiderBtn = $('spiderEditBtn');
+    if (!spiderBtn) {
+      spiderBtn = document.createElement('button');
+      spiderBtn.id = 'spiderEditBtn';
+      spiderBtn.type = 'button';
+      spiderBtn.textContent = '✏️ Upraviť pavúka';
+      spiderBtn.className = editBtn.className;
+      spiderBtn.style.marginLeft = '6px';
+      editBtn.insertAdjacentElement('afterend', spiderBtn);
+    }
+    spiderBtn.style.display = 'inline-block';
     spiderBtn.onclick = async () => {
       try {
-        const n = Number(okruh._file.slice(1));
+        const cur = state.okruhy[state.currentOkruh];   // aktuálny okruh, nie closure
+        if (!cur || !cur._file) return;
+        const n = Number(cur._file.slice(1));
         const { applySpiderOverride } = await import('../scripts/spiderOverrides.js');
-        const eff = await applySpiderOverride(okruh, cfg.reportArea, n);
+        const eff = await applySpiderOverride(cur, cfg.reportArea, n);
         const { openSpiderEditor } = await import('../scripts/spiderEditor.js');
         openSpiderEditor({
           areaTitle: cfg.reportArea, okruhCislo: n,
@@ -347,7 +367,6 @@ function setupSummaryControls(okruh, cfg) {
         });
       } catch (e) { console.warn('[PRAVO-APP] spider editor zlyhal', e); }
     };
-    editBtn.insertAdjacentElement('afterend', spiderBtn);
 
     editBtn.onclick = () => {
       openContentEditModal({
