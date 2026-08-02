@@ -155,6 +155,16 @@
       "active": true
     },
     {
+      "id": "student-blond-akademik",
+      "name": "Študent – akademický talár (zlatý pás)",
+      "type": "talar",
+      "base": "avatars/student-blond-akademik",
+      "price": 0,
+      "grantedBy": "admin",
+      "grantNote": "akademická pečať / admin",
+      "active": true
+    },
+    {
       "id": "studentka-blond-prokurator",
       "name": "Študentka – prokurátorský talár (vínová štóla)",
       "type": "talar",
