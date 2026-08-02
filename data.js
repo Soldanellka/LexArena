@@ -123,9 +123,14 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
 
       /* 🃏 Dlaždice pre memory (pojem ↔ definícia) */
       if (Array.isArray(json.tiles)) {
-        json.tiles.forEach(t => {
+        /* _ti = kanonický index dlaždice v json.tiles jeho okruhu (rovnaký dôvod
+           ako _ci pri prípadoch nižšie): zoznam je PLOCHÝ a cez-okruhový, takže
+           pozícia v ňom nie je index, ktorý čaká applyContentOverrides
+           (tile_${i}). Hlavná appka dnes dlaždice needituje, ale sploštenie tým
+           prestáva informáciu strácať. */
+        json.tiles.forEach((t, ti) => {
           if (t && t.term && t.definition) {
-            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json',''), _area: areaTitle, zdroj: t.zdroj || null });
+            tiles.push({ term: t.term, definition: t.definition, source: file.replace('.json',''), _area: areaTitle, zdroj: t.zdroj || null, _ti: ti });
           }
         });
       }

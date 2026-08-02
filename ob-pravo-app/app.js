@@ -693,12 +693,81 @@ function buildMemory() {
 
   updateStats();
 
+  mountTileEditList(board, tiles);
+
   $('memoryRestartBtn').onclick = () => {
     board.innerHTML = '';
     const next = board.nextElementSibling;
     if (next && next.textContent.includes('Všetky')) next.remove();
     buildMemory();
   };
+}
+
+/* ✏️ Úprava kartičiek (admin/garant) – zoznam pod hracou doskou, jedna položka
+   na KANONICKÚ dlaždicu okruh.tiles[i]. Zámerne NIE ikona na hracích kartách:
+   tie sú zamiešané a klik na ne je herná akcia (párovanie), tlačidlo by s ňou
+   kolidovalo; navyše jedna dlaždica = dve karty (pojem + definícia).
+
+   IDEMPOTENCIA (poučenie z pavúčieho tlačidla): zoznam má pevné id a pred
+   vytvorením sa existujúci odstráni, takže opakovaný render ho nemnoží – a to
+   aj keby sa mount volal viackrát alebo dobehol starší getMyRole().then().
+   KONTEXT: onclick číta okruh AŽ PRI KLIKU zo state (nie zo closure), takže
+   pracuje vždy so zobrazeným okruhom. */
+function mountTileEditList(board, tiles) {
+  document.getElementById('memoryTileEditList')?.remove();
+  if (!board || !tiles.length) return;
+
+  getMyRole().then(role => {
+    if (role !== 'admin' && role !== 'garant') return;
+    document.getElementById('memoryTileEditList')?.remove();
+
+    const wrap = document.createElement('div');
+    wrap.id = 'memoryTileEditList';
+    wrap.style.cssText = 'margin-top:14px;padding-top:10px;border-top:1px solid var(--card-border,rgba(0,0,0,0.12))';
+    const head = document.createElement('div');
+    head.className = 'small muted';
+    head.style.marginBottom = '6px';
+    head.textContent = '✏️ Úprava kartičiek (admin/garant)';
+    wrap.appendChild(head);
+
+    tiles.forEach((t, i) => {
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex;gap:8px;align-items:center;padding:3px 0;font-size:13px';
+      const label = document.createElement('span');
+      label.style.cssText = 'flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';
+      label.textContent = `${i + 1}. ${t.term || '(bez pojmu)'}`;
+      const btn = document.createElement('button');
+      btn.className = 'report-q-btn';
+      btn.type = 'button';
+      btn.textContent = '✏️';
+      btn.title = 'Upraviť kartičku';
+      btn.onclick = () => {
+        const okruh = state.okruhy[state.currentOkruh];
+        const canonical = okruh?.tiles?.[i];
+        const app = AREA_SLUGS[CONFIG[state.area].reportArea];
+        if (!canonical || !app) return;
+        openContentEditModal({
+          app,
+          okruh: okruh._file,
+          cast: `tile_${i}`,
+          kind: 'tile',
+          current: canonical,
+          autor: getMyNick(),
+          rola: role,
+          title: `Upraviť kartičku – ${okruh._file} · ${i + 1}`,
+          onSaved: (saved) => {
+            Object.assign(canonical, saved.novyObsah);
+            canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+            buildMemory();
+          }
+        });
+      };
+      row.append(label, btn);
+      wrap.appendChild(row);
+    });
+
+    board.insertAdjacentElement('afterend', wrap);
+  });
 }
 
 /* ── PRÍPADY ── */

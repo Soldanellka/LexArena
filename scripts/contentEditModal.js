@@ -27,12 +27,13 @@ function ensureModal() {
 const inputStyle = 'width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #d0d5dd;border-radius:8px;font-size:14px;font-family:inherit;margin-top:4px;';
 const labelStyle = 'display:block;font-size:12px;font-weight:600;color:#444;margin-top:12px;';
 
-/* ctx = { app, okruh, cast, kind: 'summary'|'question', current, autor, rola, title, onSaved } */
+/* ctx = { app, okruh, cast, kind: 'summary'|'question'|'tile', current, autor, rola, title, onSaved } */
 export function openContentEditModal(ctx) {
   const modal = ensureModal();
   const isSummary = ctx.kind === 'summary';
+  const isTile = ctx.kind === 'tile';
 
-  const optionsHtml = isSummary ? '' : (ctx.current.options || []).map((opt, i) => `
+  const optionsHtml = (isSummary || isTile) ? '' : (ctx.current.options || []).map((opt, i) => `
     <label style="${labelStyle}">Možnosť ${i + 1} ${i === ctx.current.correct ? '(správna)' : ''}</label>
     <input type="text" class="ce-opt" data-i="${i}" value="${escapeAttr(opt)}" style="${inputStyle}"/>
   `).join('');
@@ -48,6 +49,15 @@ export function openContentEditModal(ctx) {
       ${isSummary ? `
         <label style="${labelStyle}">Text zhrnutia</label>
         <textarea id="ceSummary" rows="8" style="${inputStyle}">${escapeHtmlText(ctx.current.summary || '')}</textarea>
+      ` : isTile ? `
+        <label style="${labelStyle}">Pojem</label>
+        <input type="text" id="ceTerm" value="${escapeAttr(ctx.current.term || '')}" style="${inputStyle}"/>
+
+        <label style="${labelStyle}">Definícia</label>
+        <textarea id="ceDefinition" rows="5" style="${inputStyle}">${escapeHtmlText(ctx.current.definition || '')}</textarea>
+
+        <label style="${labelStyle}">Zdroj (citácia)</label>
+        <input type="text" id="ceTileZdroj" value="${escapeAttr((ctx.current.zdroj && ctx.current.zdroj.citation) || '')}" style="${inputStyle}"/>
       ` : `
         <label style="${labelStyle}">Znenie otázky</label>
         <textarea id="ceQuestion" rows="2" style="${inputStyle}">${escapeHtmlText(ctx.current.question || '')}</textarea>
@@ -91,6 +101,16 @@ export function openContentEditModal(ctx) {
       const summary = modal.querySelector('#ceSummary').value.trim();
       if (!summary) { errEl.textContent = 'Zhrnutie nesmie byť prázdne.'; errEl.style.display = 'block'; return; }
       novyObsah = { summary };
+    } else if (isTile) {
+      const term = modal.querySelector('#ceTerm').value.trim();
+      const definition = modal.querySelector('#ceDefinition').value.trim();
+      const tileZdroj = modal.querySelector('#ceTileZdroj').value.trim();
+      if (!term) { errEl.textContent = 'Pojem nesmie byť prázdny.'; errEl.style.display = 'block'; return; }
+      if (!definition) { errEl.textContent = 'Definícia nesmie byť prázdna.'; errEl.style.display = 'block'; return; }
+      novyObsah = {
+        term, definition,
+        zdroj: tileZdroj ? { type: 'zakon', citation: tileZdroj } : (ctx.current.zdroj || null)
+      };
     } else {
       const question = modal.querySelector('#ceQuestion').value.trim();
       const options = Array.from(modal.querySelectorAll('.ce-opt')).map(inp => inp.value.trim());

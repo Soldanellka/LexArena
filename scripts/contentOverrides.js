@@ -12,12 +12,13 @@
    }
    - app: slug oblasti (AREA_SLUGS nižšie)
    - okruh: názov súboru bez prípony, napr. "A23"
-   - cast: 'summary' | `quiz_${i}` | `case_${ci}_step_${si}` (i/ci/si sú
+   - cast: 'summary' | `quiz_${i}` | `tile_${i}` | `case_${ci}_step_${si}` (i/ci/si sú
      indexy do KANONICKÉHO, nezamiešaného poľa quiz[]/cases[].steps[]
      tak, ako ho vracia normalizeOkruh() – nikdy zo zamiešaného
      zobrazenia po shuffleOptions()).
    - novyObsah: pre 'summary' { summary }, pre otázku/krok
-     { question, options, correct, explanation, zdroj }.
+     { question, options, correct, explanation, zdroj }, pre dlaždicu
+     { term, definition, zdroj }.
    - rola: skutočná Firebase rola autora (users/{nick}/role), nikdy
      lokálny "view" prepínač – inak by si hocikto mohol lokálne
      nastaviť pečať 🎓.
@@ -85,6 +86,17 @@ export function applyContentOverrides(json, overrides) {
       const ov = overrides[`quiz_${i}`];
       if (!ov || !ov.novyObsah) return q;
       return { ...q, ...ov.novyObsah, _seal: sealMeta(ov) };
+    });
+  }
+
+  /* Kartičky/dlaždice – rovnaký per-index vzor ako quiz vyššie (tiles je pole
+     { term, definition, zdroj? } so stabilnými indexmi). Guard na pole: okruhy
+     bez tiles ostanú nedotknuté. */
+  if (Array.isArray(json.tiles)) {
+    result.tiles = json.tiles.map((t, i) => {
+      const ov = overrides[`tile_${i}`];
+      if (!ov || !ov.novyObsah) return t;
+      return { ...t, ...ov.novyObsah, _seal: sealMeta(ov) };
     });
   }
 
