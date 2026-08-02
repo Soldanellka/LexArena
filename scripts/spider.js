@@ -55,8 +55,14 @@ async function fetchTopicJson(key, areaTitle) {
   try {
     const res = await fetch(`${basePath}${key}.json`);
     if (!res.ok) return null;
-    const json = await res.json();
-    return (json && json.title) ? json : null;
+    let json = await res.json();
+    if (!(json && json.title)) return null;
+    // Admin spider override (Etapa 2) – jediné miesto obalenia fetchu; fail-soft.
+    try {
+      const { applySpiderOverride } = await import('./spiderOverrides.js');
+      json = await applySpiderOverride(json, areaTitle, Number(key.slice(1)));
+    } catch (e) { console.warn('[PAVÚK] spider override zlyhal – originál', e); }
+    return json;
   } catch (e) {
     console.warn('[PAVÚK] fetch okruhu zlyhal:', e);
     return null;

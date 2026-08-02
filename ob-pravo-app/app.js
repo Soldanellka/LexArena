@@ -291,6 +291,30 @@ function setupSummaryControls(okruh, cfg) {
   getMyRole().then(role => {
     if (role !== 'admin' && role !== 'garant') return;
     editBtn.style.display = 'inline-block';
+
+    /* ✏️ Upraviť pavúka (Etapa 2) – vedľa summary editu, rovnaký rola-gate.
+       Editor je samostatný overlay (spiderEditor.js), save cez saveSpiderOverride
+       – žiadna duplicitná ukladacia logika. Prefill = efektívny stav (override). */
+    const spiderBtn = document.createElement('button');
+    spiderBtn.textContent = '✏️ Upraviť pavúka';
+    spiderBtn.className = editBtn.className;
+    spiderBtn.style.marginLeft = '6px';
+    spiderBtn.onclick = async () => {
+      try {
+        const n = Number(okruh._file.slice(1));
+        const { applySpiderOverride } = await import('../scripts/spiderOverrides.js');
+        const eff = await applySpiderOverride(okruh, cfg.reportArea, n);
+        const { openSpiderEditor } = await import('../scripts/spiderEditor.js');
+        openSpiderEditor({
+          areaTitle: cfg.reportArea, okruhCislo: n,
+          spider: (eff && eff.spider) || { center: '', branches: [] },
+          autor: getMyNick(), rola: role,
+          onSaved: () => { try { if (typeof window.invalidateOkruhCache === 'function') window.invalidateOkruhCache(cfg.reportArea, n); } catch (e) {} }
+        });
+      } catch (e) { console.warn('[OB-PRAVO-APP] spider editor zlyhal', e); }
+    };
+    editBtn.insertAdjacentElement('afterend', spiderBtn);
+
     editBtn.onclick = () => {
       openContentEditModal({
         app: AREA_SLUGS[cfg.reportArea],

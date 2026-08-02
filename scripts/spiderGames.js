@@ -110,10 +110,25 @@ function shuffle(arr) {
    v tej istej relácii). Kľúč `${areaTitle}:${n}` – rôzne oblasti majú
    vlastné A{n}.json. */
 const okruhCache = new Map(); // `${areaTitle}:${n}` -> { branches, title }
+
+/* Zneplatní memoizovaný okruh – volá spiderEditor po uložení admin override,
+   inak by hry ostali na starých dátach do reloadu (strom nové, hry staré).
+   Exportované aj na window (editor ho volá bez importu, len ak je modul
+   načítaný). */
+export function invalidateOkruhCache(areaTitle, n) {
+  okruhCache.delete(`${areaTitle}:${n}`);
+}
+if (typeof window !== 'undefined') window.invalidateOkruhCache = invalidateOkruhCache;
+
 async function getOkruh(areaTitle, n) {
   const cacheKey = `${areaTitle}:${n}`;
   if (okruhCache.has(cacheKey)) return okruhCache.get(cacheKey);
-  const json = await fetchJson(areaTitle, `A${n}`);
+  let json = await fetchJson(areaTitle, `A${n}`);
+  // Admin spider override (Etapa 2) – navrství sa PRED cache entry, fail-soft.
+  try {
+    const { applySpiderOverride } = await import('./spiderOverrides.js');
+    json = await applySpiderOverride(json, areaTitle, n);
+  } catch (e) { console.warn('[HRY] spider override zlyhal – originál', e); }
   const title = okruhTitleOf(json, n);
   const entry = { branches: branchesOf(json), title, center: (json && json.spider?.center) || title };
   okruhCache.set(cacheKey, entry);
@@ -382,7 +397,7 @@ function ensureGameCss() {
 
 /* Idempotentne (starú .spiderGameSec zmaže) vykreslí sekciu hier s
    tlačidlami. Všetky návraty z hier volajú túto funkciu späť. */
-export function mountLauncher(panel, areaTitle, okruhCislo) {
+export function mountLauncher(panel, areaTitle, okruhCislo, onSpiderSaved) {
   if (!panel) return;
   ensureGameCss();
   const existing = panel.querySelector('.spiderGameSec');
@@ -421,6 +436,41 @@ export function mountLauncher(panel, areaTitle, okruhCislo) {
   bleskBtn.onclick = () => startBlesk(areaTitle, okruhCislo, panel);
 
   sec.append(cuckooBtn, rozBtn, recallBtn, bleskBtn);
+
+  // ✏️ Admin/garant: editor pavúka (Etapa 2). Fire-and-forget; tlačidlo pribudne
+  // až po overení skutočnej Firebase roly (getRole), ostatní ho neuvidia.
+  mountSpiderEditButton(sec, areaTitle, okruhCislo, onSpiderSaved);
+}
+
+/* Rola-gated tlačidlo „Upraviť pavúka" – zdieľané mount pre launcher.
+   Prefill editora = efektívny (override-aware) getOkruh. */
+async function mountSpiderEditButton(sec, areaTitle, okruhCislo, onSpiderSaved) {
+  try {
+    const nick = localStorage.getItem('playerNick');
+    if (!nick) return;
+    const { getRole } = await import('./economyConfig.js');   // rovnaký zdroj roly ako summary gate
+    const rola = await getRole(nick);
+    if (rola !== 'admin' && rola !== 'garant') return;
+
+    const editBtn = document.createElement('button');
+    editBtn.className = 'btn';
+    editBtn.style.width = '100%';
+    editBtn.style.marginTop = '12px';
+    editBtn.textContent = '✏️ Upraviť pavúka';
+    editBtn.onclick = async () => {
+      try {
+        const okr = await getOkruh(areaTitle, okruhCislo);   // override-aware efektívny stav
+        const { openSpiderEditor } = await import('./spiderEditor.js');
+        openSpiderEditor({
+          areaTitle, okruhCislo,
+          spider: { center: okr.center, branches: okr.branches },
+          autor: nick, rola,
+          onSaved: () => { if (typeof onSpiderSaved === 'function') onSpiderSaved(); }
+        });
+      } catch (e) { console.warn('[HRY] otvorenie editora pavúka zlyhalo', e); }
+    };
+    if (sec.isConnected) sec.appendChild(editBtn);
+  } catch (e) { console.warn('[HRY] spider edit gate zlyhal', e); }
 }
 
 /* ---- Hra 1: Kukučka -------------------------------------------------- */

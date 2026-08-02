@@ -82,7 +82,12 @@ async function fetchOkruhTitle(key, areaTitle) {
   try {
     const res = await fetch(`${basePath}${key}.json`);
     if (!res.ok) return key;
-    const json = await res.json();
+    let json = await res.json();
+    // Admin spider override (Etapa 2) – aby labely uzlov ukázali upravený center; fail-soft.
+    try {
+      const { applySpiderOverride } = await import('./spiderOverrides.js');
+      json = await applySpiderOverride(json, areaTitle, Number(key.slice(1)));
+    } catch (e) { console.warn('[MAPA] spider override zlyhal – originál', e); }
     return (json && (json.spider?.center || json.title)) || key;
   } catch (e) {
     console.warn('[MAPA] fetch okruhu zlyhal:', e);
@@ -549,7 +554,10 @@ export function openStructureBrowser() {
           const gamePanel = gameModal?.querySelector('.avatar-panel');
           if (gamePanel) {
             const g = await import('./spiderGames.js');
-            g.mountLauncher(gamePanel, areaTitle, Number(key.slice(1)));
+            // 4. param = re-render Z3 stromu po uložení admin editora pavúka
+            // (existujúca cesta openOkruhTree, nevymýšľa sa vlastné prekreslenie).
+            g.mountLauncher(gamePanel, areaTitle, Number(key.slice(1)),
+              () => openOkruhTree(key, areaTitle, true));
           }
         } catch (e) { console.error('spiderMap: game launcher failed', e); }
       }
