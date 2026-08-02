@@ -97,6 +97,10 @@ const AVATAR_CONFIG = {
        pre každú farbu taláru – chýbajúce kombinácie s lemom tu jednoducho
        NIE SÚ (žiadny fiktívny nákup niečoho, čo appka nevie zobraziť).
     ============================================================ */
+    /* Grafika aktualizovaná (commit 15bba5d, 6 PNG prepísaných na rovnakých
+       cestách) – modrý lem/pás na taláre, čiapke a knihe zvýraznený a
+       zosýtený, pôvodne takmer splýval s čiernou. Kód sa nemení, appka
+       načíta novú grafiku cez rovnaké cesty. */
     'student-blond-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-blond-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     /* Vlastný render hotový a nahratý v avatars/ (commit 0dc16ba, 6 PNG:
        student-tmavy-advokat-{full,tired,sleep}{,-bust}.png). Žiadny
