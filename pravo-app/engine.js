@@ -133,26 +133,17 @@ function saveDone() {
    FIREBASE – pridelenie § (ak je dostupné)
 ============================================================ */
 async function awardPar() {
+  // § sa pripisuje VÝHRADNE cez jednotnú bránu rodičovskej appky
+  // (window.opener.econBridgeAward) – tá rieši denný strop aj transakčný log.
+  // Žiadny priamy zápis do Firebase odtiaľto (obchádzal by strop). Ak rodič
+  // nie je dostupný (priame otvorenie sub-appky, zavreté okno), ticho nič
+  // nerobíme – hráč nedostane žiadnu chybovú hlášku.
   try {
-    if (window.opener?.awardParagrafy) {
-      await window.opener.awardParagrafy(1, 'za dokončenie okruhu');
-      return true;
+    if (window.opener?.econBridgeAward) {
+      const res = await window.opener.econBridgeAward(1, 'za dokončenie okruhu');
+      return res != null; // odznak § len keď sa reálne pripísalo (nie pri vyčerpanom strope)
     }
-    const db = window.db || window.parent?.db;
-    const nick = localStorage.getItem('playerNick');
-    if (db && nick) {
-      const { ref, get, update } = await import(
-        'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js'
-      );
-      const snap = await get(ref(db, `users/${nick}/paragrafy`));
-      const current = snap.exists() ? snap.val() : 0;
-      await update(ref(db, `users/${nick}`), {
-        paragrafy: current + 1,
-        lastParUpdate: Date.now()
-      });
-      return true;
-    }
-  } catch (e) { console.log('Firebase nedostupná:', e.message); }
+  } catch (e) { /* rodič nedostupný – ticho, žiadna hláška hráčovi */ }
   return false;
 }
 

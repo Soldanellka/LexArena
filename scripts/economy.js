@@ -468,6 +468,20 @@ export async function econSettleLeaderboards() {
   await announceLeaderboardWinIfAny(db, periods);
 }
 
+/* ============================================================
+   MOST PRE SUB-APPKY (pravo-app, ob-pravo-app)
+   Sub-appky bežia v samostatnom okne a k ekonomike pristupujú
+   cez window.opener. Pripíše § aktuálnemu lokálnemu hráčovi cez
+   jednotnú bránu econAward – teda V DENNOM STROPE (bez skipCap),
+   s transakčným logom, presne ako bežná hra. Vráti balanceAfter
+   alebo null (napr. strop vyčerpaný / žiadny nick).
+============================================================ */
+export async function econBridgeAward(amount, reason = '') {
+  const nick = getNick();
+  if (!nick || !amount) return null;
+  return await econAward(nick, amount, reason);
+}
+
 // ECONOMY_CONFIG na window kvôli inline skriptom v index.html (napr. openVerdictModal),
 // ktoré nie sú ES moduly a nemôžu importovať – čerpajú sumy odtiaľto (žiadny hardcode).
 window.ECONOMY_CONFIG = ECONOMY_CONFIG;
@@ -484,3 +498,4 @@ window.econAdComplete = econAdComplete;
 window.econRedeemCode = econRedeemCode;
 window.econGrant = econGrant;
 window.econSettleLeaderboards = econSettleLeaderboards;
+window.econBridgeAward = econBridgeAward;
