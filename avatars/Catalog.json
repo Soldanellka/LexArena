@@ -65,6 +65,16 @@
       "active": true
     },
     {
+      "id": "student-blond-prokurator",
+      "name": "Študent – prokurátorský talár",
+      "type": "talar",
+      "base": "avatars/student-blond-prokurator",
+      "price": 700,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "student-tmavy-advokat",
       "name": "Študent – advokátsky talár",
       "type": "talar",

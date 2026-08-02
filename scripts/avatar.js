@@ -102,6 +102,12 @@ const AVATAR_CONFIG = {
        zosýtený, pôvodne takmer splýval s čiernou. Kód sa nemení, appka
        načíta novú grafiku cez rovnaké cesty. */
     'student-blond-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-blond-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 52a70e6, 6 PNG:
+       student-blond-prokurator-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením student-blond-advokat (modrý lem/pás/čiapka/kniha →
+       červená). V sleep póze ostáva kniha neutrálna tmavá (nebola modrá
+       ani v zdroji). Červená farba vizuálne overená. */
+    'student-blond-prokurator':     { name: 'Študent – prokurátorský talár',            base: 'avatars/student-blond-prokurator',     unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     /* Vlastný render hotový a nahratý v avatars/ (commit 0dc16ba, 6 PNG:
        student-tmavy-advokat-{full,tired,sleep}{,-bust}.png). Žiadny
        fallbackBase zámerne: fallback je len pre čierny talár bez lemu,
