@@ -214,6 +214,28 @@ function renderSessionEnd(sec, { title, scoreText, onAgain, onBack, backText = '
 }
 
 /* ============================================================
+   ENERGETICKÝ GATE – jednotné pravidlo „avatar spí = nič interaktívne".
+   Rovnaký pre všetkých 5 hier (aj pre Recall/Blesk, ktoré energiu nemíňajú
+   ani nedávajú § – gate je ich jediná ekonomická väzba).
+
+   Vracia true = hrať sa smie. Pri spiacom avatarovi (energia ≤ 0) vráti
+   false a hlášku „😴 Avatar spí! Nakŕm ho za 12§…" zobrazí canPlayDuel()
+   SÁM – tu sa preto nič nedopĺňa (žiadny druhý toast).
+
+   FAIL-SOFT: ak import alebo volanie ekonomiky zlyhá, hru PUSTÍME –
+   výpadok ekonomiky nesmie zablokovať učenie.
+============================================================ */
+async function canPlaySpiderGame() {
+  try {
+    const econ = await import('./economy.js');
+    return await econ.econCanPlay('spider');
+  } catch (e) {
+    console.warn('[HRY] energetický gate zlyhal – hra pokračuje', e);
+    return true;
+  }
+}
+
+/* ============================================================
    EKONOMIKA PAVÚKOVÝCH HIER (Etapa 2) – lazy import, FAIL-SOFT.
    Volá sa z KONCOVEJ obrazovky Kukučky/Rozpárovania/Kde som? (dosiahnutie
    renderSessionEnd = dokončené sedenie). Energia −2 aj pri 0 skóre; § len za
@@ -502,6 +524,7 @@ async function mountSpiderEditButton(sec, areaTitle, okruhCislo, onSpiderSaved) 
    len čerpá zo zdieľaných helperov a návraty smerujú na mountLauncher. */
 export async function startCuckoo(areaTitle, okruhCislo, panel) {
   if (!panel) return;
+  if (!(await canPlaySpiderGame())) return;   // avatar spí – launcher ostáva zobrazený
   ensureGameCss();
   const sec = resolveSec(panel);
   const backToLauncher = () => mountLauncher(panel, areaTitle, okruhCislo);
@@ -697,8 +720,11 @@ export async function startCuckoo(areaTitle, okruhCislo, panel) {
 /* Interná (volaná z mountLauncher). Priradenie listov dvoch zmiešaných
    vetiev toho istého okruhu do správnych košov (klik-list → klik-vetva).
    Skóre = kolá bez chyby. */
-function startRozparovanie(areaTitle, okruhCislo, panel) {
+/* async kvôli energetickému gate nižšie – volajúci (mountLauncher onclick)
+   návratovú hodnotu nepoužíva, takže zmena signatúry nikoho neovplyvní. */
+async function startRozparovanie(areaTitle, okruhCislo, panel) {
   if (!panel) return;
+  if (!(await canPlaySpiderGame())) return;   // avatar spí – launcher ostáva zobrazený
   ensureGameCss();
   const sec = resolveSec(panel);
   const backToLauncher = () => mountLauncher(panel, areaTitle, okruhCislo);
@@ -940,13 +966,19 @@ function startRozparovanie(areaTitle, okruhCislo, panel) {
    Kolo: náhodná vetva náhodného okruhu oblasti (len na čítanie) → hráč
    dvojkrokovo háda klaster (krok A) a potom okruh v klastri (krok B).
    Skóre = 0–10 (2 body/kolo za trafenie na prvý pokus). 5 kôl. */
-export function startKdeSom(modal, areaTitle, mapData, onExit) {
+/* async kvôli energetickému gate nižšie – volajúci (spiderMap Z1 tlačidlo)
+   návratovú hodnotu nepoužíva, takže zmena signatúry nikoho neovplyvní. */
+export async function startKdeSom(modal, areaTitle, mapData, onExit) {
   const exit = () => { if (typeof onExit === 'function') onExit(); };
   if (!modal || !mapData || !Array.isArray(mapData.clusters) || !mapData.clusters.length) {
     if (typeof onExit === 'function') onExit();
     else console.error('[KDE SOM] chýbajú dáta (modal/mapData) – hra sa nespustí.');
     return;
   }
+  /* Avatar spí. Na rozdiel od ostatných hier tu volajúci pred spustením robí
+     cleanupLevel(), takže samotný return by nechal prázdnu obrazovku –
+     preto sa cez exit() vrátime na Z1 mapu. */
+  if (!(await canPlaySpiderGame())) { exit(); return; }
   ensureGameCss();
 
   // Únia okruhov naprieč klastrami (unikátne čísla).
@@ -1184,6 +1216,7 @@ function buildSkeletonHint(label) {
    NEPOUŽÍVA (koniec má vlastný layout s "Na zopakovanie"). */
 export async function startRecall(areaTitle, okruhCislo, panel) {
   if (!panel) return;
+  if (!(await canPlaySpiderGame())) return;   // avatar spí – launcher ostáva zobrazený
   ensureGameCss();
   const sec = resolveSec(panel);
   const backToLauncher = () => mountLauncher(panel, areaTitle, okruhCislo);
@@ -1624,6 +1657,7 @@ export async function startRecall(areaTitle, okruhCislo, panel) {
    riziko. Nehodnotené, žiadny zápis, stav v closure. */
 export async function startBlesk(areaTitle, okruhCislo, panel) {
   if (!panel) return;
+  if (!(await canPlaySpiderGame())) return;   // avatar spí – launcher ostáva zobrazený
   ensureGameCss();
   const sec = resolveSec(panel);
   const backToLauncher = () => mountLauncher(panel, areaTitle, okruhCislo);
