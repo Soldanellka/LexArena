@@ -120,6 +120,12 @@ const AVATAR_CONFIG = {
        stmavením student-blond-advokat (jemné modré prúžky → čierna/tmavosivá,
        splýva s plášťom, bez lemu). fallbackBase už netreba. */
     'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render hotový a nahratý v avatars/ (rename commity 733c24d/
+       6cbf362/53d1961, 6 PNG: student-blond-sudca-{full,tired,sleep}{,-bust}.png).
+       Vznikla prefarbením student-blond-prokurator (červený lem/pás/kniha →
+       fialová, rovnaký odtieň ako studentka-blond-sudca, ~302°). Fialová
+       farba vizuálne overená. */
+    'student-blond-sudca':          { name: 'Študent – sudcovský talár',               base: 'avatars/student-blond-sudca',          unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'sudca',      talarPrice: ECONOMY_CONFIG.TALARE.SUDCA },
     /* Vlastný render hotový a nahratý v avatars/ (commit 4edf72b, 6 PNG:
        studentka-blond-advokat-{full,tired,sleep}{,-bust}.png). Modrý lem
        vizuálne overený (2026-07-31). */
