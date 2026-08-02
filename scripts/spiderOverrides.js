@@ -24,7 +24,7 @@
    Babu cez UI editor (spiderEditor.js).
 ============================================================ */
 
-import { AREA_SLUGS } from './contentOverrides.js';
+import { AREA_SLUGS, sealMeta } from './contentOverrides.js';
 
 let fbApiPromise = null;
 function fbApi() {
@@ -58,9 +58,14 @@ export async function applySpiderOverride(json, areaTitle, okruhCislo) {
     const { ref, get } = await fbApi();
     const snap = await get(ref(db, `contentOverrides/${app}/${okruh}/spider`));
     if (!snap.exists()) return json;
-    const sp = snap.val() && snap.val().novyObsah && snap.val().novyObsah.spider;
+    const ov = snap.val() || {};
+    const sp = ov.novyObsah && ov.novyObsah.spider;
     if (!isValidSpider(sp)) return json;
-    return { ...json, spider: sp };
+    /* _seal = stopa poslednej úpravy (rovnaký tvar ako pri summary/quiz/case,
+       cez zdieľané sealMeta). Čitatelia spider dát (spider.js buildBranches,
+       spiderGames branchesOf, spiderMap center) mapujú polia explicitne, takže
+       im pole navyše neprekáža. */
+    return { ...json, spider: { ...sp, _seal: sealMeta(ov) } };
   } catch (e) {
     console.warn(`[spiderOverrides] applySpiderOverride zlyhalo (${areaTitle}/A${okruhCislo}) – originál`, e);
     return json;

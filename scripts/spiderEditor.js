@@ -20,6 +20,7 @@
 ============================================================ */
 
 import { saveSpiderOverride } from './spiderOverrides.js';
+import { formatEditStamp } from './contentOverrides.js';
 
 let overlayEl = null;
 
@@ -54,6 +55,8 @@ const INP = 'width:100%;box-sizing:border-box;padding:7px 9px;border:1px solid #
 export function openSpiderEditor({ areaTitle, okruhCislo, spider, autor, rola, onSaved }) {
   const overlay = ensureOverlay();
   const model = toModel(spider);
+  // Stopa poslednej úpravy (Krok 3) – prefill nesie _seal z applySpiderOverride.
+  const stampText = formatEditStamp(spider && spider._seal);
 
   const panel = document.createElement('div');
   panel.style.cssText = 'background:#fff;color:#1a1a1a;border-radius:16px;padding:22px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);';
@@ -66,6 +69,7 @@ export function openSpiderEditor({ areaTitle, okruhCislo, spider, autor, rola, o
       <button id="seClose" style="background:none;border:none;font-size:18px;cursor:pointer;color:#666">✕</button>
     </div>
     <div style="font-size:12px;color:#777;margin-bottom:10px">Zmena sa uloží ako Firebase override – pôvodný JSON sa nemení. Ostatní ju uvidia po načítaní okruhu.</div>
+    ${stampText ? `<div style="font-size:12px;color:#555;margin:-4px 0 10px">${esc(stampText)}</div>` : ''}
     <label style="display:block;font-size:12px;font-weight:600;color:#444">Center (názov v strede pavúka)</label>
     <textarea id="seCenter" rows="2" style="${INP};margin-top:4px">${esc(model.center)}</textarea>
     <div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0 6px">

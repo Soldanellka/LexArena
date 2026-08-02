@@ -62,9 +62,29 @@ export async function loadContentOverrides(app, okruh) {
   }
 }
 
-function sealMeta(ov) {
-  if (!ov || !ov.pecat) return null;
-  return { type: 'garant', autor: ov.autor || '', timestamp: ov.timestamp || null };
+/* Meta poslednej úpravy – vracia sa VŽDY, keď override existuje (nielen pri
+   pečati), aby sa dala zobraziť stopa „✏️ Upravené … – autor" aj pri admin
+   úprave. `pecat` rozlišuje, či ide navyše o akademickú pečať garanta.
+   Pozn.: `type: 'garant'` ostáva kvôli spätnej kompatibilite tvaru, ale
+   rozhoduje `pecat` – volajúci nesmie z existencie meta usudzovať pečať. */
+export function sealMeta(ov) {
+  if (!ov) return null;
+  return {
+    pecat: !!ov.pecat,
+    type: ov.pecat ? 'garant' : 'admin',
+    autor: ov.autor || '',
+    rola: ov.rola || (ov.pecat ? 'garant' : 'admin'),
+    timestamp: ov.timestamp || null
+  };
+}
+
+/* Jednotný formát stopy poslednej úpravy pre celú appku (hlavná aj študijné).
+   Vracia string alebo '' – DOM si stavia volajúci. */
+export function formatEditStamp(seal) {
+  if (!seal) return '';
+  const d = seal.timestamp ? new Date(seal.timestamp).toLocaleDateString('sk-SK') : '';
+  const kto = seal.autor || 'neznámy';
+  return `✏️ Upravené${d ? ' ' + d : ''} – ${kto}${seal.pecat ? ' · 🎓 akademická pečať' : ''}`;
 }
 
 /* Navrství overrides na už normalizovaný okruh (normalizeOkruh()).

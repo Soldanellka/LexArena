@@ -2,7 +2,7 @@
 
 import { shuffleOptions } from '../core.js';
 import { normalizeOkruh } from '../scripts/contentNormalize.js';
-import { applyOverridesForOkruh, AREA_SLUGS } from '../scripts/contentOverrides.js';
+import { applyOverridesForOkruh, AREA_SLUGS, formatEditStamp, sealMeta } from '../scripts/contentOverrides.js';
 import { getRole } from '../scripts/economyConfig.js';
 import { openContentEditModal } from '../scripts/contentEditModal.js';
 import { writeOkruhBest, readDoneOkruhIndices, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
@@ -94,6 +94,13 @@ async function getMyRole() {
   if (myRoleCache !== null) return myRoleCache;
   myRoleCache = await getRole(getMyNick());
   return myRoleCache;
+}
+
+/* Escape pre text vkladaný do innerHTML. Obsah okruhov je autorský JSON, ale
+   stopa úpravy nesie NICK autora (hráčom zvolený reťazec z Firebase), takže
+   ide do HTML len escapovaný. */
+function escapeHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 function loadDone() {
@@ -273,7 +280,7 @@ function selectOkruh(idx) {
 ============================================================ */
 function setupSummaryControls(okruh, cfg) {
   const sealEl = $('summarySeal');
-  if (sealEl) sealEl.textContent = okruh._summarySeal ? '🎓 overené garantom' : '';
+  if (sealEl) sealEl.textContent = formatEditStamp(okruh._summarySeal);
 
   const reportBtn = $('summaryReportBtn');
   if (reportBtn) {
@@ -346,7 +353,7 @@ function setupSummaryControls(okruh, cfg) {
         title: `Upraviť zhrnutie – ${okruh._file}`,
         onSaved: (saved) => {
           okruh.summary = saved.novyObsah.summary;
-          okruh._summarySeal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+          okruh._summarySeal = sealMeta(saved);
           selectOkruh(state.currentOkruh);
         }
       });
@@ -398,6 +405,21 @@ function renderQuestion() {
   // Otázka
   $('questionNumber').textContent = `Otázka ${q.current + 1}`;
   $('questionText').textContent = question.question;
+
+  /* ✏️ Stopa poslednej úpravy – z KANONICKÉHO okruh.quiz[i] (zobrazené
+     `question` je zamiešaná kópia, ktorá po uložení nemusí byť aktuálna).
+     Táto appka nemá pri otázke zdrojový riadok, takže si stopa nesie vlastný
+     element; starý sa vždy odstráni → žiadne množenie pri prekreslení. */
+  document.getElementById('questionEditStamp')?.remove();
+  const qStamp = formatEditStamp(state.okruhy[state.currentOkruh]?.quiz?.[q.current]?._seal);
+  if (qStamp) {
+    const stampEl = document.createElement('div');
+    stampEl.id = 'questionEditStamp';
+    stampEl.className = 'small muted';
+    stampEl.textContent = qStamp;
+    $('questionText').insertAdjacentElement('afterend', stampEl);
+  }
+
   setupReportButton(question);
   setupQuestionEditButton(q.current);
 
@@ -483,7 +505,7 @@ function setupQuestionEditButton(idx) {
         title: `Upraviť otázku – ${okruh._file} #${idx + 1}`,
         onSaved: (saved) => {
           Object.assign(okruh.quiz[idx], saved.novyObsah);
-          okruh.quiz[idx]._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+          okruh.quiz[idx]._seal = sealMeta(saved);
           state.quiz.questions[idx] = shuffleOptions(okruh.quiz[idx]);
           state.quiz.answered[idx] = null;
           renderQuestion();
@@ -733,9 +755,21 @@ function mountTileEditList(board, tiles) {
     tiles.forEach((t, i) => {
       const row = document.createElement('div');
       row.style.cssText = 'display:flex;gap:8px;align-items:center;padding:3px 0;font-size:13px';
-      const label = document.createElement('span');
-      label.style.cssText = 'flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';
-      label.textContent = `${i + 1}. ${t.term || '(bez pojmu)'}`;
+      /* Pojem + (ak bola upravená) stopa poslednej úpravy ako druhý riadok. */
+      const label = document.createElement('div');
+      label.style.cssText = 'flex:1;min-width:0';
+      const termLine = document.createElement('div');
+      termLine.style.cssText = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap';
+      termLine.textContent = `${i + 1}. ${t.term || '(bez pojmu)'}`;
+      label.appendChild(termLine);
+      const tStamp = formatEditStamp(t._seal);
+      if (tStamp) {
+        const stampLine = document.createElement('div');
+        stampLine.className = 'small muted';
+        stampLine.style.cssText = 'font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';
+        stampLine.textContent = tStamp;
+        label.appendChild(stampLine);
+      }
       const btn = document.createElement('button');
       btn.className = 'report-q-btn';
       btn.type = 'button';
@@ -757,7 +791,7 @@ function mountTileEditList(board, tiles) {
           title: `Upraviť kartičku – ${okruh._file} · ${i + 1}`,
           onSaved: (saved) => {
             Object.assign(canonical, saved.novyObsah);
-            canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+            canonical._seal = sealMeta(saved);
             buildMemory();
           }
         });
@@ -868,7 +902,7 @@ function buildCases() {
             <button class="report-q-btn case-report-btn" data-si="${si}" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
             <button class="report-q-btn case-edit-btn" data-si="${si}" type="button" style="display:none">✏️ Upraviť</button>
           </div>`;
-          if (step._seal) html += `<div class="small muted">🎓 overené garantom</div>`;
+          if (step._seal) html += `<div class="small muted">${escapeHtml(formatEditStamp(step._seal))}</div>`;
         }
       }
 
@@ -927,7 +961,7 @@ function buildCases() {
               title: `Upraviť krok prípadu – ${okruh._file} · prípad ${ci + 1}`,
               onSaved: (saved) => {
                 Object.assign(okruh.cases[ci].steps[si], saved.novyObsah);
-                okruh.cases[ci].steps[si]._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+                okruh.cases[ci].steps[si]._seal = sealMeta(saved);
                 steps[si] = shuffleOptions(okruh.cases[ci].steps[si]);
                 answers[si] = null;
                 render();

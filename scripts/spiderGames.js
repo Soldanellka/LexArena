@@ -130,7 +130,8 @@ async function getOkruh(areaTitle, n) {
     json = await applySpiderOverride(json, areaTitle, n);
   } catch (e) { console.warn('[HRY] spider override zlyhal – originál', e); }
   const title = okruhTitleOf(json, n);
-  const entry = { branches: branchesOf(json), title, center: (json && json.spider?.center) || title };
+  // seal = stopa poslednej admin úpravy pavúka (Krok 3); null ak nebol override.
+  const entry = { branches: branchesOf(json), title, center: (json && json.spider?.center) || title, seal: (json && json.spider?._seal) || null };
   okruhCache.set(cacheKey, entry);
   return entry;
 }
@@ -440,6 +441,28 @@ export function mountLauncher(panel, areaTitle, okruhCislo, onSpiderSaved) {
   // ✏️ Admin/garant: editor pavúka (Etapa 2). Fire-and-forget; tlačidlo pribudne
   // až po overení skutočnej Firebase roly (getRole), ostatní ho neuvidia.
   mountSpiderEditButton(sec, areaTitle, okruhCislo, onSpiderSaved);
+
+  // Stopa poslednej úpravy pavúka (Krok 3) – pre VŠETKÝCH, nielen adminov.
+  // Býva v .spiderGameSec, ktorú mountLauncher stavia nanovo → idempotentné,
+  // a spider.js sa nedotýka (jeho render ostáva nezmenený).
+  mountSpiderStamp(sec, areaTitle, okruhCislo);
+}
+
+/* Decentný riadok „✏️ Upravené … – autor" pod hrami v Z3 strome. Fail-soft:
+   pri chybe sa proste nezobrazí nič. */
+async function mountSpiderStamp(sec, areaTitle, okruhCislo) {
+  try {
+    const okr = await getOkruh(areaTitle, okruhCislo);
+    if (!okr || !okr.seal || !sec.isConnected) return;
+    const { formatEditStamp } = await import('./contentOverrides.js');
+    const text = formatEditStamp(okr.seal);
+    if (!text) return;
+    const el = document.createElement('div');
+    el.className = 'small muted';
+    el.style.cssText = 'margin-top:10px;font-size:11px';
+    el.textContent = text;
+    sec.appendChild(el);
+  } catch (e) { console.warn('[HRY] stopa úpravy pavúka sa nezobrazila', e); }
 }
 
 /* Rola-gated tlačidlo „Upraviť pavúka" – zdieľané mount pre launcher.
@@ -463,7 +486,7 @@ async function mountSpiderEditButton(sec, areaTitle, okruhCislo, onSpiderSaved) 
         const { openSpiderEditor } = await import('./spiderEditor.js');
         openSpiderEditor({
           areaTitle, okruhCislo,
-          spider: { center: okr.center, branches: okr.branches },
+          spider: { center: okr.center, branches: okr.branches, _seal: okr.seal },
           autor: nick, rola,
           onSaved: () => { if (typeof onSpiderSaved === 'function') onSpiderSaved(); }
         });

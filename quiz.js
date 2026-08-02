@@ -15,7 +15,7 @@ import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js'
 import { playSound } from './audio.js';
 import { econEnergy, econSpend, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
-import { AREA_SLUGS } from './scripts/contentOverrides.js';
+import { AREA_SLUGS, formatEditStamp, sealMeta } from './scripts/contentOverrides.js';
 import { openContentEditModal } from './scripts/contentEditModal.js';
 import { getRole } from './scripts/economyConfig.js';
 
@@ -145,6 +145,8 @@ export function renderQuestion(first = false){
       if (oldSeal) oldSeal.remove();
       const oldSource = parent.querySelector('#questionSourceLine');
       if (oldSource) oldSource.remove();
+      const oldStamp = parent.querySelector('#questionEditStamp');
+      if (oldStamp) oldStamp.remove();
       const oldExplanation = parent.querySelector('#questionExplanationBox');
       if (oldExplanation) oldExplanation.remove();
 
@@ -164,6 +166,18 @@ export function renderQuestion(first = false){
       sourceLine.id = 'questionSourceLine';
       sourceLine.innerHTML = renderSource(q.zdroj);
       parent.appendChild(sourceLine);
+
+      /* ✏️ Stopa poslednej úpravy (override) – samostatný riadok, NIE badge
+         vyššie: ten je pečať z NAHLÁSENÍ (reports/), iná funkcia. textContent,
+         takže nick autora sa nedostane do HTML neescapovaný. */
+      const stampText = formatEditStamp(q._seal);
+      if (stampText) {
+        const stamp = document.createElement('div');
+        stamp.id = 'questionEditStamp';
+        stamp.className = 'small muted';
+        stamp.textContent = stampText;
+        parent.appendChild(stamp);
+      }
 
       /* 💬 Vysvetlenie (normalizované na {correct,wrong} pri načítaní) –
          skryté, kým hráč nevyberie odpoveď; chýbajúce vysvetlenie =
@@ -247,7 +261,7 @@ export function renderQuestion(first = false){
               title: `Upraviť otázku – ${q.source}`,
               onSaved: (saved) => {
                 Object.assign(canonical, saved.novyObsah);
-                canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+                canonical._seal = sealMeta(saved);
                 showRewardToast('✅ Zmena uložená. Prejaví sa pri ďalšom načítaní otázky.');
               }
             });

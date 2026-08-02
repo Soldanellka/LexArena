@@ -11,7 +11,7 @@ import { incrementGamesPlayed } from './avatars.js';
 import { econEnergy, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 import { recordOkruhResult, PROGRESS_ACTIVITIES } from './scripts/progressTracking.js';
 import { renderSource } from './scripts/sourceUtil.js';
-import { AREA_SLUGS } from './scripts/contentOverrides.js';
+import { AREA_SLUGS, formatEditStamp, sealMeta } from './scripts/contentOverrides.js';
 import { openContentEditModal } from './scripts/contentEditModal.js';
 import { getRole } from './scripts/economyConfig.js';
 
@@ -497,7 +497,7 @@ function renderJsonCase(container, areaTitle) {
         <button class="report-q-btn case-report-btn" data-si="${i}" type="button">⚖️ Nahlásiť právnu nezrovnalosť</button>
         <button class="report-q-btn case-edit-btn" data-si="${i}" type="button" style="display:none">✏️ Upraviť</button>
       </div>`;
-      if (s._seal) html += `<div class="small muted">🎓 overené garantom</div>`;
+      if (s._seal) html += `<div class="small muted">${escapeHtml(formatEditStamp(s._seal))}</div>`;
     }
 
     html += renderStepSource(s);
@@ -591,7 +591,7 @@ function renderJsonCase(container, areaTitle) {
           title: `Upraviť krok prípadu – ${c.source} · prípad ${ci + 1}`,
           onSaved: (saved) => {
             Object.assign(canonical, saved.novyObsah);
-            canonical._seal = saved.pecat ? { type: 'garant', autor: saved.autor, timestamp: saved.timestamp } : null;
+            canonical._seal = sealMeta(saved);
             c.steps[si] = shuffleOptions(canonical);
             delete window.__jsonCaseAnswers[idx]?.[si];
             renderJsonCase(container, areaTitle);
