@@ -645,9 +645,31 @@ async function refreshEarnAdCard() {
    ===================================================== */
 const LEX_GUIDE_SEEN_KEY = 'lexGuideSeen';
 
+/* Doplní § sumy do #guideModal z ECONOMY_CONFIG (jediný zdroj pravdy), aby sa
+   čísla v návode nemuseli udržiavať ručne a nikdy sa nerozišli so správaním
+   appky. Element nesie cestu v atribúte data-econ (napr. "REWARDS.DUEL_WIN",
+   "STREAK.BASE.0", "STATNICE.EXAM_REWARD.1"); cesta sa rozloží po bodkách aj
+   cez polia/číselné kľúče. Neznáma cesta → console.warn + pomlčka (NIE 0, aby
+   sa hráčovi neukázala nepravdivá nula). Beží pri každom otvorení návodu. */
+function fillGuideEconomyValues() {
+  const modal = $('guideModal');
+  if (!modal) return;
+  modal.querySelectorAll('[data-econ]').forEach(el => {
+    const path = el.getAttribute('data-econ');
+    const val = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), ECONOMY_CONFIG);
+    if (typeof val === 'number') {
+      el.textContent = String(val);
+    } else {
+      console.warn(`guideModal: neznáma data-econ cesta "${path}" – ponechávam pomlčku`);
+      el.textContent = '—';
+    }
+  });
+}
+
 function openGuideModal() {
   const modal = $('guideModal');
   if (!modal) return;
+  fillGuideEconomyValues();
   modal.style.display = 'flex';
 
   if (!localStorage.getItem(LEX_GUIDE_SEEN_KEY)) {
