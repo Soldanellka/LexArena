@@ -3,19 +3,17 @@
 import { ref, update } 
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-import { $, qsa, shuffleArray, saveParagrafy } from './core.js';
+import { $, qsa, shuffleArray } from './core.js';
 import {
   quiz,
-  paragrafy,
   selectedArea,
-  setParagrafy,
   setQuizState
 } from './state.js';
 import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js';
 import { playSound } from './audio.js';
-import { econEnergy, econSpend, ECONOMY_CONFIG } from './scripts/economy.js';
+import { econEnergy, econSpend, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
 import { AREA_SLUGS } from './scripts/contentOverrides.js';
 import { openContentEditModal } from './scripts/contentEditModal.js';
@@ -44,21 +42,20 @@ function resolveAreaTitle() {
 /* =========================
    Štart kvízu (študijný)
    ========================= */
-export function startQuiz(){
+export async function startQuiz(){
   if (!selectedArea) {
     alert('Vyber oblasť.');
     return;
   }
 
-  if (paragrafy < 5) {
+  // Vstupné do kvízu ide výhradne cez Firebase bránu (econSpend). Pri nedostatku §
+  // alebo neúspechu (vrátane neprihláseného hráča) kvíz nespustíme.
+  const nick = localStorage.getItem('playerNick');
+  const ok = nick && await econSpend(nick, ECONOMY_CONFIG.SINKS.QUIZ_ENTRY, 'vstup do kvízu');
+  if (!ok) {
     alert('Nemáš dosť paragrafov.');
     return;
   }
-
-  const newPar = paragrafy - 5;
-  setParagrafy(newPar);
-  saveParagrafy(newPar);
-  if ($('parCount')) $('parCount').textContent = newPar;
 
   const qset = Array.isArray(selectedArea.questions) ? selectedArea.questions : [];
   const shuffled = shuffleArray(JSON.parse(JSON.stringify(qset))).slice(0, 10);
@@ -476,12 +473,10 @@ export function finishQuiz(){
   /* =========================
      Študijný režim
      ========================= */
-  // 🔥 § EKONOMIKA: +1§ za každé odohranie kvízu
-  const reward = 1;
-  const newPar = paragrafy + reward;
-  setParagrafy(newPar);
-  saveParagrafy(newPar);
-  if ($('parCount')) $('parCount').textContent = newPar;
+  // 🔥 § EKONOMIKA: +1§ za každé odohranie kvízu – Firebase brána, BEZ skipCap
+  // (počíta sa do denného stropu). Fire-and-forget, rovnako ako econEnergy vyššie.
+  const nick = localStorage.getItem('playerNick');
+  if (nick) econAward(nick, ECONOMY_CONFIG.REWARDS.QUIZ_PLAYED, 'dohraný kvíz');
 
   showRewardToast(`Kvíz dokončený! Správne: ${quiz.correct}, Nesprávne: ${quiz.wrong}. +1§ za odohranie!`);
 

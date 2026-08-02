@@ -1,7 +1,6 @@
 'use strict';
 
-import { $, qsa, shuffleArray, saveParagrafy } from './core.js';
-import { paragrafy, setParagrafy } from './state.js';
+import { $, qsa, shuffleArray } from './core.js';
 import { showRewardToast } from './ui.js';
 import { playSound } from './audio.js';
 import { incrementGamesPlayed } from './avatars.js';
@@ -205,14 +204,8 @@ function onMemoryClick(uid, el){
     memoryState.first.el.classList.add('wrong','shake');
     memoryState.second.el.classList.add('wrong','shake');
 
-    if(mode === 'exam'){
-      const newPar = Math.max(0, paragrafy - 1);
-      setParagrafy(newPar);
-      saveParagrafy(newPar);
-      const pc = $('parCount');
-      if(pc) pc.textContent = newPar;
-      showRewardToast('Nesprávna dvojica • -1 paragraf');
-    }
+    // § trest za nesprávnu dvojicu zrušený – odmeny/postih za pexeso rieši
+    // výhradne Firebase (MEMORY_PERFECT za bezchybnú sadu). Exam režim ostáva hrateľný.
 
     // remove wrong/selected after short animation
     setTimeout(() => {
@@ -300,7 +293,6 @@ function finishMemoryGame(){
   stopTimer();
 
   const mode = $('memoryMode')?.value || 'training';
-  const reward = Math.max(1, memoryState.cards.length / 8);
 
   const nick = localStorage.getItem('playerNick');
   if (nick) {
@@ -332,15 +324,11 @@ function finishMemoryGame(){
   }
 
   if(mode === 'exam'){
-    const newPar = paragrafy + reward;
-    setParagrafy(newPar);
-    saveParagrafy(newPar);
-    const pc = $('parCount');
-    if(pc) pc.textContent = newPar;
-
+    // § odmena za exam pexeso zrušená z localStorage – § rieši výhradne Firebase
+    // (MEMORY_PERFECT vyššie za bezchybnú sadu). Ostáva zvuk, toast bez §, rebríček.
     try { playSound(window.soundWin); } catch(e){}
 
-    showRewardToast(`Všetky páry spojené • +${reward} paragrafov`);
+    showRewardToast(`Všetky páry spojené • ${memoryState.matches} párov`);
 
     saveLeaderboardEntry({
       time: memoryState.elapsed,

@@ -9,8 +9,6 @@ import {
   setRole
 } from './state.js';
 import { showRewardToast } from './ui.js';
-import { saveParagrafy } from './core.js';
-import { paragrafy, setParagrafy } from './state.js';
 import { persistReports } from './reports.js';
 
 /* ===============================
@@ -29,13 +27,8 @@ export function grantGuarantee(reportId){
   r.guaranteedBy = 'garant';
   r.guaranteedAt = new Date().toISOString();
 
-  const newPar = paragrafy + 5;
-  setParagrafy(newPar);
-  saveParagrafy(newPar);
-  $('parCount').textContent = newPar;
-
   persistReports();
-  showRewardToast('Pečať garanta udelená • +5 paragrafov');
+  showRewardToast('Pečať garanta udelená');
   renderAdminPanel();
 }
 
@@ -93,13 +86,10 @@ export function approveReport(reportId){
     }
   }
 
-  const newPar = paragrafy + 1;
-  setParagrafy(newPar);
-  saveParagrafy(newPar);
-  $('parCount').textContent = newPar;
-
+  // Samo-odmena adminovi zrušená. § za schválené nahlásenie dostáva REPORTÉR –
+  // rieši sa v živej ceste (index.html openVerdictModal), nie v tomto legacy paneli.
   persistReports();
-  showRewardToast('Otázka schválená • +1 paragraf (admin)');
+  showRewardToast('Otázka schválená (admin)');
   renderAdminPanel();
 }
 

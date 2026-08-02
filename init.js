@@ -1,8 +1,7 @@
 'use strict';
 
-import { $, loadParagrafy, escapeHtml } from './core.js';
+import { $, escapeHtml } from './core.js';
 import { isValidPin, isPinHashingAvailable, setPin, getPinStatus, claimNick } from './scripts/pinAuth.js';
-import { setParagrafy } from './state.js';
 import { showRewardToast } from './ui.js';
 import { renderAreas, renderModules, updateNickUI } from './app.js';
 import { renderHeaderAvatar } from './avatars.js';
@@ -376,11 +375,8 @@ window.openAvatarPickerModal = openAvatarPickerModal;
    ===================================================== */
 export function init() {
   waitForAllData(() => {
-    /* 🔹 Paragrafy */
-    const p = loadParagrafy();
-    setParagrafy(p);
-    const pc = $('parCount') || $('paragrafValue');
-    if (pc) pc.textContent = p;
+    /* 🔹 Paragrafy – zostatok § sa už NEseeduje z localStorage. Hodnotu do
+       #parCount doplní Firebase cesta (scripts/avatar.js po načítaní hráča). */
 
     /* 🔹 Získaj § – tlačidlo viditeľné len prihlásenému hráčovi */
     const earnBtn = $('earnBtn');

@@ -1130,6 +1130,17 @@ function openVerdictModal({ id, reporterNick, decision, role, nick, db, onDone }
           [sealType]: ((ud.seals && ud.seals[sealType]) || 0) + 1
         });
       }
+
+      // § odmena reportérovi za schválené nahlásenie – cez jednotnú Firebase bránu,
+      // BEZ skipCap (počíta sa do denného stropu). Fail-soft: prípadná chyba odmeny
+      // nesmie zhodiť verdikt (status/seal sú už zapísané vyššie).
+      try {
+        if (window.econAward && window.ECONOMY_CONFIG) {
+          await window.econAward(reporterNick, window.ECONOMY_CONFIG.REWARDS.REPORT_APPROVED, 'schválený report otázky');
+        }
+      } catch (e) {
+        console.warn('econAward reportérovi zlyhal (verdikt ostáva platný):', e);
+      }
     }
 
     close();

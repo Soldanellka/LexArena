@@ -1,6 +1,6 @@
 'use strict';
 
-import { LS, loadParagrafy } from './core.js';
+import { LS } from './core.js';
 
 /* =========================
    Stav aplikácie
@@ -16,7 +16,6 @@ export let quiz = {
   wrong: 0
 };
 
-export let paragrafy = loadParagrafy();
 export let isPremium = false;
 export let role = 'student';
 
@@ -43,10 +42,6 @@ export function setSelectedArea(v){ selectedArea = v; }
 
 export function setQuizState(obj){
   quiz = { ...quiz, ...obj };
-}
-
-export function setParagrafy(v){
-  paragrafy = v;
 }
 
 export function setPremium(v){

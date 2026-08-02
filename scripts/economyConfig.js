@@ -53,12 +53,10 @@ export const ECONOMY_CONFIG = {
     CASES_PERFECT: 10,     // sada na 100 %
     CHALLENGE_NEW: 7,      // prijatie duel-linku novým nickom (zjednotiť s existujúcou logikou)
     CHALLENGE_EXISTING: 1,
-    VIDEO: 12              // odmena za náukové video – JEDNORAZOVO na video a nick
-    // TODO (Audit otázok): až sa rozhodne odmeňovať § za schválené nahlásenia,
-    // pridaj REWARDS.REPORT_APPROVED sem a zavolaj econAward(reporterNick,
-    // REWARDS.REPORT_APPROVED, 'za schválené nahlásenie') z openVerdictModal()
-    // v index.html (vetva decision === 'approved', vedľa awardSeal logiky).
-    // Zatiaľ zámerne bez odmeny – rieši sa samostatným zadaním.
+    VIDEO: 12,             // odmena za náukové video – JEDNORAZOVO na video a nick
+    QUIZ_PLAYED: 1,        // +1§ za dohraný študijný kvíz (quiz.js finishQuiz, BEZ skipCap – v dennom strope)
+    REPORT_APPROVED: 2     // reportérovi za schválené nahlásenie otázky (index.html openVerdictModal,
+                           // vetva decision === 'approved', vedľa awardSeal logiky; BEZ skipCap)
   },
 
   // STREAK – krivka so stropom (pôvodne 1–50§ lineárne; 50§/deň = 1500§/mesiac zadarmo
@@ -88,6 +86,7 @@ export const ECONOMY_CONFIG = {
 
   // SINKY – aby mal hráč na čo míňať (hodnota § rastie s možnosťami minúť)
   SINKS: {
+    QUIZ_ENTRY: 5,            // vstupné do študijného kvízu (quiz.js startQuiz, econSpend)
     QUIZ_HINT_5050: 3,        // nápoveda 50:50 v duelovom kvíze
     STREAK_SHIELD: 5,         // existuje v avatar.js – zjednotiť sem
     PRESTIGE_AVATAR_MIN: 300, // cenové pásmo prestige avatarov (300–500§), viď Sinky

@@ -25,13 +25,10 @@ export function qsa(sel){
   return Array.from(document.querySelectorAll(sel));
 }
 
-export function saveParagrafy(n){
-  try { localStorage.setItem(LS.PAR, String(n)); } catch(e){}
-}
-
-export function loadParagrafy(){
-  return Number(localStorage.getItem(LS.PAR) || 10);
-}
+/* saveParagrafy/loadParagrafy zrušené (Etapa 1, bod 1.1): § menu spravuje
+   výhradne Firebase cez scripts/economy.js. Kľúč LS.PAR ('lex_paragrafy') sa
+   už z appky nečíta ani nezapisuje; ostáva len v transferAccount() nižšie
+   (demo export účtu) a v zozname kľúčov na vyčistenie (init.js). */
 
 export function escapeHtml(s){
   return String(s || '').replace(/[&<>"']/g, c => ({

@@ -1,9 +1,7 @@
 'use strict';
 
-import { $, escapeHtml, LS, saveParagrafy, closeModal, shuffleOptions } from './core.js';
+import { $, escapeHtml, LS, closeModal, shuffleOptions } from './core.js';
 import {
-  paragrafy,
-  setParagrafy,
   currentCaseSet,
   answeredCases,
   setAnsweredCases
@@ -169,13 +167,8 @@ export function submitCase(caseId, optionId){
   showRewardToast(opt.feedback || 'Spätná väzba');
 
   if(opt.correct){
-    const newPar = paragrafy + (c.reward || 1);
-    setParagrafy(newPar);
-    saveParagrafy(newPar);
-
-    const pc = $('parCount');
-    if(pc) pc.textContent = newPar;
-
+    // § za správny prípad sa už nepripisuje priebežne z localStorage – odmena za
+    // prípady ide výhradne cez Firebase pri dokončení celej sady (econAward nižšie).
     answeredCases.add(caseId);
     saveAnsweredCases(currentCaseSet);
   }

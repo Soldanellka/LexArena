@@ -468,6 +468,9 @@ export async function econSettleLeaderboards() {
   await announceLeaderboardWinIfAny(db, periods);
 }
 
+// ECONOMY_CONFIG na window kvôli inline skriptom v index.html (napr. openVerdictModal),
+// ktoré nie sú ES moduly a nemôžu importovať – čerpajú sumy odtiaľto (žiadny hardcode).
+window.ECONOMY_CONFIG = ECONOMY_CONFIG;
 window.econAward = econAward;
 window.econSpend = econSpend;
 window.econBalance = econBalance;
