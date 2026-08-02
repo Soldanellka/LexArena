@@ -75,6 +75,16 @@
       "active": true
     },
     {
+      "id": "student-medeny-prokurator",
+      "name": "Študent (medené vlasy) – prokurátorský talár (vínová štóla)",
+      "type": "talar",
+      "base": "avatars/student-medeny-prokurator",
+      "price": 700,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "student-tmavy-advokat",
       "name": "Študent – advokátsky talár",
       "type": "talar",

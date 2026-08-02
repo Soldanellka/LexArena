@@ -108,6 +108,10 @@ const AVATAR_CONFIG = {
        červená). V sleep póze ostáva kniha neutrálna tmavá (nebola modrá
        ani v zdroji). Červená farba vizuálne overená. */
     'student-blond-prokurator':     { name: 'Študent – prokurátorský talár',            base: 'avatars/student-blond-prokurator',     unlock: 'talar_purchase', talarBaseId: 'student-blond',    talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
+    /* Vlastný render hotový a nahratý v avatars/ (commit 2b59541, 6 PNG:
+       student-medeny-prokurator-{full,tired,sleep}{,-bust}.png). Prvý
+       prokurátorský talár pre student-medeny (doteraz len talar-cierny). */
+    'student-medeny-prokurator':    { name: 'Študent – prokurátorský talár',            base: 'avatars/student-medeny-prokurator',    unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     /* Vlastný render hotový a nahratý v avatars/ (commit 0dc16ba, 6 PNG:
        student-tmavy-advokat-{full,tired,sleep}{,-bust}.png). Žiadny
        fallbackBase zámerne: fallback je len pre čierny talár bez lemu,
