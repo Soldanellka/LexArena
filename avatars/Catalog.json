@@ -95,6 +95,16 @@
       "active": true
     },
     {
+      "id": "student-blond-talar-cierny",
+      "name": "Študent – základný talár",
+      "type": "talar",
+      "base": "avatars/student-blond-talar-cierny",
+      "price": 200,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "student-tmavy-talar-cierny",
       "name": "Študent – základný talár",
       "type": "talar",

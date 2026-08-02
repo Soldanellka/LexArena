@@ -115,9 +115,11 @@ const AVATAR_CONFIG = {
     'student-tmavy-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-tmavy-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     'student-medeny-talar-cierny':  { name: 'Študent – základný talár',                base: 'avatars/student-medeny-talar-cierny',  unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'student-tmavy-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-tmavy-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
-    /* Vlastný render zatiaľ chýba – požičaný od student-medeny-talar-cierny
-       (rovnaké pohlavie, len čierny talár bez lemu). */
-    'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   fallbackBase: 'avatars/student-medeny-talar-cierny', unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
+    /* Vlastný render hotový a nahratý v avatars/ (commit e58df8b, 6 PNG:
+       student-blond-talar-cierny-{full,tired,sleep}{,-bust}.png). Vznikla
+       stmavením student-blond-advokat (jemné modré prúžky → čierna/tmavosivá,
+       splýva s plášťom, bez lemu). fallbackBase už netreba. */
+    'student-blond-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-blond-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-blond', talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     /* Vlastný render hotový a nahratý v avatars/ (commit 4edf72b, 6 PNG:
        studentka-blond-advokat-{full,tired,sleep}{,-bust}.png). Modrý lem
        vizuálne overený (2026-07-31). */
