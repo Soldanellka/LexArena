@@ -17,14 +17,14 @@
    economy.js re-exportuje ECONOMY_CONFIG, takže zvyšok appky
    naďalej importuje všetko len z economy.js.
 
-   NÁVOD (#guideModal): § SUMY sa už čerpajú ODTIAĽTO za behu.
-   Elementy v #guideModal (index.html) nesú atribút data-econ s cestou
-   do tohto configu (napr. "REWARDS.DUEL_WIN") a fillGuideEconomyValues()
-   v init.js ich doplní pri každom otvorení návodu – § čísla teda netreba
-   udržiavať ručne, nemôžu sa rozísť so správaním appky.
-   ⚠️ VÝNIMKA: tabuľka „Energia a avatar" v #guideModal (−5 % / −1 % …)
-   je zatiaľ STATICKÝ text. Ak zmeníš hodnoty v ENERGY nižšie, uprav aj
-   tú tabuľku ručne (alebo ju tiež preveď na data-econ).
+   NÁVOD (#guideModal): VŠETKY ČÍSLA sa už čerpajú ODTIAĽTO za behu –
+   § sumy aj energia. Elementy v #guideModal (index.html) nesú atribút
+   data-econ s cestou do tohto configu (napr. "REWARDS.DUEL_WIN" alebo
+   "ENERGY.DUEL") a fillGuideEconomyValues() v init.js ich doplní pri
+   každom otvorení návodu – čísla teda netreba udržiavať ručne, nemôžu
+   sa rozísť so správaním appky.
+   Pozn.: znamienko (+/−) je autorské v HTML, z configu sa berie len
+   veľkosť (Math.abs) – preto ENERGY.* môžu ostať záporné.
 ============================================================ */
 
 import { ref, get, push }

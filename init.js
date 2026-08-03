@@ -658,7 +658,11 @@ function fillGuideEconomyValues() {
     const path = el.getAttribute('data-econ');
     const val = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), ECONOMY_CONFIG);
     if (typeof val === 'number') {
-      el.textContent = String(val);
+      /* Znamienko je AUTORSKÉ v HTML (+/− pred spanom), z configu berieme len
+         veľkosť. Platí rovnako pre § aj pre energiu, ktorá má v ENERGY.*
+         záporné hodnoty – inak by sa vypísalo ASCII "-" namiesto typografického
+         "−" použitého v tabuľke. Jedno pravidlo pre všetky data-econ miesta. */
+      el.textContent = String(Math.abs(val));
     } else {
       console.warn(`guideModal: neznáma data-econ cesta "${path}" – ponechávam pomlčku`);
       el.textContent = '—';
