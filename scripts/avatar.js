@@ -112,11 +112,21 @@ const AVATAR_CONFIG = {
        student-medeny-prokurator-{full,tired,sleep}{,-bust}.png). Prvý
        prokurátorský talár pre student-medeny (doteraz len talar-cierny). */
     'student-medeny-prokurator':    { name: 'Študent – prokurátorský talár',            base: 'avatars/student-medeny-prokurator',    unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
+    /* Vlastný render hotový a nahratý v avatars/ (commit f42ffee, 6 PNG:
+       student-medeny-advokat-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením student-medeny-prokurator (vínová štóla/kniha → modrá).
+       Modrá farba vizuálne overená. */
+    'student-medeny-advokat':       { name: 'Študent – advokátsky talár',              base: 'avatars/student-medeny-advokat',       unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
     /* Vlastný render hotový a nahratý v avatars/ (commit 0dc16ba, 6 PNG:
        student-tmavy-advokat-{full,tired,sleep}{,-bust}.png). Žiadny
        fallbackBase zámerne: fallback je len pre čierny talár bez lemu,
        nikdy pre modrý lem (viď pravidlo vyššie). */
     'student-tmavy-advokat':        { name: 'Študent – advokátsky talár',              base: 'avatars/student-tmavy-advokat',        unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'advokat',    talarPrice: ECONOMY_CONFIG.TALARE.ADVOKAT },
+    /* Vlastný render hotový a nahratý v avatars/ (commit f42ffee, 6 PNG:
+       student-tmavy-prokurator-{full,tired,sleep}{,-bust}.png). Vznikla
+       prefarbením student-tmavy-advokat (modrý lem/pás → červená). Červená
+       farba vizuálne overená. */
+    'student-tmavy-prokurator':     { name: 'Študent – prokurátorský talár',            base: 'avatars/student-tmavy-prokurator',     unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'prokurator', talarPrice: ECONOMY_CONFIG.TALARE.PROKURATOR },
     'student-medeny-talar-cierny':  { name: 'Študent – základný talár',                base: 'avatars/student-medeny-talar-cierny',  unlock: 'talar_purchase', talarBaseId: 'student-medeny',   talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     'student-tmavy-talar-cierny':   { name: 'Študent – základný talár',                base: 'avatars/student-tmavy-talar-cierny',   unlock: 'talar_purchase', talarBaseId: 'student-tmavy',    talarRole: 'talar-cierny', talarPrice: ECONOMY_CONFIG.TALARE.CIERNY },
     /* Vlastný render hotový a nahratý v avatars/ (commit e58df8b, 6 PNG:

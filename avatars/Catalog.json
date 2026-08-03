@@ -85,11 +85,31 @@
       "active": true
     },
     {
+      "id": "student-medeny-advokat",
+      "name": "Študent (medené vlasy) – advokátsky talár (modrý lem)",
+      "type": "talar",
+      "base": "avatars/student-medeny-advokat",
+      "price": 500,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "student-tmavy-advokat",
       "name": "Študent – advokátsky talár",
       "type": "talar",
       "base": "avatars/student-tmavy-advokat",
       "price": 500,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
+      "id": "student-tmavy-prokurator",
+      "name": "Študent (tmavé vlasy) – prokurátorský talár (vínová štóla)",
+      "type": "talar",
+      "base": "avatars/student-tmavy-prokurator",
+      "price": 700,
       "grantedBy": "shop",
       "grantNote": "obchod za §",
       "active": true
