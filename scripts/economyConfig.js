@@ -125,7 +125,8 @@ export const ECONOMY_CONFIG = {
     // nápoveda ZNÍŽI najlepšiu dosiahnuteľnú známku (číslo horšie = nižšia
     // kvalita): index = celkový počet nápovied za skúšku (3+ nápovede → posledná
     // hodnota). Rovnaké pre všetky tri persóny, žiadna výnimka.
-    HINT_GRADE_FLOOR: [1, 2, 3, 4], // 0 nápovied→max 1, 1→max 2, 2→max 3, 3+→max 4
+    HINT_GRADE_FLOOR: [1, 1, 2, 3], // 0 nápovied→max 1, 1→max 1 (prvá "zadarmo"),
+                                    // 2→max 2, 3+→max 3 (zmiernenie round 1, 2026-08)
 
     // REKALIBRÁCIA HODNOTENIA (2026-07-17) – lokálny textový substitút
     // (evaluateCoverage v statnice.js) NEVIE posúdiť právnu SPRÁVNOSŤ ani
@@ -134,19 +135,26 @@ export const ECONOMY_CONFIG = {
     // pred reálnou štátnicou je horšie než príliš prísna miestna známka.
     POINT_COVERAGE_RATIO: 0.55,  // predtým 0.34 – bod je "pokrytý" až od
                                   // nadpolovičnej zhody jeho slov, nie tretiny
-    TERMINOLOGY_WEIGHT: 0.35,    // predtým 0.2 – ale ZÁMERNE < 0.45 (prah pre
-                                  // známku 3 nižšie): pri nulovom obsahovom
-                                  // pokrytí (holé vymenovanie pojmov bez
-                                  // súvislostí) skóre 0*(1-0.35)+100*0.35=35
-                                  // NIKDY neprekročí pásmo "nedostatočné"
-    MIN_ANSWER_WORDS: 25,        // odpoveď kratšia než toto (počet slov za
+    TERMINOLOGY_WEIGHT: 0.20,    // zmiernenie round 1 (2026-08): 0.35 → 0.20 –
+                                  // vysvetlenie vlastnými slovami bez pojmov
+                                  // z tiles nemá stiahnuť inak dobrú odpoveď.
+                                  // Invariant (anti-gaming) MUSÍ ďalej platiť:
+                                  // pri nulovom obsahovom pokrytí (holé
+                                  // vymenovanie pojmov bez súvislostí) skóre
+                                  // 0*(1-0.20)+100*0.20=20 < 40 (prah známky 3
+                                  // v GRADE_THRESHOLDS nižšie) – NIKDY
+                                  // neprekročí pásmo "nedostatočné"
+    MIN_ANSWER_WORDS: 15,        // odpoveď kratšia než toto (počet slov za
                                   // JEDNU tému) nemôže dosiahnuť známku 1
                                   // ani 2 bez ohľadu na coverage skóre
     GRADE_THRESHOLDS: [          // avg coverage % → znamka (prvý vyhovujúci
-                                  // riadok zhora, min je dolná hranica)
-      { min: 90, znamka: 1 },
-      { min: 75, znamka: 2 },
-      { min: 55, znamka: 3 },
+                                  // riadok zhora, min je dolná hranica).
+                                  // Zmiernenie round 1 (2026-08): 90/75/55 →
+                                  // 80/60/40 – "skoro kompletná" odpoveď má
+                                  // padnúť na 1/2, nie na 3.
+      { min: 80, znamka: 1 },
+      { min: 60, znamka: 2 },
+      { min: 40, znamka: 3 },
       { min: 0,  znamka: 4 }
     ],
 

@@ -126,8 +126,8 @@ const PERSONAS = {
     },
     // Vecná chyba (LLM incorrect[]) – ODLIŠNÉ od missingLine: toto NIE JE
     // chýbajúci bod na doplnenie, je to NESPRÁVNE tvrdenie. anyIncorrect vždy
-    // vynúti znamka>=3 (buildFinalFeedback), takže táto veta sa nikdy
-    // nezobrazí pri znamke 1-2 – netreba pre ne samostatné, jemnejšie znenie.
+    // vynúti znamka>=2 (buildFinalFeedback, zmiernenie round 1 2026-08), takže
+    // táto veta sa nikdy nezobrazí pri znamke 1 – vecné znenie sedí pre 2-4.
     incorrectLine: (title, incorrect) => `Téma „${title}" – vecná chyba (nesprávne tvrdenie, nie chýbajúci bod): ${incorrect.join('; ')}.`,
     noCoveredFallback: 'Žiadny bod nebol pokrytý dostatočne.',
     odporucaniaWithGaps: ['Zamerajte sa presne na vymenované chýbajúce body – bez toho skúška neobstojí.', 'Držte štruktúru: pojem → znaky → príklad → judikatúra.'],
@@ -844,7 +844,9 @@ function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
   let znamka = ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS.find(t => avg >= t.min).znamka;
   // Vecná chyba (keby ju lokálny substitút niekedy vedel rozpoznať) nikdy
   // nesmie vyzerať ako "výborne" – rovnaký floor-vzor ako nižšie pri nápovedi/dĺžke.
-  if (anyIncorrect) znamka = Math.max(znamka, 3);
+  // Zmiernenie round 1 (2026-08): floor 3 → 2 – jedna drobnosť označená ako
+  // nesprávna zrazí najviac na dvojku, nie rovno na trojku.
+  if (anyIncorrect) znamka = Math.max(znamka, 2);
 
   // Nápoveda na žiadosť (Fáza D.2) znižuje NAJLEPŠIU dosiahnuteľnú známku –
   // nikdy ju nezlepší, len ju zdola obmedzí (Math.max = "aspoň takto zlá").
