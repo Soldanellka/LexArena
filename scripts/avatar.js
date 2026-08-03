@@ -211,7 +211,13 @@ const AVATAR_CONFIG = {
        6 PNG: student-medeny-akademik-{full,tired,sleep}{,-bust}.png). Ručne
        dotiahnutá zlatá "kolieskovaná" textúra na páse/čiapke/knihe (vlastná
        grafika používateľky, nie skriptové prefarbenie). Zlatá vizuálne overená. */
-    'student-medeny-akademik': { name: 'Študent (medené vlasy) – akademický talár (zlatý pás)', base: 'avatars/student-medeny-akademik', talarBaseId: 'student-medeny', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
+    'student-medeny-akademik': { name: 'Študent (medené vlasy) – akademický talár (zlatý pás)', base: 'avatars/student-medeny-akademik', talarBaseId: 'student-medeny', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
+    /* Vlastný render hotový a nahratý v avatars/ (commity 5ff6767 + 6b0b219,
+       6 PNG: student-tmavy-akademik-{full,tired,sleep}{,-bust}.png). Ručne
+       dotiahnutá zlatá "kolieskovaná" textúra na páse/čiapke/knihe (vlastná
+       grafika používateľky, nie skriptové prefarbenie, rovnaký štýl ako
+       student-medeny-akademik). Zlatá vizuálne overená. */
+    'student-tmavy-akademik': { name: 'Študent (tmavé vlasy) – akademický talár (zlatý pás)', base: 'avatars/student-tmavy-akademik', talarBaseId: 'student-tmavy', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
