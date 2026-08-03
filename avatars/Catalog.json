@@ -225,6 +225,26 @@
       "active": true
     },
     {
+      "id": "student-tmavy-sudca",
+      "name": "Študent (tmavé vlasy) – sudcovský talár (fialový pás)",
+      "type": "talar",
+      "base": "avatars/student-tmavy-sudca",
+      "price": 1000,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
+      "id": "student-medeny-sudca",
+      "name": "Študent (medené vlasy) – sudcovský talár (fialový pás)",
+      "type": "talar",
+      "base": "avatars/student-medeny-sudca",
+      "price": 1000,
+      "grantedBy": "shop",
+      "grantNote": "obchod za §",
+      "active": true
+    },
+    {
       "id": "studentka-blond-talar-cierny",
       "name": "Študentka – základný talár",
       "type": "talar",
