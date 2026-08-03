@@ -206,7 +206,12 @@ const AVATAR_CONFIG = {
        prenesením zlatého štýlu (lem/pás/kniha/čiapka/strapec) na
        student-blond-talar-cierny, doladená používateľkou pre sýtejšiu
        zlatú. Prvý mužský akademický talár v kóde (doteraz len studentka-*). */
-    'student-blond-akademik':  { name: 'Študent – akademický talár (zlatý pás)', base: 'avatars/student-blond-akademik', talarBaseId: 'student-blond', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
+    'student-blond-akademik':  { name: 'Študent – akademický talár (zlatý pás)', base: 'avatars/student-blond-akademik', talarBaseId: 'student-blond', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' },
+    /* Vlastný render hotový a nahratý v avatars/ (commity e233ba1 + d84b8bb,
+       6 PNG: student-medeny-akademik-{full,tired,sleep}{,-bust}.png). Ručne
+       dotiahnutá zlatá "kolieskovaná" textúra na páse/čiapke/knihe (vlastná
+       grafika používateľky, nie skriptové prefarbenie). Zlatá vizuálne overená. */
+    'student-medeny-akademik': { name: 'Študent (medené vlasy) – akademický talár (zlatý pás)', base: 'avatars/student-medeny-akademik', talarBaseId: 'student-medeny', unlock: 'talar_role', talarRole: 'akademik', desc: 'Automaticky pridelené garantom a adminom – nedá sa kúpiť.' }
   }
 };
 
