@@ -3,10 +3,10 @@
 /* ============================================================
    scripts/statnice.js
    Štátnicová sieň – interaktívna komisia (v3). Podporované oblasti:
-   Pracovné právo (jeden bazén, dvojica okruhov A(2k-1)+A(2k)) a
-   Občianske právo (DVA oddelené bazény – hmotné + procesné, po
-   jednom náhodnom okruhu z každého). Nová oblasť sa pridáva do
-   AREA_CONFIG nižšie, bez zásahu do existujúcich oblastí.
+   Pracovné právo a Európske právo (jeden bazén, dvojica okruhov
+   A(2k-1)+A(2k)) a Občianske právo (DVA oddelené bazény – hmotné +
+   procesné, po jednom náhodnom okruhu z každého). Nová oblasť sa
+   pridáva do AREA_CONFIG nižšie, bez zásahu do existujúcich oblastí.
 
    ⚠️ HODNOTENIE (Fáza 3, 2026-07-19): PRIMÁRNE cez /api/grade-answer
    (Claude Haiku, serverless, viď api/grade-answer.js) – posudzuje aj
@@ -57,6 +57,10 @@ const CIVIL_HMOTNE_COUNT = 40;
 const CIVIL_PROCESNE_PATH = LIVE + 'ob-pravo-app/data/procesne/';
 const CIVIL_PROCESNE_COUNT = 45;
 
+const EU_AREA_NAME = 'Európske právo';
+const EU_DATA_PATH = LIVE + 'eu-pravo-app/data/';
+const EU_OKRUH_COUNT = 38; // rovnaký limit ako data.js (A1-A38, jeden bazén bez delenia)
+
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
    bez zásahu do existujúcich záznamov.
@@ -81,6 +85,11 @@ const AREA_CONFIG = {
       { path: CIVIL_HMOTNE_PATH, count: CIVIL_HMOTNE_COUNT, label: 'Hmotné právo', progressAreaTitle: 'Občianske právo hmotné' },
       { path: CIVIL_PROCESNE_PATH, count: CIVIL_PROCESNE_COUNT, label: 'Procesné právo', progressAreaTitle: 'Občianske právo procesné' }
     ]
+  },
+  [EU_AREA_NAME]: {
+    mode: 'pair',
+    pool: { path: EU_DATA_PATH, count: EU_OKRUH_COUNT },
+    progressAreaTitle: 'Európske právo'
   }
 };
 
