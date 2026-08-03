@@ -1,0 +1,55 @@
+{
+  "rules": {
+    // ============================================================
+    // LexArena – Firebase Realtime Database Security Rules
+    //
+    // Appka nemá Firebase Authentication (identita = prezývka v
+    // localStorage), preto tieto Rules NEVEDIA rozlíšiť "prihláseného
+    // admina" od hocijakého iného klienta – klient je vždy anonymný.
+    // Jediné, čo Rules v tomto stave vedia urobiť, je ZAKÁZAŤ zápis na
+    // konkrétnu CESTU úplne, bez ohľadu na to, kto/čo o zápis žiada.
+    //
+    // ⚠️ DÔLEŽITÉ (opravené po audite pred nasadením): RTDB .write
+    // pravidlá sa KASKÁDOVITO dedia nadol a hlbšie ".write": false
+    // NEDOKÁŽE zrušiť povolenie udelené vyššie v strome. Preto
+    // ".write": true na koreni robí PÔVODNÝ zápis
+    // "users/$nick/role/.write":false MŔTVYM KÓDOM – klient by aj
+    // tak mohol role prepísať priamo. Zámok preto musí byť
+    // ".validate", nie ".write" – validate pravidlá NEKASKÁDUJÚ a
+    // musia prejsť nezávisle na každej úrovni zápisu bez ohľadu na
+    // to, že rodič má ".write": true.
+    //
+    // "newData.val() === data.val()" pri role znamená: hodnota sa
+    // nesmie zmeniť VÔBEC – ani z prázdna na prvú hodnotu. Dôsledok:
+    // role sa dnes NEDÁ nastaviť z klienta vôbec, čiže admin panel
+    // tlačidlá "🔏 Garant" / "👤 Student" (aj v zozname hráčov, aj cez
+    // nick input) po nasadení PRESTANÚ FUNGOVAŤ (zápis Firebase ticho
+    // odmietne, tlačidlá to dnes nekontrolujú a nehlásia chybu). Toto
+    // je zámerné a v súlade s pôvodným zámerom nižšie – rolu odteraz
+    // mení VÝHRADNE majiteľka ručne vo Firebase konzole (alebo cez
+    // Admin SDK/service-account, napr. api/sync-content.js), kde
+    // admin-level prístup tieto Rules úplne obchádza.
+    //
+    // VŠETKO OSTATNÉ zostáva zámerne také, ako to appka dnes reálne
+    // používa (t.j. čítanie aj zápis povolené) – bez prístupu k
+    // Firebase Rules Playground / testovaciemu projektu na overenie
+    // by bolo neúnosne riskantné naslepo zamykať ďalšie z 24
+    // zapisovaných vetiev (users, leaderboard, duels, senaty,
+    // senatInvites, senatSpory, senatRewards, reports, courtroom,
+    // groups, assignments, contentOverrides, biflovackaOverrides,
+    // promoCodes, rewards, faculties, facultyStats, facultyRewards,
+    // analytics, analyticsDaily, biflovackaVideos, seals, config,
+    // feedback) – pozri sprievodnú správu s presným zoznamom ciest.
+    // ============================================================
+    ".read": true,
+    ".write": true,
+
+    "users": {
+      "$nick": {
+        "role": {
+          ".validate": "newData.val() === data.val()"
+        }
+      }
+    }
+  }
+}
