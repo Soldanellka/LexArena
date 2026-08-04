@@ -161,6 +161,25 @@
       </div>
     </div>
 
+    <div class="card highlight-senaty" id="senatyCard">
+      <h3 style="margin:0">⚖️ Senáty</h3>
+      <div class="small">Skupinová súťaž o body a odmeny</div>
+
+      <div id="senatyNoneBox" style="display:none;margin-top:10px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-primary" id="foundSenatBtn">➕ Založiť senát</button>
+          <button class="btn" id="haveInviteBtn">🔗 Mám pozvánku</button>
+        </div>
+      </div>
+
+      <div id="senatyMineBox" style="margin-top:10px"></div>
+
+      <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
+        <div class="small" style="font-weight:600;margin-bottom:6px">🏆 TOP 3 senáty</div>
+        <div id="senatyMiniLeaderboard" class="small muted">Načítavam…</div>
+      </div>
+    </div>
+
     <div class="card section-card highlight-report" id="reportCard">
       <h3 style="margin:0">⚖️ Právna nezrovnalosť</h3>
       <div class="small" style="margin-bottom:12px">Našiel/Našla si chybu? Argumentuj ako právnik a pomôž zlepšiť otázky.</div>
@@ -178,18 +197,37 @@
       </div>
     </div>
 
-    <div class="card section-card" id="shopCard">
-      <h3 style="margin:0">Obchod</h3>
-      <!-- Obchod ešte nie je spustený – tlačidlá nikdy nemali handler. Do
-           spustenia sú vypnuté, aby neviedli do prázdna. Popis používa
-           existujúcu triedu .small, rovnako ako ostatné karty. -->
-      <div class="small">Pripravujeme – čoskoro</div>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn btn-primary" id="buy20" disabled>Kúpiť +20 paragrafov</button>
-        <button class="btn" id="buyPremium" disabled>Kúpiť PREMIUM</button>
-        <button class="btn" id="openShop" title="Obchod sa pripravuje" type="button" disabled>
-          <img src="assets/icons/shop.svg" width="18" height="18" alt="">
-        </button>
+    <div class="card section-card highlight-feedback" id="feedbackCard">
+      <h3 style="margin:0">💬 Tvoj názor</h3>
+      <div class="small" style="margin-bottom:12px">Pomôž nám zlepšiť LexArenu</div>
+
+      <div id="feedbackForm">
+        <div class="feedback-options">
+          <button class="feedback-type-btn active" data-type="napad">💡 Nápad</button>
+          <button class="feedback-type-btn" data-type="chyba">🐛 Chyba</button>
+          <button class="feedback-type-btn" data-type="pochvala">⭐ Pochvala</button>
+        </div>
+        <textarea id="feedbackText" class="feedback-textarea"
+          placeholder="Napíš svoju pripomienku..." maxlength="500"></textarea>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <span id="feedbackCharCount" class="small muted">0 / 500</span>
+          <button class="btn btn-primary" id="sendFeedbackBtn">Odoslať</button>
+        </div>
+      </div>
+
+      <div id="feedbackSuccess" style="display:none;text-align:center;padding:16px">
+        <div style="font-size:32px;margin-bottom:8px">🙏</div>
+        <div style="font-weight:600">Ďakujeme za spätnú väzbu!</div>
+        <div class="small muted" style="margin-top:4px">Prečítame každú pripomienku.</div>
+        <button class="btn" id="feedbackAgainBtn" style="margin-top:12px">Pridať ďalšiu</button>
+      </div>
+    </div>
+
+    <div class="card section-card highlight-noticeboard" id="noticeboardCard">
+      <h3 style="margin:0">📋 Nástenka komunity</h3>
+      <div class="small muted" style="margin-bottom:10px">Zverejnené príspevky a odpovede</div>
+      <div id="publishedFeedbackBox">
+        <div class="small muted">Načítavam...</div>
       </div>
     </div>
 
@@ -239,37 +277,19 @@
       </div>
     </div>
 
-    <div class="card section-card highlight-feedback" id="feedbackCard">
-      <h3 style="margin:0">💬 Tvoj názor</h3>
-      <div class="small" style="margin-bottom:12px">Pomôž nám zlepšiť LexArenu</div>
-
-      <div id="feedbackForm">
-        <div class="feedback-options">
-          <button class="feedback-type-btn active" data-type="napad">💡 Nápad</button>
-          <button class="feedback-type-btn" data-type="chyba">🐛 Chyba</button>
-          <button class="feedback-type-btn" data-type="pochvala">⭐ Pochvala</button>
-        </div>
-        <textarea id="feedbackText" class="feedback-textarea"
-          placeholder="Napíš svoju pripomienku..." maxlength="500"></textarea>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-          <span id="feedbackCharCount" class="small muted">0 / 500</span>
-          <button class="btn btn-primary" id="sendFeedbackBtn">Odoslať</button>
-        </div>
-      </div>
-
-      <div id="feedbackSuccess" style="display:none;text-align:center;padding:16px">
-        <div style="font-size:32px;margin-bottom:8px">🙏</div>
-        <div style="font-weight:600">Ďakujeme za spätnú väzbu!</div>
-        <div class="small muted" style="margin-top:4px">Prečítame každú pripomienku.</div>
-        <button class="btn" id="feedbackAgainBtn" style="margin-top:12px">Pridať ďalšiu</button>
-      </div>
-    </div>
-
-    <div class="card section-card highlight-noticeboard" id="noticeboardCard">
-      <h3 style="margin:0">📋 Nástenka komunity</h3>
-      <div class="small muted" style="margin-bottom:10px">Zverejnené príspevky a odpovede</div>
-      <div id="publishedFeedbackBox">
-        <div class="small muted">Načítavam...</div>
+    <!-- SERVIS – obchod a admin panel na konci, mimo troch svetov. -->
+    <div class="card section-card" id="shopCard">
+      <h3 style="margin:0">Obchod</h3>
+      <!-- Obchod ešte nie je spustený – tlačidlá nikdy nemali handler. Do
+           spustenia sú vypnuté, aby neviedli do prázdna. Popis používa
+           existujúcu triedu .small, rovnako ako ostatné karty. -->
+      <div class="small">Pripravujeme – čoskoro</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn btn-primary" id="buy20" disabled>Kúpiť +20 paragrafov</button>
+        <button class="btn" id="buyPremium" disabled>Kúpiť PREMIUM</button>
+        <button class="btn" id="openShop" title="Obchod sa pripravuje" type="button" disabled>
+          <img src="assets/icons/shop.svg" width="18" height="18" alt="">
+        </button>
       </div>
     </div>
 
@@ -280,35 +300,9 @@
 
   </div>
 
+  <!-- SVET 1 – ARÉNA: výber oblasti + pojednávanie → hry → register výziev.
+       Register je priame predĺženie pojednávania, preto ostáva tu. -->
   <div class="right">
-
-    <div class="card highlight-bank" id="duelBankCard">
-      <h3 style="margin:0">Register pojednávaní</h3>
-      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
-      </div>
-      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
-    </div>
-
-    <div class="card highlight-senaty" id="senatyCard">
-      <h3 style="margin:0">⚖️ Senáty</h3>
-      <div class="small">Skupinová súťaž o body a odmeny</div>
-
-      <div id="senatyNoneBox" style="display:none;margin-top:10px">
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn btn-primary" id="foundSenatBtn">➕ Založiť senát</button>
-          <button class="btn" id="haveInviteBtn">🔗 Mám pozvánku</button>
-        </div>
-      </div>
-
-      <div id="senatyMineBox" style="margin-top:10px"></div>
-
-      <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
-        <div class="small" style="font-weight:600;margin-bottom:6px">🏆 TOP 3 senáty</div>
-        <div id="senatyMiniLeaderboard" class="small muted">Načítavam…</div>
-      </div>
-    </div>
 
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">
@@ -380,6 +374,15 @@
         Štátnicová sieň (15§, dostupná pre Pracovné, Občianske a Európske právo) je nácvik ústnej skúšky pred komisiou –
         hlavná príprava na reálne štátnice.
       </div>
+    </div>
+
+    <div class="card highlight-bank" id="duelBankCard">
+      <h3 style="margin:0">Register pojednávaní</h3>
+      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
+      </div>
+      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
     </div>
 
   </div>

@@ -1019,15 +1019,34 @@ body {
 
   .left > .card,
   .right > .card {
-    order: 7; /* 7. zvyšok – ostatné karty si zachovajú vzájomné poradie */
+    order: 99; /* poistka – karta bez vlastného poradia padne na koniec */
   }
 
-  #tilesSection      { order: 1; } /* 1. dlaždice / študijné moduly */
-  #duelBankCard      { order: 2; } /* 2. register pojednávaní */
-  #senatyCard        { order: 3; } /* 3. senáty */
-  #quizCard          { order: 4; } /* 4. vyber oblasť pojednávania */
-  #gamesSection      { order: 5; } /* 5. hry */
-  #leaderboardSection{ order: 6; } /* 6. rebríček */
+  /* Poradie na mobile = marketingová chrbtica troch svetov (Stopa B2).
+     Na desktope tvorí Svet 1 pravý stĺpec a Svety 2/3 + Servis ľavý;
+     na mobile sú stĺpce display:contents, takže sa skladajú za sebou. */
+
+  /* ⚔️ SVET 1 – ARÉNA */
+  #quizCard          { order: 1; }  /* výber oblasti + pojednávanie */
+  #gamesSection      { order: 2; }  /* hry na vybranej dvojici */
+  #duelBankCard      { order: 3; }  /* register výziev – predĺženie pojednávania */
+
+  /* 📚 SVET 2 – TRÉNINGY */
+  #tilesSection      { order: 4; }  /* študijné moduly */
+  #biflovackaCard    { order: 5; }  /* bifľovačka */
+  #judikaturaSection { order: 6; }  /* judikatúra NS SR */
+
+  /* 🏛️ SVET 3 – SÚŤAŽ A KOMUNITA */
+  #leaderboardSection{ order: 7; }
+  #senatyCard        { order: 8; }
+  #reportCard        { order: 9; }  /* právna nezrovnalosť / súdna sieň */
+  #feedbackCard      { order: 10; }
+  #noticeboardCard   { order: 11; }
+  #videoCard         { order: 12; } /* návody a odmeny */
+
+  /* 🧰 SERVIS */
+  #shopCard          { order: 13; }
+  #adminCard         { order: 14; }
 }
 
 /* ============================================================
@@ -3008,8 +3027,8 @@ body {
 
 /* ============================================================
    ⚖️ Judikatúra – statická sekcia (scripts/judikatura.js),
-   #judikaturaSection sa vkladá JS-kom hneď za #gamesSection
-   ("Hry a prípady") v pravom (.right) stĺpci. Používa rovnaké
+   #judikaturaSection sa vkladá JS-kom hneď za #biflovackaCard
+   (Svet 2 – Tréningy) v ľavom (.left) stĺpci. Používa rovnaké
    .card/.chip vzory ako zvyšok appky – žiadny vlastný gradient/FAB,
    žiadny position:fixed (nahradilo pôvodný plávajúci panel vpravo
    dole, 2026-07-27).

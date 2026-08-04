@@ -195,8 +195,13 @@ async function toggleInstitut(resultsEl, btn, institutId) {
 function mountJudikaturaSection() {
   if (document.getElementById('judikaturaSection')) return; // ochrana pred dvojitým mountom
 
-  const gamesSection = document.getElementById('gamesSection');
-  if (!gamesSection || !gamesSection.parentNode) return; // #gamesSection chýba – nemontovať naslepo inde
+  /* Judikatúra patrí do Sveta 2 (Tréningy), preto sa montuje za Bifľovačku,
+     nie za #gamesSection ako predtým (tá je vo Svete 1 – Aréna). Fallback na
+     #gamesSection ostáva pre prípad, že by karta Bifľovačky chýbala – lepšie
+     zobraziť sekciu inde než ju nezobraziť vôbec. */
+  const anchor = document.getElementById('biflovackaCard')
+              || document.getElementById('gamesSection');
+  if (!anchor || !anchor.parentNode) return; // niet kam montovať – nemontovať naslepo
 
   const section = document.createElement('div');
   section.className = 'card';
@@ -217,7 +222,7 @@ function mountJudikaturaSection() {
     </div>
   `;
 
-  gamesSection.insertAdjacentElement('afterend', section);
+  anchor.insertAdjacentElement('afterend', section);
 
   section.querySelectorAll('.judikatura-institut-btn').forEach(btn => {
     const row = btn.closest('.judikatura-institut-row');
