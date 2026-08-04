@@ -104,9 +104,9 @@ async function openAvatarSelectModal() {
   const AVATARS = [
     { id: 'student-f', name: 'Študentka práva', emoji: '👩‍⚖️', desc: 'Dostupná pre všetkých', locked: false },
     { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých', locked: false },
-    { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: `Za 100§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 100 },
-    { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
-    { id: 'dog',       name: 'Pes vernosti',    emoji: '🐶',   desc: `Za 30 dní streaku (máš ${loginStreak})`, locked: loginStreak < 30 },
+    { id: 'cat',       name: 'Právnická mačka', emoji: '🐱', base: 'avatars/macka', desc: `Za 3000§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 3000 },
+    { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉', base: 'avatars/sova',  desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
+    { id: 'dog',       name: 'Pes vernosti',    emoji: '🐶', base: 'avatars/pes',   desc: `Za 30 dní streaku (máš ${loginStreak})`, locked: loginStreak < 30 },
     { id: 'prestige',  name: 'Prestige avatar',  emoji: '✨',   desc: `Čoskoro – od ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATAR_MIN}§`, locked: true, comingSoon: true },
   ];
 
@@ -143,7 +143,10 @@ async function openAvatarSelectModal() {
           position:relative;
         ">
           ${av.locked ? '<div style="position:absolute;top:8px;right:8px;font-size:14px">🔒</div>' : ''}
-          <div style="font-size:42px;margin-bottom:8px">${av.emoji}</div>
+          ${av.base
+            ? `<img src="${av.base}-full-bust.png" alt="${av.name}" style="width:56px;height:56px;object-fit:cover;border-radius:50%;margin-bottom:8px" />`
+            : `<div style="font-size:42px;margin-bottom:8px">${av.emoji}</div>`
+          }
           <div style="font-weight:600;font-size:13px">${av.name}</div>
           <div style="font-size:11px;color:var(--muted);margin-top:4px">${av.desc}</div>
         </div>

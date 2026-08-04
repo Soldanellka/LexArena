@@ -47,8 +47,8 @@ const AVATAR_CONFIG = {
       name: 'Právnická mačka',
       base: 'avatars/macka',
       unlock: 'paragraphs_100',
-      unlockValue: 100,
-      desc: 'Odomkni za 100§'
+      unlockValue: 3000,
+      desc: 'Odomkni za 3000§'
     },
     'owl': {
       name: 'Sova múdrosti',
