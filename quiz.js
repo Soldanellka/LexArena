@@ -128,7 +128,13 @@ export function renderQuestion(first = false){
       sp.textContent = o;
       b.appendChild(sp);
 
-      b.addEventListener('click', () => selectOption(b, i === q.correct, i));
+      /* Referencia na handler sa drží na elemente, aby sa dal po zvolení
+         odpovede SKUTOČNE odpojiť (removeEventListener). Pôvodné
+         `g.onclick = null` v selectOption() nič neodpojilo – handler bol
+         pripojený cez addEventListener, takže sa dalo klikať ďalej a každý
+         klik znova skóroval. */
+      b._lexOptHandler = () => selectOption(b, i === q.correct, i);
+      b.addEventListener('click', b._lexOptHandler);
 
       optionsEl.appendChild(b);
     });
@@ -189,6 +195,10 @@ export function renderQuestion(first = false){
         explanationBox.style.display = 'none';
         parent.appendChild(explanationBox);
       }
+
+      /* Už zodpovedaná otázka (návrat cez Predchádzajúca) – obnov jej stav
+         a uzavri ju. Musí bežať AŽ TU, keď už existuje aj box vysvetlenia. */
+      applyAnsweredVisualState(q);
 
       /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
       const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
@@ -293,11 +303,58 @@ export function renderQuestion(first = false){
 /* =========================
    Výber odpovede
    ========================= */
-export function selectOption(btn, correct, index){
-  const group = qsa('.opt');
-  group.forEach(g => g.onclick = null);
+/* Odpojí klikacie handlery všetkých možností – otázka je uzavretá.
+   Zámerne NEnastavuje `disabled` ani inline štýly: to by zmenilo vzhľad
+   tlačidiel (prehliadačový disabled look), a tu ide len o správanie. */
+function lockOptions(){
+  qsa('.opt').forEach(g => {
+    if (g._lexOptHandler) {
+      g.removeEventListener('click', g._lexOptHandler);
+      g._lexOptHandler = null;
+    }
+  });
+}
 
+/* Po návrate na už zodpovedanú otázku (Predchádzajúca/Ďalšia) sa otázka
+   vykresľuje nanovo – bez tohto by vyzerala nezodpovedaná a dala by sa
+   odpovedať znova, čo skóre počítalo druhýkrát. Obnoví PRESNE ten istý
+   stav, aký nastavuje selectOption() nižšie (rovnaké triedy .correct/
+   .wrong aj rovnaká ikonka), žiadny nový vzhľad. */
+function applyAnsweredVisualState(q){
+  if (!q || q.selectedIndex == null) return;
+  const wasCorrect = q.selectedIndex === q.correct;
+
+  qsa('.opt').forEach(b => {
+    const i = Number(b.dataset.optIndex);
+    if (i === q.selectedIndex) {
+      b.classList.add(wasCorrect ? 'correct' : 'wrong');
+      if (wasCorrect) showInlineIcon(b, 'assets/icons/check.svg');
+    } else if (!wasCorrect && i === q.correct) {
+      b.classList.add('correct');
+      showInlineIcon(b, 'assets/icons/check.svg');
+    }
+  });
+
+  const box = $('questionExplanationBox');
+  if (box && q.explanation) {
+    box.textContent = wasCorrect ? (q.explanation.correct || '') : (q.explanation.wrong || '');
+    box.className = `question-explanation ${wasCorrect ? 'ok' : 'no'}`;
+    box.style.display = 'block';
+  }
+
+  lockOptions();
+}
+
+export function selectOption(btn, correct, index){
   const current = quiz.questions[quiz.index];
+
+  /* Poistka proti dvojitému skórovaniu: otázka, ktorá už má zvolenú
+     odpoveď, sa nikdy nesmie vyhodnotiť znova (ani opakovaným klikom,
+     ani po návrate cez Predchádzajúca). */
+  if (current && current.selectedIndex != null) { lockOptions(); return; }
+
+  lockOptions();
+
   if (current) current.selectedIndex = index;
 
   if (correct) {
