@@ -119,6 +119,9 @@
 
   <div class="left">
 
+    <!-- SVET 2 – TRÉNINGY: uč sa vo vlastnom tempe. -->
+    <h3 class="world-heading" id="worldTraining">📚 Tréningy</h3>
+
     <div class="card section-card" id="tilesSection">
       <h3 style="margin:0">Študijné moduly</h3>
       <div class="small">Samostatné moduly pre detailné štúdium</div>
@@ -130,6 +133,9 @@
       <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
       <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
     </div>
+
+    <!-- SVET 3 – SÚŤAŽ A KOMUNITA: meraj sa s ostatnými a zlepšuj obsah. -->
+    <h3 class="world-heading" id="worldCommunity">🏛️ Súťaž a komunita</h3>
 
     <div class="card section-card" id="leaderboardSection">
       <h3 style="margin:0" id="leaderboardTitle">Rebríček pojednávaní</h3>
@@ -278,12 +284,16 @@
     </div>
 
     <!-- SERVIS – obchod a admin panel na konci, mimo troch svetov. -->
-    <div class="card section-card" id="shopCard">
+    <h3 class="world-heading" id="worldService">🧰 Servis</h3>
+
+    <div class="card section-card card-soon" id="shopCard">
       <h3 style="margin:0">Obchod</h3>
       <!-- Obchod ešte nie je spustený – tlačidlá nikdy nemali handler. Do
            spustenia sú vypnuté, aby neviedli do prázdna. Popis používa
            existujúcu triedu .small, rovnako ako ostatné karty. -->
       <div class="small">Pripravujeme – čoskoro</div>
+      <!-- .card-soon = stlmený stav "čoskoro" (styles.css) -->
+
       <div style="display:flex;gap:8px;margin-top:8px">
         <button class="btn btn-primary" id="buy20" disabled>Kúpiť +20 paragrafov</button>
         <button class="btn" id="buyPremium" disabled>Kúpiť PREMIUM</button>
@@ -303,6 +313,8 @@
   <!-- SVET 1 – ARÉNA: výber oblasti + pojednávanie → hry → register výziev.
        Register je priame predĺženie pojednávania, preto ostáva tu. -->
   <div class="right">
+
+    <h3 class="world-heading" id="worldArena">⚔️ Aréna</h3>
 
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">

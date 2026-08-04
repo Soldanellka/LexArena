@@ -276,6 +276,55 @@ body {
 .left { flex: 1; min-width: 0; }
 .right { width: 420px; min-width: 0; }
 
+/* ============================================================
+   NADPISY TROCH SVETOV (Aréna / Tréningy / Súťaž a komunita / Servis)
+   Sú to <h3> SÚRODENCI kariet (nie obaly – mobilné display:contents +
+   order musí ďalej fungovať). Vzhľad je zámerne odvodený od nadpisov
+   VNÚTRI kariet: rovnaká rodina (Inter z body), rovnaká veľkosť
+   (prehliadačový default h3 = 1.17em, presne ako .card h3) a rovnaká
+   hrúbka 700. Oproti kartovému nadpisu sa líši len odsadením – nič
+   nové sa nezavádza. Farba ide cez var(--text), takže tmavý režim
+   funguje automaticky (premenná sa prepisuje v :root[data-theme=dark]).
+============================================================ */
+.world-heading {
+  margin: 4px 4px 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ============================================================
+   STAVY "PRIPRAVUJE SA" / "ČOSKORO"
+   Odvodené zo súčasných farieb – žiadna nová paleta, len odsýtenie a
+   priehľadnosť. grayscale() je použité zámerne namiesto prepisovania
+   pozadia: chip má v svetlej téme ružový gradient a v tmavej úplne iný
+   (s !important, viď sekcia nižšie), takže odsýtenie je jediný zápis,
+   ktorý sedí v OBOCH režimoch bez duplikovania gradientov. Pravidlá
+   platia len pre vypnuté prvky – bežné chipy a karty ostávajú nedotknuté.
+============================================================ */
+.chip:disabled,
+.chip:disabled:hover {
+  opacity: 0.5;
+  filter: grayscale(1);
+  cursor: not-allowed;
+  transform: none;      /* zruší hover nadskočenie */
+  box-shadow: none;
+  /* Stav sa nemá "animovať do seba" – tmavá téma dáva chipom
+     transition: all, čo by odsýtenie rozbehlo ako prechod. */
+  transition: none;
+}
+
+/* Tmavá téma dáva chipom tieň s !important – prebiť ho treba rovnako. */
+:root[data-theme="dark"] .chip:disabled,
+:root[data-theme="dark"] .chip:disabled:hover {
+  box-shadow: none !important;
+}
+
+/* Karta funkcie, ktorá ešte nebeží (dnes Obchod). Priehľadnosť je
+   téma-agnostická, takže nepotrebuje dark variant. */
+.card-soon {
+  opacity: 0.6;
+}
+
 .card {
   background: var(--surface);
   border-radius: var(--radius);
@@ -1026,27 +1075,36 @@ body {
      Na desktope tvorí Svet 1 pravý stĺpec a Svety 2/3 + Servis ľavý;
      na mobile sú stĺpce display:contents, takže sa skladajú za sebou. */
 
+  /* Nadpisy svetov sú súrodenci kariet – na mobile sa cez display:contents
+     stávajú rovnocennými flex položkami, takže potrebujú vlastné poradie,
+     inak by sa oddelili od svojho svetu. */
+  .world-heading { order: 99; }
+
   /* ⚔️ SVET 1 – ARÉNA */
-  #quizCard          { order: 1; }  /* výber oblasti + pojednávanie */
-  #gamesSection      { order: 2; }  /* hry na vybranej dvojici */
-  #duelBankCard      { order: 3; }  /* register výziev – predĺženie pojednávania */
+  #worldArena        { order: 1; }
+  #quizCard          { order: 2; }  /* výber oblasti + pojednávanie */
+  #gamesSection      { order: 3; }  /* hry na vybranej dvojici */
+  #duelBankCard      { order: 4; }  /* register výziev – predĺženie pojednávania */
 
   /* 📚 SVET 2 – TRÉNINGY */
-  #tilesSection      { order: 4; }  /* študijné moduly */
-  #biflovackaCard    { order: 5; }  /* bifľovačka */
-  #judikaturaSection { order: 6; }  /* judikatúra NS SR */
+  #worldTraining     { order: 5; }
+  #tilesSection      { order: 6; }  /* študijné moduly */
+  #biflovackaCard    { order: 7; }  /* bifľovačka */
+  #judikaturaSection { order: 8; }  /* judikatúra NS SR */
 
   /* 🏛️ SVET 3 – SÚŤAŽ A KOMUNITA */
-  #leaderboardSection{ order: 7; }
-  #senatyCard        { order: 8; }
-  #reportCard        { order: 9; }  /* právna nezrovnalosť / súdna sieň */
-  #feedbackCard      { order: 10; }
-  #noticeboardCard   { order: 11; }
-  #videoCard         { order: 12; } /* návody a odmeny */
+  #worldCommunity    { order: 9; }
+  #leaderboardSection{ order: 10; }
+  #senatyCard        { order: 11; }
+  #reportCard        { order: 12; } /* právna nezrovnalosť / súdna sieň */
+  #feedbackCard      { order: 13; }
+  #noticeboardCard   { order: 14; }
+  #videoCard         { order: 15; } /* návody a odmeny */
 
   /* 🧰 SERVIS */
-  #shopCard          { order: 13; }
-  #adminCard         { order: 14; }
+  #worldService      { order: 16; }
+  #shopCard          { order: 17; }
+  #adminCard         { order: 18; }
 }
 
 /* ============================================================
