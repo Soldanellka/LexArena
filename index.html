@@ -180,10 +180,14 @@
 
     <div class="card section-card" id="shopCard">
       <h3 style="margin:0">Obchod</h3>
+      <!-- Obchod ešte nie je spustený – tlačidlá nikdy nemali handler. Do
+           spustenia sú vypnuté, aby neviedli do prázdna. Popis používa
+           existujúcu triedu .small, rovnako ako ostatné karty. -->
+      <div class="small">Pripravujeme – čoskoro</div>
       <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn btn-primary" id="buy20">Kúpiť +20 paragrafov</button>
-        <button class="btn" id="buyPremium">Kúpiť PREMIUM</button>
-        <button class="btn" id="openShop" title="Otvoriť obchod" type="button">
+        <button class="btn btn-primary" id="buy20" disabled>Kúpiť +20 paragrafov</button>
+        <button class="btn" id="buyPremium" disabled>Kúpiť PREMIUM</button>
+        <button class="btn" id="openShop" title="Obchod sa pripravuje" type="button" disabled>
           <img src="assets/icons/shop.svg" width="18" height="18" alt="">
         </button>
       </div>

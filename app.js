@@ -86,6 +86,38 @@ function renderAreas() {
 
     list.appendChild(btn);
   });
+
+  markUnavailableAreaChips(list);
+}
+
+/* ============================================================
+   CHIPY OBLASTÍ BEZ OBSAHU – "pripravuje sa"
+
+   Rímske právo a Dejiny práva sú v duelAreas (areas.js), ale data.js pre
+   ne nenačítava žiadne otázky, takže viedli do slepej uličky: dali sa
+   vybrať, pojednávanie sa nespustilo a hry ostali prázdne. Po dobehnutí
+   načítavania sa preto chip označí a klik zablokuje. Chipy sa NEZAHADZUJÚ
+   – len čo pre oblasť pribudne obsah, označenie samo zmizne.
+
+   ⚠️ Čisto správanie + popis, ŽIADNA zmena vzhľadu: ani trieda .muted, ani
+   atribút disabled nemajú v styles.css vlastné pravidlo (overené – chip
+   s .muted aj s disabled je pixelovo identický s bežným chipom; appka
+   nemá disabled štýl nikde, ani #startQuizBtn). Stav je preto čitateľný
+   výhradne z textu "– pripravuje sa". Vizuálne odlíšenie by si vyžiadalo
+   NOVÉ CSS pravidlo = zmena dizajnu, ktorá čaká na odsúhlasenie.
+============================================================ */
+async function markUnavailableAreaChips(list) {
+  const chips = Array.from(list.querySelectorAll('.area-chip'));
+  await Promise.all(chips.map(async (btn) => {
+    const name = btn.dataset.area;
+    await waitAreaLoaded(name);      // max 5 s, existujúca helper nižšie
+    if (isAreaLoaded(name)) return;  // obsah dorazil – chip ostáva bežný
+
+    btn.disabled = true;
+    btn.classList.add('muted');
+    btn.title = 'Obsah tejto oblasti sa pripravuje';
+    btn.textContent = `${name} – pripravuje sa`;
+  }));
 }
 
 /* =====================================================
