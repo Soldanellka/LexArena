@@ -86,6 +86,7 @@ async function openAvatarSelectModal() {
   // Načítaj stav hráča pre kontrolu odomknutia
   let totalEarned = 0;
   let acceptedReports = 0;
+  let loginStreak = 0;
   if (db && nick) {
     try {
       const { ref, get } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
@@ -95,6 +96,7 @@ async function openAvatarSelectModal() {
         // Fallback: ak totalParagraphsEarned neexistuje, použi aktuálny zostatok
         totalEarned = d.totalParagraphsEarned || d.paragrafy || 0;
         acceptedReports = d.acceptedReports || 0;
+        loginStreak = d.loginStreak || 0;
       }
     } catch(e) {}
   }
@@ -104,6 +106,7 @@ async function openAvatarSelectModal() {
     { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých', locked: false },
     { id: 'cat',       name: 'Právnická mačka', emoji: '🐱',   desc: `Za 100§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 100 },
     { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉',   desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
+    { id: 'dog',       name: 'Pes vernosti',    emoji: '🐶',   desc: `Za 30 dní streaku (máš ${loginStreak})`, locked: loginStreak < 30 },
     { id: 'prestige',  name: 'Prestige avatar',  emoji: '✨',   desc: `Čoskoro – od ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATAR_MIN}§`, locked: true, comingSoon: true },
   ];
 
