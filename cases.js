@@ -409,8 +409,52 @@ export function loadCasesFromJson(casesArr, areaTitle) {
   window.__jsonCaseIndex = 0;
   window.__jsonCaseAnswers = {}; // { caseIdx: { stepIdx: chosenOption } }
   window.__jsonCaseRecorded = new Set(); // ktoré indexy už zapísali progres (Fáza 2)
+  window.__jsonCaseScores = {};          // { caseIdx: pct } – podklad pre CASES_PERFECT
+  window.__jsonCaseSetRewarded = false;  // § + energia za sadu sa udeľujú raz na načítanie
 
   renderJsonCase(container, areaTitle);
+}
+
+/* ============================================================
+   § + ENERGIA ZA DOHRANÚ SADU PRÍPADOV
+   Ekonomika prípadov pôvodne visela VÝHRADNE v submitCase() nižšie, ktorá
+   pracuje nad window.cases – to však hlavná appka nikdy nenaplní (data.js
+   plní window.areaCases), takže živá JSON cesta nikdy nič neudelila ani
+   nestrhla. Táto funkcia dopája TIE ISTÉ konštanty na živú cestu; hodnoty
+   ani ich význam sa nemenia (ENERGY.CASES_SET / REWARDS.CASES_SET /
+   REWARDS.CASES_PERFECT), rovnaký vzor ako finishMemoryGame() v memory.js.
+
+   "Sada" = všetky prípady načítané pre vybranú dvojicu okruhov, ktoré majú
+   aspoň jeden krok s možnosťami (prípad bez otázok sa nedá vyhodnotiť, preto
+   sa do menovateľa nepočíta – inak by sa sada nikdy neuzavrela).
+
+   Na rozdiel od submitCase() sa tu 100 % NEODVODZUJE od dokončenia: v JSON
+   ceste sa krok označí za zodpovedaný aj pri nesprávnej voľbe, takže sada sa
+   dá dohrať aj s chybami. CASES_PERFECT preto vyžaduje skutočných 100 % vo
+   všetkých prípadoch sady.
+============================================================ */
+function maybeAwardCaseSet(cases) {
+  if (window.__jsonCaseSetRewarded) return;
+
+  const scoreable = (cases || []).filter(c =>
+    (c.steps || []).some(s => Array.isArray(s.options) && s.options.length > 0)
+  ).length;
+  if (!scoreable || window.__jsonCaseRecorded.size < scoreable) return;
+
+  window.__jsonCaseSetRewarded = true;
+
+  const nick = localStorage.getItem('playerNick');
+  if (!nick) return; // bez nicku niet komu pripísať (rovnako ako submitCase nižšie)
+
+  econEnergy(nick, ECONOMY_CONFIG.ENERGY.CASES_SET, 'dohraná sada prípadov');
+  econAward(nick, ECONOMY_CONFIG.REWARDS.CASES_SET, 'dokončená sada prípadov');
+
+  const scores = Object.values(window.__jsonCaseScores || {});
+  if (scores.length === scoreable && scores.every(p => p === 100)) {
+    econAward(nick, ECONOMY_CONFIG.REWARDS.CASES_PERFECT, 'sada prípadov na 100 %');
+  }
+
+  incrementGamesPlayed();
 }
 
 function renderJsonCase(container, areaTitle) {
@@ -519,10 +563,13 @@ function renderJsonCase(container, areaTitle) {
     // prípade) a len ak má prípad presnú atribúciu oblasti aj okruhu.
     if (!window.__jsonCaseRecorded.has(idx)) {
       window.__jsonCaseRecorded.add(idx);
+      window.__jsonCaseScores[idx] = pct;
       const nick = localStorage.getItem('playerNick');
       if (nick && c.area && c.source) {
         recordOkruhResult(nick, c.area, c.source, PROGRESS_ACTIVITIES.CASES, pct);
       }
+      // § + energia za CELÚ sadu – rovnaký "raz" strážca ako zápis progresu vyššie.
+      maybeAwardCaseSet(cases);
     }
   }
 
