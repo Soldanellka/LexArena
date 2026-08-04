@@ -10,7 +10,7 @@ import { loadAnsweredCases } from './cases.js';
 import { applyTheme } from './theme.js';
 import { nextQ, prevQ } from './quiz.js';
 import { initDuelLeaderboard } from './scripts/leaderboard.js';
-import { watchDuelBankBadge } from './scripts/duels.js';
+import { watchDuelBankBadge, announceOwnDuelResults } from './scripts/duels.js';
 import { initAvatarSystem, selectAvatar, getTalarShopEntries, buyTalar, getBaseIdFor } from './scripts/avatar.js';
 import { scrollToTarget, uncollapseSection } from './mobile-nav.js';
 import {
@@ -426,6 +426,10 @@ export function init() {
 
     /* 🔹 Výzva na duel cez zdieľateľný link (?duel=ID) */
     checkDuelChallengeLink();
+
+    /* 🔹 Výsledky vlastných odoslaných výziev – tvorca dohral skôr, než
+       výzvu niekto prijal, takže sa víťaza dozvie až tu. */
+    announceOwnDuelResults();
 
     /* 🔹 Nahlásenie z inej stránky (Bifľovačka, ob-pravo-app) cez ?report=1&area=&src=&qtext= */
     checkReportLink();

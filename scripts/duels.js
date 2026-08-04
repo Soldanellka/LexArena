@@ -472,7 +472,7 @@ function updateLeaderboardWithResult(nick, score, isWin) {
    dohral skôr, ako výzvu niekto prijal, takže sa výsledok dozvie až pri
    ďalšej návšteve – to je samostatná úloha, viď protokol.
 ============================================================ */
-function showDuelResultModal(result, myNick) {
+function showDuelResultModal(result, myNick, onClose) {
   if (!result) return;
 
   const old = document.getElementById('duelResultModal');
@@ -508,9 +508,74 @@ function showDuelResultModal(result, myNick) {
     </div>`;
   document.body.appendChild(modal);
 
-  const close = () => modal.remove();
+  const close = () => {
+    modal.remove();
+    if (typeof onClose === 'function') onClose();
+  };
   modal.querySelector('#closeDuelResultModal').onclick = close;
   modal.onclick = e => { if (e.target === modal) close(); };
+}
+
+/* ============================================================
+   VÝSLEDKY VLASTNÝCH ODOSLANÝCH VÝZIEV (pre TVORCU)
+
+   Tvorca výzvy dohrá skôr, než ju niekto prijme – finalizeDuel beží až u
+   prijímateľa, takže tvorca sa výsledok inak nikdy nedozvie. Pri návšteve
+   appky mu preto ukážeme výsledky jeho dokončených výziev.
+
+   "Videné" sa značí do duels/{id}/resultSeen/{nick} – rovnaký vzor ako už
+   existujúce duels/{id}/challengeClaimed/{nick} nižšie (nie localStorage,
+   nech to sedí aj po prihlásení z iného zariadenia). Značí sa hneď pri
+   zobrazení, aby reload uprostred modalu výsledok nezopakoval.
+
+   Viac výsledkov sa ukáže postupne (od najstaršieho), vždy až po zavretí
+   predchádzajúceho – nič sa nestratí a modaly sa neprekrývajú.
+
+   ⚠️ DVE POISTKY PROTI ZAVALENIU: v databáze sú aj historické duely spred
+   zavedenia tejto funkcie (pri písaní 111 dokončených, jeden tvorca ich mal
+   36) a žiadny z nich nemá resultSeen – bez poistiek by hráč pri najbližšom
+   otvorení appky dostal desiatky modalov za sebou.
+   1. Časové okno: staré výsledky sú aj tak nezaujímavé, ohlasujú sa len
+      duely dohrané za posledných MAX_AGE dní (staršie sa NIKDY neukážu a
+      nič sa im nezapisuje – žiadna vlna zápisov do DB).
+   2. Strop na návštevu: naraz najviac MAX_PER_VISIT modalov, zvyšok príde
+      pri ďalšej návšteve (nič sa nestráca).
+============================================================ */
+const RESULT_ANNOUNCE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 dní
+const RESULT_ANNOUNCE_MAX_PER_VISIT = 3;
+
+export async function announceOwnDuelResults() {
+  const db = getDb();
+  const nick = localStorage.getItem('playerNick');
+  if (!db || !nick) return;
+
+  try {
+    const snap = await get(ref(db, 'duels'));
+    const data = snap.val() || {};
+
+    const now = Date.now();
+    const unseen = Object.entries(data)
+      .filter(([, d]) =>
+        d && d.status === 'finished' && d.result &&
+        d.from === nick &&
+        !(d.resultSeen && d.resultSeen[nick]) &&
+        (now - (d.finishedAt || 0)) < RESULT_ANNOUNCE_MAX_AGE_MS
+      )
+      .sort((a, b) => (a[1].finishedAt || 0) - (b[1].finishedAt || 0))
+      .slice(0, RESULT_ANNOUNCE_MAX_PER_VISIT);
+
+    if (!unseen.length) return;
+
+    const showNext = (i) => {
+      if (i >= unseen.length) return;
+      const [id, duel] = unseen[i];
+      update(ref(db, `duels/${id}/resultSeen`), { [nick]: true });
+      showDuelResultModal(duel.result, nick, () => showNext(i + 1));
+    };
+    showNext(0);
+  } catch (e) {
+    console.warn('⚠️ duels: výsledky vlastných výziev sa nepodarilo načítať', e);
+  }
 }
 
 /* ============================================================
