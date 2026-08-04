@@ -1122,6 +1122,31 @@ body {
   gap: 10px;
 }
 
+/* ============================================================
+   REBRÍČEK – TOP 3 VIDITEĽNÉ, ZVYŠOK SKROLOVATEĽNE
+   Desať riadkov po 72 px robilo z karty rebríčka 997 px. Výška je
+   nastavená na tri riadky (3×72 + 2×10 gap = 236) plus kúsok navyše,
+   nech je zo štvrtého riadka vidieť, že sa dá skrolovať.
+
+   ⚠️ Aplikované na KONTAJNERY RIADKOV, nikdy na filter – riadok chipov
+   Týždeň/Mesiac/Všetko musí ostať priamym predchodcom #duelLeaderboard
+   (scripts/leaderboard.js ho hľadá cez previousElementSibling). Toto
+   pravidlo nemení DOM ani texty, len výšku zoznamu.
+   Platí pre všetky tri režimy (Jednotlivci / Senáty / Fakulty).
+============================================================ */
+#duelLeaderboard,
+#senatLeaderboard,
+#facultyFullLeaderboard {
+  /* ⚠️ .list je flex-wrap: wrap – pri obmedzenej výške by sa riadky
+     nezalomili nadol, ale do ĎALŠÍCH STĹPCOV a namiesto skrolovania by
+     sa zoznam scvrkol. Preto explicitne stĺpec bez zalamovania. */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-height: 252px;
+  overflow-y: auto;
+}
+
 .lb-row {
   display: flex;
   align-items: center;
