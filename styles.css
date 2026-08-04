@@ -2758,13 +2758,16 @@ body {
 /* ============================================================
    Bifľovačka (Memory Trainer) – dlaždice
 ============================================================ */
+/* Kompaktnejšie dlaždice: 6 oblastí × pôvodných 115 px robilo z karty
+   Bifľovačky najvyšší prvok stĺpca. Menia sa VÝHRADNE rozmery a
+   odsadenia – pozadie, orámovanie, zaoblenie aj hover ostávajú. */
 .memory-tile {
   display: block;
   background: var(--surface);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 14px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
+  padding: 9px 12px;
+  margin-bottom: 6px;
   text-decoration: none;
   color: inherit;
   transition: box-shadow .18s, transform .18s;
@@ -2777,17 +2780,19 @@ body {
 
 .memory-tile-title {
   font-weight: 700;
-  margin-bottom: 6px;
+  font-size: 14px;
+  margin-bottom: 3px;
 }
 
 .memory-tile-stat {
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.35;
   color: var(--muted);
 }
 
 .memory-tile-badge {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 5px;
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 12px;
