@@ -409,9 +409,21 @@ export async function getAreaStats(slug) {
 
   const area = getAreaBySlug(slug);
   const progress = await loadProgress(slug);
-  // Odhad celkového počtu balíčkov: 5 otázok na súbor (bežná konvencia naprieč appkami).
-  // Presné číslo sa doplní, keď používateľ oblasť skutočne otvorí (loadMemoryArea).
-  const estimatedTotal = area ? area.count * 5 : 0;
+  /* Odhad celkového počtu balíčkov pre dlaždicu: 3 definície na okruh.
+     Pôvodne tu bolo 5 (konvencia počtu KVÍZOVÝCH otázok na súbor) – lenže
+     bifľovačka čerpá z ručných biflovacka/{slug}.json, kde má KAŽDÝ okruh
+     presne 3 definície (overené vo všetkých piatich súboroch: pracovne
+     50/150, tph 30/90, tpp 30/90, ob_hmotne 40/120, ob_procesne 45/135 –
+     min aj max 3). Menovateľ bol preto o tretinu nafúknutý a percentá aj
+     odznak dokončenia na dlaždici systematicky podhodnotené.
+
+     Ostáva to ODHAD len pre Európske právo, ktoré ručný súbor nemá a
+     balíčky sa mu generujú z kvízov (≤5 na okruh, podľa toho, koľko
+     otázok nájde zodpovedajúcu definíciu v tiles). Presné číslo sa
+     aj tak doplní hneď, ako používateľ oblasť otvorí – vtedy sa použije
+     vetva areaState vyššie. */
+  const DEFINITIONS_PER_OKRUH = 3;
+  const estimatedTotal = area ? area.count * DEFINITIONS_PER_OKRUH : 0;
   return computeStatsFromProgress(progress, estimatedTotal);
 }
 
