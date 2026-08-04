@@ -528,6 +528,38 @@ function finalizeDuel(duel, opponentNick, opponentQuestions) {
 /* ============================================================
    BANKA DUELOV
 ============================================================ */
+/* ============================================================
+   SKRYTÉ (ODMIETNUTÉ) CUDZIE VÝZVY – len lokálne, per zariadenie.
+
+   Pôvodne "Odmietnuť" volalo remove() na duels/{id} pre AKÚKOĽVEK výzvu,
+   teda ktokoľvek vedel natrvalo zmazať cudziu výzvu z databázy všetkým
+   ostatným hráčom. Odmietnutie je pritom rozhodnutie JEDNÉHO hráča – nemá
+   žiadny dôvod siahať na cudzí záznam. Vlastnú výzvu naďalej maže z DB
+   (to je legitímne zrušenie vlastného pojednávania), cudziu len schová
+   tomuto hráčovi. Zoznam sa priebežne čistí od ID, ktoré už aj tak nie sú
+   platné (expirované/prijaté/zmazané autorom), aby nerástol donekonečna.
+============================================================ */
+const DISMISSED_DUELS_KEY = 'lex_dismissed_duels';
+
+function getDismissedDuels() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(DISMISSED_DUELS_KEY) || '[]');
+    return Array.isArray(raw) ? raw : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function dismissDuelLocally(duelId) {
+  const list = getDismissedDuels();
+  if (!list.includes(duelId)) list.push(duelId);
+  try {
+    localStorage.setItem(DISMISSED_DUELS_KEY, JSON.stringify(list));
+  } catch (e) {
+    console.warn('⚠️ duels: odmietnutú výzvu sa nepodarilo uložiť lokálne', e);
+  }
+}
+
 function loadDuelBank(callback) {
   const db = getDb();
   if (!db) return;
@@ -544,7 +576,18 @@ function loadDuelBank(callback) {
       d.status === "pending"
     );
 
-    callback(valid);
+    // Prune: nechaj v zozname len ID, ktoré sú ešte reálne v ponuke.
+    const dismissed = getDismissedDuels();
+    if (dismissed.length) {
+      const validIds = new Set(valid.map(d => d.id));
+      const pruned = dismissed.filter(id => validIds.has(id));
+      if (pruned.length !== dismissed.length) {
+        try { localStorage.setItem(DISMISSED_DUELS_KEY, JSON.stringify(pruned)); } catch (e) {}
+      }
+    }
+
+    const dismissedSet = new Set(getDismissedDuels());
+    callback(valid.filter(d => !dismissedSet.has(d.id)));
   });
 }
 
@@ -647,10 +690,16 @@ export function renderDuelBank() {
       }
 
       div.querySelector(".duel-reject").onclick = () => {
-        const db = getDb();
-        if (!db) return;
-
-        remove(ref(db, `duels/${duel.id}`));
+        if (isOwn) {
+          // Vlastná výzva – legitímne zrušenie, zmaž ju z databázy.
+          const db = getDb();
+          if (!db) return;
+          remove(ref(db, `duels/${duel.id}`));
+        } else {
+          // Cudzia výzva – NIKDY nesiahaj na cudzí záznam, len ju schovaj
+          // tomuto hráčovi (viď komentár pri DISMISSED_DUELS_KEY vyššie).
+          dismissDuelLocally(duel.id);
+        }
         renderDuelBank();
       };
 
