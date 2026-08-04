@@ -12,6 +12,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { econAward, econEnergy, econCanPlay, ECONOMY_CONFIG } from './economy.js';
 import { showRewardToast } from '../ui.js';
+import { escapeHtml } from '../core.js';
 import { awardFacultyPoints } from './faculties.js';
 import { getOkruhDoneKeys } from './dashboardStats.js';
 import { fetchPercentMapSafe, bucketizeKeysByPercent } from './okruhSelector.js';
@@ -458,6 +459,61 @@ function updateLeaderboardWithResult(nick, score, isWin) {
 }
 
 /* ============================================================
+   VÝSLEDKOVÁ OBRAZOVKA DUELU
+
+   duels/{id}.result sa zapisoval už predtým, ale žiadne UI ho nečítalo –
+   hráč sa víťaza nedozvedel inak než z rebríčka. Modal používa VÝHRADNE
+   existujúce triedy duelového modalu (.duel-challenge-modal-overlay /
+   .duel-challenge-modal / .duel-challenge-title / .btn / .btn-primary,
+   styles.css:2768+), takže nepribúda žiadny nový vzhľad.
+
+   Zobrazuje sa hráčovi, ktorý duel práve dohral (prijímateľ výzvy – ten
+   sedí za týmto zariadením a finalizeDuel beží u neho). Tvorca výzvy
+   dohral skôr, ako výzvu niekto prijal, takže sa výsledok dozvie až pri
+   ďalšej návšteve – to je samostatná úloha, viď protokol.
+============================================================ */
+function showDuelResultModal(result, myNick) {
+  if (!result) return;
+
+  const old = document.getElementById('duelResultModal');
+  if (old) old.remove();
+
+  const { firstPlayer, secondPlayer, winner, areaTitle } = result;
+  const me = firstPlayer.nick === myNick ? firstPlayer : secondPlayer;
+  const opponent = firstPlayer.nick === myNick ? secondPlayer : firstPlayer;
+
+  let title;
+  if (winner === 'draw') title = '🤝 Remíza!';
+  else if (winner === myNick) title = '🏆 Vyhral/a si!';
+  else title = '📚 Tentoraz to nevyšlo';
+
+  const modal = document.createElement('div');
+  modal.id = 'duelResultModal';
+  modal.className = 'duel-challenge-modal-overlay';
+  modal.innerHTML = `
+    <div class="duel-challenge-modal">
+      <div class="duel-challenge-title">${title}</div>
+      <p class="small" style="margin:12px 0 4px">Pojednávanie – ${escapeHtml(areaTitle || '')}</p>
+      <div class="list" style="margin:10px 0">
+        <div style="display:flex;justify-content:space-between;padding:6px 0">
+          <span><strong>${escapeHtml(me.nick)}</strong> (ty)</span>
+          <strong>${me.score}</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:6px 0">
+          <span>${escapeHtml(opponent.nick)}</span>
+          <strong>${opponent.score}</strong>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="closeDuelResultModal" style="width:100%">Zavrieť</button>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const close = () => modal.remove();
+  modal.querySelector('#closeDuelResultModal').onclick = close;
+  modal.onclick = e => { if (e.target === modal) close(); };
+}
+
+/* ============================================================
    FINÁLNE VYHODNOTENIE DUELU
 ============================================================ */
 function finalizeDuel(duel, opponentNick, opponentQuestions) {
@@ -523,6 +579,15 @@ function finalizeDuel(duel, opponentNick, opponentQuestions) {
   update(duelRef, resultPayload);
 
   console.log("🔥 Duel vyhodnotený:", duel.id, resultPayload);
+
+  // Ukáž výsledok hráčovi, ktorý duel práve dohral (viď komentár pri
+  // showDuelResultModal vyššie). Nesmie zhodiť vyhodnotenie, ktoré je už
+  // zapísané – preto vo vlastnom try/catch.
+  try {
+    showDuelResultModal(resultPayload.result, opponentNick);
+  } catch (e) {
+    console.warn('⚠️ duels: výsledkovú obrazovku sa nepodarilo zobraziť', e);
+  }
 }
 
 /* ============================================================
