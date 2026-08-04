@@ -8,34 +8,76 @@ import { claimNick } from './scripts/pinAuth.js';
 /* =====================================================
    RENDER ŠTUDIJNÝCH MODULOV (externé appky z catalog)
    ===================================================== */
+/* Jedna dlaždica katalógu. Vzhľad ostáva presne ako doteraz – .chip,
+   rovnaké otváranie cez window.catalog.openExternal. */
+function buildModuleChip(name, item) {
+  const btn = document.createElement('button');
+  btn.className = 'chip';
+  btn.type = 'button';
+  btn.textContent = name;
+
+  btn.onclick = () => {
+    console.log("Otváram externú appku:", item.openExternal);
+
+    // Ak existuje funkcia openExternal, použijeme ju
+    if (typeof window.catalog.openExternal === 'function') {
+      window.catalog.openExternal(item.openExternal);
+    } else {
+      // fallback – otvorenie URL
+      window.location.href = item.openExternal;
+    }
+  };
+
+  return btn;
+}
+
 function renderModules() {
   const list = $('modulesList');
   if (!list || typeof window.catalog === 'undefined') return;
 
   list.innerHTML = '';
 
-  Object.keys(window.catalog).forEach(name => {
-    const item = window.catalog[name];
-    if (!item || !item.openExternal) return;
+  /* window.catalog nesie aj funkciu openExternal – tá nemá vlastnú
+     .openExternal vlastnosť, takže sa filtrom nižšie prirodzene vynechá
+     (rovnaká podmienka ako pôvodne). */
+  const entries = Object.keys(window.catalog)
+    .map(name => [name, window.catalog[name]])
+    .filter(([, item]) => item && item.openExternal);
 
-    const btn = document.createElement('button');
-    btn.className = 'chip';
-    btn.textContent = name;
+  entries.filter(([, item]) => !item.legacy)
+         .forEach(([name, item]) => list.appendChild(buildModuleChip(name, item)));
 
-    btn.onclick = () => {
-      console.log("Otváram externú appku:", item.openExternal);
+  /* Staršie samostatné appky (legacy: true v data.js) idú pod jednu
+     zbaliteľnú dlaždicu, nech hlavný zoznam drží len plnohodnotné
+     oblasti. Rozbaľovač je bežný .chip a rozbalený zoznam je .list –
+     žiadny nový vizuálny jazyk. */
+  const legacy = entries.filter(([, item]) => item.legacy);
+  if (!legacy.length) return;
 
-      // Ak existuje funkcia openExternal, použijeme ju
-      if (typeof window.catalog.openExternal === 'function') {
-        window.catalog.openExternal(item.openExternal);
-      } else {
-        // fallback – otvorenie URL
-        window.location.href = item.openExternal;
-      }
-    };
+  const box = document.createElement('div');
+  box.id = 'moreModulesBox';
+  box.className = 'list';
+  box.style.width = '100%';   // .list je flex-wrap → vlastný riadok
+  box.style.display = 'none';
+  legacy.forEach(([name, item]) => box.appendChild(buildModuleChip(name, item)));
 
-    list.appendChild(btn);
-  });
+  const toggle = document.createElement('button');
+  toggle.className = 'chip';
+  toggle.type = 'button';
+  toggle.id = 'moreModulesBtn';
+  toggle.setAttribute('aria-expanded', 'false');
+  const label = (open) => `${open ? '▾' : '▸'} Ďalší obsah (${legacy.length})`;
+  toggle.textContent = label(false);
+
+  toggle.onclick = () => {
+    const open = box.style.display === 'none';
+    box.style.display = open ? 'flex' : 'none';
+    toggle.textContent = label(open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  list.appendChild(toggle);
+  list.appendChild(box);
 }
 
 /* =====================================================

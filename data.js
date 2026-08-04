@@ -57,8 +57,13 @@ window.catalog = {
     desc: "38 okruhov európskeho práva, kvízy, kartičky a prípady."
   },
 
+  /* legacy: true = staršie samostatné appky (vlastné HTML, bez Firebase,
+     bez nicku, bez zápisu progresu a bez §). V Študijných moduloch sa
+     nezobrazujú priamo, ale až po rozbalení dlaždice "Ďalší obsah" –
+     hlavný zoznam tak drží len plnohodnotné oblasti. */
   "Občan - teória a veľký kvíz": {
     id: "obcan",
+    legacy: true,
     openExternal: LIVE + "Občan - teória a veľký kvíz/",
     externalPath: LIVE + "Občan - teória a veľký kvíz/data/",
     desc: "Veľký občiansky kvíz."
@@ -66,6 +71,7 @@ window.catalog = {
 
   "TREST Veľký KVÍZ": {
     id: "trestvelky",
+    legacy: true,
     openExternal: LIVE + "TREST Veľký KVÍZ/",
     externalPath: LIVE + "TREST Veľký KVÍZ/data/",
     desc: "Kompletný trestný kvíz."
@@ -73,6 +79,7 @@ window.catalog = {
 
   "Trestné právo - spájačka": {
     id: "spajacka",
+    legacy: true,
     openExternal: LIVE + "Trestné právo - spájačka/",
     externalPath: LIVE + "Trestné právo - spájačka/data/",
     desc: "Interaktívna spájačka."
@@ -80,6 +87,7 @@ window.catalog = {
 
   "Trestné právo - teória a prípady": {
     id: "tppripady",
+    legacy: true,
     openExternal: LIVE + "Trestné právo - teória a prípady/",
     externalPath: LIVE + "Trestné právo - teória a prípady/data/",
     desc: "Teória + prípady."
