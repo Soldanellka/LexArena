@@ -140,17 +140,28 @@ function saveDone() {
    FIREBASE – pridelenie § (ak je dostupné)
 ============================================================ */
 async function awardPar() {
-  // § sa pripisuje VÝHRADNE cez jednotnú bránu rodičovskej appky
-  // (window.opener.econBridgeAward) – tá rieši denný strop aj transakčný log.
-  // Žiadny priamy zápis do Firebase odtiaľto (obchádzal by strop). Ak rodič
-  // nie je dostupný (priame otvorenie sub-appky, zavreté okno), ticho nič
-  // nerobíme – hráč nedostane žiadnu chybovú hlášku.
+  // § sa pripisuje VÝHRADNE cez jednotnú bránu econBridgeAward → econAward –
+  // tá rieši denný strop aj transakčný log. Žiadny priamy zápis do Firebase
+  // odtiaľto (obchádzal by strop).
+  //
+  // OPRAVA: pôvodne sa volalo len window.opener.econBridgeAward, lenže katalóg
+  // otvára sub-appky cez window.location.href v TOM ISTOM okne (data.js), takže
+  // window.opener je null a odmena ticho prepadla – hráč sľúbený § nikdy
+  // nedostal. econBridgeAward sa preto importuje priamo; je to tá istá brána
+  // (rovnaký strop, rovnaký log), len bez závislosti na rodičovskom okne.
+  // window.opener ostáva ako prvá voľba pre prípad, že sa sub-appka otvorí
+  // v novom okne – správanie je v oboch cestách identické.
   try {
     if (window.opener?.econBridgeAward) {
       const res = await window.opener.econBridgeAward(1, 'za dokončenie okruhu');
       return res != null; // odznak § len keď sa reálne pripísalo (nie pri vyčerpanom strope)
     }
-  } catch (e) { /* rodič nedostupný – ticho, žiadna hláška hráčovi */ }
+    const { econBridgeAward } = await import('../scripts/economy.js');
+    const res = await econBridgeAward(1, 'za dokončenie okruhu');
+    return res != null;
+  } catch (e) {
+    console.warn('⚠️ § za dokončenie okruhu sa nepodarilo pripísať', e);
+  }
   return false;
 }
 
