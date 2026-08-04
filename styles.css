@@ -277,6 +277,36 @@ body {
 .right { width: 420px; min-width: 0; }
 
 /* ============================================================
+   DVOJSTĹPEC V ĽAVEJ ČASTI – Rebríček a Senáty vedľa seba
+
+   Obe karty boli pod sebou cez celú šírku (708 px), čo zbytočne
+   naťahovalo ľavý stĺpec. Riešené GRIDOM NA .left, nie novým wrapperom:
+   obaliť ich do spoločného divu by rozbilo mobilný reťazec
+   display:contents + order (karty by prestali byť priamymi deťmi).
+
+   Všetky deti ostávajú cez celú šírku (grid-column 1/-1), výnimku majú
+   len tie dve karty. Platí VÝHRADNE nad 900 px, teda tam, kde .container
+   reálne stojí v dvoch stĺpcoch – pod tým sa nič nemení a mobilné
+   pravidlá (display:contents + order) ostávajú netknuté.
+============================================================ */
+@media (min-width: 901px) {
+  .left {
+    display: grid;
+    /* minmax(0, 1fr), nie 1fr – inak by široký obsah rebríčka roztiahol
+       svoj stĺpec cez min-content a polovice by neboli rovnaké. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 16px;
+    align-content: start;
+    align-items: start;   /* karty si držia vlastnú výšku, nenaťahujú sa */
+  }
+
+  .left > * { grid-column: 1 / -1; }
+
+  #leaderboardSection { grid-column: 1 / 2; }
+  #senatyCard         { grid-column: 2 / -1; }
+}
+
+/* ============================================================
    NADPISY TROCH SVETOV (Aréna / Tréningy / Súťaž a komunita / Servis)
    Sú to <h3> SÚRODENCI kariet (nie obaly – mobilné display:contents +
    order musí ďalej fungovať). Vzhľad je zámerne odvodený od nadpisov
