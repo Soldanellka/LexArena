@@ -1086,20 +1086,20 @@ body {
   #gamesSection      { order: 3; }  /* hry na vybranej dvojici */
   #duelBankCard      { order: 4; }  /* register výziev – predĺženie pojednávania */
 
-  /* 📚 SVET 2 – TRÉNINGY */
-  #worldTraining     { order: 5; }
-  #tilesSection      { order: 6; }  /* študijné moduly */
-  #biflovackaCard    { order: 7; }  /* bifľovačka */
-  #judikaturaSection { order: 8; }  /* judikatúra NS SR */
+  /* 🏛️ SVET 3 – SÚŤAŽ A KOMUNITA (nad Tréningami, rozhodnutie 2026-08) */
+  #worldCommunity    { order: 5; }
+  #leaderboardSection{ order: 6; }
+  #senatyCard        { order: 7; }
+  #reportCard        { order: 8; }  /* právna nezrovnalosť / súdna sieň */
+  #feedbackCard      { order: 9; }
+  #noticeboardCard   { order: 10; }
+  #videoCard         { order: 11; } /* návody a odmeny */
 
-  /* 🏛️ SVET 3 – SÚŤAŽ A KOMUNITA */
-  #worldCommunity    { order: 9; }
-  #leaderboardSection{ order: 10; }
-  #senatyCard        { order: 11; }
-  #reportCard        { order: 12; } /* právna nezrovnalosť / súdna sieň */
-  #feedbackCard      { order: 13; }
-  #noticeboardCard   { order: 14; }
-  #videoCard         { order: 15; } /* návody a odmeny */
+  /* 📚 SVET 2 – TRÉNINGY */
+  #worldTraining     { order: 12; }
+  #tilesSection      { order: 13; } /* študijné moduly */
+  #biflovackaCard    { order: 14; } /* bifľovačka */
+  #judikaturaSection { order: 15; } /* judikatúra NS SR */
 
   /* 🧰 SERVIS */
   #worldService      { order: 16; }
