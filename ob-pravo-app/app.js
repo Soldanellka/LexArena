@@ -8,7 +8,7 @@ import { openContentEditModal } from '../scripts/contentEditModal.js';
 import { writeOkruhBest, readDoneOkruhIndices, PROGRESS_ACTIVITIES } from '../scripts/progressTracking.js';
 
 /* 📊 Osobný prehľad progresu (Fáza 2) – najlepší výsledok per okruh.
-   appId 'obcianske' zodpovedá window.catalog['Občianske právo...'].id
+   appId 'obcianske' zodpovedá window.catalog['Občianske právo'].id
    v data.js aj resolveProgressLocation() v scripts/progressTracking.js –
    duely z root pojednávania a solo štúdium v tejto appke tak zdieľajú
    rovnaké okruhy v rovnakej vetve (users/{nick}/progress/obcianske/...). */

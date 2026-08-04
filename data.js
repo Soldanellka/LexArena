@@ -43,7 +43,12 @@ window.catalog = {
     desc: "Kompletná appka trestného práva: hmotné + procesné, kvízy, kartičky a prípady."
   },
 
-  "Občianske právo – hmotné a procesné": {
+  /* Kľúč je zároveň POPIS dlaždice (renderModules používa názov ako text),
+     inak sa nikde nevyhľadáva – identita modulu je id: "obcianske"
+     (progressTracking, ob-pravo-app). Skrátené z "Občianske právo –
+     hmotné a procesné"; appka naďalej ťahá hmotné aj procesné, výber
+     dvojice okruhov (dual) sa nemenil. */
+  "Občianske právo": {
     id: "obcianske",
     openExternal: LIVE + "ob-pravo-app/",
     externalPath: LIVE + "ob-pravo-app/data/",
