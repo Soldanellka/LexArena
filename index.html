@@ -123,7 +123,24 @@
        poradie v HTML sa nemenilo, aby sa nemuseli presúvať veľké bloky. -->
   <div class="right">
 
-    <!-- MNOŽINA 4 – SÚŤAŽ A KOMUNITA -->
+    <!-- MNOŽINA – REGISTER POJEDNÁVANÍ (hore v pravom stĺpci).
+         Prijatie výzvy vedie na kvíz v ľavom stĺpci – scroll cez stĺpce
+         je v poriadku, rieši ho startDuelQuiz (quiz.js). -->
+    <div class="set-panel" id="setRegister">
+    <h3 class="world-heading" id="worldRegister">⚔️ Výzvy</h3>
+
+    <div class="card highlight-bank" id="duelBankCard">
+      <h3 style="margin:0">Register pojednávaní</h3>
+      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
+      </div>
+      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
+    </div>
+
+    </div><!-- /setRegister -->
+
+    <!-- MNOŽINA – SÚŤAŽ A KOMUNITA -->
     <div class="set-panel" id="setCommunity">
     <h3 class="world-heading" id="worldCommunity">🏛️ Súťaž a komunita</h3>
 
@@ -314,17 +331,6 @@
     <div class="set-panel" id="setTraining">
     <h3 class="world-heading" id="worldArena">🥊 Tréning</h3>
 
-    <!-- ŤAHÚŇ – Štátnicová sieň. Tlačidlo si ponecháva pôvodné
-         #openStatniceBtn aj triedu .statnice-cta-btn (hook + vzhľad). -->
-    <div class="card highlight-games" id="statniceHeroCard">
-      <h3 style="margin:0">🏛️ Štátnicová sieň</h3>
-      <div class="small" style="margin-bottom:12px">
-        Štátnica nanečisto – ústna skúška pred trojčlennou komisiou. Dostaneš dve témy,
-        5 minút na prípravu a hodnotenie so známkou 1 – 4. Hlavná príprava na reálne štátnice.
-      </div>
-      <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">⚖️ Vstúpiť do štátnicovej siene</button>
-    </div>
-
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">
         <div class="small">Pojednávanie</div>
@@ -377,22 +383,16 @@
       </div>
     </div>
 
-    <!-- Výzvy nad hrami: prijatie výzvy vedie rovno na kvíz kúsok vyššie. -->
-    <div class="card highlight-bank" id="duelBankCard">
-      <h3 style="margin:0">Register pojednávaní</h3>
-      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
-      </div>
-      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
-    </div>
-
-    <!-- Hry na vybranej dvojici okruhov. Štátnica má vlastnú dlaždicu hore
-         (ťahúň), Môj progres a Štruktúra otázok sú v Ďalších tréningoch –
-         tie výber oblasti nepotrebujú. -->
+    <!-- Hry viazané na vybranú dvojicu okruhov – vrátane Štátnicovej siene.
+         Štátnica mala krátko vlastnú dlaždicu nad výberom oblasti, ale keďže
+         bez vybranej oblasti sa nespustí, patrí sem k Pojednávaniu,
+         Kartičkám a Prípadom. Zvýraznená ostáva ikonou a triedou
+         .statnice-cta-btn. Môj progres a Štruktúra otázok sú v Ďalších
+         tréningoch – tie výber oblasti nepotrebujú. -->
     <div class="card highlight-games" id="gamesSection">
       <h3 style="margin:0">Hry a prípady</h3>
       <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
         <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
         <button class="btn" id="openCasesBtn">Prípady z praxe</button>
         <div id="gamesAreaHint" class="games-hint">
@@ -402,6 +402,8 @@
       </div>
       <div class="small" style="margin-top:10px;color:var(--muted)">
         Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+        Štátnicová sieň (15§, dostupná pre Pracovné, Občianske a Európske právo) je nácvik ústnej
+        skúšky pred komisiou – hlavná príprava na reálne štátnice.
       </div>
     </div>
 

@@ -195,11 +195,15 @@ async function toggleInstitut(resultsEl, btn, institutId) {
 function mountJudikaturaSection() {
   if (document.getElementById('judikaturaSection')) return; // ochrana pred dvojitým mountom
 
-  /* Judikatúra patrí do Sveta 2 (Tréningy), preto sa montuje za Bifľovačku,
-     nie za #gamesSection ako predtým (tá je vo Svete 1 – Aréna). Fallback na
-     #gamesSection ostáva pre prípad, že by karta Bifľovačky chýbala – lepšie
-     zobraziť sekciu inde než ju nezobraziť vôbec. */
+  /* Judikatúra patrí do množiny „Ďalšie tréningy“ (výber oblasti nepotrebuje).
+     Kotví sa hneď za #biflovackaCard, takže v mriežke dvojíc tvorí PRVÝ
+     riadok spolu s ňou. Je to zámer kvôli výškam: Bifľovačka (~755 px) a
+     Judikatúra (~560 px) sú obe vysoké, kým Môj progres a Štruktúra otázok
+     sú nízke (~150 px). Pri poradí z nákresu (Bifľovačka | Progres) by
+     v prvom riadku ostalo ~600 px prázdneho miesta – takto sedia riadky
+     na seba. Fallbacky pre prípad, že by karta chýbala. */
   const anchor = document.getElementById('biflovackaCard')
+              || document.getElementById('spiderCard')
               || document.getElementById('gamesSection');
   if (!anchor || !anchor.parentNode) return; // niet kam montovať – nemontovať naslepo
 
