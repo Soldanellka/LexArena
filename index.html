@@ -249,15 +249,14 @@
       <h3 style="margin:0">📺 Návody & odmeny</h3>
       <div class="small" style="margin-bottom:12px">Pozri video a získaj <strong>+12§</strong></div>
 
-      <!-- Tri videá robili z karty najvyšší prvok pravého stĺpca (~500 px),
-           preto sú pod rozbaľovačom – rovnaký vzor ako „Ďalší obsah“
-           v moduloch a „Ďalšie oblasti“ v Bifľovačke. Zoznam ostáva v DOM,
-           len skrytý, takže initVideoSystem() naň naviaže bez zmeny a
-           odznaky prevzatých odmien sa doplnia aj v zbalenom stave. -->
-      <button class="chip" type="button" id="moreVideosBtn" aria-expanded="false">▸ Zobraziť videá (3)</button>
-
-      <div id="videoList" class="video-list" style="display:none">
-
+      <!-- Tri videá robili z karty najvyšší prvok pravého stĺpca (~500 px).
+           PRVÉ ostáva viditeľné, aby nováčik vôbec vedel, že sa tu dá zarobiť
+           (3 × 12 §); zvyšné dve sú pod rozbaľovačom – rovnaký vzor ako
+           „Ďalšie oblasti“ v Bifľovačke (časť vidieť, časť zbalená).
+           Zoznam ostáva v DOM, len skrytý, takže initVideoSystem() naň
+           naviaže bez zmeny a odznaky prevzatých odmien sa doplnia aj
+           v zbalenom stave. -->
+      <div class="video-list">
         <div class="video-item" data-video-id="v1">
           <div class="video-thumb" onclick="openVideo('v1')">
             <div class="video-play-btn">▶</div>
@@ -268,6 +267,11 @@
             <span class="video-reward-badge" id="reward-v1">+12§</span>
           </div>
         </div>
+      </div>
+
+      <button class="chip" type="button" id="moreVideosBtn" aria-expanded="false">▸ Ďalšie videá (2)</button>
+
+      <div id="videoList" class="video-list" style="display:none">
 
         <div class="video-item" data-video-id="v2">
           <div class="video-thumb" onclick="openVideo('v2')">

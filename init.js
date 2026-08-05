@@ -963,15 +963,15 @@ function initVideoSystem() {
     });
   }
 
-  /* Rozbaľovač zoznamu videí – tri náhľady robili z karty najvyšší prvok
-     pravého stĺpca. Zoznam ostáva v DOM (len skrytý), takže väzby vyššie
-     aj obnova odznakov nižšie fungujú bez ohľadu na rozbalenie. Rovnaký
-     vzor ako „Ďalší obsah“ v moduloch a „Ďalšie oblasti“ v Bifľovačke. */
+  /* Rozbaľovač ĎALŠÍCH videí – prvé je vždy viditeľné (nováčik má vidieť,
+     že sa tu dá zarobiť), zvyšné dve sú zbalené. Zoznam ostáva v DOM (len
+     skrytý), takže väzby vyššie aj obnova odznakov nižšie fungujú bez
+     ohľadu na rozbalenie. Rovnaký vzor ako „Ďalšie oblasti“ v Bifľovačke. */
   const moreVideosBtn = $('moreVideosBtn');
   const videoListBox = $('videoList');
   if (moreVideosBtn && videoListBox) {
     const pocet = videoListBox.querySelectorAll('.video-item').length;
-    const label = (open) => `${open ? '▾ Skryť videá' : '▸ Zobraziť videá'} (${pocet})`;
+    const label = (open) => `${open ? '▾ Skryť' : '▸ Ďalšie'} videá (${pocet})`;
     moreVideosBtn.textContent = label(false);
     moreVideosBtn.addEventListener('click', () => {
       const open = videoListBox.style.display === 'none';
