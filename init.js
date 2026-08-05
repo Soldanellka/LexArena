@@ -963,6 +963,24 @@ function initVideoSystem() {
     });
   }
 
+  /* Rozbaľovač zoznamu videí – tri náhľady robili z karty najvyšší prvok
+     pravého stĺpca. Zoznam ostáva v DOM (len skrytý), takže väzby vyššie
+     aj obnova odznakov nižšie fungujú bez ohľadu na rozbalenie. Rovnaký
+     vzor ako „Ďalší obsah“ v moduloch a „Ďalšie oblasti“ v Bifľovačke. */
+  const moreVideosBtn = $('moreVideosBtn');
+  const videoListBox = $('videoList');
+  if (moreVideosBtn && videoListBox) {
+    const pocet = videoListBox.querySelectorAll('.video-item').length;
+    const label = (open) => `${open ? '▾ Skryť videá' : '▸ Zobraziť videá'} (${pocet})`;
+    moreVideosBtn.textContent = label(false);
+    moreVideosBtn.addEventListener('click', () => {
+      const open = videoListBox.style.display === 'none';
+      videoListBox.style.display = open ? '' : 'none';
+      moreVideosBtn.textContent = label(open);
+      moreVideosBtn.setAttribute('aria-expanded', String(open));
+    });
+  }
+
   // Obnov stav vyzdvihnutých videí (Firebase = zdroj pravdy)
   Object.keys(VIDEO_CONFIG).forEach(async videoId => {
     if (await econIsVideoClaimed(videoId)) {

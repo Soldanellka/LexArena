@@ -195,11 +195,14 @@ async function toggleInstitut(resultsEl, btn, institutId) {
 function mountJudikaturaSection() {
   if (document.getElementById('judikaturaSection')) return; // ochrana pred dvojitým mountom
 
-  /* Judikatúra sa presunula do PRAVÉHO stĺpca (balans stĺpcov), kde na ňu
-     čaká prázdny hostiteľ #judikaturaHost – tam sa sekcia vkladá dovnútra.
-     Fallback na pôvodné kotvenie `afterend` za #biflovackaCard (prípadne
-     #quizCard) ostáva pre prípad, že by hostiteľ v markupe chýbal: lepšie
-     zobraziť sekciu inde než ju nezobraziť vôbec. */
+  /* Judikatúra patrí do množiny „Uč sa“ v ĽAVOM stĺpci (výber oblasti
+     nepotrebuje) a stojí v nej ako posledná – kotví sa preto `afterend`
+     za #biflovackaCard. Krátko bola vpravo kvôli balansu stĺpcov, ale to
+     ho prestrelilo na druhú stranu; vyrovnáva sa inak (zbaliteľné
+     Návody & odmeny). Podpora hostiteľa #judikaturaHost ostáva pre prípad,
+     že by sa niekedy znovu presúvala – ak v markupe je, vloží sa doň.
+     Fallback na #quizCard, keby chýbala aj Bifľovačka: lepšie zobraziť
+     sekciu inde než ju nezobraziť vôbec. */
   const host = document.getElementById('judikaturaHost');
   const anchor = host
               || document.getElementById('biflovackaCard')
