@@ -1164,10 +1164,11 @@ body {
 
   #setTraining  { order: 1; } /* 🥊 Hraj – spojená herná dlaždica */
   #setStudy     { order: 2; } /* 📚 Uč sa – moduly, bifľovačka, judikatúra */
-  #setRegister  { order: 3; } /* ⚔️ Výzvy – register pojednávaní */
-  #setCommunity { order: 4; } /* 🏛️ Súťaž a komunita */
-  #setService   { order: 5; } /* 🧰 Servis – obchod */
-  #setAdmin     { order: 6; } /* 🔐 Správa – admin/garant panel, úplne na konci */
+  #setRegister   { order: 3; } /* ⚔️ Výzvy – register pojednávaní */
+  #setCommunity  { order: 4; } /* 🏛️ Súťaž a komunita */
+  #setJudikatura { order: 5; } /* ⚖️ Judikatúra NS SR */
+  #setService    { order: 6; } /* 🧰 Servis – obchod */
+  #setAdmin      { order: 7; } /* 🔐 Správa – admin/garant panel, úplne na konci */
 }
 
 /* ============================================================

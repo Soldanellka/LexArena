@@ -576,12 +576,17 @@ export async function updateTile(slug, containerEl) {
   `;
 }
 
+/* Koľko oblastí je vidieť hneď; zvyšok sa skrýva pod rozbaľovač.
+   Šesť dlaždíc robilo z karty najvyšší prvok ľavého stĺpca (~720 px). */
+const MEMORY_TILES_VISIBLE = 3;
+
 export async function renderMemoryTiles(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = '';
-  MEMORY_AREAS.forEach(area => {
+
+  const makeTile = (area) => {
     const tile = document.createElement('a');
     tile.className = 'memory-tile';
     tile.dataset.memorySlug = area.slug;
@@ -590,8 +595,41 @@ export async function renderMemoryTiles(containerId) {
       <div class="memory-tile-title">🧠 Bifľovačka – ${area.name}</div>
       <div class="small muted">Načítavam…</div>
     `;
-    container.appendChild(tile);
-  });
+    return tile;
+  };
+
+  const visible = MEMORY_AREAS.slice(0, MEMORY_TILES_VISIBLE);
+  const hidden = MEMORY_AREAS.slice(MEMORY_TILES_VISIBLE);
+
+  visible.forEach(area => container.appendChild(makeTile(area)));
+
+  /* Zvyšné oblasti pod jedným rozbaľovačom – rovnaký vzor ako „Ďalší obsah“
+     v Študijných moduloch (chip + skrytý box), žiadny nový vizuálny jazyk.
+     Dlaždice sa vytvárajú hneď, len sú skryté, takže updateTile() nižšie
+     doplní progres do všetkých šiestich bez ohľadu na rozbalenie. */
+  if (hidden.length) {
+    const box = document.createElement('div');
+    box.id = 'moreMemoryBox';
+    box.style.display = 'none';
+    hidden.forEach(area => box.appendChild(makeTile(area)));
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'chip';
+    toggle.id = 'moreMemoryBtn';
+    toggle.setAttribute('aria-expanded', 'false');
+    const label = (open) => `${open ? '▾' : '▸'} Ďalšie oblasti (${hidden.length})`;
+    toggle.textContent = label(false);
+    toggle.onclick = () => {
+      const open = box.style.display === 'none';
+      box.style.display = open ? 'block' : 'none';
+      toggle.textContent = label(open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+
+    container.appendChild(toggle);
+    container.appendChild(box);
+  }
 
   MEMORY_AREAS.forEach(area => updateTile(area.slug, container));
 }

@@ -195,13 +195,14 @@ async function toggleInstitut(resultsEl, btn, institutId) {
 function mountJudikaturaSection() {
   if (document.getElementById('judikaturaSection')) return; // ochrana pred dvojitým mountom
 
-  /* Judikatúra patrí do množiny „Uč sa“ (výber oblasti nepotrebuje) a stojí
-     ako POSLEDNÁ karta ľavého stĺpca – kotví sa preto za #biflovackaCard,
-     ktorá je v tej množine posledná. Fallback na #quizCard pre prípad, že by
-     Bifľovačka chýbala: lepšie zobraziť sekciu inde než ju nezobraziť vôbec.
-     (#gamesSection sa už ako kotva nepoužíva – po zlúčení je vnútri
-     #quizCard, takže by judikatúru vložil doprostred hernej dlaždice.) */
-  const anchor = document.getElementById('biflovackaCard')
+  /* Judikatúra sa presunula do PRAVÉHO stĺpca (balans stĺpcov), kde na ňu
+     čaká prázdny hostiteľ #judikaturaHost – tam sa sekcia vkladá dovnútra.
+     Fallback na pôvodné kotvenie `afterend` za #biflovackaCard (prípadne
+     #quizCard) ostáva pre prípad, že by hostiteľ v markupe chýbal: lepšie
+     zobraziť sekciu inde než ju nezobraziť vôbec. */
+  const host = document.getElementById('judikaturaHost');
+  const anchor = host
+              || document.getElementById('biflovackaCard')
               || document.getElementById('quizCard');
   if (!anchor || !anchor.parentNode) return; // niet kam montovať – nemontovať naslepo
 
@@ -224,7 +225,9 @@ function mountJudikaturaSection() {
     </div>
   `;
 
-  anchor.insertAdjacentElement('afterend', section);
+  // Hostiteľ = vložiť DOVNÚTRA; kotva (fallback) = vložiť ZA ňu.
+  if (host) host.appendChild(section);
+  else anchor.insertAdjacentElement('afterend', section);
 
   section.querySelectorAll('.judikatura-institut-btn').forEach(btn => {
     const row = btn.closest('.judikatura-institut-row');
