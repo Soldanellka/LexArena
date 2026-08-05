@@ -101,14 +101,34 @@ async function openAvatarSelectModal() {
     } catch(e) {}
   }
 
-  const AVATARS = [
-    { id: 'student-f', name: 'Študentka práva', emoji: '👩‍⚖️', desc: 'Dostupná pre všetkých', locked: false },
-    { id: 'student-m', name: 'Študent práva',   emoji: '👨‍⚖️', desc: 'Dostupný pre všetkých', locked: false },
+  /* Základná sada = tých istých 6 ilustrovaných postáv ako v pickeri
+     (BASIC_AVATARS nižšie, unlock:'default' v AVATAR_CONFIG.AVATARS).
+     Predtým tu boli len dve emoji dlaždice s legacy id 'student-f' /
+     'student-m' (staré vložené SVG) – hráč tak v prvom výbere nikdy
+     nevidel skutočnú grafiku appky. Obidva modály zapisujú cez tú istú
+     selectAvatar(), takže id sú z jedného priestoru (kľúče
+     AVATAR_CONFIG.AVATARS) a presun je bezpečný.
+     'student-f'/'student-m' sa ZÁMERNE NEMAŽÚ z AVATAR_CONFIG – hráči,
+     ktorí ich majú uložené vo Firebase, sa naďalej vykreslia; len sa už
+     nedajú novo zvoliť. */
+  const BASIC_TILES = [
+    { id: 'studentka-tmava',  name: 'Študentka<br>tmavé vlasy',  base: 'avatars/studentka-tmava',  locked: false },
+    { id: 'studentka-medena', name: 'Študentka<br>medené vlasy', base: 'avatars/studentka-medena', locked: false },
+    { id: 'studentka-blond',  name: 'Študentka<br>blond vlasy',  base: 'avatars/studentka-blond',  locked: false },
+    { id: 'student-tmavy',    name: 'Študent<br>tmavé vlasy',    base: 'avatars/student-tmavy',    locked: false },
+    { id: 'student-medeny',   name: 'Študent<br>medené vlasy',   base: 'avatars/student-medeny',   locked: false },
+    { id: 'student-blond',    name: 'Študent<br>blond vlasy',    base: 'avatars/student-blond',    locked: false },
+  ];
+
+  const UNLOCK_TILES = [
     { id: 'cat',       name: 'Právnická mačka', emoji: '🐱', base: 'avatars/macka', desc: `Za 3000§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 3000 },
     { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉', base: 'avatars/sova',  desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
     { id: 'dog',       name: 'Pes vernosti',    emoji: '🐶', base: 'avatars/pes',   desc: `Za 30 dní streaku (máš ${loginStreak})`, locked: loginStreak < 30 },
     { id: 'prestige',  name: 'Prestige avatar',  emoji: '✨',   desc: `Čoskoro – od ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATAR_MIN}§`, locked: true, comingSoon: true },
   ];
+
+  // Spoločný zoznam pre klik handler (comingSoon check) – renderujú sa v dvoch mriežkach.
+  const AVATARS = [...BASIC_TILES, ...UNLOCK_TILES];
 
   const modal = document.createElement('div');
   modal.id = 'avatarSelectModal';
@@ -134,8 +154,24 @@ async function openAvatarSelectModal() {
       </div>
       <button id="closeAvatarSelectModal" class="btn" style="padding:6px 12px">✕</button>
     </div>
+    <!-- Základná sada: 3 stĺpce (6 variantov dvoch postáv, menšie dlaždice
+         bez popisu – "Dostupné pre všetkých" 6× by bol len šum). -->
+    <div style="font-weight:600;font-size:12px;color:var(--muted);margin-bottom:8px">Základná sada</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+      ${BASIC_TILES.map(av => `
+        <div class="avatar-select-card" data-id="${av.id}" style="
+          border:2px solid var(--border,#eee); border-radius:14px;
+          padding:10px 6px; text-align:center; cursor:pointer;
+          transition:all .2s; position:relative;
+        ">
+          <img src="${av.base}-full-bust.png" alt="" style="width:52px;height:52px;object-fit:cover;border-radius:50%;margin-bottom:6px" />
+          <div style="font-weight:600;font-size:11px;line-height:1.25">${av.name}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div style="font-weight:600;font-size:12px;color:var(--muted);margin:16px 0 8px">Odomykateľné</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      ${AVATARS.map(av => `
+      ${UNLOCK_TILES.map(av => `
         <div class="avatar-select-card" data-id="${av.id}" style="
           border:2px solid ${av.locked ? 'var(--border,#eee)' : 'var(--border,#eee)'}; border-radius:14px;
           padding:16px; text-align:center; cursor:pointer;
@@ -152,12 +188,14 @@ async function openAvatarSelectModal() {
         </div>
       `).join('')}
     </div>
-    <!-- Vstup do pickera (základná sada + talár shop). Predtým to bola
-         samostatná ikona palety 🎨 v hornej lište – zlúčené sem, nech je
-         v lište jedna avatarová ikona. Picker sa NEMENÍ, len sa sem
-         presunul vstup naň. -->
-    <div style="margin-top:12px">
-      <button id="openAvatarPickerFromSelect" class="btn" style="width:100%">🎨 Zmeniť vzhľad</button>
+    <!-- Vstup do pickera. Základná sada je už hore v tomto modáli, takže
+         picker tu ostáva JEDINE kvôli talár shopu – a je jeho jediným
+         živým vstupom (#changeAvatarBtn v markupe nie je, viď init.js
+         nižšie), preto tlačidlo nesmie zmiznúť; len sa premenovalo z
+         "🎨 Zmeniť vzhľad" na taláre, aby nevyzeralo ako duplicita
+         výberu postavy. -->
+    <div style="margin-top:16px">
+      <button id="openAvatarPickerFromSelect" class="btn" style="width:100%">🎭 Taláre a doplnky</button>
     </div>
     <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border,#eee)">
       <div style="font-weight:600;font-size:13px;margin-bottom:6px">🏛️ Tvoja fakulta</div>
@@ -195,7 +233,7 @@ async function openAvatarSelectModal() {
     if (e.target === modal) modal.style.display = 'none';
   };
 
-  /* "Zmeniť vzhľad" – nahrádza pôvodnú paletu 🎨 z lišty. Otvára ten istý
+  /* "Taláre a doplnky" – nahrádza pôvodnú paletu 🎨 z lišty. Otvára ten istý
      openAvatarPickerModal(false) ako predtým; picker si rieši vlastný
      modal navrchu, preto sa tento zámerne NEZATVÁRA (rovnaké správanie
      ako pri pôvodnej ikone, kde profilový modal ostával otvorený pod ňou). */
