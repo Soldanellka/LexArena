@@ -1956,12 +1956,32 @@ body {
   padding: 5px 14px 5px 10px;
   box-shadow: 0 2px 8px rgba(240,138,166,0.15);
   transition: box-shadow .2s;
-  cursor: default;
+  /* Po konsolidácii lišty je badge TLAČIDLO (otvára „Získaj §“), preto
+     pointer a reset vlastných štýlov <button>. Vzhľad ostáva pôvodný. */
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
 .par-badge:hover {
   box-shadow: 0 4px 14px rgba(240,138,166,0.28);
 }
+
+/* Malé „＋“ napovie, že sa dá kliknúť pre ďalšie §. */
+.par-plus {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-3);
+  opacity: 0.75;
+}
+
+/* Bez nicku niet komu § pripísať – badge ostáva čitateľný, len neaktívny
+   (rovnaký vzor ako .btn:disabled). */
+.par-badge:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.par-badge:disabled .par-plus { display: none; }
 
 .par-icon {
   font-family: 'Georgia', serif;
@@ -2192,20 +2212,30 @@ body {
    🐾 AVATAR ENERGIA PANEL (vedľa avatara v headeri)
 ============================================================ */
 
+/* Energia ako JEDEN prvok: prúžok a percento stáli pod sebou ako dve
+   samostatné veci, teraz sú v jednej pilulke vedľa seba. Oba elementy si
+   ponechávajú ID (#avatarEnergyBar, #avatarEnergyText) – scripts/avatar.js
+   ich plní bez zmeny. Tlačidlo „Nakŕmiť“ sa zobrazuje len pri nízkej
+   energii, preto ostáva samostatné za pilulkou. */
 .avatar-energy-panel {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  margin-left: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--card-border);
 }
 
 .avatar-energy-bar-wrap {
-  width: 60px;
-  height: 7px;
+  width: 46px;
+  height: 6px;
   background: rgba(0,0,0,0.12);
   border-radius: 999px;
   overflow: hidden;
+  flex: none;
 }
 
 .avatar-energy-bar {

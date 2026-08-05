@@ -399,9 +399,17 @@ export function init() {
        #parCount doplní Firebase cesta (scripts/avatar.js po načítaní hráča). */
 
     /* 🔹 Získaj § – tlačidlo viditeľné len prihlásenému hráčovi */
-    const earnBtn = $('earnBtn');
+    /* § badge je zároveň vstup do okna „Získaj §“ (samostatné tlačidlo
+       #earnBtn zaniklo). Bez nicku sa nedá nikam pripísať, preto je vtedy
+       vypnutý – rovnaké pravidlo, aké malo predtým tlačidlo. */
+    const parBadge = $('parBadge');
     const initNick = localStorage.getItem('playerNick');
-    if (earnBtn) earnBtn.style.display = initNick ? 'inline-flex' : 'none';
+    if (parBadge) {
+      parBadge.disabled = !initNick;
+      parBadge.title = initNick
+        ? 'Tvoje paragrafy – klikni pre získanie ďalších'
+        : 'Tvoje paragrafy (najprv si zadaj nick)';
+    }
 
     /* 🔹 Analytics návratnosti – beží na pozadí, nič neblokuje */
     if (initNick) {
@@ -764,8 +772,20 @@ function initWelcomeSystem() {
   const dot = $('welcomeHintDot');
   if (dot) dot.style.display = localStorage.getItem(LEX_WELCOME_SEEN_KEY) ? 'none' : '';
 
+  /* Ikona 👋 v lište zanikla (zlúčená s ℹ️ do jedného vstupu „Pomoc“),
+     uvítacie okno sa teraz otvára z návodu. Väzba na #welcomeBtn ostáva
+     ako poistka, keby sa ikona niekedy vrátila. */
   const welcomeBtn = $('welcomeBtn');
   if (welcomeBtn) welcomeBtn.addEventListener('click', openWelcomeModal);
+
+  const welcomeFromGuide = $('openWelcomeFromGuide');
+  if (welcomeFromGuide) {
+    welcomeFromGuide.addEventListener('click', () => {
+      const guide = $('guideModal');
+      if (guide) guide.style.display = 'none';
+      openWelcomeModal();
+    });
+  }
 
   /* "Rozumiem" – JEDINÉ miesto, ktoré nastavuje flag (na rozdiel od
      zavretia cez pozadie/"Otvoriť nástenku" nižšie, ktoré okno len
@@ -3516,9 +3536,11 @@ function attachEvents() {
   displayPlayerSeals();
 
   /* 🔥 Získaj § (reklamy + promo kódy) */
-  const earnBtn = $('earnBtn');
-  if (earnBtn) {
-    earnBtn.addEventListener('click', openEarnModal);
+  /* Klik na § badge otvorí „Získaj §“ – badge nahradil samostatné tlačidlo
+     #earnBtn, ktoré v lište zaniklo pri konsolidácii. */
+  const parBadge = $('parBadge');
+  if (parBadge) {
+    parBadge.addEventListener('click', openEarnModal);
   }
 
   /* 🔥 Návod „Ako funguje LexArena" */

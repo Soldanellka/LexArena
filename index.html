@@ -56,16 +56,16 @@
 
   <div class="header-right">
 
-    <!-- § Paragrafy – prémiový dizajn -->
-    <div class="par-badge" title="Tvoje paragrafy">
+    <!-- § Paragrafy + Získaj § v JEDNOM prvku. Badge predtým nemal žiadny
+         handler a vedľa neho stálo samostatné tlačidlo „💰 Získaj §“ –
+         teraz je zostatok aj cesta k zárobku to isté miesto: klik otvorí
+         okno Získaj § (reklama + promo kód). #parCount ostáva (plní ho
+         scripts/avatar.js). Interaktívny je len s nickom, rovnako ako
+         predtým tlačidlo. -->
+    <button type="button" class="par-badge" id="parBadge" title="Tvoje paragrafy – klikni pre získanie ďalších">
       <span class="par-icon">§</span>
       <span id="parCount" class="par-count">0</span>
-    </div>
-
-    <!-- Získaj § (reklamy + promo kódy) -->
-    <button class="btn header-earn-btn" id="earnBtn" style="display:none" title="Získaj §">
-      <span class="earn-btn-full">💰 Získaj §</span>
-      <span class="earn-btn-short">💰</span>
+      <span class="par-plus" aria-hidden="true">＋</span>
     </button>
 
     <!-- Streak -->
@@ -76,15 +76,11 @@
       <span id="roleLabel">student</span>
     </div>
 
-    <!-- Uvítacie okno -->
-    <button class="btn icon-btn header-info-btn" id="welcomeBtn" title="Vitaj v LexArene">
-      👋
-      <span class="games-hint-dot" id="welcomeHintDot"></span>
-    </button>
-
-    <!-- Návod -->
-    <button class="btn icon-btn header-info-btn" id="infoBtn" title="Ako funguje LexArena">
-      ℹ️
+    <!-- Pomoc – jeden vstup namiesto dvoch ikon (👋 uvítanie + ℹ️ návod).
+         Otvára návod, v ktorom je hore aj odkaz na uvítacie okno.
+         #infoBtn si ponecháva ID (initGuideSystem naň visí). -->
+    <button class="btn icon-btn header-info-btn" id="infoBtn" title="Pomoc / O LexArene">
+      ❓
       <span class="games-hint-dot" id="infoHintDot"></span>
     </button>
 
@@ -575,6 +571,12 @@
     <div class="game-panel-header">
       <h3>📖 Ako funguje LexArena</h3>
       <button class="btn" id="closeGuide">Zavrieť</button>
+    </div>
+
+    <!-- Uvítacie okno stratilo vlastnú ikonu v lište (👋 a ℹ️ sú zlúčené),
+         odtiaľ sa dá znovu otvoriť. -->
+    <div style="margin-bottom:12px">
+      <button class="chip" type="button" id="openWelcomeFromGuide">👋 Vitaj v LexArene</button>
     </div>
 
     <div class="guide-accordion">
