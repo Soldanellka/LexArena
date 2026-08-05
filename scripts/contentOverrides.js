@@ -80,9 +80,27 @@ export function sealMeta(ov) {
 
 /* Jednotný formát stopy poslednej úpravy pre celú appku (hlavná aj študijné).
    Vracia string alebo '' – DOM si stavia volajúci. */
+/* Admin zasahuje NEVIDITEĽNE: že úpravu spravil admin, vidí len admin.
+   Garantove úpravy vidia všetci aj s podpisom – garant za ne ručí menom a
+   nesie akademickú pečať. Skrýva sa VÝHRADNE meno autora, nie samotný fakt
+   úpravy ani dátum: hráč naďalej vidí, že otázka bola opravená.
+
+   Rola prezerajúceho sa číta z `playerFirebaseRole` – to je SKUTOČNÁ rola
+   z Firebase (ukladá ju initRoleSystem), nie náhľadový prepínač
+   `playerRole`, takže admin v režime „garant“ podpis stále uvidí.
+   Je to len zobrazovacia vec: čítať sa dá synchrónne počas renderu a
+   prípadné podvrhnutie hodnoty v localStorage neodomkne žiadne právo,
+   odhalilo by len meno – schvaľovacie práva idú cez getRealRole/Firebase. */
 export function formatEditStamp(seal) {
   if (!seal) return '';
   const d = seal.timestamp ? new Date(seal.timestamp).toLocaleDateString('sk-SK') : '';
+
+  let viewerRole = 'student';
+  try { viewerRole = localStorage.getItem('playerFirebaseRole') || 'student'; } catch (e) {}
+  const skryAutora = seal.rola === 'admin' && viewerRole !== 'admin';
+
+  if (skryAutora) return `✏️ Upravené${d ? ' ' + d : ''}`;
+
   const kto = seal.autor || 'neznámy';
   return `✏️ Upravené${d ? ' ' + d : ''} – ${kto}${seal.pecat ? ' · 🎓 akademická pečať' : ''}`;
 }

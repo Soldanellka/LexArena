@@ -1087,11 +1087,31 @@ window.openCourtroomModal = async function() {
 
       let verdictHtml = '';
       if (r.verdict) {
-        const roleIcon = r.verdict.role === 'garant' ? '🎓' : '⚖️';
-        const roleLabel = r.verdict.role === 'garant' ? 'garant' : 'admin';
-        verdictHtml = r.verdict.comment
-          ? `<div class="courtroom-verdict">📜 Verdikt (${roleLabel} ${roleIcon} ${r.verdict.by}): ${r.verdict.comment}</div>`
-          : `<div class="courtroom-verdict">📜 ${status === 'approved' ? 'Schválené' : 'Zamietnuté'} – ${roleLabel} ${roleIcon} ${r.verdict.by}</div>`;
+        /* Admin schvaľuje NEVIDITEĽNE: že zásah spravil admin, vidí len admin.
+           Garantove verdikty vidia všetci aj s podpisom – garant zaň ručí menom
+           a nesie akademickú pečať. Skrýva sa VÝHRADNE atribúcia (rola + nick),
+           nie samotný verdikt ani jeho odôvodnenie: komunita sa aj tak dozvie,
+           ako sa rozhodlo a prečo.
+
+           `role` je SKUTOČNÁ rola prezerajúceho z Firebase (getRealRole vyššie),
+           nie náhľadový prepínač z localStorage – admin v režime „garant“ teda
+           podpis stále uvidí a študent ho neuvidí nikdy.
+
+           Platí spätne aj na staršie záznamy: vykresľujú sa tým istým kódom,
+           takže netreba žiadna migrácia dát. */
+        const skryAtribuciu = r.verdict.role === 'admin' && role !== 'admin';
+
+        if (skryAtribuciu) {
+          verdictHtml = r.verdict.comment
+            ? `<div class="courtroom-verdict">📜 Verdikt: ${r.verdict.comment}</div>`
+            : `<div class="courtroom-verdict">📜 ${status === 'approved' ? 'Schválené' : 'Zamietnuté'}</div>`;
+        } else {
+          const roleIcon = r.verdict.role === 'garant' ? '🎓' : '⚖️';
+          const roleLabel = r.verdict.role === 'garant' ? 'garant' : 'admin';
+          verdictHtml = r.verdict.comment
+            ? `<div class="courtroom-verdict">📜 Verdikt (${roleLabel} ${roleIcon} ${r.verdict.by}): ${r.verdict.comment}</div>`
+            : `<div class="courtroom-verdict">📜 ${status === 'approved' ? 'Schválené' : 'Zamietnuté'} – ${roleLabel} ${roleIcon} ${r.verdict.by}</div>`;
+        }
       }
 
       return `
