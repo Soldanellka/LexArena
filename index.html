@@ -539,29 +539,49 @@
       <h3>👋 Vitaj v LexArene</h3>
     </div>
 
+    <!-- Uvítacie okno je prvá vec, ktorú nový návštevník vidí. Predtým to bolo
+         päť odstavcov textu zakončených „Rozumiem“ – teda súhlas, nie pozvánka.
+         Teraz: jednovetový sľub, tri veci, ktoré appka vie, a akčné CTA.
+         Testovacia fáza, súkromie a disclaimer ostávajú – len zbalené nižšie,
+         nech neprekryjú prvý dojem. -->
     <div class="welcome-body">
-      <p>LexArena je študijná pomôcka pre študentov práva — precvič si štátnicové okruhy
-      formou pojednávaní, kartičiek, prípadov, bifľovačky a štátnicovej siene.</p>
+      <p style="font-size:16px"><strong>Priprav sa na štátnice hravo.</strong> Skúšaj si ich nanečisto
+      pred komisiou, súťaž so spolužiakmi a zbieraj paragrafy (§).</p>
 
-      <p>🧪 Sme v testovacej fáze. Všetky funkcie sú zatiaľ bezplatné. Za aktivitu
-      zbieraš paragrafy (§) — ak ti dôjdu a avatar zaspí, napíš nám cez nástenku
-      a radi ti nejaké pridáme.</p>
+      <div class="welcome-highlights">
+        <div><span class="welcome-hl-icon">🏛️</span><strong>Štátnicová sieň</strong><br>
+          <span class="small muted">Ústna skúška nanečisto so známkou a spätnou väzbou.</span></div>
+        <div><span class="welcome-hl-icon">⚔️</span><strong>Pojednávanie</strong><br>
+          <span class="small muted">10 otázok proti spolužiakovi — výzvu pošleš linkom.</span></div>
+        <div><span class="welcome-hl-icon">🧠</span><strong>Bifľovačka</strong><br>
+          <span class="small muted">Definície nahlas alebo písomne, aj cestou.</span></div>
+      </div>
 
-      <p>🙏 Ďakujeme za každý príspevok — či už nahlásiš právnu nezrovnalosť, alebo
-      napíšeš pripomienku. Pomáhaš tým zlepšovať obsah pre všetkých.</p>
+      <details class="guide-section" style="margin-top:14px">
+        <summary>🧪 Testovacia fáza, súkromie a upozornenie</summary>
+        <div class="guide-content">
+          <p>Sme v testovacej fáze, všetky funkcie sú zatiaľ bezplatné. Za aktivitu
+          zbieraš paragrafy (§) — ak ti dôjdu a avatar zaspí, napíš nám cez nástenku
+          a radi ti nejaké pridáme.</p>
 
-      <p>🔒 Súkromie: Na používanie stačí prezývka — nezbierame e-mail, meno ani iné
-      osobné údaje. Odporúčame nepoužívať ako prezývku svoje pravé meno, nech
-      zostaneš anonymný/á. (Ak sa pripojíš ku skupine vyučujúceho a napíšeš zadaný
-      test, tvoj výsledok uvidí daný vyučujúci — tvoj bežný tréning ostáva súkromný.)</p>
+          <p>🙏 Ďakujeme za každý príspevok — či už nahlásiš právnu nezrovnalosť, alebo
+          napíšeš pripomienku. Pomáhaš tým zlepšovať obsah pre všetkých.</p>
 
-      <p class="small muted">LexArena je študijná pomôcka, nie právne poradenstvo —
-      kľúčové informácie si vždy over v aktuálnom znení predpisov na slov-lex.sk.</p>
+          <p>🔒 Súkromie: Na používanie stačí prezývka — nezbierame e-mail, meno ani iné
+          osobné údaje. Odporúčame nepoužívať ako prezývku svoje pravé meno, nech
+          zostaneš anonymný/á. (Ak sa pripojíš ku skupine vyučujúceho a napíšeš zadaný
+          test, tvoj výsledok uvidí daný vyučujúci — tvoj bežný tréning ostáva súkromný.)</p>
+
+          <p class="small muted">LexArena je študijná pomôcka, nie právne poradenstvo —
+          kľúčové informácie si vždy over v aktuálnom znení predpisov na slov-lex.sk.</p>
+        </div>
+      </details>
     </div>
 
     <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;justify-content:flex-end">
       <button class="btn" id="welcomeNoticeboardBtn">📋 Otvoriť nástenku</button>
-      <button class="btn btn-primary" id="welcomeUnderstoodBtn">Rozumiem</button>
+      <!-- ID nemenené – je to JEDINÉ miesto, ktoré nastavuje „videl som“ flag. -->
+      <button class="btn btn-primary" id="welcomeUnderstoodBtn">Začni hrať →</button>
     </div>
   </div>
 </div>
@@ -594,6 +614,30 @@
           spoznáš podľa pečate. LexArena je študijná pomôcka, nie právne poradenstvo:
           kľúčové informácie si pred skúškou vždy over v aktuálnom znení predpisov
           na slov-lex.sk.</p>
+        </div>
+      </details>
+
+      <!-- Výber oblasti je vstupná brána do celého loopu, ale v návode dosiaľ
+           vôbec nebol vysvetlený – rovnako ako Moduly, Judikatúra, Senáty
+           a Môj progres nižšie. Doplnené 2026-08. -->
+      <details class="guide-section">
+        <summary>🎯 Výber oblasti a tri režimy</summary>
+        <div class="guide-content">
+          <p>Všetko sa začína výberom oblasti v dlaždici <strong>Hraj</strong>. Kliknutím na oblasť
+          si appka pripraví <strong>dvojicu okruhov</strong> – a tú istú dvojicu potom používa
+          pojednávanie, kartičky, prípady aj štátnicová sieň. Nemusíš teda vyberať
+          štyrikrát; vyberieš raz a hráš, čo chceš.</p>
+          <p>Pri trestnom a občianskom práve dostaneš jeden okruh z hmotného a jeden
+          z procesného práva, pri pracovnom a európskom dvojicu z tej istej banky.</p>
+          <p>Pod oblasťami sú tri režimy, ktorými ovplyvníš, ktoré okruhy sa vyberú:</p>
+          <table class="guide-table">
+            <tr><th>Režim</th><th>Čo vyberie</th></tr>
+            <tr><td>🎲 Náhodne</td><td>Ľubovoľnú dvojicu z celej oblasti (predvolené)</td></tr>
+            <tr><td>📗 Preštudované</td><td>Len okruhy, kde už máš z kvízu aspoň 60 %</td></tr>
+            <tr><td>📕 Na precvičenie</td><td>Tvoje najslabšie okruhy – appka ti vyberie, čo ti nejde</td></tr>
+          </table>
+          <p class="small muted">Ak pre zvolený režim niet z čoho vyberať (napr. ešte nemáš nič
+          preštudované), appka potichu vyberie náhodne a napíše ti to pod dlaždicou.</p>
         </div>
       </details>
 
@@ -684,6 +728,71 @@
             <tr><td>🧭 Kde som? – 8–9/10</td><td>+<span data-econ="SPIDER_GAMES.REWARDS.kdesom.1.sg"></span>§</td></tr>
           </table>
           <p class="small muted">Max <span data-econ="SPIDER_GAMES.DAILY_MAX_SESSIONS"></span> odmenené sedenia denne (spoločne za všetky tri hry), ten istý okruh raz denne.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>📊 Môj progres</summary>
+        <div class="guide-content">
+          <p>Súkromný prehľad – vidíš ho len ty. Pri každej téme ukazuje percento
+          zvládnutia spočítané zo všetkého, čo si v nej odohral (kvíz, kartičky,
+          prípady, bifľovačka, štátnica). Zbaliteľná časť <strong>„Čo dobrať“</strong> ti
+          rovno povie, ktoré témy sú pod 80 % a čo v nich chýba, a v sekcii Skúšky
+          nájdeš históriu štátnicových známok.</p>
+          <p>Za priebežný postup dostávaš jednorazové odmeny:</p>
+          <table class="guide-table">
+            <tr><th>Míľnik</th><th>Odmena</th></tr>
+            <tr><td>Téma na 30 %</td><td>+<span data-econ="DASHBOARD.TEMA_30"></span>§</td></tr>
+            <tr><td>Téma na 50 %</td><td>+<span data-econ="DASHBOARD.TEMA_50"></span>§</td></tr>
+            <tr><td>Téma na 80 %</td><td>+<span data-econ="DASHBOARD.TEMA_80"></span>§</td></tr>
+            <tr><td>Celá oblasť na 100 %</td><td>+<span data-econ="DASHBOARD.OBLAST_100"></span>§</td></tr>
+          </table>
+          <p class="small muted">Počíta sa od 17. 7. 2026 – staršia aktivita sa nezapočítava,
+          takže aj téma, ktorú dávno vieš, môže ukazovať 0 %, kým si ju znovu neprejdeš.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>📁 Študijné moduly</summary>
+        <div class="guide-content">
+          <p>Samostatné appky na pokojné štúdium – bez energie, bez časového tlaku
+          a s neobmedzeným opakovaním. Pri každom okruhu nájdeš teóriu so zdrojom,
+          mapu štruktúry otázok a kvíz; po jeho dokončení sa odomknú aj kartičky
+          a prípady k tomu istému okruhu.</p>
+          <p>Okruh sa označí za zvládnutý pri kvíze na <strong>60 %</strong> a výsledok sa
+          započíta do Môjho progresu. Pod dlaždicou <strong>„Ďalší obsah“</strong> sú staršie
+          samostatné appky (veľké kvízy, spájačka) – tie fungujú mimo tvojho účtu,
+          takže sa z nich progres ani § nezapisujú.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>⚖️ Judikatúra NS SR</summary>
+        <div class="guide-content">
+          <p>Rešerš skutočných rozhodnutí Najvyššieho súdu SR k štátnicovým inštitútom –
+          napríklad bezdôvodné obohatenie, vydržanie, neodkladné opatrenie či skončenie
+          pracovného pomeru. Klikneš na inštitút a appka vytiahne reálne rozhodnutia
+          so spisovou značkou, dátumom a odkazom na originál.</p>
+          <p>Nepotrebuje vybranú oblasť, nestojí žiadne § ani energiu – je to čisto
+          študijná pomôcka, keď si chceš pozrieť, ako to súd naozaj rozhodol.</p>
+        </div>
+      </details>
+
+      <details class="guide-section">
+        <summary>🏛️ Senáty</summary>
+        <div class="guide-content">
+          <p>Senát je tím 3 – 5 hráčov. Založíš ho a pošleš spolužiakom pozývací link;
+          keď vás budú traja, senát sa stane súťažným a odmeny dostanú všetci.</p>
+          <p>Predseda potom môže vyzvať iný senát na <strong>spor</strong>: všetci členovia
+          do 48 hodín odohrajú tie isté otázky a počíta sa priemer za celý tím
+          (kto nehral, má nulu). Body zo sporov sa zbierajú v rebríčku senátov.</p>
+          <table class="guide-table">
+            <tr><th>Udalosť</th><th>Odmena</th></tr>
+            <tr><td>Senát dosiahol 3 členov (predsedovi)</td><td>+<span data-econ="SENATY.FOUND_COMPLETE"></span>§</td></tr>
+            <tr><td>Za každého pozvaného člena</td><td>+<span data-econ="SENATY.RECRUIT"></span>§</td></tr>
+            <tr><td>Výhra v spore (každému členovi)</td><td>+<span data-econ="SENATY.SPOR_WIN"></span>§</td></tr>
+            <tr><td>Remíza / prehra</td><td>+<span data-econ="SENATY.SPOR_DRAW"></span>§ / +<span data-econ="SENATY.SPOR_LOSS"></span>§</td></tr>
+          </table>
         </div>
       </details>
 

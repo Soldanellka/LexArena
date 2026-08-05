@@ -1967,6 +1967,27 @@ body {
   box-shadow: 0 4px 14px rgba(240,138,166,0.28);
 }
 
+/* Tri „čo appka vie“ v uvítacom okne. Bez novej palety – rovnaké
+   zaoblenie a orámovanie ako karty, len drobnejšie. */
+.welcome-highlights {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+.welcome-highlights > div {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  line-height: 1.35;
+}
+.welcome-hl-icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
+@media (min-width: 560px) {
+  .welcome-highlights { grid-template-columns: 1fr 1fr 1fr; }
+}
+
 /* Malé „＋“ napovie, že sa dá kliknúť pre ďalšie §. */
 .par-plus {
   font-size: 12px;

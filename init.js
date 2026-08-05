@@ -795,6 +795,14 @@ function initWelcomeSystem() {
     understoodBtn.addEventListener('click', () => {
       localStorage.setItem(LEX_WELCOME_SEEN_KEY, '1');
       closeWelcomeModal();
+      /* CTA je „Začni hrať“, tak nováčika aj naozaj pošli k výberu oblasti –
+         odtiaľ vedie všetko ostatné. Rovnaké zvýraznenie ako pri štátnici. */
+      const picker = $('areasInQuiz');
+      if (picker) {
+        picker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        picker.classList.add('duel-highlight');
+        setTimeout(() => picker.classList.remove('duel-highlight'), 2000);
+      }
     });
   }
 
