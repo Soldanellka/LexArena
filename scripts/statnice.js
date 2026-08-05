@@ -38,6 +38,7 @@
 ============================================================ */
 
 import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
+import { escapeHtml } from '../core.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
 import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLikelyDesktop } from '../memoryTrainer.js';
@@ -823,14 +824,21 @@ function buildFollowUpMessage(missing, title, personaKey) {
   return p.followUp(missing[0]);
 }
 
+/* Známka pre JEDNU hodnotu coverage – tie isté prahy ako pre celkovú
+   známku (GRADE_THRESHOLDS), zámerne ŽIADNA druhá tabuľka. */
+function gradeForCoverage(coverage) {
+  return ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS.find(t => coverage >= t.min).znamka;
+}
+
 /* Záverečná spätná väzba – lokálny substitút, rovnaký tvar ako Claude API.
-   Kalibrácia presne podľa zadania: 1 = coverage≥85 a žiadne incorrect,
-   2 = 65-84, 3 = 45-64, 4 = <45 alebo závažné vecné chyby.
+   Kalibrácia podľa ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS – po zmiernení
+   round 1 (2026-08): 1 = coverage ≥ 80, 2 = 60–79, 3 = 40–59, 4 = < 40.
+   (Pôvodné znenie tu uvádzalo staré prahy 85/65/45 – opravené.)
 
    ⚠️ NEMENNÁ ZÁSADA: znamka sa počíta VÝLUČNE z `evaluations` (avg
-   coverage + anyIncorrect) a `hintsUsed` (rovnaký strop pre všetky
-   persóny, ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR) – ÚPLNE rovnako
-   bez ohľadu na personaKey. Ten sa použije AŽ NIŽŠIE, len na
+   coverage + anyIncorrect + známka najslabšej témy) a `hintsUsed` (rovnaký
+   strop pre všetky persóny, ECONOMY_CONFIG.STATNICE.HINT_GRADE_FLOOR) –
+   ÚPLNE rovnako bez ohľadu na personaKey. Ten sa použije AŽ NIŽŠIE, len na
    sformulovanie textu (silne/medzery/odporucania/zaver). Rovnaká
    odpoveď + rovnaký počet nápovied => rovnaká známka u všetkých
    troch persón, vždy. */
@@ -842,6 +850,33 @@ function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
   // Prahy sú v ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS (zoradené zhora),
   // prvý riadok, do ktorého avg "zapadne" (avg >= min), určuje známku.
   let znamka = ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS.find(t => avg >= t.min).znamka;
+
+  /* ============================================================
+     V1 – STROP SLABŠOU TÉMOU (2026-08)
+
+     Priemer dvoch tém dovolil silnej téme zamaskovať odbytú: úplná (100)
+     + povrchná (40) = 70, čo je dvojka. Skúška má pripraviť na reálnu
+     komisiu, kde jedna nezvládnutá téma známku ťahá dole – preto ak
+     ktorákoľvek téma spadne do pásma známky 3 alebo horšie, celková
+     známka už nemôže byť lepšia než 3.
+
+     Per-téma známka sa určuje TÝMI ISTÝMI prahmi (gradeForCoverage vyššie).
+     Poradie floorov nižšie nehrá rolu – všetky sú Math.max, teda výhradne
+     zhoršujú a navzájom sa nemôžu prebiť.
+
+     Preskočená/nezodpovedaná téma (gradeAnswer vracia coverage 0 a
+     skipped:true) spadne do pásma 4, takže strop platí. Nezávisle od toho
+     ju už dnes chytá aj floor za krátku odpoveď nižšie (skipped má
+     tooShort:true) – teda dvojitá poistka, obe s rovnakým výsledkom. */
+  const perTopicGrades = evaluations.map(e => gradeForCoverage(e.coverage));
+  const weakestTopicGrade = Math.max(...perTopicGrades);
+  // Vysvetlenie študentovi má zmysel LEN keď strop známku reálne stiahol.
+  const weakTopicCapped = weakestTopicGrade >= 3 && znamka < 3;
+  const weakTopicTitle = weakTopicCapped
+    ? (topics[perTopicGrades.indexOf(weakestTopicGrade)]?.title || '')
+    : '';
+  if (weakestTopicGrade >= 3) znamka = Math.max(znamka, 3);
+
   // Vecná chyba (keby ju lokálny substitút niekedy vedel rozpoznať) nikdy
   // nesmie vyzerať ako "výborne" – rovnaký floor-vzor ako nižšie pri nápovedi/dĺžke.
   // Zmiernenie round 1 (2026-08): floor 3 → 2 – jedna drobnosť označená ako
@@ -884,7 +919,7 @@ function buildFinalFeedback(evaluations, topics, personaKey, hintsUsed = 0) {
 
   const odporucania = medzery.length ? p.odporucaniaWithGaps : p.odporucaniaClean;
 
-  return { znamka, silne, medzery, nespravne, odporucania, terminologyGaps: missingTermsAll, zaver: p.zaver[znamka], anyTooShort };
+  return { znamka, silne, medzery, nespravne, odporucania, terminologyGaps: missingTermsAll, zaver: p.zaver[znamka], anyTooShort, weakTopicCapped, weakTopicTitle };
 }
 
 /* ============================================================
@@ -1637,6 +1672,7 @@ export async function openStatniceHall(areaName) {
     fbEl.innerHTML = `
       ${hintsUsed > 0 ? `<div class="small muted">Použité nápovede: ${hintsUsed} (znížili najlepšiu dosiahnuteľnú známku).</div>` : ''}
       ${feedback.anyTooShort ? `<div class="small muted">Odpoveď na aspoň jednu tému bola príliš krátka na spoľahlivé posúdenie – obmedzilo to najlepšiu dosiahnuteľnú známku.</div>` : ''}
+      ${feedback.weakTopicCapped ? `<div class="small muted">Téma „${escapeHtml(feedback.weakTopicTitle)}" vyšla na 3 – celková známka preto nemôže byť lepšia, aj keď druhá téma dopadla výrazne lepšie.</div>` : ''}
       <div class="statnice-fb-section"><strong>Silné stránky</strong><ul>${feedback.silne.map(s => `<li>${s}</li>`).join('')}</ul></div>
       ${feedback.nespravne.length ? `<div class="statnice-fb-section statnice-fb-incorrect"><strong>Vecné chyby</strong><ul>${feedback.nespravne.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
       ${feedback.medzery.length ? `<div class="statnice-fb-section"><strong>Medzery</strong><ul>${feedback.medzery.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
