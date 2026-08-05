@@ -48,7 +48,10 @@ function initBottomNav() {
   };
 
   // Zvýraznenie aktívnej položky podľa toho, ktorá sekcia je práve vo výreze
-  const sectionIds = ['quizCard', 'gamesSection', 'leaderboardSection'];
+  /* #gamesSection je po zlúčení vnútri #quizCard, takže by sa ako samostatná
+     sekcia prekrývala s ním – sledujeme namiesto neho Bifľovačku, ktorá je
+     druhým cieľom spodnej lišty. */
+  const sectionIds = ['quizCard', 'biflovackaCard', 'leaderboardSection'];
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
   if (sections.length && typeof IntersectionObserver === 'function') {

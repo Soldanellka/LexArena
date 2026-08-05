@@ -310,25 +310,9 @@ body {
   background: rgba(255, 255, 255, 0.03);
 }
 
-/* „Ďalšie tréningy“ – dvojice vedľa seba. Ľavý stĺpec je pri pomere 2:1
-   dosť široký, takže sa množina takto výrazne skráti. Karty sú priame
-   deti panelu (žiadny ďalší wrapper), takže mobilné poradie na úrovni
-   .set-panel ostáva nedotknuté. Platí len nad 900 px, teda tam, kde
-   .container reálne stojí v dvoch stĺpcoch.
-   Dvojice sú párované podľa VÝŠOK, nie podľa poradia z nákresu:
-   Bifľovačka | Judikatúra (obe vysoké) a Progres | Štruktúra (obe nízke).
-   Pri pároch z nákresu (Bifľovačka | Progres) ostávalo v prvom riadku
-   ~600 px prázdneho miesta – riadok mriežky je vždy vysoký ako vyššia
-   karta. Karty majú vlastný margin-bottom, preto len column-gap. */
-@media (min-width: 901px) {
-  #setMoreTraining {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 14px;
-    align-items: start;
-  }
-  #setMoreTraining > .world-heading { grid-column: 1 / -1; }
-}
+/* Množina „Ďalšie tréningy“ zanikla (Progres a Štruktúra otázok sa presunuli
+   do spojenej hernej dlaždice, Bifľovačka a Judikatúra stoja v množine
+   „Uč sa“), takže jej mriežka dvojíc už nie je potrebná. */
 
 /* ============================================================
    NADPISY MNOŽÍN (Tréning / Ďalšie tréningy / Študijné moduly /
@@ -1127,12 +1111,11 @@ body {
      nemôže „stratiť“ medzi množinami. */
   .set-panel { order: 99; } /* poistka – panel bez poradia padne na koniec */
 
-  #setTraining     { order: 1; } /* 🥊 Tréning (kŕmi ho výber oblasti) */
-  #setMoreTraining { order: 2; } /* 📚 Ďalšie tréningy */
-  #setModules      { order: 3; } /* 📁 Študijné moduly */
-  #setRegister     { order: 4; } /* ⚔️ Výzvy – register pojednávaní */
-  #setCommunity    { order: 5; } /* 🏛️ Súťaž a komunita */
-  #setService      { order: 6; } /* 🧰 Servis */
+  #setTraining  { order: 1; } /* 🥊 Hraj – spojená herná dlaždica */
+  #setStudy     { order: 2; } /* 📚 Uč sa – moduly, bifľovačka, judikatúra */
+  #setRegister  { order: 3; } /* ⚔️ Výzvy – register pojednávaní */
+  #setCommunity { order: 4; } /* 🏛️ Súťaž a komunita */
+  #setService   { order: 5; } /* 🧰 Servis */
 }
 
 /* ============================================================

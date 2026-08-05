@@ -326,14 +326,15 @@
   <!-- ĽAVÝ STĹPEC – „uč sa a trénuj“ (množiny 1–3). -->
   <div class="left">
 
-    <!-- MNOŽINA 1 – TRÉNING: všetko, čo kŕmi výber oblasti.
-         Poradie: Štátnicová sieň (ťahúň) → Pojednávanie → Výzvy → Hry. -->
+    <!-- MNOŽINA – HRAJ: jedna spojená dlaždica. Hore výber oblasti, pod ním
+         všetky akcie nad ňou (pojednávanie, kartičky, prípady, štátnica) plus
+         Progres a Štruktúra otázok, ktoré oblasť nepotrebujú. -->
     <div class="set-panel" id="setTraining">
-    <h3 class="world-heading" id="worldArena">🥊 Tréning</h3>
+    <h3 class="world-heading" id="worldArena">🥊 Hraj</h3>
 
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">
-        <div class="small">Pojednávanie</div>
+        <div class="small">Vyber oblasť a hraj</div>
         <h2 id="quizTitle">Vyber oblasť pojednávania, hry a prípady</h2>
         <div class="small">Po odohraní sa tvoja 10‑otázková výzva uloží do registra pojednávaní.</div>
 
@@ -343,12 +344,45 @@
           <div id="areasList" class="areas-chips"></div>
         </div>
 
-        <div style="margin-top:12px;display:flex;gap:8px">
-          <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť pojednávanie</button>
-          <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
-          <button class="btn" id="helpBtn" type="button">
-            <img src="assets/icons/info.svg" width="18" height="18" alt="">
-          </button>
+        <!-- AKCIE – pôvodná karta „Hry a prípady“ presunutá SEM ako sekcia.
+             #gamesSection si ponecháva ID (bottom-nav, judikatura.js), ale už
+             nie je samostatná .card – vnorená karta v karte by zdvojila
+             pozadie aj tieň. Oddelené linkou rovnako ako iné vnútorné sekcie
+             (napr. TOP 3 senáty v #senatyCard).
+             Trieda .highlight-games odstránená – v styles.css nemá žiadne
+             pravidlo, bola to len značka, takže vizuálne sa nič nestráca. -->
+        <div id="gamesSection" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
+          <div class="small" style="margin-bottom:8px;font-weight:600;color:var(--muted)">Čo chceš hrať:</div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť pojednávanie</button>
+            <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
+            <button class="btn" id="openCasesBtn">Prípady z praxe</button>
+            <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
+            <!-- Progres a Štruktúra otázok NEPOTREBUJÚ vybranú oblasť –
+                 zámerne sa nedisablujú spolu s ostatnými. -->
+            <button class="btn" id="openDashboardBtn">📊 Môj progres</button>
+            <button class="btn" id="openSpiderBtn">🕸️ Štruktúra otázok</button>
+          </div>
+
+          <div id="gamesAreaHint" class="games-hint">
+            <span class="games-hint-dot"></span>
+            Najprv vyber oblasť vyššie – načítajú sa k nej kartičky aj prípady
+          </div>
+
+          <div class="small" style="margin-top:10px;color:var(--muted)">
+            Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+            Štátnicová sieň (15§, dostupná pre Pracovné, Občianske a Európske právo) je nácvik ústnej
+            skúšky pred komisiou – hlavná príprava na reálne štátnice.
+            Môj progres a Štruktúra otázok fungujú aj bez vybranej oblasti.
+          </div>
+
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn btn-ghost" id="resetBtn">Zrušiť</button>
+            <button class="btn" id="helpBtn" type="button">
+              <img src="assets/icons/info.svg" width="18" height="18" alt="">
+            </button>
+          </div>
         </div>
       </div>
 
@@ -383,60 +417,13 @@
       </div>
     </div>
 
-    <!-- Hry viazané na vybranú dvojicu okruhov – vrátane Štátnicovej siene.
-         Štátnica mala krátko vlastnú dlaždicu nad výberom oblasti, ale keďže
-         bez vybranej oblasti sa nespustí, patrí sem k Pojednávaniu,
-         Kartičkám a Prípadom. Zvýraznená ostáva ikonou a triedou
-         .statnice-cta-btn. Môj progres a Štruktúra otázok sú v Ďalších
-         tréningoch – tie výber oblasti nepotrebujú. -->
-    <div class="card highlight-games" id="gamesSection">
-      <h3 style="margin:0">Hry a prípady</h3>
-      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-        <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
-        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
-        <div id="gamesAreaHint" class="games-hint">
-          <span class="games-hint-dot"></span>
-          Najprv vyber oblasť vyššie – načítajú sa k nej kartičky aj prípady
-        </div>
-      </div>
-      <div class="small" style="margin-top:10px;color:var(--muted)">
-        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
-        Štátnicová sieň (15§, dostupná pre Pracovné, Občianske a Európske právo) je nácvik ústnej
-        skúšky pred komisiou – hlavná príprava na reálne štátnice.
-      </div>
-    </div>
-
     </div><!-- /setTraining -->
 
-    <!-- MNOŽINA 2 – ĎALŠIE TRÉNINGY: vlastný výber, nepotrebujú oblasť.
-         Judikatúra sa sem pripája JS-kom hneď za Bifľovačku (judikatura.js). -->
-    <div class="set-panel" id="setMoreTraining">
-    <h3 class="world-heading" id="worldTraining">📚 Ďalšie tréningy</h3>
-
-    <div class="card section-card" id="biflovackaCard">
-      <h3 style="margin:0">🧠 Bifľovačka</h3>
-      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
-      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
-    </div>
-
-    <div class="card section-card" id="progressCard">
-      <h3 style="margin:0">📊 Môj progres</h3>
-      <div class="small" style="margin-bottom:12px">Súkromný prehľad – ako ti idú jednotlivé témy a čo dobrať.</div>
-      <button class="btn" id="openDashboardBtn">Otvoriť prehľad</button>
-    </div>
-
-    <div class="card section-card" id="spiderCard">
-      <h3 style="margin:0">🕸️ Štruktúra otázok</h3>
-      <div class="small" style="margin-bottom:12px">Mapa okruhov a ich vetiev – vrátane pavúkových hier.</div>
-      <button class="btn" id="openSpiderBtn">Otvoriť mapu</button>
-    </div>
-
-    </div><!-- /setMoreTraining -->
-
-    <!-- MNOŽINA 3 – ŠTUDIJNÉ MODULY -->
-    <div class="set-panel" id="setModules">
-    <h3 class="world-heading" id="worldModules">📁 Študijné moduly</h3>
+    <!-- MNOŽINA – UČ SA: veci s vlastným výberom, nezávislé od oblasti
+         zvolenej vyššie. Judikatúra sa sem pripája JS-kom za Bifľovačku
+         (judikatura.js), takže stojí ako posledná v stĺpci. -->
+    <div class="set-panel" id="setStudy">
+    <h3 class="world-heading" id="worldStudy">📚 Uč sa</h3>
 
     <div class="card section-card" id="tilesSection">
       <h3 style="margin:0">Študijné moduly</h3>
@@ -444,7 +431,13 @@
       <div id="modulesList" class="list" style="margin-top:10px"></div>
     </div>
 
-    </div><!-- /setModules -->
+    <div class="card section-card" id="biflovackaCard">
+      <h3 style="margin:0">🧠 Bifľovačka</h3>
+      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
+      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
+    </div>
+
+    </div><!-- /setStudy -->
 
   </div>
 
@@ -1281,8 +1274,10 @@ console.log('✅ Reports system inline načítaný');
 <!-- Spodná navigácia (len mobil) -->
 <nav class="bottom-nav" aria-label="Rýchla navigácia">
   <button data-target="top">🏠<span>Domov</span></button>
-  <button data-target="quizCard">⚔️<span>Pojednávanie</span></button>
-  <button data-target="gamesSection">🎮<span>Hry</span></button>
+  <!-- #gamesSection je po zlúčení VNÚTRI #quizCard, takže samostatný cieľ
+       „Hry“ by viedol na to isté miesto – nahradený Bifľovačkou. -->
+  <button data-target="quizCard">⚔️<span>Hraj</span></button>
+  <button data-target="biflovackaCard">🧠<span>Bifľovačka</span></button>
   <button data-target="leaderboardSection">🏆<span>Rebríček</span></button>
   <button data-target="profile">👤<span>Profil</span></button>
 </nav>
