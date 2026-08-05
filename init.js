@@ -152,6 +152,13 @@ async function openAvatarSelectModal() {
         </div>
       `).join('')}
     </div>
+    <!-- Vstup do pickera (základná sada + talár shop). Predtým to bola
+         samostatná ikona palety 🎨 v hornej lište – zlúčené sem, nech je
+         v lište jedna avatarová ikona. Picker sa NEMENÍ, len sa sem
+         presunul vstup naň. -->
+    <div style="margin-top:12px">
+      <button id="openAvatarPickerFromSelect" class="btn" style="width:100%">🎨 Zmeniť vzhľad</button>
+    </div>
     <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border,#eee)">
       <div style="font-weight:600;font-size:13px;margin-bottom:6px">🏛️ Tvoja fakulta</div>
       <div style="display:flex;gap:8px">
@@ -187,6 +194,13 @@ async function openAvatarSelectModal() {
   modal.onclick = (e) => {
     if (e.target === modal) modal.style.display = 'none';
   };
+
+  /* "Zmeniť vzhľad" – nahrádza pôvodnú paletu 🎨 z lišty. Otvára ten istý
+     openAvatarPickerModal(false) ako predtým; picker si rieši vlastný
+     modal navrchu, preto sa tento zámerne NEZATVÁRA (rovnaké správanie
+     ako pri pôvodnej ikone, kde profilový modal ostával otvorený pod ňou). */
+  const pickerBtn = document.getElementById('openAvatarPickerFromSelect');
+  if (pickerBtn) pickerBtn.onclick = () => openAvatarPickerModal(false);
 
   // Výber avatara
   panel.querySelectorAll('.avatar-select-card').forEach(card => {
@@ -3451,7 +3465,11 @@ function attachEvents() {
     });
   }
 
-  /* 🔥 Zmeniť avatara (základná sada – vždy dá zavrieť) */
+  /* 🔥 Zmeniť avatara (základná sada – vždy dá zavrieť).
+     Ikona palety už v lište nie je (zlúčená s avatarom) – vstup je teraz
+     tlačidlo #openAvatarPickerFromSelect vnútri avatarového modálu, viď
+     openAvatarSelectModal(). Táto vetva ostáva ako poistka, keby sa
+     #changeAvatarBtn niekedy vrátil; bez neho je to no-op. */
   const changeAvatarBtn = $('changeAvatarBtn');
   if (changeAvatarBtn) {
     changeAvatarBtn.addEventListener('click', () => openAvatarPickerModal(false));

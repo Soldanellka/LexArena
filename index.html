@@ -36,9 +36,10 @@
       <button id="feedAvatarBtn" class="btn avatar-feed-btn" style="display:none" title="Nakŕm avatara za 12§">
         🍖 Nakŕmiť (12§)
       </button>
-      <button id="changeAvatarBtn" class="btn icon-btn" title="Zmeniť avatara">
-        🎨
-      </button>
+      <!-- Paleta 🎨 (#changeAvatarBtn) bola samostatná druhá avatarová ikona
+           v lište. Zlúčená s avatarom: "Zmeniť vzhľad" je teraz položkou
+           vnútri avatarového modálu (openAvatarSelectModal v init.js), odkiaľ
+           volá ten istý openAvatarPickerModal(false). Oba modály ostávajú. -->
     </div>
 
     <div class="nick-box">
