@@ -645,4 +645,21 @@ window.startDuelQuiz = function(questions){
   document.body.classList.add('quiz-fullscreen');
 
   renderQuestion(true);
+
+  /* Hráč nemá hľadať, kde sa kvíz otvoril. Na mobile to riešila trieda
+     quiz-fullscreen (karta cez celú obrazovku), ale tá platí LEN do 640 px –
+     na desktope sa kvíz otvorí vnútri #quizCard hore v Aréne, takže kto
+     spúšťal pojednávanie z registra uložených výziev (dole) alebo bol
+     odrolovaný inde, ostal pozerať na pôvodné miesto.
+
+     Scroll + 2 s zvýraznenie tu boli doteraz len na jednej z troch ciest
+     (prijatie výzvy linkom, init.js). Presunuté sem, do startDuelQuiz,
+     takže platia pre VŠETKY vstupy: vlastné pojednávanie, prijatie z
+     registra aj prijatie linkom. */
+  const quizArea = $('quizArea');
+  if (quizArea) {
+    quizArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    quizArea.classList.add('duel-highlight');
+    setTimeout(() => quizArea.classList.remove('duel-highlight'), 2000);
+  }
 };

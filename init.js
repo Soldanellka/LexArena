@@ -3414,15 +3414,9 @@ async function acceptDuelChallenge(duel, duelId, nick, msgEl) {
   closeDuelChallengeModal();
 
   if (typeof window.startDuelQuiz === 'function') {
+    // Scroll na kvíz + zvýraznenie rieši priamo startDuelQuiz (quiz.js),
+    // aby platili pre všetky vstupy, nielen pre prijatie výzvy linkom.
     window.startDuelQuiz(freshDuel.questions);
-
-    // Hráč nemusí sám hľadať kvíz – stránka sa k nemu sama zroluje a na 2 s ho zvýrazní.
-    const quizArea = document.getElementById('quizArea');
-    if (quizArea) {
-      quizArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      quizArea.classList.add('duel-highlight');
-      setTimeout(() => quizArea.classList.remove('duel-highlight'), 2000);
-    }
   } else {
     console.error('❌ startDuelQuiz() neexistuje!');
   }
