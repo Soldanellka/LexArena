@@ -143,7 +143,16 @@ export const ECONOMY_CONFIG = {
                                   // vymenovanie pojmov bez súvislostí) skóre
                                   // 0*(1-0.20)+100*0.20=20 < 40 (prah známky 3
                                   // v GRADE_THRESHOLDS nižšie) – NIKDY
-                                  // neprekročí pásmo "nedostatočné"
+                                  // neprekročí pásmo "nedostatočné".
+                                  // ⚠️ Váhu nestačí posudzovať samu: terminológia
+                                  // vie zdvihnúť skóre až o 20 bodov, takže pri
+                                  // contentCoverage 50 by sama dotiahla tému na
+                                  // 60 = pásmo dvojky a obišla by strop V1.
+                                  // Preto je v combineCoverage() (statnice.js)
+                                  // poistka – pod prahom dvojky terminológia
+                                  // tému do pásma dvojky nikdy neposunie.
+                                  // Žiadne nové číslo: poistka číta hranicu
+                                  // priamo z GRADE_THRESHOLDS nižšie.
     MIN_ANSWER_WORDS: 15,        // odpoveď kratšia než toto (počet slov za
                                   // JEDNU tému) nemôže dosiahnuť známku 1
                                   // ani 2 bez ohľadu na coverage skóre

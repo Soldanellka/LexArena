@@ -660,12 +660,47 @@ function computeTerminologyGaps(userText, glossary) {
   return { usedTerms, missingTerms, localTerminologyScore };
 }
 
-// Ak okruh nemá glosár (napr. staršie dáta bez tiles), alebo terminológia
-// je null, terminológia sa nezapočítava (vypadne, nie 0 %).
+/* Dolná hranica pásma danej známky, čítaná z JEDINEJ tabuľky prahov
+   (GRADE_THRESHOLDS) – žiadne duplicitné číslo, poistka nižšie sa
+   automaticky posunie, ak by sa prahy niekedy prekalibrovali. */
+function gradeBandMin(znamka) {
+  const row = ECONOMY_CONFIG.STATNICE.GRADE_THRESHOLDS.find(t => t.znamka === znamka);
+  return row ? row.min : 0;
+}
+
+/* Ak okruh nemá glosár (napr. staršie dáta bez tiles), alebo terminológia
+   je null, terminológia sa nezapočítava (vypadne, nie 0 %).
+
+   ============================================================
+   TERMINOLOGICKÁ POISTKA (2026-08, spolu s V1)
+
+   Terminológia má váhu 0,20, takže vie skóre zdvihnúť až o 20 bodov.
+   Bez poistky stačilo `contentCoverage` 50 a plné použitie pojmov na
+   combined 60 – téma s POLOVIČNÝM obsahovým pokrytím sa tak dostala do
+   pásma dvojky a UNIKLA stropu V1 (ten stropuje len témy v pásme 3+).
+
+   Pravidlo: terminológia smie skóre vylepšovať, ale NESMIE tému posunúť
+   do pásma dvojky, ak na to nestačí samotný obsah. Preto sa pri
+   contentCoverage pod hranicou dvojky výsledok zastropuje tesne pod ňou.
+
+   Zámerne sa NEobmedzuje zdvih v rámci nižších pásiem: vzorka „krátka,
+   správna, povrchná" (content 35, terminológia 60 → 40) má podľa
+   kalibrácie Fázy A vyjsť na 3, nie na 4 – a tá ostáva nedotknutá.
+
+   Anti-gaming invariant naďalej platí a je teraz dvojito krytý: holé
+   vymenovanie pojmov (contentCoverage 0) dá 0×0,8 + 100×0,2 = 20, čo je
+   pod prahom trojky (40) → známka 4.
+   ============================================================ */
 function combineCoverage(contentCoverage, terminologyScore) {
-  return terminologyScore === null
-    ? contentCoverage
-    : Math.round(contentCoverage * (1 - TERMINOLOGY_WEIGHT) + terminologyScore * TERMINOLOGY_WEIGHT);
+  if (terminologyScore === null) return contentCoverage;
+
+  const combined = Math.round(
+    contentCoverage * (1 - TERMINOLOGY_WEIGHT) + terminologyScore * TERMINOLOGY_WEIGHT
+  );
+
+  const grade2Min = gradeBandMin(2);
+  if (contentCoverage < grade2Min) return Math.min(combined, grade2Min - 1);
+  return combined;
 }
 
 function computeOnTopic(userText, coveredCount, contentCoverage) {
