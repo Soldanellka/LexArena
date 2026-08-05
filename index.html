@@ -118,9 +118,13 @@
 
 <main class="container">
 
-  <div class="left">
+  <!-- PRAVÝ STĹPEC – „súťaž a komunita“ (množiny 4 a 5).
+       Pozn.: v DOM je tento blok prvý, no cez CSS `order` stojí vpravo –
+       poradie v HTML sa nemenilo, aby sa nemuseli presúvať veľké bloky. -->
+  <div class="right">
 
-    <!-- SVET 3 – SÚŤAŽ A KOMUNITA: meraj sa s ostatnými a zlepšuj obsah. -->
+    <!-- MNOŽINA 4 – SÚŤAŽ A KOMUNITA -->
+    <div class="set-panel" id="setCommunity">
     <h3 class="world-heading" id="worldCommunity">🏛️ Súťaž a komunita</h3>
 
     <div class="card section-card" id="leaderboardSection">
@@ -189,6 +193,14 @@
       </div>
     </div>
 
+    <div class="card section-card highlight-noticeboard" id="noticeboardCard">
+      <h3 style="margin:0">📋 Nástenka komunity</h3>
+      <div class="small muted" style="margin-bottom:10px">Zverejnené príspevky a odpovede</div>
+      <div id="publishedFeedbackBox">
+        <div class="small muted">Načítavam...</div>
+      </div>
+    </div>
+
     <div class="card section-card highlight-feedback" id="feedbackCard">
       <h3 style="margin:0">💬 Tvoj názor</h3>
       <div class="small" style="margin-bottom:12px">Pomôž nám zlepšiť LexArenu</div>
@@ -215,13 +227,6 @@
       </div>
     </div>
 
-    <div class="card section-card highlight-noticeboard" id="noticeboardCard">
-      <h3 style="margin:0">📋 Nástenka komunity</h3>
-      <div class="small muted" style="margin-bottom:10px">Zverejnené príspevky a odpovede</div>
-      <div id="publishedFeedbackBox">
-        <div class="small muted">Načítavam...</div>
-      </div>
-    </div>
 
     <div class="card section-card highlight-video" id="videoCard">
       <h3 style="margin:0">📺 Návody & odmeny</h3>
@@ -269,23 +274,10 @@
       </div>
     </div>
 
-    <!-- SVET 2 – TRÉNINGY: uč sa vo vlastnom tempe.
-         Judikatúra sa sem pripája JS-kom hneď za Bifľovačku (judikatura.js). -->
-    <h3 class="world-heading" id="worldTraining">📚 Tréningy</h3>
+    </div><!-- /setCommunity -->
 
-    <div class="card section-card" id="tilesSection">
-      <h3 style="margin:0">Študijné moduly</h3>
-      <div class="small">Samostatné moduly pre detailné štúdium</div>
-      <div id="modulesList" class="list" style="margin-top:10px"></div>
-    </div>
-
-    <div class="card section-card" id="biflovackaCard">
-      <h3 style="margin:0">🧠 Bifľovačka</h3>
-      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
-      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
-    </div>
-
-    <!-- SERVIS – obchod a admin panel na konci, mimo troch svetov. -->
+    <!-- MNOŽINA 5 – SERVIS -->
+    <div class="set-panel" id="setService">
     <h3 class="world-heading" id="worldService">🧰 Servis</h3>
 
     <div class="card section-card card-soon" id="shopCard">
@@ -310,13 +302,28 @@
       <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
     </div>
 
+    </div><!-- /setService -->
+
   </div>
 
-  <!-- SVET 1 – ARÉNA: výber oblasti + pojednávanie → hry → register výziev.
-       Register je priame predĺženie pojednávania, preto ostáva tu. -->
-  <div class="right">
+  <!-- ĽAVÝ STĹPEC – „uč sa a trénuj“ (množiny 1–3). -->
+  <div class="left">
 
-    <h3 class="world-heading" id="worldArena">⚔️ Aréna</h3>
+    <!-- MNOŽINA 1 – TRÉNING: všetko, čo kŕmi výber oblasti.
+         Poradie: Štátnicová sieň (ťahúň) → Pojednávanie → Výzvy → Hry. -->
+    <div class="set-panel" id="setTraining">
+    <h3 class="world-heading" id="worldArena">🥊 Tréning</h3>
+
+    <!-- ŤAHÚŇ – Štátnicová sieň. Tlačidlo si ponecháva pôvodné
+         #openStatniceBtn aj triedu .statnice-cta-btn (hook + vzhľad). -->
+    <div class="card highlight-games" id="statniceHeroCard">
+      <h3 style="margin:0">🏛️ Štátnicová sieň</h3>
+      <div class="small" style="margin-bottom:12px">
+        Štátnica nanečisto – ústna skúška pred trojčlennou komisiou. Dostaneš dve témy,
+        5 minút na prípravu a hodnotenie so známkou 1 – 4. Hlavná príprava na reálne štátnice.
+      </div>
+      <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">⚖️ Vstúpiť do štátnicovej siene</button>
+    </div>
 
     <div class="card highlight-duelquiz" id="quizCard">
       <div id="quizIntro">
@@ -370,26 +377,7 @@
       </div>
     </div>
 
-    <div class="card highlight-games" id="gamesSection">
-      <h3 style="margin:0">Hry a prípady</h3>
-      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
-        <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">⚖️ Štátnicová sieň</button>
-        <button class="btn" id="openDashboardBtn">📊 Môj progres</button>
-        <button class="btn btn-primary" id="openSpiderBtn">🕸️ Štruktúra otázok</button>
-        <div id="gamesAreaHint" class="games-hint">
-          <span class="games-hint-dot"></span>
-          Najprv vyber oblasť vyššie – načítajú sa k nej kartičky aj prípady
-        </div>
-      </div>
-      <div class="small" style="margin-top:10px;color:var(--muted)">
-        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
-        Štátnicová sieň (15§, dostupná pre Pracovné, Občianske a Európske právo) je nácvik ústnej skúšky pred komisiou –
-        hlavná príprava na reálne štátnice.
-      </div>
-    </div>
-
+    <!-- Výzvy nad hrami: prijatie výzvy vedie rovno na kvíz kúsok vyššie. -->
     <div class="card highlight-bank" id="duelBankCard">
       <h3 style="margin:0">Register pojednávaní</h3>
       <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
@@ -398,6 +386,63 @@
       </div>
       <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
     </div>
+
+    <!-- Hry na vybranej dvojici okruhov. Štátnica má vlastnú dlaždicu hore
+         (ťahúň), Môj progres a Štruktúra otázok sú v Ďalších tréningoch –
+         tie výber oblasti nepotrebujú. -->
+    <div class="card highlight-games" id="gamesSection">
+      <h3 style="margin:0">Hry a prípady</h3>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
+        <button class="btn" id="openCasesBtn">Prípady z praxe</button>
+        <div id="gamesAreaHint" class="games-hint">
+          <span class="games-hint-dot"></span>
+          Najprv vyber oblasť vyššie – načítajú sa k nej kartičky aj prípady
+        </div>
+      </div>
+      <div class="small" style="margin-top:10px;color:var(--muted)">
+        Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
+      </div>
+    </div>
+
+    </div><!-- /setTraining -->
+
+    <!-- MNOŽINA 2 – ĎALŠIE TRÉNINGY: vlastný výber, nepotrebujú oblasť.
+         Judikatúra sa sem pripája JS-kom hneď za Bifľovačku (judikatura.js). -->
+    <div class="set-panel" id="setMoreTraining">
+    <h3 class="world-heading" id="worldTraining">📚 Ďalšie tréningy</h3>
+
+    <div class="card section-card" id="biflovackaCard">
+      <h3 style="margin:0">🧠 Bifľovačka</h3>
+      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
+      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card section-card" id="progressCard">
+      <h3 style="margin:0">📊 Môj progres</h3>
+      <div class="small" style="margin-bottom:12px">Súkromný prehľad – ako ti idú jednotlivé témy a čo dobrať.</div>
+      <button class="btn" id="openDashboardBtn">Otvoriť prehľad</button>
+    </div>
+
+    <div class="card section-card" id="spiderCard">
+      <h3 style="margin:0">🕸️ Štruktúra otázok</h3>
+      <div class="small" style="margin-bottom:12px">Mapa okruhov a ich vetiev – vrátane pavúkových hier.</div>
+      <button class="btn" id="openSpiderBtn">Otvoriť mapu</button>
+    </div>
+
+    </div><!-- /setMoreTraining -->
+
+    <!-- MNOŽINA 3 – ŠTUDIJNÉ MODULY -->
+    <div class="set-panel" id="setModules">
+    <h3 class="world-heading" id="worldModules">📁 Študijné moduly</h3>
+
+    <div class="card section-card" id="tilesSection">
+      <h3 style="margin:0">Študijné moduly</h3>
+      <div class="small">Samostatné moduly pre detailné štúdium</div>
+      <div id="modulesList" class="list" style="margin-top:10px"></div>
+    </div>
+
+    </div><!-- /setModules -->
 
   </div>
 
