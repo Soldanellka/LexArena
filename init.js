@@ -3611,11 +3611,34 @@ function attachEvents() {
     });
   }
 
-  /* ⚖️ Štátnicová sieň – prototyp (len Pracovné právo) */
+  /* ⚖️ Štátnicová sieň – ťahúň na vrchu množiny Tréning.
+
+     Štátnica čerpá z tej istej dvojice okruhov ako pojednávanie
+     (window.__selectedOkruhPair, plní ju applyOkruhPairSelection po výbere
+     oblasti). Ako ťahúň stojí NAD kartou pojednávania, takže hráč naň môže
+     kliknúť skôr, než si oblasť vôbec vybral – vtedy ho pošleme k výberu
+     namiesto strohého toastu „najprv si vyber oblasť“.
+
+     Výber oblasti sa ZÁMERNE nezdvojuje: chipy ostávajú jediné, v
+     #quizCard. Tu sa naň len zroluje a na 2 s zvýrazní (rovnaká trieda
+     .duel-highlight ako pri kvíze), takže zviazaný celok ostáva jeden. */
   const openStatniceBtn = $('openStatniceBtn');
   if (openStatniceBtn) {
     openStatniceBtn.addEventListener('click', async () => {
       const areaName = window.__selectedAreaName || '';
+      const pair = window.__selectedOkruhPair;
+
+      if (!areaName || !pair || pair.area !== areaName || pair.empty === true) {
+        const picker = $('areasInQuiz');
+        if (picker) {
+          picker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          picker.classList.add('duel-highlight');
+          setTimeout(() => picker.classList.remove('duel-highlight'), 2000);
+        }
+        showRewardToast('⚖️ Najprv si vyber oblasť – štátnica použije tú istú dvojicu okruhov ako pojednávanie.');
+        return;
+      }
+
       const { openStatniceHall } = await import('./scripts/statnice.js');
       openStatniceHall(areaName);
     });
