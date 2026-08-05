@@ -314,11 +314,6 @@
       </div>
     </div>
 
-    <div class="card section-card" id="adminCard">
-      <h3 style="margin:0">Admin a garant panel</h3>
-      <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
-    </div>
-
     </div><!-- /setService -->
 
   </div>
@@ -354,15 +349,19 @@
         <div id="gamesSection" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--card-border, rgba(0,0,0,0.08))">
           <div class="small" style="margin-bottom:8px;font-weight:600;color:var(--muted)">Čo chceš hrať:</div>
 
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="btn btn-primary" id="startQuizBtn" disabled>Spustiť pojednávanie</button>
-            <button class="btn btn-primary" id="openMemoryBtn">Kartičky (Memory)</button>
-            <button class="btn" id="openCasesBtn">Prípady z praxe</button>
+          <!-- Všetkých šesť akcií má JEDNOTNÝ vzhľad (.btn.btn-primary –
+               vzor podľa Kartičiek). Štátnica je zvýraznená prstencom cez
+               .statnice-cta-btn, čo je len sýtejší variant tej istej
+               pilulky, nie iný tvar. Ikony ostávajú v texte. -->
+          <div class="game-actions">
+            <button class="btn btn-primary" id="startQuizBtn" disabled>⚔️ Spustiť pojednávanie</button>
             <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
+            <button class="btn btn-primary" id="openMemoryBtn">🃏 Kartičky</button>
+            <button class="btn btn-primary" id="openCasesBtn">📋 Prípady z praxe</button>
             <!-- Progres a Štruktúra otázok NEPOTREBUJÚ vybranú oblasť –
                  zámerne sa nedisablujú spolu s ostatnými. -->
-            <button class="btn" id="openDashboardBtn">📊 Môj progres</button>
-            <button class="btn" id="openSpiderBtn">🕸️ Štruktúra otázok</button>
+            <button class="btn btn-primary" id="openDashboardBtn">📊 Môj progres</button>
+            <button class="btn btn-primary" id="openSpiderBtn">🕸️ Štruktúra otázok</button>
           </div>
 
           <div id="gamesAreaHint" class="games-hint">
@@ -438,6 +437,23 @@
     </div>
 
     </div><!-- /setStudy -->
+
+    <!-- MNOŽINA – SPRÁVA: admin/garant panel na úplnom konci ľavého stĺpca.
+         ⚠️ Musí stáť ZA množinou setStudy, nie v nej: judikatura.js sa
+         mountuje `afterend` za #biflovackaCard, takže karta umiestnená
+         vnútri setStudy za Bifľovačkou by skončila PRED Judikatúrou.
+         Takto vyjde admin panel naozaj posledný aj po jej mounte.
+         Gating sa nemenil – obsah rieši renderAdminPanel podľa view roly,
+         študent vidí výzvu prepnúť rolu. -->
+    <div class="set-panel" id="setAdmin">
+    <h3 class="world-heading" id="worldAdmin">🔐 Správa</h3>
+
+    <div class="card section-card" id="adminCard">
+      <h3 style="margin:0">Admin a garant panel</h3>
+      <div id="adminPanel" class="small">Pre zobrazenie prepni rolu na garant.</div>
+    </div>
+
+    </div><!-- /setAdmin -->
 
   </div>
 

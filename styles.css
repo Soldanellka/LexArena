@@ -52,6 +52,8 @@
   --radius: 12px;
   --text: #2b2b2b;
   --glass: rgba(240,198,214,0.35);
+  /* prstenec zvýraznenej akcie (Štátnicová sieň) – odvodený z --accent-3 */
+  --statnice-ring: rgba(255,111,145,0.45);
 }
 
 /* 🌙 DARK THEME */
@@ -68,6 +70,8 @@
   --shadow: 0 8px 28px rgba(2,6,23,0.6);
   --text: #e6eef6;
   --glass: rgba(20,40,60,0.28);
+  /* v tmavej téme je paleta modrá – prstenec odvodený z --accent-1 */
+  --statnice-ring: rgba(43,110,163,0.6);
 }
 
 /* ----------------------------------------------------------
@@ -251,16 +255,63 @@ body {
 
 /* Štátnicová sieň – hlavná príprava na reálne štátnice, nech vynikne
    medzi ostatnými hrami (zlatý rámik + jemný pulz, nie kričiaci). */
+/* Štátnicová sieň – zvýraznená, ale v RÁVNAKOM tvare ako ostatné akcie.
+   Pôvodný zlatý rám s pulzovaním nahradený prstencom v akcentnej farbe
+   témy: rovnaká pilulka a rovnaký gradient ako .btn-primary, len sýtejšie
+   orámovaná. Žiadny nový vizuálny jazyk, žiadna iná farba než akcent.
+   Prstenec je cez premennú, aby sedel aj v tmavom režime (tam má appka
+   úplne inú paletu). */
 .statnice-cta-btn {
   position: relative;
-  border: 2px solid #d4af37;
-  box-shadow: 0 0 0 2px rgba(212,175,55,0.25), 0 8px 20px rgba(212,175,55,0.25);
-  animation: statnice-cta-glow 2.4s ease-in-out infinite;
+  box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring);
 }
-@keyframes statnice-cta-glow {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(212,175,55,0.25), 0 8px 20px rgba(212,175,55,0.25); }
-  50% { box-shadow: 0 0 0 4px rgba(212,175,55,0.4), 0 8px 24px rgba(212,175,55,0.4); }
+
+/* Tmavá téma dáva tlačidlám tieň s !important – prstenec ho musí prebiť
+   rovnako, inak by sa stratil. */
+:root[data-theme="dark"] .statnice-cta-btn {
+  box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring) !important;
 }
+
+/* ============================================================
+   VYPNUTÉ TLAČIDLÁ – po zjednotení akcií na .btn-primary by inak
+   nebolo vidieť, že „Spustiť pojednávanie“ čaká na výber oblasti
+   (appka dovtedy nemala pre disabled žiadny štýl vôbec).
+   Odvodené zo súčasných farieb – len priehľadnosť a odsýtenie.
+============================================================ */
+.btn:disabled,
+.btn:disabled:hover {
+  opacity: 0.45;
+  filter: grayscale(0.6);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+:root[data-theme="dark"] .btn:disabled,
+:root[data-theme="dark"] .btn:disabled:hover {
+  box-shadow: none !important;
+}
+
+/* Akcie v spojenej hernej dlaždici. Na mobile mriežka 2×3, nech sa šesť
+   rovnakých pilúl nezalomí do rozsypaného radu. */
+.game-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .game-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .game-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* @keyframes statnice-cta-glow odstránené spolu so zlatým rámom –
+   zvýraznenie Štátnice je teraz statický prstenec v akcentnej farbe. */
 
 /* ----------------------------------------------------------
    LAYOUT & CARDS
@@ -1115,7 +1166,8 @@ body {
   #setStudy     { order: 2; } /* 📚 Uč sa – moduly, bifľovačka, judikatúra */
   #setRegister  { order: 3; } /* ⚔️ Výzvy – register pojednávaní */
   #setCommunity { order: 4; } /* 🏛️ Súťaž a komunita */
-  #setService   { order: 5; } /* 🧰 Servis */
+  #setService   { order: 5; } /* 🧰 Servis – obchod */
+  #setAdmin     { order: 6; } /* 🔐 Správa – admin/garant panel, úplne na konci */
 }
 
 /* ============================================================
