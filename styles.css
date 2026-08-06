@@ -261,6 +261,11 @@ body {
    orámovaná. Žiadny nový vizuálny jazyk, žiadna iná farba než akcent.
    Prstenec je cez premennú, aby sedel aj v tmavom režime (tam má appka
    úplne inú paletu). */
+/* Akcentný prstenec pre hlavnú hernú linku (pojednávanie · výzva · štátnica).
+   Pôvodne to bol štýl výhradne Štátnice (.statnice-cta-btn); trieda ostáva
+   ako hook na pôvodnom tlačidle, ale prstenec sa riadi generickou
+   .game-cta-btn, aby ho mohli niesť všetky tri bez zavádzajúceho názvu. */
+.game-cta-btn,
 .statnice-cta-btn {
   position: relative;
   box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring);
@@ -268,9 +273,14 @@ body {
 
 /* Tmavá téma dáva tlačidlám tieň s !important – prstenec ho musí prebiť
    rovnako, inak by sa stratil. */
+:root[data-theme="dark"] .game-cta-btn,
 :root[data-theme="dark"] .statnice-cta-btn {
   box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring) !important;
 }
+
+/* Vypnuté CTA prstenec nemá – rieši to už .btn:disabled nižšie (vyššia
+   špecificita v svetlej téme, `!important` v tmavej), netreba naň vlastné
+   pravidlo. Overené na kaskáde, nie odhadom. */
 
 /* ============================================================
    VYPNUTÉ TLAČIDLÁ – po zjednotení akcií na .btn-primary by inak
@@ -308,6 +318,12 @@ body {
   .game-actions .btn {
     width: 100%;
     text-align: center;
+  }
+  /* Nepárny počet akcií (od pribudnutia „Vyzvi spolužiaka“ ich je 7) by
+     nechal poslednú dlaždicu osamotenú v polovici riadka – nech radšej
+     zaberie celú šírku. Podmienka je generická, drží aj pri párnom počte. */
+  .game-actions .btn:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 /* @keyframes statnice-cta-glow odstránené spolu so zlatým rámom –

@@ -501,6 +501,12 @@ export function finishQuiz(){
        🔥 Prvý hráč (tvorca výzvy) – duel ešte nemá id
        ========================= */
     if (!hasDuelId) {
+      /* Príznak sa číta a hneď zhadzuje TU, nie až pri samotnom share – aj keď
+         uloženie výzvy zlyhá (chýbajúca Firebase), nesmie prepadnúť do ďalšieho,
+         bežného pojednávania a ponúknuť zdieľanie bez vyžiadania. */
+      const shareAfter = !!window.__challengeShareAfterQuiz;
+      window.__challengeShareAfterQuiz = false;
+
       if (typeof window.saveDuel === 'function') {
         window.saveDuel(nick, areaTitle, enrichedQuestions);
 
@@ -515,6 +521,19 @@ export function finishQuiz(){
           });
 
           console.log("🔥 Duel uložený do banky duelov (pending)");
+
+          /* „⚔️ Vyzvi spolužiaka“ (#challengeFriendBtn) – rovnaké pojednávanie
+             ako bežné, len sa share krok ukáže sám namiesto toho, aby ho hráč
+             hľadal v registri. Výzva vzniká pri KAŽDOM pojednávaní (saveDuel
+             vyššie), príznak teda nemení hru, len UI po nej. Údaje si berieme
+             do snapshotu – window.currentDuel sa nižšie čistí na null.
+             Malé oneskorenie nechá dobehnúť výsledkový toast. */
+          if (shareAfter) {
+            const duelSnapshot = { id: duelId, from: nick, areaTitle };
+            setTimeout(() => {
+              if (typeof window.shareDuelInvite === 'function') window.shareDuelInvite(duelSnapshot);
+            }, 900);
+          }
         }
       }
       // 🔥 Energia za odohraný duel (prvý hráč - tvorca)
@@ -574,6 +593,10 @@ export function cancelQuiz(){
   $('quizIntro').style.display = 'block';
   $('quizArea').style.display = 'none';
   document.body.classList.remove('quiz-fullscreen');
+
+  // Zrušené pojednávanie žiadnu výzvu nevytvorí – príznak auto-share nesmie
+  // prežiť do ďalšej, bežne spustenej hry.
+  window.__challengeShareAfterQuiz = false;
 
   window.duelQuestions = null;
   window.currentOpponent = null;

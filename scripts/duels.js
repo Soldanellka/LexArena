@@ -354,6 +354,40 @@ export async function startDuel(areaName, precomputedPair = null) {
 }
 
 /* ============================================================
+   ZDIEĽANIE VÝZVY (?duel=ID)
+
+   Vytiahnuté z tlačidla 📤 v registri pojednávaní, aby ten istý kód
+   používal aj automatický share krok po „⚔️ Vyzvi spolužiaka“ (init.js).
+   Register a auto-share sa tak nemôžu rozísť v znení správy ani v tom,
+   či sa link dostane do schránky.
+
+   Poradie krokov je zámerné: NAJPRV schránka, až potom navigator.share.
+   Schránka je istota (funguje aj keď hráč share dialóg zavrie), share je
+   bonus na mobile. `duel` stačí v tvare { id, from, areaTitle }.
+============================================================ */
+export async function shareDuelInvite(duel) {
+  if (!duel || !duel.id) {
+    showRewardToast('⚠️ Výzvu sa nepodarilo pripraviť – skús ju poslať z registra pojednávaní.');
+    return;
+  }
+  const link = `https://www.lexarena.sk/?duel=${duel.id}`;
+  const message = `⚔️ ${duel.from} ťa vyzýva na pojednávanie z oblasti ${duel.areaTitle} v LexAréne! Prijmi výzvu: ${link}`;
+  try {
+    await navigator.clipboard.writeText(message);
+    showRewardToast('Výzva skopírovaná – stačí vložiť ✅');
+  } catch (e) {
+    window.prompt('Skopíruj správu manuálne:', message);
+  }
+  if (navigator.share) {
+    navigator.share({
+      title: 'Výzva na pojednávanie – LexArena',
+      text: message,
+      url: link
+    }).catch(() => {});
+  }
+}
+
+/* ============================================================
    ULOŽENIE VÝZVY DO FIREBASE (PRVÝ HRÁČ)
 ============================================================ */
 export function saveDuel(from, areaTitle, questions) {
@@ -769,23 +803,7 @@ export function renderDuelBank() {
 
       const sendBtn = div.querySelector(".duel-send");
       if (sendBtn) {
-        sendBtn.onclick = async () => {
-          const link = `https://www.lexarena.sk/?duel=${duel.id}`;
-          const message = `⚔️ ${duel.from} ťa vyzýva na pojednávanie z oblasti ${duel.areaTitle} v LexAréne! Prijmi výzvu: ${link}`;
-          try {
-            await navigator.clipboard.writeText(message);
-            showRewardToast('Výzva skopírovaná – stačí vložiť ✅');
-          } catch (e) {
-            window.prompt('Skopíruj správu manuálne:', message);
-          }
-          if (navigator.share) {
-            navigator.share({
-              title: 'Výzva na pojednávanie – LexArena',
-              text: message,
-              url: link
-            }).catch(() => {});
-          }
-        };
+        sendBtn.onclick = () => shareDuelInvite(duel);
       }
 
       const acceptBtn = div.querySelector(".duel-accept:not(.duel-send)");
@@ -934,6 +952,7 @@ async function awardChallengeLinkReward({ duelId, nick, isNewPlayer }) {
    EXPORTY
 ============================================================ */
 window.saveDuel = saveDuel;
+window.shareDuelInvite = shareDuelInvite;
 window.renderDuelBank = renderDuelBank;
 window.startDuel = startDuel;
 window.watchDuelBankBadge = watchDuelBankBadge;

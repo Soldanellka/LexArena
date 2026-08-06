@@ -790,12 +790,15 @@ export function updateAvatarUI(energy, avatarType) {
     feedBtn.style.display = isSleeping ? 'inline-flex' : 'none';
   }
 
-  // Duel button blokovanie
-  const startDuelBtn = document.getElementById('startQuizBtn');
-  if (startDuelBtn && isSleeping) {
-    startDuelBtn.disabled = true;
-    startDuelBtn.title = 'Avatar spí – nakŕm ho!';
-  }
+  // Duel button blokovanie – vrátane „Vyzvi spolužiaka“, ktorý spúšťa to isté
+  // pojednávanie (inak by sa spiaci avatar dal obísť druhým tlačidlom).
+  ['startQuizBtn', 'challengeFriendBtn'].forEach(id => {
+    const b = document.getElementById(id);
+    if (b && isSleeping) {
+      b.disabled = true;
+      b.title = 'Avatar spí – nakŕm ho!';
+    }
+  });
 
   window.__currentAvatarEnergy = energy;
   window.__currentAvatarType = avatarType;

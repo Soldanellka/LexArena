@@ -361,8 +361,12 @@
                .statnice-cta-btn, čo je len sýtejší variant tej istej
                pilulky, nie iný tvar. Ikony ostávajú v texte. -->
           <div class="game-actions">
-            <button class="btn btn-primary" id="startQuizBtn" disabled>⚔️ Spustiť pojednávanie</button>
-            <button class="btn btn-primary statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
+            <!-- Akcentované trio (.game-cta-btn) = hlavná herná linka:
+                 sólo pojednávanie · výzva spolužiakovi · štátnica.
+                 .statnice-cta-btn ostáva na Štátnici ako pôvodný hook. -->
+            <button class="btn btn-primary game-cta-btn" id="startQuizBtn" disabled>⚔️ Spustiť pojednávanie</button>
+            <button class="btn btn-primary game-cta-btn" id="challengeFriendBtn" disabled>⚔️ Vyzvi spolužiaka</button>
+            <button class="btn btn-primary game-cta-btn statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
             <button class="btn btn-primary" id="openMemoryBtn">🃏 Kartičky</button>
             <button class="btn btn-primary" id="openCasesBtn">📋 Prípady z praxe</button>
             <!-- Progres a Štruktúra otázok NEPOTREBUJÚ vybranú oblasť –
