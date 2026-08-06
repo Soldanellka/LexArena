@@ -43,6 +43,7 @@ import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatal
 import { showRewardToast } from '../ui.js';
 import { speakText, isSpeechRecognitionSupported, createSpeechRecognizer, isLikelyDesktop } from '../memoryTrainer.js';
 import { normalizeOkruhText, normalizeZdroj } from './contentNormalize.js';
+import { applyOverridesForOkruh } from './contentOverrides.js';
 import { renderSource } from './sourceUtil.js';
 import { ensureVoicesLoaded, pickVoice, getAvailableSkGenders } from '../biflovackaVideo.js';
 import { recordOkruhResult, PROGRESS_ACTIVITIES } from './progressTracking.js';
@@ -319,11 +320,23 @@ function significantWords(text) {
 ------------------------------------------------------------ */
 function extractKeyPoints(rawSummary, title) {
   const text = String(rawSummary || '');
-  const sectionMatch = text.match(/Kľúčové slová[^:]*:\s*\n([\s\S]*?)(?=\n\nZapamätaj si|\n\n$|$)/i);
+
+  /* Dva tvary nadpisu, obe od autorky obsahu:
+     - staršie zhrnutia (Pracovné, Občianske, EÚ): „Kľúčové slová (štátnicové):"
+     - novšie (Trestné hmotné A1–A13):            „Zapamätaj si (štátnicové jadro)"
+     Druhý nadpis NEMÁ dvojbodku a sekcia končí až pri „Zdroj", preto vlastný
+     vzor, nie rozšírenie prvého. Poradie je zámerné: prvý vzor sa skúša
+     najskôr, takže pre existujúce oblasti sa správanie nemení vôbec.
+     Texty autorky sa nijako neupravujú – prispôsobuje sa parser. */
+  const sectionMatch =
+       text.match(/Kľúčové slová[^:]*:\s*\n([\s\S]*?)(?=\n\nZapamätaj si|\n\n$|$)/i)
+    || text.match(/Zapamätaj si[^\n:]*:?[ \t]*\n([\s\S]*?)(?=\n\nZdroj|\n\n$|$)/i);
+
   if (sectionMatch) {
     const rawLines = sectionMatch[1]
       .split('\n')
-      .map(l => l.replace(/^[-•]\s*/, '').trim())
+      // Odrážky: pomlčka, en/em pomlčka aj guľôčka – novšie zhrnutia používajú „–".
+      .map(l => l.replace(/^[-–—•]\s*/, '').trim())
       .filter(Boolean);
 
     // Niektoré okruhy majú "Kľúčové slová:" ako JEDEN riadok pojmov oddelených
@@ -356,12 +369,43 @@ function extractKeyPoints(rawSummary, title) {
   return sentences.length ? sentences.slice(0, 6) : (title ? [title] : []);
 }
 
+/* Preklad basePath → názov oblasti pre contentOverrides (AREA_SLUGS kľúčuje
+   podľa NÁZVU oblasti, nie cesty). Odvodené z AREA_CONFIG, aby pribudnutie
+   oblasti nevyžadovalo ďalšiu tabuľku. */
+function areaTitleForPath(basePath) {
+  for (const [areaName, config] of Object.entries(AREA_CONFIG)) {
+    if (config.mode === 'pair' && config.pool.path === basePath) {
+      return config.progressAreaTitle || areaName;
+    }
+    if (config.mode === 'dual-pool') {
+      const pool = config.pools.find(p => p.path === basePath);
+      if (pool) return pool.progressAreaTitle;
+    }
+  }
+  return null;
+}
+
 async function fetchOkruh(basePath, n) {
   try {
     const res = await fetch(`${basePath}A${n}.json`);
     if (!res.ok) return null;
-    const json = await res.json();
+    let json = await res.json();
     if (!json || !json.title) return null;
+
+    /* Firebase overridy (garant/admin úpravy zhrnutí) – rovnaká klientská
+       cesta, akou ich aplikuje zvyšok appky (data.js, memoryDefinitions.js).
+       Bez toho sieň skúšala z pôvodného textu v repe, nie z vyeditovaných
+       zhrnutí, a bola tak závislá od toho, či prebehol GitHub sync.
+
+       Fail-soft: applyOverridesForOkruh vracia pri chýbajúcej Firebase,
+       neznámej oblasti aj chýbajúcom override PÔVODNÝ json bez zmeny, takže
+       fallback na súbor je automatický a nepotrebuje vlastnú vetvu.
+       Náklad: jedno čítanie contentOverrides/{app}/{okruh} na okruh, teda
+       2 navyše na skúšku – deje sa raz pri štarte, súbežne s fetchom
+       samotného okruhu, nie počas odpovedania. */
+    const areaTitle = areaTitleForPath(basePath);
+    if (areaTitle) json = await applyOverridesForOkruh(json, areaTitle, `A${n}`);
+
     const summaryText = normalizeOkruhText(json);
     if (!summaryText) return null;
     const keyPoints = extractKeyPoints(summaryText, json.title);
