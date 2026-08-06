@@ -118,5 +118,13 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Páchateľ – fyzická osoba × právnická osoba",
+    "branches": [
+      { "label": "Fyzická osoba", "leaves": ["Vek – trestná zodpovednosť od 14 rokov (pri vybraných situáciách skúmanie vyspelosti do 15).", "Príčetnosť – schopnosť rozpoznať protiprávnosť a ovládať konanie.", "Zavinenie – úmysel alebo nedbanlivosť ako podmienka zodpovednosti.", "Osobitný subjekt – niektoré TČ vyžadujú špeciálne postavenie (napr. verejný činiteľ)."] },
+      { "label": "Právnická osoba", "leaves": ["Zákon č. 91/2016 Z. z. – trestná zodpovednosť právnických osôb, osobitný zákon.", "Pričítateľnosť – konanie štatutárov, zamestnancov a osôb konajúcich v jej mene.", "Tresty pre PO – peňažný trest, prepadnutie majetku, zákaz činnosti, zrušenie PO.", "Obmedzenia – PO nezodpovedá za všetky TČ, len za zákonom vymenované."] },
+      { "label": "Spôsobilosť a zodpovednosť", "leaves": ["Vek a príčetnosť – základné podmienky trestnej zodpovednosti FO.", "Ovládacia schopnosť – schopnosť ovládať svoje konanie.", "Rozpoznávacia schopnosť – schopnosť rozpoznať protiprávnosť konania."] }
+    ]
   }
 }

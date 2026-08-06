@@ -118,5 +118,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Objektívne znaky – konanie × následok × príčinná súvislosť",
+    "branches": [
+      { "label": "Konanie a opomenutie", "leaves": ["Konanie – aktívny zásah do chráneného záujmu.", "Opomenutie – pasívne nekonanie tam, kde existovala povinnosť konať."] },
+      { "label": "Následok", "leaves": ["Poruchový – skutočná ujma na chránenom záujme.", "Ohrozovací – stačí vytvorenie nebezpečenstva pre chránený záujem."] },
+      { "label": "Príčinná súvislosť", "leaves": ["Conditio sine qua non – bez konania by následok nenastal.", "Právna relevancia – príčina musí byť právne významná, nie akákoľvek."] },
+      { "label": "Okolnosti činu", "leaves": ["Miesto a čas – kde a kedy bol čin spáchaný.", "Spôsob a prostriedky – ako a čím bol čin spáchaný.", "Kvalifikačné znaky – okolnosti zvyšujúce závažnosť (kvalifikované skutkové podstaty)."] },
+      { "label": "Význam", "leaves": ["Právna kvalifikácia – podklad zaradenia skutku.", "Závažnosť – určenie závažnosti a výmery trestu.", "Odlíšenie od priestupku – hranica trestnosti."] }
+    ]
   }
 }

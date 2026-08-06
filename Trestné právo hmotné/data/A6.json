@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Subjektívna stránka – zavinenie × úmysel × nedbanlivosť × omyl",
+    "branches": [
+      { "label": "Subjektívna stránka", "leaves": ["Psychický vzťah – vnútorný vzťah páchateľa k činu a následku.", "Zavinenie – obligatórny znak, úmysel alebo nedbanlivosť.", "Motív a pohnútka – znak skutkovej podstaty len vtedy, keď to zákon vyžaduje."] },
+      { "label": "Formy zavinenia", "leaves": ["Úmysel priamy – páchateľ chcel porušiť alebo ohroziť chránený záujem.", "Úmysel nepriamy – vedel, že môže porušiť, a bol s tým uzrozumený.", "Vedomá nedbanlivosť – vedel, že môže spôsobiť následok, ale bez primeraných dôvodov sa spoliehal, že nenastane.", "Nevedomá nedbanlivosť – nevedel, hoci vedieť mal a mohol."] },
+      { "label": "Omyl", "leaves": ["Skutkový omyl – omyl o faktoch, vylučuje úmysel.", "Právny omyl nevyhnutný – nemohol sa mu vyhnúť, vylučuje zavinenie.", "Právny omyl vyhnuteľný – mohol sa mu vyhnúť, zodpovednosť trvá, môže znížiť trest."] },
+      { "label": "Význam", "leaves": ["Vznik zodpovednosti – bez zavinenia niet trestnej zodpovednosti.", "Kvalifikácia a trest – forma zavinenia ovplyvňuje kvalifikáciu aj výmeru trestu."] }
+    ]
   }
 }

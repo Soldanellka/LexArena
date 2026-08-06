@@ -104,5 +104,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Trest – pojem × účel × druhy × zásady",
+    "branches": [
+      { "label": "Pojem trestu", "leaves": ["Ujma podľa zákona – ujma na slobode, majetkových alebo iných právach odsúdeného (§ 31 ods. 2 TZ).", "Ukladá len súd – jediný orgán oprávnený uložiť trest.", "Reakcia na TČ – základný sankčný prostriedok trestného práva."] },
+      { "label": "Účel trestu (§ 34 TZ)", "leaves": ["Ochrana spoločnosti – chrániť spoločnosť pred páchateľom.", "Zabránenie – zabrániť v páchaní ďalšej trestnej činnosti.", "Výchova – vychovať páchateľa k riadnemu životu.", "Generálna prevencia – odradiť ostatných od páchania TČ.", "Morálne odsúdenie – vyjadrenie morálneho odsúdenia spoločnosťou."] },
+      { "label": "Druhy trestov", "leaves": ["Odňatie slobody – najprísnejší trest; pre mladistvých len výnimočne.", "Domáce väzenie – obmedzenie slobody v domácom prostredí.", "Peňažný trest – majetková sankcia.", "Prepadnutie majetku alebo veci – majetkové tresty prepadnutia.", "Zákazy – zákaz činnosti, pobytu, účasti na verejných podujatiach.", "Ďalšie – povinná práca, vyhostenie, strata titulov a hodností."] },
+      { "label": "Zásady ukladania", "leaves": ["Zákonnosť – nulla poena sine lege.", "Úmernosť a spravodlivosť – trest primeraný a spravodlivý.", "Humánnosť – rešpekt k ľudskej dôstojnosti.", "Ne bis in idem – nie dvakrát za to isté."] }
+    ]
   }
 }

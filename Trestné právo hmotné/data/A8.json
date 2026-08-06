@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Vývinové štádiá – príprava × pokus × dokonanie",
+    "branches": [
+      { "label": "Príprava", "leaves": ["Vytváranie podmienok – úmyselné vytváranie podmienok na spáchanie TČ.", "Len obzvlášť závažné zločiny – príprava je trestná len pri nich.", "Bez bezprostrednosti – nevyžaduje bezprostredné smerovanie k dokonaniu."] },
+      { "label": "Pokus", "leaves": ["Bezprostredné smerovanie – konanie bezprostredne smeruje k dokonaniu TČ.", "Úmysel – pokus je možný len pri úmyselných TČ.", "Nedokonanie – k dokonaniu nedošlo nezávisle od vôle páchateľa."] },
+      { "label": "Dokonanie", "leaves": ["Naplnené znaky – naplnené všetky znaky skutkovej podstaty.", "Konzumpcia – dokonaný čin konzumuje pokus aj prípravu."] },
+      { "label": "Význam", "leaves": ["Kvalifikácia a trest – štádium ovplyvňuje kvalifikáciu a výmeru trestu.", "Ochrana spoločnosti – trestnosť skorších štádií chráni spoločnosť pred dokonaním."] }
+    ]
   }
 }

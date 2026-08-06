@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Skutková podstata – pojem × znaky × triedenie",
+    "branches": [
+      { "label": "Pojem", "leaves": ["Súhrn zákonných znakov – znaky, ktoré musia byť naplnené, aby bol skutok trestným činom.", "Model v zákone – model TČ, s ktorým sa porovnáva konanie páchateľa.", "Základ kvalifikácie – určuje hranice trestnej zodpovednosti."] },
+      { "label": "Znaky skutkovej podstaty", "leaves": ["Objekt – chránený spoločenský záujem (život, zdravie, majetok).", "Subjekt – páchateľ, trestne zodpovedná osoba; niekedy osobitný subjekt (napr. verejný činiteľ).", "Objektívna stránka – konanie alebo opomenutie, následok, príčinná súvislosť; prípadne spôsob, miesto, čas.", "Subjektívna stránka – zavinenie (úmysel/nedbanlivosť); niekedy motív či pohnútka.", "Následok – porušenie alebo ohrozenie objektu; pri niektorých TČ obligatórny."] },
+      { "label": "Triedenie", "leaves": ["Podľa konštrukcie – formálne (bez následku) × materiálne (vyžadujú následok).", "Podľa útoku – proti životu, majetku, slobode (systematika osobitnej časti TZ).", "Podľa zavinenia – úmyselné × nedbanlivostné × kombinované.", "Podľa následku – poruchové (škoda alebo ujma) × ohrozovacie (stačí nebezpečenstvo).", "Podľa subjektu – všeobecné × osobitné (špeciálne postavenie páchateľa)."] },
+      { "label": "Význam", "leaves": ["Právna kvalifikácia – nástroj zaradenia skutku pod zákon.", "Určenie trestu – východisko pre druh a výmeru trestu.", "Odlíšenie od priestupkov – hranica medzi trestným činom a priestupkom.", "Predvídateľnosť – zaručuje predvídateľnosť trestného práva."] }
+    ]
   }
 }

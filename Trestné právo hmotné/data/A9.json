@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Trestná súčinnosť – účastníctvo × spolupáchateľstvo",
+    "branches": [
+      { "label": "Účastníctvo", "leaves": ["Účasť na cudzom TČ – úmyselná účasť na trestnom čine inej osoby.", "Bez vlastného naplnenia SP – účastník nenapĺňa skutkovú podstatu vlastným konaním."] },
+      { "label": "Formy účastníctva", "leaves": ["Organizátor – zosnoval alebo riadil spáchanie trestného činu.", "Návodca – naviedol iného na spáchanie trestného činu.", "Pomocník – poskytol pomoc (prostriedky, rada, sľub pomoci po čine)."] },
+      { "label": "Spolupáchateľstvo", "leaves": ["Spoločné konanie – spoločné úmyselné konanie dvoch alebo viacerých osôb.", "Spoločné naplnenie SP – spolu napĺňajú skutkovú podstatu trestného činu."] },
+      { "label": "Rozdiel", "leaves": ["Spolupáchateľ – trestný čin vykonáva.", "Účastník – podporuje, riadi alebo navádza toho, kto čin vykoná.", "Trestanie – obaja sa trestajú v rámci sadzby za čin, na ktorom sa podieľali."] }
+    ]
   }
 }

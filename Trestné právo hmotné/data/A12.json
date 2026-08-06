@@ -104,5 +104,13 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Ochranné × výchovné opatrenia",
+    "branches": [
+      { "label": "Ochranné opatrenia", "leaves": ["Ochranné liečenie – liečba porúch páchateľa (liečebný charakter).", "Ochranný dohľad – bezpečnostný dohľad nad páchateľom.", "Zabratie veci – odňatie veci na ochranu spoločnosti.", "Účel – preventívny, liečebný alebo bezpečnostný, keď trest nestačí."] },
+      { "label": "Výchovné opatrenia (mladiství)", "leaves": ["Napomenutie – formálne napomenutie mladistvého.", "Dohľad probačného úradníka – sledovanie a vedenie mladistvého.", "Obmedzenia a povinnosti – výchovné obmedzenia a uložené povinnosti.", "Výchovné programy – programy prevýchovy a sociálneho začlenenia."] },
+      { "label": "Rozdiel trest a opatrenie", "leaves": ["Trest – sankcia spôsobujúca ujmu.", "Opatrenie – preventívny alebo výchovný zásah, nie je trest.", "Samostatnosť – opatrenia možno uložiť samostatne aj popri treste."] }
+    ]
   }
 }

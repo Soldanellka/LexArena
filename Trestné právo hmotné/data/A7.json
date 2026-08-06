@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Okolnosti vylučujúce protiprávnosť – nutná obrana × krajná núdza",
+    "branches": [
+      { "label": "Pojem", "leaves": ["Formálne znaky TČ – konanie formálne napĺňa znaky trestného činu.", "Nie je protiprávne – právny poriadok ho za daných okolností dovoľuje.", "Vylučuje zodpovednosť – trestná zodpovednosť nevzniká."] },
+      { "label": "Nutná obrana", "leaves": ["Odvrátenie útoku – konanie odvracia útok na chránený záujem.", "Protiprávny útok – útok musí byť protiprávny a trvať alebo priamo hroziť.", "Primeranosť – obrana nesmie byť zjavne neprimeraná útoku.", "Netreba ustupovať – obranca nemá povinnosť útoku ustúpiť."] },
+      { "label": "Krajná núdza", "leaves": ["Odvrátenie nebezpečenstva – odvracia sa nebezpečenstvo, nie útok osoby.", "Neodvrátiteľnosť inak – nebezpečenstvo nemožno za daných okolností odvrátiť inak.", "Proporcionalita – spôsobený následok nesmie byť zjavne závažnejší než hroziaci."] },
+      { "label": "Ďalšie okolnosti", "leaves": ["Súhlas poškodeného – dovolené nakladanie s vlastným právom v medziach zákona.", "Povolené riziko – riziko spoločensky prospešnej činnosti v medziach pravidiel.", "Výkon práva a povinnosti – konanie pri výkone práva alebo plnení povinnosti.", "Príkaz nadriadeného – plnenie záväzného príkazu za zákonných podmienok."] }
+    ]
   }
 }

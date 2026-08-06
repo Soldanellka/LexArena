@@ -1,0 +1,23 @@
+{
+  "area": "Trestné právo hmotné",
+  "clusters": [
+    { "id": "zaklady-trestneho-prava", "label": "Základy trestného práva", "okruhy": [1, 2] },
+    { "id": "skutkova-podstata", "label": "Skutková podstata", "okruhy": [3, 4, 6] },
+    { "id": "pachatel-a-sucinnost", "label": "Páchateľ a súčinnosť", "okruhy": [5, 9] },
+    { "id": "protipravnost-a-stadia", "label": "Protiprávnosť a štádiá", "okruhy": [7, 8] },
+    { "id": "mnohost-trestnej-cinnosti", "label": "Mnohosť trestnej činnosti", "okruhy": [10] },
+    { "id": "sankcie", "label": "Sankcie", "okruhy": [11, 12] },
+    { "id": "mladistvi", "label": "Mladiství", "okruhy": [13] }
+  ],
+  "links": [
+    { "from": 2, "to": 3, "note": "Druhy trestných činov napĺňajú skutkové podstaty" },
+    { "from": 4, "to": 6, "note": "Objektívna a subjektívna stránka jednej skutkovej podstaty" },
+    { "from": 5, "to": 6, "note": "Zavinenie ako podmienka zodpovednosti páchateľa" },
+    { "from": 5, "to": 13, "note": "Vek a vyspelosť páchateľa" },
+    { "from": 7, "to": 8, "note": "Obe riešia hranicu trestnosti konania" },
+    { "from": 8, "to": 9, "note": "Štádiá a formy účasti sa kvalifikujú spolu" },
+    { "from": 10, "to": 11, "note": "Súbeh a recidíva určujú ukladanie trestu" },
+    { "from": 11, "to": 12, "note": "Trest × opatrenie – dva druhy sankcií" },
+    { "from": 11, "to": 13, "note": "Tresty mladistvých ako osobitný režim" }
+  ]
+}

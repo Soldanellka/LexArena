@@ -104,5 +104,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Mladiství – vek × vyspelosť × tresty × opatrenia",
+    "branches": [
+      { "label": "Veková hranica", "leaves": ["Mladistvý 14 až 18 rokov – osoba, ktorá dovŕšila 14 a neprekročila 18 rokov (§ 94 TZ).", "Pod 14 rokov – trestná zodpovednosť nevzniká; rieši sociálnoprávna ochrana detí."] },
+      { "label": "Vyspelosť (§ 95 TZ)", "leaves": ["Rozumová a mravná vyspelosť – mladistvý do 15 rokov nemusí byť zodpovedný bez dostatočnej vyspelosti.", "Znalecké skúmanie – vyspelosť sa zisťuje znalecky (prostredie, správanie, vývin)."] },
+      { "label": "Tresty mladistvých", "leaves": ["Znížené sadzby – miernejšie tresty pre neukončený osobnostný vývin (§ 97 TZ).", "Odňatie slobody výnimočne – len krajné riešenie, v podstatne nižšej sadzbe.", "Účel – výchova a prevencia, nie represia."] },
+      { "label": "Výchovné opatrenia", "leaves": ["Nástroje – napomenutie, dohľad, obmedzenia a povinnosti, výchovné programy (§ 105 TZ).", "Prednosť – preferujú sa pred represívnym trestom; podporujú resocializáciu."] },
+      { "label": "Špecifiká konania", "leaves": ["Šetrnosť a rýchlosť – konanie šetrné, rýchle, často neverejné.", "Ochrana budúcnosti – možnosť rýchleho zahladenia odsúdenia."] }
+    ]
   }
 }

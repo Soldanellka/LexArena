@@ -154,5 +154,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TPH – pojem × funkcie × zásady",
+    "branches": [
+      { "label": "Pojem TPH", "leaves": ["Čo upravuje – určuje, ktoré konania sú trestnými činmi, aké tresty a ochranné opatrenia možno uložiť.", "Trestná zodpovednosť – ustanovuje podmienky, za ktorých vzniká trestná zodpovednosť.", "Kodifikácia – základná úprava: Trestný zákon (zákon č. 300/2005 Z. z.)."] },
+      { "label": "Funkcie TPH", "leaves": ["Ochranná – chráni spoločnosť, hodnoty, právny poriadok, život, zdravie a majetok.", "Preventívna – generálna (potenciálni páchatelia) × individuálna (konkrétny páchateľ).", "Represívna – umožňuje uložiť trest ako reakciu na trestný čin.", "Regulačná – stanovuje hranice dovoleného správania v spoločnosti."] },
+      { "label": "Zásada zákonnosti", "leaves": ["Nullum crimen sine lege – trestné činy a tresty musia byť ustanovené zákonom.", "Zákaz analógie – analógia v neprospech páchateľa je zakázaná.", "Zákaz retroaktivity – zákon nesmie pôsobiť spätne v neprospech páchateľa.", "Lex mitior – retroaktivita v prospech páchateľa je dovolená."] },
+      { "label": "Ďalšie zásady", "leaves": ["Subsidiarita (ultima ratio) – trestné právo je krajný prostriedok, nastupuje, len ak iné prostriedky nestačia.", "Individuálna vina – zodpovednosť je osobná; trest len za zavinené konanie (úmysel/nedbanlivosť).", "Humanizmus – tresty nesmú byť kruté, neľudské ani ponižujúce; rešpekt k dôstojnosti.", "Proporcionalita – trest primeraný závažnosti: spôsob, následok, zavinenie, osobné pomery."] }
+    ]
   }
 }

@@ -118,5 +118,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Trestný čin – definícia × druhy × triedenie",
+    "branches": [
+      { "label": "Definícia trestného činu", "leaves": ["Protiprávne konanie – konanie v rozpore s právnym poriadkom.", "Označené zákonom – zákon ho výslovne označuje za trestný čin.", "Trestnosť – možno zaň uložiť trest.", "Zavinenie – musí byť zavinené, úmysel alebo nedbanlivosť."] },
+      { "label": "Druhy podľa závažnosti", "leaves": ["Prečin – menej závažný TČ; z nedbanlivosti, alebo úmyselný s hornou hranicou do 5 rokov.", "Zločin – závažnejší, vždy úmyselný TČ; horná hranica nad 5 rokov.", "Obzvlášť závažný zločin – horná hranica nad 10 rokov (napr. vražda)."] },
+      { "label": "Druhy podľa predmetu útoku", "leaves": ["Život a zdravie – TČ proti životu a zdraviu.", "Majetok – TČ proti majetku.", "Sloboda a dôstojnosť – TČ proti slobode a ľudskej dôstojnosti.", "Verejný poriadok – TČ proti verejnému poriadku.", "Hospodárstvo – TČ proti hospodárstvu.", "Ďalšie hlavy – životné prostredie, rodina a mládež, republika, mier a ľudskosť podľa systematiky osobitnej časti TZ."] },
+      { "label": "Druhy podľa zavinenia", "leaves": ["Úmyselné – páchateľ chcel porušiť alebo ohroziť chránený záujem alebo bol s tým uzrozumený.", "Nedbanlivostné – následok nechcel, ale konal nedbalo (vedomá × nevedomá nedbanlivosť)."] },
+      { "label": "Účel triedenia", "leaves": ["Právna kvalifikácia – zaradenie skutku pod správnu skutkovú podstatu.", "Určenie trestu – druh a výmera trestu podľa závažnosti.", "Procesný režim – napr. podmienky väzby či premlčanie.", "Štatistika a prevencia – kriminologická štatistika a trestná politika štátu."] }
+    ]
   }
 }
