@@ -54,6 +54,12 @@
   --glass: rgba(240,198,214,0.35);
   /* prstenec zvýraznenej akcie (Štátnicová sieň) – odvodený z --accent-3 */
   --statnice-ring: rgba(255,111,145,0.45);
+  /* Hlavná herná linka (.game-cta-btn) – sýtejší gradient než .btn-primary,
+     aby trio z mriežky vystúpilo. Svetlá téma: od akcentnej ružovej do
+     tmavšieho odtieňa toho istého tónu, nie do inej farby. */
+  --cta-from: #ff6f91;
+  --cta-to: #d93b66;
+  --cta-shadow: rgba(217,59,102,0.38);
 }
 
 /* 🌙 DARK THEME */
@@ -72,6 +78,12 @@
   --glass: rgba(20,40,60,0.28);
   /* v tmavej téme je paleta modrá – prstenec odvodený z --accent-1 */
   --statnice-ring: rgba(43,110,163,0.6);
+  /* Tmavá téma: .btn-primary tu ide accent-2→accent-3, čo sú tmavé modré a
+     na tmavom pozadí splývajú. CTA preto berie SVETLEJŠÍ koniec palety
+     (accent-1 a vyššie), aby trio vystúpilo rovnako ako v svetlej téme. */
+  --cta-from: #3b8fd0;
+  --cta-to: #1f4f7a;
+  --cta-shadow: rgba(43,110,163,0.45);
 }
 
 /* ----------------------------------------------------------
@@ -261,26 +273,96 @@ body {
    orámovaná. Žiadny nový vizuálny jazyk, žiadna iná farba než akcent.
    Prstenec je cez premennú, aby sedel aj v tmavom režime (tam má appka
    úplne inú paletu). */
-/* Akcentný prstenec pre hlavnú hernú linku (pojednávanie · výzva · štátnica).
-   Pôvodne to bol štýl výhradne Štátnice (.statnice-cta-btn); trieda ostáva
-   ako hook na pôvodnom tlačidle, ale prstenec sa riadi generickou
-   .game-cta-btn, aby ho mohli niesť všetky tri bez zavádzajúceho názvu. */
+/* ============================================================
+   HLAVNÁ HERNÁ LINKA – pojednávanie · výzva · štátnica (.game-cta-btn)
+
+   Verzia 1 mala len akcentný prstenec okolo bežnej .btn-primary pilulky.
+   Na produkcii sa strácal a vo vypnutom stave trio dokonca pôsobilo
+   MENEJ výrazne než bežné akcie (.btn:disabled ho zošedivelo rovnako).
+   Preto plný akcent: sýtejší vlastný gradient, väčšia ikona, väčší font,
+   výraznejší tieň – a vypnutý stav, ktorý gradient NESTRÁCA.
+
+   Ikona je v `data-icon` a vykresľuje ju ::before, nie text tlačidla.
+   Dôvod nie je kozmetický: app.js po výbere oblasti prepisuje
+   startQuizBtn.textContent, čo by emoji v texte zmazalo. Pseudo-element
+   to prežije. Keby raz pribudla obrázková grafika, stačí ::before dať
+   background-image – štruktúra tomu nebráni.
+
+   .statnice-cta-btn ostáva ako pôvodný hook na tlačidle Štátnice;
+   vzhľad riadi .game-cta-btn, ktorú nesú všetky tri.
+============================================================ */
 .game-cta-btn,
 .statnice-cta-btn {
   position: relative;
-  box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  padding: 13px 18px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--cta-from), var(--cta-to));
+  box-shadow: 0 8px 22px var(--cta-shadow), 0 2px 6px rgba(0,0,0,0.10);
 }
 
-/* Tmavá téma dáva tlačidlám tieň s !important – prstenec ho musí prebiť
-   rovnako, inak by sa stratil. */
-:root[data-theme="dark"] .game-cta-btn,
-:root[data-theme="dark"] .statnice-cta-btn {
-  box-shadow: 0 0 0 2px var(--statnice-ring), 0 10px 24px var(--statnice-ring) !important;
+.game-cta-btn::before,
+.statnice-cta-btn::before {
+  content: attr(data-icon);
+  font-size: 26px;
+  line-height: 1;
+  /* Emoji nesmie zdediť odsýtenie z vypnutého stavu – rieši sa nižšie. */
+  flex: none;
 }
 
-/* Vypnuté CTA prstenec nemá – rieši to už .btn:disabled nižšie (vyššia
-   špecificita v svetlej téme, `!important` v tmavej), netreba naň vlastné
-   pravidlo. Overené na kaskáde, nie odhadom. */
+.game-cta-btn:hover:not(:disabled),
+.statnice-cta-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px var(--cta-shadow), 0 3px 8px rgba(0,0,0,0.14);
+}
+
+/* Tmavá téma prepisuje pozadie aj tieň .btn s !important (blok „Dark mode –
+   dlaždice s tieňovaním“ NIŽŠIE v súbore), takže CTA ho musí prebiť, inak by
+   v tmavom režime splynulo s bežnými tlačidlami.
+   ⚠️ Nestačí `:root[data-theme=dark] .game-cta-btn` – to má rovnakú
+   špecificitu (0,3,0) ako `:root[data-theme=dark] .btn` a keďže tá stojí v
+   súbore nižšie, vyhrala by ONA. Preto sa pridáva `.btn` do selektora:
+   (0,4,0) prebíja bez ohľadu na poradie. Overené na kaskáde, nie odhadom. */
+:root[data-theme="dark"] .btn.game-cta-btn,
+:root[data-theme="dark"] .btn.statnice-cta-btn {
+  background: linear-gradient(135deg, var(--cta-from), var(--cta-to)) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 22px var(--cta-shadow), 0 2px 6px rgba(0,0,0,0.35) !important;
+}
+:root[data-theme="dark"] .btn.game-cta-btn:hover:not(:disabled),
+:root[data-theme="dark"] .btn.statnice-cta-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--cta-from), var(--cta-to)) !important;
+  box-shadow: 0 14px 30px var(--cta-shadow), 0 3px 8px rgba(0,0,0,0.45) !important;
+}
+
+/* VYPNUTÉ CTA – gradient ostáva, len stlmený. Zámerne NEpadá pod
+   .btn:disabled (opacity .45 + grayscale .6 + box-shadow:none), lebo tam
+   trio zošedivelo viac než bežné akcie a prestalo vyzerať ako hlavné.
+   Špecificita (0,3,0) aj `!important` prebíjajú .btn:disabled v oboch témach. */
+.game-cta-btn:disabled,
+.game-cta-btn:disabled:hover,
+:root[data-theme="dark"] .game-cta-btn:disabled,
+:root[data-theme="dark"] .game-cta-btn:disabled:hover {
+  opacity: 0.72 !important;
+  filter: saturate(0.55) !important;
+  cursor: not-allowed;
+  transform: none !important;
+  background: linear-gradient(135deg, var(--cta-from), var(--cta-to)) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px var(--cta-shadow) !important;
+}
+/* Ikona ostáva plne čitateľná aj vo vypnutom stave – odsýtenie rodiča
+   sa na nej vyruší. */
+.game-cta-btn:disabled::before {
+  filter: saturate(1.9);
+}
 
 /* ============================================================
    VYPNUTÉ TLAČIDLÁ – po zjednotení akcií na .btn-primary by inak
@@ -319,10 +401,18 @@ body {
     width: 100%;
     text-align: center;
   }
-  /* Nepárny počet akcií (od pribudnutia „Vyzvi spolužiaka“ ich je 7) by
-     nechal poslednú dlaždicu osamotenú v polovici riadka – nech radšej
-     zaberie celú šírku. Podmienka je generická, drží aj pri párnom počte. */
-  .game-actions .btn:last-child:nth-child(odd) {
+  /* Hlavná herná linka má na mobile každá svoj celý riadok – s väčšou ikonou
+     a väčším fontom sa do polovice šírky zmestí len tesne a trio by stratilo
+     dôraz, ktorý má mať. Zvyšné štyri akcie idú pod tým bežnou mriežkou 2×2. */
+  .game-actions .game-cta-btn {
+    grid-column: 1 / -1;
+  }
+
+  /* Osamotená posledná dlaždica v polovici riadka – nech radšej zaberie celú
+     šírku. Parita sa počíta cez :nth-child, a keďže trio vyššie zaberá celé
+     riadky, zvyšné akcie sa lámu do dvojíc až od 4. potomka: orphan teda
+     vzniká pri PÁRNOM celkovom počte (dnes 7 = bez orphanu, 8 = orphan). */
+  .game-actions .btn:last-child:nth-child(even) {
     grid-column: 1 / -1;
   }
 }
@@ -1178,12 +1268,13 @@ body {
      nemôže „stratiť“ medzi množinami. */
   .set-panel { order: 99; } /* poistka – panel bez poradia padne na koniec */
 
-  #setTraining  { order: 1; } /* 🥊 Hraj – spojená herná dlaždica */
+  /* #setRegister zanikol (2026-08) – register pojednávaní je teraz kartou
+     vnútri #setTraining, takže na mobile ide automaticky s ním. */
+  #setTraining  { order: 1; } /* 🥊 Hraj – herná dlaždica + register pojednávaní */
   #setStudy     { order: 2; } /* 📚 Uč sa – moduly, bifľovačka, judikatúra */
-  #setRegister  { order: 3; } /* ⚔️ Výzvy – register pojednávaní */
-  #setCommunity { order: 4; } /* 🏛️ Súťaž a komunita */
-  #setService   { order: 5; } /* 🧰 Servis – obchod */
-  #setAdmin     { order: 6; } /* 🔐 Správa – admin/garant panel, úplne na konci */
+  #setCommunity { order: 3; } /* 🏛️ Súťaž a komunita */
+  #setService   { order: 4; } /* 🧰 Servis – obchod */
+  #setAdmin     { order: 5; } /* 🔐 Správa – admin/garant panel, úplne na konci */
 }
 
 /* ============================================================

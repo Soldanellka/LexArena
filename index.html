@@ -119,22 +119,10 @@
        poradie v HTML sa nemenilo, aby sa nemuseli presúvať veľké bloky. -->
   <div class="right">
 
-    <!-- MNOŽINA – REGISTER POJEDNÁVANÍ (hore v pravom stĺpci).
-         Prijatie výzvy vedie na kvíz v ľavom stĺpci – scroll cez stĺpce
-         je v poriadku, rieši ho startDuelQuiz (quiz.js). -->
-    <div class="set-panel" id="setRegister">
-    <h3 class="world-heading" id="worldRegister">⚔️ Výzvy</h3>
-
-    <div class="card highlight-bank" id="duelBankCard">
-      <h3 style="margin:0">Register pojednávaní</h3>
-      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
-      <div style="display:flex;gap:8px;margin-top:8px">
-        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
-      </div>
-      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
-    </div>
-
-    </div><!-- /setRegister -->
+    <!-- Register pojednávaní (#duelBankCard) tu STÁL – presunutý do ľavého
+         stĺpca k pojednávaniu (množina 🥊 Hraj), lebo výzvy sú pojednávania
+         od iných hráčov. Množina ⚔️ Výzvy tým zanikla; pravý stĺpec je teraz
+         Súťaž a komunita → Servis. -->
 
     <!-- MNOŽINA – SÚŤAŽ A KOMUNITA -->
     <div class="set-panel" id="setCommunity">
@@ -363,10 +351,13 @@
           <div class="game-actions">
             <!-- Akcentované trio (.game-cta-btn) = hlavná herná linka:
                  sólo pojednávanie · výzva spolužiakovi · štátnica.
-                 .statnice-cta-btn ostáva na Štátnici ako pôvodný hook. -->
-            <button class="btn btn-primary game-cta-btn" id="startQuizBtn" disabled>⚔️ Spustiť pojednávanie</button>
-            <button class="btn btn-primary game-cta-btn" id="challengeFriendBtn" disabled>⚔️ Vyzvi spolužiaka</button>
-            <button class="btn btn-primary game-cta-btn statnice-cta-btn" id="openStatniceBtn">🏛️ Štátnicová sieň</button>
+                 .statnice-cta-btn ostáva na Štátnici ako pôvodný hook.
+                 ⚠️ Ikona patrí do data-icon, NIE do textu tlačidla: app.js po
+                 výbere oblasti prepisuje startQuizBtn.textContent a emoji
+                 v texte by tým zmizlo. Vykresľuje ju ::before (styles.css). -->
+            <button class="btn btn-primary game-cta-btn" id="startQuizBtn" data-icon="🥊" disabled>Spustiť pojednávanie</button>
+            <button class="btn btn-primary game-cta-btn" id="challengeFriendBtn" data-icon="⚔️" disabled>Vyzvi spolužiaka</button>
+            <button class="btn btn-primary game-cta-btn statnice-cta-btn" id="openStatniceBtn" data-icon="🏛️">Štátnicová sieň</button>
             <button class="btn btn-primary" id="openMemoryBtn">🃏 Kartičky</button>
             <button class="btn btn-primary" id="openCasesBtn">📋 Prípady z praxe</button>
             <!-- Progres a Štruktúra otázok NEPOTREBUJÚ vybranú oblasť –
@@ -425,6 +416,21 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Register pojednávaní – presunutý sem z pravého stĺpca (2026-08).
+         Výzvy sú pojednávania od iných hráčov, patria teda k hernej dlaždici,
+         nie do samostatnej množiny vpravo. Stojí ZA #quizCard zámerne: hlavný
+         tok je „vyber oblasť → hraj“ a ten musí ostať prvý; register je to,
+         čo si hráč pozrie potom. „Prijmem výzvu → scroll na kvíz“ je teraz
+         v rámci jedného stĺpca (quizArea.scrollIntoView v quiz.js). -->
+    <div class="card highlight-bank" id="duelBankCard">
+      <h3 style="margin:0">Register pojednávaní</h3>
+      <div class="small">Balíky otázok a uložené výzvy na pojednávanie</div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn" id="toggleDuelBankBtn">Uložené výzvy</button>
+      </div>
+      <div id="duelBank" class="list" style="margin-top:10px; display:none;"></div>
     </div>
 
     </div><!-- /setTraining -->
