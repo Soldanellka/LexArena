@@ -118,5 +118,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právo EÚ × trestné právo hmotné",
+    "branches": [
+      { "label": "Harmonizácia smernicami", "leaves": ["Minimálne štandardy – smernice zjednocujú definície TČ a sankcií", "Terorizmus – smernica o boji proti terorizmu", "Pranie špinavých peňazí – harmonizované definície a sankcie", "Obchodovanie s ľuďmi – spoločná ochrana obetí", "PIF smernica – ochrana finančných záujmov EÚ"] },
+      { "label": "Eurozatykač (EZR)", "leaves": ["Vzájomné uznávanie – nahrádza klasické vydávacie konanie v EÚ", "Rýchle odovzdanie – zadržanie a odovzdanie na stíhanie či výkon trestu", "Priamy styk – konanie priamo medzi justičnými orgánmi", "Vnútroštátna úprava – zákon o medzinárodnej justičnej spolupráci (č. 167/2026 Z. z.)"] },
+      { "label": "Účinok práva EÚ", "leaves": ["Nariadenia – môžu mať priamy účinok, sú priamo záväzné", "Smernice – nemajú priamy účinok v neprospech jednotlivca (nullum crimen)", "Eurokonformný výklad – vnútroštátne právo sa vykladá v súlade s cieľmi smernice"] },
+      { "label": "Súdny dvor EÚ", "leaves": ["Prejudiciálne konanie – výklad práva EÚ podľa čl. 267 ZFEÚ", "Judikatúra – kľúčový vplyv na výklad trestnoprávnych noriem členských štátov"] }
+    ]
   }
 }

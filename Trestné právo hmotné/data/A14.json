@@ -104,5 +104,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Trestná zodpovednosť právnických osôb",
+    "branches": [
+      { "label": "Právny základ a podmienky", "leaves": ["Zákon č. 91/2016 Z. z. – osobitný zákon o trestnej zodpovednosti PO", "Podmienka – čin spáchaný v mene, v prospech, v záujme alebo v rámci činnosti PO", "Súbežná zodpovednosť – zodpovednosť PO nevylučuje zodpovednosť konajúcej FO"] },
+      { "label": "Pričítateľnosť konania", "leaves": ["Štatutár – konanie štatutárneho orgánu sa pripisuje PO", "Riadiaca osoba – konanie osoby v riadiacej pozícii", "Zamestnanec – konanie zamestnanca v rámci činnosti PO", "S vedomím PO – konanie osoby s vedomím či súhlasom PO"] },
+      { "label": "Sankcie pre PO", "leaves": ["Peňažný trest – základná majetková sankcia", "Zákaz činnosti – organizačná sankcia", "Prepadnutie majetku – najzávažnejšia majetková sankcia", "Zákaz dotácií a verejného obstarávania – vylúčenie z verejných zdrojov", "Zrušenie PO – najprísnejší trest"] },
+      { "label": "Účel trestania PO", "leaves": ["Ochrana spoločnosti – reakcia na kriminalitu právnických osôb", "Prevencia – odradenie od zneužívania PO", "Zamedzenie zneužívania – PO nesmie byť nástrojom trestnej činnosti"] }
+    ]
   }
 }

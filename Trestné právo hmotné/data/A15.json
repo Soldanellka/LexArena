@@ -104,5 +104,13 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zánik trestnosti × zánik trestu × zahladenie",
+    "branches": [
+      { "label": "Zánik trestnosti (§ 85–88)", "leaves": ["Premlčanie – uplynutie doby podľa závažnosti činu, stíhanie už nie je možné", "Účinná ľútosť – dobrovoľná náprava či odvrátenie následku pri vybraných TČ", "Smrť páchateľa – stíhanie sa zastaví, trest nemožno uložiť", "Zmena zákona – čin už nie je trestný (lex mitior)"] },
+      { "label": "Zánik trestu (§ 89–91)", "leaves": ["Výkon trestu – trest zaniká úplným vykonaním", "Premlčanie výkonu – trest sa nevykonal v zákonnej lehote", "Amnestia a milosť – rozhodnutie, ktoré trest odpúšťa alebo zmierňuje"] },
+      { "label": "Zahladenie odsúdenia (§ 92–93)", "leaves": ["Podmienky – riadny život, uplynutie času, vykonaný trest", "Účinok – na osobu sa hľadí, akoby nebola odsúdená", "Register trestov – výmaz záznamu", "Význam – zamestnanie, licencie, spoločenské postavenie"] }
+    ]
   }
 }

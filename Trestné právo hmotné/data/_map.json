@@ -3,11 +3,13 @@
   "clusters": [
     { "id": "zaklady-trestneho-prava", "label": "Základy trestného práva", "okruhy": [1, 2] },
     { "id": "skutkova-podstata", "label": "Skutková podstata", "okruhy": [3, 4, 6] },
-    { "id": "pachatel-a-sucinnost", "label": "Páchateľ a súčinnosť", "okruhy": [5, 9] },
+    { "id": "pachatel-a-sucinnost", "label": "Páchateľ a súčinnosť", "okruhy": [5, 9, 14] },
     { "id": "protipravnost-a-stadia", "label": "Protiprávnosť a štádiá", "okruhy": [7, 8] },
     { "id": "mnohost-trestnej-cinnosti", "label": "Mnohosť trestnej činnosti", "okruhy": [10] },
-    { "id": "sankcie", "label": "Sankcie", "okruhy": [11, 12] },
-    { "id": "mladistvi", "label": "Mladiství", "okruhy": [13] }
+    { "id": "sankcie", "label": "Sankcie", "okruhy": [11, 12, 15] },
+    { "id": "mladistvi", "label": "Mladiství", "okruhy": [13] },
+    { "id": "europsky-rozmer", "label": "Európsky rozmer", "okruhy": [16] },
+    { "id": "osobitna-cast", "label": "Osobitná časť", "okruhy": [17] }
   ],
   "links": [
     { "from": 2, "to": 3, "note": "Druhy trestných činov napĺňajú skutkové podstaty" },
@@ -18,6 +20,12 @@
     { "from": 8, "to": 9, "note": "Štádiá a formy účasti sa kvalifikujú spolu" },
     { "from": 10, "to": 11, "note": "Súbeh a recidíva určujú ukladanie trestu" },
     { "from": 11, "to": 12, "note": "Trest × opatrenie – dva druhy sankcií" },
-    { "from": 11, "to": 13, "note": "Tresty mladistvých ako osobitný režim" }
+    { "from": 11, "to": 13, "note": "Tresty mladistvých ako osobitný režim" },
+    { "from": 14, "to": 5, "note": "PO ako osobitný páchateľ" },
+    { "from": 15, "to": 10, "note": "Zahladenie ruší účinok odsúdenia pre recidívu" },
+    { "from": 15, "to": 11, "note": "Zánik trestu nadväzuje na jeho ukladanie" },
+    { "from": 16, "to": 1, "note": "Európsky rámec zásad trestného práva" },
+    { "from": 17, "to": 3, "note": "Skutkové podstaty osobitnej časti" },
+    { "from": 17, "to": 6, "note": "Úmysel × nedbanlivosť rozlišuje vraždu a usmrtenie" }
   ]
 }
