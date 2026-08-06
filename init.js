@@ -3798,6 +3798,16 @@ function attachEvents() {
   // Cena štátnice na dlaždici – z ECONOMY_CONFIG, nie natvrdo v HTML.
   fillStaticEconomyValues();
 
+  /* Pútací pulz hlavných dlaždíc sa po PRVEJ interakcii vypína natrvalo –
+     hráč už vie, že tam sú, ďalej by to bolo len rušenie. Stačí jediný
+     poslucháč na kontajneri (once), samotné vypnutie rieši CSS trieda. */
+  const gameTiles = document.querySelector('.game-tiles');
+  if (gameTiles) {
+    gameTiles.addEventListener('pointerdown', () => {
+      gameTiles.classList.add('tiles-interacted');
+    }, { once: true });
+  }
+
   /* ⚔️ Dlaždica Výzvy → register pojednávaní.
      Register je karta v TEJ ISTEJ množine (pod hernou dlaždicou), takže stačí
      naň zroloval a rozbaliť zoznam. Zoznam sa rozbaľuje VŽDY (nie prepínačom),
