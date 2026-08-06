@@ -63,6 +63,22 @@ const EU_AREA_NAME = 'Európske právo';
 const EU_DATA_PATH = LIVE + 'eu-pravo-app/data/';
 const EU_OKRUH_COUNT = 38; // rovnaký limit ako data.js (A1-A38, jeden bazén bez delenia)
 
+const CRIMINAL_AREA_NAME = 'Trestné právo';
+const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
+/* ⚠️ count = koľko okruhov má SKÚŠKOVÝ obsah, nie koľko je súborov.
+   Hmotné má 30 súborov, ale zhrnutia (Firebase overidy od Babu) zatiaľ len
+   A1–A13; A14+ majú v repe iba krátke `theory` (~300 znakov), z ktorého by
+   vznikli núdzové vety namiesto kľúčových bodov. Po doplnení ďalších zhrnutí
+   stačí zdvihnúť toto číslo. */
+const CRIMINAL_HMOTNE_COUNT = 13;
+const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
+/* Procesné nemá zatiaľ ANI JEDNO zhrnutie – súbory majú len quiz/tiles/cases,
+   žiadne `summary` ani `theory`, a vo Firebase preň nie je override. Bazén je
+   preto vedome prázdny (count 0): oblasť ho pozná, ale skúška z neho neťahá.
+   Až pribudnú zhrnutia, zdvihni count a Trestné sa samo začne skúšať ako
+   plnohodnotná dvojica hmotné+procesné – bez zásahu do kódu. */
+const CRIMINAL_PROCESNE_COUNT = 0;
+
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
    bez zásahu do existujúcich záznamov.
@@ -86,6 +102,13 @@ const AREA_CONFIG = {
     pools: [
       { path: CIVIL_HMOTNE_PATH, count: CIVIL_HMOTNE_COUNT, label: 'Hmotné právo', progressAreaTitle: 'Občianske právo hmotné' },
       { path: CIVIL_PROCESNE_PATH, count: CIVIL_PROCESNE_COUNT, label: 'Procesné právo', progressAreaTitle: 'Občianske právo procesné' }
+    ]
+  },
+  [CRIMINAL_AREA_NAME]: {
+    mode: 'dual-pool',
+    pools: [
+      { path: CRIMINAL_HMOTNE_PATH, count: CRIMINAL_HMOTNE_COUNT, label: 'Hmotné právo', progressAreaTitle: 'Trestné právo hmotné' },
+      { path: CRIMINAL_PROCESNE_PATH, count: CRIMINAL_PROCESNE_COUNT, label: 'Procesné právo', progressAreaTitle: 'Trestné právo procesné' }
     ]
   },
   [EU_AREA_NAME]: {
@@ -447,10 +470,22 @@ function findAreaPoolInfo(areaTitle) {
     }
     if (config.mode === 'dual-pool') {
       const pool = config.pools.find(p => p.progressAreaTitle === areaTitle);
-      if (pool) return { path: pool.path, label: pool.label };
+      if (pool) return { path: pool.path, label: pool.label, count: pool.count };
     }
   }
   return null;
+}
+
+/* Všetky bazény jednej oblasti siene (pre doplnenie témy nižšie). Bazén s
+   count === 0 je vedome prázdny – oblasť ho pozná, ale zatiaľ preň niet
+   skúškového obsahu (dnes Trestné procesné). */
+function poolsOfArea(areaName) {
+  const config = AREA_CONFIG[areaName];
+  if (!config) return [];
+  if (config.mode === 'pair') {
+    return [{ path: config.pool.path, count: config.pool.count, label: null }];
+  }
+  return config.pools.map(p => ({ path: p.path, count: p.count, label: p.label }));
 }
 
 /* Preloží zdieľaný výber (shared.sources – dve { area, key } dvojice,
@@ -458,25 +493,77 @@ function findAreaPoolInfo(areaTitle) {
    staval pickExamTopics cez fetchOkruh – render/gradeAnswer/záver sa
    nemenia, dostávajú rovnaké objekty ako dnes.
 
-   Vráti [] pri AKOMKOĽVEK zlyhaní (neznáma oblasť v lookupe, fetchOkruh
-   vráti null čo i len pre jeden z dvoch okruhov) – volajúci (openStatniceHall)
-   to musí ošetriť identicky ako dnešné topics.length < 2 (refund, nespustiť).
-   Táto funkcia sama NIKDY nevracia čiastočný/neúplný pár. */
-async function buildTopicsFromSharedSelection(shared) {
+   HYBRIDNÉ DOPLNENIE (2026-08, „cesta A hybridne"): ak sa zo zdieľanej
+   dvojice podarí načítať len JEDNU tému, druhá sa dobrá z bazénov TEJ ISTEJ
+   oblasti, ktoré skúškový obsah majú. Dôvod: Aréna ponúka „Trestné právo"
+   ako dvojicu hmotné+procesné, ale procesné zatiaľ nemá ani jedno zhrnutie –
+   bez doplnenia by každý pokus skončil strhnutím a vrátením 15 § a hláškou
+   „Komisia nie je dostupná“. Akonáhle procesné zhrnutia dostane (stačí zdvihnúť
+   `count` v AREA_CONFIG), obe témy sa načítajú zo zdieľanej dvojice a doplnenie
+   sa už nespustí – žiadna ďalšia zmena kódu.
+
+   Rozlišuje sa PREČO téma nevyšla:
+   - zdroj nemá skúškový obsah (neznámy bazén, count 0, okruh mimo rozsahu)
+     → doplní sa náhradná téma,
+   - bazén aj okruh sú v poriadku, ale fetchOkruh zlyhal (sieť, rozbitý JSON)
+     → vráti sa [] a volajúci refunduje ako doteraz.
+   Bez tohto rozlíšenia by hráč, ktorému pojednávanie vytiahlo napr. hmotný
+   okruh A22 (mimo skúškového rozsahu), dostal strhnutie a vrátenie § namiesto
+   skúšky – teda presne ten problém, ktorý má doplnenie riešiť.
+
+   `count` v AREA_CONFIG je zároveň hranica SKÚŠKOVÉHO obsahu: okruh mimo
+   rozsahu sa nepoužije ani zo zdieľanej dvojice, aj keby súbor existoval
+   (napr. Trestné hmotné má 30 súborov, ale zhrnutia zatiaľ len A1–A13). */
+async function buildTopicsFromSharedSelection(shared, areaName) {
+  const used = new Set();
+  let hadRealFailure = false;
+
   const results = await Promise.all(shared.sources.map(async (source) => {
     const info = findAreaPoolInfo(source.area);
-    if (!info) return null;
+    if (!info || info.count === 0) return null;          // bazén bez skúškového obsahu
     const n = Number(String(source.key).replace(/^A/, ''));
     if (!Number.isFinite(n)) return null;
+    if (typeof info.count === 'number' && (n < 1 || n > info.count)) return null; // mimo rozsahu
     const topic = await fetchOkruh(info.path, n);
-    if (topic && info.label) topic.label = info.label;
+    if (!topic) { hadRealFailure = true; return null; }  // platný okruh, ale nenačítal sa
+    used.add(`${info.path}A${n}`);
+    if (info.label) topic.label = info.label;
     return topic;
   }));
 
-  if (results.some(t => !t)) return [];
+  const topics = results.filter(Boolean);
+  if (hadRealFailure) return [];
 
-  console.log('[ŠTÁTNICE] Témy zo zdieľaného výberu:', shared.area, `[${shared.mode}]`, results.map(t => t.id).join('+'));
-  return results;
+  if (topics.length < 2) {
+    const candidates = [];
+    poolsOfArea(areaName)
+      .filter(p => p.count > 0)
+      .forEach(p => { for (let n = 1; n <= p.count; n++) candidates.push({ ...p, n }); });
+    // Fisher–Yates, nech doplnená téma nie je vždy tá istá.
+    for (let i = candidates.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+    }
+    // Strop pokusov: pri oblasti s desiatkami okruhov by sériové fetchovanie
+    // až do vyčerpania zbytočne zdržalo štart skúšky.
+    let attempts = 0;
+    for (const c of candidates) {
+      if (topics.length >= 2 || attempts >= 8) break;
+      const id = `${c.path}A${c.n}`;
+      if (used.has(id)) continue;
+      attempts++;
+      const topic = await fetchOkruh(c.path, c.n);
+      if (!topic) continue;
+      used.add(id);
+      if (c.label) topic.label = c.label;
+      topics.push(topic);
+    }
+    if (topics.length < 2) return [];
+    console.log('[ŠTÁTNICE] Druhá téma doplnená z bazéna oblasti:', areaName, topics.map(t => t.id).join('+'));
+  }
+
+  console.log('[ŠTÁTNICE] Témy zo zdieľaného výberu:', shared.area, `[${shared.mode}]`, topics.map(t => t.id).join('+'));
+  return topics;
 }
 
 /* ============================================================
@@ -1282,7 +1369,7 @@ export async function openStatniceHall(areaName) {
     return;
   }
 
-  const topics = await buildTopicsFromSharedSelection(shared);
+  const topics = await buildTopicsFromSharedSelection(shared, areaName);
   if (topics.length < 2) {
     // vráť § – skúška sa nedá spustiť (nepodarilo sa načítať oba zdieľané
     // okruhy / neznáma oblasť v lookupe) – NEZMENENÉ oproti pred 4b,
