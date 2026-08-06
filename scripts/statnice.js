@@ -66,18 +66,14 @@ const EU_OKRUH_COUNT = 38; // rovnaký limit ako data.js (A1-A38, jeden bazén b
 const CRIMINAL_AREA_NAME = 'Trestné právo';
 const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
 /* ⚠️ count = koľko okruhov má SKÚŠKOVÝ obsah, nie koľko je súborov.
-   Hmotné má 30 súborov, ale zhrnutia (Firebase overidy od Babu) zatiaľ len
-   A1–A13; A14+ majú v repe iba krátke `theory` (~300 znakov), z ktorého by
-   vznikli núdzové vety namiesto kľúčových bodov. Po doplnení ďalších zhrnutí
-   stačí zdvihnúť toto číslo. */
-const CRIMINAL_HMOTNE_COUNT = 13;
+   Kritérium: okruh má vo Firebase zhrnutie, z ktorého extractKeyPoints vráti
+   aspoň jeden bod. Hmotné spĺňa všetkých 30 (overené 2026-08-06). */
+const CRIMINAL_HMOTNE_COUNT = 30;
 const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
-/* Procesné nemá zatiaľ ANI JEDNO zhrnutie – súbory majú len quiz/tiles/cases,
-   žiadne `summary` ani `theory`, a vo Firebase preň nie je override. Bazén je
-   preto vedome prázdny (count 0): oblasť ho pozná, ale skúška z neho neťahá.
-   Až pribudnú zhrnutia, zdvihni count a Trestné sa samo začne skúšať ako
-   plnohodnotná dvojica hmotné+procesné – bez zásahu do kódu. */
-const CRIMINAL_PROCESNE_COUNT = 0;
+/* Procesné: zhrnutia má A1–A8, ale zhrnutie pri A8 obsahovo patrí k A7
+   (súbor A8 je „Procesné úkony…", zhrnutie hovorí o poškodenom a obeti) –
+   do skúšky preto ide len súvislý rozsah A1–A7. Po oprave A8 zdvihni na 8. */
+const CRIMINAL_PROCESNE_COUNT = 7;
 
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
@@ -344,16 +340,24 @@ function significantWords(text) {
 function extractKeyPoints(rawSummary, title) {
   const text = String(rawSummary || '');
 
-  /* Dva tvary nadpisu, obe od autorky obsahu:
+  /* Tri tvary nadpisu, všetky od autorky obsahu:
      - staršie zhrnutia (Pracovné, Občianske, EÚ): „Kľúčové slová (štátnicové):"
-     - novšie (Trestné hmotné A1–A13):            „Zapamätaj si (štátnicové jadro)"
-     Druhý nadpis NEMÁ dvojbodku a sekcia končí až pri „Zdroj", preto vlastný
-     vzor, nie rozšírenie prvého. Poradie je zámerné: prvý vzor sa skúša
-     najskôr, takže pre existujúce oblasti sa správanie nemení vôbec.
+     - Trestné hmotné:                            „Zapamätaj si (štátnicové jadro)"
+     - Trestné procesné:                          „Zhrnutie (štátnicové jadro)"
+     Druhý a tretí nadpis NEMAJÚ dvojbodku a sekcia končí až pri „Zdroj", preto
+     majú vlastné vzory, nie rozšírenie prvého. Poradie je zámerné: prvý vzor sa
+     skúša najskôr, takže pre existujúce oblasti sa správanie nemení vôbec.
      Texty autorky sa nijako neupravujú – prispôsobuje sa parser. */
   const sectionMatch =
        text.match(/Kľúčové slová[^:]*:\s*\n([\s\S]*?)(?=\n\nZapamätaj si|\n\n$|$)/i)
-    || text.match(/Zapamätaj si[^\n:]*:?[ \t]*\n([\s\S]*?)(?=\n\nZdroj|\n\n$|$)/i);
+    || text.match(/Zapamätaj si[^\n:]*:?[ \t]*\n([\s\S]*?)(?=\n\nZdroj|\n\n$|$)/i)
+    /* ⚠️ „Zhrnutie (štátnicové jadro)" má INÚ polohu než predošlé dva: nestojí
+       na konci ako zoznam odrážok, ale HORE, hneď za úvodným odstavcom, a
+       nasleduje ho jeden hutný odstavec jadra – až potom ide celý rozpísaný
+       text okruhu. Preto sa berie len po PRVÝ prázdny riadok, nie po „Zdroj";
+       inak by sa ako „kľúčové body" zobral celý okruh (namerané: 30 bodov pri
+       TPP A1 namiesto jadra). */
+    || text.match(/Zhrnutie[^\n:]*:?[ \t]*\n([\s\S]*?)(?=\n[ \t]*\n|$)/i);
 
   if (sectionMatch) {
     const rawLines = sectionMatch[1]
