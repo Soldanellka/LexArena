@@ -726,10 +726,9 @@ const LEX_GUIDE_SEEN_KEY = 'lexGuideSeen';
    "STREAK.BASE.0", "STATNICE.EXAM_REWARD.1"); cesta sa rozloží po bodkách aj
    cez polia/číselné kľúče. Neznáma cesta → console.warn + pomlčka (NIE 0, aby
    sa hráčovi neukázala nepravdivá nula). Beží pri každom otvorení návodu. */
-function fillGuideEconomyValues() {
-  const modal = $('guideModal');
-  if (!modal) return;
-  modal.querySelectorAll('[data-econ]').forEach(el => {
+function fillEconomyValues(root) {
+  if (!root) return;
+  root.querySelectorAll('[data-econ]').forEach(el => {
     const path = el.getAttribute('data-econ');
     const val = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), ECONOMY_CONFIG);
     if (typeof val === 'number') {
@@ -739,15 +738,27 @@ function fillGuideEconomyValues() {
          "−" použitého v tabuľke. Jedno pravidlo pre všetky data-econ miesta. */
       el.textContent = String(Math.abs(val));
     } else {
-      console.warn(`guideModal: neznáma data-econ cesta "${path}" – ponechávam pomlčku`);
+      console.warn(`data-econ: neznáma cesta "${path}" – ponechávam pomlčku`);
       el.textContent = '—';
     }
   });
 }
 
+/* Návod – beží pri každom otvorení. */
+function fillGuideEconomyValues() {
+  fillEconomyValues($('guideModal'));
+}
+
+/* Statické miesta MIMO návodu – celá herná sekcia (dlaždica Štátnice aj
+   vysvetľujúci odstavec pod mriežkou). Raz po načítaní DOM, rovnaký zdroj
+   pravdy, žiadna § suma v HTML natvrdo. */
+function fillStaticEconomyValues() {
+  fillEconomyValues($('gamesSection'));
+}
+
 /* To isté pre prahy pečatí (data-seal="bronze.min"), len zo scripts/seals.js
    namiesto ECONOMY_CONFIG – pečate nie sú § ani energia, majú vlastný zdroj.
-   Oddelená funkcia, nie ďalšia vetva vo fillGuideEconomyValues(), aby bolo
+   Oddelená funkcia, nie ďalšia vetva vo fillEconomyValues(), aby bolo
    z volajúceho aj z warningu vidieť, ktorý config zlyhal. */
 function fillGuideSealValues() {
   const modal = $('guideModal');
@@ -3782,6 +3793,27 @@ function attachEvents() {
     });
   } else {
     console.warn('⚠️ toggleDuelBankBtn alebo duelBank element sa nenašiel v DOM.');
+  }
+
+  // Cena štátnice na dlaždici – z ECONOMY_CONFIG, nie natvrdo v HTML.
+  fillStaticEconomyValues();
+
+  /* ⚔️ Dlaždica Výzvy → register pojednávaní.
+     Register je karta v TEJ ISTEJ množine (pod hernou dlaždicou), takže stačí
+     naň zroloval a rozbaliť zoznam. Zoznam sa rozbaľuje VŽDY (nie prepínačom),
+     lebo hráč sem prišiel práve preň – zbalený zoznam by pôsobil, že klik
+     nespravil nič. uncollapseSection rieši mobilný zbalený stav karty. */
+  const openDuelBankTile = $('openDuelBankTile');
+  if (openDuelBankTile && duelBankBox) {
+    openDuelBankTile.addEventListener('click', () => {
+      uncollapseSection('duelbank');
+      if (duelBankBox.style.display === 'none') {
+        duelBankBox.style.display = 'block';
+        if (typeof window.renderDuelBank === 'function') window.renderDuelBank();
+      }
+      const card = $('duelBankCard');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 }
 

@@ -790,15 +790,14 @@ export function updateAvatarUI(energy, avatarType) {
     feedBtn.style.display = isSleeping ? 'inline-flex' : 'none';
   }
 
-  // Duel button blokovanie – vrátane „Vyzvi spolužiaka“, ktorý spúšťa to isté
-  // pojednávanie (inak by sa spiaci avatar dal obísť druhým tlačidlom).
-  ['startQuizBtn', 'challengeFriendBtn'].forEach(id => {
-    const b = document.getElementById(id);
-    if (b && isSleeping) {
-      b.disabled = true;
-      b.title = 'Avatar spí – nakŕm ho!';
-    }
-  });
+  /* Duel button blokovanie. Dlaždicu Výzvy (#openDuelBankTile) sem ZÁMERNE
+     nepridávaj – register je len zoznam, hru nespúšťa; samotné prijatie výzvy
+     si energiu overí cez econCanPlay v scripts/duels.js. */
+  const startDuelBtn = document.getElementById('startQuizBtn');
+  if (startDuelBtn && isSleeping) {
+    startDuelBtn.disabled = true;
+    startDuelBtn.title = 'Avatar spí – nakŕm ho!';
+  }
 
   window.__currentAvatarEnergy = energy;
   window.__currentAvatarType = avatarType;

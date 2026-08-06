@@ -264,16 +264,11 @@ async function applyOkruhPairSelection(areaName, mode) {
     hint.innerHTML = `<span class="games-hint-dot"></span><strong>${areaName}</strong> – vyberám okruhy…`;
   }
 
-  /* Kým sa nevyberie nová dvojica, nedovoľ spustiť pojednávanie so starou (z inej
-     oblasti/režimu). Platí rovnako pre „Vyzvi spolužiaka“ – je to to isté
-     pojednávanie, len sa po ňom sám ponúkne zdieľací krok, takže musí mať
-     ROVNAKÝ životný cyklus ako #startQuizBtn (inak by sa dalo spustiť s
-     otázkami z predošlej oblasti). */
-  const CTA_IDS = ['startQuizBtn', 'challengeFriendBtn'];
-  CTA_IDS.forEach(id => {
-    const b = $(id);
-    if (b) { b.disabled = true; b.onclick = null; }
-  });
+  /* Kým sa nevyberie nová dvojica, nedovoľ spustiť pojednávanie so starou
+     (z inej oblasti/režimu). Dlaždica Výzvy (#openDuelBankTile) sem nepatrí –
+     register od výberu oblasti nezávisí a je aktívny vždy. */
+  const startBtnEarly = $('startQuizBtn');
+  if (startBtnEarly) { startBtnEarly.disabled = true; startBtnEarly.onclick = null; }
 
   await waitAreaLoaded(areaName);
   if (token !== okruhSelectionToken) return; // medzitým sa zvolila iná oblasť/režim
@@ -298,35 +293,13 @@ async function applyOkruhPairSelection(areaName, mode) {
       startBtn.onclick = null;
     } else {
       startBtn.disabled = false;
-      startBtn.textContent = 'Spustiť pojednávanie';
+      /* Text sa ZÁMERNE neprepisuje – #startQuizBtn je od prestavby na
+         dlaždice HTML blok (ikona/názov/popis) a textContent by ho zmazal.
+         Pôvodný zápis 'Spustiť pojednávanie' tu bol len preto, aby z popisku
+         zmizlo emoji, ktoré už aj tak nie je súčasťou textu. */
       startBtn.onclick = () => {
         console.log('Spúšťam duel pre oblasť:', areaName, 'okruhy:', result.keys);
         startDuel(areaName, result);
-      };
-    }
-  }
-
-  /* „Vyzvi spolužiaka“ – ten istý startDuel s tou istou dvojicou okruhov,
-     navyše len príznak, ktorý po dohraní vyvolá zdieľací krok (quiz.js).
-     Text sa ZÁMERNE neprepisuje ako pri #startQuizBtn – emoji ⚔️ tu nesie
-     význam „výzva“, kdežto pri sólo pojednávaní ho výber oblasti odstraňuje. */
-  const challengeBtn = $('challengeFriendBtn');
-  if (challengeBtn) {
-    if (result.empty || !result.questions.length) {
-      challengeBtn.disabled = true;
-      challengeBtn.onclick = null;
-    } else {
-      challengeBtn.disabled = false;
-      challengeBtn.onclick = () => {
-        console.log('Spúšťam výzvu spolužiakovi pre oblasť:', areaName, 'okruhy:', result.keys);
-        window.__challengeShareAfterQuiz = true;
-        /* startDuel() sa vie ticho vrátiť (vyčerpaný denný limit, prázdna
-           oblasť) – vtedy príznak zhoď, nech nezostane visieť na najbližšie
-           bežné pojednávanie. Rozpoznáva sa podľa toho, či hru naozaj
-           naštartoval (nastavuje window.duelQuestions). */
-        Promise.resolve(startDuel(areaName, result)).then(() => {
-          if (!window.duelQuestions) window.__challengeShareAfterQuiz = false;
-        });
       };
     }
   }
