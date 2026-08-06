@@ -133,5 +133,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti ľudskej dôstojnosti",
+    "branches": [
+      { "label": "Chránený záujem", "leaves": ["Sexuálna sloboda – právo rozhodovať o sexuálnom živote", "Integrita a autonómia – telesná a psychická nedotknuteľnosť", "Súhlas – absencia súhlasu ako základný prvok (redefinícia znásilnenia)"] },
+      { "label": "Sexuálne násilie", "leaves": ["Podstata – donútenie k sexuálnemu konaniu násilím alebo hrozbou", "Rozsah – aj bez fyzického odporu pri hrozbe či zneužití bezbrannosti", "Zásah – do sexuálnej slobody a telesnej integrity"] },
+      { "label": "Sexuálne zneužívanie", "leaves": ["Podstata – konanie voči osobe neschopnej dať platný súhlas", "Chránení – najmä deti do 15 rokov a osoby s duševnou poruchou", "Znak – zneužitie moci, autority alebo dôvery", "Európsky rámec – smernica 2011/93/EÚ o ochrane detí"] },
+      { "label": "Sexuálne obťažovanie", "leaves": ["Podstata – nežiaduce správanie sexuálnej povahy narúšajúce dôstojnosť", "Prostredie – ponižujúce, zastrašujúce alebo nepriateľské", "Právne zaradenie – nie samostatná skutková podstata; napĺňa znaky iných TČ"] }
+    ]
   }
 }

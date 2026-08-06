@@ -104,5 +104,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti slobode",
+    "branches": [
+      { "label": "Chránený záujem", "leaves": ["Osobná sloboda – autonómia a voľný pohyb človeka", "Slobodné rozhodovanie – vôľa bez protiprávneho nátlaku"] },
+      { "label": "Obmedzovanie osobnej slobody", "leaves": ["Podstata – protiprávne bránenie vo voľnom pohybe", "Formy – zadržiavanie proti vôli, bránenie v odchode, uzavretie v priestore", "Prekážky – fyzické aj psychické", "Znak – zásah do slobody pohybu bez potreby ďalšieho motívu"] },
+      { "label": "Vydieranie", "leaves": ["Podstata – nútenie konať, opomenúť alebo znášať", "Prostriedky – hrozba násilia, hrozba inej ťažkej ujmy, protiprávny nátlak", "Cieľ – prinútiť obeť konať proti svojej vôli", "Kontext – často spojené s organizovanou kriminalitou"] },
+      { "label": "Únos", "leaves": ["Podstata – protiprávne premiestnenie alebo zadržiavanie osoby", "Znaky – odňatie z prostredia, premiestnenie, zadržiavanie proti vôli", "Kontext – často s nátlakom, vydieraním či násilím", "Závažnosť – jeden z najzávažnejších zásahov do slobody"] }
+    ]
   }
 }

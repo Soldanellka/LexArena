@@ -108,5 +108,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti zdraviu × ohrozovacie delikty",
+    "branches": [
+      { "label": "Ublíženie na zdraví", "leaves": ["Podstata – porucha zdravia či ochorenie, nie len prechodné a bezvýznamné", "Znaky – vyžaduje lekárske ošetrenie, obmedzuje obvyklý spôsob života", "Trvanie – spravidla viac ako 7 dní", "Zavinenie – úmyselné aj nedbanlivostné formy"] },
+      { "label": "Ťažká ujma na zdraví", "leaves": ["Podstata – závažné poškodenie zdravia s dlhodobými následkami", "Formy – zmrzačenie, ochromenie údu, strata či oslabenie funkcie orgánu", "Ďalšie formy – dlhodobá alebo ťažká porucha zdravia, ohrozenie života", "Závažnosť – vysoké trestné sadzby"] },
+      { "label": "Ohrozovacie delikty", "leaves": ["Podstata – vytvorenie reálneho nebezpečenstva smrti či vážnej ujmy, bez následku", "Neoprávnený experiment na človeku – zásah do integrity bez povolenia", "Šírenie nebezpečnej nákazlivej choroby – úmyselne aj z nedbanlivosti", "Ohrozovanie závadnými potravinami a nepovolenými liečivami – ochrana verejného zdravia"] },
+      { "label": "Neposkytnutie pomoci", "leaves": ["Podstata – neposkytne pomoc osobe v nebezpečenstve smrti či vážnej ujmy", "Podmienka – mohol pomôcť bez ohrozenia seba alebo iného", "Charakter – typický ohrozovací delikt, povinnosť solidarity"] }
+    ]
   }
 }

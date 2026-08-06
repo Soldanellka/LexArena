@@ -9,7 +9,7 @@
     { "id": "sankcie", "label": "Sankcie", "okruhy": [11, 12, 15] },
     { "id": "mladistvi", "label": "Mladiství", "okruhy": [13] },
     { "id": "europsky-rozmer", "label": "Európsky rozmer", "okruhy": [16] },
-    { "id": "osobitna-cast", "label": "Osobitná časť", "okruhy": [17] }
+    { "id": "osobitna-cast", "label": "Osobitná časť", "okruhy": [17, 18, 19, 20, 21] }
   ],
   "links": [
     { "from": 2, "to": 3, "note": "Druhy trestných činov napĺňajú skutkové podstaty" },
@@ -26,6 +26,11 @@
     { "from": 15, "to": 11, "note": "Zánik trestu nadväzuje na jeho ukladanie" },
     { "from": 16, "to": 1, "note": "Európsky rámec zásad trestného práva" },
     { "from": 17, "to": 3, "note": "Skutkové podstaty osobitnej časti" },
-    { "from": 17, "to": 6, "note": "Úmysel × nedbanlivosť rozlišuje vraždu a usmrtenie" }
+    { "from": 17, "to": 6, "note": "Úmysel × nedbanlivosť rozlišuje vraždu a usmrtenie" },
+    { "from": 18, "to": 17, "note": "Susedné hodnoty: život a zdravie" },
+    { "from": 18, "to": 4, "note": "Poruchový × ohrozovací následok v praxi" },
+    { "from": 19, "to": 20, "note": "Sloboda a dôstojnosť – príbuzné chránené záujmy" },
+    { "from": 20, "to": 16, "note": "Smernica 2011/93/EÚ – európsky rámec ochrany detí" },
+    { "from": 21, "to": 13, "note": "Ochrana detí: obete (A21) × páchatelia (A13)" }
   ]
 }
