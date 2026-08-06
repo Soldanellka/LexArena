@@ -850,14 +850,16 @@
           <p>Našiel/Našla si právnu nezrovnalosť? Tlačidlo na nahlásenie nájdeš pri
           každej otázke v kvíze, pod zhrnutím okruhu aj pri krokoch prípadov z praxe –
           navrhneš správne znenie a právnicky ho zdôvodníš. Nahlásenie
-          putuje do Súdnej siene, kde môžu ostatní hlasovať a komentovať. Garant alebo
-          admin vydá verdikt s odôvodnením, ktoré vidí celá komunita.</p>
+          putuje do Súdnej siene, kde môžu ostatní hlasovať a komentovať. Verdikt vydá
+          garant (podpísaný, s odôvodnením) alebo admin (bez podpisu, len výsledok).</p>
           <p>Za schválené nahlásenia zbieraš pečate:</p>
           <table class="guide-table">
             <tr><th>Pečať</th><th>Podmienka</th></tr>
-            <tr><td>🥉 Bronzová</td><td>1. schválené nahlásenie</td></tr>
-            <tr><td>🥈 Strieborná</td><td>5 schválených</td></tr>
-            <tr><td>🥇 Zlatá</td><td>15 schválených</td></tr>
+            <!-- Čísla dopĺňa fillGuideSealValues() z scripts/seals.js (rovnaký
+                 zdroj, z akého sa pečate udeľujú) – nikdy ich sem nepíš ručne. -->
+            <tr><td>🥉 Bronzová</td><td><span data-seal="bronze.min"></span>. schválené nahlásenie</td></tr>
+            <tr><td>🥈 Strieborná</td><td><span data-seal="silver.min"></span> schválených</td></tr>
+            <tr><td>🥇 Zlatá</td><td><span data-seal="gold.min"></span> schválených</td></tr>
             <tr><td>🎓 Akademická</td><td>garant (automaticky)</td></tr>
           </table>
           <p>Pečať sa zobrazuje aj pri auditovanej otázke – vieš, že prešla kontrolou
@@ -931,6 +933,7 @@
 <!-- REPORTS SYSTEM – inline pre spoľahlivé načítanie -->
 <script type="module">
 import { renderSource } from './scripts/sourceUtil.js';
+import { SEAL_EMOJI, getSealType } from './scripts/seals.js';
 
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
@@ -939,22 +942,10 @@ async function fbImport() {
   return await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js");
 }
 
-/* ── PEČATE ── */
-const SEALS = {
-  bronze:   { label: '🥉 Bronzová pečať',   min: 1,  max: 4 },
-  silver:   { label: '🥈 Strieborná pečať', min: 5,  max: 14 },
-  gold:     { label: '🥇 Zlatá pečať',      min: 15, max: Infinity },
-  academic: { label: '🎓 Akademická pečať' } // garant/admin automaticky, bez počítania
-};
-const SEAL_EMOJI = { bronze: '🥉', silver: '🥈', gold: '🥇', academic: '🎓' };
-
-function getSealType(approvedCount, role) {
-  if (role === 'garant' || role === 'admin') return 'academic';
-  if (approvedCount >= SEALS.gold.min) return 'gold';
-  if (approvedCount >= SEALS.silver.min) return 'silver';
-  if (approvedCount >= SEALS.bronze.min) return 'bronze';
-  return null;
-}
+/* ── PEČATE ──
+   Prahy aj getSealType() sa presunuli do scripts/seals.js, aby ich mohol
+   importovať aj návod (tabuľka prahov sa odtiaľ vypĺňa za behu) a čísla
+   sa nemali kde rozísť. Správanie sa presunom nemení. */
 
 /* Skutočná rola (Firebase), nie lokálny "view" prepínač – ten sa dá zmeniť
    v UI len na náhľad iných rolí a nesmie ovplyvniť schvaľovacie práva. */

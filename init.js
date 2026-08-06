@@ -13,6 +13,7 @@ import { initDuelLeaderboard } from './scripts/leaderboard.js';
 import { watchDuelBankBadge, announceOwnDuelResults } from './scripts/duels.js';
 import { initAvatarSystem, selectAvatar, getTalarShopEntries, buyTalar, getBaseIdFor } from './scripts/avatar.js';
 import { scrollToTarget, uncollapseSection } from './mobile-nav.js';
+import { SEALS } from './scripts/seals.js';
 import {
   econSettleLeaderboards, econVideoReward, econIsVideoClaimed, econCanPlay, ECONOMY_CONFIG,
   econAdStatus, econAdComplete, econRedeemCode
@@ -740,10 +741,30 @@ function fillGuideEconomyValues() {
   });
 }
 
+/* To isté pre prahy pečatí (data-seal="bronze.min"), len zo scripts/seals.js
+   namiesto ECONOMY_CONFIG – pečate nie sú § ani energia, majú vlastný zdroj.
+   Oddelená funkcia, nie ďalšia vetva vo fillGuideEconomyValues(), aby bolo
+   z volajúceho aj z warningu vidieť, ktorý config zlyhal. */
+function fillGuideSealValues() {
+  const modal = $('guideModal');
+  if (!modal) return;
+  modal.querySelectorAll('[data-seal]').forEach(el => {
+    const path = el.getAttribute('data-seal');
+    const val = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), SEALS);
+    if (typeof val === 'number') {
+      el.textContent = String(val);
+    } else {
+      console.warn(`guideModal: neznáma data-seal cesta "${path}" – ponechávam pomlčku`);
+      el.textContent = '—';
+    }
+  });
+}
+
 function openGuideModal() {
   const modal = $('guideModal');
   if (!modal) return;
   fillGuideEconomyValues();
+  fillGuideSealValues();
   modal.style.display = 'flex';
 
   if (!localStorage.getItem(LEX_GUIDE_SEEN_KEY)) {
