@@ -131,34 +131,86 @@ async function ghPatch(path, token, body) {
   return res.json();
 }
 
+/* Validný tvar pavúka – prenesené z isValidSpider() v
+   scripts/spiderOverrides.js. Nevalidný override sa NEAPLIKUJE (a teda ani
+   neoznačí za vybavený), nech sa pokazeným tvarom nedá prepísať súbor v repe. */
+function isValidSpider(sp) {
+  return !!sp && typeof sp === 'object'
+    && (sp.center === undefined || sp.center === null || typeof sp.center === 'string')
+    && Array.isArray(sp.branches)
+    && sp.branches.every(b =>
+        b && typeof b.label === 'string'
+        && Array.isArray(b.leaves)
+        && b.leaves.every(l => typeof l === 'string'));
+}
+
 /* Rovnaká logika ako applyContentOverrides() v scripts/contentOverrides.js
+   (+ applySpiderOverride() v scripts/spiderOverrides.js pre cast 'spider')
    – zámerne duplikovaná (server nemá bundler na import ESM z klienta),
-   udržiavať zosynchronizované pri zmene formátu overridu. */
+   udržiavať zosynchronizované pri zmene formátu overridu.
+
+   Vracia { result, applied }, kde `applied` je zoznam castov, ktoré sa naozaj
+   premietli do výsledku. Volajúci podľa neho označuje `committed` – dovtedy
+   sa označovali VŠETKY casty okruhu, takže cast, ktorý táto funkcia nepozná
+   (predtým 'spider' a 'tile_*') alebo nemá kam sadnúť (index mimo poľa), sa
+   označil za vybavený bez zapísania a zo syncu navždy zmizol.
+
+   `_seal` sa do súboru ZÁMERNE nepíše – je to zobrazovacia meta, ktorú si
+   klient odvodí z overridu vo Firebase (ten sa nemaže, len značkuje). */
 function applyOverrides(json, overridesForOkruh) {
-  if (!overridesForOkruh || !Object.keys(overridesForOkruh).length) return json;
+  const applied = [];
+  if (!overridesForOkruh || !Object.keys(overridesForOkruh).length) return { result: json, applied };
   const result = Object.assign({}, json);
 
   const summaryOv = overridesForOkruh.summary;
   if (summaryOv && summaryOv.novyObsah && typeof summaryOv.novyObsah.summary === 'string') {
     result.summary = summaryOv.novyObsah.summary;
+    applied.push('summary');
   }
+
+  /* Pavúk: json.spider = {center, branches[]} – rovnaké pole, aké číta
+     spider.js/spiderGames.js/spiderMap.js. Zapisuje sa aj do okruhu, ktorý
+     zatiaľ žiadny json.spider nemá (override ho práve zavádza). */
+  const spiderOv = overridesForOkruh.spider;
+  if (spiderOv && spiderOv.novyObsah && isValidSpider(spiderOv.novyObsah.spider)) {
+    result.spider = spiderOv.novyObsah.spider;
+    applied.push('spider');
+  }
+
   if (Array.isArray(json.quiz)) {
     result.quiz = json.quiz.map((q, i) => {
       const ov = overridesForOkruh[`quiz_${i}`];
-      return (ov && ov.novyObsah) ? Object.assign({}, q, ov.novyObsah) : q;
+      if (!ov || !ov.novyObsah) return q;
+      applied.push(`quiz_${i}`);
+      return Object.assign({}, q, ov.novyObsah);
     });
   }
+
+  /* Dlaždice (term/definition/zdroj) – per-index vzor ako quiz vyššie.
+     Klient ich prekrýval už dávno, server nie; teraz paritne. */
+  if (Array.isArray(json.tiles)) {
+    result.tiles = json.tiles.map((t, i) => {
+      const ov = overridesForOkruh[`tile_${i}`];
+      if (!ov || !ov.novyObsah) return t;
+      applied.push(`tile_${i}`);
+      return Object.assign({}, t, ov.novyObsah);
+    });
+  }
+
   if (Array.isArray(json.cases)) {
     result.cases = json.cases.map((c, ci) => {
       if (!Array.isArray(c.steps)) return c;
       const steps = c.steps.map((s, si) => {
         const ov = overridesForOkruh[`case_${ci}_step_${si}`];
-        return (ov && ov.novyObsah) ? Object.assign({}, s, ov.novyObsah) : s;
+        if (!ov || !ov.novyObsah) return s;
+        applied.push(`case_${ci}_step_${si}`);
+        return Object.assign({}, s, ov.novyObsah);
       });
       return Object.assign({}, c, { steps });
     });
   }
-  return result;
+
+  return { result, applied };
 }
 
 module.exports = async (req, res) => {
@@ -223,21 +275,44 @@ module.exports = async (req, res) => {
     const baseCommit = await ghGet(`/repos/${owner}/${repo}/git/commits/${baseCommitSha}`, ghToken);
     const baseTreeSha = baseCommit.tree.sha;
 
-    // 2) Pre každý dotknutý okruh: pôvodný JSON + navrstvenie -> nový blob.
+    /* 2) Pre každý dotknutý okruh: pôvodný JSON + navrstvenie -> nový blob.
+       `appliedByOkruh` si drží, ktoré casty sa naozaj zapísali – krok 6 nižšie
+       podľa neho značkuje. Okruh, z ktorého sa neaplikovalo NIČ, sa preskočí
+       úplne (žiadny blob, žiadny záznam v strome) – inak by vznikol commit,
+       ktorý nemení ani bajt. */
     const treeEntries = [];
     const filesChanged = [];
+    const appliedByOkruh = {};
+    const skipped = [];
     for (const a of affected) {
       const fileRes = await ghGet(
         `/repos/${owner}/${repo}/contents/${encodeURIComponent(AREA_PATHS[a.app]).replace(/%2F/g, '/')}${a.okruh}.json?ref=${branch}`,
         ghToken
       );
       const original = JSON.parse(Buffer.from(fileRes.content, 'base64').toString('utf8'));
-      const merged = applyOverrides(original, overridesByApp[a.app][a.okruh]);
-      const content = JSON.stringify(merged, null, 2) + '\n';
+      const { result: merged, applied } = applyOverrides(original, overridesByApp[a.app][a.okruh]);
 
+      const pendingApplied = applied.filter(cast => {
+        const ov = overridesByApp[a.app][a.okruh][cast];
+        return ov && !ov.committed;
+      });
+      if (!pendingApplied.length) {
+        skipped.push({ path: a.path, reason: 'žiadny z nevybavených overridov sa nedal zapísať' });
+        continue;
+      }
+
+      const content = JSON.stringify(merged, null, 2) + '\n';
       const blob = await ghPost(`/repos/${owner}/${repo}/git/blobs`, ghToken, { content, encoding: 'utf-8' });
       treeEntries.push({ path: a.path, mode: '100644', type: 'blob', sha: blob.sha });
       filesChanged.push(a.path);
+      appliedByOkruh[`${a.app}/${a.okruh}`] = pendingApplied;
+    }
+
+    if (!treeEntries.length) {
+      return res.status(200).json({
+        ok: true, committed: false, files: [], overridesBaked: 0, skipped,
+        message: 'Nič sa nedalo zapísať – žiadny commit nevznikol, overridy ostávajú nevybavené.'
+      });
     }
 
     // 3) Nový strom + 4) commit (zatiaľ nedotknuté v hlavnej vetve).
@@ -254,20 +329,22 @@ module.exports = async (req, res) => {
     //    nedotknutá a Firebase overridy ostávajú nezmenené.
     await ghPatch(`/repos/${owner}/${repo}/git/refs/heads/${branch}`, ghToken, { sha: commit.sha });
 
-    // 6) Označ zapečené overridy ako "committed" (nemažú sa, aby bola
-    //    história dohľadateľná; opakovaný beh ich preskočí).
+    /* 6) Označ zapečené overridy ako "committed" (nemažú sa, aby bola
+       história dohľadateľná; opakovaný beh ich preskočí).
+       Značkujú sa VÝHRADNE casty z appliedByOkruh, teda tie, ktoré applyOverrides
+       naozaj premietla do blobu. Cast, ktorý sa zapísať nedal, ostáva `false` a
+       objaví sa v ďalšom náhľade znova – radšej opakovane viditeľný než ticho
+       stratený. */
     let overridesBaked = 0;
-    for (const a of affected) {
-      const casts = overridesByApp[a.app][a.okruh];
-      for (const castKey of Object.keys(casts)) {
-        if (casts[castKey] && !casts[castKey].committed) {
-          await markOverrideCommitted(googleToken, dbUrl, a.app, a.okruh, castKey, commit.sha);
-          overridesBaked++;
-        }
+    for (const key of Object.keys(appliedByOkruh)) {
+      const [app, okruh] = key.split('/');
+      for (const castKey of appliedByOkruh[key]) {
+        await markOverrideCommitted(googleToken, dbUrl, app, okruh, castKey, commit.sha);
+        overridesBaked++;
       }
     }
 
-    return res.status(200).json({ ok: true, committed: true, files: filesChanged, overridesBaked, commitSha: commit.sha });
+    return res.status(200).json({ ok: true, committed: true, files: filesChanged, overridesBaked, skipped, commitSha: commit.sha });
   } catch (e) {
     return res.status(500).json({ ok: false, error: e.message || String(e) });
   }
