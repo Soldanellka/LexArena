@@ -57,28 +57,45 @@ async function spendParagrafyRemote(db, nick, amount) {
 }
 
 /* Dorovná denný strop zárobku pre daný nick. Vráti povolenú (prípadne
-   orezanú) sumu, alebo null ak je strop už vyčerpaný. */
-async function applyDailyCap(db, nick, amount) {
+   orezanú) sumu, alebo null ak sa nedá udeliť nič.
+
+   allOrNothing: pre JEDNORAZOVÉ odmeny, ktoré UI sľúbi celou sumou (video,
+   dashboard míľnik, reklama). Orezanie by tam znamenalo, že hráč vidí „+12§“
+   a dostane 5§ – alebo, pri jednorazovkách s príznakom, že o zvyšok príde
+   navždy. Preto sa buď zmestí celá suma, alebo sa nedá nič a nárok ostáva
+   na zajtra. Opakovateľné odmeny (duel, kvíz, senátny spor) orezanie znesú –
+   tam je čiastočná výplata lepšia než nič. */
+async function applyDailyCap(db, nick, amount, allOrNothing = false) {
   const cap = ECONOMY_CONFIG.LIMITS.DAILY_EARN_CAP;
   const capRef = ref(db, `users/${nick}/dailyEarned/${todayKey()}`);
   const snap = await get(capRef);
   const earned = snap.exists() ? snap.val() : 0;
+  const remaining = cap - earned;
 
-  if (earned >= cap) {
+  if (remaining <= 0 || (allOrNothing && remaining < amount)) {
     if (nick === getNick()) {
-      showRewardToast(`Dosiahol/a si dnešný limit ${cap}§ z aktivít. Streak, rebríčky a videá idú ďalej!`);
+      showRewardToast(`Dosiahol/a si dnešný limit ${cap}§ z aktivít. Streak, rebríčky a štátnica idú ďalej!`);
     }
     return null;
   }
 
-  const allowed = Math.min(amount, cap - earned);
+  const allowed = Math.min(amount, remaining);
   await set(capRef, earned + allowed);
   return allowed;
 }
 
 /* ============================================================
    1️⃣ econAward – pripíše §
-   opts.skipCap = true pre streak, rebríčky, videá, reklamy, granty
+
+   opts.skipCap = true SMÚ používať už len tri veci (ekonomika v1, viď
+   LIMITS v economyConfig.js): rebríčkové odmeny (LEADERBOARD, SENATY.LB_*,
+   FACULTIES), štátnicová sieň (odmena + vrátenie vkladu) a granty/promo od
+   admina. Streak cap nerieši vôbec – ide priamo cez awardParagrafy.
+   ⛔ Nepridávaj skipCap novým zdrojom bez rozhodnutia Babu; senátne spory,
+   dashboard míľniky, videá a reklama ho v1 stratili zámerne.
+
+   opts.allOrNothing = true pre jednorazovky, ktorých sumu UI sľúbi vopred –
+   buď celá, alebo nič (viď applyDailyCap vyššie).
 ============================================================ */
 export async function econAward(nick, amount, reason = '', opts = {}) {
   const db = getDb();
@@ -89,7 +106,7 @@ export async function econAward(nick, amount, reason = '', opts = {}) {
 
   let grantAmount = amount;
   if (!skipCap) {
-    grantAmount = await applyDailyCap(db, nick, amount);
+    grantAmount = await applyDailyCap(db, nick, amount, !!opts.allOrNothing);
     if (grantAmount === null) return null;
   }
   if (!grantAmount) return null;
@@ -174,8 +191,20 @@ export async function econVideoReward(videoId) {
     return false;
   }
 
+  /* Poradie je KRITICKÉ: odmena najprv, príznak „vyzdvihnuté“ až po nej.
+     Video je v1 v dennom strope (predtým ho obchádzalo) a odmena je
+     jednorazová na video a nick – keby sa príznak zapísal ako predtým PRED
+     econAward, hráč, ktorý má strop vyčerpaný, by o 12§ prišiel NAVŽDY a UI
+     by mu pritom sľubovalo odmenu. Rovnaký vzor, aký už používajú dashboard
+     míľniky (scripts/dashboardRewards.js). allOrNothing bráni orezaniu na
+     časť sumy. Pri neúspechu vraciame false → UI nechá tlačidlo aktívne a
+     hráč si odmenu vyzdvihne zajtra. */
+  const balanceAfter = await econAward(
+    nick, ECONOMY_CONFIG.REWARDS.VIDEO, 'za pozretie videa 🎬', { allOrNothing: true }
+  );
+  if (balanceAfter === null) return false;
+
   await set(claimedRef, true);
-  await econAward(nick, ECONOMY_CONFIG.REWARDS.VIDEO, 'za pozretie videa 🎬', { skipCap: true });
   return true;
 }
 
@@ -235,7 +264,18 @@ export async function econAdComplete() {
   // funkciu až po potvrdení od SDK, že reklama bola skutočne dopozeraná),
   // napr.: const result = await adProvider.showRewardedAd();
   //        if (!result.completed) return; // nevolaj econAdComplete()
-  await econAward(nick, ECONOMY_CONFIG.ADS.REWARD, 'za pozretie reklamy', { skipCap: true });
+
+  /* Reklama je v1 v dennom strope (predtým ho obchádzala). Denný slot je už
+     v tomto bode spotrebovaný transakciou vyššie, takže keď strop odmenu
+     nepustí, musíme ho VRÁTIŤ – inak by hráč prišiel aj o § aj o pokus.
+     allOrNothing: 3§ za 20 s pozerania nemá zmysel orezávať na 1§. */
+  const balanceAfter = await econAward(
+    nick, ECONOMY_CONFIG.ADS.REWARD, 'za pozretie reklamy', { allOrNothing: true }
+  );
+  if (balanceAfter === null) {
+    await runTransaction(countRef, (current) => Math.max(0, (current || 1) - 1));
+    return { success: false, reason: 'daily_cap' };
+  }
   return { success: true };
 }
 

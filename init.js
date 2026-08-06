@@ -125,7 +125,11 @@ async function openAvatarSelectModal() {
     { id: 'cat',       name: 'Právnická mačka', emoji: '🐱', base: 'avatars/macka', desc: `Za 3000§ celkovo (máš ${totalEarned}§)`, locked: totalEarned < 3000 },
     { id: 'owl',       name: 'Sova múdrosti',   emoji: '🦉', base: 'avatars/sova',  desc: `Za 100 nahlásení (máš ${acceptedReports})`, locked: acceptedReports < 100 },
     { id: 'dog',       name: 'Pes vernosti',    emoji: '🐶', base: 'avatars/pes',   desc: `Za 30 dní streaku (máš ${loginStreak})`, locked: loginStreak < 30 },
-    { id: 'prestige',  name: 'Prestige avatar',  emoji: '✨',   desc: `Čoskoro – od ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATAR_MIN}§`, locked: true, comingSoon: true },
+    /* Prestige rad má v ekonomike v1 štyri cenové tiery (SINKS.PRESTIGE_AVATARS
+       = 300/600/1000/2000§). Grafika zatiaľ neexistuje ani pre prvý tier, takže
+       dlaždica ostáva jedna a „čoskoro“; rozpätie sa berie z configu, nech sa
+       popis nerozíde s cenami. */
+    { id: 'prestige',  name: 'Prestige avatary',  emoji: '✨',   desc: `Čoskoro – ${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATARS[0]}–${ECONOMY_CONFIG.SINKS.PRESTIGE_AVATARS[ECONOMY_CONFIG.SINKS.PRESTIGE_AVATARS.length - 1]}§`, locked: true, comingSoon: true },
   ];
 
   // Spoločný zoznam pre klik handler (comingSoon check) – renderujú sa v dvoch mriežkach.
@@ -985,8 +989,9 @@ window.openVideo = function(videoId) {
 };
 
 // Reklama (placeholder existujúcimi náukovými videami) – náhodné video z
-// VIDEO_CONFIG, nech sa neopakuje stále to isté. Odmena +3§/3× deň cez
-// econAdComplete, nezávisle od jednorazovej náukovej odmeny +12§ vyššie.
+// VIDEO_CONFIG, nech sa neopakuje stále to isté. Odmena ide cez econAdComplete
+// (ADS.REWARD × ADS.DAILY_MAX denne, obe v economyConfig.js – sem ich nepíš),
+// nezávisle od jednorazovej náukovej odmeny REWARDS.VIDEO vyššie.
 window.openAdVideoModal = function() {
   showVideoModal(pickRandomVideoId(), 'ad');
 };

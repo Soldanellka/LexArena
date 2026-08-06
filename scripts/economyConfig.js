@@ -30,6 +30,35 @@
 import { ref, get, push }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
+/* ============================================================
+   ZÁSADY EKONOMIKY v1 (2026-08) – ZAMKNUTÉ, nemeniť bez Babu.
+
+   1. ŽIADNE PAY-TO-WIN. Za § sa NIKDY nekupuje výhoda v súťaži –
+      ani v rebríčku, ani v dueli, ani v senátnom spore. Za § sa dá
+      kúpiť výhradne: kozmetika (taláre, prestige avatari), poistky
+      (štít streaku), vstupy (štátnicová skúška) a nápovedy, ktoré
+      sú dostupné každému hráčovi za rovnakú cenu a v tej istej hre.
+      Nápoveda v štátnici si navyše sama zníži strop známky
+      (HINT_GRADE_FLOOR) – kupuje sa pomoc, nie lepší výsledok.
+      ⛔ Nikdy sem nepridávaj: kúpu § bonusu k skóre, kúpu miesta
+      v rebríčku, kúpu druhého pokusu v dueli, platené okruhy.
+
+   2. VSTUP DO BEŽNÝCH HIER JE ZADARMO. Kvíz, kartičky ani prípady sa
+      nespoplatňujú – učenie nesmie byť za peniaze. SINKS.QUIZ_ENTRY
+      je preto MŔTVA hodnota (žiadny volajúci) a mŕtva ostáva; nemazať,
+      aby sa omylom nezaviedla znova ako "chýbajúca" cena.
+
+   3. ODMENY ZA UČENIE SA NEZNIŽUJÚ. Bifľovačka (BIFLOVACKA_*),
+      dashboard míľniky (DASHBOARD.*) a modulové odmeny sú jadro
+      appky. Ekonomika sa vyvažuje sinkami a denným stropom, nikdy
+      orezávaním toho, za čo sa hráč učí.
+============================================================ */
+
+/* Cenové tiery prestige avatarov – samostatná konštanta, aby na ňu mohol
+   PRESTIGE_AVATAR_MIN nižšie ukázať (objektový literál sa sám na seba
+   odkazovať nevie) a nemohli sa rozísť. */
+const PRESTIGE_TIERS = [300, 600, 1000, 2000];
+
 export const ECONOMY_CONFIG = {
   // ENERGIA (náklady v % z max 100)
   ENERGY: {
@@ -82,24 +111,55 @@ export const ECONOMY_CONFIG = {
     GARANT_DAILY_GRANT: 50    // koľko § môže garant rozdať denne
   },
 
-  // ANTI-ABUSE
+  /* ANTI-ABUSE
+     Strop 60§/deň ostáva, ale okruh výnimiek sa v1 ZÚŽIL. Obísť ho smú už
+     len tri veci – všetko ostatné je opakovateľná aktivita a musí byť v strope:
+
+       ✅ MIMO stropu (obchádza):
+          – streak za prihlásenie (avatar.js checkDailyLogin – ide priamo
+            cez awardParagrafy, econAward vôbec nevolá),
+          – rebríčkové odmeny: LEADERBOARD.*, SENATY.LB_*, FACULTIES.*,
+          – Štátnicová sieň: STATNICE.EXAM_REWARD + vrátenia vkladu.
+
+       ⛔ V STROPE (po novom, predtým obchádzali):
+          – senátne odmeny za spory a založenie: SENATY.SPOR_*,
+            FOUND_COMPLETE, RECRUIT, JOIN_NEW_PLAYER,
+          – dashboard míľniky: DASHBOARD.*,
+          – videá návodov: REWARDS.VIDEO,
+          – reklama: ADS.REWARD,
+          – testy od garanta: ASSIGNMENTS.* (v strope už predtým),
+          – schválené nahlásenia: REWARDS.REPORT_APPROVED (v strope už predtým).
+
+     ⚠️ Jednorazové odmeny (video, dashboard míľnik, reklama) sa udeľujú s
+     { allOrNothing: true } – buď sa zmestí celá suma, alebo sa nedá nič a
+     nárok ostáva na zajtra. Bez toho by strop utrhol časť sľúbenej odmeny
+     (napr. z 12§ za video len 5§) a UI by klamalo. Viď econAward v economy.js. */
   LIMITS: {
-    DAILY_EARN_CAP: 60        // max § z aktivít/deň; NEPOČÍTA sa: streak, rebríčky, videá
+    DAILY_EARN_CAP: 60
   },
 
   // SINKY – aby mal hráč na čo míňať (hodnota § rastie s možnosťami minúť)
   SINKS: {
-    QUIZ_ENTRY: 5,            // vstupné do študijného kvízu (quiz.js startQuiz, econSpend)
+    /* MŔTVA HODNOTA – vstup do bežných hier sa nespoplatňuje (zásada 2 hore).
+       Žiadny volajúci ju nečíta; ostáva len ako značka, že to bolo zvážené
+       a zamietnuté. */
+    QUIZ_ENTRY: 5,
     QUIZ_HINT_5050: 3,        // nápoveda 50:50 v duelovom kvíze
-    STREAK_SHIELD: 5,         // existuje v avatar.js – zjednotiť sem
-    PRESTIGE_AVATAR_MIN: 300, // cenové pásmo prestige avatarov (300–500§), viď Sinky
+    STREAK_SHIELD: 15,        // poistka streaku (v1: 5 → 15 – pri 5§ bola lacnejšia
+                              //  než jeden deň streaku a strácala váhu rozhodnutia)
+    /* Prestige avatari – rad 300/600/1000/2000§ (PRESTIGE_TIERS hore).
+       PRESTIGE_AVATAR_MIN je len prvý tier, drží sa ho odkazom, aby sa čísla
+       nemohli rozísť; používa ho popis dlaždice „Čoskoro – od N§“. */
+    PRESTIGE_AVATARS: PRESTIGE_TIERS,
+    PRESTIGE_AVATAR_MIN: PRESTIGE_TIERS[0],
     BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
     BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
     BIFLOVACKA_JOKER_REPLAY: 1,   // žolík: vypočuť definíciu znova cez TTS (v odpovedacej fáze)
     BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
   },
 
-  // SENÁTY – skupinová súťaž (skipCap: true pri econAward, sú to udalosti, nie grind)
+  /* SENÁTY – skupinová súťaž. V1: spory a založenie/nábor sú V STROPE,
+     mimo stropu ostávajú už len senátne REBRÍČKY (LB_WEEKLY/LB_MONTHLY). */
   SENATY: {
     FOUND_COMPLETE: 10,   // predsedovi, keď senát dosiahne 3 členov
     RECRUIT: 5,           // pozývateľovi za každého člena po dokončení senátu (raz na člena)
@@ -177,11 +237,10 @@ export const ECONOMY_CONFIG = {
   },
 
   // OSOBNÝ PREHĽAD PROGRESU – Fáza 3 (dashboard). Jednorazové odmeny.
-  // ⚠️ CESTA B (2026-07-18): idú s { skipCap: true } (scripts/dashboardRewards.js)
-  // – NEPOČÍTAJÚ sa do LIMITS.DAILY_EARN_CAP, presne ako streak/rebríčky/videá.
-  // Sú to jednorazové nefarmovateľné míľniky, nie opakovateľná aktivita, proti
-  // ktorej denný strop existuje. Jednorazovosť sa vynucuje cez
-  // users/{nick}/dashboardRewards/... flag, zapísaný AŽ PO úspešnom econAward.
+  // ⚠️ V1 (2026-08): míľniky sú PO NOVOM V LIMITS.DAILY_EARN_CAP – pôvodná
+  // Cesta B im dávala { skipCap: true }, ten je preč. Jednorazovosť sa naďalej
+  // vynucuje cez users/{nick}/dashboardRewards/... flag zapísaný AŽ PO úspešnom
+  // econAward, takže míľnik dosiahnutý pri plnom strope sa udelí neskôr, nestratí sa.
   DASHBOARD: {
     // MEDZIMEDAILY (2026-07-18) – proti "dlhému tichu" medzi 0 a 80 %,
     // motivujú priebežne. Malé sumy zámerne (nefarmovateľné jednorazovky,
@@ -211,6 +270,18 @@ export const ECONOMY_CONFIG = {
   // unlock:'talar_purchase'). Akademický talár (unlock:'talar_role') sa NIKDY
   // nekupuje – tu zámerne nemá cenu, priraďuje sa len podľa skutočnej Firebase
   // roly (users/{nick}/role === 'garant'|'admin'), viď scripts/avatar.js.
+  /* SEZÓNNE ROZŠÍRENIE – obchod je plne dátový, žiadna logika sa nemení.
+     getTalarShopEntries() (scripts/avatar.js) iteruje AVATAR_CONFIG.AVATARS a
+     berie všetko s unlock:'talar_purchase' pre AKTUÁLNY základný avatar; cenu
+     číta z položky (`talarPrice`), nie zo zoznamu tu. Pridanie novej sezónnej
+     položky sú preto tri dátové kroky:
+       1. sem doplniť cenu novým kľúčom (napr. `ZIMNY: 400`),
+       2. do AVATAR_CONFIG.AVATARS pridať položku(-y) s unlock:'talar_purchase',
+          talarBaseId (ku ktorému zo 6 základných avatarov patrí), talarRole
+          a talarPrice: ECONOMY_CONFIG.TALARE.ZIMNY,
+       3. nahrať 6 PNG na cestu z `base` (full/tired/sleep + -bust varianty).
+     Kým grafika nie je nahratá, nechaj položku s `hidden: true` – v obchode
+     sa neukáže a nedá kúpiť. Ceny v1 ostávajú nezmenené (200–1000§). */
   TALARE: {
     CIERNY: 200,      // ⚫ základný talár
     ADVOKAT: 500,     // 🔵 advokátsky talár
@@ -227,7 +298,8 @@ export const ECONOMY_CONFIG = {
   ADS: {
     ENABLED: true,            // "Získaj §" – zatiaľ placeholder videami, nie skutočným SDK
     REWARD: 3,                // § za pozretie odmeňovanej reklamy (rewarded ad)
-    DAILY_MAX: 3              // max reklám denne (t. j. max +9§/deň z reklám)
+    DAILY_MAX: 2              // v1: 3 → 2 (max +6§/deň); reklama je navyše po novom
+                              //  V DENNOM STROPE, takže to nie je obchádzka
   },
 
   // PAVÚKOVÉ HRY (Etapa 2) – § len za VÝSLEDOK celého sedenia, cez econAward

@@ -7,16 +7,18 @@
    proti "dlhému tichu" medzi 0 a 80 % – priebežná motivácia namiesto
    jedinej vzdialenej odmeny.
 
-   ⚠️ CESTA B (2026-07-18) – oprava § pasce: VŠETKY idú cez econAward
-   S { skipCap: true }. Sú to jednorazové nefarmovateľné míľniky (flag
-   nižšie zaručuje jednorazovosť) presne ako streak/rebríčky/videá, nie
-   opakovateľná grindovateľná aktivita, proti ktorej denný strop
-   LIMITS.DAILY_EARN_CAP existuje – preto sa doň (rovnako ako streak/
-   rebríčky) nepočítajú. econAward pri skipCap:true vôbec nevolá
-   applyDailyCap, takže dashboard § sa NEPRIPOČÍTAVAJÚ do
-   users/{nick}/dailyEarned/{deň} a nijako neuberajú z toho, čo môže
-   hráč zarobiť bežnou hrou (duel/kartičky/prípady/štátnica – tie
-   naďalej idú BEZ skipCap, teda v strope).
+   ⚠️ EKONOMIKA v1 (2026-08) – míľniky sú PO NOVOM V DENNOM STROPE.
+   Pôvodná Cesta B (2026-07-18) im dala { skipCap: true } spolu so
+   streakom/rebríčkami/videami; v1 okruh výnimiek zúžila na rebríčky a
+   štátnicu, takže dashboard § sa odteraz pripočítavajú do
+   users/{nick}/dailyEarned/{deň} a ubezpečujú z toho istého denného
+   rozpočtu ako bežná hra.
+
+   Bezpečné je to vďaka poradiu, ktoré tu platilo už predtým: flag sa
+   zapíše AŽ PO úspešnom econAward. Míľnik dosiahnutý pri vyčerpanom
+   strope sa teda neoznačí za vyplatený a udelí sa pri najbližšom
+   prepočte (t. j. na druhý deň). { allOrNothing: true } navyše bráni
+   tomu, aby sa z 5§ míľnika vyplatili napr. 2§ zvyšku stropu.
 
    Jednorazovosť: users/{nick}/dashboardRewards/... flag – nedá sa
    získať opakovane ani po resete/zopakovaní aktivity (reset/zhoršenie
@@ -52,12 +54,17 @@ async function markClaimed(nick, path) {
   await set(ref(db, `users/${nick}/dashboardRewards/${path}`), true);
 }
 
-/* Jeden míľnik: over → udeľ (skipCap) → flag AŽ PO úspechu. Zdieľané všetkými
+/* Jeden míľnik: over → udeľ → flag AŽ PO úspechu. Zdieľané všetkými
    prahmi nižšie, aby sa vzor isClaimed→econAward→markClaimed neopakoval
-   4-krát s rizikom, že sa niektorá kópia časom rozíde od ostatných. */
+   4-krát s rizikom, že sa niektorá kópia časom rozíde od ostatných.
+
+   Ekonomika v1: míľniky už NEOBCHÁDZAJÚ denný strop (skipCap odstránený).
+   allOrNothing + flag až po úspechu znamená, že míľnik dosiahnutý po
+   vyčerpaní stropu sa jednoducho udelí pri najbližšom prepočte v ďalší deň –
+   hráč oň nepríde a suma sa mu neoreže na časť. */
 async function maybeAwardMilestone(nick, path, amount, reason) {
   if (await isClaimed(nick, path)) return;
-  const result = await econAward(nick, amount, reason, { skipCap: true });
+  const result = await econAward(nick, amount, reason, { allOrNothing: true });
   if (result !== null) await markClaimed(nick, path);
 }
 

@@ -843,8 +843,13 @@
             <tr><td>Mesačný (koniec mesiaca)</td><td>+<span data-econ="LEADERBOARD.MONTHLY.0"></span>§</td><td>+<span data-econ="LEADERBOARD.MONTHLY.1"></span>§</td><td>+<span data-econ="LEADERBOARD.MONTHLY.2"></span>§</td></tr>
           </table>
           <p>Ak sa umiestniš, LexArena ti to oznámi pri najbližšej návšteve.</p>
-          <p class="small muted">Denný strop zárobku z herných aktivít je <span data-econ="LIMITS.DAILY_EARN_CAP"></span>§ – streak, rebríčky a videá sa
-          doň nepočítajú.</p>
+          <!-- Zoznam výnimiek MUSÍ sedieť s LIMITS v scripts/economyConfig.js
+               a so skipCap volaniami v scripts/economy.js. Od ekonomiky v1 sú
+               videá aj reklama V STROPE – netvrď o nich opak. -->
+          <p class="small muted">Denný strop zárobku z herných aktivít je <span data-econ="LIMITS.DAILY_EARN_CAP"></span>§. Nepočítajú
+          sa doň len streak za prihlásenie, rebríčkové odmeny a Štátnicová sieň – všetko ostatné vrátane
+          videí a reklám doň patrí. Ak strop vyčerpáš, jednorazové odmeny (video, míľnik) o nič neprídeš,
+          vyzdvihneš si ich na druhý deň.</p>
         </div>
       </details>
 

@@ -156,9 +156,11 @@ export async function joinSenat(senatId, nick) {
 
   await set(ref(db, `users/${nick}/senaty/${senatId}`), true);
 
-  // Odmena novému hráčovi (jednorazovo, mimo denného stropu)
+  /* Odmena novému hráčovi (jednorazovo). Ekonomika v1: V DENNOM STROPE
+     (skipCap odstránený) – obchádzať ho smú už len rebríčky a štátnica.
+     Nový nick má strop z definície prázdny, takže sa odmena vždy zmestí. */
   if (isNewPlayer) {
-    await econAward(nick, ECONOMY_CONFIG.SENATY.JOIN_NEW_PLAYER, `nový hráč cez senátny link ${senatId}`, { skipCap: true });
+    await econAward(nick, ECONOMY_CONFIG.SENATY.JOIN_NEW_PLAYER, `nový hráč cez senátny link ${senatId}`, { allOrNothing: true });
   }
 
   // Odmena predsedovi za nábor tohto člena (raz na člena, ochrana cez recruitClaimed)
@@ -169,8 +171,13 @@ export async function joinSenat(senatId, nick) {
       if (current === true) return; // abort – už vyplatené
       return true;
     });
+    /* V1: v dennom strope. Nárok je už v tomto bode transakčne zabraný, takže
+       keď strop odmenu nepustí, príznak VRACIAME – inak by predseda o § prišiel
+       navždy. Dvojitú výplatu to neotvára: bez ďalšieho pripojenia toho istého
+       člena sa sem kód znova nedostane. */
     if (claimResult && claimResult.committed) {
-      await econAward(founder, ECONOMY_CONFIG.SENATY.RECRUIT, `nábor člena ${nick} do senátu`, { skipCap: true });
+      const paid = await econAward(founder, ECONOMY_CONFIG.SENATY.RECRUIT, `nábor člena ${nick} do senátu`, { allOrNothing: true });
+      if (paid === null) await set(claimedRef, null);
     }
   }
 
@@ -183,8 +190,14 @@ export async function joinSenat(senatId, nick) {
       return 'active';
     });
     if (statusResult && statusResult.committed) {
+      /* V1: v dennom strope. Tu sa príznak vrátiť NEDÁ – je ním samotný
+         prechod senátu do stavu 'active', čo je skutočná zmena stavu, nie
+         účtovný nárok. Zostatkové riziko: predseda, ktorý má v ten deň strop
+         už vyčerpaný, o týchto 10§ príde. Vedomé – prípad je jednorazový a
+         úzky (senát sa dokončí práve raz), a rušiť kvôli nemu aktiváciu
+         senátu by bolo horšie. */
       if (founder) {
-        await econAward(founder, ECONOMY_CONFIG.SENATY.FOUND_COMPLETE, `senát ${senat.name} dokončený (3 členovia)`, { skipCap: true });
+        await econAward(founder, ECONOMY_CONFIG.SENATY.FOUND_COMPLETE, `senát ${senat.name} dokončený (3 členovia)`, { allOrNothing: true });
       }
       if (nick === getNick()) {
         showRewardToast(`⚖️ Senát ${senat.name} je kompletný!`);
@@ -377,8 +390,12 @@ async function applySporResult(senat, senatId, outcome, scores) {
   const rewardAmount = outcome === 'win' ? ECONOMY_CONFIG.SENATY.SPOR_WIN
     : outcome === 'draw' ? ECONOMY_CONFIG.SENATY.SPOR_DRAW
     : ECONOMY_CONFIG.SENATY.SPOR_LOSS;
+  /* V1: senátny spor je V DENNOM STROPE (skipCap odstránený) – mimo stropu
+     ostávajú zo senátov už len rebríčkové odmeny (LB_WEEKLY/LB_MONTHLY nižšie).
+     allOrNothing: výsledok sporu je udalosť s oznámenou sumou, orezanie na
+     zvyšok stropu by bolo mätúce – kto má strop plný, dostane 0 a vie prečo. */
   const members = Object.keys(senat.members || {});
-  await Promise.all(members.map(m => econAward(m, rewardAmount, `senátny spor – ${outcome}`, { skipCap: true })));
+  await Promise.all(members.map(m => econAward(m, rewardAmount, `senátny spor – ${outcome}`, { allOrNothing: true })));
 
   // 🏛️ Fakulty – individuálny výsledok každého člena, čo odohral, pripíše body jeho fakulte
   await Promise.all(members.map(m => {
