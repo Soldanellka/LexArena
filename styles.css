@@ -289,7 +289,10 @@ body {
 .game-tiles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  /* Medzera ~ šírka dvoch písmen názvu (700 14.5px: „aa“ = 16,1 px, priemer
+     dvoch znakov 16,7 px) – dlaždice sa tým o kúsok zúžia a medzi nimi
+     vznikne dýchateľná medzera namiesto zlepeného pásu. */
+  gap: 18px;
   margin-bottom: 10px;
 }
 
