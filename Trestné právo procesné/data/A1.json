@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Základné zásady trestného konania (§ 2 TP)",
+    "branches": [
+      { "label": "Zákonnosť a primeranosť", "leaves": ["Zákonnosť stíhania – stíhať len zo zákonných dôvodov a zákonným spôsobom", "Primeranosť – zásahy do práv len v nevyhnutnej miere, rešpekt k dôstojnosti a súkromiu", "Sudca pre prípravné konanie – o zásahoch do práv rozhoduje súd"] },
+      { "label": "Ochrana obvineného", "leaves": ["Prezumpcia neviny – nevinný, kým súd právoplatne nevysloví vinu", "Právo na obhajobu – obhajca už v prípravnom konaní", "Ne bis in idem – nie dvakrát za ten istý čin"] },
+      { "label": "Chod konania", "leaves": ["Legalita – prokurátor je povinný stíhať všetky TČ, o ktorých sa dozvedel", "Oficialita – orgány konajú z úradnej povinnosti", "Rýchlosť – väzobné veci prednostne, bez prieťahov", "Spravodlivý proces – nezávislý a nestranný súd, primeraná lehota, prítomnosť"] },
+      { "label": "Dokazovanie a proces", "leaves": ["Skutkový stav bez dôvodných pochybností – v rozsahu potrebnom na rozhodnutie", "Voľné hodnotenie dôkazov – vnútorné presvedčenie po zvážení všetkých okolností", "Kontradiktórnosť a rovnosť strán – vyjadriť sa k dôkazom, navrhovať dôkazy", "Ústnosť a verejnosť – hlavné pojednávanie spravidla verejné"] }
+    ]
   }
 }

@@ -80,5 +80,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Korupcia (§§ 328–336b)",
+    "branches": [
+      { "label": "Prijímanie úplatku (§§ 328–330)", "leaves": ["Podstata – prijme, žiada alebo si dá sľúbiť úplatok", "Súvislosť – výkon právomoci, obstarávanie veci všeobecného záujmu, porušenie povinností", "Charakter – pasívna korupcia", "Sadzby – vyššie pri verejnom činiteľovi a značnom rozsahu"] },
+      { "label": "Podplácanie (§§ 332–334)", "leaves": ["Podstata – poskytne, ponúkne alebo sľúbi úplatok", "Cieľ – konanie či zdržanie sa konania v rozpore s povinnosťami", "Charakter – aktívna korupcia", "Verejný činiteľ – osobitná SP (§ 334)"] },
+      { "label": "Nepriama korupcia (§ 336)", "leaves": ["Podstata – úplatok za pôsobenie vplyvom na verejného činiteľa", "Obe strany – prostredník aj ten, kto vplyv kupuje"] },
+      { "label": "Spoločné znaky", "leaves": ["Vzťah dvoch strán – prijímateľ a poskytovateľ", "Poškodený – verejný záujem a dôvera v právny štát", "Rovnosť – narúša rovnosť účastníkov právnych vzťahov"] }
+    ]
   }
 }

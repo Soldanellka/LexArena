@@ -98,5 +98,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Mier × ľudskosť × terorizmus × vojnové TČ (12. hlava)",
+    "branches": [
+      { "label": "Proti mieru", "leaves": ["Ohrozenie mieru – podnecovanie k vojne, propagácia a podpora vojnovej propagandy", "Prísnejšie – v spojení s cudzou mocou, počas krízovej situácie"] },
+      { "label": "Zločiny proti ľudskosti", "leaves": ["Genocídium – úmysel zničiť národnú, etnickú, rasovú či náboženskú skupinu", "Formy genocídia – usmrcovanie, bránenie rodeniu, prevádzanie detí, ničivé životné podmienky", "Zotročenie – otroctvo, nevoľníctvo, nútené práce, obchodovanie s ľuďmi"] },
+      { "label": "Terorizmus", "leaves": ["Podstata – zastrašenie obyvateľstva, destabilizácia usporiadania štátu", "Cieľ – donútiť vládu či medzinárodnú organizáciu konať alebo nekonať", "Prostriedok – hrozba alebo čin ohrozujúci život, zdravie, majetok"] },
+      { "label": "Extrémizmus", "leaves": ["Materiály – výroba, šírenie a držba extrémistických materiálov", "Hnutia – podpora hnutí potláčajúcich práva a slobody", "Nenávisť – hanobenie národa, rasy, etnika; podnecovanie k nenávisti"] },
+      { "label": "Vojnové TČ", "leaves": ["Podstata – závažné porušenia humanitárneho práva počas konfliktu", "Formy – útoky na civilistov, mučenie zajatcov, zakázané zbrane, ničenie chránených objektov", "Rámec – Ženevské dohovory; trestné aj podľa medzinárodného práva"] }
+    ]
   }
 }

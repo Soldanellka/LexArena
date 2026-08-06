@@ -9,7 +9,11 @@
     { "id": "sankcie", "label": "Sankcie", "okruhy": [11, 12, 15] },
     { "id": "mladistvi", "label": "Mladiství", "okruhy": [13] },
     { "id": "europsky-rozmer", "label": "Európsky rozmer", "okruhy": [16] },
-    { "id": "osobitna-cast", "label": "Osobitná časť", "okruhy": [17, 18, 19, 20, 21] }
+    { "id": "osobitna-cast", "label": "Osobitná časť – osoba a rodina", "okruhy": [17, 18, 19, 20, 21, 28] },
+    { "id": "majetok-a-hospodarstvo", "label": "Majetok a hospodárstvo", "okruhy": [22, 23] },
+    { "id": "vseobecne-nebezpecne", "label": "Všeobecne nebezpečné a ŽP", "okruhy": [24] },
+    { "id": "stat-a-verejna-moc", "label": "Štát a verejná moc", "okruhy": [25, 26, 27, 29] },
+    { "id": "mier-a-ludskost", "label": "Mier a ľudskosť", "okruhy": [30] }
   ],
   "links": [
     { "from": 2, "to": 3, "note": "Druhy trestných činov napĺňajú skutkové podstaty" },
@@ -31,6 +35,14 @@
     { "from": 18, "to": 4, "note": "Poruchový × ohrozovací následok v praxi" },
     { "from": 19, "to": 20, "note": "Sloboda a dôstojnosť – príbuzné chránené záujmy" },
     { "from": 20, "to": 16, "note": "Smernica 2011/93/EÚ – európsky rámec ochrany detí" },
-    { "from": 21, "to": 13, "note": "Ochrana detí: obete (A21) × páchatelia (A13)" }
+    { "from": 21, "to": 13, "note": "Ochrana detí: obete (A21) × páchatelia (A13)" },
+    { "from": 22, "to": 23, "note": "Majetkové × hospodárske delikty" },
+    { "from": 24, "to": 18, "note": "Ohrozovací princíp v praxi" },
+    { "from": 25, "to": 29, "note": "Bezpečnosť a obrana štátu" },
+    { "from": 25, "to": 30, "note": "Vnútroštátna × medzinárodná ochrana štátu" },
+    { "from": 26, "to": 27, "note": "Verejná moc a jej korumpovanie" },
+    { "from": 27, "to": 14, "note": "Korupcia a zodpovednosť právnických osôb" },
+    { "from": 28, "to": 19, "note": "Príbuzné skutkové podstaty slobody" },
+    { "from": 30, "to": 16, "note": "Medzinárodný a európsky rozmer" }
   ]
 }

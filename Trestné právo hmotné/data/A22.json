@@ -104,5 +104,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti majetku",
+    "branches": [
+      { "label": "Krádež (§ 212)", "leaves": ["Podstata – úmyselné prisvojenie si cudzej veci zmocnením sa", "Trestnosť – škoda nad 700 €, alebo vlámanie, vrecková či opakovaná krádež", "Kľúčový znak – fyzické zmocnenie bez súhlasu vlastníka"] },
+      { "label": "Podvod (§ 221)", "leaves": ["Podstata – obohatenie uvedením do omylu alebo využitím omylu", "Formy – aktívne uvedenie do omylu, využitie omylu, zamlčanie podstatných skutočností", "Rozdiel od krádeže – poškodený majetok odovzdá sám, na základe omylu", "Škoda – aspoň malá (nad 700 €)"] },
+      { "label": "Sprenevera (§ 213)", "leaves": ["Podstata – prisvojenie si cudzej veci, ktorá bola páchateľovi zverená", "Zverenie – dobrovoľné odovzdanie na účel (správa, úschova, povolanie)", "Kľúčový znak – vec zverená, nie odňatá; konanie v rozpore s účelom", "Typické – profesionálne vzťahy (zamestnanec, účtovník, správca)"] },
+      { "label": "Rozlíšenie trojice", "leaves": ["Krádež – odňatie veci", "Podvod – omyl poškodeného", "Sprenevera – zneužitie zverenia", "Hranica malej škody – 700 €"] }
+    ]
   }
 }

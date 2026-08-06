@@ -110,5 +110,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Ochrana základných práv v trestnom konaní (§§ 1–2 TP)",
+    "branches": [
+      { "label": "Východiská", "leaves": ["Účel (§ 1) – TČ náležite zistiť, páchateľov potrestať, práva rešpektovať", "Ústavný rámec – Ústava SR a Dohovor o ochrane ľudských práv", "Platí pre FO aj PO – ochrana práv oboch"] },
+      { "label": "Limity zásahov", "leaves": ["Primeranosť (§ 2 ods. 2) – len v miere nevyhnutnej na účel konania", "Súdna kontrola – prehliadku, odpočúvanie, väzbu povoľuje sudca pre prípravné konanie", "Zákonnosť – len zo zákonných dôvodov a zákonným spôsobom"] },
+      { "label": "Práva osoby", "leaves": ["Prezumpcia neviny – štát dokazuje vinu; zákaz predčasného označovania za páchateľa", "Právo na obhajobu – obhajca, prítomnosť pri úkonoch, rovnosť zbraní", "Spravodlivý proces – nezávislý súd, primeraná lehota, vyjadrenie k dôkazom", "Ne bis in idem – ochrana pred opakovaným stíhaním"] },
+      { "label": "Kvalita rozhodovania", "leaves": ["Skutkový stav bez pochybností – základ spravodlivého rozhodnutia", "Oficialita a legalita – konanie z úradnej povinnosti, povinnosť stíhať"] }
+    ]
   }
 }

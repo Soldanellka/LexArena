@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Subjekty × strany trestného konania",
+    "branches": [
+      { "label": "Rozlíšenie", "leaves": ["Subjekty – všetky osoby s procesným postavením podľa TP", "Strany – aktívni účastníci: obvinený, obhajca, prokurátor, poškodený"] },
+      { "label": "Orgány činné v trestnom konaní (§ 10)", "leaves": ["Policajt – úkony prípravného konania, zabezpečovanie dôkazov", "Prokurátor – riadi prípravné konanie, podáva obžalobu, zastupuje štát", "Súd – rozhoduje o vine, treste a zásahoch do práv"] },
+      { "label": "Strany a ich práva", "leaves": ["Obvinený (§ 32) – najširšie práva: obhajoba, dôkazy, opravné prostriedky", "Obhajca (§ 34) – advokát; úkony, dôkazy, opravné prostriedky v mene obvineného", "Poškodený (§ 46) – ujma z TČ; adhézny nárok na náhradu škody", "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistenej veci"] },
+      { "label": "Ďalšie subjekty", "leaves": ["Svedok (§ 127) – povinnosť vypovedať, ak zákon neustanovuje inak", "Znalec (§ 133) – odborné posúdenie znaleckým posudkom", "Pomocné osoby – tlmočník, prekladateľ, zapisovateľ"] }
+    ]
   }
 }

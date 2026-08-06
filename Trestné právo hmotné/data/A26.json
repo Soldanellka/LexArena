@@ -80,5 +80,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti poriadku vo verejných veciach",
+    "branches": [
+      { "label": "Marenie výkonu úradného rozhodnutia (§ 348)", "leaves": ["Podstata – úmyselné sťaženie či znemožnenie výkonu rozhodnutia", "Formy – činnosť napriek zákazu, nerešpektovanie zákazu vstupu/pobytu", "Judikatúra – už samotné vykonávanie zakázanej činnosti napĺňa SP (jazda počas zákazu)"] },
+      { "label": "Falšovanie verejnej listiny (§ 352)", "leaves": ["Podstata – vyhotovenie falošnej, pozmenenie pravej alebo použitie falošnej listiny", "Verejná listina – rozhodnutie súdu, notárska zápisnica, úradné potvrdenie", "Cieľ – neoprávnená výhoda či ovplyvnenie právneho postavenia"] },
+      { "label": "Ohýbanie práva (§ 326)", "leaves": ["Podstata – verejný činiteľ úmyselne rozhoduje v rozpore so zákonom", "Účel – poškodiť alebo zvýhodniť osobu", "Znaky – páchateľ verejný činiteľ, úmysel, nezákonné rozhodnutie, účel", "Závažnosť – zásah do princípov právneho štátu"] },
+      { "label": "Chránený záujem", "leaves": ["Autorita verejnej moci a výkon rozhodnutí", "Dôveryhodnosť verejných listín", "Zákonnosť rozhodovania"] }
+    ]
   }
 }

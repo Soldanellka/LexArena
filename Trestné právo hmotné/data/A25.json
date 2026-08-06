@@ -100,5 +100,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti republike",
+    "branches": [
+      { "label": "Vlastizrada (§ 311)", "leaves": ["Podstata – občan SR v spojení s cudzou mocou spácha TČ proti SR", "Formy – úklady proti SR, teror, sabotáž v spojení s cudzou mocou", "Závažnosť – 15–25 rokov alebo doživotie"] },
+      { "label": "Rozvracanie republiky (§ 312)", "leaves": ["Podstata – násilná zmena ústavného zriadenia", "Formy – narušenie samostatnosti, zvrchovanosti či územnej celistvosti SR", "Sadzba – vysoká, pri kvalifikovaných formách až doživotie"] },
+      { "label": "Teror (§ 313)", "leaves": ["Podstata – úmyselné usmrtenie s cieľom poškodiť ústavné zriadenie", "Cieľ – vyvolať strach, destabilizovať štát, donútiť orgány konať", "Pozn. – terorizmus ako samostatná kategória patrí do 12. hlavy (viď A30)"] },
+      { "label": "Chránený záujem", "leaves": ["Suverenita a ústavné zriadenie SR", "Bezpečnosť a obranyschopnosť štátu"] }
+    ]
   }
 }

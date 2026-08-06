@@ -80,5 +80,13 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "TČ proti iným právam a slobodám",
+    "branches": [
+      { "label": "Porušovanie domovej slobody (§ 194)", "leaves": ["Podstata – neoprávnené vniknutie do obydlia alebo zotrvanie v ňom", "Stačí – obyčajný vstup bez súhlasu oprávnenej osoby", "Kvalifikácia – prekonanie prekážky, skupina, chránená osoba", "Ústavný základ – čl. 21 Ústavy SR"] },
+      { "label": "Obmedzovanie osobnej slobody (§ 183)", "leaves": ["Podstata – protiprávne bránenie užívať osobnú slobodu, najmä voľný pohyb", "Kvalifikácia – chránená osoba, závažnejší spôsob, ťažká ujma či smrť", "Ústavný základ – čl. 17 Ústavy SR", "Väzba – detailne v okruhu TČ proti slobode (A19)"] },
+      { "label": "Diskriminácia a extrémizmus", "leaves": ["Podstata – znevýhodnenie osoby pre rasu, národnosť, pohlavie, vieru či iný znak", "Formy – porušovanie rovnosti; hanobenie a podnecovanie nenávisti (extrémistické TČ)", "Ústavný základ – čl. 12 Ústavy SR (rovnosť)"] }
+    ]
   }
 }

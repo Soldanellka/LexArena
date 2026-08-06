@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Obvinený × výsluch obvineného",
+    "branches": [
+      { "label": "Vznik postavenia", "leaves": ["Vznesenie obvinenia – uznesením podľa § 206 TP", "Okamih – doručením alebo oznámením uznesenia (aj pri zadržaní)", "Formálny status – zakladá najširšie procesné práva"] },
+      { "label": "Práva a povinnosti (§ 34)", "leaves": ["Práva – obhajca, nevypovedať, vyjadriť sa k dôkazom, navrhovať dôkazy, opravné prostriedky", "Ďalšie práva – prítomnosť pri úkonoch, preklad a tlmočenie", "Povinnosti – dostaviť sa, strpieť zákonné úkony (DNA, dychová skúška)"] },
+      { "label": "Postavenie v konaní", "leaves": ["Strana konania – rovnosť zbraní s prokurátorom", "Ochrana zásadami – prezumpcia neviny, obhajoba, spravodlivý proces", "Podozrivý × obvinený – práva obvineného sú širšie, nemožno ich zamieňať"] },
+      { "label": "Výsluch (§ 121)", "leaves": ["Zákaz donucovania – k výpovedi ani k priznaniu, rešpekt k osobnosti", "Poučenie – právo vypovedať/odmietnuť, obhajca, nevypovedať bez obhajcu", "Ďalšie poučenia – podmienečné zastavenie, zmier, dohoda o vine a treste", "Neúčinnosť – výpoveď podozrivého pred vznesením obvinenia nemožno použiť"] }
+    ]
   }
 }

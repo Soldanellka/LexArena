@@ -98,5 +98,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Brannosť × obrana vlasti × vojenské TČ",
+    "branches": [
+      { "label": "Proti brannosti a civilnej službe", "leaves": ["Brannosť – vyhýbanie sa povinnostiam obrany štátu (nenastúpenie, marenie, útek)", "Civilná služba – vyhýbanie sa zákonnej alternatíve vojenskej služby", "Rámec – branná povinnosť podľa zákona č. 150/2025 Z. z."] },
+      { "label": "Proti službe v ozbrojených silách", "leaves": ["Podstata – narúšanie disciplíny a pripravenosti ozbrojených síl", "Formy – nenastúpenie, neuposlúchnutie rozkazu, svojvoľné opustenie jednotky"] },
+      { "label": "Proti obrane vlasti", "leaves": ["Podstata – oslabovanie obranyschopnosti štátu", "Formy – sabotáž, poškodzovanie vojenského materiálu, konanie v prospech nepriateľa"] },
+      { "label": "Vojenské TČ", "leaves": ["Páchateľ – len vojak (osobitný subjekt)", "Formy – dezercia, neuposlúchnutie rozkazu, urážka nadriadeného, porušenie strážnej služby", "Chránené – vojenská disciplína, hierarchia, pripravenosť"] }
+    ]
   }
 }

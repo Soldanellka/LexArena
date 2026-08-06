@@ -114,5 +114,13 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Súdy × OČTK × pomocné osoby",
+    "branches": [
+      { "label": "Súdy (§§ 11–23)", "leaves": ["Okresný súd – prvý stupeň vo väčšine vecí", "Krajský súd – závažnejšie veci a odvolania", "Špecializovaný trestný súd – korupcia, organizovaný zločin, extrémizmus, terorizmus", "Najvyšší súd SR – dovolanie a mimoriadne opravné prostriedky", "Sudca pre prípravné konanie – väzba, prehliadky, odpočúvanie"] },
+      { "label": "OČTK (§ 10)", "leaves": ["Prokurátor – riadi prípravné konanie, obžaloba, zastupuje štát", "Policajt – vyšetrovanie, dôkazy, zadržanie, prehliadky, výsluchy", "Špecializované orgány – finančná správa, vojenská polícia, ZVJS, veliteľ lode"] },
+      { "label": "Pomocné osoby (§§ 24–29)", "leaves": ["Probačný a mediačný úradník – dohľad, alternatívne tresty, mediácia", "Vyšší súdny úradník – úkony z poverenia sudcu", "Zapisovateľ a tlmočník – zápisnice, preklad", "Nezúčastnená osoba a figurant – kontrola nestrannosti, rekonštrukcia"] }
+    ]
   }
 }

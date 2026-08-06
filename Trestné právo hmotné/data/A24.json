@@ -108,5 +108,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Všeobecne nebezpečné TČ × ochrana ŽP",
+    "branches": [
+      { "label": "Všeobecné ohrozenie (§ 284)", "leaves": ["Podstata – spôsobenie či zvýšenie všeobecného nebezpečenstva", "Formy – požiar, výbuch, havária, výbušniny, plyn, elektrina, rádioaktivita", "Trestnosť – stačí vydanie ľudí do nebezpečenstva smrti/ťažkej ujmy alebo škoda veľkého rozsahu", "Princíp – ohrozovací delikt, škoda nemusí vzniknúť"] },
+      { "label": "Ohrozenie ŽP (§ 300)", "leaves": ["Podstata – vydanie životného prostredia do nebezpečenstva", "Znak – porušenie predpisov o ochrane prírody", "Následok – značná alebo veľká ekologická škoda", "Chránené – ekologická rovnováha a zdravé životné podmienky"] },
+      { "label": "Odpady", "leaves": ["Podstata – nelegálne ukladanie, preprava, skladovanie či likvidácia odpadov", "Dôraz – nebezpečné odpady", "Riziko – ohrozenie pôdy, vody a ovzdušia"] },
+      { "label": "Znečisťovanie", "leaves": ["Podstata – vypúšťanie či únik škodlivých látok do vody, pôdy, ovzdušia", "Následok – vážna ekologická ujma alebo ohrozenie zdravia obyvateľstva"] }
+    ]
   }
 }

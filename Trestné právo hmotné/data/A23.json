@@ -104,5 +104,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Hospodárske TČ",
+    "branches": [
+      { "label": "Skresľovanie evidencie (§ 259)", "leaves": ["Podstata – pozmenenie, zničenie, zatajenie či nevedenie účtovných dokladov", "Cieľ – zakryť trestnú činnosť, skresliť výsledok, znížiť daň, poškodiť veriteľov", "Chránené – pravdivosť a transparentnosť účtovníctva"] },
+      { "label": "Poškodzovanie veriteľa (§ 239)", "leaves": ["Podstata – dlžník zmarí alebo sťaží uspokojenie veriteľov", "Formy – prevody a skrývanie majetku, fiktívne zmluvy, darovanie pred exekúciou", "Kľúčový znak – úmyselné konanie proti záujmom veriteľa"] },
+      { "label": "Daňové TČ (§§ 276–279)", "leaves": ["Skrátenie dane (§ 276) – nepravdivé údaje, zatajenie príjmov", "Neodvedenie dane a poistného (§ 277) – neodvedie vybrané či zrazené sumy", "Daňový podvod (§ 277a) – vylákanie daňovej výhody, karuselové podvody", "Nebezpečnosť – zásah do príjmov verejných rozpočtov"] },
+      { "label": "Chránený záujem", "leaves": ["Hospodársky poriadok – transparentnosť a stabilita", "Práva veriteľov – uspokojenie pohľadávok", "Daňový systém – príjmy štátu"] }
+    ]
   }
 }
