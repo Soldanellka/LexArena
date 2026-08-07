@@ -114,5 +114,16 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Procesné úkony × poskytovanie informácií",
+    "branches": [
+      { "label": "Podanie (§ 62)", "leaves": ["Formy – písomne, ústne do zápisnice, elektronicky (KEP alebo úradná schránka)", "Podľa obsahu – posudzuje sa obsah, nie označenie („sťažnosť\" môže byť odvolanie)"] },
+      { "label": "Zápisnica (§§ 58–61)", "leaves": ["Kedy – o každom úkone s významom pre konanie", "Náležitosti – orgán, miesto, čas, účel, prítomní, priebeh, vyhlásenia, podpisy", "Námietky (§ 59) – proti zneniu; orgán rozhodne a dôvodnú opraví"] },
+      { "label": "Doručovanie (§§ 65–68)", "leaves": ["Spôsoby – do vlastných rúk, bežné, elektronické (schránka)", "Fikcia doručenia (§ 66) – nevyzdvihnutá zásielka sa považuje za doručenú posledným dňom lehoty", "Výnimka – fikcia neplatí pri doručovaní obvinenému do vlastných rúk", "Elektronicky – doručené okamihom uloženia do aktivovanej schránky"] },
+      { "label": "Lehoty (§§ 63–64)", "leaves": ["Počítanie – dni od nasledujúceho dňa; týždne/mesiace koncom zhodného dňa", "Víkend a sviatok – koniec lehoty sa posúva na najbližší pracovný deň", "Navrátenie lehoty (§ 64) – vážne dôvody; žiadosť do 3 dní + súčasne vykonať úkon"] },
+      { "label": "Nazeranie do spisu (§ 69)", "leaves": ["Kto – obvinený, obhajca, poškodený, zúčastnená osoba, zástupcovia, probačný úradník…", "Obmedzenie – v prípravnom konaní možno odmietnuť pre ohrozenie účelu stíhania", "Výpisky a kópie – dovolené, ak neohrozia konanie"] },
+      { "label": "Poskytovanie informácií (§ 6)", "leaves": ["Chránené – prezumpcia neviny, súkromie, údaje maloletých a obetí, tajomstvá", "Neposkytnú sa – ak by ohrozili vyšetrovanie či účel konania", "Verejnosť – poznámky a nákresy účastníkom nemožno zakázať, ak nerušia priebeh"] }
+    ]
   }
 }

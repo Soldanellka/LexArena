@@ -70,10 +70,10 @@ const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
    aspoň jeden bod. Hmotné spĺňa všetkých 30 (overené 2026-08-06). */
 const CRIMINAL_HMOTNE_COUNT = 30;
 const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
-/* Procesné: zhrnutia má A1–A8, ale zhrnutie pri A8 obsahovo patrí k A7
-   (súbor A8 je „Procesné úkony…", zhrnutie hovorí o poškodenom a obeti) –
-   do skúšky preto ide len súvislý rozsah A1–A7. Po oprave A8 zdvihni na 8. */
-const CRIMINAL_PROCESNE_COUNT = 7;
+/* Procesné: zhrnutia má A1–A8. A8 malo pôvodne omylom uložený text okruhu A7,
+   preto bol rozsah dočasne 7; autorka ho prepísala (2026-08-06) a okruh sa
+   zaradil späť. */
+const CRIMINAL_PROCESNE_COUNT = 8;
 
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
