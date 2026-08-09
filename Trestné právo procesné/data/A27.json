@@ -118,10 +118,10 @@
   "spider": {
     "center": "Osobitné spôsoby konania",
     "branches": [
-      { "label": "Samosudca a odklony", "leaves": ["Samosudca – menej závažné TČ (do 5 rokov), rýchlejšie, často trestný rozkaz", "Dohoda o vine a treste – priznanie, dohoda s prokurátorom, schvaľuje súd"] },
-      { "label": "Mladiství a právnické osoby", "leaves": ["Mladiství – zvýšená ochrana, výchovný účel, obmedzená väzba, zákonný zástupca", "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty"] },
-      { "label": "Ušlý a chránený svedok", "leaves": ["Proti ušlému – konanie bez prítomnosti pri vyhýbaní sa; riadne predvolanie", "Chránený svedok – anonymizácia, osobitné postupy pri ohrození"] },
-      { "label": "Medzinárodné konania", "leaves": ["EZR – vydanie a prevzatie osôb v EÚ, rýchle lehoty, obmedzené odmietnutie", "Uznanie cudzieho rozhodnutia – prenos výkonu trestu"] }
+      { "label": "Samosudca (§§ 314a–314c) a dohoda o vine a treste (§§ 232–233a)", "leaves": ["Samosudca – menej závažné TČ (do 5 rokov), rýchlejšie, často trestný rozkaz", "Dohoda o vine a treste – priznanie, dohoda s prokurátorom, schvaľuje súd"] },
+      { "label": "Mladiství (§§ 345–363) a právnické osoby (§§ 363a–363h)", "leaves": ["Mladiství – zvýšená ochrana, výchovný účel, obmedzená väzba, zákonný zástupca", "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty"] },
+      { "label": "Ušlý (§§ 358–364) a chránený svedok (§§ 136a–136d)", "leaves": ["Proti ušlému – konanie bez prítomnosti pri vyhýbaní sa; riadne predvolanie", "Chránený svedok – anonymizácia, osobitné postupy pri ohrození"] },
+      { "label": "Medzinárodné konania – EZR (§§ 403–420), uznanie cudzieho rozhodnutia (§§ 521–528)", "leaves": ["EZR – vydanie a prevzatie osôb v EÚ, rýchle lehoty, obmedzené odmietnutie", "Uznanie cudzieho rozhodnutia – prenos výkonu trestu"] }
     ]
   }
 }
