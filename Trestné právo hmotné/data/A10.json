@@ -108,7 +108,7 @@
   "spider": {
     "center": "Súbeh × recidíva",
     "branches": [
-      { "label": "Súbeh", "leaves": ["Pojem – viac TČ spáchaných pred právoplatným odsúdením za niektorý z nich.", "Úhrnný a súhrnný trest – spôsob ukladania trestu podľa toho, či už existuje skorší rozsudok."] },
+      { "label": "Súbeh", "leaves": ["Pojem – viac TČ spáchaných pred právoplatným odsúdením za niektorý z nich.", "Úhrnný (§ 41) × súhrnný (§ 42) trest – podľa existencie skoršieho rozsudku"] },
       { "label": "Jednočinný súbeh", "leaves": ["Jedno konanie – jedným konaním naplnené viaceré skutkové podstaty."] },
       { "label": "Viacčinný súbeh", "leaves": ["Viac konaní – viac trestných činov viacerými konaniami bez odsúdenia medzi nimi."] },
       { "label": "Recidíva", "leaves": ["Pojem – nový trestný čin po predchádzajúcom odsúdení.", "Všeobecná × špeciálna – akýkoľvek nový TČ × rovnaký alebo obdobný TČ.", "Rovnorodá × rôznorodá – rovnaký typ TČ × iný druh TČ.", "Vplyv na trest (§ 47 TZ) – horná hranica sadzby sa zvyšuje o tretinu pri úmyselnom TČ po odsúdení za úmyselný TČ."] }

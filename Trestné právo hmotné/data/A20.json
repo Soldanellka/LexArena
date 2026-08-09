@@ -135,12 +135,13 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "TČ proti ľudskej dôstojnosti",
+    "center": "TČ proti ľudskej dôstojnosti (§§ 199–203)",
     "branches": [
-      { "label": "Chránený záujem", "leaves": ["Sexuálna sloboda – právo rozhodovať o sexuálnom živote", "Integrita a autonómia – telesná a psychická nedotknuteľnosť", "Súhlas – absencia súhlasu ako základný prvok (redefinícia znásilnenia)"] },
-      { "label": "Sexuálne násilie", "leaves": ["Podstata – donútenie k sexuálnemu konaniu násilím alebo hrozbou", "Rozsah – aj bez fyzického odporu pri hrozbe či zneužití bezbrannosti", "Zásah – do sexuálnej slobody a telesnej integrity"] },
-      { "label": "Sexuálne zneužívanie", "leaves": ["Podstata – konanie voči osobe neschopnej dať platný súhlas", "Chránení – najmä deti do 15 rokov a osoby s duševnou poruchou", "Znak – zneužitie moci, autority alebo dôvery", "Európsky rámec – smernica 2011/93/EÚ o ochrane detí"] },
-      { "label": "Sexuálne obťažovanie", "leaves": ["Podstata – nežiaduce správanie sexuálnej povahy narúšajúce dôstojnosť", "Prostredie – ponižujúce, zastrašujúce alebo nepriateľské", "Právne zaradenie – nie samostatná skutková podstata; napĺňa znaky iných TČ"] }
+      { "label": "Znásilnenie (§ 199)", "leaves": ["Podstata – donútenie k súloži či inému sexuálnemu styku násilím, hrozbou alebo zneužitím bezbrannosti", "Súhlas – absencia slobodného súhlasu je jadrom skutkovej podstaty", "Odpor – fyzický odpor nie je podmienkou", "Bezbrannosť – spánok, intoxikácia, zdravotný stav rovnocenné násiliu"] },
+      { "label": "Sexuálne násilie (§ 200)", "leaves": ["Podstata – donútenie k inému sexuálnemu konaniu než súlož", "Prostriedky – násilie, hrozba bezprostredného násilia, zneužitie bezbrannosti", "Rozsah – širší okruh sexuálnych prejavov zasahujúcich sexuálnu slobodu"] },
+      { "label": "Pohlavné zneužívanie (§ 201)", "leaves": ["Podstata – konanie voči osobe neschopnej dať platný súhlas", "Chránení – najmä deti do 15 rokov a osoby s duševnou poruchou", "Znak – zneužitie autority, dôvery, závislosti či bezbrannosti", "Európsky rámec – smernica 2011/93/EÚ o ochrane detí"] },
+      { "label": "Súlož medzi príbuznými (§ 203)", "leaves": ["Podstata – sexuálny styk medzi príbuznými, právne neprípustný", "Chráni – rodinné vzťahy, vývin detí, zákaz zneužitia autority v rodine"] },
+      { "label": "Sexuálne obťažovanie", "leaves": ["Podstata – nežiaduce správanie sexuálnej povahy narúšajúce dôstojnosť", "Formy – verbálne, neverbálne, fyzické", "Právne zaradenie – bez samostatnej SP; môže napĺňať § 199, § 200, § 192, § 189, § 183"] }
     ]
   }
 }

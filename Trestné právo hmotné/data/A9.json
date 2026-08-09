@@ -123,9 +123,9 @@
     "center": "Trestná súčinnosť – účastníctvo × spolupáchateľstvo",
     "branches": [
       { "label": "Účastníctvo", "leaves": ["Účasť na cudzom TČ – úmyselná účasť na trestnom čine inej osoby.", "Bez vlastného naplnenia SP – účastník nenapĺňa skutkovú podstatu vlastným konaním."] },
-      { "label": "Formy účastníctva", "leaves": ["Organizátor – zosnoval alebo riadil spáchanie trestného činu.", "Návodca – naviedol iného na spáchanie trestného činu.", "Pomocník – poskytol pomoc (prostriedky, rada, sľub pomoci po čine)."] },
+      { "label": "Formy účastníctva", "leaves": ["Organizátor – zosnoval alebo riadil spáchanie trestného činu.", "Návodca – naviedol iného na spáchanie trestného činu.", "Objednávateľ – požiadal iného, aby spáchal trestný čin (§ 21 ods. 1 písm. c)", "Pomocník – poskytol pomoc (prostriedky, rada, sľub pomoci po čine)."] },
       { "label": "Spolupáchateľstvo", "leaves": ["Spoločné konanie – spoločné úmyselné konanie dvoch alebo viacerých osôb.", "Spoločné naplnenie SP – spolu napĺňajú skutkovú podstatu trestného činu."] },
-      { "label": "Rozdiel", "leaves": ["Spolupáchateľ – trestný čin vykonáva.", "Účastník – podporuje, riadi alebo navádza toho, kto čin vykoná.", "Trestanie – obaja sa trestajú v rámci sadzby za čin, na ktorom sa podieľali."] }
+      { "label": "Rozdiel", "leaves": ["Spolupáchateľ – trestný čin vykonáva.", "Účastník – podporuje, riadi, navádza alebo objednáva čin, ktorý vykoná iný", "Trestanie – obaja sa trestajú v rámci sadzby za čin, na ktorom sa podieľali."] }
     ]
   }
 }

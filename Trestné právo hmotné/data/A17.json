@@ -106,12 +106,13 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Trestné činy proti životu (2. hlava osobitnej časti)",
+    "center": "Trestné činy proti životu (§§ 144–149)",
     "branches": [
-      { "label": "Vražda (§ 160)", "leaves": ["Podstata – úmyselné usmrtenie inej osoby", "Zavinenie – úmysel priamy alebo nepriamy", "Sadzba – 15 až 20 rokov; kvalifikované formy až 25 rokov alebo doživotie", "Kategória – obzvlášť závažný zločin"] },
-      { "label": "Úkladná vražda (§ 159)", "leaves": ["Podstata – úmyselné usmrtenie s rozmyslom alebo po predchádzajúcej úvahe", "Rozmysel – premyslené, plánované konanie s časovým odstupom", "Sadzba – 20 až 25 rokov; kvalifikované formy doživotie", "Postavenie – najprísnejšie trestaná forma usmrtenia"] },
-      { "label": "Usmrtenie (§ 164)", "leaves": ["Podstata – neúmyselné spôsobenie smrti, spravidla z nedbanlivosti", "Zavinenie – porušenie povinnosti zo zákona, povolania či situácie", "Sadzba – do 3 rokov; kvalifikované formy vyššie (napr. alkohol pri nehode)"] },
-      { "label": "Porovnanie", "leaves": ["Kľúčový rozdiel – zavinenie: úmysel (vražda) × nedbanlivosť (usmrtenie)", "Rozmysel – odlišuje úkladnú vraždu od vraždy", "Chránená hodnota – život ako najvyššia hodnota, najprísnejšie tresty"] }
+      { "label": "Úkladná vražda (§ 144)", "leaves": ["Podstata – úmyselné usmrtenie s rozmyslom alebo po predchádzajúcej úvahe", "Rozmysel – premyslené, plánované konanie, nie afekt", "Sadzba – 20 až 25 rokov; kvalifikované formy doživotie", "Postavenie – najprísnejšie trestaný TČ proti životu"] },
+      { "label": "Vražda (§ 145)", "leaves": ["Podstata – úmyselné usmrtenie inej osoby", "Zavinenie – priamy úmysel alebo uzrozumenie (nepriamy úmysel)", "Sadzba – 15 až 20 rokov; kvalifikované formy 25 rokov alebo doživotie"] },
+      { "label": "Zabitie (§§ 147–148)", "leaves": ["Podstata – úmyselné usmrtenie za menej závažných okolností", "Situácie – silné rozrušenie (afekt), prekročenie nutnej obrany či krajnej núdze", "Sadzba – 3 až 8 rokov; kvalifikované formy vyššie", "Postavenie – stredná kategória medzi vraždou a usmrtením"] },
+      { "label": "Usmrtenie (§ 149)", "leaves": ["Podstata – nedbanlivostné spôsobenie smrti", "Zavinenie – porušenie povinnosti zo zákona, povolania či situácie", "Sadzba – do 3 rokov; kvalifikované formy vyššie (napr. alkohol pri nehode)"] },
+      { "label": "Porovnanie", "leaves": ["Kľúč – zavinenie: rozmysel × úmysel × afekt × nedbanlivosť", "Hierarchia sadzieb – úkladná vražda > vražda > zabitie > usmrtenie", "Chránená hodnota – život ako najvyššia hodnota"] }
     ]
   }
 }
