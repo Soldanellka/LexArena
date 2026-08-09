@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Obhajca × osoby so samostatnými obhajovacími právami",
+    "branches": [
+      { "label": "Obhajca (§ 36 TP)", "leaves": ["Kto – len advokát; samostatný subjekt konania, koná v mene obvineného", "Zvolený – obvinený si ho vyberá sám", "Ustanovený – súd/prokurátor pri povinnej obhajobe alebo nemajetnosti (§§ 39–42)", "Náhradný – na zabezpečenie neodkladného úkonu"] },
+      { "label": "Práva obhajcu (§ 44 TP)", "leaves": ["Účasť – zúčastňovať sa všetkých úkonov", "Dôkazy – navrhovať dôkazy, klásť otázky svedkom", "Opravné prostriedky – podávať v mene obvineného", "Komunikácia – s obvineným bez obmedzenia"] },
+      { "label": "Povinnosti obhajcu", "leaves": ["Mlčanlivosť – o všetkom z obhajoby; nemôže byť vypočúvaný ako svedok", "Záujem obvineného – koná v jeho prospech", "Koncipient – zastúpenie pri prečinoch a niektorých zločinoch so súhlasom obvineného"] },
+      { "label": "Samostatné obhajovacie práva", "leaves": ["Poškodený (§ 46) – nárok na náhradu škody, dôkazy, opravné prostriedky v rozsahu nároku", "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistení/odňatí veci", "Osoba so zaisteným majetkom (§ 95a) – samostatná obrana majetku", "Dotknuté osoby – preskúmanie zákonnosti zásahu sudcom pre prípravné konanie"] }
+    ]
   }
 }

@@ -70,10 +70,11 @@ const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
    aspoň jeden bod. Hmotné spĺňa všetkých 30 (overené 2026-08-06). */
 const CRIMINAL_HMOTNE_COUNT = 30;
 const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
-/* Procesné: zhrnutia má A1–A8. A8 malo pôvodne omylom uložený text okruhu A7,
-   preto bol rozsah dočasne 7; autorka ho prepísala (2026-08-06) a okruh sa
-   zaradil späť. */
-const CRIMINAL_PROCESNE_COUNT = 8;
+/* Procesné: rozsah je 2 z ROZHODNUTIA autorky (2026-08-07), nie z limitu dát –
+   zhrnutia so zoznamom odrážok má aj A3–A8 a extrakcia z nich vracia 4–8 bodov.
+   Autorka chce sieť púšťať dávkovo, ako budú okruhy prechádzať jej kontrolou;
+   zdvihnutie čísla je jediná potrebná zmena. */
+const CRIMINAL_PROCESNE_COUNT = 2;
 
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
@@ -342,8 +343,18 @@ function extractKeyPoints(rawSummary, title) {
 
   /* Tri tvary nadpisu, všetky od autorky obsahu:
      - staršie zhrnutia (Pracovné, Občianske, EÚ): „Kľúčové slová (štátnicové):"
-     - Trestné hmotné:                            „Zapamätaj si (štátnicové jadro)"
-     - Trestné procesné:                          „Zhrnutie (štátnicové jadro)"
+     - Trestné hmotné aj procesné:                „Zapamätaj si …"
+     - staršie Trestné procesné:                  „Zhrnutie (štátnicové jadro)"
+
+     Vzor „Zapamätaj si" je zámerne TOLERANTNÝ na prívlastok aj interpunkciu –
+     `[^\n:]*:?` pokryje „Zapamätaj si", „Zapamätaj si:" aj „Zapamätaj si
+     (štátnicové jadro)", `i` navyše veľkosť písmen. Overené na všetkých
+     štyroch tvaroch (2026-08-07), netreba ho rozširovať.
+
+     Poradie „Zapamätaj si" PRED „Zhrnutie" je podstatné: TPP A3–A7 majú OBE
+     sekcie – „Zhrnutie" hore ako súvislý odstavec a „Zapamätaj si" dole ako
+     zoznam odrážok. Jadrom je ten zoznam, preto sa „Zhrnutie" uplatní len
+     ako záloha pre okruhy, ktoré zoznam nemajú.
      Druhý a tretí nadpis NEMAJÚ dvojbodku a sekcia končí až pri „Zdroj", preto
      majú vlastné vzory, nie rozšírenie prvého. Poradie je zámerné: prvý vzor sa
      skúša najskôr, takže pre existujúce oblasti sa správanie nemení vôbec.

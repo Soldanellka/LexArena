@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Poškodený × obeť × zúčastnená osoba",
+    "branches": [
+      { "label": "Poškodený (§ 46 TP)", "leaves": ["Kto – osoba so škodou, ujmou na zdraví, nemajetkovou ujmou či ohrozenými právami", "Adhézne konanie – nárok na náhradu škody v trestnom konaní", "Práva – dôkazy, účasť na úkonoch, opravné prostriedky v rozsahu nároku, informácie", "Postavenie – strana konania, ak uplatní nárok"] },
+      { "label": "Obeť (zákon č. 274/2017)", "leaves": ["Kto – širší pojem než poškodený; aj osoby mimo procesu (napr. pozostalí)", "Obzvlášť zraniteľná obeť – dieťa, osoba 75+, zdravotne postihnutá, obete násilia a obchodovania", "Práva – informácie, odborná pomoc, ochrana pred sekundárnou viktimizáciou", "Odškodnenie – pri násilných trestných činoch"] },
+      { "label": "Zúčastnená osoba (§ 47 TP)", "leaves": ["Kto – osoba, ktorej vec bola zaistená alebo odňatá", "Práva – obrana vlastníctva, opravné prostriedky proti zaisteniu, informácie", "Postavenie – nie je stranou konania, má samostatné obhajovacie práva"] },
+      { "label": "Rozdiely", "leaves": ["Poškodený – procesná strana s nárokom (TP)", "Obeť – širší hmotnoprávny pojem (zákon o obetiach)", "Zúčastnená osoba – chráni majetok, nie nárok zo škody"] }
+    ]
   }
 }
