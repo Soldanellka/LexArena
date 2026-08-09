@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prokurátor – garant zákonnosti predsúdneho konania",
+    "branches": [
+      { "label": "Právny základ", "leaves": ["Ústava SR čl. 149 – ochrana práv a zákonom chránených záujmov", "Zákon č. 153/2001 Z. z. § 4 – dozor nad zákonnosťou", "Trestný poriadok – konkrétne úkony"] },
+      { "label": "Obsah dozoru", "leaves": ["Kontrola polície – zákonnosť úkonov, práva osôb, lehoty", "Usmerňovanie – záväzné pokyny, nariadenie dôkazov, smer vyšetrovania", "Vlastné úkony – výsluchy, znalci, návrhy na väzbu, zaistenie majetku, odklony"] },
+      { "label": "Rozhodovanie", "leaves": ["Po vyšetrovaní – obžaloba, zastavenie, postúpenie, prerušenie", "Dohoda o vine a treste – schválenie návrhu"] },
+      { "label": "Ochrana práv", "leaves": ["Osoby – obvinený, poškodený a ďalší", "Zásahy – kontrola zadržania, väzby, prehliadok a ITP"] }
+    ]
   }
 }

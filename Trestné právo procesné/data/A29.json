@@ -110,5 +110,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právny styk s cudzinou (§§ 477–522)",
+    "branches": [
+      { "label": "Právny základ", "leaves": ["Prednosť zmlúv – TP sa použije subsidiárne", "Vzájomnosť – bez zmluvy pri garancii reciprocity", "Pojmy – cudzí orgán, medzinárodný súd"] },
+      { "label": "Formy styku", "leaves": ["Priamy – medzi justičnými orgánmi, len na základe zmluvy", "Nepriamy – cez ministerstvá alebo konzulárne úrady"] },
+      { "label": "Právna pomoc", "leaves": ["Obsah – doručovanie, výsluchy, dôkazy, informácie, dožiadania", "Rámec – napr. Európsky dohovor o vzájomnej pomoci (ETS 30)"] },
+      { "label": "Extradícia a EZR", "leaves": ["Extradícia – obojstranná trestnosť, ne bis in idem, nepremlčanie, nepolitický skutok", "EZR – neskúma sa dôvodnosť, len dôvody odmietnutia; vydávacia väzba podľa zákona o EZR"] },
+      { "label": "Uznávanie a prevzatie", "leaves": ["Uznanie cudzieho rozhodnutia (§§ 518–522) – podľa TP a zmlúv", "Prevzatie a odovzdanie konania – účelnosť, pobyt, dôkazy, resocializácia"] }
+    ]
   }
 }

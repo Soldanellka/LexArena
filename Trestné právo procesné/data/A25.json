@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Riadne opravné prostriedky – sťažnosť × odvolanie",
+    "branches": [
+      { "label": "Pojem", "leaves": ["Cieľ – napadnúť neprávoplatné rozhodnutie a odstrániť chyby pred právoplatnosťou", "Garancia – súčasť práva na spravodlivý proces"] },
+      { "label": "Sťažnosť (§§ 179–195)", "leaves": ["Proti čomu – uznesenie", "Kto – obvinený, poškodený, zúčastnená osoba, prokurátor", "Lehota – 3 dni; odkladný účinok", "Rozhodnutie – zamietnutie, zrušenie, zmena (nadriadený orgán)"] },
+      { "label": "Odvolanie (§§ 307–322)", "leaves": ["Proti čomu – rozsudok", "Kto – obžalovaný, obhajca, prokurátor, poškodený v rozsahu nároku", "Lehota – 15 dní; odkladný účinok", "Prieskum – zákonnosť, skutkové zistenia, trest, procesné chyby"] },
+      { "label": "Rozhodnutia odvolacieho súdu (§ 321)", "leaves": ["Potvrdenie – zamietnutie odvolania", "Zrušenie – nové rozhodnutie alebo vrátenie veci", "Zmena rozsudku"] }
+    ]
   }
 }

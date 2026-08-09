@@ -110,5 +110,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Preskúmanie × predbežné prejednanie obžaloby (§§ 241–244)",
+    "branches": [
+      { "label": "Preskúmanie (§§ 241–242)", "leaves": ["Kto – predseda senátu alebo poverený člen", "Čo – oprávnenosť, opis skutku, podmienky konania, zákonnosť dôkazov", "Výsledok – hlavné pojednávanie alebo predbežné prejednanie"] },
+      { "label": "Predbežné prejednanie (§ 243)", "leaves": ["Kedy – rozhodnutia podľa § 244, iná kvalifikácia, pochybnosti o dôkazoch, možná dohoda", "Forma – verejné alebo neverejné zasadnutie", "Obsah – preskúmanie, vypočutie, zisťovanie dohody"] },
+      { "label": "Rozhodnutia (§ 244)", "leaves": ["Zastavenie – postúpenie – prerušenie", "Vrátenie veci prokurátorovi na doplnenie", "Schválenie dohody o vine a treste", "Nariadenie hlavného pojednávania"] },
+      { "label": "Charakter", "leaves": ["Fakultatívnosť – závisí od úvahy predsedu senátu", "Účel – filter procesných chýb pred pojednávaním"] }
+    ]
   }
 }

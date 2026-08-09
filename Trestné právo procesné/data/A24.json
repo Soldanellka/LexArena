@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Verejné × neverejné zasadnutie súdu",
+    "branches": [
+      { "label": "Verejné zasadnutie", "leaves": ["Charakter – prístupné verejnosti; vylúčenie len zo zákonných dôvodov", "Použitie – odvolanie, dohoda o vine a treste, podmienečné prepustenie, ochranné liečenie", "Účel – dôkazy, vypočutie strán, verejné prerokovanie"] },
+      { "label": "Neverejné zasadnutie", "leaves": ["Charakter – bez verejnosti, spravidla bez strán, zo spisu", "Použitie – procesné rozhodnutia, predbežné prejednanie, sťažnosti, odklony", "Účel – rýchle rozhodnutie bez dokazovania"] },
+      { "label": "Rozdiely", "leaves": ["Verejnosť – áno (s výnimkami) × nie", "Rozhodnutia – meritórne aj procesné × prevažne procesné", "Dokazovanie – možné × spravidla nie"] },
+      { "label": "Voľba formy", "leaves": ["Rozhoduje – zákon alebo predseda senátu"] }
+    ]
   }
 }

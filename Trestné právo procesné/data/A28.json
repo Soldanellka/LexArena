@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Probácia × mediácia – restoratívne nástroje",
+    "branches": [
+      { "label": "Právny základ", "leaves": ["Zákon č. 550/2003 Z. z. – probační a mediační úradníci", "Trestný poriadok – mediácia ako odklon, probácia pri alternatívnych trestoch"] },
+      { "label": "Probácia", "leaves": ["Obsah – dohľad, kontrola povinností, povinná práca, domáce väzenie, zákaz priblíženia", "Účel – zníženie recidívy, resocializácia, ochrana poškodených", "Kto – probačný a mediačný úradník (zamestnanec súdu)"] },
+      { "label": "Mediácia", "leaves": ["Podstata – dobrovoľný zmier obvineného a poškodeného pred mediátorom", "Zásady – dobrovoľnosť, nestrannosť, rovnosť, bezplatnosť, mlčanlivosť", "Výhody – rýchlosť, náhrada škody, možnosť nezápisu do registra"] },
+      { "label": "Význam", "leaves": ["Prax – tisíce mediácií ročne, milióny eur náhrad", "Smer – podpora restoratívnej justície"] }
+    ]
   }
 }

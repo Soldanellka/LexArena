@@ -110,5 +110,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rozhodnutia prokurátora po vyšetrovaní",
+    "branches": [
+      { "label": "Obžaloba (§§ 208–209)", "leaves": ["Podmienka – výsledky odôvodňujú záver o spáchaní skutku", "Podanie – súdu s kompletným spisom", "Význam – kľúčový moment, vec ide pred súd"] },
+      { "label": "Zastavenie · prerušenie · postúpenie", "leaves": ["Zastavenie (§ 215) – skutok sa nestal, nie je TČ, neprípustnosť, smrť obvineného", "Prerušenie (§ 228) – nezvestnosť, zdravotná nespôsobilosť, iné konanie", "Postúpenie (§ 214) – skutok môže byť priestupok či iný delikt"] },
+      { "label": "Odklony", "leaves": ["Podmienečné zastavenie (§ 216) – menej závažné TČ, uložené povinnosti", "Dohoda o vine a treste (§§ 232–233) – priznanie, dohoda, schvaľuje súd"] },
+      { "label": "Predbežné prejednanie obžaloby (§§ 241–244)", "leaves": ["Súd skúma – zákonnosť, dôkazy, procesné chyby", "Možnosti – prijať a nariadiť pojednávanie, vrátiť, zastaviť, schváliť dohodu"] }
+    ]
   }
 }

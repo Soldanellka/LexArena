@@ -110,5 +110,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dokazovanie – etapy × zásady × prostriedky (§ 119)",
+    "branches": [
+      { "label": "Pojem a etapy", "leaves": ["Pojem – zisťovanie skutkového stavu bez dôvodných pochybností", "Získavanie – vyhľadanie a zabezpečenie dôkazov", "Vykonávanie – dôkaz vstupuje do konania vykonaním, najmä na hlavnom pojednávaní", "Hodnotenie – vnútorné presvedčenie, logika, skúsenosť (§ 2 ods. 12)"] },
+      { "label": "Špeciálne zásady", "leaves": ["Zákonnosť dôkazov – nezákonný dôkaz je neprípustný (§ 119 ods. 2)", "Voľné hodnotenie – bez formálnych pravidiel", "In dubio pro reo – v pochybnostiach v prospech obvineného", "Vyhľadávacia – dôkazy v prospech aj neprospech", "Bezprostrednosť, ústnosť, kontradiktórnosť – priamo pred súdom, s právami strán"] },
+      { "label": "Dôkazné prostriedky (neuzavretý výpočet)", "leaves": ["Výsluchy – obvinený, svedok, poškodený; konfrontácia, rekognícia", "Vecné a listinné dôkazy – predmety, dokumenty, elektronické listiny", "Znalci – posudky a odborné vyjadrenia (§§ 144–151)", "Prehliadky a obhliadky – domová, osobná; miesto činu", "ITP a OPČ – odpočúvanie, sledovanie; zaistenie vecí (§§ 89a–95b)"] },
+      { "label": "Prípustnosť", "leaves": ["Neprípustný – získaný či vykonaný nezákonne, porušujúci základné práva", "Absolútny zákaz – dôkaz získaný nátlakom alebo mučením"] }
+    ]
   }
 }

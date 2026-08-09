@@ -114,5 +114,16 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Svedok – povinnosti × odmietnutie × ochrana",
+    "branches": [
+      { "label": "Pojem a povinnosti (§ 126)", "leaves": ["Kto – osoba s vedomosťou o dôležitých skutočnostiach (aj poškodený, zúčastnená osoba)", "Povinnosti – dostaviť sa, vypovedať pravdu, nič nezamlčať", "Nedostavenie – možné predvedenie"] },
+      { "label": "Odmietnutie výpovede (§ 127)", "leaves": ["Sebaobvinenie – nebezpečenstvo stíhania sebe alebo blízkej osobe", "Tajomstvá – spovedné; advokátske, lekárske, bankové (ak nezbavený mlčanlivosti)", "Charakter – absolútne právo, nemožno prelomiť"] },
+      { "label": "Ochrana svedka (§§ 136–139)", "leaves": ["Anonymita – utajenie totožnosti", "Technika – videokonferencia, zmena hlasu, vylúčenie verejnosti", "Program ochrany – osobitný zákon; kľúčové pri organizovanej kriminalite"] },
+      { "label": "Výsluch (§§ 131–134)", "leaves": ["Priebeh – poučenie, vzťah k obvinenému, bez nátlaku, vlastnými slovami", "Otázky – prípustné, ale nie sugestívne"] },
+      { "label": "Špeciálne kategórie", "leaves": ["Maloletý (§ 135) – šetrne, s psychológom, bez opakovania", "Anonymný (§ 136) – technické prostriedky pri závažnej kriminalite", "Chránený – fyzická ochrana, zmena identity (osobitný zákon)"] },
+      { "label": "Hodnotenie a zodpovednosť", "leaves": ["Hodnotenie – vierohodnosť, konzistentnosť, motivácia, kontext ostatných dôkazov", "Zodpovednosť – krivá výpoveď (§ 346 TZ), marenie úkonu"] }
+    ]
   }
 }

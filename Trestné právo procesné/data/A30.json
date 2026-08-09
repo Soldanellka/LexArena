@@ -110,5 +110,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Justičná spolupráca v EÚ",
+    "branches": [
+      { "label": "Právny základ", "leaves": ["Čl. 82–86 ZFEÚ – justičná spolupráca, uznávanie, aproximácia", "Rámec – priestor slobody, bezpečnosti a spravodlivosti"] },
+      { "label": "Vzájomné uznávanie", "leaves": ["Princíp – rozhodnutie jedného štátu platí v inom bez nového konania", "Použitie – EZR, dôkazy, konfiškácia, finančné sankcie"] },
+      { "label": "Nástroje", "leaves": ["EZR – rýchle vydanie osoby, nahrádza extradíciu", "EVP/EYP – nariadenie dôkazov v inom štáte", "Konfiškácia – zmrazenie a odňatie výnosov v celej EÚ"] },
+      { "label": "Agentúry a siete", "leaves": ["Eurojust – koordinácia stíhaní, konflikty jurisdikcií, spoločné tímy", "Europol – spravodajstvo a podpora proti organizovanému zločinu", "EJS – priamy kontakt justičných orgánov"] },
+      { "label": "Policajná spolupráca", "leaves": ["Formy – cezhraničné prenasledovanie, spoločné operácie, výmena informácií"] }
+    ]
   }
 }

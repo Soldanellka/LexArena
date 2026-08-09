@@ -110,5 +110,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Meritórne rozhodnutia – rozsudok a alternatívy",
+    "branches": [
+      { "label": "Pojem", "leaves": ["Podstata – rozhodnutie vo veci samej: vina, trest, opatrenia", "Kedy – po vykonaní dokazovania na hlavnom pojednávaní"] },
+      { "label": "Odsudzujúci rozsudok", "leaves": ["Obsah – vina, kvalifikácia, trest, ochranné opatrenia, náhrada škody", "Odôvodnenie (§ 168) – dôkazy, hodnotenie, úvahy o treste"] },
+      { "label": "Oslobodzujúci rozsudok (§ 285)", "leaves": ["Dôvody – skutok sa nestal, nie je TČ, nespáchal ho obžalovaný, neprípustnosť", "Dôsledky – nevinnosť; náhrada škody spravidla na civilné konanie"] },
+      { "label": "Ďalšie rozhodnutia", "leaves": ["Zastavenie (§ 281) – dôvody podľa § 215 aj na pojednávaní", "Postúpenie (§ 282) – priestupok či iný delikt", "Prerušenie (§ 283) – prekážka konania"] },
+      { "label": "Vyhlásenie", "leaves": ["Verejne – aj pri neverejnom pojednávaní", "Predseda senátu – stručné odôvodnenie"] }
+    ]
   }
 }

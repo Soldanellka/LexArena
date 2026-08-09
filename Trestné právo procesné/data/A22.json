@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Hlavné pojednávanie – jadro trestného konania",
+    "branches": [
+      { "label": "Zásady", "leaves": ["Ústnosť a bezprostrednosť – dôkazy naživo pred súdom", "Verejnosť – so zákonnými výnimkami", "Kontradiktórnosť a rovnosť strán – rovnaké procesné práva"] },
+      { "label": "Príprava (§§ 250–252)", "leaves": ["Predseda senátu – termín, predvolania, zabezpečenie dôkazov, návrhy strán"] },
+      { "label": "Priebeh (§§ 253–290)", "leaves": ["Začiatok – otvorenie, prítomnosť, poučenie, prečítanie obžaloby", "Výsluch obžalovaného – môže odmietnuť; bez nátlaku a sugescie", "Dokazovanie – svedkovia, znalci, listiny, vecné dôkazy, záznamy", "Záverečné návrhy – prokurátor → poškodený → obhajca → obžalovaný", "Posledné slovo a rozsudok – porada a vyhlásenie"] },
+      { "label": "Verejnosť a odročenie", "leaves": ["Vylúčenie verejnosti – maloletí, utajenie, bezpečnosť svedka, mravnosť", "Odročenie – chýbajúci svedok, doplnenie dokazovania, prekážky"] }
+    ]
   }
 }

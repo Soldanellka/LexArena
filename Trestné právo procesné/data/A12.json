@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "OPČ – sledovanie × agent × údaje",
+    "branches": [
+      { "label": "Pojem a rámec", "leaves": ["Podstata – utajované nástroje Policajného zboru mimo trestného konania", "Úprava – zákon č. 171/1993 Z. z. o PZ a osobitné predpisy; TP rieši len použitie výsledkov", "Cieľ – informácie nedosiahnuteľné štandardnými úkonmi"] },
+      { "label": "Druhy prostriedkov", "leaves": ["Sledovanie osôb a vecí – základný a najčastejší prostriedok", "Agent – pôsobí v prostredí páchateľov na povolenie prokurátora/súdu", "Telekomunikačné údaje – lokalizácia, zoznamy hovorov od operátorov", "Porovnávanie databáz – identifikácia osôb, tokov a spojení"] },
+      { "label": "Vzťah k trestnému konaniu", "leaves": ["Mimo konania – OPČ nie je súčasťou trestného konania", "Dôkaz – výsledky použiteľné, len ak získané zákonne", "Časovanie – často predchádza začatiu stíhania"] },
+      { "label": "Riziká", "leaves": ["Hranice – nejasné rozhranie OPČ × ITP", "Základné práva – riziko zásahov do súkromia; potreba presnej úpravy a kontroly"] }
+    ]
   }
 }

@@ -110,5 +110,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zaistenie osôb – zadržanie × predvedenie × zatknutie × väzba",
+    "branches": [
+      { "label": "Zadržanie (§ 85)", "leaves": ["Kto – policajt, pri dôvode väzby alebo pristihnutí pri čine", "Postup – poučenie o právach, zápisnica", "Lehoty – 48 hodín na odovzdanie súdu; 96 hodín pri OZZ"] },
+      { "label": "Predvedenie", "leaves": ["Podstata – privedenie osoby, ktorá sa bez ospravedlnenia nedostavila", "Charakter – zabezpečenie prítomnosti, nie sankcia", "Limity – dôstojnosť osoby a primeranosť zásahu"] },
+      { "label": "Zatknutie (§ 73)", "leaves": ["Príkaz – vydáva sudca pre prípravné konanie", "Podmienky – dôvodné podozrenie + dôvod väzby", "Postup – poučenie, bezodkladné odovzdanie súdu"] },
+      { "label": "Väzba (§§ 71–72)", "leaves": ["Rozhoduje – výlučne sudca; najintenzívnejší zásah do slobody", "Dôvody – úteková, kolúzna, preventívna", "Zásady – primeranosť, nevyhnutný čas, pravidelné preskúmavanie, prednostné vybavovanie"] },
+      { "label": "Zistenie totožnosti (§ 118)", "leaves": ["Úkony – osobné údaje, odtlačky, fotografie, hlasové záznamy", "Povinnosť – osoba musí strpieť; pri odmietnutí zákonné donútenie"] }
+    ]
   }
 }

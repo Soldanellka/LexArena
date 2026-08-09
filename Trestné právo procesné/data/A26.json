@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Mimoriadne opravné prostriedky – zásah do právoplatnosti",
+    "branches": [
+      { "label": "Dovolanie (§§ 368–382)", "leaves": ["Kto – obvinený a osoby v jeho prospech, generálny prokurátor, minister spravodlivosti", "Dôvody (§ 371) – porušenie zákona, nesprávne posúdenie, procesné chyby, trest mimo hraníc", "Kam – Najvyšší súd SR; jednota aplikácie práva"] },
+      { "label": "Obnova konania (§§ 394–402)", "leaves": ["Dôvody – nové skutočnosti a dôkazy, falšované dôkazy, závažná chyba", "Účel – materiálna spravodlivosť pri nesprávnom skutkovom stave"] },
+      { "label": "§ 363 TP", "leaves": ["Kto – generálny prokurátor, aj bez návrhu", "Proti čomu – právoplatné rozhodnutia OČTK v prípravnom konaní (nie súdov)", "Limity – prísne časové obmedzenie; rozhodnutie konečné", "Kontroverzie – ÚS SR: riziko nerovnosti strán, len jasná nezákonnosť"] },
+      { "label": "Spoločné znaky", "leaves": ["Výnimočnosť – len závažné právne či skutkové chyby", "Deľba – dovolanie právo × obnova fakty × § 363 nezákonnosť OČTK"] }
+    ]
   }
 }

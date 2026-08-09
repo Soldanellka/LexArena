@@ -114,5 +114,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Odborné vyjadrenie × znalecký posudok (§§ 144–151)",
+    "branches": [
+      { "label": "Odborné vyjadrenie (§ 144)", "leaves": ["Kto – osoba s odbornými vedomosťami, nie znalec", "Použitie – jednoduchšie odborné otázky", "Povaha – dôkazný prostriedok, nie posudok"] },
+      { "label": "Ustanovenie znalca (§ 145)", "leaves": ["Kto ustanovuje – OČTK alebo súd uznesením", "Znalec – zapísaný v zozname znalcov", "Uznesenie – úloha, otázky, lehota"] },
+      { "label": "Znalecký posudok (§ 147)", "leaves": ["Povaha – samostatný dôkazný prostriedok", "Náležitosti – úkony, podklady, výsledky, závery, odpovede", "Formy – písomný alebo ústny"] },
+      { "label": "Kontrola posudku (§§ 148–150)", "leaves": ["Výsluch znalca – objasnenie záverov, rozpory", "Doplnenie – pri neúplnosti či nejasnosti", "Kontrolný posudok – iný znalec pri pochybnostiach"] },
+      { "label": "Znalec a hodnotenie", "leaves": ["Povinnosti – osobne, nestranne, mlčanlivosť, včas", "Práva – odmena, podklady, odmietnutie pri konflikte záujmov", "Hodnotenie – voľné; posudok nie je nadradený iným dôkazom"] }
+    ]
   }
 }

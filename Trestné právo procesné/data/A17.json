@@ -114,5 +114,15 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Časti a štádiá trestného konania",
+    "branches": [
+      { "label": "Časti (systematika TP)", "leaves": ["Hlavy I–III – zásady, orgány, úkony", "Hlavy IV–V – prípravné konanie, konanie pred súdom", "Hlavy VI–VIII – opravné, mimoriadne opravné, vykonávacie konanie", "Hlava IX – osobitné spôsoby konania"] },
+      { "label": "Pred začatím stíhania (§§ 197–198)", "leaves": ["Účel – preveriť podnet", "Úkony – vysvetlenia, prvotné zaistenie dôkazov", "Výsledok – začatie stíhania alebo odloženie veci"] },
+      { "label": "Prípravné konanie (Hlava IV)", "leaves": ["Začatie stíhania (§ 199) – uznesenie", "Vznesenie obvinenia (§ 206) – osoba sa stáva obvineným", "Vyšetrovanie – výsluchy, prehliadky, ITP, znalci", "Ukončenie – obžaloba, zastavenie, prerušenie, postúpenie"] },
+      { "label": "Konanie pred súdom (Hlava V)", "leaves": ["Predbežné prejednanie obžaloby (§§ 241–244)", "Hlavné pojednávanie (§§ 250–290) – dôkazy, návrhy, rozsudok", "Verejné a neverejné zasadnutie – vybrané rozhodnutia"] },
+      { "label": "Opravné a vykonávacie", "leaves": ["Riadne – sťažnosť, odvolanie", "Mimoriadne – dovolanie, obnova konania", "Vykonávacie – realizácia trestov, opatrení a náhrady škody"] }
+    ]
   }
 }

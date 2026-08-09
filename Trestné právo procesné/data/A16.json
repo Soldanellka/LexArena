@@ -114,5 +114,14 @@
     "citation": "zákon č. 300/2005 Z. z. (Trestný zákon)",
     "url": "https://www.slov-lex.sk/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Uznesenie × rozsudok × trestný rozkaz",
+    "branches": [
+      { "label": "Uznesenie", "leaves": ["Kto – policajt, prokurátor, súd; najčastejšia forma", "O čom – začatie stíhania, obvinenie, väzba, zaistenie, zastavenie, postúpenie", "Náležitosti – výrok, odôvodnenie, poučenie", "Opravný prostriedok – sťažnosť"] },
+      { "label": "Rozsudok (§§ 163–172)", "leaves": ["Povaha – meritórne rozhodnutie o vine a treste po dokazovaní", "Výrok (§ 164) – vina/nevina, trest, ochranné opatrenia, náhrada škody", "Odôvodnenie (§ 168) – dôkazy, hodnotenie, kvalifikácia, úvahy o treste", "Opravný prostriedok – odvolanie"] },
+      { "label": "Trestný rozkaz (§§ 353–358)", "leaves": ["Povaha – skrátená forma bez hlavného pojednávania", "Podmienky – spoľahlivo preukázaný skutok, vybrané tresty", "Odpor – ruší rozkaz, koná sa hlavné pojednávanie"] },
+      { "label": "Právoplatnosť a prostriedky", "leaves": ["Riadne – sťažnosť (uznesenie), odvolanie (rozsudok)", "Mimoriadne – dovolanie, obnova konania", "Právoplatnosť (§ 172) – márne uplynutie lehoty alebo zamietnutie prostriedku"] }
+    ]
   }
 }
