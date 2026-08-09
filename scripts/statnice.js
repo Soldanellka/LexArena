@@ -70,11 +70,11 @@ const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
    aspoň jeden bod. Hmotné spĺňa všetkých 30 (overené 2026-08-06). */
 const CRIMINAL_HMOTNE_COUNT = 30;
 const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
-/* Procesné: rozsah je 2 z ROZHODNUTIA autorky (2026-08-07), nie z limitu dát –
-   zhrnutia so zoznamom odrážok má aj A3–A8 a extrakcia z nich vracia 4–8 bodov.
-   Autorka chce sieť púšťať dávkovo, ako budú okruhy prechádzať jej kontrolou;
-   zdvihnutie čísla je jediná potrebná zmena. */
-const CRIMINAL_PROCESNE_COUNT = 2;
+/* Procesné: zhrnutia so zoznamom odrážok („Zapamätaj si") má A1–A8 a extrakcia
+   z každého vracia 4–8 kľúčových bodov (overené 2026-08-07). A1/A2 boli
+   pôvodne slabé – ich jadro bola jedna dlhá veta a dávali po 1 bode – autorka
+   ich prepísala na zoznam a dnes dávajú 6 a 7. */
+const CRIMINAL_PROCESNE_COUNT = 8;
 
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
