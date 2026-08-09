@@ -116,13 +116,13 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "ITP – odpočúvanie × záznamy × sledovanie (§§ 114–117)",
+    "center": "ITP – sledovanie × záznamy × odpočúvanie (§§ 113–117)",
     "branches": [
-      { "label": "Pojem a druhy", "leaves": ["Podstata – utajované nástroje na informácie inak nedostupné", "Druhy – odpočúvanie, obrazové/zvukové záznamy, sledovanie, monitoring komunikácie", "Nasadenie – organizovaná, korupčná, násilná a hospodárska kriminalita"] },
-      { "label": "Podmienky použitia (§ 114)", "leaves": ["Závažný TČ – bežné úkony nepostačujú", "Primeranosť – zásah nevyhnutný a primeraný", "Súhlas sudcu – písomný, max. 6 mesiacov, predĺžiteľné o 6"] },
-      { "label": "Bez súhlasu sudcu (§ 115)", "leaves": ["Výnimka – vec neznesie odklad, súhlas nemožno včas získať", "Poistky – oznámenie sudcovi do 1 hodiny, dodatočný súhlas", "Limit – bez súhlasu do 12 hodín sa ITP okamžite ukončí"] },
+      { "label": "Pojem a druhy", "leaves": ["Podstata – utajované nástroje na informácie inak nedostupné", "Druhy – sledovanie osôb a vecí (§ 113), obrazové a zvukové záznamy (§ 114), odpočúvanie a záznam telekomunikačnej prevádzky (§ 115), oznámenie údajov o telekomunikačnej prevádzke (§ 116), agent (§ 117)", "Nasadenie – organizovaná, korupčná, násilná a hospodárska kriminalita"] },
+      { "label": "Podmienky použitia (§§ 113–115)", "leaves": ["Závažný TČ – bežné úkony nepostačujú", "Primeranosť – zásah nevyhnutný a primeraný", "Príkaz sudcu – písomný; čas najviac šesť mesiacov, predĺžiteľný"] },
+      { "label": "Vec, ktorá neznesie odklad", "leaves": ["Výnimka – vec neznesie odklad, súhlas nemožno včas získať", "Poistky – oznámenie sudcovi do 1 hodiny, dodatočný súhlas", "Limit – bez súhlasu do 12 hodín sa ITP okamžite ukončí"] },
       { "label": "Agent (§ 117)", "leaves": ["Použitie – infiltrácia organizovaných skupín", "Obydlie – osobitný príkaz podľa § 114; zásada najmiernejšieho zásahu"] },
-      { "label": "Záznamy (§ 116)", "leaves": ["Režim – utajené uchovávanie; nepoužiteľné sa zlikvidujú", "Dôkaz – len zákonne získané záznamy; obhajoba má právo oboznámiť sa", "Kontrola – sudca aj orgán sústavne skúmajú trvanie dôvodov"] }
+      { "label": "Nakladanie so záznamami", "leaves": ["Režim – utajené uchovávanie; nepoužiteľné sa zlikvidujú", "Dôkaz – len zákonne získané záznamy; obhajoba má právo oboznámiť sa", "Kontrola – sudca aj orgán sústavne skúmajú trvanie dôvodov"] }
     ]
   }
 }
