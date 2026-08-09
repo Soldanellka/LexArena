@@ -1,0 +1,35 @@
+{
+  "area": "Trestné právo procesné",
+  "clusters": [
+    { "id": "zasady-a-subjekty", "label": "Zásady a subjekty konania", "okruhy": [1, 2, 3, 4, 5, 6, 7] },
+    { "id": "procesne-ukony", "label": "Procesné úkony", "okruhy": [8] },
+    { "id": "zaistenie", "label": "Zaistenie osôb a vecí", "okruhy": [9, 10] },
+    { "id": "dokazovanie", "label": "Dokazovanie", "okruhy": [11, 12, 13, 14, 15] },
+    { "id": "rozhodnutia-a-stadia", "label": "Rozhodnutia a štádiá", "okruhy": [16, 17] },
+    { "id": "predsudne-konanie", "label": "Predsúdne konanie", "okruhy": [18, 19, 20] },
+    { "id": "konanie-pred-sudom", "label": "Konanie pred súdom", "okruhy": [21, 22, 23, 24] },
+    { "id": "opravne-prostriedky", "label": "Opravné prostriedky", "okruhy": [25, 26] },
+    { "id": "osobitne-a-restorativa", "label": "Osobitné konania a restoratíva", "okruhy": [27, 28] },
+    { "id": "cudzina-a-eu", "label": "Cudzina a EÚ", "okruhy": [29, 30] }
+  ],
+  "links": [
+    { "from": 1, "to": 13, "note": "Zásady sa najvýraznejšie prejavia v dokazovaní" },
+    { "from": 2, "to": 9, "note": "Zásahy do osobnej slobody pod súdnou kontrolou" },
+    { "from": 5, "to": 6, "note": "Obvinený a jeho obhajca" },
+    { "from": 7, "to": 23, "note": "Nárok poškodeného sa rieši v rozsudku" },
+    { "from": 8, "to": 16, "note": "Úkony a ich písomná podoba – rozhodnutia" },
+    { "from": 9, "to": 11, "note": "Zásahy do práv povoľuje sudca pre prípravné konanie" },
+    { "from": 10, "to": 13, "note": "Zaistené veci ako dôkazný prostriedok" },
+    { "from": 11, "to": 12, "note": "ITP × operatívno-pátracia činnosť – hranica" },
+    { "from": 13, "to": 14, "note": "Svedok ako najčastejší dôkazný prostriedok" },
+    { "from": 13, "to": 15, "note": "Znalecký posudok ako dôkazný prostriedok" },
+    { "from": 17, "to": 18, "note": "Predsúdne konanie ako prvé štádium" },
+    { "from": 19, "to": 21, "note": "Obžaloba prechádza na súdne preskúmanie" },
+    { "from": 20, "to": 19, "note": "Prokurátor rozhoduje po skončení vyšetrovania" },
+    { "from": 22, "to": 23, "note": "Pojednávanie a jeho meritórny výstup" },
+    { "from": 22, "to": 24, "note": "Hlavné pojednávanie × zasadnutie súdu" },
+    { "from": 25, "to": 26, "note": "Riadne × mimoriadne opravné prostriedky" },
+    { "from": 27, "to": 28, "note": "Odklony a restoratívne nástroje" },
+    { "from": 29, "to": 30, "note": "Medzinárodná × únijná spolupráca" }
+  ]
+}

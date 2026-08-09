@@ -114,10 +114,10 @@
   "spider": {
     "center": "Zaistenie vecí a majetku",
     "branches": [
-      { "label": "Zaistenie veci (§ 89a)", "leaves": ["Dôvody – dôkaz, nástroj činu, výnos, predmet prepadnutia/zhabania", "Postup – uznesenie, doručenie, evidencia a úschova", "Obrana – sťažnosť proti uzneseniu"] },
-      { "label": "Vydanie a odňatie (§§ 89, 91)", "leaves": ["Vydanie – povinnosť vydať vec na výzvu OČTK", "Odňatie – donucovací úkon pri nevydaní; primerané prostriedky, zápisnica"] },
-      { "label": "Majetok a účty (§§ 95a–95b)", "leaves": ["Zaistenie majetku – pre budúci výkon prepadnutia či peňažného trestu", "Rozsah – nehnuteľnosti, hnuteľné veci, účty, cenné papiere, práva", "Blokácia účtu – zákaz transakcií aj dispozície pri podozrení z výnosov"] },
-      { "label": "Listiny a dáta (§§ 92, 90)", "leaves": ["Listiny s tajomstvom – bankové, daňové, telekomunikačné len so súhlasom súdu", "Advokátske tajomstvo – osobitná ochrana", "Počítačové údaje – vydanie, kopírovanie, zaistenie nosičov"] }
+      { "label": "Zaistenie veci (§§ 89, 93–94)", "leaves": ["Dôvody – dôkaz, nástroj činu, výnos, predmet prepadnutia/zhabania", "Postup – uznesenie, doručenie, evidencia a úschova", "Obrana – sťažnosť proti uzneseniu"] },
+      { "label": "Vydanie (§ 89a) a odňatie (§ 90)", "leaves": ["Vydanie – povinnosť vydať vec na výzvu OČTK", "Odňatie – donucovací úkon pri nevydaní; primerané prostriedky, zápisnica"] },
+      { "label": "Majetok a účty (§§ 95–96)", "leaves": ["Zaistenie majetku – pre budúci výkon prepadnutia či peňažného trestu", "Rozsah – nehnuteľnosti, hnuteľné veci, účty, cenné papiere, práva", "Blokácia účtu – zákaz transakcií aj dispozície pri podozrení z výnosov"] },
+      { "label": "Listiny a dáta (§ 91)", "leaves": ["Listiny s tajomstvom – bankové, daňové, telekomunikačné len so súhlasom súdu", "Advokátske tajomstvo – osobitná ochrana", "Počítačové údaje – vydanie, kopírovanie, zaistenie nosičov"] }
     ]
   }
 }
