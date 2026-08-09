@@ -70,11 +70,9 @@ const CRIMINAL_HMOTNE_PATH = LIVE + 'Trestné právo hmotné/data/';
    aspoň jeden bod. Hmotné spĺňa všetkých 30 (overené 2026-08-06). */
 const CRIMINAL_HMOTNE_COUNT = 30;
 const CRIMINAL_PROCESNE_PATH = LIVE + 'Trestné právo procesné/data/';
-/* Procesné: zhrnutia so zoznamom odrážok („Zapamätaj si") má A1–A8 a extrakcia
-   z každého vracia 4–8 kľúčových bodov (overené 2026-08-07). A1/A2 boli
-   pôvodne slabé – ich jadro bola jedna dlhá veta a dávali po 1 bode – autorka
-   ich prepísala na zoznam a dnes dávajú 6 a 7. */
-const CRIMINAL_PROCESNE_COUNT = 8;
+/* Procesné: zhrnutia má VŠETKÝCH 30 okruhov a extrakcia z každého vracia
+   4–10 kľúčových bodov (overené 2026-08-07, súvislé pokrytie A1–A30). */
+const CRIMINAL_PROCESNE_COUNT = 30;
 
 /* ============================================================
    REGISTER OBLASTÍ ŠTÁTNICOVEJ SIENE – nová oblasť sa pridáva sem,
@@ -361,6 +359,14 @@ function extractKeyPoints(rawSummary, title) {
      Texty autorky sa nijako neupravujú – prispôsobuje sa parser. */
   const sectionMatch =
        text.match(/Kľúčové slová[^:]*:\s*\n([\s\S]*?)(?=\n\nZapamätaj si|\n\n$|$)/i)
+    /* Odrážky NA TOM ISTOM RIADKU ako nadpis – „Zapamätaj si (štátnicové jadro)
+       – prvý bod. – druhý bod." Musí sa skúšať PRED riadkovým vzorom nižšie:
+       ten by pri takomto tvare preskočil celý zoznam a zachytil až nasledujúci
+       odstavec, teda spravidla citáciu zákona (namerané pri TPP A10 a A11 –
+       jediným „kľúčovým bodom" bol riadok „Zdroj (overené) – Trestný poriadok…").
+       Podmienka `[ \t]*–` nesmie prejsť cez koniec riadka, takže texty
+       s odrážkami na ďalších riadkoch (TPH, väčšina TPP) sem nespadnú. */
+    || text.match(/Zapamätaj si[^\n:]*?:?[ \t]*(–[^\n]*)(?=\n|$)/i)
     || text.match(/Zapamätaj si[^\n:]*:?[ \t]*\n([\s\S]*?)(?=\n\nZdroj|\n\n$|$)/i)
     /* ⚠️ „Zhrnutie (štátnicové jadro)" má INÚ polohu než predošlé dva: nestojí
        na konci ako zoznam odrážok, ale HORE, hneď za úvodným odstavcom, a
@@ -372,6 +378,11 @@ function extractKeyPoints(rawSummary, title) {
 
   if (sectionMatch) {
     const rawLines = sectionMatch[1]
+      /* Odrážky natlačené do jedného riadka („… = § 89a. – Odňatie veci = § 90.")
+         sa najprv rozlámu na samostatné riadky. Vzor je úzky ZÁMERNE – vyžaduje
+         koniec vety pred pomlčkou, takže bežnú pomlčku vnútri vety
+         („Vec dôležitá – definícia") nerozdelí. */
+      .replace(/([.:;])\s+[–—-]\s+/g, '$1\n')
       .split('\n')
       // Odrážky: pomlčka, en/em pomlčka aj guľôčka – novšie zhrnutia používajú „–".
       .map(l => l.replace(/^[-–—•]\s*/, '').trim())
