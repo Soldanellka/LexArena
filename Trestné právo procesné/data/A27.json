@@ -182,34 +182,37 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Osobitné spôsoby konania",
+    "center": "Osobitné spôsoby konania (SIEDMA HLAVA, §§ 330–362g)",
     "branches": [
       {
-        "label": "Samosudca (§§ 314a–314c) a dohoda o vine a treste (§§ 232–233a)",
+        "label": "Samosudca (§§ 348–352) a dohoda o vine a treste (§§ 331–335)",
         "leaves": [
           "Samosudca – menej závažné TČ (do 5 rokov), rýchlejšie, často trestný rozkaz",
-          "Dohoda o vine a treste – priznanie, dohoda s prokurátorom, schvaľuje súd"
+          "Dohoda o vine a treste – priznanie a dohoda s prokurátorom už v prípravnom konaní (§§ 232–233)",
+          "Schválenie – návrh dohody preskúma a schvaľuje súd (§§ 331–335)"
         ]
       },
       {
-        "label": "Mladiství (§§ 345–363) a právnické osoby (§§ 363a–363h)",
+        "label": "Mladiství (§§ 336–347) a právnické osoby (zákon č. 91/2016 Z. z.)",
         "leaves": [
           "Mladiství – zvýšená ochrana, výchovný účel, obmedzená väzba, zákonný zástupca",
-          "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty"
+          "Obhajoba (§ 336) – mladistvý musí mať obhajcu",
+          "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty; mimo TP, podľa zákona č. 91/2016 Z. z."
         ]
       },
       {
-        "label": "Ušlý (§§ 358–364) a chránený svedok (§§ 136a–136d)",
+        "label": "Ušlý (§§ 358–362) a chránený svedok (§§ 136–139)",
         "leaves": [
           "Proti ušlému – konanie bez prítomnosti pri vyhýbaní sa; riadne predvolanie",
-          "Chránený svedok – anonymizácia, osobitné postupy pri ohrození"
+          "Poistka (§ 362) – odsúdený môže do 15 dní žiadať opätovné prejednanie vo svojej prítomnosti",
+          "Chránený svedok – utajenie údajov a osobitné postupy pri ohrození"
         ]
       },
       {
-        "label": "Medzinárodné konania – EZR (zákon č. 154/2010 Z. z.), uznanie cudzieho rozhodnutia (§§ 518–521)",
+        "label": "Medzinárodné konania – EZR (zákon č. 154/2010 Z. z.), uznanie cudzieho rozhodnutia (§§ 515–521)",
         "leaves": [
           "EZR – vydanie a prevzatie osôb v EÚ, rýchle lehoty, obmedzené odmietnutie",
-          "Uznanie cudzieho rozhodnutia – prenos výkonu trestu"
+          "Uznanie cudzieho rozhodnutia – prenos výkonu trestu; uznávacie konanie § 518"
         ]
       }
     ]
