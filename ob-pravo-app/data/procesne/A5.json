@@ -2,13 +2,23 @@
   "id": "5",
   "title": "Subjekty civilného procesu",
   "schemaVersion": "1.1",
-  "tags": ["subjekty procesu", "procesná subjektivita", "procesná spôsobilosť", "znalec", "kolízny opatrovník"],
-  "summary": "Subjektmi civilného procesu sú súd, účastníci konania (v sporovom konaní strany – žalobca a žalovaný) a ďalšie osoby zúčastnené na konaní – svedkovia, znalci, tlmočníci, prípadne prokurátor alebo iné orgány verejnej moci. Účastník musí mať procesnú subjektivitu (spôsobilosť byť stranou konania), ktorá zodpovedá právnej subjektivite v hmotnom práve, a procesnú spôsobilosť (spôsobilosť vlastnými úkonmi nadobúdať a vykonávať procesné práva a povinnosti), ktorá zodpovedá spôsobilosti na právne úkony. Za osoby bez procesnej spôsobilosti konajú ich zákonní zástupcovia.\n\nOd účastníkov treba odlišovať tzv. iné subjekty procesu, ktoré majú iba funkčnú úlohu – znalec poskytuje odborný záver ako dôkazný prostriedok, svedok vypovedá o skutočnostiach, tlmočník zabezpečuje jazykovú komunikáciu; žiadny z nich nemá vlastný právny záujem na výsledku konania a nedisponuje predmetom konania. Osobitným subjektom je kolízny opatrovník, ktorého súd ustanoví na ochranu záujmov maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu. V zákonom ustanovených prípadoch môže do konania vstúpiť aj prokurátor na ochranu verejného záujmu.\n\nZapamätaj si:\n- Hlavné subjekty: súd a účastníci (strany sporu); majú vlastný právny záujem na výsledku.\n- Iné subjekty procesu: svedok, znalec, tlmočník – bez vlastného právneho záujmu na výsledku.\n- Procesná subjektivita = spôsobilosť byť stranou konania (zodpovedá právnej subjektivite).\n- Procesná spôsobilosť = spôsobilosť vlastnými úkonmi konať v konaní (zodpovedá spôsobilosti na právne úkony).\n- Kolízny opatrovník chráni záujmy maloletého pri rozpore záujmov so zákonným zástupcom."
-  ,
+  "tags": [
+    "subjekty procesu",
+    "procesná subjektivita",
+    "procesná spôsobilosť",
+    "znalec",
+    "kolízny opatrovník"
+  ],
+  "summary": "Subjektmi civilného procesu sú súd, účastníci konania a iné osoby zúčastnené na konaní.\nCivilný proces je založený na procesnom vzťahu, ktorý vzniká doručením žaloby súdu – tým sa vytvára procesnoprávny vzťah medzi súdom a účastníkmi.\n\nSúd ako subjekt civilného procesu\nSúd je orgán verejnej moci, ktorý poskytuje ochranu právam a právom chráneným záujmom.\nOkrem sudcu môžu mať rozhodovaciu právomoc aj ďalšie osoby podľa zákona:\n\nVSÚ (vyšší súdny úradník) – vykonáva zákonom zverené úkony, najmä v menej komplikovaných procesných otázkach.\n\nNotár ako súdny komisár – koná v dedičskom konaní.\n\nExekútor – vykonáva exekučné konanie ako orgán verejnej moci.\n\nÚčastníci konania\nÚčastníci sú tí, ktorí majú vlastný právny záujem na výsledku konania.\n\nSporové konanie: žalobca a žalovaný – koná sa o ich nároku.\n\nMimosporové konanie: osoby, o ktorých právach alebo povinnostiach sa rozhoduje.\n\nProcesné podmienky na strane účastníkov\nÚčastník musí mať:\n\nprocesnú subjektivitu – spôsobilosť byť stranou konania (zodpovedá právnej subjektivite),\n\nprocesnú spôsobilosť – spôsobilosť vlastnými úkonmi vykonávať procesné práva a povinnosti (zodpovedá spôsobilosti na právne úkony).\n\nOsoby bez procesnej spôsobilosti konajú prostredníctvom zákonných zástupcov.\n\nIné subjekty procesu\nIde o osoby, ktoré nemajú právny záujem na výsledku konania, ale plnia funkčnú úlohu.\n\nSubjekty dokazovania\nSvedok – vypovedá o skutočnostiach, ktoré vnímal.\n\nZnalec – poskytuje odborný posudok ako dôkaz.\n\nTlmočník / prekladateľ – zabezpečuje jazykovú komunikáciu.\n\nĎalšie osoby v konaní\nZapisovateľ – vedie súdny spis a zapisuje priebeh pojednávania.\n\nAsistent sudcu – vykonáva odborné úkony na podporu sudcu.\n\nProkurátor – môže vstúpiť do konania na ochranu verejného záujmu, ak to zákon umožňuje.\n\nKolízny opatrovník\nKolízny opatrovník je osobitný subjekt, ktorého súd ustanoví na ochranu záujmov maloletého alebo osoby s obmedzenou spôsobilosťou, ak sú v rozpore so záujmami jeho zákonného zástupcu.\n\nMá procesné práva účastníka v rozsahu potrebnom na ochranu zastupovanej osoby.\n\nZapamätaj si (štátnicové jadro)\nHlavné subjekty: súd + účastníci (majú právny záujem).\n\nIné subjekty: svedok, znalec, tlmočník, prekladateľ, zapisovateľ, asistent sudcu – bez právneho záujmu.\n\nProcesná subjektivita = byť stranou konania.\n\nProcesná spôsobilosť = konať vlastnými úkonmi.\n\nKolízny opatrovník chráni maloletého pri rozpore záujmov so zákonným zástupcom.\n\nProkurátor môže vstúpiť do konania, ak to zákon umožňuje.\n\nProcesný vzťah vzniká doručením žaloby súdu.\n\nZdroj:\nCSP (160/2015 Z. z.); CMP (161/2015 Z. z.); SSP (162/2015 Z. z.); Ústava SR čl. 46–50.",
   "quiz": [
     {
       "question": "Kto je vždy hlavným subjektom civilného sporového konania spolu so súdom?",
-      "options": ["Svedok", "Strany sporu (žalobca a žalovaný)", "Znalec", "Tlmočník"],
+      "options": [
+        "Svedok",
+        "Strany sporu (žalobca a žalovaný)",
+        "Znalec",
+        "Tlmočník"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Hlavnými subjektmi civilného sporového konania sú súd a strany sporu – žalobca a žalovaný.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Aké je postavenie znalca v civilnom procese?",
-      "options": ["Je účastníkom konania", "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok, nie účastníkom", "Rozhoduje namiesto súdu o právnych otázkach", "Zastupuje jednu zo strán"],
+      "options": [
+        "Je účastníkom konania",
+        "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok, nie účastníkom",
+        "Rozhoduje namiesto súdu o právnych otázkach",
+        "Zastupuje jednu zo strán"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Znalec poskytuje odborný záver (znalecký posudok) ako dôkazný prostriedok; nie je účastníkom konania ani nerozhoduje o právnych otázkach.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Môže do civilného konania vstúpiť prokurátor?",
-      "options": ["Nikdy, prokurátor pôsobí len v trestnom konaní", "Áno, v zákonom ustanovených prípadoch môže podať návrh alebo vstúpiť do už začatého konania na ochranu verejného záujmu", "Áno, ale iba ako svedok", "Áno, iba ako znalec"],
+      "options": [
+        "Nikdy, prokurátor pôsobí len v trestnom konaní",
+        "Áno, v zákonom ustanovených prípadoch môže podať návrh alebo vstúpiť do už začatého konania na ochranu verejného záujmu",
+        "Áno, ale iba ako svedok",
+        "Áno, iba ako znalec"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon v ustanovených prípadoch umožňuje prokurátorovi podať návrh na začatie konania alebo doň vstúpiť na ochranu verejného záujmu.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Aké je postavenie kolízneho opatrovníka v konaniach týkajúcich sa maloletého?",
-      "options": ["Nemá žiadne procesné postavenie", "Chráni záujmy maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu", "Je vždy žalovaným v konaní", "Nahrádza súd pri rozhodovaní vo veci"],
+      "options": [
+        "Nemá žiadne procesné postavenie",
+        "Chráni záujmy maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu",
+        "Je vždy žalovaným v konaní",
+        "Nahrádza súd pri rozhodovaní vo veci"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súd ustanoví kolízneho opatrovníka práve vtedy, keď záujmy maloletého a jeho zákonného zástupcu nie sú zhodné, aby bol maloletý riadne zastúpený.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Čím sa účastník konania odlišuje od iných subjektov procesu (svedok, znalec, tlmočník)?",
-      "options": ["Účastník má vlastný právny záujem na výsledku konania a disponuje procesnými právami vo veci samej, iní majú len funkčnú úlohu", "Iné subjekty majú rovnaké procesné práva ako účastníci", "Rozdiel medzi nimi neexistuje", "Svedok je vždy zároveň aj účastníkom konania"],
+      "options": [
+        "Účastník má vlastný právny záujem na výsledku konania a disponuje procesnými právami vo veci samej, iní majú len funkčnú úlohu",
+        "Iné subjekty majú rovnaké procesné práva ako účastníci",
+        "Rozdiel medzi nimi neexistuje",
+        "Svedok je vždy zároveň aj účastníkom konania"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Účastník má priamy právny záujem na výsledku sporu a môže disponovať predmetom konania; iní subjekti majú iba pomocnú, funkčnú úlohu.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Subjekty civilného procesu", "definition": "Súd, účastníci konania a ďalšie osoby zúčastnené na konaní (svedkovia, znalci, tlmočníci)." },
-    { "term": "Procesná subjektivita", "definition": "Spôsobilosť byť stranou civilného konania; zodpovedá právnej subjektivite v hmotnom práve." },
-    { "term": "Procesná spôsobilosť", "definition": "Spôsobilosť vlastnými úkonmi nadobúdať a vykonávať procesné práva a povinnosti; zodpovedá spôsobilosti na právne úkony." },
-    { "term": "Znalec", "definition": "Odborník poskytujúci znalecký posudok ako dôkazný prostriedok, nie účastník konania." },
-    { "term": "Kolízny opatrovník", "definition": "Osoba ustanovená súdom na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu." }
+    {
+      "term": "Subjekty civilného procesu",
+      "definition": "Súd, účastníci konania a ďalšie osoby zúčastnené na konaní (svedkovia, znalci, tlmočníci)."
+    },
+    {
+      "term": "Procesná subjektivita",
+      "definition": "Spôsobilosť byť stranou civilného konania; zodpovedá právnej subjektivite v hmotnom práve."
+    },
+    {
+      "term": "Procesná spôsobilosť",
+      "definition": "Spôsobilosť vlastnými úkonmi nadobúdať a vykonávať procesné práva a povinnosti; zodpovedá spôsobilosti na právne úkony."
+    },
+    {
+      "term": "Znalec",
+      "definition": "Odborník poskytujúci znalecký posudok ako dôkazný prostriedok, nie účastník konania."
+    },
+    {
+      "term": "Kolízny opatrovník",
+      "definition": "Osoba ustanovená súdom na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Rozpor záujmov rodiča a dieťaťa",
       "difficulty": "stredná",
       "steps": [
-        { "question": "V konaní o úprave výkonu rodičovských práv súd zistí, že záujmy matky a maloletého dieťaťa sú v rozpore.", "options": [], "correct": 0 },
+        {
+          "question": "V konaní o úprave výkonu rodičovských práv súd zistí, že záujmy matky a maloletého dieťaťa sú v rozpore.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo súd ustanoví?",
-          "options": ["Kolízneho opatrovníka na ochranu záujmov dieťaťa", "Nič, matka zastupuje dieťa aj naďalej", "Súd konanie bez ďalšieho zastaví"],
+          "options": [
+            "Kolízneho opatrovníka na ochranu záujmov dieťaťa",
+            "Nič, matka zastupuje dieťa aj naďalej",
+            "Súd konanie bez ďalšieho zastaví"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri rozpore záujmov medzi zákonným zástupcom a maloletým súd ustanoví kolízneho opatrovníka, aby bol maloletý riadne zastúpený.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Je kolízny opatrovník samostatným účastníkom konania alebo zástupcom maloletého?",
-          "options": ["Koná v mene a v záujme maloletého ako jeho procesný zástupca, maloletý zostáva účastníkom konania", "Je samostatným účastníkom popri dieťati", "Je iba svedkom v konaní"],
+          "options": [
+            "Koná v mene a v záujme maloletého ako jeho procesný zástupca, maloletý zostáva účastníkom konania",
+            "Je samostatným účastníkom popri dieťati",
+            "Je iba svedkom v konaní"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Kolízny opatrovník vystupuje ako zástupca maloletého, ktorý sám zostáva účastníkom konania.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Výsluch znalca na pojednávaní",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Súd predvolá znalca, aby na pojednávaní vysvetlil svoj znalecký posudok o výške škody.", "options": [], "correct": 0 },
+        {
+          "question": "Súd predvolá znalca, aby na pojednávaní vysvetlil svoj znalecký posudok o výške škody.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aké je procesné postavenie znalca?",
-          "options": ["Je účastníkom konania s právom navrhovať dôkazy", "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok", "Zastupuje žalovaného"],
+          "options": [
+            "Je účastníkom konania s právom navrhovať dôkazy",
+            "Je iným subjektom procesu poskytujúcim odborný dôkazný prostriedok",
+            "Zastupuje žalovaného"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Znalec je iným subjektom procesu – jeho posudok je dôkazným prostriedkom, on sám nie je účastníkom.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Môže znalec namiesto súdu rozhodnúť o právnej otázke zavinenia?",
-          "options": ["Áno, ak je odborník na danú oblasť", "Nie, hodnotenie právnych otázok patrí výlučne súdu, znalec sa vyjadruje len k odborným (skutkovým) otázkam", "Áno, ak s tým strany súhlasia"],
+          "options": [
+            "Áno, ak je odborník na danú oblasť",
+            "Nie, hodnotenie právnych otázok patrí výlučne súdu, znalec sa vyjadruje len k odborným (skutkovým) otázkam",
+            "Áno, ak s tým strany súhlasia"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Právne posúdenie veci, vrátane otázky zavinenia, patrí výlučne súdu; znalec poskytuje len odborné závery k skutkovým otázkam.",
@@ -120,16 +189,89 @@
   "spider": {
     "center": "Subjekty civilného procesu – súd, účastníci, iné osoby, procesná subjektivita, procesná spôsobilosť",
     "branches": [
-      { "label": "Vznik procesného vzťahu", "leaves": ["Procesnoprávny vzťah vzniká doručením žaloby na súd.", "Tým sa vytvára vzťah medzi súdom a účastníkmi konania."] },
-      { "label": "Subjekty s rozhodovacou právomocou", "leaves": ["Súd – orgán verejnej moci poskytujúci ochranu právam a právom chráneným záujmom; rozhoduje podľa Ústavy, zákonov a medzinárodných zmlúv.", "Vyšší súdny úradník (VSÚ) – vykonáva zákonom zverené procesné úkony.", "Notár ako súdny komisár – koná v dedičskom konaní.", "Exekútor – vykonáva exekučné konanie ako orgán verejnej moci."] },
-      { "label": "Funkcia súdu v konaniach", "leaves": ["Sporové konanie: rozhoduje medzi žalobcom a žalovaným.", "Mimosporové konanie: zisťuje objektívny stav a chráni verejný záujem."] },
-      { "label": "Strany sporu a účastníci konania", "leaves": ["Účastníci sú osoby, ktoré majú vlastný právny záujem na výsledku konania.", "Sporové konanie: žalobca × žalovaný – o ich nároku sa koná a rozhoduje.", "Mimosporové konanie: osoby, o ktorých právach/povinnostiach sa rozhoduje."] },
-      { "label": "Procesné podmienky na strane strán", "leaves": ["Účastník musí mať procesnú subjektivitu a procesnú spôsobilosť; ak chýbajú, ide o nedostatok procesných podmienok."] },
-      { "label": "Procesná subjektivita a procesná spôsobilosť", "leaves": ["Procesná subjektivita – spôsobilosť byť stranou konania; zodpovedá právnej subjektivite v hmotnom práve.", "Majú ju FO, PO, štát, obec a iné subjekty, ak to zákon pripúšťa.", "Procesná spôsobilosť – spôsobilosť vlastnými úkonmi vykonávať procesné práva a povinnosti; zodpovedá spôsobilosti na právne úkony.", "Osoby bez spôsobilosti konajú prostredníctvom zákonných zástupcov."] },
-      { "label": "Subjekty v procese dokazovania", "leaves": ["Ide o osoby, ktoré nemajú právny záujem na výsledku konania, ale plnia funkčnú úlohu:", "Svedok – vypovedá o tom, čo vnímal.", "Znalec – poskytuje odborný posudok ako dôkaz."] },
-      { "label": "Iné subjekty konania", "leaves": ["Tlmočník – zabezpečuje jazykovú komunikáciu.", "Prekladateľ – prekladá listiny a komunikáciu.", "Zapisovateľ – vedie súdny spis a zapisuje priebeh pojednávania.", "Asistent sudcu – vykonáva odborné úkony na podporu sudcu.", "Prokurátor – môže vstúpiť do konania na ochranu verejného záujmu, ak to zákon umožňuje."] },
-      { "label": "Kolízny opatrovník", "leaves": ["Kolízneho opatrovníka ustanovuje súd na ochranu záujmov maloletého alebo osoby s obmedzenou spôsobilosťou, ak sú v rozpore so záujmami zákonného zástupcu.", "Má procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného."] },
-      { "label": "Zapamätaj si (štátnicové jadro)", "leaves": ["Hlavné subjekty: súd + účastníci (majú právny záujem).", "Iné subjekty: svedok, znalec, tlmočník, prekladateľ, zapisovateľ, asistent sudcu.", "Procesná subjektivita = byť stranou konania.", "Procesná spôsobilosť = konať vlastnými úkonmi.", "Kolízny opatrovník chráni maloletého pri rozpore záujmov so zákonným zástupcom.", "Prokurátor môže vstúpiť do konania, ak to zákon umožňuje.", "Procesný vzťah vzniká doručením žaloby súdu."] }
+      {
+        "label": "Vznik procesného vzťahu",
+        "leaves": [
+          "Procesnoprávny vzťah vzniká doručením žaloby na súd.",
+          "Tým sa vytvára vzťah medzi súdom a účastníkmi konania."
+        ]
+      },
+      {
+        "label": "Subjekty s rozhodovacou právomocou",
+        "leaves": [
+          "Súd – orgán verejnej moci poskytujúci ochranu právam a právom chráneným záujmom; rozhoduje podľa Ústavy, zákonov a medzinárodných zmlúv.",
+          "Vyšší súdny úradník (VSÚ) – vykonáva zákonom zverené procesné úkony.",
+          "Notár ako súdny komisár – koná v dedičskom konaní.",
+          "Exekútor – vykonáva exekučné konanie ako orgán verejnej moci."
+        ]
+      },
+      {
+        "label": "Funkcia súdu v konaniach",
+        "leaves": [
+          "Sporové konanie: rozhoduje medzi žalobcom a žalovaným.",
+          "Mimosporové konanie: zisťuje objektívny stav a chráni verejný záujem."
+        ]
+      },
+      {
+        "label": "Strany sporu a účastníci konania",
+        "leaves": [
+          "Účastníci sú osoby, ktoré majú vlastný právny záujem na výsledku konania.",
+          "Sporové konanie: žalobca × žalovaný – o ich nároku sa koná a rozhoduje.",
+          "Mimosporové konanie: osoby, o ktorých právach/povinnostiach sa rozhoduje."
+        ]
+      },
+      {
+        "label": "Procesné podmienky na strane strán",
+        "leaves": [
+          "Účastník musí mať procesnú subjektivitu a procesnú spôsobilosť; ak chýbajú, ide o nedostatok procesných podmienok."
+        ]
+      },
+      {
+        "label": "Procesná subjektivita a procesná spôsobilosť",
+        "leaves": [
+          "Procesná subjektivita – spôsobilosť byť stranou konania; zodpovedá právnej subjektivite v hmotnom práve.",
+          "Majú ju FO, PO, štát, obec a iné subjekty, ak to zákon pripúšťa.",
+          "Procesná spôsobilosť – spôsobilosť vlastnými úkonmi vykonávať procesné práva a povinnosti; zodpovedá spôsobilosti na právne úkony.",
+          "Osoby bez spôsobilosti konajú prostredníctvom zákonných zástupcov."
+        ]
+      },
+      {
+        "label": "Subjekty v procese dokazovania",
+        "leaves": [
+          "Ide o osoby, ktoré nemajú právny záujem na výsledku konania, ale plnia funkčnú úlohu:",
+          "Svedok – vypovedá o tom, čo vnímal.",
+          "Znalec – poskytuje odborný posudok ako dôkaz."
+        ]
+      },
+      {
+        "label": "Iné subjekty konania",
+        "leaves": [
+          "Tlmočník – zabezpečuje jazykovú komunikáciu.",
+          "Prekladateľ – prekladá listiny a komunikáciu.",
+          "Zapisovateľ – vedie súdny spis a zapisuje priebeh pojednávania.",
+          "Asistent sudcu – vykonáva odborné úkony na podporu sudcu.",
+          "Prokurátor – môže vstúpiť do konania na ochranu verejného záujmu, ak to zákon umožňuje."
+        ]
+      },
+      {
+        "label": "Kolízny opatrovník",
+        "leaves": [
+          "Kolízneho opatrovníka ustanovuje súd na ochranu záujmov maloletého alebo osoby s obmedzenou spôsobilosťou, ak sú v rozpore so záujmami zákonného zástupcu.",
+          "Má procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného."
+        ]
+      },
+      {
+        "label": "Zapamätaj si (štátnicové jadro)",
+        "leaves": [
+          "Hlavné subjekty: súd + účastníci (majú právny záujem).",
+          "Iné subjekty: svedok, znalec, tlmočník, prekladateľ, zapisovateľ, asistent sudcu.",
+          "Procesná subjektivita = byť stranou konania.",
+          "Procesná spôsobilosť = konať vlastnými úkonmi.",
+          "Kolízny opatrovník chráni maloletého pri rozpore záujmov so zákonným zástupcom.",
+          "Prokurátor môže vstúpiť do konania, ak to zákon umožňuje.",
+          "Procesný vzťah vzniká doručením žaloby súdu."
+        ]
+      }
     ]
   }
 }

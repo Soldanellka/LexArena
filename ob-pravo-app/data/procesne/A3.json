@@ -2,13 +2,24 @@
   "id": "3",
   "title": "Súdy a ich postavenie, organizácia súdov",
   "schemaVersion": "1.1",
-  "tags": ["sústava súdov", "okresný súd", "krajský súd", "Najvyšší súd SR", "Najvyšší správny súd SR", "nezávislosť súdov"],
-  "summary": "Súdnictvo v Slovenskej republike vykonávajú nezávislé a nestranné súdy oddelené od zákonodarnej a výkonnej moci. Sústavu všeobecných súdov tvoria okresné súdy (spravidla súdy prvej inštancie), krajské súdy (spravidla odvolacie súdy, výnimočne aj súdy prvej inštancie vo vymedzených veciach) a Najvyšší súd SR ako najvyššia inštancia všeobecného súdnictva, ktorý rozhoduje najmä o dovolaniach. Od 1.8.2021 pôsobí aj Najvyšší správny súd SR, ktorý vykonáva správne súdnictvo (dovtedy patriace Najvyššiemu súdu SR) a niektoré disciplinárne konania (napr. voči sudcom, prokurátorom, advokátom). Mimo sústavy všeobecných súdov stojí Ústavný súd SR, ktorý chráni ústavnosť.\n\nPostavenie súdov charakterizuje nezávislosť a nestrannosť (čl. 141 a nasl. Ústavy SR), viazanosť ústavou, zákonom a medzinárodnou zmluvou, ako aj právo na zákonného sudcu – vec musí prejednať sudca alebo senát určený vopred podľa rozvrhu práce, nie účelovo vybraný pre konkrétnu kauzu. Organizačne súdy fungujú v senátoch alebo prostredníctvom samosudcov; štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR v súčinnosti so Súdnou radou SR, ktorá dbá na nezávislosť súdnictva.\n\nZapamätaj si:\n- Sústava všeobecných súdov: okresné súdy, krajské súdy, Najvyšší súd SR.\n- Najvyšší správny súd SR (od 1.8.2021): správne súdnictvo a niektoré disciplinárne konania.\n- Ústavný súd SR stojí mimo sústavy všeobecných súdov.\n- Zásada zákonného sudcu (čl. 48 Ústavy SR) – sudcu určuje vopred rozvrh práce.\n- Štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR spolu so Súdnou radou SR."
-  ,
+  "tags": [
+    "sústava súdov",
+    "okresný súd",
+    "krajský súd",
+    "Najvyšší súd SR",
+    "Najvyšší správny súd SR",
+    "nezávislosť súdov"
+  ],
+  "summary": "Súdnictvo v SR vykonávajú nezávislé a nestranné súdy, oddelené od zákonodarnej a výkonnej moci (čl. 141 a nasl. Ústavy SR).\nSúd rozhoduje podľa Ústavy, zákonov a medzinárodných zmlúv.\nZákladnou garanciou je právo na zákonného sudcu – vec musí prejednať sudca alebo senát určený vopred rozvrhom práce, nie účelovo vybraný.\nToto je súčasť práva na spravodlivý súdny proces a odráža princípy nezávislosti a nestrannosti súdov.\n\nSústava všeobecných súdov (3 stupne, 2 inštancie)\nOkresné súdy  \n– spravidla súdy prvej inštancie.\n\nKrajské súdy  \n– spravidla odvolacie súdy;\n– v niektorých veciach konajú aj ako súdy prvej inštancie.\n\nNajvyšší súd SR  \n– najvyššia inštancia všeobecného súdnictva;\n– rozhoduje najmä o dovolaniach;\n– zjednocuje judikatúru.\n\nNajvyšší správny súd SR (od 1. 8. 2021)\nSamostatná vrcholná inštancia správneho súdnictva.\nJe oddelený od Najvyššieho súdu SR, čím sa posilnila špecializácia správneho súdnictva.\n\nRozhoduje o:  \n– správnych žalobách,\n– kasačných sťažnostiach,\n– disciplinárnych konaniach voči sudcom, prokurátorom, advokátom a ďalším profesiám.\n\nÚstavný súd SR\nStojí mimo sústavy všeobecných súdov.\nChráni ústavnosť.\n\nRozhoduje o:  \n– súlade zákonov s Ústavou,\n– ústavných sťažnostiach,\n– volebných veciach,\n– kompetenčných sporoch.\n\nOrganizácia súdov\nSúdy rozhodujú:\n– samosudcom,\n– senátmi (spravidla trojčlenné).\n\nŠtátnu správu súdov vykonáva Ministerstvo spravodlivosti SR, ktoré zabezpečuje chod súdov, personálne a materiálne podmienky.\n\nSúdna rada SR  \n– dohliada na nezávislosť súdnictva,\n– navrhuje kandidátov na sudcov,\n– rieši etické otázky.\n\nZapamätaj si (štátnicové jadro)\n– všeobecné súdy: okresné – krajské – Najvyšší súd SR  \n– Najvyšší správny súd SR: správne súdnictvo + disciplinárne konania\n– Ústavný súd SR: mimo sústavy všeobecných súdov\n– Zákonný sudca: rozvrh práce určuje, kto rozhoduje\n– Organizácia: MS SR + Súdna rada SR\n– princípy organizácie: nezávislosť, nestrannosť, spravodlivý proces\n\nZdroj:\nÚstava SR čl. 141–151; zákon o súdoch; zákon o Najvyššom správnom súde; judikatúra NS SR a NSS SR.",
   "quiz": [
     {
       "question": "Ktorý súd je najvyššou inštanciou všeobecného súdnictva v civilných sporových veciach?",
-      "options": ["Ústavný súd SR", "Najvyšší súd SR", "Krajský súd", "Najvyšší správny súd SR"],
+      "options": [
+        "Ústavný súd SR",
+        "Najvyšší súd SR",
+        "Krajský súd",
+        "Najvyšší správny súd SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. V civilných veciach je najvyššou inštanciou všeobecného súdnictva Najvyšší súd SR, ktorý rozhoduje najmä o dovolaniach.",
@@ -17,7 +28,12 @@
     },
     {
       "question": "Aké je poslanie Najvyššieho správneho súdu SR (od roku 2021)?",
-      "options": ["Rozhoduje o dovolaniach v civilných sporoch", "Vykonáva správne súdnictvo a niektoré disciplinárne konania", "Je odvolacím súdom voči okresným súdom v civilných veciach", "Nahradil Ústavný súd SR"],
+      "options": [
+        "Rozhoduje o dovolaniach v civilných sporoch",
+        "Vykonáva správne súdnictvo a niektoré disciplinárne konania",
+        "Je odvolacím súdom voči okresným súdom v civilných veciach",
+        "Nahradil Ústavný súd SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Od 1.8.2021 Najvyšší správny súd SR prevzal agendu správneho súdnictva a rozhoduje niektoré disciplinárne konania (napr. voči sudcom).",
@@ -26,7 +42,12 @@
     },
     {
       "question": "Čo zaručuje zásada zákonného sudcu (čl. 48 Ústavy SR)?",
-      "options": ["Vec prejedná sudca alebo senát určený vopred podľa rozvrhu práce, nie ad hoc", "Účastník konania si môže vybrať sudcu", "O veci môže rozhodnúť ktorýkoľvek sudca v SR podľa vlastného uváženia", "Sudcu určuje žalobca v žalobe"],
+      "options": [
+        "Vec prejedná sudca alebo senát určený vopred podľa rozvrhu práce, nie ad hoc",
+        "Účastník konania si môže vybrať sudcu",
+        "O veci môže rozhodnúť ktorýkoľvek sudca v SR podľa vlastného uváženia",
+        "Sudcu určuje žalobca v žalobe"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Nikoho nemožno odňať jeho zákonnému sudcovi – vec musí byť pridelená vopred stanoveným postupom podľa rozvrhu práce súdu.",
@@ -35,7 +56,12 @@
     },
     {
       "question": "Kto vykonáva štátnu správu súdov v SR?",
-      "options": ["Výlučne predseda Najvyššieho súdu SR", "Ministerstvo spravodlivosti SR v súčinnosti so Súdnou radou SR", "Prezident SR priamym riadením", "Generálna prokuratúra SR"],
+      "options": [
+        "Výlučne predseda Najvyššieho súdu SR",
+        "Ministerstvo spravodlivosti SR v súčinnosti so Súdnou radou SR",
+        "Prezident SR priamym riadením",
+        "Generálna prokuratúra SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR, pričom Súdna rada SR dbá na zachovanie nezávislosti súdnictva.",
@@ -44,7 +70,12 @@
     },
     {
       "question": "Ktorý súd spravidla koná a rozhoduje ako súd prvej inštancie v civilných sporových veciach?",
-      "options": ["Krajský súd", "Okresný súd", "Najvyšší súd SR", "Najvyšší správny súd SR"],
+      "options": [
+        "Krajský súd",
+        "Okresný súd",
+        "Najvyšší súd SR",
+        "Najvyšší správny súd SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Okresné súdy sú základným článkom sústavy všeobecných súdov a spravidla konajú a rozhodujú na prvom stupni.",
@@ -53,21 +84,44 @@
     }
   ],
   "tiles": [
-    { "term": "Okresný súd", "definition": "Základný článok sústavy všeobecných súdov, spravidla koná a rozhoduje ako súd prvej inštancie." },
-    { "term": "Krajský súd", "definition": "Spravidla odvolací súd voči rozhodnutiam okresných súdov vo svojom obvode." },
-    { "term": "Najvyšší súd SR", "definition": "Najvyššia inštancia všeobecného súdnictva, rozhoduje najmä o dovolaniach." },
-    { "term": "Najvyšší správny súd SR", "definition": "Od 1.8.2021 vykonáva správne súdnictvo a niektoré disciplinárne konania." },
-    { "term": "Zásada zákonného sudcu", "definition": "Vec musí prejednať sudca/senát určený vopred podľa rozvrhu práce, nie účelovo (čl. 48 Ústavy SR)." }
+    {
+      "term": "Okresný súd",
+      "definition": "Základný článok sústavy všeobecných súdov, spravidla koná a rozhoduje ako súd prvej inštancie."
+    },
+    {
+      "term": "Krajský súd",
+      "definition": "Spravidla odvolací súd voči rozhodnutiam okresných súdov vo svojom obvode."
+    },
+    {
+      "term": "Najvyšší súd SR",
+      "definition": "Najvyššia inštancia všeobecného súdnictva, rozhoduje najmä o dovolaniach."
+    },
+    {
+      "term": "Najvyšší správny súd SR",
+      "definition": "Od 1.8.2021 vykonáva správne súdnictvo a niektoré disciplinárne konania."
+    },
+    {
+      "term": "Zásada zákonného sudcu",
+      "definition": "Vec musí prejednať sudca/senát určený vopred podľa rozvrhu práce, nie účelovo (čl. 48 Ústavy SR)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Určenie príslušného stupňa súdu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Účastník podáva odvolanie proti rozsudku okresného súdu.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník podáva odvolanie proti rozsudku okresného súdu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorý súd o odvolaní rozhodne?",
-          "options": ["Krajský súd", "Najvyšší súd SR", "Ústavný súd SR"],
+          "options": [
+            "Krajský súd",
+            "Najvyšší súd SR",
+            "Ústavný súd SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odvolania proti rozhodnutiam okresných súdov spravidla prejednáva a rozhoduje príslušný krajský súd.",
@@ -76,7 +130,11 @@
         },
         {
           "question": "Čo ak by chcel účastník napadnúť právoplatné rozhodnutie krajského súdu mimoriadnym opravným prostriedkom?",
-          "options": ["Podá dovolanie na Najvyšší súd SR", "Podá opäť odvolanie na krajský súd", "Obráti sa na Najvyšší správny súd SR"],
+          "options": [
+            "Podá dovolanie na Najvyšší súd SR",
+            "Podá opäť odvolanie na krajský súd",
+            "Obráti sa na Najvyšší správny súd SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Mimoriadnym opravným prostriedkom proti právoplatnému rozhodnutiu odvolacieho súdu je dovolanie na Najvyšší súd SR.",
@@ -89,10 +147,18 @@
       "title": "Prípad 2 – Zmena rozvrhu práce",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Predseda súdu tesne pred pojednávaním v konkrétnej kauze zmenil rozvrh práce a pridelil vec inému sudcovi.", "options": [], "correct": 0 },
+        {
+          "question": "Predseda súdu tesne pred pojednávaním v konkrétnej kauze zmenil rozvrh práce a pridelil vec inému sudcovi.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký princíp je týmto postupom potenciálne ohrozený?",
-          "options": ["Zásada zákonného sudcu", "Zásada rovnosti strán", "Zásada hospodárnosti"],
+          "options": [
+            "Zásada zákonného sudcu",
+            "Zásada rovnosti strán",
+            "Zásada hospodárnosti"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Účelová zmena rozvrhu práce tesne pred rozhodovaním konkrétnej veci môže porušovať právo na zákonného sudcu podľa čl. 48 Ústavy SR.",
@@ -101,7 +167,11 @@
         },
         {
           "question": "Čo by mal dotknutý účastník namietať?",
-          "options": ["Že mu bol odňatý zákonný sudca v rozpore s čl. 48 Ústavy SR", "Že súd nemá právomoc vo veci konať", "Že ide o vecnú nepríslušnosť súdu"],
+          "options": [
+            "Že mu bol odňatý zákonný sudca v rozpore s čl. 48 Ústavy SR",
+            "Že súd nemá právomoc vo veci konať",
+            "Že ide o vecnú nepríslušnosť súdu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Účastník sa môže brániť námietkou porušenia práva na zákonného sudcu, prípadne ústavnou sťažnosťou po vyčerpaní opravných prostriedkov.",
@@ -120,12 +190,72 @@
   "spider": {
     "center": "Súdnictvo v SR vykonávajú nezávislé a nestranné súdy; základnou garanciou je právo na zákonného sudcu.",
     "branches": [
-      { "label": "Postavenie súdov podľa Ústavy", "leaves": ["súdy sú nezávislé a nestranné", "oddelené od zákonodarnej a výkonnej moci", "rozhodujú podľa Ústavy, zákonov, medzinárodných zmlúv", "právo na zákonného sudcu", "súčasť práva na spravodlivý súdny proces", "sudca/senát určený rozvrhom práce, nie účelovo"] },
-      { "label": "Sústava všeobecných súdov", "leaves": ["všeobecná súdna sústava: 3 stupne, 2 inštancie", "Okresné súdy", "spravidla prvá inštancia", "Krajské súdy", "spravidla odvolacie súdy", "v niektorých veciach aj prvá inštancia", "Najvyšší súd SR", "najvyššia inštancia všeobecného súdnictva", "rozhoduje o dovolaniach", "zjednocuje judikatúru"] },
-      { "label": "Základné zásady súdnej organizácie a činnosti", "leaves": ["nezávislosť súdov a sudcov", "nestrannosť", "právo na zákonného sudcu", "rozhodovanie podľa rozvrhu práce"] },
-      { "label": "Najvyšší správny súd SR", "leaves": ["od 1. 8. 2021", "samostatná vrcholná inštancia správneho súdnictva", "rozhoduje o správnych žalobách", "rozhoduje o kasačných sťažnostiach", "rozhoduje o disciplinárnych konaniach sudcov, prokurátorov, advokátov a ďalších profesií", "oddelený od Najvyššieho súdu SR → špecializácia správneho súdnictva"] },
-      { "label": "Ústavný súd SR", "leaves": ["stojí mimo sústavy všeobecných súdov", "chráni ústavnosť", "rozhoduje o súlade zákonov s Ústavou", "rozhoduje o ústavných sťažnostiach", "rozhoduje o volebných veciach", "rozhoduje o kompetenčných sporoch"] },
-      { "label": "Organizácia súdov", "leaves": ["súdy rozhodujú samosudcom", "súdy rozhodujú senátmi", "štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR", "Súdna rada SR: dohliada na nezávislosť súdnictva, navrhuje kandidátov na sudcov, rieši etické otázky"] }
+      {
+        "label": "Postavenie súdov podľa Ústavy",
+        "leaves": [
+          "súdy sú nezávislé a nestranné",
+          "oddelené od zákonodarnej a výkonnej moci",
+          "rozhodujú podľa Ústavy, zákonov, medzinárodných zmlúv",
+          "právo na zákonného sudcu",
+          "súčasť práva na spravodlivý súdny proces",
+          "sudca/senát určený rozvrhom práce, nie účelovo"
+        ]
+      },
+      {
+        "label": "Sústava všeobecných súdov",
+        "leaves": [
+          "všeobecná súdna sústava: 3 stupne, 2 inštancie",
+          "Okresné súdy",
+          "spravidla prvá inštancia",
+          "Krajské súdy",
+          "spravidla odvolacie súdy",
+          "v niektorých veciach aj prvá inštancia",
+          "Najvyšší súd SR",
+          "najvyššia inštancia všeobecného súdnictva",
+          "rozhoduje o dovolaniach",
+          "zjednocuje judikatúru"
+        ]
+      },
+      {
+        "label": "Základné zásady súdnej organizácie a činnosti",
+        "leaves": [
+          "nezávislosť súdov a sudcov",
+          "nestrannosť",
+          "právo na zákonného sudcu",
+          "rozhodovanie podľa rozvrhu práce"
+        ]
+      },
+      {
+        "label": "Najvyšší správny súd SR",
+        "leaves": [
+          "od 1. 8. 2021",
+          "samostatná vrcholná inštancia správneho súdnictva",
+          "rozhoduje o správnych žalobách",
+          "rozhoduje o kasačných sťažnostiach",
+          "rozhoduje o disciplinárnych konaniach sudcov, prokurátorov, advokátov a ďalších profesií",
+          "oddelený od Najvyššieho súdu SR → špecializácia správneho súdnictva"
+        ]
+      },
+      {
+        "label": "Ústavný súd SR",
+        "leaves": [
+          "stojí mimo sústavy všeobecných súdov",
+          "chráni ústavnosť",
+          "rozhoduje o súlade zákonov s Ústavou",
+          "rozhoduje o ústavných sťažnostiach",
+          "rozhoduje o volebných veciach",
+          "rozhoduje o kompetenčných sporoch"
+        ]
+      },
+      {
+        "label": "Organizácia súdov",
+        "leaves": [
+          "súdy rozhodujú samosudcom",
+          "súdy rozhodujú senátmi",
+          "štátnu správu súdov vykonáva Ministerstvo spravodlivosti SR",
+          "Súdna rada SR: dohliada na nezávislosť súdnictva, navrhuje kandidátov na sudcov, rieši etické otázky"
+        ]
+      }
     ]
   }
 }

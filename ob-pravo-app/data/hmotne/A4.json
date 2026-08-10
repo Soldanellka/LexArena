@@ -1,7 +1,7 @@
 {
   "id": "4",
   "title": "Právne úkony, náležitosti právnych úkonov",
-  "summary": "Právny úkon je prejav vôle smerujúci k vzniku, zmene alebo zániku práv (§ 34 OZ). Náležitosti: subjekt (spôsobilý), vôľa (slobodná, vážna, bez omylu), prejav (určitý, zrozumiteľný) a forma (zákonom predpísaná). Ústne, písomné alebo konkludentné konanie. Písomná forma je povinná pre úkony s nehnuteľnosťami.",
+  "summary": "Právny úkon je prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností (§ 34 OZ). Ide o základný nástroj autonómie vôle v občianskom práve. Právny úkon je platný len vtedy, ak spĺňa zákonom požadované náležitosti – subjektové, vôľové, obsahové, formálne a jazykové.\n\n1. Subjekt právneho úkonu  \nÚkon môže urobiť len subjekt, ktorý má spôsobilosť na právne úkony. Fyzická osoba ju nadobúda plnoletosťou; právnická osoba koná prostredníctvom štatutárnych orgánov. Nedostatok spôsobilosti spôsobuje neplatnosť úkonu.\n\n2. Vôľa  \nVôľa musí byť slobodná, vážna, určitá a zrozumiteľná. Nesmie byť urobená v omyle, pod nátlakom alebo v tiesni. Omyl v podstatnej náležitosti právneho úkonu môže viesť k jeho neplatnosti.\n\n3. Prejav vôle  \nPrejav musí byť určitý a zrozumiteľný, aby bolo možné určiť jeho obsah. Prejav môže byť urobený ústne, písomne alebo konkludentne (mlčky, správaním). Konkludentné konanie je prípustné, ak zákon nevyžaduje osobitnú formu.\n\n4. Forma právneho úkonu  \nForma môže byť voľná alebo zákonom predpísaná. Písomná forma je povinná najmä pri úkonoch týkajúcich sa nehnuteľností, pri zmluvách o prevode vlastníctva, pri zriadení vecných práv či pri niektorých rodinnoprávnych úkonoch. Nedodržanie formy spôsobuje neplatnosť právneho úkonu.\n\nPrávne úkony sú základným prostriedkom, ktorým subjekty upravujú svoje občianskoprávne vzťahy. Ich platnosť a účinnosť závisí od splnenia všetkých uvedených náležitostí.\n\nZdroje: OZ (40/1964 Zb.), judikatúra NS SR, Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár,",
   "quiz": [
     {
       "question": "Čo definuje § 34 OZ ako právny úkon?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Právny úkon (§ 34 OZ)", "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností." },
-    { "term": "Spôsobilosť na právne úkony", "definition": "Náležitosť subjektu – osoba musí byť spôsobilá vlastnými úkonmi nadobúdať práva a povinnosti." },
-    { "term": "Konkludentný úkon", "definition": "Prejav vôle urobený činom/správaním, nie výslovne slovom." },
-    { "term": "Určitosť a zrozumiteľnosť (§ 37 OZ)", "definition": "Úkon musí byť možné vyložiť, inak je neplatný." },
-    { "term": "Písomná forma", "definition": "Vyžaduje sa, ak to ustanovuje zákon (napr. pri nehnuteľnostiach) alebo dohoda strán." }
+    {
+      "term": "Právny úkon (§ 34 OZ)",
+      "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností."
+    },
+    {
+      "term": "Spôsobilosť na právne úkony",
+      "definition": "Náležitosť subjektu – osoba musí byť spôsobilá vlastnými úkonmi nadobúdať práva a povinnosti."
+    },
+    {
+      "term": "Konkludentný úkon",
+      "definition": "Prejav vôle urobený činom/správaním, nie výslovne slovom."
+    },
+    {
+      "term": "Určitosť a zrozumiteľnosť (§ 37 OZ)",
+      "definition": "Úkon musí byť možné vyložiť, inak je neplatný."
+    },
+    {
+      "term": "Písomná forma",
+      "definition": "Vyžaduje sa, ak to ustanovuje zákon (napr. pri nehnuteľnostiach) alebo dohoda strán."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Kúpa nehnuteľnosti len ústne",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Dvaja susedia sa ústne dohodnú na predaji pozemku, bez akejkoľvek písomnej zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Dvaja susedia sa ústne dohodnú na predaji pozemku, bez akejkoľvek písomnej zmluvy.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je táto ústna dohoda o prevode nehnuteľnosti platná?",
-          "options": ["Nie, zákon pre prevod nehnuteľnosti vyžaduje písomnú formu (§ 46 OZ)", "Áno, ústna dohoda medzi susedmi vždy postačuje", "Áno, pokiaľ si to obe strany navzájom odsúhlasia ústne"],
+          "options": [
+            "Nie, zákon pre prevod nehnuteľnosti vyžaduje písomnú formu (§ 46 OZ)",
+            "Áno, ústna dohoda medzi susedmi vždy postačuje",
+            "Áno, pokiaľ si to obe strany navzájom odsúhlasia ústne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmluvy o prevode nehnuteľností musia mať zo zákona písomnú formu.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo z toho vyplýva pre platnosť takéhoto úkonu?",
-          "options": ["Úkon je neplatný pre nedostatok zákonom predpísanej formy", "Úkon je platný, forma nemá pri nehnuteľnostiach žiadny význam", "Úkon je iba relatívne neplatný na návrh notára"],
+          "options": [
+            "Úkon je neplatný pre nedostatok zákonom predpísanej formy",
+            "Úkon je platný, forma nemá pri nehnuteľnostiach žiadny význam",
+            "Úkon je iba relatívne neplatný na návrh notára"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nedostatok povinnej písomnej formy spôsobuje neplatnosť úkonu.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Konkludentné konanie",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Cestujúci nastúpi do mestského autobusu a označí si cestovný lístok, hoci s vodičom o tom nehovoril ani slovo.", "options": [], "correct": 0 },
+        {
+          "question": "Cestujúci nastúpi do mestského autobusu a označí si cestovný lístok, hoci s vodičom o tom nehovoril ani slovo.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Vzniká takýmto konaním právny úkon?",
-          "options": ["Áno, ide o konkludentný prejav vôle uzavrieť prepravnú zmluvu", "Nie, bez výslovného ústneho alebo písomného prejavu úkon nevzniká", "Nie, ide iba o protiprávne konanie"],
+          "options": [
+            "Áno, ide o konkludentný prejav vôle uzavrieť prepravnú zmluvu",
+            "Nie, bez výslovného ústneho alebo písomného prejavu úkon nevzniká",
+            "Nie, ide iba o protiprávne konanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nastúpenie a označenie lístka je typickým príkladom konkludentného právneho úkonu.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo je typickým znakom konkludentného úkonu?",
-          "options": ["Vôľa je vyjadrená správaním (činom), nie slovami", "Musí byť vždy písomný", "Nemôže zakladať žiadne právne účinky"],
+          "options": [
+            "Vôľa je vyjadrená správaním (činom), nie slovami",
+            "Musí byť vždy písomný",
+            "Nemôže zakladať žiadne právne účinky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konkludentný úkon vyjadruje vôľu činom, nie slovným prejavom.",
@@ -142,12 +181,60 @@
   "spider": {
     "center": "Právne úkony – pojem a náležitosti (prejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností)",
     "branches": [
-      { "label": "Pojem právneho úkonu", "leaves": ["prejav vôle podľa § 34 OZ", "smeruje k právnym následkom", "základ autonómie vôle", "musí byť platný, aby vyvolal účinky"] },
-      { "label": "Subjekt právneho úkonu", "leaves": ["spôsobilosť na právne úkony", "fyzická osoba: plnoletosť", "právnická osoba: štatutárny orgán", "nedostatok spôsobilosti → neplatnosť"] },
-      { "label": "Vôľa", "leaves": ["musí byť slobodná", "vážna, určitá, zrozumiteľná", "nesmie byť v omyle, tiesni, pod nátlakom", "omyl v podstatnej náležitosti → neplatnosť"] },
-      { "label": "Prejav vôle", "leaves": ["musí byť určitý a zrozumiteľný", "formy: ústne, písomne, konkludentne", "konkludentné konanie, ak zákon nevyžaduje formu", "prejav musí umožniť určiť obsah úkonu"] },
-      { "label": "Forma právneho úkonu", "leaves": ["voľná forma, ak zákon neustanovuje inak", "písomná forma pri nehnuteľnostiach", "prevod vlastníctva, vecné práva, niektoré rodinné úkony", "nedodržanie formy → neplatnosť"] },
-      { "label": "Význam právnych úkonov", "leaves": ["základný nástroj autonómie vôle", "určujú vznik, zmenu, zánik práv a povinností", "musia spĺňať všetky náležitosti, aby boli platné", "kľúčové pre fungovanie občianskoprávnych vzťahov"] }
+      {
+        "label": "Pojem právneho úkonu",
+        "leaves": [
+          "prejav vôle podľa § 34 OZ",
+          "smeruje k právnym následkom",
+          "základ autonómie vôle",
+          "musí byť platný, aby vyvolal účinky"
+        ]
+      },
+      {
+        "label": "Subjekt právneho úkonu",
+        "leaves": [
+          "spôsobilosť na právne úkony",
+          "fyzická osoba: plnoletosť",
+          "právnická osoba: štatutárny orgán",
+          "nedostatok spôsobilosti → neplatnosť"
+        ]
+      },
+      {
+        "label": "Vôľa",
+        "leaves": [
+          "musí byť slobodná",
+          "vážna, určitá, zrozumiteľná",
+          "nesmie byť v omyle, tiesni, pod nátlakom",
+          "omyl v podstatnej náležitosti → neplatnosť"
+        ]
+      },
+      {
+        "label": "Prejav vôle",
+        "leaves": [
+          "musí byť určitý a zrozumiteľný",
+          "formy: ústne, písomne, konkludentne",
+          "konkludentné konanie, ak zákon nevyžaduje formu",
+          "prejav musí umožniť určiť obsah úkonu"
+        ]
+      },
+      {
+        "label": "Forma právneho úkonu",
+        "leaves": [
+          "voľná forma, ak zákon neustanovuje inak",
+          "písomná forma pri nehnuteľnostiach",
+          "prevod vlastníctva, vecné práva, niektoré rodinné úkony",
+          "nedodržanie formy → neplatnosť"
+        ]
+      },
+      {
+        "label": "Význam právnych úkonov",
+        "leaves": [
+          "základný nástroj autonómie vôle",
+          "určujú vznik, zmenu, zánik práv a povinností",
+          "musia spĺňať všetky náležitosti, aby boli platné",
+          "kľúčové pre fungovanie občianskoprávnych vzťahov"
+        ]
+      }
     ]
   }
 }

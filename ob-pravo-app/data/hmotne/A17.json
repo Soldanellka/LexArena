@@ -1,7 +1,7 @@
 {
   "id": "17",
   "title": "Záväzkové právne vzťahy – pojem, prvky, vznik záväzkov",
-  "summary": "Záväzkový právny vzťah (§ 488–900 OZ) je vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh. Prvky: subjekty (veriteľ, dlžník), obsah (práva a povinnosti), predmet (plnenie). Vznik: zo zmluvy (hlavný zdroj), z protiprávneho konania (škoda, bezdôvodné obohatenie), z iných skutočností (nálezné).",
+  "summary": "Záväzkový právny vzťah podľa § 488–900 OZ je právny vzťah, v ktorom vzniká veriteľovi pohľadávka a dlžníkovi dlh. Ide o relatívny právny vzťah – pôsobí inter partes, teda len medzi účastníkmi záväzku. Záväzky sú základom súkromnoprávnych vzťahov, pretože umožňujú výmenu plnení, obchod a spoluprácu medzi subjektmi.\n\nPrvky záväzkového právneho vzťahu\n1. Subjekty  \n– Veriteľ – osoba oprávnená požadovať plnenie.\n– Dlžník – osoba povinná plniť.\n\n2. Obsah  \nObsahom sú práva a povinnosti strán. Dlžník je povinný poskytnúť plnenie, veriteľ má právo ho požadovať.\n\n3. Predmet (plnenie)  \nPlnením môže byť:\n– dare (niečo dať),\n– facere (niečo vykonať),\n– non facere (niečoho sa zdržať),\n– pati (niečo strpieť).\nPlnenie musí byť možné, dovolené a určité.\n\nVznik záväzkov\nZáväzky vznikajú z rôznych právnych skutočností:\n\n1. Zo zmluvy  \nNajčastejší a najdôležitejší zdroj záväzkov. Zmluva je dvojstranný právny úkon, ktorým sa strany zaväzujú k plneniam. OZ upravuje všeobecné pravidlá a osobitné typy zmlúv (kúpna, darovacia, nájomná, zmluva o dielo).\n\n2. Z protiprávneho konania  \n– Zodpovednosť za škodu (§ 420 a nasl.) – kto poruší právnu povinnosť a spôsobí škodu, je povinný ju nahradiť.\n– Bezdôvodné obohatenie (§ 451 a nasl.) – kto sa bez právneho dôvodu obohatí na úkor iného, musí obohatenie vydať.\n\n3. Z iných právnych skutočností  \n– Nálezné (§ 135 OZ) – vznik záväzku pri nájdení cudzej veci.\n– Rozhodnutie orgánu verejnej moci,\n– Zákon,\n– Vydanie veci z držby,\n– Konanie bez príkazu.\n\nZáväzky sú dynamickou časťou občianskeho práva – umožňujú vznik, zmenu a zánik právnych vzťahov medzi subjektmi a zabezpečujú fungovanie ekonomických a spoločenských procesov.\n\nZdroje: OZ (40/1964 Zb.), § 488–900; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je záväzok v občianskom práve?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Záväzok (§ 488 OZ)", "definition": "Relatívny právny vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh." },
-    { "term": "Pohľadávka", "definition": "Aktívna stránka záväzku – právo veriteľa požadovať plnenie." },
-    { "term": "Dlh", "definition": "Pasívna stránka záväzku – povinnosť dlžníka plniť." },
-    { "term": "Predmet záväzku", "definition": "Plnenie – dať (dare), konať (facere), zdržať sa (omittere) alebo strpieť (pati)." },
-    { "term": "Relatívna povaha záväzkov", "definition": "Záväzkové práva pôsobia len medzi stranami, nie erga omnes." }
+    {
+      "term": "Záväzok (§ 488 OZ)",
+      "definition": "Relatívny právny vzťah, z ktorého veriteľovi vzniká pohľadávka a dlžníkovi dlh."
+    },
+    {
+      "term": "Pohľadávka",
+      "definition": "Aktívna stránka záväzku – právo veriteľa požadovať plnenie."
+    },
+    {
+      "term": "Dlh",
+      "definition": "Pasívna stránka záväzku – povinnosť dlžníka plniť."
+    },
+    {
+      "term": "Predmet záväzku",
+      "definition": "Plnenie – dať (dare), konať (facere), zdržať sa (omittere) alebo strpieť (pati)."
+    },
+    {
+      "term": "Relatívna povaha záväzkov",
+      "definition": "Záväzkové práva pôsobia len medzi stranami, nie erga omnes."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Vznik záväzku zo zmluvy",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Dvaja podnikatelia uzavrú kúpnu zmluvu, z ktorej jednému vznikne právo na zaplatenie ceny a druhému povinnosť ju zaplatiť.", "options": [], "correct": 0 },
+        {
+          "question": "Dvaja podnikatelia uzavrú kúpnu zmluvu, z ktorej jednému vznikne právo na zaplatenie ceny a druhému povinnosť ju zaplatiť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký typ právneho vzťahu medzi nimi vzniká?",
-          "options": ["Záväzkový (relatívny) právny vzťah", "Vecné právo pôsobiace voči všetkým", "Právny stav bez konkrétnych strán"],
+          "options": [
+            "Záväzkový (relatívny) právny vzťah",
+            "Vecné právo pôsobiace voči všetkým",
+            "Právny stav bez konkrétnych strán"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o typický záväzkový vzťah medzi konkrétnym veriteľom a dlžníkom.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Voči komu pôsobí takto vzniknuté právo na zaplatenie ceny?",
-          "options": ["Len voči konkrétnemu dlžníkovi zo zmluvy, nie voči všetkým osobám", "Voči všetkým osobám bez rozdielu (erga omnes)", "Voči celému okoliu podnikateľa"],
+          "options": [
+            "Len voči konkrétnemu dlžníkovi zo zmluvy, nie voči všetkým osobám",
+            "Voči všetkým osobám bez rozdielu (erga omnes)",
+            "Voči celému okoliu podnikateľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Záväzkové právo je relatívne a pôsobí len medzi zmluvnými stranami.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Rôzne formy plnenia",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Zmluva zaväzuje jednu stranu zdržať sa určitej konkurenčnej činnosti počas dohodnutého obdobia.", "options": [], "correct": 0 },
+        {
+          "question": "Zmluva zaväzuje jednu stranu zdržať sa určitej konkurenčnej činnosti počas dohodnutého obdobia.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O akú formu plnenia (predmetu záväzku) v tomto prípade ide?",
-          "options": ["Omittere – zdržanie sa konania", "Dare – odovzdanie veci", "Facere – aktívne konanie"],
+          "options": [
+            "Omittere – zdržanie sa konania",
+            "Dare – odovzdanie veci",
+            "Facere – aktívne konanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Záväzok zdržať sa konkurenčnej činnosti je typickým príkladom omittere.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Musí byť predmetom záväzku vždy odovzdanie veci alebo peňazí?",
-          "options": ["Nie, predmetom môže byť aj konanie, zdržanie sa alebo strpenie niečoho", "Áno, záväzok sa vždy týka odovzdania veci", "Áno, výlučne peňažného plnenia"],
+          "options": [
+            "Nie, predmetom môže byť aj konanie, zdržanie sa alebo strpenie niečoho",
+            "Áno, záväzok sa vždy týka odovzdania veci",
+            "Áno, výlučne peňažného plnenia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon pripúšťa širokú škálu foriem plnenia, nielen odovzdanie veci či peňazí.",
@@ -142,14 +181,76 @@
   "spider": {
     "center": "Záväzkové právne vzťahy – pojem, prvky, vznik (veriteľ – pohľadávka, dlžník – dlh, inter partes)",
     "branches": [
-      { "label": "Pojem záväzkového právneho vzťahu (§ 488 OZ)", "leaves": ["právny vzťah medzi veriteľom a dlžníkom", "veriteľ má pohľadávku, dlžník má dlh", "pôsobí inter partes, len medzi účastníkmi", "základ výmeny plnení, obchodu a spolupráce"] },
-      { "label": "Subjekty", "leaves": ["veriteľ: oprávnený požadovať plnenie", "dlžník: povinný plniť"] },
-      { "label": "Obsah", "leaves": ["práva a povinnosti strán", "dlžník poskytuje plnenie, veriteľ ho môže požadovať"] },
-      { "label": "Predmet (plnenie)", "leaves": ["dare: niečo dať", "facere: niečo vykonať", "non facere: niečoho sa zdržať", "pati: niečo strpieť", "plnenie musí byť možné, dovolené, určité"] },
-      { "label": "Vznik záväzkov zo zmluvy", "leaves": ["najčastejší a najdôležitejší zdroj záväzkov", "zmluva je dvojstranný právny úkon", "OZ upravuje všeobecné pravidlá a typové zmluvy", "kúpna, darovacia, nájomná, zmluva o dielo"] },
-      { "label": "Vznik záväzkov z protiprávneho konania", "leaves": ["zodpovednosť za škodu (§ 420 a nasl.)", "porušenie právnej povinnosti → škoda → povinnosť nahradiť", "bezdôvodné obohatenie (§ 451 a nasl.)", "obohatenie bez právneho dôvodu → povinnosť vydať"] },
-      { "label": "Vznik záväzkov z iných právnych skutočností", "leaves": ["nálezné (§ 135 OZ): nález cudzej veci", "rozhodnutie orgánu verejnej moci", "zákon", "vydanie veci z držby", "konanie bez príkazu"] },
-      { "label": "Význam pre prax", "leaves": ["dynamická časť občianskeho práva", "umožňuje ekonomické a spoločenské procesy", "základ obchodných vzťahov, služieb, zmlúv", "jasné pravidlá pre vznik, zmenu a zánik práv a povinností"] }
+      {
+        "label": "Pojem záväzkového právneho vzťahu (§ 488 OZ)",
+        "leaves": [
+          "právny vzťah medzi veriteľom a dlžníkom",
+          "veriteľ má pohľadávku, dlžník má dlh",
+          "pôsobí inter partes, len medzi účastníkmi",
+          "základ výmeny plnení, obchodu a spolupráce"
+        ]
+      },
+      {
+        "label": "Subjekty",
+        "leaves": [
+          "veriteľ: oprávnený požadovať plnenie",
+          "dlžník: povinný plniť"
+        ]
+      },
+      {
+        "label": "Obsah",
+        "leaves": [
+          "práva a povinnosti strán",
+          "dlžník poskytuje plnenie, veriteľ ho môže požadovať"
+        ]
+      },
+      {
+        "label": "Predmet (plnenie)",
+        "leaves": [
+          "dare: niečo dať",
+          "facere: niečo vykonať",
+          "non facere: niečoho sa zdržať",
+          "pati: niečo strpieť",
+          "plnenie musí byť možné, dovolené, určité"
+        ]
+      },
+      {
+        "label": "Vznik záväzkov zo zmluvy",
+        "leaves": [
+          "najčastejší a najdôležitejší zdroj záväzkov",
+          "zmluva je dvojstranný právny úkon",
+          "OZ upravuje všeobecné pravidlá a typové zmluvy",
+          "kúpna, darovacia, nájomná, zmluva o dielo"
+        ]
+      },
+      {
+        "label": "Vznik záväzkov z protiprávneho konania",
+        "leaves": [
+          "zodpovednosť za škodu (§ 420 a nasl.)",
+          "porušenie právnej povinnosti → škoda → povinnosť nahradiť",
+          "bezdôvodné obohatenie (§ 451 a nasl.)",
+          "obohatenie bez právneho dôvodu → povinnosť vydať"
+        ]
+      },
+      {
+        "label": "Vznik záväzkov z iných právnych skutočností",
+        "leaves": [
+          "nálezné (§ 135 OZ): nález cudzej veci",
+          "rozhodnutie orgánu verejnej moci",
+          "zákon",
+          "vydanie veci z držby",
+          "konanie bez príkazu"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "dynamická časť občianskeho práva",
+          "umožňuje ekonomické a spoločenské procesy",
+          "základ obchodných vzťahov, služieb, zmlúv",
+          "jasné pravidlá pre vznik, zmenu a zánik práv a povinností"
+        ]
+      }
     ]
   }
 }

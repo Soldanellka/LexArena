@@ -2,13 +2,23 @@
   "id": "9",
   "title": "Zastúpenie v civilnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["zastúpenie", "plnomocenstvo", "procesný opatrovník", "kolízny opatrovník", "povinné zastúpenie advokátom"],
-  "summary": "Civilné procesné právo pozná zastúpenie zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu. Zmluvné zastúpenie vzniká udelením plnomocenstva, spravidla advokátovi; plnomocenstvo môže byť všeobecné (oprávňuje na všetky úkony v konaní) alebo špeciálne (len na konkrétny, presne vymedzený úkon). Zákonné zastúpenie vyplýva priamo zo zákona – napríklad rodič zastupuje maloleté dieťa alebo štatutárny orgán koná za právnickú osobu.\n\nSúd ustanoví účastníkovi procesného opatrovníka najmä vtedy, ak je jeho pobyt neznámy alebo mu nemožno doručovať na známu adresu v cudzine a inak by sa konanie neúmerne predĺžilo (§ 78 CSP); ide o zastúpenie z rozhodnutia súdu. Osobitným prípadom je kolízny opatrovník, ktorého súd ustanoví na ochranu záujmov maloletého, ak sú v rozpore so záujmami jeho zákonného zástupcu. V dovolacom konaní pred Najvyšším súdom SR je zastúpenie advokátom spravidla povinné (§ 429 CSP), s výnimkou, ak má dovolateľ sám vysokoškolské právnické vzdelanie druhého stupňa; nedostatok povinného zastúpenia vedie k odmietnutiu dovolania, ak nie je odstránený.\n\nZapamätaj si:\n- Druhy zastúpenia: zmluvné (plnomocenstvo), zákonné (zo zákona), na základe rozhodnutia súdu (procesný opatrovník).\n- Všeobecné plnomocenstvo = na všetky úkony; špeciálne = len na vymedzený úkon.\n- Procesný opatrovník (§ 78 CSP) – ustanovuje sa napr. pri neznámom pobyte účastníka.\n- Kolízny opatrovník chráni záujmy maloletého pri rozpore so zákonným zástupcom.\n- Povinné zastúpenie advokátom v dovolacom konaní (§ 429 CSP), s výnimkou právnicky vzdelaného dovolateľa."
-  ,
+  "tags": [
+    "zastúpenie",
+    "plnomocenstvo",
+    "procesný opatrovník",
+    "kolízny opatrovník",
+    "povinné zastúpenie advokátom"
+  ],
+  "summary": "Zastúpenie v civilnom konaní je procesný právny vzťah, v ktorom zástupca koná v mene a na účet účastníka.\nÚčelom zastúpenia je umožniť účastníkovi efektívne vykonávať procesné práva a povinnosti.\n\nZastúpenie je procesná podmienka – ak chýba tam, kde je povinné (napr. dovolanie), ide o odstrániteľnú vadu, ktorú musí účastník napraviť; inak nasleduje odmietnutie podania.\n\nCivilné procesné právo pozná tri základné formy zastúpenia: zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu.\n\n1. Zmluvné zastúpenie (plnomocenstvo)\nVzniká udelením plnomocenstva – najčastejšie advokátovi, ale zástupcom môže byť aj FO alebo PO, ak to zákon pripúšťa.\nIde o fakultatívne zastúpenie – procesne spôsobilý účastník sa môže, ale nemusí dať zastúpiť.\n\nDruhy plnomocenstva\nVšeobecné plnomocenstvo – oprávňuje na všetky úkony v konaní.\n\nŠpeciálne plnomocenstvo – len na konkrétny úkon (napr. podanie odvolania).\n\nPlnomocenstvo musí byť preukázané súdu; jeho rozsah určuje, aké úkony môže zástupca vykonať.\n\n2. Zákonné zastúpenie\nVyplýva priamo zo zákona.\nPoužíva sa pri procesne nespôsobilých osobách.\n\nPríklady zákonného zastúpenia\nrodič zastupuje maloleté dieťa,\n\nštatutárny orgán koná za právnickú osobu,\n\nopatrovník ustanovený podľa hmotného práva (napr. pri obmedzení spôsobilosti).\n\nZákonný zástupca koná v rozsahu práv a povinností, ktoré mu zákon priznáva.\n\n3. Zastúpenie na základe rozhodnutia súdu (§ 78 CSP)\nSúd ustanoví procesného opatrovníka, ak:\n\nje pobyt účastníka neznámy,\n\nnemožno mu doručovať na známu adresu v cudzine,\n\ninak by sa konanie neúmerne predĺžilo.\n\nProcesný opatrovník vykonáva úkony potrebné na ochranu práv účastníka.\n\nKolízny opatrovník\nOsobitný prípad zákonného zastúpenia.\nSúd ho ustanoví na ochranu maloletého alebo osoby s obmedzenou spôsobilosťou, ak sú jeho záujmy v rozpore so záujmami zákonného zástupcu.\n\nMá procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného.\n\n4. Povinné zastúpenie v dovolacom konaní (§ 429 CSP)\nV dovolacom konaní pred Najvyšším súdom SR je povinné zastúpenie advokátom, okrem prípadu, keď má dovolateľ vysokoškolské právnické vzdelanie druhého stupňa.\n\nNedostatok povinného zastúpenia je odstrániteľná vada – ak sa neodstráni, dovolanie sa odmietne.\n\nZapamätaj si (štátnicové jadro)\nDruhy zastúpenia: zmluvné, zákonné, procesný opatrovník.\n\nVšeobecné plnomocenstvo = všetky úkony; špeciálne = konkrétny úkon.\n\nProcesný opatrovník (§ 78 CSP) pri neznámom pobyte alebo nemožnosti doručenia.\n\nKolízny opatrovník chráni maloletého pri rozpore so zákonným zástupcom.\n\nPovinné zastúpenie advokátom v dovolacom konaní (§ 429 CSP).\n\nZastúpenie je procesná podmienka; nedostatok je odstrániteľná vada.\n\nProcesne spôsobilí → môžu sa dať zastúpiť; procesne nespôsobilí → musia byť zastúpení.\n\nZdroj:\nCSP (160/2015 Z. z.), § 78, § 429; CMP (161/2015 Z. z.); Ústava SR čl. 46–50.",
   "quiz": [
     {
       "question": "Aké druhy zastúpenia civilné procesné právo pozná?",
-      "options": ["Iba zmluvné", "Zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu (procesný opatrovník)", "Iba zákonné", "Iba prostredníctvom advokáta"],
+      "options": [
+        "Iba zmluvné",
+        "Zmluvné, zákonné a zastúpenie na základe rozhodnutia súdu (procesný opatrovník)",
+        "Iba zákonné",
+        "Iba prostredníctvom advokáta"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Popri zmluvnom a zákonnom zastúpení pozná civilný proces aj zastúpenie z rozhodnutia súdu, napríklad prostredníctvom procesného opatrovníka.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Kedy je v civilnom sporovom konaní povinné zastúpenie advokátom?",
-      "options": ["Vždy už na prvom stupni", "V dovolacom konaní pred Najvyšším súdom SR (§ 429 CSP), ak zákon neustanoví inak", "Nikdy nie je povinné", "Iba pri sporoch do 500 eur"],
+      "options": [
+        "Vždy už na prvom stupni",
+        "V dovolacom konaní pred Najvyšším súdom SR (§ 429 CSP), ak zákon neustanoví inak",
+        "Nikdy nie je povinné",
+        "Iba pri sporoch do 500 eur"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Podľa § 429 CSP musí byť dovolateľ v dovolacom konaní zastúpený advokátom, s výnimkou, ak má sám vysokoškolské právnické vzdelanie druhého stupňa.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Kto zastupuje maloleté dieťa v konaní, ak sú záujmy zákonného zástupcu v rozpore so záujmami dieťaťa?",
-      "options": ["Súd ustanoví kolízneho opatrovníka", "Dieťa zostáva bez zastúpenia", "Zastupuje ho automaticky prokurátor", "Zastupuje ho druhý rodič bez ohľadu na rozpor záujmov"],
+      "options": [
+        "Súd ustanoví kolízneho opatrovníka",
+        "Dieťa zostáva bez zastúpenia",
+        "Zastupuje ho automaticky prokurátor",
+        "Zastupuje ho druhý rodič bez ohľadu na rozpor záujmov"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri rozpore záujmov medzi zákonným zástupcom a maloletým súd ustanoví kolízneho opatrovníka na ochranu záujmov dieťaťa.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Aký je rozdiel medzi všeobecným a špeciálnym plnomocenstvom?",
-      "options": ["Všeobecné oprávňuje na všetky úkony v konaní, špeciálne len na konkrétny, presne vymedzený úkon", "Nie je medzi nimi rozdiel", "Špeciálne plnomocenstvo je vždy širšie ako všeobecné", "Všeobecné plnomocenstvo sa udeľuje iba advokátovi"],
+      "options": [
+        "Všeobecné oprávňuje na všetky úkony v konaní, špeciálne len na konkrétny, presne vymedzený úkon",
+        "Nie je medzi nimi rozdiel",
+        "Špeciálne plnomocenstvo je vždy širšie ako všeobecné",
+        "Všeobecné plnomocenstvo sa udeľuje iba advokátovi"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Všeobecné plnomocenstvo pokrýva všetky procesné úkony v konaní, kým špeciálne sa vzťahuje len na vymedzený úkon (napr. podanie odvolania).",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Kedy súd ustanoví účastníkovi procesného opatrovníka?",
-      "options": ["Ak je pobyt účastníka neznámy alebo mu nemožno doručovať na známu adresu v cudzine, a inak by sa konanie neúmerne predĺžilo, prípadne z iných zákonom ustanovených dôvodov", "Vždy na začiatku konania automaticky bez ďalšieho", "Iba na žiadosť žalovaného bez odôvodnenia", "Nikdy, opatrovník sa ustanovuje len v trestnom konaní"],
+      "options": [
+        "Ak je pobyt účastníka neznámy alebo mu nemožno doručovať na známu adresu v cudzine, a inak by sa konanie neúmerne predĺžilo, prípadne z iných zákonom ustanovených dôvodov",
+        "Vždy na začiatku konania automaticky bez ďalšieho",
+        "Iba na žiadosť žalovaného bez odôvodnenia",
+        "Nikdy, opatrovník sa ustanovuje len v trestnom konaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Procesný opatrovník sa ustanoví najmä pri neznámom pobyte účastníka alebo nemožnosti doručovania, aby sa predišlo neprimeranému predĺženiu konania.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluvné zastúpenie", "definition": "Zastúpenie na základe plnomocenstva udeleného účastníkom (napr. advokátovi)." },
-    { "term": "Zákonné zastúpenie", "definition": "Zastúpenie vyplývajúce priamo zo zákona (rodič za maloleté dieťa, štatutárny orgán za právnickú osobu)." },
-    { "term": "Procesný opatrovník", "definition": "Zástupca ustanovený súdom, napríklad ak je pobyt účastníka neznámy (§ 78 CSP)." },
-    { "term": "Kolízny opatrovník", "definition": "Zástupca ustanovený na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu." },
-    { "term": "Povinné zastúpenie advokátom", "definition": "V dovolacom konaní musí byť dovolateľ zastúpený advokátom, ak zákon neustanoví výnimku (§ 429 CSP)." }
+    {
+      "term": "Zmluvné zastúpenie",
+      "definition": "Zastúpenie na základe plnomocenstva udeleného účastníkom (napr. advokátovi)."
+    },
+    {
+      "term": "Zákonné zastúpenie",
+      "definition": "Zastúpenie vyplývajúce priamo zo zákona (rodič za maloleté dieťa, štatutárny orgán za právnickú osobu)."
+    },
+    {
+      "term": "Procesný opatrovník",
+      "definition": "Zástupca ustanovený súdom, napríklad ak je pobyt účastníka neznámy (§ 78 CSP)."
+    },
+    {
+      "term": "Kolízny opatrovník",
+      "definition": "Zástupca ustanovený na ochranu záujmov maloletého, ak sú v rozpore so záujmami zákonného zástupcu."
+    },
+    {
+      "term": "Povinné zastúpenie advokátom",
+      "definition": "V dovolacom konaní musí byť dovolateľ zastúpený advokátom, ak zákon neustanoví výnimku (§ 429 CSP)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neznámy pobyt žalovaného",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Súd nemôže doručiť žalobu žalovanému, pretože jeho pobyt je neznámy a nedá sa zistiť ani šetrením.", "options": [], "correct": 0 },
+        {
+          "question": "Súd nemôže doručiť žalobu žalovanému, pretože jeho pobyt je neznámy a nedá sa zistiť ani šetrením.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo súd v takom prípade urobí?",
-          "options": ["Ustanoví žalovanému procesného opatrovníka", "Konanie bez ďalšieho zastaví", "Rozhodne v neprospech žalobcu automaticky"],
+          "options": [
+            "Ustanoví žalovanému procesného opatrovníka",
+            "Konanie bez ďalšieho zastaví",
+            "Rozhodne v neprospech žalobcu automaticky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri neznámom pobyte žalovaného súd ustanoví procesného opatrovníka, aby sa mohlo konanie riadne uskutočniť.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Aké má procesný opatrovník postavenie?",
-          "options": ["Zastupuje žalovaného v konaní a hája jeho procesné záujmy najlepšie, ako to okolnosti dovoľujú", "Stáva sa žalovaným namiesto pôvodného účastníka", "Je iba formálnym pozorovateľom bez procesných práv"],
+          "options": [
+            "Zastupuje žalovaného v konaní a hája jeho procesné záujmy najlepšie, ako to okolnosti dovoľujú",
+            "Stáva sa žalovaným namiesto pôvodného účastníka",
+            "Je iba formálnym pozorovateľom bez procesných práv"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Procesný opatrovník vystupuje ako zástupca žalovaného a vykonáva jeho procesné práva v jeho záujme.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Dovolanie bez advokáta",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Účastník podá dovolanie na Najvyšší súd SR sám, bez zastúpenia advokátom, hoci nespĺňa žiadnu zákonnú výnimku.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník podá dovolanie na Najvyšší súd SR sám, bez zastúpenia advokátom, hoci nespĺňa žiadnu zákonnú výnimku.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký to má procesný následok?",
-          "options": ["Súd ho vyzve na odstránenie nedostatku (zastúpenie advokátom), inak dovolanie odmietne", "Dovolanie sa bez ďalšieho prejedná", "Nedostatok zastúpenia je bez akéhokoľvek významu"],
+          "options": [
+            "Súd ho vyzve na odstránenie nedostatku (zastúpenie advokátom), inak dovolanie odmietne",
+            "Dovolanie sa bez ďalšieho prejedná",
+            "Nedostatok zastúpenia je bez akéhokoľvek významu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Chýbajúce povinné zastúpenie advokátom je odstrániteľným nedostatkom podania; ak sa neodstráni, dovolanie sa odmietne.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Existuje výnimka z povinného zastúpenia advokátom v dovolacom konaní?",
-          "options": ["Áno, napríklad ak má dovolateľ sám vysokoškolské právnické vzdelanie druhého stupňa (§ 429 ods. 2 CSP)", "Nie, výnimky neexistujú", "Áno, ak je dovolateľ štátnym občanom SR"],
+          "options": [
+            "Áno, napríklad ak má dovolateľ sám vysokoškolské právnické vzdelanie druhého stupňa (§ 429 ods. 2 CSP)",
+            "Nie, výnimky neexistujú",
+            "Áno, ak je dovolateľ štátnym občanom SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon oslobodzuje od povinného zastúpenia advokátom dovolateľa, ktorý má sám požadované právnické vzdelanie.",
@@ -120,13 +189,69 @@
   "spider": {
     "center": "Zastúpenie v civilnom konaní – zmluvné × zákonné × procesný opatrovník × kolízny opatrovník × povinné zastúpenie",
     "branches": [
-      { "label": "Pojem zastúpenia", "leaves": ["oprávnenie konať za iného", "zastúpenie je procesná podmienka", "nedostatok zastúpenia = odstrániteľná vada"] },
-      { "label": "Zmluvné zastúpenie", "leaves": ["plnomocenstvo", "vzniká udelením plnomocenstva – najčastejšie advokátovi", "zástupcom môže byť FO aj PO", "všeobecné plnomocenstvo – na všetky úkony", "špeciálne plnomocenstvo – na konkrétny úkon (napr. odvolanie)", "plnomocenstvo musí byť preukázané súdu; rozsah určuje, čo môže zástupca vykonať"] },
-      { "label": "Zákonné zastúpenie", "leaves": ["vyplýva priamo zo zákona", "rodič zastupuje maloleté dieťa", "štatutárny orgán koná za právnickú osobu", "opatrovník ustanovený podľa hmotného práva", "zákonný zástupca koná v rozsahu práv a povinností, ktoré mu zákon priznáva"] },
-      { "label": "Zastúpenie procesne spôsobilých a nespôsobilých subjektov", "leaves": ["procesne spôsobilý subjekt sa môže dať zastúpiť fakultatívne", "v zákonom stanovených prípadoch je zástupcom povinne advokát", "procesne nespôsobilý subjekt zastupuje zákonný zástupca", "ak niet zákonného zástupcu → súd ustanoví procesného opatrovníka"] },
-      { "label": "Procesný opatrovník (§ 78 CSP)", "leaves": ["súd ho ustanoví, ak je pobyt účastníka neznámy", "ak nemožno doručovať na známu adresu v cudzine", "ak by sa konanie inak neúmerne predĺžilo", "vykonáva úkony potrebné na ochranu práv účastníka"] },
-      { "label": "Kolízny opatrovník", "leaves": ["súd ho ustanoví na ochranu maloletého alebo osoby s obmedzenou spôsobilosťou", "ak sú jeho záujmy v rozpore so záujmami zákonného zástupcu", "má procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného"] },
-      { "label": "Povinné zastúpenie v dovolacom konaní (§ 429 CSP)", "leaves": ["pred Najvyšším súdom SR je povinné zastúpenie advokátom", "výnimka: dovolateľ má VŠ právnické vzdelanie druhého stupňa", "nedostatok povinného zastúpenia → odmietnutie dovolania, ak sa neodstráni"] }
+      {
+        "label": "Pojem zastúpenia",
+        "leaves": [
+          "oprávnenie konať za iného",
+          "zastúpenie je procesná podmienka",
+          "nedostatok zastúpenia = odstrániteľná vada"
+        ]
+      },
+      {
+        "label": "Zmluvné zastúpenie",
+        "leaves": [
+          "plnomocenstvo",
+          "vzniká udelením plnomocenstva – najčastejšie advokátovi",
+          "zástupcom môže byť FO aj PO",
+          "všeobecné plnomocenstvo – na všetky úkony",
+          "špeciálne plnomocenstvo – na konkrétny úkon (napr. odvolanie)",
+          "plnomocenstvo musí byť preukázané súdu; rozsah určuje, čo môže zástupca vykonať"
+        ]
+      },
+      {
+        "label": "Zákonné zastúpenie",
+        "leaves": [
+          "vyplýva priamo zo zákona",
+          "rodič zastupuje maloleté dieťa",
+          "štatutárny orgán koná za právnickú osobu",
+          "opatrovník ustanovený podľa hmotného práva",
+          "zákonný zástupca koná v rozsahu práv a povinností, ktoré mu zákon priznáva"
+        ]
+      },
+      {
+        "label": "Zastúpenie procesne spôsobilých a nespôsobilých subjektov",
+        "leaves": [
+          "procesne spôsobilý subjekt sa môže dať zastúpiť fakultatívne",
+          "v zákonom stanovených prípadoch je zástupcom povinne advokát",
+          "procesne nespôsobilý subjekt zastupuje zákonný zástupca",
+          "ak niet zákonného zástupcu → súd ustanoví procesného opatrovníka"
+        ]
+      },
+      {
+        "label": "Procesný opatrovník (§ 78 CSP)",
+        "leaves": [
+          "súd ho ustanoví, ak je pobyt účastníka neznámy",
+          "ak nemožno doručovať na známu adresu v cudzine",
+          "ak by sa konanie inak neúmerne predĺžilo",
+          "vykonáva úkony potrebné na ochranu práv účastníka"
+        ]
+      },
+      {
+        "label": "Kolízny opatrovník",
+        "leaves": [
+          "súd ho ustanoví na ochranu maloletého alebo osoby s obmedzenou spôsobilosťou",
+          "ak sú jeho záujmy v rozpore so záujmami zákonného zástupcu",
+          "má procesné práva účastníka v rozsahu potrebnom na ochranu zastupovaného"
+        ]
+      },
+      {
+        "label": "Povinné zastúpenie v dovolacom konaní (§ 429 CSP)",
+        "leaves": [
+          "pred Najvyšším súdom SR je povinné zastúpenie advokátom",
+          "výnimka: dovolateľ má VŠ právnické vzdelanie druhého stupňa",
+          "nedostatok povinného zastúpenia → odmietnutie dovolania, ak sa neodstráni"
+        ]
+      }
     ]
   }
 }

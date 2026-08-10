@@ -2,50 +2,101 @@
   "id": "A23",
   "title": "Meritórne rozhodnutia súdu na hlavnom pojednávaní",
   "schemaVersion": "1.1",
-  "tags": ["meritórne rozhodnutia", "hlavné pojednávanie", "súd", "trestné konanie"],
-
+  "tags": [
+    "meritórne rozhodnutia",
+    "hlavné pojednávanie",
+    "súd",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktoré rozhodnutie je meritórnym rozhodnutím súdu?",
-      "options": ["Uznesenie o odročení pojednávania", "Rozsudok o vine a treste", "Uznesenie o predvedení svedka"],
+      "options": [
+        "Uznesenie o odročení pojednávania",
+        "Rozsudok o vine a treste",
+        "Uznesenie o predvedení svedka"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy súd vyhlasuje rozsudok?",
-      "options": ["Po vykonaní dôkazov a záverečných rečiach", "Na začiatku pojednávania", "Po podaní obžaloby"],
+      "options": [
+        "Po vykonaní dôkazov a záverečných rečiach",
+        "Na začiatku pojednávania",
+        "Po podaní obžaloby"
+      ],
       "correct": 0
     },
     {
       "question": "Ktoré rozhodnutie môže súd prijať, ak nebolo dokázané, že skutok spáchal obžalovaný?",
-      "options": ["Odsudzujúci rozsudok", "Oslobodzujúci rozsudok", "Zastavenie konania"],
+      "options": [
+        "Odsudzujúci rozsudok",
+        "Oslobodzujúci rozsudok",
+        "Zastavenie konania"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré rozhodnutie súd vydá, ak skutok nie je trestným činom?",
-      "options": ["Oslobodzujúci rozsudok", "Uznesenie o vrátení veci", "Trestný rozkaz"],
+      "options": [
+        "Oslobodzujúci rozsudok",
+        "Uznesenie o vrátení veci",
+        "Trestný rozkaz"
+      ],
       "correct": 0
     },
     {
       "question": "Kto má posledné slovo pred vyhlásením rozsudku?",
-      "options": ["Prokurátor", "Obhajca", "Obvinený"],
+      "options": [
+        "Prokurátor",
+        "Obhajca",
+        "Obvinený"
+      ],
       "correct": 2
     }
   ],
-
   "tiles": [
-    { "term": "Meritórne rozhodnutie", "definition": "Rozhodnutie súdu vo veci samej, najmä rozsudok." },
-    { "term": "Odsudzujúci rozsudok", "definition": "Rozhodnutie, ktorým súd uzná obžalovaného vinným." },
-    { "term": "Oslobodzujúci rozsudok", "definition": "Rozhodnutie, ktorým súd obžalovaného oslobodí spod obžaloby." },
-    { "term": "Skutková veta", "definition": "Časť rozsudku opisujúca skutok, ktorý bol preukázaný." },
-    { "term": "Právna veta", "definition": "Časť rozsudku obsahujúca právnu kvalifikáciu skutku." },
-
-    { "term": "Odôvodnenie rozsudku", "definition": "Vysvetlenie, prečo súd rozhodol určitým spôsobom." },
-    { "term": "Výrok rozsudku", "definition": "Základná časť rozsudku, v ktorej súd rozhoduje o vine a treste." },
-    { "term": "Zastavenie konania", "definition": "Rozhodnutie, ak nie sú splnené podmienky na pokračovanie v konaní." },
-    { "term": "Zmena právnej kvalifikácie", "definition": "Súd môže skutok právne posúdiť inak ako prokurátor v obžalobe." },
-    { "term": "Vyhlásenie rozsudku", "definition": "Formálny akt, ktorým súd oznámi svoje rozhodnutie." }
+    {
+      "term": "Meritórne rozhodnutie",
+      "definition": "Rozhodnutie súdu vo veci samej, najmä rozsudok."
+    },
+    {
+      "term": "Odsudzujúci rozsudok",
+      "definition": "Rozhodnutie, ktorým súd uzná obžalovaného vinným."
+    },
+    {
+      "term": "Oslobodzujúci rozsudok",
+      "definition": "Rozhodnutie, ktorým súd obžalovaného oslobodí spod obžaloby."
+    },
+    {
+      "term": "Skutková veta",
+      "definition": "Časť rozsudku opisujúca skutok, ktorý bol preukázaný."
+    },
+    {
+      "term": "Právna veta",
+      "definition": "Časť rozsudku obsahujúca právnu kvalifikáciu skutku."
+    },
+    {
+      "term": "Odôvodnenie rozsudku",
+      "definition": "Vysvetlenie, prečo súd rozhodol určitým spôsobom."
+    },
+    {
+      "term": "Výrok rozsudku",
+      "definition": "Základná časť rozsudku, v ktorej súd rozhoduje o vine a treste."
+    },
+    {
+      "term": "Zastavenie konania",
+      "definition": "Rozhodnutie, ak nie sú splnené podmienky na pokračovanie v konaní."
+    },
+    {
+      "term": "Zmena právnej kvalifikácie",
+      "definition": "Súd môže skutok právne posúdiť inak ako prokurátor v obžalobe."
+    },
+    {
+      "term": "Vyhlásenie rozsudku",
+      "definition": "Formálny akt, ktorým súd oznámi svoje rozhodnutie."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nedostatok dôkazov",
@@ -58,22 +109,33 @@
         },
         {
           "question": "Krok 1: Ako má súd rozhodnúť?",
-          "options": ["Odsúdiť obžalovaného", "Oslobodiť obžalovaného", "Vrátiť vec prokurátorovi"],
+          "options": [
+            "Odsúdiť obžalovaného",
+            "Oslobodiť obžalovaného",
+            "Vrátiť vec prokurátorovi"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Prečo?",
-          "options": ["Nie je dokázaná vina", "Obžalovaný sa priznal", "Prokurátor to navrhol"],
+          "options": [
+            "Nie je dokázaná vina",
+            "Obžalovaný sa priznal",
+            "Prokurátor to navrhol"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Čo nasleduje po rozhodnutí?",
-          "options": ["Vyhlásenie rozsudku", "Začatie nového vyšetrovania", "Zastavenie konania automaticky"],
+          "options": [
+            "Vyhlásenie rozsudku",
+            "Začatie nového vyšetrovania",
+            "Zastavenie konania automaticky"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Skutok nie je trestným činom",
       "difficulty": "stredná",
@@ -85,12 +147,20 @@
         },
         {
           "question": "Krok 1: Ako má súd rozhodnúť?",
-          "options": ["Oslobodiť obžalovaného", "Odsúdiť obžalovaného", "Vrátiť vec prokurátorovi"],
+          "options": [
+            "Oslobodiť obžalovaného",
+            "Odsúdiť obžalovaného",
+            "Vrátiť vec prokurátorovi"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Aký je dôvod?",
-          "options": ["Skutok nie je trestným činom", "Chýba obžaloba", "Obžalovaný nespolupracoval"],
+          "options": [
+            "Skutok nie je trestným činom",
+            "Chýba obžaloba",
+            "Obžalovaný nespolupracoval"
+          ],
           "correct": 0
         },
         {
@@ -114,11 +184,43 @@
   "spider": {
     "center": "Meritórne rozhodnutia – rozsudok a alternatívy",
     "branches": [
-      { "label": "Pojem", "leaves": ["Podstata – rozhodnutie vo veci samej: vina, trest, opatrenia", "Kedy – po vykonaní dokazovania na hlavnom pojednávaní"] },
-      { "label": "Odsudzujúci rozsudok", "leaves": ["Obsah – vina, kvalifikácia, trest, ochranné opatrenia, náhrada škody", "Odôvodnenie (§ 168) – dôkazy, hodnotenie, úvahy o treste"] },
-      { "label": "Oslobodzujúci rozsudok (§ 285)", "leaves": ["Dôvody – skutok sa nestal, nie je TČ, nespáchal ho obžalovaný, neprípustnosť", "Dôsledky – nevinnosť; náhrada škody spravidla na civilné konanie"] },
-      { "label": "Ďalšie rozhodnutia", "leaves": ["Zastavenie (§ 281) – dôvody podľa § 215 aj na pojednávaní", "Postúpenie (§ 282) – priestupok či iný delikt", "Prerušenie (§ 283) – prekážka konania"] },
-      { "label": "Vyhlásenie", "leaves": ["Verejne – aj pri neverejnom pojednávaní", "Predseda senátu – stručné odôvodnenie"] }
+      {
+        "label": "Pojem",
+        "leaves": [
+          "Podstata – rozhodnutie vo veci samej: vina, trest, opatrenia",
+          "Kedy – po vykonaní dokazovania na hlavnom pojednávaní"
+        ]
+      },
+      {
+        "label": "Odsudzujúci rozsudok",
+        "leaves": [
+          "Obsah – vina, kvalifikácia, trest, ochranné opatrenia, náhrada škody",
+          "Odôvodnenie (§ 168) – dôkazy, hodnotenie, úvahy o treste"
+        ]
+      },
+      {
+        "label": "Oslobodzujúci rozsudok (§ 285)",
+        "leaves": [
+          "Dôvody – skutok sa nestal, nie je TČ, nespáchal ho obžalovaný, neprípustnosť",
+          "Dôsledky – nevinnosť; náhrada škody spravidla na civilné konanie"
+        ]
+      },
+      {
+        "label": "Ďalšie rozhodnutia",
+        "leaves": [
+          "Zastavenie (§ 281) – dôvody podľa § 215 aj na pojednávaní",
+          "Postúpenie (§ 282) – priestupok či iný delikt",
+          "Prerušenie (§ 283) – prekážka konania"
+        ]
+      },
+      {
+        "label": "Vyhlásenie",
+        "leaves": [
+          "Verejne – aj pri neverejnom pojednávaní",
+          "Predseda senátu – stručné odôvodnenie"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Meritórne rozhodnutia súdu na hlavnom pojednávaní sú rozhodnutia, ktorými súd vo veci samej rozhoduje o vine alebo nevine obžalovaného a o treste či ochranných opatreniach. Základným meritórnym rozhodnutím je rozsudok, ktorý môže byť odsudzujúci alebo oslobodzujúci. Rozsudok je výsledkom vykonaného dokazovania na hlavnom pojednávaní a musí byť verejne vyhlásený, riadne odôvodnený a obsahovať všetky zákonom predpísané náležitosti.\n\n1. Pojem meritórneho rozhodnutia\nMeritórne rozhodnutie je rozhodnutie, ktoré rieši podstatu veci – teda otázku, či je obžalovaný vinný alebo nevinný, a ak je vinný, aký trest alebo opatrenie sa mu uloží.\n\nMeritórne rozhodnutia sa vydávajú na hlavnom pojednávaní, po vykonaní dokazovania.\n\n2. Druhy meritórnych rozhodnutí na hlavnom pojednávaní\n2.1 Odsudzujúci rozsudok (§ 270–280 TP)\nSúd uzná obžalovaného vinným a uloží mu:\n\ntrest podľa Trestného zákona,\n\nochranné opatrenie (napr. ochranné liečenie),\n\nrozhodne o náhrade škody,\n\nrozhodne o zaistených veciach.\n\nObsah odsudzujúceho rozsudku (§ 164 TP)\nvýrok o vine,\n\nprávna kvalifikácia skutku,\n\nuložený trest,\n\nochranné opatrenia,\n\nrozhodnutie o náhrade škody,\n\nodôvodnenie.\n\n2.2 Oslobodzujúci rozsudok (§ 285 TP)\nSúd oslobodí obžalovaného, ak:\n\nsa nepreukázalo, že sa stal trestný čin,\n\nskutok nie je trestným činom,\n\nskutok nespáchal obžalovaný,\n\nje neprípustné trestné stíhanie.\n\nDôsledky oslobodenia:\nobžalovaný sa považuje za nevinného,\n\nrozhoduje sa o náhrade škody (zvyčajne odkaz na civilné konanie).\n\n2.3 Rozhodnutie o zastavení konania (§ 281 TP)\nSúd môže zastaviť konanie aj na hlavnom pojednávaní, ak zistí dôvody podľa § 215 TP (napr. premlčanie, smrť obžalovaného, neprípustnosť stíhania).\n\n2.4 Rozhodnutie o postúpení veci (§ 282 TP)\nAk skutok nie je trestným činom, ale môže byť priestupkom alebo iným deliktom, súd postúpi vec príslušnému orgánu.\n\n2.5 Rozhodnutie o prerušení konania (§ 283 TP)\nAk nastane prekážka (napr. zdravotná nespôsobilosť obžalovaného), súd konanie preruší.\n\n3. Vyhlásenie rozsudku (§ 284 TP)\nRozsudok sa vyhlasuje verejne, aj keď bolo pojednávanie neverejné.\nPredseda senátu stručne odôvodní rozhodnutie.\n\n4. Odôvodnenie rozsudku (§ 168 TP)\nMusí obsahovať:\n\nopis vykonaných dôkazov,\n\nhodnotenie dôkazov,\n\nprávnu kvalifikáciu skutku,\n\núvahy o treste.\n\nZapamätaj si (štátnicové jadro)\nMeritórne rozhodnutia = rozhodnutia vo veci samej.\n\nZákladné meritórne rozhodnutie je rozsudok.\n\nRozsudok môže byť odsudzujúci alebo oslobodzujúci.\n\nSúd môže aj zastaviť konanie, postúpiť vec alebo prerušiť konanie.\n\nRozsudok musí byť verejne vyhlásený a riadne odôvodnený.\n\nZdroj (zhrnutie)\nTrestný poriadok – § 164, § 168, § 270–290\n\nMinisterstvo spravodlivosti SR – trestné pojednávania \n\nNajvyšší súd SR – verejné zasadnutia a vyhlásenia rozhodnutí"
 }

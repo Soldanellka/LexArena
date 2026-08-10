@@ -2,50 +2,100 @@
   "id": "A3",
   "title": "Subjekty a strany trestného konania",
   "schemaVersion": "1.1",
-  "tags": ["subjekty", "strany", "trestné konanie"],
-
+  "tags": [
+    "subjekty",
+    "strany",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktorý z nasledujúcich je subjektom trestného konania?",
-      "options": ["Obvinený", "Svedok", "Znalec"],
+      "options": [
+        "Obvinený",
+        "Svedok",
+        "Znalec"
+      ],
       "correct": 0
     },
     {
       "question": "Kto je stranou trestného konania?",
-      "options": ["Prokurátor", "Policajt", "Znalec"],
+      "options": [
+        "Prokurátor",
+        "Policajt",
+        "Znalec"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý subjekt rozhoduje o vine a treste?",
-      "options": ["Súd", "Prokurátor", "Obhajca"],
+      "options": [
+        "Súd",
+        "Prokurátor",
+        "Obhajca"
+      ],
       "correct": 0
     },
     {
       "question": "Kto zastupuje štát v trestnom konaní?",
-      "options": ["Obhajca", "Prokurátor", "Poškodený"],
+      "options": [
+        "Obhajca",
+        "Prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kto môže byť poškodeným v trestnom konaní?",
-      "options": ["Len fyzická osoba", "Len právnická osoba", "Fyzická aj právnická osoba"],
+      "options": [
+        "Len fyzická osoba",
+        "Len právnická osoba",
+        "Fyzická aj právnická osoba"
+      ],
       "correct": 2
     }
   ],
-
   "tiles": [
-    { "term": "Obvinený", "definition": "Osoba, proti ktorej bolo vznesené obvinenie." },
-    { "term": "Prokurátor", "definition": "Zastupuje štát a podáva obžalobu." },
-    { "term": "Súd", "definition": "Rozhoduje o vine a treste." },
-    { "term": "Obhajca", "definition": "Zabezpečuje obhajobu obvineného." },
-    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené." },
-
-    { "term": "Svedok", "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre konanie." },
-    { "term": "Znalec", "definition": "Odborník, ktorý podáva znalecký posudok." },
-    { "term": "Policajt", "definition": "Orgán činný v trestnom konaní v prípravnom konaní." },
-    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
-    { "term": "Trestný sudca", "definition": "Sudca špecializovaný na trestné veci." }
+    {
+      "term": "Obvinený",
+      "definition": "Osoba, proti ktorej bolo vznesené obvinenie."
+    },
+    {
+      "term": "Prokurátor",
+      "definition": "Zastupuje štát a podáva obžalobu."
+    },
+    {
+      "term": "Súd",
+      "definition": "Rozhoduje o vine a treste."
+    },
+    {
+      "term": "Obhajca",
+      "definition": "Zabezpečuje obhajobu obvineného."
+    },
+    {
+      "term": "Poškodený",
+      "definition": "Osoba, ktorej bolo trestným činom ublížené."
+    },
+    {
+      "term": "Svedok",
+      "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre konanie."
+    },
+    {
+      "term": "Znalec",
+      "definition": "Odborník, ktorý podáva znalecký posudok."
+    },
+    {
+      "term": "Policajt",
+      "definition": "Orgán činný v trestnom konaní v prípravnom konaní."
+    },
+    {
+      "term": "Zúčastnená osoba",
+      "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť."
+    },
+    {
+      "term": "Trestný sudca",
+      "definition": "Sudca špecializovaný na trestné veci."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Kto je stranou konania?",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Je poškodený stranou trestného konania?",
-          "options": ["Áno", "Nie", "Len v civilnom konaní"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len v civilnom konaní"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Aké právo má poškodený?",
-          "options": ["Podávať obžalobu", "Navrhovať dôkazy", "Rozhodovať o vine"],
+          "options": [
+            "Podávať obžalobu",
+            "Navrhovať dôkazy",
+            "Rozhodovať o vine"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Postavenie obvineného",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Ako má polícia postupovať?",
-          "options": ["Pokračovať vo výsluchu ako so svedkom", "Ihneď prerušiť výsluch a poučiť osobu ako obvineného", "Zadržať osobu bez poučenia"],
+          "options": [
+            "Pokračovať vo výsluchu ako so svedkom",
+            "Ihneď prerušiť výsluch a poučiť osobu ako obvineného",
+            "Zadržať osobu bez poučenia"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Prečo je to dôležité?",
-          "options": ["Aby sa predišlo prieťahom", "Aby sa zachovalo právo nevypovedať", "Aby sa urýchlilo konanie"],
+          "options": [
+            "Aby sa predišlo prieťahom",
+            "Aby sa zachovalo právo nevypovedať",
+            "Aby sa urýchlilo konanie"
+          ],
           "correct": 1
         },
         {
@@ -118,10 +183,39 @@
   "spider": {
     "center": "Subjekty × strany trestného konania",
     "branches": [
-      { "label": "Rozlíšenie", "leaves": ["Subjekty – všetky osoby s procesným postavením podľa TP", "Strany – aktívni účastníci: obvinený, obhajca, prokurátor, poškodený"] },
-      { "label": "Orgány činné v trestnom konaní (§ 10)", "leaves": ["Policajt – úkony prípravného konania, zabezpečovanie dôkazov", "Prokurátor – riadi prípravné konanie, podáva obžalobu, zastupuje štát", "Súd – rozhoduje o vine, treste a zásahoch do práv"] },
-      { "label": "Strany a ich práva", "leaves": ["Obvinený (§ 32) – najširšie práva: obhajoba, dôkazy, opravné prostriedky", "Obhajca (§ 34) – advokát; úkony, dôkazy, opravné prostriedky v mene obvineného", "Poškodený (§ 46) – ujma z TČ; adhézny nárok na náhradu škody", "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistenej veci"] },
-      { "label": "Ďalšie subjekty", "leaves": ["Svedok (§ 127) – povinnosť vypovedať, ak zákon neustanovuje inak", "Znalec (§ 133) – odborné posúdenie znaleckým posudkom", "Pomocné osoby – tlmočník, prekladateľ, zapisovateľ"] }
+      {
+        "label": "Rozlíšenie",
+        "leaves": [
+          "Subjekty – všetky osoby s procesným postavením podľa TP",
+          "Strany – aktívni účastníci: obvinený, obhajca, prokurátor, poškodený"
+        ]
+      },
+      {
+        "label": "Orgány činné v trestnom konaní (§ 10)",
+        "leaves": [
+          "Policajt – úkony prípravného konania, zabezpečovanie dôkazov",
+          "Prokurátor – riadi prípravné konanie, podáva obžalobu, zastupuje štát",
+          "Súd – rozhoduje o vine, treste a zásahoch do práv"
+        ]
+      },
+      {
+        "label": "Strany a ich práva",
+        "leaves": [
+          "Obvinený (§ 32) – najširšie práva: obhajoba, dôkazy, opravné prostriedky",
+          "Obhajca (§ 34) – advokát; úkony, dôkazy, opravné prostriedky v mene obvineného",
+          "Poškodený (§ 46) – ujma z TČ; adhézny nárok na náhradu škody",
+          "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistenej veci"
+        ]
+      },
+      {
+        "label": "Ďalšie subjekty",
+        "leaves": [
+          "Svedok (§ 127) – povinnosť vypovedať, ak zákon neustanovuje inak",
+          "Znalec (§ 133) – odborné posúdenie znaleckým posudkom",
+          "Pomocné osoby – tlmočník, prekladateľ, zapisovateľ"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Subjekty a strany trestného konania sú všetky osoby, ktoré majú procesné postavenie a právomoci v trestnom konaní. Základné delenie je na subjekty (orgány vykonávajúce konanie) a strany (osoby, ktoré uplatňujú svoje práva v konaní).\n\nZhrnutie (štátnicové jadro)\nSubjekty trestného konania sú orgány činné v trestnom konaní, súdy, prokurátor, obvinený, obhajca, poškodený, zúčastnená osoba, svedok, znalec a ďalšie osoby, ktoré majú procesné postavenie. Strany trestného konania sú obvinený, obhajca, prokurátor a poškodený, teda osoby, ktoré majú právo aktívne vstupovať do konania, navrhovať dôkazy a ovplyvňovať výsledok konania.\n\n1. Subjekty trestného konania\nSubjekty sú všetky osoby, ktoré majú procesné postavenie podľa Trestného poriadku. Patria sem:\n\na) Orgány činné v trestnom konaní (§ 10 TP)\nPolicajt – vykonáva úkony prípravného konania, vyhľadáva a zabezpečuje dôkazy.\n\nProkurátor – riadi prípravné konanie, podáva obžalobu, zastupuje štát.\n\nSúd – rozhoduje o vine a treste, kontroluje zásahy do práv (sudca pre prípravné konanie).\n\nb) Obvinený (§ 32 TP)\nOsoba, proti ktorej bolo vznesené obvinenie. Má právo na obhajobu, na vyjadrenie sa k dôkazom, na navrhovanie dôkazov, na obhajcu.\n\nc) Obhajca (§ 34 TP)\nAdvokát, ktorý poskytuje právnu pomoc obvinenému. Môže sa zúčastňovať úkonov, navrhovať dôkazy, podávať opravné prostriedky.\n\nd) Poškodený (§ 46 TP)\nOsoba, ktorej bolo trestným činom ublížené na zdraví, spôsobená škoda alebo nemajetková ujma. Má právo uplatniť nárok na náhradu škody (adhézne konanie).\n\ne) Zúčastnená osoba (§ 47 TP)\nOsoba, ktorej vec bola zaistená alebo odňatá. Má právo brániť svoje vlastnícke práva.\n\nf) Svedok (§ 127 TP)\nOsoba, ktorá má vypovedať o skutočnostiach dôležitých pre konanie. Má povinnosť vypovedať, ak zákon neustanovuje inak.\n\ng) Znalec (§ 133 TP)\nOdborník, ktorý podáva znalecký posudok, ak je potrebné odborné posúdenie.\n\nh) Tlmočník, prekladateľ, zapisovateľ\nPomocné osoby zabezpečujúce priebeh konania.\n\n2. Strany trestného konania\nStrany sú subjekty, ktoré uplatňujú svoje procesné práva a vstupujú do konania ako aktívni účastníci.\n\na) Obvinený\nMá právo na obhajobu, navrhovanie dôkazov, podávanie opravných prostriedkov.\n\nb) Obhajca\nKoná v mene obvineného, chráni jeho práva.\n\nc) Prokurátor\nZastupuje štát, podáva obžalobu, navrhuje dôkazy, je stranou konania pred súdom.\n\nd) Poškodený\nAk uplatní nárok na náhradu škody, stáva sa stranou konania v rozsahu tohto nároku.\n\nZapamätaj si (štátnicové jadro)\n– Subjekty = všetky osoby s procesným postavením.\n– Strany = obvinený, obhajca, prokurátor, poškodený.\n– Obvinený má najširšie procesné práva.\n– Prokurátor zastupuje štát.\n– Poškodený môže uplatniť adhézny nárok.\n– Zúčastnená osoba chráni vlastnícke práva.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., §§ 10, 32–47, 127–133 (Slov-Lex)"
 }

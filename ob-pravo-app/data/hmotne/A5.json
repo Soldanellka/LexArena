@@ -1,7 +1,7 @@
 {
   "id": "5",
   "title": "Následky vadnosti právnych úkonov",
-  "summary": "Vadnosť právneho úkonu môže spôsobiť jeho neplatnosť: absolútnu (§ 39 OZ – ex lege, súd prihliadne z úradnej moci) alebo relatívnu (§ 40a OZ – len ak sa oprávnená osoba neplatnosti dovolá). Dôvody absolútnej neplatnosti: rozpor so zákonom, dobrými mravmi, nenaplnenie zákonnej formy. Relatívna neplatnosť: omyl (§ 49a OZ), tieseň, lesť, výhrážka (§ 49 OZ).",
+  "summary": "Vadnosť právneho úkonu znamená, že úkon nespĺňa zákonom požadované náležitosti. Následkom môže byť jeho neplatnosť, ktorá predstavuje najvýznamnejší právny dôsledok vadnosti. Neplatnosť môže byť absolútna alebo relatívna, pričom rozdiel spočíva v tom, kto sa jej môže dovolávať a aké účinky vyvoláva.\n\n1. Absolútna neplatnosť (§ 39 OZ)  \nNastáva ex lege, teda priamo zo zákona, bez potreby dovolania sa. Súd na ňu prihliada z úradnej povinnosti. Úkon je neplatný od začiatku (ex tunc). Dôvody absolútnej neplatnosti:\n– rozpor so zákonom,\n– rozpor s dobrými mravmi,\n– obchádzanie zákona,\n– nedodržanie zákonom predpísanej formy (napr. písomná forma pri nehnuteľnostiach),\n– právny úkon osoby nespôsobilej na právne úkony.\n\nAbsolútna neplatnosť chráni verejný záujem a základné hodnoty právneho poriadku.\n\n2. Relatívna neplatnosť (§ 40a OZ)  \nÚkon je neplatný len vtedy, ak sa oprávnená osoba neplatnosti dovolá. Súd na ňu neprihliada automaticky. Dôvody relatívnej neplatnosti:\n– omyl v podstatnej náležitosti právneho úkonu (§ 49a OZ),\n– tieseň,\n– lesť (podvod),\n– výhrážka (§ 49 OZ),\n– omyl vyvolaný druhou stranou alebo jej vedomosť o omyle.\n\nRelatívna neplatnosť chráni individuálne záujmy účastníka, ktorý konal v nepriaznivých podmienkach.\n\nÚčinky neplatnosti  \nNeplatný právny úkon nevyvoláva zamýšľané právne následky. Strany sú povinné vrátiť si plnenia podľa pravidiel o bezdôvodnom obohatení. Pri relatívnej neplatnosti sa úkon považuje za platný, pokiaľ sa oprávnená osoba neplatnosti nedovolá.\n\nZdroje: OZ (40/1964 Zb.), § 39, § 40a, § 49, § 49a; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Aký je rozdiel medzi absolútnou a relatívnou neplatnosťou právneho úkonu?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Absolútna neplatnosť (§ 39 OZ)", "definition": "Nastáva priamo zo zákona (ex lege), súd na ňu prihliada z úradnej moci." },
-    { "term": "Relatívna neplatnosť (§ 40a OZ)", "definition": "Existuje, len ak sa jej oprávnená osoba dovolá." },
-    { "term": "Omyl (§ 49a OZ)", "definition": "Zakladá relatívnu neplatnosť, ak ho druhá strana vyvolala alebo o ňom vedela." },
-    { "term": "Donútenie (§ 49 OZ)", "definition": "Protiprávna výhražka spôsobujúca relatívnu neplatnosť úkonu." },
-    { "term": "Konvalidácia", "definition": "Dodatočné zhojenie vady úkonu; možná pri relatívnej, nie pri absolútnej neplatnosti." }
+    {
+      "term": "Absolútna neplatnosť (§ 39 OZ)",
+      "definition": "Nastáva priamo zo zákona (ex lege), súd na ňu prihliada z úradnej moci."
+    },
+    {
+      "term": "Relatívna neplatnosť (§ 40a OZ)",
+      "definition": "Existuje, len ak sa jej oprávnená osoba dovolá."
+    },
+    {
+      "term": "Omyl (§ 49a OZ)",
+      "definition": "Zakladá relatívnu neplatnosť, ak ho druhá strana vyvolala alebo o ňom vedela."
+    },
+    {
+      "term": "Donútenie (§ 49 OZ)",
+      "definition": "Protiprávna výhražka spôsobujúca relatívnu neplatnosť úkonu."
+    },
+    {
+      "term": "Konvalidácia",
+      "definition": "Dodatočné zhojenie vady úkonu; možná pri relatívnej, nie pri absolútnej neplatnosti."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Zmluva odporujúca zákonu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Strany uzavrú zmluvu, ktorej obsah priamo odporuje kogentnému ustanoveniu zákona.", "options": [], "correct": 0 },
+        {
+          "question": "Strany uzavrú zmluvu, ktorej obsah priamo odporuje kogentnému ustanoveniu zákona.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký typ neplatnosti táto zmluva zakladá?",
-          "options": ["Absolútnu neplatnosť podľa § 39 OZ", "Relatívnu neplatnosť, len na návrh jednej zo strán", "Zmluva je bez ďalšieho platná napriek rozporu so zákonom"],
+          "options": [
+            "Absolútnu neplatnosť podľa § 39 OZ",
+            "Relatívnu neplatnosť, len na návrh jednej zo strán",
+            "Zmluva je bez ďalšieho platná napriek rozporu so zákonom"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozpor so zákonom zakladá absolútnu neplatnosť podľa § 39 OZ.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Musí sa niektorá strana tejto neplatnosti dovolávať, aby na ňu súd prihliadol?",
-          "options": ["Nie, súd na absolútnu neplatnosť prihliada z úradnej moci", "Áno, bez návrhu súd nikdy neplatnosť nezohľadní", "Áno, ale iba ak ide o spotrebiteľskú zmluvu"],
+          "options": [
+            "Nie, súd na absolútnu neplatnosť prihliada z úradnej moci",
+            "Áno, bez návrhu súd nikdy neplatnosť nezohľadní",
+            "Áno, ale iba ak ide o spotrebiteľskú zmluvu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Absolútna neplatnosť pôsobí ex lege a súd na ňu prihliada aj bez návrhu.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Zmluva uzavretá v omyle",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Kupujúci uzavrel kúpnu zmluvu v omyle o vlastnostiach veci, pričom predávajúci o tomto omyle vedel a mlčky ho využil.", "options": [], "correct": 0 },
+        {
+          "question": "Kupujúci uzavrel kúpnu zmluvu v omyle o vlastnostiach veci, pričom predávajúci o tomto omyle vedel a mlčky ho využil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký typ neplatnosti tento omyl zakladá?",
-          "options": ["Relatívnu neplatnosť podľa § 49a OZ", "Absolútnu neplatnosť bez ďalšieho", "Zmluva zostáva bezvýhradne platná"],
+          "options": [
+            "Relatívnu neplatnosť podľa § 49a OZ",
+            "Absolútnu neplatnosť bez ďalšieho",
+            "Zmluva zostáva bezvýhradne platná"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Omyl, o ktorom druhá strana vedela, zakladá relatívnu neplatnosť podľa § 49a OZ.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo musí kupujúci urobiť, aby sa tejto neplatnosti účinne dovolal?",
-          "options": ["Musí sa neplatnosti výslovne dovolať, inak zmluva zostáva v platnosti", "Nemusí nič, neplatnosť nastáva automaticky", "Musí počkať, kým to namietne predávajúci"],
+          "options": [
+            "Musí sa neplatnosti výslovne dovolať, inak zmluva zostáva v platnosti",
+            "Nemusí nič, neplatnosť nastáva automaticky",
+            "Musí počkať, kým to namietne predávajúci"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Relatívna neplatnosť nastáva až dovolaním sa oprávnenej osoby.",
@@ -142,13 +181,69 @@
   "spider": {
     "center": "Následky vadnosti právnych úkonov (neplatnosť – absolútna / relatívna – účinky)",
     "branches": [
-      { "label": "Vadnosť právneho úkonu", "leaves": ["úkon nespĺňa zákonné náležitosti", "následok: neplatnosť", "môže byť absolútna alebo relatívna", "ovplyvňuje vznik, zmenu, zánik práv a povinností"] },
-      { "label": "Absolútna neplatnosť (§ 39 OZ)", "leaves": ["nastáva ex lege (automaticky)", "súd prihliada z úradnej povinnosti", "účinky ex tunc (od začiatku)", "chráni verejný záujem"] },
-      { "label": "Dôvody absolútnej neplatnosti", "leaves": ["rozpor so zákonom", "rozpor s dobrými mravmi", "obchádzanie zákona", "nedodržanie zákonnej formy", "úkon osoby nespôsobilej na právne úkony"] },
-      { "label": "Relatívna neplatnosť (§ 40a OZ)", "leaves": ["úkon je neplatný, len ak sa oprávnená osoba dovolá", "súd neprihliada automaticky", "chráni individuálne záujmy"] },
-      { "label": "Dôvody relatívnej neplatnosti", "leaves": ["omyl v podstatnej náležitosti (§ 49a OZ)", "tieseň", "lesť (podvod)", "výhrážka (§ 49 OZ)", "omyl vyvolaný druhou stranou alebo jej vedomosť o omyle"] },
-      { "label": "Účinky neplatnosti", "leaves": ["úkon nevyvoláva zamýšľané právne následky", "strany si vracajú plnenia → bezdôvodné obohatenie", "pri relatívnej neplatnosti sa úkon považuje za platný, kým sa neplatnosti niekto nedovolá"] },
-      { "label": "Význam pre prax", "leaves": ["kontrola platnosti právnych úkonov", "ochrana verejného záujmu (absolútna)", "ochrana slabšej strany (relatívna)", "zásadné pre zmluvné právo, rodinné právo, vecné práva"] }
+      {
+        "label": "Vadnosť právneho úkonu",
+        "leaves": [
+          "úkon nespĺňa zákonné náležitosti",
+          "následok: neplatnosť",
+          "môže byť absolútna alebo relatívna",
+          "ovplyvňuje vznik, zmenu, zánik práv a povinností"
+        ]
+      },
+      {
+        "label": "Absolútna neplatnosť (§ 39 OZ)",
+        "leaves": [
+          "nastáva ex lege (automaticky)",
+          "súd prihliada z úradnej povinnosti",
+          "účinky ex tunc (od začiatku)",
+          "chráni verejný záujem"
+        ]
+      },
+      {
+        "label": "Dôvody absolútnej neplatnosti",
+        "leaves": [
+          "rozpor so zákonom",
+          "rozpor s dobrými mravmi",
+          "obchádzanie zákona",
+          "nedodržanie zákonnej formy",
+          "úkon osoby nespôsobilej na právne úkony"
+        ]
+      },
+      {
+        "label": "Relatívna neplatnosť (§ 40a OZ)",
+        "leaves": [
+          "úkon je neplatný, len ak sa oprávnená osoba dovolá",
+          "súd neprihliada automaticky",
+          "chráni individuálne záujmy"
+        ]
+      },
+      {
+        "label": "Dôvody relatívnej neplatnosti",
+        "leaves": [
+          "omyl v podstatnej náležitosti (§ 49a OZ)",
+          "tieseň",
+          "lesť (podvod)",
+          "výhrážka (§ 49 OZ)",
+          "omyl vyvolaný druhou stranou alebo jej vedomosť o omyle"
+        ]
+      },
+      {
+        "label": "Účinky neplatnosti",
+        "leaves": [
+          "úkon nevyvoláva zamýšľané právne následky",
+          "strany si vracajú plnenia → bezdôvodné obohatenie",
+          "pri relatívnej neplatnosti sa úkon považuje za platný, kým sa neplatnosti niekto nedovolá"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "kontrola platnosti právnych úkonov",
+          "ochrana verejného záujmu (absolútna)",
+          "ochrana slabšej strany (relatívna)",
+          "zásadné pre zmluvné právo, rodinné právo, vecné práva"
+        ]
+      }
     ]
   }
 }

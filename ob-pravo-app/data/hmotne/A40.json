@@ -1,7 +1,7 @@
 {
   "id": "40",
   "title": "Verejná súťaž a verejný prísľub",
-  "summary": "Verejná súťaž (§ 847-849 OZ): vyhlasovateľ vyhlási súťaž na najlepší návrh - zaväzuje sa odmeniť najlepší návrh. Verejný prísľub (§ 850-852 OZ): kto verejne vyhlási odmenu za vykonanie určitého výkonu, je povinný odmenu poskytnúť tomu, kto výkon uskutočnil. Oba inštitúty sú jednostrannými právnymi úkonmi zaväzujúcimi vyhlasovateľa.",
+  "summary": "Verejná súťaž (§ 847–849 OZ)\nVerejná súťaž je jednostranný právny úkon, ktorým vyhlasovateľ vyhlási súťaž na najlepší návrh a zaväzuje sa poskytnúť odmenu tomu, kto predloží najlepší návrh podľa podmienok súťaže.\n\nPodstatné znaky:\n– vyhlásenie súťaže musí byť verejné,\n– musia byť určené podmienky súťaže, kritériá hodnotenia a odmena,\n– návrhy sa posudzujú podľa kritérií uvedených vo vyhlásení,\n– vyhlasovateľ je povinný odmenu poskytnúť víťazovi,\n– návrh možno odvolať len do uplynutia lehoty na podanie návrhov.\n\nVyhlasovateľ môže súťaž zrušiť, ale len zo zákonných dôvodov (napr. ak sa podstatne zmenili okolnosti).\n\nVerejný prísľub (§ 850–852 OZ)\nVerejný prísľub je jednostranný právny úkon, ktorým sa osoba verejne zaväzuje poskytnúť odmenu tomu, kto vykoná určitý výkon.\n\nPodstatné znaky:\n– prísľub musí byť verejný (napr. oznámenie, vyhlásenie, reklama),\n– výkon musí byť určitý a uskutočniteľný,\n– odmenu získava ten, kto výkon splní ako prvý,\n– vyhlasovateľ je povinný odmenu poskytnúť, ak bol výkon splnený.\n\nPrísľub možno odvolať, ale odvolanie musí byť urobené rovnakým spôsobom, akým bol prísľub vyhlásený. Odvolanie neúčinkuje voči tomu, kto už výkon splnil.\n\nPodstata oboch inštitútov\n– ide o jednostranné právne úkony,\n– vzniká záväzok len na strane vyhlasovateľa,\n– odmena sa poskytuje za najlepší návrh (súťaž) alebo za splnený výkon (prísľub),\n– nejde o zmluvu – druhá strana nevstupuje do záväzku, len vykoná výkon.\n\nZdroje: OZ (40/1964 Zb.), § 847–852; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je verejná súťaž (§ 847 OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Verejná súťaž (§ 847 OZ)", "definition": "Vyhlasovateľ sa zaväzuje odmeniť najlepší návrh doručený v stanovenej lehote." },
-    { "term": "Verejný prísľub (§ 850 OZ)", "definition": "Vyhlasovateľ je viazaný voči tomu, kto uskutoční sľúbený výkon." },
-    { "term": "Jednostrannosť", "definition": "Oba inštitúty zaväzujú iba vyhlasovateľa, nie účastníkov." },
-    { "term": "Odvolanie prísľubu (§ 851 OZ)", "definition": "Možné len pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený." },
-    { "term": "Súčasné splnenie viacerými osobami (§ 852 OZ)", "definition": "Odmena sa rozdelí rovnakým dielom, ak vyhlasovateľ neurčil inak." }
+    {
+      "term": "Verejná súťaž (§ 847 OZ)",
+      "definition": "Vyhlasovateľ sa zaväzuje odmeniť najlepší návrh doručený v stanovenej lehote."
+    },
+    {
+      "term": "Verejný prísľub (§ 850 OZ)",
+      "definition": "Vyhlasovateľ je viazaný voči tomu, kto uskutoční sľúbený výkon."
+    },
+    {
+      "term": "Jednostrannosť",
+      "definition": "Oba inštitúty zaväzujú iba vyhlasovateľa, nie účastníkov."
+    },
+    {
+      "term": "Odvolanie prísľubu (§ 851 OZ)",
+      "definition": "Možné len pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený."
+    },
+    {
+      "term": "Súčasné splnenie viacerými osobami (§ 852 OZ)",
+      "definition": "Odmena sa rozdelí rovnakým dielom, ak vyhlasovateľ neurčil inak."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Odvolanie verejného prísľubu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Vyhlasovateľ verejne sľúbi odmenu tomu, kto nájde jeho stratené zviera, no ešte predtým, než ho niekto nájde, chce svoj prísľub odvolať.", "options": [], "correct": 0 },
+        {
+          "question": "Vyhlasovateľ verejne sľúbi odmenu tomu, kto nájde jeho stratené zviera, no ešte predtým, než ho niekto nájde, chce svoj prísľub odvolať.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže tak urobiť?",
-          "options": ["Áno, ale iba pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený", "Nie, verejný prísľub nemožno nikdy odvolať", "Áno, kedykoľvek aj bez akejkoľvek formy"],
+          "options": [
+            "Áno, ale iba pred uskutočnením výkonu a rovnakou formou, akou bol prísľub zverejnený",
+            "Nie, verejný prísľub nemožno nikdy odvolať",
+            "Áno, kedykoľvek aj bez akejkoľvek formy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odvolanie musí predchádzať uskutočneniu výkonu a musí mať rovnakú formu ako pôvodný prísľub.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo ak by zviera niekto medzitým už našiel skôr, než bolo odvolanie zverejnené?",
-          "options": ["Nálezcovi by nárok na odmenu vznikol, odvolanie by naň už nemalo vplyv", "Odvolanie by pôsobilo spätne a nálezca by nárok nezískal", "Nálezca by musel o odmenu súdiť sa s vyhlasovateľom bez nároku na úspech"],
+          "options": [
+            "Nálezcovi by nárok na odmenu vznikol, odvolanie by naň už nemalo vplyv",
+            "Odvolanie by pôsobilo spätne a nálezca by nárok nezískal",
+            "Nálezca by musel o odmenu súdiť sa s vyhlasovateľom bez nároku na úspech"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak výkon nastal skôr než odvolanie, nárok na odmenu už vznikol a neskoršie odvolanie naň nemá vplyv.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Súčasné odovzdanie víťazného návrhu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vo verejnej súťaži o najlepší architektonický návrh dorazia dva rovnako hodnotené najlepšie návrhy od dvoch rôznych autorov súčasne.", "options": [], "correct": 0 },
+        {
+          "question": "Vo verejnej súťaži o najlepší architektonický návrh dorazia dva rovnako hodnotené najlepšie návrhy od dvoch rôznych autorov súčasne.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa v takom prípade rozdelí odmena, ak vyhlasovateľ vopred neurčil iný postup?",
-          "options": ["Rovnakým dielom medzi oboch autorov", "Odmena prepadne v prospech vyhlasovateľa", "Odmenu dostane iba ten, kto podal návrh skôr v ten istý deň"],
+          "options": [
+            "Rovnakým dielom medzi oboch autorov",
+            "Odmena prepadne v prospech vyhlasovateľa",
+            "Odmenu dostane iba ten, kto podal návrh skôr v ten istý deň"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon predpokladá rovnaké rozdelenie odmeny medzi rovnocenných autorov.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Kto je vôbec zaviazaný z verejnej súťaže?",
-          "options": ["Iba vyhlasovateľ, ktorý sľúbil odmenu za najlepší návrh", "Všetci účastníci súťaže navzájom", "Iba účastníci, ktorí súťaž nevyhrali"],
+          "options": [
+            "Iba vyhlasovateľ, ktorý sľúbil odmenu za najlepší návrh",
+            "Všetci účastníci súťaže navzájom",
+            "Iba účastníci, ktorí súťaž nevyhrali"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Verejná súťaž je jednostranným záväzkom vyhlasovateľa, nie vzájomným záväzkom účastníkov.",
@@ -142,12 +181,64 @@
   "spider": {
     "center": "Verejná súťaž a verejný prísľub – pojem, náležitosti, odvolanie, rozdiely (jednostranné právne úkony s odmenou za návrh alebo výkon)",
     "branches": [
-      { "label": "Verejná súťaž (§ 847–849 OZ)", "leaves": ["vyhlasovateľ vyhlási súťaž na najlepší návrh a zaväzuje sa poskytnúť odmenu víťazovi", "vyhlásenie musí byť verejné", "musia byť určené podmienky súťaže, kritériá hodnotenia a odmena", "návrhy sa posudzujú podľa kritérií vo vyhlásení", "vyhlasovateľ je povinný odmenu poskytnúť víťazovi", "návrh možno odvolať len do uplynutia lehoty na podanie návrhov"] },
-      { "label": "Podmienky a priebeh súťaže", "leaves": ["verejné vyhlásenie", "presné kritériá hodnotenia", "určená odmena", "objektívne posúdenie návrhov", "povinnosť vyhlasovateľa odmenu vyplatiť"] },
-      { "label": "Verejný prísľub (§ 850–852 OZ)", "leaves": ["vyhlasovateľ sa verejne zaväzuje poskytnúť odmenu tomu, kto vykoná určitý výkon", "prísľub musí byť verejný: oznámenie, reklama, vyhlásenie", "výkon musí byť určitý a uskutočniteľný", "odmenu získava ten, kto výkon splní ako prvý", "vyhlasovateľ je povinný odmenu poskytnúť, ak bol výkon splnený"] },
-      { "label": "Odvolanie súťaže a prísľubu", "leaves": ["prísľub možno odvolať rovnakým spôsobom, akým bol vyhlásený", "odvolanie neúčinkuje voči tomu, kto už výkon splnil", "súťaž možno zrušiť len zo zákonných dôvodov, napr. podstatná zmena okolností", "návrh možno odvolať len pred uplynutím lehoty"] },
-      { "label": "Rozdiely medzi súťažou a prísľubom", "leaves": ["verejná súťaž: odmena za najlepší návrh", "verejný prísľub: odmena za splnený výkon", "súťaž hodnotí návrhy, prísľub vyžaduje splnenie výkonu", "oba sú jednostranné právne úkony, záväzok vzniká len na strane vyhlasovateľa", "nejde o zmluvu, druhá strana nevstupuje do záväzku, len vykoná výkon"] },
-      { "label": "Význam pre prax", "leaves": ["verejná súťaž: architektonické, literárne, dizajnérske súťaže", "verejný prísľub: odmeny za nález veci, za informácie, za splnenie úlohy", "jasné pravidlá bránia sporom o odmenu a platnosť odvolania"] }
+      {
+        "label": "Verejná súťaž (§ 847–849 OZ)",
+        "leaves": [
+          "vyhlasovateľ vyhlási súťaž na najlepší návrh a zaväzuje sa poskytnúť odmenu víťazovi",
+          "vyhlásenie musí byť verejné",
+          "musia byť určené podmienky súťaže, kritériá hodnotenia a odmena",
+          "návrhy sa posudzujú podľa kritérií vo vyhlásení",
+          "vyhlasovateľ je povinný odmenu poskytnúť víťazovi",
+          "návrh možno odvolať len do uplynutia lehoty na podanie návrhov"
+        ]
+      },
+      {
+        "label": "Podmienky a priebeh súťaže",
+        "leaves": [
+          "verejné vyhlásenie",
+          "presné kritériá hodnotenia",
+          "určená odmena",
+          "objektívne posúdenie návrhov",
+          "povinnosť vyhlasovateľa odmenu vyplatiť"
+        ]
+      },
+      {
+        "label": "Verejný prísľub (§ 850–852 OZ)",
+        "leaves": [
+          "vyhlasovateľ sa verejne zaväzuje poskytnúť odmenu tomu, kto vykoná určitý výkon",
+          "prísľub musí byť verejný: oznámenie, reklama, vyhlásenie",
+          "výkon musí byť určitý a uskutočniteľný",
+          "odmenu získava ten, kto výkon splní ako prvý",
+          "vyhlasovateľ je povinný odmenu poskytnúť, ak bol výkon splnený"
+        ]
+      },
+      {
+        "label": "Odvolanie súťaže a prísľubu",
+        "leaves": [
+          "prísľub možno odvolať rovnakým spôsobom, akým bol vyhlásený",
+          "odvolanie neúčinkuje voči tomu, kto už výkon splnil",
+          "súťaž možno zrušiť len zo zákonných dôvodov, napr. podstatná zmena okolností",
+          "návrh možno odvolať len pred uplynutím lehoty"
+        ]
+      },
+      {
+        "label": "Rozdiely medzi súťažou a prísľubom",
+        "leaves": [
+          "verejná súťaž: odmena za najlepší návrh",
+          "verejný prísľub: odmena za splnený výkon",
+          "súťaž hodnotí návrhy, prísľub vyžaduje splnenie výkonu",
+          "oba sú jednostranné právne úkony, záväzok vzniká len na strane vyhlasovateľa",
+          "nejde o zmluvu, druhá strana nevstupuje do záväzku, len vykoná výkon"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "verejná súťaž: architektonické, literárne, dizajnérske súťaže",
+          "verejný prísľub: odmeny za nález veci, za informácie, za splnenie úlohy",
+          "jasné pravidlá bránia sporom o odmenu a platnosť odvolania"
+        ]
+      }
     ]
   }
 }

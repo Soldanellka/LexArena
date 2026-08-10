@@ -2,50 +2,100 @@
   "id": "A1",
   "title": "Základné zásady trestného konania",
   "schemaVersion": "1.1",
-  "tags": ["zásady", "trestné konanie", "proces"],
-
+  "tags": [
+    "zásady",
+    "trestné konanie",
+    "proces"
+  ],
   "quiz": [
     {
       "question": "Ktorá zásada znamená, že obvinený nemusí vypovedať proti sebe?",
-      "options": ["Zásada verejnosti", "Zásada nemo tenetur", "Zásada legality"],
+      "options": [
+        "Zásada verejnosti",
+        "Zásada nemo tenetur",
+        "Zásada legality"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorá zásada vyžaduje, aby dokazovanie prebiehalo ústne pred súdom?",
-      "options": ["Zásada ústnosti", "Zásada rýchlosti konania", "Zásada proporcionality"],
+      "options": [
+        "Zásada ústnosti",
+        "Zásada rýchlosti konania",
+        "Zásada proporcionality"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorá zásada zabezpečuje, že strany môžu reagovať na dôkazy druhej strany?",
-      "options": ["Zásada kontradiktórnosti", "Zásada verejnosti", "Zásada humanity"],
+      "options": [
+        "Zásada kontradiktórnosti",
+        "Zásada verejnosti",
+        "Zásada humanity"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorá zásada vyžaduje, aby súd rozhodoval len na základe dôkazov vykonaných pred ním?",
-      "options": ["Zásada bezprostrednosti", "Zásada legality", "Zásada oportunity"],
+      "options": [
+        "Zásada bezprostrednosti",
+        "Zásada legality",
+        "Zásada oportunity"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorá zásada znamená, že každý je považovaný za nevinného, kým sa vina nepreukáže?",
-      "options": ["Zásada prezumpcie neviny", "Zásada rýchlosti konania", "Zásada zákonnosti"],
+      "options": [
+        "Zásada prezumpcie neviny",
+        "Zásada rýchlosti konania",
+        "Zásada zákonnosti"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Prezumpcia neviny", "definition": "Každý je považovaný za nevinného, kým sa vina nepreukáže." },
-    { "term": "Nemo tenetur", "definition": "Obvinený nemusí vypovedať ani predkladať dôkazy proti sebe." },
-    { "term": "Zásada verejnosti", "definition": "Konanie je spravidla verejné, s možnosťou zákonných výnimiek." },
-    { "term": "Zásada ústnosti", "definition": "Dôkazy sa vykonávajú ústne pred súdom." },
-    { "term": "Zásada bezprostrednosti", "definition": "Súd hodnotí len dôkazy, ktoré sám vykonal." },
-
-    { "term": "Kontradiktórnosť", "definition": "Strany môžu reagovať na dôkazy a tvrdenia druhej strany." },
-    { "term": "Rovnosť strán", "definition": "Strany majú rovnaké procesné možnosti." },
-    { "term": "Zásada legality", "definition": "Orgány musia konať, ak sú splnené podmienky trestného stíhania." },
-    { "term": "Zásada oficiality", "definition": "Konanie sa začína z úradnej povinnosti." },
-    { "term": "Zásada rýchlosti", "definition": "Konanie má prebiehať bez zbytočných prieťahov." }
+    {
+      "term": "Prezumpcia neviny",
+      "definition": "Každý je považovaný za nevinného, kým sa vina nepreukáže."
+    },
+    {
+      "term": "Nemo tenetur",
+      "definition": "Obvinený nemusí vypovedať ani predkladať dôkazy proti sebe."
+    },
+    {
+      "term": "Zásada verejnosti",
+      "definition": "Konanie je spravidla verejné, s možnosťou zákonných výnimiek."
+    },
+    {
+      "term": "Zásada ústnosti",
+      "definition": "Dôkazy sa vykonávajú ústne pred súdom."
+    },
+    {
+      "term": "Zásada bezprostrednosti",
+      "definition": "Súd hodnotí len dôkazy, ktoré sám vykonal."
+    },
+    {
+      "term": "Kontradiktórnosť",
+      "definition": "Strany môžu reagovať na dôkazy a tvrdenia druhej strany."
+    },
+    {
+      "term": "Rovnosť strán",
+      "definition": "Strany majú rovnaké procesné možnosti."
+    },
+    {
+      "term": "Zásada legality",
+      "definition": "Orgány musia konať, ak sú splnené podmienky trestného stíhania."
+    },
+    {
+      "term": "Zásada oficiality",
+      "definition": "Konanie sa začína z úradnej povinnosti."
+    },
+    {
+      "term": "Zásada rýchlosti",
+      "definition": "Konanie má prebiehať bez zbytočných prieťahov."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Mlčanie obvineného",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Aký právny problém riešime?",
-          "options": ["Zásada verejnosti", "Zásada nemo tenetur", "Zásada legality"],
+          "options": [
+            "Zásada verejnosti",
+            "Zásada nemo tenetur",
+            "Zásada legality"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Môže súd vyvodiť vinu z mlčania?",
-          "options": ["Áno", "Nie", "Len ak to potvrdí prokurátor"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to potvrdí prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Vylúčenie verejnosti",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Aký právny problém riešime?",
-          "options": ["Zásada verejnosti", "Zásada legality", "Zásada rýchlosti"],
+          "options": [
+            "Zásada verejnosti",
+            "Zásada legality",
+            "Zásada rýchlosti"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Môže súd vylúčiť verejnosť?",
-          "options": ["Áno, ak ide o ochranu maloletých", "Nie, nikdy", "Len so súhlasom obvineného"],
+          "options": [
+            "Áno, ak ide o ochranu maloletých",
+            "Nie, nikdy",
+            "Len so súhlasom obvineného"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +183,41 @@
   "spider": {
     "center": "Základné zásady trestného konania (§ 2 TP)",
     "branches": [
-      { "label": "Zákonnosť a primeranosť", "leaves": ["Zákonnosť stíhania – stíhať len zo zákonných dôvodov a zákonným spôsobom", "Primeranosť – zásahy do práv len v nevyhnutnej miere, rešpekt k dôstojnosti a súkromiu", "Sudca pre prípravné konanie – o zásahoch do práv rozhoduje súd"] },
-      { "label": "Ochrana obvineného", "leaves": ["Prezumpcia neviny – nevinný, kým súd právoplatne nevysloví vinu", "Právo na obhajobu – obhajca už v prípravnom konaní", "Ne bis in idem – nie dvakrát za ten istý čin"] },
-      { "label": "Chod konania", "leaves": ["Legalita – prokurátor je povinný stíhať všetky TČ, o ktorých sa dozvedel", "Oficialita – orgány konajú z úradnej povinnosti", "Rýchlosť – väzobné veci prednostne, bez prieťahov", "Spravodlivý proces – nezávislý a nestranný súd, primeraná lehota, prítomnosť"] },
-      { "label": "Dokazovanie a proces", "leaves": ["Skutkový stav bez dôvodných pochybností – v rozsahu potrebnom na rozhodnutie", "Voľné hodnotenie dôkazov – vnútorné presvedčenie po zvážení všetkých okolností", "Kontradiktórnosť a rovnosť strán – vyjadriť sa k dôkazom, navrhovať dôkazy", "Ústnosť a verejnosť – hlavné pojednávanie spravidla verejné"] }
+      {
+        "label": "Zákonnosť a primeranosť",
+        "leaves": [
+          "Zákonnosť stíhania – stíhať len zo zákonných dôvodov a zákonným spôsobom",
+          "Primeranosť – zásahy do práv len v nevyhnutnej miere, rešpekt k dôstojnosti a súkromiu",
+          "Sudca pre prípravné konanie – o zásahoch do práv rozhoduje súd"
+        ]
+      },
+      {
+        "label": "Ochrana obvineného",
+        "leaves": [
+          "Prezumpcia neviny – nevinný, kým súd právoplatne nevysloví vinu",
+          "Právo na obhajobu – obhajca už v prípravnom konaní",
+          "Ne bis in idem – nie dvakrát za ten istý čin"
+        ]
+      },
+      {
+        "label": "Chod konania",
+        "leaves": [
+          "Legalita – prokurátor je povinný stíhať všetky TČ, o ktorých sa dozvedel",
+          "Oficialita – orgány konajú z úradnej povinnosti",
+          "Rýchlosť – väzobné veci prednostne, bez prieťahov",
+          "Spravodlivý proces – nezávislý a nestranný súd, primeraná lehota, prítomnosť"
+        ]
+      },
+      {
+        "label": "Dokazovanie a proces",
+        "leaves": [
+          "Skutkový stav bez dôvodných pochybností – v rozsahu potrebnom na rozhodnutie",
+          "Voľné hodnotenie dôkazov – vnútorné presvedčenie po zvážení všetkých okolností",
+          "Kontradiktórnosť a rovnosť strán – vyjadriť sa k dôkazom, navrhovať dôkazy",
+          "Ústnosť a verejnosť – hlavné pojednávanie spravidla verejné"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Základné zásady trestného konania sú ústavné a zákonné pravidlá, ktoré určujú, ako majú orgány činné v trestnom konaní postupovať, aby bol proces zákonný, spravodlivý a rešpektoval základné práva osôb. Sú uvedené v § 2 Trestného poriadku a tvoria základ celého trestného procesu.\n\nZákladné zásady trestného konania upravené v § 2 Trestného poriadku určujú rámec trestného procesu: zákonnosť stíhania, primeranosť zásahov, sudcu pre prípravné konanie, prezumpciu neviny, povinnosť prokurátora stíhať trestné činy, oficialitu, rýchlosť konania, spravodlivý proces, ne bis in idem, právo na obhajobu a zistenie skutkového stavu bez pochybností.\n\n1. Zásada zákonnosti stíhania\nNikto nemôže byť stíhaný ako obvinený inak než zo zákonných dôvodov a spôsobom, ktorý ustanovuje Trestný poriadok.\n\n2. Zásada primeranosti zásahov do práv\nDo základných práv a slobôd možno zasahovať len v miere nevyhnutnej na dosiahnutie účelu trestného konania, pričom treba rešpektovať dôstojnosť osôb a ich súkromie.\n\n3. Zásada sudcu pre prípravné konanie\nO zásahoch do základných práv a slobôd pred začatím trestného stíhania alebo v prípravnom konaní rozhoduje sudca pre prípravné konanie, ak zákon alebo medzinárodná zmluva neustanovuje inak.\n\n4. Prezumpcia neviny\nKaždý, proti komu sa vedie trestné konanie, sa považuje za nevinného, kým súd nevysloví právoplatným odsudzujúcim rozsudkom jeho vinu.\n\n5. Zásada legality (povinnosť prokurátora stíhať)\nProkurátor je povinný stíhať všetky trestné činy, o ktorých sa dozvedel, ak zákon alebo medzinárodná zmluva neustanovuje inak.\n\n6. Zásada oficiality\nOrgány činné v trestnom konaní a súdy konajú z úradnej povinnosti, ak zákon neustanovuje inak.\n\n7. Zásada rýchlosti konania\nVäzobné veci a veci so zaisteným majetkom sa vybavujú prednostne a urýchlene, bez zbytočných prieťahov.\n\n8. Zásada spravodlivého procesu\nKaždý má právo, aby jeho trestná vec bola spravodlivo a v primeranej lehote prejednaná nezávislým a nestranným súdom, v jeho prítomnosti, s možnosťou vyjadriť sa ku všetkým vykonávaným dôkazom.\n\n9. Zásada ne bis in idem\nNikoho nemožno trestne stíhať za čin, za ktorý bol už právoplatne odsúdený alebo oslobodený spod obžaloby.\n\n10. Právo na obhajobu\nKaždý, proti komu sa vedie trestné konanie, má právo na obhajobu; podozrivý má právo na obhajcu už v prípravnom konaní.\n\n11. Zásada zistenia skutkového stavu bez dôvodných pochybností\nOrgány postupujú tak, aby bol zistený skutkový stav veci, o ktorom nie sú dôvodné pochybnosti, v rozsahu nevyhnutnom na rozhodnutie.\n\n12. Zásada voľného hodnotenia dôkazov\nOrgány hodnotia dôkazy podľa svojho vnútorného presvedčenia, založeného na starostlivom zvážení všetkých okolností prípadu (implicitne vyplýva zo systematiky § 2 TP).\n\n13. Zásada kontradiktórnosti a rovnosti strán\nObvinený má právo vyjadriť sa ku všetkým dôkazom, navrhovať dôkazy a byť prítomný pri ich vykonávaní, ak zákon neustanovuje inak.\n\n14. Zásada ústnosti a verejnosti\nHlavné pojednávanie je spravidla verejné a dôkazy sa vykonávajú ústne pred súdom (vyplýva z ústavných zásad a systematiky TP).\n\nZapamätaj si:\n\n– Zásady trestného konania sú upravené v § 2 Trestného poriadku.\n– Určujú rámec zákonného, spravodlivého a ústavne súladného procesu.\n– Zahŕňajú zákonnosť stíhania, primeranosť zásahov, sudcu pre prípravné konanie.\n– Obsahujú prezumpciu neviny, právo na obhajobu, spravodlivý proces.\n– Zahŕňajú oficialitu, legalitu, rýchlosť konania a zásadu ne bis in idem.\n– Orgány musia zistiť skutkový stav bez dôvodných pochybností.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., § 2 – Základné zásady trestného konania (overené na Slov-Lex)   \n– Návrh Trestného poriadku – Ministerstvo spravodlivosti SR (dopĺňa systematický výklad) Ministerstvo spravodlivosti SRMinisterstvo spravodlivosti SR. NÁVRH TRESTNÉHO PORIADOKU"
 }

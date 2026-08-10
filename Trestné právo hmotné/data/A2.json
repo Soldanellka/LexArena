@@ -2,7 +2,11 @@
   "id": "A2",
   "title": "Trestný čin a jeho druhy, triedenie trestných činov",
   "schemaVersion": "1.1",
-  "tags": ["trestný čin", "triedenie", "základy"],
+  "tags": [
+    "trestný čin",
+    "triedenie",
+    "základy"
+  ],
   "theory": [
     {
       "heading": "Definícia trestného činu",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Ako sa delia trestné činy podľa závažnosti?",
-      "options": ["Prečin a priestupok", "Prečin a zločin", "Zločin a priestupok"],
+      "options": [
+        "Prečin a priestupok",
+        "Prečin a zločin",
+        "Zločin a priestupok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – trestné činy sa delia na prečiny a zločiny.",
       "explanation_incorrect": "Nesprávne – priestupok nie je trestný čin v tomto delení."
     },
     {
       "question": "Ktoré kritérium NIE je bežné pri triedení trestných činov?",
-      "options": ["Závažnosť", "Predmet útoku", "Farba obete"],
+      "options": [
+        "Závažnosť",
+        "Predmet útoku",
+        "Farba obete"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – farba obete nie je právne relevantné kritérium.",
       "explanation_incorrect": "Nesprávne – farba obete nie je kritérium."
     },
     {
       "question": "Čo je právna kvalifikácia?",
-      "options": ["Určenie trestu", "Priradenie skutku k ustanoveniu trestného zákona", "Vyšetrovací postup"],
+      "options": [
+        "Určenie trestu",
+        "Priradenie skutku k ustanoveniu trestného zákona",
+        "Vyšetrovací postup"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – právna kvalifikácia priraďuje skutok k ustanoveniu zákona.",
       "explanation_incorrect": "Nesprávne – nie je to len určenie trestu."
     },
     {
       "question": "Ktorý pojem patrí medzi predmet útoku?",
-      "options": ["Majetok", "Súd", "Obžaloba"],
+      "options": [
+        "Majetok",
+        "Súd",
+        "Obžaloba"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – majetok môže byť predmetom útoku trestného činu.",
       "explanation_incorrect": "Nesprávne – súd nie je predmet útoku."
     },
     {
       "question": "Prečo je triedenie trestných činov dôležité?",
-      "options": ["Pre štatistiku a prevenciu", "Pre farbu obálky spisu", "Pre výber sudcu"],
+      "options": [
+        "Pre štatistiku a prevenciu",
+        "Pre farbu obálky spisu",
+        "Pre výber sudcu"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – triedenie pomáha pri štatistike a prevencii.",
       "explanation_incorrect": "Nesprávne – farba obálky a výber sudcu nie sú dôvody."
     }
   ],
   "tiles": [
-    { "term": "Prečin", "definition": "Menej závažný trestný čin." },
-    { "term": "Zločin", "definition": "Závažnejší trestný čin s prísnejšími trestami." },
-    { "term": "Predmet útoku", "definition": "To, čo je útokom trestného činu (napr. majetok, zdravie)." },
-    { "term": "Právna kvalifikácia", "definition": "Priradenie skutku k ustanoveniu trestného zákona." },
-    { "term": "Recidíva", "definition": "Opakované páchateľstvo po predchádzajúcom odsúdení." }
+    {
+      "term": "Prečin",
+      "definition": "Menej závažný trestný čin."
+    },
+    {
+      "term": "Zločin",
+      "definition": "Závažnejší trestný čin s prísnejšími trestami."
+    },
+    {
+      "term": "Predmet útoku",
+      "definition": "To, čo je útokom trestného činu (napr. majetok, zdravie)."
+    },
+    {
+      "term": "Právna kvalifikácia",
+      "definition": "Priradenie skutku k ustanoveniu trestného zákona."
+    },
+    {
+      "term": "Recidíva",
+      "definition": "Opakované páchateľstvo po predchádzajúcom odsúdení."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Je to trestný čin proti majetku?",
-          "options": ["Áno", "Nie", "Záleží na hodnote"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Záleží na hodnote"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o trestný čin proti majetku.",
           "explanation_incorrect": "Nesprávne – je to trestný čin proti majetku."
         },
         {
           "question": "Krok 2: Aké kritérium rozhoduje medzi prečinom a zločinom?",
-          "options": ["Hmotná škoda a okolnosti", "Farba mobilu", "Počet svedkov"],
+          "options": [
+            "Hmotná škoda a okolnosti",
+            "Farba mobilu",
+            "Počet svedkov"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – závažnosť a škoda rozhodujú.",
           "explanation_incorrect": "Nesprávne – farba a svedkovia nie sú rozhodujúce."
@@ -98,14 +145,22 @@
         },
         {
           "question": "Krok 1: Ide o hospodársky trestný čin?",
-          "options": ["Áno", "Nie", "Len ak škoda > 1000€"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak škoda > 1000€"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o hospodársky trestný čin (podvod).",
           "explanation_incorrect": "Nesprávne – nie je to podmienené len sumou."
         },
         {
           "question": "Krok 2: Aké dôkazy sú kľúčové?",
-          "options": ["Zmluvy, komunikácia, svedkovia", "Farba loga", "Počet zamestnancov"],
+          "options": [
+            "Zmluvy, komunikácia, svedkovia",
+            "Farba loga",
+            "Počet zamestnancov"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – dokumenty a komunikácia sú kľúčové.",
           "explanation_incorrect": "Nesprávne – farba loga nie je relevantná."
@@ -122,11 +177,51 @@
   "spider": {
     "center": "Trestný čin – definícia × druhy × triedenie",
     "branches": [
-      { "label": "Definícia trestného činu", "leaves": ["Protiprávne konanie – konanie v rozpore s právnym poriadkom.", "Označené zákonom – zákon ho výslovne označuje za trestný čin.", "Trestnosť – možno zaň uložiť trest.", "Zavinenie – musí byť zavinené, úmysel alebo nedbanlivosť."] },
-      { "label": "Druhy podľa závažnosti", "leaves": ["Prečin – menej závažný TČ; z nedbanlivosti, alebo úmyselný s hornou hranicou do 5 rokov.", "Zločin – závažnejší, vždy úmyselný TČ; horná hranica nad 5 rokov.", "Obzvlášť závažný zločin – horná hranica nad 10 rokov (napr. vražda)."] },
-      { "label": "Druhy podľa predmetu útoku", "leaves": ["Život a zdravie – TČ proti životu a zdraviu.", "Majetok – TČ proti majetku.", "Sloboda a dôstojnosť – TČ proti slobode a ľudskej dôstojnosti.", "Verejný poriadok – TČ proti verejnému poriadku.", "Hospodárstvo – TČ proti hospodárstvu.", "Ďalšie hlavy – životné prostredie, rodina a mládež, republika, mier a ľudskosť podľa systematiky osobitnej časti TZ."] },
-      { "label": "Druhy podľa zavinenia", "leaves": ["Úmyselné – páchateľ chcel porušiť alebo ohroziť chránený záujem alebo bol s tým uzrozumený.", "Nedbanlivostné – následok nechcel, ale konal nedbalo (vedomá × nevedomá nedbanlivosť)."] },
-      { "label": "Účel triedenia", "leaves": ["Právna kvalifikácia – zaradenie skutku pod správnu skutkovú podstatu.", "Určenie trestu – druh a výmera trestu podľa závažnosti.", "Procesný režim – napr. podmienky väzby či premlčanie.", "Štatistika a prevencia – kriminologická štatistika a trestná politika štátu."] }
+      {
+        "label": "Definícia trestného činu",
+        "leaves": [
+          "Protiprávne konanie – konanie v rozpore s právnym poriadkom.",
+          "Označené zákonom – zákon ho výslovne označuje za trestný čin.",
+          "Trestnosť – možno zaň uložiť trest.",
+          "Zavinenie – musí byť zavinené, úmysel alebo nedbanlivosť."
+        ]
+      },
+      {
+        "label": "Druhy podľa závažnosti",
+        "leaves": [
+          "Prečin – menej závažný TČ; z nedbanlivosti, alebo úmyselný s hornou hranicou do 5 rokov.",
+          "Zločin – závažnejší, vždy úmyselný TČ; horná hranica nad 5 rokov.",
+          "Obzvlášť závažný zločin – horná hranica nad 10 rokov (napr. vražda)."
+        ]
+      },
+      {
+        "label": "Druhy podľa predmetu útoku",
+        "leaves": [
+          "Život a zdravie – TČ proti životu a zdraviu.",
+          "Majetok – TČ proti majetku.",
+          "Sloboda a dôstojnosť – TČ proti slobode a ľudskej dôstojnosti.",
+          "Verejný poriadok – TČ proti verejnému poriadku.",
+          "Hospodárstvo – TČ proti hospodárstvu.",
+          "Ďalšie hlavy – životné prostredie, rodina a mládež, republika, mier a ľudskosť podľa systematiky osobitnej časti TZ."
+        ]
+      },
+      {
+        "label": "Druhy podľa zavinenia",
+        "leaves": [
+          "Úmyselné – páchateľ chcel porušiť alebo ohroziť chránený záujem alebo bol s tým uzrozumený.",
+          "Nedbanlivostné – následok nechcel, ale konal nedbalo (vedomá × nevedomá nedbanlivosť)."
+        ]
+      },
+      {
+        "label": "Účel triedenia",
+        "leaves": [
+          "Právna kvalifikácia – zaradenie skutku pod správnu skutkovú podstatu.",
+          "Určenie trestu – druh a výmera trestu podľa závažnosti.",
+          "Procesný režim – napr. podmienky väzby či premlčanie.",
+          "Štatistika a prevencia – kriminologická štatistika a trestná politika štátu."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestný čin je podľa Trestného zákona protiprávne konanie, ktoré zákon označuje za trestný čin a za ktoré možno uložiť trest. Ide o konanie spoločensky škodlivé, ktoré napĺňa znaky skutkovej podstaty uvedenej v zákone.\n\nTrestný čin je výsledkom konania človeka, ktoré je:\n\nprotiprávne,\n\nspoločensky škodlivé,\n\nzavinené (úmysel alebo nedbanlivosť),\n\na je zaň možné uložiť trest.\n\n1. Druhy trestných činov podľa závažnosti\nTrestný zákon rozlišuje:\n\nPrečin\nmenej závažný trestný čin,\n\nspáchaný z nedbanlivosti alebo úmyselne,\n\nhorná hranica trestu odňatia slobody nepresahuje 5 rokov.\n\nZločin\nzávažnejší trestný čin,\n\nvždy úmyselný,\n\nhorná hranica trestu odňatia slobody prevyšuje 5 rokov.\n\nObzvlášť závažný zločin\nhorná hranica trestu odňatia slobody prevyšuje 10 rokov,\n\nide o najzávažnejšie úmyselné trestné činy (napr. vražda).\n\n2. Druhy trestných činov podľa predmetu útoku\nTriedenie podľa toho, proti akému chránenému záujmu smeruje útok:\n\nproti životu a zdraviu,\n\nproti slobode a ľudskej dôstojnosti,\n\nproti majetku,\n\nproti verejnému poriadku,\n\nproti rodine a mládeži,\n\nproti hospodárstvu,\n\nproti životnému prostrediu,\n\nproti republike,\n\nproti mieru a ľudskosti.\n\nToto triedenie vychádza zo systematiky osobitnej časti Trestného zákona.\n\n3. Druhy trestných činov podľa formy zavinenia\nÚmyselné trestné činy – páchateľ chcel porušiť alebo ohroziť chránený záujem, alebo bol s následkom uzrozumený.\n\nNedbanlivostné trestné činy – páchateľ nechcel následok, ale konal nedbalo (vedomá × nevedomá nedbanlivosť).\n\nNiektoré trestné činy možno spáchať len úmyselne (napr. vražda), iné len z nedbanlivosti (napr. usmrtenie), niektoré oboma formami.\n\n4. Účel triedenia trestných činov\nTriedenie trestných činov slúži na:\n\nprávnu kvalifikáciu skutku,\n\nurčenie druhu a výmery trestu,\n\nurčenie procesného režimu (napr. podmienky väzby, premlčanie),\n\nkriminologickú štatistiku,\n\nprevenciu a trestnú politiku štátu.\n\nZapamätaj si (štátnicové jadro)\n– Trestný čin je protiprávne konanie, ktoré zákon označuje za trestný čin a za ktoré možno uložiť trest.\n– Základné delenie: prečin × zločin × obzvlášť závažný zločin.\n– Triedenie podľa predmetu útoku vychádza z osobitnej časti TZ.\n– Zavinenie: úmysel × nedbanlivosť.\n– Triedenie slúži na právnu kvalifikáciu, určenie trestu a procesný režim.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nČentéš – Trestné právo hmotné\nŠámal – Trestní právo hmotné\nJudikatúra NS SR"
 }

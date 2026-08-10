@@ -2,13 +2,22 @@
   "id": "31",
   "title": "Dovolanie – pojem, priebeh konania o dovolaní, rozhodnutie o dovolaní",
   "schemaVersion": "1.1",
-  "tags": ["dovolanie", "prípustnosť dovolania", "Najvyšší súd SR", "povinné zastúpenie advokátom"],
-  "summary": "Dovolanie (§ 419 a nasl. CSP) je mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu, o ktorom rozhoduje Najvyšší súd SR. Podáva sa, rovnako ako odvolanie, na súde, ktorý rozhodoval v prvej inštancii; tento súd ho po overení formálnych náležitostí postúpi Najvyššiemu súdu SR. Dovolanie je prípustné len z dôvodov taxatívne vymedzených v § 421 CSP – najmä ak odvolací súd rozhodol právnu otázku v rozpore s ustálenou rozhodovacou praxou dovolacieho súdu, odchýlil sa od nej, alebo ak ide o právnu otázku, ktorú dovolací súd doposiaľ neriešil.\n\nDovolateľ musí byť v dovolacom konaní zastúpený advokátom, ak sám nemá vysokoškolské právnické vzdelanie druhého stupňa (§ 429 CSP); nedostatok povinného zastúpenia je odstrániteľnou vadou, ktorá pri neodstránení vedie k odmietnutiu dovolania. Dovolanie zásadne nemá odkladný účinok – napadnuté rozhodnutie zostáva vykonateľné aj počas dovolacieho konania. Najvyšší súd SR môže dovolanie odmietnuť (ak je neprípustné alebo zjavne neopodstatnené), zamietnuť (ak nie je dôvodné) alebo napadnuté rozhodnutie zrušiť a vec vrátiť na ďalšie konanie.\n\nZapamätaj si:\n- Dovolanie smeruje proti právoplatnému rozhodnutiu odvolacieho súdu, rozhoduje o ňom Najvyšší súd SR.\n- Podáva sa na súde prvej inštancie, ktorý ho postúpi Najvyššiemu súdu SR.\n- Povinné zastúpenie advokátom (§ 429 CSP), s výnimkou právnicky vzdelaného dovolateľa.\n- Prípustnosť je viazaná na taxatívne dôvody v § 421 CSP.\n- Dovolanie zásadne nemá odkladný účinok na vykonateľnosť napadnutého rozhodnutia."
-  ,
+  "tags": [
+    "dovolanie",
+    "prípustnosť dovolania",
+    "Najvyšší súd SR",
+    "povinné zastúpenie advokátom"
+  ],
+  "summary": "Dovolanie je mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu (§ 419 CSP).\nRozhoduje o ňom Najvyšší súd SR ako dovolací súd.\nPodáva sa na súde prvej inštancie, ktorý napadnuté rozhodnutie vydal; tento súd preverí formálne náležitosti a vec postúpi dovolaciemu súdu.\n\n1. Prípustnosť dovolania (§ 421 CSP)\nSubjektívne podmienky\ndovolanie môže podať účastník, ktorému rozhodnutie spôsobuje ujmu,\n\nmusí byť zastúpený advokátom (ak nemá právnické vzdelanie II. stupňa).\n\nObjektívne podmienky\nDovolanie je prípustné len z taxatívnych dôvodov, najmä ak:\n\nodvolací súd rozhodol právnu otázku v rozpore s ustálenou praxou dovolacieho súdu,\n\nodvolací súd sa odchýlil od ustálenej praxe,\n\nide o právnu otázku, ktorú dovolací súd doposiaľ neriešil,\n\nprávna otázka má zásadný právny význam.\n\nDovolanie nie je prostriedkom na opätovné hodnotenie skutkového stavu — jeho jadrom je právna otázka.\n\n2. Povinné zastúpenie (§ 429 CSP)\ndovolateľ musí byť zastúpený advokátom,\n\nvýnimka: ak má právnické vzdelanie druhého stupňa, môže konať sám,\n\nnedostatok povinného zastúpenia je odstrániteľná vada,\n\nak sa neodstráni → dovolanie sa odmietne.\n\n3. Účinky dovolania\ndovolanie nemá odkladný účinok – rozhodnutie zostáva vykonateľné,\n\nodkladný účinok možno priznať len výnimočne, ak to zákon umožňuje.\n\n4. Priebeh konania o dovolaní\nNajvyšší súd SR preskúma:\n\nprípustnosť dovolania,\n\ndôvodnosť dovolania.\n\nKonanie je prevažne písomné, bez pojednávania, zamerané na právne otázky.\nDovolací súd nie je viazaný skutkovým stavom, ale právnymi otázkami, ktoré odvolací súd riešil.\n\n5. Rozhodnutia dovolacieho súdu\nOdmietnutie dovolania\nAk je:\n\nneprípustné,\n\noneskorené,\n\npodané neoprávnenou osobou,\n\nzjavne neopodstatnené.\n\nZamietnutie dovolania\ndovolanie je prípustné, ale nie je dôvodné.\n\nZrušenie napadnutého rozhodnutia\nak je dovolanie dôvodné,\n\nvec sa vráti súdu nižšej inštancie na ďalšie konanie.\n\nZapamätaj si (štátnicové jadro)\nDovolanie smeruje proti právoplatnému rozhodnutiu odvolacieho súdu.\n\nPodáva sa na súde prvej inštancie.\n\nPovinné zastúpenie advokátom (§ 429 CSP).\n\nPrípustnosť viazaná na taxatívne dôvody (§ 421 CSP).\n\nDovolanie nemá odkladný účinok.\n\nNajvyšší súd môže dovolanie odmietnuť, zamietnuť, alebo zrušiť rozhodnutie.\n\nZdroj\nCivilný sporový poriadok (CSP): § 419–435\n\nŠtevček – Macej – Šramel a kol.: Civilný sporový poriadok. Komentár, C. H. Beck, 2016\n\nŠtevček – Macej – Šramel: Civilné procesné právo, Wolters Kluwer, 2017\n\nZbierka stanovísk NS SR a rozhodnutí súdov SR",
   "quiz": [
     {
       "question": "Kto rozhoduje o dovolaní ako mimoriadnom opravnom prostriedku?",
-      "options": ["Krajský súd", "Najvyšší súd SR", "Ústavný súd SR", "Európsky súd pre ľudské práva"],
+      "options": [
+        "Krajský súd",
+        "Najvyšší súd SR",
+        "Ústavný súd SR",
+        "Európsky súd pre ľudské práva"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. O dovolaní ako mimoriadnom opravnom prostriedku rozhoduje výlučne Najvyšší súd SR.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Kde sa dovolanie podáva?",
-      "options": ["Priamo na Najvyššom súde SR", "Na súde, ktorý rozhodoval v prvej inštancii; ten ho postúpi Najvyššiemu súdu SR", "Na odvolacom súde", "Na Ministerstve spravodlivosti SR"],
+      "options": [
+        "Priamo na Najvyššom súde SR",
+        "Na súde, ktorý rozhodoval v prvej inštancii; ten ho postúpi Najvyššiemu súdu SR",
+        "Na odvolacom súde",
+        "Na Ministerstve spravodlivosti SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Rovnako ako pri odvolaní sa dovolanie podáva na súde prvej inštancie, ktorý ho postúpi príslušnému súdu.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Je dovolateľ povinný byť zastúpený advokátom?",
-      "options": ["Nie, môže konať sám bez akýchkoľvek podmienok", "Áno, povinné zastúpenie advokátom, ak sám nemá vysokoškolské právnické vzdelanie druhého stupňa (§ 429 CSP)", "Len ak predmet sporu presahuje 50 000 eur", "Len ak je dovolateľom fyzická osoba"],
+      "options": [
+        "Nie, môže konať sám bez akýchkoľvek podmienok",
+        "Áno, povinné zastúpenie advokátom, ak sám nemá vysokoškolské právnické vzdelanie druhého stupňa (§ 429 CSP)",
+        "Len ak predmet sporu presahuje 50 000 eur",
+        "Len ak je dovolateľom fyzická osoba"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Povinné zastúpenie advokátom sa neviaže na výšku sporu, ale na vlastné právnické vzdelanie dovolateľa.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Kedy je dovolanie prípustné podľa § 421 CSP?",
-      "options": ["Vždy voči akémukoľvek rozsudku odvolacieho súdu bez obmedzenia", "Ak odvolací súd rozhodol právnu otázku v rozpore s ustálenou rozhodovacou praxou dovolacieho súdu, odchýlil sa od nej, alebo ide o dosiaľ neriešenú právnu otázku", "Len v sporoch nad 100 000 eur", "Len pri porušení základných práv bez ďalších podmienok"],
+      "options": [
+        "Vždy voči akémukoľvek rozsudku odvolacieho súdu bez obmedzenia",
+        "Ak odvolací súd rozhodol právnu otázku v rozpore s ustálenou rozhodovacou praxou dovolacieho súdu, odchýlil sa od nej, alebo ide o dosiaľ neriešenú právnu otázku",
+        "Len v sporoch nad 100 000 eur",
+        "Len pri porušení základných práv bez ďalších podmienok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Prípustnosť dovolania je viazaná na konkrétne, taxatívne vymedzené dôvody týkajúce sa zjednocovania judikatúry.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Má dovolanie odkladný účinok na vykonateľnosť napadnutého rozhodnutia?",
-      "options": ["Áno, vždy automaticky", "Nie, dovolanie zásadne nemá odkladný účinok", "Len ak s tým súhlasí protistrana", "Závisí výlučne od výšky predmetu sporu"],
+      "options": [
+        "Áno, vždy automaticky",
+        "Nie, dovolanie zásadne nemá odkladný účinok",
+        "Len ak s tým súhlasí protistrana",
+        "Závisí výlučne od výšky predmetu sporu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Na rozdiel od odvolania dovolanie zásadne nemá odkladný účinok – napadnuté rozhodnutie ostáva vykonateľné.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Dovolanie", "definition": "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu, o ktorom rozhoduje Najvyšší súd SR." },
-    { "term": "Miesto podania dovolania", "definition": "Podáva sa na súde prvej inštancie, ktorý ho postúpi Najvyššiemu súdu SR." },
-    { "term": "Povinné zastúpenie advokátom (§ 429 CSP)", "definition": "S výnimkou dovolateľa s vysokoškolským právnickým vzdelaním druhého stupňa." },
-    { "term": "Prípustnosť dovolania (§ 421 CSP)", "definition": "Najmä rozpor s ustálenou rozhodovacou praxou alebo dosiaľ neriešená právna otázka." },
-    { "term": "Rozhodnutia o dovolaní", "definition": "Odmietnutie, zamietnutie alebo zrušenie napadnutého rozhodnutia." }
+    {
+      "term": "Dovolanie",
+      "definition": "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu, o ktorom rozhoduje Najvyšší súd SR."
+    },
+    {
+      "term": "Miesto podania dovolania",
+      "definition": "Podáva sa na súde prvej inštancie, ktorý ho postúpi Najvyššiemu súdu SR."
+    },
+    {
+      "term": "Povinné zastúpenie advokátom (§ 429 CSP)",
+      "definition": "S výnimkou dovolateľa s vysokoškolským právnickým vzdelaním druhého stupňa."
+    },
+    {
+      "term": "Prípustnosť dovolania (§ 421 CSP)",
+      "definition": "Najmä rozpor s ustálenou rozhodovacou praxou alebo dosiaľ neriešená právna otázka."
+    },
+    {
+      "term": "Rozhodnutia o dovolaní",
+      "definition": "Odmietnutie, zamietnutie alebo zrušenie napadnutého rozhodnutia."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Dovolanie bez zastúpenia advokátom",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Účastník bez právnického vzdelania podá dovolanie na Najvyšší súd SR sám, bez zastúpenia advokátom.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník bez právnického vzdelania podá dovolanie na Najvyšší súd SR sám, bez zastúpenia advokátom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký to má procesný následok?",
-          "options": ["Súd ho vyzve na odstránenie nedostatku, inak dovolanie odmietne", "Dovolanie sa bez ďalšieho prejedná", "Nedostatok zastúpenia nemá žiadny význam"],
+          "options": [
+            "Súd ho vyzve na odstránenie nedostatku, inak dovolanie odmietne",
+            "Dovolanie sa bez ďalšieho prejedná",
+            "Nedostatok zastúpenia nemá žiadny význam"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Chýbajúce povinné zastúpenie je odstrániteľnou vadou, ktorá pri neodstránení vedie k odmietnutiu dovolania.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Kde mal dovolateľ dovolanie podať?",
-          "options": ["Na súde prvej inštancie, ktorý ho postúpi Najvyššiemu súdu SR", "Priamo na Najvyššom súde SR", "Na odvolacom súde"],
+          "options": [
+            "Na súde prvej inštancie, ktorý ho postúpi Najvyššiemu súdu SR",
+            "Priamo na Najvyššom súde SR",
+            "Na odvolacom súde"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rovnako ako pri odvolaní, aj dovolanie sa podáva na súde prvej inštancie.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Prípustnosť dovolania",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Odvolací súd rozhodol o právnej otázke spôsobom, ktorý je v priamom rozpore s ustálenou rozhodovacou praxou Najvyššieho súdu SR.", "options": [], "correct": 0 },
+        {
+          "question": "Odvolací súd rozhodol o právnej otázke spôsobom, ktorý je v priamom rozpore s ustálenou rozhodovacou praxou Najvyššieho súdu SR.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je za tejto okolnosti dovolanie prípustné?",
-          "options": ["Áno, ide o jeden zo zákonných dôvodov prípustnosti dovolania podľa § 421 CSP", "Nie, dovolanie je vylúčené bez ohľadu na rozpor s judikatúrou", "Áno, ale iba ak s tým súhlasí odvolací súd"],
+          "options": [
+            "Áno, ide o jeden zo zákonných dôvodov prípustnosti dovolania podľa § 421 CSP",
+            "Nie, dovolanie je vylúčené bez ohľadu na rozpor s judikatúrou",
+            "Áno, ale iba ak s tým súhlasí odvolací súd"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozpor s ustálenou rozhodovacou praxou dovolacieho súdu je jedným zo zákonom vymenovaných dôvodov prípustnosti.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Má podanie takéhoto dovolania automaticky odkladný účinok?",
-          "options": ["Nie, dovolanie zásadne nemá odkladný účinok", "Áno, automaticky odkladá vykonateľnosť", "Áno, ale iba pri sporoch nad 100 000 eur"],
+          "options": [
+            "Nie, dovolanie zásadne nemá odkladný účinok",
+            "Áno, automaticky odkladá vykonateľnosť",
+            "Áno, ale iba pri sporoch nad 100 000 eur"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez ohľadu na dôvod dovolania platí, že samo osebe nemá odkladný účinok.",
@@ -120,12 +188,60 @@
   "spider": {
     "center": "Dovolanie – mimoriadny opravný prostriedok × právna otázka × NS SR × odmietnutie/zamietnutie/zrušenie",
     "branches": [
-      { "label": "Pojem dovolania", "leaves": ["dovolanie = mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu", "rozhoduje Najvyšší súd SR", "podáva sa na súde prvej inštancie, ktorý rozhodnutie vydal", "súd prvej inštancie preverí náležitosti a postúpi vec dovolaciemu súdu"] },
-      { "label": "Subjektívne podmienky prípustnosti", "leaves": ["dovolanie podáva strana, ktorej sa rozhodnutie nepriaznivo dotýka", "povinné zastúpenie advokátom (§ 429 CSP), ak dovolateľ nemá právnické vzdelanie 2. stupňa", "nedostatok zastúpenia = odstrániteľná vada; ak sa neodstráni → dovolanie sa odmietne", "dovolanie sa podáva v zákonnej lehote"] },
-      { "label": "Objektívne podmienky prípustnosti (§ 421 CSP)", "leaves": ["Dovolanie je prípustné len z taxatívnych dôvodov:", "odvolací súd rozhodol právnu otázku v rozpore s ustálenou praxou dovolacieho súdu", "odvolací súd sa odchýlil od ustálenej praxe", "ide o právnu otázku, ktorú dovolací súd doposiaľ neriešil", "právna otázka má zásadný význam", "Dovolanie nie je prostriedkom na opätovné hodnotenie skutkového stavu — jeho jadrom je právna otázka."] },
-      { "label": "Účinky dovolania", "leaves": ["dovolanie nemá odkladný účinok", "napadnuté rozhodnutie je vykonateľné aj počas dovolacieho konania", "odkladný účinok možno priznať len výnimočne, ak to zákon umožňuje"] },
-      { "label": "Priebeh konania o dovolaní", "leaves": ["Najvyšší súd SR preskúma prípustnosť dovolania", "preskúma dôvodnosť dovolania", "konanie je prevažne písomné, bez pojednávania", "zamerané na právne otázky, nie na skutkové zistenia"] },
-      { "label": "Rozhodnutia dovolacieho súdu", "leaves": ["Odmietnutie: neprípustné, oneskorené, podané neoprávnenou osobou, zjavne neopodstatnené", "Zamietnutie: dovolanie je prípustné, ale nie je dôvodné", "Zrušenie napadnutého rozhodnutia: dovolanie je dôvodné, vec sa vracia súdu nižšej inštancie na ďalšie konanie"] }
+      {
+        "label": "Pojem dovolania",
+        "leaves": [
+          "dovolanie = mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu odvolacieho súdu",
+          "rozhoduje Najvyšší súd SR",
+          "podáva sa na súde prvej inštancie, ktorý rozhodnutie vydal",
+          "súd prvej inštancie preverí náležitosti a postúpi vec dovolaciemu súdu"
+        ]
+      },
+      {
+        "label": "Subjektívne podmienky prípustnosti",
+        "leaves": [
+          "dovolanie podáva strana, ktorej sa rozhodnutie nepriaznivo dotýka",
+          "povinné zastúpenie advokátom (§ 429 CSP), ak dovolateľ nemá právnické vzdelanie 2. stupňa",
+          "nedostatok zastúpenia = odstrániteľná vada; ak sa neodstráni → dovolanie sa odmietne",
+          "dovolanie sa podáva v zákonnej lehote"
+        ]
+      },
+      {
+        "label": "Objektívne podmienky prípustnosti (§ 421 CSP)",
+        "leaves": [
+          "Dovolanie je prípustné len z taxatívnych dôvodov:",
+          "odvolací súd rozhodol právnu otázku v rozpore s ustálenou praxou dovolacieho súdu",
+          "odvolací súd sa odchýlil od ustálenej praxe",
+          "ide o právnu otázku, ktorú dovolací súd doposiaľ neriešil",
+          "právna otázka má zásadný význam",
+          "Dovolanie nie je prostriedkom na opätovné hodnotenie skutkového stavu — jeho jadrom je právna otázka."
+        ]
+      },
+      {
+        "label": "Účinky dovolania",
+        "leaves": [
+          "dovolanie nemá odkladný účinok",
+          "napadnuté rozhodnutie je vykonateľné aj počas dovolacieho konania",
+          "odkladný účinok možno priznať len výnimočne, ak to zákon umožňuje"
+        ]
+      },
+      {
+        "label": "Priebeh konania o dovolaní",
+        "leaves": [
+          "Najvyšší súd SR preskúma prípustnosť dovolania",
+          "preskúma dôvodnosť dovolania",
+          "konanie je prevažne písomné, bez pojednávania",
+          "zamerané na právne otázky, nie na skutkové zistenia"
+        ]
+      },
+      {
+        "label": "Rozhodnutia dovolacieho súdu",
+        "leaves": [
+          "Odmietnutie: neprípustné, oneskorené, podané neoprávnenou osobou, zjavne neopodstatnené",
+          "Zamietnutie: dovolanie je prípustné, ale nie je dôvodné",
+          "Zrušenie napadnutého rozhodnutia: dovolanie je dôvodné, vec sa vracia súdu nižšej inštancie na ďalšie konanie"
+        ]
+      }
     ]
   }
 }

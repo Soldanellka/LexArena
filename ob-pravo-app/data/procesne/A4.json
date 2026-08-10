@@ -2,13 +2,23 @@
   "id": "4",
   "title": "Zloženie súdu a vylúčenie sudcu",
   "schemaVersion": "1.1",
-  "tags": ["samosudca", "senát", "vylúčenie sudcu", "námietka zaujatosti", "podjatosť"],
-  "summary": "Civilné súdy rozhodujú buď prostredníctvom samosudcu, alebo v senáte. Na prvom stupni rozhoduje v sporových veciach spravidla samosudca; na odvolacom a dovolacom stupni rozhodujú senáty zložené spravidla z troch sudcov. Zloženie súdu musí byť určené vopred podľa rozvrhu práce (zásada zákonného sudcu).\n\nSudca je z prejednávania a rozhodovania veci vylúčený, ak má pomer k veci, k účastníkom alebo k ich zástupcom, ktorý vzbudzuje pochybnosť o jeho nezaujatosti (§ 49 a nasl. CSP). Dôvodom vylúčenia je aj skutočnosť, že sudca už v tej istej veci rozhodoval na nižšom stupni. Účastník môže podjatosť sudcu namietať prostredníctvom námietky zaujatosti, ktorú musí uplatniť bez zbytočného odkladu, len čo sa o dôvode dozvedel; oneskorená alebo účelová námietka sa neprihliada. O vylúčení sudcu nerozhoduje sám namietaný sudca, ale nadriadený súd, prípadne iný senát alebo sudca určený zákonom, aby sa zachovala objektivita rozhodovania.\n\nZapamätaj si:\n- Prvý stupeň v sporových veciach: spravidla samosudca; odvolanie a dovolanie: senát (spravidla traja sudcovia).\n- Vylúčenie sudcu (§ 49 CSP): pomer k veci, účastníkom alebo ich zástupcom vzbudzujúci pochybnosť o nestrannosti.\n- Dôvodom vylúčenia je aj opätovné rozhodovanie tej istej veci na nižšom stupni.\n- Námietku zaujatosti treba uplatniť bez zbytočného odkladu, inak sa na ňu neprihliada.\n- O vylúčení nerozhoduje sám namietaný sudca, ale nadriadený súd/iný senát."
-  ,
+  "tags": [
+    "samosudca",
+    "senát",
+    "vylúčenie sudcu",
+    "námietka zaujatosti",
+    "podjatosť"
+  ],
+  "summary": "Zloženie súdu\nCivilné súdy rozhodujú buď ako samosudca, alebo v senáte.\nZloženie súdu musí byť určené vopred rozvrhom práce, čo zabezpečuje zásadu zákonného sudcu (čl. 48 Ústavy SR). Sudcu nemožno vyberať účelovo pre konkrétnu vec.\n\nSamosudca\ntypické pre prvostupňové sporové konania,\n\nrozhoduje aj VSÚ (vyšší súdny úradník) v zákonom určených úkonoch,\n\nv dedičskom konaní koná notár ako súdny komisár,\n\nv exekučnom konaní rozhoduje exekútor ako orgán verejnej moci (v rozsahu zákona).\n\nSenát\nodvolacie konanie: spravidla trojčlenný senát,\n\ndovolacie konanie: trojčlenný senát,\n\nväčšie senáty (5, 7, 8 členov): pri zjednocovaní judikatúry alebo pri zásadných právnych otázkach.\n\nPorada a hlasovanie senátu\nrozhodnutie sa prijíma väčšinou hlasov,\n\nporada je neverejná,\n\nsudca môže pripojiť odlišné stanovisko (dissent).\n\nVylúčenie sudcu (§ 49 a nasl. CSP)\nSudca je vylúčený z prejednávania a rozhodovania veci, ak existuje okolnosť, ktorá vzbudzuje pochybnosť o jeho nezaujatosti.\n\nDôvody vylúčenia\nPomer k veci – osobný záujem na výsledku, majetkový prospech.\n\nPomer k účastníkom alebo ich zástupcom – rodinný, pracovný, nepriateľský vzťah.\n\nPredchádzajúce rozhodovanie v tej istej veci – sudca nemôže rozhodovať o odvolaní proti vlastnému rozsudku.\n\nIné okolnosti – ak objektívne vzbudzujú pochybnosť o nestrannosti.\n\nNámietka zaujatosti\nÚčastník môže podať námietku zaujatosti, ktorú musí uplatniť bez zbytočného odkladu, len čo sa o dôvode dozvedel.\n\nPravidlá námietky\nOneskorená alebo účelová námietka sa odmieta.\n\nOpakovaná námietka bez nových dôvodov sa nepripúšťa.\n\nO vylúčení nerozhoduje namietaný sudca, ale:\n– nadriadený súd, alebo\n– iný senát určený zákonom.\nCieľom je zachovať objektívnu nestrannosť.\n\nÚkony namietnutého sudcu\nsudca nesmie rozhodovať vo veci samej,\n\nmôže vykonať len neodkladné a procesne nevyhnutné úkony, aby sa predišlo prieťahom,\n\npo rozhodnutí o námietke pokračuje buď pôvodný sudca (ak nie je vylúčený), alebo nový zákonný sudca.\n\nZapamätaj si (štátnicové jadro)\nPrvý stupeň: samosudca; odvolanie a dovolanie: senát troch sudcov.\n\nZásada zákonného sudcu: rozvrh práce určuje, kto rozhoduje.\n\nVylúčenie sudcu (§ 49 CSP): pomer k veci, účastníkom alebo ich zástupcom.\n\nSudca nemôže rozhodovať o odvolaní proti vlastnému rozhodnutiu.\n\nNámietku zaujatosti treba podať včas; rozhoduje nadriadený súd.\n\nNamietaný sudca môže vykonať len nevyhnutné úkony.\n\nZdroj:\nCSP (160/2015 Z. z.), § 49–55; Ústava SR čl. 48; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Kto spravidla rozhoduje na prvom stupni v civilnom spore?",
-      "options": ["Senát troch sudcov", "Samosudca", "Prísediaci sudcovia", "Predseda súdu"],
+      "options": [
+        "Senát troch sudcov",
+        "Samosudca",
+        "Prísediaci sudcovia",
+        "Predseda súdu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. V civilnom sporovom konaní na prvom stupni rozhoduje spravidla samosudca.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Aké je zloženie odvolacieho senátu na krajskom súde v civilnej veci?",
-      "options": ["Samosudca", "Senát zložený spravidla z troch sudcov", "Dvaja sudcovia a jeden prísediaci", "Senát piatich sudcov"],
+      "options": [
+        "Samosudca",
+        "Senát zložený spravidla z troch sudcov",
+        "Dvaja sudcovia a jeden prísediaci",
+        "Senát piatich sudcov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odvolacie senáty na krajských súdoch rozhodujú spravidla v zložení troch sudcov.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Čo je dôvodom vylúčenia sudcu podľa § 49 CSP?",
-      "options": ["Sudca má rovnaké priezvisko ako účastník", "Sudca má pomer k veci, k účastníkom alebo ich zástupcom, ktorý vzbudzuje pochybnosť o jeho nezaujatosti", "Sudca už v minulosti rozhodoval iný spor s iným účastníkom", "Sudca je iného vierovyznania ako účastník"],
+      "options": [
+        "Sudca má rovnaké priezvisko ako účastník",
+        "Sudca má pomer k veci, k účastníkom alebo ich zástupcom, ktorý vzbudzuje pochybnosť o jeho nezaujatosti",
+        "Sudca už v minulosti rozhodoval iný spor s iným účastníkom",
+        "Sudca je iného vierovyznania ako účastník"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Dôvodom vylúčenia je pomer sudcu k veci, k účastníkom alebo ich zástupcom, ktorý objektívne vzbudzuje pochybnosť o jeho nezaujatosti.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Kto rozhoduje o námietke zaujatosti sudcu?",
-      "options": ["Samotný namietaný sudca", "Nadriadený súd, resp. iný senát/sudca určený zákonom, nie sám namietaný sudca", "Účastník konania", "Minister spravodlivosti SR"],
+      "options": [
+        "Samotný namietaný sudca",
+        "Nadriadený súd, resp. iný senát/sudca určený zákonom, nie sám namietaný sudca",
+        "Účastník konania",
+        "Minister spravodlivosti SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Aby bolo rozhodnutie objektívne, o vylúčení sudcu rozhoduje iný, zákonom určený súd, senát alebo sudca – nie namietaný sudca sám.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Môže byť z prejednávania veci vylúčený sudca, ktorý už v tej istej veci rozhodoval na nižšom stupni?",
-      "options": ["Áno, pre pochybnosť o nezaujatosti pri opätovnom rozhodovaní tej istej veci", "Nie, nikdy", "Iba ak si to účastník výslovne vyžiada bez odôvodnenia", "Iba pri trestných veciach"],
+      "options": [
+        "Áno, pre pochybnosť o nezaujatosti pri opätovnom rozhodovaní tej istej veci",
+        "Nie, nikdy",
+        "Iba ak si to účastník výslovne vyžiada bez odôvodnenia",
+        "Iba pri trestných veciach"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zákon vylučuje sudcu, ktorý už v tej istej veci rozhodoval na nižšom stupni, aby sa predišlo pochybnostiam o nestrannosti opätovného rozhodovania.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Samosudca", "definition": "Sudca, ktorý sám rozhoduje najmä na prvom stupni v civilných sporových veciach." },
-    { "term": "Senát", "definition": "Kolégium sudcov (spravidla traja), ktoré rozhoduje najmä v odvolacom a dovolacom konaní." },
-    { "term": "Vylúčenie sudcu", "definition": "Vyňatie sudcu z prejednávania a rozhodovania veci pre pochybnosť o jeho nezaujatosti (§ 49 CSP)." },
-    { "term": "Námietka zaujatosti", "definition": "Procesný prostriedok účastníka, ktorým namieta podjatosť sudcu; musí byť odôvodnená a včasná." },
-    { "term": "Podjatosť", "definition": "Stav, keď má sudca pomer k veci, účastníkom alebo ich zástupcom vzbudzujúci pochybnosť o nestrannosti." }
+    {
+      "term": "Samosudca",
+      "definition": "Sudca, ktorý sám rozhoduje najmä na prvom stupni v civilných sporových veciach."
+    },
+    {
+      "term": "Senát",
+      "definition": "Kolégium sudcov (spravidla traja), ktoré rozhoduje najmä v odvolacom a dovolacom konaní."
+    },
+    {
+      "term": "Vylúčenie sudcu",
+      "definition": "Vyňatie sudcu z prejednávania a rozhodovania veci pre pochybnosť o jeho nezaujatosti (§ 49 CSP)."
+    },
+    {
+      "term": "Námietka zaujatosti",
+      "definition": "Procesný prostriedok účastníka, ktorým namieta podjatosť sudcu; musí byť odôvodnená a včasná."
+    },
+    {
+      "term": "Podjatosť",
+      "definition": "Stav, keď má sudca pomer k veci, účastníkom alebo ich zástupcom vzbudzujúci pochybnosť o nestrannosti."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Sudca a príbuzenský vzťah",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Sudca zistí, že žalovaný je jeho blízky príbuzný.", "options": [], "correct": 0 },
+        {
+          "question": "Sudca zistí, že žalovaný je jeho blízky príbuzný.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo má sudca urobiť?",
-          "options": ["Oznámiť túto skutočnosť a vec ďalej neprejednávať, kým sa nerozhodne o jeho vylúčení", "Vec rozhodnúť rýchlo, aby sa vyhol komplikáciám", "Prejednať vec, lebo príbuzenstvo nie je nikdy dôvodom vylúčenia"],
+          "options": [
+            "Oznámiť túto skutočnosť a vec ďalej neprejednávať, kým sa nerozhodne o jeho vylúčení",
+            "Vec rozhodnúť rýchlo, aby sa vyhol komplikáciám",
+            "Prejednať vec, lebo príbuzenstvo nie je nikdy dôvodom vylúčenia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Sudca je povinný bez zbytočného odkladu oznámiť skutočnosti nasvedčujúce jeho vylúčeniu a ďalej vo veci nekonať, kým sa o jeho vylúčení nerozhodne.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Kto napokon rozhodne o vylúčení tohto sudcu?",
-          "options": ["Nadriadený súd/určený senát podľa rozvrhu práce, nie samotný sudca", "Sám dotknutý sudca", "Žalobca"],
+          "options": [
+            "Nadriadený súd/určený senát podľa rozvrhu práce, nie samotný sudca",
+            "Sám dotknutý sudca",
+            "Žalobca"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. O vylúčení rozhoduje iný, zákonom určený orgán súdu, aby bolo rozhodnutie objektívne.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Oneskorená námietka zaujatosti",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Účastník vznesie námietku zaujatosti sudcu až po vyhlásení rozsudku, hoci o dôvode vedel už na začiatku konania.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník vznesie námietku zaujatosti sudcu až po vyhlásení rozsudku, hoci o dôvode vedel už na začiatku konania.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Bude sa na takúto námietku prihliadať?",
-          "options": ["Spravidla nie, ak nebola uplatnená bez zbytočného odkladu, ide o oneskorenú/účelovú námietku", "Áno, vždy bez obmedzenia", "Iba ak s tým súhlasí protistrana"],
+          "options": [
+            "Spravidla nie, ak nebola uplatnená bez zbytočného odkladu, ide o oneskorenú/účelovú námietku",
+            "Áno, vždy bez obmedzenia",
+            "Iba ak s tým súhlasí protistrana"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Námietku zaujatosti treba uplatniť bez zbytočného odkladu po tom, čo sa účastník o dôvode dozvedel; oneskorená námietka sa spravidla neberie do úvahy.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Aký je zmysel požiadavky na včasnosť námietky?",
-          "options": ["Zabrániť účelovému zneužívaniu inštitútu na spochybňovanie už vydaných rozhodnutí", "Chrániť výlučne záujmy sudcu", "Zjednodušiť prácu vyššieho súdu bez ďalšieho odôvodnenia"],
+          "options": [
+            "Zabrániť účelovému zneužívaniu inštitútu na spochybňovanie už vydaných rozhodnutí",
+            "Chrániť výlučne záujmy sudcu",
+            "Zjednodušiť prácu vyššieho súdu bez ďalšieho odôvodnenia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Požiadavka včasnosti bráni tomu, aby účastníci namietali podjatosť až vtedy, keď je pre nich výsledok konania nepriaznivý.",
@@ -120,11 +189,58 @@
   "spider": {
     "center": "Zloženie súdu × Zákonný sudca × Vylúčenie sudcu (§ 49 a nasl. CSP)",
     "branches": [
-      { "label": "Zloženie súdu – samosudca", "leaves": ["samosudca: spravidla prvý stupeň v sporových veciach", "vyšší súdny úradník (VSÚ) – vykonáva zákonom určené úkony", "notár ako súdny komisár – dedičské konanie", "exekútor – rozhoduje v rozsahu zákona", "zloženie musí byť určené vopred rozvrhom práce"] },
-      { "label": "Zloženie súdu – senát", "leaves": ["senát: 3, 5, 7 alebo 8 členov", "odvolacie konanie – spravidla 3-členný senát", "dovolacie konanie – spravidla 3-členný senát", "väčší senát pri zjednocovaní judikatúry", "porada senátu a hlasovanie – neverejná, rozhodnutie väčšinou hlasov, možnosť odlišného stanoviska"] },
-      { "label": "Zásada zákonného sudcu", "leaves": ["čl. 48 Ústavy SR", "sudca/senát musí byť určený rozvrhom práce", "zákaz účelového výberu sudcu", "rozvrh práce určuje: – ktorý sudca rozhoduje, – zloženie senátov, – prideľovanie vecí"] },
-      { "label": "Dôvody vylúčenia sudcu", "leaves": ["sudca je vylúčený, ak existuje okolnosť vzbudzujúca pochybnosť o jeho nezaujatosti", "pomer k veci – osobný záujem na výsledku", "pomer k účastníkom alebo ich zástupcom – rodinný, pracovný, nepriateľský vzťah", "predchádzajúce rozhodovanie v tej istej veci – sudca nemôže rozhodovať o odvolaní proti vlastnému rozsudku", "iné okolnosti vzbudzujúce pochybnosť o nestrannosti"] },
-      { "label": "Námietka zaujatosti", "leaves": ["môže ju vzniesť sudca aj strana", "účastník ju musí podať bez zbytočného odkladu, len čo sa o dôvode dozvedel", "koncentrácia – námietku možno uplatniť len do určitého štádia konania", "opakovaná bezdôvodná námietka sa nepripúšťa", "oneskorená alebo účelová námietka → odmietne sa", "o vylúčení rozhoduje nadriadený súd alebo iný senát", "úkony namietnutého sudcu: – môže vykonať len neodkladné a nevyhnutné úkony – nesmie rozhodovať vo veci samej", "cieľ: zachovať objektivitu a nestrannosť"] }
+      {
+        "label": "Zloženie súdu – samosudca",
+        "leaves": [
+          "samosudca: spravidla prvý stupeň v sporových veciach",
+          "vyšší súdny úradník (VSÚ) – vykonáva zákonom určené úkony",
+          "notár ako súdny komisár – dedičské konanie",
+          "exekútor – rozhoduje v rozsahu zákona",
+          "zloženie musí byť určené vopred rozvrhom práce"
+        ]
+      },
+      {
+        "label": "Zloženie súdu – senát",
+        "leaves": [
+          "senát: 3, 5, 7 alebo 8 členov",
+          "odvolacie konanie – spravidla 3-členný senát",
+          "dovolacie konanie – spravidla 3-členný senát",
+          "väčší senát pri zjednocovaní judikatúry",
+          "porada senátu a hlasovanie – neverejná, rozhodnutie väčšinou hlasov, možnosť odlišného stanoviska"
+        ]
+      },
+      {
+        "label": "Zásada zákonného sudcu",
+        "leaves": [
+          "čl. 48 Ústavy SR",
+          "sudca/senát musí byť určený rozvrhom práce",
+          "zákaz účelového výberu sudcu",
+          "rozvrh práce určuje: – ktorý sudca rozhoduje, – zloženie senátov, – prideľovanie vecí"
+        ]
+      },
+      {
+        "label": "Dôvody vylúčenia sudcu",
+        "leaves": [
+          "sudca je vylúčený, ak existuje okolnosť vzbudzujúca pochybnosť o jeho nezaujatosti",
+          "pomer k veci – osobný záujem na výsledku",
+          "pomer k účastníkom alebo ich zástupcom – rodinný, pracovný, nepriateľský vzťah",
+          "predchádzajúce rozhodovanie v tej istej veci – sudca nemôže rozhodovať o odvolaní proti vlastnému rozsudku",
+          "iné okolnosti vzbudzujúce pochybnosť o nestrannosti"
+        ]
+      },
+      {
+        "label": "Námietka zaujatosti",
+        "leaves": [
+          "môže ju vzniesť sudca aj strana",
+          "účastník ju musí podať bez zbytočného odkladu, len čo sa o dôvode dozvedel",
+          "koncentrácia – námietku možno uplatniť len do určitého štádia konania",
+          "opakovaná bezdôvodná námietka sa nepripúšťa",
+          "oneskorená alebo účelová námietka → odmietne sa",
+          "o vylúčení rozhoduje nadriadený súd alebo iný senát",
+          "úkony namietnutého sudcu: – môže vykonať len neodkladné a nevyhnutné úkony – nesmie rozhodovať vo veci samej",
+          "cieľ: zachovať objektivitu a nestrannosť"
+        ]
+      }
     ]
   }
 }

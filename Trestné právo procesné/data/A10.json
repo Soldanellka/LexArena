@@ -2,50 +2,100 @@
   "id": "A10",
   "title": "Zaistenie vecí pre účely trestného konania",
   "schemaVersion": "1.1",
-  "tags": ["zaistenie vecí", "dôkazy", "trestné konanie"],
-
+  "tags": [
+    "zaistenie vecí",
+    "dôkazy",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Čo je zaistenie veci v trestnom konaní?",
-      "options": ["Dočasné odňatie veci na účely dokazovania", "Trvalé odňatie veci páchateľovi", "Zničenie veci"],
+      "options": [
+        "Dočasné odňatie veci na účely dokazovania",
+        "Trvalé odňatie veci páchateľovi",
+        "Zničenie veci"
+      ],
       "correct": 0
     },
     {
       "question": "Kto môže rozhodnúť o zaistení veci?",
-      "options": ["Len súd", "Polícia alebo prokurátor", "Poškodený"],
+      "options": [
+        "Len súd",
+        "Polícia alebo prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno vec zaistiť?",
-      "options": ["Len po vznesení obvinenia", "Ak môže slúžiť ako dôkaz alebo môže prepadnúť", "Len pri násilných trestných činoch"],
+      "options": [
+        "Len po vznesení obvinenia",
+        "Ak môže slúžiť ako dôkaz alebo môže prepadnúť",
+        "Len pri násilných trestných činoch"
+      ],
       "correct": 1
     },
     {
       "question": "Ako sa zaistená vec dokumentuje?",
-      "options": ["Ústnym oznámením", "Zápisnicou o zaistení veci", "Nie je potrebné dokumentovať"],
+      "options": [
+        "Ústnym oznámením",
+        "Zápisnicou o zaistení veci",
+        "Nie je potrebné dokumentovať"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy sa musí vec vrátiť?",
-      "options": ["Keď pominú dôvody zaistenia", "Až po rozsudku", "Nikdy"],
+      "options": [
+        "Keď pominú dôvody zaistenia",
+        "Až po rozsudku",
+        "Nikdy"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Zaistenie veci", "definition": "Dočasné odňatie veci, ktorá môže slúžiť ako dôkaz alebo môže prepadnúť." },
-    { "term": "Zápisnica o zaistení", "definition": "Dokument, v ktorom sa uvedie opis veci, dôvod zaistenia a spôsob zaistenia." },
-    { "term": "Dôkazný prostriedok", "definition": "Vec, ktorá môže prispieť k objasneniu skutkového stavu." },
-    { "term": "Prepadnutie veci", "definition": "Trest spočívajúci v odňatí veci páchateľovi." },
-    { "term": "Zhabanie veci", "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom." },
-
-    { "term": "Vydanie veci", "definition": "Osoba môže vec dobrovoľne vydať na výzvu orgánu." },
-    { "term": "Odňatie veci", "definition": "Nútené odobranie veci, ak ju osoba nevydá dobrovoľne." },
-    { "term": "Zaistenie listín", "definition": "Osobitný postup pri zaistení dokumentov a písomností." },
-    { "term": "Zaistenie elektronických dát", "definition": "Postup pri odňatí dátových nosičov alebo ich kópií." },
-    { "term": "Vrátenie veci", "definition": "Vec sa vráti, ak už nie je potrebná pre konanie." }
+    {
+      "term": "Zaistenie veci",
+      "definition": "Dočasné odňatie veci, ktorá môže slúžiť ako dôkaz alebo môže prepadnúť."
+    },
+    {
+      "term": "Zápisnica o zaistení",
+      "definition": "Dokument, v ktorom sa uvedie opis veci, dôvod zaistenia a spôsob zaistenia."
+    },
+    {
+      "term": "Dôkazný prostriedok",
+      "definition": "Vec, ktorá môže prispieť k objasneniu skutkového stavu."
+    },
+    {
+      "term": "Prepadnutie veci",
+      "definition": "Trest spočívajúci v odňatí veci páchateľovi."
+    },
+    {
+      "term": "Zhabanie veci",
+      "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom."
+    },
+    {
+      "term": "Vydanie veci",
+      "definition": "Osoba môže vec dobrovoľne vydať na výzvu orgánu."
+    },
+    {
+      "term": "Odňatie veci",
+      "definition": "Nútené odobranie veci, ak ju osoba nevydá dobrovoľne."
+    },
+    {
+      "term": "Zaistenie listín",
+      "definition": "Osobitný postup pri zaistení dokumentov a písomností."
+    },
+    {
+      "term": "Zaistenie elektronických dát",
+      "definition": "Postup pri odňatí dátových nosičov alebo ich kópií."
+    },
+    {
+      "term": "Vrátenie veci",
+      "definition": "Vec sa vráti, ak už nie je potrebná pre konanie."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odmietnutie vydať vec",
@@ -58,22 +108,33 @@
         },
         {
           "question": "Krok 1: Ako môže polícia postupovať?",
-          "options": ["Odňať vec", "Ukončiť úkon", "Počkať na súhlas obvineného"],
+          "options": [
+            "Odňať vec",
+            "Ukončiť úkon",
+            "Počkať na súhlas obvineného"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Čo musí polícia vyhotoviť?",
-          "options": ["Zápisnicu o odňatí veci", "Len interný záznam", "Nie je potrebné nič dokumentovať"],
+          "options": [
+            "Zápisnicu o odňatí veci",
+            "Len interný záznam",
+            "Nie je potrebné nič dokumentovať"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Kedy sa vec môže vrátiť?",
-          "options": ["Keď pominú dôvody zaistenia", "Až po rozsudku", "Nikdy"],
+          "options": [
+            "Keď pominú dôvody zaistenia",
+            "Až po rozsudku",
+            "Nikdy"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zaistenie veci u tretej osoby",
       "difficulty": "stredná",
@@ -85,12 +146,20 @@
         },
         {
           "question": "Krok 1: Aké postavenie má táto osoba?",
-          "options": ["Poškodený", "Zúčastnená osoba", "Obvinený"],
+          "options": [
+            "Poškodený",
+            "Zúčastnená osoba",
+            "Obvinený"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Má táto osoba právo brániť sa proti zaisteniu?",
-          "options": ["Áno", "Nie", "Len ak ide o drahú vec"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o drahú vec"
+          ],
           "correct": 0
         },
         {
@@ -114,10 +183,38 @@
   "spider": {
     "center": "Zaistenie vecí a majetku",
     "branches": [
-      { "label": "Zaistenie veci (§§ 89, 93–94)", "leaves": ["Dôvody – dôkaz, nástroj činu, výnos, predmet prepadnutia/zhabania", "Postup – uznesenie, doručenie, evidencia a úschova", "Obrana – sťažnosť proti uzneseniu"] },
-      { "label": "Vydanie (§ 89a) a odňatie (§ 90)", "leaves": ["Vydanie – povinnosť vydať vec na výzvu OČTK", "Odňatie – donucovací úkon pri nevydaní; primerané prostriedky, zápisnica"] },
-      { "label": "Majetok a účty (§§ 95–96)", "leaves": ["Zaistenie majetku – pre budúci výkon prepadnutia či peňažného trestu", "Rozsah – nehnuteľnosti, hnuteľné veci, účty, cenné papiere, práva", "Blokácia účtu – zákaz transakcií aj dispozície pri podozrení z výnosov"] },
-      { "label": "Listiny a dáta (§ 91)", "leaves": ["Listiny s tajomstvom – bankové, daňové, telekomunikačné len so súhlasom súdu", "Advokátske tajomstvo – osobitná ochrana", "Počítačové údaje – vydanie, kopírovanie, zaistenie nosičov"] }
+      {
+        "label": "Zaistenie veci (§§ 89, 93–94)",
+        "leaves": [
+          "Dôvody – dôkaz, nástroj činu, výnos, predmet prepadnutia/zhabania",
+          "Postup – uznesenie, doručenie, evidencia a úschova",
+          "Obrana – sťažnosť proti uzneseniu"
+        ]
+      },
+      {
+        "label": "Vydanie (§ 89a) a odňatie (§ 90)",
+        "leaves": [
+          "Vydanie – povinnosť vydať vec na výzvu OČTK",
+          "Odňatie – donucovací úkon pri nevydaní; primerané prostriedky, zápisnica"
+        ]
+      },
+      {
+        "label": "Majetok a účty (§§ 95–96)",
+        "leaves": [
+          "Zaistenie majetku – pre budúci výkon prepadnutia či peňažného trestu",
+          "Rozsah – nehnuteľnosti, hnuteľné veci, účty, cenné papiere, práva",
+          "Blokácia účtu – zákaz transakcií aj dispozície pri podozrení z výnosov"
+        ]
+      },
+      {
+        "label": "Listiny a dáta (§ 91)",
+        "leaves": [
+          "Listiny s tajomstvom – bankové, daňové, telekomunikačné len so súhlasom súdu",
+          "Advokátske tajomstvo – osobitná ochrana",
+          "Počítačové údaje – vydanie, kopírovanie, zaistenie nosičov"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Zaistenie vecí a majetku pre účely trestného konania Zaistenie vecí a majetku upravuje, ako môžu orgány činné v trestnom konaní získať, odňať, uchovať alebo zablokovať veci a hodnoty, ktoré môžu slúžiť ako dôkaz alebo môžu byť predmetom prepadnutia či zhabania.\n\nVec dôležitá pre trestné konanie a povinnosť na jej vydanie (§ 89, § 89a TP) Vec dôležitá pre trestné konanie (§ 89 TP) je vec, ktorá môže slúžiť ako dôkaz, bola určená alebo použitá na spáchanie trestného činu, alebo je výnosom z trestnej činnosti. Kto má takúto vec pri sebe, je povinný ju na výzvu vydať (§ 89a TP – povinnosť na vydanie veci).\nOdňatie veci (§ 90 TP) Odňatie veci je donucovací úkon, ak osoba vec dobrovoľne nevydá. – orgán môže použiť primerané donucovacie prostriedky, – o úkone sa spíše zápisnica, – odňatie sa vykonáva tak, aby sa vec nepoškodila.\nPočítačové údaje (§ 91 TP) Uchovanie, vydanie a odňatie počítačových údajov: – orgán môže požadovať vydanie údajov, – môže vykonať kopírovanie dát, – môže zaistiť nosiče (počítač, telefón, USB).\nPrevzatie a úschova zaistených vecí (§§ 92–94 TP) – prevzatie zaistenej veci (§ 92), – spoločné ustanovenia a riadna úschova (§§ 93–94), – vec sa označí, zaeviduje a uchová; dotknutá osoba môže podať sťažnosť.\nZaistenie peňažných prostriedkov a cenných papierov (§§ 95–96 TP) – zaistenie peňažných prostriedkov na účte (§ 95): banka nesmie vykonávať transakcie a majiteľ nesmie s prostriedkami nakladať, ak je podozrenie, že súvisia s trestnou činnosťou, – zaistenie zaknihovaných cenných papierov (§ 96).\nListiny s tajomstvom Listiny obsahujúce chránené tajomstvo (bankové, daňové, telekomunikačné) podliehajú osobitnému režimu; listiny s advokátskym tajomstvom majú osobitnú ochranu.\n\nZapamätaj si (štátnicové jadro) – Vec dôležitá pre trestné konanie = § 89; povinnosť vydať ju = § 89a. – Odňatie veci pri nevydaní = § 90. – Počítačové údaje = § 91. – Prevzatie a úschova zaistených vecí = §§ 92–94. – Peňažné prostriedky na účte = § 95, zaknihované cenné papiere = § 96. – Proti zaisteniu možno podať sťažnosť.\n\nZdroj (overené) – Trestný poriadok č. 301/2005 Z. z., znenie účinné od 1. 7. 2026 – Slov-Lex: §§ 89–96 TP"
 }

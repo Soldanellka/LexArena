@@ -2,7 +2,12 @@
   "id": "A28",
   "title": "Trestné činy proti iným právam a slobodám",
   "schemaVersion": "1.1",
-  "tags": ["práva", "slobody", "diskriminácia", "porušovanie domovej slobody"],
+  "tags": [
+    "práva",
+    "slobody",
+    "diskriminácia",
+    "porušovanie domovej slobody"
+  ],
   "theory": [
     {
       "heading": "Porušovanie domovej slobody",
@@ -20,36 +25,71 @@
   "quiz": [
     {
       "question": "Čo je porušovanie domovej slobody?",
-      "options": ["Vstup do cudzieho obydlia bez súhlasu", "Bežná návšteva", "Náhodné zaklopanie"],
+      "options": [
+        "Vstup do cudzieho obydlia bez súhlasu",
+        "Bežná návšteva",
+        "Náhodné zaklopanie"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je obmedzovanie osobnej slobody?",
-      "options": ["Zákonné zadržanie", "Protiprávne bránenie pohybu", "Dobrovoľné zotrvanie"],
+      "options": [
+        "Zákonné zadržanie",
+        "Protiprávne bránenie pohybu",
+        "Dobrovoľné zotrvanie"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je diskriminácia?",
-      "options": ["Znevýhodnenie osoby z chráneného dôvodu", "Bežná kritika", "Nesúhlas v diskusii"],
+      "options": [
+        "Znevýhodnenie osoby z chráneného dôvodu",
+        "Bežná kritika",
+        "Nesúhlas v diskusii"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je chráneným objektom?",
-      "options": ["Zdravie", "Základné práva a slobody", "Majetok"],
+      "options": [
+        "Zdravie",
+        "Základné práva a slobody",
+        "Majetok"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý čin patrí medzi tieto trestné činy?",
-      "options": ["Porušovanie domovej slobody", "Krádež", "Podvod"],
+      "options": [
+        "Porušovanie domovej slobody",
+        "Krádež",
+        "Podvod"
+      ],
       "correct": 0
     }
   ],
   "tiles": [
-    { "term": "Domová sloboda", "definition": "Právo na nedotknuteľnosť obydlia." },
-    { "term": "Osobná sloboda", "definition": "Právo na voľný pohyb." },
-    { "term": "Diskriminácia", "definition": "Znevýhodnenie osoby z chráneného dôvodu." },
-    { "term": "Slobody", "definition": "Chránené základné práva človeka." },
-    { "term": "Oprávnená osoba", "definition": "Osoba s právom rozhodovať o vstupe do obydlia." }
+    {
+      "term": "Domová sloboda",
+      "definition": "Právo na nedotknuteľnosť obydlia."
+    },
+    {
+      "term": "Osobná sloboda",
+      "definition": "Právo na voľný pohyb."
+    },
+    {
+      "term": "Diskriminácia",
+      "definition": "Znevýhodnenie osoby z chráneného dôvodu."
+    },
+    {
+      "term": "Slobody",
+      "definition": "Chránené základné práva človeka."
+    },
+    {
+      "term": "Oprávnená osoba",
+      "definition": "Osoba s právom rozhodovať o vstupe do obydlia."
+    }
   ],
   "cases": [
     {
@@ -84,9 +124,33 @@
   "spider": {
     "center": "TČ proti iným právam a slobodám",
     "branches": [
-      { "label": "Porušovanie domovej slobody (§ 194)", "leaves": ["Podstata – neoprávnené vniknutie do obydlia alebo zotrvanie v ňom", "Stačí – obyčajný vstup bez súhlasu oprávnenej osoby", "Kvalifikácia – prekonanie prekážky, skupina, chránená osoba", "Ústavný základ – čl. 21 Ústavy SR"] },
-      { "label": "Obmedzovanie osobnej slobody (§ 183)", "leaves": ["Podstata – protiprávne bránenie užívať osobnú slobodu, najmä voľný pohyb", "Kvalifikácia – chránená osoba, závažnejší spôsob, ťažká ujma či smrť", "Ústavný základ – čl. 17 Ústavy SR", "Väzba – detailne v okruhu TČ proti slobode (A19)"] },
-      { "label": "Diskriminácia a extrémizmus", "leaves": ["Podstata – znevýhodnenie osoby pre rasu, národnosť, pohlavie, vieru či iný znak", "Formy – porušovanie rovnosti; hanobenie a podnecovanie nenávisti (extrémistické TČ)", "Ústavný základ – čl. 12 Ústavy SR (rovnosť)"] }
+      {
+        "label": "Porušovanie domovej slobody (§ 194)",
+        "leaves": [
+          "Podstata – neoprávnené vniknutie do obydlia alebo zotrvanie v ňom",
+          "Stačí – obyčajný vstup bez súhlasu oprávnenej osoby",
+          "Kvalifikácia – prekonanie prekážky, skupina, chránená osoba",
+          "Ústavný základ – čl. 21 Ústavy SR"
+        ]
+      },
+      {
+        "label": "Obmedzovanie osobnej slobody (§ 183)",
+        "leaves": [
+          "Podstata – protiprávne bránenie užívať osobnú slobodu, najmä voľný pohyb",
+          "Kvalifikácia – chránená osoba, závažnejší spôsob, ťažká ujma či smrť",
+          "Ústavný základ – čl. 17 Ústavy SR",
+          "Väzba – detailne v okruhu TČ proti slobode (A19)"
+        ]
+      },
+      {
+        "label": "Diskriminácia a extrémizmus",
+        "leaves": [
+          "Podstata – znevýhodnenie osoby pre rasu, národnosť, pohlavie, vieru či iný znak",
+          "Formy – porušovanie rovnosti; hanobenie a podnecovanie nenávisti (extrémistické TČ)",
+          "Ústavný základ – čl. 12 Ústavy SR (rovnosť)"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti iným právam a slobodám chránia nedotknuteľnosť obydlia, osobnú slobodu a rovnosť ľudí bez diskriminácie. Základné skutkové podstaty sú porušovanie domovej slobody, obmedzovanie osobnej slobody a diskriminácia.\n\nTrestné činy proti iným právam a slobodám sú upravené v Trestnom zákone č. 300/2005 Z. z., najmä v §§ 183–198. Chránia základné ústavné práva: nedotknuteľnosť obydlia, osobnú slobodu, rovnosť a zákaz diskriminácie.\n\n1. Porušovanie domovej slobody\n(§ 194 TZ)\n\nPorušovanie domovej slobody je konanie, pri ktorom páchateľ neoprávnene vnikne do obydlia iného alebo tam neoprávnene zotrvá.\nPodľa Slov-Lex:\n\nuž obyčajný vstup bez súhlasu oprávnenej osoby napĺňa skutkovú podstatu,\n\nprísnejšia kvalifikácia nastáva pri prekonaní prekážky, konaní v skupine alebo voči chránenej osobe .\n\nOchrana obydlia je ústavne garantovaná (čl. 21 Ústavy SR), preto je zásah do domovej slobody trestnoprávne sankcionovaný.\n\n2. Obmedzovanie osobnej slobody\n(§ 183 TZ)\n\nObmedzovanie osobnej slobody je konanie, pri ktorom páchateľ bez oprávnenia bráni inému užívať osobnú slobodu, najmä vo voľnom pohybe.\nPodľa Slov-Lex:\n\nzákladná sadzba je 6 mesiacov až 3 roky,\n\nvyššie sadzby pri útoku na chránenej osobe, pri závažnom spôsobe konania alebo pri spôsobení ťažkej ujmy či smrti .\n\nIde o zásah do jedného z najzákladnejších práv – práva na osobnú slobodu (čl. 17 Ústavy SR).\n\n3. Diskriminácia\n(§ 424a TZ – hanobenie a podnecovanie; § 424 TZ – extrémizmus; § 190 TZ – porušovanie rovnosti)\n\nDiskriminácia je konanie, pri ktorom páchateľ znevýhodní osobu z dôvodu jej:\n\nrasy,\n\nnárodnosti,\n\netnickej príslušnosti,\n\npohlavia,\n\nviery,\n\nalebo iného chráneného znaku.\n\nTrestný zákon postihuje diskriminačné konanie najmä ako:\n\nporušovanie rovnosti (§ 190 TZ) – ak osoba znevýhodní inú pri uplatňovaní práv,\n\nextrémistické trestné činy (§ 424, § 424a TZ) – ak ide o hanobenie alebo podnecovanie nenávisti voči skupine.\n\nDiskriminácia je závažným zásahom do princípu rovnosti podľa čl. 12 Ústavy SR.\n\nZapamätaj si (štátnicové jadro)\n– Porušovanie domovej slobody = neoprávnené vniknutie alebo zotrvanie v obydlí.\n– Obmedzovanie osobnej slobody = protiprávne bránenie vo voľnom pohybe.\n– Diskriminácia = znevýhodnenie osoby pre chránený znak.\n– Ide o trestné činy chrániace základné ústavné práva: obydlie, slobodu, rovnosť.\n\nZdroj\n– § 194 TZ – porušovanie domovej slobody   \n– § 183 TZ – obmedzovanie osobnej slobody zakonvkapse.skzakonvkapse.sk. § 183 Obmedzovanie osobnej slobody · Zákony SR  \n– Ústava SR – čl. 12, 17, 21 (rovnosť, osobná sloboda, nedotknuteľnosť obydlia)"
 }

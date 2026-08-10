@@ -2,7 +2,11 @@
   "id": "A15",
   "title": "Dôvody zániku trestnosti a trestu, zahladenie odsúdenia",
   "schemaVersion": "1.1",
-  "tags": ["zánik trestnosti", "zahladenie", "promlčanie"],
+  "tags": [
+    "zánik trestnosti",
+    "zahladenie",
+    "promlčanie"
+  ],
   "theory": [
     {
       "heading": "Zánik trestnosti",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Kedy zaniká trestnosť?",
-      "options": ["Smrťou páchateľa", "Po výkone trestu", "Po odvolaní"],
+      "options": [
+        "Smrťou páchateľa",
+        "Po výkone trestu",
+        "Po odvolaní"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – smrťou trestnosť zaniká.",
       "explanation_incorrect": "Nie – výkon trestu nie je zánik trestnosti."
     },
     {
       "question": "Čo je účinná ľútosť?",
-      "options": ["Ľútosť pred súdom", "Odstránenie následku činu", "Zmena zákona"],
+      "options": [
+        "Ľútosť pred súdom",
+        "Odstránenie následku činu",
+        "Zmena zákona"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – odstránenie následku môže zrušiť trestnosť.",
       "explanation_incorrect": "Nie – nejde o emocionálnu ľútosť."
     },
     {
       "question": "Čo je zahladenie odsúdenia?",
-      "options": ["Vymazanie trestného činu zo zákona", "Hľadí sa, akoby nebol odsúdený", "Zmena sudcu"],
+      "options": [
+        "Vymazanie trestného činu zo zákona",
+        "Hľadí sa, akoby nebol odsúdený",
+        "Zmena sudcu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – zahladenie ruší následky odsúdenia.",
       "explanation_incorrect": "Nie – nejde o zmenu zákona."
     },
     {
       "question": "Kedy zaniká trest?",
-      "options": ["Výkonom trestu", "Po podaní odvolania", "Po výsluchu"],
+      "options": [
+        "Výkonom trestu",
+        "Po podaní odvolania",
+        "Po výsluchu"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – trest zaniká výkonom.",
       "explanation_incorrect": "Nie – odvolanie nezaniká trest."
     },
     {
       "question": "Čo je premlčanie výkonu trestu?",
-      "options": ["Zánik trestu po uplynutí času", "Zmena sudcu", "Zmena kvalifikácie"],
+      "options": [
+        "Zánik trestu po uplynutí času",
+        "Zmena sudcu",
+        "Zmena kvalifikácie"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – výkon trestu sa premlčí.",
       "explanation_incorrect": "Nie – ide o časový zánik."
     }
   ],
   "tiles": [
-    { "term": "Premlčanie", "definition": "Zánik trestnosti po uplynutí času." },
-    { "term": "Účinná ľútosť", "definition": "Odstránenie následku činu ruší trestnosť." },
-    { "term": "Zahladenie odsúdenia", "definition": "Hľadí sa, akoby nebol odsúdený." },
-    { "term": "Amnestia", "definition": "Zánik trestu rozhodnutím hlavy štátu." },
-    { "term": "Zmena zákona", "definition": "Novší zákon môže zrušiť trestnosť." }
+    {
+      "term": "Premlčanie",
+      "definition": "Zánik trestnosti po uplynutí času."
+    },
+    {
+      "term": "Účinná ľútosť",
+      "definition": "Odstránenie následku činu ruší trestnosť."
+    },
+    {
+      "term": "Zahladenie odsúdenia",
+      "definition": "Hľadí sa, akoby nebol odsúdený."
+    },
+    {
+      "term": "Amnestia",
+      "definition": "Zánik trestu rozhodnutím hlavy štátu."
+    },
+    {
+      "term": "Zmena zákona",
+      "definition": "Novší zákon môže zrušiť trestnosť."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Ide o účinnú ľútosť?",
-          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri násilných činoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – odstránenie škody je účinná ľútosť.",
           "explanation_incorrect": "Nie – ide o účinnú ľútosť."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Je trestnosť premlčaná?",
-          "options": ["Áno", "Nie", "Len pri prečinoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri prečinoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – trestnosť zaniká uplynutím času.",
           "explanation_incorrect": "Nie – je premlčaná."
@@ -108,9 +155,33 @@
   "spider": {
     "center": "Zánik trestnosti × zánik trestu × zahladenie",
     "branches": [
-      { "label": "Zánik trestnosti (§ 85–88)", "leaves": ["Premlčanie – uplynutie doby podľa závažnosti činu, stíhanie už nie je možné", "Účinná ľútosť – dobrovoľná náprava či odvrátenie následku pri vybraných TČ", "Smrť páchateľa – stíhanie sa zastaví, trest nemožno uložiť", "Zmena zákona – čin už nie je trestný (lex mitior)"] },
-      { "label": "Zánik trestu (§ 89–91)", "leaves": ["Výkon trestu – trest zaniká úplným vykonaním", "Premlčanie výkonu – trest sa nevykonal v zákonnej lehote", "Amnestia a milosť – rozhodnutie, ktoré trest odpúšťa alebo zmierňuje"] },
-      { "label": "Zahladenie odsúdenia (§ 92–93)", "leaves": ["Podmienky – riadny život, uplynutie času, vykonaný trest", "Účinok – na osobu sa hľadí, akoby nebola odsúdená", "Register trestov – výmaz záznamu", "Význam – zamestnanie, licencie, spoločenské postavenie"] }
+      {
+        "label": "Zánik trestnosti (§ 85–88)",
+        "leaves": [
+          "Premlčanie – uplynutie doby podľa závažnosti činu, stíhanie už nie je možné",
+          "Účinná ľútosť – dobrovoľná náprava či odvrátenie následku pri vybraných TČ",
+          "Smrť páchateľa – stíhanie sa zastaví, trest nemožno uložiť",
+          "Zmena zákona – čin už nie je trestný (lex mitior)"
+        ]
+      },
+      {
+        "label": "Zánik trestu (§ 89–91)",
+        "leaves": [
+          "Výkon trestu – trest zaniká úplným vykonaním",
+          "Premlčanie výkonu – trest sa nevykonal v zákonnej lehote",
+          "Amnestia a milosť – rozhodnutie, ktoré trest odpúšťa alebo zmierňuje"
+        ]
+      },
+      {
+        "label": "Zahladenie odsúdenia (§ 92–93)",
+        "leaves": [
+          "Podmienky – riadny život, uplynutie času, vykonaný trest",
+          "Účinok – na osobu sa hľadí, akoby nebola odsúdená",
+          "Register trestov – výmaz záznamu",
+          "Význam – zamestnanie, licencie, spoločenské postavenie"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestnosť zaniká premlčaním, účinnou ľútosťou, smrťou páchateľa alebo zmenou zákona; trest zaniká jeho výkonom, premlčaním výkonu alebo amnestiou; zahladenie odsúdenia spôsobí, že sa na osobu hľadí, akoby nebola odsúdená.\n\n1. Zánik trestnosti (§ 85 – § 88 TZ)\nZánik trestnosti znamená, že trestný čin už nemožno trestne stíhať, hoci bol spáchaný. Dôvody sú:\n\npremlčanie  \n– uplynutie zákonom stanovenej doby, po ktorej už nemožno trestný čin stíhať\n– dĺžka závisí od závažnosti trestného činu\n\núčinná ľútosť  \n– páchateľ dobrovoľne napraví alebo odvráti následok trestného činu\n– platí len pri vybraných trestných činoch (napr. majetkové, hospodárske)\n\nsmrť páchateľa  \n– trestné stíhanie sa zastaví, trest nemožno uložiť ani vykonať\n\nzmena zákona  \n– ak nový zákon stanoví, že čin už nie je trestný (lex mitior)\n\n2. Zánik trestu (§ 89 – § 91 TZ)\nZánik trestu znamená, že uložený trest už nemožno vykonať.\n\nvýkon trestu  \n– trest zaniká jeho úplným vykonaním\n\npremlčanie výkonu trestu  \n– ak sa trest nevykoná v zákonom stanovenej lehote\n\namnestiou alebo milosťou  \n– rozhodnutie prezidenta alebo vlády, ktoré odpúšťa alebo zmierňuje trest\n\n3. Zahladenie odsúdenia (§ 92 – § 93 TZ)\nZahladenie odsúdenia je právny inštitút, ktorým sa odstránia následky odsúdenia.\n\npo splnení podmienok (riadny život, uplynutie času, výkon trestu)\n\nsúd rozhodne, že sa na páchateľa hľadí, akoby nebol odsúdený\n\nvýmaz sa vykoná v registri trestov\n\nmá význam pre zamestnanie, licencie, spoločenské postavenie\n\nZapamätaj si (štátnicové jadro)\n– Zánik trestnosti: premlčanie, účinná ľútosť, smrť páchateľa, zmena zákona.\n– Zánik trestu: výkon trestu, premlčanie výkonu, amnestia/milosť.\n– Zahladenie odsúdenia: právny účinok, že sa na osobu hľadí, akoby nebola odsúdená.\n\nZdroj\n– Trestný zákon (zákon č. 300/2005 Z. z.), § 85 – § 93\n– Komentár k TZ – Čentéš, Šramel\n– Ministerstvo spravodlivosti SR – metodické materiály k zahladeniu odsúdenia"
 }

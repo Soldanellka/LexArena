@@ -2,50 +2,101 @@
   "id": "A28",
   "title": "Probácia a mediácia v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["probácia", "mediácia", "alternatívne riešenia", "trestné konanie"],
-
+  "tags": [
+    "probácia",
+    "mediácia",
+    "alternatívne riešenia",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Čo je cieľom probácie?",
-      "options": ["Potrestať obvineného", "Kontrolovať a podporovať obvineného pri plnení povinností", "Nahradiť súd"],
+      "options": [
+        "Potrestať obvineného",
+        "Kontrolovať a podporovať obvineného pri plnení povinností",
+        "Nahradiť súd"
+      ],
       "correct": 1
     },
     {
       "question": "Kto vykonáva mediáciu v trestnom konaní?",
-      "options": ["Sudca", "Probačný a mediačný úradník", "Policajt"],
+      "options": [
+        "Sudca",
+        "Probačný a mediačný úradník",
+        "Policajt"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno vykonať mediáciu?",
-      "options": ["Len po rozsudku", "V ktoromkoľvek štádiu trestného konania", "Len v prípravnom konaní"],
+      "options": [
+        "Len po rozsudku",
+        "V ktoromkoľvek štádiu trestného konania",
+        "Len v prípravnom konaní"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je výsledkom mediácie?",
-      "options": ["Dohoda medzi obvineným a poškodeným", "Rozsudok", "Uznesenie o zastavení stíhania"],
+      "options": [
+        "Dohoda medzi obvineným a poškodeným",
+        "Rozsudok",
+        "Uznesenie o zastavení stíhania"
+      ],
       "correct": 0
     },
     {
       "question": "Aký je účel probácie?",
-      "options": ["Prevencia recidívy a podpora resocializácie", "Zvýšenie trestov", "Zrýchlenie konania"],
+      "options": [
+        "Prevencia recidívy a podpora resocializácie",
+        "Zvýšenie trestov",
+        "Zrýchlenie konania"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Probácia", "definition": "Kontrola a pomoc obvinenému pri plnení povinností uložených súdom." },
-    { "term": "Mediácia", "definition": "Mimosúdne riešenie konfliktu medzi obvineným a poškodeným." },
-    { "term": "Probačný a mediačný úradník", "definition": "Osoba vykonávajúca probáciu a mediáciu v trestnom konaní." },
-    { "term": "Dohoda o náhrade škody", "definition": "Výsledok mediácie, ktorým sa obvinený zaväzuje nahradiť škodu." },
-    { "term": "Alternatívne riešenie", "definition": "Riešenie trestnej veci bez uloženia nepodmienečného trestu." },
-
-    { "term": "Kontrola povinností", "definition": "Probačný úradník dohliada na plnenie povinností obvineného." },
-    { "term": "Restoratívna justícia", "definition": "Prístup zameraný na obnovu vzťahov medzi obvineným a poškodeným." },
-    { "term": "Podmienečné zastavenie", "definition": "Inštitút, pri ktorom môže mediácia pomôcť splniť podmienky." },
-    { "term": "Zmier", "definition": "Osobitný spôsob ukončenia konania, často spojený s mediáciou." },
-    { "term": "Resocializácia", "definition": "Pomoc obvinenému zaradiť sa späť do spoločnosti." }
+    {
+      "term": "Probácia",
+      "definition": "Kontrola a pomoc obvinenému pri plnení povinností uložených súdom."
+    },
+    {
+      "term": "Mediácia",
+      "definition": "Mimosúdne riešenie konfliktu medzi obvineným a poškodeným."
+    },
+    {
+      "term": "Probačný a mediačný úradník",
+      "definition": "Osoba vykonávajúca probáciu a mediáciu v trestnom konaní."
+    },
+    {
+      "term": "Dohoda o náhrade škody",
+      "definition": "Výsledok mediácie, ktorým sa obvinený zaväzuje nahradiť škodu."
+    },
+    {
+      "term": "Alternatívne riešenie",
+      "definition": "Riešenie trestnej veci bez uloženia nepodmienečného trestu."
+    },
+    {
+      "term": "Kontrola povinností",
+      "definition": "Probačný úradník dohliada na plnenie povinností obvineného."
+    },
+    {
+      "term": "Restoratívna justícia",
+      "definition": "Prístup zameraný na obnovu vzťahov medzi obvineným a poškodeným."
+    },
+    {
+      "term": "Podmienečné zastavenie",
+      "definition": "Inštitút, pri ktorom môže mediácia pomôcť splniť podmienky."
+    },
+    {
+      "term": "Zmier",
+      "definition": "Osobitný spôsob ukončenia konania, často spojený s mediáciou."
+    },
+    {
+      "term": "Resocializácia",
+      "definition": "Pomoc obvinenému zaradiť sa späť do spoločnosti."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Mediácia pri náhrade škody",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Kto môže sprostredkovať dohodu?",
-          "options": ["Prokurátor", "Probačný a mediačný úradník", "Súdny znalec"],
+          "options": [
+            "Prokurátor",
+            "Probačný a mediačný úradník",
+            "Súdny znalec"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Čo je cieľom mediácie?",
-          "options": ["Dohoda o náhrade škody", "Uloženie trestu", "Zastavenie konania automaticky"],
+          "options": [
+            "Dohoda o náhrade škody",
+            "Uloženie trestu",
+            "Zastavenie konania automaticky"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Probácia pri podmienečnom odsúdení",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Kto dohliada na plnenie tejto povinnosti?",
-          "options": ["Súd", "Probačný úradník", "Polícia"],
+          "options": [
+            "Súd",
+            "Probačný úradník",
+            "Polícia"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Čo je cieľom probácie?",
-          "options": ["Podpora obvineného pri plnení povinností", "Zvýšenie trestu", "Zastavenie konania"],
+          "options": [
+            "Podpora obvineného pri plnení povinností",
+            "Zvýšenie trestu",
+            "Zastavenie konania"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,37 @@
   "spider": {
     "center": "Probácia × mediácia – restoratívne nástroje",
     "branches": [
-      { "label": "Právny základ", "leaves": ["Zákon č. 550/2003 Z. z. – probační a mediační úradníci", "Trestný poriadok – mediácia ako odklon, probácia pri alternatívnych trestoch"] },
-      { "label": "Probácia", "leaves": ["Obsah – dohľad, kontrola povinností, povinná práca, domáce väzenie, zákaz priblíženia", "Účel – zníženie recidívy, resocializácia, ochrana poškodených", "Kto – probačný a mediačný úradník (zamestnanec súdu)"] },
-      { "label": "Mediácia", "leaves": ["Podstata – dobrovoľný zmier obvineného a poškodeného pred mediátorom", "Zásady – dobrovoľnosť, nestrannosť, rovnosť, bezplatnosť, mlčanlivosť", "Výhody – rýchlosť, náhrada škody, možnosť nezápisu do registra"] },
-      { "label": "Význam", "leaves": ["Prax – tisíce mediácií ročne, milióny eur náhrad", "Smer – podpora restoratívnej justície"] }
+      {
+        "label": "Právny základ",
+        "leaves": [
+          "Zákon č. 550/2003 Z. z. – probační a mediační úradníci",
+          "Trestný poriadok – mediácia ako odklon, probácia pri alternatívnych trestoch"
+        ]
+      },
+      {
+        "label": "Probácia",
+        "leaves": [
+          "Obsah – dohľad, kontrola povinností, povinná práca, domáce väzenie, zákaz priblíženia",
+          "Účel – zníženie recidívy, resocializácia, ochrana poškodených",
+          "Kto – probačný a mediačný úradník (zamestnanec súdu)"
+        ]
+      },
+      {
+        "label": "Mediácia",
+        "leaves": [
+          "Podstata – dobrovoľný zmier obvineného a poškodeného pred mediátorom",
+          "Zásady – dobrovoľnosť, nestrannosť, rovnosť, bezplatnosť, mlčanlivosť",
+          "Výhody – rýchlosť, náhrada škody, možnosť nezápisu do registra"
+        ]
+      },
+      {
+        "label": "Význam",
+        "leaves": [
+          "Prax – tisíce mediácií ročne, milióny eur náhrad",
+          "Smer – podpora restoratívnej justície"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Probácia a mediácia sú alternatívne, restoratívne nástroje trestného konania. Probácia predstavuje dohľad nad obvineným alebo odsúdeným, kontrolu plnenia povinností, organizovanie trestov ako povinná práca či domáce väzenie a pomoc pri resocializácii. Mediácia je dobrovoľný proces zmieru medzi obvineným a poškodeným, ktorý vedie nestranný probačný a mediačný úradník. Cieľom je náhrada škody, prevzatie zodpovednosti a rýchle ukončenie trestnej veci bez potreby súdneho konania.\n\n1. Právny základ probácie a mediácie\nZákon č. 550/2003 Z. z. o probačných a mediačných úradníkoch – upravuje výkon probácie a mediácie, postavenie úradníkov a ich úlohy. \n\nTrestný poriadok – upravuje využitie mediácie ako odklonu a probácie pri alternatívnych trestoch.\n\nMinisterstvo spravodlivosti SR – metodicky riadi výkon probácie a mediácie. \n\n2. Probácia v trestnom konaní\nPodstata probácie\nProbácia je odborný dohľad nad obvineným, obžalovaným alebo odsúdeným, ktorý zahŕňa:\n\nkontrolu plnenia povinností a obmedzení,\n\ndohľad nad správaním obvineného,\n\norganizovanie trestu povinnej práce,\n\nvýkon trestu domáceho väzenia,\n\nkontrolu zákazu priblíženia,\n\npomoc obvinenému viesť riadny život.\n\nÚčel probácie\nzníženie recidívy,\n\npodpora resocializácie,\n\nefektívny výkon alternatívnych trestov,\n\nochrana poškodených.\n\nKto vykonáva probáciu?\nProbačný a mediačný úradník – zamestnanec súdu, odborník na sociálnu prácu, právo a komunikáciu. \n\n3. Mediácia v trestnom konaní\nPodstata mediácie\nMediácia je dobrovoľný proces, v ktorom sa obvinený a poškodený stretnú za účasti mediátora, aby:\n\nvysvetlili okolnosti trestného činu,\n\nvyjadrili ľútosť,\n\ndosiahli zmier,\n\ndohodli sa na náhrade škody.\n\nKľúčové zásady mediácie\ndobrovoľnosť – obe strany musia súhlasiť, súhlas možno kedykoľvek odvolať,\n\nnestrannosť mediátora,\n\nrovnosť strán,\n\nbezplatnosť,\n\nmlčanlivosť mediátora.\n\nVýhody mediácie\nrýchle vyriešenie veci (spravidla do jedného mesiaca),\n\nnáhrada škody bez súdneho konania,\n\nmožnosť odpustenia a zmieru,\n\ntrestný čin sa za určitých podmienok nezapíše do registra trestov.\n\n4. Význam probácie a mediácie v praxi\nMinisterstvo spravodlivosti uvádza, že probační a mediační úradníci:\n\nriešia tisíce mediácií ročne,\n\nzabezpečujú milióny eur náhrady škody pre poškodených,\n\nvýrazne podporujú restoratívnu justíciu.\n\nZapamätaj si (štátnicové jadro)\nProbácia = dohľad, kontrola, pomoc obvinenému/odsúdenému.\n\nMediácia = zmier medzi obvineným a poškodeným.\n\nObe vykonáva probačný a mediačný úradník.\n\nCieľ: rýchlosť, náhrada škody, resocializácia, zníženie recidívy.\n\nZdroj:\nMinisterstvo spravodlivosti SR – Mediácia v trestnom konaní \n\nZákon č. 550/2003 Z. z. o probačných a mediačných úradníkoch \n\nTlačová správa MS SR o reforme probácie a mediácie (2026)"
 }

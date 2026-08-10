@@ -1,7 +1,7 @@
 {
   "id": "32",
   "title": "Zmluva o pôžičke a zmluva o výpožičke",
-  "summary": "Zmluva o pôžičke (§ 657-658 OZ): veriteľ odovzdá dlžníkovi veci určené podľa druhu (peniaze, potraviny) - dlžník vráti rovnaké množstvo. Reálna zmluva - vznik odovzdaním. Výpožička (§ 659-662 OZ): prenechanie veci na bezodplatné dočasné užívanie - vracia sa tá istá vec. Rozdiel: pri pôžičke prechádza vlastníctvo, pri výpožičke nie.",
+  "summary": "Zmluva o pôžičke (§ 657–658 OZ)\nZmluva o pôžičke je reálna zmluva – vzniká až odovzdaním veci dlžníkovi.\nVeriteľ odovzdá dlžníkovi veci určené podľa druhu, najčastejšie:\n– peniaze,\n– potraviny,\n– suroviny,\n– iné zastupiteľné veci.\n\nDlžník sa zaväzuje vrátiť rovnaké množstvo vecí rovnakého druhu a kvality.\nPri pôžičke prechádza vlastnícke právo na dlžníka – môže vec spotrebovať, minúť, použiť podľa potreby.\n\nOdmena (úroky) môže byť dohodnutá, inak ide o bezodplatnú pôžičku.\n\nZmluva o výpožičke (§ 659–662 OZ)\nVýpožička je zmluva, pri ktorej požičiavateľ prenecháva vypožičiavateľovi vec na dočasné, bezodplatné užívanie.\nPodstatné znaky:\n– bezodplatnosť,\n– dočasnosť,\n– vracia sa tá istá vec, nie vec rovnakého druhu.\n\nVypožičiavateľ je povinný:\n– užívať vec riadne a podľa dohody,\n– chrániť ju pred poškodením,\n– vrátiť ju v stave zodpovedajúcom obvyklému opotrebeniu.\n\nPri výpožičke neprechádza vlastníctvo – vec zostáva vo vlastníctve požičiavateľa.\n\nRozdiely medzi pôžičkou a výpožičkou\n– Pôžička: zastupiteľné veci, prechod vlastníctva, vracia sa rovnaké množstvo.\n– Výpožička: individuálne určená vec, bez prechodu vlastníctva, vracia sa tá istá vec.\n– Pôžička je reálna, výpožička je konsenzuálna (vzniká dohodou).\n\nPraktické príklady\n– Pôžička: požičanie 100 € alebo 5 kg múky.\n– Výpožička: požičanie bicykla, knihy, náradia.\n\nZdroje: OZ (40/1964 Zb.), § 657–662; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je charakteristickým znakom zmluvy o pôžičke?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluva o pôžičke (§ 657 OZ)", "definition": "Veriteľ odovzdá druhovo určené veci, dlžník vráti rovnaké množstvo." },
-    { "term": "Reálna zmluva", "definition": "Zmluva o pôžičke vzniká až odovzdaním predmetu pôžičky." },
-    { "term": "Výpožička (§ 659 OZ)", "definition": "Bezodplatné prenechanie individuálne určenej veci na dočasné užívanie, vracia sa tá istá vec." },
-    { "term": "Prechod vlastníctva pri pôžičke", "definition": "Vlastníctvo prechádza na dlžníka, na rozdiel od výpožičky." },
-    { "term": "Odplatnosť", "definition": "Pôžička môže byť odplatná (s úrokom) aj bezodplatná; výpožička je vždy bezodplatná." }
+    {
+      "term": "Zmluva o pôžičke (§ 657 OZ)",
+      "definition": "Veriteľ odovzdá druhovo určené veci, dlžník vráti rovnaké množstvo."
+    },
+    {
+      "term": "Reálna zmluva",
+      "definition": "Zmluva o pôžičke vzniká až odovzdaním predmetu pôžičky."
+    },
+    {
+      "term": "Výpožička (§ 659 OZ)",
+      "definition": "Bezodplatné prenechanie individuálne určenej veci na dočasné užívanie, vracia sa tá istá vec."
+    },
+    {
+      "term": "Prechod vlastníctva pri pôžičke",
+      "definition": "Vlastníctvo prechádza na dlžníka, na rozdiel od výpožičky."
+    },
+    {
+      "term": "Odplatnosť",
+      "definition": "Pôžička môže byť odplatná (s úrokom) aj bezodplatná; výpožička je vždy bezodplatná."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Pôžička peňazí medzi priateľmi",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Priateľ požičia druhému priateľovi 500 eur s tým, že mu ich o mesiac vráti.", "options": [], "correct": 0 },
+        {
+          "question": "Priateľ požičia druhému priateľovi 500 eur s tým, že mu ich o mesiac vráti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí dlžník vrátiť presne tie isté bankovky, ktoré dostal?",
-          "options": ["Nie, stačí vrátiť rovnakú sumu peňazí (druhovo určenú vec)", "Áno, musí vrátiť presne tie isté bankovky", "Áno, inak by šlo o krádež"],
+          "options": [
+            "Nie, stačí vrátiť rovnakú sumu peňazí (druhovo určenú vec)",
+            "Áno, musí vrátiť presne tie isté bankovky",
+            "Áno, inak by šlo o krádež"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri pôžičke sa vracia rovnaké množstvo druhovo určenej veci, nie tie isté kusy.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Kedy táto zmluva o pôžičke vznikla?",
-          "options": ["Až odovzdaním peňazí dlžníkovi (ide o reálnu zmluvu)", "Už samotnou ústnou dohodou bez odovzdania peňazí", "Až vrátením peňazí"],
+          "options": [
+            "Až odovzdaním peňazí dlžníkovi (ide o reálnu zmluvu)",
+            "Už samotnou ústnou dohodou bez odovzdania peňazí",
+            "Až vrátením peňazí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmluva o pôžičke je reálna zmluva, vyžaduje si skutočné odovzdanie predmetu pôžičky.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Výpožička auta na víkend",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Sused požičia svojmu susedovi na víkend osobné auto bezplatne, s tým, že po víkende mu presne to isté auto vráti.", "options": [], "correct": 0 },
+        {
+          "question": "Sused požičia svojmu susedovi na víkend osobné auto bezplatne, s tým, že po víkende mu presne to isté auto vráti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký zmluvný typ ide?",
-          "options": ["O zmluvu o výpožičke", "O zmluvu o pôžičke", "O nájomnú zmluvu"],
+          "options": [
+            "O zmluvu o výpožičke",
+            "O zmluvu o pôžičke",
+            "O nájomnú zmluvu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bezodplatné prenechanie individuálne určenej veci s povinnosťou vrátiť tú istú vec je výpožička.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Prešlo by na vypožičiavajúceho suseda vlastníctvo auta?",
-          "options": ["Nie, pri výpožičke vlastníctvo neprechádza, vracia sa tá istá vec", "Áno, tak ako pri pôžičke", "Áno, ale iba dočasne na dobu výpožičky"],
+          "options": [
+            "Nie, pri výpožičke vlastníctvo neprechádza, vracia sa tá istá vec",
+            "Áno, tak ako pri pôžičke",
+            "Áno, ale iba dočasne na dobu výpožičky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri výpožičke ide len o dočasné užívanie, vlastníctvo zostáva požičiavajúcemu.",
@@ -142,11 +181,50 @@
   "spider": {
     "center": "Pôžička a výpožička – pojem, náležitosti, povinnosti, rozdiely (zastupiteľné vs. individuálne veci, prechod vlastníctva vs. užívanie)",
     "branches": [
-      { "label": "Zmluva o pôžičke (§ 657–658 OZ)", "leaves": ["reálna zmluva, vzniká až odovzdaním veci", "predmet: zastupiteľné veci, napr. peniaze, potraviny, suroviny", "dlžník vracia rovnaké množstvo rovnakého druhu a kvality", "prechádza vlastnícke právo na dlžníka, ktorý môže vec spotrebovať", "odmena vo forme úrokov môže byť dohodnutá, inak ide o bezodplatnú pôžičku"] },
-      { "label": "Zmluva o výpožičke (§ 659–662 OZ)", "leaves": ["požičiavateľ prenecháva vec na dočasné a bezodplatné užívanie", "predmet: individuálne určená vec", "vracia sa tá istá vec, nie vec rovnakého druhu", "vypožičiavateľ musí vec užívať riadne a chrániť ju pred poškodením", "vlastníctvo neprechádza na vypožičiavateľa"] },
-      { "label": "Rozdiely medzi pôžičkou a výpožičkou", "leaves": ["pôžička: zastupiteľné veci, prechod vlastníctva, vracia sa množstvo", "výpožička: individuálna vec, bez prechodu vlastníctva, vracia sa tá istá vec", "pôžička je reálna zmluva, výpožička konsenzuálna", "pôžička môže byť odplatná, výpožička je vždy bezodplatná"] },
-      { "label": "Praktické príklady", "leaves": ["pôžička: 100 eur, 5 kg múky, liter benzínu", "výpožička: bicykel, kniha, náradie, hudobný nástroj"] },
-      { "label": "Význam pre prax", "leaves": ["pôžička sa uplatňuje vo finančných vzťahoch, krátkodobých aj dlhodobých", "výpožička je typická pre bežné občianske, susedské a rodinné vzťahy", "jasné odlíšenie bráni sporom o vlastníctvo, poškodenie veci či povinnosť vrátiť"] }
+      {
+        "label": "Zmluva o pôžičke (§ 657–658 OZ)",
+        "leaves": [
+          "reálna zmluva, vzniká až odovzdaním veci",
+          "predmet: zastupiteľné veci, napr. peniaze, potraviny, suroviny",
+          "dlžník vracia rovnaké množstvo rovnakého druhu a kvality",
+          "prechádza vlastnícke právo na dlžníka, ktorý môže vec spotrebovať",
+          "odmena vo forme úrokov môže byť dohodnutá, inak ide o bezodplatnú pôžičku"
+        ]
+      },
+      {
+        "label": "Zmluva o výpožičke (§ 659–662 OZ)",
+        "leaves": [
+          "požičiavateľ prenecháva vec na dočasné a bezodplatné užívanie",
+          "predmet: individuálne určená vec",
+          "vracia sa tá istá vec, nie vec rovnakého druhu",
+          "vypožičiavateľ musí vec užívať riadne a chrániť ju pred poškodením",
+          "vlastníctvo neprechádza na vypožičiavateľa"
+        ]
+      },
+      {
+        "label": "Rozdiely medzi pôžičkou a výpožičkou",
+        "leaves": [
+          "pôžička: zastupiteľné veci, prechod vlastníctva, vracia sa množstvo",
+          "výpožička: individuálna vec, bez prechodu vlastníctva, vracia sa tá istá vec",
+          "pôžička je reálna zmluva, výpožička konsenzuálna",
+          "pôžička môže byť odplatná, výpožička je vždy bezodplatná"
+        ]
+      },
+      {
+        "label": "Praktické príklady",
+        "leaves": [
+          "pôžička: 100 eur, 5 kg múky, liter benzínu",
+          "výpožička: bicykel, kniha, náradie, hudobný nástroj"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "pôžička sa uplatňuje vo finančných vzťahoch, krátkodobých aj dlhodobých",
+          "výpožička je typická pre bežné občianske, susedské a rodinné vzťahy",
+          "jasné odlíšenie bráni sporom o vlastníctvo, poškodenie veci či povinnosť vrátiť"
+        ]
+      }
     ]
   }
 }

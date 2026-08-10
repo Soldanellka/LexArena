@@ -2,50 +2,101 @@
   "id": "A29",
   "title": "Právny styk s cudzinou",
   "schemaVersion": "1.1",
-  "tags": ["právny styk s cudzinou", "medzinárodná spolupráca", "extradícia", "MLA"],
-
+  "tags": [
+    "právny styk s cudzinou",
+    "medzinárodná spolupráca",
+    "extradícia",
+    "MLA"
+  ],
   "quiz": [
     {
       "question": "Čo je právny styk s cudzinou?",
-      "options": ["Spolupráca medzi súdmi a orgánmi rôznych štátov", "Cestovanie do zahraničia", "Obchodné vzťahy medzi firmami"],
+      "options": [
+        "Spolupráca medzi súdmi a orgánmi rôznych štátov",
+        "Cestovanie do zahraničia",
+        "Obchodné vzťahy medzi firmami"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý dokument najčastejšie upravuje právny styk s cudzinou?",
-      "options": ["Medzinárodné zmluvy", "Rozhodnutie obce", "Interné predpisy polície"],
+      "options": [
+        "Medzinárodné zmluvy",
+        "Rozhodnutie obce",
+        "Interné predpisy polície"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je vydanie osoby (extradícia)?",
-      "options": ["Odovzdanie osoby medzi štátmi na trestné stíhanie alebo výkon trestu", "Vyhostenie cudzinca", "Zrušenie občianstva"],
+      "options": [
+        "Odovzdanie osoby medzi štátmi na trestné stíhanie alebo výkon trestu",
+        "Vyhostenie cudzinca",
+        "Zrušenie občianstva"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je právna pomoc v trestných veciach?",
-      "options": ["Poskytovanie právnikov obvineným", "Medzinárodná spolupráca pri dokazovaní", "Pomoc pri písaní zmlúv"],
+      "options": [
+        "Poskytovanie právnikov obvineným",
+        "Medzinárodná spolupráca pri dokazovaní",
+        "Pomoc pri písaní zmlúv"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý orgán je ústredným orgánom pre právny styk s cudzinou v trestných veciach?",
-      "options": ["Ministerstvo spravodlivosti", "Polícia", "Obecný úrad"],
+      "options": [
+        "Ministerstvo spravodlivosti",
+        "Polícia",
+        "Obecný úrad"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Právny styk s cudzinou", "definition": "Medzinárodná spolupráca orgánov pri trestnom konaní." },
-    { "term": "Medzinárodná právna pomoc", "definition": "Poskytovanie dôkazov, doručovanie a iné úkony medzi štátmi." },
-    { "term": "Extradícia", "definition": "Vydanie osoby do iného štátu na trestné stíhanie alebo výkon trestu." },
-    { "term": "Európsky zatýkací rozkaz", "definition": "Zjednodušená forma odovzdania osoby medzi členskými štátmi EÚ." },
-    { "term": "Doručovanie do cudziny", "definition": "Zasielanie písomností osobám nachádzajúcim sa v inom štáte." },
-
-    { "term": "Právna pomoc", "definition": "Vykonanie procesných úkonov na žiadosť cudzieho štátu." },
-    { "term": "Ústredný orgán", "definition": "Orgán koordinujúci medzinárodnú spoluprácu (napr. Ministerstvo spravodlivosti)." },
-    { "term": "Prenos trestného konania", "definition": "Postúpenie trestnej veci inému štátu." },
-    { "term": "Výkon cudzieho rozhodnutia", "definition": "Uznanie a výkon rozsudku vydaného v inom štáte." },
-    { "term": "Zásada reciprocity", "definition": "Spolupráca sa poskytuje, ak ju poskytuje aj druhý štát." }
+    {
+      "term": "Právny styk s cudzinou",
+      "definition": "Medzinárodná spolupráca orgánov pri trestnom konaní."
+    },
+    {
+      "term": "Medzinárodná právna pomoc",
+      "definition": "Poskytovanie dôkazov, doručovanie a iné úkony medzi štátmi."
+    },
+    {
+      "term": "Extradícia",
+      "definition": "Vydanie osoby do iného štátu na trestné stíhanie alebo výkon trestu."
+    },
+    {
+      "term": "Európsky zatýkací rozkaz",
+      "definition": "Zjednodušená forma odovzdania osoby medzi členskými štátmi EÚ."
+    },
+    {
+      "term": "Doručovanie do cudziny",
+      "definition": "Zasielanie písomností osobám nachádzajúcim sa v inom štáte."
+    },
+    {
+      "term": "Právna pomoc",
+      "definition": "Vykonanie procesných úkonov na žiadosť cudzieho štátu."
+    },
+    {
+      "term": "Ústredný orgán",
+      "definition": "Orgán koordinujúci medzinárodnú spoluprácu (napr. Ministerstvo spravodlivosti)."
+    },
+    {
+      "term": "Prenos trestného konania",
+      "definition": "Postúpenie trestnej veci inému štátu."
+    },
+    {
+      "term": "Výkon cudzieho rozhodnutia",
+      "definition": "Uznanie a výkon rozsudku vydaného v inom štáte."
+    },
+    {
+      "term": "Zásada reciprocity",
+      "definition": "Spolupráca sa poskytuje, ak ju poskytuje aj druhý štát."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Žiadosť o právnu pomoc",
@@ -58,22 +109,33 @@
         },
         {
           "question": "Krok 1: Ako môže súd postupovať?",
-          "options": ["Požiadať Rakúsko o právnu pomoc", "Požiadať svedka, aby prišiel na Slovensko", "Zastaviť konanie"],
+          "options": [
+            "Požiadať Rakúsko o právnu pomoc",
+            "Požiadať svedka, aby prišiel na Slovensko",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ktorý orgán žiadosť vybavuje?",
-          "options": ["Ministerstvo spravodlivosti ako ústredný orgán", "Obecný úrad", "Polícia bez ďalšieho"],
+          "options": [
+            "Ministerstvo spravodlivosti ako ústredný orgán",
+            "Obecný úrad",
+            "Polícia bez ďalšieho"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Čo môže byť výsledkom?",
-          "options": ["Vypočutie svedka v Rakúsku", "Zrušenie obžaloby", "Automatické oslobodenie obvineného"],
+          "options": [
+            "Vypočutie svedka v Rakúsku",
+            "Zrušenie obžaloby",
+            "Automatické oslobodenie obvineného"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Extradícia osoby",
       "difficulty": "stredná",
@@ -85,12 +147,20 @@
         },
         {
           "question": "Krok 1: Ako môže Slovensko postupovať?",
-          "options": ["Požiadať Srbsko o vydanie osoby (extradíciu)", "Zatknúť osobu bez súhlasu Srbska", "Zastaviť trestné stíhanie"],
+          "options": [
+            "Požiadať Srbsko o vydanie osoby (extradíciu)",
+            "Zatknúť osobu bez súhlasu Srbska",
+            "Zastaviť trestné stíhanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto žiadosť podáva?",
-          "options": ["Ministerstvo spravodlivosti", "Obecný úrad", "Poškodený"],
+          "options": [
+            "Ministerstvo spravodlivosti",
+            "Obecný úrad",
+            "Poškodený"
+          ],
           "correct": 0
         },
         {
@@ -114,11 +184,43 @@
   "spider": {
     "center": "Právny styk s cudzinou (§§ 477–522)",
     "branches": [
-      { "label": "Právny základ", "leaves": ["Prednosť zmlúv – TP sa použije subsidiárne", "Vzájomnosť – bez zmluvy pri garancii reciprocity", "Pojmy – cudzí orgán, medzinárodný súd"] },
-      { "label": "Formy styku", "leaves": ["Priamy – medzi justičnými orgánmi, len na základe zmluvy", "Nepriamy – cez ministerstvá alebo konzulárne úrady"] },
-      { "label": "Právna pomoc", "leaves": ["Obsah – doručovanie, výsluchy, dôkazy, informácie, dožiadania", "Rámec – napr. Európsky dohovor o vzájomnej pomoci (ETS 30)"] },
-      { "label": "Extradícia a EZR", "leaves": ["Extradícia – obojstranná trestnosť, ne bis in idem, nepremlčanie, nepolitický skutok", "EZR – neskúma sa dôvodnosť, len dôvody odmietnutia; vydávacia väzba podľa zákona o EZR"] },
-      { "label": "Uznávanie a prevzatie (§§ 518–521)", "leaves": ["Uznanie cudzieho rozhodnutia (§§ 518–521) – uznávacie konanie, účinky, väzba, vykonávacie konanie", "Prevzatie a odovzdanie konania – účelnosť, pobyt, dôkazy, resocializácia"] }
+      {
+        "label": "Právny základ",
+        "leaves": [
+          "Prednosť zmlúv – TP sa použije subsidiárne",
+          "Vzájomnosť – bez zmluvy pri garancii reciprocity",
+          "Pojmy – cudzí orgán, medzinárodný súd"
+        ]
+      },
+      {
+        "label": "Formy styku",
+        "leaves": [
+          "Priamy – medzi justičnými orgánmi, len na základe zmluvy",
+          "Nepriamy – cez ministerstvá alebo konzulárne úrady"
+        ]
+      },
+      {
+        "label": "Právna pomoc",
+        "leaves": [
+          "Obsah – doručovanie, výsluchy, dôkazy, informácie, dožiadania",
+          "Rámec – napr. Európsky dohovor o vzájomnej pomoci (ETS 30)"
+        ]
+      },
+      {
+        "label": "Extradícia a EZR",
+        "leaves": [
+          "Extradícia – obojstranná trestnosť, ne bis in idem, nepremlčanie, nepolitický skutok",
+          "EZR – neskúma sa dôvodnosť, len dôvody odmietnutia; vydávacia väzba podľa zákona o EZR"
+        ]
+      },
+      {
+        "label": "Uznávanie a prevzatie (§§ 518–521)",
+        "leaves": [
+          "Uznanie cudzieho rozhodnutia (§§ 518–521) – uznávacie konanie, účinky, väzba, vykonávacie konanie",
+          "Prevzatie a odovzdanie konania – účelnosť, pobyt, dôkazy, resocializácia"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Právny styk s cudzinou Právny styk s cudzinou je súbor postupov, ktorými slovenské orgány spolupracujú s orgánmi iných štátov v trestných veciach. Zahŕňa právnu pomoc, extradíciu, uznávanie a výkon cudzích rozhodnutí, prevzatie a odovzdanie trestného konania a konania podľa európskych nástrojov.\n\nPrávny styk s cudzinou je upravený v Piatej časti Trestného poriadku (§§ 477–522). Základom sú medzinárodné zmluvy, ktoré majú prednosť pred vnútroštátnou úpravou.\n\nPrávny základ (§§ 477–480 TP) – medzinárodné zmluvy majú prednosť – ustanovenia TP sa použijú subsidiárne, – cudzí orgán = orgán iného štátu oprávnený konať podľa jeho právneho poriadku alebo medzinárodnej zmluvy, – medzinárodný súd = medzinárodný trestný súd zriadený zmluvou alebo rozhodnutím organizácie, – vzájomnosť – ak neexistuje zmluva, Slovensko koná, ak druhý štát garantuje recipročné plnenie.\nPriamy a nepriamy právny styk – priamy: komunikácia priamo medzi justičnými orgánmi štátov; možný len na základe medzinárodnej zmluvy, – nepriamy: cez Ministerstvo spravodlivosti, Ministerstvo zahraničných vecí alebo konzulárne úrady.\nPrávna pomoc v trestných veciach – doručovanie písomností, – výsluchy svedkov, – vykonanie dôkazov, – poskytovanie informácií, – dožiadania o procesné úkony. Používajú sa medzinárodné dohovory, napr. Európsky dohovor o vzájomnej pomoci v trestných veciach (ETS 30).\nExtradícia (vydanie osoby) Podmienky zahŕňajú: – obojstrannú trestnosť, – neexistenciu prekážky ne bis in idem, – nepremlčanie, – nepolitický charakter skutku.\nEurópsky zatýkací rozkaz (EZR) EZR je osobitný nástroj EÚ, upravený zákonom č. 154/2010 Z. z. – slovenské orgány neskúmajú dôvodnosť vydania EZR, iba dôvody odmietnutia podľa zákona o EZR, – rozhodujú o vydávacej väzbe podľa zákona o EZR.\nUznanie a výkon cudzieho rozhodnutia (§§ 518–521 TP) – uznávacie konanie (§ 518), – účinky uznaného cudzieho rozhodnutia (§ 519), – väzba (§ 520), – vykonávacie konanie (§ 521). Slovenský súd uzná cudzie rozhodnutie, ak sú splnené podmienky podľa TP a medzinárodných zmlúv.\nPrevzatie a odovzdanie trestného konania Používa sa, ak je účelnejšie, aby trestné konanie prebiehalo v inom štáte: – obojstranná trestnosť, – trvalý pobyt obvineného v dožiadanom štáte, – lepšia dostupnosť dôkazov, – resocializačné dôvody.\n\nZapamätaj si (štátnicové jadro) – Právny styk s cudzinou = medzinárodná justičná spolupráca v trestných veciach. – Základ: medzinárodné zmluvy, subsidiárne Trestný poriadok (§§ 477–522). – Obsah: právna pomoc, extradícia, EZR, uznávanie rozhodnutí, prevzatie konania. – Uznanie a výkon cudzieho rozhodnutia = §§ 518–521 TP. – Priamy styk = priamo medzi orgánmi; nepriamy = cez ministerstvá.\n\nZdroj (overené) – Trestný poriadok č. 301/2005 Z. z., znenie účinné od 1. 7. 2026 – §§ 477–522 – Zákon č. 154/2010 Z. z. o európskom zatýkacom rozkaze – Justičná akadémia – prevzatie a odovzdanie trestnej veci, medzinárodné dohovory"
 }

@@ -1,7 +1,7 @@
 {
   "id": "3",
   "title": "Právne skutočnosti v občianskom práve – pojem, druhy",
-  "summary": "Právna skutočnosť je každá skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností. Delenie: právne úkony (jednania), protiprávne úkony (delikty), právne udalosti (nezávislé od vôle – narodenie, smrť, uplynutie času) a právne stavy.",
+  "summary": "Právna skutočnosť je každá skutočnosť, s ktorou právny poriadok spája vznik, zmenu alebo zánik práv a povinností. Ide o základný prvok dynamiky občianskoprávnych vzťahov – právo reaguje na určité okolnosti tým, že upravuje právne následky.\n\nPrávne skutočnosti sa delia na:\n\n1. Právne úkony (jednania)  \nPrejav vôle smerujúci k vzniku, zmene alebo zániku práv a povinností. Môžu byť jednostranné (napr. výpoveď, závet) alebo dvojstranné (zmluvy). Platnosť právneho úkonu vyžaduje spôsobilosť, určitý a zrozumiteľný prejav vôle, súlad so zákonom a dobrými mravmi.\n\n2. Protiprávne úkony (delikty)  \nKonanie v rozpore s právom, ktoré spôsobí škodu alebo inú ujmu. Právny následok je povinnosť škodu nahradiť alebo odstrániť následky. Patria sem škoda spôsobená porušením povinnosti, bezdôvodné obohatenie či zásah do osobnostných práv.\n\n3. Právne udalosti  \nSkutočnosti, ktoré nastávajú nezávisle od vôle človeka. Právne následky nastávajú automaticky. Typicky ide o narodenie, smrť, uplynutie času, plynutie lehôt, prírodné udalosti. Udalosti sú objektívne a nevyžadujú žiadny prejav vôle.\n\n4. Právne stavy  \nDlhodobejšie právne situácie, ktoré trvajú určitý čas a majú právny význam (napr. manželstvo, rodičovstvo, držba, podnikateľský status). Právny stav môže vzniknúť právnym úkonom, udalosťou alebo rozhodnutím orgánu verejnej moci.\n\nPrávne skutočnosti sú základom vzniku občianskoprávnych vzťahov a určujú, kedy a prečo sa mení právne postavenie subjektov.\n\nZdroje: OZ (40/1964 Zb.), judikatúra NS SR, Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár,",
   "quiz": [
     {
       "question": "Čo je právna skutočnosť?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Právna skutočnosť", "definition": "Skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností." },
-    { "term": "Právny úkon", "definition": "Vôľové konanie smerujúce k právnym následkom (napr. zmluva)." },
-    { "term": "Právna udalosť", "definition": "Skutočnosť nastávajúca nezávisle od vôle (napr. narodenie, smrť, uplynutie času)." },
-    { "term": "Protiprávny úkon (delikt)", "definition": "Konanie porušujúce povinnosť, z ktorého vzniká zodpovednosť." },
-    { "term": "Právny stav", "definition": "Trvajúci stav, s ktorým právo spája určité následky (napr. vlastníctvo, manželstvo)." }
+    {
+      "term": "Právna skutočnosť",
+      "definition": "Skutočnosť, s ktorou právo spája vznik, zmenu alebo zánik práv a povinností."
+    },
+    {
+      "term": "Právny úkon",
+      "definition": "Vôľové konanie smerujúce k právnym následkom (napr. zmluva)."
+    },
+    {
+      "term": "Právna udalosť",
+      "definition": "Skutočnosť nastávajúca nezávisle od vôle (napr. narodenie, smrť, uplynutie času)."
+    },
+    {
+      "term": "Protiprávny úkon (delikt)",
+      "definition": "Konanie porušujúce povinnosť, z ktorého vzniká zodpovednosť."
+    },
+    {
+      "term": "Právny stav",
+      "definition": "Trvajúci stav, s ktorým právo spája určité následky (napr. vlastníctvo, manželstvo)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Uplynutie výpovednej lehoty",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "V nájomnej zmluve uplynie dohodnutá výpovedná lehota, čím zmluva zaniká bez ďalšieho konania strán.", "options": [], "correct": 0 },
+        {
+          "question": "V nájomnej zmluve uplynie dohodnutá výpovedná lehota, čím zmluva zaniká bez ďalšieho konania strán.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ právnej skutočnosti ide?",
-          "options": ["Právnu udalosť (uplynutie času)", "Právny úkon", "Protiprávny úkon"],
+          "options": [
+            "Právnu udalosť (uplynutie času)",
+            "Právny úkon",
+            "Protiprávny úkon"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uplynutie času nastáva nezávisle od aktuálnej vôle strán – ide o právnu udalosť.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Prečo nejde o právny úkon?",
-          "options": ["Lebo zánik nastáva nezávisle od aktuálneho prejavu vôle strán v danom okamihu, iba plynutím času", "Lebo strany pri uzavretí zmluvy vôbec neprejavili vôľu", "Lebo ide o protiprávne konanie jednej zo strán"],
+          "options": [
+            "Lebo zánik nastáva nezávisle od aktuálneho prejavu vôle strán v danom okamihu, iba plynutím času",
+            "Lebo strany pri uzavretí zmluvy vôbec neprejavili vôľu",
+            "Lebo ide o protiprávne konanie jednej zo strán"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Právny úkon vyžaduje aktuálny prejav vôle smerujúci k následku, čo pri plynutí lehoty chýba.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Spôsobenie škody z nedbanlivosti",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Vodič z nedbanlivosti poškodí cudzie vozidlo pri dopravnej nehode.", "options": [], "correct": 0 },
+        {
+          "question": "Vodič z nedbanlivosti poškodí cudzie vozidlo pri dopravnej nehode.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ právnej skutočnosti ide z hľadiska vzniku zodpovednosti za škodu?",
-          "options": ["O protiprávny úkon (delikt)", "O právnu udalosť", "O právny úkon smerujúci k vzniku záväzku"],
+          "options": [
+            "O protiprávny úkon (delikt)",
+            "O právnu udalosť",
+            "O právny úkon smerujúci k vzniku záväzku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nedbanlivostné spôsobenie škody je protiprávnym konaním zakladajúcim zodpovednosť.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo je typickým znakom protiprávneho úkonu?",
-          "options": ["Porušenie právnej povinnosti, z ktorého vzniká zodpovednosť za následky", "Súlad konania so zákonom a dobrými mravmi", "Vždy úmyselné konanie smerujúce k uzavretiu zmluvy"],
+          "options": [
+            "Porušenie právnej povinnosti, z ktorého vzniká zodpovednosť za následky",
+            "Súlad konania so zákonom a dobrými mravmi",
+            "Vždy úmyselné konanie smerujúce k uzavretiu zmluvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Delikt sa vyznačuje porušením povinnosti a vznikom zodpovednosti, nie súladom so zákonom.",
@@ -142,11 +181,51 @@
   "spider": {
     "center": "Právne skutočnosti v občianskom práve – pojem, druhy (vznik, zmena, zánik práv a povinností)",
     "branches": [
-      { "label": "Právne úkony", "leaves": ["prejav vôle smerujúci k právnym následkom", "jednostranné: výpoveď, závet", "dvojstranné: zmluvy", "podmienky platnosti: spôsobilosť, určitý prejav, súlad so zákonom a dobrými mravmi"] },
-      { "label": "Protiprávne úkony (delikty)", "leaves": ["konanie v rozpore s právom", "spôsobenie škody alebo ujmy", "následok: povinnosť nahradiť škodu", "patria sem: škoda porušením povinnosti, bezdôvodné obohatenie, zásah do osobnostných práv"] },
-      { "label": "Právne udalosti", "leaves": ["nastávajú nezávisle od vôle človeka", "právne následky automaticky", "príklady: narodenie, smrť, uplynutie času, plynutie lehôt, prírodné udalosti", "objektívne, nevyžadujú prejav vôle"] },
-      { "label": "Právne stavy", "leaves": ["dlhodobejšie právne situácie", "trvajú určitý čas", "príklady: manželstvo, rodičovstvo, držba, podnikateľský status", "vznik: právny úkon, udalosť alebo rozhodnutie orgánu verejnej moci"] },
-      { "label": "Význam právnych skutočností", "leaves": ["určujú vznik, zmenu a zánik práv a povinností", "sú základom dynamiky občianskoprávnych vzťahov", "určujú, kedy sa mení právne postavenie subjektov", "sú nevyhnutné pre aplikáciu OZ"] }
+      {
+        "label": "Právne úkony",
+        "leaves": [
+          "prejav vôle smerujúci k právnym následkom",
+          "jednostranné: výpoveď, závet",
+          "dvojstranné: zmluvy",
+          "podmienky platnosti: spôsobilosť, určitý prejav, súlad so zákonom a dobrými mravmi"
+        ]
+      },
+      {
+        "label": "Protiprávne úkony (delikty)",
+        "leaves": [
+          "konanie v rozpore s právom",
+          "spôsobenie škody alebo ujmy",
+          "následok: povinnosť nahradiť škodu",
+          "patria sem: škoda porušením povinnosti, bezdôvodné obohatenie, zásah do osobnostných práv"
+        ]
+      },
+      {
+        "label": "Právne udalosti",
+        "leaves": [
+          "nastávajú nezávisle od vôle človeka",
+          "právne následky automaticky",
+          "príklady: narodenie, smrť, uplynutie času, plynutie lehôt, prírodné udalosti",
+          "objektívne, nevyžadujú prejav vôle"
+        ]
+      },
+      {
+        "label": "Právne stavy",
+        "leaves": [
+          "dlhodobejšie právne situácie",
+          "trvajú určitý čas",
+          "príklady: manželstvo, rodičovstvo, držba, podnikateľský status",
+          "vznik: právny úkon, udalosť alebo rozhodnutie orgánu verejnej moci"
+        ]
+      },
+      {
+        "label": "Význam právnych skutočností",
+        "leaves": [
+          "určujú vznik, zmenu a zánik práv a povinností",
+          "sú základom dynamiky občianskoprávnych vzťahov",
+          "určujú, kedy sa mení právne postavenie subjektov",
+          "sú nevyhnutné pre aplikáciu OZ"
+        ]
+      }
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "14",
   "title": "Záložné právo – funkcie, vznik, zánik a výkon",
-  "summary": "Záložné právo (§ 151a–151me OZ) slúži na zabezpečenie pohľadávky – veriteľ (záložný veriteľ) má právo uspokojiť pohľadávku zo zálohu ak dlžník nesplní záväzok. Vznik: zmluvou, zákonom alebo rozhodnutím súdu. Záložný veriteľ môže záložné právo vykonať dohodou alebo verejnou dražbou. Záložné právo zaniká: zánikom pohľadávky, zánik zálohu, vzdanie sa práva.",
+  "summary": "Záložné právo podľa § 151a–151me OZ je vecné právo slúžiace na zabezpečenie pohľadávky. Záložný veriteľ má právo uspokojiť sa zo zálohu, ak dlžník nesplní zabezpečený záväzok. Ide o absolútne právo pôsobiace erga omnes, ktoré poskytuje veriteľovi silné postavenie – najmä droit de préférence (prednostné uspokojenie) a droit de suite (záložné právo nasleduje vec).\n\nFunkcie záložného práva\n– Zabezpečovacia funkcia – motivuje dlžníka splniť záväzok.\n– Uspokojovacia funkcia – umožňuje veriteľovi uspokojiť sa zo zálohu pri nesplnení záväzku.\n– Preventívna funkcia – znižuje riziko veriteľa a stabilizuje právne vzťahy.\n\nVznik záložného práva\nZáložné právo môže vzniknúť:\n\n– Zmluvou – najčastejší spôsob; pri nehnuteľnostiach je potrebný vklad do katastra, ktorý má konštitutívny účinok.\n– Zo zákona – napr. záložné právo prenajímateľa k veciam v prenajatom priestore.\n– Rozhodnutím súdu alebo správneho orgánu – napr. pri zabezpečení výživného.\n– Vydržaním – ak niekto dlhodobo vykonáva právo zodpovedajúce záložnému právu.\n\nPredmetom záložného práva môže byť hnuteľná vec, nehnuteľnosť, pohľadávka, podnik alebo iné majetkové právo.\n\nVýkon záložného práva\nAk dlžník nesplní záväzok, záložný veriteľ môže záložné právo vykonať:\n\n– dohodnutým spôsobom (napr. predaj zálohu mimo dražby),\n– verejnou dražbou,\n– predajom podľa osobitných predpisov (napr. exekučný predaj).\n\nVýkon musí byť primeraný a nesmie poškodiť dlžníka nad nevyhnutnú mieru.\n\nZánik záložného práva\nZáložné právo zaniká:\n\n– zánikom zabezpečenej pohľadávky,\n– zánikom zálohu,\n– výmazom z katastra (pri nehnuteľnostiach),\n– vzdanie sa záložného práva zo strany veriteľa,\n– splnením účelu zabezpečenia.\n\nZánik sa spravidla preukazuje listinou, ktorá umožní výmaz z registra.\n\nZdroje: OZ (40/1964 Zb.), § 151a–151me; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Akú funkciu plní záložné právo?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Záložné právo", "definition": "Zabezpečuje pohľadávku – veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok." },
-    { "term": "Akcesorickosť", "definition": "Existencia záložného práva závisí od existencie zabezpečenej pohľadávky." },
-    { "term": "Výkon záložného práva (§ 151j OZ)", "definition": "Dohodou záložcu a záložného veriteľa alebo predajom vo verejnej dražbe." },
-    { "term": "Podzálog", "definition": "Záložný veriteľ zastaví svoju pohľadávku (vrátane záložného práva) ďalšej osobe." },
-    { "term": "Zánik záložného práva", "definition": "Zánikom pohľadávky, zánikom zálohu alebo vzdaním sa práva." }
+    {
+      "term": "Záložné právo",
+      "definition": "Zabezpečuje pohľadávku – veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok."
+    },
+    {
+      "term": "Akcesorickosť",
+      "definition": "Existencia záložného práva závisí od existencie zabezpečenej pohľadávky."
+    },
+    {
+      "term": "Výkon záložného práva (§ 151j OZ)",
+      "definition": "Dohodou záložcu a záložného veriteľa alebo predajom vo verejnej dražbe."
+    },
+    {
+      "term": "Podzálog",
+      "definition": "Záložný veriteľ zastaví svoju pohľadávku (vrátane záložného práva) ďalšej osobe."
+    },
+    {
+      "term": "Zánik záložného práva",
+      "definition": "Zánikom pohľadávky, zánikom zálohu alebo vzdaním sa práva."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neplnenie zabezpečeného dlhu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Dlžník nesplní svoj záväzok zabezpečený záložným právom k jeho vozidlu.", "options": [], "correct": 0 },
+        {
+          "question": "Dlžník nesplní svoj záväzok zabezpečený záložným právom k jeho vozidlu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo môže záložný veriteľ urobiť?",
-          "options": ["Uspokojiť sa zo zálohu, napríklad dohodou alebo predajom vo verejnej dražbe", "Automaticky sa stať vlastníkom vozidla bez ďalšieho postupu", "Vec bez akéhokoľvek postupu jednoducho zabrať"],
+          "options": [
+            "Uspokojiť sa zo zálohu, napríklad dohodou alebo predajom vo verejnej dražbe",
+            "Automaticky sa stať vlastníkom vozidla bez ďalšieho postupu",
+            "Vec bez akéhokoľvek postupu jednoducho zabrať"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon predpisuje konkrétne spôsoby výkonu záložného práva – dohodu alebo verejnú dražbu.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Stáva sa záložný veriteľ okamžite vlastníkom zálohu, len čo dlžník nesplní dlh?",
-          "options": ["Nie, záložné právo dáva len právo uspokojiť sa zo zálohu zákonným postupom, nie automatické vlastníctvo", "Áno, záložné právo automaticky prevádza vlastníctvo", "Áno, ale iba pri hnuteľných veciach"],
+          "options": [
+            "Nie, záložné právo dáva len právo uspokojiť sa zo zálohu zákonným postupom, nie automatické vlastníctvo",
+            "Áno, záložné právo automaticky prevádza vlastníctvo",
+            "Áno, ale iba pri hnuteľných veciach"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Záložné právo je len uspokojovacím právom, nie priamym nadobudnutím vlastníctva.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Zánik záložného práva splatením dlhu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Dlžník v plnom rozsahu splatí pohľadávku, ktorá bola zabezpečená záložným právom.", "options": [], "correct": 0 },
+        {
+          "question": "Dlžník v plnom rozsahu splatí pohľadávku, ktorá bola zabezpečená záložným právom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo sa stane so záložným právom?",
-          "options": ["Zanikne, keďže záložné právo je akcesorické k zabezpečenej pohľadávke", "Zostáva naďalej v platnosti bez ohľadu na splatenie dlhu", "Prechádza automaticky na inú pohľadávku toho istého veriteľa"],
+          "options": [
+            "Zanikne, keďže záložné právo je akcesorické k zabezpečenej pohľadávke",
+            "Zostáva naďalej v platnosti bez ohľadu na splatenie dlhu",
+            "Prechádza automaticky na inú pohľadávku toho istého veriteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zánikom zabezpečenej pohľadávky zaniká aj akcesorické záložné právo.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo vyjadruje akcesorická povaha záložného práva?",
-          "options": ["Jeho existencia je závislá od existencie zabezpečenej pohľadávky", "Existuje úplne samostatne bez väzby na akúkoľvek pohľadávku", "Môže vzniknúť len bez akejkoľvek pohľadávky"],
+          "options": [
+            "Jeho existencia je závislá od existencie zabezpečenej pohľadávky",
+            "Existuje úplne samostatne bez väzby na akúkoľvek pohľadávku",
+            "Môže vzniknúť len bez akejkoľvek pohľadávky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Akcesorickosť znamená väzbu záložného práva na osud zabezpečenej pohľadávky.",
@@ -142,13 +181,72 @@
   "spider": {
     "center": "Záložné právo – funkcie, vznik, výkon, zánik (zabezpečenie pohľadávky, erga omnes, droit de préférence a droit de suite)",
     "branches": [
-      { "label": "Pojem záložného práva (§ 151a OZ)", "leaves": ["vecné právo na zabezpečenie pohľadávky", "veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok", "pôsobí erga omnes", "droit de préférence: prednostné uspokojenie", "droit de suite: právo nasleduje vec"] },
-      { "label": "Funkcie záložného práva", "leaves": ["zabezpečovacia: motivuje dlžníka plniť", "uspokojovacia: veriteľ sa uspokojí zo zálohu", "preventívna: znižuje riziko veriteľa"] },
-      { "label": "Vznik záložného práva", "leaves": ["zmluvou: najčastejší spôsob, pri nehnuteľnostiach vklad do katastra (konštitutívny účinok)", "zo zákona: napr. záložné právo prenajímateľa", "rozhodnutím súdu alebo správneho orgánu: napr. zabezpečenie výživného", "vydržaním: dlhodobé vykonávanie práva zodpovedajúceho záložnému právu"] },
-      { "label": "Predmet záložného práva", "leaves": ["hnuteľná vec", "nehnuteľnosť", "pohľadávka", "podnik", "majetkové právo"] },
-      { "label": "Výkon záložného práva (§ 151j–151ma OZ)", "leaves": ["ak dlžník nesplní záväzok, veriteľ môže vykonať záložné právo", "dohodnutý spôsob: predaj mimo dražby", "verejná dražba", "predaj podľa osobitných predpisov: exekučný predaj", "výkon musí byť primeraný a nesmie poškodiť dlžníka nad nevyhnutnú mieru"] },
-      { "label": "Zánik záložného práva", "leaves": ["zánikom zabezpečenej pohľadávky", "zánikom zálohu", "výmazom z katastra pri nehnuteľnostiach", "vzdanie sa záložného práva veriteľom", "splnením účelu zabezpečenia"] },
-      { "label": "Význam pre prax", "leaves": ["najdôležitejší zabezpečovací inštitút", "vysoká právna istota: kataster, NCRP", "kľúčové pre úvery, hypotéky, podnikanie", "silná ochrana veriteľa cez prednostné uspokojenie"] }
+      {
+        "label": "Pojem záložného práva (§ 151a OZ)",
+        "leaves": [
+          "vecné právo na zabezpečenie pohľadávky",
+          "veriteľ sa môže uspokojiť zo zálohu, ak dlžník nesplní záväzok",
+          "pôsobí erga omnes",
+          "droit de préférence: prednostné uspokojenie",
+          "droit de suite: právo nasleduje vec"
+        ]
+      },
+      {
+        "label": "Funkcie záložného práva",
+        "leaves": [
+          "zabezpečovacia: motivuje dlžníka plniť",
+          "uspokojovacia: veriteľ sa uspokojí zo zálohu",
+          "preventívna: znižuje riziko veriteľa"
+        ]
+      },
+      {
+        "label": "Vznik záložného práva",
+        "leaves": [
+          "zmluvou: najčastejší spôsob, pri nehnuteľnostiach vklad do katastra (konštitutívny účinok)",
+          "zo zákona: napr. záložné právo prenajímateľa",
+          "rozhodnutím súdu alebo správneho orgánu: napr. zabezpečenie výživného",
+          "vydržaním: dlhodobé vykonávanie práva zodpovedajúceho záložnému právu"
+        ]
+      },
+      {
+        "label": "Predmet záložného práva",
+        "leaves": [
+          "hnuteľná vec",
+          "nehnuteľnosť",
+          "pohľadávka",
+          "podnik",
+          "majetkové právo"
+        ]
+      },
+      {
+        "label": "Výkon záložného práva (§ 151j–151ma OZ)",
+        "leaves": [
+          "ak dlžník nesplní záväzok, veriteľ môže vykonať záložné právo",
+          "dohodnutý spôsob: predaj mimo dražby",
+          "verejná dražba",
+          "predaj podľa osobitných predpisov: exekučný predaj",
+          "výkon musí byť primeraný a nesmie poškodiť dlžníka nad nevyhnutnú mieru"
+        ]
+      },
+      {
+        "label": "Zánik záložného práva",
+        "leaves": [
+          "zánikom zabezpečenej pohľadávky",
+          "zánikom zálohu",
+          "výmazom z katastra pri nehnuteľnostiach",
+          "vzdanie sa záložného práva veriteľom",
+          "splnením účelu zabezpečenia"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "najdôležitejší zabezpečovací inštitút",
+          "vysoká právna istota: kataster, NCRP",
+          "kľúčové pre úvery, hypotéky, podnikanie",
+          "silná ochrana veriteľa cez prednostné uspokojenie"
+        ]
+      }
     ]
   }
 }

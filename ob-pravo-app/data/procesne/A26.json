@@ -2,13 +2,22 @@
   "id": "26",
   "title": "Skrátené konania a skrátené rozhodnutia",
   "schemaVersion": "1.1",
-  "tags": ["platobný rozkaz", "upomínacie konanie", "odpor", "zmenkový platobný rozkaz"],
-  "summary": "Skrátené konania a rozhodnutia umožňujú rýchle a hospodárne vybavenie jednoduchých, najmä nesporných peňažných nárokov bez potreby nariadenia pojednávania a rozsiahleho dokazovania. Typickým príkladom je platobný rozkaz (§ 265 a nasl. CSP), ktorý súd vydá bez pojednávania na základe žalobných tvrdení a predložených listinných dôkazov, ak sú splnené zákonné podmienky; osobitným druhom je zmenkový a šekový platobný rozkaz vydávaný na základe zmenky alebo šeku. Samostatnou právnou úpravou (zákon č. 307/2016 Z. z.) je upomínacie konanie – z veľkej časti elektronizované konanie určené na rýchle vymáhanie peňažných pohľadávok prostredníctvom centrálneho portálu.\n\nProti platobnému rozkazu nie je opravným prostriedkom odvolanie, ale odpor, ktorý musí žalovaný podať v zákonnej lehote; riadne podaný odpor zrušuje platobný rozkaz v celom rozsahu (nie iba v časti, ktorej sa odpor týka) a súd následne pokračuje v riadnom sporovom konaní vrátane nariadenia pojednávania, ak je potrebné. Tento mechanizmus umožňuje rýchle vybavenie nesporných vecí, no zároveň zachováva plné právo žalovaného na riadnu procesnú obranu.\n\nZapamätaj si:\n- Platobný rozkaz sa vydáva bez pojednávania a dokazovania, na základe tvrdení a listín.\n- Upomínacie konanie (zákon č. 307/2016 Z. z.) je osobitné, elektronizované konanie na vymáhanie peňažných pohľadávok.\n- Riadnym opravným prostriedkom proti platobnému rozkazu je odpor, nie odvolanie.\n- Odpor zrušuje platobný rozkaz v celom rozsahu, nie len sčasti.\n- Po zrušení platobného rozkazu pokračuje súd v riadnom sporovom konaní."
-  ,
+  "tags": [
+    "platobný rozkaz",
+    "upomínacie konanie",
+    "odpor",
+    "zmenkový platobný rozkaz"
+  ],
+  "summary": "Skrátené konania a skrátené rozhodnutia umožňujú rýchle, hospodárne a efektívne vybavenie jednoduchých peňažných nárokov, najmä tých, ktoré sú nesporné alebo ľahko preukázateľné listinami.\nIch cieľom je odbremeniť súdy od zbytočného pojednávania a dokazovania.\n\n„Skrátenosť“ znamená:\n\nbez pojednávania,\n\nbez dokazovania (alebo len listinné dôkazy),\n\npri pasivite strán,\n\nautomatizovaný alebo zrýchlený postup.\n\nDo tejto skupiny patria:\n\nplatobný rozkaz (PR),\n\nelektronický platobný rozkaz (EPR),\n\nupomínací platobný rozkaz (UPR),\n\nkontumačný rozsudok (rozsudok pre zmeškanie),\n\nrozsudok pre uznanie,\n\nrozsudok pre vzdanie sa nároku.\n\n1. Platobný rozkaz (§ 265 a nasl. CSP)\nSúd ho vydá:\n\nbez pojednávania,\n\nbez dokazovania,\n\nlen na základe žalobných tvrdení a listín.\n\nPodmienky platobného rozkazu\npeňažný nárok,\n\nžaloba obsahuje všetky náležitosti,\n\nnárok je preukázateľný listinami,\n\nnejde o vec, kde zákon platobný rozkaz vylučuje,\n\nsúčasne sa doručuje žalovanému do vlastných rúk.\n\nZmenkový a šekový platobný rozkaz\nosobitný druh PR,\n\nvydáva sa na základe zmenky alebo šeku,\n\ntieto listiny majú osobitnú dôkaznú silu.\n\n2. Upomínacie konanie (zákon č. 307/2016 Z. z.)\nSamostatné, elektronické konanie určené na rýchle vymáhanie peňažných pohľadávok.\n\nCharakteristika:\n\nnávrh sa podáva elektronicky cez centrálny portál,\n\nrozhoduje špecializovaný súd,\n\nvýsledkom je upomínací platobný rozkaz,\n\nmá účinky ako PR podľa CSP.\n\n3. Elektronický platobný rozkaz (EPR)\nVydáva sa v elektronickom konaní podľa CSP:\n\nnávrh sa podáva elektronicky,\n\nrozhodnutie sa doručuje elektronicky,\n\nproces je automatizovaný.\n\n4. Kontumačný rozsudok (rozsudok pre zmeškanie)\nIde o skrátené meritórne rozhodnutie pri pasivite žalovaného.\n\nPodmienky kontumácie\nžalovaný sa nevyjadrí k žalobe pred nariadením pojednávania (na PPS),\n\nalebo sa nedostaví na pojednávanie,\n\nmusí byť riadne poučený o následkoch,\n\npasivita musí byť na strane žalovaného (pri žalobcovi ide o zastavenie konania).\n\n5. Rozsudok pre uznanie a rozsudok pre vzdanie sa nároku\nRozsudok pre uznanie\nžalovaný nárok uzná,\n\nsúd je uznaním viazaný,\n\nrozhoduje bez dokazovania.\n\nRozsudok pre vzdanie sa nároku\nžalobca sa nároku vzdá,\n\nsúd konanie zastaví alebo rozhodne podľa povahy veci.\n\n6. Opravný prostriedok – odpor\nProti platobnému rozkazu nie je prípustné odvolanie.\n\nOdpor\njediný riadny opravný prostriedok,\n\nmusí byť podaný v zákonnej lehote,\n\nzrušuje platobný rozkaz v celom rozsahu,\n\nsúd pokračuje v riadnom sporovom konaní,\n\nvykoná dokazovanie a nariadi pojednávanie.\n\nMechanizmus odporu umožňuje rýchle vybavenie nesporných vecí, ale zároveň zachováva žalovanému plné právo na procesnú obranu.\n\n7. Návrh na zrušenie rozkazu\nPri niektorých rozkazných konaniach (napr. EPR, UPR) existuje osobitný opravný prostriedok:\n\nnávrh na zrušenie,\n\nsmeruje proti rozkazu, ktorý sa nepodarilo doručiť alebo sú splnené zákonné dôvody,\n\nmá odlišné účinky od odporu.\n\nZapamätaj si (štátnicové jadro)\nPlatobný rozkaz sa vydáva bez pojednávania, na základe tvrdení a listín.\n\nUpomínacie konanie je osobitné elektronické konanie (zákon č. 307/2016 Z. z.).\n\nOpravný prostriedok proti PR je odpor, nie odvolanie.\n\nOdpor zrušuje rozkaz v celom rozsahu.\n\nPo zrušení rozkazu súd pokračuje v riadnom sporovom konaní.\n\nKontumačný rozsudok vzniká pri pasivite žalovaného.\n\nRozsudok pre uznanie a vzdanie sa nároku sú skrátené meritórne rozhodnutia.\n\nZdroj:\nCSP (160/2015 Z. z.), § 265 a nasl.; zákon č. 307/2016 Z. z.; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (2016); Števček–Macej–Šramel: Civilné procesné právo (2017).",
   "quiz": [
     {
       "question": "Čo je typickým príkladom skráteného rozhodnutia v civilnom konaní?",
-      "options": ["Rozsudok po vykonaní rozsiahleho dokazovania", "Platobný rozkaz vydaný bez nariadenia pojednávania a bez dokazovania", "Rozsudok odvolacieho súdu", "Uznesenie o vylúčení sudcu"],
+      "options": [
+        "Rozsudok po vykonaní rozsiahleho dokazovania",
+        "Platobný rozkaz vydaný bez nariadenia pojednávania a bez dokazovania",
+        "Rozsudok odvolacieho súdu",
+        "Uznesenie o vylúčení sudcu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Platobný rozkaz je typickým skráteným rozhodnutím vydávaným bez pojednávania pri splnení zákonných podmienok.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Čo je upomínacie konanie?",
-      "options": ["Osobitné zjednodušené a z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok podľa zákona č. 307/2016 Z. z.", "Konanie o výkone rozhodnutia (exekúcia)", "Konanie o rozvode manželstva", "Konanie o vylúčení sudcu"],
+      "options": [
+        "Osobitné zjednodušené a z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok podľa zákona č. 307/2016 Z. z.",
+        "Konanie o výkone rozhodnutia (exekúcia)",
+        "Konanie o rozvode manželstva",
+        "Konanie o vylúčení sudcu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Upomínacie konanie je samostatne upravené osobitným zákonom a slúži na rýchle vymáhanie peňažných nárokov.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo sa stane, ak žalovaný podá včas odpor proti platobnému rozkazu?",
-      "options": ["Platobný rozkaz sa v celom rozsahu zrušuje a súd pokračuje v riadnom konaní", "Odpor nemá žiadny účinok", "Platobný rozkaz sa zruší len sčasti, vo výške odporu", "Súd odpor bez ďalšieho zamietne"],
+      "options": [
+        "Platobný rozkaz sa v celom rozsahu zrušuje a súd pokračuje v riadnom konaní",
+        "Odpor nemá žiadny účinok",
+        "Platobný rozkaz sa zruší len sčasti, vo výške odporu",
+        "Súd odpor bez ďalšieho zamietne"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Riadne podaný odpor zrušuje platobný rozkaz vcelku, nie len v časti, a konanie pokračuje ako riadne sporové konanie.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Aký je zmysel skrátených konaní a rozhodnutí?",
-      "options": ["Umožniť rýchle a hospodárne vybavenie jednoduchých alebo nesporných vecí (najmä vymáhanie peňažných pohľadávok)", "Predĺžiť konanie v zložitých veciach", "Nahradiť odvolacie konanie", "Zrušiť povinnosť platiť súdny poplatok"],
+      "options": [
+        "Umožniť rýchle a hospodárne vybavenie jednoduchých alebo nesporných vecí (najmä vymáhanie peňažných pohľadávok)",
+        "Predĺžiť konanie v zložitých veciach",
+        "Nahradiť odvolacie konanie",
+        "Zrušiť povinnosť platiť súdny poplatok"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Cieľom je efektivita a rýchlosť pri jednoduchých, spravidla nesporných peňažných nárokoch.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Je proti platobnému rozkazu prípustné odvolanie?",
-      "options": ["Nie, jediným riadnym prostriedkom obrany žalovaného je odpor, nie odvolanie", "Áno, vždy len odvolanie, odpor CSP nepozná", "Áno, aj odvolanie aj odpor súčasne", "Platobný rozkaz nemožno napadnúť vôbec žiadnym spôsobom"],
+      "options": [
+        "Nie, jediným riadnym prostriedkom obrany žalovaného je odpor, nie odvolanie",
+        "Áno, vždy len odvolanie, odpor CSP nepozná",
+        "Áno, aj odvolanie aj odpor súčasne",
+        "Platobný rozkaz nemožno napadnúť vôbec žiadnym spôsobom"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Proti platobnému rozkazu smeruje odpor, nie odvolanie, ktoré je určené pre iné druhy rozhodnutí.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Platobný rozkaz", "definition": "Skrátené rozhodnutie o peňažnom nároku vydané bez pojednávania a dokazovania, ak sú splnené zákonné podmienky." },
-    { "term": "Upomínacie konanie", "definition": "Osobitné, z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok (zákon č. 307/2016 Z. z.)." },
-    { "term": "Odpor", "definition": "Riadny prostriedok obrany žalovaného proti platobnému rozkazu; jeho podanie ruší rozkaz v celom rozsahu." },
-    { "term": "Zmenkový a šekový platobný rozkaz", "definition": "Osobitný druh platobného rozkazu vydávaný na základe zmenky alebo šeku." },
-    { "term": "Zjednodušené konania", "definition": "Postupy umožňujúce rýchle vybavenie jednoduchých, najmä peňažných nárokov." }
+    {
+      "term": "Platobný rozkaz",
+      "definition": "Skrátené rozhodnutie o peňažnom nároku vydané bez pojednávania a dokazovania, ak sú splnené zákonné podmienky."
+    },
+    {
+      "term": "Upomínacie konanie",
+      "definition": "Osobitné, z veľkej časti elektronizované konanie na vymáhanie peňažných pohľadávok (zákon č. 307/2016 Z. z.)."
+    },
+    {
+      "term": "Odpor",
+      "definition": "Riadny prostriedok obrany žalovaného proti platobnému rozkazu; jeho podanie ruší rozkaz v celom rozsahu."
+    },
+    {
+      "term": "Zmenkový a šekový platobný rozkaz",
+      "definition": "Osobitný druh platobného rozkazu vydávaný na základe zmenky alebo šeku."
+    },
+    {
+      "term": "Zjednodušené konania",
+      "definition": "Postupy umožňujúce rýchle vybavenie jednoduchých, najmä peňažných nárokov."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Vydanie platobného rozkazu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Veriteľ podá elektronický návrh na vydanie platobného rozkazu v upomínacom konaní na zaplatenie nesporného dlhu.", "options": [], "correct": 0 },
+        {
+          "question": "Veriteľ podá elektronický návrh na vydanie platobného rozkazu v upomínacom konaní na zaplatenie nesporného dlhu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí súd pred vydaním platobného rozkazu nariadiť pojednávanie a vykonať dokazovanie?",
-          "options": ["Nie, platobný rozkaz môže súd vydať bez pojednávania, len na základe žalobných tvrdení a listinných dôkazov", "Áno, pojednávanie je vždy povinné", "Áno, musí vždy vykonať výsluch svedkov"],
+          "options": [
+            "Nie, platobný rozkaz môže súd vydať bez pojednávania, len na základe žalobných tvrdení a listinných dôkazov",
+            "Áno, pojednávanie je vždy povinné",
+            "Áno, musí vždy vykonať výsluch svedkov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Práve v tom spočíva zrýchlenie tohto typu konania oproti riadnemu sporovému konaniu.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo môže žalovaný urobiť, ak s platobným rozkazom nesúhlasí?",
-          "options": ["Podať odpor v zákonnej lehote", "Podať odvolanie", "Nemôže urobiť nič"],
+          "options": [
+            "Podať odpor v zákonnej lehote",
+            "Podať odvolanie",
+            "Nemôže urobiť nič"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odpor je jediným riadnym prostriedkom obrany žalovaného proti platobnému rozkazu.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Účinky podaného odporu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalovaný v zákonnej lehote podá riadne odôvodnený odpor proti vydanému platobnému rozkazu.", "options": [], "correct": 0 },
+        {
+          "question": "Žalovaný v zákonnej lehote podá riadne odôvodnený odpor proti vydanému platobnému rozkazu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký to má účinok na platobný rozkaz?",
-          "options": ["Platobný rozkaz sa zrušuje v celom rozsahu", "Platobný rozkaz zostáva čiastočne v platnosti", "Odpor nemá žiadny vplyv na platobný rozkaz"],
+          "options": [
+            "Platobný rozkaz sa zrušuje v celom rozsahu",
+            "Platobný rozkaz zostáva čiastočne v platnosti",
+            "Odpor nemá žiadny vplyv na platobný rozkaz"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Riadne podaný odpor ruší platobný rozkaz vcelku, bez ohľadu na rozsah námietok v odpore.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Ako súd ďalej postupuje po zrušení platobného rozkazu?",
-          "options": ["Pokračuje v riadnom sporovom konaní a nariadi ďalšie potrebné procesné kroky", "Konanie bez ďalšieho zastaví", "Musí automaticky vydať nový, totožný platobný rozkaz"],
+          "options": [
+            "Pokračuje v riadnom sporovom konaní a nariadi ďalšie potrebné procesné kroky",
+            "Konanie bez ďalšieho zastaví",
+            "Musí automaticky vydať nový, totožný platobný rozkaz"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Po zrušení platobného rozkazu sa konanie vracia do štandardného sporového konania.",
@@ -120,13 +188,76 @@
   "spider": {
     "center": "Platobný rozkaz × Upomínacie konanie × Kontumácia × Odpor",
     "branches": [
-      { "label": "V čom spočíva skrátenosť", "leaves": ["bez nariadenia pojednávania", "dokazovanie len v listinnej podobe", "alebo pri pasivite strán", "cieľ: rýchle a hospodárne vybavenie jednoduchých vecí"] },
-      { "label": "Skrátené rozhodnutia", "leaves": ["platobný rozkaz (PR)", "upomínací platobný rozkaz (EPR / UPR)", "kontumačný rozsudok (KR) – rozsudok pre zmeškanie", "rozsudok pre uznanie", "rozsudok pre vzdanie sa nároku"] },
-      { "label": "Platobný rozkaz (§ 265 CSP)", "leaves": ["súd ho vydá bez pojednávania", "bez dokazovania", "len na základe žalobných tvrdení a listín", "podmienka: peňažný nárok", "vhodný pri jednoduchých peňažných nárokoch, zmluvných pohľadávkach, listinne preukázateľných nárokoch", "osobitná obrana žalovaného: odpor", "právoplatnosť a vykonateľnosť nastávajú súčasne"] },
-      { "label": "Zmenkový a šekový platobný rozkaz", "leaves": ["osobitný druh PR", "vydáva sa na základe zmenky alebo šeku", "tieto listiny majú osobitnú dôkaznú silu"] },
-      { "label": "Upomínacie konanie", "leaves": ["zákon č. 307/2016 Z. z.", "samostatné, elektronizované konanie", "návrh sa podáva cez centrálny portál", "výsledkom je upomínací platobný rozkaz", "má rovnaké účinky ako PR podľa CSP", "cieľ: rýchle vymáhanie peňažných pohľadávok bez pojednávania"] },
-      { "label": "Podmienky kontumácie", "leaves": ["kontumačné rozhodnutie možno vydať: – pred nariadením pojednávania (PPS) – na predbežnom prejednaní sporu – počas ktoréhokoľvek pojednávania", "kontumácia je možná na oboch procesných stranách", "pasivita spočíva v: – nevyjadrení sa, – nedostavení sa, – nekonaní napriek riadnemu poučeniu"] },
-      { "label": "Odpor a návrh na zrušenie", "leaves": ["proti platobnému rozkazu nie je prípustné odvolanie", "riadnym opravným prostriedkom je odpor", "odpor zrušuje platobný rozkaz v celom rozsahu", "súd pokračuje v riadnom sporovom konaní, vykoná dokazovanie, nariadi pojednávanie", "proti kontumačnému rozsudku je osobitným prostriedkom nápravy návrh na zrušenie", "to isté platí pri rozsudku pre uznanie a pre vzdanie sa nároku", "mechanizmus umožňuje rýchle vybavenie nesporných vecí a zároveň zachováva právo na obranu"] }
+      {
+        "label": "V čom spočíva skrátenosť",
+        "leaves": [
+          "bez nariadenia pojednávania",
+          "dokazovanie len v listinnej podobe",
+          "alebo pri pasivite strán",
+          "cieľ: rýchle a hospodárne vybavenie jednoduchých vecí"
+        ]
+      },
+      {
+        "label": "Skrátené rozhodnutia",
+        "leaves": [
+          "platobný rozkaz (PR)",
+          "upomínací platobný rozkaz (EPR / UPR)",
+          "kontumačný rozsudok (KR) – rozsudok pre zmeškanie",
+          "rozsudok pre uznanie",
+          "rozsudok pre vzdanie sa nároku"
+        ]
+      },
+      {
+        "label": "Platobný rozkaz (§ 265 CSP)",
+        "leaves": [
+          "súd ho vydá bez pojednávania",
+          "bez dokazovania",
+          "len na základe žalobných tvrdení a listín",
+          "podmienka: peňažný nárok",
+          "vhodný pri jednoduchých peňažných nárokoch, zmluvných pohľadávkach, listinne preukázateľných nárokoch",
+          "osobitná obrana žalovaného: odpor",
+          "právoplatnosť a vykonateľnosť nastávajú súčasne"
+        ]
+      },
+      {
+        "label": "Zmenkový a šekový platobný rozkaz",
+        "leaves": [
+          "osobitný druh PR",
+          "vydáva sa na základe zmenky alebo šeku",
+          "tieto listiny majú osobitnú dôkaznú silu"
+        ]
+      },
+      {
+        "label": "Upomínacie konanie",
+        "leaves": [
+          "zákon č. 307/2016 Z. z.",
+          "samostatné, elektronizované konanie",
+          "návrh sa podáva cez centrálny portál",
+          "výsledkom je upomínací platobný rozkaz",
+          "má rovnaké účinky ako PR podľa CSP",
+          "cieľ: rýchle vymáhanie peňažných pohľadávok bez pojednávania"
+        ]
+      },
+      {
+        "label": "Podmienky kontumácie",
+        "leaves": [
+          "kontumačné rozhodnutie možno vydať: – pred nariadením pojednávania (PPS) – na predbežnom prejednaní sporu – počas ktoréhokoľvek pojednávania",
+          "kontumácia je možná na oboch procesných stranách",
+          "pasivita spočíva v: – nevyjadrení sa, – nedostavení sa, – nekonaní napriek riadnemu poučeniu"
+        ]
+      },
+      {
+        "label": "Odpor a návrh na zrušenie",
+        "leaves": [
+          "proti platobnému rozkazu nie je prípustné odvolanie",
+          "riadnym opravným prostriedkom je odpor",
+          "odpor zrušuje platobný rozkaz v celom rozsahu",
+          "súd pokračuje v riadnom sporovom konaní, vykoná dokazovanie, nariadi pojednávanie",
+          "proti kontumačnému rozsudku je osobitným prostriedkom nápravy návrh na zrušenie",
+          "to isté platí pri rozsudku pre uznanie a pre vzdanie sa nároku",
+          "mechanizmus umožňuje rýchle vybavenie nesporných vecí a zároveň zachováva právo na obranu"
+        ]
+      }
     ]
   }
 }

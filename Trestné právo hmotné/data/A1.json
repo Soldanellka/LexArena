@@ -2,7 +2,11 @@
   "id": "A1",
   "title": "Pojem, funkcie a zásady trestného práva hmotného",
   "schemaVersion": "1.1",
-  "tags": ["základy", "zásady", "trestné právo"],
+  "tags": [
+    "základy",
+    "zásady",
+    "trestné právo"
+  ],
   "theory": [
     {
       "heading": "Čo je trestné právo hmotné",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Ktorá zásada vyjadruje, že trestnosť činu musí byť ustanovená zákonom?",
-      "options": ["Zásada proporcionality", "Zásada zákonnosti", "Zásada humanizmu"],
+      "options": [
+        "Zásada proporcionality",
+        "Zásada zákonnosti",
+        "Zásada humanizmu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – zásada zákonnosti vyžaduje, aby trestnosť bola určená zákonom.",
       "explanation_incorrect": "Nie – správna je zásada zákonnosti, ktorá vyžaduje, aby trestnosť určoval zákon."
     },
     {
       "question": "Ktorá funkcia TPH chráni spoločnosť pred kriminalitou?",
-      "options": ["Preventívna", "Represívna", "Ochranná"],
+      "options": [
+        "Preventívna",
+        "Represívna",
+        "Ochranná"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – ochranná funkcia chráni spoločnosť pred kriminalitou.",
       "explanation_incorrect": "Nie – ochranná funkcia je tá, ktorá chráni spoločnosť pred kriminalitou."
     },
     {
       "question": "Čo znamená zásada subsidiarity v trestnom práve?",
-      "options": ["Trestné právo je primárne", "Trestné právo sa použije až po vyčerpaní iných prostriedkov", "Trest musí byť prísny"],
+      "options": [
+        "Trestné právo je primárne",
+        "Trestné právo sa použije až po vyčerpaní iných prostriedkov",
+        "Trest musí byť prísny"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – subsidiarita znamená, že trestné právo sa použije len ak iné prostriedky nestačia.",
       "explanation_incorrect": "Nesprávne – subsidiarita neznamená prísnosť trestu."
     },
     {
       "question": "Ktorá zásada vyjadruje, že trest musí byť primeraný závažnosti činu?",
-      "options": ["Zásada proporcionality", "Zásada zákonnosti", "Zásada retroaktivity"],
+      "options": [
+        "Zásada proporcionality",
+        "Zásada zákonnosti",
+        "Zásada retroaktivity"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – proporcionalita vyžaduje primeranosť trestu.",
       "explanation_incorrect": "Nesprávne – proporcionalita je správna odpoveď."
     },
     {
       "question": "Čo je hlavnou výnimkou zo zákazu retroaktivity v neprospech páchateľa?",
-      "options": ["Žiadna výnimka", "Retroaktivita v prospech páchateľa", "Retroaktivita pri vojnovom stave"],
+      "options": [
+        "Žiadna výnimka",
+        "Retroaktivita v prospech páchateľa",
+        "Retroaktivita pri vojnovom stave"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ak novšia norma je priaznivejšia pre páchateľa, uplatní sa táto norma.",
       "explanation_incorrect": "Nesprávne – existuje výnimka v prospech páchateľa."
     }
   ],
   "tiles": [
-    { "term": "Zásada zákonnosti", "definition": "Len zákon môže určiť, čo je trestný čin a aký trest možno uložiť." },
-    { "term": "Subsidiarita", "definition": "Trestné právo sa použije až vtedy, keď iné prostriedky nestačia." },
-    { "term": "Humanizmus", "definition": "Trestanie musí rešpektovať ľudskú dôstojnosť." },
-    { "term": "Proporcionalita", "definition": "Trest musí byť primeraný závažnosti činu." },
-    { "term": "Retroaktivita v prospech", "definition": "Novšia norma priaznivejšia pre páchateľa sa môže uplatniť spätne." }
+    {
+      "term": "Zásada zákonnosti",
+      "definition": "Len zákon môže určiť, čo je trestný čin a aký trest možno uložiť."
+    },
+    {
+      "term": "Subsidiarita",
+      "definition": "Trestné právo sa použije až vtedy, keď iné prostriedky nestačia."
+    },
+    {
+      "term": "Humanizmus",
+      "definition": "Trestanie musí rešpektovať ľudskú dôstojnosť."
+    },
+    {
+      "term": "Proporcionalita",
+      "definition": "Trest musí byť primeraný závažnosti činu."
+    },
+    {
+      "term": "Retroaktivita v prospech",
+      "definition": "Novšia norma priaznivejšia pre páchateľa sa môže uplatniť spätne."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Aký právny problém riešime?",
-          "options": ["Subsidiarita trestnej represie", "Proporcionalita trestu", "Retroaktivita v neprospech páchateľa"],
+          "options": [
+            "Subsidiarita trestnej represie",
+            "Proporcionalita trestu",
+            "Retroaktivita v neprospech páchateľa"
+          ],
           "correct": 2,
           "explanation_correct": "Správne – ide o zákaz retroaktivity v neprospech páchateľa.",
           "explanation_incorrect": "Nesprávne – otázka sa týka retroaktivity, nie subsidiarity alebo proporcionality."
         },
         {
           "question": "Krok 2: Ktoré ustanovenie sa použije?",
-          "options": ["Zásada proporcionality", "Zásada zákonnosti (lex praevia)", "Zásada humanizmu"],
+          "options": [
+            "Zásada proporcionality",
+            "Zásada zákonnosti (lex praevia)",
+            "Zásada humanizmu"
+          ],
           "correct": 1,
           "explanation_correct": "Správne – zásada zákonnosti zahŕňa aj zákaz retroaktivity.",
           "explanation_incorrect": "Nesprávne – proporcionalita ani humanizmus neriešia retroaktivitu."
@@ -120,28 +167,44 @@
         },
         {
           "question": "Krok 1: Aký právny problém riešime?",
-          "options": ["Retroaktivita", "Subsidiarita trestnej represie", "Proporcionalita trestu"],
+          "options": [
+            "Retroaktivita",
+            "Subsidiarita trestnej represie",
+            "Proporcionalita trestu"
+          ],
           "correct": 2,
           "explanation_correct": "Správne – ide o primeranosť trestu.",
           "explanation_incorrect": "Nesprávne – nejde o retroaktivitu ani subsidiaritu."
         },
         {
           "question": "Krok 2: Ktoré ustanovenie sa použije?",
-          "options": ["Zásada humanizmu", "Zásada proporcionality", "Zásada zákonnosti"],
+          "options": [
+            "Zásada humanizmu",
+            "Zásada proporcionality",
+            "Zásada zákonnosti"
+          ],
           "correct": 1,
           "explanation_correct": "Správne – proporcionalita je kľúčová pri ukladaní trestu.",
           "explanation_incorrect": "Nesprávne – humanizmus ani zákonnosť nie sú jadrom problému."
         },
         {
           "question": "Krok 3: Ako sa norma aplikuje na skutok?",
-          "options": ["Uložiť najprísnejší trest", "Uložiť trest primeraný závažnosti a okolnostiam", "Vyhnúť sa trestu úplne"],
+          "options": [
+            "Uložiť najprísnejší trest",
+            "Uložiť trest primeraný závažnosti a okolnostiam",
+            "Vyhnúť sa trestu úplne"
+          ],
           "correct": 1,
           "explanation_correct": "Správne – trest musí byť primeraný závažnosti činu a osobným pomerom páchateľa.",
           "explanation_incorrect": "Nesprávne – extrémy nie sú prípustné."
         },
         {
           "question": "Krok 4: Aký procesný postup je najvhodnejší?",
-          "options": ["Okamžité uvalenie väzby", "Klasické vyšetrovanie a individuálne posúdenie trestu", "Skrátené konanie bez posúdenia okolností"],
+          "options": [
+            "Okamžité uvalenie väzby",
+            "Klasické vyšetrovanie a individuálne posúdenie trestu",
+            "Skrátené konanie bez posúdenia okolností"
+          ],
           "correct": 1,
           "explanation_correct": "Správne – treba individuálne posúdiť všetky okolnosti.",
           "explanation_incorrect": "Nesprávne – väzba ani skrátené konanie nie sú primerané."
@@ -158,10 +221,42 @@
   "spider": {
     "center": "TPH – pojem × funkcie × zásady",
     "branches": [
-      { "label": "Pojem TPH", "leaves": ["Čo upravuje – určuje, ktoré konania sú trestnými činmi, aké tresty a ochranné opatrenia možno uložiť.", "Trestná zodpovednosť – ustanovuje podmienky, za ktorých vzniká trestná zodpovednosť.", "Kodifikácia – základná úprava: Trestný zákon (zákon č. 300/2005 Z. z.)."] },
-      { "label": "Funkcie TPH", "leaves": ["Ochranná – chráni spoločnosť, hodnoty, právny poriadok, život, zdravie a majetok.", "Preventívna – generálna (potenciálni páchatelia) × individuálna (konkrétny páchateľ).", "Represívna – umožňuje uložiť trest ako reakciu na trestný čin.", "Regulačná – stanovuje hranice dovoleného správania v spoločnosti."] },
-      { "label": "Zásada zákonnosti", "leaves": ["Nullum crimen sine lege – trestné činy a tresty musia byť ustanovené zákonom.", "Zákaz analógie – analógia v neprospech páchateľa je zakázaná.", "Zákaz retroaktivity – zákon nesmie pôsobiť spätne v neprospech páchateľa.", "Lex mitior – retroaktivita v prospech páchateľa je dovolená."] },
-      { "label": "Ďalšie zásady", "leaves": ["Subsidiarita (ultima ratio) – trestné právo je krajný prostriedok, nastupuje, len ak iné prostriedky nestačia.", "Individuálna vina – zodpovednosť je osobná; trest len za zavinené konanie (úmysel/nedbanlivosť).", "Humanizmus – tresty nesmú byť kruté, neľudské ani ponižujúce; rešpekt k dôstojnosti.", "Proporcionalita – trest primeraný závažnosti: spôsob, následok, zavinenie, osobné pomery."] }
+      {
+        "label": "Pojem TPH",
+        "leaves": [
+          "Čo upravuje – určuje, ktoré konania sú trestnými činmi, aké tresty a ochranné opatrenia možno uložiť.",
+          "Trestná zodpovednosť – ustanovuje podmienky, za ktorých vzniká trestná zodpovednosť.",
+          "Kodifikácia – základná úprava: Trestný zákon (zákon č. 300/2005 Z. z.)."
+        ]
+      },
+      {
+        "label": "Funkcie TPH",
+        "leaves": [
+          "Ochranná – chráni spoločnosť, hodnoty, právny poriadok, život, zdravie a majetok.",
+          "Preventívna – generálna (potenciálni páchatelia) × individuálna (konkrétny páchateľ).",
+          "Represívna – umožňuje uložiť trest ako reakciu na trestný čin.",
+          "Regulačná – stanovuje hranice dovoleného správania v spoločnosti."
+        ]
+      },
+      {
+        "label": "Zásada zákonnosti",
+        "leaves": [
+          "Nullum crimen sine lege – trestné činy a tresty musia byť ustanovené zákonom.",
+          "Zákaz analógie – analógia v neprospech páchateľa je zakázaná.",
+          "Zákaz retroaktivity – zákon nesmie pôsobiť spätne v neprospech páchateľa.",
+          "Lex mitior – retroaktivita v prospech páchateľa je dovolená."
+        ]
+      },
+      {
+        "label": "Ďalšie zásady",
+        "leaves": [
+          "Subsidiarita (ultima ratio) – trestné právo je krajný prostriedok, nastupuje, len ak iné prostriedky nestačia.",
+          "Individuálna vina – zodpovednosť je osobná; trest len za zavinené konanie (úmysel/nedbanlivosť).",
+          "Humanizmus – tresty nesmú byť kruté, neľudské ani ponižujúce; rešpekt k dôstojnosti.",
+          "Proporcionalita – trest primeraný závažnosti: spôsob, následok, zavinenie, osobné pomery."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné právo hmotné (TPH) je odvetvie práva, ktoré určuje, ktoré konania sú trestnými činmi, aké tresty a ochranné opatrenia možno uložiť a za akých podmienok vzniká trestná zodpovednosť. Je kodifikované najmä v Trestnom zákone (zákon č. 300/2005 Z. z.).\n\n1. Funkcie trestného práva hmotného\nTPH plní viacero základných funkcií:\n\nOchranná funkcia – chráni spoločnosť, jej hodnoty, právny poriadok, život, zdravie, majetok a ďalšie chránené záujmy.\n\nPreventívna funkcia – pôsobí na potenciálnych páchateľov (generálna prevencia) aj na konkrétneho páchateľa (individuálna prevencia).\n\nRepresívna funkcia – umožňuje uložiť trest ako reakciu na trestný čin.\n\nRegulačná funkcia – stanovuje hranice dovoleného správania a tým usmerňuje konanie osôb v spoločnosti.\n\n2. Zásady trestného práva hmotného\nZásada zákonnosti (nullum crimen, nulla poena sine lege)\ntrestné činy a tresty musia byť ustanovené zákonom,\n\nzákaz analógie v neprospech páchateľa,\n\nzákaz retroaktivity v neprospech páchateľa,\n\nretroaktivita v prospech páchateľa je dovolená (lex mitior).\n\nZásada subsidiarity trestnej represie (ultima ratio)\ntrestné právo sa uplatňuje len vtedy, ak ochranu právnych statkov nemožno dosiahnuť inými právnymi prostriedkami,\n\ntrestné právo je krajným prostriedkom.\n\nZásada individuálnej viny\ntrestná zodpovednosť je osobná,\n\ntrest možno uložiť len tomu, kto konal zavinene (úmysel alebo nedbanlivosť).\n\nZásada humanizmu\ntresty nesmú byť kruté, neľudské alebo ponižujúce,\n\nrešpektuje sa ľudská dôstojnosť páchateľa.\n\nZásada proporcionality\ntrest musí byť primeraný závažnosti trestného činu,\n\nzohľadňuje sa spôsob spáchania, následok, zavinenie, osobné pomery páchateľa.\n\nZapamätaj si (štátnicové jadro)\n– TPH určuje, čo je trestný čin, aké tresty možno uložiť a kedy vzniká trestná zodpovednosť.\n– Funkcie: ochranná, preventívna, represívna, regulačná.\n– Zásady: zákonnosť, subsidiarita, vina, humanizmus, proporcionalita.\n– Retroaktivita: zákaz v neprospech, možnosť v prospech páchateľa.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nŠámal – Trestní právo hmotné\nČentéš – Trestné právo hmotné\nJudikatúra NS SR a ÚS SR"
 }

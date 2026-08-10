@@ -1,7 +1,7 @@
 {
   "id": "7",
   "title": "Fyzické osoby",
-  "summary": "Fyzická osoba nadobúda spôsobilosť na práva a povinnosti (právnu subjektivitu) narodením (§ 7 OZ). Spôsobilosť na právne úkony vzniká plnoletosťou (18 rokov), môže byť súdom obmedzená alebo odňatá. Ochrana osobnosti fyzickej osoby (§ 11–16 OZ): život, zdravie, občianska cnosť, súkromie. Osobné práva sú neprevoditeľné a nepremlčateľné.",
+  "summary": "Fyzická osoba je základný subjekt občianskoprávnych vzťahov. Nadobúda spôsobilosť na práva a povinnosti (právnu subjektivitu) narodením (§ 7 OZ). Táto spôsobilosť je neodňateľná a trvá až do smrti. Právna subjektivita vyjadruje schopnosť byť nositeľom práv a povinností.\n\nSpôsobilosť na právne úkony je schopnosť vlastným konaním nadobúdať práva a povinnosti. Vzniká plnoletosťou, teda dovŕšením 18 rokov. Môže byť obmedzená alebo odňatá súdom, ak osoba trpí duševnou poruchou, ktorá ju robí neschopnou samostatne právne konať. V rozsahu obmedzenia koná za fyzickú osobu opatrovník. Maloletí konajú prostredníctvom zákonných zástupcov, pričom môžu samostatne robiť len úkony primerané ich veku.\n\nOchrana osobnosti (§ 11–16 OZ)\nOZ poskytuje fyzickej osobe rozsiahlu ochranu jej osobnostných práv. Chránené sú najmä:\n– život a zdravie,\n– občianska česť a ľudská dôstojnosť,\n– meno,\n– súkromie,\n– prejavy osobnej povahy (fotografie, obrazové a zvukové záznamy).\n\nNa použitie podoby, mena alebo prejavov osobnej povahy je potrebný súhlas fyzickej osoby, ak nejde o zákonné výnimky. Pri zásahu do osobnostných práv má osoba právo domáhať sa zdržania sa zásahu, odstránenia následkov a primeraného zadosťučinenia, vrátane náhrady nemajetkovej ujmy v peniazoch.\n\nOsobnostné práva sú neprevoditeľné, nepostúpiteľné a nepremlčateľné. Sú úzko späté s osobou a nemožno ich previesť na inú osobu ani sa ich platne vzdať.\n\nZdroje: OZ (40/1964 Zb.), § 7, § 11–16; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kedy nadobúda fyzická osoba spôsobilosť na práva a povinnosti?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Právna subjektivita", "definition": "Spôsobilosť mať práva a povinnosti, vzniká narodením (§ 7 OZ)." },
-    { "term": "Spôsobilosť na právne úkony", "definition": "Vzniká plnoletosťou (18 rokov); môže byť súdom obmedzená alebo odňatá." },
-    { "term": "Emancipácia", "definition": "Nadobudnutie plnej spôsobilosti na právne úkony uzavretím manželstva so súhlasom súdu (§ 8 ods. 2 OZ)." },
-    { "term": "Ochrana osobnosti (§ 11 – 16 OZ)", "definition": "Chráni život, zdravie, česť, súkromie fyzickej osoby." },
-    { "term": "Neprevoditeľnosť osobných práv", "definition": "Osobné práva sú neprevoditeľné a nepremlčateľné." }
+    {
+      "term": "Právna subjektivita",
+      "definition": "Spôsobilosť mať práva a povinnosti, vzniká narodením (§ 7 OZ)."
+    },
+    {
+      "term": "Spôsobilosť na právne úkony",
+      "definition": "Vzniká plnoletosťou (18 rokov); môže byť súdom obmedzená alebo odňatá."
+    },
+    {
+      "term": "Emancipácia",
+      "definition": "Nadobudnutie plnej spôsobilosti na právne úkony uzavretím manželstva so súhlasom súdu (§ 8 ods. 2 OZ)."
+    },
+    {
+      "term": "Ochrana osobnosti (§ 11 – 16 OZ)",
+      "definition": "Chráni život, zdravie, česť, súkromie fyzickej osoby."
+    },
+    {
+      "term": "Neprevoditeľnosť osobných práv",
+      "definition": "Osobné práva sú neprevoditeľné a nepremlčateľné."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Obmedzenie spôsobilosti na právne úkony",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Súd na základe znaleckého posudku obmedzí spôsobilosť osoby na právne úkony pre jej duševnú poruchu.", "options": [], "correct": 0 },
+        {
+          "question": "Súd na základe znaleckého posudku obmedzí spôsobilosť osoby na právne úkony pre jej duševnú poruchu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kto je oprávnený takéto obmedzenie vysloviť?",
-          "options": ["Iba súd", "Lekár psychiater samostatne", "Notár"],
+          "options": [
+            "Iba súd",
+            "Lekár psychiater samostatne",
+            "Notár"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Obmedzenie spôsobilosti na právne úkony patrí výlučne do právomoci súdu (§ 10 OZ).",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Môže táto osoba naďalej robiť právne úkony v rozsahu, v akom nebola obmedzená?",
-          "options": ["Áno, mimo rozsahu obmedzenia si zachováva spôsobilosť", "Nie, obmedzením stráca spôsobilosť úplne", "Áno, ale iba so súhlasom notára"],
+          "options": [
+            "Áno, mimo rozsahu obmedzenia si zachováva spôsobilosť",
+            "Nie, obmedzením stráca spôsobilosť úplne",
+            "Áno, ale iba so súhlasom notára"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Obmedzenie spôsobilosti musí zodpovedať konkrétnemu rozsahu, mimo neho si osoba spôsobilosť zachováva.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Manželstvo maloletého",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "16-ročná osoba uzavrie so súhlasom súdu manželstvo.", "options": [], "correct": 0 },
+        {
+          "question": "16-ročná osoba uzavrie so súhlasom súdu manželstvo.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký to má vplyv na jej spôsobilosť na právne úkony?",
-          "options": ["Nadobúda plnú spôsobilosť na právne úkony (emancipácia)", "Spôsobilosť zostáva obmedzená až do 18 rokov", "Spôsobilosť stráca úplne"],
+          "options": [
+            "Nadobúda plnú spôsobilosť na právne úkony (emancipácia)",
+            "Spôsobilosť zostáva obmedzená až do 18 rokov",
+            "Spôsobilosť stráca úplne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uzavretím manželstva nadobúda maloletý plnú spôsobilosť na právne úkony (§ 8 ods. 2 OZ).",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Stratí táto osoba spôsobilosť späť, ak sa manželstvo neskôr rozvedie pred jej 18. narodeninami?",
-          "options": ["Nie, raz nadobudnutá plná spôsobilosť zostáva zachovaná", "Áno, automaticky sa vracia do postavenia maloletého", "Áno, ale iba ak o to požiada súd"],
+          "options": [
+            "Nie, raz nadobudnutá plná spôsobilosť zostáva zachovaná",
+            "Áno, automaticky sa vracia do postavenia maloletého",
+            "Áno, ale iba ak o to požiada súd"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nadobudnutá plná spôsobilosť na právne úkony sa rozvodom manželstva nestráca.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Fyzické osoby – subjektivita, spôsobilosť, ochrana osobnosti (základný subjekt občianskoprávnych vzťahov)",
     "branches": [
-      { "label": "Právna subjektivita (§ 7 OZ)", "leaves": ["vznik: narodením", "zánik: smrťou", "neodňateľná, trvá celý život", "schopnosť byť nositeľom práv a povinností"] },
-      { "label": "Spôsobilosť na právne úkony", "leaves": ["vznik: plnoletosť (18 rokov)", "schopnosť vlastným konaním nadobúdať práva a povinnosti", "môže byť obmedzená alebo odňatá súdom", "dôvod: duševná porucha brániaca samostatnému konaniu"] },
-      { "label": "Maloletí a obmedzenie spôsobilosti", "leaves": ["maloletí konajú cez zákonných zástupcov", "môžu robiť úkony primerané veku", "pri obmedzení spôsobilosti koná opatrovník", "rozsah obmedzenia určuje súd"] },
-      { "label": "Ochrana osobnosti (§ 11–16 OZ)", "leaves": ["život a zdravie", "česť a dôstojnosť", "meno", "súkromie", "prejavy osobnej povahy (fotky, záznamy)", "na použitie podoby, mena, prejavov je potrebný súhlas osoby"] },
-      { "label": "Práva pri zásahu do osobnosti", "leaves": ["právo na zdržanie sa zásahu", "právo na odstránenie následkov", "právo na primerané zadosťučinenie", "možnosť žiadať nemajetkovú ujmu v peniazoch", "osobnostné práva sú neprevoditeľné, nepostúpiteľné, nepremlčateľné"] },
-      { "label": "Význam pre prax", "leaves": ["základ subjektov občianskoprávnych vzťahov", "ochrana integrity človeka", "limity autonómie vôle pri úkonoch maloletých", "zásadné pre zmluvy, rodinné právo, osobnostné spory"] }
+      {
+        "label": "Právna subjektivita (§ 7 OZ)",
+        "leaves": [
+          "vznik: narodením",
+          "zánik: smrťou",
+          "neodňateľná, trvá celý život",
+          "schopnosť byť nositeľom práv a povinností"
+        ]
+      },
+      {
+        "label": "Spôsobilosť na právne úkony",
+        "leaves": [
+          "vznik: plnoletosť (18 rokov)",
+          "schopnosť vlastným konaním nadobúdať práva a povinnosti",
+          "môže byť obmedzená alebo odňatá súdom",
+          "dôvod: duševná porucha brániaca samostatnému konaniu"
+        ]
+      },
+      {
+        "label": "Maloletí a obmedzenie spôsobilosti",
+        "leaves": [
+          "maloletí konajú cez zákonných zástupcov",
+          "môžu robiť úkony primerané veku",
+          "pri obmedzení spôsobilosti koná opatrovník",
+          "rozsah obmedzenia určuje súd"
+        ]
+      },
+      {
+        "label": "Ochrana osobnosti (§ 11–16 OZ)",
+        "leaves": [
+          "život a zdravie",
+          "česť a dôstojnosť",
+          "meno",
+          "súkromie",
+          "prejavy osobnej povahy (fotky, záznamy)",
+          "na použitie podoby, mena, prejavov je potrebný súhlas osoby"
+        ]
+      },
+      {
+        "label": "Práva pri zásahu do osobnosti",
+        "leaves": [
+          "právo na zdržanie sa zásahu",
+          "právo na odstránenie následkov",
+          "právo na primerané zadosťučinenie",
+          "možnosť žiadať nemajetkovú ujmu v peniazoch",
+          "osobnostné práva sú neprevoditeľné, nepostúpiteľné, nepremlčateľné"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "základ subjektov občianskoprávnych vzťahov",
+          "ochrana integrity človeka",
+          "limity autonómie vôle pri úkonoch maloletých",
+          "zásadné pre zmluvy, rodinné právo, osobnostné spory"
+        ]
+      }
     ]
   }
 }

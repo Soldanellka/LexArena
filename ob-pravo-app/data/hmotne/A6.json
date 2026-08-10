@@ -1,7 +1,7 @@
 {
   "id": "6",
   "title": "Čas ako právna skutočnosť, premlčanie, preklúzia",
-  "summary": "Čas je právnou skutočnosťou – uplynutie doby spôsobuje vznik alebo zánik práv (premlčanie, preklúzia, vydržanie). Premlčanie (§ 100–114 OZ): uplynutím premlčacej doby sa právo neruší, ale stáva sa nevymáhateľným ak dlžník vznesie námietku. Všeobecná doba: 3 roky. Preklúzia: uplynutím zákonnej lehoty právo samotné zaniká (súd prihliadne z úradnej moci).",
+  "summary": "Čas je významná právna skutočnosť, pretože právny poriadok spája s jeho plynutím vznik, zmenu alebo zánik práv a povinností. Uplynutie času spôsobuje právne následky pri premlčaní, preklúzii, vydržaní, pri plynutí lehôt či pri vzniku právnych udalostí (napr. smrť, narodenie).\n\nPremlčanie (§ 100–114 OZ)\nPremlčanie znamená, že po uplynutí zákonom stanovenej premlčacej doby sa právo síce nezaniká, ale stáva sa nevymáhateľným, ak dlžník vznesie námietku premlčania. Súd na premlčanie neprihliada z úradnej povinnosti.\n– Všeobecná premlčacia doba je 3 roky, ak zákon neustanovuje inak.\n– Premlčujú sa najmä majetkové práva, právo na náhradu škody, právo na vydanie bezdôvodného obohatenia.\n– Premlčanie začína plynúť odo dňa, keď sa právo mohlo vykonať po prvý raz.\n– Premlčanie môže byť prerušené (uznaním dlhu, uplatnením práva na súde) alebo môže nastať jeho stavanie.\n\nPremlčanie chráni právnu istotu tým, že motivuje veriteľa konať v primeranom čase.\n\nPreklúzia\nPreklúzia znamená, že po uplynutí zákonom stanovenej prekluzívnej lehoty právo zaniká. Súd na preklúziu prihliada z úradnej povinnosti, aj keď dlžník nenamietne nič.\n– Preklúzia sa týka práv, ktoré zákon viaže na presnú lehotu (napr. niektoré rodinnoprávne úkony, právo odstúpiť od zmluvy v zákonom stanovenej lehote).\n– Po zániku práva už nemožno požadovať jeho splnenie ani náhradu.\n\nPreklúzia predstavuje prísnejší následok ako premlčanie, pretože právo úplne zaniká.\n\nČas a vydržanie\nUplynutie času je rozhodujúce aj pri vydržaní, kde dlhodobá držba vedie k nadobudnutiu vlastníckeho práva, ak sú splnené zákonné podmienky (dobrá viera, nepretržitá držba).\n\nZdroje: OZ (40/1964 Zb.), § 100–114; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je premlčanie v občianskom práve?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Premlčanie", "definition": "Uplynutím premlčacej doby sa právo nezaniká, ale stáva sa nevymáhateľným, ak dlžník vznesie námietku (§ 100 OZ)." },
-    { "term": "Preklúzia", "definition": "Uplynutím zákonnej lehoty právo samotné zaniká, súd naň prihliadne z úradnej moci." },
-    { "term": "Všeobecná premlčacia doba (§ 101 OZ)", "definition": "Tri roky, plynúca odo dňa, keď sa právo mohlo vykonať po prvý raz." },
-    { "term": "Námietka premlčania", "definition": "Procesný prostriedok dlžníka, bez ktorého súd na premlčanie neprihliadne." },
-    { "term": "Stavenie premlčacej doby (§ 112 OZ)", "definition": "Uplatnením práva na súde alebo v rozhodcovskom konaní premlčacia doba po dobu konania neplynie." }
+    {
+      "term": "Premlčanie",
+      "definition": "Uplynutím premlčacej doby sa právo nezaniká, ale stáva sa nevymáhateľným, ak dlžník vznesie námietku (§ 100 OZ)."
+    },
+    {
+      "term": "Preklúzia",
+      "definition": "Uplynutím zákonnej lehoty právo samotné zaniká, súd naň prihliadne z úradnej moci."
+    },
+    {
+      "term": "Všeobecná premlčacia doba (§ 101 OZ)",
+      "definition": "Tri roky, plynúca odo dňa, keď sa právo mohlo vykonať po prvý raz."
+    },
+    {
+      "term": "Námietka premlčania",
+      "definition": "Procesný prostriedok dlžníka, bez ktorého súd na premlčanie neprihliadne."
+    },
+    {
+      "term": "Stavenie premlčacej doby (§ 112 OZ)",
+      "definition": "Uplatnením práva na súde alebo v rozhodcovskom konaní premlčacia doba po dobu konania neplynie."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Nesplnený dlh po piatich rokoch",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Veriteľ si spomenie na dlh, ktorý dlžník nesplatil už pred piatimi rokmi, a podá naň žalobu; dlžník v konaní výslovne namietne premlčanie.", "options": [], "correct": 0 },
+        {
+          "question": "Veriteľ si spomenie na dlh, ktorý dlžník nesplatil už pred piatimi rokmi, a podá naň žalobu; dlžník v konaní výslovne namietne premlčanie.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako súd rozhodne, ak je nárok premlčaný a dlžník námietku vzniesol?",
-          "options": ["Súd nárok neprizná, keďže premlčanie bolo namietnuté", "Súd nárok prizná bez ohľadu na námietku premlčania", "Súd na námietku vôbec neprihliadne"],
+          "options": [
+            "Súd nárok neprizná, keďže premlčanie bolo namietnuté",
+            "Súd nárok prizná bez ohľadu na námietku premlčania",
+            "Súd na námietku vôbec neprihliadne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Po vznesení námietky premlčania súd premlčaný nárok neprizná.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo by sa stalo, keby dlžník námietku premlčania v konaní vôbec nevzniesol?",
-          "options": ["Súd by na premlčanie neprihliadol a mohol by nárok priznať", "Súd by musel premlčanie zohľadniť aj bez námietky", "Nárok by zanikol úplne bez ohľadu na konanie dlžníka"],
+          "options": [
+            "Súd by na premlčanie neprihliadol a mohol by nárok priznať",
+            "Súd by musel premlčanie zohľadniť aj bez námietky",
+            "Nárok by zanikol úplne bez ohľadu na konanie dlžníka"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez vznesenia námietky súd premlčanie sám z úradnej moci nezohľadňuje.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Zánik práva uplynutím prekluzívnej lehoty",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Zákon stanovuje na uplatnenie určitého práva prekluzívnu lehotu, ktorá márne uplynie bez toho, aby oprávnený právo uplatnil.", "options": [], "correct": 0 },
+        {
+          "question": "Zákon stanovuje na uplatnenie určitého práva prekluzívnu lehotu, ktorá márne uplynie bez toho, aby oprávnený právo uplatnil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo sa s týmto právom stane?",
-          "options": ["Právo úplne zaniká (preklúzia), súd na to prihliadne z úradnej moci", "Právo zostáva zachované, iba sa oslabuje jeho vymáhateľnosť", "Právo zaniká len na základe námietky povinného"],
+          "options": [
+            "Právo úplne zaniká (preklúzia), súd na to prihliadne z úradnej moci",
+            "Právo zostáva zachované, iba sa oslabuje jeho vymáhateľnosť",
+            "Právo zaniká len na základe námietky povinného"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Preklúzia spôsobuje priamy zánik práva, ktorý súd zohľadní aj bez námietky.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čím sa preklúzia zásadne líši od premlčania?",
-          "options": ["Pri preklúzii zaniká samotné právo a súd naň prihliada aj bez námietky, pri premlčaní právo zostáva, len sa oslabuje jeho vymáhateľnosť na základe námietky", "Preklúzia a premlčanie sú úplne totožné inštitúty", "Preklúzia sa týka len zmluvných pokút, premlčanie len náhrady škody"],
+          "options": [
+            "Pri preklúzii zaniká samotné právo a súd naň prihliada aj bez námietky, pri premlčaní právo zostáva, len sa oslabuje jeho vymáhateľnosť na základe námietky",
+            "Preklúzia a premlčanie sú úplne totožné inštitúty",
+            "Preklúzia sa týka len zmluvných pokút, premlčanie len náhrady škody"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Kľúčový rozdiel spočíva v tom, čo presne zaniká a či je potrebná námietka.",
@@ -142,12 +181,60 @@
   "spider": {
     "center": "Čas ako právna skutočnosť – premlčanie, preklúzia (plynutie času → vznik, zmena, zánik práv a povinností)",
     "branches": [
-      { "label": "Čas ako právna skutočnosť", "leaves": ["právny poriadok spája následky s plynutím času", "vznik, zmena, zánik práv a povinností", "význam pri lehotách, premlčaní, preklúzii, vydržaní", "čas ako objektívna právna udalosť"] },
-      { "label": "Premlčanie (§ 100–114 OZ)", "leaves": ["právo nezaniká, ale stáva sa nevymáhateľným", "súd neprihliada automaticky", "dlžník musí vzniesť námietku premlčania", "všeobecná lehota: 3 roky", "týka sa majetkových práv, škody, bezdôvodného obohatenia"] },
-      { "label": "Priebeh premlčania", "leaves": ["začiatok: deň, keď sa právo mohlo vykonať po prvý raz", "prerušenie: uznanie dlhu, uplatnenie práva na súde", "stavanie: prekážky brániace uplatneniu práva"] },
-      { "label": "Preklúzia", "leaves": ["právo zaniká po uplynutí lehoty", "súd prihliada z úradnej povinnosti", "nemožno požadovať splnenie ani náhradu", "týka sa práv viazaných na presnú lehotu", "prísnejší následok ako premlčanie"] },
-      { "label": "Čas a vydržanie", "leaves": ["dlhodobá držba → nadobudnutie vlastníctva", "podmienky: dobrá viera, nepretržitá držba", "čas je rozhodujúci prvok vydržania"] },
-      { "label": "Význam pre prax", "leaves": ["právna istota", "motivácia konať v primeranom čase", "ochrana veriteľa aj dlžníka", "zásadné pre majetkové práva, zmluvy, držbu"] }
+      {
+        "label": "Čas ako právna skutočnosť",
+        "leaves": [
+          "právny poriadok spája následky s plynutím času",
+          "vznik, zmena, zánik práv a povinností",
+          "význam pri lehotách, premlčaní, preklúzii, vydržaní",
+          "čas ako objektívna právna udalosť"
+        ]
+      },
+      {
+        "label": "Premlčanie (§ 100–114 OZ)",
+        "leaves": [
+          "právo nezaniká, ale stáva sa nevymáhateľným",
+          "súd neprihliada automaticky",
+          "dlžník musí vzniesť námietku premlčania",
+          "všeobecná lehota: 3 roky",
+          "týka sa majetkových práv, škody, bezdôvodného obohatenia"
+        ]
+      },
+      {
+        "label": "Priebeh premlčania",
+        "leaves": [
+          "začiatok: deň, keď sa právo mohlo vykonať po prvý raz",
+          "prerušenie: uznanie dlhu, uplatnenie práva na súde",
+          "stavanie: prekážky brániace uplatneniu práva"
+        ]
+      },
+      {
+        "label": "Preklúzia",
+        "leaves": [
+          "právo zaniká po uplynutí lehoty",
+          "súd prihliada z úradnej povinnosti",
+          "nemožno požadovať splnenie ani náhradu",
+          "týka sa práv viazaných na presnú lehotu",
+          "prísnejší následok ako premlčanie"
+        ]
+      },
+      {
+        "label": "Čas a vydržanie",
+        "leaves": [
+          "dlhodobá držba → nadobudnutie vlastníctva",
+          "podmienky: dobrá viera, nepretržitá držba",
+          "čas je rozhodujúci prvok vydržania"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "právna istota",
+          "motivácia konať v primeranom čase",
+          "ochrana veriteľa aj dlžníka",
+          "zásadné pre majetkové práva, zmluvy, držbu"
+        ]
+      }
     ]
   }
 }

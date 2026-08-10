@@ -1,7 +1,7 @@
 {
   "id": "20",
   "title": "Zánik záväzkov",
-  "summary": "Záväzok zaniká najčastejšie splnením (§ 559 OZ). Ďalšie dôvody: kompenzácia (vzájomný zápočet – § 580 OZ), dohoda o narovnaní, odstúpenie od zmluvy (§ 48 OZ), zánik plnenia (nemožnosť), konfúzia (splynutie dlžníka a veriteľa), preklúzia, smrť dlžníka (ak je plnenie viazané na jeho osobu).",
+  "summary": "Záväzok zaniká vtedy, keď zanikne právna povinnosť dlžníka plniť. Najčastejším a prirodzeným spôsobom zániku záväzku je splnenie (§ 559 OZ). Dlžník poskytne veriteľovi riadne a včas plnenie, čím záväzok definitívne zaniká. Splnenie musí byť úplné, v súlade so zmluvou a na správnom mieste.\n\nĎalšie spôsoby zániku záväzkov\n1. Kompenzácia (vzájomný zápočet – § 580 OZ)  \nAk majú veriteľ a dlžník voči sebe vzájomné pohľadávky, ktoré sú rovnakého druhu a splatné, môžu ich započítať.\n– Započítanie spôsobuje zánik záväzku v rozsahu, v akom sa pohľadávky kryjú.\n– Môže byť jednostranné alebo dohodou.\n\n2. Dohoda o urovnaní (§ 585 OZ)  \nStrany odstránia sporné alebo pochybné práva tým, že ich nahradia novým záväzkom. Urovnanie má účinky zániku pôvodného záväzku.\n\n3. Odstúpenie od zmluvy (§ 48 OZ)  \nOdstúpením sa zmluva ruší od začiatku (ex tunc), ak zákon alebo zmluva umožňuje odstúpenie. Strany sú povinné vrátiť si plnenia.\n\n4. Nemožnosť plnenia (§ 575 OZ)  \nAk sa plnenie stane objektívne nemožným, záväzok zaniká. Nemožnosť musí byť skutočná, nie subjektívna (napr. finančná neschopnosť dlžníka).\n\n5. Konfúzia (splynutie)  \nZáväzok zaniká, ak sa veriteľ a dlžník stanú tou istou osobou (napr. dedičstvo, zlúčenie spoločností).\n\n6. Preklúzia  \nAk právo zanikne uplynutím prekluzívnej lehoty, zaniká aj záväzok.\n\n7. Smrť dlžníka alebo veriteľa  \nZáväzok zaniká, ak je plnenie viazané na osobu dlžníka alebo veriteľa (napr. umelecké dielo, osobné služby).\n\nZánik záväzku čiastočne alebo úplne\nNiektoré spôsoby zániku pôsobia len čiastočne (kompenzácia), iné úplne (splnenie, odstúpenie, nemožnosť plnenia).\n\nZánik záväzkov je kľúčový pre právnu istotu – uzatvára právny vzťah a odstraňuje povinnosť dlžníka plniť.\n\nZdroje: OZ (40/1964 Zb.), § 48, § 559, § 575, § 580, § 585; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je najčastejší spôsob zániku záväzku?",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "question": "Čo je dohoda o narovnaní (§ 585 OZ)?",
+      "question": "Čo je dohoda o urovnaní (§ 585 OZ)?",
       "options": [
         "Zánik záväzku splnením",
         "Dohoda strán o nových vzájomných právach a povinnostiach nahrádzajúca sporný alebo pochybný pôvodný záväzok",
@@ -41,8 +41,8 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. § 585 OZ: narovnanie je dohoda strán, ktorou sa upravujú ich sporné alebo pochybné práva a povinnosti – pôvodné zanikajú a nahrádzajú ich nové.",
-        "wrong": "Nesprávne. Narovnanie nie je splnenie záväzku – je to nová dohoda nahrádzajúca sporný záväzok."
+        "correct": "Správne. § 585 OZ: urovnanie je dohoda strán, ktorou sa upravujú ich sporné alebo pochybné práva a povinnosti – pôvodné zanikajú a nahrádzajú ich nové.",
+        "wrong": "Nesprávne. Urovnanie nie je splnenie záväzku – je to nová dohoda nahrádzajúca sporný záväzok."
       }
     },
     {
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Splnenie (§ 559 OZ)", "definition": "Najčastejší spôsob zániku záväzku – dlžník splní, čo bol povinný plniť." },
-    { "term": "Kompenzácia (§ 580 OZ)", "definition": "Vzájomné pohľadávky rovnakého druhu zanikajú do výšky nižšej z nich." },
-    { "term": "Narovnanie (§ 585 OZ)", "definition": "Dohoda strán nahrádzajúca sporný alebo pochybný záväzok novým usporiadaním práv a povinností." },
-    { "term": "Nemožnosť plnenia", "definition": "Záväzok zaniká, ak sa plnenie stane objektívne nemožným bez zavinenia dlžníka." },
-    { "term": "Konfúzia", "definition": "Zánik záväzku splynutím veriteľa a dlžníka v jednej osobe." }
+    {
+      "term": "Splnenie (§ 559 OZ)",
+      "definition": "Najčastejší spôsob zániku záväzku – dlžník splní, čo bol povinný plniť."
+    },
+    {
+      "term": "Kompenzácia (§ 580 OZ)",
+      "definition": "Vzájomné pohľadávky rovnakého druhu zanikajú do výšky nižšej z nich."
+    },
+    {
+      "term": "Urovnanie (§ 585 OZ)",
+      "definition": "Dohoda strán nahrádzajúca sporný alebo pochybný záväzok novým usporiadaním práv a povinností."
+    },
+    {
+      "term": "Nemožnosť plnenia",
+      "definition": "Záväzok zaniká, ak sa plnenie stane objektívne nemožným bez zavinenia dlžníka."
+    },
+    {
+      "term": "Konfúzia",
+      "definition": "Zánik záväzku splynutím veriteľa a dlžníka v jednej osobe."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Vzájomné pohľadávky strán",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Firma A dlhuje firme B sumu 1000 eur, zároveň firma B dlhuje firme A sumu 700 eur z inej zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Firma A dlhuje firme B sumu 1000 eur, zároveň firma B dlhuje firme A sumu 700 eur z inej zmluvy.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo môžu strany urobiť s týmito vzájomnými pohľadávkami?",
-          "options": ["Započítať ich (kompenzácia) do výšky nižšej z nich", "Museli by nutne obe sumy zaplatiť v plnej výške bez možnosti započítania", "Pohľadávky by museli byť postúpené tretej osobe"],
+          "options": [
+            "Započítať ich (kompenzácia) do výšky nižšej z nich",
+            "Museli by nutne obe sumy zaplatiť v plnej výške bez možnosti započítania",
+            "Pohľadávky by museli byť postúpené tretej osobe"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vzájomné pohľadávky rovnakého druhu možno započítať do výšky nižšej z nich.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Aký je výsledok takéhoto započítania v uvedenom príklade?",
-          "options": ["Zanikne pohľadávka B vo výške 700 eur a A dlhuje B už len 300 eur", "Obe pohľadávky zostanú v pôvodnej výške bez zmeny", "Zanikne iba pohľadávka firmy A v plnej výške"],
+          "options": [
+            "Zanikne pohľadávka B vo výške 700 eur a A dlhuje B už len 300 eur",
+            "Obe pohľadávky zostanú v pôvodnej výške bez zmeny",
+            "Zanikne iba pohľadávka firmy A v plnej výške"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Kompenzácia zníži vyššiu pohľadávku o hodnotu nižšej pohľadávky.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Zdedenie vlastnej pohľadávky",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Syn, ktorý dlhoval svojmu otcovi peniaze, po jeho smrti zdedí práve túto pohľadávku otca voči sebe samému.", "options": [], "correct": 0 },
+        {
+          "question": "Syn, ktorý dlhoval svojmu otcovi peniaze, po jeho smrti zdedí práve túto pohľadávku otca voči sebe samému.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo sa s týmto záväzkom stane?",
-          "options": ["Zanikne konfúziou – splynutím veriteľa a dlžníka v jednej osobe", "Záväzok zostáva v platnosti, syn dlhuje sám sebe", "Záväzok automaticky prechádza na štát"],
+          "options": [
+            "Zanikne konfúziou – splynutím veriteľa a dlžníka v jednej osobe",
+            "Záväzok zostáva v platnosti, syn dlhuje sám sebe",
+            "Záväzok automaticky prechádza na štát"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Keď sa veriteľ a dlžník stanú tou istou osobou, záväzok zaniká konfúziou.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Prečo v takomto prípade záväzok zaniká?",
-          "options": ["Lebo záväzkový vzťah predpokladá dve odlišné strany – veriteľa a dlžníka", "Lebo dedenie dlhov je vo všeobecnosti zakázané", "Lebo štát preberá všetky dedičské pohľadávky"],
+          "options": [
+            "Lebo záväzkový vzťah predpokladá dve odlišné strany – veriteľa a dlžníka",
+            "Lebo dedenie dlhov je vo všeobecnosti zakázané",
+            "Lebo štát preberá všetky dedičské pohľadávky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez dvoch odlišných strán stráca záväzkový vzťah zmysel a zaniká.",
@@ -140,17 +179,82 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Zánik záväzkov – spôsoby, účinky, právna istota (zánik povinnosti dlžníka plniť)",
     "branches": [
-      { "label": "Splnenie (§ 559 OZ)", "leaves": ["najčastejší a prirodzený spôsob zániku záväzku", "dlžník poskytne riadne, včas a úplné plnenie", "plnenie musí byť podľa zmluvy a na správnom mieste", "záväzok zaniká definitívne"] },
-      { "label": "Kompenzácia – vzájomný zápočet (§ 580 OZ)", "leaves": ["veriteľ a dlžník majú voči sebe vzájomné pohľadávky", "podmienky: rovnaký druh plnenia, splatnosť", "môže byť jednostranná alebo dohodou", "záväzok zaniká v rozsahu, v akom sa pohľadávky kryjú"] },
-      { "label": "Dohoda o narovnaní (§ 585 OZ)", "leaves": ["strany odstránia sporné alebo pochybné práva", "nahradia ich novým záväzkom", "pôvodný záväzok zaniká", "narovnanie stabilizuje právny vzťah"] },
-      { "label": "Odstúpenie od zmluvy (§ 48 OZ)", "leaves": ["zmluva sa ruší ex tunc, od začiatku", "strany si musia vrátiť plnenia", "možné len ak to umožňuje zákon alebo zmluva"] },
-      { "label": "Nemožnosť plnenia (§ 575 OZ)", "leaves": ["záväzok zaniká, ak sa plnenie stane objektívne nemožným", "nemožnosť musí byť skutočná, nie subjektívna", "finančná neschopnosť dlžníka nie je nemožnosť plnenia"] },
-      { "label": "Konfúzia (splynutie)", "leaves": ["veriteľ a dlžník sa stanú tou istou osobou", "typicky: dedenie, zlúčenie spoločností", "záväzok zaniká automaticky"] },
-      { "label": "Preklúzia", "leaves": ["zánik práva uplynutím prekluzívnej lehoty", "ak zanikne právo, zaniká aj záväzok"] },
-      { "label": "Smrť dlžníka alebo veriteľa", "leaves": ["záväzok zaniká, ak je plnenie viazané na osobu", "napr. umelecké dielo, osobné služby"] },
-      { "label": "Význam pre prax", "leaves": ["uzatvára právny vzťah", "odstraňuje povinnosť dlžníka plniť", "poskytuje právnu istotu a stabilitu", "umožňuje efektívne riešenie sporov a vyrovnanie pohľadávok"] }
-    ]
+      {
+        "label": "Splnenie (§ 559 OZ)",
+        "leaves": [
+          "najčastejší a prirodzený spôsob zániku záväzku",
+          "dlžník poskytne riadne, včas a úplné plnenie",
+          "plnenie musí byť podľa zmluvy a na správnom mieste",
+          "záväzok zaniká definitívne"
+        ]
+      },
+      {
+        "label": "Kompenzácia – vzájomný zápočet (§ 580 OZ)",
+        "leaves": [
+          "veriteľ a dlžník majú voči sebe vzájomné pohľadávky",
+          "podmienky: rovnaký druh plnenia, splatnosť",
+          "môže byť jednostranná alebo dohodou",
+          "záväzok zaniká v rozsahu, v akom sa pohľadávky kryjú"
+        ]
+      },
+      {
+        "label": "Dohoda o urovnaní (§ 585 OZ)",
+        "leaves": [
+          "strany odstránia sporné alebo pochybné práva",
+          "nahradia ich novým záväzkom",
+          "pôvodný záväzok zaniká",
+          "urovnanie stabilizuje právny vzťah"
+        ]
+      },
+      {
+        "label": "Odstúpenie od zmluvy (§ 48 OZ)",
+        "leaves": [
+          "zmluva sa ruší ex tunc, od začiatku",
+          "strany si musia vrátiť plnenia",
+          "možné len ak to umožňuje zákon alebo zmluva"
+        ]
+      },
+      {
+        "label": "Nemožnosť plnenia (§ 575 OZ)",
+        "leaves": [
+          "záväzok zaniká, ak sa plnenie stane objektívne nemožným",
+          "nemožnosť musí byť skutočná, nie subjektívna",
+          "finančná neschopnosť dlžníka nie je nemožnosť plnenia"
+        ]
+      },
+      {
+        "label": "Konfúzia (splynutie)",
+        "leaves": [
+          "veriteľ a dlžník sa stanú tou istou osobou",
+          "typicky: dedenie, zlúčenie spoločností",
+          "záväzok zaniká automaticky"
+        ]
+      },
+      {
+        "label": "Preklúzia",
+        "leaves": [
+          "zánik práva uplynutím prekluzívnej lehoty",
+          "ak zanikne právo, zaniká aj záväzok"
+        ]
+      },
+      {
+        "label": "Smrť dlžníka alebo veriteľa",
+        "leaves": [
+          "záväzok zaniká, ak je plnenie viazané na osobu",
+          "napr. umelecké dielo, osobné služby"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "uzatvára právny vzťah",
+          "odstraňuje povinnosť dlžníka plniť",
+          "poskytuje právnu istotu a stabilitu",
+          "umožňuje efektívne riešenie sporov a vyrovnanie pohľadávok"
+        ]
+      }
+    ],
+    "center": "Zánik záväzkov – spôsoby, účinky, právna istota (zánik povinnosti dlžníka plniť)"
   }
 }

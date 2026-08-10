@@ -2,50 +2,100 @@
   "id": "A2",
   "title": "Ochrana základných práv a slobôd v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["ľudské práva", "proces", "trestné konanie"],
-
+  "tags": [
+    "ľudské práva",
+    "proces",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktoré právo zaručuje, že obvinený nemusí vypovedať proti sebe?",
-      "options": ["Právo na obhajobu", "Zákaz sebaobviňovania (nemo tenetur)", "Právo na tlmočníka"],
+      "options": [
+        "Právo na obhajobu",
+        "Zákaz sebaobviňovania (nemo tenetur)",
+        "Právo na tlmočníka"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré právo zaručuje, že obvinený musí byť informovaný o dôvodoch zadržania?",
-      "options": ["Právo na zákonného sudcu", "Právo na informácie o obvinení", "Právo na náhradu škody"],
+      "options": [
+        "Právo na zákonného sudcu",
+        "Právo na informácie o obvinení",
+        "Právo na náhradu škody"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré právo chráni osobu pred svojvoľným obmedzením osobnej slobody?",
-      "options": ["Právo na osobnú slobodu", "Právo na súkromie", "Právo na obhajcu"],
+      "options": [
+        "Právo na osobnú slobodu",
+        "Právo na súkromie",
+        "Právo na obhajcu"
+      ],
       "correct": 0
     },
     {
       "question": "Ktoré právo zaručuje, že obvinený má možnosť obhajovať sa sám alebo prostredníctvom obhajcu?",
-      "options": ["Právo na obhajobu", "Právo na tlmočníka", "Právo na verejné pojednávanie"],
+      "options": [
+        "Právo na obhajobu",
+        "Právo na tlmočníka",
+        "Právo na verejné pojednávanie"
+      ],
       "correct": 0
     },
     {
       "question": "Ktoré právo zaručuje, že osoba nemôže byť mučená alebo vystavená neľudskému zaobchádzaniu?",
-      "options": ["Právo na spravodlivý proces", "Zákaz mučenia", "Právo na zákonného sudcu"],
+      "options": [
+        "Právo na spravodlivý proces",
+        "Zákaz mučenia",
+        "Právo na zákonného sudcu"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Právo na obhajobu", "definition": "Obvinený má právo obhajovať sa sám alebo prostredníctvom obhajcu." },
-    { "term": "Nemo tenetur", "definition": "Nikto nie je povinný usvedčovať sám seba." },
-    { "term": "Právo na osobnú slobodu", "definition": "Zadržanie a väzba musia byť zákonné a odôvodnené." },
-    { "term": "Zákaz mučenia", "definition": "Zakazuje sa mučenie, kruté, neľudské alebo ponižujúce zaobchádzanie." },
-    { "term": "Právo na spravodlivý proces", "definition": "Každý má právo na spravodlivé a verejné prerokovanie veci." },
-
-    { "term": "Právo na tlmočníka", "definition": "Osoba, ktorá nerozumie jazyku konania, má právo na tlmočenie." },
-    { "term": "Právo byť informovaný", "definition": "Obvinený musí byť oboznámený s dôvodmi obvinenia." },
-    { "term": "Právo na zákonného sudcu", "definition": "O veci rozhoduje sudca určený zákonom." },
-    { "term": "Právo na súkromie", "definition": "Zásahy do súkromia musia byť zákonné a nevyhnutné." },
-    { "term": "Právo na opravný prostriedok", "definition": "Obvinený má právo napadnúť rozhodnutie opravným prostriedkom." }
+    {
+      "term": "Právo na obhajobu",
+      "definition": "Obvinený má právo obhajovať sa sám alebo prostredníctvom obhajcu."
+    },
+    {
+      "term": "Nemo tenetur",
+      "definition": "Nikto nie je povinný usvedčovať sám seba."
+    },
+    {
+      "term": "Právo na osobnú slobodu",
+      "definition": "Zadržanie a väzba musia byť zákonné a odôvodnené."
+    },
+    {
+      "term": "Zákaz mučenia",
+      "definition": "Zakazuje sa mučenie, kruté, neľudské alebo ponižujúce zaobchádzanie."
+    },
+    {
+      "term": "Právo na spravodlivý proces",
+      "definition": "Každý má právo na spravodlivé a verejné prerokovanie veci."
+    },
+    {
+      "term": "Právo na tlmočníka",
+      "definition": "Osoba, ktorá nerozumie jazyku konania, má právo na tlmočenie."
+    },
+    {
+      "term": "Právo byť informovaný",
+      "definition": "Obvinený musí byť oboznámený s dôvodmi obvinenia."
+    },
+    {
+      "term": "Právo na zákonného sudcu",
+      "definition": "O veci rozhoduje sudca určený zákonom."
+    },
+    {
+      "term": "Právo na súkromie",
+      "definition": "Zásahy do súkromia musia byť zákonné a nevyhnutné."
+    },
+    {
+      "term": "Právo na opravný prostriedok",
+      "definition": "Obvinený má právo napadnúť rozhodnutie opravným prostriedkom."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonné zadržanie",
@@ -58,22 +108,33 @@
         },
         {
           "question": "Krok 1: Ktoré právo je porušené?",
-          "options": ["Právo na obhajobu", "Právo na osobnú slobodu", "Právo na tlmočníka"],
+          "options": [
+            "Právo na obhajobu",
+            "Právo na osobnú slobodu",
+            "Právo na tlmočníka"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Čo musí polícia urobiť pri zadržaní?",
-          "options": ["Ihneď informovať o dôvodoch zadržania", "Počkať na príkaz sudcu", "Zadržať osobu bez vysvetlenia"],
+          "options": [
+            "Ihneď informovať o dôvodoch zadržania",
+            "Počkať na príkaz sudcu",
+            "Zadržať osobu bez vysvetlenia"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Ako má postupovať obvinený?",
-          "options": ["Požiadať o prepustenie alebo preskúmanie zákonnosti zadržania", "Odmietnuť spolupracovať", "Počkať na obžalobu"],
+          "options": [
+            "Požiadať o prepustenie alebo preskúmanie zákonnosti zadržania",
+            "Odmietnuť spolupracovať",
+            "Počkať na obžalobu"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Donucovanie pri výsluchu",
       "difficulty": "stredná",
@@ -85,12 +146,20 @@
         },
         {
           "question": "Krok 1: Ktoré právo je porušené?",
-          "options": ["Zákaz mučenia a nátlaku", "Právo na tlmočníka", "Právo na verejné pojednávanie"],
+          "options": [
+            "Zákaz mučenia a nátlaku",
+            "Právo na tlmočníka",
+            "Právo na verejné pojednávanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Je takto získaná výpoveď použiteľná?",
-          "options": ["Áno, ak je pravdivá", "Nie, je neprípustná", "Len ak ju potvrdí prokurátor"],
+          "options": [
+            "Áno, ak je pravdivá",
+            "Nie, je neprípustná",
+            "Len ak ju potvrdí prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -114,10 +183,39 @@
   "spider": {
     "center": "Ochrana základných práv v trestnom konaní (§§ 1–2 TP)",
     "branches": [
-      { "label": "Východiská", "leaves": ["Účel (§ 1) – TČ náležite zistiť, páchateľov potrestať, práva rešpektovať", "Ústavný rámec – Ústava SR a Dohovor o ochrane ľudských práv", "Platí pre FO aj PO – ochrana práv oboch"] },
-      { "label": "Limity zásahov", "leaves": ["Primeranosť (§ 2 ods. 2) – len v miere nevyhnutnej na účel konania", "Súdna kontrola – prehliadku, odpočúvanie, väzbu povoľuje sudca pre prípravné konanie", "Zákonnosť – len zo zákonných dôvodov a zákonným spôsobom"] },
-      { "label": "Práva osoby", "leaves": ["Prezumpcia neviny – štát dokazuje vinu; zákaz predčasného označovania za páchateľa", "Právo na obhajobu – obhajca, prítomnosť pri úkonoch, rovnosť zbraní", "Spravodlivý proces – nezávislý súd, primeraná lehota, vyjadrenie k dôkazom", "Ne bis in idem – ochrana pred opakovaným stíhaním"] },
-      { "label": "Kvalita rozhodovania", "leaves": ["Skutkový stav bez pochybností – základ spravodlivého rozhodnutia", "Oficialita a legalita – konanie z úradnej povinnosti, povinnosť stíhať"] }
+      {
+        "label": "Východiská",
+        "leaves": [
+          "Účel (§ 1) – TČ náležite zistiť, páchateľov potrestať, práva rešpektovať",
+          "Ústavný rámec – Ústava SR a Dohovor o ochrane ľudských práv",
+          "Platí pre FO aj PO – ochrana práv oboch"
+        ]
+      },
+      {
+        "label": "Limity zásahov",
+        "leaves": [
+          "Primeranosť (§ 2 ods. 2) – len v miere nevyhnutnej na účel konania",
+          "Súdna kontrola – prehliadku, odpočúvanie, väzbu povoľuje sudca pre prípravné konanie",
+          "Zákonnosť – len zo zákonných dôvodov a zákonným spôsobom"
+        ]
+      },
+      {
+        "label": "Práva osoby",
+        "leaves": [
+          "Prezumpcia neviny – štát dokazuje vinu; zákaz predčasného označovania za páchateľa",
+          "Právo na obhajobu – obhajca, prítomnosť pri úkonoch, rovnosť zbraní",
+          "Spravodlivý proces – nezávislý súd, primeraná lehota, vyjadrenie k dôkazom",
+          "Ne bis in idem – ochrana pred opakovaným stíhaním"
+        ]
+      },
+      {
+        "label": "Kvalita rozhodovania",
+        "leaves": [
+          "Skutkový stav bez pochybností – základ spravodlivého rozhodnutia",
+          "Oficialita a legalita – konanie z úradnej povinnosti, povinnosť stíhať"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Ochrana základných práv a slobôd v trestnom konaní znamená, že celý proces musí prebiehať tak, aby boli rešpektované ústavné práva osoby, proti ktorej sa konanie vedie, aj ostatných subjektov konania. Trestný poriadok výslovne prikazuje, že orgány činné v trestnom konaní môžu zasahovať do práv len v nevyhnutnej miere a pod súdnou kontrolou.\n\nOchrana základných práv a slobôd v trestnom konaní je zakotvená v § 1 a § 2 Trestného poriadku. Zahŕňa primeranosť zásahov, súdnu kontrolu zásahov, prezumpciu neviny, právo na obhajobu, spravodlivý proces, rovnosť strán, zákonnosť stíhania, ne bis in idem, a povinnosť orgánov konať tak, aby bol skutkový stav zistený bez pochybností. Tieto zásady sú zároveň odrazom ústavných práv podľa Ústavy SR a Dohovoru o ochrane ľudských práv.\n\n1. Zásada rešpektovania základných práv a slobôd\nPodľa § 1 Trestného poriadku orgány činné v trestnom konaní musia postupovať tak, aby boli trestné činy náležite zistené, páchatelia potrestaní, pričom treba rešpektovať základné práva a slobody fyzických aj právnických osôb. \n\n2. Primeranosť zásahov do práv\nPodľa § 2 ods. 2 TP možno zasahovať do práv len v miere nevyhnutnej na dosiahnutie účelu trestného konania, pri rešpektovaní dôstojnosti osôb a ich súkromia. \n\n3. Súdna kontrola zásahov – sudca pre prípravné konanie\nZásahy do základných práv (domová prehliadka, odpočúvanie, zadržanie osoby, väzba) môže v prípravnom konaní povoliť len sudca pre prípravné konanie, ak zákon neustanovuje inak.\nToto je kľúčový prvok ochrany pred svojvoľným zásahom štátu. \n\n4. Prezumpcia neviny\nKaždý sa považuje za nevinného, kým súd právoplatne nerozhodne o vine.\nZ tejto zásady vyplýva aj povinnosť štátu dokazovať vinu a zákaz predčasného označovania osoby za páchateľa. \n\n5. Právo na obhajobu\nObvinený má právo na obhajcu, na komunikáciu s ním, na prítomnosť pri úkonoch, na navrhovanie dôkazov a na rovnosť zbraní.\nPodozrivý má právo na obhajcu už v prípravnom konaní. \n\n6. Spravodlivý proces\nKaždý má právo, aby jeho vec bola prejednaná:\n\nnezávislým a nestranným súdom,\n\nv primeranej lehote,\n\nv jeho prítomnosti,\n\ns možnosťou vyjadriť sa ku všetkým dôkazom. \n\n7. Zásada ne bis in idem\nNikoho nemožno stíhať za čin, za ktorý už bol právoplatne odsúdený alebo oslobodený.\nZásada chráni pred opakovaným zásahom štátu. \n\n8. Zákonnosť stíhania a oficialita\nOrgány môžu konať len zo zákonných dôvodov a spôsobom, ktorý zákon ustanovuje.\nProkurátor je povinný stíhať všetky trestné činy, o ktorých sa dozvedel. \n\n9. Zistenie skutkového stavu bez dôvodných pochybností\nOrgány musia postupovať tak, aby bol skutkový stav zistený bez pochybností, v rozsahu potrebnom na rozhodnutie.\nTáto zásada je základom spravodlivého rozhodovania.\n\nZapamätaj si:\n– Ochrana práv je zakotvená v § 1 a § 2 Trestného poriadku.\n– Zásahy do práv musia byť primerané a pod súdnou kontrolou.\n– Platí prezumpcia neviny a povinnosť štátu dokazovať vinu.\n– Obvinený má právo na obhajobu a rovnosť strán.\n– Každý má právo na spravodlivý proces v primeranej lehote.\n– Platí zásada ne bis in idem a zákonnosť stíhania.\n– Skutkový stav musí byť zistený bez dôvodných pochybností.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., § 1 a § 2 – ochrana základných práv a slobôd (Slov-Lex)"
 }

@@ -2,7 +2,12 @@
   "id": "A26",
   "title": "Trestné činy proti poriadku vo verejných veciach",
   "schemaVersion": "1.1",
-  "tags": ["verejné veci", "verejná moc", "úradné rozhodnutia", "falšovanie"],
+  "tags": [
+    "verejné veci",
+    "verejná moc",
+    "úradné rozhodnutia",
+    "falšovanie"
+  ],
   "theory": [
     {
       "heading": "Marenie výkonu úradného rozhodnutia",
@@ -20,36 +25,71 @@
   "quiz": [
     {
       "question": "Čo je marenie výkonu úradného rozhodnutia?",
-      "options": ["Dobrovoľné splnenie povinnosti", "Úmyselné sťažovanie výkonu rozhodnutia", "Náhodné omeškanie"],
+      "options": [
+        "Dobrovoľné splnenie povinnosti",
+        "Úmyselné sťažovanie výkonu rozhodnutia",
+        "Náhodné omeškanie"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je falšovanie verejnej listiny?",
-      "options": ["Zničenie starej listiny", "Vyhotovenie alebo úprava listiny ako pravej", "Bežná chyba v dokumente"],
+      "options": [
+        "Zničenie starej listiny",
+        "Vyhotovenie alebo úprava listiny ako pravej",
+        "Bežná chyba v dokumente"
+      ],
       "correct": 1
     },
     {
       "question": "Kto môže spáchať ohýbanie práva?",
-      "options": ["Každý občan", "Len verejný činiteľ", "Len právnik"],
+      "options": [
+        "Každý občan",
+        "Len verejný činiteľ",
+        "Len právnik"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je chráneným objektom?",
-      "options": ["Majetok", "Riadny výkon verejnej moci", "Zdravie"],
+      "options": [
+        "Majetok",
+        "Riadny výkon verejnej moci",
+        "Zdravie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý čin patrí medzi trestné činy proti poriadku vo verejných veciach?",
-      "options": ["Falšovanie listiny", "Krádež", "Podvod"],
+      "options": [
+        "Falšovanie listiny",
+        "Krádež",
+        "Podvod"
+      ],
       "correct": 0
     }
   ],
   "tiles": [
-    { "term": "Úradné rozhodnutie", "definition": "Rozhodnutie orgánu verejnej moci." },
-    { "term": "Falšovanie listiny", "definition": "Vyhotovenie alebo úprava listiny ako pravej." },
-    { "term": "Ohýbanie práva", "definition": "Úmyselné rozhodovanie v rozpore so zákonom." },
-    { "term": "Verejný činiteľ", "definition": "Osoba vykonávajúca verejnú moc." },
-    { "term": "Verejná moc", "definition": "Chránený objekt týchto trestných činov." }
+    {
+      "term": "Úradné rozhodnutie",
+      "definition": "Rozhodnutie orgánu verejnej moci."
+    },
+    {
+      "term": "Falšovanie listiny",
+      "definition": "Vyhotovenie alebo úprava listiny ako pravej."
+    },
+    {
+      "term": "Ohýbanie práva",
+      "definition": "Úmyselné rozhodovanie v rozpore so zákonom."
+    },
+    {
+      "term": "Verejný činiteľ",
+      "definition": "Osoba vykonávajúca verejnú moc."
+    },
+    {
+      "term": "Verejná moc",
+      "definition": "Chránený objekt týchto trestných činov."
+    }
   ],
   "cases": [
     {
@@ -84,10 +124,40 @@
   "spider": {
     "center": "TČ proti poriadku vo verejných veciach",
     "branches": [
-      { "label": "Marenie výkonu úradného rozhodnutia (§ 348)", "leaves": ["Podstata – úmyselné sťaženie či znemožnenie výkonu rozhodnutia", "Formy – činnosť napriek zákazu, nerešpektovanie zákazu vstupu/pobytu", "Judikatúra – už samotné vykonávanie zakázanej činnosti napĺňa SP (jazda počas zákazu)"] },
-      { "label": "Falšovanie verejnej listiny (§ 352)", "leaves": ["Podstata – vyhotovenie falošnej, pozmenenie pravej alebo použitie falošnej listiny", "Verejná listina – rozhodnutie súdu, notárska zápisnica, úradné potvrdenie", "Cieľ – neoprávnená výhoda či ovplyvnenie právneho postavenia"] },
-      { "label": "Ohýbanie práva (§ 326)", "leaves": ["Podstata – verejný činiteľ úmyselne rozhoduje v rozpore so zákonom", "Účel – poškodiť alebo zvýhodniť osobu", "Znaky – páchateľ verejný činiteľ, úmysel, nezákonné rozhodnutie, účel", "Závažnosť – zásah do princípov právneho štátu"] },
-      { "label": "Chránený záujem", "leaves": ["Autorita verejnej moci a výkon rozhodnutí", "Dôveryhodnosť verejných listín", "Zákonnosť rozhodovania"] }
+      {
+        "label": "Marenie výkonu úradného rozhodnutia (§ 348)",
+        "leaves": [
+          "Podstata – úmyselné sťaženie či znemožnenie výkonu rozhodnutia",
+          "Formy – činnosť napriek zákazu, nerešpektovanie zákazu vstupu/pobytu",
+          "Judikatúra – už samotné vykonávanie zakázanej činnosti napĺňa SP (jazda počas zákazu)"
+        ]
+      },
+      {
+        "label": "Falšovanie verejnej listiny (§ 352)",
+        "leaves": [
+          "Podstata – vyhotovenie falošnej, pozmenenie pravej alebo použitie falošnej listiny",
+          "Verejná listina – rozhodnutie súdu, notárska zápisnica, úradné potvrdenie",
+          "Cieľ – neoprávnená výhoda či ovplyvnenie právneho postavenia"
+        ]
+      },
+      {
+        "label": "Ohýbanie práva (§ 326)",
+        "leaves": [
+          "Podstata – verejný činiteľ úmyselne rozhoduje v rozpore so zákonom",
+          "Účel – poškodiť alebo zvýhodniť osobu",
+          "Znaky – páchateľ verejný činiteľ, úmysel, nezákonné rozhodnutie, účel",
+          "Závažnosť – zásah do princípov právneho štátu"
+        ]
+      },
+      {
+        "label": "Chránený záujem",
+        "leaves": [
+          "Autorita verejnej moci a výkon rozhodnutí",
+          "Dôveryhodnosť verejných listín",
+          "Zákonnosť rozhodovania"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti poriadku vo verejných veciach chránia riadny výkon verejnej moci, autoritu štátu a zákonnosť rozhodovania. Patria sem najmä marenie výkonu úradného rozhodnutia, falšovanie verejnej listiny a ohýbanie práva.\n\nA26 – Trestné činy proti poriadku vo verejných veciach\n(summary do LexAreny – vysoká akademická úroveň, overené podľa Slov-Lex)\n\nTrestné činy proti poriadku vo verejných veciach sú upravené v Trestnom zákone č. 300/2005 Z. z., najmä v ustanoveniach §§ 341–353. Ich cieľom je chrániť autoritu verejnej moci, riadny výkon rozhodnutí, dôveryhodnosť verejných listín a zákonnosť rozhodovania verejných činiteľov.\n\n1. Marenie výkonu úradného rozhodnutia (§ 348 TZ)\nMarenie výkonu úradného rozhodnutia je konanie, pri ktorom páchateľ úmyselne sťažuje alebo znemožňuje výkon rozhodnutia súdu alebo iného orgánu verejnej moci.\nTypické formy:\n\nvykonávanie činnosti, na ktorú bol uložený zákaz činnosti,\n\nnerešpektovanie zákazu vstupu, zákazu pobytu,\n\nmarenie výkonu trestu alebo ochranného opatrenia,\n\nnerešpektovanie rozhodnutia o odobratí vodičského oprávnenia.\n\nJudikatúra potvrdzuje, že už samotné vykonávanie zakázanej činnosti napĺňa skutkovú podstatu (napr. vedenie vozidla počas zákazu viesť motorové vozidlá). \n\n2. Falšovanie a pozmeňovanie verejnej listiny (§ 352 TZ)\nFalšovanie verejnej listiny je konanie, pri ktorom páchateľ:\n\nvyhotoví falošnú verejnú listinu,\n\npozmení pravú listinu,\n\nalebo ju použije ako pravú, hoci vie, že je falošná alebo pozmenená.\n\nVerejnou listinou je napríklad rozhodnutie súdu, notárska zápisnica, úradné potvrdenie, osvedčenie či iný dokument vydaný orgánom verejnej moci.\nCieľom páchateľa je spravidla získať neoprávnenú výhodu alebo ovplyvniť právne postavenie osoby.\n\n3. Ohýbanie práva (§ 326 TZ)\nOhýbanie práva je konanie verejného činiteľa, ktorý úmyselne rozhoduje v rozpore so zákonom, aby:\n\npoškodil inú osobu, alebo\n\nzvýhodnil osobu.\n\nPodstatné znaky:\n\npáchateľom je verejný činiteľ,\n\nkonanie musí byť úmyselné,\n\nrozhodnutie musí byť v rozpore so zákonom,\n\nmusí existovať účel poškodiť alebo zvýhodniť.\n\nIde o mimoriadne závažný zásah do princípov právneho štátu, preto je trestná sadzba prísna.\n\nZapamätaj si (štátnicové jadro)\n– Marenie výkonu úradného rozhodnutia = úmyselné znemožnenie alebo sťaženie výkonu rozhodnutia.\n– Falšovanie verejnej listiny = vyhotovenie, pozmenenie alebo použitie falošnej verejnej listiny.\n– Ohýbanie práva = úmyselné nezákonné rozhodovanie verejného činiteľa s cieľom poškodiť alebo zvýhodniť.\n– Tieto trestné činy chránia autoritu štátu, zákonnosť a dôveru verejnosti vo výkon verejnej moci.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 326, 348, 352 (Slov-Lex)\n– Rozhodnutie Mestského súdu Bratislava I – marenie výkonu úradného rozhodnutia (§ 348 TZ)"
 }

@@ -1,7 +1,7 @@
 {
   "id": "31",
   "title": "Zmluva o dielo - pojem, podstatné náležitosti, osobitné druhy",
-  "summary": "Zmluva o dielo (§ 631-656 OZ): zhotoviteľ sa zaväzuje vykonať dielo a objednávateľ zaplatiť odmenu. Dielo: zhotovenie, oprava, úprava alebo iná zmena veci. Odmena: dohodnutá alebo určená podľa rozpočtu. Zodpovednosť za vady: zhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní. Záručná doba: minimálne 24 mesiacov pri stavbách.",
+  "summary": "Zmluva o dielo podľa § 631–656 OZ je zmluva, v ktorej sa zhotoviteľ zaväzuje vykonať dielo a objednávateľ sa zaväzuje zaplatiť odmenu. Ide o typickú zmluvu výsledku – podstatou je dosiahnutie určitého výsledku, nie samotná činnosť.\n\nPojem diela (§ 631 OZ)\nDielom je:\n– zhotovenie veci,\n– oprava,\n– úprava,\n– údržba,\n– iná hmotná alebo nehmotná zmena veci (napr. softvér, projektová dokumentácia).\n\nDielo môže byť vykonané osobne alebo prostredníctvom subdodávateľov, ak to zmluva nevylučuje.\n\nPodstatné náležitosti zmluvy\nPredmet diela – musí byť určitý a vykonateľný.\n\nOdmena – dohodnutá pevne, podľa rozpočtu alebo určená spôsobom výpočtu.\n– Ak je odmena určená rozpočtom, zhotoviteľ ju nesmie jednostranne zvýšiť bez súhlasu objednávateľa.\n\nLehota a spôsob vykonania diela – ak nie je dohodnuté, musí byť vykonané v primeranej lehote.\n\nZodpovednosť za vady diela (§ 633–637 OZ)\nZhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní.\nObjednávateľ má právo požadovať:\n– odstránenie vady,\n– zľavu z ceny,\n– pri podstatných vadách odstúpenie od zmluvy.\n\nPri stavbách platí minimálna záručná doba 24 mesiacov, ak sa strany nedohodnú inak.\n\nOsobitné druhy zmluvy o dielo\n– Dielo na nehnuteľnosti – často vyžaduje písomnú formu, odovzdanie sa realizuje protokolom.\n– Projektové práce – výsledkom je dokumentácia, nie fyzická vec.\n– Opravy a údržba – zhotoviteľ zodpovedá za správne vykonanie zásahu.\n– Dielo vykonané na veci objednávateľa – zhotoviteľ musí vec chrániť a vrátiť ju po vykonaní diela.\n\nOdovzdanie diela (§ 642 OZ)\nDielo je splnené jeho riadnym dokončením a odovzdaním. Objednávateľ je povinný dielo prevziať, ak nemá podstatné vady.\n\nZmluva o dielo je flexibilný typ obligácie, používaný pri stavebných prácach, opravách, tvorbe softvéru či kreatívnych činnostiach.\n\nZdroje: OZ (40/1964 Zb.), § 631–656; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je predmetom zmluvy o dielo?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluva o dielo (§ 631 OZ)", "definition": "Zhotoviteľ vykoná dielo, objednávateľ zaplatí odmenu." },
-    { "term": "Predmet diela", "definition": "Zhotovenie, oprava, úprava alebo iná zmena veci, aj nehmotný výsledok." },
-    { "term": "Zodpovednosť za vady", "definition": "Zhotoviteľ zodpovedá za vady, ktoré malo dielo pri odovzdaní." },
-    { "term": "Práva objednávateľa pri vade", "definition": "Bezplatné odstránenie vady, primeraná zľava alebo odstúpenie od zmluvy pri podstatnej vade." },
-    { "term": "Zmena diela počas zhotovovania", "definition": "Možná, zhotoviteľ má nárok na primeranú zmenu odmeny a lehoty." }
+    {
+      "term": "Zmluva o dielo (§ 631 OZ)",
+      "definition": "Zhotoviteľ vykoná dielo, objednávateľ zaplatí odmenu."
+    },
+    {
+      "term": "Predmet diela",
+      "definition": "Zhotovenie, oprava, úprava alebo iná zmena veci, aj nehmotný výsledok."
+    },
+    {
+      "term": "Zodpovednosť za vady",
+      "definition": "Zhotoviteľ zodpovedá za vady, ktoré malo dielo pri odovzdaní."
+    },
+    {
+      "term": "Práva objednávateľa pri vade",
+      "definition": "Bezplatné odstránenie vady, primeraná zľava alebo odstúpenie od zmluvy pri podstatnej vade."
+    },
+    {
+      "term": "Zmena diela počas zhotovovania",
+      "definition": "Možná, zhotoviteľ má nárok na primeranú zmenu odmeny a lehoty."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Omeškanie zhotoviteľa",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Zhotoviteľ nábytku na mieru neodovzdá hotové dielo v dohodnutom termíne, hoci objednávateľ si splnil všetky svoje povinnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Zhotoviteľ nábytku na mieru neodovzdá hotové dielo v dohodnutom termíne, hoci objednávateľ si splnil všetky svoje povinnosti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "V akom postavení sa zhotoviteľ ocitá?",
-          "options": ["Je v omeškaní so zhotovením a odovzdaním diela", "Zodpovednosť nevzniká, kým dielo nie je úplne dokončené", "Objednávateľ automaticky stráca nárok na dielo"],
+          "options": [
+            "Je v omeškaní so zhotovením a odovzdaním diela",
+            "Zodpovednosť nevzniká, kým dielo nie je úplne dokončené",
+            "Objednávateľ automaticky stráca nárok na dielo"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nedodržanie dohodnutého termínu zakladá omeškanie zhotoviteľa.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo môže objednávateľ v dôsledku omeškania požadovať?",
-          "options": ["Napríklad náhradu škody spôsobenej omeškaním, prípadne iné zákonné nároky", "Iba prevzatie diela bez akýchkoľvek ďalších nárokov", "Okamžité zrušenie zmluvy bez možnosti akejkoľvek nápravy zo strany zhotoviteľa"],
+          "options": [
+            "Napríklad náhradu škody spôsobenej omeškaním, prípadne iné zákonné nároky",
+            "Iba prevzatie diela bez akýchkoľvek ďalších nárokov",
+            "Okamžité zrušenie zmluvy bez možnosti akejkoľvek nápravy zo strany zhotoviteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Omeškanie zhotoviteľa zakladá objednávateľovi zákonné nároky, napríklad na náhradu škody.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Podstatná vada diela",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Po odovzdaní stavebného diela sa zistí podstatná vada, ktorá znemožňuje riadne užívanie stavby.", "options": [], "correct": 0 },
+        {
+          "question": "Po odovzdaní stavebného diela sa zistí podstatná vada, ktorá znemožňuje riadne užívanie stavby.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aké má objednávateľ možnosti?",
-          "options": ["Môže žiadať bezplatné odstránenie vady, primeranú zľavu, alebo pri podstatnej vade odstúpiť od zmluvy", "Môže žiadať iba úplne nové dielo bez akejkoľvek inej možnosti", "Nemá žiadne práva, keďže dielo už prevzal"],
+          "options": [
+            "Môže žiadať bezplatné odstránenie vady, primeranú zľavu, alebo pri podstatnej vade odstúpiť od zmluvy",
+            "Môže žiadať iba úplne nové dielo bez akejkoľvek inej možnosti",
+            "Nemá žiadne práva, keďže dielo už prevzal"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon dáva objednávateľovi pri vadách viacero možností podľa ich povahy.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Za akú vadu zhotoviteľ zodpovedá?",
-          "options": ["Za vadu, ktorú malo dielo už v čase jeho odovzdania objednávateľovi", "Iba za vady, ktoré objednávateľ zistí do troch dní od prevzatia", "Iba za vady spôsobené vyššou mocou"],
+          "options": [
+            "Za vadu, ktorú malo dielo už v čase jeho odovzdania objednávateľovi",
+            "Iba za vady, ktoré objednávateľ zistí do troch dní od prevzatia",
+            "Iba za vady spôsobené vyššou mocou"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozhodujúci je stav diela v čase jeho odovzdania, nie okamih zistenia vady.",
@@ -142,12 +181,61 @@
   "spider": {
     "center": "Zmluva o dielo – pojem, náležitosti, vady, osobitné druhy, odovzdanie (zmluva výsledku, cieľom je hotové dielo)",
     "branches": [
-      { "label": "Pojem diela (§ 631 OZ)", "leaves": ["zhotovenie veci", "oprava", "úprava", "údržba", "hmotná alebo nehmotná zmena veci: softvér, projektová dokumentácia", "dielo môže byť vykonané osobne alebo cez subdodávateľov, ak to zmluva nevylučuje"] },
-      { "label": "Podstatné náležitosti zmluvy", "leaves": ["predmet diela musí byť určitý, vykonateľný, jasne definovaný", "odmena: pevná suma, podľa rozpočtu alebo spôsob výpočtu", "ak je odmena určená rozpočtom, zhotoviteľ ju nesmie jednostranne zvýšiť bez súhlasu objednávateľa", "lehota a spôsob vykonania; ak nie je dohodnuté, vykonanie v primeranej lehote"] },
-      { "label": "Zodpovednosť za vady diela (§ 633–637 OZ)", "leaves": ["zhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní", "odstránenie vady", "zľava z ceny", "odstúpenie od zmluvy pri podstatných vadách", "pri stavbách minimálna záručná doba 24 mesiacov, ak sa strany nedohodnú inak"] },
-      { "label": "Osobitné druhy zmluvy o dielo", "leaves": ["dielo na nehnuteľnosti: často vyžaduje písomnú formu, odovzdanie protokolom", "projektové práce: výsledkom je dokumentácia, nie fyzická vec", "opravy a údržba: zhotoviteľ zodpovedá za správne vykonanie zásahu", "dielo na veci objednávateľa: zhotoviteľ musí vec chrániť a po vykonaní diela ju vrátiť"] },
-      { "label": "Odovzdanie diela (§ 642 OZ)", "leaves": ["dielo je splnené jeho riadnym dokončením a odovzdaním", "objednávateľ je povinný dielo prevziať, ak nemá podstatné vady"] },
-      { "label": "Význam pre prax", "leaves": ["kľúčová zmluva pre stavebníctvo, IT, opravy, kreatívne práce", "jasné pravidlá pre odmenu, vady a odovzdanie", "flexibilná úprava umožňuje široké využitie", "chráni objednávateľa aj zhotoviteľa cez presné povinnosti"] }
+      {
+        "label": "Pojem diela (§ 631 OZ)",
+        "leaves": [
+          "zhotovenie veci",
+          "oprava",
+          "úprava",
+          "údržba",
+          "hmotná alebo nehmotná zmena veci: softvér, projektová dokumentácia",
+          "dielo môže byť vykonané osobne alebo cez subdodávateľov, ak to zmluva nevylučuje"
+        ]
+      },
+      {
+        "label": "Podstatné náležitosti zmluvy",
+        "leaves": [
+          "predmet diela musí byť určitý, vykonateľný, jasne definovaný",
+          "odmena: pevná suma, podľa rozpočtu alebo spôsob výpočtu",
+          "ak je odmena určená rozpočtom, zhotoviteľ ju nesmie jednostranne zvýšiť bez súhlasu objednávateľa",
+          "lehota a spôsob vykonania; ak nie je dohodnuté, vykonanie v primeranej lehote"
+        ]
+      },
+      {
+        "label": "Zodpovednosť za vady diela (§ 633–637 OZ)",
+        "leaves": [
+          "zhotoviteľ zodpovedá za vady, ktoré mal predmet diela pri odovzdaní",
+          "odstránenie vady",
+          "zľava z ceny",
+          "odstúpenie od zmluvy pri podstatných vadách",
+          "pri stavbách minimálna záručná doba 24 mesiacov, ak sa strany nedohodnú inak"
+        ]
+      },
+      {
+        "label": "Osobitné druhy zmluvy o dielo",
+        "leaves": [
+          "dielo na nehnuteľnosti: často vyžaduje písomnú formu, odovzdanie protokolom",
+          "projektové práce: výsledkom je dokumentácia, nie fyzická vec",
+          "opravy a údržba: zhotoviteľ zodpovedá za správne vykonanie zásahu",
+          "dielo na veci objednávateľa: zhotoviteľ musí vec chrániť a po vykonaní diela ju vrátiť"
+        ]
+      },
+      {
+        "label": "Odovzdanie diela (§ 642 OZ)",
+        "leaves": [
+          "dielo je splnené jeho riadnym dokončením a odovzdaním",
+          "objednávateľ je povinný dielo prevziať, ak nemá podstatné vady"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "kľúčová zmluva pre stavebníctvo, IT, opravy, kreatívne práce",
+          "jasné pravidlá pre odmenu, vady a odovzdanie",
+          "flexibilná úprava umožňuje široké využitie",
+          "chráni objednávateľa aj zhotoviteľa cez presné povinnosti"
+        ]
+      }
     ]
   }
 }

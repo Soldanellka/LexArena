@@ -2,7 +2,12 @@
   "id": "A8",
   "title": "Vývinové štádiá trestného činu",
   "schemaVersion": "1.1",
-  "tags": ["štádiá", "príprava", "pokus", "dokonaný čin"],
+  "tags": [
+    "štádiá",
+    "príprava",
+    "pokus",
+    "dokonaný čin"
+  ],
   "theory": [
     {
       "heading": "Príprava",
@@ -20,46 +25,81 @@
   "quiz": [
     {
       "question": "Čo je pokus trestného činu?",
-      "options": ["Dokonanie činu", "Konanie smerujúce k dokonaniu", "Neúmyselné konanie"],
+      "options": [
+        "Dokonanie činu",
+        "Konanie smerujúce k dokonaniu",
+        "Neúmyselné konanie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – pokus smeruje k dokonaniu.",
       "explanation_incorrect": "Nie – pokus nie je dokonanie."
     },
     {
       "question": "Kedy ide o prípravu?",
-      "options": ["Pri úmyselnom vytváraní podmienok", "Pri náhodnom konaní", "Pri nedbanlivosti"],
+      "options": [
+        "Pri úmyselnom vytváraní podmienok",
+        "Pri náhodnom konaní",
+        "Pri nedbanlivosti"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – príprava je úmyselná.",
       "explanation_incorrect": "Nie – príprava nie je náhodná."
     },
     {
       "question": "Kedy je čin dokonaný?",
-      "options": ["Keď sú naplnené všetky znaky skutkovej podstaty", "Keď páchateľ začne konať", "Keď páchateľ ujde"],
+      "options": [
+        "Keď sú naplnené všetky znaky skutkovej podstaty",
+        "Keď páchateľ začne konať",
+        "Keď páchateľ ujde"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – dokonanie vyžaduje naplnenie všetkých znakov.",
       "explanation_incorrect": "Nie – začatie konania nestačí."
     },
     {
       "question": "Je pokus trestný?",
-      "options": ["Áno", "Nie", "Len pri nedbanlivosti"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len pri nedbanlivosti"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – pokus je trestný.",
       "explanation_incorrect": "Nie – pokus je trestný."
     },
     {
       "question": "Ktoré štádium je najzávažnejšie?",
-      "options": ["Príprava", "Pokus", "Dokonaný čin"],
+      "options": [
+        "Príprava",
+        "Pokus",
+        "Dokonaný čin"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – dokonaný čin je najzávažnejší.",
       "explanation_incorrect": "Nie – dokonanie je najzávažnejšie."
     }
   ],
   "tiles": [
-    { "term": "Príprava", "definition": "Úmyselné vytváranie podmienok na spáchanie činu." },
-    { "term": "Pokus", "definition": "Konanie smerujúce k dokonaniu." },
-    { "term": "Dokonanie", "definition": "Naplnenie všetkých znakov skutkovej podstaty." },
-    { "term": "Úmysel", "definition": "Vnútorný vzťah páchateľa k činu." },
-    { "term": "Dobrovoľné upustenie", "definition": "Páchateľ sám zastaví konanie pred dokončením." }
+    {
+      "term": "Príprava",
+      "definition": "Úmyselné vytváranie podmienok na spáchanie činu."
+    },
+    {
+      "term": "Pokus",
+      "definition": "Konanie smerujúce k dokonaniu."
+    },
+    {
+      "term": "Dokonanie",
+      "definition": "Naplnenie všetkých znakov skutkovej podstaty."
+    },
+    {
+      "term": "Úmysel",
+      "definition": "Vnútorný vzťah páchateľa k činu."
+    },
+    {
+      "term": "Dobrovoľné upustenie",
+      "definition": "Páchateľ sám zastaví konanie pred dokončením."
+    }
   ],
   "cases": [
     {
@@ -73,14 +113,22 @@
         },
         {
           "question": "Krok 1: Ide o pokus?",
-          "options": ["Áno", "Nie", "Len ak bola škoda"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bola škoda"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – konanie smerovalo k dokonaniu.",
           "explanation_incorrect": "Nie – ide o pokus."
         },
         {
           "question": "Krok 2: Je pokus trestný?",
-          "options": ["Áno", "Nie", "Len pri zločine"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri zločine"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – pokus je trestný.",
           "explanation_incorrect": "Nie – pokus je trestný."
@@ -98,14 +146,22 @@
         },
         {
           "question": "Krok 1: Ide o prípravu?",
-          "options": ["Áno", "Nie", "Len ak bola zbraň použitá"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bola zbraň použitá"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o prípravu.",
           "explanation_incorrect": "Nie – príprava nevyžaduje použitie zbrane."
         },
         {
           "question": "Krok 2: Je príprava trestná?",
-          "options": ["Áno – pri obzvlášť závažných zločinoch", "Nie", "Len pri prečinoch"],
+          "options": [
+            "Áno – pri obzvlášť závažných zločinoch",
+            "Nie",
+            "Len pri prečinoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – príprava je trestná pri závažných zločinoch.",
           "explanation_incorrect": "Nie – príprava môže byť trestná."
@@ -122,10 +178,37 @@
   "spider": {
     "center": "Vývinové štádiá – príprava × pokus × dokonanie",
     "branches": [
-      { "label": "Príprava", "leaves": ["Vytváranie podmienok – úmyselné vytváranie podmienok na spáchanie TČ.", "Len obzvlášť závažné zločiny – príprava je trestná len pri nich.", "Bez bezprostrednosti – nevyžaduje bezprostredné smerovanie k dokonaniu."] },
-      { "label": "Pokus", "leaves": ["Bezprostredné smerovanie – konanie bezprostredne smeruje k dokonaniu TČ.", "Úmysel – pokus je možný len pri úmyselných TČ.", "Nedokonanie – k dokonaniu nedošlo nezávisle od vôle páchateľa."] },
-      { "label": "Dokonanie", "leaves": ["Naplnené znaky – naplnené všetky znaky skutkovej podstaty.", "Konzumpcia – dokonaný čin konzumuje pokus aj prípravu."] },
-      { "label": "Význam", "leaves": ["Kvalifikácia a trest – štádium ovplyvňuje kvalifikáciu a výmeru trestu.", "Ochrana spoločnosti – trestnosť skorších štádií chráni spoločnosť pred dokonaním."] }
+      {
+        "label": "Príprava",
+        "leaves": [
+          "Vytváranie podmienok – úmyselné vytváranie podmienok na spáchanie TČ.",
+          "Len obzvlášť závažné zločiny – príprava je trestná len pri nich.",
+          "Bez bezprostrednosti – nevyžaduje bezprostredné smerovanie k dokonaniu."
+        ]
+      },
+      {
+        "label": "Pokus",
+        "leaves": [
+          "Bezprostredné smerovanie – konanie bezprostredne smeruje k dokonaniu TČ.",
+          "Úmysel – pokus je možný len pri úmyselných TČ.",
+          "Nedokonanie – k dokonaniu nedošlo nezávisle od vôle páchateľa."
+        ]
+      },
+      {
+        "label": "Dokonanie",
+        "leaves": [
+          "Naplnené znaky – naplnené všetky znaky skutkovej podstaty.",
+          "Konzumpcia – dokonaný čin konzumuje pokus aj prípravu."
+        ]
+      },
+      {
+        "label": "Význam",
+        "leaves": [
+          "Kvalifikácia a trest – štádium ovplyvňuje kvalifikáciu a výmeru trestu.",
+          "Ochrana spoločnosti – trestnosť skorších štádií chráni spoločnosť pred dokonaním."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Vývinové štádiá trestného činu sú: príprava, pokus a dokonaný trestný čin.\nRelevantné sú len pri úmyselných trestných činoch.\nPríprava je trestná len pri obzvlášť závažných zločinoch (§ 13 TZ).\nPokus je trestný pri všetkých úmyselných trestných činoch (§ 14 TZ).\nDokonanie nastáva naplnením všetkých znakov skutkovej podstaty.\n\n1. Príprava trestného činu (§ 13 TZ)\nPríprava je úmyselné vytváranie podmienok na spáchanie trestného činu.\nIde o konanie, ktoré ešte bezprostredne nesmeruje k dokonaniu, ale už vytvára predpoklady na spáchanie činu.\n\nPríklady prípravy\nobstarávanie zbrane,\n\nzískavanie informácií o obeti,\n\nplánovanie útoku,\n\nvytváranie podmienok na spáchanie činu.\n\nTrestnosť prípravy\ntrestná je len pri obzvlášť závažných zločinoch,\n\npri ostatných trestných činoch sa príprava netrestá.\n\nCharakteristika\nmusí byť úmyselná,\n\nnejde ešte o bezprostredné smerovanie k dokonaniu.\n\n2. Pokus trestného činu (§ 14 TZ)\nPokus je konanie, ktoré bezprostredne smeruje k dokonaniu, ale k dokonaniu nedôjde z dôvodov nezávislých od vôle páchateľa.\n\nPodmienky pokusu\númysel spáchať trestný čin,\n\nbezprostredné smerovanie k dokonaniu,\n\nnedokonanie z dôvodov mimo vôle páchateľa.\n\nTrestnosť pokusu\npokus je trestný pri všetkých úmyselných trestných činoch,\n\ntrest sa ukladá v rámci sadzby za dokonaný trestný čin.\n\n3. Dokonaný trestný čin (§ 8 TZ)\nDokonaný trestný čin je stav, keď sú naplnené všetky znaky skutkovej podstaty.\nDokonanie „konzumuje“ pokus aj prípravu.\n\n4. Význam vývinových štádií\numožňujú trestnoprávnu reakciu už pred dokončením činu,\n\nchránia spoločnosť pred nebezpečnými úmyslami,\n\nurčujú hranice trestnosti konania,\n\nsú dôležité pre právnu kvalifikáciu a určenie trestu.\n\nZapamätaj si (štátnicové jadro)\nPríprava = úmyselné vytváranie podmienok na obzvlášť závažný zločin.\n\nPokus = bezprostredné smerovanie k dokonaniu, ktoré sa neuskutoční.\n\nDokonaný trestný čin = naplnené všetky znaky skutkovej podstaty.\n\nVývinové štádiá sú relevantné len pri úmyselných trestných činoch.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.) – § 8, § 13, § 14\n\nBurda – Beleš – Ľorko – Mihálik: Trestná zodpovednosť\n\nWikiwand – Vývojové štádiá trestného činu"
 }

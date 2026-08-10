@@ -2,7 +2,11 @@
   "id": "A3",
   "title": "Skutková podstata – pojem, znaky a triedenie",
   "schemaVersion": "1.1",
-  "tags": ["skutková podstata", "znaky", "triedenie"],
+  "tags": [
+    "skutková podstata",
+    "znaky",
+    "triedenie"
+  ],
   "theory": [
     {
       "heading": "Pojem skutkovej podstaty",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Čo je súčasťou skutkovej podstaty?",
-      "options": ["Len čin", "Objekt, subjekt, objektívna a subjektívna stránka", "Len následok"],
+      "options": [
+        "Len čin",
+        "Objekt, subjekt, objektívna a subjektívna stránka",
+        "Len následok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – skutková podstata zahŕňa objekt, subjekt, objektívnu a subjektívnu stránku.",
       "explanation_incorrect": "Nesprávne – nie je to len čin alebo následok."
     },
     {
       "question": "Ktorý prvok patrí do objektívnej stránky?",
-      "options": ["Zavinenie", "Konanie alebo opomenutie", "Úmysel"],
+      "options": [
+        "Zavinenie",
+        "Konanie alebo opomenutie",
+        "Úmysel"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – objektívna stránka zahŕňa konanie alebo opomenutie a následok.",
       "explanation_incorrect": "Nesprávne – úmysel je subjektívna stránka."
     },
     {
       "question": "Čo je subjekt skutkovej podstaty?",
-      "options": ["Obeť", "Páchateľ", "Súd"],
+      "options": [
+        "Obeť",
+        "Páchateľ",
+        "Súd"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – subjektom je páchateľ (ten, kto koná).",
       "explanation_incorrect": "Nesprávne – obeť nie je subjektom skutkovej podstaty."
     },
     {
       "question": "Prečo je triedenie skutkových podstát dôležité?",
-      "options": ["Pre právnu kvalifikáciu", "Pre výber sudcu", "Pre farbu spisu"],
+      "options": [
+        "Pre právnu kvalifikáciu",
+        "Pre výber sudcu",
+        "Pre farbu spisu"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – triedenie pomáha pri právnej kvalifikácii skutku.",
       "explanation_incorrect": "Nesprávne – nie je to o farbe spisu."
     },
     {
       "question": "Ktorý znak NIE je súčasťou skutkovej podstaty?",
-      "options": ["Následok", "Miesto činu", "Subjektívna stránka"],
+      "options": [
+        "Následok",
+        "Miesto činu",
+        "Subjektívna stránka"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – miesto činu nie je typickým zákonným znakom skutkovej podstaty.",
       "explanation_incorrect": "Nesprávne – miesto činu môže byť relevantné, ale nie je zákonným znakom."
     }
   ],
   "tiles": [
-    { "term": "Objekt skutkovej podstaty", "definition": "To, čo je útokom (napr. majetok, zdravie)." },
-    { "term": "Subjekt skutkovej podstaty", "definition": "Páchateľ trestného činu." },
-    { "term": "Objektívna stránka", "definition": "Konanie/opomenutie a následok." },
-    { "term": "Subjektívna stránka", "definition": "Zavinenie – úmysel alebo nedbanlivosť." },
-    { "term": "Následok", "definition": "Škoda alebo iný výsledok spôsobený činom." }
+    {
+      "term": "Objekt skutkovej podstaty",
+      "definition": "To, čo je útokom (napr. majetok, zdravie)."
+    },
+    {
+      "term": "Subjekt skutkovej podstaty",
+      "definition": "Páchateľ trestného činu."
+    },
+    {
+      "term": "Objektívna stránka",
+      "definition": "Konanie/opomenutie a následok."
+    },
+    {
+      "term": "Subjektívna stránka",
+      "definition": "Zavinenie – úmysel alebo nedbanlivosť."
+    },
+    {
+      "term": "Následok",
+      "definition": "Škoda alebo iný výsledok spôsobený činom."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Je splnená objektívna stránka?",
-          "options": ["Áno – konanie a následok sú preukázané", "Nie", "Len čiastočne"],
+          "options": [
+            "Áno – konanie a následok sú preukázané",
+            "Nie",
+            "Len čiastočne"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – konanie (úder) a následok (zranenie) sú splnené.",
           "explanation_incorrect": "Nesprávne – sú splnené."
         },
         {
           "question": "Krok 2: Ako posúdiť subjektívnu stránku?",
-          "options": ["Skúmať úmysel alebo nedbanlivosť", "Ignorovať", "Len trestný register"],
+          "options": [
+            "Skúmať úmysel alebo nedbanlivosť",
+            "Ignorovať",
+            "Len trestný register"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – treba zistiť, či išlo o úmysel alebo nedbanlivosť.",
           "explanation_incorrect": "Nesprávne – subjektívna stránka sa nesmie ignorovať."
@@ -98,14 +145,22 @@
         },
         {
           "question": "Krok 1: Ide o konanie alebo opomenutie?",
-          "options": ["Opomenutie", "Konanie", "Oboje"],
+          "options": [
+            "Opomenutie",
+            "Konanie",
+            "Oboje"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o opomenutie povinnosti dohľadu.",
           "explanation_incorrect": "Nesprávne – nie je to konanie."
         },
         {
           "question": "Krok 2: Aký prvok je kľúčový pre trestnú zodpovednosť?",
-          "options": ["Zavinenie (nedbanlivosť)", "Farba oblečenia", "Počet svedkov"],
+          "options": [
+            "Zavinenie (nedbanlivosť)",
+            "Farba oblečenia",
+            "Počet svedkov"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – treba preukázať zavinenie (nedbanlivosť).",
           "explanation_incorrect": "Nesprávne – farba oblečenia nie je relevantná."
@@ -122,10 +177,44 @@
   "spider": {
     "center": "Skutková podstata – pojem × znaky × triedenie",
     "branches": [
-      { "label": "Pojem", "leaves": ["Súhrn zákonných znakov – znaky, ktoré musia byť naplnené, aby bol skutok trestným činom.", "Model v zákone – model TČ, s ktorým sa porovnáva konanie páchateľa.", "Základ kvalifikácie – určuje hranice trestnej zodpovednosti."] },
-      { "label": "Znaky skutkovej podstaty", "leaves": ["Objekt – chránený spoločenský záujem (život, zdravie, majetok).", "Subjekt – páchateľ, trestne zodpovedná osoba; niekedy osobitný subjekt (napr. verejný činiteľ).", "Objektívna stránka – konanie alebo opomenutie, následok, príčinná súvislosť; prípadne spôsob, miesto, čas.", "Subjektívna stránka – zavinenie (úmysel/nedbanlivosť); niekedy motív či pohnútka.", "Následok – porušenie alebo ohrozenie objektu; pri niektorých TČ obligatórny."] },
-      { "label": "Triedenie", "leaves": ["Podľa konštrukcie – formálne (bez následku) × materiálne (vyžadujú následok).", "Podľa útoku – proti životu, majetku, slobode (systematika osobitnej časti TZ).", "Podľa zavinenia – úmyselné × nedbanlivostné × kombinované.", "Podľa následku – poruchové (škoda alebo ujma) × ohrozovacie (stačí nebezpečenstvo).", "Podľa subjektu – všeobecné × osobitné (špeciálne postavenie páchateľa)."] },
-      { "label": "Význam", "leaves": ["Právna kvalifikácia – nástroj zaradenia skutku pod zákon.", "Určenie trestu – východisko pre druh a výmeru trestu.", "Odlíšenie od priestupkov – hranica medzi trestným činom a priestupkom.", "Predvídateľnosť – zaručuje predvídateľnosť trestného práva."] }
+      {
+        "label": "Pojem",
+        "leaves": [
+          "Súhrn zákonných znakov – znaky, ktoré musia byť naplnené, aby bol skutok trestným činom.",
+          "Model v zákone – model TČ, s ktorým sa porovnáva konanie páchateľa.",
+          "Základ kvalifikácie – určuje hranice trestnej zodpovednosti."
+        ]
+      },
+      {
+        "label": "Znaky skutkovej podstaty",
+        "leaves": [
+          "Objekt – chránený spoločenský záujem (život, zdravie, majetok).",
+          "Subjekt – páchateľ, trestne zodpovedná osoba; niekedy osobitný subjekt (napr. verejný činiteľ).",
+          "Objektívna stránka – konanie alebo opomenutie, následok, príčinná súvislosť; prípadne spôsob, miesto, čas.",
+          "Subjektívna stránka – zavinenie (úmysel/nedbanlivosť); niekedy motív či pohnútka.",
+          "Následok – porušenie alebo ohrozenie objektu; pri niektorých TČ obligatórny."
+        ]
+      },
+      {
+        "label": "Triedenie",
+        "leaves": [
+          "Podľa konštrukcie – formálne (bez následku) × materiálne (vyžadujú následok).",
+          "Podľa útoku – proti životu, majetku, slobode (systematika osobitnej časti TZ).",
+          "Podľa zavinenia – úmyselné × nedbanlivostné × kombinované.",
+          "Podľa následku – poruchové (škoda alebo ujma) × ohrozovacie (stačí nebezpečenstvo).",
+          "Podľa subjektu – všeobecné × osobitné (špeciálne postavenie páchateľa)."
+        ]
+      },
+      {
+        "label": "Význam",
+        "leaves": [
+          "Právna kvalifikácia – nástroj zaradenia skutku pod zákon.",
+          "Určenie trestu – východisko pre druh a výmeru trestu.",
+          "Odlíšenie od priestupkov – hranica medzi trestným činom a priestupkom.",
+          "Predvídateľnosť – zaručuje predvídateľnosť trestného práva."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Skutková podstata trestného činu je súhrn zákonom ustanovených znakov, ktoré musia byť naplnené, aby bolo možné konkrétny skutok právne kvalifikovať ako trestný čin.\nIde o „model“ trestného činu v zákone, ktorý sa porovnáva s konaním páchateľa.\n\nSkutková podstata je základným nástrojom právnej kvalifikácie a určuje hranice trestnej zodpovednosti.\n\n1. Základné znaky skutkovej podstaty\nObjekt\nchránený spoločenský záujem, proti ktorému trestný čin smeruje\n\nnapr. život, zdravie, majetok, verejný poriadok\n\nSubjekt\npáchateľ trestného činu\n\nmusí byť trestne zodpovedná osoba (vek, príčetnosť)\n\npri niektorých TČ sa vyžaduje osobitný subjekt (napr. verejný činiteľ)\n\nObjektívna stránka\nvonkajšie prejavy konania páchateľa\n\nkonanie (konanie alebo opomenutie), následok, príčinná súvislosť\n\nprípadne aj spôsob, prostriedky, miesto, čas\n\nSubjektívna stránka\nzavinenie: úmysel alebo nedbanlivosť\n\nmôže zahŕňať aj motív či pohnútku, ak to zákon vyžaduje\n\nNásledok\nporušenie alebo ohrozenie objektu\n\npri niektorých TČ je následok obligatórny (napr. ublíženie na zdraví), pri iných nie (napr. ohrozovacie TČ)\n\n2. Triedenie skutkových podstát\nPodľa konštrukcie (štruktúry)\nformálne skutkové podstaty – nevyžadujú vznik následku (napr. ohrozovacie TČ)\n\nmateriálne skutkové podstaty – vyžadujú následok (napr. ublíženie na zdraví)\n\nPodľa spôsobu útoku\nproti životu a zdraviu\n\nproti majetku\n\nproti slobode\n\nproti verejnému poriadku\n\nproti hospodárstvu\n(zodpovedá systematike osobitnej časti TZ)\n\nPodľa formy zavinenia\númyselné\n\nnedbanlivostné\n\nkombinované (možno spáchať oboma formami)\n\nPodľa následku\nporuchové (vznik škody, ujmy)\n\nohrozovacie (postačuje vytvorenie nebezpečenstva)\n\nPodľa povahy subjektu\nvšeobecné\n\nosobitné (vyžadujú špeciálne postavenie páchateľa)\n\n3. Význam skutkovej podstaty\nSkutková podstata slúži na:\n\nprávnu kvalifikáciu skutku,\n\nurčenie druhu a výmery trestu,\n\nodlíšenie trestných činov od priestupkov,\n\nzabezpečenie zákonnosti a predvídateľnosti trestného práva.\n\nZapamätaj si (štátnicové jadro)\n– Skutková podstata = súhrn znakov, ktoré musia byť splnené, aby bol skutok trestným činom.\n– Základné znaky: objekt, subjekt, objektívna stránka, subjektívna stránka, následok.\n– Triedenie: podľa konštrukcie, útoku, zavinenia, následku, subjektu.\n– Skutková podstata je základ právnej kvalifikácie.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nČentéš – Trestné právo hmotné\nŠámal – Trestní právo hmotné\nJudikatúra NS SR"
 }

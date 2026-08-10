@@ -2,7 +2,13 @@
   "id": "A24",
   "title": "Trestné činy všeobecne nebezpečné a trestné činy proti životnému prostrediu",
   "schemaVersion": "1.1",
-  "tags": ["všeobecné nebezpečenstvo", "životné prostredie", "odpady", "znečisťovanie", "ohrozenie"],
+  "tags": [
+    "všeobecné nebezpečenstvo",
+    "životné prostredie",
+    "odpady",
+    "znečisťovanie",
+    "ohrozenie"
+  ],
   "theory": [
     {
       "heading": "Všeobecne nebezpečné trestné činy",
@@ -28,46 +34,81 @@
   "quiz": [
     {
       "question": "Čo je typickým znakom všeobecne nebezpečných trestných činov?",
-      "options": ["Vyžaduje sa skutočná škoda", "Stačí už samotné ohrozenie", "Musí ísť o úmyselné zabitie"],
+      "options": [
+        "Vyžaduje sa skutočná škoda",
+        "Stačí už samotné ohrozenie",
+        "Musí ísť o úmyselné zabitie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – pri týchto činoch stačí ohrozenie, nie je potrebná škoda.",
       "explanation_incorrect": "Nie – škoda nie je podmienkou."
     },
     {
       "question": "Čo je všeobecné ohrozenie?",
-      "options": ["Ohrozenie jednej osoby", "Ohrozenie viacerých osôb alebo veľkého majetku", "Bežný priestupok"],
+      "options": [
+        "Ohrozenie jednej osoby",
+        "Ohrozenie viacerých osôb alebo veľkého majetku",
+        "Bežný priestupok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o ohrozenie viacerých osôb alebo veľkého rozsahu.",
       "explanation_incorrect": "Nie – nejde o malý rozsah."
     },
     {
       "question": "Čo je neoprávnené nakladanie s odpadmi?",
-      "options": ["Triedenie odpadu", "Nelegálne ukladanie alebo preprava odpadov", "Používanie zberného dvora"],
+      "options": [
+        "Triedenie odpadu",
+        "Nelegálne ukladanie alebo preprava odpadov",
+        "Používanie zberného dvora"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o konanie v rozpore so zákonom.",
       "explanation_incorrect": "Nie – triedenie odpadu nie je trestné."
     },
     {
       "question": "Čo je chráneným objektom trestných činov proti životnému prostrediu?",
-      "options": ["Majetok štátu", "Ekologická rovnováha a zdravie ľudí", "Verejný poriadok"],
+      "options": [
+        "Majetok štátu",
+        "Ekologická rovnováha a zdravie ľudí",
+        "Verejný poriadok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o ochranu prírody a zdravia.",
       "explanation_incorrect": "Nie – nejde o verejný poriadok."
     },
     {
       "question": "Kedy ide o znečisťovanie životného prostredia?",
-      "options": ["Pri vypúšťaní škodlivín spôsobujúcich vážnu ujmu", "Pri bežnom používaní vody", "Pri legálnom výrube stromov"],
+      "options": [
+        "Pri vypúšťaní škodlivín spôsobujúcich vážnu ujmu",
+        "Pri bežnom používaní vody",
+        "Pri legálnom výrube stromov"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – musí ísť o škodlivé látky s vážnymi následkami.",
       "explanation_incorrect": "Nie – bežné používanie prírody nie je trestné."
     }
   ],
   "tiles": [
-    { "term": "Všeobecné ohrozenie", "definition": "Ohrozenie života, zdravia alebo majetku vo veľkom rozsahu." },
-    { "term": "Neoprávnené nakladanie s odpadmi", "definition": "Nelegálne ukladanie alebo preprava odpadov." },
-    { "term": "Znečisťovanie", "definition": "Vypúšťanie škodlivín do prírody." },
-    { "term": "Ekologická ujma", "definition": "Závažné poškodenie životného prostredia." },
-    { "term": "Nebezpečná látka", "definition": "Látka schopná spôsobiť vážne ohrozenie alebo škodu." }
+    {
+      "term": "Všeobecné ohrozenie",
+      "definition": "Ohrozenie života, zdravia alebo majetku vo veľkom rozsahu."
+    },
+    {
+      "term": "Neoprávnené nakladanie s odpadmi",
+      "definition": "Nelegálne ukladanie alebo preprava odpadov."
+    },
+    {
+      "term": "Znečisťovanie",
+      "definition": "Vypúšťanie škodlivín do prírody."
+    },
+    {
+      "term": "Ekologická ujma",
+      "definition": "Závažné poškodenie životného prostredia."
+    },
+    {
+      "term": "Nebezpečná látka",
+      "definition": "Látka schopná spôsobiť vážne ohrozenie alebo škodu."
+    }
   ],
   "cases": [
     {
@@ -81,7 +122,11 @@
         },
         {
           "question": "Je to trestný čin?",
-          "options": ["Áno – znečisťovanie životného prostredia", "Nie – ide len o priestupok", "Len ak zomreli ľudia"],
+          "options": [
+            "Áno – znečisťovanie životného prostredia",
+            "Nie – ide len o priestupok",
+            "Len ak zomreli ľudia"
+          ],
           "correct": 0
         }
       ]
@@ -97,7 +142,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Neoprávnené nakladanie s odpadmi", "Krádež", "Výtržníctvo"],
+          "options": [
+            "Neoprávnené nakladanie s odpadmi",
+            "Krádež",
+            "Výtržníctvo"
+          ],
           "correct": 0
         }
       ]
@@ -112,10 +161,40 @@
   "spider": {
     "center": "Všeobecne nebezpečné TČ × ochrana ŽP",
     "branches": [
-      { "label": "Všeobecné ohrozenie (§ 284)", "leaves": ["Podstata – spôsobenie či zvýšenie všeobecného nebezpečenstva", "Formy – požiar, výbuch, havária, výbušniny, plyn, elektrina, rádioaktivita", "Trestnosť – stačí vydanie ľudí do nebezpečenstva smrti/ťažkej ujmy alebo škoda veľkého rozsahu", "Princíp – ohrozovací delikt, škoda nemusí vzniknúť"] },
-      { "label": "Ohrozenie ŽP (§ 300)", "leaves": ["Podstata – vydanie životného prostredia do nebezpečenstva", "Znak – porušenie predpisov o ochrane prírody", "Následok – značná alebo veľká ekologická škoda", "Chránené – ekologická rovnováha a zdravé životné podmienky"] },
-      { "label": "Odpady", "leaves": ["Podstata – nelegálne ukladanie, preprava, skladovanie či likvidácia odpadov", "Dôraz – nebezpečné odpady", "Riziko – ohrozenie pôdy, vody a ovzdušia"] },
-      { "label": "Znečisťovanie", "leaves": ["Podstata – vypúšťanie či únik škodlivých látok do vody, pôdy, ovzdušia", "Následok – vážna ekologická ujma alebo ohrozenie zdravia obyvateľstva"] }
+      {
+        "label": "Všeobecné ohrozenie (§ 284)",
+        "leaves": [
+          "Podstata – spôsobenie či zvýšenie všeobecného nebezpečenstva",
+          "Formy – požiar, výbuch, havária, výbušniny, plyn, elektrina, rádioaktivita",
+          "Trestnosť – stačí vydanie ľudí do nebezpečenstva smrti/ťažkej ujmy alebo škoda veľkého rozsahu",
+          "Princíp – ohrozovací delikt, škoda nemusí vzniknúť"
+        ]
+      },
+      {
+        "label": "Ohrozenie ŽP (§ 300)",
+        "leaves": [
+          "Podstata – vydanie životného prostredia do nebezpečenstva",
+          "Znak – porušenie predpisov o ochrane prírody",
+          "Následok – značná alebo veľká ekologická škoda",
+          "Chránené – ekologická rovnováha a zdravé životné podmienky"
+        ]
+      },
+      {
+        "label": "Odpady",
+        "leaves": [
+          "Podstata – nelegálne ukladanie, preprava, skladovanie či likvidácia odpadov",
+          "Dôraz – nebezpečné odpady",
+          "Riziko – ohrozenie pôdy, vody a ovzdušia"
+        ]
+      },
+      {
+        "label": "Znečisťovanie",
+        "leaves": [
+          "Podstata – vypúšťanie či únik škodlivých látok do vody, pôdy, ovzdušia",
+          "Následok – vážna ekologická ujma alebo ohrozenie zdravia obyvateľstva"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy všeobecne nebezpečné a trestné činy proti životnému prostrediu sú upravené v Trestnom zákone č. 300/2005 Z. z., najmä v §§ 284 a 300. Ide o skutky, ktoré svojím charakterom ohrozujú širokú skupinu osôb alebo ekologickú rovnováhu. Typickým znakom je, že už samotné ohrozenie je trestné, aj keď škoda ešte nevznikla.\n\n1. Všeobecne nebezpečné trestné činy\nVšeobecne nebezpečné trestné činy sú konania, ktoré môžu spôsobiť rozsiahle ohrozenie života, zdravia alebo majetku.\nPodľa § 284 TZ páchateľ úmyselne spôsobí alebo zvýši všeobecné nebezpečenstvo napríklad tým, že vyvolá:\n\npožiar,\n\nvýbuch,\n\nhaváriu,\n\nškodlivý účinok výbušnín, plynu, elektriny, rádioaktivity,\n\nalebo iné podobné nebezpečné konanie.\n\nK trestnosti postačuje vydanie ľudí do nebezpečenstva smrti alebo ťažkej ujmy, či ohrozenie majetku veľkého rozsahu.\n\n2. Všeobecné ohrozenie (§ 284 TZ)\nVšeobecné ohrozenie je základná skutková podstata všeobecne nebezpečných trestných činov.\nPáchateľ spôsobí alebo môže spôsobiť:\n\nnebezpečenstvo smrti alebo ťažkej ujmy na zdraví viacerých osôb,\n\nalebo škodu veľkého rozsahu.\n\n3. Trestné činy proti životnému prostrediu (§ 300 TZ)\nTieto trestné činy chránia prírodu, vodu, ovzdušie, pôdu, živočíchy a rastliny pred závažným poškodením alebo zničením.\nPodľa § 300 TZ ide o konania, ktorými páchateľ:\n\númyselne vydá životné prostredie do nebezpečenstva,\n\nporuší právne predpisy o ochrane prírody,\n\nspôsobí značnú alebo veľkú ekologickú škodu.\n\n4. Neoprávnené nakladanie s odpadmi\nNeoprávnené nakladanie s odpadmi zahŕňa:\n\nnelegálne ukladanie,\n\nprepravu,\n\nskladovanie,\n\nalebo likvidáciu odpadov, najmä nebezpečných.\n\n5. Znečisťovanie životného prostredia\nZnečisťovanie životného prostredia je konanie, pri ktorom páchateľ:\n\nvypúšťa alebo umožní únik škodlivých látok do vody, pôdy alebo ovzdušia,\n\nčím môže spôsobiť vážnu ekologickú ujmu alebo ohroziť zdravie obyvateľstva.\n\nZapamätaj si (štátnicové jadro)\n– Všeobecne nebezpečné trestné činy = už samotné ohrozenie je trestné.\n– Všeobecné ohrozenie = nebezpečenstvo smrti, ťažkej ujmy alebo škody veľkého rozsahu.\n– Trestné činy proti životnému prostrediu chránia ekologickú rovnováhu.\n– Neoprávnené nakladanie s odpadmi = nelegálne nakladanie s odpadmi.\n– Znečisťovanie = škodlivé látky vo vode, pôde, ovzduší.\n\nZdroj\n– § 284 TZ – všeobecné ohrozenie   \n– § 300 TZ – ohrozenie životného prostredia zakonvkapse.skzakonvkapse.sk. Čo znamená § 300 Ohrozenie životného prostredia a prírodných zdrojov – Trestný zákon · Zákony SR  \n– Skutkové podstaty ochrany prírody (§ 305 a nasl.)"
 }

@@ -2,50 +2,101 @@
   "id": "A4",
   "title": "Súdy v trestnom konaní, orgány činné v trestnom konaní a pomocné osoby",
   "schemaVersion": "1.1",
-  "tags": ["súdy", "OČTK", "pomocné osoby", "trestné konanie"],
-
+  "tags": [
+    "súdy",
+    "OČTK",
+    "pomocné osoby",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktorý orgán rozhoduje o vine a treste v trestnom konaní?",
-      "options": ["Prokurátor", "Súd", "Polícia"],
+      "options": [
+        "Prokurátor",
+        "Súd",
+        "Polícia"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý orgán je oprávnený viesť vyšetrovanie?",
-      "options": ["Súd", "Polícia", "Znalec"],
+      "options": [
+        "Súd",
+        "Polícia",
+        "Znalec"
+      ],
       "correct": 1
     },
     {
       "question": "Kto zastupuje štát v trestnom konaní?",
-      "options": ["Obhajca", "Prokurátor", "Poškodený"],
+      "options": [
+        "Obhajca",
+        "Prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kto je pomocnou osobou v trestnom konaní?",
-      "options": ["Znalec", "Prokurátor", "Sudca"],
+      "options": [
+        "Znalec",
+        "Prokurátor",
+        "Sudca"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý súd koná ako súd prvého stupňa vo väčšine trestných vecí?",
-      "options": ["Najvyšší súd SR", "Krajský súd", "Okresný súd"],
+      "options": [
+        "Najvyšší súd SR",
+        "Krajský súd",
+        "Okresný súd"
+      ],
       "correct": 2
     }
   ],
-
   "tiles": [
-    { "term": "Súd", "definition": "Rozhoduje o vine, treste a ďalších otázkach v trestnom konaní." },
-    { "term": "Prokurátor", "definition": "Zastupuje štát, podáva obžalobu a dozerá na zákonnosť prípravného konania." },
-    { "term": "Polícia", "definition": "Vykonáva úkony prípravného konania, najmä vyšetrovanie a objasňovanie trestných činov." },
-    { "term": "Znalec", "definition": "Pomocná osoba, ktorá podáva odborný posudok." },
-    { "term": "Tlmočník", "definition": "Zabezpečuje preklad pre osoby, ktoré nerozumejú jazyku konania." },
-
-    { "term": "Okresný súd", "definition": "Súd prvého stupňa vo väčšine trestných vecí." },
-    { "term": "Krajský súd", "definition": "Rozhoduje ako odvolací súd a v závažných veciach aj ako súd prvého stupňa." },
-    { "term": "Najvyšší súd SR", "definition": "Zabezpečuje jednotnosť rozhodovania a rozhoduje o mimoriadnych opravných prostriedkoch." },
-    { "term": "Vyšetrovateľ", "definition": "Policajt oprávnený vykonávať vyšetrovanie v trestných veciach." },
-    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené a ktorá môže uplatniť nárok na náhradu škody." }
+    {
+      "term": "Súd",
+      "definition": "Rozhoduje o vine, treste a ďalších otázkach v trestnom konaní."
+    },
+    {
+      "term": "Prokurátor",
+      "definition": "Zastupuje štát, podáva obžalobu a dozerá na zákonnosť prípravného konania."
+    },
+    {
+      "term": "Polícia",
+      "definition": "Vykonáva úkony prípravného konania, najmä vyšetrovanie a objasňovanie trestných činov."
+    },
+    {
+      "term": "Znalec",
+      "definition": "Pomocná osoba, ktorá podáva odborný posudok."
+    },
+    {
+      "term": "Tlmočník",
+      "definition": "Zabezpečuje preklad pre osoby, ktoré nerozumejú jazyku konania."
+    },
+    {
+      "term": "Okresný súd",
+      "definition": "Súd prvého stupňa vo väčšine trestných vecí."
+    },
+    {
+      "term": "Krajský súd",
+      "definition": "Rozhoduje ako odvolací súd a v závažných veciach aj ako súd prvého stupňa."
+    },
+    {
+      "term": "Najvyšší súd SR",
+      "definition": "Zabezpečuje jednotnosť rozhodovania a rozhoduje o mimoriadnych opravných prostriedkoch."
+    },
+    {
+      "term": "Vyšetrovateľ",
+      "definition": "Policajt oprávnený vykonávať vyšetrovanie v trestných veciach."
+    },
+    {
+      "term": "Poškodený",
+      "definition": "Osoba, ktorej bolo trestným činom ublížené a ktorá môže uplatniť nárok na náhradu škody."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Kto má viesť úkon?",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Ktorý orgán je oprávnený nariadiť domovú prehliadku?",
-          "options": ["Polícia", "Prokurátor", "Súd"],
+          "options": [
+            "Polícia",
+            "Prokurátor",
+            "Súd"
+          ],
           "correct": 2
         },
         {
           "question": "Krok 2: Je úkon polície zákonný?",
-          "options": ["Áno", "Nie", "Len ak to schváli prokurátor"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to schváli prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Postavenie znalca",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Môže znalec odmietnuť podanie posudku?",
-          "options": ["Áno, ak nie je odborne spôsobilý", "Nie, musí posudok podať vždy", "Len so súhlasom prokurátora"],
+          "options": [
+            "Áno, ak nie je odborne spôsobilý",
+            "Nie, musí posudok podať vždy",
+            "Len so súhlasom prokurátora"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ako má orgán konania postupovať?",
-          "options": ["Uložiť znalcovi pokutu", "Ustanoviť iného znalca", "Zastaviť konanie"],
+          "options": [
+            "Uložiť znalcovi pokutu",
+            "Ustanoviť iného znalca",
+            "Zastaviť konanie"
+          ],
           "correct": 1
         },
         {
@@ -118,9 +184,34 @@
   "spider": {
     "center": "Súdy × OČTK × pomocné osoby",
     "branches": [
-      { "label": "Súdy (§§ 11–23)", "leaves": ["Okresný súd – prvý stupeň vo väčšine vecí", "Krajský súd – závažnejšie veci a odvolania", "Špecializovaný trestný súd – korupcia, organizovaný zločin, extrémizmus, terorizmus", "Najvyšší súd SR – dovolanie a mimoriadne opravné prostriedky", "Sudca pre prípravné konanie – väzba, prehliadky, odpočúvanie"] },
-      { "label": "OČTK (§ 10)", "leaves": ["Prokurátor – riadi prípravné konanie, obžaloba, zastupuje štát", "Policajt – vyšetrovanie, dôkazy, zadržanie, prehliadky, výsluchy", "Špecializované orgány – finančná správa, vojenská polícia, ZVJS, veliteľ lode"] },
-      { "label": "Pomocné osoby (§§ 24–29)", "leaves": ["Probačný a mediačný úradník – dohľad, alternatívne tresty, mediácia", "Vyšší súdny úradník – úkony z poverenia sudcu", "Zapisovateľ a tlmočník – zápisnice, preklad", "Nezúčastnená osoba a figurant – kontrola nestrannosti, rekonštrukcia"] }
+      {
+        "label": "Súdy (§§ 11–23)",
+        "leaves": [
+          "Okresný súd – prvý stupeň vo väčšine vecí",
+          "Krajský súd – závažnejšie veci a odvolania",
+          "Špecializovaný trestný súd – korupcia, organizovaný zločin, extrémizmus, terorizmus",
+          "Najvyšší súd SR – dovolanie a mimoriadne opravné prostriedky",
+          "Sudca pre prípravné konanie – väzba, prehliadky, odpočúvanie"
+        ]
+      },
+      {
+        "label": "OČTK (§ 10)",
+        "leaves": [
+          "Prokurátor – riadi prípravné konanie, obžaloba, zastupuje štát",
+          "Policajt – vyšetrovanie, dôkazy, zadržanie, prehliadky, výsluchy",
+          "Špecializované orgány – finančná správa, vojenská polícia, ZVJS, veliteľ lode"
+        ]
+      },
+      {
+        "label": "Pomocné osoby (§§ 24–29)",
+        "leaves": [
+          "Probačný a mediačný úradník – dohľad, alternatívne tresty, mediácia",
+          "Vyšší súdny úradník – úkony z poverenia sudcu",
+          "Zapisovateľ a tlmočník – zápisnice, preklad",
+          "Nezúčastnená osoba a figurant – kontrola nestrannosti, rekonštrukcia"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Súdy, orgány činné v trestnom konaní a pomocné osoby sú základnou procesnou infraštruktúrou trestného konania. Súdy rozhodujú, OČTK konajú a pomocné osoby zabezpečujú technický, odborný a organizačný chod konania.\n\nZhrnutie (štátnicové jadro)\nSúdy vykonávajú trestné súdnictvo a rozhodujú o vine, treste a zásahoch do práv. Orgány činné v trestnom konaní (prokurátor, policajt, ďalšie špecializované orgány) vykonávajú úkony prípravného konania. Pomocné osoby (probačný a mediačný úradník, vyšší súdny úradník, zapisovateľ, tlmočník, nezúčastnená osoba, figurant) zabezpečujú odborné, technické a procesné úkony.\n\n1. Súdy v trestnom konaní\nPodľa Trestného poriadku (§ 11–23) súdy vykonávajú trestné súdnictvo a rozhodujú o všetkých zásadných otázkach trestného konania.\n\na) Druhy súdov\nOkresný súd – rozhoduje ako súd prvého stupňa vo väčšine trestných vecí.\n\nKrajský súd – rozhoduje v závažnejších veciach (napr. obzvlášť závažné zločiny) a ako odvolací súd.\n\nŠpecializovaný trestný súd – rozhoduje o korupcii, organizovanom zločine, extrémizme, terorizme.\n\nNajvyšší súd SR – rozhoduje o dovolaní, mimoriadnych opravných prostriedkoch.\n\nb) Sudca pre prípravné konanie\nRozhoduje o zásahoch do základných práv (väzba, domová prehliadka, odpočúvanie).\n\n2. Orgány činné v trestnom konaní\nPodľa § 10 TP patria medzi OČTK: \n\na) Prokurátor\nriadi prípravné konanie,\n\npodáva obžalobu,\n\nzastupuje štát,\n\nrozhoduje o právach a povinnostiach osôb v konaní.\n\nb) Policajt (vyšetrovateľ, poverený policajt)\nvykonáva úkony vyšetrovania,\n\nzabezpečuje dôkazy,\n\nvykonáva zadržanie, prehliadky, výsluchy.\n\nc) Špecializované orgány\nFinančná správa SR – daňové a colné trestné činy,\n\nVojenská polícia – trestné činy príslušníkov ozbrojených síl,\n\nZbor väzenskej a justičnej stráže – trestné činy vo výkone trestu,\n\nVeliteľ námornej lode – trestné činy na lodi SR.\n\n3. Pomocné osoby\nUpravené v § 24–29 TP. \n\na) Probačný a mediačný úradník (§ 24)\nvykonáva dohľad nad obvineným,\n\npripravuje podklady pre rozhodovanie o alternatívnych trestoch,\n\nsprostredkúva mediáciu medzi obvineným a poškodeným.\n\nb) Vyšší súdny úradník (§ 25)\nvykonáva úkony podľa poverenia sudcu (napr. doručovanie, administratívne úkony).\n\nc) Zapisovateľ (§ 26)\nvedie zápisnice,\n\nzabezpečuje administratívny chod pojednávania.\n\nd) Tlmočník (§ 27)\nzabezpečuje preklad pre osoby, ktoré nerozumejú jazyku konania.\n\ne) Nezúčastnená osoba (§ 29)\nprítomná pri úkonoch, ktoré vyžadujú kontrolu nestrannosti (napr. domová prehliadka).\n\nf) Figurant (§ 29)\nosoba použitá pri rekonstrukcii alebo vyšetrovacom pokuse.\n\nZapamätaj si (štátnicové jadro)\n– Súdy rozhodujú o vine, treste a zásahoch do práv.\n– OČTK = prokurátor + policajt + špecializované orgány.\n– Pomocné osoby zabezpečujú odborné, technické a procesné úkony.\n– Sudca pre prípravné konanie chráni základné práva v prípravnom konaní.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., §§ 10–29 (Slov-Lex)   \n– Orgány činné v trestnom konaní – definícia (§ 10 TP) sk.wikipedia.orgsk.wikipedia.org. Orgán činný v trestnom konaní - Wikipédia"
 }

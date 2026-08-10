@@ -1,7 +1,7 @@
 {
   "id": "9",
   "title": "Právnické osoby",
-  "summary": "Právnická osoba je umelý subjekt práva odlišný od fyzických osôb (§ 18 OZ). Druhy: združenia fyzických alebo právnických osôb, účelové združenia majetku (nadácie, fondy), jednotky územnej samosprávy, iné. Vznik zápisom do registra (§ 19 OZ). Zánik výmazom z registra (§ 19a OZ). Koná prostredníctvom štatutárnych orgánov (§ 20 OZ).",
+  "summary": "Právnická osoba je umelý subjekt práva, ktorý je odlišný od fyzických osôb (§ 18 OZ). Má vlastnú právnu subjektivitu, môže nadobúdať práva a povinnosti, vystupovať v právnych vzťahoch, uzatvárať zmluvy a niesť zodpovednosť. Právnická osoba koná prostredníctvom osôb, ktoré sú na to oprávnené – najmä štatutárnych orgánov (§ 20 OZ).\n\nDruhy právnických osôb\nOZ uvádza základné kategórie:\n– združenia osôb (napr. občianske združenia, spolky, obchodné spoločnosti),\n– účelové združenia majetku (nadácie, neziskové fondy),\n– jednotky územnej samosprávy (obce, VÚC),\n– iné právnické osoby, ktoré vznikajú na základe osobitných zákonov (komory, verejnoprávne inštitúcie).\n\nKaždý typ právnickej osoby má vlastnú vnútornú štruktúru, spôsob hospodárenia a pravidlá konania navonok.\n\nVznik právnickej osoby (§ 19 OZ)\nPrávnická osoba vzniká zápisom do registra, ak to zákon vyžaduje. Registrami sú najmä:\n– obchodný register,\n– register mimovládnych organizácií,\n– register nadácií,\n– register neziskových organizácií,\n– osobitné registre podľa špeciálnych zákonov.\n\nZápis má konštitutívny účinok – právnická osoba existuje až odo dňa zápisu.\n\nZánik právnickej osoby (§ 20a OZ)\nZaniká výmazom z registra, ktorý má rovnako konštitutívny účinok. Zániku spravidla predchádza:\n– zrušenie (s likvidáciou alebo bez likvidácie),\n– rozhodnutie orgánu právnickej osoby,\n– rozhodnutie súdu,\n– uplynutie doby, na ktorú bola založená.\n\nKonanie právnickej osoby (§ 20a OZ)\nPrávnická osoba koná prostredníctvom:\n– štatutárnych orgánov (konateľ, predstavenstvo, predseda),\n– zamestnancov alebo poverených osôb, ak konajú v rámci oprávnenia,\n– zástupcov na základe plnej moci.\n\nÚkony štatutára zaväzujú právnickú osobu priamo.\n\nZdroje: OZ (40/1964 Zb.), § 18–20; osobitné zákony o právnických osobách; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kedy vzniká právnická osoba?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Právnická osoba (§ 18 OZ)", "definition": "Umelý subjekt práva odlišný od fyzických osôb." },
-    { "term": "Vznik právnickej osoby (§ 19 OZ)", "definition": "Zápisom do zákonom určeného registra." },
-    { "term": "Zánik právnickej osoby (§ 19a OZ)", "definition": "Výmazom z registra." },
-    { "term": "Štatutárny orgán (§ 20 OZ)", "definition": "Koná v mene právnickej osoby navonok." },
-    { "term": "Oddelenie majetku", "definition": "Za záväzky právnickej osoby v zásade zodpovedá len ona sama, nie jej členovia/orgány." }
+    {
+      "term": "Právnická osoba (§ 18 OZ)",
+      "definition": "Umelý subjekt práva odlišný od fyzických osôb."
+    },
+    {
+      "term": "Vznik právnickej osoby (§ 19 OZ)",
+      "definition": "Zápisom do zákonom určeného registra."
+    },
+    {
+      "term": "Zánik právnickej osoby (§ 19a OZ)",
+      "definition": "Výmazom z registra."
+    },
+    {
+      "term": "Štatutárny orgán (§ 20 OZ)",
+      "definition": "Koná v mene právnickej osoby navonok."
+    },
+    {
+      "term": "Oddelenie majetku",
+      "definition": "Za záväzky právnickej osoby v zásade zodpovedá len ona sama, nie jej členovia/orgány."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Zmluva pred zápisom do registra",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Zakladatelia obchodnej spoločnosti uzavrú zmluvu v jej mene ešte predtým, než bola spoločnosť zapísaná do obchodného registra.", "options": [], "correct": 0 },
+        {
+          "question": "Zakladatelia obchodnej spoločnosti uzavrú zmluvu v jej mene ešte predtým, než bola spoločnosť zapísaná do obchodného registra.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Existuje už v tomto momente právnická osoba, ktorá by bola zmluvou viazaná?",
-          "options": ["Nie, právnická osoba vzniká až zápisom do registra", "Áno, vzniká už uzavretím zakladateľskej zmluvy", "Áno, vzniká už podaním návrhu na zápis"],
+          "options": [
+            "Nie, právnická osoba vzniká až zápisom do registra",
+            "Áno, vzniká už uzavretím zakladateľskej zmluvy",
+            "Áno, vzniká už podaním návrhu na zápis"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konštitutívny účinok má až zápis do registra podľa § 19 OZ.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Kto teda z takejto zmluvy zaväzuje sa pred zápisom do registra?",
-          "options": ["Spravidla osoby, ktoré v tomto mene konali, kým spoločnosť záväzok neprevezme", "Nikto, zmluva je bez ďalšieho neplatná", "Automaticky štát"],
+          "options": [
+            "Spravidla osoby, ktoré v tomto mene konali, kým spoločnosť záväzok neprevezme",
+            "Nikto, zmluva je bez ďalšieho neplatná",
+            "Automaticky štát"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pred vznikom spoločnosti zaväzujú konajúce osoby, kým záväzok po vzniku spoločnosť neprevezme.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Konanie zamestnanca bez oprávnenia",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Radový zamestnanec spoločnosti bez osobitného poverenia podpíše dôležitú zmluvu v mene spoločnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Radový zamestnanec spoločnosti bez osobitného poverenia podpíše dôležitú zmluvu v mene spoločnosti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je spoločnosť touto zmluvou automaticky viazaná?",
-          "options": ["Nie, konať v mene spoločnosti navonok môže spravidla len štatutárny orgán alebo osoba s osobitným poverením", "Áno, každý zamestnanec môže bez obmedzenia zaväzovať spoločnosť", "Áno, ak zamestnanec konal v dobrej viere, bez ďalšieho skúmania"],
+          "options": [
+            "Nie, konať v mene spoločnosti navonok môže spravidla len štatutárny orgán alebo osoba s osobitným poverením",
+            "Áno, každý zamestnanec môže bez obmedzenia zaväzovať spoločnosť",
+            "Áno, ak zamestnanec konal v dobrej viere, bez ďalšieho skúmania"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konať navonok v mene právnickej osoby môže spravidla len jej štatutárny orgán alebo poverená osoba.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Kto je typicky štatutárnym orgánom obchodnej spoločnosti?",
-          "options": ["Napríklad konateľ v s.r.o. alebo predstavenstvo v akciovej spoločnosti", "Ktokoľvek s pracovnou zmluvou v spoločnosti", "Výlučne zakladateľ spoločnosti"],
+          "options": [
+            "Napríklad konateľ v s.r.o. alebo predstavenstvo v akciovej spoločnosti",
+            "Ktokoľvek s pracovnou zmluvou v spoločnosti",
+            "Výlučne zakladateľ spoločnosti"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konateľ, prípadne predstavenstvo, sú typickými štatutárnymi orgánmi obchodných spoločností.",
@@ -140,15 +179,73 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Právnické osoby – pojem, druhy, vznik, zánik, konanie (umelý subjekt práva s vlastnou právnou subjektivitou)",
     "branches": [
-      { "label": "Pojem právnickej osoby (§ 18 OZ)", "leaves": ["umelý subjekt odlišný od fyzickej osoby", "má právnu subjektivitu", "môže nadobúdať práva a povinnosti", "vystupuje v právnych vzťahoch, uzatvára zmluvy", "nesie právnu zodpovednosť"] },
-      { "label": "Druhy právnických osôb", "leaves": ["združenia osôb: spolky, občianske združenia, obchodné spoločnosti", "účelové združenia majetku: nadácie, neziskové fondy", "jednotky územnej samosprávy: obce, VÚC", "iné právnické osoby podľa osobitných zákonov: komory, verejnoprávne inštitúcie"] },
-      { "label": "Vznik právnickej osoby (§ 19 OZ)", "leaves": ["vzniká zápisom do registra", "zápis má konštitutívny účinok", "právnická osoba existuje až odo dňa zápisu"] },
-      { "label": "Registre", "leaves": ["obchodný register", "register mimovládnych organizácií", "register nadácií", "register neziskových organizácií", "osobitné registre"] },
-      { "label": "Zánik právnickej osoby (§ 19a OZ)", "leaves": ["zánik: výmaz z registra (konštitutívny účinok)", "predchádza mu zrušenie (s likvidáciou alebo bez)", "rozhodnutie orgánu právnickej osoby", "rozhodnutie súdu", "uplynutie doby, na ktorú bola založená"] },
-      { "label": "Konanie právnickej osoby (§ 20 OZ)", "leaves": ["štatutárne orgány: konateľ, predstavenstvo, predseda", "zamestnanci alebo poverené osoby v rámci oprávnenia", "zástupcovia na základe plnej moci", "úkony štatutára zaväzujú právnickú osobu priamo"] },
-      { "label": "Význam pre prax", "leaves": ["umožňujú organizovanú činnosť osôb a majetku", "sú základom podnikania, verejnej správy, neziskového sektora", "právna istota: jasné pravidlá vzniku, zániku a konania", "kľúčové pre zmluvné právo, obchodné právo, správne právo"] }
-    ]
+      {
+        "label": "Pojem právnickej osoby (§ 18 OZ)",
+        "leaves": [
+          "umelý subjekt odlišný od fyzickej osoby",
+          "má právnu subjektivitu",
+          "môže nadobúdať práva a povinnosti",
+          "vystupuje v právnych vzťahoch, uzatvára zmluvy",
+          "nesie právnu zodpovednosť"
+        ]
+      },
+      {
+        "label": "Druhy právnických osôb",
+        "leaves": [
+          "združenia osôb: spolky, občianske združenia, obchodné spoločnosti",
+          "účelové združenia majetku: nadácie, neziskové fondy",
+          "jednotky územnej samosprávy: obce, VÚC",
+          "iné právnické osoby podľa osobitných zákonov: komory, verejnoprávne inštitúcie"
+        ]
+      },
+      {
+        "label": "Vznik právnickej osoby (§ 19 OZ)",
+        "leaves": [
+          "vzniká zápisom do registra",
+          "zápis má konštitutívny účinok",
+          "právnická osoba existuje až odo dňa zápisu"
+        ]
+      },
+      {
+        "label": "Registre",
+        "leaves": [
+          "obchodný register",
+          "register mimovládnych organizácií",
+          "register nadácií",
+          "register neziskových organizácií",
+          "osobitné registre"
+        ]
+      },
+      {
+        "label": "Zánik právnickej osoby (§ 20a OZ)",
+        "leaves": [
+          "zánik: výmaz z registra (konštitutívny účinok)",
+          "predchádza mu zrušenie (s likvidáciou alebo bez)",
+          "rozhodnutie orgánu právnickej osoby",
+          "rozhodnutie súdu",
+          "uplynutie doby, na ktorú bola založená"
+        ]
+      },
+      {
+        "label": "Konanie právnickej osoby (§ 20 OZ)",
+        "leaves": [
+          "štatutárne orgány: konateľ, predstavenstvo, predseda",
+          "zamestnanci alebo poverené osoby v rámci oprávnenia",
+          "zástupcovia na základe plnej moci",
+          "úkony štatutára zaväzujú právnickú osobu priamo"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "umožňujú organizovanú činnosť osôb a majetku",
+          "sú základom podnikania, verejnej správy, neziskového sektora",
+          "právna istota: jasné pravidlá vzniku, zániku a konania",
+          "kľúčové pre zmluvné právo, obchodné právo, správne právo"
+        ]
+      }
+    ],
+    "center": "Právnické osoby – pojem, druhy, vznik, zánik, konanie (umelý subjekt práva s vlastnou právnou subjektivitou)"
   }
 }

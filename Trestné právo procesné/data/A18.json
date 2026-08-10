@@ -2,50 +2,100 @@
   "id": "A18",
   "title": "Predsúdne konanie",
   "schemaVersion": "1.1",
-  "tags": ["predsúdne konanie", "prípravné konanie", "trestné konanie"],
-
+  "tags": [
+    "predsúdne konanie",
+    "prípravné konanie",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Čo je predsúdne konanie?",
-      "options": ["Konanie pred odvolacím súdom", "Časť trestného konania pred podaním obžaloby", "Konanie po právoplatnom rozsudku"],
+      "options": [
+        "Konanie pred odvolacím súdom",
+        "Časť trestného konania pred podaním obžaloby",
+        "Konanie po právoplatnom rozsudku"
+      ],
       "correct": 1
     },
     {
       "question": "Kto vykonáva úkony v predsúdnom konaní?",
-      "options": ["Súd", "Polícia a prokurátor", "Poškodený"],
+      "options": [
+        "Súd",
+        "Polícia a prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy sa predsúdne konanie končí?",
-      "options": ["Podaním obžaloby", "Začatím hlavného pojednávania", "Vydaním rozsudku"],
+      "options": [
+        "Podaním obžaloby",
+        "Začatím hlavného pojednávania",
+        "Vydaním rozsudku"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý úkon patrí do predsúdneho konania?",
-      "options": ["Vykonávanie dôkazov na hlavnom pojednávaní", "Začatie trestného stíhania", "Rozhodnutie o odvolaní"],
+      "options": [
+        "Vykonávanie dôkazov na hlavnom pojednávaní",
+        "Začatie trestného stíhania",
+        "Rozhodnutie o odvolaní"
+      ],
       "correct": 1
     },
     {
       "question": "Kto dozoruje zákonnosť predsúdneho konania?",
-      "options": ["Súd", "Prokurátor", "Obhajca"],
+      "options": [
+        "Súd",
+        "Prokurátor",
+        "Obhajca"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Predsúdne konanie", "definition": "Časť trestného konania pred podaním obžaloby, zahŕňajúca preverovanie a vyšetrovanie." },
-    { "term": "Začatie trestného stíhania", "definition": "Formálny úkon, ktorým sa začína prípravné konanie." },
-    { "term": "Vyšetrovanie", "definition": "Zisťovanie skutkového stavu a zhromažďovanie dôkazov." },
-    { "term": "Dozor prokurátora", "definition": "Prokurátor dohliada na zákonnosť úkonov polície." },
-    { "term": "Podanie obžaloby", "definition": "Úkon, ktorým sa predsúdne konanie končí a vec sa predkladá súdu." },
-
-    { "term": "Objasňovanie", "definition": "Úkony polície pred začatím trestného stíhania." },
-    { "term": "Zaisťovacie úkony", "definition": "Úkony na zabezpečenie osôb a vecí pre účely konania." },
-    { "term": "Výsluch", "definition": "Procesný úkon na získanie informácií od osôb." },
-    { "term": "Dôkazné prostriedky", "definition": "Prostriedky na preukázanie skutočností dôležitých pre konanie." },
-    { "term": "Rozhodnutie o zastavení stíhania", "definition": "Rozhodnutie prokurátora, ktorým sa konanie môže skončiť už v predsúdnom štádiu." }
+    {
+      "term": "Predsúdne konanie",
+      "definition": "Časť trestného konania pred podaním obžaloby, zahŕňajúca preverovanie a vyšetrovanie."
+    },
+    {
+      "term": "Začatie trestného stíhania",
+      "definition": "Formálny úkon, ktorým sa začína prípravné konanie."
+    },
+    {
+      "term": "Vyšetrovanie",
+      "definition": "Zisťovanie skutkového stavu a zhromažďovanie dôkazov."
+    },
+    {
+      "term": "Dozor prokurátora",
+      "definition": "Prokurátor dohliada na zákonnosť úkonov polície."
+    },
+    {
+      "term": "Podanie obžaloby",
+      "definition": "Úkon, ktorým sa predsúdne konanie končí a vec sa predkladá súdu."
+    },
+    {
+      "term": "Objasňovanie",
+      "definition": "Úkony polície pred začatím trestného stíhania."
+    },
+    {
+      "term": "Zaisťovacie úkony",
+      "definition": "Úkony na zabezpečenie osôb a vecí pre účely konania."
+    },
+    {
+      "term": "Výsluch",
+      "definition": "Procesný úkon na získanie informácií od osôb."
+    },
+    {
+      "term": "Dôkazné prostriedky",
+      "definition": "Prostriedky na preukázanie skutočností dôležitých pre konanie."
+    },
+    {
+      "term": "Rozhodnutie o zastavení stíhania",
+      "definition": "Rozhodnutie prokurátora, ktorým sa konanie môže skončiť už v predsúdnom štádiu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Kedy sa končí predsúdne konanie?",
@@ -58,22 +108,33 @@
         },
         {
           "question": "Krok 1: Ako sa končí predsúdne konanie?",
-          "options": ["Podaním obžaloby", "Začatím hlavného pojednávania", "Vydaním rozsudku"],
+          "options": [
+            "Podaním obžaloby",
+            "Začatím hlavného pojednávania",
+            "Vydaním rozsudku"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto podáva obžalobu?",
-          "options": ["Súd", "Prokurátor", "Obvinený"],
+          "options": [
+            "Súd",
+            "Prokurátor",
+            "Obvinený"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 3: Čo nasleduje po podaní obžaloby?",
-          "options": ["Hlavné pojednávanie", "Odvolacie konanie", "Dovolacie konanie"],
+          "options": [
+            "Hlavné pojednávanie",
+            "Odvolacie konanie",
+            "Dovolacie konanie"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zastavenie trestného stíhania v predsúdnom konaní",
       "difficulty": "stredná",
@@ -85,17 +146,29 @@
         },
         {
           "question": "Krok 1: Môže prokurátor zastaviť trestné stíhanie v predsúdnom konaní?",
-          "options": ["Áno", "Nie", "Len so súhlasom obvineného"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom obvineného"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Aký opravný prostriedok môže podať poškodený?",
-          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "options": [
+            "Odvolanie",
+            "Sťažnosť",
+            "Dovolanie"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 3: Kto rozhoduje o sťažnosti?",
-          "options": ["Nadriadený prokurátor", "Súd", "Polícia"],
+          "options": [
+            "Nadriadený prokurátor",
+            "Súd",
+            "Polícia"
+          ],
           "correct": 0
         }
       ]
@@ -110,10 +183,38 @@
   "spider": {
     "center": "Predsúdne konanie – preverovanie × prípravné konanie",
     "branches": [
-      { "label": "Pojem", "leaves": ["Dve časti – postup pred začatím stíhania + prípravné konanie", "Rozsah – od preverenia podnetu po podanie obžaloby", "Aktéri – polícia a prokurátor"] },
-      { "label": "Pred začatím stíhania", "leaves": ["Úkony – prijatie oznámenia, preverenie skutku, vysvetlenia, zaistenie stôp", "Výsledok – začatie stíhania alebo odloženie veci"] },
-      { "label": "Prípravné konanie", "leaves": ["Začiatok a koniec – od vznesenia obvinenia po obžalobu či iné rozhodnutie", "Vedenie – vyšetrovateľ; prokurátor dohliada a rozhoduje", "Etapy – začatie stíhania → obvinenie → vyšetrovanie → ukončenie"] },
-      { "label": "Účel", "leaves": ["Zistiť – či sa stal TČ a kto je páchateľ", "Zabezpečiť – dôkazy pre súdne konanie", "Rozhodnúť – či sa podá obžaloba"] }
+      {
+        "label": "Pojem",
+        "leaves": [
+          "Dve časti – postup pred začatím stíhania + prípravné konanie",
+          "Rozsah – od preverenia podnetu po podanie obžaloby",
+          "Aktéri – polícia a prokurátor"
+        ]
+      },
+      {
+        "label": "Pred začatím stíhania",
+        "leaves": [
+          "Úkony – prijatie oznámenia, preverenie skutku, vysvetlenia, zaistenie stôp",
+          "Výsledok – začatie stíhania alebo odloženie veci"
+        ]
+      },
+      {
+        "label": "Prípravné konanie",
+        "leaves": [
+          "Začiatok a koniec – od vznesenia obvinenia po obžalobu či iné rozhodnutie",
+          "Vedenie – vyšetrovateľ; prokurátor dohliada a rozhoduje",
+          "Etapy – začatie stíhania → obvinenie → vyšetrovanie → ukončenie"
+        ]
+      },
+      {
+        "label": "Účel",
+        "leaves": [
+          "Zistiť – či sa stal TČ a kto je páchateľ",
+          "Zabezpečiť – dôkazy pre súdne konanie",
+          "Rozhodnúť – či sa podá obžaloba"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Predsúdne konanie je prvá veľká fáza trestného konania, ktorá zahŕňa postup pred začatím trestného stíhania a prípravné konanie. Je to obdobie, v ktorom polícia a prokurátor zisťujú, či sa stal trestný čin, kto ho spáchal a či je možné podať obžalobu. \n\n🧭 Čo patrí do predsúdneho konania?\nPredsúdne konanie sa skladá z dvoch hlavných častí:\n\nPostup pred začatím trestného stíhania\n\nPrípravné konanie\n\nTieto dve časti tvoria celé predsúdne konanie, ktoré trvá od prvého preverovania podnetu až po podanie obžaloby. \n\n🔍 1. Postup pred začatím trestného stíhania\nÚčelom je zistiť, či existuje dôvod začať trestné stíhanie.\n\nČo robí polícia?\nprijíma trestné oznámenie,\n\npreveruje, či sa skutok stal,\n\nzisťuje základné okolnosti,\n\nvykonáva prvotné úkony (vyžiadanie vysvetlení, zabezpečenie stôp). \n\nVýsledok môže byť:\nzačatie trestného stíhania,\n\nodloženie veci (ak nejde o trestný čin). \n\n🕵️ 2. Prípravné konanie\nZačína sa vznesením obvinenia a končí podaním obžaloby alebo iným rozhodnutím prokurátora. \n\nKto vedie prípravné konanie?\npolicajný vyšetrovateľ,\n\nprokurátor (dohľad, rozhodovanie). \n\nEtapy prípravného konania:\nZačatie trestného stíhania – uznesenie policajta/prokurátora.\n\nVznesenie obvinenia – osoba sa stáva obvineným.\n\nVyšetrovanie – vykonávanie dôkazov (výsluchy, prehliadky, ITP, OPČ).\n\nUkončenie vyšetrovania – prokurátor rozhodne o obžalobe, zastavení, prerušení alebo postúpení veci. \n\n⚖️ Účel predsúdneho konania\nzistiť, či sa stal trestný čin,\n\nidentifikovať páchateľa,\n\nzabezpečiť dôkazy,\n\npripraviť vec na súdne konanie,\n\nrozhodnúť, či sa podá obžaloba. \n\n📌 Zapamätaj si (štátnicové jadro)\nPredsúdne konanie = postup pred začatím TS + prípravné konanie.\n\nVedú ho polícia a prokurátor.\n\nKončí sa podaním obžaloby alebo iným rozhodnutím prokurátora.\n\nJe to najdôležitejšia fáza pre získanie dôkazov.\n\nPo podaní obžaloby začína súdne konanie. \n\n📚 Zdroj:\nMinisterstvo spravodlivosti SR – Čo je trestné konanie? \n\nMinisterstvo spravodlivosti SR – Trestné konanie – úvod \n\nEurópsky portál elektronickej justície – Predsúdne konanie \n\nObčiansky poradca – Predsúdne konanie (priebeh, sťažnosti)"
 }

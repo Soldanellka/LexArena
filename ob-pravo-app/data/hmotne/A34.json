@@ -1,7 +1,7 @@
 {
   "id": "34",
   "title": "Nájom bytu (podľa OZ a zákona o krátkodobom nájme bytu)",
-  "summary": "Nájom bytu (§ 685-716 OZ) má posilnenú ochranu nájomcu. Prenajímateľ môže vypovedať nájom len z dôvodov taxatívne uvedených v § 711 OZ (napr. hrubé porušenie povinností). Nájomca má právo na predĺženie nájmu. Zákon č. 98/2014 Z.z. o krátkodobom nájme bytu: na kratšie obdobia (do 6 rokov), registrovaná u notára, kratšia výpovedná lehota - 15 dní.",
+  "summary": "Nájom bytu podľa Občianskeho zákonníka (§ 685–716 OZ)\nNájom bytu je osobitný typ nájmu s posilnenou ochranou nájomcu. Prenajímateľ prenecháva byt na užívanie za nájomné a nájomca je povinný byt riadne užívať, platiť nájomné a služby.\n\nPrenajímateľ musí byt odovzdať v stave spôsobilom na riadne užívanie a zabezpečiť nerušené bývanie. Nájomca vykonáva bežnú údržbu a drobné opravy.\n\nVýpoveď nájmu bytu (§ 711 OZ)\nPrenajímateľ môže vypovedať nájom len z taxatívnych dôvodov, napr.:\n– hrubé porušenie povinností nájomcu (neplatenie nájomného, poškodzovanie bytu),\n– potreba bytu pre prenajímateľa alebo jeho blízkych,\n– ak nájomca užíva byt bez súhlasu inak, než bolo dohodnuté.\n\nVýpovedná lehota je spravidla 3 mesiace.\nNájomca má právo na predĺženie nájmu, ak sa strany nedohodnú inak.\n\nOchrana nájomcu\n– výpoveď musí byť písomná,\n– nájomca môže podať žalobu na neplatnosť výpovede,\n– prenajímateľ nemôže jednostranne zvyšovať nájomné bez zákonného postupu.\n\nKrátkodobý nájom bytu (zákon č. 98/2014 Z. z.)\nKrátkodobý nájom je osobitný režim určený na flexibilné bývanie na obdobie najviac 6 rokov. Zmluva musí byť:\n– písomná,\n– registrovaná u notára (Notársky centrálny register nájmov).\n\nVýhody a odlišnosti\n– kratšia výpovedná lehota – len 15 dní,\n– jednoduchšie ukončenie nájmu,\n– prenajímateľ má širšie možnosti výpovede než pri klasickom nájme bytu,\n– zmluva môže obsahovať presnejšie pravidlá užívania a kontroly bytu.\n\nPodstata rozdielu\n– OZ nájom bytu: silná ochrana nájomcu, dlhodobé bývanie, prísne výpovedné dôvody.\n– Krátkodobý nájom: flexibilita, rýchle ukončenie, slabšia ochrana nájomcu, vhodné pre krátkodobé bývanie.\n\nZdroje: OZ (40/1964 Zb.), § 685–716; zákon č. 98/2014 Z. z.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Aká zvláštna ochrana platí pre nájomcu bytu?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Výpoveď nájmu bytu (§ 711 OZ)", "definition": "Prenajímateľ môže vypovedať iba z taxatívne vymedzených zákonných dôvodov." },
-    { "term": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)", "definition": "Na dobu určitú do 6 rokov, so zápisom u notára." },
-    { "term": "Výpovedná lehota pri krátkodobom nájme", "definition": "Kratšia než pri bežnom nájme bytu (napr. 15/30 dní)." },
-    { "term": "Podnájom bytu (§ 719 OZ)", "definition": "Možný len so súhlasom prenajímateľa." },
-    { "term": "Posilnená ochrana nájomcu", "definition": "Typický znak nájmu bytu podľa OZ v porovnaní s bežným nájmom." }
+    {
+      "term": "Výpoveď nájmu bytu (§ 711 OZ)",
+      "definition": "Prenajímateľ môže vypovedať iba z taxatívne vymedzených zákonných dôvodov."
+    },
+    {
+      "term": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)",
+      "definition": "Na dobu určitú do 6 rokov, so zápisom u notára."
+    },
+    {
+      "term": "Výpovedná lehota pri krátkodobom nájme",
+      "definition": "Kratšia než pri bežnom nájme bytu (napr. 15/30 dní)."
+    },
+    {
+      "term": "Podnájom bytu (§ 719 OZ)",
+      "definition": "Možný len so súhlasom prenajímateľa."
+    },
+    {
+      "term": "Posilnená ochrana nájomcu",
+      "definition": "Typický znak nájmu bytu podľa OZ v porovnaní s bežným nájmom."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Výpoveď bez zákonného dôvodu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Prenajímateľ chce ukončiť nájom bytu jednoducho preto, že si to rozmyslel, bez toho, aby existoval niektorý z dôvodov uvedených v § 711 OZ.", "options": [], "correct": 0 },
+        {
+          "question": "Prenajímateľ chce ukončiť nájom bytu jednoducho preto, že si to rozmyslel, bez toho, aby existoval niektorý z dôvodov uvedených v § 711 OZ.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takáto výpoveď platná?",
-          "options": ["Nie, prenajímateľ môže vypovedať nájom bytu len z taxatívne vymedzených zákonných dôvodov", "Áno, prenajímateľ môže nájom bytu vypovedať kedykoľvek bez dôvodu", "Áno, ak o tom nájomcu informuje aspoň mesiac vopred"],
+          "options": [
+            "Nie, prenajímateľ môže vypovedať nájom bytu len z taxatívne vymedzených zákonných dôvodov",
+            "Áno, prenajímateľ môže nájom bytu vypovedať kedykoľvek bez dôvodu",
+            "Áno, ak o tom nájomcu informuje aspoň mesiac vopred"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez naplnenia niektorého z taxatívnych dôvodov nie je výpoveď platná.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Prečo zákon takto chráni nájomcu bytu?",
-          "options": ["Lebo bývanie sa považuje za základnú životnú potrebu vyžadujúcu zvýšenú právnu ochranu", "Lebo prenajímatelia nemajú žiadne vlastnícke práva k bytu", "Lebo ide len o formalitu bez reálneho významu"],
+          "options": [
+            "Lebo bývanie sa považuje za základnú životnú potrebu vyžadujúcu zvýšenú právnu ochranu",
+            "Lebo prenajímatelia nemajú žiadne vlastnícke práva k bytu",
+            "Lebo ide len o formalitu bez reálneho významu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ochrana bývania ako základnej potreby odôvodňuje posilnenú ochranu nájomcu.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Krátkodobý nájom bytu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Vlastník bytu sa rozhodne prenajať byt na presne 2 roky formou krátkodobého nájmu podľa zákona č. 98/2014 Z. z., so zápisom zmluvy u notára.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník bytu sa rozhodne prenajať byt na presne 2 roky formou krátkodobého nájmu podľa zákona č. 98/2014 Z. z., so zápisom zmluvy u notára.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takáto dĺžka nájmu v súlade s týmto zákonom?",
-          "options": ["Áno, krátkodobý nájom môže trvať až do 6 rokov", "Nie, krátkodobý nájom môže trvať najviac 1 rok", "Nie, tento zákon umožňuje len neurčitú dobu nájmu"],
+          "options": [
+            "Áno, krátkodobý nájom môže trvať až do 6 rokov",
+            "Nie, krátkodobý nájom môže trvať najviac 1 rok",
+            "Nie, tento zákon umožňuje len neurčitú dobu nájmu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon o krátkodobom nájme bytu pripúšťa dobu až 6 rokov.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Aká je hlavná výhoda krátkodobého nájmu pre prenajímateľa oproti bežnému nájmu bytu?",
-          "options": ["Kratšia výpovedná lehota a menej prísna ochrana nájomcu ako pri bežnom nájme bytu", "Úplné vylúčenie akejkoľvek ochrany nájomcu", "Možnosť nájom kedykoľvek okamžite ukončiť bez výpovednej lehoty"],
+          "options": [
+            "Kratšia výpovedná lehota a menej prísna ochrana nájomcu ako pri bežnom nájme bytu",
+            "Úplné vylúčenie akejkoľvek ochrany nájomcu",
+            "Možnosť nájom kedykoľvek okamžite ukončiť bez výpovednej lehoty"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Krátkodobý nájom zmierňuje niektoré ochranné prvky bežného nájmu bytu, no úplne ich neruší.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Nájom bytu podľa OZ a krátkodobý nájom – pojem, ochrana, výpoveď, rozdiely (osobitná ochrana nájomcu vs. flexibilita krátkodobého nájmu)",
     "branches": [
-      { "label": "Nájom bytu podľa OZ (§ 685–716 OZ)", "leaves": ["prenajímateľ prenechá byt na užívanie za nájomné", "nájomca byt riadne užíva, platí nájomné a služby", "prenajímateľ musí zabezpečiť byt v stave spôsobilom na užívanie", "prenajímateľ musí zabezpečiť nerušené bývanie", "nájomca vykonáva bežnú údržbu a drobné opravy"] },
-      { "label": "Výpoveď nájmu bytu (§ 711 OZ)", "leaves": ["prenajímateľ môže vypovedať nájom len z taxatívnych dôvodov", "hrubé porušenie povinností nájomcu: neplatenie, poškodzovanie", "potreba bytu pre prenajímateľa alebo jeho blízkych", "užívanie bytu inak, než bolo dohodnuté, bez súhlasu", "výpovedná lehota spravidla 3 mesiace"] },
-      { "label": "Ochrana nájomcu", "leaves": ["výpoveď musí byť písomná", "nájomca môže podať žalobu na neplatnosť výpovede", "prenajímateľ nemôže jednostranne zvyšovať nájomné bez zákonného postupu", "silná ochrana nájomcu ako slabšej strany"] },
-      { "label": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)", "leaves": ["určený na flexibilné bývanie, najviac 6 rokov", "zmluva musí byť písomná", "musí byť registrovaná v Notárskom centrálnom registri nájmov", "výpovedná lehota len 15 dní, jednoduchšie ukončenie nájmu", "prenajímateľ má širšie možnosti výpovede a väčšiu kontrolu"] },
-      { "label": "Rozdiely medzi OZ nájmom a krátkodobým nájmom", "leaves": ["nájom podľa OZ: silná ochrana nájomcu, dlhodobé bývanie", "nájom podľa OZ: prísne výpovedné dôvody, 3-mesačná výpovedná lehota", "krátkodobý nájom: flexibilita, rýchle ukončenie do 15 dní", "krátkodobý nájom: slabšia ochrana nájomcu, vhodný na krátkodobé bývanie"] },
-      { "label": "Význam pre prax", "leaves": ["nájom podľa OZ chráni stabilitu bývania", "krátkodobý nájom umožňuje rýchle a flexibilné riešenia", "prenajímateľ má pri krátkodobom nájme väčšiu kontrolu", "nájomca musí poznať rozdiely, aby si zvolil vhodný typ bývania"] }
+      {
+        "label": "Nájom bytu podľa OZ (§ 685–716 OZ)",
+        "leaves": [
+          "prenajímateľ prenechá byt na užívanie za nájomné",
+          "nájomca byt riadne užíva, platí nájomné a služby",
+          "prenajímateľ musí zabezpečiť byt v stave spôsobilom na užívanie",
+          "prenajímateľ musí zabezpečiť nerušené bývanie",
+          "nájomca vykonáva bežnú údržbu a drobné opravy"
+        ]
+      },
+      {
+        "label": "Výpoveď nájmu bytu (§ 711 OZ)",
+        "leaves": [
+          "prenajímateľ môže vypovedať nájom len z taxatívnych dôvodov",
+          "hrubé porušenie povinností nájomcu: neplatenie, poškodzovanie",
+          "potreba bytu pre prenajímateľa alebo jeho blízkych",
+          "užívanie bytu inak, než bolo dohodnuté, bez súhlasu",
+          "výpovedná lehota spravidla 3 mesiace"
+        ]
+      },
+      {
+        "label": "Ochrana nájomcu",
+        "leaves": [
+          "výpoveď musí byť písomná",
+          "nájomca môže podať žalobu na neplatnosť výpovede",
+          "prenajímateľ nemôže jednostranne zvyšovať nájomné bez zákonného postupu",
+          "silná ochrana nájomcu ako slabšej strany"
+        ]
+      },
+      {
+        "label": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)",
+        "leaves": [
+          "určený na flexibilné bývanie, najviac 6 rokov",
+          "zmluva musí byť písomná",
+          "musí byť registrovaná v Notárskom centrálnom registri nájmov",
+          "výpovedná lehota len 15 dní, jednoduchšie ukončenie nájmu",
+          "prenajímateľ má širšie možnosti výpovede a väčšiu kontrolu"
+        ]
+      },
+      {
+        "label": "Rozdiely medzi OZ nájmom a krátkodobým nájmom",
+        "leaves": [
+          "nájom podľa OZ: silná ochrana nájomcu, dlhodobé bývanie",
+          "nájom podľa OZ: prísne výpovedné dôvody, 3-mesačná výpovedná lehota",
+          "krátkodobý nájom: flexibilita, rýchle ukončenie do 15 dní",
+          "krátkodobý nájom: slabšia ochrana nájomcu, vhodný na krátkodobé bývanie"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "nájom podľa OZ chráni stabilitu bývania",
+          "krátkodobý nájom umožňuje rýchle a flexibilné riešenia",
+          "prenajímateľ má pri krátkodobom nájme väčšiu kontrolu",
+          "nájomca musí poznať rozdiely, aby si zvolil vhodný typ bývania"
+        ]
+      }
     ]
   }
 }

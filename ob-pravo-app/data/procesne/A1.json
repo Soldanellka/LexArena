@@ -2,13 +2,24 @@
   "id": "1",
   "title": "Pojem civilného práva procesného, pramene, druhy civilného procesu",
   "schemaVersion": "1.1",
-  "tags": ["civilné právo procesné", "pramene", "CSP", "CMP", "SSP", "druhy civilného procesu"],
-  "summary": "Civilné právo procesné je odvetvie verejného práva upravujúce postup súdov, účastníkov a ďalších subjektov pri prejednávaní a rozhodovaní súkromnoprávnych vecí. Na rozdiel od hmotného práva neustanovuje obsah práv a povinností, ale spôsob ich uplatnenia a ochrany pred súdom. Rekodifikáciou účinnou od 1.7.2016 bol zrušený jednotný Občiansky súdny poriadok (99/1963 Zb.) a nahradený tromi samostatnými kódexmi: Civilným sporovým poriadkom (zákon č. 160/2015 Z. z., CSP) pre sporové konania, Civilným mimosporovým poriadkom (zákon č. 161/2015 Z. z., CMP) pre mimosporové konania a Správnym súdnym poriadkom (zákon č. 162/2015 Z. z., SSP) pre správne súdnictvo.\n\nPramene civilného procesu tvoria predovšetkým Ústava SR (čl. 46 – 50, právo na súdnu a inú právnu ochranu), uvedené procesné kódexy, ako aj medzinárodné zmluvy a priamo aplikovateľné predpisy EÚ (napr. nariadenie Brusel Ia č. 1215/2012). Civilný proces v širšom zmysle zahŕňa sporové konanie, mimosporové konanie, správne súdnictvo, exekučné konanie (Exekučný poriadok č. 233/1995 Z. z.) a alternatívne formy riešenia sporov (rozhodcovské konanie, mediácia).\n\nZapamätaj si:\n- Od 1.7.2016 platia tri kódexy: CSP, CMP, SSP – nahradili jednotný OSP.\n- CSP upravuje sporové konanie (dva rovnocenné protistojace strany).\n- CMP upravuje mimosporové konanie (napr. dedičské, opatrovnícke veci).\n- SSP upravuje súdny prieskum rozhodnutí orgánov verejnej správy.\n- Pramene: Ústava SR, procesné kódexy, medzinárodné zmluvy, právo EÚ.\n- Civilný proces v širšom zmysle zahŕňa aj exekučné a rozhodcovské konanie."
-  ,
+  "tags": [
+    "civilné právo procesné",
+    "pramene",
+    "CSP",
+    "CMP",
+    "SSP",
+    "druhy civilného procesu"
+  ],
+  "summary": "Civilné právo procesné je verejnoprávne odvetvie, ktoré upravuje postup súdov, účastníkov a ďalších subjektov pri prejednávaní a rozhodovaní súkromnoprávnych vecí. Neupravuje obsah práv a povinností (to robí hmotné právo), ale spôsob ich uplatnenia a ochrany pred súdom. Jeho účelom je ochrana ohrozených práv, zabezpečenie spravodlivého procesu a právnej istoty.\n\nRekodifikácia od 1. 7. 2016\nZrušený bol jednotný Občiansky súdny poriadok (OSP) a nahradili ho tri samostatné kódexy:\n\nCivilný sporový poriadok (CSP) – zákon č. 160/2015 Z. z.\nupravuje sporové konanie, kde stoja proti sebe dve rovnocenné strany\n\nkontradiktórnosť, koncentrácia, moderné procesné princípy\n\nCivilný mimosporový poriadok (CMP) – zákon č. 161/2015 Z. z.\nupravuje mimosporové konania (dedičské, opatrovnícke, statusové veci)\n\nzisťuje sa objektívny stav\n\nsúd chráni verejný záujem\n\nSprávny súdny poriadok (SSP) – zákon č. 162/2015 Z. z.\nupravuje súdny prieskum zákonnosti rozhodnutí orgánov verejnej správy\n\nRekodifikácia priniesla jasné oddelenie sporového, mimosporového a správneho konania a modernizovala procesné pravidlá.\n\nPramene civilného procesu\nVnútroštátne pramene\nÚstava SR (čl. 46–50) – právo na súdnu ochranu, spravodlivý proces\n\nCSP, CMP, SSP – základné procesné kódexy\n\nExekučný poriadok (233/1995 Z. z.) – úprava exekučného konania\n\nMedzinárodné pramene\nDohovor o ochrane ľudských práv a základných slobôd (čl. 6 – právo na spravodlivý proces)\n\nPrávo Európskej únie\nnariadenia o medzinárodnej príslušnosti a uznávaní rozhodnutí\n\nBrusel Ia (nariadenie č. 1215/2012)\n\nDruhy civilného procesu (v širšom zmysle)\nSporové konanie (CSP)\nkontradiktórne\n\ndve rovnocenné strany\n\nrozhoduje sa o nároku\n\nMimosporové konanie (CMP)\nzisťuje sa objektívny stav\n\nsúd chráni verejný záujem\n\nSprávne súdnictvo (SSP)\npreskúmavanie zákonnosti rozhodnutí orgánov verejnej správy\n\nExekučné konanie\nnútený výkon súdnych rozhodnutí\n\nAlternatívne riešenie sporov\nrozhodcovské konanie\n\nmediácia\n\nZapamätaj si (štátnicové jadro)\nod 1. 7. 2016 platia CSP, CMP, SSP – nahradili OSP\n\nCSP = sporové, CMP = mimosporové, SSP = správne súdnictvo\n\npramene: Ústava, procesné kódexy, medzinárodné zmluvy, právo EÚ\n\ncivilný proces zahŕňa aj exekúcie a alternatívne riešenie sporov\n\núčel: ochrana ohrozených práv a spravodlivý proces\n\nZdroj\nLazar – Števček a kol.: Občiansky zákonník. Veľký komentár; judikatúra NS SR; OZ (40/1964 Zb.), § 847–852.",
   "quiz": [
     {
       "question": "Čo je predmetom civilného práva procesného?",
-      "options": ["Hmotnoprávna úprava vlastníctva", "Postup súdov a účastníkov pri prejednávaní a rozhodovaní civilných vecí", "Trestné stíhanie páchateľov", "Organizácia verejnej správy"],
+      "options": [
+        "Hmotnoprávna úprava vlastníctva",
+        "Postup súdov a účastníkov pri prejednávaní a rozhodovaní civilných vecí",
+        "Trestné stíhanie páchateľov",
+        "Organizácia verejnej správy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Civilné právo procesné upravuje postup súdov, účastníkov a ďalších subjektov pri prejednávaní a rozhodovaní súkromnoprávnych vecí.",
@@ -17,7 +28,12 @@
     },
     {
       "question": "Ktoré tri kódexy tvoria dnešnú úpravu civilného procesu od 1.7.2016?",
-      "options": ["OSP, Trestný poriadok, Správny poriadok", "CSP, CMP, SSP", "Obchodný zákonník, OZ, Zákonník práce", "Ústava, CSP, Exekučný poriadok"],
+      "options": [
+        "OSP, Trestný poriadok, Správny poriadok",
+        "CSP, CMP, SSP",
+        "Obchodný zákonník, OZ, Zákonník práce",
+        "Ústava, CSP, Exekučný poriadok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Rekodifikácia nahradila jednotný Občiansky súdny poriadok tromi kódexmi: CSP (160/2015), CMP (161/2015) a SSP (162/2015 Z. z.).",
@@ -26,7 +42,12 @@
     },
     {
       "question": "Aký typ konania upravuje Civilný mimosporový poriadok (CMP)?",
-      "options": ["Konania, v ktorých niet sporu medzi účastníkmi rovnocenného postavenia (napr. dedičské, opatrovnícke)", "Konania o obchodných sporoch medzi podnikateľmi", "Konania pred správnymi súdmi", "Výkon rozhodnutia a exekúciu"],
+      "options": [
+        "Konania, v ktorých niet sporu medzi účastníkmi rovnocenného postavenia (napr. dedičské, opatrovnícke)",
+        "Konania o obchodných sporoch medzi podnikateľmi",
+        "Konania pred správnymi súdmi",
+        "Výkon rozhodnutia a exekúciu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. CMP upravuje mimosporové konania – typicky veci starostlivosti o maloletých, dedičské konanie, konania o spôsobilosti na právne úkony – kde chýba kontradiktórny spor dvoch rovnocenných strán.",
@@ -35,7 +56,12 @@
     },
     {
       "question": "Čo patrí medzi pramene civilného práva procesného?",
-      "options": ["Iba CSP", "Ústava SR, CSP, CMP, SSP, medzinárodné zmluvy a priamo aplikovateľné predpisy EÚ", "Iba judikatúra Ústavného súdu", "Iba Exekučný poriadok"],
+      "options": [
+        "Iba CSP",
+        "Ústava SR, CSP, CMP, SSP, medzinárodné zmluvy a priamo aplikovateľné predpisy EÚ",
+        "Iba judikatúra Ústavného súdu",
+        "Iba Exekučný poriadok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pramene CPP tvoria najmä Ústava SR (čl. 46 – 50), procesné kódexy CSP/CMP/SSP, ako aj medzinárodné zmluvy a nariadenia EÚ (napr. nariadenie Brusel Ia).",
@@ -44,7 +70,12 @@
     },
     {
       "question": "Ktoré konanie nie je súčasťou civilného procesu ani v širšom zmysle?",
-      "options": ["Sporové konanie podľa CSP", "Mimosporové konanie podľa CMP", "Exekučné konanie", "Trestné konanie o prečine"],
+      "options": [
+        "Sporové konanie podľa CSP",
+        "Mimosporové konanie podľa CMP",
+        "Exekučné konanie",
+        "Trestné konanie o prečine"
+      ],
       "correct": 3,
       "explanation": {
         "correct": "Správne. Trestné konanie je samostatným odvetvím (trestné právo procesné) upravené Trestným poriadkom, nie je súčasťou civilného procesu.",
@@ -53,21 +84,44 @@
     }
   ],
   "tiles": [
-    { "term": "Civilné právo procesné", "definition": "Odvetvie práva upravujúce postup súdov a účastníkov pri prejednávaní a rozhodovaní civilných vecí." },
-    { "term": "CSP", "definition": "Civilný sporový poriadok (zákon č. 160/2015 Z. z.) – upravuje sporové konanie." },
-    { "term": "CMP", "definition": "Civilný mimosporový poriadok (zákon č. 161/2015 Z. z.) – upravuje mimosporové konanie." },
-    { "term": "SSP", "definition": "Správny súdny poriadok (zákon č. 162/2015 Z. z.) – upravuje správne súdnictvo." },
-    { "term": "Rekodifikácia 2016", "definition": "K 1.7.2016 nahradila jednotný OSP trojicou kódexov CSP, CMP, SSP." }
+    {
+      "term": "Civilné právo procesné",
+      "definition": "Odvetvie práva upravujúce postup súdov a účastníkov pri prejednávaní a rozhodovaní civilných vecí."
+    },
+    {
+      "term": "CSP",
+      "definition": "Civilný sporový poriadok (zákon č. 160/2015 Z. z.) – upravuje sporové konanie."
+    },
+    {
+      "term": "CMP",
+      "definition": "Civilný mimosporový poriadok (zákon č. 161/2015 Z. z.) – upravuje mimosporové konanie."
+    },
+    {
+      "term": "SSP",
+      "definition": "Správny súdny poriadok (zákon č. 162/2015 Z. z.) – upravuje správne súdnictvo."
+    },
+    {
+      "term": "Rekodifikácia 2016",
+      "definition": "K 1.7.2016 nahradila jednotný OSP trojicou kódexov CSP, CMP, SSP."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Výber správneho kódexu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Rodič sa domáha na súde určenia výživného na maloleté dieťa; nejde o klasický kontradiktórny spor dvoch rovnocenných strán, ale o vec starostlivosti o dieťa.", "options": [], "correct": 0 },
+        {
+          "question": "Rodič sa domáha na súde určenia výživného na maloleté dieťa; nejde o klasický kontradiktórny spor dvoch rovnocenných strán, ale o vec starostlivosti o dieťa.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Podľa ktorého kódexu bude súd postupovať?",
-          "options": ["CSP", "CMP", "SSP"],
+          "options": [
+            "CSP",
+            "CMP",
+            "SSP"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Veci starostlivosti súdu o maloletých patria medzi mimosporové konania upravené v CMP.",
@@ -76,7 +130,11 @@
         },
         {
           "question": "Prečo sa neuplatní CSP?",
-          "options": ["Lebo CSP sa vzťahuje len na obchodné spory", "Lebo ide o mimosporovú vec starostlivosti o maloletého, ktorá patrí do pôsobnosti CMP", "Lebo výživné nie je súkromnoprávny nárok"],
+          "options": [
+            "Lebo CSP sa vzťahuje len na obchodné spory",
+            "Lebo ide o mimosporovú vec starostlivosti o maloletého, ktorá patrí do pôsobnosti CMP",
+            "Lebo výživné nie je súkromnoprávny nárok"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. CMP sa vzťahuje na taxatívne vymedzené mimosporové veci vrátane starostlivosti súdu o maloletých.",
@@ -89,10 +147,18 @@
       "title": "Prípad 2 – Žaloba proti rozhodnutiu správneho orgánu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Podnikateľ nesúhlasí s rozhodnutím daňového úradu a chce ho napadnúť na súde.", "options": [], "correct": 0 },
+        {
+          "question": "Podnikateľ nesúhlasí s rozhodnutím daňového úradu a chce ho napadnúť na súde.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorý kódex upravuje súdne preskúmanie rozhodnutí orgánov verejnej správy?",
-          "options": ["SSP", "CMP", "CSP"],
+          "options": [
+            "SSP",
+            "CMP",
+            "CSP"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súdny prieskum rozhodnutí orgánov verejnej správy upravuje Správny súdny poriadok (zákon č. 162/2015 Z. z.).",
@@ -101,7 +167,11 @@
         },
         {
           "question": "Ako sa také konanie označuje?",
-          "options": ["Sporové konanie", "Správne súdnictvo", "Mimosporové konanie"],
+          "options": [
+            "Sporové konanie",
+            "Správne súdnictvo",
+            "Mimosporové konanie"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Ide o správne súdnictvo, v ktorom správne súdy preskúmavajú zákonnosť postupu a rozhodnutí orgánov verejnej správy.",
@@ -120,10 +190,63 @@
   "spider": {
     "center": "Civilné právo procesné – pojem, pramene, druhy konaní (CSP, CMP, SSP)",
     "branches": [
-      { "label": "Pojem civilného práva procesného", "leaves": ["odvetvie verejného práva", "upravuje postup súdov a účastníkov pri prejednávaní súkromnoprávnych vecí", "neupravuje obsah práv → to robí hmotné právo", "upravuje uplatnenie a ochranu práv pred súdom", "účel: ochrana ohrozených práv"] },
-      { "label": "Rekodifikácia od 1. 7. 2016", "leaves": ["Zrušený OSP → nahradili ho tri kódexy", "CSP – Civilný sporový poriadok", "sporové konanie", "dve rovnocenné strany", "kontradiktórnosť, koncentrácia, moderné princípy", "CMP – Civilný mimosporový poriadok", "dedičské, opatrovnícke, statusové veci", "zisťuje sa objektívny stav", "súd chráni verejný záujem", "SSP – Správny súdny poriadok", "preskúmavanie zákonnosti rozhodnutí orgánov verejnej správy", "Rekodifikácia: modernizácia procesných pravidiel, jasné oddelenie sporového, mimosporového a správneho konania"] },
-      { "label": "Pramene civilného procesu", "leaves": ["Ústava SR (čl. 46–50) – právo na súdnu ochranu, spravodlivý proces", "vnútroštátne pramene: CSP, CMP, SSP – základné procesné kódexy", "CSP – zákon č. 160/2015 Z. z.", "Medzinárodné zmluvy – napr. Dohovor o ochrane ľudských práv", "Právo EÚ – nariadenia, Brusel Ia (1215/2012), nariadenia o uznávaní rozhodnutí", "Exekučný poriadok (233/1995 Z. z.) – úprava exekučného konania"] },
-      { "label": "Klasifikácia (druhy civilného procesu)", "leaves": ["Sporové konanie (CSP):", "kontradiktórne", "dve strany", "rozhoduje sa o nároku", "Mimosporové konanie (CMP):", "zisťuje sa objektívny stav", "súd chráni verejný záujem", "Správne súdnictvo (SSP):", "preskúmavanie zákonnosti rozhodnutí verejnej správy", "Exekučné konanie:", "nútený výkon súdnych rozhodnutí", "Alternatívne riešenie sporov:", "rozhodcovské konanie", "mediácia"] }
+      {
+        "label": "Pojem civilného práva procesného",
+        "leaves": [
+          "odvetvie verejného práva",
+          "upravuje postup súdov a účastníkov pri prejednávaní súkromnoprávnych vecí",
+          "neupravuje obsah práv → to robí hmotné právo",
+          "upravuje uplatnenie a ochranu práv pred súdom",
+          "účel: ochrana ohrozených práv"
+        ]
+      },
+      {
+        "label": "Rekodifikácia od 1. 7. 2016",
+        "leaves": [
+          "Zrušený OSP → nahradili ho tri kódexy",
+          "CSP – Civilný sporový poriadok",
+          "sporové konanie",
+          "dve rovnocenné strany",
+          "kontradiktórnosť, koncentrácia, moderné princípy",
+          "CMP – Civilný mimosporový poriadok",
+          "dedičské, opatrovnícke, statusové veci",
+          "zisťuje sa objektívny stav",
+          "súd chráni verejný záujem",
+          "SSP – Správny súdny poriadok",
+          "preskúmavanie zákonnosti rozhodnutí orgánov verejnej správy",
+          "Rekodifikácia: modernizácia procesných pravidiel, jasné oddelenie sporového, mimosporového a správneho konania"
+        ]
+      },
+      {
+        "label": "Pramene civilného procesu",
+        "leaves": [
+          "Ústava SR (čl. 46–50) – právo na súdnu ochranu, spravodlivý proces",
+          "vnútroštátne pramene: CSP, CMP, SSP – základné procesné kódexy",
+          "CSP – zákon č. 160/2015 Z. z.",
+          "Medzinárodné zmluvy – napr. Dohovor o ochrane ľudských práv",
+          "Právo EÚ – nariadenia, Brusel Ia (1215/2012), nariadenia o uznávaní rozhodnutí",
+          "Exekučný poriadok (233/1995 Z. z.) – úprava exekučného konania"
+        ]
+      },
+      {
+        "label": "Klasifikácia (druhy civilného procesu)",
+        "leaves": [
+          "Sporové konanie (CSP):",
+          "kontradiktórne",
+          "dve strany",
+          "rozhoduje sa o nároku",
+          "Mimosporové konanie (CMP):",
+          "zisťuje sa objektívny stav",
+          "súd chráni verejný záujem",
+          "Správne súdnictvo (SSP):",
+          "preskúmavanie zákonnosti rozhodnutí verejnej správy",
+          "Exekučné konanie:",
+          "nútený výkon súdnych rozhodnutí",
+          "Alternatívne riešenie sporov:",
+          "rozhodcovské konanie",
+          "mediácia"
+        ]
+      }
     ]
   }
 }

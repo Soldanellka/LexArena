@@ -2,13 +2,23 @@
   "id": "44",
   "title": "Postavenie a činnosť notára",
   "schemaVersion": "1.1",
-  "tags": ["notár", "Notársky poriadok", "notárska zápisnica", "súdny komisár", "vidimácia"],
-  "summary": "Notár je podľa Notárskeho poriadku (zákon č. 323/1992 Zb.) štátom určená a splnomocnená osoba, ktorá vykonáva notársku činnosť ako osobitnú verejnú funkciu; nejde o podnikanie v bežnom zmysle. Medzi typické činnosti notára patrí spisovanie verejných listín – notárskych zápisníc o právnych úkonoch, osvedčovanie právne významných skutočností a vyhlásení, osvedčovanie pravosti podpisov a zhody odpisov s listinami (vidimácia, ľudovo legalizácia) a notárska úschova listín a peňazí slúžiaca na zabezpečenie právnych úkonov.\n\nOsobitnou úlohou notára je pôsobenie ako súdny komisár v konaní o dedičstve – notár tu na základe poverenia súdom vykonáva potrebné procesné úkony a pripravuje podklady pre rozhodnutie, ktoré napokon vydáva súd formou uznesenia. Notár tiež vedie alebo sa podieľa na vedení niektorých verejných registrov (napríklad registra záložných práv). Notárska zápisnica, ktorá obsahuje zákonom stanovené náležitosti vrátane výslovného súhlasu povinného s jej vykonateľnosťou, môže slúžiť ako exekučný titul bez potreby osobitného súdneho konania o veci samej.\n\nZapamätaj si:\n- Notár vykonáva verejnú funkciu podľa Notárskeho poriadku (zákon č. 323/1992 Zb.), nie je klasickým podnikateľom.\n- Typické činnosti: notárske zápisnice, osvedčovanie skutočností a podpisov (vidimácia), notárska úschova.\n- V konaní o dedičstve pôsobí ako súdny komisár poverený súdom.\n- Rozhodnutie vo veci dedičstva napriek účasti notára vždy vydáva súd.\n- Notárska zápisnica so súhlasom s vykonateľnosťou môže byť exekučným titulom."
-  ,
+  "tags": [
+    "notár",
+    "Notársky poriadok",
+    "notárska zápisnica",
+    "súdny komisár",
+    "vidimácia"
+  ],
+  "summary": "Notár je podľa Notárskeho poriadku (zákon č. 323/1992 Zb.) štátom určená a splnomocnená osoba vykonávajúca notársku činnosť ako verejnú funkciu.\nNevykonáva podnikanie v bežnom zmysle — jeho činnosť má verejnoprávny charakter, je regulovaná zákonom a podlieha dohľadu.\n\nNotár je:\n\nverejný činiteľ vykonávajúci fidei publica,\n\nnezávislý a nestranný,\n\nviazaný zákonom,\n\npovinný zachovávať mlčanlivosť,\n\norganizovaný v stavovskom orgáne Notárska komora SR.\n\n1. Typické činnosti notára\nNotárske zápisnice\nspisovanie verejných listín o právnych úkonoch,\n\nvysoká dôkazná sila,\n\nmôžu byť exekučným titulom, ak obsahujú presné označenie povinnosti, splatnosť a výslovný súhlas povinného s vykonateľnosťou.\n\nOsvedčovanie skutočností a podpisov\nosvedčovanie právne významných skutočností,\n\nlegalizácia podpisov,\n\nvidimácia listín.\n\nNotárska úschova\núschova listín, peňazí alebo iných hodnôt, najmä pri prevodoch nehnuteľností.\n\nVedenie verejných registrov\nregister záložných práv,\n\nregister dražieb,\n\nďalšie registre podľa zákona.\n\n2. Notár ako súdny komisár v dedičskom konaní\nNotár pôsobí ako súdny komisár poverený súdom.\nDedičské konanie je prvoinštančné konanie, ktoré vykonáva notár v mene súdu.\n\nNotár:\n\nzisťuje okruh dedičov, majetok a záväzky poručiteľa,\n\nvykonáva procesné úkony,\n\npripravuje podklady pre rozhodnutie,\n\nrozhoduje uznesením, proti ktorému je možné podať odvolanie,\n\nrozhodnutie vo veci samej však vždy vydáva súd.\n\n3. Notárska zápisnica ako exekučný titul\nNotárska zápisnica je exekučným titulom, ak obsahuje:\n\npresné označenie povinnosti,\n\nsplatnosť,\n\nvýslovný súhlas povinného s vykonateľnosťou.\n\nZapamätaj si (štátnicové jadro)\n– Notár vykonáva verejnú funkciu, nie podnikanie.\n– Typické činnosti: notárske zápisnice, osvedčovanie, úschovy, registre.\n– V dedičskom konaní pôsobí ako súdny komisár, ale rozhoduje súd.\n– Notárska zápisnica so súhlasom s vykonateľnosťou je exekučným titulom.\n– Stavovský orgán: Notárska komora SR.\n\nZdroj\nNotársky poriadok (zákon č. 323/1992 Zb.)\nŠtevček – Macej – Šramel a kol.: Civilné procesné právo, Wolters Kluwer\nKomentár k Notárskemu poriadku, C. H. Beck",
   "quiz": [
     {
       "question": "Aké je postavenie notára podľa Notárskeho poriadku?",
-      "options": ["Štátom určená a splnomocnená osoba vykonávajúca notársku činnosť ako verejnú funkciu", "Bežný podnikateľ bez osobitného postavenia", "Zamestnanec súdu podriadený sudcovi", "Orgán štátnej správy s trestnoprávnou právomocou"],
+      "options": [
+        "Štátom určená a splnomocnená osoba vykonávajúca notársku činnosť ako verejnú funkciu",
+        "Bežný podnikateľ bez osobitného postavenia",
+        "Zamestnanec súdu podriadený sudcovi",
+        "Orgán štátnej správy s trestnoprávnou právomocou"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Notár vykonáva osobitnú verejnú funkciu, nie je bežným podnikateľom ani zamestnancom súdu.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Čo patrí medzi typické činnosti notára?",
-      "options": ["Spisovanie notárskych zápisníc, osvedčovanie skutočností a podpisov, notárska úschova", "Vedenie trestného konania proti páchateľom", "Rozhodovanie o odvolaniach proti rozsudkom", "Vydávanie stavebných povolení"],
+      "options": [
+        "Spisovanie notárskych zápisníc, osvedčovanie skutočností a podpisov, notárska úschova",
+        "Vedenie trestného konania proti páchateľom",
+        "Rozhodovanie o odvolaniach proti rozsudkom",
+        "Vydávanie stavebných povolení"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Ide o klasické činnosti spadajúce do notárskej praxe.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "V akej funkcii pôsobí notár v konaní o dedičstve?",
-      "options": ["Ako súdny komisár poverený súdom", "Ako sudca rozhodujúci samostatne bez súdu", "Ako exekútor vymáhajúci dlhy poručiteľa", "Ako svedok bez ďalších právomocí"],
+      "options": [
+        "Ako súdny komisár poverený súdom",
+        "Ako sudca rozhodujúci samostatne bez súdu",
+        "Ako exekútor vymáhajúci dlhy poručiteľa",
+        "Ako svedok bez ďalších právomocí"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Notár koná v mene súdu na základe jeho poverenia, samotné rozhodnutie však vydáva súd.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Čo je vidimácia (legalizácia) vykonávaná notárom?",
-      "options": ["Osvedčenie pravosti podpisu alebo zhody odpisu (kópie) s listinou", "Vydanie exekučného titulu bez ďalších náležitostí", "Rozhodnutie o vlastníckom práve k nehnuteľnosti", "Schválenie rozvodu manželstva"],
+      "options": [
+        "Osvedčenie pravosti podpisu alebo zhody odpisu (kópie) s listinou",
+        "Vydanie exekučného titulu bez ďalších náležitostí",
+        "Rozhodnutie o vlastníckom práve k nehnuteľnosti",
+        "Schválenie rozvodu manželstva"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Vidimácia je formálnym osvedčením pravosti podpisu alebo zhody kópie s originálom.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Môže sa notárska zápisnica stať exekučným titulom?",
-      "options": ["Áno, ak obsahuje zákonom stanovené náležitosti vrátane súhlasu s vykonateľnosťou", "Nie, notárska zápisnica nikdy nemôže byť podkladom pre exekúciu", "Áno, ale iba ak ju dodatočne potvrdí exekútor", "Áno, bez ohľadu na akékoľvek náležitosti"],
+      "options": [
+        "Áno, ak obsahuje zákonom stanovené náležitosti vrátane súhlasu s vykonateľnosťou",
+        "Nie, notárska zápisnica nikdy nemôže byť podkladom pre exekúciu",
+        "Áno, ale iba ak ju dodatočne potvrdí exekútor",
+        "Áno, bez ohľadu na akékoľvek náležitosti"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Notárska zápisnica sa exekučným titulom stáva len pri splnení presne stanovených zákonných podmienok.",
@@ -53,21 +83,45 @@
     }
   ],
   "tiles": [
-    { "term": "Notár", "definition": "Štátom určená a splnomocnená osoba vykonávajúca notársku činnosť ako verejnú funkciu (Notársky poriadok, zákon č. 323/1992 Zb.)." },
-    { "term": "Notárska zápisnica", "definition": "Verejná listina o právnom úkone spísaná notárom, môže byť exekučným titulom pri splnení náležitostí." },
-    { "term": "Vidimácia (legalizácia)", "definition": "Osvedčenie pravosti podpisu alebo zhody kópie s listinou." },
-    { "term": "Súdny komisár", "definition": "Notár poverený súdom na výkon úkonov v konaní o dedičstve." },
-    { "term": "Notárska úschova", "definition": "Úschova listín a peňazí u notára na účely zabezpečenia právneho úkonu." }
+    {
+      "term": "Notár",
+      "definition": "Štátom určená a splnomocnená osoba vykonávajúca notársku činnosť ako verejnú funkciu (Notársky poriadok, zákon č. 323/1992 Zb.)."
+    },
+    {
+      "term": "Notárska zápisnica",
+      "definition": "Verejná listina o právnom úkone spísaná notárom, môže byť exekučným titulom pri splnení náležitostí."
+    },
+    {
+      "term": "Vidimácia (legalizácia)",
+      "definition": "Osvedčenie pravosti podpisu alebo zhody kópie s listinou."
+    },
+    {
+      "term": "Súdny komisár",
+      "definition": "Notár poverený súdom na výkon úkonov v konaní o dedičstve."
+    },
+    {
+      "term": "Notárska úschova",
+      "definition": "Úschova listín a peňazí u notára na účely zabezpečenia právneho úkonu."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Osvedčenie podpisu na zmluve",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Strany potrebujú, aby bol podpis na zmluve o prevode nehnuteľnosti úradne osvedčený.", "options": [], "correct": 0 },
+        {
+          "question": "Strany potrebujú, aby bol podpis na zmluve o prevode nehnuteľnosti úradne osvedčený.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kto môže vykonať osvedčenie (vidimáciu) podpisu?",
-          "options": ["Notár (alebo iný na to oprávnený subjekt, napr. obec)", "Iba sudca", "Iba exekútor", "Iba znalec"],
+          "options": [
+            "Notár (alebo iný na to oprávnený subjekt, napr. obec)",
+            "Iba sudca",
+            "Iba exekútor",
+            "Iba znalec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Osvedčovanie podpisov patrí medzi typické notárske (a obdobné) úkony.",
@@ -76,7 +130,11 @@
         },
         {
           "question": "Čo osvedčenie podpisu potvrdzuje?",
-          "options": ["Že podpis na listine urobila konkrétna osoba", "Že obsah zmluvy je vecne správny a v súlade so zákonom", "Že zmluva je automaticky exekučným titulom"],
+          "options": [
+            "Že podpis na listine urobila konkrétna osoba",
+            "Že obsah zmluvy je vecne správny a v súlade so zákonom",
+            "Že zmluva je automaticky exekučným titulom"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vidimácia sa týka len pravosti podpisu, nie vecnej správnosti obsahu listiny.",
@@ -89,10 +147,18 @@
       "title": "Prípad 2 – Notár ako súdny komisár",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Súd poverí notára, aby v jeho mene vykonal úkony v konaní o dedičstve po zomretej osobe.", "options": [], "correct": 0 },
+        {
+          "question": "Súd poverí notára, aby v jeho mene vykonal úkony v konaní o dedičstve po zomretej osobe.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "V akom postavení notár v tomto konaní koná?",
-          "options": ["Ako súdny komisár konajúci v mene súdu", "Ako samostatný sudca rozhodujúci nezávisle od súdu", "Ako exekútor vymáhajúci pohľadávky poručiteľa"],
+          "options": [
+            "Ako súdny komisár konajúci v mene súdu",
+            "Ako samostatný sudca rozhodujúci nezávisle od súdu",
+            "Ako exekútor vymáhajúci pohľadávky poručiteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Notár v dedičskom konaní koná ako súdny komisár na základe poverenia súdom.",
@@ -101,7 +167,11 @@
         },
         {
           "question": "Kto napokon vydáva rozhodnutie vo veci (uznesenie o dedičstve)?",
-          "options": ["Súd, hoci podklady pripravuje notár ako súdny komisár", "Notár sám, bez akejkoľvek účasti súdu", "Exekútor poverený súdom"],
+          "options": [
+            "Súd, hoci podklady pripravuje notár ako súdny komisár",
+            "Notár sám, bez akejkoľvek účasti súdu",
+            "Exekútor poverený súdom"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Formálne rozhodnutie vo veci vždy vydáva súd, notár len pripravuje podklady a vykonáva úkony.",
@@ -120,13 +190,68 @@
   "spider": {
     "center": "Notár – verejná funkcia × zápisnice × osvedčovanie × úschova × dedičstvo × exekučný titul",
     "branches": [
-      { "label": "Postavenie notára", "leaves": ["zákon č. 323/1992 Zb., Notársky poriadok", "notár je verejný činiteľ poverený štátom výkonom časti štátnej moci", "pôsobí ako nositeľ fidei publica (verejnej viery)", "nezávislosť, nestrannosť, povinnosť mlčanlivosti, viazanosť zákonmi", "nie je podnikateľom v bežnom zmysle, jeho činnosť je verejnoprávna a regulovaná zákonom"] },
-      { "label": "Notárske zápisnice", "leaves": ["verejné listiny o právnych úkonoch (zmluvy, vyhlásenia, dohody)", "majú vysokú dôkaznú silu", "ak obsahujú zákonné náležitosti + súhlas povinného s vykonateľnosťou, sú exekučným titulom"] },
-      { "label": "Osvedčovanie skutočností a podpisov", "leaves": ["osvedčovanie právne významných skutočností", "osvedčovanie pravosti podpisov (legalizácia)", "vidimácia – osvedčenie zhody odpisu s originálom", "zabezpečujú právnu istotu v civilnom styku"] },
-      { "label": "Notárska úschova", "leaves": ["úschova listín, peňazí alebo iných hodnôt", "typicky pri prevodoch nehnuteľností alebo zmluvách s vyšším rizikom", "chráni strany pred podvodom a zabezpečuje bezpečný priebeh právneho úkonu"] },
-      { "label": "Notár ako súdny komisár v dedičskom konaní", "leaves": ["notára poverí súd podľa rozvrhu", "v dedičskom konaní vystupuje v postavení prvoinštančného súdu", "podľa § 16 CMP súdny komisár rozhoduje", "vykonáva procesné úkony, zisťuje dedičov, majetok a záväzky", "rozhoduje uznesením", "proti jeho uzneseniu je vždy prípustné odvolanie"] },
-      { "label": "Notárska zápisnica ako exekučný titul", "leaves": ["Musí obsahovať:", "presné označenie povinnosti", "splatnosť", "výslovný súhlas povinného s vykonateľnosťou → umožňuje vymáhanie bez súdneho konania o veci samej"] },
-      { "label": "Centrálne registre a stavovský orgán", "leaves": ["notár vedie a spravuje centrálne registre (napr. register záložných práv)", "stavovským orgánom je Notárska komora SR"] }
+      {
+        "label": "Postavenie notára",
+        "leaves": [
+          "zákon č. 323/1992 Zb., Notársky poriadok",
+          "notár je verejný činiteľ poverený štátom výkonom časti štátnej moci",
+          "pôsobí ako nositeľ fidei publica (verejnej viery)",
+          "nezávislosť, nestrannosť, povinnosť mlčanlivosti, viazanosť zákonmi",
+          "nie je podnikateľom v bežnom zmysle, jeho činnosť je verejnoprávna a regulovaná zákonom"
+        ]
+      },
+      {
+        "label": "Notárske zápisnice",
+        "leaves": [
+          "verejné listiny o právnych úkonoch (zmluvy, vyhlásenia, dohody)",
+          "majú vysokú dôkaznú silu",
+          "ak obsahujú zákonné náležitosti + súhlas povinného s vykonateľnosťou, sú exekučným titulom"
+        ]
+      },
+      {
+        "label": "Osvedčovanie skutočností a podpisov",
+        "leaves": [
+          "osvedčovanie právne významných skutočností",
+          "osvedčovanie pravosti podpisov (legalizácia)",
+          "vidimácia – osvedčenie zhody odpisu s originálom",
+          "zabezpečujú právnu istotu v civilnom styku"
+        ]
+      },
+      {
+        "label": "Notárska úschova",
+        "leaves": [
+          "úschova listín, peňazí alebo iných hodnôt",
+          "typicky pri prevodoch nehnuteľností alebo zmluvách s vyšším rizikom",
+          "chráni strany pred podvodom a zabezpečuje bezpečný priebeh právneho úkonu"
+        ]
+      },
+      {
+        "label": "Notár ako súdny komisár v dedičskom konaní",
+        "leaves": [
+          "notára poverí súd podľa rozvrhu",
+          "v dedičskom konaní vystupuje v postavení prvoinštančného súdu",
+          "podľa § 16 CMP súdny komisár rozhoduje",
+          "vykonáva procesné úkony, zisťuje dedičov, majetok a záväzky",
+          "rozhoduje uznesením",
+          "proti jeho uzneseniu je vždy prípustné odvolanie"
+        ]
+      },
+      {
+        "label": "Notárska zápisnica ako exekučný titul",
+        "leaves": [
+          "Musí obsahovať:",
+          "presné označenie povinnosti",
+          "splatnosť",
+          "výslovný súhlas povinného s vykonateľnosťou → umožňuje vymáhanie bez súdneho konania o veci samej"
+        ]
+      },
+      {
+        "label": "Centrálne registre a stavovský orgán",
+        "leaves": [
+          "notár vedie a spravuje centrálne registre (napr. register záložných práv)",
+          "stavovským orgánom je Notárska komora SR"
+        ]
+      }
     ]
   }
 }

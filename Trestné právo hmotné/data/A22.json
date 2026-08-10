@@ -2,7 +2,13 @@
   "id": "A22",
   "title": "Trestné činy proti majetku",
   "schemaVersion": "1.1",
-  "tags": ["majetok", "krádež", "sprenevera", "podvod", "lúpež"],
+  "tags": [
+    "majetok",
+    "krádež",
+    "sprenevera",
+    "podvod",
+    "lúpež"
+  ],
   "theory": [
     {
       "heading": "Krádež",
@@ -20,46 +26,81 @@
   "quiz": [
     {
       "question": "Čo je krádež?",
-      "options": ["Zmocnenie sa cudzej veci", "Uvedenie do omylu", "Zničenie cudzej veci"],
+      "options": [
+        "Zmocnenie sa cudzej veci",
+        "Uvedenie do omylu",
+        "Zničenie cudzej veci"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – krádež je zmocnenie sa cudzej veci.",
       "explanation_incorrect": "Nie – krádež je zmocnenie sa veci."
     },
     {
       "question": "Čo je podvod?",
-      "options": ["Prisvojenie zverenej veci", "Uvedenie do omylu za účelom prospechu", "Náhodné poškodenie veci"],
+      "options": [
+        "Prisvojenie zverenej veci",
+        "Uvedenie do omylu za účelom prospechu",
+        "Náhodné poškodenie veci"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – podvod je uvedenie do omylu.",
       "explanation_incorrect": "Nie – podvod je uvedenie do omylu."
     },
     {
       "question": "Čo je sprenevera?",
-      "options": ["Prisvojenie si zverenej veci", "Krádež z obchodu", "Podvodné konanie"],
+      "options": [
+        "Prisvojenie si zverenej veci",
+        "Krádež z obchodu",
+        "Podvodné konanie"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – sprenevera je prisvojenie zverenej veci.",
       "explanation_incorrect": "Nie – ide o zverenú vec."
     },
     {
       "question": "Ktorý čin je majetkový?",
-      "options": ["Krádež", "Ublíženie na zdraví", "Vydieranie"],
+      "options": [
+        "Krádež",
+        "Ublíženie na zdraví",
+        "Vydieranie"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – krádež je majetkový čin.",
       "explanation_incorrect": "Nie – ublíženie nie je majetkový čin."
     },
     {
       "question": "Čo je chráneným objektom pri majetkových činoch?",
-      "options": ["Život", "Majetok", "Sloboda"],
+      "options": [
+        "Život",
+        "Majetok",
+        "Sloboda"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – chránený je majetok.",
       "explanation_incorrect": "Nie – ide o majetok."
     }
   ],
   "tiles": [
-    { "term": "Krádež", "definition": "Zmocnenie sa cudzej veci." },
-    { "term": "Podvod", "definition": "Uvedenie do omylu za účelom prospechu." },
-    { "term": "Sprenevera", "definition": "Prisvojenie si zverenej veci." },
-    { "term": "Škoda", "definition": "Majetková ujma spôsobená činom." },
-    { "term": "Prospech", "definition": "Výhoda získaná trestným činom." }
+    {
+      "term": "Krádež",
+      "definition": "Zmocnenie sa cudzej veci."
+    },
+    {
+      "term": "Podvod",
+      "definition": "Uvedenie do omylu za účelom prospechu."
+    },
+    {
+      "term": "Sprenevera",
+      "definition": "Prisvojenie si zverenej veci."
+    },
+    {
+      "term": "Škoda",
+      "definition": "Majetková ujma spôsobená činom."
+    },
+    {
+      "term": "Prospech",
+      "definition": "Výhoda získaná trestným činom."
+    }
   ],
   "cases": [
     {
@@ -73,7 +114,11 @@
         },
         {
           "question": "Krok 1: Ide o krádež?",
-          "options": ["Áno", "Nie", "Len ak tovar bol drahý"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak tovar bol drahý"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o krádež.",
           "explanation_incorrect": "Nie – je to krádež."
@@ -91,7 +136,11 @@
         },
         {
           "question": "Krok 1: Ide o spreneveru?",
-          "options": ["Áno", "Nie", "Len ak to bolo veľa peňazí"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to bolo veľa peňazí"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – peniaze mu boli zverené.",
           "explanation_incorrect": "Nie – ide o spreneveru."
@@ -108,10 +157,42 @@
   "spider": {
     "center": "TČ proti majetku",
     "branches": [
-      { "label": "Krádež (§ 212)", "leaves": ["Podstata – úmyselné prisvojenie si cudzej veci zmocnením sa", "Trestnosť – škoda nad 700 €, alebo vlámanie, vrecková či opakovaná krádež", "Kľúčový znak – fyzické zmocnenie bez súhlasu vlastníka"] },
-      { "label": "Podvod (§ 221)", "leaves": ["Podstata – obohatenie uvedením do omylu alebo využitím omylu", "Formy – aktívne uvedenie do omylu, využitie omylu, zamlčanie podstatných skutočností", "Rozdiel od krádeže – poškodený majetok odovzdá sám, na základe omylu", "Škoda – aspoň malá (nad 700 €)"] },
-      { "label": "Sprenevera (§ 213)", "leaves": ["Podstata – prisvojenie si cudzej veci, ktorá bola páchateľovi zverená", "Zverenie – dobrovoľné odovzdanie na účel (správa, úschova, povolanie)", "Kľúčový znak – vec zverená, nie odňatá; konanie v rozpore s účelom", "Typické – profesionálne vzťahy (zamestnanec, účtovník, správca)"] },
-      { "label": "Rozlíšenie trojice", "leaves": ["Krádež – odňatie veci", "Podvod – omyl poškodeného", "Sprenevera – zneužitie zverenia", "Hranica malej škody – 700 €"] }
+      {
+        "label": "Krádež (§ 212)",
+        "leaves": [
+          "Podstata – úmyselné prisvojenie si cudzej veci zmocnením sa",
+          "Trestnosť – škoda nad 700 €, alebo vlámanie, vrecková či opakovaná krádež",
+          "Kľúčový znak – fyzické zmocnenie bez súhlasu vlastníka"
+        ]
+      },
+      {
+        "label": "Podvod (§ 221)",
+        "leaves": [
+          "Podstata – obohatenie uvedením do omylu alebo využitím omylu",
+          "Formy – aktívne uvedenie do omylu, využitie omylu, zamlčanie podstatných skutočností",
+          "Rozdiel od krádeže – poškodený majetok odovzdá sám, na základe omylu",
+          "Škoda – aspoň malá (nad 700 €)"
+        ]
+      },
+      {
+        "label": "Sprenevera (§ 213)",
+        "leaves": [
+          "Podstata – prisvojenie si cudzej veci, ktorá bola páchateľovi zverená",
+          "Zverenie – dobrovoľné odovzdanie na účel (správa, úschova, povolanie)",
+          "Kľúčový znak – vec zverená, nie odňatá; konanie v rozpore s účelom",
+          "Typické – profesionálne vzťahy (zamestnanec, účtovník, správca)"
+        ]
+      },
+      {
+        "label": "Rozlíšenie trojice",
+        "leaves": [
+          "Krádež – odňatie veci",
+          "Podvod – omyl poškodeného",
+          "Sprenevera – zneužitie zverenia",
+          "Hranica malej škody – 700 €"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti majetku chránia vlastnícke právo, držbu a majetkové záujmy. Základné skutkové podstaty sú krádež (zmocnenie sa cudzej veci), podvod (uvedenie do omylu za účelom obohatenia) a sprenevera (prisvojenie si zverenej veci).\n\nTrestné činy proti majetku sú upravené v Štvrtej hlave osobitnej časti Trestného zákona. Ich spoločným znakom je zásah do cudzieho majetku, či už formou odňatia veci, obohatenia sa na úkor poškodeného alebo zneužitia zverenia veci. Základné skutkové podstaty sú krádež, podvod a sprenevera.\n\n🟥 Krádež (§ 212 TZ)\nKrádež je úmyselné prisvojenie si cudzej veci tým, že sa jej páchateľ zmocní.\nPodľa Trestného zákona ide o trestný čin najmä vtedy, ak:\n\nspôsobená škoda presiahne 700 €, \n\nide o krádež vlámaním, vreckovú krádež alebo opakovanú krádež.\n\nPodstatným znakom je fyzické zmocnenie sa veci bez súhlasu vlastníka.\n\n🟥 Podvod (§ 221 TZ)\nPodvod je konanie, pri ktorom páchateľ:\n\nuvedie inú osobu do omylu,\n\nalebo využije jej omyl,\n\na tým sa obohatí na škodu cudzieho majetku.\n\nZákonné znaky zahŕňajú:\n\naktívne uvedenie do omylu,\n\nvyužitie existujúceho omylu,\n\nzamlčanie podstatných skutočností,\n\nspôsobenie škody aspoň malej (nad 700 €). \n\nPodvod sa od krádeže líši tým, že poškodený sám odovzdá majetok, hoci na základe omylu.\n\n🟥 Sprenevera (§ 213 TZ)\nSprenevera je prisvojenie si cudzej veci, ktorá bola páchateľovi zverená.\nZverením sa rozumie, že poškodený dobrovoľne odovzdá vec páchateľovi na určitý účel (napr. správa, úschova, výkon povolania).\nPodstatné znaky:\n\nvec je zverená, nie odňatá,\n\npáchateľ si ju prisvojí,\n\nkoná v rozpore s účelom zverenia.\n\nSprenevera je typická pri profesionálnych vzťahoch (zamestnanec, účtovník, správca majetku).\n\nPorovnávacia tabuľka\nSkutok\tPodstata\tKľúčový znak\tTypické konanie\nKrádež\tPrisvojenie cudzej veci\tZmocnenie sa veci\todcudzenie veci bez súhlasu\nPodvod\tObohatenie uvedením do omylu\tOmyl poškodeného\tfalošné tvrdenia, klamstvo\nSprenevera\tPrisvojenie zverenej veci\tZverenie veci\tzneužitie dôvery, nevrátenie veci\n\n\nZapamätaj si (štátnicové jadro)\n– Krádež = zmocnenie sa cudzej veci.\n– Podvod = uvedenie do omylu alebo využitie omylu za účelom obohatenia.\n– Sprenevera = prisvojenie si zverenej veci.\n– Rozdiel: krádež = odňatie; podvod = omyl; sprenevera = zverenie.\n– Hranica malej škody: 700 € (pre trestný čin). \n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 212–221 (Slov-Lex)   \n– Samec & Partners – odborné výklady ku krádeži a podvodu aksamec.sk+1aksamec.sk. Podvod – skutková podstata a tresty 2026 | Samec & partnersaksamec.sk. Krádež – trestné sadzby a obhajoba 2026 | Samec & partners  \n– Dôvodová správa k majetkovým trestným činom (rozlíšenie škody)"
 }

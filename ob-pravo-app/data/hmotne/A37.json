@@ -1,7 +1,7 @@
 {
   "id": "37",
   "title": "Poistná zmluva - pojem, podstatné náležitosti",
-  "summary": "Poistná zmluva (§ 788-828 OZ, zákon č. 8/2008 Z.z. o poisťovníctve): poisťovateľ sa zaväzuje poskytnúť poistné plnenie (poistné krytie) pri poistnej udalosti, poistník platí poistné. Podstatné náležitosti: poistná udalosť, poistná suma, poistné. Druhy: životné a neživotné poistenie, povinné (zodpovednostné) a dobrovoľné. Poistná udalosť: náhodná skutočnosť, s ktorou zmluva spája povinnosť plniť.",
+  "summary": "Poistná zmluva podľa § 788–828 OZ je záväzok, v ktorom sa poisťovateľ zaväzuje poskytnúť poistné plnenie pri vzniku poistnej udalosti a poistník sa zaväzuje platiť poistné. Účelom je finančná ochrana pred následkami náhodných udalostí.\n\nPodstatné náležitosti poistnej zmluvy\nPoistná udalosť – náhodná skutočnosť, s ktorou zmluva spája povinnosť poisťovateľa plniť (napr. úraz, požiar, krádež).\n\nPoistná suma – horná hranica poistného plnenia.\n\nPoistné – cena poistenia, platená jednorazovo alebo pravidelne.\n\nZmluva musí obsahovať aj rozsah poistenia, výluky, poistné obdobie a podmienky vzniku nároku na plnenie.\n\nPoistná udalosť\nPoistná udalosť musí byť:\n– náhodná,\n– nezávislá od vôle poistníka,\n– presne definovaná v zmluve.\n\nAk udalosť nie je náhodná (úmyselné konanie, podvod), poisťovateľ neplní.\n\nDruhy poistenia\n1. Životné poistenie\n– poistenie smrti, dožitia, úrazu, choroby, invalidity,\n– často spojené so sporením alebo investovaním.\n\n2. Neživotné poistenie\n– poistenie majetku (dom, byt, auto),\n– poistenie zodpovednosti (škoda spôsobená inému),\n– cestovné poistenie, úrazové poistenie.\n\n3. Povinné a dobrovoľné poistenie\n– Povinné: zákonom uložené (napr. povinné zmluvné poistenie motorových vozidiel).\n– Dobrovoľné: uzatvára sa podľa potreby poistníka.\n\nZákon o poisťovníctve (č. 8/2008 Z. z.)\nUpravuje:\n– podmienky podnikania poisťovní,\n– dohľad nad poistením,\n– pravidlá solventnosti,\n– ochranu poistníkov.\n\nZánik poistenia\nPoistenie zaniká najmä:\n– uplynutím poistného obdobia,\n– nezaplatením poistného,\n– výpoveďou,\n– dohodou strán.\n\nPoistná zmluva je kľúčovým nástrojom finančnej ochrany pred rizikami, ktoré môžu spôsobiť značné majetkové alebo osobné škody.\n\nZdroje: OZ (40/1964 Zb.), § 788–828; zákon č. 8/2008 Z. z.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je poistná udalosť?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Poistná udalosť", "definition": "Náhodná skutočnosť, s ktorou zmluva spája vznik povinnosti poisťovateľa plniť." },
-    { "term": "Podstatné náležitosti", "definition": "Poistná udalosť, poistná suma a poistné." },
-    { "term": "Vinkulácia", "definition": "Poistné plnenie sa viaže na splnenie záväzku a vypláca sa veriteľovi namiesto poistníkovi." },
-    { "term": "Životné vs. neživotné poistenie", "definition": "Delenie poistenia podľa krytého rizika." },
-    { "term": "PZP", "definition": "Povinné zmluvné poistenie zodpovednosti za škodu z prevádzky motorového vozidla." }
+    {
+      "term": "Poistná udalosť",
+      "definition": "Náhodná skutočnosť, s ktorou zmluva spája vznik povinnosti poisťovateľa plniť."
+    },
+    {
+      "term": "Podstatné náležitosti",
+      "definition": "Poistná udalosť, poistná suma a poistné."
+    },
+    {
+      "term": "Vinkulácia",
+      "definition": "Poistné plnenie sa viaže na splnenie záväzku a vypláca sa veriteľovi namiesto poistníkovi."
+    },
+    {
+      "term": "Životné vs. neživotné poistenie",
+      "definition": "Delenie poistenia podľa krytého rizika."
+    },
+    {
+      "term": "PZP",
+      "definition": "Povinné zmluvné poistenie zodpovednosti za škodu z prevádzky motorového vozidla."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Poistná udalosť pri havárii",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vodič má uzatvorené havarijné poistenie vozidla a spôsobí nehodu, pri ktorej sa jeho auto poškodí.", "options": [], "correct": 0 },
+        {
+          "question": "Vodič má uzatvorené havarijné poistenie vozidla a spôsobí nehodu, pri ktorej sa jeho auto poškodí.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je táto nehoda poistnou udalosťou?",
-          "options": ["Áno, ide o náhodnú skutočnosť, s ktorou zmluva spája poisťovateľovu povinnosť plniť", "Nie, poistná udalosť sa vzťahuje len na krádež vozidla", "Nie, poistenie kryje len škodu spôsobenú inou osobou"],
+          "options": [
+            "Áno, ide o náhodnú skutočnosť, s ktorou zmluva spája poisťovateľovu povinnosť plniť",
+            "Nie, poistná udalosť sa vzťahuje len na krádež vozidla",
+            "Nie, poistenie kryje len škodu spôsobenú inou osobou"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Havarijné poistenie kryje aj škodu spôsobenú vlastnou nehodou poistníka.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo musí byť súčasťou poistnej zmluvy, aby bolo možné z nej plniť pri takejto udalosti?",
-          "options": ["Vymedzenie poistnej udalosti, poistná suma a výška poistného", "Iba podpis oboch strán bez ďalších náležitostí", "Notárske overenie zmluvy"],
+          "options": [
+            "Vymedzenie poistnej udalosti, poistná suma a výška poistného",
+            "Iba podpis oboch strán bez ďalších náležitostí",
+            "Notárske overenie zmluvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Toto sú podstatné náležitosti, bez ktorých poistná zmluva neplní svoj účel.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Vinkulácia v prospech banky",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Pri hypotekárnom úvere si banka dohodne s poistníkom vinkuláciu poistného plnenia z poistenia nehnuteľnosti v jej prospech.", "options": [], "correct": 0 },
+        {
+          "question": "Pri hypotekárnom úvere si banka dohodne s poistníkom vinkuláciu poistného plnenia z poistenia nehnuteľnosti v jej prospech.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Komu sa v prípade poistnej udalosti vyplatí poistné plnenie?",
-          "options": ["Priamo banke ako vinkulovanému veriteľovi, nie poistníkovi", "Vždy iba poistníkovi bez ohľadu na vinkuláciu", "Rovným dielom banke aj poistníkovi automaticky"],
+          "options": [
+            "Priamo banke ako vinkulovanému veriteľovi, nie poistníkovi",
+            "Vždy iba poistníkovi bez ohľadu na vinkuláciu",
+            "Rovným dielom banke aj poistníkovi automaticky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vinkulácia práve mení príjemcu poistného plnenia v prospech dohodnutého veriteľa.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Prečo banky pri hypotékach bežne vyžadujú vinkuláciu poistenia?",
-          "options": ["Aby mali istotu, že poistné plnenie pri škode použije prednostne na úhradu alebo obnovu zabezpečenej nehnuteľnosti", "Aby zvýšili poistné, ktoré platí poistník", "Vinkulácia nemá pre banku žiadny praktický význam"],
+          "options": [
+            "Aby mali istotu, že poistné plnenie pri škode použije prednostne na úhradu alebo obnovu zabezpečenej nehnuteľnosti",
+            "Aby zvýšili poistné, ktoré platí poistník",
+            "Vinkulácia nemá pre banku žiadny praktický význam"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vinkulácia chráni záujem banky na hodnote zabezpečujúcej nehnuteľnosti.",
@@ -142,12 +181,62 @@
   "spider": {
     "center": "Poistná zmluva – pojem, náležitosti, poistná udalosť, druhy poistenia, zánik (finančná ochrana pred náhodnými udalosťami)",
     "branches": [
-      { "label": "Pojem poistnej zmluvy (§ 788 OZ)", "leaves": ["poisťovateľ sa zaväzuje poskytnúť poistné plnenie pri vzniku poistnej udalosti", "poistník sa zaväzuje platiť poistné", "účel: finančná ochrana pred následkami náhodných udalostí", "zmluva upravuje rozsah poistenia, výluky a podmienky plnenia"] },
-      { "label": "Podstatné náležitosti", "leaves": ["poistná udalosť: náhodná skutočnosť zakladajúca povinnosť poisťovateľa plniť", "poistná suma: horná hranica poistného plnenia", "poistné: cena poistenia, platená jednorazovo alebo pravidelne", "rozsah poistenia, výluky, poistné obdobie", "podmienky vzniku nároku na plnenie"] },
-      { "label": "Poistná udalosť", "leaves": ["musí byť náhodná", "nezávislá od vôle poistníka", "presne definovaná", "poisťovateľ neplní pri úmyselnom konaní, podvode alebo konaní v rozpore s poistnými podmienkami"] },
-      { "label": "Druhy poistenia", "leaves": ["životné poistenie: smrť, dožitie, úraz, choroba, invalidita", "životné poistenie býva spojené so sporením alebo investovaním", "neživotné poistenie: majetok, zodpovednosť, cestovné, úrazové", "povinné poistenie uložené zákonom, napr. PZP", "dobrovoľné poistenie podľa potreby poistníka"] },
-      { "label": "Zánik poistenia", "leaves": ["uplynutím poistného obdobia", "nezaplatením poistného", "výpoveďou", "dohodou strán"] },
-      { "label": "Význam pre prax", "leaves": ["chráni pred finančnými následkami škôd, úrazov, chorôb", "umožňuje plánovanie rizík a stabilitu majetku", "povinné poistenia chránia tretie osoby", "jasné pravidlá zmluvy bránia sporom o plnenie"] }
+      {
+        "label": "Pojem poistnej zmluvy (§ 788 OZ)",
+        "leaves": [
+          "poisťovateľ sa zaväzuje poskytnúť poistné plnenie pri vzniku poistnej udalosti",
+          "poistník sa zaväzuje platiť poistné",
+          "účel: finančná ochrana pred následkami náhodných udalostí",
+          "zmluva upravuje rozsah poistenia, výluky a podmienky plnenia"
+        ]
+      },
+      {
+        "label": "Podstatné náležitosti",
+        "leaves": [
+          "poistná udalosť: náhodná skutočnosť zakladajúca povinnosť poisťovateľa plniť",
+          "poistná suma: horná hranica poistného plnenia",
+          "poistné: cena poistenia, platená jednorazovo alebo pravidelne",
+          "rozsah poistenia, výluky, poistné obdobie",
+          "podmienky vzniku nároku na plnenie"
+        ]
+      },
+      {
+        "label": "Poistná udalosť",
+        "leaves": [
+          "musí byť náhodná",
+          "nezávislá od vôle poistníka",
+          "presne definovaná",
+          "poisťovateľ neplní pri úmyselnom konaní, podvode alebo konaní v rozpore s poistnými podmienkami"
+        ]
+      },
+      {
+        "label": "Druhy poistenia",
+        "leaves": [
+          "životné poistenie: smrť, dožitie, úraz, choroba, invalidita",
+          "životné poistenie býva spojené so sporením alebo investovaním",
+          "neživotné poistenie: majetok, zodpovednosť, cestovné, úrazové",
+          "povinné poistenie uložené zákonom, napr. PZP",
+          "dobrovoľné poistenie podľa potreby poistníka"
+        ]
+      },
+      {
+        "label": "Zánik poistenia",
+        "leaves": [
+          "uplynutím poistného obdobia",
+          "nezaplatením poistného",
+          "výpoveďou",
+          "dohodou strán"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "chráni pred finančnými následkami škôd, úrazov, chorôb",
+          "umožňuje plánovanie rizík a stabilitu majetku",
+          "povinné poistenia chránia tretie osoby",
+          "jasné pravidlá zmluvy bránia sporom o plnenie"
+        ]
+      }
     ]
   }
 }

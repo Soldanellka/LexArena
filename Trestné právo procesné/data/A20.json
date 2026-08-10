@@ -2,50 +2,101 @@
   "id": "A20",
   "title": "Dozor a úkony prokurátora v predsúdnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["prokurátor", "dozor", "predsúdne konanie", "trestné konanie"],
-
+  "tags": [
+    "prokurátor",
+    "dozor",
+    "predsúdne konanie",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto vykonáva dozor nad zákonnosťou predsúdneho konania?",
-      "options": ["Súd", "Prokurátor", "Polícia"],
+      "options": [
+        "Súd",
+        "Prokurátor",
+        "Polícia"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý z nasledujúcich úkonov môže prokurátor vykonať v predsúdnom konaní?",
-      "options": ["Vydanie rozsudku", "Nariadenie doplnenia vyšetrovania", "Uloženie trestu"],
+      "options": [
+        "Vydanie rozsudku",
+        "Nariadenie doplnenia vyšetrovania",
+        "Uloženie trestu"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré rozhodnutie môže prokurátor prijať po skončení vyšetrovania?",
-      "options": ["Podanie obžaloby", "Vydanie trestného rozkazu", "Rozhodnutie o odvolaní"],
+      "options": [
+        "Podanie obžaloby",
+        "Vydanie trestného rozkazu",
+        "Rozhodnutie o odvolaní"
+      ],
       "correct": 0
     },
     {
       "question": "Môže prokurátor zrušiť nezákonné rozhodnutie policajta?",
-      "options": ["Áno", "Nie", "Len so súhlasom súdu"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len so súhlasom súdu"
+      ],
       "correct": 0
     },
     {
       "question": "Kto rozhoduje o sťažnosti proti rozhodnutiu prokurátora?",
-      "options": ["Nadriadený prokurátor", "Súd", "Polícia"],
+      "options": [
+        "Nadriadený prokurátor",
+        "Súd",
+        "Polícia"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Dozor prokurátora", "definition": "Dohľad nad zákonnosťou úkonov polície v predsúdnom konaní." },
-    { "term": "Pokyn prokurátora", "definition": "Záväzný pokyn policajtovi na vykonanie úkonu alebo doplnenie dokazovania." },
-    { "term": "Zrušenie rozhodnutia", "definition": "Prokurátor môže zrušiť nezákonné alebo neodôvodnené rozhodnutie polície." },
-    { "term": "Podanie obžaloby", "definition": "Rozhodnutie prokurátora, ktorým sa vec predkladá súdu." },
-    { "term": "Zastavenie trestného stíhania", "definition": "Rozhodnutie prokurátora, ak nie sú splnené podmienky na pokračovanie v stíhaní." },
-
-    { "term": "Doplnenie vyšetrovania", "definition": "Prokurátor môže nariadiť doplnenie dokazovania pred rozhodnutím." },
-    { "term": "Sťažnosť", "definition": "Opravný prostriedok proti rozhodnutiam prokurátora alebo polície." },
-    { "term": "Nadriadený prokurátor", "definition": "Orgán, ktorý rozhoduje o sťažnostiach proti rozhodnutiam prokurátora." },
-    { "term": "Dohľad nad väzbou", "definition": "Prokurátor kontroluje zákonnosť dôvodov väzby v predsúdnom konaní." },
-    { "term": "Zmier", "definition": "Možnosť ukončiť trestné stíhanie pri splnení zákonných podmienok." }
+    {
+      "term": "Dozor prokurátora",
+      "definition": "Dohľad nad zákonnosťou úkonov polície v predsúdnom konaní."
+    },
+    {
+      "term": "Pokyn prokurátora",
+      "definition": "Záväzný pokyn policajtovi na vykonanie úkonu alebo doplnenie dokazovania."
+    },
+    {
+      "term": "Zrušenie rozhodnutia",
+      "definition": "Prokurátor môže zrušiť nezákonné alebo neodôvodnené rozhodnutie polície."
+    },
+    {
+      "term": "Podanie obžaloby",
+      "definition": "Rozhodnutie prokurátora, ktorým sa vec predkladá súdu."
+    },
+    {
+      "term": "Zastavenie trestného stíhania",
+      "definition": "Rozhodnutie prokurátora, ak nie sú splnené podmienky na pokračovanie v stíhaní."
+    },
+    {
+      "term": "Doplnenie vyšetrovania",
+      "definition": "Prokurátor môže nariadiť doplnenie dokazovania pred rozhodnutím."
+    },
+    {
+      "term": "Sťažnosť",
+      "definition": "Opravný prostriedok proti rozhodnutiam prokurátora alebo polície."
+    },
+    {
+      "term": "Nadriadený prokurátor",
+      "definition": "Orgán, ktorý rozhoduje o sťažnostiach proti rozhodnutiam prokurátora."
+    },
+    {
+      "term": "Dohľad nad väzbou",
+      "definition": "Prokurátor kontroluje zákonnosť dôvodov väzby v predsúdnom konaní."
+    },
+    {
+      "term": "Zmier",
+      "definition": "Možnosť ukončiť trestné stíhanie pri splnení zákonných podmienok."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonné rozhodnutie polície",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Môže prokurátor zasiahnuť?",
-          "options": ["Áno, môže zrušiť rozhodnutie polície", "Nie", "Len ak to schváli súd"],
+          "options": [
+            "Áno, môže zrušiť rozhodnutie polície",
+            "Nie",
+            "Len ak to schváli súd"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ako môže prokurátor postupovať?",
-          "options": ["Nariadiť vykonanie dôkazu", "Ignorovať sťažnosť", "Postúpiť vec obhajcovi"],
+          "options": [
+            "Nariadiť vykonanie dôkazu",
+            "Ignorovať sťažnosť",
+            "Postúpiť vec obhajcovi"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Doplnenie vyšetrovania",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Môže prokurátor nariadiť doplnenie vyšetrovania?",
-          "options": ["Áno", "Nie", "Len ak to navrhne poškodený"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to navrhne poškodený"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Čo môže nariadiť?",
-          "options": ["Vykonanie ďalších výsluchov", "Zastavenie konania", "Podanie obžaloby bez doplnenia"],
+          "options": [
+            "Vykonanie ďalších výsluchov",
+            "Zastavenie konania",
+            "Podanie obžaloby bez doplnenia"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,37 @@
   "spider": {
     "center": "Prokurátor – garant zákonnosti predsúdneho konania",
     "branches": [
-      { "label": "Právny základ", "leaves": ["Ústava SR čl. 149 – ochrana práv a zákonom chránených záujmov", "Zákon č. 153/2001 Z. z. § 4 – dozor nad zákonnosťou", "Trestný poriadok – konkrétne úkony"] },
-      { "label": "Obsah dozoru", "leaves": ["Kontrola polície – zákonnosť úkonov, práva osôb, lehoty", "Usmerňovanie – záväzné pokyny, nariadenie dôkazov, smer vyšetrovania", "Vlastné úkony – výsluchy, znalci, návrhy na väzbu, zaistenie majetku, odklony"] },
-      { "label": "Rozhodovanie", "leaves": ["Po vyšetrovaní – obžaloba, zastavenie, postúpenie, prerušenie", "Dohoda o vine a treste – schválenie návrhu"] },
-      { "label": "Ochrana práv", "leaves": ["Osoby – obvinený, poškodený a ďalší", "Zásahy – kontrola zadržania, väzby, prehliadok a ITP"] }
+      {
+        "label": "Právny základ",
+        "leaves": [
+          "Ústava SR čl. 149 – ochrana práv a zákonom chránených záujmov",
+          "Zákon č. 153/2001 Z. z. § 4 – dozor nad zákonnosťou",
+          "Trestný poriadok – konkrétne úkony"
+        ]
+      },
+      {
+        "label": "Obsah dozoru",
+        "leaves": [
+          "Kontrola polície – zákonnosť úkonov, práva osôb, lehoty",
+          "Usmerňovanie – záväzné pokyny, nariadenie dôkazov, smer vyšetrovania",
+          "Vlastné úkony – výsluchy, znalci, návrhy na väzbu, zaistenie majetku, odklony"
+        ]
+      },
+      {
+        "label": "Rozhodovanie",
+        "leaves": [
+          "Po vyšetrovaní – obžaloba, zastavenie, postúpenie, prerušenie",
+          "Dohoda o vine a treste – schválenie návrhu"
+        ]
+      },
+      {
+        "label": "Ochrana práv",
+        "leaves": [
+          "Osoby – obvinený, poškodený a ďalší",
+          "Zásahy – kontrola zadržania, väzby, prehliadok a ITP"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Prokurátor je v predsúdnom konaní garantom zákonnosti. Dohliada na postup polície, usmerňuje vyšetrovanie, vykonáva vlastné procesné úkony a rozhoduje o najdôležitejších otázkach – od začatia trestného stíhania až po podanie obžaloby. Jeho právomoci vyplývajú z Ústavy SR, Trestného poriadku a Zákona o prokuratúre. Prokurátor zabezpečuje, aby vyšetrovanie bolo zákonné, úplné, objektívne a aby boli rešpektované práva obvineného, poškodeného aj ďalších osôb.\n\n1. Právny základ dozoru prokurátora\nÚstava SR – čl. 149  \nProkuratúra chráni práva a zákonom chránené záujmy osôb a štátu.\n\nZákon o prokuratúre č. 153/2001 Z. z. – § 4 ods. 1 písm. a)  \nProkurátor vykonáva dozor nad zachovávaním zákonnosti pred začatím trestného stíhania a v prípravnom konaní.\n\nTrestný poriadok č. 301/2005 Z. z.  \nUpravuje konkrétne úkony prokurátora v predsúdnom konaní.\n\n2. Obsah dozoru prokurátora\n2.1 Kontrola zákonnosti postupu polície\nProkurátor dohliada, či polícia:\n\nvykonáva úkony zákonne,\n\nrešpektuje základné práva osôb,\n\nsprávne vykonáva dôkazy,\n\ndodržiava lehoty a procesné pravidlá.\n\n2.2 Usmerňovanie vyšetrovania\nProkurátor môže:\n\nukladať záväzné pokyny vyšetrovateľovi,\n\nnariadiť vykonanie konkrétnych dôkazov,\n\nurčovať smer vyšetrovania,\n\nvyžadovať doplnenie úkonov.\n\n2.3 Vykonávanie vlastných úkonov\nProkurátor môže sám vykonať:\n\nvýsluchy,\n\nkonfrontácie,\n\nustanovenie znalca,\n\nnávrhy na väzbu,\n\nrozhodnutia o zaistení majetku,\n\nrozhodnutia o odklonoch (zmier, podmienečné zastavenie).\n\n3. Rozhodovacie právomoci prokurátora v predsúdnom konaní\nPo skončení vyšetrovania prokurátor rozhoduje o:\n\npodaní obžaloby,\n\nzastavení trestného stíhania,\n\npostúpení veci,\n\nprerušení trestného stíhania,\n\nschválení dohody o vine a treste.\n\n4. Ochrana práv osôb v predsúdnom konaní\nProkurátor je garantom zákonnosti:\n\ndohliada na rešpektovanie práv obvineného, poškodeného a ďalších osôb,\n\nkontroluje zásahy do osobnej slobody (zadržanie, väzba),\n\nkontroluje zásahy do súkromia (prehliadky, ITP).\n\nZapamätaj si (štátnicové jadro)\nProkurátor je garant zákonnosti v predsúdnom konaní.\n\nUsmerňuje vyšetrovanie, kontroluje políciu, vykonáva vlastné úkony.\n\nRozhoduje o obžalobe, zastavení, prerušení, postúpení a dohode o vine a treste.\n\nJeho právomoci vyplývajú z Ústavy SR, Trestného poriadku a Zákona o prokuratúre.\n\nZdroj:\nZákon o prokuratúre č. 153/2001 Z. z. – § 4\n\nÚstava SR – čl. 149\n\nTrestný poriadok č. 301/2005 Z. z.\n\nŠanta – Valašik, Dozor prokurátora v predsúdnom trestnom konaní, Justičná revue\n\nMišinová, Praktické úskalia dozoru prokurátora, Justičná revue\n\nUsmernenia Generálnej prokuratúry SR"
 }

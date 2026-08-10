@@ -2,7 +2,12 @@
   "id": "A10",
   "title": "Súbeh trestných činov a recidíva",
   "schemaVersion": "1.1",
-  "tags": ["súbeh", "recidíva", "viacčinný súbeh", "jednočinný súbeh"],
+  "tags": [
+    "súbeh",
+    "recidíva",
+    "viacčinný súbeh",
+    "jednočinný súbeh"
+  ],
   "theory": [
     {
       "heading": "Súbeh trestných činov",
@@ -20,46 +25,81 @@
   "quiz": [
     {
       "question": "Kedy ide o súbeh trestných činov?",
-      "options": ["Keď páchateľ spácha viac činov pred odsúdením", "Keď je čin spáchaný v skupine", "Keď je čin spáchaný v noci"],
+      "options": [
+        "Keď páchateľ spácha viac činov pred odsúdením",
+        "Keď je čin spáchaný v skupine",
+        "Keď je čin spáchaný v noci"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – súbeh je viac činov pred odsúdením.",
       "explanation_incorrect": "Nie – skupina ani čas nerozhodujú."
     },
     {
       "question": "Čo je jednočinný súbeh?",
-      "options": ["Viac činov – jeden trestný čin", "Jedno konanie – viac trestných činov", "Viac konaní – jeden následok"],
+      "options": [
+        "Viac činov – jeden trestný čin",
+        "Jedno konanie – viac trestných činov",
+        "Viac konaní – jeden následok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – jedným konaním sa naplní viac skutkových podstát.",
       "explanation_incorrect": "Nie – ide o jedno konanie."
     },
     {
       "question": "Čo je recidíva?",
-      "options": ["Prvé odsúdenie", "Opätovné spáchanie trestného činu po odsúdení", "Náhodné konanie"],
+      "options": [
+        "Prvé odsúdenie",
+        "Opätovné spáchanie trestného činu po odsúdení",
+        "Náhodné konanie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – recidíva je opätovné páchateľstvo.",
       "explanation_incorrect": "Nie – recidíva je opakovanie."
     },
     {
       "question": "Ktorá recidíva je závažnejšia?",
-      "options": ["Všeobecná", "Špeciálna", "Žiadna"],
+      "options": [
+        "Všeobecná",
+        "Špeciálna",
+        "Žiadna"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – špeciálna recidíva je závažnejšia.",
       "explanation_incorrect": "Nie – špeciálna recidíva je horšia."
     },
     {
       "question": "Kedy súbeh zaniká?",
-      "options": ["Po právoplatnom odsúdení", "Po výkone trestu", "Po odvolaní"],
+      "options": [
+        "Po právoplatnom odsúdení",
+        "Po výkone trestu",
+        "Po odvolaní"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – po odsúdení už nejde o súbeh.",
       "explanation_incorrect": "Nie – rozhoduje právoplatnosť."
     }
   ],
   "tiles": [
-    { "term": "Jednočinný súbeh", "definition": "Jedným konaním sa naplní viac skutkových podstát." },
-    { "term": "Viacčinný súbeh", "definition": "Viaceré konania – viaceré trestné činy." },
-    { "term": "Recidíva", "definition": "Opätovné spáchanie trestného činu po odsúdení." },
-    { "term": "Špeciálna recidíva", "definition": "Opätovné spáchanie rovnakého alebo podobného trestného činu." },
-    { "term": "Všeobecná recidíva", "definition": "Opätovné spáchanie akéhokoľvek trestného činu." }
+    {
+      "term": "Jednočinný súbeh",
+      "definition": "Jedným konaním sa naplní viac skutkových podstát."
+    },
+    {
+      "term": "Viacčinný súbeh",
+      "definition": "Viaceré konania – viaceré trestné činy."
+    },
+    {
+      "term": "Recidíva",
+      "definition": "Opätovné spáchanie trestného činu po odsúdení."
+    },
+    {
+      "term": "Špeciálna recidíva",
+      "definition": "Opätovné spáchanie rovnakého alebo podobného trestného činu."
+    },
+    {
+      "term": "Všeobecná recidíva",
+      "definition": "Opätovné spáchanie akéhokoľvek trestného činu."
+    }
   ],
   "cases": [
     {
@@ -73,7 +113,11 @@
         },
         {
           "question": "Krok 1: Ide o jednočinný súbeh?",
-          "options": ["Áno", "Nie", "Len ak bola škoda vysoká"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bola škoda vysoká"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – jedným konaním naplnila dve skutkové podstaty.",
           "explanation_incorrect": "Nie – ide o jednočinný súbeh."
@@ -91,7 +135,11 @@
         },
         {
           "question": "Krok 1: Ide o recidívu?",
-          "options": ["Áno – špeciálnu", "Áno – všeobecnú", "Nie"],
+          "options": [
+            "Áno – špeciálnu",
+            "Áno – všeobecnú",
+            "Nie"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o špeciálnu recidívu.",
           "explanation_incorrect": "Nie – je to špeciálna recidíva."
@@ -108,10 +156,35 @@
   "spider": {
     "center": "Súbeh × recidíva",
     "branches": [
-      { "label": "Súbeh", "leaves": ["Pojem – viac TČ spáchaných pred právoplatným odsúdením za niektorý z nich.", "Úhrnný (§ 41) × súhrnný (§ 42) trest – podľa existencie skoršieho rozsudku"] },
-      { "label": "Jednočinný súbeh", "leaves": ["Jedno konanie – jedným konaním naplnené viaceré skutkové podstaty."] },
-      { "label": "Viacčinný súbeh", "leaves": ["Viac konaní – viac trestných činov viacerými konaniami bez odsúdenia medzi nimi."] },
-      { "label": "Recidíva", "leaves": ["Pojem – nový trestný čin po predchádzajúcom odsúdení.", "Všeobecná × špeciálna – akýkoľvek nový TČ × rovnaký alebo obdobný TČ.", "Rovnorodá × rôznorodá – rovnaký typ TČ × iný druh TČ.", "Vplyv na trest (§ 47 TZ) – horná hranica sadzby sa zvyšuje o tretinu pri úmyselnom TČ po odsúdení za úmyselný TČ."] }
+      {
+        "label": "Súbeh",
+        "leaves": [
+          "Pojem – viac TČ spáchaných pred právoplatným odsúdením za niektorý z nich.",
+          "Úhrnný (§ 41) × súhrnný (§ 42) trest – podľa existencie skoršieho rozsudku"
+        ]
+      },
+      {
+        "label": "Jednočinný súbeh",
+        "leaves": [
+          "Jedno konanie – jedným konaním naplnené viaceré skutkové podstaty."
+        ]
+      },
+      {
+        "label": "Viacčinný súbeh",
+        "leaves": [
+          "Viac konaní – viac trestných činov viacerými konaniami bez odsúdenia medzi nimi."
+        ]
+      },
+      {
+        "label": "Recidíva",
+        "leaves": [
+          "Pojem – nový trestný čin po predchádzajúcom odsúdení.",
+          "Všeobecná × špeciálna – akýkoľvek nový TČ × rovnaký alebo obdobný TČ.",
+          "Rovnorodá × rôznorodá – rovnaký typ TČ × iný druh TČ.",
+          "Vplyv na trest (§ 47 TZ) – horná hranica sadzby sa zvyšuje o tretinu pri úmyselnom TČ po odsúdení za úmyselný TČ."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "1. Pojem súbehu\nSúbeh trestných činov nastáva vtedy, keď páchateľ spácha dva alebo viac trestných činov skôr, než je za niektorý z nich právoplatne odsúdený.\nIde o situáciu, keď sa trestnoprávna reakcia ešte „nestihla“ uplatniť a páchateľ medzitým spácha ďalší trestný čin.\n\nVýznam pre trest:\nak neexistuje žiadny skorší rozsudok → ukladá sa úhrnný trest (§ 41 TZ),\n\nak existuje skorší právoplatný rozsudok → ukladá sa súhrnný trest (§ 42 TZ).\n\n2. Jednočinný a viacčinný súbeh\nJednočinný súbeh\nPáchateľ jedným konaním naplní viac skutkových podstát.\nPríklad: jedným útokom spôsobí ublíženie na zdraví aj výtržníctvo.\n\nViacčinný súbeh\nPáchateľ spácha viac trestných činov viacerými konaniami, bez právoplatného odsúdenia medzi nimi.\nPríklad: krádež v pondelok, podvod v stredu.\n\n3. Recidíva (§ 47 TZ)\nRecidíva je opätovné spáchanie trestného činu po predchádzajúcom odsúdení.\n\nDruhy recidívy\nvšeobecná recidíva – nový trestný čin akéhokoľvek druhu po odsúdení,\n\nšpeciálna recidíva – nový trestný čin rovnakého alebo obdobného druhu,\n\nrovnorodá recidíva – opakovanie rovnakého typu trestného činu (napr. majetkový),\n\nrôznorodá recidíva – nový trestný čin je iného druhu.\n\nVplyv recidívy na trest\nPodľa § 47 TZ sa horná hranica trestnej sadzby zvyšuje o jednu tretinu, ak páchateľ spácha úmyselný trestný čin po predchádzajúcom odsúdení za úmyselný trestný čin.\n\n4. Význam súbehu a recidívy\nurčujú spôsob ukladania trestu (úhrnný × súhrnný),\n\nrecidíva sprísňuje trestnú politiku,\n\nsúbeh umožňuje komplexné posúdenie viacerých konaní pred odsúdením.\n\nZapamätaj si (štátnicové jadro)\n– Súbeh = viac trestných činov pred právoplatným odsúdením.\n– Jednočinný súbeh = jedným konaním viac skutkových podstát.\n– Viacčinný súbeh = viac konaní, viac trestných činov.\n– Recidíva = nový trestný čin po odsúdení; všeobecná × špeciálna.\n– Recidíva zvyšuje hornú hranicu trestnej sadzby o 1/3.\n\nZdroj (overené)\n– Trestný zákon č. 300/2005 Z. z. – § 41 (úhrnný trest), § 42 (súhrnný trest), § 47 (recidíva)\n– Vrtíková: Všeobecná časť Trestného zákona  \n– RuleCalc – § 47 TZ (recidíva)\n– Kiko: Recidíva pohľadom kriminológie a trestného práva"
 }

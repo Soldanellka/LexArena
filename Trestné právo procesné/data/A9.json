@@ -2,50 +2,100 @@
   "id": "A9",
   "title": "Zaistenie osôb na účely trestného konania",
   "schemaVersion": "1.1",
-  "tags": ["zaistenie", "osoby", "trestné konanie"],
-
+  "tags": [
+    "zaistenie",
+    "osoby",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kedy môže polícia zaistiť osobu?",
-      "options": ["Kedykoľvek", "Len ak sú splnené zákonné dôvody", "Len na pokyn súdu"],
+      "options": [
+        "Kedykoľvek",
+        "Len ak sú splnené zákonné dôvody",
+        "Len na pokyn súdu"
+      ],
       "correct": 1
     },
     {
       "question": "Ako dlho môže trvať zaistenie osoby políciou?",
-      "options": ["48 hodín", "24 hodín", "72 hodín"],
+      "options": [
+        "48 hodín",
+        "24 hodín",
+        "72 hodín"
+      ],
       "correct": 1
     },
     {
       "question": "Kto rozhoduje o ďalšom obmedzení osobnej slobody po zaistení?",
-      "options": ["Polícia", "Prokurátor", "Súd"],
+      "options": [
+        "Polícia",
+        "Prokurátor",
+        "Súd"
+      ],
       "correct": 2
     },
     {
       "question": "Musí byť zaistená osoba poučená o svojich právach?",
-      "options": ["Áno", "Nie", "Len ak ide o mladistvého"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak ide o mladistvého"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý z nasledujúcich je dôvodom zaistenia?",
-      "options": ["Zabránenie úteku", "Nespolupráca so svedkami", "Nesúhlas s výsluchom"],
+      "options": [
+        "Zabránenie úteku",
+        "Nespolupráca so svedkami",
+        "Nesúhlas s výsluchom"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Zaistenie osoby", "definition": "Dočasné obmedzenie osobnej slobody na účely trestného konania." },
-    { "term": "Dôvody zaistenia", "definition": "Najmä zabránenie úteku, pokračovaniu v trestnej činnosti alebo ovplyvňovaniu svedkov." },
-    { "term": "Poučenie osoby", "definition": "Zaistená osoba musí byť poučená o svojich právach a dôvodoch zaistenia." },
-    { "term": "Maximálna lehota", "definition": "Zaistenie môže trvať najviac 24 hodín, pri mladistvom 48 hodín." },
-    { "term": "Prepustenie", "definition": "Ak dôvody zaistenia pominú, osoba musí byť okamžite prepustená." },
-
-    { "term": "Zadržanie", "definition": "Obmedzenie slobody po vznesení obvinenia, odlišné od zaistenia." },
-    { "term": "Väzba", "definition": "Dlhodobé obmedzenie slobody na základe rozhodnutia súdu." },
-    { "term": "Policajt", "definition": "Orgán oprávnený vykonať zaistenie osoby." },
-    { "term": "Prokurátor", "definition": "Dozoruje zákonnosť zaistenia a môže rozhodnúť o prepustení." },
-    { "term": "Súd", "definition": "Rozhoduje o ďalšom obmedzení slobody, napríklad o väzbe." }
+    {
+      "term": "Zaistenie osoby",
+      "definition": "Dočasné obmedzenie osobnej slobody na účely trestného konania."
+    },
+    {
+      "term": "Dôvody zaistenia",
+      "definition": "Najmä zabránenie úteku, pokračovaniu v trestnej činnosti alebo ovplyvňovaniu svedkov."
+    },
+    {
+      "term": "Poučenie osoby",
+      "definition": "Zaistená osoba musí byť poučená o svojich právach a dôvodoch zaistenia."
+    },
+    {
+      "term": "Maximálna lehota",
+      "definition": "Zaistenie môže trvať najviac 24 hodín, pri mladistvom 48 hodín."
+    },
+    {
+      "term": "Prepustenie",
+      "definition": "Ak dôvody zaistenia pominú, osoba musí byť okamžite prepustená."
+    },
+    {
+      "term": "Zadržanie",
+      "definition": "Obmedzenie slobody po vznesení obvinenia, odlišné od zaistenia."
+    },
+    {
+      "term": "Väzba",
+      "definition": "Dlhodobé obmedzenie slobody na základe rozhodnutia súdu."
+    },
+    {
+      "term": "Policajt",
+      "definition": "Orgán oprávnený vykonať zaistenie osoby."
+    },
+    {
+      "term": "Prokurátor",
+      "definition": "Dozoruje zákonnosť zaistenia a môže rozhodnúť o prepustení."
+    },
+    {
+      "term": "Súd",
+      "definition": "Rozhoduje o ďalšom obmedzení slobody, napríklad o väzbe."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonné predĺženie zaistenia",
@@ -58,22 +108,33 @@
         },
         {
           "question": "Krok 1: Je možné predĺžiť zaistenie nad 24 hodín?",
-          "options": ["Áno", "Nie", "Len so súhlasom obhajcu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom obhajcu"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Ako má polícia postupovať po uplynutí lehoty?",
-          "options": ["Prepustiť osobu", "Počkať na pokyn prokurátora", "Presunúť osobu do väzby bez rozhodnutia súdu"],
+          "options": [
+            "Prepustiť osobu",
+            "Počkať na pokyn prokurátora",
+            "Presunúť osobu do väzby bez rozhodnutia súdu"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Aké právo má zaistená osoba?",
-          "options": ["Domáhať sa prepustenia", "Požiadať o výsluch svedkov", "Požiadať o zmenu policajta"],
+          "options": [
+            "Domáhať sa prepustenia",
+            "Požiadať o výsluch svedkov",
+            "Požiadať o zmenu policajta"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zaistenie kvôli obave z úteku",
       "difficulty": "stredná",
@@ -85,12 +146,20 @@
         },
         {
           "question": "Krok 1: Je obava z úteku dôvodom na zaistenie?",
-          "options": ["Áno", "Nie", "Len pri závažných trestných činoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri závažných trestných činoch"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Čo musí polícia urobiť po zaistení?",
-          "options": ["Ihneď poučiť osobu o dôvodoch zaistenia", "Počkať na príkaz súdu", "Zaistiť osobu na 48 hodín automaticky"],
+          "options": [
+            "Ihneď poučiť osobu o dôvodoch zaistenia",
+            "Počkať na príkaz súdu",
+            "Zaistiť osobu na 48 hodín automaticky"
+          ],
           "correct": 0
         },
         {
@@ -114,11 +183,46 @@
   "spider": {
     "center": "Zaistenie osôb – zadržanie × predvedenie × zatknutie × väzba",
     "branches": [
-      { "label": "Zadržanie (§ 85)", "leaves": ["Kto – policajt, pri dôvode väzby alebo pristihnutí pri čine", "Postup – poučenie o právach, zápisnica", "Lehoty – 48 hodín na odovzdanie súdu; 96 hodín pri OZZ"] },
-      { "label": "Predvedenie (§§ 120, 128)", "leaves": ["Podstata – privedenie osoby, ktorá sa bez ospravedlnenia nedostavila", "Charakter – zabezpečenie prítomnosti, nie sankcia", "Limity – dôstojnosť osoby a primeranosť zásahu"] },
-      { "label": "Zatknutie (§ 73)", "leaves": ["Príkaz – vydáva sudca pre prípravné konanie", "Podmienky – dôvodné podozrenie + dôvod väzby", "Postup – poučenie, bezodkladné odovzdanie súdu"] },
-      { "label": "Väzba (§§ 71–72)", "leaves": ["Rozhoduje – výlučne sudca; najintenzívnejší zásah do slobody", "Dôvody – úteková, kolúzna, preventívna", "Zásady – primeranosť, nevyhnutný čas, pravidelné preskúmavanie, prednostné vybavovanie"] },
-      { "label": "Zistenie totožnosti", "leaves": ["Úkony – osobné údaje, odtlačky, fotografie, hlasové záznamy", "Povinnosť – osoba musí strpieť; pri odmietnutí zákonné donútenie"] }
+      {
+        "label": "Zadržanie (§ 85)",
+        "leaves": [
+          "Kto – policajt, pri dôvode väzby alebo pristihnutí pri čine",
+          "Postup – poučenie o právach, zápisnica",
+          "Lehoty – 48 hodín na odovzdanie súdu; 96 hodín pri OZZ"
+        ]
+      },
+      {
+        "label": "Predvedenie (§§ 120, 128)",
+        "leaves": [
+          "Podstata – privedenie osoby, ktorá sa bez ospravedlnenia nedostavila",
+          "Charakter – zabezpečenie prítomnosti, nie sankcia",
+          "Limity – dôstojnosť osoby a primeranosť zásahu"
+        ]
+      },
+      {
+        "label": "Zatknutie (§ 73)",
+        "leaves": [
+          "Príkaz – vydáva sudca pre prípravné konanie",
+          "Podmienky – dôvodné podozrenie + dôvod väzby",
+          "Postup – poučenie, bezodkladné odovzdanie súdu"
+        ]
+      },
+      {
+        "label": "Väzba (§§ 71–72)",
+        "leaves": [
+          "Rozhoduje – výlučne sudca; najintenzívnejší zásah do slobody",
+          "Dôvody – úteková, kolúzna, preventívna",
+          "Zásady – primeranosť, nevyhnutný čas, pravidelné preskúmavanie, prednostné vybavovanie"
+        ]
+      },
+      {
+        "label": "Zistenie totožnosti",
+        "leaves": [
+          "Úkony – osobné údaje, odtlačky, fotografie, hlasové záznamy",
+          "Povinnosť – osoba musí strpieť; pri odmietnutí zákonné donútenie"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Zaistenie osôb na účely trestného konania Zaistenie osôb predstavuje zásahy do osobnej slobody, ktoré možno vykonať len zo zákonných dôvodov a spôsobom ustanoveným Trestným poriadkom. Patrí sem zadržanie, predvedenie, zatknutie, väzba a zistenie totožnosti. Ide o najintenzívnejšie zásahy do základných práv, preto sú striktne regulované.\n\nZadržanie osoby (§ 85 TP) Zadržanie je krátkodobé obmedzenie osobnej slobody vykonané policajtom.\n\nPodmienky (§ 85 TP) Policajt môže zadržať osobu, ak: – existuje dôvod väzby podľa § 71 TP, alebo – bola osoba pristihnutá pri trestnom čine alebo bezprostredne po ňom.\n\nPostup – poučenie o právach (najmä právo na obhajcu), – spísanie zápisnice, – odovzdanie súdu alebo prepustenie do: – 48 hodín, – 96 hodín pri obzvlášť závažných zločinoch.\n\nPredvedenie (§ 120, § 128 TP) Predvedenie je donucovací úkon, ktorým polícia privedie osobu, ktorá sa bez ospravedlnenia nedostavila na úkon, na ktorý bola riadne predvolaná. – predvedenie obvineného upravuje § 120 TP, – predvedenie svedka upravuje § 128 TP.\n\nCharakteristika – slúži len na zabezpečenie prítomnosti osoby, – nie je sankciou, – policajt musí dbať na dôstojnosť a primeranosť zásahu.\n\nZatknutie (§ 73 TP) Zatknutie je závažnejší zásah než zadržanie, vykonáva sa na základe príkazu na zatknutie.\n\nPríkaz na zatknutie Vydáva ho sudca pre prípravné konanie, ak: – je osoba dôvodne podozrivá zo spáchania trestného činu, – existuje dôvod väzby (§ 71 TP).\n\nPostup – poučenie o právach, – bezodkladné odovzdanie súdu.\n\nVäzba (§§ 71–72 TP) Väzba je najintenzívnejší zásah do osobnej slobody. O väzbe rozhoduje výlučne sudca.\n\nDôvody (§ 71 TP) – úteková väzba, – kolúzna väzba, – preventívna väzba.\n\nZásady – primeranosť, – nevyhnutný čas, – pravidelné preskúmanie, – prednostné vybavovanie väzobných vecí.\n\nZistenie totožnosti Zistenie totožnosti umožňuje polícii identifikovať osobu, ak existujú konkrétne indície o súvislosti s trestným činom.\n\nMožné úkony – zisťovanie osobných údajov, – odtlačky prstov, – fotografie, – hlasové záznamy.\n\nOsoba je povinná úkon strpieť; pri odmietnutí možno použiť zákonné donucovacie prostriedky.\n\nZapamätaj si (štátnicové jadro) – Zaistenie osôb = zadržanie, predvedenie, zatknutie, väzba, zistenie totožnosti. – Zadržanie max. 48/96 hodín. – Predvedenie: obvinený § 120, svedok § 128. – Zatknutie len na príkaz sudcu. – Väzba je najprísnejší zásah do slobody. – Každý zásah musí byť zákonný, primeraný a pod súdnou kontrolou.\n\nZdroj (overené) – Trestný poriadok č. 301/2005 Z. z., znenie účinné od 1. 7. 2026 – Slov-Lex: § 85, § 120, § 128, § 73, §§ 71–72 TP"
 }

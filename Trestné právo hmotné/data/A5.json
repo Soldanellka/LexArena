@@ -2,7 +2,11 @@
   "id": "A5",
   "title": "Páchateľ trestného činu – fyzická osoba, právnická osoba",
   "schemaVersion": "1.1",
-  "tags": ["páchateľ", "FO", "PO"],
+  "tags": [
+    "páchateľ",
+    "FO",
+    "PO"
+  ],
   "theory": [
     {
       "heading": "Páchateľ ako fyzická osoba",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Kto je páchateľom trestného činu?",
-      "options": ["Svedok", "Páchateľ (FO alebo PO)", "Sudca"],
+      "options": [
+        "Svedok",
+        "Páchateľ (FO alebo PO)",
+        "Sudca"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – páchateľ môže byť fyzická alebo právnická osoba.",
       "explanation_incorrect": "Nesprávne – svedok a sudca nie sú páchateľmi."
     },
     {
       "question": "Môže právnická osoba niesť trestnoprávnu zodpovednosť?",
-      "options": ["Áno", "Nie", "Len v občianskom práve"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len v občianskom práve"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – právnické osoby môžu byť trestne zodpovedné podľa zákona.",
       "explanation_incorrect": "Nesprávne – nie je to len v občianskom práve."
     },
     {
       "question": "Ktorý faktor ovplyvňuje trestnú zodpovednosť FO?",
-      "options": ["Vek a príčetnosť", "Farba očí", "Počet príbuzných"],
+      "options": [
+        "Vek a príčetnosť",
+        "Farba očí",
+        "Počet príbuzných"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – vek a príčetnosť sú rozhodujúce.",
       "explanation_incorrect": "Nesprávne – farba očí nie je relevantná."
     },
     {
       "question": "Aký typ sankcie je bežný pri PO?",
-      "options": ["Peňažné pokuty a opatrenia", "Väzenie", "Osobný trest odňatia slobody"],
+      "options": [
+        "Peňažné pokuty a opatrenia",
+        "Väzenie",
+        "Osobný trest odňatia slobody"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – právnické osoby dostávajú často majetkové sankcie.",
       "explanation_incorrect": "Nesprávne – PO nemôžu byť väznené ako FO."
     },
     {
       "question": "Čo sa skúma pri príčetnosti?",
-      "options": ["Duševný stav v čase činu", "Výška mzdy", "Počet svedkov"],
+      "options": [
+        "Duševný stav v čase činu",
+        "Výška mzdy",
+        "Počet svedkov"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – skúma sa duševný stav páchateľa v čase činu.",
       "explanation_incorrect": "Nesprávne – mzda a počet svedkov nie sú o príčetnosti."
     }
   ],
   "tiles": [
-    { "term": "Fyzická osoba (FO)", "definition": "Jednotlivec, ktorý môže byť páchateľom trestného činu." },
-    { "term": "Právnická osoba (PO)", "definition": "Organizácia, ktorá môže niesť trestnoprávnu zodpovednosť." },
-    { "term": "Príčetnosť", "definition": "Schopnosť rozpoznať význam svojho konania a riadiť ho." },
-    { "term": "Veková hranica", "definition": "Minimálny vek pre trestnú zodpovednosť (podľa zákona)." },
-    { "term": "Majetkové sankcie", "definition": "Pokuty a iné majetkové postihy voči PO." }
+    {
+      "term": "Fyzická osoba (FO)",
+      "definition": "Jednotlivec, ktorý môže byť páchateľom trestného činu."
+    },
+    {
+      "term": "Právnická osoba (PO)",
+      "definition": "Organizácia, ktorá môže niesť trestnoprávnu zodpovednosť."
+    },
+    {
+      "term": "Príčetnosť",
+      "definition": "Schopnosť rozpoznať význam svojho konania a riadiť ho."
+    },
+    {
+      "term": "Veková hranica",
+      "definition": "Minimálny vek pre trestnú zodpovednosť (podľa zákona)."
+    },
+    {
+      "term": "Majetkové sankcie",
+      "definition": "Pokuty a iné majetkové postihy voči PO."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Je mladistvý trestne zodpovedný?",
-          "options": ["Áno, ak dosiahol vek stanovený zákonom", "Nie nikdy", "Len ak súd rozhodne inak"],
+          "options": [
+            "Áno, ak dosiahol vek stanovený zákonom",
+            "Nie nikdy",
+            "Len ak súd rozhodne inak"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – mladiství môžu byť trestne zodpovední podľa veku a okolností.",
           "explanation_incorrect": "Nesprávne – nie je to absolútne vylúčené."
         },
         {
           "question": "Krok 2: Aké opatrenia sú preferované?",
-          "options": ["Výchovné a ochranné opatrenia", "Dlhodobé väzenie", "Žiadne opatrenia"],
+          "options": [
+            "Výchovné a ochranné opatrenia",
+            "Dlhodobé väzenie",
+            "Žiadne opatrenia"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – pri mladistvých sa preferujú výchovné a ochranné opatrenia.",
           "explanation_incorrect": "Nesprávne – dlhodobé väzenie nie je preferované."
@@ -98,14 +145,22 @@
         },
         {
           "question": "Krok 1: Môže byť PO trestne zodpovedná?",
-          "options": ["Áno – ak konanie predstavuje porušenie zákona PO", "Nie", "Len ak konal štatutárny orgán"],
+          "options": [
+            "Áno – ak konanie predstavuje porušenie zákona PO",
+            "Nie",
+            "Len ak konal štatutárny orgán"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – PO môže niesť zodpovednosť, ak konanie súvisí s jej činnosťou.",
           "explanation_incorrect": "Nesprávne – nie je to podmienené len štatutárnym orgánom."
         },
         {
           "question": "Krok 2: Aké sankcie sú možné?",
-          "options": ["Peňažné pokuty, zákaz činnosti, nápravné opatrenia", "Väzenie pre PO", "Osobné tresty pre všetkých zamestnancov"],
+          "options": [
+            "Peňažné pokuty, zákaz činnosti, nápravné opatrenia",
+            "Väzenie pre PO",
+            "Osobné tresty pre všetkých zamestnancov"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – PO môže byť uložená pokuta alebo zákaz činnosti.",
           "explanation_incorrect": "Nesprávne – PO nemôže byť väznená."
@@ -122,9 +177,33 @@
   "spider": {
     "center": "Páchateľ – fyzická osoba × právnická osoba",
     "branches": [
-      { "label": "Fyzická osoba", "leaves": ["Vek – trestná zodpovednosť od 14 rokov (pri vybraných situáciách skúmanie vyspelosti do 15).", "Príčetnosť – schopnosť rozpoznať protiprávnosť a ovládať konanie.", "Zavinenie – úmysel alebo nedbanlivosť ako podmienka zodpovednosti.", "Osobitný subjekt – niektoré TČ vyžadujú špeciálne postavenie (napr. verejný činiteľ)."] },
-      { "label": "Právnická osoba", "leaves": ["Zákon č. 91/2016 Z. z. – trestná zodpovednosť právnických osôb, osobitný zákon.", "Pričítateľnosť – konanie štatutárov, zamestnancov a osôb konajúcich v jej mene.", "Tresty pre PO – peňažný trest, prepadnutie majetku, zákaz činnosti, zrušenie PO.", "Obmedzenia – PO nezodpovedá za všetky TČ, len za zákonom vymenované."] },
-      { "label": "Spôsobilosť a zodpovednosť", "leaves": ["Vek a príčetnosť – základné podmienky trestnej zodpovednosti FO.", "Ovládacia schopnosť – schopnosť ovládať svoje konanie.", "Rozpoznávacia schopnosť – schopnosť rozpoznať protiprávnosť konania."] }
+      {
+        "label": "Fyzická osoba",
+        "leaves": [
+          "Vek – trestná zodpovednosť od 14 rokov (pri vybraných situáciách skúmanie vyspelosti do 15).",
+          "Príčetnosť – schopnosť rozpoznať protiprávnosť a ovládať konanie.",
+          "Zavinenie – úmysel alebo nedbanlivosť ako podmienka zodpovednosti.",
+          "Osobitný subjekt – niektoré TČ vyžadujú špeciálne postavenie (napr. verejný činiteľ)."
+        ]
+      },
+      {
+        "label": "Právnická osoba",
+        "leaves": [
+          "Zákon č. 91/2016 Z. z. – trestná zodpovednosť právnických osôb, osobitný zákon.",
+          "Pričítateľnosť – konanie štatutárov, zamestnancov a osôb konajúcich v jej mene.",
+          "Tresty pre PO – peňažný trest, prepadnutie majetku, zákaz činnosti, zrušenie PO.",
+          "Obmedzenia – PO nezodpovedá za všetky TČ, len za zákonom vymenované."
+        ]
+      },
+      {
+        "label": "Spôsobilosť a zodpovednosť",
+        "leaves": [
+          "Vek a príčetnosť – základné podmienky trestnej zodpovednosti FO.",
+          "Ovládacia schopnosť – schopnosť ovládať svoje konanie.",
+          "Rozpoznávacia schopnosť – schopnosť rozpoznať protiprávnosť konania."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Páchateľ trestného činu je subjekt, ktorý svojím konaním naplní znaky skutkovej podstaty trestného činu a je zaň možné uložiť trest.\nTrestnoprávna zodpovednosť môže vzniknúť fyzickej osobe aj právnickej osobe, ale ich podmienky sa líšia.\n\n1. Páchateľ ako fyzická osoba\nFyzická osoba je najčastejší subjekt trestného činu. Aby mohla niesť trestnú zodpovednosť, musí spĺňať zákonné podmienky:\n\nVek\ntrestná zodpovednosť od 14 rokov,\n\npri niektorých TČ od 15 rokov (napr. sexuálne trestné činy).\n\nPríčetnosť\nschopnosť rozpoznať protiprávnosť konania a ovládať svoje konanie,\n\nnepríčetný človek nie je trestne zodpovedný, môže mu byť uložené ochranné liečenie.\n\nDuševný stav\nznížená príčetnosť môže ovplyvniť trest (napr. zníženie trestu, uloženie liečenia).\n\nZavinenie\númysel alebo nedbanlivosť,\n\nbez zavinenia nie je trestná zodpovednosť.\n\nOsobitný subjekt\nniektoré trestné činy vyžadujú špeciálne postavenie (napr. verejný činiteľ, vojak, lekár).\n\n2. Páchateľ ako právnická osoba\nPrávnické osoby nesú trestnoprávnu zodpovednosť podľa zákona o trestnej zodpovednosti právnických osôb (zákon č. 91/2016 Z. z.).\n\nPodstata zodpovednosti\nprávnická osoba zodpovedá za trestné činy, ktoré spáchala:\n– konaním svojich štatutárov,\n– konaním zamestnancov,\n– konaním osôb konajúcich v jej mene alebo v jej záujme.\n\nDruhy trestov pre právnické osoby\npeňažný trest,\n\nprepadnutie majetku,\n\nzákaz činnosti,\n\nzákaz prijímať dotácie,\n\nzrušenie právnickej osoby.\n\nObmedzenia\nprávnická osoba nemôže byť páchateľom všetkých trestných činov (napr. vražda).\n\nzodpovednosť právnickej osoby nevylučuje zodpovednosť fyzickej osoby.\n\n3. Spôsobilosť a zodpovednosť páchateľa\nPri posudzovaní trestnej zodpovednosti sa hodnotí:\n\nvek,\n\npríčetnosť,\n\nduševný stav,\n\nschopnosť ovládať svoje konanie,\n\nschopnosť rozpoznať protiprávnosť,\n\nzavinenie.\n\nTieto podmienky sú nevyhnutné pre vznik trestnej zodpovednosti fyzickej osoby.\n\nZapamätaj si (štátnicové jadro)\n– Páchateľom môže byť fyzická osoba aj právnická osoba.\n– Fyzická osoba musí byť príčetná, mať dostatočný vek a konať zavinene.\n– Právnická osoba zodpovedá za konanie osôb, ktoré konajú v jej mene alebo v jej záujme.\n– Tresty pre právnické osoby sú najmä majetkové a sankčné.\n– Zodpovednosť právnickej osoby nevylučuje zodpovednosť fyzickej osoby.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nZákon č. 91/2016 Z. z. o trestnej zodpovednosti právnických osôb\nČentéš – Trestné právo hmotné\nJudikatúra NS SR"
 }

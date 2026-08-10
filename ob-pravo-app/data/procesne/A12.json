@@ -2,13 +2,22 @@
   "id": "12",
   "title": "Procesné úkony účastníkov konania",
   "schemaVersion": "1.1",
-  "tags": ["procesný úkon", "podanie", "náležitosti podania", "odstránenie vád podania"],
-  "summary": "Procesný úkon účastníka je prejav vôle smerujúci voči súdu alebo inému účastníkovi, ktorý má procesné účinky – napríklad žaloba, vyjadrenie k žalobe, návrh na vykonanie dôkazu, odvolanie alebo späťvzatie návrhu. Úkony možno robiť písomne, ústne do zápisnice na súde, alebo elektronicky, ak to zákon pripúšťa. Každé podanie musí mať náležitosti podľa § 127 CSP – musí byť z neho zrejmé, ktorému súdu je určené, kto ho robí, ktorej veci sa týka, čo sleduje, a musí byť podpísané.\n\nAk podanie trpí vadami, ktoré bránia jeho vecnému prejednaniu, súd vyzve účastníka, aby ich v určenej lehote odstránil; ak sa tak nestane, súd na podanie neprihliadne, prípadne ho odmietne. Riadne urobený procesný úkon je pre účastníka záväzný a viaže ho, kým ho nezmení alebo neodvolá spôsobom, ktorý zákon pripúšťa (napríklad späťvzatie žaloby). Zákon zároveň v niektorých fázach konania obmedzuje možnosť uplatňovať nové tvrdenia a dôkazy (zásada koncentrácie konania), aby sa predišlo účelovému predlžovaniu sporu.\n\nZapamätaj si:\n- Procesný úkon = prejav vôle účastníka s procesnými účinkami voči súdu alebo protistrane.\n- Náležitosti podania (§ 127 CSP): súd, účastník, vec, čo sleduje, podpis.\n- Vadné podanie – súd vyzve na odstránenie vád, inak naň neprihliadne alebo ho odmietne.\n- Riadne urobený úkon účastníka je záväzný, kým nie je zákonným spôsobom zmenený.\n- Koncentrácia konania obmedzuje uplatňovanie nových tvrdení a dôkazov v neskorších fázach."
-  ,
+  "tags": [
+    "procesný úkon",
+    "podanie",
+    "náležitosti podania",
+    "odstránenie vád podania"
+  ],
+  "summary": "Procesný úkon účastníka je prejav jeho vôle smerujúci voči súdu alebo protistrane, ktorý má procesné účinky.\nÚčastník tak uplatňuje svoje práva, reaguje na tvrdenia protistrany a ovplyvňuje priebeh konania.\n\nProcesné úkony účastníkov sú prejavom dispozičného princípu – účastník rozhoduje o tom, či konanie začne, ako bude prebiehať a či bude pokračovať.\n\nPríklady procesných úkonov\nMeritórne úkony\npodanie žaloby,\n\nspäťvzatie žaloby,\n\nodpor proti platobnému rozkazu,\n\nodvolanie,\n\nuznanie nároku,\n\nuzavretie zmieru.\n\nNemeritórne úkony\nnávrh na doplnenie lehoty,\n\nnávrh na oslobodenie od súdneho poplatku,\n\nnámietka zaujatosti,\n\nnávrh na odročenie pojednávania,\n\nnávrh na vykonanie dôkazu.\n\nÚkony možno robiť:\n\npísomne,\n\nústne do zápisnice,\n\nelektronicky, ak to zákon pripúšťa.\n\nInterpretačné pravidlo (§ 124 CSP)\nPri posudzovaní procesného úkonu je rozhodujúci obsah, nie jeho označenie.\nSúd musí vykladať úkon podľa toho, čo účastník prejavil, nie podľa formálneho názvu podania.\n\nForma podania (§ 125 CSP)\nPodanie možno urobiť:\n\nv listinnej podobe,\n\nv elektronickej podobe (s autorizáciou podľa zákona o e-Governmente).\n\nNáležitosti podania (§ 127 CSP)\nKaždé podanie musí obsahovať:\n\noznačenie súdu,\n\nkto podanie robí,\n\nvec, ktorej sa týka,\n\nčo sa podaním sleduje,\n\npodpis.\n\nAk podanie tieto náležitosti nemá alebo trpí vadami, ktoré bránia jeho prejednaniu, súd vyzve účastníka na ich odstránenie v určenej lehote.\n\nVadné podanie\nak účastník vady neodstráni, súd na podanie neprihliadne,\n\nalebo ho odmietne, ak to zákon stanovuje (napr. vadné odvolanie).\n\nVadné podanie je odstrániteľná vada konania, ak zákon neustanovuje inak.\n\nZáväznosť procesných úkonov\nRiadne urobený procesný úkon je pre účastníka záväzný, kým ho nezmení alebo neodvolá spôsobom, ktorý zákon pripúšťa (napr. späťvzatie žaloby, zmena žaloby).\n\nKoncentrácia konania\nProcesné úkony účastníkov sú obmedzené lehotami:\n\nzákonné lehoty (napr. lehota na odvolanie),\n\nsudcovská koncentrácia (súd určí lehotu na predloženie tvrdení a dôkazov),\n\nzákonná koncentrácia (napr. § 153 CSP – koncentrácia sporového konania).\n\nKoncentrácia bráni účelovému predlžovaniu sporu – účastník musí tvrdenia a dôkazy predložiť včas, inak na ne súd nemusí prihliadnuť.\n\nZapamätaj si (štátnicové jadro)\nProcesný úkon = prejav vôle účastníka s procesnými účinkami.\n\nNáležitosti podania (§ 127 CSP): súd, účastník, vec, cieľ, podpis.\n\nVadné podanie → výzva na odstránenie vád; inak sa neprihliada alebo odmietne.\n\nRiadny úkon je záväzný, kým nie je zákonným spôsobom zmenený.\n\nKoncentrácia obmedzuje neskoré tvrdenia a dôkazy.\n\n§ 124 CSP – rozhoduje obsah, nie označenie.\n\n§ 125 CSP – podanie v listinnej alebo elektronickej podobe.\n\nÚkony môžu byť meritórne aj nemeritórne.\n\nZdroj:\nCSP (160/2015 Z. z.), § 124–127; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo je procesný úkon účastníka?",
-      "options": ["Prejav vôle účastníka smerujúci voči súdu alebo inému účastníkovi, ktorý má procesné účinky", "Iba samotné podanie žaloby", "Iba rozhodnutie súdu", "Úkon, ktorý nemá žiadne právne účinky"],
+      "options": [
+        "Prejav vôle účastníka smerujúci voči súdu alebo inému účastníkovi, ktorý má procesné účinky",
+        "Iba samotné podanie žaloby",
+        "Iba rozhodnutie súdu",
+        "Úkon, ktorý nemá žiadne právne účinky"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Procesný úkon je akýkoľvek prejav vôle účastníka s procesnými účinkami, nielen žaloba.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Aké formy môže mať procesný úkon účastníka?",
-      "options": ["Iba písomnú formu", "Písomnú, ústne do zápisnice alebo elektronickú, podľa povahy úkonu a zákonných podmienok", "Iba elektronickú formu", "Iba prostredníctvom advokáta"],
+      "options": [
+        "Iba písomnú formu",
+        "Písomnú, ústne do zápisnice alebo elektronickú, podľa povahy úkonu a zákonných podmienok",
+        "Iba elektronickú formu",
+        "Iba prostredníctvom advokáta"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon pripúšťa viacero foriem procesných úkonov v závislosti od ich povahy a zákonných podmienok.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo musí každé podanie účastníka obsahovať podľa § 127 CSP?",
-      "options": ["Len podpis účastníka", "Náležitosti podľa § 127 CSP – ktorému súdu je určené, kto ho robí, ktorej veci sa týka, čo sleduje, a podpis", "Len označenie súdu", "Len opis skutkového stavu bez ďalšieho"],
+      "options": [
+        "Len podpis účastníka",
+        "Náležitosti podľa § 127 CSP – ktorému súdu je určené, kto ho robí, ktorej veci sa týka, čo sleduje, a podpis",
+        "Len označenie súdu",
+        "Len opis skutkového stavu bez ďalšieho"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 127 CSP vymedzuje súhrn náležitostí, ktoré musí obsahovať každé podanie, nielen niektorú z nich.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo urobí súd, ak podanie účastníka trpí vadami brániacimi jeho prejednaniu?",
-      "options": ["Bez ďalšieho ho odmietne bez možnosti nápravy", "Vyzve účastníka na odstránenie vád v primeranej lehote, inak na podanie neprihliadne alebo ho odmietne", "Podanie automaticky prijme napriek vadám", "Postúpi ho bez ďalšieho inému súdu"],
+      "options": [
+        "Bez ďalšieho ho odmietne bez možnosti nápravy",
+        "Vyzve účastníka na odstránenie vád v primeranej lehote, inak na podanie neprihliadne alebo ho odmietne",
+        "Podanie automaticky prijme napriek vadám",
+        "Postúpi ho bez ďalšieho inému súdu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súd dáva účastníkovi možnosť vady odstrániť skôr, než vyvodí procesné dôsledky.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Je účastník svojím riadne urobeným procesným úkonom (napr. uznaním nároku) viazaný?",
-      "options": ["Áno, riadne urobený procesný úkon je pre účastníka záväzný, kým ho zákonom predpokladaným spôsobom nezmení alebo neodvolá", "Nie, úkony možno kedykoľvek bez obmedzenia meniť", "Viazanosť sa týka len súdu, nie účastníka", "Úkony účastníkov nemajú žiadne záväzné účinky"],
+      "options": [
+        "Áno, riadne urobený procesný úkon je pre účastníka záväzný, kým ho zákonom predpokladaným spôsobom nezmení alebo neodvolá",
+        "Nie, úkony možno kedykoľvek bez obmedzenia meniť",
+        "Viazanosť sa týka len súdu, nie účastníka",
+        "Úkony účastníkov nemajú žiadne záväzné účinky"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Riadne urobený procesný úkon zaväzuje účastníka, čím sa chráni predvídateľnosť a stabilita konania.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Procesný úkon účastníka", "definition": "Prejav vôle účastníka voči súdu alebo inému účastníkovi s procesnými účinkami." },
-    { "term": "Náležitosti podania (§ 127 CSP)", "definition": "Označenie súdu, účastníka, veci, čo sa sleduje, a podpis." },
-    { "term": "Odstránenie vád podania", "definition": "Súd vyzve účastníka na doplnenie alebo opravu podania v určenej lehote." },
-    { "term": "Koncentrácia konania", "definition": "Obmedzenie možnosti uplatňovať nové tvrdenia a dôkazy po určitom momente konania." },
-    { "term": "Viazanosť procesným úkonom", "definition": "Riadne urobený úkon je pre účastníka záväzný, kým ho zákonným spôsobom nezmení." }
+    {
+      "term": "Procesný úkon účastníka",
+      "definition": "Prejav vôle účastníka voči súdu alebo inému účastníkovi s procesnými účinkami."
+    },
+    {
+      "term": "Náležitosti podania (§ 127 CSP)",
+      "definition": "Označenie súdu, účastníka, veci, čo sa sleduje, a podpis."
+    },
+    {
+      "term": "Odstránenie vád podania",
+      "definition": "Súd vyzve účastníka na doplnenie alebo opravu podania v určenej lehote."
+    },
+    {
+      "term": "Koncentrácia konania",
+      "definition": "Obmedzenie možnosti uplatňovať nové tvrdenia a dôkazy po určitom momente konania."
+    },
+    {
+      "term": "Viazanosť procesným úkonom",
+      "definition": "Riadne urobený úkon je pre účastníka záväzný, kým ho zákonným spôsobom nezmení."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neúplná žaloba",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Žalobca podá žalobu, v ktorej chýba presné označenie žalovaného.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca podá žalobu, v ktorej chýba presné označenie žalovaného.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako má súd postupovať?",
-          "options": ["Vyzvať žalobcu na odstránenie tejto vady v určenej lehote", "Žalobu bez ďalšieho odmietnuť bez možnosti opravy", "Konanie automaticky zastaviť bez výzvy"],
+          "options": [
+            "Vyzvať žalobcu na odstránenie tejto vady v určenej lehote",
+            "Žalobu bez ďalšieho odmietnuť bez možnosti opravy",
+            "Konanie automaticky zastaviť bez výzvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Chýbajúce označenie žalovaného je odstrániteľnou vadou, na ktorú súd žalobcu vyzve.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo ak žalobca vadu v stanovenej lehote neodstráni?",
-          "options": ["Súd na podanie neprihliadne, prípadne žalobu odmietne", "Súd si chýbajúci údaj sám domyslí", "Konanie napriek tomu pokračuje bez akejkoľvek zmeny"],
+          "options": [
+            "Súd na podanie neprihliadne, prípadne žalobu odmietne",
+            "Súd si chýbajúci údaj sám domyslí",
+            "Konanie napriek tomu pokračuje bez akejkoľvek zmeny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak vada nie je odstránená, súd vyvodí procesné dôsledky – na podanie neprihliadne alebo ho odmietne.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Zmena stanoviska účastníka",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalovaný na pojednávaní nárok výslovne uznal, no o týždeň neskôr chce toto uznanie jednostranne odvolať bez ďalšieho odôvodnenia.", "options": [], "correct": 0 },
+        {
+          "question": "Žalovaný na pojednávaní nárok výslovne uznal, no o týždeň neskôr chce toto uznanie jednostranne odvolať bez ďalšieho odôvodnenia.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže tak urobiť voľne?",
-          "options": ["Nie, riadne urobeným procesným úkonom (uznaním) je viazaný, kým ho nezmení spôsobom, ktorý zákon pripúšťa", "Áno, procesné úkony možno kedykoľvek voľne meniť", "Áno, ale iba so súhlasom sudcu bez ďalších podmienok"],
+          "options": [
+            "Nie, riadne urobeným procesným úkonom (uznaním) je viazaný, kým ho nezmení spôsobom, ktorý zákon pripúšťa",
+            "Áno, procesné úkony možno kedykoľvek voľne meniť",
+            "Áno, ale iba so súhlasom sudcu bez ďalších podmienok"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uznanie nároku je záväzný dispozičný úkon, ktorý nemožno jednostranne a bez zákonného dôvodu odvolať.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Aký je zmysel viazanosti účastníka vlastným procesným úkonom?",
-          "options": ["Zabezpečiť predvídateľnosť a stabilitu priebehu konania", "Sťažiť účastníkovi prístup k spravodlivosti", "Chrániť výlučne záujmy súdu"],
+          "options": [
+            "Zabezpečiť predvídateľnosť a stabilitu priebehu konania",
+            "Sťažiť účastníkovi prístup k spravodlivosti",
+            "Chrániť výlučne záujmy súdu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Viazanosť úkonmi chráni predovšetkým riadny a predvídateľný priebeh konania pre všetkých účastníkov.",
@@ -120,14 +188,74 @@
   "spider": {
     "center": "Procesné úkony účastníkov – podania × náležitosti × vady × záväznosť × koncentrácia",
     "branches": [
-      { "label": "Pojem a povaha procesného úkonu", "leaves": ["prejav vôle účastníka smerujúci voči súdu alebo protistrane", "má procesné účinky", "ide o dispozičné procesné úkony – uplatňuje sa dispozičný princíp", "účastník nimi uplatňuje svoje práva, reaguje na tvrdenia protistrany a ovplyvňuje priebeh konania"] },
-      { "label": "Obmedzenie lehotou", "leaves": ["realizácia úkonov je obmedzená lehotami", "zákonná koncentrácia", "sudcovská koncentrácia", "zákonné lehoty na podanie opravných prostriedkov"] },
-      { "label": "Interpretačné pravidlo a forma (§ 124, § 125 CSP)", "leaves": ["§ 124 CSP: rozhodujúci je obsah úkonu, nie jeho označenie", "§ 125 CSP: podanie sa robí v listinnej alebo elektronickej podobe", "úkony možno robiť aj ústne do zápisnice"] },
-      { "label": "Meritórne a nemeritórne úkony", "leaves": ["meritórne: žaloba, späťvzatie žaloby, odpor, odvolanie", "nemeritórne: návrh na odpustenie lehoty, návrh vo veci poplatku, námietka zaujatosti, návrh na odročenie pojednávania"] },
-      { "label": "Náležitosti podania (§ 127 CSP)", "leaves": ["označenie súdu", "kto podanie robí", "vec, ktorej sa týka", "čo sa podaním sleduje", "podpis", "Ak podanie nemá náležitosti alebo má vady → súd vyzve na ich odstránenie v lehote."] },
-      { "label": "Vadné podanie", "leaves": ["ak účastník vady neodstráni → súd na podanie neprihliadne", "alebo ho odmietne, ak to zákon stanovuje"] },
-      { "label": "Záväznosť procesných úkonov", "leaves": ["riadne urobený úkon je pre účastníka záväzný", "možno ho zmeniť alebo odvolať len spôsobom, ktorý zákon pripúšťa", "príklady: späťvzatie žaloby, zmena žaloby"] },
-      { "label": "Koncentrácia konania", "leaves": ["obmedzuje možnosť uplatňovať nové tvrdenia a dôkazy v neskorších fázach", "cieľ: zabrániť účelovému predlžovaniu sporu", "najvýraznejšia v sporovom konaní", "účastník musí tvrdenia a dôkazy predložiť včas, inak na ne súd nemusí prihliadnuť"] }
+      {
+        "label": "Pojem a povaha procesného úkonu",
+        "leaves": [
+          "prejav vôle účastníka smerujúci voči súdu alebo protistrane",
+          "má procesné účinky",
+          "ide o dispozičné procesné úkony – uplatňuje sa dispozičný princíp",
+          "účastník nimi uplatňuje svoje práva, reaguje na tvrdenia protistrany a ovplyvňuje priebeh konania"
+        ]
+      },
+      {
+        "label": "Obmedzenie lehotou",
+        "leaves": [
+          "realizácia úkonov je obmedzená lehotami",
+          "zákonná koncentrácia",
+          "sudcovská koncentrácia",
+          "zákonné lehoty na podanie opravných prostriedkov"
+        ]
+      },
+      {
+        "label": "Interpretačné pravidlo a forma (§ 124, § 125 CSP)",
+        "leaves": [
+          "§ 124 CSP: rozhodujúci je obsah úkonu, nie jeho označenie",
+          "§ 125 CSP: podanie sa robí v listinnej alebo elektronickej podobe",
+          "úkony možno robiť aj ústne do zápisnice"
+        ]
+      },
+      {
+        "label": "Meritórne a nemeritórne úkony",
+        "leaves": [
+          "meritórne: žaloba, späťvzatie žaloby, odpor, odvolanie",
+          "nemeritórne: návrh na odpustenie lehoty, návrh vo veci poplatku, námietka zaujatosti, návrh na odročenie pojednávania"
+        ]
+      },
+      {
+        "label": "Náležitosti podania (§ 127 CSP)",
+        "leaves": [
+          "označenie súdu",
+          "kto podanie robí",
+          "vec, ktorej sa týka",
+          "čo sa podaním sleduje",
+          "podpis",
+          "Ak podanie nemá náležitosti alebo má vady → súd vyzve na ich odstránenie v lehote."
+        ]
+      },
+      {
+        "label": "Vadné podanie",
+        "leaves": [
+          "ak účastník vady neodstráni → súd na podanie neprihliadne",
+          "alebo ho odmietne, ak to zákon stanovuje"
+        ]
+      },
+      {
+        "label": "Záväznosť procesných úkonov",
+        "leaves": [
+          "riadne urobený úkon je pre účastníka záväzný",
+          "možno ho zmeniť alebo odvolať len spôsobom, ktorý zákon pripúšťa",
+          "príklady: späťvzatie žaloby, zmena žaloby"
+        ]
+      },
+      {
+        "label": "Koncentrácia konania",
+        "leaves": [
+          "obmedzuje možnosť uplatňovať nové tvrdenia a dôkazy v neskorších fázach",
+          "cieľ: zabrániť účelovému predlžovaniu sporu",
+          "najvýraznejšia v sporovom konaní",
+          "účastník musí tvrdenia a dôkazy predložiť včas, inak na ne súd nemusí prihliadnuť"
+        ]
+      }
     ]
   }
 }

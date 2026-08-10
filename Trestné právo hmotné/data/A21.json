@@ -2,7 +2,13 @@
   "id": "A21",
   "title": "Trestné činy proti rodine a mládeži",
   "schemaVersion": "1.1",
-  "tags": ["rodina", "mládež", "zanedbanie", "týranie", "výživa"],
+  "tags": [
+    "rodina",
+    "mládež",
+    "zanedbanie",
+    "týranie",
+    "výživa"
+  ],
   "theory": [
     {
       "heading": "Zanedbanie povinnej výživy",
@@ -20,35 +26,55 @@
   "quiz": [
     {
       "question": "Kedy ide o zanedbanie povinnej výživy?",
-      "options": ["Pri dlhodobom neplatení výživného", "Pri jednorazovom omeškaní", "Pri dobrovoľnom darovaní peňazí"],
+      "options": [
+        "Pri dlhodobom neplatení výživného",
+        "Pri jednorazovom omeškaní",
+        "Pri dobrovoľnom darovaní peňazí"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – musí ísť o dlhodobé neplnenie povinnosti.",
       "explanation_incorrect": "Nie – jednorazové omeškanie nestačí."
     },
     {
       "question": "Čo je týranie blízkej osoby?",
-      "options": ["Jednorazová hádka", "Dlhodobé fyzické alebo psychické ubližovanie", "Náhodné zranenie"],
+      "options": [
+        "Jednorazová hádka",
+        "Dlhodobé fyzické alebo psychické ubližovanie",
+        "Náhodné zranenie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – týranie musí byť dlhodobé alebo opakované.",
       "explanation_incorrect": "Nie – jednorazová hádka nie je týranie."
     },
     {
       "question": "Kto je chránený pri ohrozovaní mravnej výchovy?",
-      "options": ["Dospelý", "Maloletý", "Právnická osoba"],
+      "options": [
+        "Dospelý",
+        "Maloletý",
+        "Právnická osoba"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – chránený je maloletý.",
       "explanation_incorrect": "Nie – ide o ochranu maloletých."
     },
     {
       "question": "Čo je chráneným objektom týchto trestných činov?",
-      "options": ["Rodina a riadna výchova detí", "Majetok", "Verejný poriadok"],
+      "options": [
+        "Rodina a riadna výchova detí",
+        "Majetok",
+        "Verejný poriadok"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – chránené sú rodinné vzťahy a vývoj maloletých.",
       "explanation_incorrect": "Nie – nejde o majetok ani verejný poriadok."
     },
     {
       "question": "Kedy ide o týranie zverenej osoby?",
-      "options": ["Pri dlhodobom ubližovaní osobe, ktorá je páchateľovi zverená", "Pri jednorazovom konflikte", "Pri náhodnom zranení"],
+      "options": [
+        "Pri dlhodobom ubližovaní osobe, ktorá je páchateľovi zverená",
+        "Pri jednorazovom konflikte",
+        "Pri náhodnom zranení"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – musí ísť o dlhodobé ubližovanie zverenej osobe.",
       "explanation_incorrect": "Nie – jednorazové konanie nestačí."
@@ -88,7 +114,11 @@
         },
         {
           "question": "Krok 1: Ide o zanedbanie povinnej výživy?",
-          "options": ["Áno", "Nie", "Len ak je výživné vysoké"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak je výživné vysoké"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o dlhodobé neplnenie povinnosti.",
           "explanation_incorrect": "Nie – výška výživného nie je rozhodujúca."
@@ -106,14 +136,22 @@
         },
         {
           "question": "Krok 1: Ide o týranie?",
-          "options": ["Áno", "Nie", "Len ak je fyzické násilie"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak je fyzické násilie"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – týranie môže byť aj psychické.",
           "explanation_incorrect": "Nie – fyzické násilie nie je podmienkou."
         },
         {
           "question": "Krok 2: Je rozhodujúca dlhodobosť?",
-          "options": ["Áno", "Nie", "Len ak je dieťa mladšie ako 10 rokov"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak je dieťa mladšie ako 10 rokov"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – týranie musí byť dlhodobé alebo opakované.",
           "explanation_incorrect": "Nie – vek dieťaťa nie je rozhodujúci."
@@ -130,10 +168,42 @@
   "spider": {
     "center": "TČ proti rodine a mládeži",
     "branches": [
-      { "label": "Chránený záujem", "leaves": ["Rodina – rodinné vzťahy a rodičovské povinnosti", "Deti a mládež – fyzická a psychická integrita, zdravý mravný vývin", "Zaradenie – Tretia hlava osobitnej časti (§§ 204–211)"] },
-      { "label": "Zanedbanie povinnej výživy (§ 207)", "leaves": ["Podstata – neplnenie zákonnej vyživovacej povinnosti", "Trestnosť – dlhodobé neplnenie, úmyselné vyhýbanie sa plateniu", "Znak – neplnenie napriek schopnosti platiť", "Výskyt – jeden z najčastejších TČ proti rodine"] },
-      { "label": "Týranie blízkej a zverenej osoby (§ 208)", "leaves": ["Podstata – dlhodobé či opakované fyzické alebo psychické ubližovanie", "Formy – násilie, ponižovanie, izolácia, kontrola, zanedbávanie", "Znak – zneužitie moci alebo závislosti obete", "Kontext – typicky domáce násilie"] },
-      { "label": "Ohrozovanie mravnej výchovy mládeže (§ 211)", "leaves": ["Podstata – konanie negatívne ovplyvňujúce vývoj maloletého", "Formy – umožnenie alkoholu, drog, hazardu, vedenie k nemravnému životu", "Ďalšie – umožnenie prostitúcie či kriminality, zanedbávanie výchovy", "Chránená osoba – maloletý do 18 rokov"] }
+      {
+        "label": "Chránený záujem",
+        "leaves": [
+          "Rodina – rodinné vzťahy a rodičovské povinnosti",
+          "Deti a mládež – fyzická a psychická integrita, zdravý mravný vývin",
+          "Zaradenie – Tretia hlava osobitnej časti (§§ 204–211)"
+        ]
+      },
+      {
+        "label": "Zanedbanie povinnej výživy (§ 207)",
+        "leaves": [
+          "Podstata – neplnenie zákonnej vyživovacej povinnosti",
+          "Trestnosť – dlhodobé neplnenie, úmyselné vyhýbanie sa plateniu",
+          "Znak – neplnenie napriek schopnosti platiť",
+          "Výskyt – jeden z najčastejších TČ proti rodine"
+        ]
+      },
+      {
+        "label": "Týranie blízkej a zverenej osoby (§ 208)",
+        "leaves": [
+          "Podstata – dlhodobé či opakované fyzické alebo psychické ubližovanie",
+          "Formy – násilie, ponižovanie, izolácia, kontrola, zanedbávanie",
+          "Znak – zneužitie moci alebo závislosti obete",
+          "Kontext – typicky domáce násilie"
+        ]
+      },
+      {
+        "label": "Ohrozovanie mravnej výchovy mládeže (§ 211)",
+        "leaves": [
+          "Podstata – konanie negatívne ovplyvňujúce vývoj maloletého",
+          "Formy – umožnenie alkoholu, drog, hazardu, vedenie k nemravnému životu",
+          "Ďalšie – umožnenie prostitúcie či kriminality, zanedbávanie výchovy",
+          "Chránená osoba – maloletý do 18 rokov"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti rodine a mládeži chránia základné spoločenské hodnoty: rodinu, rodičovské povinnosti, fyzickú a psychickú integritu detí a zdravý mravný vývin mládeže.\nMedzi základné skutkové podstaty patria:\n– zanedbanie povinnej výživy,\n– týranie blízkej alebo zverenej osoby,\n– ohrozovanie mravnej výchovy mládeže.\n\nV slovenskom Trestnom zákone sú upravené v Štvrtej hlave osobitnej časti (§§ 207–211 TZ).\n\n1. Zanedbanie povinnej výživy (§ 207 TZ)\nZanedbanie povinnej výživy spočíva v tom, že páchateľ neplní zákonnú povinnosť poskytovať výživu osobe, ktorú je povinný živiť.\n\nTrestnosť vzniká najmä pri:\n– dlhodobom neplnení povinnosti,\n– úmyselnom vyhýbaní sa plateniu,\n– neplnení povinnosti napriek schopnosti platiť.\n\nIde o jeden z najčastejších trestných činov proti rodine.\n\n2. Týranie blízkej alebo zverenej osoby (§ 208 TZ)\nTýranie je dlhodobé alebo opakované fyzické či psychické ubližovanie, ktoré spôsobuje utrpenie, ponižovanie alebo strach.\n\nFormy týrania:\n– fyzické násilie,\n– psychické týranie (ponižovanie, izolácia, kontrola),\n– zanedbávanie,\n– zneužívanie moci alebo závislosti.\n\nTýranie je závažný trestný čin, často spojený s domácim násilím.\n\n3. Ohrozovanie mravnej výchovy mládeže (§ 211 TZ)\nOhrozovanie mravnej výchovy mládeže je konanie, ktoré negatívne ovplyvňuje vývoj maloletého.\n\nTypické formy:\n– umožnenie požívania alkoholu alebo drog,\n– vedenie k nemravnému životu,\n– umožnenie hazardu, prostitúcie, kriminality,\n– zanedbávanie výchovy.\n\nChránenou osobou je maloletý do 18 rokov.\n\nZapamätaj si (štátnicové jadro)\n– Zanedbanie povinnej výživy = dlhodobé neplnenie zákonnej vyživovacej povinnosti.\n– Týranie blízkej osoby = dlhodobé fyzické alebo psychické ubližovanie.\n– Ohrozovanie mravnej výchovy mládeže = konanie negatívne ovplyvňujúce vývoj maloletého.\n– Trestné činy proti rodine chránia deti, rodinu, rodičovské povinnosti a mravný vývin mládeže.\n\nZdroj (overené)\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 207–211 TZ  \n– Ministerstvo spravodlivosti SR – prehľad trestných činov proti rodine a mládeži\n– Burda – Čentéš – Šramel: Trestné právo hmotné – Osobitná časť  \n– Justičná revue – domáce násilie a týranie\n– Smernica EP a Rady 2011/93/EÚ (ochrana detí)"
 }

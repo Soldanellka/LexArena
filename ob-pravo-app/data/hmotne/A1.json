@@ -1,7 +1,7 @@
 {
   "id": "1",
   "title": "Pojem, predmet a systém občianskeho práva, pramene",
-  "summary": "Občianske právo je základné odvetvie súkromného práva, ktoré upravuje majetkové a osobné vzťahy fyzických a právnických osôb. Predmetom sú vzťahy rovnosti strán. Systém tvoria: všeobecná časť, vecné právo, záväzkové právo, dedičské právo, rodinné právo. Hlavným prameňom je zákon č. 40/1964 Zb. – Občiansky zákonník (OZ).",
+  "summary": "Občianske právo je základné odvetvie súkromného práva, ktoré upravuje majetkové a osobné nemajetkové vzťahy medzi subjektmi vystupujúcimi v rovnosti. Ide o vzťahy, v ktorých štát nevystupuje ako nositeľ verejnej moci, ale ako subjekt súkromného práva. Občianskoprávne vzťahy sú založené na autonómii vôle, zmluvnej slobode, ochrane vlastníctva a zásade poctivého obchodného styku.\n\nPredmet úpravy zahŕňa:\n– majetkové vzťahy (vlastníctvo, držba, vecné práva k cudzej veci, záväzky),\n– osobné nemajetkové vzťahy (ochrana osobnosti, meno, súkromie),\n– rodinné vzťahy (manželstvo, rodičovské práva a povinnosti, výživné),\n– dedičské vzťahy (prechod majetku po smrti poručiteľa).\n\nSystém občianskeho práva sa člení na:\n\nVšeobecnú časť – subjekty práva, právne skutočnosti, zastúpenie, premlčanie a preklúzia.\n\nVecné právo – vlastníctvo, spoluvlastníctvo, držba, vecné práva k cudzej veci.\n\nZáväzkové právo – zmluvy, delikty, bezdôvodné obohatenie.\n\nDedičské právo – dedičské tituly, závet, odmietnutie dedičstva, dedičské konanie.\n\nRodinné právo – manželstvo, rodičovské práva, osvojenie, výživné.\n\nPramene občianskeho práva:  \n– zákon č. 40/1964 Zb. – Občiansky zákonník,\n– zákon č. 36/2005 Z. z. – Zákon o rodine,\n– Ústava SR (čl. 12, 19),\n– osobitné zákony (spotrebiteľ, osobné údaje),\n– judikatúra NS SR a ÚS SR,\n– právo EÚ (najmä smernice v oblasti spotrebiteľského a zmluvného práva).\n\nZdroje: OZ (40/1964 Zb.), Zákon o rodine (36/2005 Z. z.), Ústava SR, Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár,",
   "quiz": [
     {
       "question": "Ktorý zákon je základným prameňom občianskeho práva v SR?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Občianske právo", "definition": "Základné odvetvie súkromného práva upravujúce majetkové a osobné vzťahy FO a PO na základe rovnosti (§ 1 OZ)." },
-    { "term": "Kogentná norma", "definition": "Záväzná norma, od ktorej sa strany nemôžu odchýliť ani dohodou (§ 2 ods. 3 OZ)." },
-    { "term": "Dispozitívna norma", "definition": "Norma, od ktorej sa strany môžu dohodou odchýliť, ak to zákon výslovne nezakazuje (§ 2 ods. 3 OZ)." },
-    { "term": "Subsidiarita OZ", "definition": "OZ sa použije, ak osobitný predpis (napr. Obchodný zákonník) danú otázku neupravuje." },
-    { "term": "Systém občianskeho práva", "definition": "Všeobecná časť, vecné právo, záväzkové právo, dedičské právo, rodinné právo." }
+    {
+      "term": "Občianske právo",
+      "definition": "Základné odvetvie súkromného práva upravujúce majetkové a osobné vzťahy FO a PO na základe rovnosti (§ 1 OZ)."
+    },
+    {
+      "term": "Kogentná norma",
+      "definition": "Záväzná norma, od ktorej sa strany nemôžu odchýliť ani dohodou (§ 2 ods. 3 OZ)."
+    },
+    {
+      "term": "Dispozitívna norma",
+      "definition": "Norma, od ktorej sa strany môžu dohodou odchýliť, ak to zákon výslovne nezakazuje (§ 2 ods. 3 OZ)."
+    },
+    {
+      "term": "Subsidiarita OZ",
+      "definition": "OZ sa použije, ak osobitný predpis (napr. Obchodný zákonník) danú otázku neupravuje."
+    },
+    {
+      "term": "Systém občianskeho práva",
+      "definition": "Všeobecná časť, vecné právo, záväzkové právo, dedičské právo, rodinné právo."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Medzera v obchodnej zmluve",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Dvaja podnikatelia uzavreli kúpnu zmluvu podľa Obchodného zákonníka. Pri spore sa ukázalo, že Obchodný zákonník otázku premlčania konkrétneho nároku vôbec neupravuje.", "options": [], "correct": 0 },
+        {
+          "question": "Dvaja podnikatelia uzavreli kúpnu zmluvu podľa Obchodného zákonníka. Pri spore sa ukázalo, že Obchodný zákonník otázku premlčania konkrétneho nároku vôbec neupravuje.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorý predpis sa na túto medzeru použije?",
-          "options": ["Výlučne Obchodný zákonník bez doplnenia", "Subsidiárne sa použijú ustanovenia Občianskeho zákonníka", "Otázka ostane právne neriešená"],
+          "options": [
+            "Výlučne Obchodný zákonník bez doplnenia",
+            "Subsidiárne sa použijú ustanovenia Občianskeho zákonníka",
+            "Otázka ostane právne neriešená"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Podľa § 1 ods. 2 Obchodného zákonníka (zákon č. 513/1991 Zb.) sa otázky, ktoré nemožno riešiť podľa jeho ustanovení, riešia podľa predpisov občianskeho práva.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Prečo je takéto subsidiárne použitie OZ možné?",
-          "options": ["Lebo OZ je hierarchicky nadradený Obchodnému zákonníku", "Lebo OZ je všeobecným predpisom súkromného práva, ktorý sa uplatní pri medzere v osobitnej úprave", "Lebo o tom rozhoduje súd podľa vlastnej úvahy bez zákonného základu"],
+          "options": [
+            "Lebo OZ je hierarchicky nadradený Obchodnému zákonníku",
+            "Lebo OZ je všeobecným predpisom súkromného práva, ktorý sa uplatní pri medzere v osobitnej úprave",
+            "Lebo o tom rozhoduje súd podľa vlastnej úvahy bez zákonného základu"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. OZ je všeobecným (subsidiárnym) predpisom súkromného práva – uplatní sa všade tam, kde osobitný predpis danú otázku neupravuje.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Neplatná zmluvná doložka",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "V kúpnej zmluve sa strany dohodli na doložke, ktorá je v priamom rozpore s kogentným ustanovením Občianskeho zákonníka.", "options": [], "correct": 0 },
+        {
+          "question": "V kúpnej zmluve sa strany dohodli na doložke, ktorá je v priamom rozpore s kogentným ustanovením Občianskeho zákonníka.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takáto doložka platná?",
-          "options": ["Áno, dohoda strán má pri súkromnoprávnych vzťahoch vždy prednosť", "Nie, odporuje kogentnej norme, a je preto neplatná", "Áno, pokiaľ s ňou obe strany súhlasili"],
+          "options": [
+            "Áno, dohoda strán má pri súkromnoprávnych vzťahoch vždy prednosť",
+            "Nie, odporuje kogentnej norme, a je preto neplatná",
+            "Áno, pokiaľ s ňou obe strany súhlasili"
+          ],
           "correct": 1,
           "explanation": {
             "correct": "Správne. Od kogentných ustanovení sa strany nemôžu odchýliť ani vzájomnou dohodou (§ 2 ods. 3 OZ a contrario) – odchylná doložka je neplatná.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo by platilo, keby dotknuté ustanovenie bolo dispozitívne, nie kogentné?",
-          "options": ["Odchylná dohoda strán by bola prípustná", "Aj tak by bola doložka neplatná", "Celá zmluva by bez ďalšieho zanikla"],
+          "options": [
+            "Odchylná dohoda strán by bola prípustná",
+            "Aj tak by bola doložka neplatná",
+            "Celá zmluva by bez ďalšieho zanikla"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri dispozitívnych normách § 2 ods. 3 OZ výslovne pripúšťa, aby sa účastníci dohodli odchylne od zákona.",
@@ -142,10 +181,47 @@
   "spider": {
     "center": "Občianske právo – pojem a systém",
     "branches": [
-      { "label": "Pojem OP", "leaves": ["súkromné právo", "rovnosť subjektov", "štát ako subjekt, nie autorita", "autonómia vôle", "zmluvná sloboda", "ochrana vlastníctva"] },
-      { "label": "Predmet OP", "leaves": ["majetkové vzťahy: vlastníctvo, držba, vecné práva, záväzky", "osobné nemajetkové vzťahy: osobnosť, meno, súkromie", "rodinné vzťahy: manželstvo, rodičovské práva, výživné", "dedičské vzťahy: dedenie, závet, odmietnutie dedičstva"] },
-      { "label": "Systém OP", "leaves": ["všeobecná časť: subjekty, právne skutočnosti, zastúpenie, premlčanie", "vecné právo: vlastníctvo, spoluvlastníctvo, držba", "záväzkové právo: zmluvy, delikty, bezdôvodné obohatenie", "dedičské právo: tituly, závet, dedičské konanie", "rodinné právo: manželstvo, osvojenie, výživné"] },
-      { "label": "Pramene OP", "leaves": ["OZ (40/1964 Zb.)", "Zákon o rodine (36/2005 Z. z.)", "Ústava SR – čl. 12, 19", "osobitné zákony: spotrebiteľ, osobné údaje", "judikatúra NS SR, ÚS SR", "právo EÚ: smernice spotrebiteľské, zmluvné"] }
+      {
+        "label": "Pojem OP",
+        "leaves": [
+          "súkromné právo",
+          "rovnosť subjektov",
+          "štát ako subjekt, nie autorita",
+          "autonómia vôle",
+          "zmluvná sloboda",
+          "ochrana vlastníctva"
+        ]
+      },
+      {
+        "label": "Predmet OP",
+        "leaves": [
+          "majetkové vzťahy: vlastníctvo, držba, vecné práva, záväzky",
+          "osobné nemajetkové vzťahy: osobnosť, meno, súkromie",
+          "rodinné vzťahy: manželstvo, rodičovské práva, výživné",
+          "dedičské vzťahy: dedenie, závet, odmietnutie dedičstva"
+        ]
+      },
+      {
+        "label": "Systém OP",
+        "leaves": [
+          "všeobecná časť: subjekty, právne skutočnosti, zastúpenie, premlčanie",
+          "vecné právo: vlastníctvo, spoluvlastníctvo, držba",
+          "záväzkové právo: zmluvy, delikty, bezdôvodné obohatenie",
+          "dedičské právo: tituly, závet, dedičské konanie",
+          "rodinné právo: manželstvo, osvojenie, výživné"
+        ]
+      },
+      {
+        "label": "Pramene OP",
+        "leaves": [
+          "OZ (40/1964 Zb.)",
+          "Zákon o rodine (36/2005 Z. z.)",
+          "Ústava SR – čl. 12, 19",
+          "osobitné zákony: spotrebiteľ, osobné údaje",
+          "judikatúra NS SR, ÚS SR",
+          "právo EÚ: smernice spotrebiteľské, zmluvné"
+        ]
+      }
     ]
   }
 }

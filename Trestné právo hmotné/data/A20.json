@@ -2,7 +2,13 @@
   "id": "A20",
   "title": "Trestné činy proti ľudskej dôstojnosti",
   "schemaVersion": "1.1",
-  "tags": ["dôstojnosť", "sexuálne trestné činy", "sexuálne násilie", "zneužívanie", "obťažovanie"],
+  "tags": [
+    "dôstojnosť",
+    "sexuálne trestné činy",
+    "sexuálne násilie",
+    "zneužívanie",
+    "obťažovanie"
+  ],
   "theory": [
     {
       "heading": "Sexuálne násilie",
@@ -20,35 +26,55 @@
   "quiz": [
     {
       "question": "Čo je sexuálne násilie?",
-      "options": ["Dobrovoľný styk", "Donútenie k sexuálnemu konaniu násilím alebo hrozbou", "Náhodný dotyk"],
+      "options": [
+        "Dobrovoľný styk",
+        "Donútenie k sexuálnemu konaniu násilím alebo hrozbou",
+        "Náhodný dotyk"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – sexuálne násilie je donútenie násilím alebo hrozbou.",
       "explanation_incorrect": "Nie – dobrovoľný styk nie je sexuálne násilie."
     },
     {
       "question": "Kedy ide o sexuálne zneužívanie?",
-      "options": ["Keď osoba nie je schopná dať platný súhlas", "Keď ide o hádku medzi partnermi", "Keď je osoba dospelá a súhlasí"],
+      "options": [
+        "Keď osoba nie je schopná dať platný súhlas",
+        "Keď ide o hádku medzi partnermi",
+        "Keď je osoba dospelá a súhlasí"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – zneužívanie je konanie voči osobe bez schopnosti súhlasu.",
       "explanation_incorrect": "Nie – rozhodujúca je neschopnosť dať súhlas."
     },
     {
       "question": "Čo je chráneným objektom týchto trestných činov?",
-      "options": ["Majetok", "Sexuálna sloboda a ľudská dôstojnosť", "Verejný poriadok"],
+      "options": [
+        "Majetok",
+        "Sexuálna sloboda a ľudská dôstojnosť",
+        "Verejný poriadok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – chránená je sexuálna sloboda a dôstojnosť.",
       "explanation_incorrect": "Nie – nejde o majetok ani verejný poriadok."
     },
     {
       "question": "Kedy je súhlas právne irelevantný?",
-      "options": ["Pri dieťati pod zákonným vekom", "Pri dospelej osobe bez nátlaku", "Pri dobrovoľnom vzťahu dvoch dospelých"],
+      "options": [
+        "Pri dieťati pod zákonným vekom",
+        "Pri dospelej osobe bez nátlaku",
+        "Pri dobrovoľnom vzťahu dvoch dospelých"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – dieťa nemôže dať platný súhlas.",
       "explanation_incorrect": "Nie – súhlas dieťaťa je právne irelevantný."
     },
     {
       "question": "Čo je sexuálne obťažovanie?",
-      "options": ["Nevhodné správanie sexuálnej povahy narúšajúce dôstojnosť", "Dobrovoľný flirt", "Bežná komunikácia"],
+      "options": [
+        "Nevhodné správanie sexuálnej povahy narúšajúce dôstojnosť",
+        "Dobrovoľný flirt",
+        "Bežná komunikácia"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – ide o správanie narúšajúce dôstojnosť.",
       "explanation_incorrect": "Nie – flirt nie je trestný čin."
@@ -88,14 +114,22 @@
         },
         {
           "question": "Krok 1: Ide o sexuálne násilie?",
-          "options": ["Áno", "Nie", "Len ak došlo k zraneniu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak došlo k zraneniu"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – hrozba násilia stačí na naplnenie skutkovej podstaty.",
           "explanation_incorrect": "Nie – zranenie nie je podmienkou."
         },
         {
           "question": "Krok 2: Je súhlas obete platný, ak bol daný zo strachu?",
-          "options": ["Nie", "Áno", "Len ak nebola zranená"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak nebola zranená"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – súhlas vynútený hrozbou nie je platný.",
           "explanation_incorrect": "Nie – súhlas musí byť slobodný."
@@ -113,14 +147,22 @@
         },
         {
           "question": "Krok 1: Je súhlas dieťaťa právne relevantný?",
-          "options": ["Nie", "Áno", "Len ak rodičia súhlasili"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak rodičia súhlasili"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – dieťa nemôže dať platný súhlas.",
           "explanation_incorrect": "Nie – súhlas dieťaťa je právne irelevantný."
         },
         {
           "question": "Krok 2: O aký čin ide?",
-          "options": ["Sexuálne zneužívanie", "Sexuálne násilie", "Obmedzovanie osobnej slobody"],
+          "options": [
+            "Sexuálne zneužívanie",
+            "Sexuálne násilie",
+            "Obmedzovanie osobnej slobody"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o sexuálne zneužívanie maloletého.",
           "explanation_incorrect": "Nie – nejde o násilie, ale o zneužitie maloletého."
@@ -137,11 +179,48 @@
   "spider": {
     "center": "TČ proti ľudskej dôstojnosti (§§ 199–203)",
     "branches": [
-      { "label": "Znásilnenie (§ 199)", "leaves": ["Podstata – donútenie k súloži či inému sexuálnemu styku násilím, hrozbou alebo zneužitím bezbrannosti", "Súhlas – absencia slobodného súhlasu je jadrom skutkovej podstaty", "Odpor – fyzický odpor nie je podmienkou", "Bezbrannosť – spánok, intoxikácia, zdravotný stav rovnocenné násiliu"] },
-      { "label": "Sexuálne násilie (§ 200)", "leaves": ["Podstata – donútenie k inému sexuálnemu konaniu než súlož", "Prostriedky – násilie, hrozba bezprostredného násilia, zneužitie bezbrannosti", "Rozsah – širší okruh sexuálnych prejavov zasahujúcich sexuálnu slobodu"] },
-      { "label": "Pohlavné zneužívanie (§ 201)", "leaves": ["Podstata – konanie voči osobe neschopnej dať platný súhlas", "Chránení – najmä deti do 15 rokov a osoby s duševnou poruchou", "Znak – zneužitie autority, dôvery, závislosti či bezbrannosti", "Európsky rámec – smernica 2011/93/EÚ o ochrane detí"] },
-      { "label": "Súlož medzi príbuznými (§ 203)", "leaves": ["Podstata – sexuálny styk medzi príbuznými, právne neprípustný", "Chráni – rodinné vzťahy, vývin detí, zákaz zneužitia autority v rodine"] },
-      { "label": "Sexuálne obťažovanie", "leaves": ["Podstata – nežiaduce správanie sexuálnej povahy narúšajúce dôstojnosť", "Formy – verbálne, neverbálne, fyzické", "Právne zaradenie – bez samostatnej SP; môže napĺňať § 199, § 200, § 192, § 189, § 183"] }
+      {
+        "label": "Znásilnenie (§ 199)",
+        "leaves": [
+          "Podstata – donútenie k súloži či inému sexuálnemu styku násilím, hrozbou alebo zneužitím bezbrannosti",
+          "Súhlas – absencia slobodného súhlasu je jadrom skutkovej podstaty",
+          "Odpor – fyzický odpor nie je podmienkou",
+          "Bezbrannosť – spánok, intoxikácia, zdravotný stav rovnocenné násiliu"
+        ]
+      },
+      {
+        "label": "Sexuálne násilie (§ 200)",
+        "leaves": [
+          "Podstata – donútenie k inému sexuálnemu konaniu než súlož",
+          "Prostriedky – násilie, hrozba bezprostredného násilia, zneužitie bezbrannosti",
+          "Rozsah – širší okruh sexuálnych prejavov zasahujúcich sexuálnu slobodu"
+        ]
+      },
+      {
+        "label": "Pohlavné zneužívanie (§ 201)",
+        "leaves": [
+          "Podstata – konanie voči osobe neschopnej dať platný súhlas",
+          "Chránení – najmä deti do 15 rokov a osoby s duševnou poruchou",
+          "Znak – zneužitie autority, dôvery, závislosti či bezbrannosti",
+          "Európsky rámec – smernica 2011/93/EÚ o ochrane detí"
+        ]
+      },
+      {
+        "label": "Súlož medzi príbuznými (§ 203)",
+        "leaves": [
+          "Podstata – sexuálny styk medzi príbuznými, právne neprípustný",
+          "Chráni – rodinné vzťahy, vývin detí, zákaz zneužitia autority v rodine"
+        ]
+      },
+      {
+        "label": "Sexuálne obťažovanie",
+        "leaves": [
+          "Podstata – nežiaduce správanie sexuálnej povahy narúšajúce dôstojnosť",
+          "Formy – verbálne, neverbálne, fyzické",
+          "Právne zaradenie – bez samostatnej SP; môže napĺňať § 199, § 200, § 192, § 189, § 183"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti ľudskej dôstojnosti zahŕňajú znásilnenie, sexuálne násilie, pohlavné zneužívanie, súlož medzi príbuznými a ďalšie skutky, ktoré zasahujú do sexuálnej slobody, integrity a autonómie človeka.\nChránia dôstojnosť, telesnú integritu, sexuálnu autonómiu a slobodu súhlasu.\n\nV slovenskom Trestnom zákone sú upravené najmä v §§ 199–203 TZ.\n\n1. Znásilnenie (§ 199 TZ)\nZnásilnenie je donútenie inej osoby k súloži alebo inému sexuálnemu styku použitím:\n– násilia,\n– hrozby bezprostredného násilia,\n– zneužitia bezbrannosti.\n\nKľúčové prvky podľa aktuálnej úpravy:\nSúhlas je jadrom skutkovej podstaty — jeho absencia zakladá znásilnenie.\n\nFyzický odpor nie je podmienkou.\n\nZneužitie bezbrannosti (spánok, intoxikácia, zdravotný stav) je rovnocenné násiliu.\n\nIde o najzávažnejší sexuálny trestný čin.\n\n2. Sexuálne násilie (§ 200 TZ)\nSexuálne násilie je donútenie k inému sexuálnemu konaniu než súlož, opäť použitím:\n– násilia,\n– hrozby bezprostredného násilia,\n– zneužitia bezbrannosti.\n\nChráni širší okruh sexuálnych prejavov, ktoré nepredstavujú súlož, ale zasahujú do sexuálnej slobody.\n\n3. Pohlavné zneužívanie (§ 201 TZ)\nPohlavné zneužívanie je konanie voči osobe, ktorá nie je schopná dať platný súhlas — najmä dieťa alebo osoba s duševnou poruchou.\n\nPodstatné znaky:\n– obeť je dieťa (najmä < 15 rokov),\n– obeť nie je schopná posúdiť následky konania,\n– páchateľ zneužije autoritu, dôveru, závislosť alebo bezbrannosť.\n\nIde o jeden z najprísnejšie trestaných činov v slovenskom práve.\n\nEÚ štandardy:\nSmernica 2011/93/EÚ stanovuje minimálne štandardy ochrany detí pred sexuálnym zneužívaním.\n\n4. Súlož medzi príbuznými (§ 203 TZ)\nIde o konanie medzi osobami v príbuzenskom vzťahu, ktoré je spoločensky a právne neprípustné.\n\nChráni:\n– rodinné vzťahy,\n– psychický a sociálny vývin detí,\n– zákaz zneužitia autority v rodine.\n\n5. Sexuálne obťažovanie (bez samostatnej SP)\nSexuálne obťažovanie je nežiaduce správanie sexuálnej povahy, ktoré:\n– narúša dôstojnosť osoby,\n– vytvára ponižujúce, zastrašujúce alebo nepriateľské prostredie.\n\nMôže byť:\n– verbálne (poznámky, návrhy),\n– neverbálne (gestá, pohyby),\n– fyzické (nežiaduci dotyk).\n\nPozor:\nTrestný zákon nepozná samostatnú SP „sexuálne obťažovanie“, ale tieto prejavy môžu napĺňať znaky:\n– znásilnenia (§ 199),\n– sexuálneho násilia (§ 200),\n– nátlaku (§ 192),\n– vydierania (§ 189),\n– obmedzovania osobnej slobody (§ 183).\n\nZapamätaj si (štátnicové jadro)\n– Znásilnenie (§ 199) = donútenie k súloži alebo inému styku násilím, hrozbou alebo zneužitím bezbrannosti.\n– Sexuálne násilie (§ 200) = donútenie k inému sexuálnemu konaniu než súlož.\n– Pohlavné zneužívanie (§ 201) = konanie voči osobe neschopnej dať súhlas (najmä dieťa).\n– Súlož medzi príbuznými (§ 203) = ochrana rodinných vzťahov a zákazu zneužitia autority.\n– Sexuálne obťažovanie = nežiaduce správanie sexuálnej povahy, ktoré môže napĺňať iné SP.\n\nZdroj (overené)\n– Trestný zákon č. 300/2005 Z. z., osobitná časť §§ 199–203\n– Prokeinová, Sexuálne zneužívanie verzus súlož medzi príbuznými, Justičná revue 2025\n– Dôvodová správa k redefinícii znásilnenia (NRSR)\n– Smernica EP a Rady 2011/93/EÚ\n– Burda – Čentéš – Šramel: Trestné právo hmotné – Osobitná časť"
 }

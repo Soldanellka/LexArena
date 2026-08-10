@@ -1,7 +1,7 @@
 {
   "id": "23",
   "title": "Osobitné prípady zodpovednosti za škodu",
-  "summary": "OZ upravuje osobitné prípady zodpovednosti: za škodu spôsobenú prevádzkovou činnosťou (§ 420a – objektívna), vadným výrobkom (zákon č. 294/1999 Z.z.), škodou na vnesených veciach (§ 433), škodou spôsobenou zveraťom (§ 431), osobou nespôsobilou (§ 422). Objektívna zodpovednosť: bez zavinenia – prevádzkovateľ zodpovedá za samotný vznik škody.",
+  "summary": "Občiansky zákonník okrem všeobecnej zodpovednosti za škodu (§ 420 OZ) upravuje aj osobitné režimy, ktoré reagujú na špecifické situácie, kde je potrebné posilniť ochranu poškodeného alebo zjednodušiť dokazovanie. Mnohé z nich sú objektívne – nezávisia od zavinenia.\n\n1. Škoda spôsobená prevádzkovou činnosťou (§ 420a OZ)\nIde o objektívnu zodpovednosť. Prevádzkovateľ zodpovedá za škodu spôsobenú okolnosťami, ktoré majú pôvod v prevádzke (stroje, technológie, dopravné prostriedky).\n– Nevyžaduje sa zavinenie.\n– Prevádzkovateľ sa môže zbaviť zodpovednosti len ak preukáže, že škodu spôsobila neodvrátiteľná udalosť alebo konanie poškodeného.\n\n2. Zodpovednosť za škodu spôsobenú vadným výrobkom\nUpravená zákonom č. 294/1999 Z. z.  \n– Výrobca zodpovedá za škodu spôsobenú vadou výrobku, ktorý nebezpečnými vlastnosťami ohrozuje spotrebiteľa.\n– Ide o objektívnu zodpovednosť bez ohľadu na zavinenie.\n– Poškodený musí preukázať škodu, vadu a príčinnú súvislosť.\n\n3. Škoda na vnesených veciach (§ 433 OZ)\nPrevádzkovateľ ubytovacieho zariadenia zodpovedá za škodu na veciach, ktoré hosť vnesie do priestorov.\n– Zodpovednosť je objektívna.\n– Limit zodpovednosti je obmedzený, ak vec nebola prevzatá do úschovy.\n\n4. Škoda spôsobená zvieraťom (§ 431 OZ)\nTen, kto zviera držal alebo nad ním vykonával dohľad, zodpovedá za škodu spôsobenú zvieraťom.\n– Zodpovednosť je objektívna.\n– Liberácia je možná, ak preukáže, že dohľad nezanedbal.\n\n5. Škoda spôsobená osobou nespôsobilou (§ 422 OZ)\nZa škodu spôsobenú osobou, ktorá nemôže posúdiť následky svojho konania (dieťa, duševná porucha), zodpovedá ten, kto nad ňou vykonáva dohľad.\n– Zodpovednosť je objektívna.\n– Dohliadajúci sa zbaví zodpovednosti, ak preukáže, že dohľad nezanedbal.\n\nObjektívna zodpovednosť – podstata\nPri objektívnej zodpovednosti sa nezisťuje zavinenie. Stačí samotný vznik škody a príčinná súvislosť. Povinný sa zbaví zodpovednosti len preukázaním zákonných liberačných dôvodov.\n\nZdroje: OZ (40/1964 Zb.), § 420a, § 422, § 431, § 433; zákon č. 294/1999 Z. z.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník.",
   "quiz": [
     {
       "question": "Čo je zodpovednosť za škodu spôsobenú prevádzkovou činnosťou (§ 420a OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Objektívna zodpovednosť (§ 420a OZ)", "definition": "Prevádzkovateľ zodpovedá za škodu z prevádzkovej činnosti bez ohľadu na zavinenie." },
-    { "term": "Liberačné dôvody (§ 420a ods. 3 OZ)", "definition": "Nevyhnutná vlastnosť prevádzky alebo výlučné konanie poškodeného." },
-    { "term": "Zodpovednosť za škodu spôsobenú zvieraťom (§ 431 OZ)", "definition": "Zodpovedá vlastník (chovateľ) bez ohľadu na zavinenie." },
-    { "term": "Zodpovednosť za pád z budovy (§ 422 OZ)", "definition": "Vlastník zodpovedá za škodu spôsobenú pádom predmetu alebo vadou stavby." },
-    { "term": "Zodpovednosť v stave nepríčetnosti (§ 422 ods. 2 OZ)", "definition": "Zodpovedá ten, kto sa do tohto stavu priviedol vlastnou vinou." }
+    {
+      "term": "Objektívna zodpovednosť (§ 420a OZ)",
+      "definition": "Prevádzkovateľ zodpovedá za škodu z prevádzkovej činnosti bez ohľadu na zavinenie."
+    },
+    {
+      "term": "Liberačné dôvody (§ 420a ods. 3 OZ)",
+      "definition": "Nevyhnutná vlastnosť prevádzky alebo výlučné konanie poškodeného."
+    },
+    {
+      "term": "Zodpovednosť za škodu spôsobenú zvieraťom (§ 431 OZ)",
+      "definition": "Zodpovedá vlastník (chovateľ) bez ohľadu na zavinenie."
+    },
+    {
+      "term": "Zodpovednosť za pád z budovy (§ 422 OZ)",
+      "definition": "Vlastník zodpovedá za škodu spôsobenú pádom predmetu alebo vadou stavby."
+    },
+    {
+      "term": "Zodpovednosť v stave nepríčetnosti (§ 422 ods. 2 OZ)",
+      "definition": "Zodpovedá ten, kto sa do tohto stavu priviedol vlastnou vinou."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Škoda z prevádzkovej činnosti",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Pri prevádzke výrobnej haly dôjde k úniku látky, ktorá poškodí susedný pozemok, hoci prevádzkovateľ dodržal všetky bezpečnostné predpisy.", "options": [], "correct": 0 },
+        {
+          "question": "Pri prevádzke výrobnej haly dôjde k úniku látky, ktorá poškodí susedný pozemok, hoci prevádzkovateľ dodržal všetky bezpečnostné predpisy.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Zodpovedá prevádzkovateľ za škodu, hoci nezavinil úraz úmyselne ani z nedbanlivosti?",
-          "options": ["Áno, ide o objektívnu zodpovednosť podľa § 420a OZ nezávislú od zavinenia", "Nie, bez zavinenia zodpovednosť nikdy nevzniká", "Zodpovedá iba vtedy, ak porušil predpisy"],
+          "options": [
+            "Áno, ide o objektívnu zodpovednosť podľa § 420a OZ nezávislú od zavinenia",
+            "Nie, bez zavinenia zodpovednosť nikdy nevzniká",
+            "Zodpovedá iba vtedy, ak porušil predpisy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zodpovednosť za prevádzkovú činnosť je objektívna, nezávisí od zavinenia.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ako sa môže prevádzkovateľ tejto zodpovednosti zbaviť?",
-          "options": ["Preukázaním, že škodu spôsobila nevyhnutná vlastnosť prevádzky alebo výlučne konanie poškodeného", "Preukázaním, že škodu nezavinil", "Zaplatením poistného namiesto náhrady škody"],
+          "options": [
+            "Preukázaním, že škodu spôsobila nevyhnutná vlastnosť prevádzky alebo výlučne konanie poškodeného",
+            "Preukázaním, že škodu nezavinil",
+            "Zaplatením poistného namiesto náhrady škody"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Liberačné dôvody pri objektívnej zodpovednosti sú užšie než pri zodpovednosti za zavinenie.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Škoda spôsobená psom",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Voľne pobehujúci pes uhryzne okoloidúceho chodca.", "options": [], "correct": 0 },
+        {
+          "question": "Voľne pobehujúci pes uhryzne okoloidúceho chodca.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kto zodpovedá za takto spôsobenú škodu?",
-          "options": ["Vlastník (chovateľ) psa bez ohľadu na svoje zavinenie", "Iba samotný pes, čo je právne bezpredmetné", "Nikto, ak vlastník preukáže, že psa dobre vychoval"],
+          "options": [
+            "Vlastník (chovateľ) psa bez ohľadu na svoje zavinenie",
+            "Iba samotný pes, čo je právne bezpredmetné",
+            "Nikto, ak vlastník preukáže, že psa dobre vychoval"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Za škodu spôsobenú zvieraťom zodpovedá jeho vlastník objektívne.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Ide o zodpovednosť založenú na zavinení, alebo objektívnu?",
-          "options": ["O objektívnu zodpovednosť, zavinenie vlastníka sa nevyžaduje", "O zodpovednosť založenú výlučne na preukázanom zavinení vlastníka", "Táto situácia nie je občianskoprávne upravená"],
+          "options": [
+            "O objektívnu zodpovednosť, zavinenie vlastníka sa nevyžaduje",
+            "O zodpovednosť založenú výlučne na preukázanom zavinení vlastníka",
+            "Táto situácia nie je občianskoprávne upravená"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zodpovednosť podľa § 431 OZ je objektívna.",
@@ -142,13 +181,65 @@
   "spider": {
     "center": "Osobitné režimy zodpovednosti za škodu (objektívna zodpovednosť, posilnená ochrana poškodeného)",
     "branches": [
-      { "label": "Prevádzková činnosť (§ 420a OZ)", "leaves": ["objektívna zodpovednosť", "škoda spôsobená okolnosťami majúcimi pôvod v prevádzke: stroje, technológie, doprava", "zavinenie sa nevyžaduje", "liberačné dôvody: neodvrátiteľná udalosť, konanie poškodeného"] },
-      { "label": "Vadný výrobok (zákon č. 294/1999 Z. z.)", "leaves": ["výrobca zodpovedá za škodu spôsobenú vadou výrobku", "objektívna zodpovednosť", "poškodený musí preukázať škodu, vadu výrobku a príčinnú súvislosť"] },
-      { "label": "Škoda na vnesených veciach (§ 433 OZ)", "leaves": ["prevádzkovateľ ubytovania zodpovedá za veci vnesené hosťom", "objektívna zodpovednosť", "obmedzený limit zodpovednosti, ak vec nebola prevzatá do úschovy"] },
-      { "label": "Škoda spôsobená zvieraťom (§ 431 OZ)", "leaves": ["zodpovedá ten, kto zviera držal alebo nad ním vykonával dohľad", "objektívna zodpovednosť", "liberačný dôvod: preukázanie, že dohľad nezanedbal"] },
-      { "label": "Škoda spôsobená osobou nespôsobilou (§ 422 OZ)", "leaves": ["zodpovedá ten, kto vykonáva dohľad nad osobou nespôsobilou posúdiť následky", "napr. dieťa, osoba s duševnou poruchou", "objektívna zodpovednosť", "liberačný dôvod: riadny výkon dohľadu"] },
-      { "label": "Podstata objektívnej zodpovednosti", "leaves": ["nezisťuje sa zavinenie", "stačí vznik škody a príčinná súvislosť", "zbavenie zodpovednosti len preukázaním zákonných liberačných dôvodov"] },
-      { "label": "Význam pre prax", "leaves": ["posilňuje ochranu poškodeného", "zjednodušuje dokazovanie, netreba preukazovať zavinenie", "kľúčové pri dopravných nehodách, ubytovaní, výrobkoch, zvieratách", "dopĺňa všeobecnú zodpovednosť za škodu a preventívnu povinnosť"] }
+      {
+        "label": "Prevádzková činnosť (§ 420a OZ)",
+        "leaves": [
+          "objektívna zodpovednosť",
+          "škoda spôsobená okolnosťami majúcimi pôvod v prevádzke: stroje, technológie, doprava",
+          "zavinenie sa nevyžaduje",
+          "liberačné dôvody: neodvrátiteľná udalosť, konanie poškodeného"
+        ]
+      },
+      {
+        "label": "Vadný výrobok (zákon č. 294/1999 Z. z.)",
+        "leaves": [
+          "výrobca zodpovedá za škodu spôsobenú vadou výrobku",
+          "objektívna zodpovednosť",
+          "poškodený musí preukázať škodu, vadu výrobku a príčinnú súvislosť"
+        ]
+      },
+      {
+        "label": "Škoda na vnesených veciach (§ 433 OZ)",
+        "leaves": [
+          "prevádzkovateľ ubytovania zodpovedá za veci vnesené hosťom",
+          "objektívna zodpovednosť",
+          "obmedzený limit zodpovednosti, ak vec nebola prevzatá do úschovy"
+        ]
+      },
+      {
+        "label": "Škoda spôsobená zvieraťom (§ 431 OZ)",
+        "leaves": [
+          "zodpovedá ten, kto zviera držal alebo nad ním vykonával dohľad",
+          "objektívna zodpovednosť",
+          "liberačný dôvod: preukázanie, že dohľad nezanedbal"
+        ]
+      },
+      {
+        "label": "Škoda spôsobená osobou nespôsobilou (§ 422 OZ)",
+        "leaves": [
+          "zodpovedá ten, kto vykonáva dohľad nad osobou nespôsobilou posúdiť následky",
+          "napr. dieťa, osoba s duševnou poruchou",
+          "objektívna zodpovednosť",
+          "liberačný dôvod: riadny výkon dohľadu"
+        ]
+      },
+      {
+        "label": "Podstata objektívnej zodpovednosti",
+        "leaves": [
+          "nezisťuje sa zavinenie",
+          "stačí vznik škody a príčinná súvislosť",
+          "zbavenie zodpovednosti len preukázaním zákonných liberačných dôvodov"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "posilňuje ochranu poškodeného",
+          "zjednodušuje dokazovanie, netreba preukazovať zavinenie",
+          "kľúčové pri dopravných nehodách, ubytovaní, výrobkoch, zvieratách",
+          "dopĺňa všeobecnú zodpovednosť za škodu a preventívnu povinnosť"
+        ]
+      }
     ]
   }
 }

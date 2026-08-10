@@ -1,7 +1,7 @@
 {
   "id": "16",
   "title": "Bezpodielové spoluvlastníctvo manželov (BSM)",
-  "summary": "BSM (§ 143–151 OZ) vzniká automaticky uzavretím manželstva. Predmet: veci nadobudnuté počas manželstva, okrem vecí získaných darovaním, dedením alebo pred manželstvom. Manželia majú rovnaké práva k celému majetku BSM. Zánik: zánik manželstva, rozhodnutie súdu (redukcia) alebo dohoda. Vyporiadanie: dohodou, rozhodnutím súdu alebo zákonnou fikciou (§ 150 OZ).",
+  "summary": "Bezpodielové spoluvlastníctvo manželov (BSM) podľa § 143–151 OZ je osobitná forma spoluvlastníctva, ktorá vzniká automaticky uzavretím manželstva. Ide o majetkové spoločenstvo, v ktorom manželia nevlastnia podiely – každý má rovnaké práva k celému spoločnému majetku.\n\nPredmet BSM (§ 143 OZ)\nDo BSM patria veci nadobudnuté počas trvania manželstva, najmä:\n– príjmy z práce,\n– veci kúpené z týchto príjmov,\n– majetkové hodnoty získané spoločnou činnosťou.\n\nDo BSM nepatria:\n– veci nadobudnuté pred manželstvom,\n– veci získané dedením alebo darovaním,\n– veci slúžiace osobnej potrebe alebo výkonu povolania,\n– majetok patriaci výlučne jednému z manželov zo zákonných dôvodov.\n\nSpráva majetku BSM\nManželia majú rovnaké práva pri správe spoločného majetku. Pri bežných veciach môže konať každý samostatne; pri závažných úkonoch (napr. prevod nehnuteľnosti) je potrebný súhlas oboch.\n\nZánik BSM (§ 148 OZ)\nBSM zaniká:\n– zánikom manželstva (rozvod, smrť),\n– rozhodnutím súdu o zrušení alebo obmedzení BSM (napr. z dôvodu podnikania jedného z manželov),\n– dohodou manželov, ak to zákon pripúšťa.\n\nVyporiadanie BSM (§ 149–150 OZ)\nPo zániku BSM nasleduje jeho vyporiadanie:\n– dohodou manželov,\n– rozhodnutím súdu, ak sa nedohodnú,\n– zákonnou fikciou (§ 150 OZ) – ak sa BSM nevyporiada do 3 rokov, platí, že:\n– hnuteľné veci užívané jedným z manželov sú v jeho vlastníctve,\n– ostatné veci sú v podielovom spoluvlastníctve,\n– pohľadávky a dlhy sú podielové.\n\nPri súdnom vyporiadaní platí zásada rovnosti podielov, ale súd môže prihliadnuť na starostlivosť o rodinu, príspevok k nadobudnutiu majetku či správanie manželov.\n\nZdroje: OZ (40/1964 Zb.), § 143–151; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kedy vzniká bezpodielové spoluvlastníctvo manželov?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Vznik BSM (§ 143 OZ)", "definition": "Vzniká automaticky uzavretím manželstva." },
-    { "term": "Predmet BSM", "definition": "Majetok nadobudnutý počas manželstva, okrem darov, dedičstva a vecí osobnej potreby." },
-    { "term": "Zúženie/rozšírenie BSM (§ 143a OZ)", "definition": "Možné dohodou manželov vo forme notárskej zápisnice." },
-    { "term": "Vyporiadanie BSM", "definition": "Prednostne dohodou, inak rozhodnutím súdu." },
-    { "term": "Zákonná fikcia (§ 150 ods. 4 OZ)", "definition": "Ak sa BSM nevyporiada do 3 rokov od zániku, hnuteľnosti patria tomu, kto ich užíva, nehnuteľnosti sú v podielovom spoluvlastníctve." }
+    {
+      "term": "Vznik BSM (§ 143 OZ)",
+      "definition": "Vzniká automaticky uzavretím manželstva."
+    },
+    {
+      "term": "Predmet BSM",
+      "definition": "Majetok nadobudnutý počas manželstva, okrem darov, dedičstva a vecí osobnej potreby."
+    },
+    {
+      "term": "Zúženie/rozšírenie BSM (§ 143a OZ)",
+      "definition": "Možné dohodou manželov vo forme notárskej zápisnice."
+    },
+    {
+      "term": "Vyporiadanie BSM",
+      "definition": "Prednostne dohodou, inak rozhodnutím súdu."
+    },
+    {
+      "term": "Zákonná fikcia (§ 150 ods. 4 OZ)",
+      "definition": "Ak sa BSM nevyporiada do 3 rokov od zániku, hnuteľnosti patria tomu, kto ich užíva, nehnuteľnosti sú v podielovom spoluvlastníctve."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Majetok nadobudnutý dedením počas manželstva",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Manžel počas trvania manželstva zdedí po svojom otcovi rodinný dom.", "options": [], "correct": 0 },
+        {
+          "question": "Manžel počas trvania manželstva zdedí po svojom otcovi rodinný dom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Patrí tento dom do BSM?",
-          "options": ["Nie, majetok nadobudnutý dedením do BSM nepatrí", "Áno, všetok majetok nadobudnutý počas manželstva patrí do BSM bez výnimky", "Áno, ale iba ak s tým manželka súhlasí"],
+          "options": [
+            "Nie, majetok nadobudnutý dedením do BSM nepatrí",
+            "Áno, všetok majetok nadobudnutý počas manželstva patrí do BSM bez výnimky",
+            "Áno, ale iba ak s tým manželka súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon výslovne vylučuje z BSM majetok nadobudnutý dedením.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Prečo zákon takéto veci z BSM vylučuje?",
-          "options": ["Lebo dedičstvo smeruje ku konkrétnej osobe, nie je výsledkom spoločného nadobúdania manželmi", "Lebo dedičstvo je vždy hodnotovo zanedbateľné", "Lebo dedenie počas manželstva zákon vôbec nepripúšťa"],
+          "options": [
+            "Lebo dedičstvo smeruje ku konkrétnej osobe, nie je výsledkom spoločného nadobúdania manželmi",
+            "Lebo dedičstvo je vždy hodnotovo zanedbateľné",
+            "Lebo dedenie počas manželstva zákon vôbec nepripúšťa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. BSM má zahŕňať výsledky spoločného nadobúdania majetku manželmi, nie osobné dedičstvo jedného z nich.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Nevyporiadané BSM po rozvode",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Od právoplatného rozvodu manželstva uplynuli už viac ako tri roky a bývalí manželia svoje BSM doteraz nijako nevyporiadali.", "options": [], "correct": 0 },
+        {
+          "question": "Od právoplatného rozvodu manželstva uplynuli už viac ako tri roky a bývalí manželia svoje BSM doteraz nijako nevyporiadali.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo nastáva v takomto prípade zo zákona?",
-          "options": ["Zákonná fikcia vyporiadania podľa § 150 ods. 4 OZ", "BSM zostáva navždy nevyporiadané bez akéhokoľvek riešenia", "Celý majetok automaticky pripadne štátu"],
+          "options": [
+            "Zákonná fikcia vyporiadania podľa § 150 ods. 4 OZ",
+            "BSM zostáva navždy nevyporiadané bez akéhokoľvek riešenia",
+            "Celý majetok automaticky pripadne štátu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Po troch rokoch nastupuje zákonná fikcia vyporiadania.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Ako táto fikcia rieši hnuteľné veci?",
-          "options": ["Hnuteľné veci pripadnú tomu z bývalých manželov, kto ich fakticky užíva ako vlastník", "Hnuteľné veci sa vždy rozdelia presne na polovicu bez ohľadu na užívanie", "Hnuteľné veci pripadnú štátu"],
+          "options": [
+            "Hnuteľné veci pripadnú tomu z bývalých manželov, kto ich fakticky užíva ako vlastník",
+            "Hnuteľné veci sa vždy rozdelia presne na polovicu bez ohľadu na užívanie",
+            "Hnuteľné veci pripadnú štátu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákonná fikcia priznáva hnuteľné veci tomu, kto ich ako vlastník fakticky užíva.",
@@ -142,14 +181,78 @@
   "spider": {
     "center": "BSM – pojem, predmet, správa, zánik, vyporiadanie (osobitná forma spoluvlastníctva bez podielov)",
     "branches": [
-      { "label": "Pojem BSM", "leaves": ["vzniká automaticky uzavretím manželstva", "manželia nemajú podiely", "každý má rovnaké práva k celému spoločnému majetku", "ide o majetkové spoločenstvo manželov"] },
-      { "label": "Čo patrí do BSM (§ 143 OZ)", "leaves": ["príjmy z práce", "veci kúpené z týchto príjmov", "majetok získaný spoločnou činnosťou"] },
-      { "label": "Čo nepatrí do BSM", "leaves": ["majetok nadobudnutý pred manželstvom", "dedenie a darovanie", "veci osobnej potreby alebo výkonu povolania", "majetok patriaci výlučne jednému z manželov zo zákona"] },
-      { "label": "Správa majetku BSM", "leaves": ["manželia majú rovnaké práva pri správe", "bežné úkony: každý môže konať samostatne", "závažné úkony, napr. prevod nehnuteľnosti, vyžadujú súhlas oboch", "povinnosť konať v záujme rodiny"] },
-      { "label": "Zánik BSM (§ 148 OZ)", "leaves": ["zánik manželstva: rozvod, smrť", "rozhodnutie súdu o zrušení alebo obmedzení BSM", "napr. z dôvodu podnikania jedného z manželov", "dohoda manželov, ak to zákon umožňuje"] },
-      { "label": "Vyporiadanie BSM (§ 149–150 OZ)", "leaves": ["dohoda manželov", "súdne rozhodnutie, ak sa nedohodnú", "zákonná fikcia po 3 rokoch: hnuteľné veci užívané jedným sa stávajú jeho vlastníctvom", "ostatné veci prechádzajú do podielového spoluvlastníctva", "pohľadávky a dlhy sa stávajú podielovými"] },
-      { "label": "Kritériá súdu pri vyporiadaní", "leaves": ["zásada rovnosti podielov", "starostlivosť o rodinu", "príspevok k nadobudnutiu majetku", "správanie manželov"] },
-      { "label": "Význam pre prax", "leaves": ["základ majetkového režimu manželov", "chráni ekonomickú stabilitu rodiny", "jasné pravidlá pri rozvode a dedičstve", "významné pri prevodoch nehnuteľností a podnikaní"] }
+      {
+        "label": "Pojem BSM",
+        "leaves": [
+          "vzniká automaticky uzavretím manželstva",
+          "manželia nemajú podiely",
+          "každý má rovnaké práva k celému spoločnému majetku",
+          "ide o majetkové spoločenstvo manželov"
+        ]
+      },
+      {
+        "label": "Čo patrí do BSM (§ 143 OZ)",
+        "leaves": [
+          "príjmy z práce",
+          "veci kúpené z týchto príjmov",
+          "majetok získaný spoločnou činnosťou"
+        ]
+      },
+      {
+        "label": "Čo nepatrí do BSM",
+        "leaves": [
+          "majetok nadobudnutý pred manželstvom",
+          "dedenie a darovanie",
+          "veci osobnej potreby alebo výkonu povolania",
+          "majetok patriaci výlučne jednému z manželov zo zákona"
+        ]
+      },
+      {
+        "label": "Správa majetku BSM",
+        "leaves": [
+          "manželia majú rovnaké práva pri správe",
+          "bežné úkony: každý môže konať samostatne",
+          "závažné úkony, napr. prevod nehnuteľnosti, vyžadujú súhlas oboch",
+          "povinnosť konať v záujme rodiny"
+        ]
+      },
+      {
+        "label": "Zánik BSM (§ 148 OZ)",
+        "leaves": [
+          "zánik manželstva: rozvod, smrť",
+          "rozhodnutie súdu o zrušení alebo obmedzení BSM",
+          "napr. z dôvodu podnikania jedného z manželov",
+          "dohoda manželov, ak to zákon umožňuje"
+        ]
+      },
+      {
+        "label": "Vyporiadanie BSM (§ 149–150 OZ)",
+        "leaves": [
+          "dohoda manželov",
+          "súdne rozhodnutie, ak sa nedohodnú",
+          "zákonná fikcia po 3 rokoch: hnuteľné veci užívané jedným sa stávajú jeho vlastníctvom",
+          "ostatné veci prechádzajú do podielového spoluvlastníctva",
+          "pohľadávky a dlhy sa stávajú podielovými"
+        ]
+      },
+      {
+        "label": "Kritériá súdu pri vyporiadaní",
+        "leaves": [
+          "zásada rovnosti podielov",
+          "starostlivosť o rodinu",
+          "príspevok k nadobudnutiu majetku",
+          "správanie manželov"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "základ majetkového režimu manželov",
+          "chráni ekonomickú stabilitu rodiny",
+          "jasné pravidlá pri rozvode a dedičstve",
+          "významné pri prevodoch nehnuteľností a podnikaní"
+        ]
+      }
     ]
   }
 }

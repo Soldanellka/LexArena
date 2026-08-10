@@ -1,7 +1,7 @@
 {
   "id": "26",
   "title": "Predpoklady dedenia",
-  "summary": "Dedičstvo prechádza na dediča smrťou poručiteľa (§ 460 OZ). Predpoklady: smrť poručiteľa, existencia dedičov, spôsobilosť dediča (§ 469 OZ), tituly dedenia (závet alebo zákon). Dedičská nespôsobilosť: kto sa dopustil úmyselného trestného činu voči poručiteľovi.",
+  "summary": "Dedičstvo prechádza na dediča smrťou poručiteľa (§ 460 OZ). Smrť je právna skutočnosť, ktorá otvára dedičstvo a zakladá vznik dedičských práv a povinností. Aby dedenie mohlo prebehnúť, musia byť splnené viaceré zákonné predpoklady.\n\n1. Smrť poručiteľa\nSmrť alebo vyhlásenie za mŕtveho je základnou podmienkou dedenia. Až týmto okamihom vzniká dedičské právo.\n\n2. Existencia dedičov\nDedičom môže byť fyzická alebo právnická osoba, ktorá spĺňa zákonné podmienky dedenia. Dedič musí byť živý v okamihu smrti poručiteľa, resp. musí byť počatý a narodiť sa živý.\n\n3. Spôsobilosť dediť (§ 469 OZ)\nDediť môže len ten, kto je spôsobilý. Spôsobilosť zahŕňa právnu subjektivitu a absenciu dôvodov dedičskej nespôsobilosti.\n\n4. Tituly dedenia\nDedenie môže prebehnúť na základe:\n– závetu – prejav poslednej vôle poručiteľa,\n– zákona – ak niet závetu alebo ak závet nepokrýva celý majetok,\n– dohody dedičov o vyporiadaní (v rámci konania).\n\nZávet má prednosť pred zákonom, ale musí byť platný a spôsobilý vyvolať právne účinky.\n\n5. Dedičská nespôsobilosť (§ 469a OZ)\nDediť nemôže ten, kto sa dopustil:\n– úmyselného trestného činu proti poručiteľovi, jeho manželovi, deťom alebo rodičom,\n– závažného porušenia povinností voči poručiteľovi,\n– konania proti prejavu poslednej vôle (napr. falšovanie závetu).\n\nNespôsobilosť pôsobí automaticky, dedič sa posudzuje, akoby neexistoval.\n\n6. Dedičské konanie\nPrechod dedičstva sa realizuje v rámci konania pred súdom a notárom ako súdnym komisárom. Dedičstvo sa nadobúda právoplatným rozhodnutím.\n\nPredpoklady dedenia zabezpečujú, aby dedičstvo prešlo na osoby, ktoré sú zákonom alebo poručiteľom určené, a aby sa vylúčili osoby, ktoré sa voči poručiteľovi závažne previnili.\n\nZdroje: OZ (40/1964 Zb.), § 460, § 469–469a; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kedy prechádza dedičstvo na dediča?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Prechod dedičstva (§ 460 OZ)", "definition": "Dedičstvo prechádza na dediča smrťou poručiteľa, automaticky." },
-    { "term": "Dedičská nespôsobilosť (§ 469 OZ)", "definition": "Zákonné vylúčenie z dedenia, napr. pri úmyselnom trestnom čine voči poručiteľovi." },
-    { "term": "Tituly dedenia (§ 461 OZ)", "definition": "Zo závetu, zo zákona, alebo z oboch; závet má prednosť." },
-    { "term": "Odmietnutie dedičstva (§ 463 OZ)", "definition": "Možné v lehote 1 mesiaca od oznámenia súdu, neodvolateľné." },
-    { "term": "Následok odmietnutia", "definition": "Hľadí sa naň, akoby dedič dedičstvo nenadobudol; podiel prechádza na ďalších dedičov." }
+    {
+      "term": "Prechod dedičstva (§ 460 OZ)",
+      "definition": "Dedičstvo prechádza na dediča smrťou poručiteľa, automaticky."
+    },
+    {
+      "term": "Dedičská nespôsobilosť (§ 469 OZ)",
+      "definition": "Zákonné vylúčenie z dedenia, napr. pri úmyselnom trestnom čine voči poručiteľovi."
+    },
+    {
+      "term": "Tituly dedenia (§ 461 OZ)",
+      "definition": "Zo závetu, zo zákona, alebo z oboch; závet má prednosť."
+    },
+    {
+      "term": "Odmietnutie dedičstva (§ 463 OZ)",
+      "definition": "Možné v lehote 1 mesiaca od oznámenia súdu, neodvolateľné."
+    },
+    {
+      "term": "Následok odmietnutia",
+      "definition": "Hľadí sa naň, akoby dedič dedičstvo nenadobudol; podiel prechádza na ďalších dedičov."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Trestný čin voči poručiteľovi",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Syn sa dopustil úmyselného trestného činu ublíženia na zdraví voči svojmu otcovi (poručiteľovi), ktorý mu to pred smrťou výslovne neodpustil.", "options": [], "correct": 0 },
+        {
+          "question": "Syn sa dopustil úmyselného trestného činu ublíženia na zdraví voči svojmu otcovi (poručiteľovi), ktorý mu to pred smrťou výslovne neodpustil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže syn po otcovi dediť?",
-          "options": ["Nie, je dedičsky nespôsobilý podľa § 469 OZ", "Áno, trestný čin nemá na dedenie žiadny vplyv", "Áno, ale iba polovicu dedičského podielu"],
+          "options": [
+            "Nie, je dedičsky nespôsobilý podľa § 469 OZ",
+            "Áno, trestný čin nemá na dedenie žiadny vplyv",
+            "Áno, ale iba polovicu dedičského podielu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Úmyselný trestný čin voči poručiteľovi bez jeho odpustenia zakladá dedičskú nespôsobilosť.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Zmenilo by sa niečo, keby mu to otec pred smrťou výslovne odpustil?",
-          "options": ["Áno, odpustenie by dedičskú nespôsobilosť zhojilo", "Nie, odpustenie nemá na dedičskú nespôsobilosť žiadny vplyv", "Áno, ale iba ak by odpustenie bolo súdne schválené"],
+          "options": [
+            "Áno, odpustenie by dedičskú nespôsobilosť zhojilo",
+            "Nie, odpustenie nemá na dedičskú nespôsobilosť žiadny vplyv",
+            "Áno, ale iba ak by odpustenie bolo súdne schválené"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon výslovne pripúšťa, že odpustenie poručiteľa dedičskú nespôsobilosť zhojí.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Odmietnutie dedičstva",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Dedič sa dozvie, že poručiteľ zanechal viac dlhov než majetku, a preto sa rozhodne dedičstvo odmietnuť.", "options": [], "correct": 0 },
+        {
+          "question": "Dedič sa dozvie, že poručiteľ zanechal viac dlhov než majetku, a preto sa rozhodne dedičstvo odmietnuť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "V akej lehote tak musí urobiť?",
-          "options": ["Do 1 mesiaca od oznámenia súdu o práve dedičstvo odmietnuť", "Kedykoľvek bez časového obmedzenia", "Do 1 roka od smrti poručiteľa"],
+          "options": [
+            "Do 1 mesiaca od oznámenia súdu o práve dedičstvo odmietnuť",
+            "Kedykoľvek bez časového obmedzenia",
+            "Do 1 roka od smrti poručiteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon stanovuje jednomesačnú lehotu od oznámenia súdu.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Môže dedič svoje odmietnutie dedičstva neskôr vziať späť?",
-          "options": ["Nie, odmietnutie dedičstva je neodvolateľné", "Áno, kedykoľvek bez obmedzenia", "Áno, ale iba do jedného týždňa"],
+          "options": [
+            "Nie, odmietnutie dedičstva je neodvolateľné",
+            "Áno, kedykoľvek bez obmedzenia",
+            "Áno, ale iba do jedného týždňa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odmietnutie dedičstva je definitívnym a neodvolateľným úkonom.",
@@ -142,13 +181,65 @@
   "spider": {
     "center": "Predpoklady dedenia – smrť, dedič, spôsobilosť, tituly, nespôsobilosť, konanie (dedičstvo prechádza smrťou poručiteľa)",
     "branches": [
-      { "label": "Smrť poručiteľa (§ 460 OZ)", "leaves": ["dedičstvo sa otvára smrťou poručiteľa", "môže ísť aj o vyhlásenie za mŕtveho", "až týmto okamihom vzniká dedičské právo"] },
-      { "label": "Existencia dedičov", "leaves": ["dedičom môže byť fyzická alebo právnická osoba", "musí byť živý v okamihu smrti poručiteľa", "alebo počatý a narodiť sa živý"] },
-      { "label": "Spôsobilosť dediť (§ 469 OZ)", "leaves": ["dedič musí mať právnu subjektivitu", "nesmie existovať dôvod dedičskej nespôsobilosti", "spôsobilosť je základnou podmienkou dedenia"] },
-      { "label": "Tituly dedenia", "leaves": ["závet: prejav poslednej vôle, má prednosť", "zákon: ak niet závetu alebo nepokrýva celý majetok", "dohoda dedičov v rámci dedičského konania", "závet musí byť platný a spôsobilý vyvolať právne účinky"] },
-      { "label": "Dedičská nespôsobilosť (§ 469a OZ)", "leaves": ["úmyselný trestný čin proti poručiteľovi, jeho manželovi, deťom alebo rodičom", "závažné porušenie povinností voči poručiteľovi", "konanie proti prejavu poslednej vôle, napr. falšovanie závetu", "nespôsobilosť pôsobí automaticky, dedič sa posudzuje, akoby neexistoval"] },
-      { "label": "Dedičské konanie", "leaves": ["prechod dedičstva sa realizuje pred súdom a notárom ako súdnym komisárom", "dedičstvo sa nadobúda právoplatným rozhodnutím", "konanie zabezpečuje určenie dedičov, rozsahu dedičstva a jeho rozdelenie"] },
-      { "label": "Význam pre prax", "leaves": ["zabezpečuje, aby dedičstvo prešlo na osoby určené zákonom alebo poručiteľom", "vylučuje osoby, ktoré sa voči poručiteľovi závažne previnili", "vytvára právnu istotu pri prechode majetku po smrti", "kľúčové pri sporoch o dedičské právo, platnosť závetu, nespôsobilosť"] }
+      {
+        "label": "Smrť poručiteľa (§ 460 OZ)",
+        "leaves": [
+          "dedičstvo sa otvára smrťou poručiteľa",
+          "môže ísť aj o vyhlásenie za mŕtveho",
+          "až týmto okamihom vzniká dedičské právo"
+        ]
+      },
+      {
+        "label": "Existencia dedičov",
+        "leaves": [
+          "dedičom môže byť fyzická alebo právnická osoba",
+          "musí byť živý v okamihu smrti poručiteľa",
+          "alebo počatý a narodiť sa živý"
+        ]
+      },
+      {
+        "label": "Spôsobilosť dediť (§ 469 OZ)",
+        "leaves": [
+          "dedič musí mať právnu subjektivitu",
+          "nesmie existovať dôvod dedičskej nespôsobilosti",
+          "spôsobilosť je základnou podmienkou dedenia"
+        ]
+      },
+      {
+        "label": "Tituly dedenia",
+        "leaves": [
+          "závet: prejav poslednej vôle, má prednosť",
+          "zákon: ak niet závetu alebo nepokrýva celý majetok",
+          "dohoda dedičov v rámci dedičského konania",
+          "závet musí byť platný a spôsobilý vyvolať právne účinky"
+        ]
+      },
+      {
+        "label": "Dedičská nespôsobilosť (§ 469a OZ)",
+        "leaves": [
+          "úmyselný trestný čin proti poručiteľovi, jeho manželovi, deťom alebo rodičom",
+          "závažné porušenie povinností voči poručiteľovi",
+          "konanie proti prejavu poslednej vôle, napr. falšovanie závetu",
+          "nespôsobilosť pôsobí automaticky, dedič sa posudzuje, akoby neexistoval"
+        ]
+      },
+      {
+        "label": "Dedičské konanie",
+        "leaves": [
+          "prechod dedičstva sa realizuje pred súdom a notárom ako súdnym komisárom",
+          "dedičstvo sa nadobúda právoplatným rozhodnutím",
+          "konanie zabezpečuje určenie dedičov, rozsahu dedičstva a jeho rozdelenie"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "zabezpečuje, aby dedičstvo prešlo na osoby určené zákonom alebo poručiteľom",
+          "vylučuje osoby, ktoré sa voči poručiteľovi závažne previnili",
+          "vytvára právnu istotu pri prechode majetku po smrti",
+          "kľúčové pri sporoch o dedičské právo, platnosť závetu, nespôsobilosť"
+        ]
+      }
     ]
   }
 }

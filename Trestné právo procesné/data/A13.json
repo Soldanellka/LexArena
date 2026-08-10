@@ -2,50 +2,100 @@
   "id": "A13",
   "title": "Dokazovanie (pojem, etapy, špeciálne zásady) a dôkazné prostriedky v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["dokazovanie", "dôkazy", "trestné konanie"],
-
+  "tags": [
+    "dokazovanie",
+    "dôkazy",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Čo je účelom dokazovania v trestnom konaní?",
-      "options": ["Získať priznanie obvineného", "Zistiť skutkový stav bez dôvodných pochybností", "Potvrdiť verziu polície"],
+      "options": [
+        "Získať priznanie obvineného",
+        "Zistiť skutkový stav bez dôvodných pochybností",
+        "Potvrdiť verziu polície"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorá zásada znamená, že súd hodnotí dôkazy podľa svojho vnútorného presvedčenia?",
-      "options": ["Zásada zákonnosti", "Zásada voľného hodnotenia dôkazov", "Zásada ústnosti"],
+      "options": [
+        "Zásada zákonnosti",
+        "Zásada voľného hodnotenia dôkazov",
+        "Zásada ústnosti"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý z nasledujúcich je dôkazným prostriedkom?",
-      "options": ["Obžaloba", "Znalecký posudok", "Trestný rozkaz"],
+      "options": [
+        "Obžaloba",
+        "Znalecký posudok",
+        "Trestný rozkaz"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorá etapa dokazovania zahŕňa vykonávanie dôkazov pred súdom?",
-      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Odvolacie konanie"],
+      "options": [
+        "Prípravné konanie",
+        "Hlavné pojednávanie",
+        "Odvolacie konanie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorá zásada zakazuje použitie dôkazov získaných nezákonným spôsobom?",
-      "options": ["Zásada bezprostrednosti", "Zásada zákonnosti dôkazov", "Zásada verejnosti"],
+      "options": [
+        "Zásada bezprostrednosti",
+        "Zásada zákonnosti dôkazov",
+        "Zásada verejnosti"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Dokazovanie", "definition": "Proces zisťovania skutkového stavu pomocou dôkazov." },
-    { "term": "Dôkazný prostriedok", "definition": "Prostriedok, ktorým sa preukazujú skutočnosti významné pre konanie." },
-    { "term": "Voľné hodnotenie dôkazov", "definition": "Súd hodnotí dôkazy podľa svojho vnútorného presvedčenia." },
-    { "term": "Zákonnosť dôkazov", "definition": "Dôkazy získané nezákonne nemožno použiť." },
-    { "term": "Etapy dokazovania", "definition": "Zabezpečenie dôkazov, vykonanie dôkazov, hodnotenie dôkazov." },
-
-    { "term": "Svedecká výpoveď", "definition": "Výpoveď osoby o skutočnostiach, ktoré vnímal vlastnými zmyslami." },
-    { "term": "Znalecký posudok", "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné vedomosti." },
-    { "term": "Listinný dôkaz", "definition": "Dokumenty, záznamy a iné písomnosti použiteľné ako dôkaz." },
-    { "term": "Ohliadka", "definition": "Prezretie miesta, osoby alebo veci na účely objasnenia skutku." },
-    { "term": "Rekonštrukcia", "definition": "Procesný úkon na objasnenie priebehu skutku jeho napodobnením." }
+    {
+      "term": "Dokazovanie",
+      "definition": "Proces zisťovania skutkového stavu pomocou dôkazov."
+    },
+    {
+      "term": "Dôkazný prostriedok",
+      "definition": "Prostriedok, ktorým sa preukazujú skutočnosti významné pre konanie."
+    },
+    {
+      "term": "Voľné hodnotenie dôkazov",
+      "definition": "Súd hodnotí dôkazy podľa svojho vnútorného presvedčenia."
+    },
+    {
+      "term": "Zákonnosť dôkazov",
+      "definition": "Dôkazy získané nezákonne nemožno použiť."
+    },
+    {
+      "term": "Etapy dokazovania",
+      "definition": "Zabezpečenie dôkazov, vykonanie dôkazov, hodnotenie dôkazov."
+    },
+    {
+      "term": "Svedecká výpoveď",
+      "definition": "Výpoveď osoby o skutočnostiach, ktoré vnímal vlastnými zmyslami."
+    },
+    {
+      "term": "Znalecký posudok",
+      "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné vedomosti."
+    },
+    {
+      "term": "Listinný dôkaz",
+      "definition": "Dokumenty, záznamy a iné písomnosti použiteľné ako dôkaz."
+    },
+    {
+      "term": "Ohliadka",
+      "definition": "Prezretie miesta, osoby alebo veci na účely objasnenia skutku."
+    },
+    {
+      "term": "Rekonštrukcia",
+      "definition": "Procesný úkon na objasnenie priebehu skutku jeho napodobnením."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonný dôkaz",
@@ -58,22 +108,33 @@
         },
         {
           "question": "Krok 1: Je takto získaný dôkaz zákonný?",
-          "options": ["Áno", "Nie", "Len ak ide o závažný trestný čin"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o závažný trestný čin"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Ako má súd naložiť s nezákonným dôkazom?",
-          "options": ["Vylúčiť ho z dokazovania", "Použiť ho, ak je dôležitý", "Použiť ho len v prípravnom konaní"],
+          "options": [
+            "Vylúčiť ho z dokazovania",
+            "Použiť ho, ak je dôležitý",
+            "Použiť ho len v prípravnom konaní"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Ktorá zásada bola porušená?",
-          "options": ["Zásada verejnosti", "Zásada zákonnosti dôkazov", "Zásada ústnosti"],
+          "options": [
+            "Zásada verejnosti",
+            "Zásada zákonnosti dôkazov",
+            "Zásada ústnosti"
+          ],
           "correct": 1
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Rozpor vo výpovediach svedkov",
       "difficulty": "stredná",
@@ -85,12 +146,20 @@
         },
         {
           "question": "Krok 1: Ako má súd postupovať pri rozpore vo výpovediach?",
-          "options": ["Ignorovať výpovede", "Hodnotiť ich podľa zásady voľného hodnotenia dôkazov", "Použiť len výpoveď, ktorá je kratšia"],
+          "options": [
+            "Ignorovať výpovede",
+            "Hodnotiť ich podľa zásady voľného hodnotenia dôkazov",
+            "Použiť len výpoveď, ktorá je kratšia"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Môže súd vykonať konfrontáciu?",
-          "options": ["Áno", "Nie", "Len so súhlasom obvineného"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom obvineného"
+          ],
           "correct": 0
         },
         {
@@ -114,10 +183,43 @@
   "spider": {
     "center": "Dokazovanie – etapy × zásady × prostriedky (§ 119)",
     "branches": [
-      { "label": "Pojem a etapy", "leaves": ["Pojem – zisťovanie skutkového stavu bez dôvodných pochybností", "Získavanie – vyhľadanie a zabezpečenie dôkazov", "Vykonávanie – dôkaz vstupuje do konania vykonaním, najmä na hlavnom pojednávaní", "Hodnotenie – vnútorné presvedčenie, logika, skúsenosť (§ 2 ods. 12)"] },
-      { "label": "Špeciálne zásady", "leaves": ["Zákonnosť dôkazov – nezákonný dôkaz je neprípustný (§ 119 ods. 2)", "Voľné hodnotenie – bez formálnych pravidiel", "In dubio pro reo – v pochybnostiach v prospech obvineného", "Vyhľadávacia – dôkazy v prospech aj neprospech", "Bezprostrednosť, ústnosť, kontradiktórnosť – priamo pred súdom, s právami strán"] },
-      { "label": "Dôkazné prostriedky (neuzavretý výpočet)", "leaves": ["Výsluchy – obvinený, svedok, poškodený; konfrontácia, rekognícia", "Vecné a listinné dôkazy – predmety, dokumenty, elektronické listiny", "Znalci – posudky a odborné vyjadrenia (§§ 144–151)", "Prehliadky a obhliadky – domová, osobná; miesto činu", "ITP a OPČ – odpočúvanie, sledovanie; zaistenie vecí (§§ 89a–95b)"] },
-      { "label": "Prípustnosť", "leaves": ["Neprípustný – získaný či vykonaný nezákonne, porušujúci základné práva", "Absolútny zákaz – dôkaz získaný nátlakom alebo mučením"] }
+      {
+        "label": "Pojem a etapy",
+        "leaves": [
+          "Pojem – zisťovanie skutkového stavu bez dôvodných pochybností",
+          "Získavanie – vyhľadanie a zabezpečenie dôkazov",
+          "Vykonávanie – dôkaz vstupuje do konania vykonaním, najmä na hlavnom pojednávaní",
+          "Hodnotenie – vnútorné presvedčenie, logika, skúsenosť (§ 2 ods. 12)"
+        ]
+      },
+      {
+        "label": "Špeciálne zásady",
+        "leaves": [
+          "Zákonnosť dôkazov – nezákonný dôkaz je neprípustný (§ 119 ods. 2)",
+          "Voľné hodnotenie – bez formálnych pravidiel",
+          "In dubio pro reo – v pochybnostiach v prospech obvineného",
+          "Vyhľadávacia – dôkazy v prospech aj neprospech",
+          "Bezprostrednosť, ústnosť, kontradiktórnosť – priamo pred súdom, s právami strán"
+        ]
+      },
+      {
+        "label": "Dôkazné prostriedky (neuzavretý výpočet)",
+        "leaves": [
+          "Výsluchy – obvinený, svedok, poškodený; konfrontácia, rekognícia",
+          "Vecné a listinné dôkazy – predmety, dokumenty, elektronické listiny",
+          "Znalci – posudky a odborné vyjadrenia (§§ 144–151)",
+          "Prehliadky a obhliadky – domová, osobná; miesto činu",
+          "ITP a OPČ – odpočúvanie, sledovanie; zaistenie vecí (§§ 89a–95b)"
+        ]
+      },
+      {
+        "label": "Prípustnosť",
+        "leaves": [
+          "Neprípustný – získaný či vykonaný nezákonne, porušujúci základné práva",
+          "Absolútny zákaz – dôkaz získaný nátlakom alebo mučením"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Dokazovanie je proces, ktorým orgány činné v trestnom konaní a súd zisťujú skutkový stav tak, aby o ňom neboli dôvodné pochybnosti. Má tri etapy: získavanie dôkazov, vykonávanie dôkazov a hodnotenie dôkazov.\nOpiera sa o špeciálne zásady – najmä zákonnosť dôkazov, voľné hodnotenie, prezumpciu neviny, vyhľadávaciu zásadu, bezprostrednosť, ústnosť a kontradiktórnosť.\nDôkazné prostriedky sú neuzavretým výpočtom – patria sem výsluchy, listiny, vecné dôkazy, znalecké posudky, prehliadky, obhliadky, ITP, OPČ, zaistenie vecí a ďalšie.\n\n1. Pojem dokazovania (§ 119 TP)\nDokazovanie je postup, ktorým sa zisťuje skutkový stav veci tak, aby o ňom neboli dôvodné pochybnosti.\nZahŕňa:\n\nzískavanie dôkazov,\n\nvykonávanie dôkazov,\n\nhodnotenie dôkazov.\n\n2. Etapy dokazovania\n2.1 Získavanie dôkazov\nVyhľadávanie a zabezpečovanie dôkazov: výsluchy, listiny, vecné dôkazy, ITP, OPČ, prehliadky, zaistenie vecí, obhliadky.\n\n2.2 Vykonávanie dôkazov\nDôkaz sa stáva súčasťou konania až jeho vykonaním – prezentáciou pred orgánom konania.\nNajdôležitejšie je vykonanie dôkazov na hlavnom pojednávaní.\n\n2.3 Hodnotenie dôkazov (§ 2 ods. 12 TP)\nSúd hodnotí dôkazy podľa svojho vnútorného presvedčenia, založeného na logike, skúsenosti a zvážení všetkých okolností.\n\n3. Špeciálne zásady dokazovania\n3.1 Zásada zákonnosti dôkazov (§ 119 ods. 2 TP)\nDôkaz musí byť získaný a vykonaný zákonným spôsobom.\nNezákonný dôkaz je neprípustný.\n\n3.2 Zásada voľného hodnotenia dôkazov (§ 2 ods. 12 TP)\nSúd nie je viazaný formálnymi pravidlami hodnotenia.\n\n3.3 Prezumpcia neviny (§ 2 ods. 4 TP)\nV pochybnostiach v prospech obvineného (in dubio pro reo).\n\n3.4 Vyhľadávacia zásada (§ 2 ods. 10 TP)\nOČTK musia vyhľadávať dôkazy svedčiace v prospech aj neprospech obvineného.\n\n3.5 Bezprostrednosť a ústnosť (§ 2 ods. 11 TP)\nDôkazy sa vykonávajú priamo pred súdom, ústne.\n\n3.6 Kontradiktórnosť\nStrany majú právo vyjadriť sa k dôkazom, navrhovať dôkazy, klásť otázky.\n\n4. Dôkazné prostriedky (§ 119 ods. 3 TP)\nVýpočet je neuzavretý.\n\n4.1 Výsluchy osôb\nobvinený,\n\nsvedok,\n\npoškodený,\n\nkonfrontácia,\n\nrekognícia.\n\n4.2 Vecné dôkazy\nPredmety súvisiace s trestným činom.\n\n4.3 Listinné dôkazy\nDokumenty, účtovné doklady, elektronické listiny.\n\n4.4 Znalci a odborné vyjadrenia (§ 144–151 TP)\nZnalecký posudok pri odborných otázkach.\n\n4.5 Obhliadka (§ 150 TP)\nMiesto činu, telo, predmety.\n\n4.6 Prehliadky (§ 99–101 TP)\nDomová, osobná, iných priestorov a pozemkov.\n\n4.7 Informačno‑technické prostriedky (§ 114–117 TP)\nOdpočúvanie, záznam komunikácie, sledovanie osôb a vecí.\n\n4.8 Operatívno‑pátracie prostriedky (mimo TP)\nSledovanie, kontrolovaná dodávka, informátor, krycie doklady.\n\n4.9 Zaistenie vecí (§ 89a–95b TP)\nZaistenie listín, elektronických údajov, majetku, účtov.\n\n5. Prípustnosť dôkazov\nDôkaz je neprípustný, ak:\n\nbol získaný nezákonne,\n\nbol vykonaný nezákonne,\n\nporušuje základné práva,\n\nide o dôkaz získaný nátlakom alebo mučením.\n\nNeprípustný dôkaz sa nesmie použiť.\n\nZdroj:\nTrestný poriadok č. 301/2005 Z. z., účinnosť od 1. 7. 2026  \nhttps://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2005/301/20260701"
 }

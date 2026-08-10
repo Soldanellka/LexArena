@@ -2,13 +2,22 @@
   "id": "24",
   "title": "Právoplatnosť a vykonateľnosť rozsudku",
   "schemaVersion": "1.1",
-  "tags": ["právoplatnosť", "vykonateľnosť", "res iudicata", "predbežná vykonateľnosť"],
-  "summary": "Právoplatnosť rozsudku nastáva, keď ho už nemožno napadnúť riadnym opravným prostriedkom – teda márnym uplynutím odvolacej lehoty, alebo ak bolo o odvolaní právoplatne rozhodnuté. Riadne a včas podané odvolanie bráni nadobudnutiu právoplatnosti napadnutého rozsudku, kým o ňom nie je rozhodnuté. Právoplatné rozhodnutie je záväzné pre účastníkov aj pre všetky orgány a zakladá prekážku res iudicata – o tej istej veci medzi tými istými stranami už nemožno znova rozhodovať, čo chráni právnu istotu a stabilitu súdnych rozhodnutí.\n\nVykonateľnosť vyjadruje spôsobilosť rozsudku byť podkladom pre nútený výkon rozhodnutia (exekúciu); pri rozsudku ukladajúcom povinnosť plniť nastáva spravidla súčasne s právoplatnosťou a uplynutím lehoty určenej na plnenie. Vo výnimočných, zákonom ustanovených prípadoch môže súd priznať rozsudku predbežnú vykonateľnosť ešte pred nadobudnutím právoplatnosti; povinný musí plniť už na základe takéhoto rozsudku, aj keď proti nemu súčasne podá odvolanie, keďže predbežná vykonateľnosť právo na odvolanie nevylučuje.\n\nZapamätaj si:\n- Právoplatnosť = rozsudok už nemožno napadnúť riadnym opravným prostriedkom.\n- Riadne podané odvolanie bráni nadobudnutiu právoplatnosti, kým sa oň nerozhodne.\n- Res iudicata = záväznosť právoplatného rozhodnutia, prekážka opätovného rozhodovania o tej istej veci.\n- Vykonateľnosť rozsudku ukladajúceho plnenie nastáva spravidla právoplatnosťou a uplynutím lehoty na plnenie.\n- Predbežná vykonateľnosť umožňuje výnimočne plnenie ešte pred právoplatnosťou, bez vylúčenia práva na odvolanie."
-  ,
+  "tags": [
+    "právoplatnosť",
+    "vykonateľnosť",
+    "res iudicata",
+    "predbežná vykonateľnosť"
+  ],
+  "summary": "Právoplatnosť a vykonateľnosť sú základné vlastnosti súdnych rozhodnutí, najmä meritórnych rozsudkov.\nPrávoplatnosť dáva rozhodnutiu záväznosť a nezmeniteľnosť, vykonateľnosť umožňuje jeho nútený výkon.\n\n1. Právoplatnosť rozsudku\nPrávoplatnosť nastáva, keď rozhodnutie už nemožno napadnúť riadnym opravným prostriedkom.\n\nFormálna stránka právoplatnosti\nriadne doručenie rozsudku účastníkom,\n\nmárne uplynutie odvolacej lehoty, alebo\n\nrozhodnutie odvolacieho súdu o podanom odvolaní.\n\nRiadne a včas podané odvolanie bráni právoplatnosti až do rozhodnutia odvolacieho súdu.\n\nObsahová stránka právoplatnosti\nzáväznosť rozhodnutia,\n\nrelatívna nezmeniteľnosť (možná len v zákonom stanovených prípadoch, napr. zmena pomerov podľa § 231 CSP).\n\nSubjektívna stránka právoplatnosti\nPrávoplatný rozsudok je záväzný:\n\npre účastníkov konania,\n\npre všetky orgány verejnej moci,\n\nv rozsahu výroku.\n\nRes iudicata – prekážka právoplatne rozhodnutej veci\nPrávoplatnosť zakladá prekážku res iudicata:\n\no tej istej veci,\n\nmedzi tými istými stranami,\n\nv rovnakom procesnom postavení\nuž nemožno znova konať.\n\nIde o kľúčový prvok právnej istoty.\n\n2. Vykonateľnosť rozsudku\nVykonateľnosť znamená, že rozsudok je spôsobilý byť podkladom pre exekúciu.\n\nKedy je rozsudok vykonateľný\nPri rozsudkoch ukladajúcich povinnosť plniť:\n\nprávoplatnosťou, a\n\nuplynutím paričnej lehoty (lehoty na plnenie určenej vo výroku).\n\nParičná lehota:\n\nje lehota, v ktorej má povinný splniť uloženú povinnosť,\n\nplynie od doručenia rozsudku,\n\nak nie je určená, ide o trojdňovú lehotu podľa Exekučného poriadku.\n\nPo splnení podmienok vykonateľnosti môže oprávnený podať návrh na exekúciu.\n\n3. Predbežná vykonateľnosť\nPredbežná vykonateľnosť umožňuje, aby rozsudok bol vykonateľný ešte pred právoplatnosťou.\n\nPodmienky\nSúd ju môže priznať v prípadoch, kde je potrebné okamžité plnenie, najmä:\n\nvýživné,\n\nnáhrada mzdy,\n\niné sociálne a existenčné nároky.\n\nÚčinky\npovinný musí plniť už na základe nepravoplatného rozsudku,\n\nodvolanie nemá odkladný účinok,\n\nprávo podať odvolanie zostáva zachované.\n\nPredbežná vykonateľnosť chráni slabšiu stranu a zabraňuje prieťahom.\n\nZapamätaj si (štátnicové jadro)\nPrávoplatnosť = nemožno napadnúť riadnym opravným prostriedkom.\n\nOdvolanie bráni právoplatnosti až do rozhodnutia o ňom.\n\nRes iudicata = prekážka opätovného rozhodovania o tej istej veci.\n\nVykonateľnosť pri plnení nastáva právoplatnosťou + uplynutím paričnej lehoty.\n\nPredbežná vykonateľnosť umožňuje plnenie ešte pred právoplatnosťou.\n\nPrávoplatnosť má obsahovú, formálnu a subjektívnu stránku.\n\nZmena pomerov (§ 231 CSP) umožňuje zásah do právoplatného rozhodnutia.\n\nZdroj:\nCSP (160/2015 Z. z.), § 220, § 231; Exekučný poriadok; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (2016); Števček–Macej–Šramel: Civilné procesné právo (2017); judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo je právoplatnosť rozsudku?",
-      "options": ["Vykonateľnosť rozhodnutia", "Stav, keď rozsudok už nemožno napadnúť riadnym opravným prostriedkom (odvolaním)", "Záväznosť rozsudku len pre súd", "Doručenie rozsudku stranám"],
+      "options": [
+        "Vykonateľnosť rozhodnutia",
+        "Stav, keď rozsudok už nemožno napadnúť riadnym opravným prostriedkom (odvolaním)",
+        "Záväznosť rozsudku len pre súd",
+        "Doručenie rozsudku stranám"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Právoplatnosť znamená, že rozhodnutie nadobudlo definitívnu povahu a už proti nemu nemožno podať odvolanie.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Čo vyjadruje zásada res iudicata?",
-      "options": ["Povinnosť plniť podľa rozsudku", "Záväznosť právoplatného rozhodnutia – o tej istej veci už nemožno znova rozhodovať", "Právo podať odvolanie", "Povinnosť súdu rozhodnúť v určenej lehote"],
+      "options": [
+        "Povinnosť plniť podľa rozsudku",
+        "Záväznosť právoplatného rozhodnutia – o tej istej veci už nemožno znova rozhodovať",
+        "Právo podať odvolanie",
+        "Povinnosť súdu rozhodnúť v určenej lehote"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Res iudicata chráni právnu istotu tým, že bráni opätovnému rozhodovaniu o už právoplatne rozhodnutej veci.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Kedy nastáva vykonateľnosť rozsudku ukladajúceho povinnosť plniť?",
-      "options": ["Ihneď po jeho vyhlásení bez ďalšieho", "Právoplatnosťou a súčasne uplynutím lehoty na plnenie", "Až po podaní návrhu na exekúciu", "Len po zaplatení súdneho poplatku"],
+      "options": [
+        "Ihneď po jeho vyhlásení bez ďalšieho",
+        "Právoplatnosťou a súčasne uplynutím lehoty na plnenie",
+        "Až po podaní návrhu na exekúciu",
+        "Len po zaplatení súdneho poplatku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Vykonateľnosť sa spravidla viaže na súčasné splnenie dvoch podmienok – právoplatnosť a uplynutie lehoty na plnenie.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Bráni podané odvolanie nadobudnutiu právoplatnosti rozsudku?",
-      "options": ["Áno, riadne a včas podané odvolanie bráni nadobudnutiu právoplatnosti, kým o ňom nie je právoplatne rozhodnuté", "Nie, rozsudok je právoplatný bez ohľadu na podané odvolanie", "Áno, ale iba ak s tým súhlasí protistrana", "Odvolanie nemá na právoplatnosť žiadny vplyv"],
+      "options": [
+        "Áno, riadne a včas podané odvolanie bráni nadobudnutiu právoplatnosti, kým o ňom nie je právoplatne rozhodnuté",
+        "Nie, rozsudok je právoplatný bez ohľadu na podané odvolanie",
+        "Áno, ale iba ak s tým súhlasí protistrana",
+        "Odvolanie nemá na právoplatnosť žiadny vplyv"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Kým sa o odvolaní právoplatne nerozhodne, napadnutý rozsudok právoplatnosť nenadobudne.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Čo je predbežná vykonateľnosť rozsudku?",
-      "options": ["Výnimočná vykonateľnosť rozsudku ešte pred nadobudnutím právoplatnosti, ak to zákon pripúšťa", "Vykonateľnosť, ktorá nastáva vždy až po piatich rokoch od vydania rozsudku", "Vykonateľnosť rozsudku iba voči štátu", "Vykonateľnosť, ktorá sa nikdy neuplatňuje v civilnom konaní"],
+      "options": [
+        "Výnimočná vykonateľnosť rozsudku ešte pred nadobudnutím právoplatnosti, ak to zákon pripúšťa",
+        "Vykonateľnosť, ktorá nastáva vždy až po piatich rokoch od vydania rozsudku",
+        "Vykonateľnosť rozsudku iba voči štátu",
+        "Vykonateľnosť, ktorá sa nikdy neuplatňuje v civilnom konaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Predbežná vykonateľnosť umožňuje výnimočne vynútiť plnenie ešte pred právoplatnosťou rozsudku.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Právoplatnosť", "definition": "Stav, keď rozsudok už nemožno napadnúť riadnym opravným prostriedkom (odvolaním)." },
-    { "term": "Res iudicata", "definition": "Záväznosť právoplatného rozhodnutia – prekážka opätovného rozhodovania o tej istej veci." },
-    { "term": "Vykonateľnosť", "definition": "Spôsobilosť rozsudku byť podkladom pre nútený výkon (exekúciu), nastáva spravidla právoplatnosťou a uplynutím lehoty na plnenie." },
-    { "term": "Predbežná vykonateľnosť", "definition": "Výnimočná vykonateľnosť rozsudku ešte pred nadobudnutím právoplatnosti." },
-    { "term": "Odvolanie a právoplatnosť", "definition": "Riadne podané odvolanie bráni nadobudnutiu právoplatnosti napadnutého rozsudku." }
+    {
+      "term": "Právoplatnosť",
+      "definition": "Stav, keď rozsudok už nemožno napadnúť riadnym opravným prostriedkom (odvolaním)."
+    },
+    {
+      "term": "Res iudicata",
+      "definition": "Záväznosť právoplatného rozhodnutia – prekážka opätovného rozhodovania o tej istej veci."
+    },
+    {
+      "term": "Vykonateľnosť",
+      "definition": "Spôsobilosť rozsudku byť podkladom pre nútený výkon (exekúciu), nastáva spravidla právoplatnosťou a uplynutím lehoty na plnenie."
+    },
+    {
+      "term": "Predbežná vykonateľnosť",
+      "definition": "Výnimočná vykonateľnosť rozsudku ešte pred nadobudnutím právoplatnosti."
+    },
+    {
+      "term": "Odvolanie a právoplatnosť",
+      "definition": "Riadne podané odvolanie bráni nadobudnutiu právoplatnosti napadnutého rozsudku."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Opätovná žaloba po právoplatnom rozsudku",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Súd právoplatne rozhodol o nároku medzi stranami. Neúspešná strana podá o niekoľko mesiacov novú žalobu o tú istú vec proti tej istej protistrane.", "options": [], "correct": 0 },
+        {
+          "question": "Súd právoplatne rozhodol o nároku medzi stranami. Neúspešná strana podá o niekoľko mesiacov novú žalobu o tú istú vec proti tej istej protistrane.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako súd naloží s novou žalobou?",
-          "options": ["Konanie zastaví pre prekážku res iudicata", "Vec znova meritórne prejedná a môže rozhodnúť inak", "Žalobu automaticky postúpi odvolaciemu súdu"],
+          "options": [
+            "Konanie zastaví pre prekážku res iudicata",
+            "Vec znova meritórne prejedná a môže rozhodnúť inak",
+            "Žalobu automaticky postúpi odvolaciemu súdu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Prekážka res iudicata bráni opätovnému rozhodovaniu o veci, o ktorej už bolo právoplatne rozhodnuté.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Prečo zákon takúto prekážku pripúšťa?",
-          "options": ["Aby sa chránila právna istota a stabilita už právoplatne rozhodnutých vecí", "Aby sa znížili príjmy súdov zo súdnych poplatkov", "Aby sa zabránilo podávaniu odvolaní"],
+          "options": [
+            "Aby sa chránila právna istota a stabilita už právoplatne rozhodnutých vecí",
+            "Aby sa znížili príjmy súdov zo súdnych poplatkov",
+            "Aby sa zabránilo podávaniu odvolaní"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Res iudicata slúži predovšetkým ochrane právnej istoty účastníkov aj celého právneho poriadku.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Vykonateľnosť pred právoplatnosťou",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Súd vo výnimočnom, zákonom ustanovenom prípade prizná rozsudku predbežnú vykonateľnosť ešte pred jeho právoplatnosťou.", "options": [], "correct": 0 },
+        {
+          "question": "Súd vo výnimočnom, zákonom ustanovenom prípade prizná rozsudku predbežnú vykonateľnosť ešte pred jeho právoplatnosťou.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo to znamená pre povinného?",
-          "options": ["Musí plniť už pred právoplatnosťou rozsudku, hoci môže podať odvolanie", "Nemusí plniť, kým rozsudok nie je právoplatný", "Odvolanie proti takémuto rozsudku vôbec nie je prípustné"],
+          "options": [
+            "Musí plniť už pred právoplatnosťou rozsudku, hoci môže podať odvolanie",
+            "Nemusí plniť, kým rozsudok nie je právoplatný",
+            "Odvolanie proti takémuto rozsudku vôbec nie je prípustné"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Predbežná vykonateľnosť ukladá povinnosť plniť už pred nadobudnutím právoplatnosti.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Je aj napriek predbežnej vykonateľnosti možné podať odvolanie?",
-          "options": ["Áno, predbežná vykonateľnosť nevylučuje právo podať odvolanie", "Nie, predbežná vykonateľnosť automaticky vylučuje odvolanie", "Áno, ale iba do troch dní od vyhlásenia rozsudku"],
+          "options": [
+            "Áno, predbežná vykonateľnosť nevylučuje právo podať odvolanie",
+            "Nie, predbežná vykonateľnosť automaticky vylučuje odvolanie",
+            "Áno, ale iba do troch dní od vyhlásenia rozsudku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Predbežná vykonateľnosť sa týka len okamihu plnenia, právo na riadny opravný prostriedok zostáva zachované.",
@@ -120,12 +188,60 @@
   "spider": {
     "center": "Právoplatnosť × Vykonateľnosť × Predbežná vykonateľnosť × Res iudicata",
     "branches": [
-      { "label": "Právoplatnosť – obsahová stránka", "leaves": ["záväznosť rozhodnutia", "relatívna nezmeniteľnosť", "stabilita právnych vzťahov"] },
-      { "label": "Právoplatnosť – formálna stránka", "leaves": ["riadne doručenie rozhodnutia", "nemožnosť podať riadny opravný prostriedok", "nastáva: – márnym uplynutím odvolacej lehoty – alebo právoplatným rozhodnutím odvolacieho súdu", "riadne a včas podané odvolanie bráni právoplatnosti až do rozhodnutia odvolacieho súdu"] },
-      { "label": "Právoplatnosť – subjektívna stránka", "leaves": ["určuje, pre koho je rozhodnutie záväzné", "spravidla pre strany konania a ich právnych nástupcov", "pri statusových veciach pôsobí erga omnes", "záväznosť aj pre orgány verejnej moci"] },
-      { "label": "Res iudicata a zmena pomerov", "leaves": ["res iudicata: o tej istej veci medzi tými istými stranami už nemožno znova konať", "bráni duplicitným sporom", "posilňuje právnu istotu", "zmena pomerov (§ 231 CSP): pri opakujúcich sa plneniach možno pri podstatnej zmene pomerov rozhodnúť nanovo"] },
-      { "label": "Vykonateľnosť rozsudku", "leaves": ["vykonateľnosť = rozsudok je spôsobilý byť exekučným titulom", "týka sa len rozhodnutí ukladajúcich povinnosť plniť", "nastáva: – právoplatnosťou – a uplynutím lehoty na plnenie uvedenej vo výroku", "paričná lehota: lehota na dobrovoľné splnenie povinnosti – plynie spravidla od právoplatnosti rozhodnutia", "po splnení podmienok môže oprávnený podať návrh na exekúciu"] },
-      { "label": "Predbežná vykonateľnosť", "leaves": ["súd môže priznať rozsudku predbežnú vykonateľnosť ešte pred právoplatnosťou", "povinný musí plniť okamžite, aj keď podá odvolanie", "odvolanie nemá odkladný účinok", "používa sa najmä pri: – výživnom – náhrade mzdy – situáciách vyžadujúcich okamžité plnenie"] }
+      {
+        "label": "Právoplatnosť – obsahová stránka",
+        "leaves": [
+          "záväznosť rozhodnutia",
+          "relatívna nezmeniteľnosť",
+          "stabilita právnych vzťahov"
+        ]
+      },
+      {
+        "label": "Právoplatnosť – formálna stránka",
+        "leaves": [
+          "riadne doručenie rozhodnutia",
+          "nemožnosť podať riadny opravný prostriedok",
+          "nastáva: – márnym uplynutím odvolacej lehoty – alebo právoplatným rozhodnutím odvolacieho súdu",
+          "riadne a včas podané odvolanie bráni právoplatnosti až do rozhodnutia odvolacieho súdu"
+        ]
+      },
+      {
+        "label": "Právoplatnosť – subjektívna stránka",
+        "leaves": [
+          "určuje, pre koho je rozhodnutie záväzné",
+          "spravidla pre strany konania a ich právnych nástupcov",
+          "pri statusových veciach pôsobí erga omnes",
+          "záväznosť aj pre orgány verejnej moci"
+        ]
+      },
+      {
+        "label": "Res iudicata a zmena pomerov",
+        "leaves": [
+          "res iudicata: o tej istej veci medzi tými istými stranami už nemožno znova konať",
+          "bráni duplicitným sporom",
+          "posilňuje právnu istotu",
+          "zmena pomerov (§ 231 CSP): pri opakujúcich sa plneniach možno pri podstatnej zmene pomerov rozhodnúť nanovo"
+        ]
+      },
+      {
+        "label": "Vykonateľnosť rozsudku",
+        "leaves": [
+          "vykonateľnosť = rozsudok je spôsobilý byť exekučným titulom",
+          "týka sa len rozhodnutí ukladajúcich povinnosť plniť",
+          "nastáva: – právoplatnosťou – a uplynutím lehoty na plnenie uvedenej vo výroku",
+          "paričná lehota: lehota na dobrovoľné splnenie povinnosti – plynie spravidla od právoplatnosti rozhodnutia",
+          "po splnení podmienok môže oprávnený podať návrh na exekúciu"
+        ]
+      },
+      {
+        "label": "Predbežná vykonateľnosť",
+        "leaves": [
+          "súd môže priznať rozsudku predbežnú vykonateľnosť ešte pred právoplatnosťou",
+          "povinný musí plniť okamžite, aj keď podá odvolanie",
+          "odvolanie nemá odkladný účinok",
+          "používa sa najmä pri: – výživnom – náhrade mzdy – situáciách vyžadujúcich okamžité plnenie"
+        ]
+      }
     ]
   }
 }

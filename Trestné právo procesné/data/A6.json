@@ -2,50 +2,100 @@
   "id": "A6",
   "title": "Obhajca, osoby so samostatnými obhajovacími právami",
   "schemaVersion": "1.1",
-  "tags": ["obhajca", "obhajoba", "trestné konanie"],
-
+  "tags": [
+    "obhajca",
+    "obhajoba",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto môže byť obhajcom v trestnom konaní?",
-      "options": ["Každá plnoletá osoba", "Len advokát", "Policajt"],
+      "options": [
+        "Každá plnoletá osoba",
+        "Len advokát",
+        "Policajt"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy je obhajoba povinná?",
-      "options": ["Pri každom trestnom čine", "Len pri prečinoch", "V zákonom určených prípadoch (napr. väzba, mladistvý)"],
+      "options": [
+        "Pri každom trestnom čine",
+        "Len pri prečinoch",
+        "V zákonom určených prípadoch (napr. väzba, mladistvý)"
+      ],
       "correct": 2
     },
     {
       "question": "Kto má samostatné obhajovacie práva?",
-      "options": ["Poškodený", "Zúčastnená osoba", "Mladistvý obvinený"],
+      "options": [
+        "Poškodený",
+        "Zúčastnená osoba",
+        "Mladistvý obvinený"
+      ],
       "correct": 2
     },
     {
       "question": "Môže obvinený odmietnuť obhajcu, ak ide o povinnú obhajobu?",
-      "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len so súhlasom prokurátora"
+      ],
       "correct": 1
     },
     {
       "question": "Kto vykonáva úkony obhajoby?",
-      "options": ["Obhajca", "Svedok", "Znalec"],
+      "options": [
+        "Obhajca",
+        "Svedok",
+        "Znalec"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Obhajca", "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému." },
-    { "term": "Povinná obhajoba", "definition": "Situácie, keď obvinený musí mať obhajcu zo zákona." },
-    { "term": "Samostatné obhajovacie práva", "definition": "Práva, ktoré môže vykonávať osoba nezávisle od obvineného." },
-    { "term": "Mladistvý obvinený", "definition": "Osoba mladšia ako 18 rokov, ktorá má zvýšenú ochranu." },
-    { "term": "Ustanovený obhajca", "definition": "Obhajca ustanovený súdom, ak si ho obvinený nezvolí." },
-
-    { "term": "Zvolený obhajca", "definition": "Obhajca, ktorého si obvinený vyberie sám." },
-    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
-    { "term": "Právo na obhajobu", "definition": "Základné právo obvineného brániť sa proti obvineniu." },
-    { "term": "Konflikt záujmov", "definition": "Situácia, keď jeden obhajca nemôže zastupovať viacerých obvinených." },
-    { "term": "Právo nevypovedať", "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba." }
+    {
+      "term": "Obhajca",
+      "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému."
+    },
+    {
+      "term": "Povinná obhajoba",
+      "definition": "Situácie, keď obvinený musí mať obhajcu zo zákona."
+    },
+    {
+      "term": "Samostatné obhajovacie práva",
+      "definition": "Práva, ktoré môže vykonávať osoba nezávisle od obvineného."
+    },
+    {
+      "term": "Mladistvý obvinený",
+      "definition": "Osoba mladšia ako 18 rokov, ktorá má zvýšenú ochranu."
+    },
+    {
+      "term": "Ustanovený obhajca",
+      "definition": "Obhajca ustanovený súdom, ak si ho obvinený nezvolí."
+    },
+    {
+      "term": "Zvolený obhajca",
+      "definition": "Obhajca, ktorého si obvinený vyberie sám."
+    },
+    {
+      "term": "Zúčastnená osoba",
+      "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť."
+    },
+    {
+      "term": "Právo na obhajobu",
+      "definition": "Základné právo obvineného brániť sa proti obvineniu."
+    },
+    {
+      "term": "Konflikt záujmov",
+      "definition": "Situácia, keď jeden obhajca nemôže zastupovať viacerých obvinených."
+    },
+    {
+      "term": "Právo nevypovedať",
+      "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Povinná obhajoba mladistvého",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Je obhajoba povinná?",
-          "options": ["Áno", "Nie", "Len ak ide o zločin"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o zločin"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Môže mladistvý odmietnuť obhajcu?",
-          "options": ["Áno", "Nie", "Len so súhlasom rodiča"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom rodiča"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Konflikt záujmov obhajcu",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Ide o konflikt záujmov?",
-          "options": ["Áno", "Nie", "Len ak to tvrdí prokurátor"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to tvrdí prokurátor"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ako má súd postupovať?",
-          "options": ["Ustanoviť každému obvinenému iného obhajcu", "Pokračovať v konaní", "Zastaviť konanie"],
+          "options": [
+            "Ustanoviť každému obvinenému iného obhajcu",
+            "Pokračovať v konaní",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +183,42 @@
   "spider": {
     "center": "Obhajca × osoby so samostatnými obhajovacími právami",
     "branches": [
-      { "label": "Obhajca (§ 36 TP)", "leaves": ["Kto – len advokát; samostatný subjekt konania, koná v mene obvineného", "Zvolený – obvinený si ho vyberá sám", "Ustanovený – súd/prokurátor pri povinnej obhajobe alebo nemajetnosti (§§ 39–42)", "Náhradný – na zabezpečenie neodkladného úkonu"] },
-      { "label": "Práva obhajcu (§ 44 TP)", "leaves": ["Účasť – zúčastňovať sa všetkých úkonov", "Dôkazy – navrhovať dôkazy, klásť otázky svedkom", "Opravné prostriedky – podávať v mene obvineného", "Komunikácia – s obvineným bez obmedzenia"] },
-      { "label": "Povinnosti obhajcu", "leaves": ["Mlčanlivosť – o všetkom z obhajoby; nemôže byť vypočúvaný ako svedok", "Záujem obvineného – koná v jeho prospech", "Koncipient – zastúpenie pri prečinoch a niektorých zločinoch so súhlasom obvineného"] },
-      { "label": "Samostatné obhajovacie práva", "leaves": ["Poškodený (§ 46) – nárok na náhradu škody, dôkazy, opravné prostriedky v rozsahu nároku", "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistení/odňatí veci", "Osoba so zaisteným majetkom (§ 95a) – samostatná obrana majetku", "Dotknuté osoby – preskúmanie zákonnosti zásahu sudcom pre prípravné konanie"] }
+      {
+        "label": "Obhajca (§ 36 TP)",
+        "leaves": [
+          "Kto – len advokát; samostatný subjekt konania, koná v mene obvineného",
+          "Zvolený – obvinený si ho vyberá sám",
+          "Ustanovený – súd/prokurátor pri povinnej obhajobe alebo nemajetnosti (§§ 39–42)",
+          "Náhradný – na zabezpečenie neodkladného úkonu"
+        ]
+      },
+      {
+        "label": "Práva obhajcu (§ 44 TP)",
+        "leaves": [
+          "Účasť – zúčastňovať sa všetkých úkonov",
+          "Dôkazy – navrhovať dôkazy, klásť otázky svedkom",
+          "Opravné prostriedky – podávať v mene obvineného",
+          "Komunikácia – s obvineným bez obmedzenia"
+        ]
+      },
+      {
+        "label": "Povinnosti obhajcu",
+        "leaves": [
+          "Mlčanlivosť – o všetkom z obhajoby; nemôže byť vypočúvaný ako svedok",
+          "Záujem obvineného – koná v jeho prospech",
+          "Koncipient – zastúpenie pri prečinoch a niektorých zločinoch so súhlasom obvineného"
+        ]
+      },
+      {
+        "label": "Samostatné obhajovacie práva",
+        "leaves": [
+          "Poškodený (§ 46) – nárok na náhradu škody, dôkazy, opravné prostriedky v rozsahu nároku",
+          "Zúčastnená osoba (§ 47) – bráni vlastnícke práva pri zaistení/odňatí veci",
+          "Osoba so zaisteným majetkom (§ 95a) – samostatná obrana majetku",
+          "Dotknuté osoby – preskúmanie zákonnosti zásahu sudcom pre prípravné konanie"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Obhajca je advokát, ktorý vykonáva obhajobu obvineného a chráni jeho práva v trestnom konaní; osoby so samostatnými obhajovacími právami sú subjekty, ktoré môžu vykonávať úkony na ochranu vlastných práv nezávisle od obvineného (napr. poškodený, zúčastnená osoba).\n\nZhrnutie (štátnicové jadro)\nObhajca je advokát, ktorý zastupuje obvineného a vykonáva obhajobu podľa § 36 Trestného poriadku. Obhajca môže byť zvolený, ustanovený alebo náhradný. Osoby so samostatnými obhajovacími právami sú subjekty, ktoré môžu samostatne vykonávať procesné úkony na ochranu svojich práv – najmä poškodený, zúčastnená osoba, osoba, ktorej bol zaistený majetok, a ďalšie osoby, ktorým zákon priznáva vlastné procesné oprávnenia.\n\n1. Obhajca\nPodľa § 36 Trestného poriadku obhajcom môže byť len advokát .\nObhajca je samostatným subjektom trestného konania a zároveň stranou konania, ak koná v mene obvineného.\n\nDruhy obhajcov (§ 39–42 TP)\nZvolený obhajca – obvinený si ho vyberá sám.\n\nUstanovený obhajca – ustanovuje ho súd alebo prokurátor, ak ide o povinnú obhajobu alebo obvinený nemá prostriedky na úhradu.\n\nNáhradný obhajca – ustanovuje sa, ak je potrebné zabezpečiť neodkladný úkon.\n\nPráva obhajcu (§ 44 TP)\nzúčastňovať sa všetkých úkonov,\n\nnavrhovať dôkazy,\n\nklásť otázky svedkom,\n\npodávať opravné prostriedky,\n\nkomunikovať s obvineným bez obmedzenia.\n\nPovinnosti obhajcu\nzachovávať mlčanlivosť,\n\nkonať v záujme obvineného,\n\nnesmie byť vypočúvaný ako svedok o tom, čo sa dozvedel pri obhajobe .\n\nZastupovanie koncipientom\nAdvokát sa môže dať zastúpiť advokátskym koncipientom pri prečinoch a niektorých zločinoch, ak s tým obvinený súhlasí .\n\n2. Osoby so samostatnými obhajovacími právami\nIde o osoby, ktoré nie sú obvinenými, ale zákon im priznáva vlastné procesné práva, ktoré môžu vykonávať nezávisle od obvineného.\n\na) Poškodený (§ 46 TP)\nMá právo:\n\nuplatniť nárok na náhradu škody,\n\nnavrhovať dôkazy,\n\npodávať opravné prostriedky v rozsahu nároku,\n\nbyť informovaný o úkonoch.\n\nb) Zúčastnená osoba (§ 47 TP)\nOsoba, ktorej vec bola zaistená alebo odňatá.\nMá právo:\n\nbrániť svoje vlastnícke práva,\n\npodávať opravné prostriedky proti rozhodnutiam o zaistení.\n\nc) Osoba, ktorej bol zaistený majetok (§ 95a TP)\nMá samostatné právo brániť svoj majetok v konaní o zaistení.\n\nd) Osoby dotknuté zásahmi do práv (napr. pri domovej prehliadke)\nMajú právo žiadať preskúmanie zákonnosti zásahu sudcom pre prípravné konanie.\n\nZapamätaj si (štátnicové jadro)\n– Obhajca = advokát, ktorý vykonáva obhajobu obvineného.\n– Druhy obhajcov: zvolený, ustanovený, náhradný.\n– Obhajca má rozsiahle práva – najmä navrhovať dôkazy a zúčastňovať sa úkonov.\n– Osoby so samostatnými obhajovacími právami = poškodený, zúčastnená osoba, osoby s právami pri zaistení majetku.\n– Tieto osoby môžu samostatne podávať opravné prostriedky a brániť svoje práva nezávisle od obvineného.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., § 36–47 (overené na Slov-Lex)\n– § 36 TP – obhajca   \n– Obhajca – odborný výklad (Wikipédia, právna teória) sk.wikipedia.orgsk.wikipedia.org. Obhajca (trestné právo) - Wikipédia"
 }

@@ -1,7 +1,7 @@
 {
   "id": "33",
   "title": "Nájomná zmluva - pojem, podstatné náležitosti, osobitné druhy nájmu",
-  "summary": "Nájomná zmluva (§ 663-684 OZ): prenajímateľ prenechá nájomcovi vec na dočasné užívanie za nájomné. Podstatné náležitosti: predmet nájmu, nájomné, čas. Osobitné druhy: nájom bytu (§ 685-716 OZ), nájom nebytových priestorov (zákon č. 116/1990 Zb.), podnájom. Prenajímateľ je povinný odovzdať vec v stave spôsobilom na dohodnuté užívanie. Nájomca platí nájomné a vec riadne užíva.",
+  "summary": "Nájomná zmluva podľa § 663–684 OZ je zmluva, v ktorej sa prenajímateľ zaväzuje prenechať nájomcovi vec na dočasné užívanie a nájomca sa zaväzuje platiť nájomné. Ide o typickú zmluvu užívania – nájomca vec používa, ale vlastníkom zostáva prenajímateľ.\n\nPodstatné náležitosti nájomnej zmluvy\nPredmet nájmu – vec musí byť určitá a spôsobilá na užívanie.\n\nNájomné – dohodnuté pevne alebo spôsobom určenia.\n\nČas nájmu – určitý alebo neurčitý; pri neurčitom možno nájom vypovedať.\n\nPrenajímateľ je povinný odovzdať vec v stave spôsobilom na dohodnuté užívanie a zabezpečiť nerušené užívanie. Nájomca je povinný platiť nájomné, užívať vec riadne, chrániť ju pred poškodením a po skončení nájmu ju vrátiť v stave zodpovedajúcom obvyklému opotrebeniu.\n\nPráva a povinnosti strán (§ 665–676 OZ)\n– Prenajímateľ vykonáva potrebné opravy, ktoré znemožňujú užívanie.\n– Nájomca vykonáva bežnú údržbu a drobné opravy.\n– Ak má vec vady, nájomca môže požadovať zľavu alebo odstúpiť od zmluvy.\n\nOsobitné druhy nájmu\n1. Nájom bytu (§ 685–716 OZ)\nŠpeciálna úprava chráni nájomcu ako slabšiu stranu.\n– Nájomné možno zvyšovať len podľa zákonných pravidiel.\n– Výpoveď prenajímateľa je možná len zo zákonných dôvodov.\n– Nájomca má právo na nerušené užívanie bytu a povinnosť platiť úhrady za služby.\n\n2. Nájom nebytových priestorov (zákon č. 116/1990 Zb.)\nPoužíva sa pri podnikaní.\n– Vyžaduje sa písomná forma.\n– Výpovedné dôvody sú širšie než pri nájme bytu.\n– Nájomné a podmienky sa spravidla určujú zmluvne bez osobitnej ochrany nájomcu.\n\n3. Podnájom\nNájomca môže prenechať vec do užívania tretej osobe, ak to prenajímateľ dovolí.\n– Podnájom zaniká najneskôr so zánikom nájmu.\n\nPodstata nájmu\nNájom je dočasné užívanie cudzej veci za odplatu, bez prechodu vlastníctva. Chráni stabilitu užívania a zároveň umožňuje prenajímateľovi kontrolu nad svojím majetkom.\n\nZdroje: OZ (40/1964 Zb.), § 663–716; zákon č. 116/1990 Zb.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je podstatou nájomnej zmluvy?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Nájomná zmluva (§ 663 OZ)", "definition": "Prenajímateľ prenechá nájomcovi vec na dočasné odplatné užívanie." },
-    { "term": "Podstatné náležitosti", "definition": "Predmet nájmu, nájomné a čas užívania." },
-    { "term": "Povinnosti prenajímateľa", "definition": "Odovzdať vec v spôsobilom stave a udržiavať ju počas nájmu." },
-    { "term": "Podnájom", "definition": "Nájomca so súhlasom prenajímateľa prenajme vec (alebo jej časť) ďalšej osobe." },
-    { "term": "Emptio non tollit locatum", "definition": "Predaj prenajatej veci automaticky neruší existujúci nájom." }
+    {
+      "term": "Nájomná zmluva (§ 663 OZ)",
+      "definition": "Prenajímateľ prenechá nájomcovi vec na dočasné odplatné užívanie."
+    },
+    {
+      "term": "Podstatné náležitosti",
+      "definition": "Predmet nájmu, nájomné a čas užívania."
+    },
+    {
+      "term": "Povinnosti prenajímateľa",
+      "definition": "Odovzdať vec v spôsobilom stave a udržiavať ju počas nájmu."
+    },
+    {
+      "term": "Podnájom",
+      "definition": "Nájomca so súhlasom prenajímateľa prenajme vec (alebo jej časť) ďalšej osobe."
+    },
+    {
+      "term": "Emptio non tollit locatum",
+      "definition": "Predaj prenajatej veci automaticky neruší existujúci nájom."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Predaj prenajatého bytu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Vlastník prenajatého bytu byt počas trvania nájmu predá novému vlastníkovi, bez toho, aby s nájomcom akokoľvek riešil ukončenie nájmu.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník prenajatého bytu byt počas trvania nájmu predá novému vlastníkovi, bez toho, aby s nájomcom akokoľvek riešil ukončenie nájmu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Zaniká nájomná zmluva predajom bytu?",
-          "options": ["Nie, platí zásada, že kúpa neruší nájom (emptio non tollit locatum)", "Áno, nový vlastník nemusí nájom rešpektovať", "Áno, ale iba ak s tým nájomca súhlasí"],
+          "options": [
+            "Nie, platí zásada, že kúpa neruší nájom (emptio non tollit locatum)",
+            "Áno, nový vlastník nemusí nájom rešpektovať",
+            "Áno, ale iba ak s tým nájomca súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmena vlastníka veci nemá vplyv na existujúci nájomný vzťah.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Kto je po predaji bytu novým prenajímateľom vo vzťahu k nájomcovi?",
-          "options": ["Nový vlastník bytu, ktorý vstupuje do práv a povinností pôvodného prenajímateľa", "Pôvodný vlastník naďalej zostáva prenajímateľom", "Nikto, nájom zaniká bez náhrady"],
+          "options": [
+            "Nový vlastník bytu, ktorý vstupuje do práv a povinností pôvodného prenajímateľa",
+            "Pôvodný vlastník naďalej zostáva prenajímateľom",
+            "Nikto, nájom zaniká bez náhrady"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nový vlastník vstupuje do postavenia prenajímateľa namiesto pôvodného vlastníka.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Podnájom časti bytu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Nájomca bytu chce prenajať jednu izbu ďalšej osobe, aby si znížil náklady na bývanie.", "options": [], "correct": 0 },
+        {
+          "question": "Nájomca bytu chce prenajať jednu izbu ďalšej osobe, aby si znížil náklady na bývanie.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Potrebuje na to súhlas prenajímateľa?",
-          "options": ["Áno, podnájom je možný len so súhlasom prenajímateľa", "Nie, nájomca môže podnajímať bez obmedzenia", "Nie, stačí informovať prenajímateľa dodatočne"],
+          "options": [
+            "Áno, podnájom je možný len so súhlasom prenajímateľa",
+            "Nie, nájomca môže podnajímať bez obmedzenia",
+            "Nie, stačí informovať prenajímateľa dodatočne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Podnájom vyžaduje predchádzajúci súhlas prenajímateľa.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo sa stane, ak nájomca podnajme izbu bez súhlasu prenajímateľa?",
-          "options": ["Ide o porušenie povinností nájomcu, ktoré môže mať za následok napr. výpoveď nájmu", "Podnájom je bez ďalšieho automaticky platný", "Prenajímateľ stráca právo na nájomné"],
+          "options": [
+            "Ide o porušenie povinností nájomcu, ktoré môže mať za následok napr. výpoveď nájmu",
+            "Podnájom je bez ďalšieho automaticky platný",
+            "Prenajímateľ stráca právo na nájomné"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Porušenie tejto povinnosti môže mať vážne procesné dôsledky pre nájomcu.",
@@ -142,13 +181,69 @@
   "spider": {
     "center": "Nájomná zmluva – pojem, náležitosti, práva a povinnosti, osobitné druhy nájmu (dočasné užívanie cudzej veci za odplatu)",
     "branches": [
-      { "label": "Pojem nájomnej zmluvy (§ 663 OZ)", "leaves": ["prenajímateľ prenechá vec na dočasné užívanie", "nájomca platí nájomné", "vlastníkom zostáva prenajímateľ", "typická zmluva užívania, nie prevodu"] },
-      { "label": "Podstatné náležitosti", "leaves": ["predmet nájmu: určitá vec spôsobilá na užívanie", "nájomné: pevne dohodnuté alebo určené spôsobom výpočtu", "čas nájmu: určitý alebo neurčitý", "pri neurčitom čase je možná výpoveď"] },
-      { "label": "Práva a povinnosti strán (§ 665–676 OZ)", "leaves": ["prenajímateľ: odovzdať vec v stave spôsobilom na užívanie", "prenajímateľ: zabezpečiť nerušené užívanie a vykonávať potrebné opravy", "nájomca: platiť nájomné a užívať vec riadne podľa zmluvy", "nájomca: vykonávať bežnú údržbu a drobné opravy", "nájomca: vrátiť vec v stave zodpovedajúcom obvyklému opotrebeniu", "pri vadách veci môže nájomca požadovať zľavu alebo odstúpiť od zmluvy"] },
-      { "label": "Nájom bytu (§ 685–716 OZ)", "leaves": ["zvýšená ochrana nájomcu", "nájomné možno zvyšovať len podľa zákona", "prenajímateľ môže vypovedať len zo zákonných dôvodov", "nájomca platí úhrady za služby a má právo na nerušené užívanie"] },
-      { "label": "Nájom nebytových priestorov (zákon č. 116/1990 Zb.)", "leaves": ["používa sa pri podnikaní", "vyžaduje sa písomná forma", "širšie výpovedné dôvody", "väčšia zmluvná voľnosť, bez osobitnej ochrany nájomcu"] },
-      { "label": "Podnájom", "leaves": ["nájomca môže prenechať vec tretej osobe, ak to prenajímateľ dovolí", "podnájom zaniká najneskôr so zánikom nájmu"] },
-      { "label": "Význam pre prax", "leaves": ["stabilizuje užívanie majetku bez prechodu vlastníctva", "jasné rozdelenie opráv a povinností", "špeciálna ochrana pri nájme bytu", "dôležité pri podnikaní v nebytových priestoroch"] }
+      {
+        "label": "Pojem nájomnej zmluvy (§ 663 OZ)",
+        "leaves": [
+          "prenajímateľ prenechá vec na dočasné užívanie",
+          "nájomca platí nájomné",
+          "vlastníkom zostáva prenajímateľ",
+          "typická zmluva užívania, nie prevodu"
+        ]
+      },
+      {
+        "label": "Podstatné náležitosti",
+        "leaves": [
+          "predmet nájmu: určitá vec spôsobilá na užívanie",
+          "nájomné: pevne dohodnuté alebo určené spôsobom výpočtu",
+          "čas nájmu: určitý alebo neurčitý",
+          "pri neurčitom čase je možná výpoveď"
+        ]
+      },
+      {
+        "label": "Práva a povinnosti strán (§ 665–676 OZ)",
+        "leaves": [
+          "prenajímateľ: odovzdať vec v stave spôsobilom na užívanie",
+          "prenajímateľ: zabezpečiť nerušené užívanie a vykonávať potrebné opravy",
+          "nájomca: platiť nájomné a užívať vec riadne podľa zmluvy",
+          "nájomca: vykonávať bežnú údržbu a drobné opravy",
+          "nájomca: vrátiť vec v stave zodpovedajúcom obvyklému opotrebeniu",
+          "pri vadách veci môže nájomca požadovať zľavu alebo odstúpiť od zmluvy"
+        ]
+      },
+      {
+        "label": "Nájom bytu (§ 685–716 OZ)",
+        "leaves": [
+          "zvýšená ochrana nájomcu",
+          "nájomné možno zvyšovať len podľa zákona",
+          "prenajímateľ môže vypovedať len zo zákonných dôvodov",
+          "nájomca platí úhrady za služby a má právo na nerušené užívanie"
+        ]
+      },
+      {
+        "label": "Nájom nebytových priestorov (zákon č. 116/1990 Zb.)",
+        "leaves": [
+          "používa sa pri podnikaní",
+          "vyžaduje sa písomná forma",
+          "širšie výpovedné dôvody",
+          "väčšia zmluvná voľnosť, bez osobitnej ochrany nájomcu"
+        ]
+      },
+      {
+        "label": "Podnájom",
+        "leaves": [
+          "nájomca môže prenechať vec tretej osobe, ak to prenajímateľ dovolí",
+          "podnájom zaniká najneskôr so zánikom nájmu"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "stabilizuje užívanie majetku bez prechodu vlastníctva",
+          "jasné rozdelenie opráv a povinností",
+          "špeciálna ochrana pri nájme bytu",
+          "dôležité pri podnikaní v nebytových priestoroch"
+        ]
+      }
     ]
   }
 }

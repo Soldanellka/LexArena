@@ -2,50 +2,101 @@
   "id": "A7",
   "title": "Poškodený, obeť a zúčastnená osoba",
   "schemaVersion": "1.1",
-  "tags": ["poškodený", "obeť", "zúčastnená osoba", "trestné konanie"],
-
+  "tags": [
+    "poškodený",
+    "obeť",
+    "zúčastnená osoba",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto je poškodeným v trestnom konaní?",
-      "options": ["Osoba, ktorá spáchala trestný čin", "Osoba, ktorej bolo trestným činom ublížené", "Svedok"],
+      "options": [
+        "Osoba, ktorá spáchala trestný čin",
+        "Osoba, ktorej bolo trestným činom ublížené",
+        "Svedok"
+      ],
       "correct": 1
     },
     {
       "question": "Kto je obeťou podľa zákona o obetiach trestných činov?",
-      "options": ["Len fyzická osoba", "Fyzická osoba, ktorej bola spôsobená ujma", "Každý účastník konania"],
+      "options": [
+        "Len fyzická osoba",
+        "Fyzická osoba, ktorej bola spôsobená ujma",
+        "Každý účastník konania"
+      ],
       "correct": 1
     },
     {
       "question": "Kto je zúčastnenou osobou?",
-      "options": ["Osoba, ktorej vec môže byť zhabaná alebo prepadnúť", "Obhajca", "Znalec"],
+      "options": [
+        "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť",
+        "Obhajca",
+        "Znalec"
+      ],
       "correct": 0
     },
     {
       "question": "Má poškodený právo navrhovať dôkazy?",
-      "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len so súhlasom prokurátora"
+      ],
       "correct": 0
     },
     {
       "question": "Má obeť právo na odbornú pomoc a podporu?",
-      "options": ["Áno", "Nie", "Len pri násilných trestných činoch"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len pri násilných trestných činoch"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Poškodený", "definition": "Osoba, ktorej bolo trestným činom ublížené a môže uplatniť nárok na náhradu škody." },
-    { "term": "Obeť", "definition": "Fyzická osoba, ktorej bola trestným činom spôsobená ujma na zdraví, majetku alebo dôstojnosti." },
-    { "term": "Zúčastnená osoba", "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť." },
-    { "term": "Nárok na náhradu škody", "definition": "Poškodený môže žiadať náhradu škody v adhéznom konaní." },
-    { "term": "Práva obete", "definition": "Obeť má právo na informácie, podporu, ochranu a odbornú pomoc." },
-
-    { "term": "Adhézne konanie", "definition": "Konanie, v ktorom súd rozhoduje o náhrade škody spôsobenej trestným činom." },
-    { "term": "Zhabanie veci", "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom." },
-    { "term": "Prepadnutie veci", "definition": "Trest spočívajúci v odňatí veci patriacej páchateľovi." },
-    { "term": "Právo navrhovať dôkazy", "definition": "Poškodený môže navrhovať vykonanie dôkazov v konaní." },
-    { "term": "Právo na informácie", "definition": "Obeť má právo byť informovaná o stave konania a svojich právach." }
+    {
+      "term": "Poškodený",
+      "definition": "Osoba, ktorej bolo trestným činom ublížené a môže uplatniť nárok na náhradu škody."
+    },
+    {
+      "term": "Obeť",
+      "definition": "Fyzická osoba, ktorej bola trestným činom spôsobená ujma na zdraví, majetku alebo dôstojnosti."
+    },
+    {
+      "term": "Zúčastnená osoba",
+      "definition": "Osoba, ktorej vec môže byť zhabaná alebo prepadnúť."
+    },
+    {
+      "term": "Nárok na náhradu škody",
+      "definition": "Poškodený môže žiadať náhradu škody v adhéznom konaní."
+    },
+    {
+      "term": "Práva obete",
+      "definition": "Obeť má právo na informácie, podporu, ochranu a odbornú pomoc."
+    },
+    {
+      "term": "Adhézne konanie",
+      "definition": "Konanie, v ktorom súd rozhoduje o náhrade škody spôsobenej trestným činom."
+    },
+    {
+      "term": "Zhabanie veci",
+      "definition": "Ochranné opatrenie, ktorým sa odníma vec súvisiaca s trestným činom."
+    },
+    {
+      "term": "Prepadnutie veci",
+      "definition": "Trest spočívajúci v odňatí veci patriacej páchateľovi."
+    },
+    {
+      "term": "Právo navrhovať dôkazy",
+      "definition": "Poškodený môže navrhovať vykonanie dôkazov v konaní."
+    },
+    {
+      "term": "Právo na informácie",
+      "definition": "Obeť má právo byť informovaná o stave konania a svojich právach."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nárok poškodeného",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Kde môže poškodený uplatniť nárok na náhradu škody?",
-          "options": ["V adhéznom konaní", "Len v civilnom konaní", "U prokurátora"],
+          "options": [
+            "V adhéznom konaní",
+            "Len v civilnom konaní",
+            "U prokurátora"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kedy musí poškodený uplatniť nárok?",
-          "options": ["Najneskôr na hlavnom pojednávaní pred začatím dokazovania", "Kedykoľvek počas konania", "Až po rozsudku"],
+          "options": [
+            "Najneskôr na hlavnom pojednávaní pred začatím dokazovania",
+            "Kedykoľvek počas konania",
+            "Až po rozsudku"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Postavenie zúčastnenej osoby",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Aké postavenie má táto osoba?",
-          "options": ["Poškodený", "Zúčastnená osoba", "Obeť"],
+          "options": [
+            "Poškodený",
+            "Zúčastnená osoba",
+            "Obeť"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Aké právo má zúčastnená osoba?",
-          "options": ["Navrhovať dôkazy", "Brániť sa proti zhabaní veci", "Podávať obžalobu"],
+          "options": [
+            "Navrhovať dôkazy",
+            "Brániť sa proti zhabaní veci",
+            "Podávať obžalobu"
+          ],
           "correct": 1
         },
         {
@@ -118,10 +184,41 @@
   "spider": {
     "center": "Poškodený × obeť × zúčastnená osoba",
     "branches": [
-      { "label": "Poškodený (§ 46 TP)", "leaves": ["Kto – osoba so škodou, ujmou na zdraví, nemajetkovou ujmou či ohrozenými právami", "Adhézne konanie – nárok na náhradu škody v trestnom konaní", "Práva – dôkazy, účasť na úkonoch, opravné prostriedky v rozsahu nároku, informácie", "Postavenie – strana konania, ak uplatní nárok"] },
-      { "label": "Obeť (zákon č. 274/2017)", "leaves": ["Kto – širší pojem než poškodený; aj osoby mimo procesu (napr. pozostalí)", "Obzvlášť zraniteľná obeť – dieťa, osoba 75+, zdravotne postihnutá, obete násilia a obchodovania", "Práva – informácie, odborná pomoc, ochrana pred sekundárnou viktimizáciou", "Odškodnenie – pri násilných trestných činoch"] },
-      { "label": "Zúčastnená osoba (§ 47 TP)", "leaves": ["Kto – osoba, ktorej vec bola zaistená alebo odňatá", "Práva – obrana vlastníctva, opravné prostriedky proti zaisteniu, informácie", "Postavenie – nie je stranou konania, má samostatné obhajovacie práva"] },
-      { "label": "Rozdiely", "leaves": ["Poškodený – procesná strana s nárokom (TP)", "Obeť – širší hmotnoprávny pojem (zákon o obetiach)", "Zúčastnená osoba – chráni majetok, nie nárok zo škody"] }
+      {
+        "label": "Poškodený (§ 46 TP)",
+        "leaves": [
+          "Kto – osoba so škodou, ujmou na zdraví, nemajetkovou ujmou či ohrozenými právami",
+          "Adhézne konanie – nárok na náhradu škody v trestnom konaní",
+          "Práva – dôkazy, účasť na úkonoch, opravné prostriedky v rozsahu nároku, informácie",
+          "Postavenie – strana konania, ak uplatní nárok"
+        ]
+      },
+      {
+        "label": "Obeť (zákon č. 274/2017)",
+        "leaves": [
+          "Kto – širší pojem než poškodený; aj osoby mimo procesu (napr. pozostalí)",
+          "Obzvlášť zraniteľná obeť – dieťa, osoba 75+, zdravotne postihnutá, obete násilia a obchodovania",
+          "Práva – informácie, odborná pomoc, ochrana pred sekundárnou viktimizáciou",
+          "Odškodnenie – pri násilných trestných činoch"
+        ]
+      },
+      {
+        "label": "Zúčastnená osoba (§ 47 TP)",
+        "leaves": [
+          "Kto – osoba, ktorej vec bola zaistená alebo odňatá",
+          "Práva – obrana vlastníctva, opravné prostriedky proti zaisteniu, informácie",
+          "Postavenie – nie je stranou konania, má samostatné obhajovacie práva"
+        ]
+      },
+      {
+        "label": "Rozdiely",
+        "leaves": [
+          "Poškodený – procesná strana s nárokom (TP)",
+          "Obeť – širší hmotnoprávny pojem (zákon o obetiach)",
+          "Zúčastnená osoba – chráni majetok, nie nárok zo škody"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Poškodený je procesná strana trestného konania, obeť je širší pojem podľa zákona o obetiach trestných činov a zúčastnená osoba je subjekt, ktorého vec bola zaistená alebo odňatá.\n\nZhrnutie (štátnicové jadro)\nPoškodený podľa § 46 Trestného poriadku je osoba, ktorej bola trestným činom spôsobená škoda, ujma na zdraví alebo nemajetková ujma. Obeť je širší pojem podľa zákona č. 274/2017 Z. z. – zahŕňa každú fyzickú osobu, ktorej boli porušené práva trestným činom, vrátane obzvlášť zraniteľných obetí. Zúčastnená osoba podľa § 47 TP je osoba, ktorej vec bola zaistená alebo odňatá a má samostatné procesné práva na ochranu svojho majetku.\n\n1. Poškodený\nPrávna úprava: § 46 Trestného poriadku.  \nPoškodený je osoba, ktorej bolo trestným činom:\n\nspôsobené ublíženie na zdraví,\n\nspôsobená majetková škoda,\n\nspôsobená nemajetková ujma,\n\nporušené alebo ohrozené jej práva.\n\nPráva poškodeného (§ 46 ods. 3 TP)\nprávo uplatniť nárok na náhradu škody (adhézne konanie),\n\nprávo navrhovať dôkazy,\n\nprávo zúčastniť sa úkonov,\n\nprávo podávať opravné prostriedky v rozsahu nároku,\n\nprávo na informácie o konaní.\n\nPoškodený je stranou konania, ak uplatní nárok na náhradu škody.\n\n2. Obeť\nPrávna úprava: zákon č. 274/2017 Z. z. o obetiach trestných činov.  \nObeť je fyzická osoba, ktorej bolo trestným činom:\n\nublížené na zdraví,\n\nspôsobená majetková alebo nemajetková škoda,\n\nporušené alebo ohrozené jej práva.\n\nObzvlášť zraniteľná obeť (§ 2 zákona o obetiach)\nPatrí sem najmä:\n\ndieťa,\n\nosoba nad 75 rokov,\n\nosoba so zdravotným postihnutím,\n\nobeť obchodovania s ľuďmi, domáceho násilia, sexuálneho násilia, terorizmu,\n\nosoba vystavená zvýšenému riziku viktimizácie.\n\nPráva obete\nprávo na informácie,\n\nprávo na odbornú pomoc,\n\nprávo na ochranu pred sekundárnou viktimizáciou,\n\nprávo na odškodnenie pri násilných trestných činoch.\n\nRozdiel:  \nObeť je širší pojem – zahŕňa aj osoby, ktoré nie sú poškodenými v procesnom zmysle (napr. pozostalí).\n\n3. Zúčastnená osoba\nPrávna úprava: § 47 Trestného poriadku.  \nZúčastnená osoba je subjekt, ktorého vec bola zaistená alebo odňatá v trestnom konaní.\n\nPráva zúčastnenej osoby (§ 47 TP)\nprávo brániť svoje vlastnícke práva,\n\nprávo podávať opravné prostriedky proti rozhodnutiam o zaistení,\n\nprávo byť informovaná o úkonoch týkajúcich sa jej majetku.\n\nZúčastnená osoba nie je stranou konania, ale má samostatné obhajovacie práva.\n\nZapamätaj si (štátnicové jadro)\n– Poškodený = procesná strana podľa TP, uplatňuje nárok na náhradu škody.\n– Obeť = širší pojem podľa zákona o obetiach, zahŕňa aj obzvlášť zraniteľné osoby.\n– Zúčastnená osoba = osoba, ktorej vec bola zaistená alebo odňatá.\n– Poškodený má právo na adhézne konanie, obeť na pomoc a odškodnenie, zúčastnená osoba na ochranu majetku.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., § 46–47 (Slov-Lex)\n– Zákon č. 274/2017 Z. z. o obetiach trestných činov – definícia obete a obzvlášť zraniteľnej obete"
 }

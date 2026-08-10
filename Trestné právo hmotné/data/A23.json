@@ -2,7 +2,13 @@
   "id": "A23",
   "title": "Trestné činy hospodárske",
   "schemaVersion": "1.1",
-  "tags": ["hospodárske", "ekonomické", "daňové", "veriteľ", "účtovníctvo"],
+  "tags": [
+    "hospodárske",
+    "ekonomické",
+    "daňové",
+    "veriteľ",
+    "účtovníctvo"
+  ],
   "theory": [
     {
       "heading": "Skresľovanie údajov hospodárskej a obchodnej evidencie",
@@ -20,46 +26,81 @@
   "quiz": [
     {
       "question": "Čo je skresľovanie údajov hospodárskej evidencie?",
-      "options": ["Zničenie alebo pozmenenie účtovných dokladov", "Bežná chyba v účtovníctve", "Náhodné stratenie bločku"],
+      "options": [
+        "Zničenie alebo pozmenenie účtovných dokladov",
+        "Bežná chyba v účtovníctve",
+        "Náhodné stratenie bločku"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – ide o úmyselné skreslenie údajov.",
       "explanation_incorrect": "Nie – bežná chyba nie je trestná."
     },
     {
       "question": "Čo je poškodzovanie veriteľa?",
-      "options": ["Zvýhodnenie jedného veriteľa alebo zmenšovanie majetku dlžníka", "Bežné splácanie dlhu", "Zvýšenie majetku dlžníka"],
+      "options": [
+        "Zvýhodnenie jedného veriteľa alebo zmenšovanie majetku dlžníka",
+        "Bežné splácanie dlhu",
+        "Zvýšenie majetku dlžníka"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – ide o konanie na úkor veriteľov.",
       "explanation_incorrect": "Nie – bežné splácanie nie je trestné."
     },
     {
       "question": "Ktorý čin je daňovým trestným činom?",
-      "options": ["Skrátenie dane", "Krádež", "Výtržníctvo"],
+      "options": [
+        "Skrátenie dane",
+        "Krádež",
+        "Výtržníctvo"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – skrátenie dane je daňový trestný čin.",
       "explanation_incorrect": "Nie – krádež nie je daňový čin."
     },
     {
       "question": "Čo je chráneným objektom hospodárskych trestných činov?",
-      "options": ["Riadne fungovanie hospodárstva", "Zdravie obyvateľstva", "Verejný poriadok"],
+      "options": [
+        "Riadne fungovanie hospodárstva",
+        "Zdravie obyvateľstva",
+        "Verejný poriadok"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – ide o ochranu hospodárstva a finančných vzťahov.",
       "explanation_incorrect": "Nie – nejde o zdravie ani poriadok."
     },
     {
       "question": "Kedy je konanie trestné?",
-      "options": ["Pri úmyselnom skreslení údajov alebo poškodzovaní veriteľov", "Pri náhodnej chybe", "Pri dobrovoľnom splnení povinnosti"],
+      "options": [
+        "Pri úmyselnom skreslení údajov alebo poškodzovaní veriteľov",
+        "Pri náhodnej chybe",
+        "Pri dobrovoľnom splnení povinnosti"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – úmyselné konanie je trestné.",
       "explanation_incorrect": "Nie – náhodná chyba nie je trestná."
     }
   ],
   "tiles": [
-    { "term": "Skresľovanie údajov", "definition": "Úmyselné pozmenenie alebo zničenie účtovných dokladov." },
-    { "term": "Poškodzovanie veriteľa", "definition": "Konanie dlžníka na úkor veriteľov." },
-    { "term": "Daňový podvod", "definition": "Úmyselné skrátenie dane alebo vylákanie neoprávneného odpočtu." },
-    { "term": "Účtovná evidencia", "definition": "Doklady a záznamy o hospodárskych operáciách." },
-    { "term": "Hospodárstvo", "definition": "Chránený objekt hospodárskych trestných činov." }
+    {
+      "term": "Skresľovanie údajov",
+      "definition": "Úmyselné pozmenenie alebo zničenie účtovných dokladov."
+    },
+    {
+      "term": "Poškodzovanie veriteľa",
+      "definition": "Konanie dlžníka na úkor veriteľov."
+    },
+    {
+      "term": "Daňový podvod",
+      "definition": "Úmyselné skrátenie dane alebo vylákanie neoprávneného odpočtu."
+    },
+    {
+      "term": "Účtovná evidencia",
+      "definition": "Doklady a záznamy o hospodárskych operáciách."
+    },
+    {
+      "term": "Hospodárstvo",
+      "definition": "Chránený objekt hospodárskych trestných činov."
+    }
   ],
   "cases": [
     {
@@ -73,7 +114,11 @@
         },
         {
           "question": "Krok 1: O aký čin ide?",
-          "options": ["Poškodzovanie veriteľa", "Krádež", "Sprenevera"],
+          "options": [
+            "Poškodzovanie veriteľa",
+            "Krádež",
+            "Sprenevera"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o poškodzovanie veriteľa.",
           "explanation_incorrect": "Nie – nejde o majetkový čin voči cudzej veci."
@@ -91,7 +136,11 @@
         },
         {
           "question": "Krok 1: O aký čin ide?",
-          "options": ["Skresľovanie údajov hospodárskej evidencie", "Podvod", "Výtržníctvo"],
+          "options": [
+            "Skresľovanie údajov hospodárskej evidencie",
+            "Podvod",
+            "Výtržníctvo"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o skresľovanie údajov.",
           "explanation_incorrect": "Nie – nejde o podvod ani výtržníctvo."
@@ -108,10 +157,40 @@
   "spider": {
     "center": "Hospodárske TČ",
     "branches": [
-      { "label": "Skresľovanie evidencie (§ 259)", "leaves": ["Podstata – pozmenenie, zničenie, zatajenie či nevedenie účtovných dokladov", "Cieľ – zakryť trestnú činnosť, skresliť výsledok, znížiť daň, poškodiť veriteľov", "Chránené – pravdivosť a transparentnosť účtovníctva"] },
-      { "label": "Poškodzovanie veriteľa (§ 239)", "leaves": ["Podstata – dlžník zmarí alebo sťaží uspokojenie veriteľov", "Formy – prevody a skrývanie majetku, fiktívne zmluvy, darovanie pred exekúciou", "Kľúčový znak – úmyselné konanie proti záujmom veriteľa"] },
-      { "label": "Daňové TČ (§§ 276–279)", "leaves": ["Skrátenie dane (§ 276) – nepravdivé údaje, zatajenie príjmov", "Neodvedenie dane a poistného (§ 277) – neodvedie vybrané či zrazené sumy", "Daňový podvod (§ 277a) – vylákanie daňovej výhody, karuselové podvody", "Nebezpečnosť – zásah do príjmov verejných rozpočtov"] },
-      { "label": "Chránený záujem", "leaves": ["Hospodársky poriadok – transparentnosť a stabilita", "Práva veriteľov – uspokojenie pohľadávok", "Daňový systém – príjmy štátu"] }
+      {
+        "label": "Skresľovanie evidencie (§ 259)",
+        "leaves": [
+          "Podstata – pozmenenie, zničenie, zatajenie či nevedenie účtovných dokladov",
+          "Cieľ – zakryť trestnú činnosť, skresliť výsledok, znížiť daň, poškodiť veriteľov",
+          "Chránené – pravdivosť a transparentnosť účtovníctva"
+        ]
+      },
+      {
+        "label": "Poškodzovanie veriteľa (§ 239)",
+        "leaves": [
+          "Podstata – dlžník zmarí alebo sťaží uspokojenie veriteľov",
+          "Formy – prevody a skrývanie majetku, fiktívne zmluvy, darovanie pred exekúciou",
+          "Kľúčový znak – úmyselné konanie proti záujmom veriteľa"
+        ]
+      },
+      {
+        "label": "Daňové TČ (§§ 276–279)",
+        "leaves": [
+          "Skrátenie dane (§ 276) – nepravdivé údaje, zatajenie príjmov",
+          "Neodvedenie dane a poistného (§ 277) – neodvedie vybrané či zrazené sumy",
+          "Daňový podvod (§ 277a) – vylákanie daňovej výhody, karuselové podvody",
+          "Nebezpečnosť – zásah do príjmov verejných rozpočtov"
+        ]
+      },
+      {
+        "label": "Chránený záujem",
+        "leaves": [
+          "Hospodársky poriadok – transparentnosť a stabilita",
+          "Práva veriteľov – uspokojenie pohľadávok",
+          "Daňový systém – príjmy štátu"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy hospodárske sú upravené v Ôsmej hlave osobitnej časti Trestného zákona. Ich účelom je chrániť hospodársky poriadok, transparentnosť účtovníctva, daňový systém, práva veriteľov a ekonomickú stabilitu. Patria sem najmä skresľovanie údajov hospodárskej evidencie, poškodzovanie veriteľa a daňové trestné činy.\n\n1. Skresľovanie údajov hospodárskej a obchodnej evidencie (§ 259 TZ)\nSkresľovanie údajov hospodárskej evidencie je konanie, pri ktorom páchateľ:\n\númyselne pozmení,\n\nzničí,\n\nzatají,\n\nalebo nevedie účtovné doklady, knihy či povinné záznamy.\n\nTým môže:\n\nzakryť trestnú činnosť,\n\nskresliť hospodársky výsledok,\n\nznížiť daňovú povinnosť,\n\npoškodiť veriteľov alebo obchodných partnerov.\n\nPodstatou je zásah do pravdivosti, úplnosti a transparentnosti účtovníctva, ktoré je základom hospodárskeho života.\n\n2. Poškodzovanie veriteľa (§ 239 TZ)\nPoškodzovanie veriteľa je konanie dlžníka, ktorý zmarí alebo sťaží uspokojenie svojich veriteľov.\n\nTypické formy:\n\nprevod majetku na inú osobu,\n\ndarovanie majetku pred exekúciou,\n\nskrývanie majetku,\n\nfiktívne zmluvy,\n\númyselné zadlžovanie bez možnosti splácania.\n\nKľúčovým znakom je úmyselné konanie proti záujmom veriteľa, ktoré vedie k zmareniu uspokojenia pohľadávky.\n\n3. Daňové trestné činy (§ 276–279 TZ)\nDaňové trestné činy patria medzi najčastejšie hospodárske delikty. Zahŕňajú:\n\nSkrátenie dane (§ 276 TZ)\nPáchateľ uvedie nepravdivé údaje, zatají príjmy alebo neoprávnene uplatní výdavky, čím zníži daňovú povinnosť.\n\nNeodvedenie dane a poistného (§ 277 TZ)\nPáchateľ neodvedie daň alebo poistné, ktoré vybral alebo zrazil (napr. DPH, odvody zamestnancov).\n\nDaňový podvod (§ 277a TZ)\nZávažné konanie, často organizované, pri ktorom páchateľ vyláka daňovú výhodu, typicky v oblasti DPH (karuselové podvody).\n\nDaňové trestné činy majú vysokú spoločenskú nebezpečnosť, keďže zasahujú do príjmov verejných rozpočtov.\n\nPorovnanie (bez tabuľky)\nSkresľovanie evidencie  \n– zásah do účtovníctva, falšovanie, ničenie alebo zatajenie dokladov.\n\nPoškodzovanie veriteľa  \n– dlžník úmyselne marí uspokojenie veriteľa (prevody majetku, skrývanie).\n\nDaňové trestné činy  \n– skrátenie dane, neodvedenie dane a poistného, daňový podvod.\n\nZapamätaj si (štátnicové jadro)\n– Skresľovanie evidencie = pozmenenie, zničenie alebo zatajenie účtovných dokladov.\n– Poškodzovanie veriteľa = úmyselné marenie uspokojenia veriteľa.\n– Daňové trestné činy = skrátenie dane, neodvedenie dane a poistného, daňový podvod.\n– Hospodárske trestné činy chránia transparentnosť účtovníctva, daňový systém a práva veriteľov.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 239, 259, 276–279 (overené na Slov-Lex)\n– Komentár k Trestnému zákonu – hospodárske trestné činy (Čentéš, Šramel)\n– Ministerstvo financií SR – metodické usmernenia k daňovým trestným činom"
 }

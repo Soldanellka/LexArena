@@ -2,13 +2,22 @@
   "id": "13",
   "title": "Procesné podmienky",
   "schemaVersion": "1.1",
-  "tags": ["procesné podmienky", "litispendencia", "res iudicata", "prekážka konania"],
-  "summary": "Procesné podmienky sú predpoklady, za ktorých môže súd vo veci konať a vydať meritórne rozhodnutie – na rozdiel od hmotnoprávnych predpokladov, ktoré rozhodujú o úspechu žaloby vo veci samej. Medzi procesné podmienky patrí právomoc súdu, vecná a miestna príslušnosť, procesná subjektivita a procesná spôsobilosť účastníkov, riadne zastúpenie, ak je povinné, zaplatenie súdneho poplatku, ako aj neexistencia prekážky litispendencie (o tej istej veci medzi tými istými stranami už prebieha skoršie konanie) a prekážky res iudicata (o tej istej veci už bolo právoplatne rozhodnuté).\n\nSúd skúma procesné podmienky priebežne, niektoré z úradnej moci kedykoľvek počas konania (napr. vecnú príslušnosť, právomoc), iné najmä na začiatku konania alebo na námietku strany (napr. miestnu príslušnosť). Pri odstrániteľnom nedostatku procesnej podmienky (napr. nezaplatený súdny poplatok, chýbajúce zastúpenie) súd vyzve účastníka na jeho odstránenie; ak nedostatok nemožno odstrániť alebo nie je odstránený, súd konanie zastaví.\n\nZapamätaj si:\n- Procesné podmienky = predpoklady, za ktorých môže súd vo veci vôbec konať a rozhodnúť.\n- Patria sem právomoc, príslušnosť, procesná subjektivita a spôsobilosť, súdny poplatok, zastúpenie.\n- Litispendencia = prekážka skoršieho prebiehajúceho konania o tej istej veci.\n- Res iudicata = prekážka už právoplatne rozhodnutej veci.\n- Neodstrániteľný nedostatok procesnej podmienky vedie k zastaveniu konania."
-  ,
+  "tags": [
+    "procesné podmienky",
+    "litispendencia",
+    "res iudicata",
+    "prekážka konania"
+  ],
+  "summary": "Procesné podmienky sú zákonom stanovené predpoklady, za ktorých môže súd vôbec konať a meritórne rozhodnúť.\nAk niektorá procesná podmienka chýba, súd sa nemôže zaoberať vecou samej – konanie musí zastaviť alebo vyzvať na odstránenie nedostatku.\n\nProcesné podmienky sa odlišujú od hmotnoprávnych predpokladov, ktoré rozhodujú o úspechu žaloby vo veci samej.\n\nSúd skúma procesné podmienky ex offo počas celého konania.\n\nZákladné procesné podmienky\nNa strane súdu\nPrávomoc súdu – či vec patrí súdom ako celku.\n\nVecná príslušnosť – ktorý stupeň súdu koná na prvom stupni.\n\nMiestna príslušnosť – ktorý konkrétny súd vec prejedná.\n\nNa strane účastníkov\nProcesná subjektivita – spôsobilosť byť stranou konania.\n\nProcesná spôsobilosť – spôsobilosť konať vlastnými úkonmi.\n\nRiadne zastúpenie, ak je povinné (napr. advokát v dovolacom konaní).\n\nZaplatenie súdneho poplatku, ak sa vyžaduje.\n\nNa strane veci (negatívne prekážky)\nLitispendencia – o tej istej veci medzi tými istými stranami už prebieha konanie.\n\nRes iudicata – o tej istej veci už bolo právoplatne rozhodnuté.\n\nSkúmanie procesných podmienok\nSúd skúma procesné podmienky priebežne počas celého konania:\n\nEx offo kedykoľvek: právomoc, vecná príslušnosť, subjektivita, spôsobilosť, litispendencia, res iudicata.\n\nNajmä na začiatku konania alebo na námietku: miestna príslušnosť, poplatková povinnosť, zastúpenie.\n\nOdstrániteľné a neodstrániteľné nedostatky\nOdstrániteľné nedostatky\nnezaplatený súdny poplatok,\n\nchýbajúce povinné zastúpenie,\n\nvady podania,\n\nniektoré nedostatky príslušnosti.\n\nSúd vyzve účastníka na odstránenie nedostatku v určenej lehote.\n\nNeodstrániteľné nedostatky\nnedostatok právomoci,\n\nlitispendencia,\n\nres iudicata,\n\nnedostatok procesnej subjektivity.\n\nVedú k zastaveniu konania.\n\nZapamätaj si (štátnicové jadro)\nProcesné podmienky = predpoklady, aby súd mohol konať a rozhodnúť.\n\nPatria sem: právomoc, príslušnosť, subjektivita, spôsobilosť, poplatok, zastúpenie.\n\nLitispendencia = prekážka skoršieho konania.\n\nRes iudicata = prekážka právoplatne rozhodnutej veci.\n\nNeodstrániteľný nedostatok → zastavenie konania.\n\nSúd skúma procesné podmienky ex offo počas celého konania.\n\nProcesné podmienky sú na strane súdu, strán aj veci.\n\nZdroj:\nCSP (160/2015 Z. z.); CMP (161/2015 Z. z.); SSP (162/2015 Z. z.); judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo sú procesné podmienky?",
-      "options": ["Predpoklady, za ktorých môže súd vo veci konať a meritórne rozhodnúť", "Podmienky úspechu žaloby vo veci samej", "Zmluvné podmienky dohodnuté medzi stranami", "Podmienky na uzavretie zmieru"],
+      "options": [
+        "Predpoklady, za ktorých môže súd vo veci konať a meritórne rozhodnúť",
+        "Podmienky úspechu žaloby vo veci samej",
+        "Zmluvné podmienky dohodnuté medzi stranami",
+        "Podmienky na uzavretie zmieru"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Procesné podmienky sa netýkajú toho, či žalobca vyhrá spor, ale toho, či súd môže o veci vôbec konať.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Ktorá z nasledujúcich je procesnou podmienkou?",
-      "options": ["Existencia platnej zmluvy medzi stranami", "Právomoc a príslušnosť súdu, procesná subjektivita a spôsobilosť účastníkov", "Výška spôsobenej škody", "Zavinenie škodcu"],
+      "options": [
+        "Existencia platnej zmluvy medzi stranami",
+        "Právomoc a príslušnosť súdu, procesná subjektivita a spôsobilosť účastníkov",
+        "Výška spôsobenej škody",
+        "Zavinenie škodcu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Právomoc, príslušnosť a spôsobilosť účastníkov patria medzi procesné podmienky, ktoré súd musí skúmať pred meritórnym rozhodnutím.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo je litispendencia?",
-      "options": ["Prekážka spočívajúca v tom, že o tej istej veci medzi tými istými stranami už prebieha skoršie konanie", "Premlčanie uplatneného nároku", "Zánik právnickej osoby ako účastníka", "Nedostatok plnej moci zástupcu"],
+      "options": [
+        "Prekážka spočívajúca v tom, že o tej istej veci medzi tými istými stranami už prebieha skoršie konanie",
+        "Premlčanie uplatneného nároku",
+        "Zánik právnickej osoby ako účastníka",
+        "Nedostatok plnej moci zástupcu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Litispendencia bráni tomu, aby o tej istej veci prebiehali súbežne dve konania medzi tými istými stranami.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo je res iudicata?",
-      "options": ["Prekážka rozhodnutej veci – o tej istej veci medzi tými istými stranami už bolo právoplatne rozhodnuté", "Právo účastníka podať odvolanie", "Povinnosť zaplatiť súdny poplatok", "Dôvod na prerušenie konania na neurčito"],
+      "options": [
+        "Prekážka rozhodnutej veci – o tej istej veci medzi tými istými stranami už bolo právoplatne rozhodnuté",
+        "Právo účastníka podať odvolanie",
+        "Povinnosť zaplatiť súdny poplatok",
+        "Dôvod na prerušenie konania na neurčito"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Prekážka res iudicata bráni opätovnému rozhodovaniu o veci, o ktorej už bolo právoplatne rozhodnuté.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Čo urobí súd pri odstrániteľnom nedostatku procesnej podmienky (napr. nezaplatený súdny poplatok)?",
-      "options": ["Vyzve účastníka na odstránenie nedostatku v určenej lehote, inak ďalej postupuje podľa zákona (napr. zastaví konanie)", "Rozhodne vo veci samej bez ďalšieho", "Bez ďalšieho žalobu vždy zamietne ako nedôvodnú", "Postúpi vec orgánu iného štátu"],
+      "options": [
+        "Vyzve účastníka na odstránenie nedostatku v určenej lehote, inak ďalej postupuje podľa zákona (napr. zastaví konanie)",
+        "Rozhodne vo veci samej bez ďalšieho",
+        "Bez ďalšieho žalobu vždy zamietne ako nedôvodnú",
+        "Postúpi vec orgánu iného štátu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri odstrániteľných nedostatkoch dostáva účastník možnosť nápravy skôr, než súd vyvodí procesné dôsledky.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Procesné podmienky", "definition": "Predpoklady, za ktorých môže súd vo veci konať a meritórne rozhodnúť." },
-    { "term": "Litispendencia", "definition": "Prekážka spočívajúca v tom, že o tej istej veci medzi tými istými stranami už prebieha skoršie konanie." },
-    { "term": "Res iudicata", "definition": "Prekážka rozhodnutej veci – o tej istej veci už bolo právoplatne rozhodnuté." },
-    { "term": "Odstrániteľný nedostatok", "definition": "Nedostatok procesnej podmienky, ktorý možno na výzvu súdu odstrániť (napr. doplatenie poplatku)." },
-    { "term": "Neodstrániteľný nedostatok", "definition": "Nedostatok, ktorý nemožno napraviť a vedie k zastaveniu konania (napr. nedostatok právomoci)." }
+    {
+      "term": "Procesné podmienky",
+      "definition": "Predpoklady, za ktorých môže súd vo veci konať a meritórne rozhodnúť."
+    },
+    {
+      "term": "Litispendencia",
+      "definition": "Prekážka spočívajúca v tom, že o tej istej veci medzi tými istými stranami už prebieha skoršie konanie."
+    },
+    {
+      "term": "Res iudicata",
+      "definition": "Prekážka rozhodnutej veci – o tej istej veci už bolo právoplatne rozhodnuté."
+    },
+    {
+      "term": "Odstrániteľný nedostatok",
+      "definition": "Nedostatok procesnej podmienky, ktorý možno na výzvu súdu odstrániť (napr. doplatenie poplatku)."
+    },
+    {
+      "term": "Neodstrániteľný nedostatok",
+      "definition": "Nedostatok, ktorý nemožno napraviť a vedie k zastaveniu konania (napr. nedostatok právomoci)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Druhá žaloba o tú istú vec",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalobca podá žalobu o zaplatenie tej istej sumy z tej istej zmluvy na inom súde, hoci konanie o rovnakom nároku medzi tými istými stranami už prebieha na inom súde.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca podá žalobu o zaplatenie tej istej sumy z tej istej zmluvy na inom súde, hoci konanie o rovnakom nároku medzi tými istými stranami už prebieha na inom súde.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako súd naloží s neskoršou žalobou?",
-          "options": ["Konanie zastaví pre prekážku litispendencie", "Vec spojí a rozhodne o tom istom nároku dvakrát", "Žalobe automaticky vyhovie"],
+          "options": [
+            "Konanie zastaví pre prekážku litispendencie",
+            "Vec spojí a rozhodne o tom istom nároku dvakrát",
+            "Žalobe automaticky vyhovie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súbežné konanie o tej istej veci medzi tými istými stranami je dôvodom na zastavenie neskoršieho konania.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo keby už predchádzajúce konanie skončilo právoplatným rozsudkom?",
-          "options": ["Išlo by o prekážku res iudicata a súd by konanie tiež zastavil", "Súd by musel rozhodnúť znova bez akéhokoľvek obmedzenia", "Prekážka by sa v takom prípade už neuplatnila"],
+          "options": [
+            "Išlo by o prekážku res iudicata a súd by konanie tiež zastavil",
+            "Súd by musel rozhodnúť znova bez akéhokoľvek obmedzenia",
+            "Prekážka by sa v takom prípade už neuplatnila"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Po právoplatnom rozhodnutí veci nastupuje prekážka res iudicata, ktorá tiež vedie k zastaveniu ďalšieho konania o tej istej veci.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Nezaplatený súdny poplatok",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Žalobca podal žalobu, no k nej nepriložil doklad o zaplatení súdneho poplatku ani ho neuhradil.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca podal žalobu, no k nej nepriložil doklad o zaplatení súdneho poplatku ani ho neuhradil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako súd postupuje?",
-          "options": ["Vyzve žalobcu na zaplatenie poplatku v určenej lehote", "Bez ďalšieho žalobu meritórne zamietne", "Žalobu ihneď postúpi exekútorovi"],
+          "options": [
+            "Vyzve žalobcu na zaplatenie poplatku v určenej lehote",
+            "Bez ďalšieho žalobu meritórne zamietne",
+            "Žalobu ihneď postúpi exekútorovi"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nezaplatenie súdneho poplatku je odstrániteľným nedostatkom, na ktorý súd žalobcu najprv vyzve.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Čo ak žalobca poplatok ani na výzvu nezaplatí?",
-          "options": ["Súd konanie zastaví pre nesplnenie procesnej podmienky", "Súd napriek tomu vo veci rozhodne", "Nezaplatenie poplatku nemá žiadny procesný následok"],
+          "options": [
+            "Súd konanie zastaví pre nesplnenie procesnej podmienky",
+            "Súd napriek tomu vo veci rozhodne",
+            "Nezaplatenie poplatku nemá žiadny procesný následok"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak sa odstrániteľný nedostatok neodstráni ani na výzvu, súd konanie zastaví.",
@@ -120,12 +188,64 @@
   "spider": {
     "center": "Procesné podmienky – predpoklady konania a rozhodnutia × odstrániteľné × neodstrániteľné × prekážky konania",
     "branches": [
-      { "label": "Pojem procesných podmienok", "leaves": ["podmienky stanovené zákonom", "predpoklady, aby súd mohol konať a meritórne rozhodnúť", "súd na ne prihliada ex offo počas celého konania", "ak chýbajú → súd sa vecou samej nemôže zaoberať", "odlišné od hmotnoprávnych predpokladov (tie rozhodujú o úspechu žaloby)"] },
-      { "label": "Procesné podmienky na strane súdu", "leaves": ["právomoc súdu – či vec patrí súdom ako celku", "vecná príslušnosť – ktorý stupeň súdu koná", "miestna príslušnosť – ktorý konkrétny súd koná", "riadne obsadenie súdu, nezaujatosť sudcu"] },
-      { "label": "Procesné podmienky na strane strán", "leaves": ["procesná subjektivita – byť stranou konania", "procesná spôsobilosť – konať vlastnými úkonmi", "riadne zastúpenie, ak je povinné (napr. advokát v dovolacom konaní)"] },
-      { "label": "Vecné procesné podmienky", "leaves": ["zaplatenie súdneho poplatku, ak sa vyžaduje", "riadne podanie bez vád", "určitosť a zrozumiteľnosť návrhu"] },
-      { "label": "Negatívne prekážky konania", "leaves": ["litispendencia – prekážka skoršieho konania", "res iudicata – prekážka právoplatne rozhodnutej veci", "ich existencia bráni konaniu"] },
-      { "label": "Odstrániteľné a neodstrániteľné vady", "leaves": ["Odstrániteľné vady", "nezaplatený súdny poplatok", "chýbajúce povinné zastúpenie", "vady podania", "→ súd vyzve účastníka na odstránenie nedostatku v lehote", "Neodstrániteľné vady", "nedostatok právomoci", "litispendencia", "res iudicata", "→ vedú k zastaveniu konania"] }
+      {
+        "label": "Pojem procesných podmienok",
+        "leaves": [
+          "podmienky stanovené zákonom",
+          "predpoklady, aby súd mohol konať a meritórne rozhodnúť",
+          "súd na ne prihliada ex offo počas celého konania",
+          "ak chýbajú → súd sa vecou samej nemôže zaoberať",
+          "odlišné od hmotnoprávnych predpokladov (tie rozhodujú o úspechu žaloby)"
+        ]
+      },
+      {
+        "label": "Procesné podmienky na strane súdu",
+        "leaves": [
+          "právomoc súdu – či vec patrí súdom ako celku",
+          "vecná príslušnosť – ktorý stupeň súdu koná",
+          "miestna príslušnosť – ktorý konkrétny súd koná",
+          "riadne obsadenie súdu, nezaujatosť sudcu"
+        ]
+      },
+      {
+        "label": "Procesné podmienky na strane strán",
+        "leaves": [
+          "procesná subjektivita – byť stranou konania",
+          "procesná spôsobilosť – konať vlastnými úkonmi",
+          "riadne zastúpenie, ak je povinné (napr. advokát v dovolacom konaní)"
+        ]
+      },
+      {
+        "label": "Vecné procesné podmienky",
+        "leaves": [
+          "zaplatenie súdneho poplatku, ak sa vyžaduje",
+          "riadne podanie bez vád",
+          "určitosť a zrozumiteľnosť návrhu"
+        ]
+      },
+      {
+        "label": "Negatívne prekážky konania",
+        "leaves": [
+          "litispendencia – prekážka skoršieho konania",
+          "res iudicata – prekážka právoplatne rozhodnutej veci",
+          "ich existencia bráni konaniu"
+        ]
+      },
+      {
+        "label": "Odstrániteľné a neodstrániteľné vady",
+        "leaves": [
+          "Odstrániteľné vady",
+          "nezaplatený súdny poplatok",
+          "chýbajúce povinné zastúpenie",
+          "vady podania",
+          "→ súd vyzve účastníka na odstránenie nedostatku v lehote",
+          "Neodstrániteľné vady",
+          "nedostatok právomoci",
+          "litispendencia",
+          "res iudicata",
+          "→ vedú k zastaveniu konania"
+        ]
+      }
     ]
   }
 }

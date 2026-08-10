@@ -1,7 +1,7 @@
 {
   "id": "22",
   "title": "Prevencia v občianskom práve. Všeobecná zodpovednosť za škodu",
-  "summary": "Preventívna povinnosť (§ 415–419 OZ) zaväzuje každého počínať si tak, aby nedochádzalo ku škodám. Všeobecná zodpovednosť za škodu (§ 420 OZ): protiprávny úkon, škoda, príčinná súvislosť a zavinenie. Zavinenie sa predpokladá. Liberácia: preukázanie, že škodu nezavinil.",
+  "summary": "Preventívna povinnosť (§ 415–419 OZ)\nPrevencia je základný princíp občianskoprávnej zodpovednosti. Každý je povinný počínať si tak, aby nedochádzalo ku škodám na zdraví, majetku, prírode či právach iných osôb. Ide o všeobecnú povinnosť konať opatrne, predvídať následky svojho konania a zabrániť škodám, ktoré možno rozumne očakávať.\n\nPreventívna povinnosť zahŕňa:\n– povinnosť zdržať sa konania, ktoré môže spôsobiť škodu,\n– povinnosť vykonať opatrenia na jej odvrátenie,\n– povinnosť upozorniť na hroziacu škodu, ak ju nemožno zabrániť.\n\nPorušenie preventívnej povinnosti je často prvým krokom k vzniku zodpovednosti za škodu.\n\nVšeobecná zodpovednosť za škodu (§ 420 OZ)\nVšeobecná zodpovednosť za škodu je zodpovednosť založená na zavinení. Pre vznik povinnosti nahradiť škodu musia byť splnené štyri podmienky:\n\nProtiprávny úkon – konanie alebo opomenutie, ktoré porušuje právnu povinnosť.\n\nŠkoda – majetková ujma (skutočná škoda + ušlý zisk) alebo nemajetková ujma.\n\nPríčinná súvislosť – škoda musí byť následkom protiprávneho konania.\n\nZavinenie – úmyselné alebo nedbanlivostné.\n\nZavinenie sa predpokladá, dlžník sa musí zbaviť zodpovednosti tým, že preukáže, že škodu nezavinil (liberácia). Ide o tzv. domnienku zavinenia, ktorá výrazne posilňuje postavenie poškodeného.\n\nFormy náhrady škody (§ 442 OZ)\n– uvedenie do pôvodného stavu,\n– peňažná náhrada, ak uvedenie do pôvodného stavu nie je možné alebo účelné.\n\nVšeobecná zodpovednosť za škodu je základným pilierom civilného deliktu a dopĺňa preventívnu povinnosť – ak prevencia zlyhá, nastupuje reparácia škody.\n\nZdroje: OZ (40/1964 Zb.), § 415–419, § 420, § 442; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je preventívna povinnosť v OZ (§ 415)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Preventívna povinnosť (§ 415 OZ)", "definition": "Každý je povinný počínať si tak, aby nedochádzalo ku škodám." },
-    { "term": "Predpoklady zodpovednosti (§ 420 OZ)", "definition": "Protiprávny úkon, škoda, príčinná súvislosť a zavinenie." },
-    { "term": "Presumpcia zavinenia", "definition": "Zavinenie sa predpokladá, škodca musí preukázať opak." },
-    { "term": "Kauzálny nexus", "definition": "Vzťah príčiny a následku medzi protiprávnym úkonom a škodou." },
-    { "term": "Liberácia", "definition": "Zbavenie sa zodpovednosti preukázaním, že škodu škodca nezavinil." }
+    {
+      "term": "Preventívna povinnosť (§ 415 OZ)",
+      "definition": "Každý je povinný počínať si tak, aby nedochádzalo ku škodám."
+    },
+    {
+      "term": "Predpoklady zodpovednosti (§ 420 OZ)",
+      "definition": "Protiprávny úkon, škoda, príčinná súvislosť a zavinenie."
+    },
+    {
+      "term": "Presumpcia zavinenia",
+      "definition": "Zavinenie sa predpokladá, škodca musí preukázať opak."
+    },
+    {
+      "term": "Kauzálny nexus",
+      "definition": "Vzťah príčiny a následku medzi protiprávnym úkonom a škodou."
+    },
+    {
+      "term": "Liberácia",
+      "definition": "Zbavenie sa zodpovednosti preukázaním, že škodu škodca nezavinil."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Porušenie prevenčnej povinnosti",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vlastník nechá na chodníku pred domom rozliaty olej a neurobí nič, aby zabránil možnému úrazu okoloidúcich.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník nechá na chodníku pred domom rozliaty olej a neurobí nič, aby zabránil možnému úrazu okoloidúcich.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akú povinnosť tým vlastník porušuje?",
-          "options": ["Preventívnu povinnosť podľa § 415 OZ", "Povinnosť platiť daň z nehnuteľnosti", "Povinnosť uzavrieť poistenie majetku"],
+          "options": [
+            "Preventívnu povinnosť podľa § 415 OZ",
+            "Povinnosť platiť daň z nehnuteľnosti",
+            "Povinnosť uzavrieť poistenie majetku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 415 OZ ukladá každému povinnosť počínať si tak, aby nedochádzalo ku škodám.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo ak niekto na oleji skutočne uklzne a zraní sa?",
-          "options": ["Môžu byť splnené predpoklady všeobecnej zodpovednosti za škodu podľa § 420 OZ", "Vlastník nikdy nenesie žiadnu zodpovednosť", "Zodpovedá výlučne zranená osoba sama"],
+          "options": [
+            "Môžu byť splnené predpoklady všeobecnej zodpovednosti za škodu podľa § 420 OZ",
+            "Vlastník nikdy nenesie žiadnu zodpovednosť",
+            "Zodpovedá výlučne zranená osoba sama"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Porušenie prevenčnej povinnosti môže založiť zodpovednosť za škodu, ak sú splnené aj ostatné predpoklady.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Dôkazné bremeno pri zavinení",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Poškodený žaluje škodcu o náhradu škody a preukáže protiprávny úkon, vznik škody aj príčinnú súvislosť medzi nimi.", "options": [], "correct": 0 },
+        {
+          "question": "Poškodený žaluje škodcu o náhradu škody a preukáže protiprávny úkon, vznik škody aj príčinnú súvislosť medzi nimi.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí poškodený navyše preukazovať aj zavinenie škodcu?",
-          "options": ["Nie, zavinenie sa predpokladá, dôkazné bremeno o jeho absencii nesie škodca", "Áno, poškodený musí preukázať aj úmysel škodcu", "Áno, inak zodpovednosť vôbec nevznikne"],
+          "options": [
+            "Nie, zavinenie sa predpokladá, dôkazné bremeno o jeho absencii nesie škodca",
+            "Áno, poškodený musí preukázať aj úmysel škodcu",
+            "Áno, inak zodpovednosť vôbec nevznikne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zavinenie sa pri všeobecnej zodpovednosti podľa § 420 OZ predpokladá.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Ako sa môže škodca zodpovednosti zbaviť?",
-          "options": ["Preukázaním, že škodu nezavinil (liberácia)", "Iba zaplatením preddavku poškodenému", "Škodca sa zodpovednosti zbaviť nemôže nikdy"],
+          "options": [
+            "Preukázaním, že škodu nezavinil (liberácia)",
+            "Iba zaplatením preddavku poškodenému",
+            "Škodca sa zodpovednosti zbaviť nemôže nikdy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Škodca sa môže zbaviť zodpovednosti preukázaním absencie zavinenia.",
@@ -142,12 +181,60 @@
   "spider": {
     "center": "Prevencia (§ 415–419 OZ) a všeobecná zodpovednosť za škodu (§ 420 OZ) (predchádzanie škodám a reparácia škody pri porušení povinnosti)",
     "branches": [
-      { "label": "Preventívna povinnosť (§ 415 OZ)", "leaves": ["každý je povinný konať tak, aby nedochádzalo ku škodám", "platí pre zdravie, majetok, prírodu, práva iných", "základný princíp civilnej zodpovednosti", "porušenie prevencie býva prvým krokom k vzniku škody"] },
-      { "label": "Obsah preventívnej povinnosti", "leaves": ["zdržať sa konania, ktoré môže spôsobiť škodu", "vykonať opatrenia na odvrátenie škody", "upozorniť na hroziacu škodu, ak jej nemožno zabrániť", "povinnosť predvídať následky svojho konania"] },
-      { "label": "Všeobecná zodpovednosť za škodu (§ 420 OZ)", "leaves": ["založená na zavinení", "domnienka zavinenia, dlžník sa musí liberovať", "chráni poškodeného, posilňuje jeho postavenie", "základ civilného deliktu"] },
-      { "label": "Podmienky vzniku zodpovednosti", "leaves": ["protiprávny úkon: konanie alebo opomenutie porušujúce právnu povinnosť", "škoda majetková: skutočná škoda a ušlý zisk", "škoda nemajetková: nemajetková ujma", "príčinná súvislosť: škoda musí byť následkom protiprávneho konania", "zavinenie: úmysel alebo nedbanlivosť, predpokladá sa"] },
-      { "label": "Formy náhrady škody (§ 442 OZ)", "leaves": ["uvedenie do pôvodného stavu", "peňažná náhrada, ak uvedenie nie je možné alebo účelné", "cieľ: úplná reparácia škody"] },
-      { "label": "Význam pre prax", "leaves": ["prevencia minimalizuje riziko sporov", "všeobecná zodpovednosť poskytuje poškodenému účinnú ochranu", "domnienka zavinenia uľahčuje dokazovanie", "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti"] }
+      {
+        "label": "Preventívna povinnosť (§ 415 OZ)",
+        "leaves": [
+          "každý je povinný konať tak, aby nedochádzalo ku škodám",
+          "platí pre zdravie, majetok, prírodu, práva iných",
+          "základný princíp civilnej zodpovednosti",
+          "porušenie prevencie býva prvým krokom k vzniku škody"
+        ]
+      },
+      {
+        "label": "Obsah preventívnej povinnosti",
+        "leaves": [
+          "zdržať sa konania, ktoré môže spôsobiť škodu",
+          "vykonať opatrenia na odvrátenie škody",
+          "upozorniť na hroziacu škodu, ak jej nemožno zabrániť",
+          "povinnosť predvídať následky svojho konania"
+        ]
+      },
+      {
+        "label": "Všeobecná zodpovednosť za škodu (§ 420 OZ)",
+        "leaves": [
+          "založená na zavinení",
+          "domnienka zavinenia, dlžník sa musí liberovať",
+          "chráni poškodeného, posilňuje jeho postavenie",
+          "základ civilného deliktu"
+        ]
+      },
+      {
+        "label": "Podmienky vzniku zodpovednosti",
+        "leaves": [
+          "protiprávny úkon: konanie alebo opomenutie porušujúce právnu povinnosť",
+          "škoda majetková: skutočná škoda a ušlý zisk",
+          "škoda nemajetková: nemajetková ujma",
+          "príčinná súvislosť: škoda musí byť následkom protiprávneho konania",
+          "zavinenie: úmysel alebo nedbanlivosť, predpokladá sa"
+        ]
+      },
+      {
+        "label": "Formy náhrady škody (§ 442 OZ)",
+        "leaves": [
+          "uvedenie do pôvodného stavu",
+          "peňažná náhrada, ak uvedenie nie je možné alebo účelné",
+          "cieľ: úplná reparácia škody"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "prevencia minimalizuje riziko sporov",
+          "všeobecná zodpovednosť poskytuje poškodenému účinnú ochranu",
+          "domnienka zavinenia uľahčuje dokazovanie",
+          "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti"
+        ]
+      }
     ]
   }
 }

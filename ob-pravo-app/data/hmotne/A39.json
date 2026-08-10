@@ -1,7 +1,7 @@
 {
   "id": "39",
   "title": "Zmluva o dôchodku, stávka a hra",
-  "summary": "Zmluva o dôchodku (§ 842-844 OZ): jeden záväzok sa vypláca v dôchodkových dávkach po dobu dohodnutú alebo po dobu života. Stávka a hra (§ 845-846 OZ): nevzniká žalovateľná pohľadávka - ide o naturálnu obligáciu. Výnimka: hazardné hry povolené zákonom (zákon o hazardných hrách). Víťaz nemá vymáhateľný nárok na výhru zo stávky.",
+  "summary": "Zmluva o dôchodku (§ 842–844 OZ)\nZmluva o dôchodku je záväzok, v ktorom sa jedna strana zaväzuje vyplácať druhej strane dôchodkové dávky počas dohodnutej doby alebo po dobu života oprávneného.\nPodstatné znaky:\n– pravidelné plnenie (mesačné, ročné),\n– dlhodobý charakter,\n– môže byť odplatná aj bezodplatná.\n\nDôchodok môže byť:\n– doživotný – vypláca sa až do smrti oprávneného,\n– časovo obmedzený – napr. na 10 rokov.\n\nZmluva musí obsahovať výšku dávok, periodicitu a podmienky zániku.\nZáväzok zaniká najmä uplynutím doby alebo smrťou oprávneného pri doživotnom dôchodku.\n\nStávka a hra (§ 845–846 OZ)\nStávka a hra sú záväzky, pri ktorých nevzniká žalovateľná pohľadávka – ide o naturálnu obligáciu.\nTo znamená:\n– víťaz nemá vymáhateľný nárok na výhru,\n– ak mu výhra bola dobrovoľne vyplatená, nemožno žiadať jej vrátenie.\n\nPodstatné znaky:\n– výsledok závisí od náhody alebo zručnosti,\n– právny poriadok nechráni nárok na výhru.\n\nVýnimka – hazardné hry\nAk ide o hazardné hry povolené zákonom (zákon o hazardných hrách), vzniká vymáhateľný nárok na výhru.\nSem patria:\n– lotérie,\n– stávkové hry,\n– kasínové hry,\n– kurzové stávky.\n\nV týchto prípadoch je prevádzkovateľ povinný vyplatiť výhru podľa pravidiel hry.\n\nPodstata rozdielov\n– Zmluva o dôchodku: dlhodobé, pravidelné plnenie, žalovateľný záväzok.\n– Stávka a hra: naturálna obligácia, nevymáhateľná výhra.\n– Hazardné hry: výnimka – výhra je vymáhateľná, ak je hra zákonne povolená.\n\nZdroje: OZ (40/1964 Zb.), § 842–846; zákon o hazardných hrách; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je zmluva o dôchodku (§ 842 OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluva o dôchodku (§ 842 OZ)", "definition": "Záväzok vyplácať opakované dávky na dohodnutú dobu alebo na dobu života oprávneného." },
-    { "term": "Naturálna obligácia", "definition": "Záväzok, ktorý existuje, ale nemožno ho súdne vymáhať." },
-    { "term": "Stávka a hra (§ 845 OZ)", "definition": "Nevzniká z nich súdne vymáhateľná pohľadávka." },
-    { "term": "Dobrovoľné plnenie naturálnej obligácie", "definition": "Ak dlžník dobrovoľne plní, plnenie je platné a nemožno ho žiadať späť." },
-    { "term": "Výnimka pre povolené hazardné hry", "definition": "Pohľadávky zo štátom povolených hier môžu byť žalovateľné." }
+    {
+      "term": "Zmluva o dôchodku (§ 842 OZ)",
+      "definition": "Záväzok vyplácať opakované dávky na dohodnutú dobu alebo na dobu života oprávneného."
+    },
+    {
+      "term": "Naturálna obligácia",
+      "definition": "Záväzok, ktorý existuje, ale nemožno ho súdne vymáhať."
+    },
+    {
+      "term": "Stávka a hra (§ 845 OZ)",
+      "definition": "Nevzniká z nich súdne vymáhateľná pohľadávka."
+    },
+    {
+      "term": "Dobrovoľné plnenie naturálnej obligácie",
+      "definition": "Ak dlžník dobrovoľne plní, plnenie je platné a nemožno ho žiadať späť."
+    },
+    {
+      "term": "Výnimka pre povolené hazardné hry",
+      "definition": "Pohľadávky zo štátom povolených hier môžu byť žalovateľné."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Nevymáhateľná stávka medzi priateľmi",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Dvaja priatelia sa súkromne stavili o 50 eur na výsledok športového zápasu, mimo akejkoľvek povolenej hazardnej hry.", "options": [], "correct": 0 },
+        {
+          "question": "Dvaja priatelia sa súkromne stavili o 50 eur na výsledok športového zápasu, mimo akejkoľvek povolenej hazardnej hry.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže víťaz stávky svoju výhru vymáhať na súde, ak mu ju druhý priateľ odmietne zaplatiť?",
-          "options": ["Nie, ide o naturálnu obligáciu, ktorá nie je súdne vymáhateľná", "Áno, môže si výhru vysúdiť rovnako ako akýkoľvek iný dlh", "Áno, ale iba do výšky 20 eur"],
+          "options": [
+            "Nie, ide o naturálnu obligáciu, ktorá nie je súdne vymáhateľná",
+            "Áno, môže si výhru vysúdiť rovnako ako akýkoľvek iný dlh",
+            "Áno, ale iba do výšky 20 eur"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súkromná stávka mimo povolených hier zakladá len naturálnu obligáciu bez súdnej vymáhateľnosti.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo by sa stalo, keby prehrávajúci priateľ výhru napriek tomu dobrovoľne zaplatil?",
-          "options": ["Plnenie by bolo platné a nemohol by žiadať jeho vrátenie", "Plnenie by bolo neplatné a musel by dostať peniaze späť", "Plnenie by bolo možné vymáhať späť len súdnou cestou"],
+          "options": [
+            "Plnenie by bolo platné a nemohol by žiadať jeho vrátenie",
+            "Plnenie by bolo neplatné a musel by dostať peniaze späť",
+            "Plnenie by bolo možné vymáhať späť len súdnou cestou"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dobrovoľné plnenie naturálnej obligácie je platné a nemožno ho žiadať späť.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Výhra v štátom povolenej lotérii",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Hráč vyhrá v lotérii prevádzkovanej na základe povolenia podľa zákona o hazardných hrách, prevádzkovateľ mu však výhru odmieta vyplatiť.", "options": [], "correct": 0 },
+        {
+          "question": "Hráč vyhrá v lotérii prevádzkovanej na základe povolenia podľa zákona o hazardných hrách, prevádzkovateľ mu však výhru odmieta vyplatiť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže si hráč v tomto prípade nárok na výhru vymáhať na súde?",
-          "options": ["Áno, pri štátom povolených hazardných hrách môže byť pohľadávka žalovateľná", "Nie, žiadna pohľadávka zo stávky alebo hry nikdy nie je vymáhateľná", "Nie, výhru možno získať iba dobrovoľným plnením prevádzkovateľa"],
+          "options": [
+            "Áno, pri štátom povolených hazardných hrách môže byť pohľadávka žalovateľná",
+            "Nie, žiadna pohľadávka zo stávky alebo hry nikdy nie je vymáhateľná",
+            "Nie, výhru možno získať iba dobrovoľným plnením prevádzkovateľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri zákonom povolených hazardných hrách zákon žalovateľnosť výslovne pripúšťa.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čím sa táto situácia líši od bežnej súkromnej stávky medzi priateľmi?",
-          "options": ["Ide o zákonom osobitne upravenú a povolenú hazardnú hru, pri ktorej zákon žalovateľnosť pripúšťa", "Žiadnym spôsobom, právny režim je úplne rovnaký", "Rozdiel spočíva iba vo výške výhry"] ,
+          "options": [
+            "Ide o zákonom osobitne upravenú a povolenú hazardnú hru, pri ktorej zákon žalovateľnosť pripúšťa",
+            "Žiadnym spôsobom, právny režim je úplne rovnaký",
+            "Rozdiel spočíva iba vo výške výhry"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákonná úprava povolených hazardných hier vytvára výnimku z pravidla o naturálnej obligácii.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Dôchodok, stávka a hra – pojem, náležitosti, právne účinky, rozdiely (pravidelné plnenie, naturálna obligácia, hazardné hry)",
     "branches": [
-      { "label": "Zmluva o dôchodku (§ 842–844 OZ)", "leaves": ["jedna strana sa zaväzuje vyplácať dôchodkové dávky", "pravidelné plnenie, mesačné alebo ročné", "dlhodobý charakter", "môže byť odplatná aj bezodplatná", "doživotný dôchodok trvá až do smrti oprávneného", "časovo obmedzený dôchodok, napr. na 10 rokov"] },
-      { "label": "Podstatné náležitosti dôchodku", "leaves": ["výška dávok", "periodicita", "podmienky zániku", "zánik uplynutím doby alebo smrťou oprávneného pri doživotnom dôchodku"] },
-      { "label": "Stávka a hra (§ 845–846 OZ)", "leaves": ["ide o naturálnu obligáciu", "víťaz nemá žalovateľný nárok na výhru", "ak bola výhra dobrovoľne vyplatená, nemožno žiadať jej vrátenie", "výsledok závisí od náhody alebo zručnosti", "právny poriadok nechráni nárok na výhru"] },
-      { "label": "Hazardné hry – zákonná výnimka", "leaves": ["pri hazardných hrách povolených zákonom vzniká vymáhateľný nárok na výhru", "lotérie", "stávkové hry", "kasínové hry a kurzové stávky", "prevádzkovateľ je povinný vyplatiť výhru podľa pravidiel hry"] },
-      { "label": "Rozdiely", "leaves": ["dôchodok: dlhodobé pravidelné plnenie, žalovateľný záväzok", "stávka a hra: naturálna obligácia, výhra nie je vymáhateľná", "hazardné hry: výnimka, výhra je vymáhateľná, ak je hra povolená"] },
-      { "label": "Význam pre prax", "leaves": ["dôchodok slúži na dlhodobé finančné zabezpečenie", "stávka a hra sú právne nevymáhateľné záväzky spojené s rizikovým správaním", "hazardné hry sú regulované s povinnosťou vyplatiť výhru", "jasné odlíšenie bráni sporom o vymáhateľnosť plnenia"] }
+      {
+        "label": "Zmluva o dôchodku (§ 842–844 OZ)",
+        "leaves": [
+          "jedna strana sa zaväzuje vyplácať dôchodkové dávky",
+          "pravidelné plnenie, mesačné alebo ročné",
+          "dlhodobý charakter",
+          "môže byť odplatná aj bezodplatná",
+          "doživotný dôchodok trvá až do smrti oprávneného",
+          "časovo obmedzený dôchodok, napr. na 10 rokov"
+        ]
+      },
+      {
+        "label": "Podstatné náležitosti dôchodku",
+        "leaves": [
+          "výška dávok",
+          "periodicita",
+          "podmienky zániku",
+          "zánik uplynutím doby alebo smrťou oprávneného pri doživotnom dôchodku"
+        ]
+      },
+      {
+        "label": "Stávka a hra (§ 845–846 OZ)",
+        "leaves": [
+          "ide o naturálnu obligáciu",
+          "víťaz nemá žalovateľný nárok na výhru",
+          "ak bola výhra dobrovoľne vyplatená, nemožno žiadať jej vrátenie",
+          "výsledok závisí od náhody alebo zručnosti",
+          "právny poriadok nechráni nárok na výhru"
+        ]
+      },
+      {
+        "label": "Hazardné hry – zákonná výnimka",
+        "leaves": [
+          "pri hazardných hrách povolených zákonom vzniká vymáhateľný nárok na výhru",
+          "lotérie",
+          "stávkové hry",
+          "kasínové hry a kurzové stávky",
+          "prevádzkovateľ je povinný vyplatiť výhru podľa pravidiel hry"
+        ]
+      },
+      {
+        "label": "Rozdiely",
+        "leaves": [
+          "dôchodok: dlhodobé pravidelné plnenie, žalovateľný záväzok",
+          "stávka a hra: naturálna obligácia, výhra nie je vymáhateľná",
+          "hazardné hry: výnimka, výhra je vymáhateľná, ak je hra povolená"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "dôchodok slúži na dlhodobé finančné zabezpečenie",
+          "stávka a hra sú právne nevymáhateľné záväzky spojené s rizikovým správaním",
+          "hazardné hry sú regulované s povinnosťou vyplatiť výhru",
+          "jasné odlíšenie bráni sporom o vymáhateľnosť plnenia"
+        ]
+      }
     ]
   }
 }

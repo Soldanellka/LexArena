@@ -2,50 +2,100 @@
   "id": "A22",
   "title": "Hlavné pojednávanie",
   "schemaVersion": "1.1",
-  "tags": ["hlavné pojednávanie", "súd", "trestné konanie"],
-
+  "tags": [
+    "hlavné pojednávanie",
+    "súd",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto vedie hlavné pojednávanie?",
-      "options": ["Prokurátor", "Samosudca alebo predseda senátu", "Obhajca"],
+      "options": [
+        "Prokurátor",
+        "Samosudca alebo predseda senátu",
+        "Obhajca"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý úkon sa vykonáva na začiatku hlavného pojednávania?",
-      "options": ["Vyhlásenie rozsudku", "Overenie prítomnosti a totožnosti osôb", "Výsluch svedkov"],
+      "options": [
+        "Vyhlásenie rozsudku",
+        "Overenie prítomnosti a totožnosti osôb",
+        "Výsluch svedkov"
+      ],
       "correct": 1
     },
     {
       "question": "Kto prednáša obžalobu na hlavnom pojednávaní?",
-      "options": ["Súd", "Prokurátor", "Poškodený"],
+      "options": [
+        "Súd",
+        "Prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy sa vykonávajú dôkazy?",
-      "options": ["V prípravnom konaní", "Na hlavnom pojednávaní", "V odvolacom konaní"],
+      "options": [
+        "V prípravnom konaní",
+        "Na hlavnom pojednávaní",
+        "V odvolacom konaní"
+      ],
       "correct": 1
     },
     {
       "question": "Kto má posledné slovo na hlavnom pojednávaní?",
-      "options": ["Prokurátor", "Obhajca", "Obvinený"],
+      "options": [
+        "Prokurátor",
+        "Obhajca",
+        "Obvinený"
+      ],
       "correct": 2
     }
   ],
-
   "tiles": [
-    { "term": "Hlavné pojednávanie", "definition": "Rozhodujúce štádium trestného konania, v ktorom súd rozhoduje o vine a treste." },
-    { "term": "Prednes obžaloby", "definition": "Prokurátor prednesie obžalobu na začiatku pojednávania." },
-    { "term": "Vykonávanie dôkazov", "definition": "Súd vykonáva dôkazy výsluchmi, listinami, znaleckými posudkami a ďalšími prostriedkami." },
-    { "term": "Záverečné reči", "definition": "Prokurátor, poškodený a obhajca prednesú svoje stanoviská pred rozhodnutím." },
-    { "term": "Posledné slovo obvineného", "definition": "Obvinený má právo vyjadriť sa ako posledný pred rozhodnutím." },
-
-    { "term": "Verejnosť pojednávania", "definition": "Hlavné pojednávanie je spravidla verejné, s výnimkami stanovenými zákonom." },
-    { "term": "Predseda senátu", "definition": "Osoba, ktorá riadi priebeh hlavného pojednávania." },
-    { "term": "Procesná disciplína", "definition": "Súd zabezpečuje poriadok a môže ukladať poriadkové opatrenia." },
-    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej po vykonaní dôkazov." },
-    { "term": "Odročenie pojednávania", "definition": "Súd môže pojednávanie odročiť, ak nie je možné pokračovať." }
+    {
+      "term": "Hlavné pojednávanie",
+      "definition": "Rozhodujúce štádium trestného konania, v ktorom súd rozhoduje o vine a treste."
+    },
+    {
+      "term": "Prednes obžaloby",
+      "definition": "Prokurátor prednesie obžalobu na začiatku pojednávania."
+    },
+    {
+      "term": "Vykonávanie dôkazov",
+      "definition": "Súd vykonáva dôkazy výsluchmi, listinami, znaleckými posudkami a ďalšími prostriedkami."
+    },
+    {
+      "term": "Záverečné reči",
+      "definition": "Prokurátor, poškodený a obhajca prednesú svoje stanoviská pred rozhodnutím."
+    },
+    {
+      "term": "Posledné slovo obvineného",
+      "definition": "Obvinený má právo vyjadriť sa ako posledný pred rozhodnutím."
+    },
+    {
+      "term": "Verejnosť pojednávania",
+      "definition": "Hlavné pojednávanie je spravidla verejné, s výnimkami stanovenými zákonom."
+    },
+    {
+      "term": "Predseda senátu",
+      "definition": "Osoba, ktorá riadi priebeh hlavného pojednávania."
+    },
+    {
+      "term": "Procesná disciplína",
+      "definition": "Súd zabezpečuje poriadok a môže ukladať poriadkové opatrenia."
+    },
+    {
+      "term": "Rozsudok",
+      "definition": "Rozhodnutie súdu vo veci samej po vykonaní dôkazov."
+    },
+    {
+      "term": "Odročenie pojednávania",
+      "definition": "Súd môže pojednávanie odročiť, ak nie je možné pokračovať."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Neprítomnosť obvineného",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Ako môže súd postupovať?",
-          "options": ["Predviesť obvineného", "Pokračovať bez neho vždy", "Zastaviť konanie"],
+          "options": [
+            "Predviesť obvineného",
+            "Pokračovať bez neho vždy",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Môže súd pojednávať v neprítomnosti obvineného?",
-          "options": ["Áno, ak sú splnené zákonné podmienky", "Nie, nikdy", "Len pri prečinoch"],
+          "options": [
+            "Áno, ak sú splnené zákonné podmienky",
+            "Nie, nikdy",
+            "Len pri prečinoch"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Rozpor vo výpovediach na pojednávaní",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Ako má súd postupovať?",
-          "options": ["Vykonať konfrontáciu", "Ignorovať výpovede", "Vybrať si kratšiu výpoveď"],
+          "options": [
+            "Vykonať konfrontáciu",
+            "Ignorovať výpovede",
+            "Vybrať si kratšiu výpoveď"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ako súd hodnotí dôkazy?",
-          "options": ["Podľa zásady voľného hodnotenia dôkazov", "Podľa poradia výsluchov", "Podľa želania obvineného"],
+          "options": [
+            "Podľa zásady voľného hodnotenia dôkazov",
+            "Podľa poradia výsluchov",
+            "Podľa želania obvineného"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +183,38 @@
   "spider": {
     "center": "Hlavné pojednávanie – jadro trestného konania",
     "branches": [
-      { "label": "Zásady", "leaves": ["Ústnosť a bezprostrednosť – dôkazy naživo pred súdom", "Verejnosť – so zákonnými výnimkami", "Kontradiktórnosť a rovnosť strán – rovnaké procesné práva"] },
-      { "label": "Príprava (§§ 250–252)", "leaves": ["Predseda senátu – termín, predvolania, zabezpečenie dôkazov, návrhy strán"] },
-      { "label": "Priebeh (§§ 253–290)", "leaves": ["Začiatok – otvorenie, prítomnosť, poučenie, prečítanie obžaloby", "Výsluch obžalovaného – môže odmietnuť; bez nátlaku a sugescie", "Dokazovanie – svedkovia, znalci, listiny, vecné dôkazy, záznamy", "Záverečné návrhy – prokurátor → poškodený → obhajca → obžalovaný", "Posledné slovo a rozsudok – porada a vyhlásenie"] },
-      { "label": "Verejnosť a odročenie", "leaves": ["Vylúčenie verejnosti – maloletí, utajenie, bezpečnosť svedka, mravnosť", "Odročenie – chýbajúci svedok, doplnenie dokazovania, prekážky"] }
+      {
+        "label": "Zásady",
+        "leaves": [
+          "Ústnosť a bezprostrednosť – dôkazy naživo pred súdom",
+          "Verejnosť – so zákonnými výnimkami",
+          "Kontradiktórnosť a rovnosť strán – rovnaké procesné práva"
+        ]
+      },
+      {
+        "label": "Príprava (§§ 250–252)",
+        "leaves": [
+          "Predseda senátu – termín, predvolania, zabezpečenie dôkazov, návrhy strán"
+        ]
+      },
+      {
+        "label": "Priebeh (§§ 253–290)",
+        "leaves": [
+          "Začiatok – otvorenie, prítomnosť, poučenie, prečítanie obžaloby",
+          "Výsluch obžalovaného – môže odmietnuť; bez nátlaku a sugescie",
+          "Dokazovanie – svedkovia, znalci, listiny, vecné dôkazy, záznamy",
+          "Záverečné návrhy – prokurátor → poškodený → obhajca → obžalovaný",
+          "Posledné slovo a rozsudok – porada a vyhlásenie"
+        ]
+      },
+      {
+        "label": "Verejnosť a odročenie",
+        "leaves": [
+          "Vylúčenie verejnosti – maloletí, utajenie, bezpečnosť svedka, mravnosť",
+          "Odročenie – chýbajúci svedok, doplnenie dokazovania, prekážky"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Hlavné pojednávanie je najdôležitejšia časť trestného konania. Súd tu vykonáva dôkazy bezprostredne a ústne, vypočúva obžalovaného, svedkov, znalcov, vykonáva listinné a vecné dôkazy a na záver rozhoduje rozsudkom. Pojednávanie je spravidla verejné, riadi ho predseda senátu a prebieha podľa presného procesného poriadku. Je to jediná fáza, v ktorej sa rozhoduje o vine a treste.\n\n1. Zásady hlavného pojednávania (§ 2 TP)\nÚstnosť – všetky dôkazy sa vykonávajú ústne.\n\nBezprostrednosť – súd rozhoduje len na základe dôkazov vykonaných na pojednávaní.\n\nVerejnosť – pojednávanie je verejné, okrem zákonných výnimiek.\n\nKontradiktórnosť – strany môžu klásť otázky a vyjadrovať sa k dôkazom.\n\nRovnosť strán – obžaloba a obhajoba majú rovnaké procesné práva.\n\n2. Príprava hlavného pojednávania (§ 250–252 TP)\nPredseda senátu:\n\nnariadi termín pojednávania,\n\npredvolá obžalovaného, svedkov, znalcov,\n\nzabezpečí vykonanie dôkazov,\n\nrozhodne o návrhoch strán.\n\n3. Priebeh hlavného pojednávania (§ 253–290 TP)\n3.1 Začiatok pojednávania\npredseda senátu otvorí pojednávanie,\n\noverí prítomnosť osôb,\n\npoučí obžalovaného o jeho právach,\n\nprečíta obžalobu.\n\n3.2 Výsluch obžalovaného (§ 257 TP)\nObžalovaný môže vypovedať alebo odmietnuť výpoveď.\nVýsluch prebieha bez nátlaku, otázky nesmú byť sugestívne.\n\n3.3 Vykonávanie dôkazov (§ 258–270 TP)\nSúd vykonáva:\n\nvýsluchy svedkov,\n\nvýsluchy znalcov,\n\nlistinné dôkazy,\n\nvecné dôkazy,\n\nobhliadky,\n\nprehrávanie záznamov.\n\nStrany môžu navrhovať doplnenie dokazovania.\n\n3.4 Záverečné návrhy (§ 274 TP)\nPoradie:\n\nprokurátor,\n\npoškodený,\n\nobhajca,\n\nobžalovaný.\n\n3.5 Posledné slovo obžalovaného (§ 275 TP)\nObžalovaný má právo vyjadriť sa ako posledný.\n\n3.6 Rozhodnutie – rozsudok (§ 270–290 TP)\nSúd sa odoberie na poradu a vyhlási rozsudok.\nRozsudok musí obsahovať:\n\nvýrok o vine/nevine,\n\nuložený trest,\n\nochranné opatrenia,\n\nrozhodnutie o náhrade škody.\n\n4. Verejnosť hlavného pojednávania (§ 199 TP)\nPojednávanie je verejné, ale súd môže vylúčiť verejnosť, ak:\n\nide o ochranu maloletých,\n\nide o utajované skutočnosti,\n\nje ohrozená bezpečnosť svedka,\n\nje potrebné chrániť mravnosť.\n\n5. Odročenie a prerušenie pojednávania (§ 276–278 TP)\nSúd môže pojednávanie odročiť, ak:\n\nsa nedostavil dôležitý svedok,\n\nje potrebné doplniť dokazovanie,\n\nnastali prekážky na strane súdu alebo strán.\n\nZapamätaj si (štátnicové jadro)\nHlavné pojednávanie je jadro trestného konania.\n\nDôkazy sa vykonávajú ústne a bezprostredne.\n\nPojednávanie je verejné, riadi ho predseda senátu.\n\nNa konci súd vyhlási rozsudok.\n\nZdroj:\nMinisterstvo spravodlivosti SR – informácie o trestných pojednávaniach \n\nNajvyšší súd SR – verejné zasadnutia a formy úkonov \n\nOtvorené súdy – prehľad hlavných pojednávaní"
 }

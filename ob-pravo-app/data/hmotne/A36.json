@@ -1,7 +1,7 @@
 {
   "id": "36",
   "title": "Zmluvy o preprave - pojem, podstatné náležitosti, druhy",
-  "summary": "Zmluvy o preprave (§ 760-773 OZ): prepravná zmluva zaväzuje dopravcu prepraviť cestujúceho, zásielku alebo náklad. Druhy: zmluva o preprave osôb (§ 760-764), zmluva o preprave nákladu/zásielky (§ 765-773). Dopravca zodpovedá za škodu na prepravovanej veci počas prepravy. Cestovná zmluva: komplexná zmluva o organizovanom zájazde.",
+  "summary": "Zmluvy o preprave upravené v § 760–773 OZ patria medzi záväzky, pri ktorých sa dopravca zaväzuje prepraviť cestujúceho, zásielku alebo náklad do určeného miesta. Ide o zmluvy, kde je podstatou bezpečné a riadne vykonanie prepravy.\n\nPodstatné náležitosti prepravnej zmluvy\n– dopravca, ktorý vykonáva prepravu,\n– cestujúci alebo odosielateľ,\n– predmet prepravy (osoba, zásielka, náklad),\n– miesto určenia,\n– odplata (cestovné, prepravné).\n\nDopravca je povinný vykonať prepravu riadne, bezpečne a včas. Zodpovedá za škodu na prepravovanej veci, ktorá vznikne počas prepravy, ak nepreukáže liberačné dôvody (napr. povaha veci, neodvrátiteľná udalosť).\n\n1. Zmluva o preprave osôb (§ 760–764 OZ)\nDopravca sa zaväzuje bezpečne prepraviť cestujúceho do určeného miesta.\nCestujúci má právo na bezpečnú prepravu a povinnosť dodržiavať prepravný poriadok.\n\nDopravca zodpovedá za:\n– škodu na zdraví cestujúceho,\n– škodu na veciach, ktoré mal cestujúci pri sebe,\nak vznikli v súvislosti s prepravou.\n\nZmluva vzniká spravidla nastúpením do dopravného prostriedku alebo zakúpením cestovného lístka.\n\n2. Zmluva o preprave nákladu / zásielky (§ 765–773 OZ)\nOdosielateľ odovzdáva dopravcovi zásielku na prepravu a dopravca ju musí doručiť príjemcovi.\n\nPodstatné znaky:\n– odovzdanie zásielky dopravcovi,\n– povinnosť dopravcu dodať zásielku v neporušenom stave,\n– povinnosť odosielateľa zaplatiť prepravné.\n\nDopravca zodpovedá za škodu na zásielke od prevzatia až po vydanie.\nMôže požadovať prepravný doklad (napr. nákladný list).\n\nCestovná zmluva (organizovaný zájazd)\nCestovná zmluva je komplexná zmluva, pri ktorej sa organizátor zájazdu zaväzuje poskytnúť kombináciu služieb cestovného ruchu (doprava, ubytovanie, program).\nIde o osobitný typ upravený zákonom o zájazdoch – poskytuje vysokú ochranu spotrebiteľa.\n\nZdroje: OZ (40/1964 Zb.), § 760–773; zákon o zájazdoch; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je predmetom zmluvy o preprave osôb (§ 760 OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluva o preprave osôb (§ 760 OZ)", "definition": "Dopravca sa zaväzuje prepraviť cestujúceho do dohodnutého miesta určenia." },
-    { "term": "Objektívna zodpovednosť dopravcu (§ 772 OZ)", "definition": "Zodpovedá za škodu na náklade od prevzatia do odovzdania bez ohľadu na zavinenie." },
-    { "term": "Zasielateľská zmluva", "definition": "Zasielateľ vo vlastnom mene, na cudzí účet obstaráva prepravu veci." },
-    { "term": "Cestovná zmluva (zákon č. 281/2001 Z. z.)", "definition": "Komplexná zmluva o organizovanom zájazde, organizátor zodpovedá za celý balík služieb." },
-    { "term": "Odstúpenie cestujúceho", "definition": "Možné aj pred odchodom, pri organizovanom zájazde spravidla so stornopoplatkom." }
+    {
+      "term": "Zmluva o preprave osôb (§ 760 OZ)",
+      "definition": "Dopravca sa zaväzuje prepraviť cestujúceho do dohodnutého miesta určenia."
+    },
+    {
+      "term": "Objektívna zodpovednosť dopravcu (§ 772 OZ)",
+      "definition": "Zodpovedá za škodu na náklade od prevzatia do odovzdania bez ohľadu na zavinenie."
+    },
+    {
+      "term": "Zasielateľská zmluva",
+      "definition": "Zasielateľ vo vlastnom mene, na cudzí účet obstaráva prepravu veci."
+    },
+    {
+      "term": "Cestovná zmluva (zákon č. 281/2001 Z. z.)",
+      "definition": "Komplexná zmluva o organizovanom zájazde, organizátor zodpovedá za celý balík služieb."
+    },
+    {
+      "term": "Odstúpenie cestujúceho",
+      "definition": "Možné aj pred odchodom, pri organizovanom zájazde spravidla so stornopoplatkom."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Poškodenie prepravovaného nákladu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Počas prepravy tovaru dopravcom dôjde k jeho poškodeniu, hoci dopravca postupoval s náležitou starostlivosťou a nezavinil poškodenie úmyselne ani z nedbanlivosti.", "options": [], "correct": 0 },
+        {
+          "question": "Počas prepravy tovaru dopravcom dôjde k jeho poškodeniu, hoci dopravca postupoval s náležitou starostlivosťou a nezavinil poškodenie úmyselne ani z nedbanlivosti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Zodpovedá dopravca za túto škodu?",
-          "options": ["Áno, zodpovedá objektívne bez ohľadu na zavinenie, s obmedzenými liberačnými dôvodmi", "Nie, bez zavinenia zodpovednosť dopravcu nevzniká", "Zodpovedá iba v prípade úmyselného poškodenia nákladu"],
+          "options": [
+            "Áno, zodpovedá objektívne bez ohľadu na zavinenie, s obmedzenými liberačnými dôvodmi",
+            "Nie, bez zavinenia zodpovednosť dopravcu nevzniká",
+            "Zodpovedá iba v prípade úmyselného poškodenia nákladu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zodpovednosť dopravcu za náklad je objektívna, absencia zavinenia ho automaticky nezbavuje zodpovednosti.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "V akom časovom rozmedzí dopravca za škodu na náklade zodpovedá?",
-          "options": ["Od prevzatia nákladu do jeho odovzdania príjemcovi", "Iba počas skutočnej jazdy vozidla, nie pri nakladaní a vykladaní", "Iba do momentu podpisu prepravnej zmluvy"],
+          "options": [
+            "Od prevzatia nákladu do jeho odovzdania príjemcovi",
+            "Iba počas skutočnej jazdy vozidla, nie pri nakladaní a vykladaní",
+            "Iba do momentu podpisu prepravnej zmluvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zodpovednosť dopravcu trvá počas celého obdobia, kedy má náklad u seba.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Odstúpenie od cestovnej zmluvy",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Zákazník si objedná organizovaný zájazd, no mesiac pred odchodom sa rozhodne od cestovnej zmluvy odstúpiť.", "options": [], "correct": 0 },
+        {
+          "question": "Zákazník si objedná organizovaný zájazd, no mesiac pred odchodom sa rozhodne od cestovnej zmluvy odstúpiť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže tak urobiť?",
-          "options": ["Áno, cestujúci môže od zmluvy o zájazde odstúpiť aj pred odchodom", "Nie, cestovná zmluva je vždy absolútne záväzná bez možnosti odstúpenia", "Áno, ale iba ak zájazd zruší sám organizátor"],
+          "options": [
+            "Áno, cestujúci môže od zmluvy o zájazde odstúpiť aj pred odchodom",
+            "Nie, cestovná zmluva je vždy absolútne záväzná bez možnosti odstúpenia",
+            "Áno, ale iba ak zájazd zruší sám organizátor"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Cestujúci má právo odstúpiť od cestovnej zmluvy aj z vlastnej iniciatívy.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Musí pri odstúpení počítať s nejakými dôsledkami?",
-          "options": ["Áno, spravidla so stornopoplatkom podľa podmienok zmluvy", "Nie, odstúpenie je vždy úplne bez akýchkoľvek nákladov", "Áno, musí zaplatiť celú cenu zájazdu bez zľavy"],
+          "options": [
+            "Áno, spravidla so stornopoplatkom podľa podmienok zmluvy",
+            "Nie, odstúpenie je vždy úplne bez akýchkoľvek nákladov",
+            "Áno, musí zaplatiť celú cenu zájazdu bez zľavy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odstúpenie pred odchodom je spravidla spojené so stornopoplatkom podľa zmluvných podmienok.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Zmluvy o preprave – pojem, náležitosti, druhy, zodpovednosť dopravcu (bezpečné a riadne vykonanie prepravy osôb alebo vecí)",
     "branches": [
-      { "label": "Pojem prepravnej zmluvy", "leaves": ["dopravca sa zaväzuje prepraviť osobu alebo vec do určeného miesta", "odosielateľ alebo cestujúci sa zaväzuje zaplatiť odplatu", "podstatou je bezpečné, riadne a včasné vykonanie prepravy", "dopravca zodpovedá za škodu, ak nepreukáže liberačné dôvody"] },
-      { "label": "Podstatné náležitosti", "leaves": ["dopravca", "cestujúci alebo odosielateľ", "predmet prepravy: osoba, zásielka, náklad", "miesto určenia", "odplata: cestovné, prepravné"] },
-      { "label": "Preprava osôb (§ 760–764 OZ)", "leaves": ["dopravca sa zaväzuje bezpečne prepraviť cestujúceho", "cestujúci má právo na bezpečnú prepravu", "cestujúci je povinný dodržiavať prepravný poriadok", "dopravca zodpovedá za škodu na zdraví cestujúceho a na veciach, ktoré mal pri sebe", "zmluva vzniká nastúpením do dopravného prostriedku alebo zakúpením cestovného lístka"] },
-      { "label": "Preprava nákladu a zásielky (§ 765–773 OZ)", "leaves": ["odosielateľ odovzdáva zásielku dopravcovi, dopravca ju doručí príjemcovi", "povinnosť dopravcu dodať zásielku v neporušenom stave", "odosielateľ platí prepravné", "dopravca zodpovedá za škodu na zásielke od prevzatia po vydanie", "môže požadovať prepravný doklad, nákladný list"] },
-      { "label": "Cestovná zmluva (organizovaný zájazd)", "leaves": ["komplexná zmluva o kombinácii služieb cestovného ruchu", "upravená zákonom o zájazdoch", "organizátor poskytuje dopravu, ubytovanie a program", "vysoká ochrana spotrebiteľa"] },
-      { "label": "Význam pre prax", "leaves": ["kľúčové pri cestovaní, logistike, doručovaní zásielok", "jasné pravidlá zodpovednosti dopravcu", "ochrana cestujúceho pri úrazoch a škodách", "cestovná zmluva chráni spotrebiteľa pri zájazdoch"] }
+      {
+        "label": "Pojem prepravnej zmluvy",
+        "leaves": [
+          "dopravca sa zaväzuje prepraviť osobu alebo vec do určeného miesta",
+          "odosielateľ alebo cestujúci sa zaväzuje zaplatiť odplatu",
+          "podstatou je bezpečné, riadne a včasné vykonanie prepravy",
+          "dopravca zodpovedá za škodu, ak nepreukáže liberačné dôvody"
+        ]
+      },
+      {
+        "label": "Podstatné náležitosti",
+        "leaves": [
+          "dopravca",
+          "cestujúci alebo odosielateľ",
+          "predmet prepravy: osoba, zásielka, náklad",
+          "miesto určenia",
+          "odplata: cestovné, prepravné"
+        ]
+      },
+      {
+        "label": "Preprava osôb (§ 760–764 OZ)",
+        "leaves": [
+          "dopravca sa zaväzuje bezpečne prepraviť cestujúceho",
+          "cestujúci má právo na bezpečnú prepravu",
+          "cestujúci je povinný dodržiavať prepravný poriadok",
+          "dopravca zodpovedá za škodu na zdraví cestujúceho a na veciach, ktoré mal pri sebe",
+          "zmluva vzniká nastúpením do dopravného prostriedku alebo zakúpením cestovného lístka"
+        ]
+      },
+      {
+        "label": "Preprava nákladu a zásielky (§ 765–773 OZ)",
+        "leaves": [
+          "odosielateľ odovzdáva zásielku dopravcovi, dopravca ju doručí príjemcovi",
+          "povinnosť dopravcu dodať zásielku v neporušenom stave",
+          "odosielateľ platí prepravné",
+          "dopravca zodpovedá za škodu na zásielke od prevzatia po vydanie",
+          "môže požadovať prepravný doklad, nákladný list"
+        ]
+      },
+      {
+        "label": "Cestovná zmluva (organizovaný zájazd)",
+        "leaves": [
+          "komplexná zmluva o kombinácii služieb cestovného ruchu",
+          "upravená zákonom o zájazdoch",
+          "organizátor poskytuje dopravu, ubytovanie a program",
+          "vysoká ochrana spotrebiteľa"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "kľúčové pri cestovaní, logistike, doručovaní zásielok",
+          "jasné pravidlá zodpovednosti dopravcu",
+          "ochrana cestujúceho pri úrazoch a škodách",
+          "cestovná zmluva chráni spotrebiteľa pri zájazdoch"
+        ]
+      }
     ]
   }
 }

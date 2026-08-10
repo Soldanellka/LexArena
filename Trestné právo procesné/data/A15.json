@@ -2,50 +2,101 @@
   "id": "A15",
   "title": "Odborná činnosť a znalecká činnosť v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["znalec", "odborná činnosť", "dôkazy", "trestné konanie"],
-
+  "tags": [
+    "znalec",
+    "odborná činnosť",
+    "dôkazy",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kedy sa vykonáva znalecká činnosť?",
-      "options": ["Keď sú potrebné odborné vedomosti", "Len pri násilných trestných činoch", "Len na žiadosť obvineného"],
+      "options": [
+        "Keď sú potrebné odborné vedomosti",
+        "Len pri násilných trestných činoch",
+        "Len na žiadosť obvineného"
+      ],
       "correct": 0
     },
     {
       "question": "Kto môže podať znalecký posudok?",
-      "options": ["Každý odborník", "Len znalec zapísaný v zozname znalcov", "Policajt"],
+      "options": [
+        "Každý odborník",
+        "Len znalec zapísaný v zozname znalcov",
+        "Policajt"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je odborné vyjadrenie?",
-      "options": ["Vyjadrenie znalca", "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom", "Výpoveď svedka"],
+      "options": [
+        "Vyjadrenie znalca",
+        "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom",
+        "Výpoveď svedka"
+      ],
       "correct": 1
     },
     {
       "question": "Kto ustanovuje znalca?",
-      "options": ["Obvinený", "Súd alebo orgán činný v trestnom konaní", "Poškodený"],
+      "options": [
+        "Obvinený",
+        "Súd alebo orgán činný v trestnom konaní",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Ako sa hodnotí znalecký posudok?",
-      "options": ["Je záväzný pre súd", "Súd ho hodnotí ako každý iný dôkaz", "Musí byť vždy prijatý"],
+      "options": [
+        "Je záväzný pre súd",
+        "Súd ho hodnotí ako každý iný dôkaz",
+        "Musí byť vždy prijatý"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Znalecká činnosť", "definition": "Činnosť vykonávaná znalcom, keď sú potrebné odborné vedomosti." },
-    { "term": "Znalecký posudok", "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné znalosti." },
-    { "term": "Odborné vyjadrenie", "definition": "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom." },
-    { "term": "Ustanovenie znalca", "definition": "Rozhodnutie orgánu konania, ktorým sa ustanoví znalec." },
-    { "term": "Pribratie znalca", "definition": "Postup, keď orgán prizve znalca na vykonanie úkonu." },
-
-    { "term": "Znalecký ústav", "definition": "Inštitúcia oprávnená podávať znalecké posudky." },
-    { "term": "Odborné skúmanie", "definition": "Skúmanie vykonané odborníkom, ktoré nemusí mať formu znaleckého posudku." },
-    { "term": "Hodnotenie posudku", "definition": "Súd hodnotí posudok voľne, ako každý iný dôkaz." },
-    { "term": "Vylúčenie znalca", "definition": "Znalec môže byť vylúčený pre zaujatosť alebo iné dôvody." },
-    { "term": "Doplnenie posudku", "definition": "Možnosť požiadať znalca o doplnenie alebo vysvetlenie posudku." }
+    {
+      "term": "Znalecká činnosť",
+      "definition": "Činnosť vykonávaná znalcom, keď sú potrebné odborné vedomosti."
+    },
+    {
+      "term": "Znalecký posudok",
+      "definition": "Odborné vyjadrenie znalca k otázkam, ktoré vyžadujú odborné znalosti."
+    },
+    {
+      "term": "Odborné vyjadrenie",
+      "definition": "Vyjadrenie osoby s odbornými znalosťami, ktorá nie je znalcom."
+    },
+    {
+      "term": "Ustanovenie znalca",
+      "definition": "Rozhodnutie orgánu konania, ktorým sa ustanoví znalec."
+    },
+    {
+      "term": "Pribratie znalca",
+      "definition": "Postup, keď orgán prizve znalca na vykonanie úkonu."
+    },
+    {
+      "term": "Znalecký ústav",
+      "definition": "Inštitúcia oprávnená podávať znalecké posudky."
+    },
+    {
+      "term": "Odborné skúmanie",
+      "definition": "Skúmanie vykonané odborníkom, ktoré nemusí mať formu znaleckého posudku."
+    },
+    {
+      "term": "Hodnotenie posudku",
+      "definition": "Súd hodnotí posudok voľne, ako každý iný dôkaz."
+    },
+    {
+      "term": "Vylúčenie znalca",
+      "definition": "Znalec môže byť vylúčený pre zaujatosť alebo iné dôvody."
+    },
+    {
+      "term": "Doplnenie posudku",
+      "definition": "Možnosť požiadať znalca o doplnenie alebo vysvetlenie posudku."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Potreba znalca",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Je potrebné pribratie znalca?",
-          "options": ["Áno, ide o odbornú otázku", "Nie, polícia to určí sama", "Len ak to navrhne obvinený"],
+          "options": [
+            "Áno, ide o odbornú otázku",
+            "Nie, polícia to určí sama",
+            "Len ak to navrhne obvinený"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto ustanovuje znalca?",
-          "options": ["Súd alebo OČTK", "Poškodený", "Obhajca"],
+          "options": [
+            "Súd alebo OČTK",
+            "Poškodený",
+            "Obhajca"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zaujatosť znalca",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Je možné, že je znalec zaujatý?",
-          "options": ["Áno", "Nie", "Len ak to tvrdí obvinený"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to tvrdí obvinený"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Ako má orgán postupovať?",
-          "options": ["Vylúčiť znalca a ustanoviť iného", "Ignorovať situáciu", "Požiadať poškodeného o súhlas"],
+          "options": [
+            "Vylúčiť znalca a ustanoviť iného",
+            "Ignorovať situáciu",
+            "Požiadať poškodeného o súhlas"
+          ],
           "correct": 0
         },
         {
@@ -118,11 +184,47 @@
   "spider": {
     "center": "Odborné vyjadrenie × znalecký posudok (§§ 144–151)",
     "branches": [
-      { "label": "Odborné vyjadrenie (§ 144)", "leaves": ["Kto – osoba s odbornými vedomosťami, nie znalec", "Použitie – jednoduchšie odborné otázky", "Povaha – dôkazný prostriedok, nie posudok"] },
-      { "label": "Ustanovenie znalca (§ 145)", "leaves": ["Kto ustanovuje – OČTK alebo súd uznesením", "Znalec – zapísaný v zozname znalcov", "Uznesenie – úloha, otázky, lehota"] },
-      { "label": "Znalecký posudok (§ 147)", "leaves": ["Povaha – samostatný dôkazný prostriedok", "Náležitosti – úkony, podklady, výsledky, závery, odpovede", "Formy – písomný alebo ústny"] },
-      { "label": "Kontrola posudku (§§ 148–150)", "leaves": ["Výsluch znalca – objasnenie záverov, rozpory", "Doplnenie – pri neúplnosti či nejasnosti", "Kontrolný posudok – iný znalec pri pochybnostiach"] },
-      { "label": "Znalec a hodnotenie", "leaves": ["Povinnosti – osobne, nestranne, mlčanlivosť, včas", "Práva – odmena, podklady, odmietnutie pri konflikte záujmov", "Hodnotenie – voľné; posudok nie je nadradený iným dôkazom"] }
+      {
+        "label": "Odborné vyjadrenie (§ 144)",
+        "leaves": [
+          "Kto – osoba s odbornými vedomosťami, nie znalec",
+          "Použitie – jednoduchšie odborné otázky",
+          "Povaha – dôkazný prostriedok, nie posudok"
+        ]
+      },
+      {
+        "label": "Ustanovenie znalca (§ 145)",
+        "leaves": [
+          "Kto ustanovuje – OČTK alebo súd uznesením",
+          "Znalec – zapísaný v zozname znalcov",
+          "Uznesenie – úloha, otázky, lehota"
+        ]
+      },
+      {
+        "label": "Znalecký posudok (§ 147)",
+        "leaves": [
+          "Povaha – samostatný dôkazný prostriedok",
+          "Náležitosti – úkony, podklady, výsledky, závery, odpovede",
+          "Formy – písomný alebo ústny"
+        ]
+      },
+      {
+        "label": "Kontrola posudku (§§ 148–150)",
+        "leaves": [
+          "Výsluch znalca – objasnenie záverov, rozpory",
+          "Doplnenie – pri neúplnosti či nejasnosti",
+          "Kontrolný posudok – iný znalec pri pochybnostiach"
+        ]
+      },
+      {
+        "label": "Znalec a hodnotenie",
+        "leaves": [
+          "Povinnosti – osobne, nestranne, mlčanlivosť, včas",
+          "Práva – odmena, podklady, odmietnutie pri konflikte záujmov",
+          "Hodnotenie – voľné; posudok nie je nadradený iným dôkazom"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Odborná činnosť a znalecká činnosť slúžia na objasnenie odborných otázok, ktoré orgány činné v trestnom konaní ani súd nedokážu posúdiť samy. Odborné vyjadrenie poskytuje osoba s odbornými znalosťami, zatiaľ čo znalecký posudok vypracúva znalec zapísaný v zozname znalcov. Znalec má osobitné práva a povinnosti, jeho posudok je samostatný dôkazný prostriedok a súd ho hodnotí podľa zásady voľného hodnotenia dôkazov. Znalec môže byť vypočutý, môže sa vyžadovať doplnenie posudku alebo kontrolný posudok. Odborné úkony sú upravené v § 144–151 Trestného poriadku.\n\n1. Odborná činnosť (§ 144 TP)\nOdborná činnosť je postup, pri ktorom orgán činný v trestnom konaní využije odborné znalosti osoby, ktorá nie je znalcom.\n\nOdborné vyjadrenie (§ 144 ods. 1 TP)\nposkytuje ho osoba, ktorá má odborné vedomosti, ale nie je znalcom,\n\nslúži na objasnenie jednoduchších odborných otázok,\n\nmá povahu dôkazného prostriedku, ale nie je znaleckým posudkom.\n\nKedy sa použije odborné vyjadrenie?\npri menej zložitých odborných otázkach,\n\nkeď nie je potrebné ustanoviť znalca,\n\nnapr. jednoduché technické, ekonomické či administratívne otázky.\n\n2. Znalecká činnosť (§ 145–151 TP)\nZnalecká činnosť sa vykonáva vtedy, keď je potrebné odborné posúdenie, ktoré presahuje bežné odborné vedomosti.\n\n2.1 Ustanovenie znalca (§ 145 TP)\nZnalca ustanovuje:\n\norgán činný v trestnom konaní, alebo\n\nsúd.\n\nZnalec musí byť zapísaný v zozname znalcov podľa osobitného zákona.\n\nUznesenie o ustanovení znalca (§ 145 ods. 2 TP)\nObsahuje:\n\npresné vymedzenie úlohy,\n\notázky, ktoré má znalec zodpovedať,\n\nlehotu na vypracovanie posudku.\n\n2.2 Znalecký posudok (§ 147 TP)\nZnalecký posudok je samostatný dôkazný prostriedok.\n\nNáležitosti posudku (§ 147 ods. 1 TP)\nMusí obsahovať:\n\nopis úkonov znalca,\n\npodklady, z ktorých vychádzal,\n\nvýsledky skúmania,\n\nodborné závery,\n\nodpovede na otázky orgánu konania.\n\nFormy posudku\npísomný posudok,\n\nústny posudok (napr. na hlavnom pojednávaní).\n\n2.3 Výsluch znalca (§ 148 TP)\nZnalec môže byť vypočutý, ak:\n\nje potrebné objasniť jeho závery,\n\nsú rozpory medzi posudkami,\n\nje potrebné doplniť posudok.\n\nVýsluch znalca prebieha podobne ako výsluch svedka, ale s ohľadom na jeho odborné postavenie.\n\n2.4 Doplnenie posudku (§ 149 TP)\nAk je posudok neúplný alebo nejasný, orgán môže nariadiť jeho doplnenie.\n\n2.5 Kontrolný posudok (§ 150 TP)\nKontrolný posudok sa vypracuje, ak:\n\nsú pochybnosti o správnosti pôvodného posudku,\n\nexistujú rozpory medzi posudkami,\n\nje potrebné preveriť závery znalca.\n\nKontrolný posudok vypracuje iný znalec.\n\n2.6 Obhliadka (§ 151 TP)\nObhliadka je odborný úkon, ktorý môže vykonať znalec alebo orgán konania.\nSlúži na:\n\npreskúmanie miesta činu,\n\npreskúmanie tela,\n\npreskúmanie predmetov.\n\n3. Práva a povinnosti znalca (§ 146 TP)\nZnalec je povinný:\n\npodať posudok osobne,\n\nkonať nestranne,\n\nzachovávať mlčanlivosť,\n\nvykonať úkony riadne a včas.\n\nZnalec má právo:\n\nna odmenu a náhradu výdavkov,\n\nna poskytnutie potrebných podkladov,\n\nodmietnuť posudok, ak je v konflikte záujmov.\n\n4. Hodnotenie znaleckého posudku\nSúd hodnotí posudok podľa zásady voľného hodnotenia dôkazov:\n\nodborná úroveň,\n\nlogika záverov,\n\núplnosť,\n\nkonzistentnosť,\n\nsúlad s ostatnými dôkazmi.\n\nPosudok nie je nadradený ostatným dôkazom – súd ho hodnotí vo vzájomných súvislostiach.\n\nZapamätaj si (štátnicové jadro)\nOdborné vyjadrenie ≠ znalecký posudok.\n\nZnalca ustanovuje OČTK alebo súd uznesením.\n\nZnalecký posudok je samostatný dôkazný prostriedok.\n\nMožno nariadiť doplnenie alebo kontrolný posudok.\n\nZnalec má povinnosť nestrannosti a právo na odmenu.\n\nSúd hodnotí posudok voľne, nie formálne.\n\nZdroj:\nTrestný poriadok č. 301/2005 Z. z., účinnosť od 1. 7. 2026  \nhttps://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2005/301/20260701"
 }

@@ -2,13 +2,22 @@
   "id": "16",
   "title": "Priebeh konania na súde prvej inštancie, predbežné prejednanie sporu",
   "schemaVersion": "1.1",
-  "tags": ["priebeh konania", "predbežné prejednanie sporu", "začatie konania", "rozsudok pre zmeškanie"],
-  "summary": "Sporové konanie na prvom stupni je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 143 CSP). Po podaní žaloby súd v úvodnej fáze skúma splnenie procesných podmienok a formálnu bezvadnosť žaloby, prípadne vyzve žalobcu na odstránenie vád; následne žalobu doručí žalovanému na vyjadrenie. Súd môže nariadiť predbežné prejednanie sporu (§ 168 a nasl. CSP), ktorého cieľom je čo najrýchlejšie a najhospodárnejšie priblíženie k rozhodnutiu vo veci – overenie procesných podmienok, vyjasnenie sporných skutkových a právnych otázok, poučenie strán, preskúmanie možnosti zmieru a prípadné rozvrhnutie ďalšieho postupu vrátane koncentrácie konania.\n\nAk to zákon pripúšťa, súd môže rozhodnúť aj bez nariadenia pojednávania vo veci samej – napríklad rozsudkom pre uznanie, ak žalovaný nárok uzná, alebo rozsudkom pre zmeškanie, ak žalovaný napriek riadnemu poučeniu a výzve zostane nečinný. V ostatných prípadoch súd po skončení prípravnej fázy nariadi pojednávanie.\n\nZapamätaj si:\n- Konanie je začaté dňom, keď žaloba dôjde príslušnému súdu (§ 143 CSP).\n- Súd najprv skúma procesné podmienky a formálnu bezvadnosť žaloby.\n- Predbežné prejednanie sporu (§ 168 CSP) pripravuje pojednávanie a smeruje k hospodárnemu priebehu konania.\n- Súd môže rozhodnúť aj bez pojednávania (rozsudok pre uznanie, rozsudok pre zmeškanie).\n- Cieľom prípravnej fázy je čo najrýchlejšie a najhospodárnejšie smerovanie k rozhodnutiu."
-  ,
+  "tags": [
+    "priebeh konania",
+    "predbežné prejednanie sporu",
+    "začatie konania",
+    "rozsudok pre zmeškanie"
+  ],
+  "summary": "Sporové konanie na prvom stupni sa začína dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (CSP).\nTým vzniká procesnoprávny vzťah medzi súdom a stranami.\n\nKonanie má písomnú prípravnú fázu, po ktorej nasleduje predbežné prejednanie sporu (ak sa vykoná) a následne pojednávanie alebo rozhodnutie bez pojednávania.\n\n1. Začatie konania (CSP)\nSúd po doručení žaloby:\n\nskúma procesné podmienky (právomoc, príslušnosť, subjektivita, spôsobilosť, poplatok),\n\nskúma formálnu bezvadnosť žaloby.\n\nAk žaloba trpí vadami → súd vyzve žalobcu na ich odstránenie.\nAž následne žalobu doručí žalovanému na vyjadrenie.\n\n2. Písomná fáza konania\nPo doručení žaloby žalovanému nasleduje:\n\nvyjadrenie žalovaného,\n\nreplika žalobcu,\n\nduplika žalovaného (ak je potrebná).\n\nCieľom písomnej fázy je:\n\nvyjasniť tvrdenia strán,\n\npripraviť skutkový a právny základ pre ďalší postup,\n\npreveriť, či je potrebné nariadiť predbežné prejednanie sporu.\n\n3. Predbežné prejednanie sporu (PPS) (§ 168–172 CSP)\nPredbežné prejednanie sporu je fakultatívne – súd ho nariadi, ak to prispeje k hospodárnemu a efektívnemu priebehu konania.\n\nÚčel PPS\npreveriť procesné podmienky,\n\nvyjasniť sporné skutkové a právne otázky,\n\nvykonať predbežné právne posúdenie veci,\n\npoučiť strany,\n\npreskúmať možnosť zmieru,\n\npripraviť koncentráciu konania,\n\nrozvrhnúť ďalší postup konania.\n\nPPS môže prebehnúť aj bez prítomnosti strán, ak to povaha veci umožňuje.\n\nKontumačné rozhodnutie\nAk žalovaný napriek riadnemu poučeniu zostane nečinný, môže byť vydaný rozsudok pre zmeškanie – ide o rozhodnutie bez dokazovania.\n\n4. Rozhodnutie bez pojednávania\nSúd môže rozhodnúť vo veci samej bez pojednávania, ak to zákon pripúšťa:\n\nRozsudok pre uznanie (CSP)\nžalovaný nárok uzná,\n\nsúd je uznaním viazaný,\n\ndokazovanie sa nevykonáva.\n\nRozsudok pre zmeškanie (§ 273 CSP)\nžalovaný sa napriek riadnemu poučeniu nevyjadrí alebo nedostaví,\n\nsúd môže rozhodnúť bez pojednávania.\n\n5. Pojednávanie\nAk nie je možné rozhodnúť bez pojednávania, súd po prípravnej fáze:\n\nnariadi pojednávanie,\n\nvykoná dokazovanie,\n\nrozhodne vo veci samej.\n\nSkrátené konanie bez pojednávania\nAk sú splnené zákonné podmienky (napr. uznanie nároku, zmeškanie), súd môže rozhodnúť bez nariadenia pojednávania.\n\nZapamätaj si (štátnicové jadro)\nKonanie sa začína doručením žaloby príslušnému súdu (CSP).\n\nSúd najprv skúma procesné podmienky a vady žaloby.\n\nPísomná fáza: vyjadrenie, replika, duplika.\n\nPredbežné prejednanie sporu je fakultatívne a pripravuje pojednávanie.\n\nPPS: preverenie podmienok, predbežné právne posúdenie, zmier, koncentrácia.\n\nRozhodnutie bez pojednávania: rozsudok pre uznanie, rozsudok pre zmeškanie.\n\nCieľom prípravnej fázy je rýchle a efektívne smerovanie k rozhodnutiu.\n\nZdroj:\nCSP (160/2015 Z. z.), § 143, § 168–172; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Kedy je sporové konanie začaté?",
-      "options": ["Dňom, keď žaloba dôjde príslušnému súdu", "Dňom nariadenia pojednávania", "Dňom doručenia žaloby žalovanému", "Dňom vydania rozsudku"],
+      "options": [
+        "Dňom, keď žaloba dôjde príslušnému súdu",
+        "Dňom nariadenia pojednávania",
+        "Dňom doručenia žaloby žalovanému",
+        "Dňom vydania rozsudku"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 143 CSP).",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Na čo slúži predbežné prejednanie sporu (§ 168 CSP)?",
-      "options": ["Na definitívne rozhodnutie vo veci samej", "Na prípravu pojednávania – overenie procesných podmienok, vyjasnenie sporných otázok, možnosť zmieru a rozvrhnutie ďalšieho postupu", "Na vykonanie exekúcie rozhodnutia", "Na doručenie rozsudku"],
+      "options": [
+        "Na definitívne rozhodnutie vo veci samej",
+        "Na prípravu pojednávania – overenie procesných podmienok, vyjasnenie sporných otázok, možnosť zmieru a rozvrhnutie ďalšieho postupu",
+        "Na vykonanie exekúcie rozhodnutia",
+        "Na doručenie rozsudku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Predbežné prejednanie sporu má pripraviť pôdu pre hospodárny priebeh ďalšieho konania, nie rozhodnúť vo veci samej.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Môže súd rozhodnúť bez nariadenia pojednávania?",
-      "options": ["Nie, pojednávanie je vždy povinné", "Áno, v zákonom ustanovených prípadoch (napr. rozsudok pre uznanie, rozsudok pre zmeškanie)", "Áno, ale iba ak si to želá žalovaný", "Áno, ale iba v mimosporovom konaní"],
+      "options": [
+        "Nie, pojednávanie je vždy povinné",
+        "Áno, v zákonom ustanovených prípadoch (napr. rozsudok pre uznanie, rozsudok pre zmeškanie)",
+        "Áno, ale iba ak si to želá žalovaný",
+        "Áno, ale iba v mimosporovom konaní"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon v niektorých prípadoch výslovne pripúšťa rozhodnutie bez nariadenia pojednávania.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo skúma súd v úvodnej fáze konania pred nariadením pojednávania?",
-      "options": ["Iba výšku súdneho poplatku", "Splnenie procesných podmienok a formálnu bezvadnosť žaloby", "Iba dôveryhodnosť svedkov", "Iba majetkové pomery strán"],
+      "options": [
+        "Iba výšku súdneho poplatku",
+        "Splnenie procesných podmienok a formálnu bezvadnosť žaloby",
+        "Iba dôveryhodnosť svedkov",
+        "Iba majetkové pomery strán"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Skôr než súd pristúpi k meritórnemu prejednaniu, overuje procesné podmienky a formálnu správnosť žaloby.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Aký je cieľ predbežného prejednania sporu?",
-      "options": ["Čo najrýchlejšie a najhospodárnejšie priblíženie k rozhodnutiu vo veci", "Predĺženie konania", "Zistenie osobných pomerov sudcu", "Vylúčenie verejnosti z konania"],
+      "options": [
+        "Čo najrýchlejšie a najhospodárnejšie priblíženie k rozhodnutiu vo veci",
+        "Predĺženie konania",
+        "Zistenie osobných pomerov sudcu",
+        "Vylúčenie verejnosti z konania"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Predbežné prejednanie sporu má prispieť k rýchlemu a hospodárnemu priebehu konania.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Začatie konania", "definition": "Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu." },
-    { "term": "Predbežné prejednanie sporu (§ 168 CSP)", "definition": "Fáza prípravy pojednávania zameraná na vyjasnenie sporných otázok a možnosť zmieru." },
-    { "term": "Rozsudok pre zmeškanie", "definition": "Rozsudok vydaný bez nariadenia pojednávania pri splnení zákonných podmienok nečinnosti žalovaného." },
-    { "term": "Rozsudok pre uznanie", "definition": "Rozsudok vydaný na základe uznania nároku žalovaným, možný aj bez pojednávania." },
-    { "term": "Hospodárnosť prípravnej fázy", "definition": "Cieľom prípravy konania je čo najrýchlejšie a najefektívnejšie smerovanie k rozhodnutiu." }
+    {
+      "term": "Začatie konania",
+      "definition": "Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu."
+    },
+    {
+      "term": "Predbežné prejednanie sporu (§ 168 CSP)",
+      "definition": "Fáza prípravy pojednávania zameraná na vyjasnenie sporných otázok a možnosť zmieru."
+    },
+    {
+      "term": "Rozsudok pre zmeškanie",
+      "definition": "Rozsudok vydaný bez nariadenia pojednávania pri splnení zákonných podmienok nečinnosti žalovaného."
+    },
+    {
+      "term": "Rozsudok pre uznanie",
+      "definition": "Rozsudok vydaný na základe uznania nároku žalovaným, možný aj bez pojednávania."
+    },
+    {
+      "term": "Hospodárnosť prípravnej fázy",
+      "definition": "Cieľom prípravy konania je čo najrýchlejšie a najefektívnejšie smerovanie k rozhodnutiu."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Deň začatia konania",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Žalobca podá žalobu poštou; na súd je doručená 5. marca, hoci bola na poštu podaná už 1. marca.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca podá žalobu poštou; na súd je doručená 5. marca, hoci bola na poštu podaná už 1. marca.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kedy je konanie začaté?",
-          "options": ["Dňom, keď žaloba fakticky dôjde súdu (5. marca)", "Dňom podania na pošte (1. marca)", "Dňom doručenia žaloby žalovanému"],
+          "options": [
+            "Dňom, keď žaloba fakticky dôjde súdu (5. marca)",
+            "Dňom podania na pošte (1. marca)",
+            "Dňom doručenia žaloby žalovanému"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozhodujúci je deň, keď žaloba skutočne dôjde príslušnému súdu, nie deň jej podania na pošte.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Prečo je určenie dňa začatia konania dôležité?",
-          "options": ["Viaže sa naň napríklad posudzovanie litispendencie a plynutie niektorých lehôt", "Nemá to žiadny právny význam", "Určuje výšku súdneho poplatku"],
+          "options": [
+            "Viaže sa naň napríklad posudzovanie litispendencie a plynutie niektorých lehôt",
+            "Nemá to žiadny právny význam",
+            "Určuje výšku súdneho poplatku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Deň začatia konania je rozhodujúci napríklad pri posudzovaní prekážky litispendencie.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Rozhodnutie bez pojednávania",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalovaný sa napriek riadnemu doručeniu žaloby a poučeniu na výzvu súdu vôbec nevyjadril spôsobom, ktorý by vyžadoval nariadenie pojednávania.", "options": [], "correct": 0 },
+        {
+          "question": "Žalovaný sa napriek riadnemu doručeniu žaloby a poučeniu na výzvu súdu vôbec nevyjadril spôsobom, ktorý by vyžadoval nariadenie pojednávania.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže súd rozhodnúť bez pojednávania?",
-          "options": ["Áno, ak sú splnené zákonné podmienky (napr. pre rozsudok pre zmeškanie)", "Nie, pojednávanie musí byť vždy nariadené", "Áno, ale iba so súhlasom žalovaného"],
+          "options": [
+            "Áno, ak sú splnené zákonné podmienky (napr. pre rozsudok pre zmeškanie)",
+            "Nie, pojednávanie musí byť vždy nariadené",
+            "Áno, ale iba so súhlasom žalovaného"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon pri nečinnosti žalovaného za stanovených podmienok umožňuje rozhodnúť rozsudkom pre zmeškanie bez pojednávania.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Aký je zmysel takejto úpravy?",
-          "options": ["Zabrániť účelovému a pasívnemu predlžovaniu konania nečinnosťou žalovaného", "Uľahčiť žalovanému obranu", "Zvýšiť náklady konania"],
+          "options": [
+            "Zabrániť účelovému a pasívnemu predlžovaniu konania nečinnosťou žalovaného",
+            "Uľahčiť žalovanému obranu",
+            "Zvýšiť náklady konania"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Inštitút rozsudku pre zmeškanie chráni žalobcu pred účelovou pasivitou žalovaného.",
@@ -120,12 +188,67 @@
   "spider": {
     "center": "Začiatok konania × Predbežné prejednanie × Prípravná fáza × Rozhodnutie bez pojednávania",
     "branches": [
-      { "label": "Začatie konania", "leaves": ["sporové konanie sa začína dňom doručenia žaloby vecne a miestne príslušnému súdu", "tým vzniká procesnoprávny vzťah medzi súdom a stranami", "súd následne skúma, či môže konať (procesné podmienky) a či je žaloba bez vád"] },
-      { "label": "Písomná fáza konania", "leaves": ["skúmanie procesných podmienok", "odstraňovanie vád žaloby", "doručenie žaloby žalovanému", "vyjadrenie žalovaného", "replika žalobcu", "duplika žalovaného"] },
-      { "label": "Skúmanie procesných podmienok", "leaves": ["právomoc", "vecná a miestna príslušnosť", "procesná subjektivita a spôsobilosť", "zaplatenie súdneho poplatku", "vady žaloby", "ak žaloba trpí vadami → súd vyzve žalobcu na odstránenie → až potom ju doručí žalovanému"] },
-      { "label": "Predbežné prejednanie sporu (PPS)", "leaves": ["PPS je fakultatívne – súd ho nariadi, ak je to účelné", "preveriť procesné podmienky", "vyjasniť sporné skutkové a právne otázky", "predbežné právne posúdenie veci", "poučiť strany", "preskúmať možnosť zmieru", "pripraviť koncentráciu konania a rozvrhnúť ďalší postup", "môže prebehnúť s prítomnosťou strán aj bez nej", "na PPS možno vydať kontumačné rozhodnutie"] },
-      { "label": "Rozhodnutie bez pojednávania", "leaves": ["súd môže rozhodnúť vo veci samej bez pojednávania, ak to zákon umožňuje", "rozsudok pre uznanie – žalovaný nárok uzná, súd rozhodne bez dokazovania", "rozsudok pre zmeškanie (kontumačný) – žalovaný napriek riadnemu poučeniu zostane nečinný", "rozsudok pre vzdanie sa nároku"] },
-      { "label": "Pojednávanie a rozhodnutie vo veci samej", "leaves": ["ak nie je možné rozhodnúť bez pojednávania, súd nariadi pojednávanie", "vykoná dokazovanie", "rozhodne rozsudkom vo veci samej"] }
+      {
+        "label": "Začatie konania",
+        "leaves": [
+          "sporové konanie sa začína dňom doručenia žaloby vecne a miestne príslušnému súdu",
+          "tým vzniká procesnoprávny vzťah medzi súdom a stranami",
+          "súd následne skúma, či môže konať (procesné podmienky) a či je žaloba bez vád"
+        ]
+      },
+      {
+        "label": "Písomná fáza konania",
+        "leaves": [
+          "skúmanie procesných podmienok",
+          "odstraňovanie vád žaloby",
+          "doručenie žaloby žalovanému",
+          "vyjadrenie žalovaného",
+          "replika žalobcu",
+          "duplika žalovaného"
+        ]
+      },
+      {
+        "label": "Skúmanie procesných podmienok",
+        "leaves": [
+          "právomoc",
+          "vecná a miestna príslušnosť",
+          "procesná subjektivita a spôsobilosť",
+          "zaplatenie súdneho poplatku",
+          "vady žaloby",
+          "ak žaloba trpí vadami → súd vyzve žalobcu na odstránenie → až potom ju doručí žalovanému"
+        ]
+      },
+      {
+        "label": "Predbežné prejednanie sporu (PPS)",
+        "leaves": [
+          "PPS je fakultatívne – súd ho nariadi, ak je to účelné",
+          "preveriť procesné podmienky",
+          "vyjasniť sporné skutkové a právne otázky",
+          "predbežné právne posúdenie veci",
+          "poučiť strany",
+          "preskúmať možnosť zmieru",
+          "pripraviť koncentráciu konania a rozvrhnúť ďalší postup",
+          "môže prebehnúť s prítomnosťou strán aj bez nej",
+          "na PPS možno vydať kontumačné rozhodnutie"
+        ]
+      },
+      {
+        "label": "Rozhodnutie bez pojednávania",
+        "leaves": [
+          "súd môže rozhodnúť vo veci samej bez pojednávania, ak to zákon umožňuje",
+          "rozsudok pre uznanie – žalovaný nárok uzná, súd rozhodne bez dokazovania",
+          "rozsudok pre zmeškanie (kontumačný) – žalovaný napriek riadnemu poučeniu zostane nečinný",
+          "rozsudok pre vzdanie sa nároku"
+        ]
+      },
+      {
+        "label": "Pojednávanie a rozhodnutie vo veci samej",
+        "leaves": [
+          "ak nie je možné rozhodnúť bez pojednávania, súd nariadi pojednávanie",
+          "vykoná dokazovanie",
+          "rozhodne rozsudkom vo veci samej"
+        ]
+      }
     ]
   }
 }

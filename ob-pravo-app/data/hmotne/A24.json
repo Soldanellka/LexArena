@@ -1,7 +1,7 @@
 {
   "id": "24",
   "title": "Spôsob a rozsah náhrady škody",
-  "summary": "Náhrada škody (§ 442–450 OZ) zahŕňa skutočnú škodu (damnum emergens) a ušlý zisk (lucrum cessans). Spôsob: naturálna reštitúcia (uvedenie do pôvodného stavu) alebo peňažná náhrada. Rozsah: skutočná škoda + ušlý zisk. Spoluzavinenie poškodeného znižuje náhradu (§ 441 OZ). Mimoriadne okolnosti alebo tieseň škodcu môžu viesť k zníženiu náhrady.",
+  "summary": "Náhrada škody podľa § 442–450 OZ slúži na úplnú reparáciu ujmy, ktorá vznikla porušením právnej povinnosti. Cieľom je uviesť poškodeného do stavu, v akom by bol, keby ku škode nedošlo. Náhrada zahŕňa skutočnú škodu (damnum emergens) a ušlý zisk (lucrum cessans).\n\nRozsah náhrady škody (§ 442 OZ)\nNahrádza sa:\n– skutočná škoda – priame zmenšenie majetku (oprava, strata veci),\n– ušlý zisk – to, čo by poškodený získal, keby nedošlo k škode (napr. neuskutočnený obchod).\n\nPoškodený musí preukázať výšku škody, jej vznik a príčinnú súvislosť.\n\nSpôsob náhrady škody\n1. Naturálna reštitúcia  \nUvedenie do pôvodného stavu – oprava veci, obnovenie pôvodného stavu, vrátenie veci.\nJe preferovaná, ak je možná a účelná.\n\n2. Peňažná náhrada  \nAk naturálna reštitúcia nie je možná alebo by bola neprimeraná, poskytuje sa náhrada v peniazoch.\nVýška sa určuje podľa ceny v čase vzniku škody.\n\nSpoluzavinenie poškodeného (§ 441 OZ)\nAk poškodený prispel k vzniku škody, náhrada sa primerane zníži.\n– Môže ísť o nedbanlivosť, nerešpektovanie pokynov, nebezpečné správanie.\n– Pri hrubom spoluzavinení môže byť náhrada výrazne redukovaná.\n\nZníženie náhrady škody (§ 450 OZ)\nSúd môže náhradu primerane znížiť, ak:\n– škodca konal v tiesni,\n– škoda vznikla za mimoriadnych okolností,\n– plná náhrada by bola vzhľadom na pomery škodcu neprimerane tvrdá.\n\nToto ustanovenie umožňuje zohľadniť sociálne a ľudské okolnosti prípadu.\n\nÚplná reparácia vs. spravodlivá úprava\nZákladom je úplná náhrada škody, ale zákon umožňuje korekcie (spoluzavinenie, mimoriadne okolnosti), aby výsledok bol spravodlivý.\n\nZdroje: OZ (40/1964 Zb.), § 441–450; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo zahŕňa náhrada škody podľa § 442 OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Skutočná škoda (damnum emergens)", "definition": "Priama majetková strata poškodeného." },
-    { "term": "Ušlý zisk (lucrum cessans)", "definition": "Majetkový prospech, o ktorý poškodený prišiel v dôsledku škodovej udalosti." },
-    { "term": "Naturálna reštitúcia (§ 442 ods. 2 OZ)", "definition": "Prednostný spôsob náhrady – uvedenie do predošlého stavu." },
-    { "term": "Spoluzavinenie poškodeného (§ 441 OZ)", "definition": "Znižuje rozsah náhrady škody pomerne k miere zavinenia poškodeného." },
-    { "term": "Bolesťné a sťaženie spoločenského uplatnenia (§ 444 OZ)", "definition": "Osobitné nemajetkové náhrady pri poškodení zdravia." }
+    {
+      "term": "Skutočná škoda (damnum emergens)",
+      "definition": "Priama majetková strata poškodeného."
+    },
+    {
+      "term": "Ušlý zisk (lucrum cessans)",
+      "definition": "Majetkový prospech, o ktorý poškodený prišiel v dôsledku škodovej udalosti."
+    },
+    {
+      "term": "Naturálna reštitúcia (§ 442 ods. 2 OZ)",
+      "definition": "Prednostný spôsob náhrady – uvedenie do predošlého stavu."
+    },
+    {
+      "term": "Spoluzavinenie poškodeného (§ 441 OZ)",
+      "definition": "Znižuje rozsah náhrady škody pomerne k miere zavinenia poškodeného."
+    },
+    {
+      "term": "Bolesťné a sťaženie spoločenského uplatnenia (§ 444 OZ)",
+      "definition": "Osobitné nemajetkové náhrady pri poškodení zdravia."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Poškodenie vozidla",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vinník dopravnej nehody poškodí vozidlo poškodeného, ktoré je možné opraviť do pôvodného stavu.", "options": [], "correct": 0 },
+        {
+          "question": "Vinník dopravnej nehody poškodí vozidlo poškodeného, ktoré je možné opraviť do pôvodného stavu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký spôsob náhrady škody má prednosť?",
-          "options": ["Naturálna reštitúcia – uvedenie veci do pôvodného stavu (napr. oprava)", "Vždy len peňažná náhrada bez ohľadu na možnosť opravy", "Poškodený si nemôže vybrať žiadny spôsob"],
+          "options": [
+            "Naturálna reštitúcia – uvedenie veci do pôvodného stavu (napr. oprava)",
+            "Vždy len peňažná náhrada bez ohľadu na možnosť opravy",
+            "Poškodený si nemôže vybrať žiadny spôsob"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon uprednostňuje naturálnu reštitúciu pred peňažnou náhradou, ak je možná a účelná.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo ak by oprava nebola možná alebo účelná?",
-          "options": ["Poskytne sa peňažná náhrada škody", "Poškodený by nemal nárok na žiadnu náhradu", "Škodca by musel poskytnúť úplne iné vozidlo bez ohľadu na hodnotu"],
+          "options": [
+            "Poskytne sa peňažná náhrada škody",
+            "Poškodený by nemal nárok na žiadnu náhradu",
+            "Škodca by musel poskytnúť úplne iné vozidlo bez ohľadu na hodnotu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak naturálna reštitúcia nie je možná, nastupuje peňažná náhrada škody.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Spoluzavinenie chodca",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Chodec prechádzal cez cestu mimo priechodu pre chodcov a bol zrazený vodičom, ktorý zároveň prekročil povolenú rýchlosť.", "options": [], "correct": 0 },
+        {
+          "question": "Chodec prechádzal cez cestu mimo priechodu pre chodcov a bol zrazený vodičom, ktorý zároveň prekročil povolenú rýchlosť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa v takomto prípade posúdi náhrada škody?",
-          "options": ["Náhrada sa pomerne zníži podľa miery spoluzavinenia chodca (§ 441 OZ)", "Vodič nesie celú zodpovednosť bez ohľadu na správanie chodca", "Chodec stráca nárok na akúkoľvek náhradu"],
+          "options": [
+            "Náhrada sa pomerne zníži podľa miery spoluzavinenia chodca (§ 441 OZ)",
+            "Vodič nesie celú zodpovednosť bez ohľadu na správanie chodca",
+            "Chodec stráca nárok na akúkoľvek náhradu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri spoluzavinení oboch strán sa náhrada rozdelí podľa miery zavinenia každej z nich.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Prečo zákon takto rieši spoluzavinenie poškodeného?",
-          "options": ["Aby zodpovednosť zodpovedala skutočnému podielu zavinenia oboch strán", "Aby sa vodičovi vždy odpustila celá zodpovednosť", "Aby chodec nikdy nemohol dostať žiadnu náhradu"],
+          "options": [
+            "Aby zodpovednosť zodpovedala skutočnému podielu zavinenia oboch strán",
+            "Aby sa vodičovi vždy odpustila celá zodpovednosť",
+            "Aby chodec nikdy nemohol dostať žiadnu náhradu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Cieľom je spravodlivé rozdelenie zodpovednosti podľa skutočného podielu zavinenia.",
@@ -142,11 +181,53 @@
   "spider": {
     "center": "Náhrada škody – rozsah, spôsob, korekcie (úplná reparácia ujmy a spravodlivé úpravy)",
     "branches": [
-      { "label": "Rozsah náhrady škody (§ 442 OZ)", "leaves": ["cieľ: uviesť poškodeného do stavu, v ktorom by bol bez škody", "skutočná škoda (damnum emergens): priame zmenšenie majetku", "ušlý zisk (lucrum cessans): to, čo by poškodený získal", "poškodený musí preukázať vznik škody, jej výšku a príčinnú súvislosť"] },
-      { "label": "Spôsob náhrady škody", "leaves": ["naturálna reštitúcia: uvedenie do pôvodného stavu", "oprava veci, obnovenie stavu, vrátenie veci", "preferovaná, ak je možná a účelná", "peňažná náhrada, ak naturálna reštitúcia nie je možná alebo účelná", "výška podľa ceny v čase vzniku škody"] },
-      { "label": "Spoluzavinenie poškodeného (§ 441 OZ)", "leaves": ["ak poškodený prispel k vzniku škody, náhrada sa zníži", "nedbanlivosť", "nerešpektovanie pokynov", "nebezpečné správanie", "pri hrubom spoluzavinení výrazná redukcia náhrady"] },
-      { "label": "Zníženie náhrady škody (§ 450 OZ)", "leaves": ["súd môže náhradu primerane znížiť, ak škodca konal v tiesni", "ak škoda vznikla za mimoriadnych okolností", "ak by plná náhrada bola vzhľadom na pomery škodcu neprimerane tvrdá", "umožňuje zohľadniť sociálne a ľudské okolnosti"] },
-      { "label": "Význam pre prax", "leaves": ["zabezpečuje úplnú reparáciu poškodeného", "umožňuje spravodlivé korekcie pri spoluzavinení a mimoriadnych okolnostiach", "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti", "jasné pravidlá pre výpočet a spôsob náhrady"] }
+      {
+        "label": "Rozsah náhrady škody (§ 442 OZ)",
+        "leaves": [
+          "cieľ: uviesť poškodeného do stavu, v ktorom by bol bez škody",
+          "skutočná škoda (damnum emergens): priame zmenšenie majetku",
+          "ušlý zisk (lucrum cessans): to, čo by poškodený získal",
+          "poškodený musí preukázať vznik škody, jej výšku a príčinnú súvislosť"
+        ]
+      },
+      {
+        "label": "Spôsob náhrady škody",
+        "leaves": [
+          "naturálna reštitúcia: uvedenie do pôvodného stavu",
+          "oprava veci, obnovenie stavu, vrátenie veci",
+          "preferovaná, ak je možná a účelná",
+          "peňažná náhrada, ak naturálna reštitúcia nie je možná alebo účelná",
+          "výška podľa ceny v čase vzniku škody"
+        ]
+      },
+      {
+        "label": "Spoluzavinenie poškodeného (§ 441 OZ)",
+        "leaves": [
+          "ak poškodený prispel k vzniku škody, náhrada sa zníži",
+          "nedbanlivosť",
+          "nerešpektovanie pokynov",
+          "nebezpečné správanie",
+          "pri hrubom spoluzavinení výrazná redukcia náhrady"
+        ]
+      },
+      {
+        "label": "Zníženie náhrady škody (§ 450 OZ)",
+        "leaves": [
+          "súd môže náhradu primerane znížiť, ak škodca konal v tiesni",
+          "ak škoda vznikla za mimoriadnych okolností",
+          "ak by plná náhrada bola vzhľadom na pomery škodcu neprimerane tvrdá",
+          "umožňuje zohľadniť sociálne a ľudské okolnosti"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "zabezpečuje úplnú reparáciu poškodeného",
+          "umožňuje spravodlivé korekcie pri spoluzavinení a mimoriadnych okolnostiach",
+          "kľúčové pri dopravných nehodách, škodách na majetku, profesionálnej zodpovednosti",
+          "jasné pravidlá pre výpočet a spôsob náhrady"
+        ]
+      }
     ]
   }
 }

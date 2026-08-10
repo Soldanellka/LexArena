@@ -2,7 +2,11 @@
   "id": "A13",
   "title": "Trestná zodpovednosť a trestanie mladistvých",
   "schemaVersion": "1.1",
-  "tags": ["mladiství", "zodpovednosť", "výchovné opatrenia"],
+  "tags": [
+    "mladiství",
+    "zodpovednosť",
+    "výchovné opatrenia"
+  ],
   "theory": [
     {
       "heading": "Veková hranica trestnej zodpovednosti",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Kto je mladistvý podľa zákona?",
-      "options": ["Osoba do 14 rokov", "Osoba 14–18 rokov", "Osoba nad 18 rokov"],
+      "options": [
+        "Osoba do 14 rokov",
+        "Osoba 14–18 rokov",
+        "Osoba nad 18 rokov"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – mladistvý je vo veku 14–18 rokov.",
       "explanation_incorrect": "Nie – pod 14 rokov nie je trestná zodpovednosť."
     },
     {
       "question": "Aký je účel trestania mladistvých?",
-      "options": ["Pomsta", "Prevýchova a ochrana spoločnosti", "Zvýšenie príjmov štátu"],
+      "options": [
+        "Pomsta",
+        "Prevýchova a ochrana spoločnosti",
+        "Zvýšenie príjmov štátu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – cieľom je prevýchova.",
       "explanation_incorrect": "Nie – pomsta nie je účel trestu."
     },
     {
       "question": "Aký trest sa mladistvým neukladá?",
-      "options": ["Trest odňatia slobody", "Domáce väzenie", "Doživotie"],
+      "options": [
+        "Trest odňatia slobody",
+        "Domáce väzenie",
+        "Doživotie"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – doživotie sa mladistvým neukladá.",
       "explanation_incorrect": "Nie – doživotie je zakázané."
     },
     {
       "question": "Čo je výchovné opatrenie?",
-      "options": ["Trest", "Preventívne opatrenie pre mladistvých", "Zákaz pobytu"],
+      "options": [
+        "Trest",
+        "Preventívne opatrenie pre mladistvých",
+        "Zákaz pobytu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o preventívne opatrenie.",
       "explanation_incorrect": "Nie – nie je to trest."
     },
     {
       "question": "Kedy možno uložiť trest mladistvému?",
-      "options": ["Pri každom konaní", "Len ak výchovné opatrenia nestačia", "Len pri zločinoch"],
+      "options": [
+        "Pri každom konaní",
+        "Len ak výchovné opatrenia nestačia",
+        "Len pri zločinoch"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – trest sa ukladá až keď výchovné opatrenia nestačia.",
       "explanation_incorrect": "Nie – výchovné opatrenia majú prednosť."
     }
   ],
   "tiles": [
-    { "term": "Mladistvý", "definition": "Osoba vo veku 14–18 rokov." },
-    { "term": "Výchovné opatrenie", "definition": "Opatrenie na prevýchovu mladistvého." },
-    { "term": "Znížená sadzba", "definition": "Tresty sa ukladajú v nižšom rozpätí." },
-    { "term": "Dohľad", "definition": "Kontrola správania mladistvého." },
-    { "term": "Napomenutie", "definition": "Najmiernejšie výchovné opatrenie." }
+    {
+      "term": "Mladistvý",
+      "definition": "Osoba vo veku 14–18 rokov."
+    },
+    {
+      "term": "Výchovné opatrenie",
+      "definition": "Opatrenie na prevýchovu mladistvého."
+    },
+    {
+      "term": "Znížená sadzba",
+      "definition": "Tresty sa ukladajú v nižšom rozpätí."
+    },
+    {
+      "term": "Dohľad",
+      "definition": "Kontrola správania mladistvého."
+    },
+    {
+      "term": "Napomenutie",
+      "definition": "Najmiernejšie výchovné opatrenie."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Je trestne zodpovedný?",
-          "options": ["Áno", "Nie", "Len ak ide o zločin"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o zločin"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – od 14 rokov je zodpovedný.",
           "explanation_incorrect": "Nie – je zodpovedný."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Je vhodné napomenutie?",
-          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri násilných činoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – napomenutie je primerané.",
           "explanation_incorrect": "Nie – napomenutie je vhodné."
@@ -108,11 +155,43 @@
   "spider": {
     "center": "Mladiství – vek × vyspelosť × tresty × opatrenia",
     "branches": [
-      { "label": "Veková hranica", "leaves": ["Mladistvý 14 až 18 rokov – osoba, ktorá dovŕšila 14 a neprekročila 18 rokov (§ 94 TZ).", "Pod 14 rokov – trestná zodpovednosť nevzniká; rieši sociálnoprávna ochrana detí."] },
-      { "label": "Vyspelosť (§ 95 TZ)", "leaves": ["Rozumová a mravná vyspelosť – mladistvý do 15 rokov nemusí byť zodpovedný bez dostatočnej vyspelosti.", "Znalecké skúmanie – vyspelosť sa zisťuje znalecky (prostredie, správanie, vývin)."] },
-      { "label": "Tresty mladistvých", "leaves": ["Znížené sadzby – miernejšie tresty pre neukončený osobnostný vývin (§ 97 TZ).", "Odňatie slobody výnimočne – len krajné riešenie, v podstatne nižšej sadzbe.", "Účel – výchova a prevencia, nie represia."] },
-      { "label": "Výchovné opatrenia", "leaves": ["Nástroje – napomenutie, dohľad, obmedzenia a povinnosti, výchovné programy (§ 105 TZ).", "Prednosť – preferujú sa pred represívnym trestom; podporujú resocializáciu."] },
-      { "label": "Špecifiká konania", "leaves": ["Šetrnosť a rýchlosť – konanie šetrné, rýchle, často neverejné.", "Ochrana budúcnosti – možnosť rýchleho zahladenia odsúdenia."] }
+      {
+        "label": "Veková hranica",
+        "leaves": [
+          "Mladistvý 14 až 18 rokov – osoba, ktorá dovŕšila 14 a neprekročila 18 rokov (§ 94 TZ).",
+          "Pod 14 rokov – trestná zodpovednosť nevzniká; rieši sociálnoprávna ochrana detí."
+        ]
+      },
+      {
+        "label": "Vyspelosť (§ 95 TZ)",
+        "leaves": [
+          "Rozumová a mravná vyspelosť – mladistvý do 15 rokov nemusí byť zodpovedný bez dostatočnej vyspelosti.",
+          "Znalecké skúmanie – vyspelosť sa zisťuje znalecky (prostredie, správanie, vývin)."
+        ]
+      },
+      {
+        "label": "Tresty mladistvých",
+        "leaves": [
+          "Znížené sadzby – miernejšie tresty pre neukončený osobnostný vývin (§ 97 TZ).",
+          "Odňatie slobody výnimočne – len krajné riešenie, v podstatne nižšej sadzbe.",
+          "Účel – výchova a prevencia, nie represia."
+        ]
+      },
+      {
+        "label": "Výchovné opatrenia",
+        "leaves": [
+          "Nástroje – napomenutie, dohľad, obmedzenia a povinnosti, výchovné programy (§ 105 TZ).",
+          "Prednosť – preferujú sa pred represívnym trestom; podporujú resocializáciu."
+        ]
+      },
+      {
+        "label": "Špecifiká konania",
+        "leaves": [
+          "Šetrnosť a rýchlosť – konanie šetrné, rýchle, často neverejné.",
+          "Ochrana budúcnosti – možnosť rýchleho zahladenia odsúdenia."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Mladistvý je podľa zákona osoba vo veku 14–18 rokov; pod 14 rokov trestná zodpovednosť nevzniká. Mladiství sa trestajú miernejšie, so zníženými sadzbami a preferenciou výchovných opatrení. Trestná zodpovednosť mladistvého vzniká len pri dostatočnej rozumovej a mravnej vyspelosti.\n\n1. Veková hranica trestnej zodpovednosti (§ 94 TZ)\nMladistvý je osoba, ktorá v čase spáchania trestného činu dovŕšila 14 rokov a neprekročila 18 rokov.   \nOsoba pod 14 rokov nie je trestne zodpovedná – jej konanie sa rieši prostredníctvom orgánov sociálnoprávnej ochrany detí. \n\n2. Podmienka vyspelosti (§ 95 TZ)\nMladistvý mladší ako 15 rokov nemusí byť trestne zodpovedný, ak nedosiahol takú úroveň rozumovej a mravnej vyspelosti, aby mohol rozpoznať protiprávnosť konania alebo ovládať svoje správanie.   \nVyspelosť sa zisťuje znaleckým skúmaním, pričom sa hodnotí prostredie, správanie a osobnostný vývin mladistvého. pravnenoviny.skpravnenoviny.sk. Trestná zodpovednosť mladistvých\n\n3. Znížená trestná sadzba (§ 97 TZ)\nTresty pre mladistvých sú miernejšie, pretože zákon zohľadňuje ich neukončený osobnostný vývin.\nÚčelom trestu je najmä výchova a prevencia, nie represia.   \nTrest odňatia slobody sa ukladá len ako krajné riešenie a v podstatne nižšej sadzbe než u dospelých. \n\n4. Výchovné opatrenia (§ 105 TZ)\nPri mladistvých sa preferujú výchovné opatrenia, ktoré majú pedagogický a preventívny charakter:\n\nnapomenutie,\n\ndohľad probačného úradníka,\n\nobmedzenia a povinnosti,\n\nvýchovné programy.\nTieto opatrenia sú často účinnejšie než represívny trest a podporujú resocializáciu. \n\n5. Špecifiká trestného konania voči mladistvým\nKonanie proti mladistvým je šetrné a rýchle, často neverejné, s dôrazom na ochranu budúcnosti mladistvého.   \nZákon umožňuje aj rýchle zahladenie odsúdenia, aby sa predišlo negatívnym dopadom na život mladistvého. \n\nZapamätaj si (štátnicové jadro)\n– Mladistvý = 14–18 rokov; pod 14 rokov bez trestnej zodpovednosti.\n– Mladistvý < 15 rokov musí mať dostatočnú rozumovú a mravnú vyspelosť.\n– Tresty sú miernejšie, preferuje sa výchova a prevencia.\n– Výchovné opatrenia sú základným nástrojom sankčnej politiky voči mladistvým.\n\nZdroj\n– Trestný zákon (zákon č. 300/2005 Z. z.), § 94–121\n– Trestná zodpovednosť mladistvých – právny výklad   \n– Advokátska kancelária Dobrovič – vek trestnej zodpovednosti a sankcie dobrovic.skdobrovic.sk. Trestná zodpovednosť mladistvých: Čo hrozí mladistvým za trestný čin? - Advokátska Kancelária Bratislava | JUDr. Jozef Dobrovič  \n– Originálna Tvorba – osobitosti konania voči mladistvým   \n– Online poradca – výchovné opatrenia a zásady trestania mladistvých onlineporadca.skonlineporadca.sk. Mládež a trestné právo - Online poradca"
 }

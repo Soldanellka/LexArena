@@ -2,13 +2,22 @@
   "id": "37",
   "title": "Konania v niektorých statusových veciach fyzických osôb",
   "schemaVersion": "1.1",
-  "tags": ["statusové veci", "obmedzenie svojprávnosti", "vyhlásenie za mŕtveho", "navrátenie svojprávnosti"],
-  "summary": "Statusové veci sú mimosporové konania týkajúce sa osobného stavu fyzickej osoby – najmä konanie o spôsobilosti na právne úkony (obmedzenie svojprávnosti), konanie o vyhlásenie za mŕtveho a o dôkaze smrti, a konanie o navrátenie svojprávnosti. Ich rozhodnutia pôsobia voči všetkým (erga omnes), nielen voči účastníkom konania, preto zákon dbá na osobitnú procesnú ochranu dotknutej osoby.\n\nPri konaní o obmedzení svojprávnosti môže súd obmedziť spôsobilosť fyzickej osoby na právne úkony len v rozsahu, v akom táto osoba pre duševnú poruchu nie je schopná právne úkony robiť; súd musí vždy vypočuť znalca a spravidla aj osobne vypočuť dotknutú osobu, ak to jej zdravotný stav umožňuje. Ak dôvody obmedzenia neskôr pominú, možno viesť konanie o navrátenie svojprávnosti. Konanie o vyhlásenie za mŕtveho prichádza do úvahy vtedy, keď osoba zmizla za okolností ohrozujúcich jej život alebo o nej dlhší čas niet žiadnych správ a sú splnené zákonom stanovené podmienky (uplynutie určenej doby); právoplatné rozhodnutie má účinky obdobné smrti osoby, napríklad na dedičské pomery.\n\nZapamätaj si:\n- Statusové veci pôsobia erga omnes, preto je konanie mimosporové s osobitnou ochranou dotknutej osoby.\n- Obmedzenie svojprávnosti je možné len v rozsahu zodpovedajúcom duševnej poruche osoby.\n- Súd musí vypočuť znalca a spravidla aj osobne dotknutú osobu.\n- Konanie o navrátenie svojprávnosti umožňuje zrušiť obmedzenie, ak jeho dôvody pominuli.\n- Vyhlásenie za mŕtveho má účinky obdobné smrti (napr. na dedičstvo)."
-  ,
+  "tags": [
+    "statusové veci",
+    "obmedzenie svojprávnosti",
+    "vyhlásenie za mŕtveho",
+    "navrátenie svojprávnosti"
+  ],
+  "summary": "Statusové veci sú mimosporové konania podľa CMP, ktoré sa týkajú osobného stavu fyzickej osoby.\nRozhodnutia majú účinky erga omnes, preto CMP poskytuje zvýšenú procesnú ochranu dotknutej osoby.\n\nPatria sem najmä:\n\nobmedzenie spôsobilosti na právne úkony\n\nnavrátenie svojprávnosti\n\nvyhlásenie za mŕtveho\n\ndôkaz smrti\n\n(v širšom zmysle aj detenčné konania, opatrovnícke konania)\n\n1. Obmedzenie spôsobilosti na právne úkony\nSúd môže obmedziť spôsobilosť osoby len v rozsahu, v akom pre duševnú poruchu nie je schopná robiť právne úkony.\n\nProcesné záruky\npovinný výsluch znalca,\n\nspravidla aj osobný výsluch dotknutej osoby, ak to zdravotný stav umožňuje,\n\ndôsledné zisťovanie skutkového stavu (vyšetrovacia zásada),\n\npovinnosť súdu osobu vzhliadnuť,\n\nmožnosť ustanoviť dôverníka,\n\nrozhodnutie sa zapisuje do CNRL (centrálny register rozhodnutí o spôsobilosti).\n\nObmedzenie svojprávnosti je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované.\n\nZákladná charakteristika\nZačiatok: na návrh alebo aj bez návrhu\n\nPredmet: obmedzenie spôsobilosti + ustanovenie opatrovníka\n\nÚčastníci: dotknutá osoba, navrhovateľ, opatrovník, prokurátor\n\nPríslušnosť: okresný súd\n\nForma rozhodnutia: uznesenie\n\nÚčinky: erga omnes\n\n2. Navrátenie svojprávnosti\nAk dôvody obmedzenia pominú, možno podať návrh na navrátenie svojprávnosti.\n\nSúd:\n\nopätovne skúma zdravotný stav,\n\nvykonáva znalecké dokazovanie,\n\nrozhodne uznesením,\n\núčinky sú erga omnes.\n\n3. Vyhlásenie za mŕtveho\nKonanie prichádza do úvahy, ak osoba:\n\nzmizla za okolností ohrozujúcich život, alebo\n\no nej dlhodobo niet správ,\n\nuplynula zákonom stanovená lehota.\n\nÚčinky rozhodnutia\núčinky obdobné smrti:\n– dedičské pomery,\n– zánik manželstva,\n– majetkové vzťahy.\n\nrozhodnutie pôsobí erga omnes.\n\nZákladná charakteristika\nZačiatok: na návrh alebo ex offo\n\nPredmet: určenie, že osoba je mŕtva\n\nForma: uznesenie\n\nÚčinky: erga omnes\n\n4. Konanie o dôkaze smrti\nVedie sa, ak smrť nastala, ale nemožno ju preukázať obvyklým spôsobom (napr. chýba úmrtný list).\n\nSúd:\n\nzisťuje smrť dokazovaním (svedkovia, listiny, znalecké posudky),\n\nrozhodnutie má účinky ako úmrtný list,\n\npôsobí erga omnes.\n\nZapamätaj si (štátnicové jadro)\nStatusové veci pôsobia erga omnes, preto CMP poskytuje zvýšenú ochranu dotknutej osoby.\n\nObmedzenie svojprávnosti je možné len v rozsahu zodpovedajúcom duševnej poruche.\n\nSúd musí vypočuť znalca a spravidla aj dotknutú osobu.\n\nNavrátenie svojprávnosti ruší obmedzenie, ak dôvody pominuli.\n\nVyhlásenie za mŕtveho má účinky smrti, najmä pre dedičstvo.\n\nDôkaz smrti sa používa, ak smrť nemožno preukázať obvyklým spôsobom.\n\nZdroj\nCMP (zákon č. 161/2015 Z. z.)\n\nŠtevček – Ficová – Baricová a kol.: Civilný mimosporový poriadok. Komentár, C. H. Beck, 2016\n\nŠramel – Števček – Macej: Civilné procesné právo, Wolters Kluwer, 2017",
   "quiz": [
     {
       "question": "Čo sú statusové veci fyzických osôb?",
-      "options": ["Konania týkajúce sa osobného stavu fyzickej osoby, napr. spôsobilosti na právne úkony alebo vyhlásenia za mŕtveho", "Konania o obchodných záväzkoch", "Konania o vlastníctve k hnuteľným veciam", "Konania o výkone rozhodnutia"],
+      "options": [
+        "Konania týkajúce sa osobného stavu fyzickej osoby, napr. spôsobilosti na právne úkony alebo vyhlásenia za mŕtveho",
+        "Konania o obchodných záväzkoch",
+        "Konania o vlastníctve k hnuteľným veciam",
+        "Konania o výkone rozhodnutia"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Statusové veci sa týkajú osobného postavenia fyzickej osoby, nie majetkových vzťahov ako takých.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Prečo sú statusové konania mimosporové, nie sporové?",
-      "options": ["Lebo rozhodnutie pôsobí voči všetkým (erga omnes) a vyžaduje si osobitnú ochranu dotknutej osoby", "Lebo v nich nikdy nie je potrebné dokazovanie", "Lebo sa netýkajú fyzických osôb", "Lebo v nich rozhoduje výlučne notár"],
+      "options": [
+        "Lebo rozhodnutie pôsobí voči všetkým (erga omnes) a vyžaduje si osobitnú ochranu dotknutej osoby",
+        "Lebo v nich nikdy nie je potrebné dokazovanie",
+        "Lebo sa netýkajú fyzických osôb",
+        "Lebo v nich rozhoduje výlučne notár"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Účinky voči všetkým osobám a potreba osobitnej ochrany dotknutej osoby odôvodňujú mimosporovú povahu týchto konaní.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo musí súd urobiť pred rozhodnutím o obmedzení svojprávnosti?",
-      "options": ["Vypočuť znalca a spravidla aj osobne vypočuť dotknutú osobu, ak to jej stav umožňuje", "Rozhodnúť bez akéhokoľvek dokazovania", "Vyžiadať súhlas dotknutej osoby ako podmienku rozhodnutia", "Automaticky rozhodnúť podľa návrhu rodinného príslušníka"],
+      "options": [
+        "Vypočuť znalca a spravidla aj osobne vypočuť dotknutú osobu, ak to jej stav umožňuje",
+        "Rozhodnúť bez akéhokoľvek dokazovania",
+        "Vyžiadať súhlas dotknutej osoby ako podmienku rozhodnutia",
+        "Automaticky rozhodnúť podľa návrhu rodinného príslušníka"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Znalecký posudok a osobné vypočutie dotknutej osoby sú zásadnými zárukami ochrany jej práv.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "V akom rozsahu môže súd obmedziť svojprávnosť?",
-      "options": ["Vždy v plnom rozsahu bez ohľadu na stav osoby", "Len v rozsahu, v akom osoba pre duševnú poruchu nie je schopná robiť právne úkony", "Podľa ľubovôle navrhovateľa", "Vždy len na jeden rok bez možnosti predĺženia"],
+      "options": [
+        "Vždy v plnom rozsahu bez ohľadu na stav osoby",
+        "Len v rozsahu, v akom osoba pre duševnú poruchu nie je schopná robiť právne úkony",
+        "Podľa ľubovôle navrhovateľa",
+        "Vždy len na jeden rok bez možnosti predĺženia"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Obmedzenie musí byť primerané konkrétnej neschopnosti osoby, nie plošné.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Kedy môže súd vyhlásiť osobu za mŕtvu?",
-      "options": ["Ak osoba zmizla za okolností ohrozujúcich život alebo o nej dlhší čas niet správ a sú splnené zákonom stanovené podmienky", "Hneď po nahlásení nezvestnosti bez ďalších podmienok", "Iba na základe žiadosti poisťovne", "Nikdy, tento inštitút slovenské právo nepozná"],
+      "options": [
+        "Ak osoba zmizla za okolností ohrozujúcich život alebo o nej dlhší čas niet správ a sú splnené zákonom stanovené podmienky",
+        "Hneď po nahlásení nezvestnosti bez ďalších podmienok",
+        "Iba na základe žiadosti poisťovne",
+        "Nikdy, tento inštitút slovenské právo nepozná"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zákon viaže vyhlásenie za mŕtveho na konkrétne, časovo a vecne vymedzené podmienky.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Statusové veci", "definition": "Konania týkajúce sa osobného stavu fyzickej osoby s účinkami voči všetkým (erga omnes)." },
-    { "term": "Konanie o obmedzení svojprávnosti", "definition": "Súd obmedzuje spôsobilosť na právne úkony len v rozsahu zodpovedajúcom duševnej poruche osoby." },
-    { "term": "Vypočutie znalca a dotknutej osoby", "definition": "Povinná súčasť konania o obmedzení svojprávnosti." },
-    { "term": "Konanie o vyhlásení za mŕtveho", "definition": "Rieši situáciu dlhodobej nezvestnosti alebo zmiznutia za život ohrozujúcich okolností." },
-    { "term": "Navrátenie svojprávnosti", "definition": "Konanie, ktorým možno pôvodne obmedzenú svojprávnosť opäť vrátiť, ak pominuli dôvody obmedzenia." }
+    {
+      "term": "Statusové veci",
+      "definition": "Konania týkajúce sa osobného stavu fyzickej osoby s účinkami voči všetkým (erga omnes)."
+    },
+    {
+      "term": "Konanie o obmedzení svojprávnosti",
+      "definition": "Súd obmedzuje spôsobilosť na právne úkony len v rozsahu zodpovedajúcom duševnej poruche osoby."
+    },
+    {
+      "term": "Vypočutie znalca a dotknutej osoby",
+      "definition": "Povinná súčasť konania o obmedzení svojprávnosti."
+    },
+    {
+      "term": "Konanie o vyhlásení za mŕtveho",
+      "definition": "Rieši situáciu dlhodobej nezvestnosti alebo zmiznutia za život ohrozujúcich okolností."
+    },
+    {
+      "term": "Navrátenie svojprávnosti",
+      "definition": "Konanie, ktorým možno pôvodne obmedzenú svojprávnosť opäť vrátiť, ak pominuli dôvody obmedzenia."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Návrh na obmedzenie svojprávnosti",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Rodina podá návrh na obmedzenie svojprávnosti príbuzného trpiaceho ťažkou duševnou poruchou, pre ktorú nie je schopný spravovať svoj majetok.", "options": [], "correct": 0 },
+        {
+          "question": "Rodina podá návrh na obmedzenie svojprávnosti príbuzného trpiaceho ťažkou duševnou poruchou, pre ktorú nie je schopný spravovať svoj majetok.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo musí súd pred rozhodnutím urobiť?",
-          "options": ["Vypočuť znalca a spravidla aj osobne dotknutú osobu, ak to jej stav umožňuje", "Rozhodnúť bez akéhokoľvek šetrenia na základe návrhu rodiny", "Vyžiadať písomný súhlas dotknutej osoby s obmedzením"],
+          "options": [
+            "Vypočuť znalca a spravidla aj osobne dotknutú osobu, ak to jej stav umožňuje",
+            "Rozhodnúť bez akéhokoľvek šetrenia na základe návrhu rodiny",
+            "Vyžiadať písomný súhlas dotknutej osoby s obmedzením"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Znalecký posudok a osobné vypočutie sú kľúčovými zárukami spravodlivého rozhodnutia.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "V akom rozsahu môže súd svojprávnosť obmedziť?",
-          "options": ["Len v rozsahu zodpovedajúcom neschopnosti osoby robiť právne úkony pre jej duševnú poruchu", "Vždy v plnom rozsahu bez výnimky", "V rozsahu určenom výlučne návrhom rodiny"],
+          "options": [
+            "Len v rozsahu zodpovedajúcom neschopnosti osoby robiť právne úkony pre jej duševnú poruchu",
+            "Vždy v plnom rozsahu bez výnimky",
+            "V rozsahu určenom výlučne návrhom rodiny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zásah do svojprávnosti musí byť primeraný skutočnému stavu dotknutej osoby.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Vyhlásenie za mŕtveho",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Osoba je nezvestná už mnoho rokov po tom, čo zmizla za okolností vážne ohrozujúcich jej život, a nepodarilo sa zistiť jej osud.", "options": [], "correct": 0 },
+        {
+          "question": "Osoba je nezvestná už mnoho rokov po tom, čo zmizla za okolností vážne ohrozujúcich jej život, a nepodarilo sa zistiť jej osud.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký procesný prostriedok môžu blízki tejto osoby využiť?",
-          "options": ["Návrh na začatie konania o vyhlásenie za mŕtveho", "Musia čakať donekonečna bez možnosti riešenia", "Podať žalobu o náhradu škody voči štátu"],
+          "options": [
+            "Návrh na začatie konania o vyhlásenie za mŕtveho",
+            "Musia čakať donekonečna bez možnosti riešenia",
+            "Podať žalobu o náhradu škody voči štátu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Práve na takéto situácie slúži konanie o vyhlásenie za mŕtveho.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Aký je právny účinok právoplatného rozhodnutia o vyhlásení za mŕtveho?",
-          "options": ["Nastávajú účinky obdobné smrti osoby (napr. na dedičské pomery)", "Nemá žiadny právny účinok", "Osoba je tým automaticky vyhlásená za nesvojprávnu"],
+          "options": [
+            "Nastávajú účinky obdobné smrti osoby (napr. na dedičské pomery)",
+            "Nemá žiadny právny účinok",
+            "Osoba je tým automaticky vyhlásená za nesvojprávnu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vyhlásenie za mŕtveho má zásadné právne účinky obdobné skutočnej smrti, napríklad pre dedičské konanie.",
@@ -120,12 +188,63 @@
   "spider": {
     "center": "Statusové konania – svojprávnosť × navrátenie × vyhlásenie za mŕtveho × detenčné × opatrovnícke",
     "branches": [
-      { "label": "Ktoré konania sem patria", "leaves": ["konanie o vyhlásení za mŕtveho", "konanie o spôsobilosti na právne úkony", "detenčné konanie – konanie o prípustnosti prevzatia a držania v zdravotníckom zariadení", "opatrovnícke konanie"] },
-      { "label": "Obmedzenie spôsobilosti na právne úkony", "leaves": ["súd môže obmedziť spôsobilosť osoby len v rozsahu, v akom pre duševnú poruchu nie je schopná robiť právne úkony", "obligatórne znalecké dokazovanie", "povinný výsluch znalca", "vzhliadnutie dotknutej osoby súdom", "dôsledné zisťovanie skutkového stavu (vyšetrovacia zásada)", "obmedzenie svojprávnosti je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované"] },
-      { "label": "Procesná ochrana dotknutej osoby", "leaves": ["zákon priznáva procesnú spôsobilosť aj inak nespôsobilým subjektom", "zvýšená poučovacia povinnosť súdu", "dotknutá osoba si môže zvoliť dôverníka", "evidencia rozhodnutia v Centrálnom notárskom registri listín (CNRL)"] },
-      { "label": "Navrátenie svojprávnosti", "leaves": ["ak dôvody obmedzenia pominú, možno podať návrh na navrátenie svojprávnosti", "súd opätovne skúma zdravotný stav", "vykonáva znalecké dokazovanie", "rozhoduje uznesením"] },
-      { "label": "Vyhlásenie za mŕtveho a dôkaz smrti", "leaves": ["používa sa, ak osoba zmizla za okolností ohrozujúcich život", "alebo ak o nej dlhodobo niet správ a uplynula zákonom stanovená lehota", "právoplatné rozhodnutie má účinky smrti", "zásadný dopad na dedičstvo, manželstvo, majetkové vzťahy", "dôkaz smrti: ak smrť nastala, ale nemožno ju preukázať obvyklým spôsobom", "súd zisťuje okolnosti smrti, dôkazy o úmrtí, svedectvá, listiny, znalecké posudky"] },
-      { "label": "Forma rozhodnutia a účinky", "leaves": ["rozhoduje sa uznesením, v niektorých konaniach rozsudkom", "statusové rozhodnutia pôsobia erga omnes", "preto CMP kladie dôraz na zvýšenú procesnú ochranu a odborné dokazovanie"] }
+      {
+        "label": "Ktoré konania sem patria",
+        "leaves": [
+          "konanie o vyhlásení za mŕtveho",
+          "konanie o spôsobilosti na právne úkony",
+          "detenčné konanie – konanie o prípustnosti prevzatia a držania v zdravotníckom zariadení",
+          "opatrovnícke konanie"
+        ]
+      },
+      {
+        "label": "Obmedzenie spôsobilosti na právne úkony",
+        "leaves": [
+          "súd môže obmedziť spôsobilosť osoby len v rozsahu, v akom pre duševnú poruchu nie je schopná robiť právne úkony",
+          "obligatórne znalecké dokazovanie",
+          "povinný výsluch znalca",
+          "vzhliadnutie dotknutej osoby súdom",
+          "dôsledné zisťovanie skutkového stavu (vyšetrovacia zásada)",
+          "obmedzenie svojprávnosti je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované"
+        ]
+      },
+      {
+        "label": "Procesná ochrana dotknutej osoby",
+        "leaves": [
+          "zákon priznáva procesnú spôsobilosť aj inak nespôsobilým subjektom",
+          "zvýšená poučovacia povinnosť súdu",
+          "dotknutá osoba si môže zvoliť dôverníka",
+          "evidencia rozhodnutia v Centrálnom notárskom registri listín (CNRL)"
+        ]
+      },
+      {
+        "label": "Navrátenie svojprávnosti",
+        "leaves": [
+          "ak dôvody obmedzenia pominú, možno podať návrh na navrátenie svojprávnosti",
+          "súd opätovne skúma zdravotný stav",
+          "vykonáva znalecké dokazovanie",
+          "rozhoduje uznesením"
+        ]
+      },
+      {
+        "label": "Vyhlásenie za mŕtveho a dôkaz smrti",
+        "leaves": [
+          "používa sa, ak osoba zmizla za okolností ohrozujúcich život",
+          "alebo ak o nej dlhodobo niet správ a uplynula zákonom stanovená lehota",
+          "právoplatné rozhodnutie má účinky smrti",
+          "zásadný dopad na dedičstvo, manželstvo, majetkové vzťahy",
+          "dôkaz smrti: ak smrť nastala, ale nemožno ju preukázať obvyklým spôsobom",
+          "súd zisťuje okolnosti smrti, dôkazy o úmrtí, svedectvá, listiny, znalecké posudky"
+        ]
+      },
+      {
+        "label": "Forma rozhodnutia a účinky",
+        "leaves": [
+          "rozhoduje sa uznesením, v niektorých konaniach rozsudkom",
+          "statusové rozhodnutia pôsobia erga omnes",
+          "preto CMP kladie dôraz na zvýšenú procesnú ochranu a odborné dokazovanie"
+        ]
+      }
     ]
   }
 }

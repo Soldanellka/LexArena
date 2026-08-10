@@ -2,7 +2,11 @@
   "id": "A17",
   "title": "Trestné činy proti životu",
   "schemaVersion": "1.1",
-  "tags": ["život", "vražda", "usmrtenie"],
+  "tags": [
+    "život",
+    "vražda",
+    "usmrtenie"
+  ],
   "theory": [
     {
       "heading": "Vražda",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Čo je vražda?",
-      "options": ["Neúmyselné usmrtenie", "Úmyselné usmrtenie", "Náhodná smrť"],
+      "options": [
+        "Neúmyselné usmrtenie",
+        "Úmyselné usmrtenie",
+        "Náhodná smrť"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – vražda je úmyselné usmrtenie.",
       "explanation_incorrect": "Nie – vražda je úmyselná."
     },
     {
       "question": "Čo je usmrtenie?",
-      "options": ["Úmyselné usmrtenie", "Neúmyselné spôsobenie smrti", "Náhodná udalosť"],
+      "options": [
+        "Úmyselné usmrtenie",
+        "Neúmyselné spôsobenie smrti",
+        "Náhodná udalosť"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – usmrtenie je neúmyselné.",
       "explanation_incorrect": "Nie – usmrtenie je neúmyselné."
     },
     {
       "question": "Čo je úkladná vražda?",
-      "options": ["Vražda z nedbanlivosti", "Vražda s rozmyslom", "Náhodné usmrtenie"],
+      "options": [
+        "Vražda z nedbanlivosti",
+        "Vražda s rozmyslom",
+        "Náhodné usmrtenie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o vraždu s rozmyslom.",
       "explanation_incorrect": "Nie – úkladná vražda je plánovaná."
     },
     {
       "question": "Ktorý čin je najzávažnejší?",
-      "options": ["Usmrtenie", "Vražda", "Ublíženie na zdraví"],
+      "options": [
+        "Usmrtenie",
+        "Vražda",
+        "Ublíženie na zdraví"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – vražda je najzávažnejšia.",
       "explanation_incorrect": "Nie – vražda je najzávažnejšia."
     },
     {
       "question": "Kedy ide o nedbanlivostné usmrtenie?",
-      "options": ["Pri úmysle", "Pri nepozornosti", "Pri plánovaní"],
+      "options": [
+        "Pri úmysle",
+        "Pri nepozornosti",
+        "Pri plánovaní"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o nedbanlivosť.",
       "explanation_incorrect": "Nie – nepozornosť je nedbanlivosť."
     }
   ],
   "tiles": [
-    { "term": "Vražda", "definition": "Úmyselné usmrtenie inej osoby." },
-    { "term": "Úkladná vražda", "definition": "Vražda s rozmyslom alebo plánovaním." },
-    { "term": "Usmrtenie", "definition": "Neúmyselné spôsobenie smrti." },
-    { "term": "Nedbanlivosť", "definition": "Porušenie povinnosti z nepozornosti." },
-    { "term": "Úmysel", "definition": "Vedomé chcenie následku." }
+    {
+      "term": "Vražda",
+      "definition": "Úmyselné usmrtenie inej osoby."
+    },
+    {
+      "term": "Úkladná vražda",
+      "definition": "Vražda s rozmyslom alebo plánovaním."
+    },
+    {
+      "term": "Usmrtenie",
+      "definition": "Neúmyselné spôsobenie smrti."
+    },
+    {
+      "term": "Nedbanlivosť",
+      "definition": "Porušenie povinnosti z nepozornosti."
+    },
+    {
+      "term": "Úmysel",
+      "definition": "Vedomé chcenie následku."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Ide o úmysel?",
-          "options": ["Nie", "Áno", "Len ak bol opitý"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak bol opitý"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – nejde o úmysel.",
           "explanation_incorrect": "Nie – nejde o úmysel."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Je čin plánovaný?",
-          "options": ["Áno", "Nie", "Nevieme"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Nevieme"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o plánovanie.",
           "explanation_incorrect": "Nie – je to plánované."
@@ -108,11 +155,49 @@
   "spider": {
     "center": "Trestné činy proti životu (§§ 144–149)",
     "branches": [
-      { "label": "Úkladná vražda (§ 144)", "leaves": ["Podstata – úmyselné usmrtenie s rozmyslom alebo po predchádzajúcej úvahe", "Rozmysel – premyslené, plánované konanie, nie afekt", "Sadzba – 20 až 25 rokov; kvalifikované formy doživotie", "Postavenie – najprísnejšie trestaný TČ proti životu"] },
-      { "label": "Vražda (§ 145)", "leaves": ["Podstata – úmyselné usmrtenie inej osoby", "Zavinenie – priamy úmysel alebo uzrozumenie (nepriamy úmysel)", "Sadzba – 15 až 20 rokov; kvalifikované formy 25 rokov alebo doživotie"] },
-      { "label": "Zabitie (§§ 147–148)", "leaves": ["Podstata – úmyselné usmrtenie za menej závažných okolností", "Situácie – silné rozrušenie (afekt), prekročenie nutnej obrany či krajnej núdze", "Sadzba – 3 až 8 rokov; kvalifikované formy vyššie", "Postavenie – stredná kategória medzi vraždou a usmrtením"] },
-      { "label": "Usmrtenie (§ 149)", "leaves": ["Podstata – nedbanlivostné spôsobenie smrti", "Zavinenie – porušenie povinnosti zo zákona, povolania či situácie", "Sadzba – do 3 rokov; kvalifikované formy vyššie (napr. alkohol pri nehode)"] },
-      { "label": "Porovnanie", "leaves": ["Kľúč – zavinenie: rozmysel × úmysel × afekt × nedbanlivosť", "Hierarchia sadzieb – úkladná vražda > vražda > zabitie > usmrtenie", "Chránená hodnota – život ako najvyššia hodnota"] }
+      {
+        "label": "Úkladná vražda (§ 144)",
+        "leaves": [
+          "Podstata – úmyselné usmrtenie s rozmyslom alebo po predchádzajúcej úvahe",
+          "Rozmysel – premyslené, plánované konanie, nie afekt",
+          "Sadzba – 20 až 25 rokov; kvalifikované formy doživotie",
+          "Postavenie – najprísnejšie trestaný TČ proti životu"
+        ]
+      },
+      {
+        "label": "Vražda (§ 145)",
+        "leaves": [
+          "Podstata – úmyselné usmrtenie inej osoby",
+          "Zavinenie – priamy úmysel alebo uzrozumenie (nepriamy úmysel)",
+          "Sadzba – 15 až 20 rokov; kvalifikované formy 25 rokov alebo doživotie"
+        ]
+      },
+      {
+        "label": "Zabitie (§§ 147–148)",
+        "leaves": [
+          "Podstata – úmyselné usmrtenie za menej závažných okolností",
+          "Situácie – silné rozrušenie (afekt), prekročenie nutnej obrany či krajnej núdze",
+          "Sadzba – 3 až 8 rokov; kvalifikované formy vyššie",
+          "Postavenie – stredná kategória medzi vraždou a usmrtením"
+        ]
+      },
+      {
+        "label": "Usmrtenie (§ 149)",
+        "leaves": [
+          "Podstata – nedbanlivostné spôsobenie smrti",
+          "Zavinenie – porušenie povinnosti zo zákona, povolania či situácie",
+          "Sadzba – do 3 rokov; kvalifikované formy vyššie (napr. alkohol pri nehode)"
+        ]
+      },
+      {
+        "label": "Porovnanie",
+        "leaves": [
+          "Kľúč – zavinenie: rozmysel × úmysel × afekt × nedbanlivosť",
+          "Hierarchia sadzieb – úkladná vražda > vražda > zabitie > usmrtenie",
+          "Chránená hodnota – život ako najvyššia hodnota"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti životu patria medzi najzávažnejšie skutky v slovenskom trestnom práve.\nZákladné formy sú:\n\núkladná vražda (§ 144 TZ) – úmyselné usmrtenie s rozmyslom,\n\nvražda (§ 145 TZ) – úmyselné usmrtenie,\n\nzabitie (§ 147–148 TZ) – úmyselné usmrtenie v afekte alebo pri prekročení nutnej obrany,\n\nusmrtenie (§ 149 TZ) – nedbanlivostné spôsobenie smrti.\n\nŽivot je najvyššia hodnota chránená právom, preto sú tieto skutky sankcionované najprísnejšími trestami.\n\n1. Úkladná vražda (§ 144 TZ)\nÚkladná vražda je úmyselné usmrtenie spáchané s rozmyslom alebo po predchádzajúcej úvahe.\n\nRozmysel znamená:\n– páchateľ koná premyslene,\n– má čas zvážiť konanie,\n– koná plánovane, nie v afekte.\n\nTrestnosť:\n– základná sadzba: 20 až 25 rokov,\n– kvalifikované formy: doživotie.\n\nÚkladná vražda je najprísnejšie trestaný trestný čin proti životu.\n\n2. Vražda (§ 145 TZ)\nVražda je úmyselné usmrtenie inej osoby.\n\nPodstata:\n– páchateľ chce spôsobiť smrť,\n– alebo je s ňou uzrozumený (nepriamy úmysel).\n\nTrestnosť:\n– základná sadzba: 15 až 20 rokov,\n– kvalifikované formy: 25 rokov alebo doživotie.\n\n3. Zabitie (§§ 147–148 TZ)\nZabitie je úmyselné usmrtenie, ale za menej závažných okolností než vražda.\n\nTypické situácie:\n– konanie v silnom rozrušení (afekt),\n– konanie pri prekročení medzí nutnej obrany,\n– konanie pri prekročení krajnej núdze.\n\nTrestnosť:\n– základná sadzba: 3 až 8 rokov,\n– pri kvalifikovaných formách vyššia.\n\nZabitie je „stredná“ kategória medzi vraždou a usmrtením.\n\n4. Usmrtenie (§ 149 TZ)\nUsmrtenie je nedbanlivostné spôsobenie smrti.\n\nPodstata:\n– páchateľ smrť nechce,\n– nie je s ňou uzrozumený,\n– koná nedbalo — poruší povinnosť vyplývajúcu zo zákona, povolania alebo situácie.\n\nTrestnosť:\n– základná sadzba: do 3 rokov,\n– pri kvalifikovaných formách (napr. dopravná nehoda pod vplyvom alkoholu): vyššie sadzby.\n\nPorovnanie hlavných trestných činov proti životu\nSkutok\tZavinenie\tPodstata\tZákladná sadzba\nÚkladná vražda (§ 144)\tÚmysel + rozmysel\tPlánované úmyselné usmrtenie\t20–25 rokov / doživotie\nVražda (§ 145)\tÚmysel\tÚmyselné usmrtenie osoby\t15–20 rokov\nZabitie (§ 147–148)\tÚmysel (afekt / prekročenie obrany)\tMenej závažné úmyselné usmrtenie\t3–8 rokov\nUsmrtenie (§ 149)\tNedbanlivosť\tNeúmyselné spôsobenie smrti\tdo 3 rokov\n\n\nZapamätaj si (štátnicové jadro)\n– Vražda = úmyselné usmrtenie.\n– Úkladná vražda = vražda s rozmyslom alebo predchádzajúcou úvahou.\n– Zabitie = úmyselné usmrtenie v afekte alebo pri prekročení obrany.\n– Usmrtenie = nedbanlivostné spôsobenie smrti.\n– Úkladná vražda je najprísnejšie trestaná — často až doživotie.\n– Rozdiel medzi vraždou a usmrtením je v zavinení (úmysel × nedbanlivosť).\n\nZdroj (overené)\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 144–149 TZ  \n– Ministerstvo spravodlivosti SR – prehľad skutkových podstát trestných činov proti životu\n– Burda – Čentéš – Šramel: Trestné právo hmotné – Osobitná časť  \n– Justičná revue – judikatúra k úkladnej vražde a zabitiu"
 }

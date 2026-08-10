@@ -11,78 +11,131 @@
     "Ústava SR",
     "prekážky v práci"
   ],
-
-  "summary": "Štrajk a výluka sú dva základné inštitúty kolektívneho pracovného práva, ktoré predstavujú krajné prostriedky riešenia kolektívnych sporov. Právo na štrajk je ústavne garantované (čl. 37 ods. 4 Ústavy SR) a jeho podrobná úprava sa nachádza v zákone o kolektívnom vyjednávaní. Štrajk je kolektívne prerušenie práce zamestnancami, ktoré možno vyhlásiť len v spore o uzavretie kolektívnej zmluvy a až po neúspešnom sprostredkovaní. Vyhlasuje ho výlučne odborová organizácia a nesmie ohroziť život, zdravie ani bezpečnosť.\n\nVýluka je opačný inštitút – ide o jednostranné neprideľovanie práce zo strany zamestnávateľa. Používa sa ako krajné opatrenie v kolektívnom spore. Počas výluky ide o prekážku v práci na strane zamestnávateľa, čo má dopad na náhradu mzdy.\n\nNezákonný štrajk alebo výluka zakladajú zodpovednosť za škodu. Zákon o kolektívnom vyjednávaní je jediný komplexný predpis, ktorý upravuje podmienky, postup a následky štrajku a výluky.\n\nPríklad:\nOdbory chcú vyhlásiť štrajk bez sprostredkovania. Takýto štrajk je nezákonný a odbory by niesli zodpovednosť za škodu. Zamestnávateľ môže vyhlásiť výluku, ale musí dodržať oznamovacie povinnosti.\n\nKľúčové slová (štátnicové):\n- štrajk – kolektívne prerušenie práce zamestnancami,\n- výluka – neprideľovanie práce zamestnávateľom,\n- zákon o kolektívnom vyjednávaní – upravuje štrajk aj výluku,\n- ústavné právo na štrajk – čl. 37 ods. 4 Ústavy SR,\n- sprostredkovanie – povinný krok pred štrajkom,\n- nezákonný štrajk/výluka – zodpovednosť za škodu,\n- prekážka v práci počas výluky – dopad na mzdu.\n\nZapamätaj si:\n- Štrajk aj výluka sú upravené v zákone o kolektívnom vyjednávaní.\n- Štrajk = krajné opatrenie zamestnancov; výluka = krajné opatrenie zamestnávateľa.\n- Štrajk možno vyhlásiť len odborovou organizáciou a až po neúspešnom sprostredkovaní.\n- Počas štrajku mzda nepatrí; počas výluky ide o prekážku v práci na strane zamestnávateľa.\n- Nezákonný štrajk alebo výluka zakladajú zodpovednosť za škodu."
-  ,
-
+  "summary": "Štrajk a výluka sú dva základné inštitúty kolektívneho pracovného práva, ktoré predstavujú krajné prostriedky riešenia kolektívnych sporov. Právo na štrajk je ústavne garantované (čl. 37 ods. 4 Ústavy SR) a jeho podrobná úprava sa nachádza v Zákonníku práce. Štrajk je kolektívne prerušenie práce zamestnancami, ktoré možno vyhlásiť len v spore o uzavretie kolektívnej zmluvy a až po neúspešnom sprostredkovaní. Vyhlasuje ho výlučne odborová organizácia a nesmie ohroziť život, zdravie ani bezpečnosť.\n\nVýluka je opačný inštitút – ide o jednostranné neprideľovanie práce zo strany zamestnávateľa. Používa sa ako krajné opatrenie v kolektívnom spore. Počas výluky ide o prekážku v práci na strane zamestnávateľa, čo má dopad na náhradu mzdy.\n\nNezákonný štrajk alebo výluka zakladajú zodpovednosť za škodu. Zákon o kolektívnom vyjednávaní je jediný komplexný predpis, ktorý upravuje podmienky, postup a následky štrajku a výluky.\n\nPríklad:\nOdbory chcú vyhlásiť štrajk bez sprostredkovania. Takýto štrajk je nezákonný a odbory by niesli zodpovednosť za škodu. Zamestnávateľ môže vyhlásiť výluku, ale musí dodržať oznamovacie povinnosti.\n\nKľúčové slová (štátnicové):\n- štrajk – kolektívne prerušenie práce zamestnancami,\n- výluka – neprideľovanie práce zamestnávateľom,\n- zákon o kolektívnom vyjednávaní – upravuje štrajk aj výluku,\n- ústavné právo na štrajk – čl. 37 ods. 4 Ústavy SR,\n- sprostredkovanie – povinný krok pred štrajkom,\n- nezákonný štrajk/výluka – zodpovednosť za škodu,\n- prekážka v práci počas výluky – dopad na mzdu.\n\nZapamätaj si:\n- Štrajk aj výluka sú upravené v zákone o kolektívnom vyjednávaní.\n- Štrajk = krajné opatrenie zamestnancov; výluka = krajné opatrenie zamestnávateľa.\n- Štrajk možno vyhlásiť len odborovou organizáciou a až po neúspešnom sprostredkovaní.\n- Počas štrajku mzda nepatrí; počas výluky ide o prekážku v práci na strane zamestnávateľa.\n- Nezákonný štrajk alebo výluka zakladajú zodpovednosť za škodu.",
   "quiz": [
     {
       "question": "Ktorý právny predpis upravuje štrajk a výluku?",
-      "options": ["Zákonník práce", "Zákon o kolektívnom vyjednávaní", "Občiansky zákonník"],
+      "options": [
+        "Zákon o kolektívnom vyjednávaní",
+        "Zákonník práce",
+        "Občiansky zákonník"
+      ],
       "correct": 1
     },
     {
       "question": "Kto môže vyhlásiť štrajk?",
-      "options": ["Zamestnávateľ", "Odborová organizácia", "Zamestnanci individuálne"],
+      "options": [
+        "Zamestnávateľ",
+        "Odborová organizácia",
+        "Zamestnanci individuálne"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je výluka?",
-      "options": ["Prerušenie práce zamestnancami", "Neprideľovanie práce zamestnávateľom", "Dohoda o práci nadčas"],
+      "options": [
+        "Prerušenie práce zamestnancami",
+        "Neprideľovanie práce zamestnávateľom",
+        "Dohoda o práci nadčas"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno vyhlásiť štrajk?",
-      "options": ["Kedykoľvek", "Len v spore o kolektívnu zmluvu a po sprostredkovaní", "Len po súhlase zamestnávateľa"],
+      "options": [
+        "Kedykoľvek",
+        "Len v spore o kolektívnu zmluvu a po sprostredkovaní",
+        "Len po súhlase zamestnávateľa"
+      ],
       "correct": 1
     },
     {
       "question": "Čo platí počas výluky?",
-      "options": ["Zamestnanec dostáva mzdu", "Ide o prekážku v práci na strane zamestnávateľa", "Zamestnanec musí pracovať z domu"],
+      "options": [
+        "Zamestnanec dostáva mzdu",
+        "Ide o prekážku v práci na strane zamestnávateľa",
+        "Zamestnanec musí pracovať z domu"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Štrajk", "definition": "Kolektívne prerušenie práce zamestnancami ako krajné opatrenie v kolektívnom spore." },
-    { "term": "Výluka", "definition": "Jednostranné neprideľovanie práce zamestnávateľom ako krajné opatrenie." },
-    { "term": "Ústavné právo na štrajk", "definition": "Čl. 37 ods. 4 Ústavy SR garantuje právo na štrajk." },
-    { "term": "Sprostredkovanie", "definition": "Povinný krok pred vyhlásením štrajku." },
-    { "term": "Prekážka v práci", "definition": "Počas výluky ide o prekážku na strane zamestnávateľa." }
+    {
+      "term": "Štrajk",
+      "definition": "Kolektívne prerušenie práce zamestnancami ako krajné opatrenie v kolektívnom spore."
+    },
+    {
+      "term": "Výluka",
+      "definition": "Jednostranné neprideľovanie práce zamestnávateľom ako krajné opatrenie."
+    },
+    {
+      "term": "Ústavné právo na štrajk",
+      "definition": "Čl. 37 ods. 4 Ústavy SR garantuje právo na štrajk."
+    },
+    {
+      "term": "Sprostredkovanie",
+      "definition": "Povinný krok pred vyhlásením štrajku."
+    },
+    {
+      "term": "Prekážka v práci",
+      "definition": "Počas výluky ide o prekážku na strane zamestnávateľa."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonný štrajk",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Zadanie: Odbory chcú vyhlásiť štrajk bez sprostredkovania.", "options": [], "correct": 0 },
+        {
+          "question": "Zadanie: Odbory chcú vyhlásiť štrajk bez sprostredkovania.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Krok 1: Je štrajk zákonný?",
-          "options": ["Áno", "Nie, je nezákonný", "Len ak zamestnávateľ súhlasí"],
+          "options": [
+            "Áno",
+            "Nie, je nezákonný",
+            "Len ak zamestnávateľ súhlasí"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Aký je následok?",
-          "options": ["Žiadny", "Zodpovednosť za škodu", "Zrušenie odborov"],
+          "options": [
+            "Žiadny",
+            "Zodpovednosť za škodu",
+            "Zrušenie odborov"
+          ],
           "correct": 1
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Výluka zamestnávateľa",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Zadanie: Zamestnávateľ vyhlasuje výluku.", "options": [], "correct": 0 },
+        {
+          "question": "Zadanie: Zamestnávateľ vyhlasuje výluku.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Krok 1: Musí výluku oznámiť?",
-          "options": ["Áno", "Nie", "Len ak ide o veľký podnik"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o veľký podnik"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Aký je dopad na mzdu?",
-          "options": ["Mzda patrí", "Ide o prekážku v práci na strane zamestnávateľa", "Zamestnanec musí čerpať dovolenku"],
+          "options": [
+            "Mzda patrí",
+            "Ide o prekážku v práci na strane zamestnávateľa",
+            "Zamestnanec musí čerpať dovolenku"
+          ],
           "correct": 1
         }
       ]
@@ -95,13 +148,48 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Štrajk × výluka × kolektívny spor × sprostredkovanie × zodpovednosť za škodu",
     "branches": [
-      { "label": "Právo na štrajk", "leaves": ["ústavne garantované čl. 37 ods. 4 Ústavy SR", "upravené v zákone o kolektívnom vyjednávaní", "ide o kolektívny prostriedok riešenia sporov medzi zamestnancami a zamestnávateľom"] },
-      { "label": "Štrajk – definícia a podmienky", "leaves": ["Štrajk je kolektívne prerušenie práce zamestnancami.", "Podmienky: možno ho vyhlásiť len v spore o uzavretie kolektívnej zmluvy", "Podmienky: až po neúspešnom sprostredkovaní", "Podmienky: vyhlasuje ho výlučne odborová organizácia", "Podmienky: nesmie ohroziť život, zdravie, bezpečnosť", "Počas štrajku: zamestnancom nepatrí mzda, ide o prekážku na strane zamestnanca"] },
-      { "label": "Výluka", "leaves": ["Výluka je jednostranné neprideľovanie práce zo strany zamestnávateľa.", "Charakteristika: krajné opatrenie v kolektívnom spore, počas výluky ide o prekážku v práci na strane zamestnávateľa, dopad na náhradu mzdy závisí od typu výluky (zákonná × nezákonná)"] },
-      { "label": "Nezákonný štrajk alebo výluka", "leaves": ["Nezákonnosť nastáva najmä vtedy, ak: štrajk bol vyhlásený bez sprostredkovania, štrajk/výluka nesplnili zákonné podmienky, ohrozujú život, zdravie alebo bezpečnosť", "Následky: vzniká zodpovednosť za škodu, odbory alebo zamestnávateľ nesú následky nezákonného konania"] },
-      { "label": "Dopady na mzdu", "leaves": ["štrajk → mzda nepatrí", "výluka → prekážka na strane zamestnávateľa → náhrada mzdy podľa zákona"] }
-    ]
+      {
+        "label": "Právo na štrajk",
+        "leaves": [
+          "ústavne garantované čl. 37 ods. 4 Ústavy SR",
+          "upravené v zákonníku práce",
+          "ide o kolektívny prostriedok riešenia sporov medzi zamestnancami a zamestnávateľom"
+        ]
+      },
+      {
+        "label": "Štrajk – definícia a podmienky",
+        "leaves": [
+          "Štrajk je kolektívne prerušenie práce zamestnancami.",
+          "Podmienky: možno ho vyhlásiť len v spore o uzavretie kolektívnej zmluvy",
+          "Podmienky: až po neúspešnom sprostredkovaní",
+          "Podmienky: vyhlasuje ho výlučne odborová organizácia",
+          "Podmienky: nesmie ohroziť život, zdravie, bezpečnosť",
+          "Počas štrajku: zamestnancom nepatrí mzda, ide o prekážku na strane zamestnanca"
+        ]
+      },
+      {
+        "label": "Výluka",
+        "leaves": [
+          "Výluka je jednostranné neprideľovanie práce zo strany zamestnávateľa.",
+          "Charakteristika: krajné opatrenie v kolektívnom spore, počas výluky ide o prekážku v práci na strane zamestnávateľa, dopad na náhradu mzdy závisí od typu výluky (zákonná × nezákonná)"
+        ]
+      },
+      {
+        "label": "Nezákonný štrajk alebo výluka",
+        "leaves": [
+          "Nezákonnosť nastáva najmä vtedy, ak: štrajk bol vyhlásený bez sprostredkovania, štrajk/výluka nesplnili zákonné podmienky, ohrozujú život, zdravie alebo bezpečnosť",
+          "Následky: vzniká zodpovednosť za škodu, odbory alebo zamestnávateľ nesú následky nezákonného konania"
+        ]
+      },
+      {
+        "label": "Dopady na mzdu",
+        "leaves": [
+          "štrajk → mzda nepatrí",
+          "výluka → prekážka na strane zamestnávateľa → náhrada mzdy podľa zákona"
+        ]
+      }
+    ],
+    "center": "Štrajk × výluka × kolektívny spor × sprostredkovanie × zodpovednosť za škodu"
   }
 }

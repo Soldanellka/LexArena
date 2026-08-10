@@ -1,7 +1,7 @@
 {
   "id": "27",
   "title": "Dedenie zo zákona",
-  "summary": "Zákonná dedičská postupnosť (§ 473-475a OZ) platí ak poručiteľ nezanechal závet. 4 skupiny: 1. deti a manžel/manželka (rovnaký diel), 2. manžel/manželka, rodičia a spolužijúce osoby, 3. súrodenci a spolužijúce osoby, 4. prarodičia. Ak niet dedičov, dedičstvo pripadne štátu.",
+  "summary": "Dedenie zo zákona nastupuje vtedy, keď poručiteľ nezanechal závet, alebo ak závet nepokrýva celý majetok (§ 473–475a OZ). Zákon stanovuje štyri dedičské skupiny, ktoré sa uplatňujú postupne – dedí vždy tá skupina, ktorej dedičia existujú.\n\n1. Dedičská skupina (§ 473 OZ)\nDedia deti poručiteľa a manžel/manželka.\n– Každé dieťa dedí rovnaký diel.\n– Manžel dedí rovnaký diel ako deti.\nAk dieťa nededí (napr. zomrelo), nastupujú jeho potomkovia (právo reprezentácie).\n\n2. Dedičská skupina (§ 474 OZ)\nAk niet potomkov, dedí:\n– manžel/manželka,\n– rodičia poručiteľa,\n– osoby, ktoré s poručiteľom žili najmenej 1 rok v spoločnej domácnosti a starali sa o domácnosť alebo boli odkázané na jeho výživu.\nManžel dedí najmenej polovicu dedičstva.\n\n3. Dedičská skupina (§ 475 OZ)\nAk niet dedičov z 1. ani 2. skupiny, dedí:\n– súrodenci poručiteľa,\n– osoby žijúce s poručiteľom v spoločnej domácnosti (ako v 2. skupine).\nAk súrodenec nededí, nastupujú jeho deti (právo reprezentácie).\n\n4. Dedičská skupina (§ 475a OZ)\nAk niet dedičov z predchádzajúcich skupín, dedia:\n– prarodičia poručiteľa,\n– ak niektorý prarodič nededí, dedí jeho línia (teda ďalší predkovia v tej vetve).\n\nDedenie štátom (§ 462 OZ)\nAk niet žiadnych dedičov, dedičstvo pripadne štátu ako tzv. odúmrť. Štát dedí bez povinnosti prijatia.\n\nPodstata zákonného dedenia\nZákonná postupnosť chráni rodinné väzby a zabezpečuje, aby majetok prešiel na osoby, ktoré mali k poručiteľovi najbližší vzťah, ak poručiteľ neurčil inak závetom.\n\nZdroje: OZ (40/1964 Zb.), § 462, § 473–475a; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kto dedí v prvej skupiny zákonných dedičov?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Prvá dedičská skupina (§ 473 OZ)", "definition": "Deti poručiteľa a manžel/manželka, rovnakým dielom." },
-    { "term": "Druhá dedičská skupina (§ 474 OZ)", "definition": "Manžel/manželka, rodičia a spolužijúce osoby; manžel dostane aspoň 1/2." },
-    { "term": "Reprezentačné právo", "definition": "Ak dieťa poručiteľa nededí, jeho podiel prechádza na jeho potomkov." },
-    { "term": "Odúmrť (§ 462 OZ)", "definition": "Ak niet žiadnych zákonných dedičov, dedičstvo pripadne štátu." },
-    { "term": "Manžel a neopomenuteľnosť", "definition": "Manžel/manželka nie je neopomenuteľným dedičom, môže byť závetom vylúčený." }
+    {
+      "term": "Prvá dedičská skupina (§ 473 OZ)",
+      "definition": "Deti poručiteľa a manžel/manželka, rovnakým dielom."
+    },
+    {
+      "term": "Druhá dedičská skupina (§ 474 OZ)",
+      "definition": "Manžel/manželka, rodičia a spolužijúce osoby; manžel dostane aspoň 1/2."
+    },
+    {
+      "term": "Reprezentačné právo",
+      "definition": "Ak dieťa poručiteľa nededí, jeho podiel prechádza na jeho potomkov."
+    },
+    {
+      "term": "Odúmrť (§ 462 OZ)",
+      "definition": "Ak niet žiadnych zákonných dedičov, dedičstvo pripadne štátu."
+    },
+    {
+      "term": "Manžel a neopomenuteľnosť",
+      "definition": "Manžel/manželka nie je neopomenuteľným dedičom, môže byť závetom vylúčený."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Dedenie po zomretom dieťati poručiteľa",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Poručiteľ mal dve deti, jedno z nich však zomrelo pred ním a zanechalo po sebe dve vlastné deti (vnúčatá poručiteľa).", "options": [], "correct": 0 },
+        {
+          "question": "Poručiteľ mal dve deti, jedno z nich však zomrelo pred ním a zanechalo po sebe dve vlastné deti (vnúčatá poručiteľa).",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kto zdedí podiel, ktorý by inak pripadol zomretému dieťaťu poručiteľa?",
-          "options": ["Jeho potomkovia (vnúčatá poručiteľa) na základe reprezentačného práva", "Podiel automaticky pripadne štátu", "Podiel sa rozdelí medzi ostatné žijúce deti poručiteľa"],
+          "options": [
+            "Jeho potomkovia (vnúčatá poručiteľa) na základe reprezentačného práva",
+            "Podiel automaticky pripadne štátu",
+            "Podiel sa rozdelí medzi ostatné žijúce deti poručiteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Reprezentačné právo umožňuje potomkom nastúpiť na miesto svojho zomretého rodiča.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ako sa tento podiel medzi vnúčatá rozdelí?",
-          "options": ["Rovnakým dielom medzi nich", "Celý pripadne najstaršiemu z nich", "Podľa uváženia notára"],
+          "options": [
+            "Rovnakým dielom medzi nich",
+            "Celý pripadne najstaršiemu z nich",
+            "Podľa uváženia notára"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Potomkovia zomretého dediča si podiel delia rovnakým dielom.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Vylúčenie manžela zo závetu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Poručiteľ vo svojom platnom závete výslovne vylúči svoju manželku z dedenia v prospech svojich detí.", "options": [], "correct": 0 },
+        {
+          "question": "Poručiteľ vo svojom platnom závete výslovne vylúči svoju manželku z dedenia v prospech svojich detí.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takéto vylúčenie manželky možné?",
-          "options": ["Áno, manžel/manželka nie je neopomenuteľným dedičom", "Nie, manžel je vždy neopomenuteľný dedič ako deti", "Nie, bez súhlasu manželky je takýto závet neplatný"],
+          "options": [
+            "Áno, manžel/manželka nie je neopomenuteľným dedičom",
+            "Nie, manžel je vždy neopomenuteľný dedič ako deti",
+            "Nie, bez súhlasu manželky je takýto závet neplatný"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neopomenuteľnými dedičmi sú výlučne deti poručiteľa, nie manžel.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Platilo by to isté, keby chcel poručiteľ takto vylúčiť svoje maloleté dieťa?",
-          "options": ["Nie, maloleté dieťa je neopomenuteľným dedičom a musí dostať celý zákonný podiel", "Áno, rovnaké pravidlo platí aj pre maloleté deti", "Áno, ak s tým súhlasí druhý rodič"],
+          "options": [
+            "Nie, maloleté dieťa je neopomenuteľným dedičom a musí dostať celý zákonný podiel",
+            "Áno, rovnaké pravidlo platí aj pre maloleté deti",
+            "Áno, ak s tým súhlasí druhý rodič"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Na rozdiel od manžela sú deti (najmä maloleté) neopomenuteľnými dedičmi s nárokom na celý zákonný podiel.",
@@ -142,13 +181,64 @@
   "spider": {
     "center": "Dedenie zo zákona – dedičské skupiny, postupnosť, odúmrť (nastupuje, ak niet závetu alebo nepokrýva celý majetok)",
     "branches": [
-      { "label": "1. dedičská skupina (§ 473 OZ)", "leaves": ["dedia deti poručiteľa a manžel alebo manželka", "každé dieťa dedí rovnaký diel", "manžel dedí rovnaký diel ako deti", "ak dieťa nededí, nastupujú jeho potomkovia (právo reprezentácie)"] },
-      { "label": "2. dedičská skupina (§ 474 OZ)", "leaves": ["ak niet potomkov, dedia manžel alebo manželka a rodičia poručiteľa", "osoby žijúce s poručiteľom najmenej rok v spoločnej domácnosti", "ktoré sa starali o domácnosť alebo boli odkázané na výživu", "manžel dedí najmenej polovicu dedičstva"] },
-      { "label": "3. dedičská skupina (§ 475 OZ)", "leaves": ["ak niet dedičov z 1. ani 2. skupiny, dedia súrodenci poručiteľa", "osoby žijúce s poručiteľom v spoločnej domácnosti ako v 2. skupine", "ak súrodenec nededí, nastupujú jeho deti (právo reprezentácie)"] },
-      { "label": "4. dedičská skupina (§ 475a OZ)", "leaves": ["ak niet dedičov z predchádzajúcich skupín, dedia prarodičia poručiteľa", "ak prarodič nededí, dedí jeho línia, teda ďalší predkovia v tej vetve"] },
-      { "label": "Dedenie štátom (§ 462 OZ)", "leaves": ["ak niet žiadnych dedičov, dedičstvo pripadne štátu", "ide o odúmrť", "štát dedí bez povinnosti prijatia"] },
-      { "label": "Podstata zákonného dedenia", "leaves": ["chráni rodinné väzby", "zabezpečuje, aby majetok prešiel na osoby s najbližším vzťahom k poručiteľovi", "nastupuje len vtedy, ak poručiteľ neurčil inak závetom"] },
-      { "label": "Význam pre prax", "leaves": ["jasná postupnosť dedičských skupín zabezpečuje právnu istotu", "reprezentácia chráni potomkov pred vylúčením", "štát dedí len ako posledná možnosť", "kľúčové pri dedičských sporoch, neplatných závetoch, neúplnom pokrytí majetku"] }
+      {
+        "label": "1. dedičská skupina (§ 473 OZ)",
+        "leaves": [
+          "dedia deti poručiteľa a manžel alebo manželka",
+          "každé dieťa dedí rovnaký diel",
+          "manžel dedí rovnaký diel ako deti",
+          "ak dieťa nededí, nastupujú jeho potomkovia (právo reprezentácie)"
+        ]
+      },
+      {
+        "label": "2. dedičská skupina (§ 474 OZ)",
+        "leaves": [
+          "ak niet potomkov, dedia manžel alebo manželka a rodičia poručiteľa",
+          "osoby žijúce s poručiteľom najmenej rok v spoločnej domácnosti",
+          "ktoré sa starali o domácnosť alebo boli odkázané na výživu",
+          "manžel dedí najmenej polovicu dedičstva"
+        ]
+      },
+      {
+        "label": "3. dedičská skupina (§ 475 OZ)",
+        "leaves": [
+          "ak niet dedičov z 1. ani 2. skupiny, dedia súrodenci poručiteľa",
+          "osoby žijúce s poručiteľom v spoločnej domácnosti ako v 2. skupine",
+          "ak súrodenec nededí, nastupujú jeho deti (právo reprezentácie)"
+        ]
+      },
+      {
+        "label": "4. dedičská skupina (§ 475a OZ)",
+        "leaves": [
+          "ak niet dedičov z predchádzajúcich skupín, dedia prarodičia poručiteľa",
+          "ak prarodič nededí, dedí jeho línia, teda ďalší predkovia v tej vetve"
+        ]
+      },
+      {
+        "label": "Dedenie štátom (§ 462 OZ)",
+        "leaves": [
+          "ak niet žiadnych dedičov, dedičstvo pripadne štátu",
+          "ide o odúmrť",
+          "štát dedí bez povinnosti prijatia"
+        ]
+      },
+      {
+        "label": "Podstata zákonného dedenia",
+        "leaves": [
+          "chráni rodinné väzby",
+          "zabezpečuje, aby majetok prešiel na osoby s najbližším vzťahom k poručiteľovi",
+          "nastupuje len vtedy, ak poručiteľ neurčil inak závetom"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "jasná postupnosť dedičských skupín zabezpečuje právnu istotu",
+          "reprezentácia chráni potomkov pred vylúčením",
+          "štát dedí len ako posledná možnosť",
+          "kľúčové pri dedičských sporoch, neplatných závetoch, neúplnom pokrytí majetku"
+        ]
+      }
     ]
   }
 }

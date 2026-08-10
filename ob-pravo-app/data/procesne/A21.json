@@ -2,13 +2,23 @@
   "id": "21",
   "title": "Dokazovanie v civilnom procese, základné pojmy, predmet, priebeh a hodnotenie dôkazov",
   "schemaVersion": "1.1",
-  "tags": ["dokazovanie", "predmet dokazovania", "notorieta", "dôkazné bremeno", "voľné hodnotenie dôkazov"],
-  "summary": "Dokazovanie je ústrednou fázou civilného sporového konania (§ 185 a nasl. CSP), v ktorej súd zisťuje skutkový stav potrebný na rozhodnutie. Predmetom dokazovania sú sporné skutočnosti významné pre rozhodnutie vo veci; dokazovať netreba skutočnosti všeobecne známe alebo súdu známe z jeho činnosti (notoriety, § 186 CSP), ani skutočnosti, ktoré účastníci zhodne tvrdia. V sporovom konaní nesie dôkazné bremeno tá strana, ktorá skutočnosť tvrdí – prejavuje sa tu prejednacia zásada, podľa ktorej súd dôkazy za strany z vlastnej iniciatívy nedopĺňa, s výnimkami stanovenými zákonom.\n\nPriebeh dokazovania spočíva v návrhu dôkazu stranou, rozhodnutí súdu o jeho vykonaní, samotnom vykonaní dôkazu (napríklad výsluchom svedka, oboznámením s listinou) a napokon v jeho hodnotení. Súd hodnotí dôkazy voľne, podľa svojej úvahy, každý dôkaz jednotlivo a všetky dôkazy v ich vzájomnej súvislosti (zásada voľného hodnotenia dôkazov, § 191 CSP); žiaden dôkazný prostriedok nemá vopred určenú, absolútnu dôkaznú silu.\n\nZapamätaj si:\n- Predmetom dokazovania sú sporné skutočnosti významné pre rozhodnutie.\n- Notoriety (§ 186 CSP) sa nedokazujú.\n- Dôkazné bremeno nesie strana, ktorá skutočnosť tvrdí.\n- Priebeh: návrh dôkazu → rozhodnutie o vykonaní → vykonanie → hodnotenie.\n- Súd hodnotí dôkazy voľne, jednotlivo aj v súhrne (§ 191 CSP)."
-  ,
+  "tags": [
+    "dokazovanie",
+    "predmet dokazovania",
+    "notorieta",
+    "dôkazné bremeno",
+    "voľné hodnotenie dôkazov"
+  ],
+  "summary": "Dokazovanie je zákonom upravený postup (§ 185 a nasl. CSP), v ktorom súd zisťuje skutkový stav právne významný pre rozhodnutie vo veci samej.\nJe ústrednou fázou sporového konania a realizuje prejednaciu zásadu: súd rozhoduje na základe tvrdení a dôkazov strán.\n\nCieľom dokazovania je získať poznatky právne relevantné pre rozhodnutie.\n\nZákladné pojmy\nDôkaz\nPoznatok o skutočnosti významnej pre rozhodnutie.\n\nDôkazný prostriedok\nNástroj, prostredníctvom ktorého sa dôkaz získava (svedok, listina, znalecký posudok, ohliadka, technický záznam).\n\nKlasifikácia dôkazov\npriame × nepriame\n\nosobné × vecné\n\npísomné × ústne\n\nsubjektívne × objektívne\n\nPredmet dokazovania\nPredmetom dokazovania sú sporné skutočnosti významné pre rozhodnutie.\n\nV pozitívnom zmysle – čo sa dokazuje\nsporné skutkové tvrdenia strán,\n\nprávne relevantné skutočnosti.\n\nV negatívnom zmysle – čo sa nedokazuje (§ 186 CSP)\nnotoriety – všeobecne známe skutočnosti alebo skutočnosti známe súdu z jeho činnosti,\n\nzhodne tvrdené skutočnosti,\n\nprávne irelevantné skutočnosti.\n\nDôkazné bremeno\nDôkazné bremeno nesie ten, kto tvrdí skutočnosť významnú pre rozhodnutie.\nSúd dôkazy za strany spravidla nedopĺňa, okrem zákonných výnimiek (napr. ochrana slabšej strany).\n\nPriebeh dokazovania\nDokazovanie prebieha v štyroch krokoch:\n\n1. Návrh dôkazu\nStrana označí dôkazný prostriedok.\n\n2. Rozhodnutie súdu o vykonaní dôkazu\nSúd posúdi potrebnosť, prípustnosť a relevanciu.\n\n3. Vykonanie dôkazu\nVýsluch svedka, oboznámenie s listinou, znalecké dokazovanie, ohliadka.\n\n4. Hodnotenie dôkazov (§ 191 CSP)\nSúd hodnotí dôkazy:\n\nvoľne,\n\njednotlivo,\n\nv súhrne,\n\nbez predurčenej dôkaznej sily.\n\nZapamätaj si (štátnicové jadro)\nPredmetom dokazovania sú sporné skutočnosti významné pre rozhodnutie.\n\nNotoriety sa nedokazujú (§ 186 CSP).\n\nDôkazné bremeno nesie ten, kto skutočnosť tvrdí.\n\nPriebeh: návrh → rozhodnutie → vykonanie → hodnotenie.\n\nSúd hodnotí dôkazy voľne, jednotlivo aj v súhrne (§ 191 CSP).\n\nZdroj:\nCSP (160/2015 Z. z.), § 185–191; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (C. H. Beck, 2016); Števček–Macej–Šramel: Civilné procesné právo (Wolters Kluwer, 2017); judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo je predmetom dokazovania v civilnom sporovom konaní?",
-      "options": ["Všetky skutočnosti bez rozdielu", "Sporné skutočnosti významné pre rozhodnutie vo veci", "Iba skutočnosti priznané žalovaným", "Iba právne otázky"],
+      "options": [
+        "Všetky skutočnosti bez rozdielu",
+        "Sporné skutočnosti významné pre rozhodnutie vo veci",
+        "Iba skutočnosti priznané žalovaným",
+        "Iba právne otázky"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Dokazujú sa len sporné skutočnosti, ktoré sú relevantné pre rozhodnutie o veci.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Čo je notorieta?",
-      "options": ["Skutočnosť, ktorú súd nemusí dokazovať, lebo je všeobecne známa alebo súdu známa z jeho činnosti (§ 186 CSP)", "Skutočnosť potvrdená notárom", "Skutočnosť preukázaná len znaleckým posudkom", "Skutočnosť priznaná žalovaným pod nátlakom"],
+      "options": [
+        "Skutočnosť, ktorú súd nemusí dokazovať, lebo je všeobecne známa alebo súdu známa z jeho činnosti (§ 186 CSP)",
+        "Skutočnosť potvrdená notárom",
+        "Skutočnosť preukázaná len znaleckým posudkom",
+        "Skutočnosť priznaná žalovaným pod nátlakom"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Notoriety nie je potrebné dokazovať práve preto, že sú všeobecne alebo súdu samému známe.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Kto nesie dôkazné bremeno v sporovom konaní?",
-      "options": ["Vždy žalobca", "Súd, ktorý dôkazy vyhľadáva z úradnej moci", "Strana, ktorá príslušnú skutočnosť tvrdí", "Vždy žalovaný"],
+      "options": [
+        "Vždy žalobca",
+        "Súd, ktorý dôkazy vyhľadáva z úradnej moci",
+        "Strana, ktorá príslušnú skutočnosť tvrdí",
+        "Vždy žalovaný"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. V sporovom konaní nesie dôkazné bremeno strana, ktorá sa danej skutočnosti dovoláva, nie automaticky vždy žalobca alebo žalovaný.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Ako prebieha dokazovanie?",
-      "options": ["Návrh dôkazu stranou, rozhodnutie súdu o jeho vykonaní, vykonanie dôkazu a jeho hodnotenie súdom", "Iba vykonaním dôkazu bez návrhu a hodnotenia", "Iba hodnotením dôkazov bez ich vykonania", "Iba rozhodnutím súdu bez návrhu strán"],
+      "options": [
+        "Návrh dôkazu stranou, rozhodnutie súdu o jeho vykonaní, vykonanie dôkazu a jeho hodnotenie súdom",
+        "Iba vykonaním dôkazu bez návrhu a hodnotenia",
+        "Iba hodnotením dôkazov bez ich vykonania",
+        "Iba rozhodnutím súdu bez návrhu strán"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Ide o postupnosť krokov: návrh, rozhodnutie o vykonaní, vykonanie a napokon hodnotenie dôkazu.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Ako súd hodnotí vykonané dôkazy podľa § 191 CSP?",
-      "options": ["Podľa vopred stanovenej dôkaznej sily jednotlivých dôkazných prostriedkov", "Voľne, podľa svojej úvahy, každý dôkaz jednotlivo a všetky dôkazy v ich vzájomnej súvislosti", "Len na základe znaleckého posudku, ak bol vykonaný", "Vôbec ich nehodnotí, iba ich zaznamená do spisu"],
+      "options": [
+        "Podľa vopred stanovenej dôkaznej sily jednotlivých dôkazných prostriedkov",
+        "Voľne, podľa svojej úvahy, každý dôkaz jednotlivo a všetky dôkazy v ich vzájomnej súvislosti",
+        "Len na základe znaleckého posudku, ak bol vykonaný",
+        "Vôbec ich nehodnotí, iba ich zaznamená do spisu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zásada voľného hodnotenia dôkazov znamená, že žiaden dôkaz nemá vopred danú absolútnu silu.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Predmet dokazovania", "definition": "Sporné skutočnosti významné pre rozhodnutie vo veci." },
-    { "term": "Notorieta (§ 186 CSP)", "definition": "Všeobecne známa alebo súdu známa skutočnosť, ktorú netreba dokazovať." },
-    { "term": "Dôkazné bremeno", "definition": "Povinnosť strany preukázať skutočnosť, na ktorú sa odvoláva." },
-    { "term": "Voľné hodnotenie dôkazov (§ 191 CSP)", "definition": "Súd hodnotí dôkazy podľa vlastnej úvahy, jednotlivo aj v súhrne." },
-    { "term": "Priebeh dokazovania", "definition": "Návrh dôkazu, rozhodnutie o vykonaní, vykonanie dôkazu, hodnotenie." }
+    {
+      "term": "Predmet dokazovania",
+      "definition": "Sporné skutočnosti významné pre rozhodnutie vo veci."
+    },
+    {
+      "term": "Notorieta (§ 186 CSP)",
+      "definition": "Všeobecne známa alebo súdu známa skutočnosť, ktorú netreba dokazovať."
+    },
+    {
+      "term": "Dôkazné bremeno",
+      "definition": "Povinnosť strany preukázať skutočnosť, na ktorú sa odvoláva."
+    },
+    {
+      "term": "Voľné hodnotenie dôkazov (§ 191 CSP)",
+      "definition": "Súd hodnotí dôkazy podľa vlastnej úvahy, jednotlivo aj v súhrne."
+    },
+    {
+      "term": "Priebeh dokazovania",
+      "definition": "Návrh dôkazu, rozhodnutie o vykonaní, vykonanie dôkazu, hodnotenie."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Notorieta ako skutočnosť, ktorú netreba dokazovať",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "V spore súd potrebuje zohľadniť skutočnosť, že určitý deň bol podľa zákona štátnym sviatkom.", "options": [], "correct": 0 },
+        {
+          "question": "V spore súd potrebuje zohľadniť skutočnosť, že určitý deň bol podľa zákona štátnym sviatkom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí túto skutočnosť niektorá strana dokazovať?",
-          "options": ["Nie, ide o notorietu, ktorú súd pozná bez dokazovania", "Áno, musí sa preukázať znaleckým posudkom", "Áno, musí ju písomne potvrdiť notár"],
+          "options": [
+            "Nie, ide o notorietu, ktorú súd pozná bez dokazovania",
+            "Áno, musí sa preukázať znaleckým posudkom",
+            "Áno, musí ju písomne potvrdiť notár"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Štátne sviatky sú všeobecne známou skutočnosťou, ktorú súd nemusí nechať dokazovať.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Prečo netreba notoriety dokazovať?",
-          "options": ["Lebo ide o všeobecne známe alebo súdu známe skutočnosti, pri ktorých by dokazovanie bolo nadbytočné", "Lebo zákon dokazovanie takýchto skutočností výslovne zakazuje", "Lebo tieto skutočnosti nie sú nikdy sporné"],
+          "options": [
+            "Lebo ide o všeobecne známe alebo súdu známe skutočnosti, pri ktorých by dokazovanie bolo nadbytočné",
+            "Lebo zákon dokazovanie takýchto skutočností výslovne zakazuje",
+            "Lebo tieto skutočnosti nie sú nikdy sporné"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmyslom výnimky je vyhnúť sa zbytočnému dokazovaniu skutočností, ktoré sú beztak známe.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Neunesenie dôkazného bremena",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalobca tvrdí, že mu žalovaný dlhuje peniaze z pôžičky, no v konaní nepredloží ani nenavrhne žiadny dôkaz na podporu tohto tvrdenia.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca tvrdí, že mu žalovaný dlhuje peniaze z pôžičky, no v konaní nepredloží ani nenavrhne žiadny dôkaz na podporu tohto tvrdenia.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aké to bude mať pre žalobcu následky?",
-          "options": ["Súd nebude môcť vychádzať z tejto nepreukázanej skutočnosti v jeho prospech", "Súd automaticky uverí žalobcovi, lebo tvrdenie je vážne", "Žalovaný musí namiesto žalobcu dokázať, že dlh neexistuje"],
+          "options": [
+            "Súd nebude môcť vychádzať z tejto nepreukázanej skutočnosti v jeho prospech",
+            "Súd automaticky uverí žalobcovi, lebo tvrdenie je vážne",
+            "Žalovaný musí namiesto žalobcu dokázať, že dlh neexistuje"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak žalobca neunesie dôkazné bremeno, súd nemôže tvrdenú skutočnosť považovať za preukázanú v jeho prospech.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Prečo dôkazné bremeno v tomto prípade zaťažuje práve žalobcu?",
-          "options": ["Lebo žalobca tvrdí skutočnosť (existenciu pôžičky), na ktorú sa pri uplatnení svojho nároku odvoláva", "Lebo žalovaný má vždy dôkazné bremeno v civilnom spore", "Lebo súd nemá právo rozhodovať o dôkaznom bremene"],
+          "options": [
+            "Lebo žalobca tvrdí skutočnosť (existenciu pôžičky), na ktorú sa pri uplatnení svojho nároku odvoláva",
+            "Lebo žalovaný má vždy dôkazné bremeno v civilnom spore",
+            "Lebo súd nemá právo rozhodovať o dôkaznom bremene"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dôkazné bremeno nesie tá strana, ktorá sa dovoláva danej skutočnosti pre svoj nárok.",
@@ -120,13 +189,65 @@
   "spider": {
     "center": "Dokazovanie – predmet × zásady × dôkazné bremeno × priebeh × hodnotenie dôkazov",
     "branches": [
-      { "label": "Pojem dokazovania", "leaves": ["dokazovanie je zákonom upravený postup", "cieľ: získať právne relevantné poznatky potrebné pre rozhodnutie", "dôkaz = výsledok dokazovania, poznatok o skutočnosti", "dôkazný prostriedok = nástroj, ktorým sa dôkaz získava (svedok, listina, znalec, ohliadka)"] },
-      { "label": "Klasifikácia dôkazov", "leaves": ["priame × nepriame", "osobné × vecné", "písomné × ústne"] },
-      { "label": "Predmet dokazovania", "leaves": ["v pozitívnom zmysle: sporné skutočnosti významné pre rozhodnutie vo veci samej", "v negatívnom zmysle – čo sa nedokazuje: – notoriety (§ 186 CSP) – všeobecne známe skutočnosti alebo skutočnosti známe súdu z jeho činnosti – zhode tvrdené skutočnosti strán – právne predpisy"] },
-      { "label": "Zásady dokazovania", "leaves": ["prejednacia zásada – súd zisťuje skutkový stav na základe tvrdení a dôkazov strán", "súd dôkazy spravidla nedopĺňa za strany", "výnimky: ochrana slabšej strany, osobitné konania"] },
-      { "label": "Dôkazné bremeno", "leaves": ["nesie ho ten, kto tvrdí skutočnosť významnú pre rozhodnutie", "ak strana neunesie dôkazné bremeno → súd rozhodne v jej neprospech", "dôkazné bremeno sa môže presúvať podľa povahy právneho vzťahu (napr. diskriminácia, spotrebiteľské spory)"] },
-      { "label": "Priebeh dokazovania", "leaves": ["navrhovanie dôkazu – strana označí dôkazný prostriedok (svedok, listina, znalec, ohliadka)", "zadováženie dôkazu – obstaranie dôkazného prostriedku", "rozhodnutie súdu o vykonaní dôkazu – potrebnosť, prípustnosť, relevantnosť", "vykonanie dôkazu – výsluch svedka, oboznámenie s listinou, znalecké dokazovanie, ohliadka", "hodnotenie dôkazov"] },
-      { "label": "Voľné hodnotenie dôkazov (§ 191 CSP)", "leaves": ["súd hodnotí každý dôkaz jednotlivo", "súd hodnotí všetky dôkazy vo vzájomnej súvislosti", "bez predurčenej dôkaznej sily – žiaden dôkaz nemá absolútnu váhu", "cieľ: pravdivé a presvedčivé zistenie skutkového stavu"] }
+      {
+        "label": "Pojem dokazovania",
+        "leaves": [
+          "dokazovanie je zákonom upravený postup",
+          "cieľ: získať právne relevantné poznatky potrebné pre rozhodnutie",
+          "dôkaz = výsledok dokazovania, poznatok o skutočnosti",
+          "dôkazný prostriedok = nástroj, ktorým sa dôkaz získava (svedok, listina, znalec, ohliadka)"
+        ]
+      },
+      {
+        "label": "Klasifikácia dôkazov",
+        "leaves": [
+          "priame × nepriame",
+          "osobné × vecné",
+          "písomné × ústne"
+        ]
+      },
+      {
+        "label": "Predmet dokazovania",
+        "leaves": [
+          "v pozitívnom zmysle: sporné skutočnosti významné pre rozhodnutie vo veci samej",
+          "v negatívnom zmysle – čo sa nedokazuje: – notoriety (§ 186 CSP) – všeobecne známe skutočnosti alebo skutočnosti známe súdu z jeho činnosti – zhode tvrdené skutočnosti strán – právne predpisy"
+        ]
+      },
+      {
+        "label": "Zásady dokazovania",
+        "leaves": [
+          "prejednacia zásada – súd zisťuje skutkový stav na základe tvrdení a dôkazov strán",
+          "súd dôkazy spravidla nedopĺňa za strany",
+          "výnimky: ochrana slabšej strany, osobitné konania"
+        ]
+      },
+      {
+        "label": "Dôkazné bremeno",
+        "leaves": [
+          "nesie ho ten, kto tvrdí skutočnosť významnú pre rozhodnutie",
+          "ak strana neunesie dôkazné bremeno → súd rozhodne v jej neprospech",
+          "dôkazné bremeno sa môže presúvať podľa povahy právneho vzťahu (napr. diskriminácia, spotrebiteľské spory)"
+        ]
+      },
+      {
+        "label": "Priebeh dokazovania",
+        "leaves": [
+          "navrhovanie dôkazu – strana označí dôkazný prostriedok (svedok, listina, znalec, ohliadka)",
+          "zadováženie dôkazu – obstaranie dôkazného prostriedku",
+          "rozhodnutie súdu o vykonaní dôkazu – potrebnosť, prípustnosť, relevantnosť",
+          "vykonanie dôkazu – výsluch svedka, oboznámenie s listinou, znalecké dokazovanie, ohliadka",
+          "hodnotenie dôkazov"
+        ]
+      },
+      {
+        "label": "Voľné hodnotenie dôkazov (§ 191 CSP)",
+        "leaves": [
+          "súd hodnotí každý dôkaz jednotlivo",
+          "súd hodnotí všetky dôkazy vo vzájomnej súvislosti",
+          "bez predurčenej dôkaznej sily – žiaden dôkaz nemá absolútnu váhu",
+          "cieľ: pravdivé a presvedčivé zistenie skutkového stavu"
+        ]
+      }
     ]
   }
 }

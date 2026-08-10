@@ -1,7 +1,7 @@
 {
   "id": "29",
   "title": "Spotrebiteľská zmluva - pojem, subjekty, neprijateľné podmienky",
-  "summary": "Spotrebiteľská zmluva (§ 52-60 OZ) je zmluva uzavretá medzi dodávateľom (podnikateľ) a spotrebiteľom (fyzická osoba mimo podnikateľskej činnosti). Poskytuje zvýšenú ochranu spotrebiteľovi. Neprijateľné podmienky (§ 53 OZ): podmienky, ktoré v rozpore s požiadavkou dobrej viery spôsobujú výraznú nerovnováhu v právach a povinnostiach - sú neplatné. Právo odstúpiť od zmluvy uzavretej na diaľku do 14 dní.",
+  "summary": "Spotrebiteľská zmluva podľa § 52–60 OZ je zmluva uzavretá medzi:\n– dodávateľom – podnikateľom konajúcim v rámci svojej podnikateľskej činnosti,\n– spotrebiteľom – fyzickou osobou, ktorá nekoná v rámci podnikania.\n\nCieľom úpravy je zvýšená ochrana spotrebiteľa, ktorý je slabšou stranou zmluvného vzťahu. Zákon preto obsahuje špeciálne pravidlá, ktoré obmedzujú zmluvnú voľnosť dodávateľa.\n\nPojmové znaky spotrebiteľskej zmluvy\n– asymetria medzi stranami,\n– štandardizované podmienky (často formulárové zmluvy),\n– informačná povinnosť dodávateľa,\n– výklad v prospech spotrebiteľa (§ 54 OZ).\n\nSpotrebiteľ sa nemôže vopred vzdať práv, ktoré mu zákon priznáva.\n\nNeprijateľné podmienky (§ 53 OZ)\nNeprijateľné sú podmienky, ktoré:\n– sú v rozpore s požiadavkou dobrej viery,\n– spôsobujú výraznú nerovnováhu v právach a povinnostiach strán v neprospech spotrebiteľa.\n\nTakéto podmienky sú neplatné. Príklady:\n– vylúčenie alebo obmedzenie zodpovednosti dodávateľa,\n– jednostranné zmeny zmluvy bez dôvodu,\n– neprimerané sankcie,\n– obmedzenie práva spotrebiteľa odstúpiť od zmluvy.\n\nZmluvy uzavreté na diaľku a mimo prevádzkových priestorov\nSpotrebiteľ má právo odstúpiť od zmluvy do 14 dní bez uvedenia dôvodu (§ 7 zákona o ochrane spotrebiteľa pri predaji na diaľku).\nDodávateľ musí spotrebiteľa poučiť o práve odstúpiť; ak tak neurobí, lehota sa predlžuje až na 12 mesiacov.\n\nOchranné mechanizmy\n– zákaz neprijateľných podmienok,\n– informačné povinnosti,\n– právo na reklamáciu,\n– právo na odstúpenie,\n– výklad v prospech spotrebiteľa.\n\nSpotrebiteľská zmluva je kľúčovým nástrojom ochrany slabšej strany v súkromnoprávnych vzťahoch.\n\nZdroje: OZ (40/1964 Zb.), § 52–60; zákon č. 102/2014 Z. z.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Kto je spotrebiteľ pri spotrebiteľskej zmluve?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Spotrebiteľ (§ 52 ods. 3 OZ)", "definition": "Fyzická osoba, ktorá pri zmluve nekoná v rámci podnikateľskej činnosti." },
-    { "term": "Neprijateľná podmienka (§ 53 OZ)", "definition": "Podmienka spôsobujúca v rozpore s dobrou vierou výraznú nerovnováhu v neprospech spotrebiteľa." },
-    { "term": "Čiastočná neplatnosť", "definition": "Neprijateľná podmienka je neplatná, zvyšok zmluvy zostáva platný." },
-    { "term": "Odstúpenie od zmluvy na diaľku", "definition": "Spotrebiteľ môže odstúpiť bez uvedenia dôvodu do 14 dní." },
-    { "term": "Kogentnosť ochrany spotrebiteľa", "definition": "Odchýlka v neprospech spotrebiteľa dohodou je neplatná." }
+    {
+      "term": "Spotrebiteľ (§ 52 ods. 3 OZ)",
+      "definition": "Fyzická osoba, ktorá pri zmluve nekoná v rámci podnikateľskej činnosti."
+    },
+    {
+      "term": "Neprijateľná podmienka (§ 53 OZ)",
+      "definition": "Podmienka spôsobujúca v rozpore s dobrou vierou výraznú nerovnováhu v neprospech spotrebiteľa."
+    },
+    {
+      "term": "Čiastočná neplatnosť",
+      "definition": "Neprijateľná podmienka je neplatná, zvyšok zmluvy zostáva platný."
+    },
+    {
+      "term": "Odstúpenie od zmluvy na diaľku",
+      "definition": "Spotrebiteľ môže odstúpiť bez uvedenia dôvodu do 14 dní."
+    },
+    {
+      "term": "Kogentnosť ochrany spotrebiteľa",
+      "definition": "Odchýlka v neprospech spotrebiteľa dohodou je neplatná."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Nevýhodná podmienka v štandardnej zmluve",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Dodávateľ zaradí do štandardnej spotrebiteľskej zmluvy podmienku, ktorá mu umožňuje jednostranne a bez obmedzenia meniť cenu už uzavretej zmluvy na úkor spotrebiteľa.", "options": [], "correct": 0 },
+        {
+          "question": "Dodávateľ zaradí do štandardnej spotrebiteľskej zmluvy podmienku, ktorá mu umožňuje jednostranne a bez obmedzenia meniť cenu už uzavretej zmluvy na úkor spotrebiteľa.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa takáto podmienka posúdi?",
-          "options": ["Ako neprijateľná podmienka podľa § 53 OZ, ktorá je neplatná", "Ako bežná a plne platná zmluvná podmienka", "Ako podmienka platná iba do výšky polovice pôvodnej ceny"],
+          "options": [
+            "Ako neprijateľná podmienka podľa § 53 OZ, ktorá je neplatná",
+            "Ako bežná a plne platná zmluvná podmienka",
+            "Ako podmienka platná iba do výšky polovice pôvodnej ceny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Takáto jednostranná a neobmedzená možnosť zmeny ceny je typickou neprijateľnou podmienkou.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo sa stane so zvyškom zmluvy po vyhlásení tejto podmienky za neplatnú?",
-          "options": ["Zvyšok zmluvy zostáva platný", "Celá zmluva sa stáva neplatnou", "Spotrebiteľ stráca všetky práva zo zmluvy"],
+          "options": [
+            "Zvyšok zmluvy zostáva platný",
+            "Celá zmluva sa stáva neplatnou",
+            "Spotrebiteľ stráca všetky práva zo zmluvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neplatnosť sa týka len neprijateľnej podmienky, zvyšok zmluvy platí ďalej.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Odstúpenie od internetového nákupu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Spotrebiteľ si kúpi tovar cez internetový obchod a týždeň po jeho prevzatí sa rozhodne, že oň nemá záujem.", "options": [], "correct": 0 },
+        {
+          "question": "Spotrebiteľ si kúpi tovar cez internetový obchod a týždeň po jeho prevzatí sa rozhodne, že oň nemá záujem.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže od zmluvy odstúpiť bez uvedenia dôvodu?",
-          "options": ["Áno, v lehote 14 dní od prevzatia tovaru", "Nie, pri kúpe cez internet odstúpenie zákon nepripúšťa", "Áno, ale iba do 3 dní od prevzatia"],
+          "options": [
+            "Áno, v lehote 14 dní od prevzatia tovaru",
+            "Nie, pri kúpe cez internet odstúpenie zákon nepripúšťa",
+            "Áno, ale iba do 3 dní od prevzatia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri zmluvách uzavretých na diaľku má spotrebiteľ 14-dňové právo na odstúpenie bez udania dôvodu.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Mohol by predávajúci v zmluve platne vylúčiť toto právo spotrebiteľa na odstúpenie?",
-          "options": ["Nie, ochrana spotrebiteľa je kogentná a takáto odchýlka v jeho neprospech by bola neplatná", "Áno, ak by s tým spotrebiteľ pri kúpe súhlasil", "Áno, ak by to bolo výslovne uvedené v obchodných podmienkach"],
+          "options": [
+            "Nie, ochrana spotrebiteľa je kogentná a takáto odchýlka v jeho neprospech by bola neplatná",
+            "Áno, ak by s tým spotrebiteľ pri kúpe súhlasil",
+            "Áno, ak by to bolo výslovne uvedené v obchodných podmienkach"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Kogentná ochrana spotrebiteľa vylučuje platné zmluvné vylúčenie tohto práva.",
@@ -142,13 +181,68 @@
   "spider": {
     "center": "Spotrebiteľská zmluva – pojem, subjekty, neprijateľné podmienky, ochrana spotrebiteľa (zmluva medzi podnikateľom a spotrebiteľom)",
     "branches": [
-      { "label": "Pojem spotrebiteľskej zmluvy (§ 52 OZ)", "leaves": ["zmluva medzi dodávateľom (podnikateľom) a spotrebiteľom (nepodnikateľom)", "cieľ: ochrana slabšej strany", "špeciálne pravidlá obmedzujú zmluvnú voľnosť dodávateľa"] },
-      { "label": "Subjekty spotrebiteľskej zmluvy", "leaves": ["dodávateľ: podnikateľ konajúci v rámci podnikania", "spotrebiteľ: fyzická osoba nekonajúca v rámci podnikania", "spotrebiteľ sa nemôže vopred vzdať práv, ktoré mu zákon priznáva"] },
-      { "label": "Pojmové znaky", "leaves": ["asymetria medzi stranami", "štandardizované podmienky, formulárové zmluvy", "informačná povinnosť dodávateľa", "výklad v prospech spotrebiteľa (§ 54 OZ)"] },
-      { "label": "Neprijateľné podmienky (§ 53 OZ)", "leaves": ["sú v rozpore s dobrou vierou", "spôsobujú výraznú nerovnováhu v neprospech spotrebiteľa", "sú neplatné", "príklady: vylúčenie alebo obmedzenie zodpovednosti dodávateľa", "jednostranné zmeny zmluvy bez dôvodu, neprimerané sankcie, obmedzenie práva odstúpiť"] },
-      { "label": "Zmluvy na diaľku a mimo prevádzkových priestorov", "leaves": ["spotrebiteľ má právo odstúpiť do 14 dní bez uvedenia dôvodu", "ak dodávateľ nepoučí, lehota sa predlžuje na 12 mesiacov", "upravené zákonom č. 108/2024 Z. z. o ochrane spotrebiteľa (účinný od 1. 7. 2024)"] },
-      { "label": "Ochranné mechanizmy", "leaves": ["zákaz neprijateľných podmienok", "informačné povinnosti", "právo na reklamáciu", "právo na odstúpenie", "výklad v prospech spotrebiteľa"] },
-      { "label": "Význam pre prax", "leaves": ["chráni spotrebiteľa pred nekalými praktikami", "zabezpečuje férové zmluvné podmienky", "posilňuje transparentnosť a rovnováhu medzi stranami", "kľúčové pri e-commerce, službách, telekomunikáciách, bankových produktoch"] }
+      {
+        "label": "Pojem spotrebiteľskej zmluvy (§ 52 OZ)",
+        "leaves": [
+          "zmluva medzi dodávateľom (podnikateľom) a spotrebiteľom (nepodnikateľom)",
+          "cieľ: ochrana slabšej strany",
+          "špeciálne pravidlá obmedzujú zmluvnú voľnosť dodávateľa"
+        ]
+      },
+      {
+        "label": "Subjekty spotrebiteľskej zmluvy",
+        "leaves": [
+          "dodávateľ: podnikateľ konajúci v rámci podnikania",
+          "spotrebiteľ: fyzická osoba nekonajúca v rámci podnikania",
+          "spotrebiteľ sa nemôže vopred vzdať práv, ktoré mu zákon priznáva"
+        ]
+      },
+      {
+        "label": "Pojmové znaky",
+        "leaves": [
+          "asymetria medzi stranami",
+          "štandardizované podmienky, formulárové zmluvy",
+          "informačná povinnosť dodávateľa",
+          "výklad v prospech spotrebiteľa (§ 54 OZ)"
+        ]
+      },
+      {
+        "label": "Neprijateľné podmienky (§ 53 OZ)",
+        "leaves": [
+          "sú v rozpore s dobrou vierou",
+          "spôsobujú výraznú nerovnováhu v neprospech spotrebiteľa",
+          "sú neplatné",
+          "príklady: vylúčenie alebo obmedzenie zodpovednosti dodávateľa",
+          "jednostranné zmeny zmluvy bez dôvodu, neprimerané sankcie, obmedzenie práva odstúpiť"
+        ]
+      },
+      {
+        "label": "Zmluvy na diaľku a mimo prevádzkových priestorov",
+        "leaves": [
+          "spotrebiteľ má právo odstúpiť do 14 dní bez uvedenia dôvodu",
+          "ak dodávateľ nepoučí, lehota sa predlžuje na 12 mesiacov",
+          "upravené zákonom č. 108/2024 Z. z. o ochrane spotrebiteľa (účinný od 1. 7. 2024)"
+        ]
+      },
+      {
+        "label": "Ochranné mechanizmy",
+        "leaves": [
+          "zákaz neprijateľných podmienok",
+          "informačné povinnosti",
+          "právo na reklamáciu",
+          "právo na odstúpenie",
+          "výklad v prospech spotrebiteľa"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "chráni spotrebiteľa pred nekalými praktikami",
+          "zabezpečuje férové zmluvné podmienky",
+          "posilňuje transparentnosť a rovnováhu medzi stranami",
+          "kľúčové pri e-commerce, službách, telekomunikáciách, bankových produktoch"
+        ]
+      }
     ]
   }
 }

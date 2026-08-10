@@ -2,50 +2,100 @@
   "id": "A8",
   "title": "Procesné úkony, poskytovanie informácií v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["procesné úkony", "informácie", "trestné konanie"],
-
+  "tags": [
+    "procesné úkony",
+    "informácie",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Čo je procesný úkon?",
-      "options": ["Neformálne oznámenie", "Úkon orgánu alebo osoby v trestnom konaní s právnymi účinkami", "Listinný dôkaz"],
+      "options": [
+        "Neformálne oznámenie",
+        "Úkon orgánu alebo osoby v trestnom konaní s právnymi účinkami",
+        "Listinný dôkaz"
+      ],
       "correct": 1
     },
     {
       "question": "Kto má právo nahliadať do spisu?",
-      "options": ["Každý občan", "Len obvinený a jeho obhajca", "Len poškodený"],
+      "options": [
+        "Každý občan",
+        "Len obvinený a jeho obhajca",
+        "Len poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy môže byť obmedzené poskytovanie informácií z trestného konania?",
-      "options": ["Nikdy", "Ak by to ohrozilo účel konania", "Len pri mladistvých"],
+      "options": [
+        "Nikdy",
+        "Ak by to ohrozilo účel konania",
+        "Len pri mladistvých"
+      ],
       "correct": 1
     },
     {
       "question": "Kto rozhoduje o tom, či sa poskytne informácia médiám?",
-      "options": ["Súd alebo prokurátor", "Policajt na mieste", "Obhajca"],
+      "options": [
+        "Súd alebo prokurátor",
+        "Policajt na mieste",
+        "Obhajca"
+      ],
       "correct": 0
     },
     {
       "question": "Ktorý procesný úkon musí byť vždy vykonaný za účasti obvineného?",
-      "options": ["Rekonštrukcia", "Výsluch obvineného", "Ohliadka miesta činu"],
+      "options": [
+        "Rekonštrukcia",
+        "Výsluch obvineného",
+        "Ohliadka miesta činu"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Procesný úkon", "definition": "Úkon orgánu alebo osoby v trestnom konaní, ktorý má právne účinky." },
-    { "term": "Nahliadanie do spisu", "definition": "Právo obvineného a obhajcu oboznámiť sa s obsahom spisu." },
-    { "term": "Poskytovanie informácií", "definition": "Informácie sa poskytujú len v rozsahu, ktorý neohrozí účel konania." },
-    { "term": "Účel trestného konania", "definition": "Zistiť skutkový stav a rozhodnúť spravodlivo a zákonne." },
-    { "term": "Zápisnica", "definition": "Úradný záznam o vykonanom procesnom úkone." },
-
-    { "term": "Úradný záznam", "definition": "Záznam o úkonoch, ktoré sa nezapisujú do zápisnice." },
-    { "term": "Rekonštrukcia", "definition": "Procesný úkon na objasnenie priebehu skutku." },
-    { "term": "Konfrontácia", "definition": "Stret dvoch osôb s rozpornými výpoveďami." },
-    { "term": "Poučenie", "definition": "Orgán musí osobu poučiť o jej právach a povinnostiach." },
-    { "term": "Mlčanlivosť OČTK", "definition": "Orgány musia chrániť informácie, ktoré by mohli ohroziť konanie." }
+    {
+      "term": "Procesný úkon",
+      "definition": "Úkon orgánu alebo osoby v trestnom konaní, ktorý má právne účinky."
+    },
+    {
+      "term": "Nahliadanie do spisu",
+      "definition": "Právo obvineného a obhajcu oboznámiť sa s obsahom spisu."
+    },
+    {
+      "term": "Poskytovanie informácií",
+      "definition": "Informácie sa poskytujú len v rozsahu, ktorý neohrozí účel konania."
+    },
+    {
+      "term": "Účel trestného konania",
+      "definition": "Zistiť skutkový stav a rozhodnúť spravodlivo a zákonne."
+    },
+    {
+      "term": "Zápisnica",
+      "definition": "Úradný záznam o vykonanom procesnom úkone."
+    },
+    {
+      "term": "Úradný záznam",
+      "definition": "Záznam o úkonoch, ktoré sa nezapisujú do zápisnice."
+    },
+    {
+      "term": "Rekonštrukcia",
+      "definition": "Procesný úkon na objasnenie priebehu skutku."
+    },
+    {
+      "term": "Konfrontácia",
+      "definition": "Stret dvoch osôb s rozpornými výpoveďami."
+    },
+    {
+      "term": "Poučenie",
+      "definition": "Orgán musí osobu poučiť o jej právach a povinnostiach."
+    },
+    {
+      "term": "Mlčanlivosť OČTK",
+      "definition": "Orgány musia chrániť informácie, ktoré by mohli ohroziť konanie."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odmietnuté nahliadnutie do spisu",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Má obvinený právo nahliadnuť do spisu?",
-          "options": ["Áno, ale môže byť obmedzené", "Nie", "Len po podaní obžaloby"],
+          "options": [
+            "Áno, ale môže byť obmedzené",
+            "Nie",
+            "Len po podaní obžaloby"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kedy môže byť nahliadanie obmedzené?",
-          "options": ["Ak by to ohrozilo účel konania", "Len pri zločinoch", "Nikdy"],
+          "options": [
+            "Ak by to ohrozilo účel konania",
+            "Len pri zločinoch",
+            "Nikdy"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Poskytovanie informácií médiám",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Môže polícia poskytnúť tieto informácie?",
-          "options": ["Áno, vždy", "Nie, ak by to ohrozilo účel konania", "Len ak to schváli obvinený"],
+          "options": [
+            "Áno, vždy",
+            "Nie, ak by to ohrozilo účel konania",
+            "Len ak to schváli obvinený"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto rozhoduje o poskytovaní informácií?",
-          "options": ["Súd alebo prokurátor", "Každý policajt", "Obhajca"],
+          "options": [
+            "Súd alebo prokurátor",
+            "Každý policajt",
+            "Obhajca"
+          ],
           "correct": 0
         },
         {
@@ -118,12 +183,55 @@
   "spider": {
     "center": "Procesné úkony × poskytovanie informácií",
     "branches": [
-      { "label": "Podanie (§ 62)", "leaves": ["Formy – písomne, ústne do zápisnice, elektronicky (KEP alebo úradná schránka)", "Podľa obsahu – posudzuje sa obsah, nie označenie („sťažnosť\" môže byť odvolanie)"] },
-      { "label": "Zápisnica (§§ 58–61)", "leaves": ["Kedy – o každom úkone s významom pre konanie", "Náležitosti – orgán, miesto, čas, účel, prítomní, priebeh, vyhlásenia, podpisy", "Námietky (§ 59) – proti zneniu; orgán rozhodne a dôvodnú opraví"] },
-      { "label": "Doručovanie (§§ 65–68)", "leaves": ["Spôsoby – do vlastných rúk, bežné, elektronické (schránka)", "Fikcia doručenia (§ 66) – nevyzdvihnutá zásielka sa považuje za doručenú posledným dňom lehoty", "Výnimka – fikcia neplatí pri doručovaní obvinenému do vlastných rúk", "Elektronicky – doručené okamihom uloženia do aktivovanej schránky"] },
-      { "label": "Lehoty (§§ 63–64)", "leaves": ["Počítanie – dni od nasledujúceho dňa; týždne/mesiace koncom zhodného dňa", "Víkend a sviatok – koniec lehoty sa posúva na najbližší pracovný deň", "Navrátenie lehoty (§ 64) – vážne dôvody; žiadosť do 3 dní + súčasne vykonať úkon"] },
-      { "label": "Nazeranie do spisu (§ 69)", "leaves": ["Kto – obvinený, obhajca, poškodený, zúčastnená osoba, zástupcovia, probačný úradník…", "Obmedzenie – v prípravnom konaní možno odmietnuť pre ohrozenie účelu stíhania", "Výpisky a kópie – dovolené, ak neohrozia konanie"] },
-      { "label": "Poskytovanie informácií (§ 6)", "leaves": ["Chránené – prezumpcia neviny, súkromie, údaje maloletých a obetí, tajomstvá", "Neposkytnú sa – ak by ohrozili vyšetrovanie či účel konania", "Verejnosť – poznámky a nákresy účastníkom nemožno zakázať, ak nerušia priebeh"] }
+      {
+        "label": "Podanie (§ 62)",
+        "leaves": [
+          "Formy – písomne, ústne do zápisnice, elektronicky (KEP alebo úradná schránka)",
+          "Podľa obsahu – posudzuje sa obsah, nie označenie („sťažnosť\" môže byť odvolanie)"
+        ]
+      },
+      {
+        "label": "Zápisnica (§§ 58–61)",
+        "leaves": [
+          "Kedy – o každom úkone s významom pre konanie",
+          "Náležitosti – orgán, miesto, čas, účel, prítomní, priebeh, vyhlásenia, podpisy",
+          "Námietky (§ 59) – proti zneniu; orgán rozhodne a dôvodnú opraví"
+        ]
+      },
+      {
+        "label": "Doručovanie (§§ 65–68)",
+        "leaves": [
+          "Spôsoby – do vlastných rúk, bežné, elektronické (schránka)",
+          "Fikcia doručenia (§ 66) – nevyzdvihnutá zásielka sa považuje za doručenú posledným dňom lehoty",
+          "Výnimka – fikcia neplatí pri doručovaní obvinenému do vlastných rúk",
+          "Elektronicky – doručené okamihom uloženia do aktivovanej schránky"
+        ]
+      },
+      {
+        "label": "Lehoty (§§ 63–64)",
+        "leaves": [
+          "Počítanie – dni od nasledujúceho dňa; týždne/mesiace koncom zhodného dňa",
+          "Víkend a sviatok – koniec lehoty sa posúva na najbližší pracovný deň",
+          "Navrátenie lehoty (§ 64) – vážne dôvody; žiadosť do 3 dní + súčasne vykonať úkon"
+        ]
+      },
+      {
+        "label": "Nazeranie do spisu (§ 69)",
+        "leaves": [
+          "Kto – obvinený, obhajca, poškodený, zúčastnená osoba, zástupcovia, probačný úradník…",
+          "Obmedzenie – v prípravnom konaní možno odmietnuť pre ohrozenie účelu stíhania",
+          "Výpisky a kópie – dovolené, ak neohrozia konanie"
+        ]
+      },
+      {
+        "label": "Poskytovanie informácií (§ 6)",
+        "leaves": [
+          "Chránené – prezumpcia neviny, súkromie, údaje maloletých a obetí, tajomstvá",
+          "Neposkytnú sa – ak by ohrozili vyšetrovanie či účel konania",
+          "Verejnosť – poznámky a nákresy účastníkom nemožno zakázať, ak nerušia priebeh"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Procesné úkony sú všetky zákonom upravené úkony orgánov činných v trestnom konaní, súdu a strán konania. Základ tvoria: podania (§ 62), zápisnice (§ 58), doručovanie (§ 65), lehoty (§ 63–64), nazeranie do spisu (§ 69) a poskytovanie informácií (§ 6). Tieto ustanovenia zabezpečujú zákonnosť, transparentnosť a kontrolovateľnosť trestného konania.\n\n1. Podanie (§ 62 TP)\nPodanie je akýkoľvek úkon smerujúci k orgánu činnému v trestnom konaní alebo súdu.\n\nFormy podania (§ 62 ods. 1 TP)\npísomne,\n\nústne do zápisnice,\n\nelektronicky (ak je podpísané kvalifikovaným elektronickým podpisom alebo doručené cez úradnú elektronickú schránku).\n\nPosudzovanie podľa obsahu (§ 62 ods. 2 TP)\nPodanie sa posudzuje podľa obsahu, nie podľa označenia.\n→ Ak niekto napíše „sťažnosť“, ale obsahovo ide o „odvolanie“, orgán ho musí posúdiť ako odvolanie.\n\n2. Zápisnica (§ 58–61 TP)\nZápisnica sa spisuje o každom úkone, ktorý má význam pre trestné konanie.\n\nNáležitosti zápisnice (§ 58 ods. 2 TP)\nMusí obsahovať:\n\noznačenie orgánu,\n\nmiesto, čas, účel úkonu,\n\nmená prítomných osôb,\n\npresný priebeh úkonu,\n\nvyhlásenia osôb,\n\npodpisy.\n\nNámietky proti zneniu zápisnice (§ 59 TP)\nÚčastník môže podať námietku, ak zápisnica nezodpovedá priebehu úkonu.\nOrgán musí o námietke rozhodnúť a vykonať opravu, ak je dôvodná.\n\n3. Doručovanie (§ 65–68 TP)\nDoručovanie je spôsob, akým sa procesné rozhodnutia a písomnosti dostávajú k subjektom konania.\n\nSpôsoby doručovania (§ 65 TP)\ndo vlastných rúk,\n\nbežné doručenie,\n\nelektronické doručenie (cez elektronickú schránku).\n\nFikcia doručenia (§ 66 TP)\nAk si adresát nevyzdvihne zásielku v úložnej lehote, považuje sa za doručenú posledným dňom lehoty, aj keď sa o nej nedozvedel.\n→ Neplatí pri doručovaní obvinenému do vlastných rúk.\n\nElektronické doručovanie (§ 65 ods. 3 TP)\nPísomnosť doručená do aktivovanej elektronickej schránky sa považuje za doručenú okamihom jej uloženia.\n\n4. Lehoty (§ 63–64 TP)\nLehoty určujú časové rámce na vykonanie úkonov.\n\nPočítanie lehôt (§ 63 TP)\nLehota určená na dni začína plynúť nasledujúci deň po doručení.\n\nLehota určená na týždne končí uplynutím toho istého dňa v týždni.\n\nLehota určená na mesiace končí uplynutím toho istého dňa v mesiaci.\n\nKoniec lehoty cez víkend/sviatok (§ 63 ods. 4 TP)\nAk posledný deň lehoty pripadne na sobotu, nedeľu alebo sviatok, lehota sa končí najbližší pracovný deň.\n\nNavrátenie lehoty (§ 64 TP)\nMožno ho povoliť, ak osoba z vážnych dôvodov nemohla úkon vykonať včas.\nPodmienky:\n\nžiadosť do 3 dní od odpadnutia prekážky,\n\nsúčasné vykonanie zmeškaného úkonu.\n\n5. Nazeranie do spisu (§ 69 TP)\nNazeranie do spisu je kľúčové právo procesných subjektov.\n\nKto môže nazerať (§ 69 ods. 1 TP)\nobvinený,\n\nobhajca,\n\npoškodený,\n\nzúčastnená osoba,\n\nich zákonní zástupcovia,\n\nprobačný a mediačný úradník,\n\nvyšší súdny úradník, súdny tajomník.\n\nObmedzenia (§ 69 ods. 2 TP)\nV prípravnom konaní môže OČTK odmietnuť nazretie, ak by to:\n\nohrozilo účel trestného stíhania,\n\nzmariť alebo sťažiť dokazovanie.\n\nVýpisky a kópie (§ 69 ods. 3 TP)\nSubjekty si môžu robiť:\n\nvýpisky,\n\npoznámky,\n\nkópie (ak to neohrozí konanie).\n\n6. Poskytovanie informácií o trestnom konaní (§ 6 TP)\nOrgány činné v trestnom konaní môžu informovať verejnosť, ale musia chrániť:\n\nChránené záujmy (§ 6 ods. 1–2 TP)\nprezumpciu neviny,\n\nsúkromie osôb,\n\nosobné údaje maloletých a obetí,\n\nutajované skutočnosti,\n\nbankové, daňové, obchodné tajomstvo.\n\nKedy sa informácie neposkytujú (§ 6 ods. 4 TP)\nAk by poskytnutie informácie:\n\nohrozilo vyšetrovanie,\n\nzmariť účel trestného konania,\n\nzasiahlo do chránených záujmov.\n\nVerejnosť súdneho konania (§ 6 ods. 3 TP)\nÚčastníkom nemožno zakázať robiť si poznámky alebo nákresy, ak nenarúšajú priebeh konania.\n\nZapamätaj si (štátnicové jadro)\nPodanie sa posudzuje podľa obsahu, nie názvu.\n\nZápisnica musí presne zachytiť priebeh úkonu; možno podať námietku.\n\nDoručovanie má presné pravidlá, vrátane fikcie doručenia.\n\nLehoty sa počítajú podľa § 63; víkend predlžuje lehotu.\n\nNazeranie do spisu je základné právo obvineného, obhajcu, poškodeného.\n\nInformácie sa poskytujú len tak, aby nebola porušená prezumpcia neviny ani súkromie.\n\nZdroj (overené podľa Slov‑Lex)\nTrestný poriadok č. 301/2005 Z. z., § 6, § 58–69\n\nSlov‑Lex: https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/301 (slov-lex.sk in Bing)"
 }

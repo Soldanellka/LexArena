@@ -2,13 +2,23 @@
   "id": "14",
   "title": "Podanie a žaloba",
   "schemaVersion": "1.1",
-  "tags": ["podanie", "žaloba", "petit", "naliehavý právny záujem", "zmena žaloby"],
-  "summary": "Podanie je procesný úkon účastníka adresovaný súdu, ktorý musí spĺňať všeobecné náležitosti podľa § 127 CSP. Žaloba je osobitným, najvýznamnejším podaním – je to procesný úkon, ktorým sa začína sporové konanie (§ 123 CSP). Okrem všeobecných náležitostí podania musí žaloba podľa § 132 CSP obsahovať opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit) – teda konkrétne vyjadrenie, čoho sa žalobca domáha a čím je súd pri rozhodovaní viazaný.\n\nPodľa povahy petitu rozlišujeme žalobu na plnenie (žalobca žiada uložiť žalovanému povinnosť niečo dať, konať, zdržať sa alebo strpieť), žalobu určovaciu (§ 137 písm. c) CSP – domáhanie sa určenia, či tu právny vzťah alebo právo je, alebo nie je, pokiaľ je na tom naliehavý právny záujem) a žalobu na vykonanie právneho úkonu. Naliehavý právny záujem na určovacej žalobe spravidla chýba tam, kde možno dosiahnuť úplné vyriešenie veci žalobou na plnenie. Žalobca môže žalobu počas konania zmeniť len so súhlasom súdu (§ 142 CSP); súd súhlas neudelí, ak by výsledky doterajšieho konania nemohli byť podkladom pre konanie o zmenenej žalobe.\n\nZapamätaj si:\n- Žaloba musí mať náležitosti podania (§ 127 CSP) a osobitné náležitosti žaloby (§ 132 CSP).\n- Petit = návrh výroku rozhodnutia, ktorým je súd viazaný.\n- Naliehavý právny záujem (§ 137 písm. c) CSP) je podmienkou určovacej žaloby.\n- Určovacia žaloba je spravidla vylúčená, ak možno podať žalobu na plnenie.\n- Zmena žaloby (§ 142 CSP) je možná len so súhlasom súdu."
-  ,
+  "tags": [
+    "podanie",
+    "žaloba",
+    "petit",
+    "naliehavý právny záujem",
+    "zmena žaloby"
+  ],
+  "summary": "Podanie je procesný úkon účastníka adresovaný súdu (§ 123 CSP).\nJe to prejav vôle, ktorý smeruje voči súdu alebo protistrane a má procesné účinky.\nPodanie môže byť meritórne (zasahuje do merita veci) alebo nemeritórne (procesné návrhy, žiadosti, námietky).\n\nPodanie robí účastník konania (alebo jeho zástupca) a smeruje súdu, ktorý vo veci koná.\n\n1. Náležitosti podania (§ 127 CSP)\nKaždé podanie musí obsahovať:\n\noznačenie súdu,\n\nkto podanie robí,\n\nvec, ktorej sa týka,\n\nčo sa podaním sleduje,\n\npodpis.\n\nForma podania (§ 125 CSP)\nPodanie možno urobiť:\n\npísomne (listinne),\n\nelektronicky, ak to zákon umožňuje,\n\nústne do zápisnice na súde.\n\nInterpretačné pravidlo (§ 124 CSP)\nPri posudzovaní podania je rozhodujúci obsah, nie jeho označenie.\n\n2. Vadné podanie\nAk podanie trpí vadami, ktoré bránia jeho prejednaniu:\n\nsúd vyzve účastníka na odstránenie vád v lehote,\n\nak vady neodstráni → súd neprihliadne na podanie,\n\nalebo ho odmietne, ak to zákon stanovuje (napr. vadné odvolanie).\n\n3. Žaloba (§ 123, § 132 CSP)\nŽaloba je najvýznamnejšie podanie, ktorým sa začína sporové konanie.\nOkrem všeobecných náležitostí musí obsahovať:\n\nopis rozhodujúcich skutočností,\n\noznačenie dôkazov,\n\nžalobný návrh (petit) – presné vyjadrenie, čoho sa žalobca domáha.\n\nPetit\nurčuje hranice rozhodovania súdu,\n\nsúd je petitom viazaný,\n\nnesmie prisúdiť viac, než žalobca žiada.\n\nÚčinky podania žaloby\nzačína sa sporové konanie,\n\nvzniká prekážka litispendencie,\n\nžalovaný vstupuje do procesného postavenia strany,\n\nzačínajú plynúť procesné lehoty,\n\nstabilizuje sa okruh účastníkov a predmet konania.\n\n4. Druhy žalôb podľa petitu\n1. Žaloba na plnenie\nŽalobca žiada uložiť žalovanému povinnosť:\n\nniečo dať,\n\nkonať,\n\nzdržať sa,\n\nstrpieť.\n\n2. Určovacia žaloba (§ 137 písm. c) CSP)\nŽalobca sa domáha určenia, či právny vzťah alebo právo je alebo nie je.\nPodmienkou je naliehavý právny záujem.\n\nSpravidla chýba, ak možno podať žalobu na plnenie, ktorá vyrieši vec úplne.\n\n3. Žaloba na vykonanie právneho úkonu\nŽalobca sa domáha, aby súd nahradil prejav vôle žalovaného (napr. uzavretie zmluvy).\n\n5. Zmena žaloby (§ 142 CSP)\nŽalobca môže žalobu zmeniť len so súhlasom súdu.\nSúd súhlas neudelí, ak výsledky doterajšieho konania nemôžu byť podkladom pre konanie o zmenenej žalobe.\n\nZapamätaj si (štátnicové jadro)\nPodanie = procesný úkon účastníka adresovaný súdu (§ 123 CSP).\n\nNáležitosti podania (§ 127 CSP): súd, účastník, vec, cieľ, podpis.\n\nVadné podanie → výzva na odstránenie; inak neprihliadnutie alebo odmietnutie.\n\nŽaloba = podanie + osobitné náležitosti (§ 132 CSP).\n\nPetit = návrh výroku; súd je ním viazaný.\n\nUrčovacia žaloba vyžaduje naliehavý právny záujem.\n\nAk možno podať žalobu na plnenie → určovacia žaloba spravidla vylúčená.\n\nZmena žaloby len so súhlasom súdu.\n\nPodanie žaloby má významné procesné účinky (litispendencia, začiatok konania).\n\nZdroj:\nCSP (160/2015 Z. z.), § 123, § 124–127, § 132, § 137, § 142; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo musí povinne obsahovať žaloba podľa CSP?",
-      "options": ["Len meno žalobcu a žalovaného", "Označenie súdu, strán, opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit)", "Len petit (čoho sa žalobca domáha)", "Len právnu kvalifikáciu nároku"],
+      "options": [
+        "Len meno žalobcu a žalovaného",
+        "Označenie súdu, strán, opis rozhodujúcich skutočností, označenie dôkazov a žalobný návrh (petit)",
+        "Len petit (čoho sa žalobca domáha)",
+        "Len právnu kvalifikáciu nároku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Podľa § 132 CSP musí žaloba obsahovať súhrn zákonom vymenovaných náležitostí, nielen niektorú z nich.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Čo je žalobný petit?",
-      "options": ["Opis skutkového stavu veci", "Návrh výroku rozhodnutia, teda čo konkrétne žalobca žiada od súdu", "Zoznam predložených dôkazov", "Právna kvalifikácia uplatneného nároku"],
+      "options": [
+        "Opis skutkového stavu veci",
+        "Návrh výroku rozhodnutia, teda čo konkrétne žalobca žiada od súdu",
+        "Zoznam predložených dôkazov",
+        "Právna kvalifikácia uplatneného nároku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Petit je jadrom žaloby – konkrétny návrh výroku, ktorým je súd viazaný a nemôže prisúdiť viac ani niečo iné.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Kedy má žalobca naliehavý právny záujem na určovacej žalobe?",
-      "options": ["Vždy, keď chce niečo určiť", "Keď je to potrebné na odstránenie stavu neistoty v právnom vzťahu, ktorý nemožno odstrániť inak (napr. žalobou na plnenie)", "Len keď je pohľadávka premlčaná", "Len pri sporoch o nehnuteľnosti"],
+      "options": [
+        "Vždy, keď chce niečo určiť",
+        "Keď je to potrebné na odstránenie stavu neistoty v právnom vzťahu, ktorý nemožno odstrániť inak (napr. žalobou na plnenie)",
+        "Len keď je pohľadávka premlčaná",
+        "Len pri sporoch o nehnuteľnosti"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Naliehavý právny záujem sa spravidla vylučuje, ak žalobca môže dosiahnuť úplné vyriešenie veci žalobou na plnenie.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Môže žalobca zmeniť žalobu počas konania?",
-      "options": ["Áno, kedykoľvek bez akéhokoľvek obmedzenia", "Áno, len so súhlasom súdu", "Nie, žaloba sa nikdy nemôže meniť", "Len pred prvým pojednávaním a nikdy potom"],
+      "options": [
+        "Áno, kedykoľvek bez akéhokoľvek obmedzenia",
+        "Áno, len so súhlasom súdu",
+        "Nie, žaloba sa nikdy nemôže meniť",
+        "Len pred prvým pojednávaním a nikdy potom"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Podľa § 142 CSP môže žalobca žalobu zmeniť len so súhlasom súdu, ktorý ho môže odoprieť, ak by to bránilo hospodárnemu priebehu konania.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Aké sú základné druhy žalôb podľa žalobného petitu?",
-      "options": ["Žaloba na plnenie, žaloba určovacia a žaloba na vykonanie právneho úkonu", "Iba žaloba na plnenie", "Iba žaloba určovacia", "Žaloba civilná a žaloba trestná"],
+      "options": [
+        "Žaloba na plnenie, žaloba určovacia a žaloba na vykonanie právneho úkonu",
+        "Iba žaloba na plnenie",
+        "Iba žaloba určovacia",
+        "Žaloba civilná a žaloba trestná"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Civilné procesné právo rozlišuje žaloby na plnenie, určovacie žaloby a žaloby na vykonanie právneho úkonu.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Podanie", "definition": "Procesný úkon účastníka adresovaný súdu, musí spĺňať náležitosti podľa § 127 CSP." },
-    { "term": "Žaloba", "definition": "Podanie, ktorým sa začína sporové konanie (§ 123 CSP)." },
-    { "term": "Petit", "definition": "Návrh výroku rozhodnutia – konkrétne vyjadrenie, čoho sa žalobca domáha." },
-    { "term": "Určovacia žaloba", "definition": "Žaloba o určenie, či tu právo alebo právny vzťah je, alebo nie je, pri naliehavom právnom záujme (§ 137 písm. c) CSP)." },
-    { "term": "Zmena žaloby (§ 142 CSP)", "definition": "Zmenu žaloby môže žalobca urobiť len so súhlasom súdu." }
+    {
+      "term": "Podanie",
+      "definition": "Procesný úkon účastníka adresovaný súdu, musí spĺňať náležitosti podľa § 127 CSP."
+    },
+    {
+      "term": "Žaloba",
+      "definition": "Podanie, ktorým sa začína sporové konanie (§ 123 CSP)."
+    },
+    {
+      "term": "Petit",
+      "definition": "Návrh výroku rozhodnutia – konkrétne vyjadrenie, čoho sa žalobca domáha."
+    },
+    {
+      "term": "Určovacia žaloba",
+      "definition": "Žaloba o určenie, či tu právo alebo právny vzťah je, alebo nie je, pri naliehavom právnom záujme (§ 137 písm. c) CSP)."
+    },
+    {
+      "term": "Zmena žaloby (§ 142 CSP)",
+      "definition": "Zmenu žaloby môže žalobca urobiť len so súhlasom súdu."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Určovacia žaloba bez naliehavého záujmu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalobca sa žalobou domáha určenia, že je vlastníkom veci, hoci mu nič nebráni podať rovno žalobu na vydanie veci, ktorou by spor vyriešil úplne.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca sa žalobou domáha určenia, že je vlastníkom veci, hoci mu nič nebráni podať rovno žalobu na vydanie veci, ktorou by spor vyriešil úplne.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Má žalobca v takom prípade naliehavý právny záujem na určovacej žalobe?",
-          "options": ["Spravidla nie, ak existuje žaloba na plnenie, ktorou možno dosiahnuť úplné vyriešenie veci", "Áno, vždy, keď si to žalobca želá", "Áno, lebo určovacia žaloba je prípustná bez ďalších podmienok"],
+          "options": [
+            "Spravidla nie, ak existuje žaloba na plnenie, ktorou možno dosiahnuť úplné vyriešenie veci",
+            "Áno, vždy, keď si to žalobca želá",
+            "Áno, lebo určovacia žaloba je prípustná bez ďalších podmienok"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak možno spor úplne vyriešiť žalobou na plnenie, naliehavý právny záujem na samostatnej určovacej žalobe spravidla chýba.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Čo by mal žalobca v tejto situácii radšej podať?",
-          "options": ["Žalobu na plnenie (napríklad o vydanie veci)", "Určovaciu žalobu bez ďalšieho", "Žalobu na vykonanie právneho úkonu"],
+          "options": [
+            "Žalobu na plnenie (napríklad o vydanie veci)",
+            "Určovaciu žalobu bez ďalšieho",
+            "Žalobu na vykonanie právneho úkonu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Žaloba na plnenie umožňuje úplné vyriešenie sporu vrátane exekučnej vymáhateľnosti nároku.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Rozšírenie žaloby",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Žalobca chce počas konania rozšíriť žalobu o ďalší nárok, ktorý pôvodne neuplatnil.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca chce počas konania rozšíriť žalobu o ďalší nárok, ktorý pôvodne neuplatnil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže tak urobiť?",
-          "options": ["Áno, ale len so súhlasom súdu", "Áno, úplne voľne bez ďalších podmienok", "Nie, žalobu nemožno nikdy meniť"],
+          "options": [
+            "Áno, ale len so súhlasom súdu",
+            "Áno, úplne voľne bez ďalších podmienok",
+            "Nie, žalobu nemožno nikdy meniť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozšírenie žaloby je jej zmenou v zmysle § 142 CSP a vyžaduje súhlas súdu.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Kedy súd zmenu žaloby nepripustí?",
-          "options": ["Ak by výsledky doterajšieho konania nemohli byť podkladom pre konanie o zmenenej žalobe", "Vždy, súd zmenu nikdy nepripustí", "Len ak s tým nesúhlasí sám žalobca"],
+          "options": [
+            "Ak by výsledky doterajšieho konania nemohli byť podkladom pre konanie o zmenenej žalobe",
+            "Vždy, súd zmenu nikdy nepripustí",
+            "Len ak s tým nesúhlasí sám žalobca"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súd neudelí súhlas so zmenou žaloby najmä vtedy, ak by to znamenalo nehospodárne opakovanie doterajšieho dokazovania.",
@@ -120,12 +189,68 @@
   "spider": {
     "center": "Podanie × Žaloba × Petit × Druhy žalôb × Zmena žaloby",
     "branches": [
-      { "label": "Podanie (§ 123 CSP)", "leaves": ["procesný úkon účastníka adresovaný súdu", "vždy sa určuje, kto úkon robí a komu je adresovaný", "meritórne a nemeritórne podania", "musí obsahovať: – označenie súdu – kto podanie robí – vec, ktorej sa týka – čo sa podaním sleduje – podpis", "formy: písomne, ústne do zápisnice, elektronicky (ak zákon umožňuje)", "odstraňovanie vád: súd vyzve na odstránenie; ak sa vady neodstránia → neprihliadne alebo odmietne"] },
-      { "label": "Žaloba", "leaves": ["najvýznamnejšie podanie – začína sporové konanie", "musí obsahovať všeobecné náležitosti podania", "opis rozhodujúcich skutočností", "označenie dôkazov", "žalobný návrh (petit) – presné vyjadrenie, čo žalobca žiada", "súd je petitom viazaný – nesmie prisúdiť viac ani niečo iné, než žalobca žiada"] },
-      { "label": "Účinky podania žaloby na súd", "leaves": ["začatie konania a vznik procesnoprávneho vzťahu", "vznik prekážky litispendencie", "zachovanie lehôt (premlčacích, prekluzívnych)", "stabilizácia predmetu konania a okruhu účastníkov"] },
-      { "label": "Petit a jeho druhy", "leaves": ["návrh výroku rozhodnutia", "určuje hranice rozhodovania súdu", "súd nesmie prisúdiť viac ani niečo iné, než žalobca žiada", "petit na plnenie", "petit určovací", "petit na vykonanie právneho úkonu"] },
-      { "label": "Druhy žalôb podľa petitu", "leaves": ["Žaloba na plnenie", "žalobca žiada uložiť povinnosť: dať, konať, zdržať sa, strpieť", "Určovacia žaloba", "určenie, či právny vzťah alebo právo je alebo nie je", "vyžaduje naliehavý právny záujem", "naliehavý právny záujem spravidla chýba, ak možno podať žalobu na plnenie", "Žaloba na vykonanie právneho úkonu", "súd nahradí prejav vôle žalovaného (napr. uzavretie zmluvy)"] },
-      { "label": "Zmena žaloby", "leaves": ["žalobca môže žalobu zmeniť len so súhlasom súdu", "súd súhlas neudelí, ak výsledky doterajšieho konania nemôžu byť podkladom pre konanie o zmenenej žalobe"] }
+      {
+        "label": "Podanie (§ 123 CSP)",
+        "leaves": [
+          "procesný úkon účastníka adresovaný súdu",
+          "vždy sa určuje, kto úkon robí a komu je adresovaný",
+          "meritórne a nemeritórne podania",
+          "musí obsahovať: – označenie súdu – kto podanie robí – vec, ktorej sa týka – čo sa podaním sleduje – podpis",
+          "formy: písomne, ústne do zápisnice, elektronicky (ak zákon umožňuje)",
+          "odstraňovanie vád: súd vyzve na odstránenie; ak sa vady neodstránia → neprihliadne alebo odmietne"
+        ]
+      },
+      {
+        "label": "Žaloba",
+        "leaves": [
+          "najvýznamnejšie podanie – začína sporové konanie",
+          "musí obsahovať všeobecné náležitosti podania",
+          "opis rozhodujúcich skutočností",
+          "označenie dôkazov",
+          "žalobný návrh (petit) – presné vyjadrenie, čo žalobca žiada",
+          "súd je petitom viazaný – nesmie prisúdiť viac ani niečo iné, než žalobca žiada"
+        ]
+      },
+      {
+        "label": "Účinky podania žaloby na súd",
+        "leaves": [
+          "začatie konania a vznik procesnoprávneho vzťahu",
+          "vznik prekážky litispendencie",
+          "zachovanie lehôt (premlčacích, prekluzívnych)",
+          "stabilizácia predmetu konania a okruhu účastníkov"
+        ]
+      },
+      {
+        "label": "Petit a jeho druhy",
+        "leaves": [
+          "návrh výroku rozhodnutia",
+          "určuje hranice rozhodovania súdu",
+          "súd nesmie prisúdiť viac ani niečo iné, než žalobca žiada",
+          "petit na plnenie",
+          "petit určovací",
+          "petit na vykonanie právneho úkonu"
+        ]
+      },
+      {
+        "label": "Druhy žalôb podľa petitu",
+        "leaves": [
+          "Žaloba na plnenie",
+          "žalobca žiada uložiť povinnosť: dať, konať, zdržať sa, strpieť",
+          "Určovacia žaloba",
+          "určenie, či právny vzťah alebo právo je alebo nie je",
+          "vyžaduje naliehavý právny záujem",
+          "naliehavý právny záujem spravidla chýba, ak možno podať žalobu na plnenie",
+          "Žaloba na vykonanie právneho úkonu",
+          "súd nahradí prejav vôle žalovaného (napr. uzavretie zmluvy)"
+        ]
+      },
+      {
+        "label": "Zmena žaloby",
+        "leaves": [
+          "žalobca môže žalobu zmeniť len so súhlasom súdu",
+          "súd súhlas neudelí, ak výsledky doterajšieho konania nemôžu byť podkladom pre konanie o zmenenej žalobe"
+        ]
+      }
     ]
   }
 }

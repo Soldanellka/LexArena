@@ -2,7 +2,12 @@
   "id": "A7",
   "title": "Okolnosti vylučujúce protiprávnosť",
   "schemaVersion": "1.1",
-  "tags": ["protiprávnosť", "okolnosti", "nutná obrana", "krajná núdza"],
+  "tags": [
+    "protiprávnosť",
+    "okolnosti",
+    "nutná obrana",
+    "krajná núdza"
+  ],
   "theory": [
     {
       "heading": "Pojem okolností vylučujúcich protiprávnosť",
@@ -20,46 +25,81 @@
   "quiz": [
     {
       "question": "Ktorá okolnosť vylučuje protiprávnosť?",
-      "options": ["Nedbanlivosť", "Nutná obrana", "Recidíva"],
+      "options": [
+        "Nedbanlivosť",
+        "Nutná obrana",
+        "Recidíva"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – nutná obrana je okolnosť vylučujúca protiprávnosť.",
       "explanation_incorrect": "Nie – správna odpoveď je nutná obrana."
     },
     {
       "question": "Kedy ide o krajnú núdzu?",
-      "options": ["Keď útok trvá", "Keď hrozí nebezpečenstvo a nemožno ho inak odvrátiť", "Keď páchateľ koná úmyselne"],
+      "options": [
+        "Keď útok trvá",
+        "Keď hrozí nebezpečenstvo a nemožno ho inak odvrátiť",
+        "Keď páchateľ koná úmyselne"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o konanie na odvrátenie nebezpečenstva.",
       "explanation_incorrect": "Nie – úmysel nie je podstatou krajne núdze."
     },
     {
       "question": "Čo nesmie byť pri nutnej obrane?",
-      "options": ["Zjavná neprimeranosť obrany", "Útok", "Nebezpečenstvo"],
+      "options": [
+        "Zjavná neprimeranosť obrany",
+        "Útok",
+        "Nebezpečenstvo"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – obrana nesmie byť zjavne neprimeraná.",
       "explanation_incorrect": "Nie – neprimeranosť je rozhodujúca."
     },
     {
       "question": "Kedy nejde o nutnú obranu?",
-      "options": ["Ak útok už skončil", "Ak útok trvá", "Ak útok hrozí"],
+      "options": [
+        "Ak útok už skončil",
+        "Ak útok trvá",
+        "Ak útok hrozí"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – obrana po skončení útoku nie je nutná obrana.",
       "explanation_incorrect": "Nie – útok musí trvať alebo hroziť."
     },
     {
       "question": "Ktorá okolnosť NIE je vylučujúca protiprávnosť?",
-      "options": ["Súhlas poškodeného", "Krajná núdza", "Recidíva"],
+      "options": [
+        "Súhlas poškodeného",
+        "Krajná núdza",
+        "Recidíva"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – recidíva nie je okolnosť vylučujúca protiprávnosť.",
       "explanation_incorrect": "Nie – recidíva je priťažujúca okolnosť."
     }
   ],
   "tiles": [
-    { "term": "Nutná obrana", "definition": "Odvrátenie útoku, ktoré nie je zjavne neprimerané." },
-    { "term": "Krajná núdza", "definition": "Odvrátenie nebezpečenstva, ktoré nemožno inak odvrátiť." },
-    { "term": "Súhlas poškodeného", "definition": "Poškodený súhlasí s konaním, ktoré by inak bolo protiprávne." },
-    { "term": "Dovolené riziko", "definition": "Konanie v rámci spoločensky prospešnej činnosti." },
-    { "term": "Výkon práva", "definition": "Konanie v súlade so zákonom, ktoré vylučuje protiprávnosť." }
+    {
+      "term": "Nutná obrana",
+      "definition": "Odvrátenie útoku, ktoré nie je zjavne neprimerané."
+    },
+    {
+      "term": "Krajná núdza",
+      "definition": "Odvrátenie nebezpečenstva, ktoré nemožno inak odvrátiť."
+    },
+    {
+      "term": "Súhlas poškodeného",
+      "definition": "Poškodený súhlasí s konaním, ktoré by inak bolo protiprávne."
+    },
+    {
+      "term": "Dovolené riziko",
+      "definition": "Konanie v rámci spoločensky prospešnej činnosti."
+    },
+    {
+      "term": "Výkon práva",
+      "definition": "Konanie v súlade so zákonom, ktoré vylučuje protiprávnosť."
+    }
   ],
   "cases": [
     {
@@ -73,14 +113,22 @@
         },
         {
           "question": "Krok 1: Trval útok?",
-          "options": ["Áno", "Nie", "Nie je jasné"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Nie je jasné"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – útok trval.",
           "explanation_incorrect": "Nie – útok trval."
         },
         {
           "question": "Krok 2: Bola obrana primeraná?",
-          "options": ["Áno – odvrátenie útoku", "Nie – bola zjavne neprimeraná", "Nedá sa určiť"],
+          "options": [
+            "Áno – odvrátenie útoku",
+            "Nie – bola zjavne neprimeraná",
+            "Nedá sa určiť"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – obrana bola primeraná.",
           "explanation_incorrect": "Nie – nebola neprimeraná."
@@ -98,14 +146,22 @@
         },
         {
           "question": "Krok 1: Hrozilo nebezpečenstvo?",
-          "options": ["Áno", "Nie", "Len mierne"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len mierne"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – hrozilo bezprostredné nebezpečenstvo.",
           "explanation_incorrect": "Nie – nebezpečenstvo bolo reálne."
         },
         {
           "question": "Krok 2: Je spôsobená škoda menšia?",
-          "options": ["Áno – rozbité okno je menšie zlo", "Nie", "Záleží na počasí"],
+          "options": [
+            "Áno – rozbité okno je menšie zlo",
+            "Nie",
+            "Záleží na počasí"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – zachránenie života je nadradené majetku.",
           "explanation_incorrect": "Nie – škoda je menšia."
@@ -122,10 +178,41 @@
   "spider": {
     "center": "Okolnosti vylučujúce protiprávnosť – nutná obrana × krajná núdza",
     "branches": [
-      { "label": "Pojem", "leaves": ["Formálne znaky TČ – konanie formálne napĺňa znaky trestného činu.", "Nie je protiprávne – právny poriadok ho za daných okolností dovoľuje.", "Vylučuje zodpovednosť – trestná zodpovednosť nevzniká."] },
-      { "label": "Nutná obrana", "leaves": ["Odvrátenie útoku – konanie odvracia útok na chránený záujem.", "Protiprávny útok – útok musí byť protiprávny a trvať alebo priamo hroziť.", "Primeranosť – obrana nesmie byť zjavne neprimeraná útoku.", "Netreba ustupovať – obranca nemá povinnosť útoku ustúpiť."] },
-      { "label": "Krajná núdza", "leaves": ["Odvrátenie nebezpečenstva – odvracia sa nebezpečenstvo, nie útok osoby.", "Neodvrátiteľnosť inak – nebezpečenstvo nemožno za daných okolností odvrátiť inak.", "Proporcionalita – spôsobený následok nesmie byť zjavne závažnejší než hroziaci."] },
-      { "label": "Ďalšie okolnosti", "leaves": ["Súhlas poškodeného – dovolené nakladanie s vlastným právom v medziach zákona.", "Povolené riziko – riziko spoločensky prospešnej činnosti v medziach pravidiel.", "Výkon práva a povinnosti – konanie pri výkone práva alebo plnení povinnosti.", "Príkaz nadriadeného – plnenie záväzného príkazu za zákonných podmienok."] }
+      {
+        "label": "Pojem",
+        "leaves": [
+          "Formálne znaky TČ – konanie formálne napĺňa znaky trestného činu.",
+          "Nie je protiprávne – právny poriadok ho za daných okolností dovoľuje.",
+          "Vylučuje zodpovednosť – trestná zodpovednosť nevzniká."
+        ]
+      },
+      {
+        "label": "Nutná obrana",
+        "leaves": [
+          "Odvrátenie útoku – konanie odvracia útok na chránený záujem.",
+          "Protiprávny útok – útok musí byť protiprávny a trvať alebo priamo hroziť.",
+          "Primeranosť – obrana nesmie byť zjavne neprimeraná útoku.",
+          "Netreba ustupovať – obranca nemá povinnosť útoku ustúpiť."
+        ]
+      },
+      {
+        "label": "Krajná núdza",
+        "leaves": [
+          "Odvrátenie nebezpečenstva – odvracia sa nebezpečenstvo, nie útok osoby.",
+          "Neodvrátiteľnosť inak – nebezpečenstvo nemožno za daných okolností odvrátiť inak.",
+          "Proporcionalita – spôsobený následok nesmie byť zjavne závažnejší než hroziaci."
+        ]
+      },
+      {
+        "label": "Ďalšie okolnosti",
+        "leaves": [
+          "Súhlas poškodeného – dovolené nakladanie s vlastným právom v medziach zákona.",
+          "Povolené riziko – riziko spoločensky prospešnej činnosti v medziach pravidiel.",
+          "Výkon práva a povinnosti – konanie pri výkone práva alebo plnení povinnosti.",
+          "Príkaz nadriadeného – plnenie záväzného príkazu za zákonných podmienok."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Okolnosti vylučujúce protiprávnosť sú situácie, v ktorých konanie síce formálne napĺňa znaky trestného činu, ale nie je protiprávne, a preto nie je trestným činom.\nIde o prípady, keď právo výnimočne umožňuje konať spôsobom, ktorý by inak bol trestný, pretože existuje vyšší právny dôvod.\n\n1. Nutná obrana (§ 25 TZ)\nNutná obrana je konanie, ktorým osoba odvracia priamo hroziaci alebo trvajúci útok na záujem chránený Trestným zákonom.\n\nPodmienky nutnej obrany\nmusí ísť o útok, nie o nebezpečenstvo,\n\nútok musí byť protiprávny,\n\nútok musí trvať alebo priamo hroziť,\n\nobrana nesmie byť zjavne neprimeraná útoku.\n\nDôležité zásady\nobrana môže byť aj intenzívnejšia než útok, nesmie však byť zjavne neprimeraná,\n\nobranca nemusí ustupovať,\n\nobrana proti útoku zvieraťa je možná, ak útok je vyvolaný človekom.\n\n2. Krajná núdza (§ 24 TZ)\nKrajná núdza je konanie, ktorým osoba odvracia nebezpečenstvo, ktoré nie je útokom, a ktoré nemožno inak odvrátiť.\n\nPodmienky krajne núdze\nmusí existovať nebezpečenstvo, nie útok,\n\nnebezpečenstvo musí byť bezprostredné,\n\nnebezpečenstvo nemožno odvrátiť inak,\n\nspôsobený následok nesmie byť zjavne závažnejší než ten, ktorý hrozil.\n\nRozdiel oproti nutnej obrane\nnutná obrana = proti útoku,\n\nkrajná núdza = proti nebezpečenstvu,\n\npri krajne núdzi sa vyžaduje proporcionalita, pri nutnej obrane nie.\n\n3. Ďalšie okolnosti vylučujúce protiprávnosť (pre úplnosť)\nAj keď neboli v tvojej otázke, patria sem a sú často skúšané:\n\nSúhlas poškodeného – pri záujmoch, o ktorých môže poškodený rozhodovať.\n\nPovolené riziko – napr. šport, medicína, vedecké experimenty.\n\nVýkon práva alebo povinnosti – napr. policajt pri zásahu.\n\nPlnenie príkazu nadriadeného – ak príkaz nie je zjavne nezákonný.\n\n(Tieto doplnky sú štátnicovo dôležité, ale v pavúku ich uvediem len ako doplnkovú vetvu.)\n\nZapamätaj si (štátnicové jadro)\n– Okolnosti vylučujúce protiprávnosť = konanie nie je trestným činom, hoci formálne napĺňa jeho znaky.\n– Nutná obrana: proti útoku, nesmie byť zjavne neprimeraná.\n– Krajná núdza: proti nebezpečenstvu, následok nesmie byť zjavne závažnejší.\n– Rozdiel: nutná obrana nevyžaduje proporcionalitu, krajná núdza áno.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nČentéš – Trestné právo hmotné\nŠámal – Trestní právo hmotné\nJudikatúra NS SR"
 }

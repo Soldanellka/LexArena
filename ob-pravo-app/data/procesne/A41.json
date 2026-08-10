@@ -2,13 +2,22 @@
   "id": "41",
   "title": "Subjekty exekučného konania, postavenie tzv. tretích osôb",
   "schemaVersion": "1.1",
-  "tags": ["subjekty exekučného konania", "exekútor", "tretie osoby", "excindačná žaloba"],
-  "summary": "Hlavnými subjektmi exekučného konania sú exekučný súd, exekútor (poverený súdom vykonávať exekúciu a konajúci pod jeho dohľadom), oprávnený (veriteľ, v prospech ktorého sa exekúcia vedie) a povinný (dlžník, voči ktorému exekúcia smeruje). Popri nich môžu byť exekúciou dotknuté aj tzv. tretie osoby – osoby odlišné od oprávneného a povinného, ktorým exekučný poriadok ukladá povinnosť súčinnosti alebo ktorých práva môžu byť exekúciou zasiahnuté. Typickým príkladom je zamestnávateľ povinného pri exekúcii zrážkami zo mzdy (má povinnosť zrážky vykonávať a odvádzať), banka pri prikázaní pohľadávky z účtu, alebo manžel povinného pri postihnutí majetku patriaceho do bezpodielového spoluvlastníctva manželov.\n\nOsobitným prípadom je situácia, keď exekúcia postihne vec, ku ktorej má práva osoba odlišná od povinného (napríklad je jej vlastníkom). Takáto tretia osoba sa môže brániť excindačnou (vylučovacou) žalobou podľa Exekučného poriadku, ktorou sa domáha, aby súd rozhodol, že postihnutá vec je z exekúcie vylúčená, pretože k nej má právo nepripúšťajúce exekúciu.\n\nZapamätaj si:\n- Hlavné subjekty exekučného konania: exekučný súd, exekútor, oprávnený, povinný.\n- Tretie osoby sú odlišné od oprávneného a povinného, môžu mať povinnosť súčinnosti (zamestnávateľ, banka) alebo byť priamo dotknuté.\n- Zamestnávateľ má povinnosť vykonávať a odvádzať zrážky zo mzdy povinného.\n- Excindačná (vylučovacia) žaloba slúži na vylúčenie veci z exekúcie v prospech tretej osoby s právom k veci.\n- Manžel povinného má osobitné postavenie pri postihnutí bezpodielového spoluvlastníctva manželov."
-  ,
+  "tags": [
+    "subjekty exekučného konania",
+    "exekútor",
+    "tretie osoby",
+    "excindačná žaloba"
+  ],
+  "summary": "Exekučné konanie je proces núteného výkonu exekučného titulu, v ktorom vystupujú viaceré subjekty s odlišným postavením. Základné subjekty sú exekučný súd, súdny exekútor, oprávnený a povinný. Okrem nich sa exekúcie dotýkajú aj tretie osoby, ktoré majú povinnosť súčinnosti alebo sú priamo dotknuté zásahom do majetku.\n\n1. Exekučný súd\nOd roku 2017 je jediným exekučným súdom v SR Okresný súd Banská Bystrica (OS BB) – tzv. kauzálna príslušnosť.\n\nOS BB rozhoduje o:\n\npoverení exekútora,\n\nnámietkach povinného,\n\nnávrhoch na zastavenie a odklad exekúcie,\n\nexcindačných žalobách,\n\nzmene exekútora,\n\nďalších procesných otázkach.\n\nSúd vykonáva dohľad nad exekútorom.\n\n2. Exekútor\nje verejný činiteľ, ktorý vykonáva exekúciu,\n\nurčuje sa náhodným elektronickým výberom zo zoznamu exekútorov,\n\npo prijatí návrhu žiada OS BB o poverenie,\n\npo udelení poverenia vykonáva všetky úkony smerujúce k vymoženiu pohľadávky:\n– zrážky zo mzdy,\n– prikázanie pohľadávky,\n– predaj hnuteľných vecí a nehnuteľností,\n– postihnutie iných majetkových práv.\n\nExekútor môže byť zmenený, ak nastanú zákonné dôvody (zánik úradu, vylúčenie pre zaujatosť).\n\n3. Oprávnený\nveriteľ, v prospech ktorého sa exekúcia vedie,\n\npodáva exekučný návrh,\n\nurčuje rozsah a predmet exekúcie,\n\nmá právo na uspokojenie pohľadávky,\n\nmusí spĺňať procesné podmienky (spôsobilosť, právny záujem).\n\n4. Povinný\ndlžník, voči ktorému exekúcia smeruje,\n\njeho majetok alebo príjem môže byť postihnutý zákonom stanovenými spôsobmi,\n\nmá právo na obranu:\n– návrh na zastavenie exekúcie,\n– návrh na odklad,\n– námietky proti upovedomeniu.\n\n5. Manžel povinného\nosobitné postavenie pri postihovaní BSM,\n\nmôže byť účastníkom konania v rozsahu zásahu do spoločného majetku,\n\nmôže sa brániť excindačnou žalobou, ak ide o jeho výlučný majetok,\n\nmôže žiadať vylúčenie veci z exekúcie.\n\n6. Subjekty povinné súčinnosťou\nExekúcia sa nezaobíde bez súčinnosti viacerých subjektov:\n\nzamestnávateľ povinného – vykonáva zrážky zo mzdy a odvádza ich exekútorovi,\n\nbanka – blokuje a vypláca pohľadávku z účtu,\n\ndlžník povinného – pri prikázaní pohľadávky,\n\nPolicajný zbor – asistuje pri úkonoch, zisťovaní pobytu,\n\nobec – súčinnosť pri úschove, doručovaní, zisťovaní majetku,\n\nvydavatelia tlače – zverejňujú dražby,\n\ndepozitár cenných papierov, centrálny depozitár,\n\nspoluvlastníci, osoby s predkupným právom, záložní veritelia – pri predaji hnuteľných vecí a nehnuteľností.\n\n7. Tretie osoby v exekučnom konaní\nTretie osoby sú subjekty odlišné od oprávneného a povinného, ktoré môžu byť exekúciou dotknuté alebo majú povinnosť súčinnosti.\n\nTypické tretie osoby:\n\nzamestnávateľ,\n\nbanka,\n\ndlžník povinného,\n\nmanžel povinného,\n\nspoluvlastníci,\n\nzáložní veritelia,\n\ndepozitár cenných papierov,\n\nobec.\n\n8. Excindačná (vylučovacia) žaloba\nAk exekúcia postihne vec, ku ktorej má právo tretia osoba (napr. je jej vlastníkom), môže sa brániť excindačnou žalobou.\n\nTouto žalobou sa domáha, aby súd rozhodol, že vec má byť vylúčená z exekúcie, pretože jej právo nepripúšťa exekúciu.\n\nExcindačná žaloba chráni vlastnícke a iné majetkové práva tretích osôb pred neoprávneným zásahom exekúcie.\n\nZapamätaj si (štátnicové jadro)\n– Hlavné subjekty: exekučný súd, exekútor, oprávnený, povinný.\n– Tretie osoby môžu mať povinnosť súčinnosti alebo byť priamo dotknuté zásahom.\n– Zamestnávateľ vykonáva a odvádza zrážky zo mzdy povinného.\n– Excindačná žaloba slúži na vylúčenie veci z exekúcie v prospech tretej osoby.\n– Manžel povinného má osobitné postavenie pri postihovaní BSM.\n\nZdroj\nExekučný poriadok (zákon č. 233/1995 Z. z.)\nŠtevček – Macej – Šramel a kol.: Civilné procesné právo, Wolters Kluwer, 2017",
   "quiz": [
     {
       "question": "Kto sú hlavné subjekty exekučného konania?",
-      "options": ["Exekučný súd, exekútor, oprávnený a povinný", "Iba oprávnený a povinný bez účasti súdu", "Iba exekútor konajúci úplne samostatne", "Iba súd bez účasti exekútora"],
+      "options": [
+        "Exekučný súd, exekútor, oprávnený a povinný",
+        "Iba oprávnený a povinný bez účasti súdu",
+        "Iba exekútor konajúci úplne samostatne",
+        "Iba súd bez účasti exekútora"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Exekučné konanie sa odohráva medzi týmito štyrmi hlavnými subjektmi.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Kto je v exekučnom konaní treťou osobou?",
-      "options": ["Osoba odlišná od oprávneného a povinného, ktorá môže byť exekúciou dotknutá (napr. zamestnávateľ, banka, manžel povinného)", "Výlučne exekútor", "Výlučne súd", "Výlučne oprávnený"],
+      "options": [
+        "Osoba odlišná od oprávneného a povinného, ktorá môže byť exekúciou dotknutá (napr. zamestnávateľ, banka, manžel povinného)",
+        "Výlučne exekútor",
+        "Výlučne súd",
+        "Výlučne oprávnený"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Tretie osoby stoja mimo hlavného vzťahu oprávnený – povinný, no môžu byť exekúciou priamo zasiahnuté.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Akú povinnosť má zamestnávateľ povinného pri exekúcii zrážkami zo mzdy?",
-      "options": ["Povinnosť súčinnosti – vykonávať zrážky zo mzdy a odvádzať ich oprávnenému/exekútorovi", "Žiadnu povinnosť, zamestnávateľa sa exekúcia netýka", "Povinnosť okamžite prepustiť povinného zo zamestnania", "Povinnosť uhradiť celý dlh povinného z vlastných prostriedkov"],
+      "options": [
+        "Povinnosť súčinnosti – vykonávať zrážky zo mzdy a odvádzať ich oprávnenému/exekútorovi",
+        "Žiadnu povinnosť, zamestnávateľa sa exekúcia netýka",
+        "Povinnosť okamžite prepustiť povinného zo zamestnania",
+        "Povinnosť uhradiť celý dlh povinného z vlastných prostriedkov"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zamestnávateľ má zákonnú povinnosť súčinnosti pri vykonávaní zrážok zo mzdy.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo je excindačná (vylučovacia) žaloba?",
-      "options": ["Žaloba tretej osoby tvrdiacej, že má k postihnutej veci právo nepripúšťajúce exekúciu, smerujúca k vyňatiu veci z exekúcie", "Žaloba oprávneného proti povinnému o zaplatenie dlhu", "Žaloba povinného proti exekútorovi o náhradu škody", "Žaloba o rozvod manželstva"],
+      "options": [
+        "Žaloba tretej osoby tvrdiacej, že má k postihnutej veci právo nepripúšťajúce exekúciu, smerujúca k vyňatiu veci z exekúcie",
+        "Žaloba oprávneného proti povinnému o zaplatenie dlhu",
+        "Žaloba povinného proti exekútorovi o náhradu škody",
+        "Žaloba o rozvod manželstva"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Excindačná žaloba chráni práva tretej osoby k veci, ktorá bola nesprávne postihnutá exekúciou.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Kto podáva excindačnú žalobu?",
-      "options": ["Tretia osoba, ktorá tvrdí, že má k postihnutej veci právo vylučujúce exekúciu", "Výlučne oprávnený", "Výlučne exekútor", "Výlučne súd z úradnej moci"],
+      "options": [
+        "Tretia osoba, ktorá tvrdí, že má k postihnutej veci právo vylučujúce exekúciu",
+        "Výlučne oprávnený",
+        "Výlučne exekútor",
+        "Výlučne súd z úradnej moci"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Ide o procesný prostriedok práve tretej osoby dotknutej exekúciou.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Subjekty exekučného konania", "definition": "Exekučný súd, exekútor, oprávnený a povinný." },
-    { "term": "Tretia osoba v exekúcii", "definition": "Osoba odlišná od oprávneného a povinného, ktorú môže exekúcia priamo zasiahnuť (napr. zamestnávateľ, banka)." },
-    { "term": "Súčinnosť tretích osôb", "definition": "Napríklad povinnosť zamestnávateľa vykonávať zrážky zo mzdy povinného." },
-    { "term": "Excindačná (vylučovacia) žaloba", "definition": "Žaloba tretej osoby smerujúca k vyňatiu veci z exekúcie pre existenciu jej práva k veci." },
-    { "term": "Manžel povinného", "definition": "Osobitné postavenie tretej osoby pri exekúcii postihujúcej bezpodielové spoluvlastníctvo manželov." }
+    {
+      "term": "Subjekty exekučného konania",
+      "definition": "Exekučný súd, exekútor, oprávnený a povinný."
+    },
+    {
+      "term": "Tretia osoba v exekúcii",
+      "definition": "Osoba odlišná od oprávneného a povinného, ktorú môže exekúcia priamo zasiahnuť (napr. zamestnávateľ, banka)."
+    },
+    {
+      "term": "Súčinnosť tretích osôb",
+      "definition": "Napríklad povinnosť zamestnávateľa vykonávať zrážky zo mzdy povinného."
+    },
+    {
+      "term": "Excindačná (vylučovacia) žaloba",
+      "definition": "Žaloba tretej osoby smerujúca k vyňatiu veci z exekúcie pre existenciu jej práva k veci."
+    },
+    {
+      "term": "Manžel povinného",
+      "definition": "Osobitné postavenie tretej osoby pri exekúcii postihujúcej bezpodielové spoluvlastníctvo manželov."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Vec vo vlastníctve tretej osoby",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Exekútor pri výkone exekúcie zaistí hnuteľnú vec, ktorá v skutočnosti patrí sestre povinného, nie samotnému povinnému.", "options": [], "correct": 0 },
+        {
+          "question": "Exekútor pri výkone exekúcie zaistí hnuteľnú vec, ktorá v skutočnosti patrí sestre povinného, nie samotnému povinnému.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký procesný prostriedok môže sestra použiť na ochranu svojho vlastníctva?",
-          "options": ["Excindačnú (vylučovaciu) žalobu", "Odvolanie proti rozsudku vo veci samej", "Dovolanie na Najvyšší súd SR"],
+          "options": [
+            "Excindačnú (vylučovaciu) žalobu",
+            "Odvolanie proti rozsudku vo veci samej",
+            "Dovolanie na Najvyšší súd SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Excindačná žaloba je práve nástrojom na ochranu tretej osoby, ktorej vec bola nesprávne postihnutá.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čoho sa touto žalobou sestra domáha?",
-          "options": ["Vylúčenia veci z exekúcie", "Zaplatenia dlhu povinného namiesto neho", "Zrušenia celého exekučného konania"],
+          "options": [
+            "Vylúčenia veci z exekúcie",
+            "Zaplatenia dlhu povinného namiesto neho",
+            "Zrušenia celého exekučného konania"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Cieľom excindačnej žaloby je vyňatie konkrétnej veci z exekúcie, nie zrušenie celého konania.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Súčinnosť zamestnávateľa",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Exekútor nariadi zrážky zo mzdy povinného a upovedomí o tom jeho zamestnávateľa.", "options": [], "correct": 0 },
+        {
+          "question": "Exekútor nariadi zrážky zo mzdy povinného a upovedomí o tom jeho zamestnávateľa.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí zamestnávateľ na výzvu exekútora súčinnosť poskytnúť?",
-          "options": ["Áno, zamestnávateľ má zákonnú povinnosť súčinnosti a vykonávania zrážok", "Nie, ide výlučne o súkromnú vec zamestnanca", "Áno, ale iba ak s tým zamestnanec súhlasí"],
+          "options": [
+            "Áno, zamestnávateľ má zákonnú povinnosť súčinnosti a vykonávania zrážok",
+            "Nie, ide výlučne o súkromnú vec zamestnanca",
+            "Áno, ale iba ak s tým zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Povinnosť súčinnosti zamestnávateľa vyplýva priamo zo zákona, nie zo súhlasu zamestnanca.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Čo hrozí zamestnávateľovi, ak si túto povinnosť nesplní?",
-          "options": ["Môže mu byť uložená zodpovednosť, prípadne pokuta za nesplnenie povinnosti súčinnosti", "Nič, povinnosť súčinnosti nie je vynútiteľná", "Musí namiesto toho uhradiť celý dlh povinného"],
+          "options": [
+            "Môže mu byť uložená zodpovednosť, prípadne pokuta za nesplnenie povinnosti súčinnosti",
+            "Nič, povinnosť súčinnosti nie je vynútiteľná",
+            "Musí namiesto toho uhradiť celý dlh povinného"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon sankcionuje nesplnenie povinnosti súčinnosti zo strany tretích osôb.",
@@ -120,12 +188,69 @@
   "spider": {
     "center": "Exekučný súd × exekútor × oprávnený × povinný × tretie osoby × excindačná žaloba",
     "branches": [
-      { "label": "Exekučný súd", "leaves": ["jediným exekučným súdom je Okresný súd Banská Bystrica", "v konaní koná aj vyšší súdny úradník (VSÚ)", "rozhoduje o poverení exekútora", "rozhoduje o námietkach povinného", "rozhoduje o excindačných žalobách", "rozhoduje o ďalších procesných otázkach"] },
-      { "label": "Súdny exekútor", "leaves": ["vykonáva exekúciu na základe poverenia súdu", "koná ako verejný činiteľ pod dohľadom súdu", "spôsob jeho určenia stanovuje zákon", "je možná zmena exekútora", "realizuje úkony smerujúce k vymoženiu pohľadávky: zrážky zo mzdy, prikázanie pohľadávky, predaj hnuteľných vecí, predaj nehnuteľností", "v určitom úseku konania vystupuje aj ako účastník"] },
-      { "label": "Oprávnený a povinný", "leaves": ["oprávnený: veriteľ, v prospech ktorého sa exekúcia vedie, podáva exekučný návrh", "povinný: dlžník, voči ktorému exekúcia smeruje", "na ich strane musia byť splnené procesné podmienky", "je možná zmena oprávneného aj povinného", "povinný má právo podávať námietky, návrhy a brániť sa proti nezákonnému postupu", "manžel povinného je účastníkom za zákonom stanovených podmienok, najmä pri postihovaní majetku v BSM"] },
-      { "label": "Subjekty povinné súčinnosťou", "leaves": ["Policajný zbor", "obec", "vydavatelia tlače", "ďalšie subjekty, ktoré musia poskytnúť exekútorovi súčinnosť", "pri nesplnení povinnosti im hrozí sankcia"] },
-      { "label": "Tretie osoby", "leaves": ["subjekty, ktoré nie sú stranami konania, ale exekúcia sa ich dotýka", "platiteľ mzdy (zamestnávateľ) – vykonáva zrážky zo mzdy a odvádza ich exekútorovi", "banka – blokuje a vypláca prostriedky pri prikázaní pohľadávky z účtu", "dlžník povinného", "subjekty s odvodenými právami pri predaji hnuteľných vecí a nehnuteľností: spoluvlastníci, osoby s predkupným právom, záložný veriteľ", "depozitár cenných papierov", "obec pri úschove"] },
-      { "label": "Excindačná (vylučovacia) žaloba", "leaves": ["podáva ju tretia osoba, ak exekúcia postihla vec, ku ktorej má právo (napr. vlastníctvo)", "cieľ: dosiahnuť, aby súd rozhodol, že vec má byť vylúčená z exekúcie", "chráni vlastnícke a iné majetkové práva tretích osôb pred neoprávneným zásahom"] }
+      {
+        "label": "Exekučný súd",
+        "leaves": [
+          "jediným exekučným súdom je Okresný súd Banská Bystrica",
+          "v konaní koná aj vyšší súdny úradník (VSÚ)",
+          "rozhoduje o poverení exekútora",
+          "rozhoduje o námietkach povinného",
+          "rozhoduje o excindačných žalobách",
+          "rozhoduje o ďalších procesných otázkach"
+        ]
+      },
+      {
+        "label": "Súdny exekútor",
+        "leaves": [
+          "vykonáva exekúciu na základe poverenia súdu",
+          "koná ako verejný činiteľ pod dohľadom súdu",
+          "spôsob jeho určenia stanovuje zákon",
+          "je možná zmena exekútora",
+          "realizuje úkony smerujúce k vymoženiu pohľadávky: zrážky zo mzdy, prikázanie pohľadávky, predaj hnuteľných vecí, predaj nehnuteľností",
+          "v určitom úseku konania vystupuje aj ako účastník"
+        ]
+      },
+      {
+        "label": "Oprávnený a povinný",
+        "leaves": [
+          "oprávnený: veriteľ, v prospech ktorého sa exekúcia vedie, podáva exekučný návrh",
+          "povinný: dlžník, voči ktorému exekúcia smeruje",
+          "na ich strane musia byť splnené procesné podmienky",
+          "je možná zmena oprávneného aj povinného",
+          "povinný má právo podávať námietky, návrhy a brániť sa proti nezákonnému postupu",
+          "manžel povinného je účastníkom za zákonom stanovených podmienok, najmä pri postihovaní majetku v BSM"
+        ]
+      },
+      {
+        "label": "Subjekty povinné súčinnosťou",
+        "leaves": [
+          "Policajný zbor",
+          "obec",
+          "vydavatelia tlače",
+          "ďalšie subjekty, ktoré musia poskytnúť exekútorovi súčinnosť",
+          "pri nesplnení povinnosti im hrozí sankcia"
+        ]
+      },
+      {
+        "label": "Tretie osoby",
+        "leaves": [
+          "subjekty, ktoré nie sú stranami konania, ale exekúcia sa ich dotýka",
+          "platiteľ mzdy (zamestnávateľ) – vykonáva zrážky zo mzdy a odvádza ich exekútorovi",
+          "banka – blokuje a vypláca prostriedky pri prikázaní pohľadávky z účtu",
+          "dlžník povinného",
+          "subjekty s odvodenými právami pri predaji hnuteľných vecí a nehnuteľností: spoluvlastníci, osoby s predkupným právom, záložný veriteľ",
+          "depozitár cenných papierov",
+          "obec pri úschove"
+        ]
+      },
+      {
+        "label": "Excindačná (vylučovacia) žaloba",
+        "leaves": [
+          "podáva ju tretia osoba, ak exekúcia postihla vec, ku ktorej má právo (napr. vlastníctvo)",
+          "cieľ: dosiahnuť, aby súd rozhodol, že vec má byť vylúčená z exekúcie",
+          "chráni vlastnícke a iné majetkové práva tretích osôb pred neoprávneným zásahom"
+        ]
+      }
     ]
   }
 }

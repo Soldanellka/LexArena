@@ -2,13 +2,22 @@
   "id": "23",
   "title": "Rozsudok – pojem, druhy, náležitosti jeho písomného vyhotovenia",
   "schemaVersion": "1.1",
-  "tags": ["rozsudok", "medzitýmny rozsudok", "čiastočný rozsudok", "náležitosti rozsudku"],
-  "summary": "Rozsudok je rozhodnutie súdu vo veci samej (meritórne rozhodnutie), ktoré sa vyhlasuje a vydáva v mene Slovenskej republiky. Popri konečnom rozsudku, ktorým sa rieši celý predmet konania, CSP pozná aj čiastočný rozsudok (§ 217 CSP), ktorým súd rozhodne len o časti veci spôsobilej na samostatné prejednanie, a medzitýmny rozsudok (§ 216 CSP), ktorým súd vyrieši základ uplatneného nároku, kým o jeho výške rozhodne až následne ďalším rozsudkom. Osobitnými druhmi sú rozsudok pre uznanie (na základe uznania nároku žalovaným) a rozsudok pre zmeškanie (pri nečinnosti žalovaného za zákonom stanovených podmienok).\n\nPísomné vyhotovenie rozsudku musí mať náležitosti podľa § 220 CSP: záhlavie (označenie súdu, sudcu alebo senátu, účastníkov a predmetu konania), výrok, odôvodnenie a poučenie o opravnom prostriedku. Odôvodnenie musí obsahovať skutkový stav, ktorý súd zistil, dôkazy, z ktorých pri tom vychádzal, a právne posúdenie veci vrátane úvah, ktorými sa súd pri rozhodovaní riadil; nedostatočné odôvodnenie môže spôsobiť nepreskúmateľnosť rozsudku a byť dôvodom na jeho zrušenie v odvolacom konaní.\n\nZapamätaj si:\n- Rozsudok = meritórne rozhodnutie vydávané v mene Slovenskej republiky.\n- Čiastočný rozsudok (§ 217 CSP) rieši len časť veci spôsobilú na samostatné rozhodnutie.\n- Medzitýmny rozsudok (§ 216 CSP) rieši základ nároku, o výške sa rozhoduje neskôr.\n- Náležitosti písomného vyhotovenia (§ 220 CSP): záhlavie, výrok, odôvodnenie, poučenie.\n- Nedostatočné odôvodnenie môže viesť k zrušeniu rozsudku pre nepreskúmateľnosť."
-  ,
+  "tags": [
+    "rozsudok",
+    "medzitýmny rozsudok",
+    "čiastočný rozsudok",
+    "náležitosti rozsudku"
+  ],
+  "summary": "Rozsudok je meritórne rozhodnutie súdu vo veci samej, vydané v mene Slovenskej republiky.\nPredstavuje najdôležitejší výsledok sporového konania — rieši predmet konania úplne alebo čiastočne.\n\nRozsudok môže byť vydaný:\n\nsúdom prvej inštancie,\n\nodvolacím súdom (ak rozhoduje meritórne).\n\nVyhlásenie rozsudku a jeho doručenie sú obligatórne úkony – rozsudok sa vyhlasuje spravidla verejne a následne sa doručuje účastníkom.\n\n1. Druhy rozsudkov podľa CSP\nKonečný rozsudok\nrozhoduje o celom predmete konania,\n\nkonanie tým končí (ak nie je prípustný opravný prostriedok).\n\nČiastočný rozsudok (§ 217 CSP)\nrozhoduje o časti veci, ktorá je spôsobilá na samostatné prejednanie,\n\ntypicky pri viacerých nárokoch alebo viacerých žalovaných.\n\nMedzitýmny rozsudok (§ 216 CSP)\nrozhoduje o základe nároku (teda či nárok existuje),\n\no výške nároku sa rozhodne až následne ďalším rozsudkom.\n\nOsobitné rozsudky\nrozsudok pre uznanie – žalovaný nárok uzná; súd je uznaním viazaný,\n\nrozsudok pre zmeškanie – žalovaný sa napriek riadnemu poučeniu nevyjadrí alebo sa nedostaví,\n\nrozsudok pre vzdanie sa nároku (ak žalobca nárok výslovne vzdá).\n\n2. Vyhlásenie a doručenie rozsudku\nVyhlásenie rozsudku\nprebieha spravidla verejne,\n\nsúd oznámi výrok a stručné odôvodnenie.\n\nDoručenie rozsudku\ndoručuje sa písomne všetkým účastníkom,\n\ndoručenie je podmienkou začiatku plynutia lehoty na odvolanie.\n\n3. Náležitosti písomného vyhotovenia rozsudku (§ 220 CSP)\nZáhlavie\noznačenie súdu, sudcu/senátu,\n\noznačenie účastníkov,\n\npredmet konania.\n\nVýrok\npresné rozhodnutie súdu: priznáva, zamieta, určuje,\n\nvýrok je záväzný a vykonateľný,\n\nmusí byť jasný, určitý a zrozumiteľný.\n\nOdôvodnenie\nObsahuje:\n\nzistený skutkový stav,\n\ndôkazy, o ktoré sa súd oprel,\n\nprávne posúdenie veci,\n\núvahy, ktorými sa súd riadil.\n\nNedostatočné odôvodnenie spôsobuje nepreskúmateľnosť rozsudku → môže viesť k jeho zrušeniu v odvolacom konaní.\n\nPoučenie o opravnom prostriedku\ninformácia o možnosti podať odvolanie,\n\nlehota,\n\npríslušný súd.\n\nZapamätaj si (štátnicové jadro)\nRozsudok = meritórne rozhodnutie vydané v mene SR.\n\nČiastočný rozsudok rieši len časť veci (§ 217 CSP).\n\nMedzitýmny rozsudok rieši základ nároku (§ 216 CSP).\n\nNáležitosti: záhlavie, výrok, odôvodnenie, poučenie (§ 220 CSP).\n\nNedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie rozsudku v odvolaní.\n\nRozsudok sa vyhlasuje a následne doručuje účastníkom.\n\nZdroj:\nCSP (160/2015 Z. z.), § 216–220; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (2016); Števček–Macej–Šramel: Civilné procesné právo (2017); judikatúra NS SR.",
   "quiz": [
     {
       "question": "Čo je rozsudok?",
-      "options": ["Rozhodnutie súdu vo veci samej vydávané v mene Slovenskej republiky", "Rozhodnutie súdu o procesných otázkach", "Rozhodnutie prokurátora vo veci", "Rozhodnutie znalca predložené súdu"],
+      "options": [
+        "Rozhodnutie súdu vo veci samej vydávané v mene Slovenskej republiky",
+        "Rozhodnutie súdu o procesných otázkach",
+        "Rozhodnutie prokurátora vo veci",
+        "Rozhodnutie znalca predložené súdu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Rozsudok je meritórnym rozhodnutím súdu vo veci samej.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Čo je medzitýmny rozsudok (§ 216 CSP)?",
-      "options": ["Rozsudok riešiaci základ nároku, pričom o jeho výške rozhodne súd neskôr", "Rozsudok riešiaci iba trovy konania", "Rozsudok vydávaný bez akéhokoľvek odôvodnenia", "Predbežné opatrenie súdu"],
+      "options": [
+        "Rozsudok riešiaci základ nároku, pričom o jeho výške rozhodne súd neskôr",
+        "Rozsudok riešiaci iba trovy konania",
+        "Rozsudok vydávaný bez akéhokoľvek odôvodnenia",
+        "Predbežné opatrenie súdu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Medzitýmny rozsudok rieši, či nárok vôbec existuje (základ), výška sa rieši neskôr osobitným rozsudkom.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo je čiastočný rozsudok (§ 217 CSP)?",
-      "options": ["Rozsudok, ktorým súd rozhodne len o časti prejednávanej veci, ak je táto časť spôsobilá na samostatné rozhodnutie", "Rozsudok vydaný polovicou senátu", "Rozsudok, ktorý platí len dočasne", "Rozsudok vydaný bez návrhu strán"],
+      "options": [
+        "Rozsudok, ktorým súd rozhodne len o časti prejednávanej veci, ak je táto časť spôsobilá na samostatné rozhodnutie",
+        "Rozsudok vydaný polovicou senátu",
+        "Rozsudok, ktorý platí len dočasne",
+        "Rozsudok vydaný bez návrhu strán"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Čiastočný rozsudok umožňuje rozhodnúť o samostatne posúditeľnej časti veci skôr, než o zvyšku sporu.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo musí obsahovať písomné vyhotovenie rozsudku podľa § 220 CSP?",
-      "options": ["Iba výrok", "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku", "Iba odôvodnenie bez výroku", "Iba poučenie o odvolaní"],
+      "options": [
+        "Iba výrok",
+        "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku",
+        "Iba odôvodnenie bez výroku",
+        "Iba poučenie o odvolaní"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon vyžaduje súhrn náležitostí, nielen niektorú z nich samostatne.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Čo musí obsahovať odôvodnenie rozsudku?",
-      "options": ["Iba citáciu zákona bez ďalšieho", "Skutkový stav zistený súdom, dôkazy, z ktorých vychádzal, a právne posúdenie veci", "Iba zoznam vypočutých svedkov", "Osobné hodnotenie sudcu o stranách konania"],
+      "options": [
+        "Iba citáciu zákona bez ďalšieho",
+        "Skutkový stav zistený súdom, dôkazy, z ktorých vychádzal, a právne posúdenie veci",
+        "Iba zoznam vypočutých svedkov",
+        "Osobné hodnotenie sudcu o stranách konania"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Riadne odôvodnenie musí umožniť preskúmateľnosť úvah súdu, ktoré ho viedli k danému rozhodnutiu.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Rozsudok", "definition": "Meritórne rozhodnutie súdu vo veci samej, vydávané v mene Slovenskej republiky." },
-    { "term": "Medzitýmny rozsudok (§ 216 CSP)", "definition": "Rieši základ nároku, o jeho výške rozhodne súd neskôr." },
-    { "term": "Čiastočný rozsudok (§ 217 CSP)", "definition": "Rozhoduje len o časti veci spôsobilej na samostatné rozhodnutie." },
-    { "term": "Náležitosti rozsudku (§ 220 CSP)", "definition": "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku." },
-    { "term": "Odôvodnenie rozsudku", "definition": "Obsahuje zistený skutkový stav, hodnotenie dôkazov a právne posúdenie veci." }
+    {
+      "term": "Rozsudok",
+      "definition": "Meritórne rozhodnutie súdu vo veci samej, vydávané v mene Slovenskej republiky."
+    },
+    {
+      "term": "Medzitýmny rozsudok (§ 216 CSP)",
+      "definition": "Rieši základ nároku, o jeho výške rozhodne súd neskôr."
+    },
+    {
+      "term": "Čiastočný rozsudok (§ 217 CSP)",
+      "definition": "Rozhoduje len o časti veci spôsobilej na samostatné rozhodnutie."
+    },
+    {
+      "term": "Náležitosti rozsudku (§ 220 CSP)",
+      "definition": "Záhlavie, výrok, odôvodnenie a poučenie o opravnom prostriedku."
+    },
+    {
+      "term": "Odôvodnenie rozsudku",
+      "definition": "Obsahuje zistený skutkový stav, hodnotenie dôkazov a právne posúdenie veci."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Spor o základ a výšku nároku",
       "difficulty": "stredná",
       "steps": [
-        { "question": "V spore je sporný tak samotný základ nároku (či škoda vôbec vznikla z konania žalovaného), ako aj jej presná výška.", "options": [], "correct": 0 },
+        {
+          "question": "V spore je sporný tak samotný základ nároku (či škoda vôbec vznikla z konania žalovaného), ako aj jej presná výška.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký rozsudok môže súd vydať, ak najprv vyrieši iba otázku základu?",
-          "options": ["Medzitýmny rozsudok", "Rozsudok pre zmeškanie", "Rozsudok pre uznanie"],
+          "options": [
+            "Medzitýmny rozsudok",
+            "Rozsudok pre zmeškanie",
+            "Rozsudok pre uznanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Medzitýmny rozsudok je určený presne na situáciu, keď sa najprv rieši základ nároku.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo nasleduje po vydaní medzitýmneho rozsudku?",
-          "options": ["Súd následne rozhodne aj o výške nároku ďalším rozsudkom", "Konanie sa tým definitívne skončí bez ďalšieho", "Žalovaný musí ihneď zaplatiť celú spornú sumu"],
+          "options": [
+            "Súd následne rozhodne aj o výške nároku ďalším rozsudkom",
+            "Konanie sa tým definitívne skončí bez ďalšieho",
+            "Žalovaný musí ihneď zaplatiť celú spornú sumu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Po vyriešení základu nároku súd pokračuje v konaní a rozhodne aj o jeho výške.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Chýbajúce odôvodnenie",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Súd vydá rozsudok, ktorého písomné vyhotovenie obsahuje výrok a poučenie o odvolaní, no odôvodnenie je len jednou všeobecnou vetou bez uvedenia zistených skutočností a dôkazov.", "options": [], "correct": 0 },
+        {
+          "question": "Súd vydá rozsudok, ktorého písomné vyhotovenie obsahuje výrok a poučenie o odvolaní, no odôvodnenie je len jednou všeobecnou vetou bez uvedenia zistených skutočností a dôkazov.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Spĺňa takéto písomné vyhotovenie zákonné náležitosti?",
-          "options": ["Nie, odôvodnenie musí obsahovať zistený skutkový stav, hodnotenie dôkazov a právne posúdenie", "Áno, stačí, že rozsudok obsahuje výrok a poučenie", "Áno, odôvodnenie je len nepovinnou súčasťou rozsudku"],
+          "options": [
+            "Nie, odôvodnenie musí obsahovať zistený skutkový stav, hodnotenie dôkazov a právne posúdenie",
+            "Áno, stačí, že rozsudok obsahuje výrok a poučenie",
+            "Áno, odôvodnenie je len nepovinnou súčasťou rozsudku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odôvodnenie je povinnou a obsahovo podstatnou náležitosťou rozsudku podľa § 220 CSP.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Aký môže mať nedostatočné odôvodnenie procesný následok?",
-          "options": ["Môže byť dôvodom na zrušenie rozsudku v odvolacom konaní pre nepreskúmateľnosť", "Nemá žiadny význam, rozsudok zostáva bez zmeny v platnosti", "Automaticky spôsobuje neplatnosť žaloby"],
+          "options": [
+            "Môže byť dôvodom na zrušenie rozsudku v odvolacom konaní pre nepreskúmateľnosť",
+            "Nemá žiadny význam, rozsudok zostáva bez zmeny v platnosti",
+            "Automaticky spôsobuje neplatnosť žaloby"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nepreskúmateľnosť rozsudku pre nedostatok odôvodnenia je typickým odvolacím dôvodom.",
@@ -120,11 +188,52 @@
   "spider": {
     "center": "Rozsudok – meritórne rozhodnutie × druhy × náležitosti × účinky",
     "branches": [
-      { "label": "Pojem rozsudku", "leaves": ["meritórne rozhodnutie vo veci samej", "vydáva sa v mene Slovenskej republiky", "rieši predmet konania úplne alebo čiastočne", "základný výsledok sporového konania"] },
-      { "label": "Druhy rozsudkov", "leaves": ["Konečný rozsudok – rozhoduje o celom predmete konania", "Čiastočný rozsudok (§ 217 CSP) – rozhoduje o časti veci spôsobilej na samostatné prejednanie (viaceré nároky, viacerí žalovaní)", "Medzitýmny rozsudok (§ 216 CSP) – rozhoduje o základe nároku, o výške sa rozhodne až následne; musí obsahovať úplné právne posúdenie základu", "Prvoinštančný rozsudok", "Druhoinštančný rozsudok (odvolací súd môže rozhodnúť meritórne)"] },
-      { "label": "Osobitné rozsudky", "leaves": ["Rozsudok pre uznanie – žalovaný nárok uzná; súd je uznaním viazaný, rozhoduje bez dokazovania", "Rozsudok pre zmeškanie (kontumačný) – žalovaný sa nevyjadrí alebo sa nedostaví", "Rozsudok pre vzdanie sa nároku"] },
-      { "label": "Vyhlásenie a doručenie rozsudku", "leaves": ["vyhlásenie rozsudku je obligatórny úkon", "vyhlasuje sa spravidla verejne", "doručenie rozsudku je tiež obligatórne", "doručuje sa stranám (alebo ich zástupcom) do vlastných rúk", "doručenie spúšťa plynutie lehoty na odvolanie"] },
-      { "label": "Náležitosti písomného vyhotovenia (§ 220 CSP)", "leaves": ["Záhlavie – súd, sudca/senát, účastníci, predmet konania", "Výrok – presné rozhodnutie (priznáva, zamieta, určuje); je záväzný a vykonateľný", "Odôvodnenie – – zistený skutkový stav – vykonané dôkazy – právne posúdenie – úvahy súdu – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní", "Poučenie o opravnom prostriedku – možnosť podať odvolanie, lehota, príslušný súd"] }
+      {
+        "label": "Pojem rozsudku",
+        "leaves": [
+          "meritórne rozhodnutie vo veci samej",
+          "vydáva sa v mene Slovenskej republiky",
+          "rieši predmet konania úplne alebo čiastočne",
+          "základný výsledok sporového konania"
+        ]
+      },
+      {
+        "label": "Druhy rozsudkov",
+        "leaves": [
+          "Konečný rozsudok – rozhoduje o celom predmete konania",
+          "Čiastočný rozsudok (§ 217 CSP) – rozhoduje o časti veci spôsobilej na samostatné prejednanie (viaceré nároky, viacerí žalovaní)",
+          "Medzitýmny rozsudok (§ 216 CSP) – rozhoduje o základe nároku, o výške sa rozhodne až následne; musí obsahovať úplné právne posúdenie základu",
+          "Prvoinštančný rozsudok",
+          "Druhoinštančný rozsudok (odvolací súd môže rozhodnúť meritórne)"
+        ]
+      },
+      {
+        "label": "Osobitné rozsudky",
+        "leaves": [
+          "Rozsudok pre uznanie – žalovaný nárok uzná; súd je uznaním viazaný, rozhoduje bez dokazovania",
+          "Rozsudok pre zmeškanie (kontumačný) – žalovaný sa nevyjadrí alebo sa nedostaví",
+          "Rozsudok pre vzdanie sa nároku"
+        ]
+      },
+      {
+        "label": "Vyhlásenie a doručenie rozsudku",
+        "leaves": [
+          "vyhlásenie rozsudku je obligatórny úkon",
+          "vyhlasuje sa spravidla verejne",
+          "doručenie rozsudku je tiež obligatórne",
+          "doručuje sa stranám (alebo ich zástupcom) do vlastných rúk",
+          "doručenie spúšťa plynutie lehoty na odvolanie"
+        ]
+      },
+      {
+        "label": "Náležitosti písomného vyhotovenia (§ 220 CSP)",
+        "leaves": [
+          "Záhlavie – súd, sudca/senát, účastníci, predmet konania",
+          "Výrok – presné rozhodnutie (priznáva, zamieta, určuje); je záväzný a vykonateľný",
+          "Odôvodnenie – – zistený skutkový stav – vykonané dôkazy – právne posúdenie – úvahy súdu – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní",
+          "Poučenie o opravnom prostriedku – možnosť podať odvolanie, lehota, príslušný súd"
+        ]
+      }
     ]
   }
 }

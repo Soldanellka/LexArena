@@ -2,7 +2,13 @@
   "id": "A9",
   "title": "Trestná súčinnosť a účastníctvo",
   "schemaVersion": "1.1",
-  "tags": ["účastníctvo", "organizátor", "návodca", "pomocník", "spolupáchateľ"],
+  "tags": [
+    "účastníctvo",
+    "organizátor",
+    "návodca",
+    "pomocník",
+    "spolupáchateľ"
+  ],
   "theory": [
     {
       "heading": "Pojem účastníctva",
@@ -20,46 +26,81 @@
   "quiz": [
     {
       "question": "Kto je organizátor trestného činu?",
-      "options": ["Ten, kto čin vykoná", "Ten, kto zosnuje alebo riadi trestný čin", "Ten, kto poskytne pomoc"],
+      "options": [
+        "Ten, kto čin vykoná",
+        "Ten, kto zosnuje alebo riadi trestný čin",
+        "Ten, kto poskytne pomoc"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – organizátor zosnuje alebo riadi trestný čin.",
       "explanation_incorrect": "Nie – vykonávateľ je páchateľ, nie organizátor."
     },
     {
       "question": "Kto je návodca?",
-      "options": ["Ten, kto navádza inú osobu na spáchanie činu", "Ten, kto čin vykoná", "Ten, kto koná z nedbanlivosti"],
+      "options": [
+        "Ten, kto navádza inú osobu na spáchanie činu",
+        "Ten, kto čin vykoná",
+        "Ten, kto koná z nedbanlivosti"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – návodca navádza inú osobu na spáchanie trestného činu.",
       "explanation_incorrect": "Nie – návodca je ten, kto navádza."
     },
     {
       "question": "Kto je pomocník?",
-      "options": ["Ten, kto poskytne pomoc pri čine", "Ten, kto čin riadi", "Ten, kto čin vykoná"],
+      "options": [
+        "Ten, kto poskytne pomoc pri čine",
+        "Ten, kto čin riadi",
+        "Ten, kto čin vykoná"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – pomocník poskytuje pomoc pri trestnom čine.",
       "explanation_incorrect": "Nie – pomocník je ten, kto pomáha."
     },
     {
       "question": "Čo je spolupáchateľstvo?",
-      "options": ["Náhodná účasť na čine", "Spoločné úmyselné konanie viacerých osôb", "Konanie z nedbanlivosti"],
+      "options": [
+        "Náhodná účasť na čine",
+        "Spoločné úmyselné konanie viacerých osôb",
+        "Konanie z nedbanlivosti"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – spolupáchateľstvo je spoločné úmyselné konanie.",
       "explanation_incorrect": "Nie – musí ísť o úmyselné spoločné konanie."
     },
     {
       "question": "Je účastníctvo trestné?",
-      "options": ["Áno", "Nie", "Len pri zločinoch"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len pri zločinoch"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – účastníctvo je trestné rovnako ako samotné vykonanie činu.",
       "explanation_incorrect": "Nie – účastníctvo je trestné."
     }
   ],
   "tiles": [
-    { "term": "Organizátor", "definition": "Zosnuje alebo riadi trestný čin." },
-    { "term": "Návodca", "definition": "Navádza inú osobu na spáchanie trestného činu." },
-    { "term": "Pomocník", "definition": "Poskytuje pomoc pri spáchaní trestného činu." },
-    { "term": "Spolupáchateľ", "definition": "Spoločne s iným úmyselne vykoná trestný čin." },
-    { "term": "Úmysel", "definition": "Vnútorný psychický vzťah páchateľa k trestnému činu." }
+    {
+      "term": "Organizátor",
+      "definition": "Zosnuje alebo riadi trestný čin."
+    },
+    {
+      "term": "Návodca",
+      "definition": "Navádza inú osobu na spáchanie trestného činu."
+    },
+    {
+      "term": "Pomocník",
+      "definition": "Poskytuje pomoc pri spáchaní trestného činu."
+    },
+    {
+      "term": "Spolupáchateľ",
+      "definition": "Spoločne s iným úmyselne vykoná trestný čin."
+    },
+    {
+      "term": "Úmysel",
+      "definition": "Vnútorný psychický vzťah páchateľa k trestnému činu."
+    }
   ],
   "cases": [
     {
@@ -73,14 +114,22 @@
         },
         {
           "question": "Krok 1: Ide o návodcu?",
-          "options": ["Áno", "Nie", "Len ak bol prítomný pri čine"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bol prítomný pri čine"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – presviedčanie je navádzanie.",
           "explanation_incorrect": "Nie – ide o návod."
         },
         {
           "question": "Krok 2: Je návod trestný?",
-          "options": ["Áno", "Nie", "Len pri zločinoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri zločinoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – návod je trestný rovnako ako vykonanie činu.",
           "explanation_incorrect": "Nie – návod je trestný."
@@ -98,14 +147,22 @@
         },
         {
           "question": "Krok 1: Ide o pomocníka?",
-          "options": ["Áno", "Nie", "Len ak dostal odmenu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak dostal odmenu"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – držanie dverí je pomoc pri čine.",
           "explanation_incorrect": "Nie – ide o pomoc."
         },
         {
           "question": "Krok 2: Je pomoc trestná?",
-          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri násilných činoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – pomoc je trestná forma účastníctva.",
           "explanation_incorrect": "Nie – pomoc je trestná."
@@ -122,10 +179,38 @@
   "spider": {
     "center": "Trestná súčinnosť – účastníctvo × spolupáchateľstvo",
     "branches": [
-      { "label": "Účastníctvo", "leaves": ["Účasť na cudzom TČ – úmyselná účasť na trestnom čine inej osoby.", "Bez vlastného naplnenia SP – účastník nenapĺňa skutkovú podstatu vlastným konaním."] },
-      { "label": "Formy účastníctva", "leaves": ["Organizátor – zosnoval alebo riadil spáchanie trestného činu.", "Návodca – naviedol iného na spáchanie trestného činu.", "Objednávateľ – požiadal iného, aby spáchal trestný čin (§ 21 ods. 1 písm. c)", "Pomocník – poskytol pomoc (prostriedky, rada, sľub pomoci po čine)."] },
-      { "label": "Spolupáchateľstvo", "leaves": ["Spoločné konanie – spoločné úmyselné konanie dvoch alebo viacerých osôb.", "Spoločné naplnenie SP – spolu napĺňajú skutkovú podstatu trestného činu."] },
-      { "label": "Rozdiel", "leaves": ["Spolupáchateľ – trestný čin vykonáva.", "Účastník – podporuje, riadi, navádza alebo objednáva čin, ktorý vykoná iný", "Trestanie – obaja sa trestajú v rámci sadzby za čin, na ktorom sa podieľali."] }
+      {
+        "label": "Účastníctvo",
+        "leaves": [
+          "Účasť na cudzom TČ – úmyselná účasť na trestnom čine inej osoby.",
+          "Bez vlastného naplnenia SP – účastník nenapĺňa skutkovú podstatu vlastným konaním."
+        ]
+      },
+      {
+        "label": "Formy účastníctva",
+        "leaves": [
+          "Organizátor – zosnoval alebo riadil spáchanie trestného činu.",
+          "Návodca – naviedol iného na spáchanie trestného činu.",
+          "Objednávateľ – požiadal iného, aby spáchal trestný čin (§ 21 ods. 1 písm. c)",
+          "Pomocník – poskytol pomoc (prostriedky, rada, sľub pomoci po čine)."
+        ]
+      },
+      {
+        "label": "Spolupáchateľstvo",
+        "leaves": [
+          "Spoločné konanie – spoločné úmyselné konanie dvoch alebo viacerých osôb.",
+          "Spoločné naplnenie SP – spolu napĺňajú skutkovú podstatu trestného činu."
+        ]
+      },
+      {
+        "label": "Rozdiel",
+        "leaves": [
+          "Spolupáchateľ – trestný čin vykonáva.",
+          "Účastník – podporuje, riadi, navádza alebo objednáva čin, ktorý vykoná iný",
+          "Trestanie – obaja sa trestajú v rámci sadzby za čin, na ktorom sa podieľali."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestná súčinnosť znamená účasť viacerých osôb na trestnom čine.\nRozlišujeme spolupáchateľstvo a účastníctvo.\n\n1. Účastníctvo (§ 21 TZ)\nÚčastníctvo je úmyselná účasť na trestnom čine inej osoby.\nÚčastník nenapĺňa znaky skutkovej podstaty vlastným konaním, ale podieľa sa na trestnom čine iným spôsobom.\n\nFormy účastníctva (4 formy podľa § 21 TZ)\nOrganizátor  \n– zosnová alebo riadi spáchanie trestného činu,\n– plánuje, koordinuje, zabezpečuje podmienky.\n\nNávodca  \n– úmyselne navádza inú osobu na spáchanie trestného činu,\n– vyvolá rozhodnutie spáchať trestný čin.\n\nObjednávateľ  \n– požiadal inú osobu, aby spáchala trestný čin,\n– ide o samostatnú formu účastníctva podľa § 21 ods. 1 písm. c TZ,\n– typicky pri trestných činoch, kde si páchateľ „objedná“ konanie iného (napr. útok, vraždu, poškodenie majetku).\n\nPomocník  \n– úmyselne poskytuje pomoc pri spáchaní trestného činu,\n– poskytne prostriedky, informácie, odstráni prekážky, stráži okolie.\n\nTrestnosť účastníctva\nÚčastník sa trestá ako páchateľ, v rámci trestnej sadzby za trestný čin, na ktorom sa zúčastnil.\n\n2. Spolupáchateľstvo (§ 20 TZ)\nSpolupáchateľstvo je, keď dvaja alebo viacerí páchatelia úmyselne spoločne naplnia znaky skutkovej podstaty trestného činu.\n\nPodmienky spolupáchateľstva\n– úmyselné konanie,\n– spoločné konanie alebo spoločný úmysel,\n– každý napĺňa časť skutkovej podstaty, spolu vytvoria celý trestný čin.\n\nPríklady\n– dvaja útočníci spoločne zbíjajú poškodeného,\n– jeden drží, druhý kradne,\n– jeden stráži, druhý pácha vlámanie.\n\nTrestnosť spolupáchateľov\nKaždý spolupáchateľ zodpovedá ako keby trestný čin spáchal celý sám.\n\n3. Rozdiel medzi účastníctvom a spolupáchateľstvom\nSpolupáchateľstvo = spoločné vykonanie trestného činu.\nÚčastníctvo = podpora, riadenie, navádzanie alebo objednanie trestného činu, ktorý vykoná iný.\n\nZapamätaj si (štátnicové jadro)\n– Účastníctvo = úmyselná účasť na trestnom čine inej osoby.\n– Formy účastníctva: organizátor, návodca, objednávateľ, pomocník.\n– Spolupáchateľstvo = spoločné úmyselné konanie dvoch alebo viacerých osôb.\n– Účastník aj spolupáchateľ sa trestajú v rámci sadzby za trestný čin, na ktorom sa podieľali.\n\nZdroj:\n– Trestný zákon č. 300/2005 Z. z. – § 20, § 21  \n– Čentéš: Trestné právo hmotné  \n– Burda – Čentéš – Šramel: Trestné právo hmotné – Všeobecná časť  \n– Judikatúra NS SR (spolupáchateľstvo, účastníctvo)"
 }

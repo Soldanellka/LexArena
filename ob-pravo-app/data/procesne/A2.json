@@ -2,13 +2,23 @@
   "id": "2",
   "title": "Základné princípy civilného procesu (CSP, CMP, SSP)",
   "schemaVersion": "1.1",
-  "tags": ["zásady civilného procesu", "dispozičná zásada", "prejednacia zásada", "zásada oficiality", "kontradiktórnosť"],
-  "summary": "Civilný proces je ovládaný sústavou zásad, ktoré sa v jednotlivých kódexoch prejavujú rôznou mierou. V sporovom konaní podľa CSP prevláda dispozičná zásada (strany disponujú predmetom konania, § 2 CSP) a prejednacia zásada (strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli). Ďalšími zásadami CSP sú kontradiktórnosť (§ 9 CSP – právo strany vyjadriť sa k tvrdeniam a dôkazom protistrany), rovnosť strán, hospodárnosť konania, ústnosť a verejnosť pojednávania, ako aj zásada voľného hodnotenia dôkazov.\n\nV mimosporovom konaní podľa CMP sa naopak vo väčšej miere uplatňuje zásada oficiality (súd môže v zákonom ustanovených prípadoch konať aj bez návrhu, napr. začať dedičské konanie) a vyšetrovacia zásada pri zisťovaní skutkového stavu (súd nie je viazaný iba tvrdeniami a dôkazmi účastníkov, ale môže sám vykonať potrebné dôkazy). Dôvodom je verejný záujem na riadnom usporiadaní pomerov v mimosporových veciach (starostlivosť o maloletých, dedičstvo).\n\nV správnom súdnictve podľa SSP platí zásada viazanosti súdu žalobnými bodmi (súd spravidla preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe), s výnimkami ustanovenými zákonom.\n\nZapamätaj si:\n- CSP: dispozičná a prejednacia zásada, kontradiktórnosť, rovnosť strán.\n- CMP: zásada oficiality a vyšetrovacia zásada – väčšia aktivita súdu.\n- Kontradiktórnosť (§ 9 CSP) – právo vyjadriť sa k tvrdeniam a dôkazom protistrany.\n- Zásada hospodárnosti – konanie rýchlo a bez zbytočných nákladov, bez ujmy práv.\n- SSP – súd viazaný žalobnými bodmi, ak zákon neustanoví inak."
-  ,
+  "tags": [
+    "zásady civilného procesu",
+    "dispozičná zásada",
+    "prejednacia zásada",
+    "zásada oficiality",
+    "kontradiktórnosť"
+  ],
+  "summary": "A2 — Procesné zásady civilného procesu\nCentrum: Procesné zásady – CSP, CMP, SSP (dispozičná × oficialita, prejednacia × vyšetrovacia, formálna × materiálna pravda)\n\nCivilný proces je ovládaný sústavou zásad, ktoré určujú spôsob uplatňovania a ochrany práv pred súdom.\nJednotlivé kódexy ich uplatňujú v rôznej miere podľa povahy konania.\n\n1. Civilný sporový poriadok (CSP)\nCSP je postavený na kontradiktórnom modeli – dve rovnocenné strany stoja proti sebe a súd rozhoduje na základe ich tvrdení a dôkazov.\n\nKľúčové zásady CSP\nDispozičná zásada – strany disponujú predmetom konania (podávajú žalobu, berú ju späť, uzatvárajú zmier).\n\nPrejednacia zásada – strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli.\n\nKontradiktórnosť – každá strana má právo vyjadriť sa k tvrdeniam a dôkazom protistrany.\n\nRovnosť strán – procesné postavenie strán je rovnaké.\n\nÚstnosť a verejnosť pojednávania – základný spôsob vykonávania dokazovania.\n\nVoľné hodnotenie dôkazov – súd hodnotí dôkazy podľa svojej úvahy.\n\nHospodárnosť konania – konanie má byť rýchle, efektívne a bez zbytočných nákladov.\n\n2. Civilný mimosporový poriadok (CMP)\nCMP upravuje konania, kde je prítomný verejný záujem (dedičské, opatrovnícke, statusové veci). Preto sa uplatňujú odlišné zásady.\n\nKľúčové zásady CMP\nZásada oficiality – súd môže konať aj bez návrhu (napr. dedičské konanie).\n\nVyšetrovacia zásada – súd nie je viazaný len tvrdeniami účastníkov, môže vykonať dôkazy z vlastnej iniciatívy.\n\nOchrana slabších subjektov – najmä maloletých a osôb s obmedzenou spôsobilosťou.\n\n3. Správny súdny poriadok (SSP)\nSSP upravuje súdny prieskum rozhodnutí orgánov verejnej správy.\n\nKľúčová zásada SSP\nViazanosť žalobnými bodmi – súd spravidla preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe, ak zákon neustanoví inak.\n\nÚstavné a spoločné zásady\nprávo na súdnu ochranu (čl. 46 Ústavy SR)\n\nprávo na spravodlivý proces (čl. 48–50 Ústavy SR)\n\nzásada zákonného sudcu\n\nzásada verejnosti\n\nzásada ústnosti\n\nzásada voľného hodnotenia dôkazov\n\nKontrast CSP × CMP (dôležité pre štátnice)\nDispozičná (CSP) × Oficialita (CMP)\n\nPrejednacia (CSP) × Vyšetrovacia (CMP)\n\nFormálna pravda (CSP) × Materiálna pravda (CMP)\n\nKontradiktórnosť (CSP) × Aktívna úloha súdu (CMP)\n\nZapamätaj si (štátnicové jadro)\nCSP: dispozičná + prejednacia zásada, kontradiktórnosť, rovnosť strán\n\nCMP: oficialita + vyšetrovacia zásada – súd je aktívnejší\n\nSSP: súd viazaný žalobnými bodmi\n\nHospodárnosť: konanie rýchlo, efektívne, bez ujmy práv\n\nZdroj:\nCSP (160/2015 Z. z.); CMP (161/2015 Z. z.); SSP (162/2015 Z. z.); Ústava SR čl. 46–50; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Ktorá zásada je typická pre sporové konanie podľa CSP?",
-      "options": ["Zásada oficiality – súd koná z úradnej moci", "Dispozičná a prejednacia zásada – iniciatíva patrí stranám", "Vyšetrovacia zásada", "Zásada tajnosti konania"],
+      "options": [
+        "Zásada oficiality – súd koná z úradnej moci",
+        "Dispozičná a prejednacia zásada – iniciatíva patrí stranám",
+        "Vyšetrovacia zásada",
+        "Zásada tajnosti konania"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. V sporovom konaní podľa CSP prevláda dispozičná zásada (§ 2 CSP) a prejednacia zásada – strany disponujú predmetom konania a nesú tvrdiacu a dôkaznú povinnosť.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Aká zásada prevláda v mimosporovom konaní podľa CMP?",
-      "options": ["Výlučne dispozičná zásada bez výnimky", "Zásada oficiality a vyšetrovacia zásada pri zisťovaní skutkového stavu", "Zásada kontradiktórnosti bez výnimky", "Súd je viazaný výlučne návrhmi strán"],
+      "options": [
+        "Výlučne dispozičná zásada bez výnimky",
+        "Zásada oficiality a vyšetrovacia zásada pri zisťovaní skutkového stavu",
+        "Zásada kontradiktórnosti bez výnimky",
+        "Súd je viazaný výlučne návrhmi strán"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. V mimosporovom konaní môže súd v zákonom ustanovených prípadoch konať aj bez návrhu a sám zisťovať skutkový stav (zásada oficiality a vyšetrovacia zásada).",
@@ -25,17 +40,27 @@
       }
     },
     {
-      "question": "Čo zaručuje zásada kontradiktórnosti podľa § 9 CSP?",
-      "options": ["Tajnosť súdneho konania", "Každej strane právo vyjadriť sa k tvrdeniam a dôkazom protistrany", "Rovnaký počet svedkov na oboch stranách", "Bezplatnú právnu pomoc"],
+      "question": "Čo zaručuje zásada kontradiktórnosti podľa CSP?",
+      "options": [
+        "Tajnosť súdneho konania",
+        "Každej strane právo vyjadriť sa k tvrdeniam a dôkazom protistrany",
+        "Rovnaký počet svedkov na oboch stranách",
+        "Bezplatnú právnu pomoc"
+      ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Kontradiktórnosť (§ 9 CSP) zaručuje každej strane právo poznať tvrdenia a dôkazy protistrany a vyjadriť sa k nim pred rozhodnutím.",
+        "correct": "Správne. Kontradiktórnosť (CSP) zaručuje každej strane právo poznať tvrdenia a dôkazy protistrany a vyjadriť sa k nim pred rozhodnutím.",
         "wrong": "Nesprávne. Kontradiktórnosť nesúvisí s počtom svedkov ani s tajnosťou konania – ide o právo reagovať na argumenty protistrany."
       }
     },
     {
       "question": "Čo vyjadruje zásada hospodárnosti konania?",
-      "options": ["Konanie má prebiehať rýchlo a s čo najmenšími nákladmi, bez ujmy na ochrane práv účastníkov", "Súd musí vždy nariadiť ústne pojednávanie", "Strany musia vopred zaplatiť súdny poplatok, inak konanie nezačne", "Konanie sa má vždy prerušiť, ak je to lacnejšie"],
+      "options": [
+        "Konanie má prebiehať rýchlo a s čo najmenšími nákladmi, bez ujmy na ochrane práv účastníkov",
+        "Súd musí vždy nariadiť ústne pojednávanie",
+        "Strany musia vopred zaplatiť súdny poplatok, inak konanie nezačne",
+        "Konanie sa má vždy prerušiť, ak je to lacnejšie"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zásada hospodárnosti smeruje k rýchlemu a nákladovo efektívnemu prejednaniu veci bez toho, aby to bolo na úkor riadnej ochrany práv účastníkov.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Ako sa uplatňuje zásada viazanosti súdu v správnom súdnictve podľa SSP?",
-      "options": ["Správny súd je pri prieskume spravidla viazaný žalobnými bodmi, ak zákon neustanoví inak", "Správny súd skúma vec v neobmedzenom rozsahu bez ohľadu na žalobu", "V CSP súd nie je nikdy viazaný petitom žaloby", "Medzi CSP a SSP niet v tomto ohľade rozdielu"],
+      "options": [
+        "Správny súd je pri prieskume spravidla viazaný žalobnými bodmi, ak zákon neustanoví inak",
+        "Správny súd skúma vec v neobmedzenom rozsahu bez ohľadu na žalobu",
+        "V CSP súd nie je nikdy viazaný petitom žaloby",
+        "Medzi CSP a SSP niet v tomto ohľade rozdielu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. V správnom súdnictve platí zásada viazanosti žalobnými bodmi – súd preskúmava napadnuté rozhodnutie spravidla len v rozsahu a z dôvodov uvedených v žalobe.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Dispozičná zásada", "definition": "Strany disponujú predmetom konania a jeho priebehom, napr. môžu vziať žalobu späť (§ 2 CSP)." },
-    { "term": "Prejednacia zásada", "definition": "Strany majú tvrdiacu a dôkaznú povinnosť; súd vychádza zo skutočností, ktoré strany uviedli." },
-    { "term": "Zásada oficiality", "definition": "V mimosporovom konaní môže súd v zákonom ustanovených prípadoch konať aj bez návrhu (napr. dedičské konanie)." },
-    { "term": "Kontradiktórnosť", "definition": "Každá strana má právo vyjadriť sa k tvrdeniam a dôkazom protistrany (§ 9 CSP)." },
-    { "term": "Zásada hospodárnosti", "definition": "Konanie sa má uskutočniť rýchlo a s čo najmenšími nákladmi bez ujmy na ochrane práv účastníkov." }
+    {
+      "term": "Dispozičná zásada",
+      "definition": "Strany disponujú predmetom konania a jeho priebehom, napr. môžu vziať žalobu späť (§ 2 CSP)."
+    },
+    {
+      "term": "Prejednacia zásada",
+      "definition": "Strany majú tvrdiacu a dôkaznú povinnosť; súd vychádza zo skutočností, ktoré strany uviedli."
+    },
+    {
+      "term": "Zásada oficiality",
+      "definition": "V mimosporovom konaní môže súd v zákonom ustanovených prípadoch konať aj bez návrhu (napr. dedičské konanie)."
+    },
+    {
+      "term": "Kontradiktórnosť",
+      "definition": "Každá strana má právo vyjadriť sa k tvrdeniam a dôkazom protistrany (§ 9 CSP)."
+    },
+    {
+      "term": "Zásada hospodárnosti",
+      "definition": "Konanie sa má uskutočniť rýchlo a s čo najmenšími nákladmi bez ujmy na ochrane práv účastníkov."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Späťvzatie žaloby",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalobca sa počas konania rozhodne vziať žalobu späť, pretože sa so žalovaným mimosúdne dohodol.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca sa počas konania rozhodne vziať žalobu späť, pretože sa so žalovaným mimosúdne dohodol.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorá zásada mu to umožňuje?",
-          "options": ["Dispozičná zásada", "Zásada oficiality", "Zásada tajnosti"],
+          "options": [
+            "Dispozičná zásada",
+            "Zásada oficiality",
+            "Zásada tajnosti"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dispozičná zásada (§ 2 CSP) dáva stranám právo disponovať predmetom konania, vrátane späťvzatia žaloby.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Môže súd späťvzatie žaloby odmietnuť?",
-          "options": ["Áno, ak s tým žalovaný z vážnych dôvodov nesúhlasí (§ 144 CSP)", "Nie, súd nemá v tomto smere žiadnu právomoc", "Iba žalovaný sám môže rozhodnúť, nie súd"],
+          "options": [
+            "Áno, ak s tým žalovaný z vážnych dôvodov nesúhlasí (§ 144 CSP)",
+            "Nie, súd nemá v tomto smere žiadnu právomoc",
+            "Iba žalovaný sám môže rozhodnúť, nie súd"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Podľa § 144 CSP súd späťvzatie žaloby po začatí pojednávania nepripustí, ak s tým žalovaný z vážnych dôvodov nesúhlasí.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Dedičské konanie bez návrhu",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Po smrti poručiteľa súd začne dedičské konanie, hoci žiadny z dedičov naň nepodal návrh.", "options": [], "correct": 0 },
+        {
+          "question": "Po smrti poručiteľa súd začne dedičské konanie, hoci žiadny z dedičov naň nepodal návrh.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorá zásada to umožňuje?",
-          "options": ["Zásada oficiality", "Dispozičná zásada", "Zásada rovnosti strán"],
+          "options": [
+            "Zásada oficiality",
+            "Dispozičná zásada",
+            "Zásada rovnosti strán"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konanie o dedičstve súd začína aj bez návrhu, len čo sa dozvie o úmrtí – ide o prejav zásady oficiality v mimosporovom konaní.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Prečo sa v tomto type konania uplatňuje zásada oficiality?",
-          "options": ["Lebo ide o mimosporové konanie vo verejnom záujme na riadnom usporiadaní dedičských pomerov", "Lebo dedičia si to výslovne dohodli", "Lebo notár nie je súdnym komisárom"],
+          "options": [
+            "Lebo ide o mimosporové konanie vo verejnom záujme na riadnom usporiadaní dedičských pomerov",
+            "Lebo dedičia si to výslovne dohodli",
+            "Lebo notár nie je súdnym komisárom"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Verejný záujem na usporiadaní majetkových pomerov po zomretom odôvodňuje, aby konanie prebehlo aj bez iniciatívy účastníkov.",
@@ -118,14 +187,69 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Zásady civilného procesu – CSP × CMP × SSP",
     "branches": [
-      { "label": "Význam a členenie princípov", "leaves": ["význam princípov pre výklad a aplikáciu procesných noriem", "určujú spôsob uplatňovania a ochrany práv pred súdom", "ovplyvňujú priebeh konania a postavenie strán", "ústavné princípy – právo na súdnu ochranu, spravodlivý proces, zákonný sudca, verejnosť, ústnosť", "spoločné princípy konaní podľa CSP, CMP a SSP (verejnosť, ústnosť, voľné hodnotenie dôkazov)", "osobitné princípy CSP, CMP a SSP podľa povahy konania"] },
-      { "label": "Princípy ako dvojice protikladov", "leaves": ["dispozičný princíp × zásada oficiality", "formálna pravda × materiálna pravda", "vyšetrovací princíp × prejednací princíp"] },
-      { "label": "Zásady CSP", "leaves": ["CSP = kontradiktórny model → dve rovnocenné strany, súd rozhoduje na základe ich tvrdení a dôkazov.", "Dispozičná zásada (§ 2 CSP): strany disponujú predmetom konania (žaloba, späťvzatie, zmier)", "Prejednacia zásada: strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli", "Kontradiktórnosť (§ 9 CSP): každá strana sa vyjadruje k tvrdeniam a dôkazom protistrany", "Rovnosť strán: rovnaké procesné postavenie", "Ústnosť a verejnosť: základný spôsob vykonávania dokazovania", "Voľné hodnotenie dôkazov: súd hodnotí dôkazy podľa svojej úvahy", "Hospodárnosť konania: konanie má byť rýchle, efektívne, bez zbytočných nákladov", "Formálna pravda: súd rozhoduje na základe toho, čo strany tvrdia a preukážu"] },
-      { "label": "Zásady CMP", "leaves": ["CMP = konania s verejným záujmom → dedičské, opatrovnícke, statusové veci.", "Zásada oficiality: súd môže konať aj bez návrhu", "Vyšetrovacia zásada: súd nie je viazaný tvrdeniami účastníkov, vykonáva dôkazy z vlastnej iniciatívy", "Materiálna pravda: súd zisťuje skutočný stav veci", "Ochrana slabších subjektov: najmä maloletí, osoby s obmedzenou spôsobilosťou"] },
-      { "label": "Zásady SSP", "leaves": ["SSP = súdny prieskum rozhodnutí verejnej správy", "Viazanosť žalobnými bodmi: súd preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe", "výnimky len ak zákon ustanoví inak"] },
-      { "label": "Zapamätaj si (štátnicové jadro)", "leaves": ["CSP: dispozičná + prejednacia zásada, kontradiktórnosť, rovnosť strán", "CMP: oficialita + vyšetrovacia zásada, materiálna pravda, aktívna úloha súdu", "SSP: súd viazaný žalobnými bodmi", "Hospodárnosť: konanie rýchlo, efektívne, bez ujmy práv", "rozdiel: formálna pravda (CSP) × materiálna pravda (CMP)"] }
-    ]
+      {
+        "label": "Význam a členenie princípov",
+        "leaves": [
+          "význam princípov pre výklad a aplikáciu procesných noriem",
+          "určujú spôsob uplatňovania a ochrany práv pred súdom",
+          "ovplyvňujú priebeh konania a postavenie strán",
+          "ústavné princípy – právo na súdnu ochranu, spravodlivý proces, zákonný sudca, verejnosť, ústnosť",
+          "spoločné princípy konaní podľa CSP, CMP a SSP (verejnosť, ústnosť, voľné hodnotenie dôkazov)",
+          "osobitné princípy CSP, CMP a SSP podľa povahy konania"
+        ]
+      },
+      {
+        "label": "Princípy ako dvojice protikladov",
+        "leaves": [
+          "dispozičný princíp × zásada oficiality",
+          "formálna pravda × materiálna pravda",
+          "vyšetrovací princíp × prejednací princíp"
+        ]
+      },
+      {
+        "label": "Zásady CSP",
+        "leaves": [
+          "CSP = kontradiktórny model → dve rovnocenné strany, súd rozhoduje na základe ich tvrdení a dôkazov.",
+          "Dispozičná zásada (CSP): strany disponujú predmetom konania (žaloba, späťvzatie, zmier)",
+          "Prejednacia zásada: strany majú tvrdiacu a dôkaznú povinnosť, súd vychádza zo skutočností, ktoré uviedli",
+          "Kontradiktórnosť (CSP): každá strana sa vyjadruje k tvrdeniam a dôkazom protistrany",
+          "Rovnosť strán: rovnaké procesné postavenie",
+          "Ústnosť a verejnosť: základný spôsob vykonávania dokazovania",
+          "Voľné hodnotenie dôkazov: súd hodnotí dôkazy podľa svojej úvahy",
+          "Hospodárnosť konania: konanie má byť rýchle, efektívne, bez zbytočných nákladov",
+          "Formálna pravda: súd rozhoduje na základe toho, čo strany tvrdia a preukážu"
+        ]
+      },
+      {
+        "label": "Zásady CMP",
+        "leaves": [
+          "CMP = konania s verejným záujmom → dedičské, opatrovnícke, statusové veci.",
+          "Zásada oficiality: súd môže konať aj bez návrhu",
+          "Vyšetrovacia zásada: súd nie je viazaný tvrdeniami účastníkov, vykonáva dôkazy z vlastnej iniciatívy",
+          "Materiálna pravda: súd zisťuje skutočný stav veci",
+          "Ochrana slabších subjektov: najmä maloletí, osoby s obmedzenou spôsobilosťou"
+        ]
+      },
+      {
+        "label": "Zásady SSP",
+        "leaves": [
+          "SSP = súdny prieskum rozhodnutí verejnej správy",
+          "Viazanosť žalobnými bodmi: súd preskúmava rozhodnutie len v rozsahu a z dôvodov uvedených v žalobe",
+          "výnimky len ak zákon ustanoví inak"
+        ]
+      },
+      {
+        "label": "Zapamätaj si (štátnicové jadro)",
+        "leaves": [
+          "CSP: dispozičná + prejednacia zásada, kontradiktórnosť, rovnosť strán",
+          "CMP: oficialita + vyšetrovacia zásada, materiálna pravda, aktívna úloha súdu",
+          "SSP: súd viazaný žalobnými bodmi",
+          "Hospodárnosť: konanie rýchlo, efektívne, bez ujmy práv",
+          "rozdiel: formálna pravda (CSP) × materiálna pravda (CMP)"
+        ]
+      }
+    ],
+    "center": "Zásady civilného procesu – CSP × CMP × SSP"
   }
 }

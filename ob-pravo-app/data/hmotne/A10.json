@@ -1,7 +1,7 @@
 {
   "id": "10",
   "title": "Ochrana osobnosti fyzickej osoby",
-  "summary": "Ochrana osobnosti (§ 11–16 OZ) zahŕňa právo na ochranu života, zdravia, občianskej cti, ľudskej dôstojnosti, súkromia, mena a prejavov osobnej povahy. Osobnostné práva sú neprevoditeľné a nepremlčateľné. Prostriedky ochrany: upustenie od zásahu, odstránenie následkov, primerané zadosťučinenie (morálne alebo peňažné). Spory o ochranu osobnosti patria krajskému súdu.",
+  "summary": "Ochrana osobnosti podľa § 11–16 OZ predstavuje súbor práv, ktoré chránia fyzickú osobu ako jedinečnú ľudskú bytosť. Ide o ochranu jej telesnej integrity, dôstojnosti, súkromia a prejavov osobnej povahy. Osobnostné práva sú neprevoditeľné, nepostúpiteľné a nepremlčateľné, pretože sú neoddeliteľne späté s osobou samotnou.\n\nOZ chráni najmä:\n– život a zdravie,\n– občiansku česť a ľudskú dôstojnosť,\n– súkromie,\n– meno,\n– prejavy osobnej povahy (fotografie, obrazové a zvukové záznamy).\n\nNa použitie podoby, mena alebo prejavov osobnej povahy je potrebný súhlas fyzickej osoby, ak zákon neustanovuje výnimku (napr. spravodajské účely v primeranom rozsahu). Zásah do osobnostných práv môže byť spôsobený konaním, opomenutím, neoprávneným zverejnením informácií, šírením nepravdivých tvrdení či neprimeraným zásahom do súkromia.\n\nProstriedky ochrany (§ 13 OZ)\nFyzická osoba sa môže domáhať:\n– upustenia od neoprávneného zásahu,\n– odstránenia následkov zásahu (napr. ospravedlnenie, stiahnutie článku, zničenie záznamu),\n– primeraného zadosťučinenia – morálneho alebo peňažného, ak bola spôsobená nemajetková ujma.\n\nVýška peňažného zadosťučinenia sa určuje podľa intenzity zásahu, jeho následkov a okolností prípadu. Súd prihliada na to, či zásah bol úmyselný, verejný alebo opakovaný.\n\nKonanie vo veciach ochrany osobnosti\nSpory o ochranu osobnosti patria do právomoci krajského súdu ako súdu prvého stupňa, vzhľadom na ich závažnosť a osobitný charakter.\n\nOchrana osobnosti je jedným z najdôležitejších inštitútov občianskeho práva, pretože zabezpečuje rešpektovanie ľudskej dôstojnosti a integrity v súkromnoprávnych vzťahoch.\n\nZdroje: OZ (40/1964 Zb.), § 11–16; § 13; judikatúra NS SR a ÚS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Aké práva chráni § 11 OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Ochrana osobnosti (§ 11 OZ)", "definition": "Chráni život, zdravie, česť, dôstojnosť, súkromie, meno a prejavy osobnej povahy." },
-    { "term": "Neprevoditeľnosť", "definition": "Osobnostné práva sú neprevoditeľné a nepremlčateľné." },
-    { "term": "Prostriedky ochrany (§ 13 OZ)", "definition": "Upustenie od zásahu, odstránenie následkov, primerané zadosťučinenie (morálne aj peňažné)." },
-    { "term": "Vecná príslušnosť", "definition": "Spory o ochranu osobnosti patria krajskému súdu ako súdu prvej inštancie." },
-    { "term": "Súhlas dotknutej osoby", "definition": "Fyzická osoba môže v medziach zákona súhlasiť s použitím svojich osobnostných statkov (napr. podobizne)." }
+    {
+      "term": "Ochrana osobnosti (§ 11 OZ)",
+      "definition": "Chráni život, zdravie, česť, dôstojnosť, súkromie, meno a prejavy osobnej povahy."
+    },
+    {
+      "term": "Neprevoditeľnosť",
+      "definition": "Osobnostné práva sú neprevoditeľné a nepremlčateľné."
+    },
+    {
+      "term": "Prostriedky ochrany (§ 13 OZ)",
+      "definition": "Upustenie od zásahu, odstránenie následkov, primerané zadosťučinenie (morálne aj peňažné)."
+    },
+    {
+      "term": "Vecná príslušnosť",
+      "definition": "Spory o ochranu osobnosti patria krajskému súdu ako súdu prvej inštancie."
+    },
+    {
+      "term": "Súhlas dotknutej osoby",
+      "definition": "Fyzická osoba môže v medziach zákona súhlasiť s použitím svojich osobnostných statkov (napr. podobizne)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neoprávnené zverejnenie fotografie",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Médium bez súhlasu dotknutej osoby zverejní jej súkromnú fotografiu spôsobom zasahujúcim do jej súkromia.", "options": [], "correct": 0 },
+        {
+          "question": "Médium bez súhlasu dotknutej osoby zverejní jej súkromnú fotografiu spôsobom zasahujúcim do jej súkromia.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akých prostriedkov ochrany sa dotknutá osoba môže domáhať?",
-          "options": ["Upustenia od ďalšieho zásahu, odstránenia následkov a primeraného zadosťučinenia", "Iba trestného oznámenia bez občianskoprávnej ochrany", "Iba náhrady škody podľa všeobecných ustanovení o škode bez ďalších nárokov"],
+          "options": [
+            "Upustenia od ďalšieho zásahu, odstránenia následkov a primeraného zadosťučinenia",
+            "Iba trestného oznámenia bez občianskoprávnej ochrany",
+            "Iba náhrady škody podľa všeobecných ustanovení o škode bez ďalších nárokov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 13 OZ poskytuje samostatný súbor prostriedkov ochrany osobnosti.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Na ktorý súd sa dotknutá osoba obráti v prvom stupni?",
-          "options": ["Na krajský súd", "Na okresný súd", "Na Najvyšší súd SR"],
+          "options": [
+            "Na krajský súd",
+            "Na okresný súd",
+            "Na Najvyšší súd SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Spory o ochranu osobnosti patria do vecnej príslušnosti krajského súdu.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Súhlas so zverejnením podobizne",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Osoba dobrovoľne udelí súhlas s tým, aby jej podobizeň bola použitá v reklamnej kampani.", "options": [], "correct": 0 },
+        {
+          "question": "Osoba dobrovoľne udelí súhlas s tým, aby jej podobizeň bola použitá v reklamnej kampani.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takýto súhlas v súlade s právom na ochranu osobnosti?",
-          "options": ["Áno, dotknutá osoba môže v medziach zákona so svojimi osobnostnými statkami disponovať", "Nie, súhlas na použitie osobnostných statkov nie je nikdy možný", "Nie, súhlas by musel udeliť súd namiesto dotknutej osoby"],
+          "options": [
+            "Áno, dotknutá osoba môže v medziach zákona so svojimi osobnostnými statkami disponovať",
+            "Nie, súhlas na použitie osobnostných statkov nie je nikdy možný",
+            "Nie, súhlas by musel udeliť súd namiesto dotknutej osoby"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dotknutá osoba môže v medziach zákona udeliť súhlas s použitím svojej podobizne.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Znamená to, že sa osobnostné právo prevádza na inú osobu?",
-          "options": ["Nie, ide len o súhlas s určitým použitím, právo samotné zostáva neprevoditeľné", "Áno, právo sa trvalo prevádza na tú osobu, ktorej bol súhlas udelený", "Áno, súhlasom osoba definitívne stráca svoje osobnostné právo"],
+          "options": [
+            "Nie, ide len o súhlas s určitým použitím, právo samotné zostáva neprevoditeľné",
+            "Áno, právo sa trvalo prevádza na tú osobu, ktorej bol súhlas udelený",
+            "Áno, súhlasom osoba definitívne stráca svoje osobnostné právo"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Samotné osobnostné právo zostáva neprevoditeľné, súhlas sa týka len konkrétneho použitia.",
@@ -142,13 +181,70 @@
   "spider": {
     "center": "Ochrana osobnosti fyzickej osoby, § 11–16 OZ (telesná integrita, dôstojnosť, súkromie, prejavy osobnej povahy)",
     "branches": [
-      { "label": "Pojem a povaha osobnostných práv", "leaves": ["chránia fyzickú osobu ako jedinečnú ľudskú bytosť", "neprevoditeľné", "nepostúpiteľné", "nepremlčateľné", "nemožno sa ich platne vzdať"] },
-      { "label": "Chránené hodnoty (§ 11 OZ)", "leaves": ["život a zdravie", "občianska česť a ľudská dôstojnosť", "meno", "súkromie", "prejavy osobnej povahy (fotografie, obrazové a zvukové záznamy)"] },
-      { "label": "Súhlas so zásahom", "leaves": ["potrebný na použitie podoby, mena, prejavov osobnej povahy", "výnimky: zákonné prípady, napr. spravodajské účely v primeranom rozsahu", "bez súhlasu ide o zásah do osobnostných práv"] },
-      { "label": "Formy zásahu", "leaves": ["neoprávnené konanie alebo opomenutie", "zverejnenie informácií bez súhlasu", "šírenie nepravdivých tvrdení", "neprimeraný zásah do súkromia", "neoprávnené nakladanie s fotografiami alebo záznamami"] },
-      { "label": "Prostriedky ochrany (§ 13 OZ)", "leaves": ["upustenie od zásahu", "odstránenie následkov: ospravedlnenie, stiahnutie článku, zničenie záznamu", "primerané zadosťučinenie morálne alebo peňažné (nemajetková ujma)", "výška závisí od intenzity zásahu, následkov, úmyslu, verejnosti, opakovania"] },
-      { "label": "Konanie vo veciach ochrany osobnosti", "leaves": ["právomoc: krajský súd ako súd prvého stupňa", "dôvod: závažnosť a osobitný charakter sporov", "rozhoduje o zásahu, následkoch, zadosťučinení"] },
-      { "label": "Význam pre prax", "leaves": ["chráni ľudskú dôstojnosť a integritu", "kľúčové pri mediálnych sporoch, online zásahoch, fotografiách, reputácii", "poskytuje účinné nástroje proti nepravdivým tvrdeniam a zásahom do súkromia", "posilňuje ochranu jednotlivca v digitálnom priestore"] }
+      {
+        "label": "Pojem a povaha osobnostných práv",
+        "leaves": [
+          "chránia fyzickú osobu ako jedinečnú ľudskú bytosť",
+          "neprevoditeľné",
+          "nepostúpiteľné",
+          "nepremlčateľné",
+          "nemožno sa ich platne vzdať"
+        ]
+      },
+      {
+        "label": "Chránené hodnoty (§ 11 OZ)",
+        "leaves": [
+          "život a zdravie",
+          "občianska česť a ľudská dôstojnosť",
+          "meno",
+          "súkromie",
+          "prejavy osobnej povahy (fotografie, obrazové a zvukové záznamy)"
+        ]
+      },
+      {
+        "label": "Súhlas so zásahom",
+        "leaves": [
+          "potrebný na použitie podoby, mena, prejavov osobnej povahy",
+          "výnimky: zákonné prípady, napr. spravodajské účely v primeranom rozsahu",
+          "bez súhlasu ide o zásah do osobnostných práv"
+        ]
+      },
+      {
+        "label": "Formy zásahu",
+        "leaves": [
+          "neoprávnené konanie alebo opomenutie",
+          "zverejnenie informácií bez súhlasu",
+          "šírenie nepravdivých tvrdení",
+          "neprimeraný zásah do súkromia",
+          "neoprávnené nakladanie s fotografiami alebo záznamami"
+        ]
+      },
+      {
+        "label": "Prostriedky ochrany (§ 13 OZ)",
+        "leaves": [
+          "upustenie od zásahu",
+          "odstránenie následkov: ospravedlnenie, stiahnutie článku, zničenie záznamu",
+          "primerané zadosťučinenie morálne alebo peňažné (nemajetková ujma)",
+          "výška závisí od intenzity zásahu, následkov, úmyslu, verejnosti, opakovania"
+        ]
+      },
+      {
+        "label": "Konanie vo veciach ochrany osobnosti",
+        "leaves": [
+          "právomoc: krajský súd ako súd prvého stupňa",
+          "dôvod: závažnosť a osobitný charakter sporov",
+          "rozhoduje o zásahu, následkoch, zadosťučinení"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "chráni ľudskú dôstojnosť a integritu",
+          "kľúčové pri mediálnych sporoch, online zásahoch, fotografiách, reputácii",
+          "poskytuje účinné nástroje proti nepravdivým tvrdeniam a zásahom do súkromia",
+          "posilňuje ochranu jednotlivca v digitálnom priestore"
+        ]
+      }
     ]
   }
 }

@@ -2,50 +2,101 @@
   "id": "A21",
   "title": "Preskúmanie obžaloby a predbežné prejednanie obžaloby",
   "schemaVersion": "1.1",
-  "tags": ["obžaloba", "predbežné prejednanie", "súd", "trestné konanie"],
-
+  "tags": [
+    "obžaloba",
+    "predbežné prejednanie",
+    "súd",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto preskúmava obžalobu po jej podaní?",
-      "options": ["Prokurátor", "Súd", "Polícia"],
+      "options": [
+        "Prokurátor",
+        "Súd",
+        "Polícia"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je cieľom preskúmania obžaloby?",
-      "options": ["Zistiť, či je obžaloba zákonná a úplná", "Rozhodnúť o vine", "Vypočuť svedkov"],
+      "options": [
+        "Zistiť, či je obžaloba zákonná a úplná",
+        "Rozhodnúť o vine",
+        "Vypočuť svedkov"
+      ],
       "correct": 0
     },
     {
       "question": "Kedy súd nariaďuje predbežné prejednanie obžaloby?",
-      "options": ["Vždy", "Len ak sú pochybnosti o zákonnosti alebo dôvodnosti obžaloby", "Len pri zločinoch"],
+      "options": [
+        "Vždy",
+        "Len ak sú pochybnosti o zákonnosti alebo dôvodnosti obžaloby",
+        "Len pri zločinoch"
+      ],
       "correct": 1
     },
     {
       "question": "Kto sa zúčastňuje predbežného prejednania obžaloby?",
-      "options": ["Len súd", "Súd, prokurátor, obvinený a obhajca", "Len prokurátor"],
+      "options": [
+        "Len súd",
+        "Súd, prokurátor, obvinený a obhajca",
+        "Len prokurátor"
+      ],
       "correct": 1
     },
     {
       "question": "Čo môže súd urobiť po predbežnom prejednaní obžaloby?",
-      "options": ["Vrátiť vec prokurátorovi", "Začať hlavné pojednávanie", "Obe možnosti"],
+      "options": [
+        "Vrátiť vec prokurátorovi",
+        "Začať hlavné pojednávanie",
+        "Obe možnosti"
+      ],
       "correct": 2
     }
   ],
-
   "tiles": [
-    { "term": "Preskúmanie obžaloby", "definition": "Kontrola súdu, či je obžaloba zákonná, úplná a odôvodnená." },
-    { "term": "Predbežné prejednanie obžaloby", "definition": "Pojednávanie, na ktorom súd preveruje dôvodnosť obžaloby." },
-    { "term": "Vrátenie veci prokurátorovi", "definition": "Rozhodnutie súdu, ak obžaloba trpí vadami alebo je neúplná." },
-    { "term": "Začatie hlavného pojednávania", "definition": "Súd začne pojednávanie, ak je obžaloba v poriadku." },
-    { "term": "Dôvodnosť obžaloby", "definition": "Posúdenie, či dôkazy odôvodňujú postavenie obvineného pred súd." },
-
-    { "term": "Zákonnosť obžaloby", "definition": "Obžaloba musí spĺňať zákonné náležitosti a byť riadne odôvodnená." },
-    { "term": "Procesné chyby", "definition": "Nedostatky, ktoré môžu viesť k vráteniu veci prokurátorovi." },
-    { "term": "Účasť strán", "definition": "Na predbežnom prejednaní sa zúčastňuje prokurátor, obvinený a obhajca." },
-    { "term": "Rozhodnutie súdu", "definition": "Súd môže vec vrátiť, zastaviť stíhanie alebo nariadiť hlavné pojednávanie." },
-    { "term": "Odstránenie vád", "definition": "Prokurátor môže doplniť alebo opraviť obžalobu po jej vrátení." }
+    {
+      "term": "Preskúmanie obžaloby",
+      "definition": "Kontrola súdu, či je obžaloba zákonná, úplná a odôvodnená."
+    },
+    {
+      "term": "Predbežné prejednanie obžaloby",
+      "definition": "Pojednávanie, na ktorom súd preveruje dôvodnosť obžaloby."
+    },
+    {
+      "term": "Vrátenie veci prokurátorovi",
+      "definition": "Rozhodnutie súdu, ak obžaloba trpí vadami alebo je neúplná."
+    },
+    {
+      "term": "Začatie hlavného pojednávania",
+      "definition": "Súd začne pojednávanie, ak je obžaloba v poriadku."
+    },
+    {
+      "term": "Dôvodnosť obžaloby",
+      "definition": "Posúdenie, či dôkazy odôvodňujú postavenie obvineného pred súd."
+    },
+    {
+      "term": "Zákonnosť obžaloby",
+      "definition": "Obžaloba musí spĺňať zákonné náležitosti a byť riadne odôvodnená."
+    },
+    {
+      "term": "Procesné chyby",
+      "definition": "Nedostatky, ktoré môžu viesť k vráteniu veci prokurátorovi."
+    },
+    {
+      "term": "Účasť strán",
+      "definition": "Na predbežnom prejednaní sa zúčastňuje prokurátor, obvinený a obhajca."
+    },
+    {
+      "term": "Rozhodnutie súdu",
+      "definition": "Súd môže vec vrátiť, zastaviť stíhanie alebo nariadiť hlavné pojednávanie."
+    },
+    {
+      "term": "Odstránenie vád",
+      "definition": "Prokurátor môže doplniť alebo opraviť obžalobu po jej vrátení."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Neúplná obžaloba",
@@ -58,22 +109,33 @@
         },
         {
           "question": "Krok 1: Ako má súd postupovať?",
-          "options": ["Vrátiť obžalobu prokurátorovi", "Začať hlavné pojednávanie", "Zastaviť konanie"],
+          "options": [
+            "Vrátiť obžalobu prokurátorovi",
+            "Začať hlavné pojednávanie",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Čo musí prokurátor urobiť?",
-          "options": ["Doplniť alebo opraviť obžalobu", "Zrušiť obžalobu", "Požiadať o odvolanie"],
+          "options": [
+            "Doplniť alebo opraviť obžalobu",
+            "Zrušiť obžalobu",
+            "Požiadať o odvolanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 3: Čo nasleduje po doplnení obžaloby?",
-          "options": ["Opätovné preskúmanie súdom", "Automatické začatie pojednávania", "Zastavenie stíhania"],
+          "options": [
+            "Opätovné preskúmanie súdom",
+            "Automatické začatie pojednávania",
+            "Zastavenie stíhania"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Pochybnosti o dôvodnosti obžaloby",
       "difficulty": "stredná",
@@ -85,12 +147,20 @@
         },
         {
           "question": "Krok 1: Čo môže súd urobiť?",
-          "options": ["Nariadiť predbežné prejednanie obžaloby", "Začať hlavné pojednávanie", "Zastaviť konanie"],
+          "options": [
+            "Nariadiť predbežné prejednanie obžaloby",
+            "Začať hlavné pojednávanie",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto sa zúčastňuje predbežného prejednania?",
-          "options": ["Len súd", "Súd, prokurátor, obvinený a obhajca", "Len prokurátor"],
+          "options": [
+            "Len súd",
+            "Súd, prokurátor, obvinený a obhajca",
+            "Len prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -114,10 +184,39 @@
   "spider": {
     "center": "Preskúmanie × predbežné prejednanie obžaloby (§§ 241–244)",
     "branches": [
-      { "label": "Preskúmanie (§§ 241–242)", "leaves": ["Kto – predseda senátu alebo poverený člen", "Čo – oprávnenosť, opis skutku, podmienky konania, zákonnosť dôkazov", "Výsledok – hlavné pojednávanie alebo predbežné prejednanie"] },
-      { "label": "Predbežné prejednanie (§ 243)", "leaves": ["Kedy – rozhodnutia podľa § 244, iná kvalifikácia, pochybnosti o dôkazoch, možná dohoda", "Forma – verejné alebo neverejné zasadnutie", "Obsah – preskúmanie, vypočutie, zisťovanie dohody"] },
-      { "label": "Rozhodnutia (§ 244)", "leaves": ["Zastavenie – postúpenie – prerušenie", "Vrátenie veci prokurátorovi na doplnenie", "Schválenie dohody o vine a treste", "Nariadenie hlavného pojednávania"] },
-      { "label": "Charakter", "leaves": ["Fakultatívnosť – závisí od úvahy predsedu senátu", "Účel – filter procesných chýb pred pojednávaním"] }
+      {
+        "label": "Preskúmanie (§§ 241–242)",
+        "leaves": [
+          "Kto – predseda senátu alebo poverený člen",
+          "Čo – oprávnenosť, opis skutku, podmienky konania, zákonnosť dôkazov",
+          "Výsledok – hlavné pojednávanie alebo predbežné prejednanie"
+        ]
+      },
+      {
+        "label": "Predbežné prejednanie (§ 243)",
+        "leaves": [
+          "Kedy – rozhodnutia podľa § 244, iná kvalifikácia, pochybnosti o dôkazoch, možná dohoda",
+          "Forma – verejné alebo neverejné zasadnutie",
+          "Obsah – preskúmanie, vypočutie, zisťovanie dohody"
+        ]
+      },
+      {
+        "label": "Rozhodnutia (§ 244)",
+        "leaves": [
+          "Zastavenie – postúpenie – prerušenie",
+          "Vrátenie veci prokurátorovi na doplnenie",
+          "Schválenie dohody o vine a treste",
+          "Nariadenie hlavného pojednávania"
+        ]
+      },
+      {
+        "label": "Charakter",
+        "leaves": [
+          "Fakultatívnosť – závisí od úvahy predsedu senátu",
+          "Účel – filter procesných chýb pred pojednávaním"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Preskúmanie obžaloby a predbežné prejednanie obžaloby sú prvé úkony súdu po tom, čo prokurátor podá obžalobu. Súd najprv obžalobu preskúma (formálne aj materiálne) a až potom rozhodne, či ju predbežne prejedná alebo rovno nariadi hlavné pojednávanie.\n\nPo podaní obžaloby súd vykoná preskúmanie obžaloby, kde zisťuje, či je obžaloba zákonná, úplná a či sú splnené podmienky na konanie pred súdom. Ak predseda senátu zistí, že je potrebné rozhodnúť o niektorých procesných otázkach (napr. zastavenie konania, postúpenie veci, vrátenie veci prokurátorovi), nariadi predbežné prejednanie obžaloby. Predbežné prejednanie je samostatné štádium, ktoré môže byť verejné alebo neverejné. Výsledkom je rozhodnutie podľa § 244 TP alebo nariadenie hlavného pojednávania.\n\n1. Preskúmanie obžaloby (§ 241–242 TP)\nPo doručení obžaloby súd vykoná jej preskúmanie.\n\nČo súd skúma?\nči bola obžaloba podaná oprávnenou osobou,\n\nči je skutok dostatočne opísaný,\n\nči sú splnené podmienky trestného konania,\n\nči sú dôkazy získané zákonne,\n\nči nie sú dôvody na zastavenie konania,\n\nči je potrebné predbežné prejednanie.\n\nKto preskúmava obžalobu?\npredseda senátu,\n\nalebo ním poverený člen senátu.\n\nVýsledok preskúmania:\nnariadenie hlavného pojednávania,\n\nalebo nariadenie predbežného prejednania obžaloby.\n\n2. Predbežné prejednanie obžaloby (§ 243 TP)\nPredbežné prejednanie je samostatné procesné štádium, ktoré nasleduje po preskúmaní obžaloby.\n\nKedy sa nariaďuje?\nPredseda senátu ho nariadi, ak:\n\nje potrebné rozhodnúť podľa § 244 ods. 1 písm. a) až i),\n\nskutok treba právne kvalifikovať inak, než uvádza obžaloba,\n\nsú pochybnosti o zákonnosti dôkazov,\n\nje potrebné preveriť možnosť dohody o vine a treste.\n\nForma zasadnutia:\nverejné,\n\nneverejné, ak sa uvažuje o rozhodnutí podľa § 244 ods. 1 písm. a) až i).\n\nČo súd robí na predbežnom prejednaní?\npreskúma obžalobu a zákonnosť dôkazov,\n\nvypočuje obvineného a poškodeného (ak je to potrebné),\n\nzisťuje, či strany chcú uzavrieť dohodu o vine a treste,\n\nmôže zadovážiť ďalšie vysvetlenia.\n\n3. Rozhodnutia pri predbežnom prejednaní obžaloby (§ 244 TP)\nSúd môže rozhodnúť najmä o:\n\nzastavení trestného stíhania,\n\npostúpení veci,\n\nprerušení konania,\n\nvrátení veci prokurátorovi na doplnenie,\n\nschválení dohody o vine a treste,\n\nnariadení hlavného pojednávania.\n\nZapamätaj si (štátnicové jadro)\nPreskúmanie obžaloby = formálna a materiálna kontrola obžaloby.\n\nPredbežné prejednanie = samostatné štádium, kde súd rieši procesné otázky.\n\nPredbežné prejednanie je fakultatívne – závisí od úvahy predsedu senátu.\n\nVýsledkom je rozhodnutie podľa § 244 alebo nariadenie hlavného pojednávania.\n\nZdroj:\n§ 241–244 Trestného poriadku \n\nOdborné vysvetlenie pojmu predbežného prejednania obžaloby (Lewik) \n\nÚstavný súd SR – fakultatívnosť predbežného prejednania obžaloby"
 }

@@ -2,50 +2,100 @@
   "id": "A17",
   "title": "Časti a štádiá trestného konania",
   "schemaVersion": "1.1",
-  "tags": ["štádiá", "trestné konanie", "proces"],
-
+  "tags": [
+    "štádiá",
+    "trestné konanie",
+    "proces"
+  ],
   "quiz": [
     {
       "question": "Ktoré je prvé štádium trestného konania?",
-      "options": ["Hlavné pojednávanie", "Prípravné konanie", "Odvolacie konanie"],
+      "options": [
+        "Hlavné pojednávanie",
+        "Prípravné konanie",
+        "Odvolacie konanie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré štádium konania rozhoduje o vine a treste?",
-      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Dovolacie konanie"],
+      "options": [
+        "Prípravné konanie",
+        "Hlavné pojednávanie",
+        "Dovolacie konanie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré štádium slúži na preskúmanie rozhodnutia súdu prvého stupňa?",
-      "options": ["Odvolacie konanie", "Prípravné konanie", "Konanie o dohode o vine a treste"],
+      "options": [
+        "Odvolacie konanie",
+        "Prípravné konanie",
+        "Konanie o dohode o vine a treste"
+      ],
       "correct": 0
     },
     {
       "question": "Kto vykonáva úkony v prípravnom konaní?",
-      "options": ["Súd", "Polícia a prokurátor", "Poškodený"],
+      "options": [
+        "Súd",
+        "Polícia a prokurátor",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré štádium môže skončiť dohodou o vine a treste?",
-      "options": ["Prípravné konanie", "Hlavné pojednávanie", "Odvolacie konanie"],
+      "options": [
+        "Prípravné konanie",
+        "Hlavné pojednávanie",
+        "Odvolacie konanie"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Prípravné konanie", "definition": "Štádium, v ktorom sa zisťuje skutkový stav a zhromažďujú dôkazy." },
-    { "term": "Hlavné pojednávanie", "definition": "Rozhodujúce štádium, v ktorom súd rozhoduje o vine a treste." },
-    { "term": "Odvolacie konanie", "definition": "Preskúmavanie rozhodnutia súdu prvého stupňa." },
-    { "term": "Dovolacie konanie", "definition": "Mimoriadny opravný prostriedok na preskúmanie právoplatného rozhodnutia." },
-    { "term": "Konanie o dohode o vine a treste", "definition": "Špeciálne konanie umožňujúce uzavretie dohody medzi obvineným a prokurátorom." },
-
-    { "term": "Začatie trestného stíhania", "definition": "Formálny úkon, ktorým sa začína prípravné konanie." },
-    { "term": "Podanie obžaloby", "definition": "Úkon prokurátora, ktorým sa vec predkladá súdu." },
-    { "term": "Vykonávanie dôkazov", "definition": "Kľúčová časť hlavného pojednávania." },
-    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej." },
-    { "term": "Právoplatnosť", "definition": "Stav, keď rozhodnutie už nemožno napadnúť riadnym opravným prostriedkom." }
+    {
+      "term": "Prípravné konanie",
+      "definition": "Štádium, v ktorom sa zisťuje skutkový stav a zhromažďujú dôkazy."
+    },
+    {
+      "term": "Hlavné pojednávanie",
+      "definition": "Rozhodujúce štádium, v ktorom súd rozhoduje o vine a treste."
+    },
+    {
+      "term": "Odvolacie konanie",
+      "definition": "Preskúmavanie rozhodnutia súdu prvého stupňa."
+    },
+    {
+      "term": "Dovolacie konanie",
+      "definition": "Mimoriadny opravný prostriedok na preskúmanie právoplatného rozhodnutia."
+    },
+    {
+      "term": "Konanie o dohode o vine a treste",
+      "definition": "Špeciálne konanie umožňujúce uzavretie dohody medzi obvineným a prokurátorom."
+    },
+    {
+      "term": "Začatie trestného stíhania",
+      "definition": "Formálny úkon, ktorým sa začína prípravné konanie."
+    },
+    {
+      "term": "Podanie obžaloby",
+      "definition": "Úkon prokurátora, ktorým sa vec predkladá súdu."
+    },
+    {
+      "term": "Vykonávanie dôkazov",
+      "definition": "Kľúčová časť hlavného pojednávania."
+    },
+    {
+      "term": "Rozsudok",
+      "definition": "Rozhodnutie súdu vo veci samej."
+    },
+    {
+      "term": "Právoplatnosť",
+      "definition": "Stav, keď rozhodnutie už nemožno napadnúť riadnym opravným prostriedkom."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Kedy sa končí prípravné konanie?",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Ako sa končí prípravné konanie?",
-          "options": ["Podaním obžaloby", "Vydaním rozsudku", "Začatím odvolacieho konania"],
+          "options": [
+            "Podaním obžaloby",
+            "Vydaním rozsudku",
+            "Začatím odvolacieho konania"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto podáva obžalobu?",
-          "options": ["Súd", "Prokurátor", "Obvinený"],
+          "options": [
+            "Súd",
+            "Prokurátor",
+            "Obvinený"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nesúhlas s rozsudkom",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Do ktorého štádia patrí preskúmanie rozsudku?",
-          "options": ["Prípravné konanie", "Odvolacie konanie", "Hlavné pojednávanie"],
+          "options": [
+            "Prípravné konanie",
+            "Odvolacie konanie",
+            "Hlavné pojednávanie"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto rozhoduje o odvolaní?",
-          "options": ["Súd prvého stupňa", "Odvolací súd", "Prokurátor"],
+          "options": [
+            "Súd prvého stupňa",
+            "Odvolací súd",
+            "Prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -118,11 +183,49 @@
   "spider": {
     "center": "Časti a štádiá trestného konania",
     "branches": [
-      { "label": "Časti (systematika TP)", "leaves": ["Hlavy I–III – zásady, orgány, úkony", "Hlavy IV–V – prípravné konanie, konanie pred súdom", "Hlavy VI–VIII – opravné, mimoriadne opravné, vykonávacie konanie", "Hlava IX – osobitné spôsoby konania"] },
-      { "label": "Pred začatím stíhania (§§ 197–198)", "leaves": ["Účel – preveriť podnet", "Úkony – vysvetlenia, prvotné zaistenie dôkazov", "Výsledok – začatie stíhania alebo odloženie veci"] },
-      { "label": "Prípravné konanie (Hlava IV)", "leaves": ["Začatie stíhania (§ 199) – uznesenie", "Vznesenie obvinenia (§ 206) – osoba sa stáva obvineným", "Vyšetrovanie – výsluchy, prehliadky, ITP, znalci", "Ukončenie – obžaloba, zastavenie, prerušenie, postúpenie"] },
-      { "label": "Konanie pred súdom (Hlava V)", "leaves": ["Predbežné prejednanie obžaloby (§§ 241–244)", "Hlavné pojednávanie (§§ 250–290) – dôkazy, návrhy, rozsudok", "Verejné a neverejné zasadnutie – vybrané rozhodnutia"] },
-      { "label": "Opravné a vykonávacie", "leaves": ["Riadne – sťažnosť, odvolanie", "Mimoriadne – dovolanie, obnova konania", "Vykonávacie – realizácia trestov, opatrení a náhrady škody"] }
+      {
+        "label": "Časti (systematika TP)",
+        "leaves": [
+          "Hlavy I–III – zásady, orgány, úkony",
+          "Hlavy IV–V – prípravné konanie, konanie pred súdom",
+          "Hlavy VI–VIII – opravné, mimoriadne opravné, vykonávacie konanie",
+          "Hlava IX – osobitné spôsoby konania"
+        ]
+      },
+      {
+        "label": "Pred začatím stíhania (§§ 197–198)",
+        "leaves": [
+          "Účel – preveriť podnet",
+          "Úkony – vysvetlenia, prvotné zaistenie dôkazov",
+          "Výsledok – začatie stíhania alebo odloženie veci"
+        ]
+      },
+      {
+        "label": "Prípravné konanie (Hlava IV)",
+        "leaves": [
+          "Začatie stíhania (§ 199) – uznesenie",
+          "Vznesenie obvinenia (§ 206) – osoba sa stáva obvineným",
+          "Vyšetrovanie – výsluchy, prehliadky, ITP, znalci",
+          "Ukončenie – obžaloba, zastavenie, prerušenie, postúpenie"
+        ]
+      },
+      {
+        "label": "Konanie pred súdom (Hlava V)",
+        "leaves": [
+          "Predbežné prejednanie obžaloby (§§ 241–244)",
+          "Hlavné pojednávanie (§§ 250–290) – dôkazy, návrhy, rozsudok",
+          "Verejné a neverejné zasadnutie – vybrané rozhodnutia"
+        ]
+      },
+      {
+        "label": "Opravné a vykonávacie",
+        "leaves": [
+          "Riadne – sťažnosť, odvolanie",
+          "Mimoriadne – dovolanie, obnova konania",
+          "Vykonávacie – realizácia trestov, opatrení a náhrady škody"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné konanie sa skladá z viacerých častí (hláv Trestného poriadku) a prebieha v štádiách, ktoré na seba nadväzujú: pred začatím trestného stíhania, prípravné konanie, konanie pred súdom (hlavné pojednávanie), opravné konanie, vykonávacie konanie a mimoriadne opravné konanie. Každé štádium má vlastný účel, vlastné procesné pravidlá a vlastné rozhodnutia. Základnou líniou je postup od preverovania podnetu až po právoplatné rozhodnutie a výkon trestu.\n\n1. Časti trestného konania (systematika Trestného poriadku)\nTrestný poriadok je rozdelený do hláv, ktoré predstavujú logické časti konania:\n\nHlava I – Základné zásady trestného konania\n\nHlava II – Orgány činné v trestnom konaní\n\nHlava III – Úkony trestného konania\n\nHlava IV – Prípravné konanie\n\nHlava V – Konanie pred súdom\n\nHlava VI – Opravné konanie\n\nHlava VII – Mimoriadne opravné konanie\n\nHlava VIII – Vykonávacie konanie\n\nHlava IX – Osobitné spôsoby konania\n\nHlava X – Spoločné, prechodné a záverečné ustanovenia\n\nTieto časti tvoria kostru, na ktorej sú postavené jednotlivé štádiá.\n\n2. Štádiá trestného konania\n2.1 Pred začatím trestného stíhania (§ 197–198 TP)\nÚčel: preveriť podnet, či je dôvod začať trestné stíhanie.\nOČTK vykonávajú:\n\núkony na preverenie oznámenia,\n\nvyžiadanie vysvetlení,\n\nprvotné úkony na zaistenie dôkazov.\n\nVýsledok:\n\nzačatie trestného stíhania, alebo\n\nodloženie veci.\n\n2.2 Prípravné konanie (Hlava IV TP)\nÚčel: zistiť skutkový stav, identifikovať páchateľa, zabezpečiť dôkazy.\n\nEtapy prípravného konania:\na) Začatie trestného stíhania (§ 199 TP)\nOČTK vydajú uznesenie o začatí trestného stíhania.\n\nb) Vznesenie obvinenia (§ 206 TP)\nAk sú dôvody, OČTK vznesú obvinenie konkrétnej osobe.\n\nc) Vyšetrovanie (§ 201–209 TP)\nVykonávajú sa dôkazy: výsluchy, prehliadky, ITP, znalecké dokazovanie.\n\nd) Ukončenie vyšetrovania (§ 209–211 TP)\nProkurátor rozhodne:\n\npodanie obžaloby,\n\nzastavenie konania,\n\nprerušenie konania,\n\npostúpenie veci.\n\n2.3 Konanie pred súdom (Hlava V TP)\nÚčel: rozhodnúť o vine a treste.\n\na) Predbežné prejednanie obžaloby (§ 241–244 TP)\nSúd skúma, či je obžaloba dôvodná.\n\nb) Hlavné pojednávanie (§ 250–290 TP)\nNajdôležitejšie štádium:\n\nvykonanie dôkazov,\n\nvýsluchy,\n\nzáverečné návrhy,\n\nrozsudok.\n\nc) Verejné zasadnutie (§ 291–295 TP)\nPoužíva sa pri niektorých rozhodnutiach (napr. o podmienečnom prepustení).\n\nd) Neveřejné zasadnutie (§ 296 TP)\nSúd rozhoduje bez prítomnosti verejnosti.\n\n2.4 Opravné konanie (Hlava VI TP)\nÚčel: preskúmať zákonnosť a správnosť rozhodnutí.\n\nRiadne opravné prostriedky:\nsťažnosť (proti uzneseniu),\n\nodvolanie (proti rozsudku).\n\nMimoriadne opravné prostriedky:\ndovolanie,\n\nobnova konania,\n\nsťažnosť pre porušenie zákona (v osobitných prípadoch).\n\n2.5 Mimoriadne opravné konanie (Hlava VII TP)\nÚčel: odstrániť závažné chyby právoplatných rozhodnutí.\n\nDovolanie (§ 371–382 TP)\nPodáva sa na Najvyšší súd SR.\n\nObnova konania (§ 394–402 TP)\nAk vyjdú najavo nové skutočnosti alebo dôkazy.\n\n2.6 Vykonávacie konanie (Hlava VIII TP)\nÚčel: vykonať právoplatné rozhodnutie.\n\nVykonáva sa:\n\ntrest odňatia slobody,\n\npeňažný trest,\n\ntrest zákazu činnosti,\n\nochranné opatrenia,\n\nnáhrada škody.\n\nZapamätaj si (štátnicové jadro)\nTrestné konanie má logické časti (hlavy TP) a štádiá, ktoré na seba nadväzujú.\n\nŠtádiá: pred začatím stíhania → prípravné konanie → konanie pred súdom → opravné konanie → mimoriadne opravné konanie → vykonávacie konanie.\n\nPrípravné konanie končí obžalobou alebo zastavením.\n\nHlavné pojednávanie je centrálnym bodom konania.\n\nOpravné prostriedky zabezpečujú kontrolu zákonnosti.\n\nVykonávacie konanie realizuje právoplatné rozhodnutie.\n\nZdroj:\nTrestný poriadok č. 301/2005 Z. z., účinnosť od 1. 7. 2026  \nhttps://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2005/301/20260701"
 }

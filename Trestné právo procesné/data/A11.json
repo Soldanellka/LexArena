@@ -2,50 +2,101 @@
   "id": "A11",
   "title": "Informačno-technické prostriedky v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["ITP", "odpočúvanie", "sledovanie", "trestné konanie"],
-
+  "tags": [
+    "ITP",
+    "odpočúvanie",
+    "sledovanie",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktorý orgán môže nariadiť použitie informačno-technických prostriedkov?",
-      "options": ["Polícia", "Súd", "Obhajca"],
+      "options": [
+        "Polícia",
+        "Súd",
+        "Obhajca"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno použiť odpočúvanie a záznam telekomunikačnej prevádzky?",
-      "options": ["Pri akomkoľvek trestnom čine", "Len pri závažných trestných činoch", "Len so súhlasom obvineného"],
+      "options": [
+        "Pri akomkoľvek trestnom čine",
+        "Len pri závažných trestných činoch",
+        "Len so súhlasom obvineného"
+      ],
       "correct": 1
     },
     {
       "question": "Kto vykonáva technické zabezpečenie ITP?",
-      "options": ["Súd", "Polícia", "Poškodený"],
+      "options": [
+        "Súd",
+        "Polícia",
+        "Poškodený"
+      ],
       "correct": 1
     },
     {
       "question": "Ako sa dokumentuje použitie ITP?",
-      "options": ["Ústnym oznámením", "Zápisnicou a technickým záznamom", "Nie je potrebné dokumentovať"],
+      "options": [
+        "Ústnym oznámením",
+        "Zápisnicou a technickým záznamom",
+        "Nie je potrebné dokumentovať"
+      ],
       "correct": 1
     },
     {
       "question": "Čo sa stane s nepoužiteľnými alebo nadbytočnými záznamami?",
-      "options": ["Musí sa zničiť", "Ukladajú sa navždy", "Poskytujú sa obvinenému"],
+      "options": [
+        "Musí sa zničiť",
+        "Ukladajú sa navždy",
+        "Poskytujú sa obvinenému"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Informačno-technické prostriedky", "definition": "Prostriedky používané na odpočúvanie, sledovanie a získavanie údajov v trestnom konaní." },
-    { "term": "Odpočúvanie", "definition": "Získavanie záznamov telekomunikačnej prevádzky na základe príkazu súdu." },
-    { "term": "Sledovanie osôb a vecí", "definition": "Utajený monitoring pohybu osôb alebo vecí." },
-    { "term": "Príkaz súdu", "definition": "Rozhodnutie, ktorým súd povoľuje použitie ITP." },
-    { "term": "Technický záznam", "definition": "Záznam získaný použitím ITP, ktorý sa zakladá do spisu." },
-
-    { "term": "Zničenie záznamov", "definition": "Povinnosť zničiť nepoužiteľné alebo nadbytočné záznamy." },
-    { "term": "Utajený svedok", "definition": "Osoba, ktorej identita je chránená, môže byť monitorovaná ITP." },
-    { "term": "Prevádzkové údaje", "definition": "Údaje o komunikácii, ktoré možno získať od operátora." },
-    { "term": "Policajt", "definition": "Orgán, ktorý technicky vykonáva použitie ITP." },
-    { "term": "Prokurátor", "definition": "Dozoruje zákonnosť použitia ITP a podáva návrh na ich povolenie." }
+    {
+      "term": "Informačno-technické prostriedky",
+      "definition": "Prostriedky používané na odpočúvanie, sledovanie a získavanie údajov v trestnom konaní."
+    },
+    {
+      "term": "Odpočúvanie",
+      "definition": "Získavanie záznamov telekomunikačnej prevádzky na základe príkazu súdu."
+    },
+    {
+      "term": "Sledovanie osôb a vecí",
+      "definition": "Utajený monitoring pohybu osôb alebo vecí."
+    },
+    {
+      "term": "Príkaz súdu",
+      "definition": "Rozhodnutie, ktorým súd povoľuje použitie ITP."
+    },
+    {
+      "term": "Technický záznam",
+      "definition": "Záznam získaný použitím ITP, ktorý sa zakladá do spisu."
+    },
+    {
+      "term": "Zničenie záznamov",
+      "definition": "Povinnosť zničiť nepoužiteľné alebo nadbytočné záznamy."
+    },
+    {
+      "term": "Utajený svedok",
+      "definition": "Osoba, ktorej identita je chránená, môže byť monitorovaná ITP."
+    },
+    {
+      "term": "Prevádzkové údaje",
+      "definition": "Údaje o komunikácii, ktoré možno získať od operátora."
+    },
+    {
+      "term": "Policajt",
+      "definition": "Orgán, ktorý technicky vykonáva použitie ITP."
+    },
+    {
+      "term": "Prokurátor",
+      "definition": "Dozoruje zákonnosť použitia ITP a podáva návrh na ich povolenie."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odpočúvanie bez príkazu súdu",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Je možné odpočúvať bez príkazu súdu?",
-          "options": ["Nie", "Áno, pri každom podozrení", "Len ak to schváli obvinený"],
+          "options": [
+            "Nie",
+            "Áno, pri každom podozrení",
+            "Len ak to schváli obvinený"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Je takto získaný dôkaz použiteľný?",
-          "options": ["Nie, je nezákonný", "Áno, ak je pravdivý", "Len v prípravnom konaní"],
+          "options": [
+            "Nie, je nezákonný",
+            "Áno, ak je pravdivý",
+            "Len v prípravnom konaní"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zničenie nadbytočných záznamov",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Ako sa má naložiť s nepoužiteľnými záznamami?",
-          "options": ["Musí sa zničiť", "Uchovať pre budúce prípady", "Poskytnúť médiám"],
+          "options": [
+            "Musí sa zničiť",
+            "Uchovať pre budúce prípady",
+            "Poskytnúť médiám"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto rozhoduje o zničení?",
-          "options": ["Súd", "Polícia", "Poškodený"],
+          "options": [
+            "Súd",
+            "Polícia",
+            "Poškodený"
+          ],
           "correct": 0
         },
         {
@@ -118,11 +184,46 @@
   "spider": {
     "center": "ITP – sledovanie × záznamy × odpočúvanie (§§ 113–117)",
     "branches": [
-      { "label": "Pojem a druhy", "leaves": ["Podstata – utajované nástroje na informácie inak nedostupné", "Druhy – sledovanie osôb a vecí (§ 113), obrazové a zvukové záznamy (§ 114), odpočúvanie a záznam telekomunikačnej prevádzky (§ 115), oznámenie údajov o telekomunikačnej prevádzke (§ 116), agent (§ 117)", "Nasadenie – organizovaná, korupčná, násilná a hospodárska kriminalita"] },
-      { "label": "Podmienky použitia (§§ 113–115)", "leaves": ["Závažný TČ – bežné úkony nepostačujú", "Primeranosť – zásah nevyhnutný a primeraný", "Príkaz sudcu – písomný; čas najviac šesť mesiacov, predĺžiteľný"] },
-      { "label": "Vec, ktorá neznesie odklad", "leaves": ["Výnimka – vec neznesie odklad, súhlas nemožno včas získať", "Poistky – oznámenie sudcovi do 1 hodiny, dodatočný súhlas", "Limit – bez súhlasu do 12 hodín sa ITP okamžite ukončí"] },
-      { "label": "Agent (§ 117)", "leaves": ["Použitie – infiltrácia organizovaných skupín", "Obydlie – osobitný príkaz podľa § 114; zásada najmiernejšieho zásahu"] },
-      { "label": "Nakladanie so záznamami", "leaves": ["Režim – utajené uchovávanie; nepoužiteľné sa zlikvidujú", "Dôkaz – len zákonne získané záznamy; obhajoba má právo oboznámiť sa", "Kontrola – sudca aj orgán sústavne skúmajú trvanie dôvodov"] }
+      {
+        "label": "Pojem a druhy",
+        "leaves": [
+          "Podstata – utajované nástroje na informácie inak nedostupné",
+          "Druhy – sledovanie osôb a vecí (§ 113), obrazové a zvukové záznamy (§ 114), odpočúvanie a záznam telekomunikačnej prevádzky (§ 115), oznámenie údajov o telekomunikačnej prevádzke (§ 116), agent (§ 117)",
+          "Nasadenie – organizovaná, korupčná, násilná a hospodárska kriminalita"
+        ]
+      },
+      {
+        "label": "Podmienky použitia (§§ 113–115)",
+        "leaves": [
+          "Závažný TČ – bežné úkony nepostačujú",
+          "Primeranosť – zásah nevyhnutný a primeraný",
+          "Príkaz sudcu – písomný; čas najviac šesť mesiacov, predĺžiteľný"
+        ]
+      },
+      {
+        "label": "Vec, ktorá neznesie odklad",
+        "leaves": [
+          "Výnimka – vec neznesie odklad, súhlas nemožno včas získať",
+          "Poistky – oznámenie sudcovi do 1 hodiny, dodatočný súhlas",
+          "Limit – bez súhlasu do 12 hodín sa ITP okamžite ukončí"
+        ]
+      },
+      {
+        "label": "Agent (§ 117)",
+        "leaves": [
+          "Použitie – infiltrácia organizovaných skupín",
+          "Obydlie – osobitný príkaz podľa § 114; zásada najmiernejšieho zásahu"
+        ]
+      },
+      {
+        "label": "Nakladanie so záznamami",
+        "leaves": [
+          "Režim – utajené uchovávanie; nepoužiteľné sa zlikvidujú",
+          "Dôkaz – len zákonne získané záznamy; obhajoba má právo oboznámiť sa",
+          "Kontrola – sudca aj orgán sústavne skúmajú trvanie dôvodov"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Informačno-technické prostriedky (ITP) v trestnom konaní Informačno-technické prostriedky sú najinvazívnejšie dôkazné nástroje v trestnom konaní – patria sem sledovanie osôb a vecí, vyhotovovanie záznamov, odpočúvanie, oznámenie údajov o telekomunikačnej prevádzke a agent. Použiť ich možno len na základe písomného príkazu a len pri závažnej trestnej činnosti.\n\nPojem a druhy ITP (§§ 113–117 TP) ITP sú utajované technické nástroje, ktoré umožňujú orgánom činným v trestnom konaní získavať informácie, ktoré by inak nebolo možné získať: – sledovanie osôb a vecí (§ 113), – vyhotovovanie obrazových, zvukových a obrazovo-zvukových záznamov (§ 114), – odpočúvanie a záznam telekomunikačnej prevádzky (§ 115), – oznámenie údajov o telekomunikačnej prevádzke (§ 116), – agent (§ 117).\n\nPoužívajú sa najmä pri organizovanej, korupčnej, násilnej a hospodárskej kriminalite.\n\nPodmienky použitia ITP (§§ 113–115 TP) ITP možno použiť len ak: – ide o závažný trestný čin, – bežné procesné úkony nepostačujú, – zásah je primeraný a nevyhnutný, – existuje písomný príkaz (spravidla sudcu; v prípravnom konaní na návrh prokurátora).\n\nPríkaz sa vydáva na nevyhnutný čas; jeho trvanie možno predĺžiť, pri odpočúvaní vždy o ďalšie dva mesiace (§ 115).\n\nŽiadosť o použitie ITP Žiadosť musí obsahovať: – presný opis trestného činu, – dôvody nevyhnutnosti ITP, – druh ITP, – osoby, voči ktorým sa má použiť, – miesto, čas a rozsah zásahu.\n\nSudca žiadosť preskúma a vydá písomný príkaz alebo ju zamietne.\n\nVec, ktorá neznesie odklad (§ 115 TP) Ak vec neznesie odklad a písomný príkaz sudcu nemožno vopred získať, môže pri odpočúvaní vydať príkaz prokurátor; taký príkaz musí následne potvrdiť sudca, inak sa použitie ITP musí okamžite ukončiť a záznamy nemožno použiť.\nAgent (§ 117 TP) Agent môže používať ITP pri plnení úloh, najmä pri infiltrácii organizovaných skupín. Pri zásahu do obydlia je potrebný osobitný príkaz; platí zásada najmiernejšieho zásahu.\nNakladanie so záznamami – záznamy sa uchovávajú v utajenom režime, – nepoužiteľné záznamy sa musia zlikvidovať, – ako dôkaz možno použiť len záznamy získané v súlade so zákonom, – obvinený a obhajca majú právo oboznámiť sa so záznamami, ktoré sa použijú ako dôkaz.\nKontrola zákonnosti ITP Sudca musí sústavne skúmať, či trvajú dôvody použitia ITP. Rovnakú povinnosť má orgán, ktorý ITP používa.\n\nZapamätaj si (štátnicové jadro) – ITP = sledovanie (§ 113), záznamy (§ 114), odpočúvanie (§ 115), telekomunikačné údaje (§ 116), agent (§ 117). – Použitie len na písomný príkaz a pri závažnej trestnej činnosti. – Pri veci, ktorá neznesie odklad, môže príkaz na odpočúvanie vydať prokurátor – sudca ho musí potvrdiť. – Agent pri obydlí potrebuje osobitný príkaz. – Nezákonné záznamy sú neprípustné ako dôkaz.\n\nZdroj (overené) – Trestný poriadok č. 301/2005 Z. z., znenie účinné od 1. 7. 2026 – Slov-Lex: §§ 113–117 TP"
 }

@@ -2,50 +2,100 @@
   "id": "A14",
   "title": "Svedok v trestnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["svedok", "výpoveď", "trestné konanie"],
-
+  "tags": [
+    "svedok",
+    "výpoveď",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kto je svedkom v trestnom konaní?",
-      "options": ["Osoba, ktorá spáchala trestný čin", "Osoba, ktorá má vypovedať o skutočnostiach dôležitých pre konanie", "Obhajca"],
+      "options": [
+        "Osoba, ktorá spáchala trestný čin",
+        "Osoba, ktorá má vypovedať o skutočnostiach dôležitých pre konanie",
+        "Obhajca"
+      ],
       "correct": 1
     },
     {
       "question": "Má svedok povinnosť vypovedať?",
-      "options": ["Áno, vždy", "Nie, nikdy", "Áno, okrem zákonom stanovených výnimiek"],
+      "options": [
+        "Áno, vždy",
+        "Nie, nikdy",
+        "Áno, okrem zákonom stanovených výnimiek"
+      ],
       "correct": 2
     },
     {
       "question": "Kto môže odmietnuť výpoveď?",
-      "options": ["Každý svedok", "Svedok, ktorý by výpoveďou spôsobil trestné stíhanie sebe alebo blízkym", "Len obvinený"],
+      "options": [
+        "Každý svedok",
+        "Svedok, ktorý by výpoveďou spôsobil trestné stíhanie sebe alebo blízkym",
+        "Len obvinený"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je poučenie svedka?",
-      "options": ["Informovanie o jeho právach a povinnostiach", "Rozhodnutie súdu", "Znalecký posudok"],
+      "options": [
+        "Informovanie o jeho právach a povinnostiach",
+        "Rozhodnutie súdu",
+        "Znalecký posudok"
+      ],
       "correct": 0
     },
     {
       "question": "Kto vykonáva výsluch svedka?",
-      "options": ["Súd alebo orgány činné v trestnom konaní", "Poškodený", "Obhajca samostatne"],
+      "options": [
+        "Súd alebo orgány činné v trestnom konaní",
+        "Poškodený",
+        "Obhajca samostatne"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Svedok", "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre trestné konanie." },
-    { "term": "Povinnosť vypovedať", "definition": "Svedok musí vypovedať, ak zákon neustanovuje výnimku." },
-    { "term": "Odmietnutie výpovede", "definition": "Možnosť svedka nevypovedať, ak by spôsobil trestné stíhanie sebe alebo blízkym." },
-    { "term": "Poučenie svedka", "definition": "Orgán musí svedka poučiť o jeho právach a povinnostiach." },
-    { "term": "Utajený svedok", "definition": "Svedok, ktorého identita je chránená z dôvodu ohrozenia." },
-
-    { "term": "Konfrontácia", "definition": "Stret dvoch osôb s rozpornými výpoveďami." },
-    { "term": "Svedecká výpoveď", "definition": "Dôkazný prostriedok založený na vnímaní svedka." },
-    { "term": "Predvedenie svedka", "definition": "Prinútenie svedka dostaviť sa, ak sa bez ospravedlnenia nedostaví." },
-    { "term": "Pokuta svedkovi", "definition": "Možno uložiť, ak svedok bezdôvodne odmieta vypovedať alebo sa nedostaví." },
-    { "term": "Zákaz klamavej výpovede", "definition": "Svedok nesmie úmyselne uvádzať nepravdivé skutočnosti." }
+    {
+      "term": "Svedok",
+      "definition": "Osoba, ktorá vypovedá o skutočnostiach dôležitých pre trestné konanie."
+    },
+    {
+      "term": "Povinnosť vypovedať",
+      "definition": "Svedok musí vypovedať, ak zákon neustanovuje výnimku."
+    },
+    {
+      "term": "Odmietnutie výpovede",
+      "definition": "Možnosť svedka nevypovedať, ak by spôsobil trestné stíhanie sebe alebo blízkym."
+    },
+    {
+      "term": "Poučenie svedka",
+      "definition": "Orgán musí svedka poučiť o jeho právach a povinnostiach."
+    },
+    {
+      "term": "Utajený svedok",
+      "definition": "Svedok, ktorého identita je chránená z dôvodu ohrozenia."
+    },
+    {
+      "term": "Konfrontácia",
+      "definition": "Stret dvoch osôb s rozpornými výpoveďami."
+    },
+    {
+      "term": "Svedecká výpoveď",
+      "definition": "Dôkazný prostriedok založený na vnímaní svedka."
+    },
+    {
+      "term": "Predvedenie svedka",
+      "definition": "Prinútenie svedka dostaviť sa, ak sa bez ospravedlnenia nedostaví."
+    },
+    {
+      "term": "Pokuta svedkovi",
+      "definition": "Možno uložiť, ak svedok bezdôvodne odmieta vypovedať alebo sa nedostaví."
+    },
+    {
+      "term": "Zákaz klamavej výpovede",
+      "definition": "Svedok nesmie úmyselne uvádzať nepravdivé skutočnosti."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odmietnutie výpovede",
@@ -58,12 +108,20 @@
         },
         {
           "question": "Krok 1: Môže svedok odmietnuť výpoveď?",
-          "options": ["Áno", "Nie", "Len so súhlasom prokurátora"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom prokurátora"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Aký je dôvod odmietnutia?",
-          "options": ["Ochrana blízkej osoby", "Nesúhlas s konaním", "Nedostatok času"],
+          "options": [
+            "Ochrana blízkej osoby",
+            "Nesúhlas s konaním",
+            "Nedostatok času"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +135,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nepravdivá výpoveď",
       "difficulty": "stredná",
@@ -89,12 +146,20 @@
         },
         {
           "question": "Krok 1: Je nepravdivá výpoveď dovolená?",
-          "options": ["Áno", "Nie", "Len ak s tým súhlasí obvinený"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak s tým súhlasí obvinený"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Aké následky môže mať svedok?",
-          "options": ["Trestnoprávnu zodpovednosť za krivú výpoveď", "Žiadne", "Len napomenutie"],
+          "options": [
+            "Trestnoprávnu zodpovednosť za krivú výpoveď",
+            "Žiadne",
+            "Len napomenutie"
+          ],
           "correct": 0
         },
         {
@@ -118,12 +183,53 @@
   "spider": {
     "center": "Svedok – povinnosti × odmietnutie × ochrana",
     "branches": [
-      { "label": "Pojem a povinnosti (§ 126)", "leaves": ["Kto – osoba s vedomosťou o dôležitých skutočnostiach (aj poškodený, zúčastnená osoba)", "Povinnosti – dostaviť sa, vypovedať pravdu, nič nezamlčať", "Nedostavenie – možné predvedenie"] },
-      { "label": "Odmietnutie výpovede (§ 127)", "leaves": ["Sebaobvinenie – nebezpečenstvo stíhania sebe alebo blízkej osobe", "Tajomstvá – spovedné; advokátske, lekárske, bankové (ak nezbavený mlčanlivosti)", "Charakter – absolútne právo, nemožno prelomiť"] },
-      { "label": "Ochrana svedka (§§ 136–139)", "leaves": ["Anonymita – utajenie totožnosti", "Technika – videokonferencia, zmena hlasu, vylúčenie verejnosti", "Program ochrany – osobitný zákon; kľúčové pri organizovanej kriminalite"] },
-      { "label": "Výsluch (§§ 131–134)", "leaves": ["Priebeh – poučenie, vzťah k obvinenému, bez nátlaku, vlastnými slovami", "Otázky – prípustné, ale nie sugestívne"] },
-      { "label": "Špeciálne kategórie", "leaves": ["Maloletý (§ 135) – šetrne, s psychológom, bez opakovania", "Anonymný (§ 136) – technické prostriedky pri závažnej kriminalite", "Chránený – fyzická ochrana, zmena identity (osobitný zákon)"] },
-      { "label": "Hodnotenie a zodpovednosť", "leaves": ["Hodnotenie – vierohodnosť, konzistentnosť, motivácia, kontext ostatných dôkazov", "Zodpovednosť – krivá výpoveď (§ 346 TZ), marenie úkonu"] }
+      {
+        "label": "Pojem a povinnosti (§ 126)",
+        "leaves": [
+          "Kto – osoba s vedomosťou o dôležitých skutočnostiach (aj poškodený, zúčastnená osoba)",
+          "Povinnosti – dostaviť sa, vypovedať pravdu, nič nezamlčať",
+          "Nedostavenie – možné predvedenie"
+        ]
+      },
+      {
+        "label": "Odmietnutie výpovede (§ 127)",
+        "leaves": [
+          "Sebaobvinenie – nebezpečenstvo stíhania sebe alebo blízkej osobe",
+          "Tajomstvá – spovedné; advokátske, lekárske, bankové (ak nezbavený mlčanlivosti)",
+          "Charakter – absolútne právo, nemožno prelomiť"
+        ]
+      },
+      {
+        "label": "Ochrana svedka (§§ 136–139)",
+        "leaves": [
+          "Anonymita – utajenie totožnosti",
+          "Technika – videokonferencia, zmena hlasu, vylúčenie verejnosti",
+          "Program ochrany – osobitný zákon; kľúčové pri organizovanej kriminalite"
+        ]
+      },
+      {
+        "label": "Výsluch (§§ 131–134)",
+        "leaves": [
+          "Priebeh – poučenie, vzťah k obvinenému, bez nátlaku, vlastnými slovami",
+          "Otázky – prípustné, ale nie sugestívne"
+        ]
+      },
+      {
+        "label": "Špeciálne kategórie",
+        "leaves": [
+          "Maloletý (§ 135) – šetrne, s psychológom, bez opakovania",
+          "Anonymný (§ 136) – technické prostriedky pri závažnej kriminalite",
+          "Chránený – fyzická ochrana, zmena identity (osobitný zákon)"
+        ]
+      },
+      {
+        "label": "Hodnotenie a zodpovednosť",
+        "leaves": [
+          "Hodnotenie – vierohodnosť, konzistentnosť, motivácia, kontext ostatných dôkazov",
+          "Zodpovednosť – krivá výpoveď (§ 346 TZ), marenie úkonu"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Svedok je osoba, ktorá má vedomosť o skutočnostiach dôležitých pre trestné konanie a je povinná vypovedať, ak jej zákon neumožňuje odmietnuť výpoveď. Svedok má povinnosť dostaviť sa, vypovedať pravdu a nič nezamlčať. Zároveň má právo na ochranu – najmä ak je ohrozený, zraniteľný alebo ide o obete trestných činov. Trestný poriadok upravuje aj špeciálne formy výsluchu (maloletí, anonymný svedok, chránený svedok). Výpoveď svedka je jedným z najdôležitejších dôkazných prostriedkov.\n\n1. Pojem svedka (§ 126 TP)\nSvedkom je osoba, ktorá môže svojou výpoveďou prispieť k objasneniu skutočností dôležitých pre trestné konanie.\nSvedkom môže byť:\n\nfyzická osoba,\n\npoškodený,\n\nzúčastnená osoba,\n\naj obvinený v inej veci (ak vypovedá ako svedok).\n\n2. Povinnosti svedka (§ 126 ods. 1 TP)\nSvedok je povinný:\n\ndostaviť sa na predvolanie,\n\nvypovedať pravdu,\n\nnič nezamlčať,\n\nuviesť všetky okolnosti, ktoré pozná.\n\nAk sa bez ospravedlnenia nedostaví → môže byť predvedený podľa § 89 TP.\n\n3. Právo odmietnuť výpoveď (§ 127 TP)\nSvedok môže odmietnuť výpoveď, ak:\n\nby ňou spôsobil nebezpečenstvo trestného stíhania sebe alebo blízkej osobe,\n\nje viazaný spovedným tajomstvom,\n\nide o advokátske, lekárske, mediátorské, bankové, daňové tajomstvo (ak nie je zbavený povinnosti mlčanlivosti).\n\nPrávo odmietnuť výpoveď je absolútne – nemožno ho prelomiť.\n\n4. Právo na ochranu svedka (§ 136–139 TP)\nSvedok má právo na ochranu, ak je ohrozený alebo zraniteľný.\n\nFormy ochrany:\nutajenie totožnosti (anonymný svedok),\n\ntechnické prostriedky – výsluch cez videokonferenciu, zmena hlasu,\n\nvylúčenie verejnosti z pojednávania,\n\nprogram na ochranu svedkov (samostatný zákon).\n\nOchrana svedka je zásadná najmä pri organizovanej kriminalite.\n\n5. Priebeh výsluchu svedka (§ 131–134 TP)\nVýsluch svedka je formálny procesný úkon.\n\nZákladné pravidlá:\nsvedok sa poučí o právach a povinnostiach,\n\nuvedie vzťah k obvinenému,\n\nvypovedá bez nátlaku,\n\nvýsluch je ústny,\n\nsvedok vypovedá vlastnými slovami,\n\nmožno klásť otázky, ale nesmú byť sugestívne.\n\nVýsluch svedka je jedným z najčastejších dôkazov.\n\n6. Špeciálne kategórie svedkov\n6.1 Maloletý svedok (§ 135 TP)\nvýsluch sa vykonáva šetrne,\n\nspravidla za účasti psychológa,\n\nopakovaný výsluch sa obmedzuje, aby sa predišlo sekundárnej viktimizácii.\n\n6.2 Anonymný svedok (§ 136 TP)\ntotožnosť sa utají,\n\nvýsluch sa vykonáva technickými prostriedkami,\n\npoužíva sa pri závažnej kriminalite.\n\n6.3 Chránený svedok (osobitný zákon)\nfyzická ochrana, zmena identity, presťahovanie,\n\nvyužíva sa pri organizovanej kriminalite.\n\n7. Hodnotenie výpovede svedka\nSúd hodnotí výpoveď podľa zásady voľného hodnotenia dôkazov:\n\nvierohodnosť,\n\nkonzistentnosť,\n\nmotivácia svedka,\n\nvzťah k obvinenému,\n\nobjektívne okolnosti.\n\nVýpoveď svedka sa nikdy nehodnotí izolovane, ale v kontexte ostatných dôkazov.\n\n8. Zodpovednosť svedka\nSvedok nesie trestnoprávnu zodpovednosť za:\n\nkrivú výpoveď (§ 346 TZ),\n\nmarenie úkonu (napr. nedostavenie sa),\n\nneoprávnené odmietnutie výpovede.\n\nZapamätaj si (štátnicové jadro)\nSvedok má povinnosť vypovedať pravdu a nič nezamlčať.\n\nMôže odmietnuť výpoveď, ak by ohrozil seba alebo blízku osobu.\n\nMá právo na ochranu – anonymita, technické prostriedky, vylúčenie verejnosti.\n\nMaloletí a ohrození svedkovia majú osobitný režim.\n\nVýpoveď svedka je kľúčový dôkaz, ale musí byť hodnotená v kontexte ostatných dôkazov.\n\nZdroj:\nTrestný poriadok č. 301/2005 Z. z., účinnosť od 1. 7. 2026  \nhttps://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2005/301/20260701"
 }

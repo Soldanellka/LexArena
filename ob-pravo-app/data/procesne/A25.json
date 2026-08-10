@@ -2,13 +2,22 @@
   "id": "25",
   "title": "Uznesenie – pojem, náležitosti, sťažnosť proti uzneseniu",
   "schemaVersion": "1.1",
-  "tags": ["uznesenie", "opravný prostriedok proti uzneseniu", "sťažnosť", "CMP"],
-  "summary": "Uznesenie je rozhodnutie súdu, ktorým sa v sporovom konaní rozhoduje spravidla o procesných otázkach (napríklad o zastavení konania, o trovách, o neodkladnom opatrení), nie vo veci samej. Naopak, v mimosporovom konaní podľa CMP sa – na rozdiel od CSP – vo veci samej spravidla rozhoduje práve uznesením, nie rozsudkom (napríklad pri rozhodnutí o dedičstve). Náležitosti uznesenia sú primerane podobné náležitostiam rozsudku – výrok, spravidla odôvodnenie a poučenie o opravnom prostriedku, ich rozsah sa však líši podľa povahy a významu konkrétneho uznesenia.\n\nZaujímavosťou štátnicového zoznamu je pojem „sťažnosť proti uzneseniu“ – ide o terminológiu zachovanú z pôvodného Občianskeho súdneho poriadku (do roku 2016), ktorý skutočne rozlišoval odvolanie (riadny opravný prostriedok proti rozsudku) a sťažnosť (riadny opravný prostriedok proti niektorým uzneseniam). Súčasný Civilný sporový poriadok toto rozlíšenie zjednotil – riadnym opravným prostriedkom je vo všetkých prípadoch odvolanie, pričom § 357 CSP taxatívne vymenúva uznesenia, proti ktorým je odvolanie prípustné; proti ostatným (bežným procesným) uzneseniam odvolanie spravidla prípustné nie je.\n\nZapamätaj si:\n- Uznesenie v CSP rieši spravidla procesné otázky, nie vec samu.\n- V CMP sa naopak vo veci samej spravidla rozhoduje uznesením.\n- Náležitosti uznesenia sú primerane podobné rozsudku, v rozsahu podľa povahy veci.\n- Súčasný CSP nepozná samostatnú „sťažnosť“ – opravným prostriedkom je jednotne odvolanie (§ 357 CSP).\n- Odvolanie proti uzneseniu je prípustné len v prípadoch taxatívne vymenovaných v § 357 CSP."
-  ,
+  "tags": [
+    "uznesenie",
+    "opravný prostriedok proti uzneseniu",
+    "sťažnosť",
+    "CMP"
+  ],
+  "summary": "Uznesenie je rozhodnutie súdu, ktorým sa v sporovom konaní spravidla riešia procesné otázky, nie vec sama.\nNaopak, v mimosporovom konaní (CMP) sa vo veci samej spravidla rozhoduje uznesením – uznesenie je tam základným meritórnym rozhodnutím.\n\nUznesenie môže byť:\n\nprocesné (typické v CSP),\n\nmeritórne (v CMP, výnimočne aj v CSP – napr. schválenie zmieru, neodkladné opatrenie).\n\n1. Pojem uznesenia\nUznesenie v CSP\nprimárne procesné rozhodnutie,\n\nrieši otázky ako:\n– zastavenie konania,\n– prerušenie konania,\n– zmena žaloby,\n– procesná spôsobilosť,\n– neodkladné opatrenie,\n– rozhodnutie o trovách,\n– vedenie dokazovania.\n\nUznesenie v CMP\nmeritórne rozhodnutie vo veci samej,\n\nnapr. dedičské konanie, konania o maloletých, konania o spôsobilosti na právne úkony.\n\n2. Rozdiely medzi rozsudkom a uznesením\nVyhlasovanie: rozsudok sa spravidla vyhlasuje verejne; uznesenie môže byť vyhlásené aj bez pojednávania.\n\nDoručovanie: rozsudok sa doručuje vždy; uznesenie sa doručuje podľa povahy veci.\n\nPrípustnosť opravného prostriedku: rozsudok – odvolanie je spravidla prípustné; uznesenie – odvolanie len v taxatívnych prípadoch (§ 357 CSP).\n\nPrávoplatnosť a vykonateľnosť: uznesenia o plnení sú vykonateľné rovnako ako rozsudky; procesné uznesenia sú vykonateľné okamžite.\n\n3. Náležitosti uznesenia (primerane podľa § 220 CSP)\nZáhlavie\noznačenie súdu, sudcu/senátu,\n\núčastníci,\n\npredmet konania.\n\nVýrok\npresné rozhodnutie súdu: pripúšťa, zamieta, zastavuje, nariaďuje, prerušuje, odmieta.\n\nOdôvodnenie\nskutkové a právne dôvody rozhodnutia,\n\nmôže byť stručné,\n\nmôže byť vynechané, ak to zákon výslovne umožňuje (napr. niektoré uznesenia VSÚ).\n\nPoučenie o opravnom prostriedku\nči je odvolanie prípustné,\n\nlehota,\n\npríslušný súd.\n\nNedostatočné odôvodnenie spôsobuje nepreskúmateľnosť → môže viesť k zrušeniu uznesenia v odvolacom konaní.\n\n4. Odvolanie proti uzneseniu (§ 357 CSP)\nCSP nepozná „sťažnosť“ – ide o historický termín z OSP.\nDnes je riadnym opravným prostriedkom jednotne odvolanie, aj proti uzneseniam.\n\nOdvolanie je prípustné len v prípadoch uvedených v § 357 CSP, napríklad:\nuznesenie o zastavení konania,\n\nuznesenie o neodkladnom opatrení,\n\nuznesenie o trovách konania,\n\nuznesenie o zmene žaloby,\n\nuznesenie o procesnej spôsobilosti,\n\nďalšie výslovne uvedené prípady.\n\nProti bežným procesným uzneseniam (napr. o vedení dokazovania) odvolanie prípustné nie je.\n\nUznesenia VSÚ (vyšší súdny úradník)\ndoručujú sa účastníkom,\n\nmožno proti nim podať sťažnosť (v CMP a niektorých procesných situáciách),\n\nsťažnosť nemá devolutívny účinok – rozhoduje ten istý súd, nie nadriadený.\n\nZapamätaj si (štátnicové jadro)\nUznesenie v CSP rieši procesné otázky; v CMP sa ním rozhoduje vo veci samej.\n\nNáležitosti: záhlavie, výrok, odôvodnenie, poučenie (primerane podľa § 220 CSP).\n\nCSP nepozná „sťažnosť“ – opravný prostriedok je odvolanie.\n\nOdvolanie proti uzneseniu je prípustné len podľa § 357 CSP.\n\nNepreskúmateľné odôvodnenie → zrušenie uznesenia.\n\nUznesenia VSÚ – sťažnosť, bez devolutívneho účinku.\n\nZdroj:\nCSP (160/2015 Z. z.), § 220, § 357; CMP; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (2016); Števček–Macej–Šramel: Civilné procesné právo (2017).",
   "quiz": [
     {
       "question": "Ako je v civilnom sporovom konaní podľa aktuálneho CSP označovaný riadny opravný prostriedok proti odvolaniahodnému uzneseniu súdu prvej inštancie?",
-      "options": ["Sťažnosť, rovnako ako v starom Občianskom súdnom poriadku", "Odvolanie (§ 357 CSP taxatívne vymenúva uznesenia, proti ktorým je prípustné)", "Dovolanie", "Kasačná sťažnosť"],
+      "options": [
+        "Sťažnosť, rovnako ako v starom Občianskom súdnom poriadku",
+        "Odvolanie (§ 357 CSP taxatívne vymenúva uznesenia, proti ktorým je prípustné)",
+        "Dovolanie",
+        "Kasačná sťažnosť"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súčasný CSP zjednotil terminológiu – opravným prostriedkom je aj proti uzneseniu odvolanie, nie samostatná sťažnosť.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Je proti každému uzneseniu súdu prvej inštancie prípustné odvolanie?",
-      "options": ["Áno, proti každému uzneseniu bez výnimky", "Nie, iba proti uzneseniam taxatívne vymenovaným v § 357 CSP", "Áno, ale iba ak ide o rozsudok, nie uznesenie", "Nie, proti žiadnemu uzneseniu nie je prípustný opravný prostriedok"],
+      "options": [
+        "Áno, proti každému uzneseniu bez výnimky",
+        "Nie, iba proti uzneseniam taxatívne vymenovaným v § 357 CSP",
+        "Áno, ale iba ak ide o rozsudok, nie uznesenie",
+        "Nie, proti žiadnemu uzneseniu nie je prípustný opravný prostriedok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon presne vymenúva, proti ktorým uzneseniam možno podať odvolanie; pri ostatných to vylučuje.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Ako sa spravidla rozhoduje vo veci samej v mimosporovom konaní (CMP)?",
-      "options": ["Vždy rozsudkom rovnako ako v CSP", "Spravidla uznesením, na rozdiel od sporového konania, kde sa vo veci samej rozhoduje rozsudkom", "Nálezom Ústavného súdu SR", "Vždy len neformálnym listom súdu"],
+      "options": [
+        "Vždy rozsudkom rovnako ako v CSP",
+        "Spravidla uznesením, na rozdiel od sporového konania, kde sa vo veci samej rozhoduje rozsudkom",
+        "Nálezom Ústavného súdu SR",
+        "Vždy len neformálnym listom súdu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Práve tu je zásadný rozdiel oproti CSP – v CMP je bežnou formou rozhodnutia vo veci samej uznesenie.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Čo musí obsahovať uznesenie?",
-      "options": ["Iba výrok bez ďalších náležitostí", "Primerane náležitosti podobné rozsudku – výrok, spravidla odôvodnenie a poučenie, v rozsahu podľa povahy veci", "Vždy len odôvodnenie bez výroku", "Podpis všetkých účastníkov konania"],
+      "options": [
+        "Iba výrok bez ďalších náležitostí",
+        "Primerane náležitosti podobné rozsudku – výrok, spravidla odôvodnenie a poučenie, v rozsahu podľa povahy veci",
+        "Vždy len odôvodnenie bez výroku",
+        "Podpis všetkých účastníkov konania"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Rozsah náležitostí uznesenia sa odvíja od jeho povahy a významu, no zásadne zahŕňa výrok, odôvodnenie a poučenie.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Prečo štátnicová otázka historicky hovorí o „sťažnosti“ proti uzneseniu?",
-      "options": ["Lebo pred rekodifikáciou (do roku 2016) Občiansky súdny poriadok skutočne rozlišoval odvolanie (proti rozsudku) a sťažnosť (proti niektorým uzneseniam); dnešný CSP oba prípady zjednotil pod pojem odvolanie", "Lebo ide o preklep a sťažnosť v civilnom konaní nikdy neexistovala", "Lebo sťažnosť môže podať iba prokurátor", "Lebo ide o pojem používaný výlučne v trestnom konaní"],
+      "options": [
+        "Lebo pred rekodifikáciou (do roku 2016) Občiansky súdny poriadok skutočne rozlišoval odvolanie (proti rozsudku) a sťažnosť (proti niektorým uzneseniam); dnešný CSP oba prípady zjednotil pod pojem odvolanie",
+        "Lebo ide o preklep a sťažnosť v civilnom konaní nikdy neexistovala",
+        "Lebo sťažnosť môže podať iba prokurátor",
+        "Lebo ide o pojem používaný výlučne v trestnom konaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Terminológia sa zachovala v tradičných štátnicových okruhoch, hoci CSP ju v roku 2016 zjednotil pod pojem odvolanie.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Uznesenie", "definition": "Rozhodnutie súdu, ktorým sa v sporovom konaní rozhoduje spravidla o procesných otázkach." },
-    { "term": "Uznesenie vo veci samej (CMP)", "definition": "V mimosporovom konaní sa na rozdiel od CSP vo veci samej rozhoduje spravidla uznesením." },
-    { "term": "Opravný prostriedok proti uzneseniu (CSP)", "definition": "Dnes jednotne odvolanie, prípustné len proti uzneseniam vymenovaným v § 357 CSP." },
-    { "term": "Historická „sťažnosť“", "definition": "Pred rokom 2016 rozlišoval OSP odvolanie (proti rozsudku) a sťažnosť (proti niektorým uzneseniam)." },
-    { "term": "Náležitosti uznesenia", "definition": "Výrok, spravidla odôvodnenie a poučenie, primerane podľa povahy veci." }
+    {
+      "term": "Uznesenie",
+      "definition": "Rozhodnutie súdu, ktorým sa v sporovom konaní rozhoduje spravidla o procesných otázkach."
+    },
+    {
+      "term": "Uznesenie vo veci samej (CMP)",
+      "definition": "V mimosporovom konaní sa na rozdiel od CSP vo veci samej rozhoduje spravidla uznesením."
+    },
+    {
+      "term": "Opravný prostriedok proti uzneseniu (CSP)",
+      "definition": "Dnes jednotne odvolanie, prípustné len proti uzneseniam vymenovaným v § 357 CSP."
+    },
+    {
+      "term": "Historická „sťažnosť“",
+      "definition": "Pred rokom 2016 rozlišoval OSP odvolanie (proti rozsudku) a sťažnosť (proti niektorým uzneseniam)."
+    },
+    {
+      "term": "Náležitosti uznesenia",
+      "definition": "Výrok, spravidla odôvodnenie a poučenie, primerane podľa povahy veci."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Napadnutie procesného uznesenia",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Účastník chce napadnúť uznesenie súdu prvej inštancie o zastavení konania.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník chce napadnúť uznesenie súdu prvej inštancie o zastavení konania.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký opravný prostriedok proti nemu použije podľa dnešného CSP?",
-          "options": ["Odvolanie, ak ide o uznesenie uvedené v § 357 CSP", "Sťažnosť, ako podľa starého OSP", "Dovolanie priamo na Najvyšší súd SR"],
+          "options": [
+            "Odvolanie, ak ide o uznesenie uvedené v § 357 CSP",
+            "Sťažnosť, ako podľa starého OSP",
+            "Dovolanie priamo na Najvyšší súd SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zastavenie konania patrí medzi uznesenia, proti ktorým súčasný CSP pripúšťa odvolanie.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo keby chcel účastník napadnúť bežné, zákonom nevymenované procesné uznesenie (napr. o poriadku pri pojednávaní)?",
-          "options": ["Také uznesenie spravidla samostatným opravným prostriedkom napadnúť nemožno", "Vždy môže podať odvolanie bez obmedzenia", "Musí podať dovolanie"],
+          "options": [
+            "Také uznesenie spravidla samostatným opravným prostriedkom napadnúť nemožno",
+            "Vždy môže podať odvolanie bez obmedzenia",
+            "Musí podať dovolanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odvolanie je prípustné len proti uzneseniam vymenovaným v § 357 CSP, nie proti akémukoľvek procesnému uzneseniu.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Rozhodnutie vo veci samej v dedičskom konaní",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Súd v dedičskom konaní (mimosporové konanie podľa CMP) rozhoduje o tom, kto je dedičom a aký majetok mu pripadá.", "options": [], "correct": 0 },
+        {
+          "question": "Súd v dedičskom konaní (mimosporové konanie podľa CMP) rozhoduje o tom, kto je dedičom a aký majetok mu pripadá.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akou formou súd vo veci samej rozhodne?",
-          "options": ["Uznesením, keďže ide o mimosporové konanie podľa CMP", "Rozsudkom, rovnako ako v sporovom konaní", "Nálezom Ústavného súdu SR"],
+          "options": [
+            "Uznesením, keďže ide o mimosporové konanie podľa CMP",
+            "Rozsudkom, rovnako ako v sporovom konaní",
+            "Nálezom Ústavného súdu SR"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. V dedičskom (mimosporovom) konaní sa vo veci samej rozhoduje uznesením.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Čím sa to líši od sporového konania podľa CSP?",
-          "options": ["V CSP sa vo veci samej rozhoduje rozsudkom, v CMP spravidla uznesením", "Niet žiadneho rozdielu, oba kódexy používajú rovnaké označenie", "V CSP sa vždy rozhoduje uznesením"],
+          "options": [
+            "V CSP sa vo veci samej rozhoduje rozsudkom, v CMP spravidla uznesením",
+            "Niet žiadneho rozdielu, oba kódexy používajú rovnaké označenie",
+            "V CSP sa vždy rozhoduje uznesením"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o jeden z typických terminologických a systémových rozdielov medzi CSP a CMP.",
@@ -120,12 +188,61 @@
   "spider": {
     "center": "Uznesenie – procesné rozhodnutie × náležitosti × sťažnosť × odvolanie × rozdiel CSP/CMP",
     "branches": [
-      { "label": "Pojem uznesenia", "leaves": ["rozhodnutie súdu, ktoré spravidla rieši procesné otázky, nie vec samu", "typické: zastavenie konania, trovové rozhodnutie, prerušenie konania, neodkladné opatrenie, zmena žaloby, procesné návrhy strán"] },
-      { "label": "Uznesenie v CSP vs. CMP", "leaves": ["CSP (sporové konanie): uznesenie = procesné rozhodnutie, vec sama sa rieši rozsudkom", "výnimočne je uznesenie meritórne aj v CSP: schválenie zmieru, neodkladné opatrenie", "CMP (mimosporové konanie): uznesenie = meritórne rozhodnutie vo veci samej – dedičské konanie – konania vo veciach maloletých – konanie o spôsobilosti na právne úkony"] },
-      { "label": "Rozdiely medzi rozsudkom a uznesením", "leaves": ["vyhlasovanie: uznesenie sa nemusí vždy vyhlasovať", "doručovanie: nie každé uznesenie sa doručuje", "prípustnosť opravných prostriedkov: odvolanie len v taxatívnych prípadoch", "právoplatnosť a vykonateľnosť: procesné uznesenia sú vykonateľné okamžite"] },
-      { "label": "Náležitosti uznesenia", "leaves": ["Záhlavie: súd, sudca/senát, účastníci, predmet konania", "Výrok: presné rozhodnutie – pripustenie, zamietnutie, nariadenie, zastavenie", "Odôvodnenie: skutkové a právne dôvody; môže byť stručné alebo výnimočne vynechané, ak to zákon umožňuje – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní", "Poučenie o opravnom prostriedku: či je opravný prostriedok prípustný, lehota, príslušný súd"] },
-      { "label": "Sťažnosť proti uzneseniu", "leaves": ["sťažnosť je prostriedok procesnej nápravy", "smeruje proti uzneseniam vydaným vyšším súdnym úradníkom (VSÚ)", "doručujú sa účastníkom", "sťažnosť nemá devolutívny účinok – rozhoduje ten istý súd, nie nadriadený", "umožňuje nápravu na tom istom súde"] },
-      { "label": "Odvolanie proti uzneseniu (§ 357 CSP)", "leaves": ["Odvolanie je prípustné len v taxatívnych prípadoch, napríklad:", "uznesenie o zastavení konania", "uznesenie o neodkladnom opatrení", "uznesenie o trovách konania", "uznesenie o zmene žaloby", "uznesenie o procesnej spôsobilosti", "Proti bežným procesným uzneseniam (napr. o vedení dokazovania) odvolanie prípustné nie je."] }
+      {
+        "label": "Pojem uznesenia",
+        "leaves": [
+          "rozhodnutie súdu, ktoré spravidla rieši procesné otázky, nie vec samu",
+          "typické: zastavenie konania, trovové rozhodnutie, prerušenie konania, neodkladné opatrenie, zmena žaloby, procesné návrhy strán"
+        ]
+      },
+      {
+        "label": "Uznesenie v CSP vs. CMP",
+        "leaves": [
+          "CSP (sporové konanie): uznesenie = procesné rozhodnutie, vec sama sa rieši rozsudkom",
+          "výnimočne je uznesenie meritórne aj v CSP: schválenie zmieru, neodkladné opatrenie",
+          "CMP (mimosporové konanie): uznesenie = meritórne rozhodnutie vo veci samej – dedičské konanie – konania vo veciach maloletých – konanie o spôsobilosti na právne úkony"
+        ]
+      },
+      {
+        "label": "Rozdiely medzi rozsudkom a uznesením",
+        "leaves": [
+          "vyhlasovanie: uznesenie sa nemusí vždy vyhlasovať",
+          "doručovanie: nie každé uznesenie sa doručuje",
+          "prípustnosť opravných prostriedkov: odvolanie len v taxatívnych prípadoch",
+          "právoplatnosť a vykonateľnosť: procesné uznesenia sú vykonateľné okamžite"
+        ]
+      },
+      {
+        "label": "Náležitosti uznesenia",
+        "leaves": [
+          "Záhlavie: súd, sudca/senát, účastníci, predmet konania",
+          "Výrok: presné rozhodnutie – pripustenie, zamietnutie, nariadenie, zastavenie",
+          "Odôvodnenie: skutkové a právne dôvody; môže byť stručné alebo výnimočne vynechané, ak to zákon umožňuje – nedostatočné odôvodnenie → nepreskúmateľnosť → zrušenie v odvolaní",
+          "Poučenie o opravnom prostriedku: či je opravný prostriedok prípustný, lehota, príslušný súd"
+        ]
+      },
+      {
+        "label": "Sťažnosť proti uzneseniu",
+        "leaves": [
+          "sťažnosť je prostriedok procesnej nápravy",
+          "smeruje proti uzneseniam vydaným vyšším súdnym úradníkom (VSÚ)",
+          "doručujú sa účastníkom",
+          "sťažnosť nemá devolutívny účinok – rozhoduje ten istý súd, nie nadriadený",
+          "umožňuje nápravu na tom istom súde"
+        ]
+      },
+      {
+        "label": "Odvolanie proti uzneseniu (§ 357 CSP)",
+        "leaves": [
+          "Odvolanie je prípustné len v taxatívnych prípadoch, napríklad:",
+          "uznesenie o zastavení konania",
+          "uznesenie o neodkladnom opatrení",
+          "uznesenie o trovách konania",
+          "uznesenie o zmene žaloby",
+          "uznesenie o procesnej spôsobilosti",
+          "Proti bežným procesným uzneseniam (napr. o vedení dokazovania) odvolanie prípustné nie je."
+        ]
+      }
     ]
   }
 }

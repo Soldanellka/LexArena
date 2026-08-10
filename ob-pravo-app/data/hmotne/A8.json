@@ -1,7 +1,7 @@
 {
   "id": "8",
   "title": "Zastúpenie v občianskom práve",
-  "summary": "Zastúpenie (§ 22–33a OZ) je konanie zástupcu v mene zastúpeného, pričom právne účinky nastávajú priamo pre zastúpeného. Zákonné zastúpenie: rodičia za maloletých, opatrovník. Zmluvné zastúpenie: na základe plnej moci (§ 31 OZ). Plná moc pre úkony vyžadujúce písomnú formu musí byť písomná. Prokúra – obchodné zastúpenie.",
+  "summary": "Zastúpenie (§ 22–33a OZ) je právny inštitút, pri ktorom zástupca koná v mene a na účet zastúpeného, pričom právne účinky jeho konania nastávajú priamo zastúpenému. Zastúpenie umožňuje subjektom vykonávať právne úkony prostredníctvom iných osôb, najmä ak nemajú spôsobilosť alebo potrebujú odbornú pomoc.\n\nZákonné zastúpenie\nVzniká priamo zo zákona. Typicky ide o:\n– rodičovské zastúpenie maloletých detí,\n– opatrovníka, ktorého ustanoví súd osobe s obmedzenou spôsobilosťou na právne úkony,\n– ďalšie prípady, keď zákon priznáva zastupovanie bez potreby plnej moci.\nZákonný zástupca koná v rozsahu práv a povinností, ktoré mu zákon priznáva.\n\nZmluvné zastúpenie\nVzniká na základe plnej moci (§ 31 OZ), ktorá je prejavom vôle zastúpeného, že splnomocňuje inú osobu konať za neho.\n– Plná moc môže byť ústna, písomná alebo konkludentná, ak zákon nevyžaduje osobitnú formu.\n– Ak právny úkon vyžaduje písomnú formu, plná moc musí byť písomná.  \n– Splnomocnenec je povinný konať v medziach plnej moci; prekročenie oprávnenia môže viesť k neúčinnosti úkonu, pokiaľ ho zastúpený dodatočne neschváli.\n\nProkúra\nProkúra je osobitný druh obchodného zastúpenia, upravený v Obchodnom zákonníku. Udeľuje ju podnikateľ a oprávňuje prokuristu konať vo všetkých právnych úkonoch súvisiacich s prevádzkou podniku, okrem scudzenia a zaťaženia nehnuteľností, ak to nie je výslovne uvedené. Prokúra musí byť zapísaná v obchodnom registri.\n\nÚčinky zastúpenia\nPrávne následky konania zástupcu vznikajú priamo zastúpenému, ak zástupca konal v rámci oprávnenia. Pri prekročení oprávnenia je úkon účinný len po schválení zastúpeným.\n\nZdroje: OZ (40/1964 Zb.), § 22–33a; Obchodný zákonník – prokúra; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je podstatou zastúpenia podľa § 22 OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zastúpenie (§ 22 OZ)", "definition": "Zástupca koná v mene zastúpeného, právne účinky nastávajú priamo zastúpenému." },
-    { "term": "Zákonné zastúpenie", "definition": "Rodičia za maloletých, opatrovník ustanovený súdom." },
-    { "term": "Zmluvné zastúpenie", "definition": "Na základe plnej moci (§ 31 OZ)." },
-    { "term": "Falsus procurator (§ 33 OZ)", "definition": "Osoba konajúca bez splnomocnenia alebo nad jeho rámec; zastúpený nie je viazaný, pokiaľ konanie dodatočne neschváli." },
-    { "term": "Substitúcia (§ 33a OZ)", "definition": "Ďalšia (sub)plná moc, prípustná len ak je výslovne dovolená alebo si ju vyžadujú okolnosti." }
+    {
+      "term": "Zastúpenie (§ 22 OZ)",
+      "definition": "Zástupca koná v mene zastúpeného, právne účinky nastávajú priamo zastúpenému."
+    },
+    {
+      "term": "Zákonné zastúpenie",
+      "definition": "Rodičia za maloletých, opatrovník ustanovený súdom."
+    },
+    {
+      "term": "Zmluvné zastúpenie",
+      "definition": "Na základe plnej moci (§ 31 OZ)."
+    },
+    {
+      "term": "Falsus procurator (§ 33 OZ)",
+      "definition": "Osoba konajúca bez splnomocnenia alebo nad jeho rámec; zastúpený nie je viazaný, pokiaľ konanie dodatočne neschváli."
+    },
+    {
+      "term": "Substitúcia (§ 33a OZ)",
+      "definition": "Ďalšia (sub)plná moc, prípustná len ak je výslovne dovolená alebo si ju vyžadujú okolnosti."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Konanie bez plnomocenstva",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Osoba uzavrie v mene iného zmluvu, hoci od neho nemá žiadnu plnú moc.", "options": [], "correct": 0 },
+        {
+          "question": "Osoba uzavrie v mene iného zmluvu, hoci od neho nemá žiadnu plnú moc.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je zastúpený takouto zmluvou viazaný?",
-          "options": ["Nie, pokiaľ konanie dodatočne neschváli", "Áno, vždy automaticky", "Áno, ale iba ak s tým súhlasí druhá zmluvná strana"],
+          "options": [
+            "Nie, pokiaľ konanie dodatočne neschváli",
+            "Áno, vždy automaticky",
+            "Áno, ale iba ak s tým súhlasí druhá zmluvná strana"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez dodatočného schválenia zastúpený konaním falsus procuratora viazaný nie je.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ako sa označuje osoba, ktorá takto konala bez oprávnenia?",
-          "options": ["Falsus procurator", "Súdny komisár", "Kolízny opatrovník"],
+          "options": [
+            "Falsus procurator",
+            "Súdny komisár",
+            "Kolízny opatrovník"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o klasické latinské označenie osoby konajúcej bez potrebného oprávnenia.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Plná moc na predaj nehnuteľnosti",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vlastník splnomocní zástupcu, aby v jeho mene predal nehnuteľnosť.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník splnomocní zástupcu, aby v jeho mene predal nehnuteľnosť.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akú formu musí mať táto plná moc?",
-          "options": ["Písomnú, keďže aj samotná kúpna zmluva o nehnuteľnosti vyžaduje písomnú formu", "Postačuje ústna forma bez ďalšieho", "Formu si zástupca môže zvoliť ľubovoľne"],
+          "options": [
+            "Písomnú, keďže aj samotná kúpna zmluva o nehnuteľnosti vyžaduje písomnú formu",
+            "Postačuje ústna forma bez ďalšieho",
+            "Formu si zástupca môže zvoliť ľubovoľne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Podľa § 31 ods. 4 OZ musí mať plná moc rovnakú formu ako úkon, na ktorý sa vzťahuje.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Prečo sa vyžaduje rovnaká forma plnej moci ako forma samotného úkonu?",
-          "options": ["Aby sa zabezpečila rovnaká miera právnej istoty pri overení rozsahu oprávnenia zástupcu", "Aby sa zjednodušila práca notára", "Nie je na to žiadny osobitný dôvod, ide len o formalitu bez významu"],
+          "options": [
+            "Aby sa zabezpečila rovnaká miera právnej istoty pri overení rozsahu oprávnenia zástupcu",
+            "Aby sa zjednodušila práca notára",
+            "Nie je na to žiadny osobitný dôvod, ide len o formalitu bez významu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zhoda foriem chráni právnu istotu druhej strany aj samotného splnomocniteľa.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Zastúpenie v občianskom práve (konanie v mene a na účet zastúpeného)",
     "branches": [
-      { "label": "Pojem zastúpenia (§ 22–33a OZ)", "leaves": ["zástupca koná v mene a na účet zastúpeného", "právne účinky vznikajú priamo zastúpenému", "umožňuje konať osobám bez spôsobilosti alebo s potrebou odbornej pomoci", "základný inštitút civilného práva"] },
-      { "label": "Zákonné zastúpenie", "leaves": ["vzniká priamo zo zákona", "rodičia zastupujú maloletých", "opatrovník osoby s obmedzenou spôsobilosťou", "ďalšie zákonné situácie bez plnej moci", "rozsah určuje zákon alebo rozhodnutie súdu"] },
-      { "label": "Zmluvné zastúpenie (plná moc, § 31 OZ)", "leaves": ["vzniká na základe prejavu vôle zastúpeného", "formy plnej moci: ústna, písomná, konkludentná", "ak úkon vyžaduje písomnú formu, plná moc musí byť písomná", "splnomocnenec koná v medziach plnej moci", "prekročenie oprávnenia: úkon je účinný len po schválení zastúpeným"] },
-      { "label": "Prokúra (Obchodný zákonník)", "leaves": ["osobitný druh obchodného zastúpenia", "udeľuje ju podnikateľ", "prokurista môže konať vo všetkých úkonoch súvisiacich s prevádzkou podniku", "výnimka: scudzenie a zaťaženie nehnuteľností, ak nie je výslovne uvedené", "musí byť zapísaná v obchodnom registri"] },
-      { "label": "Účinky zastúpenia", "leaves": ["právne následky konania zástupcu vznikajú priamo zastúpenému", "ak zástupca koná v rámci oprávnenia, úkon je účinný", "pri prekročení oprávnenia je úkon účinný až po schválení", "chráni právnu istotu a umožňuje flexibilné právne konanie"] },
-      { "label": "Význam pre prax", "leaves": ["umožňuje konať osobám bez spôsobilosti", "zjednodušuje právne úkony v bežnom živote aj podnikaní", "kľúčové pre zmluvy, rodinné právo, obchodné právo", "chráni zastúpeného pred konaním mimo oprávnenia"] }
+      {
+        "label": "Pojem zastúpenia (§ 22–33a OZ)",
+        "leaves": [
+          "zástupca koná v mene a na účet zastúpeného",
+          "právne účinky vznikajú priamo zastúpenému",
+          "umožňuje konať osobám bez spôsobilosti alebo s potrebou odbornej pomoci",
+          "základný inštitút civilného práva"
+        ]
+      },
+      {
+        "label": "Zákonné zastúpenie",
+        "leaves": [
+          "vzniká priamo zo zákona",
+          "rodičia zastupujú maloletých",
+          "opatrovník osoby s obmedzenou spôsobilosťou",
+          "ďalšie zákonné situácie bez plnej moci",
+          "rozsah určuje zákon alebo rozhodnutie súdu"
+        ]
+      },
+      {
+        "label": "Zmluvné zastúpenie (plná moc, § 31 OZ)",
+        "leaves": [
+          "vzniká na základe prejavu vôle zastúpeného",
+          "formy plnej moci: ústna, písomná, konkludentná",
+          "ak úkon vyžaduje písomnú formu, plná moc musí byť písomná",
+          "splnomocnenec koná v medziach plnej moci",
+          "prekročenie oprávnenia: úkon je účinný len po schválení zastúpeným"
+        ]
+      },
+      {
+        "label": "Prokúra (Obchodný zákonník)",
+        "leaves": [
+          "osobitný druh obchodného zastúpenia",
+          "udeľuje ju podnikateľ",
+          "prokurista môže konať vo všetkých úkonoch súvisiacich s prevádzkou podniku",
+          "výnimka: scudzenie a zaťaženie nehnuteľností, ak nie je výslovne uvedené",
+          "musí byť zapísaná v obchodnom registri"
+        ]
+      },
+      {
+        "label": "Účinky zastúpenia",
+        "leaves": [
+          "právne následky konania zástupcu vznikajú priamo zastúpenému",
+          "ak zástupca koná v rámci oprávnenia, úkon je účinný",
+          "pri prekročení oprávnenia je úkon účinný až po schválení",
+          "chráni právnu istotu a umožňuje flexibilné právne konanie"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "umožňuje konať osobám bez spôsobilosti",
+          "zjednodušuje právne úkony v bežnom živote aj podnikaní",
+          "kľúčové pre zmluvy, rodinné právo, obchodné právo",
+          "chráni zastúpeného pred konaním mimo oprávnenia"
+        ]
+      }
     ]
   }
 }

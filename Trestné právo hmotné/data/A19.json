@@ -2,7 +2,11 @@
   "id": "A19",
   "title": "Trestné činy proti slobode",
   "schemaVersion": "1.1",
-  "tags": ["sloboda", "obmedzovanie osobnej slobody", "vydieranie"],
+  "tags": [
+    "sloboda",
+    "obmedzovanie osobnej slobody",
+    "vydieranie"
+  ],
   "theory": [
     {
       "heading": "Obmedzovanie osobnej slobody",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Čo je obmedzovanie osobnej slobody?",
-      "options": ["Zákonné zadržanie", "Protiprávne bránenie pohybu", "Náhodné zdržanie"],
+      "options": [
+        "Zákonné zadržanie",
+        "Protiprávne bránenie pohybu",
+        "Náhodné zdržanie"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – ide o protiprávne bránenie pohybu.",
       "explanation_incorrect": "Nie – zákonné zadržanie nie je trestné."
     },
     {
       "question": "Čo je vydieranie?",
-      "options": ["Náhodná hádka", "Nútenie hrozbou", "Ponuka pomoci"],
+      "options": [
+        "Náhodná hádka",
+        "Nútenie hrozbou",
+        "Ponuka pomoci"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – vydieranie je nútenie hrozbou.",
       "explanation_incorrect": "Nie – vydieranie je hrozba."
     },
     {
       "question": "Čo je únos?",
-      "options": ["Dobrovoľné odvedenie osoby", "Protiprávne premiestnenie osoby", "Zadržanie políciou"],
+      "options": [
+        "Dobrovoľné odvedenie osoby",
+        "Protiprávne premiestnenie osoby",
+        "Zadržanie políciou"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – únos je protiprávne premiestnenie.",
       "explanation_incorrect": "Nie – polícia koná zákonne."
     },
     {
       "question": "Ktorý čin je najzávažnejší?",
-      "options": ["Vydieranie", "Únos", "Obmedzovanie slobody"],
+      "options": [
+        "Vydieranie",
+        "Únos",
+        "Obmedzovanie slobody"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – únos je najzávažnejší.",
       "explanation_incorrect": "Nie – únos je najzávažnejší."
     },
     {
       "question": "Čo je hrozba ujmy?",
-      "options": ["Ponuka", "Nátlak", "Náhodný výrok"],
+      "options": [
+        "Ponuka",
+        "Nátlak",
+        "Náhodný výrok"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – hrozba je nátlak.",
       "explanation_incorrect": "Nie – hrozba je nátlak."
     }
   ],
   "tiles": [
-    { "term": "Obmedzovanie slobody", "definition": "Protiprávne bránenie pohybu." },
-    { "term": "Vydieranie", "definition": "Nútenie hrozbou násilia." },
-    { "term": "Únos", "definition": "Protiprávne premiestnenie osoby." },
-    { "term": "Hrozba", "definition": "Nátlak na inú osobu." },
-    { "term": "Násilie", "definition": "Použitie fyzickej sily." }
+    {
+      "term": "Obmedzovanie slobody",
+      "definition": "Protiprávne bránenie pohybu."
+    },
+    {
+      "term": "Vydieranie",
+      "definition": "Nútenie hrozbou násilia."
+    },
+    {
+      "term": "Únos",
+      "definition": "Protiprávne premiestnenie osoby."
+    },
+    {
+      "term": "Hrozba",
+      "definition": "Nátlak na inú osobu."
+    },
+    {
+      "term": "Násilie",
+      "definition": "Použitie fyzickej sily."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Ide o obmedzovanie slobody?",
-          "options": ["Áno", "Nie", "Len ak bola tma"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bola tma"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o obmedzovanie.",
           "explanation_incorrect": "Nie – je to obmedzovanie."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Ide o vydieranie?",
-          "options": ["Áno", "Nie", "Len ak boli informácie nepravdivé"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak boli informácie nepravdivé"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o vydieranie.",
           "explanation_incorrect": "Nie – je to vydieranie."
@@ -108,10 +155,41 @@
   "spider": {
     "center": "TČ proti slobode",
     "branches": [
-      { "label": "Chránený záujem", "leaves": ["Osobná sloboda – autonómia a voľný pohyb človeka", "Slobodné rozhodovanie – vôľa bez protiprávneho nátlaku"] },
-      { "label": "Obmedzovanie osobnej slobody", "leaves": ["Podstata – protiprávne bránenie vo voľnom pohybe", "Formy – zadržiavanie proti vôli, bránenie v odchode, uzavretie v priestore", "Prekážky – fyzické aj psychické", "Znak – zásah do slobody pohybu bez potreby ďalšieho motívu"] },
-      { "label": "Vydieranie", "leaves": ["Podstata – nútenie konať, opomenúť alebo znášať", "Prostriedky – hrozba násilia, hrozba inej ťažkej ujmy, protiprávny nátlak", "Cieľ – prinútiť obeť konať proti svojej vôli", "Kontext – často spojené s organizovanou kriminalitou"] },
-      { "label": "Únos", "leaves": ["Podstata – protiprávne premiestnenie alebo zadržiavanie osoby", "Znaky – odňatie z prostredia, premiestnenie, zadržiavanie proti vôli", "Kontext – často s nátlakom, vydieraním či násilím", "Závažnosť – jeden z najzávažnejších zásahov do slobody"] }
+      {
+        "label": "Chránený záujem",
+        "leaves": [
+          "Osobná sloboda – autonómia a voľný pohyb človeka",
+          "Slobodné rozhodovanie – vôľa bez protiprávneho nátlaku"
+        ]
+      },
+      {
+        "label": "Obmedzovanie osobnej slobody",
+        "leaves": [
+          "Podstata – protiprávne bránenie vo voľnom pohybe",
+          "Formy – zadržiavanie proti vôli, bránenie v odchode, uzavretie v priestore",
+          "Prekážky – fyzické aj psychické",
+          "Znak – zásah do slobody pohybu bez potreby ďalšieho motívu"
+        ]
+      },
+      {
+        "label": "Vydieranie",
+        "leaves": [
+          "Podstata – nútenie konať, opomenúť alebo znášať",
+          "Prostriedky – hrozba násilia, hrozba inej ťažkej ujmy, protiprávny nátlak",
+          "Cieľ – prinútiť obeť konať proti svojej vôli",
+          "Kontext – často spojené s organizovanou kriminalitou"
+        ]
+      },
+      {
+        "label": "Únos",
+        "leaves": [
+          "Podstata – protiprávne premiestnenie alebo zadržiavanie osoby",
+          "Znaky – odňatie z prostredia, premiestnenie, zadržiavanie proti vôli",
+          "Kontext – často s nátlakom, vydieraním či násilím",
+          "Závažnosť – jeden z najzávažnejších zásahov do slobody"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti slobode zahŕňajú konania, ktorými páchateľ protiprávne zasahuje do osobnej slobody človeka.\nChránia autonómiu, voľný pohyb a slobodné rozhodovanie jednotlivca.\n\nV slovenskom Trestnom zákone sú upravené v Trestné činy proti slobode a ľudskej dôstojnosti (Osobitná časť TZ).\nMedzi základné patria: obmedzovanie osobnej slobody, vydieranie, únos.\n\n1. Obmedzovanie osobnej slobody (§ over)\nObmedzovanie osobnej slobody spočíva v protiprávnom bránení osobe vo voľnom pohybe.\n\nFormy konania:\n– zadržiavanie osoby proti jej vôli,\n– bránenie v odchode,\n– uzavretie osoby v priestore,\n– fyzické alebo psychické prekážky brániace slobodnému pohybu.\n\nPodstatou je zásah do fyzickej slobody pohybu, bez potreby ďalšieho motívu.\n\n2. Vydieranie (§ over)\nVydieranie je nútenie iného konania, opomenutia alebo znášania pomocou:\n– hrozby násilia,\n– hrozby inej ťažkej ujmy,\n– alebo iného protiprávneho nátlaku.\n\nCieľom páchateľa je prinútiť obeť konať proti svojej vôli.\nIde o závažný trestný čin, často spojený s organizovanou kriminalitou.\n\n3. Únos (§ over)\nÚnos je protiprávne premiestnenie alebo zadržiavanie osoby.\n\nPodstatné znaky:\n– odňatie osoby z jej prostredia,\n– premiestnenie na iné miesto,\n– zadržiavanie proti vôli,\n– často sprevádzané nátlakom, vydieraním alebo násilím.\n\nÚnos je jeden z najzávažnejších zásahov do osobnej slobody a dôstojnosti.\n\nZapamätaj si (štátnicové jadro)\n– Obmedzovanie osobnej slobody = protiprávne bránenie vo voľnom pohybe.\n– Vydieranie = nútenie konania hrozbou násilia alebo ujmy.\n– Únos = protiprávne premiestnenie alebo zadržiavanie osoby.\n– Trestné činy proti slobode chránia autonómiu, voľný pohyb a slobodné rozhodovanie.\n\nZdroj (overené)\n– Trestný zákon č. 300/2005 Z. z. – osobitná časť (Trestné činy proti slobode a ľudskej dôstojnosti)\n– Burda – Čentéš – Šramel: Trestné právo hmotné – Osobitná časť  \n– Justičná revue – výklad trestných činov proti slobode\n– EUR-Lex – ochrana základných práv v trestnom konaní"
 }

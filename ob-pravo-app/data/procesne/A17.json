@@ -2,13 +2,23 @@
   "id": "17",
   "title": "Pojednávanie – jeho príprava a priebeh",
   "schemaVersion": "1.1",
-  "tags": ["pojednávanie", "ústnosť", "verejnosť", "vylúčenie verejnosti", "odročenie pojednávania"],
-  "summary": "Pojednávanie je ústredným miestom prejednania veci pred súdom. V príprave pojednávania súd predvolá strany v primeranej lehote, aby sa mohli na pojednávanie riadne pripraviť, a poučí ich o následkoch nedostavenia sa. Priebeh pojednávania ovláda zásada ústnosti a verejnosti – strany prednášajú svoje návrhy a vyjadrenia ústne a verejnosť má právo byť prítomná, ak zákon neustanoví výnimku. Súd môže verejnosť z pojednávania vylúčiť najmä vtedy, ak by jej prítomnosť ohrozila utajovanú skutočnosť, mravnosť alebo bezpečnosť osôb (§ 210 CSP); vyhlásenie rozsudku je spravidla vždy verejné, aj keby verejnosť bola z priebehu pojednávania vylúčená.\n\nAk sa riadne a včas predvolaná strana na pojednávanie bez ospravedlnenia nedostaví, súd môže za splnenia zákonných podmienok konať a rozhodnúť aj v jej neprítomnosti, aby sa predišlo účelovému mareniu konania. Odročenie pojednávania je prípustné len z dôležitého dôvodu (napríklad zdravotné dôvody strany, potreba doplniť dokazovanie), nie svojvoľne na žiadosť strany bez ospravedlnenia.\n\nZapamätaj si:\n- Príprava pojednávania: predvolanie v primeranej lehote s poučením o následkoch neúčasti.\n- Zásada ústnosti a verejnosti ovláda priebeh pojednávania, ak zákon neustanoví výnimku.\n- Vylúčenie verejnosti (§ 210 CSP) je možné pri ohrození utajovaných skutočností, mravnosti alebo bezpečnosti osôb.\n- Súd môže za zákonom stanovených podmienok konať v neprítomnosti riadne predvolanej strany.\n- Odročenie pojednávania je prípustné len z dôležitého dôvodu."
-  ,
+  "tags": [
+    "pojednávanie",
+    "ústnosť",
+    "verejnosť",
+    "vylúčenie verejnosti",
+    "odročenie pojednávania"
+  ],
+  "summary": "Pojednávanie je ústredným miestom prejednania veci pred súdom.\nV sporovom konaní je štandardom, že súd rozhoduje po vykonaní pojednávania, ktoré je základným procesným priestorom na dokazovanie, vyjadrenia strán a smerovanie k rozhodnutiu vo veci samej.\n\nNenariadenie pojednávania v sporovom konaní (ak nie sú splnené zákonné výnimky) je vadou konania.\n\n1. Príprava pojednávania\nSúd predvolá strany v primeranej lehote, aby sa mohli riadne pripraviť.\n\nPredvolanie obsahuje:\nčas a miesto pojednávania,\n\npoučenie o následkoch nedostavenia sa,\n\nupozornenie na povinnosť ospravedlniť neúčasť.\n\nSúd zároveň zabezpečí prítomnosť:\n\nsvedkov,\n\nznalcov,\n\ntlmočníkov,\n\nďalších osôb potrebných na vykonanie dokazovania.\n\nPredvolanie musí byť doručené tak, aby bola zaručená reálna možnosť účasti.\n\n2. Priebeh pojednávania\nPojednávanie ovláda zásada ústnosti a verejnosti:\n\nstrany prednášajú svoje návrhy a vyjadrenia ústne,\n\nverejnosť má právo byť prítomná, ak zákon neustanoví výnimku.\n\nVylúčenie verejnosti (CSP)\nSúd môže verejnosť vylúčiť, ak by jej prítomnosť ohrozila:\n\nutajovanú skutočnosť,\n\nmravnosť,\n\nbezpečnosť osôb.\n\nVyhlásenie rozsudku je spravidla vždy verejné, aj keď bolo pojednávanie neverejné.\n\nTechnický záznam\nPriebeh pojednávania sa zaznamenáva technickým zariadením; zápisnica sa spisuje len ako podporný záznam.\n\n3. Neprítomnosť strany\nAk sa riadne a včas predvolaná strana bez ospravedlnenia nedostaví, súd môže:\n\nkonať v jej neprítomnosti,\n\nvykonať dokazovanie,\n\nrozhodnúť vo veci samej.\n\nCieľom je zabrániť účelovému mareniu konania.\n\n4. Odročenie pojednávania\nOdročenie je možné len z dôležitého dôvodu, napr.:\n\nzdravotné dôvody,\n\npotreba doplniť dokazovanie,\n\nobjektívne prekážky brániace účasti.\n\nSvojvoľné alebo neodôvodnené žiadosti sa nepripúšťajú.\nOdročenie je výnimočné — konanie má byť hospodárne a rozhodnuté spravidla na jednom pojednávaní.\n\n5. Výnimky: rozhodnutie bez pojednávania (§ 177 ods. 2 CSP)\nSúd môže rozhodnúť bez pojednávania, ak to zákon pripúšťa:\n\nrozsudok pre uznanie,\n\nrozsudok pre zmeškanie (kontumačný),\n\nrozsudok pre vzdanie sa nároku,\n\nrozkazné konanie (platobný rozkaz, európsky platobný rozkaz).\n\nIde o skrátené konania, kde sa pojednávanie nenariaďuje.\n\nZapamätaj si (štátnicové jadro)\nPredvolanie musí byť v primeranej lehote a s poučením o následkoch neúčasti.\n\nPojednávanie ovláda zásada ústnosti a verejnosti.\n\nVylúčenie verejnosti (CSP) pri ohrození utajovaných skutočností, mravnosti alebo bezpečnosti.\n\nSúd môže konať v neprítomnosti riadne predvolanej strany.\n\nOdročenie len z dôležitého dôvodu.\n\nVýnimky bez pojednávania: uznanie, zmeškanie, vzdanie sa, rozkazné konanie.\n\nZdroj:\nCSP (160/2015 Z. z.), § 177 ods. 2, § 210; Ústava SR čl. 48; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Aká lehota musí byť dodržaná pri predvolávaní strán na pojednávanie?",
-      "options": ["Ľubovoľná, zákon lehotu neupravuje", "Primeraná lehota na prípravu ustanovená zákonom", "Vždy presne 24 hodín pred pojednávaním", "Lehota neexistuje, stačí ústne oznámenie deň vopred"],
+      "options": [
+        "Ľubovoľná, zákon lehotu neupravuje",
+        "Primeraná lehota na prípravu ustanovená zákonom",
+        "Vždy presne 24 hodín pred pojednávaním",
+        "Lehota neexistuje, stačí ústne oznámenie deň vopred"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Strany musia byť predvolané v primeranej lehote, aby sa mohli na pojednávanie riadne pripraviť.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Aká zásada platí pre priebeh pojednávania, ak zákon neustanoví výnimku?",
-      "options": ["Zásada tajnosti", "Zásada ústnosti a verejnosti", "Zásada výlučne písomného prejednania", "Zásada anonymity strán"],
+      "options": [
+        "Zásada tajnosti",
+        "Zásada ústnosti a verejnosti",
+        "Zásada výlučne písomného prejednania",
+        "Zásada anonymity strán"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pojednávanie sa spravidla koná ústne a verejne, pokiaľ zákon neustanoví výnimku.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Kedy môže súd vylúčiť verejnosť z pojednávania?",
-      "options": ["Nikdy", "Ak by verejné prejednanie ohrozilo napríklad utajovanú skutočnosť, mravnosť alebo bezpečnosť osôb (§ 210 CSP)", "Len na žiadosť žalobcu bez akéhokoľvek odôvodnenia", "Len ak ide o spor s cudzím prvkom"],
+      "options": [
+        "Nikdy",
+        "Ak by verejné prejednanie ohrozilo napríklad utajovanú skutočnosť, mravnosť alebo bezpečnosť osôb (§ 210 CSP)",
+        "Len na žiadosť žalobcu bez akéhokoľvek odôvodnenia",
+        "Len ak ide o spor s cudzím prvkom"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Vylúčenie verejnosti je viazané na konkrétne, zákonom vymedzené dôvody.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Čo sa stane, ak sa riadne predvolaná strana bez ospravedlnenia nedostaví na pojednávanie?",
-      "options": ["Pojednávanie sa vždy automaticky odročí", "Súd môže za splnenia zákonných podmienok konať v jej neprítomnosti", "Konanie sa bez ďalšieho zastaví", "Súd musí čakať na jej vyjadrenie bez časového obmedzenia"],
+      "options": [
+        "Pojednávanie sa vždy automaticky odročí",
+        "Súd môže za splnenia zákonných podmienok konať v jej neprítomnosti",
+        "Konanie sa bez ďalšieho zastaví",
+        "Súd musí čakať na jej vyjadrenie bez časového obmedzenia"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Neprítomnosť riadne predvolanej strany bez ospravedlnenia nebráni súdu konať a rozhodnúť za zákonom stanovených podmienok.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Z akého dôvodu môže súd pojednávanie odročiť?",
-      "options": ["Bez uvedenia dôvodu na žiadosť ktorejkoľvek strany", "Len z dôležitého dôvodu (napr. zdravotné dôvody, potreba doplniť dôkazy)", "Len ak si to želá žalovaný bez ospravedlnenia", "Odročenie zákon vôbec nepripúšťa"],
+      "options": [
+        "Bez uvedenia dôvodu na žiadosť ktorejkoľvek strany",
+        "Len z dôležitého dôvodu (napr. zdravotné dôvody, potreba doplniť dôkazy)",
+        "Len ak si to želá žalovaný bez ospravedlnenia",
+        "Odročenie zákon vôbec nepripúšťa"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odročenie pojednávania je viazané na existenciu dôležitého dôvodu, nie na jednoduchú žiadosť strany.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Príprava pojednávania", "definition": "Predvolanie strán v primeranej lehote s poučením o následkoch nedostavenia sa." },
-    { "term": "Zásada ústnosti a verejnosti", "definition": "Pojednávanie prebieha spravidla ústne a verejne, ak zákon neustanoví výnimku." },
-    { "term": "Vylúčenie verejnosti (§ 210 CSP)", "definition": "Možné pri ohrození utajovaných skutočností, mravnosti alebo bezpečnosti osôb." },
-    { "term": "Konanie v neprítomnosti strany", "definition": "Súd môže za zákonom stanovených podmienok konať aj bez riadne predvolanej, no neprítomnej strany." },
-    { "term": "Odročenie pojednávania", "definition": "Prípustné len z dôležitého dôvodu, nie svojvoľne." }
+    {
+      "term": "Príprava pojednávania",
+      "definition": "Predvolanie strán v primeranej lehote s poučením o následkoch nedostavenia sa."
+    },
+    {
+      "term": "Zásada ústnosti a verejnosti",
+      "definition": "Pojednávanie prebieha spravidla ústne a verejne, ak zákon neustanoví výnimku."
+    },
+    {
+      "term": "Vylúčenie verejnosti (§ 210 CSP)",
+      "definition": "Možné pri ohrození utajovaných skutočností, mravnosti alebo bezpečnosti osôb."
+    },
+    {
+      "term": "Konanie v neprítomnosti strany",
+      "definition": "Súd môže za zákonom stanovených podmienok konať aj bez riadne predvolanej, no neprítomnej strany."
+    },
+    {
+      "term": "Odročenie pojednávania",
+      "definition": "Prípustné len z dôležitého dôvodu, nie svojvoľne."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neprítomnosť žalovaného",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Žalovaný bol riadne a včas predvolaný, no na pojednávanie sa bez ospravedlnenia a bez uvedenia dôvodu nedostavil.", "options": [], "correct": 0 },
+        {
+          "question": "Žalovaný bol riadne a včas predvolaný, no na pojednávanie sa bez ospravedlnenia a bez uvedenia dôvodu nedostavil.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Musí súd pojednávanie odročiť?",
-          "options": ["Nie, za splnenia zákonných podmienok môže konať v jeho neprítomnosti", "Áno, vždy musí odročiť", "Áno, kým sa žalovaný sám nevyjadrí"],
+          "options": [
+            "Nie, za splnenia zákonných podmienok môže konať v jeho neprítomnosti",
+            "Áno, vždy musí odročiť",
+            "Áno, kým sa žalovaný sám nevyjadrí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neospravedlnená neprítomnosť riadne predvolanej strany nebráni súdu konať za splnenia zákonných podmienok.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Prečo zákon takýto postup pripúšťa?",
-          "options": ["Aby sa zabránilo účelovému zmareniu pojednávania neúčasťou strany", "Aby sa žalovanému uľahčila obrana", "Aby súd ušetril na nákladoch konania"],
+          "options": [
+            "Aby sa zabránilo účelovému zmareniu pojednávania neúčasťou strany",
+            "Aby sa žalovanému uľahčila obrana",
+            "Aby súd ušetril na nákladoch konania"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmyslom úpravy je zabrániť tomu, aby neprítomnosť strany bez dôvodu blokovala priebeh konania.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Návrh na vylúčenie verejnosti",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "V spore, kde by verejné prejednanie mohlo odhaliť obchodné tajomstvo strany, navrhne táto strana vylúčenie verejnosti z pojednávania.", "options": [], "correct": 0 },
+        {
+          "question": "V spore, kde by verejné prejednanie mohlo odhaliť obchodné tajomstvo strany, navrhne táto strana vylúčenie verejnosti z pojednávania.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže súd takémuto návrhu vyhovieť?",
-          "options": ["Áno, ak sú splnené zákonné dôvody na vylúčenie verejnosti podľa § 210 CSP", "Nie, verejnosť nemožno nikdy vylúčiť", "Áno, ale iba na základe súhlasu všetkých prítomných divákov"],
+          "options": [
+            "Áno, ak sú splnené zákonné dôvody na vylúčenie verejnosti podľa § 210 CSP",
+            "Nie, verejnosť nemožno nikdy vylúčiť",
+            "Áno, ale iba na základe súhlasu všetkých prítomných divákov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak sú splnené zákonné dôvody, súd môže verejnosť z pojednávania vylúčiť.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Znamená vylúčenie verejnosti aj to, že sa rozsudok nevyhlási verejne?",
-          "options": ["Vyhlásenie rozsudku je spravidla vždy verejné, aj keď bola verejnosť vylúčená z pojednávania", "Áno, aj rozsudok sa v takom prípade vyhlasuje neverejne bez výnimky", "Rozsudok sa v takom prípade nevyhlasuje vôbec"],
+          "options": [
+            "Vyhlásenie rozsudku je spravidla vždy verejné, aj keď bola verejnosť vylúčená z pojednávania",
+            "Áno, aj rozsudok sa v takom prípade vyhlasuje neverejne bez výnimky",
+            "Rozsudok sa v takom prípade nevyhlasuje vôbec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vylúčenie verejnosti sa týka priebehu pojednávania, vyhlásenie rozsudku zostáva spravidla verejné.",
@@ -120,12 +189,55 @@
   "spider": {
     "center": "Pojednávanie – príprava × priebeh × verejnosť × neprítomnosť × odročenie",
     "branches": [
-      { "label": "Príprava pojednávania", "leaves": ["súd zabezpečuje, aby sa pojednávanie mohlo riadne uskutočniť", "predvolanie musí obsahovať: – čas a miesto pojednávania – poučenie o následkoch nedostavenia sa – upozornenie na povinnosť ospravedlniť neúčasť", "súd zabezpečí prítomnosť svedkov, znalcov, tlmočníkov a ďalších osôb potrebných na dokazovanie", "určuje sa, koho prítomnosť je potrebná na pojednávaní"] },
-      { "label": "Priebeh pojednávania", "leaves": ["zásada ústnosti – strany prednášajú návrhy a vyjadrenia ústne", "zásada verejnosti – verejnosť môže byť prítomná, ak zákon neustanoví výnimku", "vykonáva sa dokazovanie", "prerokúvajú sa procesné návrhy strán", "prednášajú sa právne argumenty", "konanie smeruje k rozhodnutiu vo veci samej"] },
-      { "label": "Nenariadenie pojednávania", "leaves": ["ak súd pojednávanie nenariadi tam, kde ho nariadiť mal → vada konania", "výnimky, kedy netreba pojednávanie (§ 177 ods. 2 CSP): – rozsudok pre uznanie – rozsudok pre zmeškanie (kontumačný) – rozsudok pre vzdanie sa nároku – rozkazné konanie (platobný rozkaz, európsky platobný rozkaz)"] },
-      { "label": "Vylúčenie verejnosti", "leaves": ["súd môže verejnosť vylúčiť, ak by jej prítomnosť ohrozila: – utajovanú skutočnosť – mravnosť – bezpečnosť osôb", "vyhlásenie rozsudku je spravidla vždy verejné, aj keď bolo pojednávanie neverejné"] },
-      { "label": "Neprítomnosť strany", "leaves": ["ak sa riadne a včas predvolaná strana bez ospravedlnenia nedostaví, súd môže konať a rozhodnúť v jej neprítomnosti", "neúčasť nebráni vykonaniu dokazovania, ak sú splnené zákonné podmienky", "cieľ: zabrániť účelovému mareniu konania"] },
-      { "label": "Odročenie pojednávania", "leaves": ["možné len z dôležitého dôvodu – zdravotné dôvody – potreba doplniť dokazovanie – objektívne prekážky brániace účasti", "svojvoľné alebo neodôvodnené žiadosti sa nepripúšťajú"] }
+      {
+        "label": "Príprava pojednávania",
+        "leaves": [
+          "súd zabezpečuje, aby sa pojednávanie mohlo riadne uskutočniť",
+          "predvolanie musí obsahovať: – čas a miesto pojednávania – poučenie o následkoch nedostavenia sa – upozornenie na povinnosť ospravedlniť neúčasť",
+          "súd zabezpečí prítomnosť svedkov, znalcov, tlmočníkov a ďalších osôb potrebných na dokazovanie",
+          "určuje sa, koho prítomnosť je potrebná na pojednávaní"
+        ]
+      },
+      {
+        "label": "Priebeh pojednávania",
+        "leaves": [
+          "zásada ústnosti – strany prednášajú návrhy a vyjadrenia ústne",
+          "zásada verejnosti – verejnosť môže byť prítomná, ak zákon neustanoví výnimku",
+          "vykonáva sa dokazovanie",
+          "prerokúvajú sa procesné návrhy strán",
+          "prednášajú sa právne argumenty",
+          "konanie smeruje k rozhodnutiu vo veci samej"
+        ]
+      },
+      {
+        "label": "Nenariadenie pojednávania",
+        "leaves": [
+          "ak súd pojednávanie nenariadi tam, kde ho nariadiť mal → vada konania",
+          "výnimky, kedy netreba pojednávanie (§ 177 ods. 2 CSP): – rozsudok pre uznanie – rozsudok pre zmeškanie (kontumačný) – rozsudok pre vzdanie sa nároku – rozkazné konanie (platobný rozkaz, európsky platobný rozkaz)"
+        ]
+      },
+      {
+        "label": "Vylúčenie verejnosti",
+        "leaves": [
+          "súd môže verejnosť vylúčiť, ak by jej prítomnosť ohrozila: – utajovanú skutočnosť – mravnosť – bezpečnosť osôb",
+          "vyhlásenie rozsudku je spravidla vždy verejné, aj keď bolo pojednávanie neverejné"
+        ]
+      },
+      {
+        "label": "Neprítomnosť strany",
+        "leaves": [
+          "ak sa riadne a včas predvolaná strana bez ospravedlnenia nedostaví, súd môže konať a rozhodnúť v jej neprítomnosti",
+          "neúčasť nebráni vykonaniu dokazovania, ak sú splnené zákonné podmienky",
+          "cieľ: zabrániť účelovému mareniu konania"
+        ]
+      },
+      {
+        "label": "Odročenie pojednávania",
+        "leaves": [
+          "možné len z dôležitého dôvodu – zdravotné dôvody – potreba doplniť dokazovanie – objektívne prekážky brániace účasti",
+          "svojvoľné alebo neodôvodnené žiadosti sa nepripúšťajú"
+        ]
+      }
     ]
   }
 }

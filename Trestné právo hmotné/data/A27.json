@@ -2,7 +2,12 @@
   "id": "A27",
   "title": "Korupcia",
   "schemaVersion": "1.1",
-  "tags": ["korupcia", "úplatok", "podplácanie", "verejný činiteľ"],
+  "tags": [
+    "korupcia",
+    "úplatok",
+    "podplácanie",
+    "verejný činiteľ"
+  ],
   "theory": [
     {
       "heading": "Prijímanie úplatku",
@@ -20,36 +25,71 @@
   "quiz": [
     {
       "question": "Čo je úplatok?",
-      "options": ["Len peniaze", "Akákoľvek neoprávnená výhoda", "Darček do 10 €"],
+      "options": [
+        "Len peniaze",
+        "Akákoľvek neoprávnená výhoda",
+        "Darček do 10 €"
+      ],
       "correct": 1
     },
     {
       "question": "Kto môže spáchať prijímanie úplatku?",
-      "options": ["Len verejný činiteľ", "Každý", "Len podnikateľ"],
+      "options": [
+        "Len verejný činiteľ",
+        "Každý",
+        "Len podnikateľ"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je podplácanie?",
-      "options": ["Ponuka úplatku", "Náhodné darovanie", "Bežná pomoc"],
+      "options": [
+        "Ponuka úplatku",
+        "Náhodné darovanie",
+        "Bežná pomoc"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je chráneným objektom korupcie?",
-      "options": ["Majetok štátu", "Dôvera v nestrannosť verejnej moci", "Zdravie"],
+      "options": [
+        "Majetok štátu",
+        "Dôvera v nestrannosť verejnej moci",
+        "Zdravie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý čin je korupčný?",
-      "options": ["Podplácanie", "Krádež", "Výtržníctvo"],
+      "options": [
+        "Podplácanie",
+        "Krádež",
+        "Výtržníctvo"
+      ],
       "correct": 0
     }
   ],
   "tiles": [
-    { "term": "Úplatok", "definition": "Neoprávnená výhoda poskytnutá za protislužbu." },
-    { "term": "Podplácanie", "definition": "Poskytnutie alebo ponuka úplatku." },
-    { "term": "Prijímanie úplatku", "definition": "Žiadanie alebo prijatie úplatku." },
-    { "term": "Nepriama korupcia", "definition": "Sprostredkovanie úplatku." },
-    { "term": "Verejný činiteľ", "definition": "Osoba vykonávajúca verejnú moc." }
+    {
+      "term": "Úplatok",
+      "definition": "Neoprávnená výhoda poskytnutá za protislužbu."
+    },
+    {
+      "term": "Podplácanie",
+      "definition": "Poskytnutie alebo ponuka úplatku."
+    },
+    {
+      "term": "Prijímanie úplatku",
+      "definition": "Žiadanie alebo prijatie úplatku."
+    },
+    {
+      "term": "Nepriama korupcia",
+      "definition": "Sprostredkovanie úplatku."
+    },
+    {
+      "term": "Verejný činiteľ",
+      "definition": "Osoba vykonávajúca verejnú moc."
+    }
   ],
   "cases": [
     {
@@ -84,10 +124,40 @@
   "spider": {
     "center": "Korupcia (§§ 328–336b)",
     "branches": [
-      { "label": "Prijímanie úplatku (§§ 328–330)", "leaves": ["Podstata – prijme, žiada alebo si dá sľúbiť úplatok", "Súvislosť – výkon právomoci, obstarávanie veci všeobecného záujmu, porušenie povinností", "Charakter – pasívna korupcia", "Sadzby – vyššie pri verejnom činiteľovi a značnom rozsahu"] },
-      { "label": "Podplácanie (§§ 332–334)", "leaves": ["Podstata – poskytne, ponúkne alebo sľúbi úplatok", "Cieľ – konanie či zdržanie sa konania v rozpore s povinnosťami", "Charakter – aktívna korupcia", "Verejný činiteľ – osobitná SP (§ 334)"] },
-      { "label": "Nepriama korupcia (§ 336)", "leaves": ["Podstata – úplatok za pôsobenie vplyvom na verejného činiteľa", "Obe strany – prostredník aj ten, kto vplyv kupuje"] },
-      { "label": "Spoločné znaky", "leaves": ["Vzťah dvoch strán – prijímateľ a poskytovateľ", "Poškodený – verejný záujem a dôvera v právny štát", "Rovnosť – narúša rovnosť účastníkov právnych vzťahov"] }
+      {
+        "label": "Prijímanie úplatku (§§ 328–330)",
+        "leaves": [
+          "Podstata – prijme, žiada alebo si dá sľúbiť úplatok",
+          "Súvislosť – výkon právomoci, obstarávanie veci všeobecného záujmu, porušenie povinností",
+          "Charakter – pasívna korupcia",
+          "Sadzby – vyššie pri verejnom činiteľovi a značnom rozsahu"
+        ]
+      },
+      {
+        "label": "Podplácanie (§§ 332–334)",
+        "leaves": [
+          "Podstata – poskytne, ponúkne alebo sľúbi úplatok",
+          "Cieľ – konanie či zdržanie sa konania v rozpore s povinnosťami",
+          "Charakter – aktívna korupcia",
+          "Verejný činiteľ – osobitná SP (§ 334)"
+        ]
+      },
+      {
+        "label": "Nepriama korupcia (§ 336)",
+        "leaves": [
+          "Podstata – úplatok za pôsobenie vplyvom na verejného činiteľa",
+          "Obe strany – prostredník aj ten, kto vplyv kupuje"
+        ]
+      },
+      {
+        "label": "Spoločné znaky",
+        "leaves": [
+          "Vzťah dvoch strán – prijímateľ a poskytovateľ",
+          "Poškodený – verejný záujem a dôvera v právny štát",
+          "Rovnosť – narúša rovnosť účastníkov právnych vzťahov"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Korupcia je súbor trestných činov, pri ktorých dochádza k poskytovaniu, prijímaniu alebo sprostredkovaniu úplatku s cieľom ovplyvniť výkon právomoci, rozhodovanie alebo konanie osoby. Základné formy sú prijímanie úplatku, podplácanie a nepriama korupcia.\n\nKorupcia je upravená v Trestnom zákone č. 300/2005 Z. z., v ôsmom oddiele osobitnej časti (§ 328 – § 336b). Ide o trestné činy, ktoré narúšajú integritu verejnej moci, rovnosť účastníkov právnych vzťahov a dôveru občanov v právny štát. Korupcia je vždy vzťah dvoch strán – prijímateľa úplatku a poskytovateľa úplatku.\n\n1. Prijímanie úplatku\n(§ 328 – § 330 TZ)\n\nPrijímanie úplatku je konanie, pri ktorom páchateľ:\n\nprijme,\n\nžiada,\n\nalebo si dá sľúbiť úplatok,\n\na to v súvislosti s výkonom právomoci, obstarávaním veci všeobecného záujmu alebo porušením povinností vyplývajúcich zo zamestnania či funkcie.\n\nPodľa § 329 TZ ide o trestný čin, ak osoba prijme úplatok pri obstarávaní veci všeobecného záujmu. Trestná sadzba je 1 až 5 rokov, pri verejnom činiteľovi 3 až 8 rokov, pri značnom rozsahu až 10 rokov. \n\n2. Podplácanie\n(§ 332 – § 334 TZ)\n\nPodplácanie je konanie, pri ktorom páchateľ:\n\nposkytne,\n\nponúkne,\n\nalebo sľúbi úplatok inej osobe,\n\naby konala alebo sa zdržala konania v rozpore so svojimi povinnosťami.\n\nPodľa § 334 TZ ide o podplácanie verejného činiteľa, ak je úplatok poskytnutý v súvislosti s výkonom jeho právomoci. Trestná sadzba je 1 až 5 rokov, pri veľkom rozsahu až 10 rokov. \n\n3. Nepriama korupcia\n(§ 336 TZ)\n\nNepriama korupcia je konanie prostredníka, ktorý:\n\npýta alebo prijme úplatok, aby svojím vplyvom pôsobil na verejného činiteľa alebo inú osobu,\n\nalebo ponúkne či poskytne úplatok za takéto ovplyvňovanie.\n\nPodľa § 336 TZ ide o trestný čin, ak osoba prijme úplatok za to, že bude svojím vplyvom pôsobiť na výkon právomoci verejného činiteľa alebo na obstarávanie veci všeobecného záujmu. \n\nZapamätaj si (štátnicové jadro)\n– Prijímanie úplatku = pasívna korupcia, prijatie, žiadanie alebo sľub úplatku.\n– Podplácanie = aktívna korupcia, poskytnutie, ponuka alebo sľub úplatku.\n– Nepriama korupcia = sprostredkovanie úplatku cez vplyv alebo ovplyvňovanie.\n– Korupcia je vždy vzťah dvoch strán, poškodeným je verejný záujem.\n– Trestné sadzby sú vysoké, najmä pri verejných činiteľoch a veľkom rozsahu.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 328–336b (Slov-Lex)\n– § 329 TZ – prijímanie úplatku   \n– § 334 TZ – podplácanie verejného činiteľa zakonvkapse.skzakonvkapse.sk. § 334 Podplácanie verejného činiteľa a tresty · Zákony SR  \n– § 336 TZ – nepriama korupcia"
 }

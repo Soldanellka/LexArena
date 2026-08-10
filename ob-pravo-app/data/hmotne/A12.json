@@ -1,7 +1,7 @@
 {
   "id": "12",
   "title": "Vlastnícke právo – pojem, obsah, nadobúdanie, ochrana",
-  "summary": "Vlastnícke právo je najúplnejšie vecné právo (§ 123 OZ). Obsah: ius possidendi (držať), ius utendi (užívať), ius fruendi (požívať plody), ius disponendi (nakladať). Nadobudnutie: zmluva + vklad do KN (nehnuteľnosti), vydržanie – 10 rokov pre nehnuteľnosti (§ 134 OZ). Ochrana: reivindikačná žaloba (§ 126 OZ), negatórna žaloba (§ 127 OZ).",
+  "summary": "Vlastnícke právo je najúplnejšie vecné právo, ktoré poskytuje vlastníkovi najširšie právne panstvo nad vecou (§ 123 OZ). Je absolútnym právom pôsobiacim erga omnes – každý je povinný rešpektovať vlastnícke postavenie oprávneného.\n\nObsah vlastníckeho práva\nVlastnícke právo zahŕňa tradičné oprávnenia:\n– ius possidendi – právo vec držať,\n– ius utendi – právo vec užívať,\n– ius fruendi – právo požívať plody a úžitky,\n– ius disponendi – právo s vecou nakladať (previesť, zaťažiť, zničiť).\n\nVlastník môže svoje právo obmedziť zmluvne alebo ho obmedzuje zákon (napr. susedské práva, ochrana životného prostredia).\n\nNadobúdanie vlastníckeho práva\nVlastníctvo možno nadobudnúť rôznymi spôsobmi:\n\n1. Zmluvou  \nPri nehnuteľnostiach je potrebné:\n– uzavretie zmluvy,\n– vklad do katastra nehnuteľností, ktorý má konštitutívny účinok.\n\n2. Vydržaním (§ 134 OZ)  \nVydržanie je originárny spôsob nadobudnutia vlastníctva. Podmienky:\n– oprávnená držba,\n– dobrá viera držiteľa,\n– nepretržitá držba počas zákonom stanovenej doby.\nLehota: 10 rokov pri nehnuteľnostiach, 3 roky pri hnuteľných veciach.\n\n3. Dedičstvom  \nVlastníctvo prechádza na dediča smrťou poručiteľa.\n\n4. Rozhodnutím orgánu verejnej moci  \nNapr. v rámci exekúcie, konkurzu či vyvlastnenia.\n\nOchrana vlastníckeho práva\nOZ poskytuje vlastníkom silnú súdnu ochranu:\n\n– Reivindikačná žaloba (§ 126 OZ)  \nŽaloba na vydanie veci proti tomu, kto ju neoprávnene drží.\n\n– Negatórna žaloba (§ 127 OZ)  \nŽaloba na odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov (napr. imisie, obťažovanie).\n\nOchrana vlastníctva je absolútna a súdy ju poskytujú aj proti zásahom verejnej moci, ak nie sú zákonné.\n\nZdroje: OZ (40/1964 Zb.), § 123, § 126, § 127, § 134; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo vyjadruje ius disponendi ako súčasť vlastníckeho práva?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Ius disponendi", "definition": "Právo nakladať s vecou – previesť, zaťažiť alebo zničiť ju." },
-    { "term": "Vydržanie nehnuteľnosti (§ 134 OZ)", "definition": "10-ročná nepretržitá oprávnená dobromyseľná držba." },
-    { "term": "Reivindikačná žaloba (§ 126 OZ)", "definition": "Žaloba vlastníka na vydanie veci od neoprávneného držiteľa." },
-    { "term": "Negatórna žaloba (§ 127 OZ)", "definition": "Žaloba na zdržanie sa neoprávnených zásahov do vlastníckeho práva." },
-    { "term": "Vklad do katastra", "definition": "Konštitutívny úkon, ktorým vlastníctvo nehnuteľnosti prechádza na nadobúdateľa." }
+    {
+      "term": "Ius disponendi",
+      "definition": "Právo nakladať s vecou – previesť, zaťažiť alebo zničiť ju."
+    },
+    {
+      "term": "Vydržanie nehnuteľnosti (§ 134 OZ)",
+      "definition": "10-ročná nepretržitá oprávnená dobromyseľná držba."
+    },
+    {
+      "term": "Reivindikačná žaloba (§ 126 OZ)",
+      "definition": "Žaloba vlastníka na vydanie veci od neoprávneného držiteľa."
+    },
+    {
+      "term": "Negatórna žaloba (§ 127 OZ)",
+      "definition": "Žaloba na zdržanie sa neoprávnených zásahov do vlastníckeho práva."
+    },
+    {
+      "term": "Vklad do katastra",
+      "definition": "Konštitutívny úkon, ktorým vlastníctvo nehnuteľnosti prechádza na nadobúdateľa."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Kúpa bez vkladu do katastra",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Kupujúci podpíše kúpnu zmluvu o nehnuteľnosti a zaplatí celú kúpnu cenu, no vklad vlastníckeho práva do katastra ešte nebol vykonaný.", "options": [], "correct": 0 },
+        {
+          "question": "Kupujúci podpíše kúpnu zmluvu o nehnuteľnosti a zaplatí celú kúpnu cenu, no vklad vlastníckeho práva do katastra ešte nebol vykonaný.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je už kupujúci vlastníkom nehnuteľnosti?",
-          "options": ["Nie, vlastníctvo prechádza až vkladom do katastra nehnuteľností", "Áno, vlastníctvo prešlo už podpisom zmluvy", "Áno, vlastníctvo prešlo zaplatením kúpnej ceny"],
+          "options": [
+            "Nie, vlastníctvo prechádza až vkladom do katastra nehnuteľností",
+            "Áno, vlastníctvo prešlo už podpisom zmluvy",
+            "Áno, vlastníctvo prešlo zaplatením kúpnej ceny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri nehnuteľnostiach má konštitutívny účinok až vklad do katastra, nie samotný podpis zmluvy či zaplatenie ceny.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo je teda kúpna zmluva vo vzťahu k prevodu vlastníctva nehnuteľnosti?",
-          "options": ["Iba titul (právny dôvod), vklad do katastra je modus (spôsob nadobudnutia)", "Sama osebe postačujúci a jediný predpoklad prevodu", "Bezvýznamná formalita bez právneho významu"],
+          "options": [
+            "Iba titul (právny dôvod), vklad do katastra je modus (spôsob nadobudnutia)",
+            "Sama osebe postačujúci a jediný predpoklad prevodu",
+            "Bezvýznamná formalita bez právneho významu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmluva zakladá titul, ale k samotnému prevodu (modu) dochádza až vkladom do katastra.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Neoprávnené zadržiavanie veci",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Osoba odmieta vrátiť vlastníkovi jeho bicykel, hoci naň nemá žiadny právny nárok.", "options": [], "correct": 0 },
+        {
+          "question": "Osoba odmieta vrátiť vlastníkovi jeho bicykel, hoci naň nemá žiadny právny nárok.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akou žalobou sa vlastník bicykla domôže jeho vydania?",
-          "options": ["Reivindikačnou (vindikačnou) žalobou", "Negatórnou žalobou", "Žalobou o náhradu škody bez možnosti vydania veci"],
+          "options": [
+            "Reivindikačnou (vindikačnou) žalobou",
+            "Negatórnou žalobou",
+            "Žalobou o náhradu škody bez možnosti vydania veci"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Reivindikačná žaloba smeruje priamo na vydanie veci neoprávneným držiteľom.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čím sa táto žaloba líši od negatórnej žaloby?",
-          "options": ["Reivindikačná žaloba smeruje na vydanie veci, negatórna na zdržanie sa rušenia bez vydania veci", "Obe žaloby majú úplne rovnaký účel", "Negatórna žaloba slúži výlučne na vydanie hnuteľných vecí"],
+          "options": [
+            "Reivindikačná žaloba smeruje na vydanie veci, negatórna na zdržanie sa rušenia bez vydania veci",
+            "Obe žaloby majú úplne rovnaký účel",
+            "Negatórna žaloba slúži výlučne na vydanie hnuteľných vecí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o dve odlišné žaloby na ochranu vlastníctva s odlišným petitom.",
@@ -142,11 +181,54 @@
   "spider": {
     "center": "Vlastnícke právo – pojem, obsah, nadobúdanie, ochrana (najúplnejšie vecné právo, pôsobí erga omnes)",
     "branches": [
-      { "label": "Pojem vlastníckeho práva (§ 123 OZ)", "leaves": ["najúplnejšie vecné právo", "absolútne právo pôsobiace voči každému", "každý musí rešpektovať vlastnícke postavenie", "najširšie právne panstvo nad vecou"] },
-      { "label": "Obsah vlastníckeho práva", "leaves": ["ius possidendi: právo vec držať", "ius utendi: právo vec užívať", "ius fruendi: právo požívať plody a úžitky", "ius disponendi: právo nakladať (previesť, zaťažiť, zničiť)", "obmedzenia: zákon (susedské práva, životné prostredie) alebo zmluva"] },
-      { "label": "Nadobúdanie vlastníctva", "leaves": ["zmluvou: pri nehnuteľnostiach uzavretie zmluvy a vklad do katastra (konštitutívny účinok)", "vydržaním (§ 134 OZ): originárny spôsob, oprávnená držba, dobrá viera, nepretržitá držba", "lehoty vydržania: 10 rokov nehnuteľnosti, 3 roky hnuteľné veci", "dedičstvom: vlastníctvo prechádza smrťou poručiteľa", "rozhodnutím orgánu verejnej moci: exekúcia, konkurz, vyvlastnenie"] },
-      { "label": "Ochrana vlastníckeho práva", "leaves": ["reivindikačná žaloba (§ 126 OZ): žaloba na vydanie veci proti tomu, kto ju neoprávnene drží", "negatórna žaloba (§ 127 OZ): odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov", "typicky: imisie, obťažovanie, zásahy do pozemku", "ochrana vlastníctva je absolútna", "súdy chránia vlastníka aj proti zásahom verejnej moci, ak nie sú zákonné"] },
-      { "label": "Význam pre prax", "leaves": ["základ nehnuteľností, podnikania, majetkových vzťahov", "vysoká právna istota: kataster, verejnosť údajov", "silná súdna ochrana", "kľúčové pre spory o držbu, hranice pozemkov, imisie, dedičstvo"] }
+      {
+        "label": "Pojem vlastníckeho práva (§ 123 OZ)",
+        "leaves": [
+          "najúplnejšie vecné právo",
+          "absolútne právo pôsobiace voči každému",
+          "každý musí rešpektovať vlastnícke postavenie",
+          "najširšie právne panstvo nad vecou"
+        ]
+      },
+      {
+        "label": "Obsah vlastníckeho práva",
+        "leaves": [
+          "ius possidendi: právo vec držať",
+          "ius utendi: právo vec užívať",
+          "ius fruendi: právo požívať plody a úžitky",
+          "ius disponendi: právo nakladať (previesť, zaťažiť, zničiť)",
+          "obmedzenia: zákon (susedské práva, životné prostredie) alebo zmluva"
+        ]
+      },
+      {
+        "label": "Nadobúdanie vlastníctva",
+        "leaves": [
+          "zmluvou: pri nehnuteľnostiach uzavretie zmluvy a vklad do katastra (konštitutívny účinok)",
+          "vydržaním (§ 134 OZ): originárny spôsob, oprávnená držba, dobrá viera, nepretržitá držba",
+          "lehoty vydržania: 10 rokov nehnuteľnosti, 3 roky hnuteľné veci",
+          "dedičstvom: vlastníctvo prechádza smrťou poručiteľa",
+          "rozhodnutím orgánu verejnej moci: exekúcia, konkurz, vyvlastnenie"
+        ]
+      },
+      {
+        "label": "Ochrana vlastníckeho práva",
+        "leaves": [
+          "reivindikačná žaloba (§ 126 OZ): žaloba na vydanie veci proti tomu, kto ju neoprávnene drží",
+          "negatórna žaloba (§ 127 OZ): odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov",
+          "typicky: imisie, obťažovanie, zásahy do pozemku",
+          "ochrana vlastníctva je absolútna",
+          "súdy chránia vlastníka aj proti zásahom verejnej moci, ak nie sú zákonné"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "základ nehnuteľností, podnikania, majetkových vzťahov",
+          "vysoká právna istota: kataster, verejnosť údajov",
+          "silná súdna ochrana",
+          "kľúčové pre spory o držbu, hranice pozemkov, imisie, dedičstvo"
+        ]
+      }
     ]
   }
 }

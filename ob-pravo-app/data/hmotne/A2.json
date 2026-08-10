@@ -1,7 +1,7 @@
 {
   "id": "2",
   "title": "Základné zásady občianskeho práva",
-  "summary": "Základné zásady OZ vyjadrujú hodnotový základ právneho poriadku. Ide o: zásadu zákonnosti, ochrany fyzickej osoby, autonómie vôle, rovnosti subjektov, ochrany dobrých mravov (§ 39 OZ), zákazu zneužívania práv (šikany) a subsidiarity OZ. Zásady sú záväzné pri výklade a aplikácii práva.",
+  "summary": "Základné zásady občianskeho práva predstavujú hodnotový základ súkromnoprávnej úpravy a slúžia ako interpretačné pravidlá pri výklade a aplikácii Občianskeho zákonníka. Vyjadrujú charakter súkromného práva, jeho orientáciu na autonómiu vôle, rovnosť subjektov a ochranu slabšej strany.\n\nMedzi kľúčové zásady patria:\n\n1. Zásada zákonnosti  \nSubjekty občianskoprávnych vzťahov môžu konať v medziach zákona, pričom právne následky nastávajú len na základe právnych skutočností upravených právnym poriadkom.\n\n2. Zásada rovnosti subjektov  \nÚčastníci občianskoprávnych vzťahov vystupujú v právnej rovnosti; štát nevystupuje ako nositeľ verejnej moci, ale ako subjekt súkromného práva.\n\n3. Autonómia vôle a zmluvná sloboda  \nSubjekty si môžu slobodne upraviť svoje vzťahy, pokiaľ tým neporušia zákon, dobré mravy alebo verejný poriadok.\n\n4. Ochrana fyzickej osoby a osobnostných práv  \nOZ chráni dôstojnosť, česť, súkromie, meno a prejavy osobnosti (§ 11 a nasl. OZ).\n\n5. Zásada ochrany dobrých mravov  \nPrávne úkony odporujúce dobrým mravom sú neplatné (§ 39 OZ). Ide o korektív autonómie vôle.\n\n6. Zákaz zneužívania práv (zákaz šikany)  \nVýkon práva nesmie smerovať k úmyselnému poškodeniu iného; šikanózny výkon práva nepožíva právnu ochranu.\n\n7. Subsidiarita Občianskeho zákonníka  \nOZ sa použije ako všeobecný predpis súkromného práva, ak osobitný zákon neustanovuje inak.\n\nZásady majú normatívny význam – sú záväzné pri výklade právnych noriem, pri posudzovaní platnosti právnych úkonov a pri rozhodovaní súdov.\n\nZdroje: OZ (40/1964 Zb.), judikatúra NS SR a ÚS SR, Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár",
   "quiz": [
     {
       "question": "Čo vyjadruje zásada autonómie vôle v OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Autonómia vôle", "definition": "Strany môžu slobodne upraviť svoje vzťahy v medziach zákona." },
-    { "term": "Zásada rovnosti subjektov", "definition": "Účastníci občianskoprávnych vzťahov majú rovné postavenie, žiadny nie je nadriadený druhému." },
-    { "term": "Dobré mravy (§ 3 ods. 1, § 39 OZ)", "definition": "Normy mravného správania uznávané spoločnosťou, chránené sankciou neplatnosti." },
-    { "term": "Zákaz zneužitia práva (šikana)", "definition": "Výkon práva nesmie smerovať k poškodeniu iného bez oprávneného záujmu." },
-    { "term": "Subsidiarita OZ", "definition": "OZ sa uplatní tam, kde osobitný predpis danú otázku neupravuje." }
+    {
+      "term": "Autonómia vôle",
+      "definition": "Strany môžu slobodne upraviť svoje vzťahy v medziach zákona."
+    },
+    {
+      "term": "Zásada rovnosti subjektov",
+      "definition": "Účastníci občianskoprávnych vzťahov majú rovné postavenie, žiadny nie je nadriadený druhému."
+    },
+    {
+      "term": "Dobré mravy (§ 3 ods. 1, § 39 OZ)",
+      "definition": "Normy mravného správania uznávané spoločnosťou, chránené sankciou neplatnosti."
+    },
+    {
+      "term": "Zákaz zneužitia práva (šikana)",
+      "definition": "Výkon práva nesmie smerovať k poškodeniu iného bez oprávneného záujmu."
+    },
+    {
+      "term": "Subsidiarita OZ",
+      "definition": "OZ sa uplatní tam, kde osobitný predpis danú otázku neupravuje."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Zmluvná podmienka v rozpore s dobrými mravmi",
       "difficulty": "stredná",
       "steps": [
-        { "question": "V zmluve o pôžičke si veriteľ dohodol úrok vo výške niekoľkonásobne prevyšujúcej obvyklú trhovú sadzbu, výrazne znevýhodňujúci dlžníka.", "options": [], "correct": 0 },
+        {
+          "question": "V zmluve o pôžičke si veriteľ dohodol úrok vo výške niekoľkonásobne prevyšujúcej obvyklú trhovú sadzbu, výrazne znevýhodňujúci dlžníka.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže byť takéto dojednanie posúdené ako neplatné?",
-          "options": ["Áno, ak odporuje dobrým mravom podľa § 39 OZ", "Nie, zmluvná voľnosť je vždy absolútna", "Nie, výšku úroku môže veriteľ určiť ľubovoľne bez obmedzenia"],
+          "options": [
+            "Áno, ak odporuje dobrým mravom podľa § 39 OZ",
+            "Nie, zmluvná voľnosť je vždy absolútna",
+            "Nie, výšku úroku môže veriteľ určiť ľubovoľne bez obmedzenia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dojednanie hrubo odporujúce dobrým mravom je podľa § 39 OZ neplatné.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ktorá zásada OZ je týmto dojednaním porušená?",
-          "options": ["Zásada dobrých mravov, príp. zákaz zneužitia práva", "Zásada rovnosti pred zákonom v trestnom konaní", "Zásada verejnosti súdneho konania"],
+          "options": [
+            "Zásada dobrých mravov, príp. zákaz zneužitia práva",
+            "Zásada rovnosti pred zákonom v trestnom konaní",
+            "Zásada verejnosti súdneho konania"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o priamy rozpor s dobrými mravmi, prípadne zneužitie ekonomicky silnejšieho postavenia veriteľa.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Výkon práva na úkor suseda",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vlastník pozemku vykonáva svoje vlastnícke právo výlučne s cieľom obťažovať a poškodiť suseda, bez akéhokoľvek vlastného úžitku.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník pozemku vykonáva svoje vlastnícke právo výlučne s cieľom obťažovať a poškodiť suseda, bez akéhokoľvek vlastného úžitku.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa takéto konanie posúdi?",
-          "options": ["Ako zakázané zneužitie práva (šikana) podľa § 3 ods. 1 OZ", "Ako riadny a bezvýhradný výkon vlastníckeho práva", "Ako trestný čin bez občianskoprávnych dôsledkov"],
+          "options": [
+            "Ako zakázané zneužitie práva (šikana) podľa § 3 ods. 1 OZ",
+            "Ako riadny a bezvýhradný výkon vlastníckeho práva",
+            "Ako trestný čin bez občianskoprávnych dôsledkov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Výkon práva výlučne na poškodenie iného je zakázaným zneužitím práva.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Aký je základ tejto zásady?",
-          "options": ["Výkon práva nesmie byť na úkor práv a oprávnených záujmov iných bez vlastného oprávneného účelu", "Vlastník má absolútne a ničím neobmedzené právo nakladať so svojou vecou", "Sused musí znášať akýkoľvek zásah do svojich práv bez námietky"],
+          "options": [
+            "Výkon práva nesmie byť na úkor práv a oprávnených záujmov iných bez vlastného oprávneného účelu",
+            "Vlastník má absolútne a ničím neobmedzené právo nakladať so svojou vecou",
+            "Sused musí znášať akýkoľvek zásah do svojich práv bez námietky"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákaz šikany chráni iných pred výkonom práva, ktorý nemá iný účel než ich poškodiť.",
@@ -142,14 +181,71 @@
   "spider": {
     "center": "Základné zásady občianskeho práva (hodnotový základ súkromného práva, interpretačné pravidlá OZ)",
     "branches": [
-      { "label": "Zásada zákonnosti", "leaves": ["konanie v medziach zákona", "právne následky len z právnych skutočností", "právna istota"] },
-      { "label": "Rovnosť subjektov", "leaves": ["rovnaké postavenie účastníkov", "štát ako subjekt, nie autorita", "zákaz diskriminácie"] },
-      { "label": "Autonómia vôle a zmluvná sloboda", "leaves": ["slobodné formovanie vzťahov", "limity: zákon, dobré mravy, verejný poriadok", "pacta sunt servanda"] },
-      { "label": "Ochrana osobnosti", "leaves": ["dôstojnosť, česť, súkromie", "meno a prejavy osobnosti", "§ 11 a nasl. OZ"] },
-      { "label": "Ochrana dobrých mravov", "leaves": ["právne úkony odporujúce dobrým mravom sú neplatné", "korektív autonómie vôle", "judikatúra NS SR"] },
-      { "label": "Zákaz zneužívania práv", "leaves": ["výkon práva nesmie poškodiť iného", "šikanózny výkon práva nepožíva ochranu", "princíp proporcionality"] },
-      { "label": "Subsidiarita OZ", "leaves": ["OZ ako všeobecný predpis súkromného práva", "použitie pri absencii osobitnej úpravy", "význam pri výklade"] },
-      { "label": "Normatívny význam zásad", "leaves": ["zásady usmerňujú výklad právnych noriem", "pomáhajú pri posudzovaní platnosti právnych úkonov", "usmerňujú rozhodovanie súdov", "dopĺňajú medzery v zákone"] }
+      {
+        "label": "Zásada zákonnosti",
+        "leaves": [
+          "konanie v medziach zákona",
+          "právne následky len z právnych skutočností",
+          "právna istota"
+        ]
+      },
+      {
+        "label": "Rovnosť subjektov",
+        "leaves": [
+          "rovnaké postavenie účastníkov",
+          "štát ako subjekt, nie autorita",
+          "zákaz diskriminácie"
+        ]
+      },
+      {
+        "label": "Autonómia vôle a zmluvná sloboda",
+        "leaves": [
+          "slobodné formovanie vzťahov",
+          "limity: zákon, dobré mravy, verejný poriadok",
+          "pacta sunt servanda"
+        ]
+      },
+      {
+        "label": "Ochrana osobnosti",
+        "leaves": [
+          "dôstojnosť, česť, súkromie",
+          "meno a prejavy osobnosti",
+          "§ 11 a nasl. OZ"
+        ]
+      },
+      {
+        "label": "Ochrana dobrých mravov",
+        "leaves": [
+          "právne úkony odporujúce dobrým mravom sú neplatné",
+          "korektív autonómie vôle",
+          "judikatúra NS SR"
+        ]
+      },
+      {
+        "label": "Zákaz zneužívania práv",
+        "leaves": [
+          "výkon práva nesmie poškodiť iného",
+          "šikanózny výkon práva nepožíva ochranu",
+          "princíp proporcionality"
+        ]
+      },
+      {
+        "label": "Subsidiarita OZ",
+        "leaves": [
+          "OZ ako všeobecný predpis súkromného práva",
+          "použitie pri absencii osobitnej úpravy",
+          "význam pri výklade"
+        ]
+      },
+      {
+        "label": "Normatívny význam zásad",
+        "leaves": [
+          "zásady usmerňujú výklad právnych noriem",
+          "pomáhajú pri posudzovaní platnosti právnych úkonov",
+          "usmerňujú rozhodovanie súdov",
+          "dopĺňajú medzery v zákone"
+        ]
+      }
     ]
   }
 }

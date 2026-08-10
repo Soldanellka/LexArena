@@ -1,7 +1,7 @@
 {
   "id": "28",
   "title": "Dedenie zo závetu",
-  "summary": "Závet (§ 476-480a OZ) je jednostranný, odvolateľný a osobný právny úkon. Forma: vlastnoručný (celý ručne písaný + podpis), alografický (inak písaný + 2 svedkovia) alebo notárska zápisnica. Neopomenuteľní dediči: maloleté deti (celý zákonný podiel), plnoleté (1/2 zákonného podielu) - § 479 OZ.",
+  "summary": "Závet podľa § 476–480a OZ je jednostranný, odvolateľný a osobný právny úkon, ktorým poručiteľ prejavuje svoju poslednú vôľu o tom, komu má pripadnúť jeho majetok. Závet má prednosť pred zákonným dedičstvom, ak je platný a účinný.\n\nFormy závetu\n1. Vlastnoručný závet (holografný)  \n– Poručiteľ ho musí celý napísať vlastnou rukou a podpísať.\n– Nepotrebuje svedkov.\n\n2. Alografický závet  \n– Závet je napísaný inou osobou alebo technicky (počítač, písací stroj).\n– Poručiteľ ho musí vlastnoručne podpísať.\n– Vyžaduje sa prítomnosť dvoch svedkov, ktorí potvrdia, že ide o prejav poslednej vôle.\n\n3. Závet vo forme notárskej zápisnice  \n– Najbezpečnejšia forma.\n– Spisuje ho notár a ukladá do centrálneho registra závetov.\n\nPodstata závetu\n– Závet je osobný – nemožno ho urobiť prostredníctvom zástupcu.\n– Je odvolateľný – poručiteľ ho môže kedykoľvek zmeniť alebo zrušiť.\n– Musí byť urobený slobodne, vážne, určito a zrozumiteľne.\n\nNeopomenuteľní dediči (§ 479 OZ)\nPoručiteľ nemôže úplne vylúčiť svoje deti bez dôvodu. Ide o tzv. povinný podiel:\n\n– Maloleté deti musia dostať celý svoj zákonný podiel.\n– Plnoleté deti musia dostať aspoň polovicu svojho zákonného podielu.\n\nAk poručiteľ neopomenuteľného dediča opomenie, závet je v tejto časti relatívne neplatný.\n\nObsah závetu\nZávet môže obsahovať:\n– určenie dedičov,\n– určenie podielov,\n– odkaz (legát),\n– podmienky a príkazy, ak nie sú v rozpore so zákonom.\n\nNeplatnosť závetu\nZávet je neplatný, ak:\n– nebola dodržaná forma,\n– poručiteľ nebol spôsobilý,\n– bol urobený pod nátlakom,\n– obsahuje nezrozumiteľné alebo neurčité ustanovenia.\n\nZávet je kľúčovým prejavom autonómie poručiteľa – umožňuje mu rozhodnúť o osude svojho majetku podľa vlastnej vôle.\n\nZdroje: OZ (40/1964 Zb.), § 476–480a, § 479; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Aké formy závetov pozná OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Závet", "definition": "Jednostranný, odvolateľný a osobný právny úkon poručiteľa." },
-    { "term": "Vlastnoručný závet (§ 476a OZ)", "definition": "Celý vlastnoručne napísaný a podpísaný poručiteľom." },
-    { "term": "Alografický závet (§ 476b OZ)", "definition": "Nemusí byť napísaný rukou, ale vyžaduje podpis dvoch svedkov." },
-    { "term": "Neopomenuteľní dediči (§ 479 OZ)", "definition": "Deti poručiteľa – maloleté (celý zákonný podiel), plnoleté (aspoň polovica)." },
-    { "term": "Odvolateľnosť závetu", "definition": "Poručiteľ môže závet kedykoľvek zmeniť alebo odvolať bez súhlasu dediča." }
+    {
+      "term": "Závet",
+      "definition": "Jednostranný, odvolateľný a osobný právny úkon poručiteľa."
+    },
+    {
+      "term": "Vlastnoručný závet (§ 476a OZ)",
+      "definition": "Celý vlastnoručne napísaný a podpísaný poručiteľom."
+    },
+    {
+      "term": "Alografický závet (§ 476b OZ)",
+      "definition": "Nemusí byť napísaný rukou, ale vyžaduje podpis dvoch svedkov."
+    },
+    {
+      "term": "Neopomenuteľní dediči (§ 479 OZ)",
+      "definition": "Deti poručiteľa – maloleté (celý zákonný podiel), plnoleté (aspoň polovica)."
+    },
+    {
+      "term": "Odvolateľnosť závetu",
+      "definition": "Poručiteľ môže závet kedykoľvek zmeniť alebo odvolať bez súhlasu dediča."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Závet napísaný na počítači",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Poručiteľ si závet napíše na počítači, vytlačí ho a vlastnoručne ho iba podpíše, bez prítomnosti svedkov.", "options": [], "correct": 0 },
+        {
+          "question": "Poručiteľ si závet napíše na počítači, vytlačí ho a vlastnoručne ho iba podpíše, bez prítomnosti svedkov.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takýto závet platný ako vlastnoručný závet?",
-          "options": ["Nie, vlastnoručný závet musí byť celý napísaný rukou, nielen podpísaný", "Áno, stačí vlastnoručný podpis pod vytlačeným textom", "Áno, ak to poručiteľ vyhlási pred rodinou"],
+          "options": [
+            "Nie, vlastnoručný závet musí byť celý napísaný rukou, nielen podpísaný",
+            "Áno, stačí vlastnoručný podpis pod vytlačeným textom",
+            "Áno, ak to poručiteľ vyhlási pred rodinou"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vlastnoručný závet musí byť celý napísaný rukou poručiteľa, samotný podpis nestačí.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Akou inou formou by mohol poručiteľ platne zanechať závet napísaný na počítači?",
-          "options": ["Ako alografický závet za prítomnosti dvoch svedkov, alebo formou notárskej zápisnice", "Formou vlastnoručného závetu bez ďalších náležitostí", "Ústne pred dvoma svedkami"],
+          "options": [
+            "Ako alografický závet za prítomnosti dvoch svedkov, alebo formou notárskej zápisnice",
+            "Formou vlastnoručného závetu bez ďalších náležitostí",
+            "Ústne pred dvoma svedkami"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Text nenapísaný rukou možno použiť ako alografický závet so svedkami, alebo formou notárskej zápisnice.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Vylúčenie maloletého dieťaťa zo závetu",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Poručiteľ vo svojom závete odkáže celý svoj majetok jednej osobe mimo rodiny a svoje maloleté dieťa v závete vôbec nespomenie.", "options": [], "correct": 0 },
+        {
+          "question": "Poručiteľ vo svojom závete odkáže celý svoj majetok jednej osobe mimo rodiny a svoje maloleté dieťa v závete vôbec nespomenie.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takýto závet voči maloletému dieťaťu bez ďalšieho účinný v plnom rozsahu?",
-          "options": ["Nie, v časti ukracujúcej neopomenuteľného maloletého dediča je neplatný", "Áno, poručiteľ môže so svojím majetkom naložiť úplne ľubovoľne", "Áno, pokiaľ dieťa v čase spísania závetu ešte nebolo splnoleté"],
+          "options": [
+            "Nie, v časti ukracujúcej neopomenuteľného maloletého dediča je neplatný",
+            "Áno, poručiteľ môže so svojím majetkom naložiť úplne ľubovoľne",
+            "Áno, pokiaľ dieťa v čase spísania závetu ešte nebolo splnoleté"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Závet ukracujúci neopomenuteľného dediča je v tejto časti neplatný.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Aký podiel patrí maloletému dieťaťu ako neopomenuteľnému dedičovi?",
-          "options": ["Celý jeho zákonný dedičský podiel", "Iba polovica jeho zákonného podielu", "Žiadny podiel, kým nedovŕši plnoletosť"],
+          "options": [
+            "Celý jeho zákonný dedičský podiel",
+            "Iba polovica jeho zákonného podielu",
+            "Žiadny podiel, kým nedovŕši plnoletosť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Maloletým neopomenuteľným dedičom patrí celý ich zákonný podiel.",
@@ -142,14 +181,75 @@
   "spider": {
     "center": "Dedenie zo závetu – formy, podstata, neopomenuteľní dediči, obsah, neplatnosť (závet ako prejav poslednej vôle poručiteľa)",
     "branches": [
-      { "label": "Vlastnoručný závet (holografný)", "leaves": ["celý napísaný vlastnou rukou", "poručiteľ ho musí podpísať", "nepotrebuje svedkov"] },
-      { "label": "Alografický závet", "leaves": ["napísaný inou osobou alebo technicky", "poručiteľ ho vlastnoručne podpíše", "prítomnosť dvoch svedkov, ktorí potvrdia prejav vôle"] },
-      { "label": "Notárska zápisnica", "leaves": ["najbezpečnejšia forma", "spisuje notár", "ukladá sa do centrálneho registra závetov"] },
-      { "label": "Podstata závetu", "leaves": ["osobný právny úkon, nemožno ho urobiť cez zástupcu", "odvolateľný, poručiteľ ho môže kedykoľvek zmeniť alebo zrušiť", "musí byť urobený slobodne, vážne, určito, zrozumiteľne", "má prednosť pred zákonom, ak je platný a účinný"] },
-      { "label": "Neopomenuteľní dediči (§ 479 OZ)", "leaves": ["poručiteľ nemôže úplne vylúčiť svoje deti bez dôvodu", "maloleté deti majú nárok na celý zákonný podiel", "plnoleté deti aspoň na polovicu zákonného podielu", "pri opomenutí je závet v tejto časti relatívne neplatný"] },
-      { "label": "Obsah závetu", "leaves": ["určenie dedičov", "určenie podielov", "odkaz (legát)", "podmienky a príkazy, ak nie sú v rozpore so zákonom"] },
-      { "label": "Neplatnosť závetu", "leaves": ["nebola dodržaná forma", "poručiteľ nebol spôsobilý", "závet bol urobený pod nátlakom", "obsahuje nezrozumiteľné alebo neurčité ustanovenia"] },
-      { "label": "Význam pre prax", "leaves": ["umožňuje poručiteľovi autonómne rozhodnúť o majetku", "chráni deti cez povinný podiel", "poskytuje flexibilitu: odkazy, podmienky, príkazy", "jasné formálne pravidlá zabezpečujú právnu istotu pri dedičských sporoch"] }
+      {
+        "label": "Vlastnoručný závet (holografný)",
+        "leaves": [
+          "celý napísaný vlastnou rukou",
+          "poručiteľ ho musí podpísať",
+          "nepotrebuje svedkov"
+        ]
+      },
+      {
+        "label": "Alografický závet",
+        "leaves": [
+          "napísaný inou osobou alebo technicky",
+          "poručiteľ ho vlastnoručne podpíše",
+          "prítomnosť dvoch svedkov, ktorí potvrdia prejav vôle"
+        ]
+      },
+      {
+        "label": "Notárska zápisnica",
+        "leaves": [
+          "najbezpečnejšia forma",
+          "spisuje notár",
+          "ukladá sa do centrálneho registra závetov"
+        ]
+      },
+      {
+        "label": "Podstata závetu",
+        "leaves": [
+          "osobný právny úkon, nemožno ho urobiť cez zástupcu",
+          "odvolateľný, poručiteľ ho môže kedykoľvek zmeniť alebo zrušiť",
+          "musí byť urobený slobodne, vážne, určito, zrozumiteľne",
+          "má prednosť pred zákonom, ak je platný a účinný"
+        ]
+      },
+      {
+        "label": "Neopomenuteľní dediči (§ 479 OZ)",
+        "leaves": [
+          "poručiteľ nemôže úplne vylúčiť svoje deti bez dôvodu",
+          "maloleté deti majú nárok na celý zákonný podiel",
+          "plnoleté deti aspoň na polovicu zákonného podielu",
+          "pri opomenutí je závet v tejto časti relatívne neplatný"
+        ]
+      },
+      {
+        "label": "Obsah závetu",
+        "leaves": [
+          "určenie dedičov",
+          "určenie podielov",
+          "odkaz (legát)",
+          "podmienky a príkazy, ak nie sú v rozpore so zákonom"
+        ]
+      },
+      {
+        "label": "Neplatnosť závetu",
+        "leaves": [
+          "nebola dodržaná forma",
+          "poručiteľ nebol spôsobilý",
+          "závet bol urobený pod nátlakom",
+          "obsahuje nezrozumiteľné alebo neurčité ustanovenia"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "umožňuje poručiteľovi autonómne rozhodnúť o majetku",
+          "chráni deti cez povinný podiel",
+          "poskytuje flexibilitu: odkazy, podmienky, príkazy",
+          "jasné formálne pravidlá zabezpečujú právnu istotu pri dedičských sporoch"
+        ]
+      }
     ]
   }
 }

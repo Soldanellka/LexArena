@@ -2,50 +2,101 @@
   "id": "A5",
   "title": "Obvinený, postavenie obvineného v trestnom konaní, výsluch obvineného",
   "schemaVersion": "1.1",
-  "tags": ["obvinený", "výsluch", "práva obvineného", "trestné konanie"],
-
+  "tags": [
+    "obvinený",
+    "výsluch",
+    "práva obvineného",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Kedy sa osoba stáva obvineným?",
-      "options": ["Po vznesení obvinenia", "Po zadržaní políciou", "Po podaní obžaloby"],
+      "options": [
+        "Po vznesení obvinenia",
+        "Po zadržaní políciou",
+        "Po podaní obžaloby"
+      ],
       "correct": 0
     },
     {
       "question": "Ktoré právo je základným právom obvineného?",
-      "options": ["Právo na tlmočníka", "Právo na obhajobu", "Právo na náhradu škody"],
+      "options": [
+        "Právo na tlmočníka",
+        "Právo na obhajobu",
+        "Právo na náhradu škody"
+      ],
       "correct": 1
     },
     {
       "question": "Môže obvinený odmietnuť vypovedať?",
-      "options": ["Nie", "Áno, vždy", "Len so súhlasom prokurátora"],
+      "options": [
+        "Nie",
+        "Áno, vždy",
+        "Len so súhlasom prokurátora"
+      ],
       "correct": 1
     },
     {
       "question": "Kto vykonáva výsluch obvineného v prípravnom konaní?",
-      "options": ["Súd", "Polícia alebo prokurátor", "Znalec"],
+      "options": [
+        "Súd",
+        "Polícia alebo prokurátor",
+        "Znalec"
+      ],
       "correct": 1
     },
     {
       "question": "Čo musí obsahovať poučenie obvineného pred výsluchom?",
-      "options": ["Povinnosť vypovedať pravdu", "Právo nevypovedať a právo na obhajcu", "Zákaz klamať"],
+      "options": [
+        "Povinnosť vypovedať pravdu",
+        "Právo nevypovedať a právo na obhajcu",
+        "Zákaz klamať"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Obvinený", "definition": "Osoba, proti ktorej bolo vznesené obvinenie." },
-    { "term": "Právo na obhajobu", "definition": "Obvinený sa môže obhajovať sám alebo prostredníctvom obhajcu." },
-    { "term": "Nemo tenetur", "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba." },
-    { "term": "Výsluch obvineného", "definition": "Procesný úkon, pri ktorom sa obvinený vyjadruje k skutku a dôkazom." },
-    { "term": "Poučenie obvineného", "definition": "Pred výsluchom musí byť obvinený poučený o svojich právach." },
-
-    { "term": "Zadržanie", "definition": "Dočasné obmedzenie osobnej slobody pred vznesením obvinenia." },
-    { "term": "Obžaloba", "definition": "Podanie prokurátora, ktorým sa vec dostáva pred súd." },
-    { "term": "Väzba", "definition": "Zákonné obmedzenie slobody obvineného z dôvodov úteku, ovplyvňovania alebo pokračovania v trestnej činnosti." },
-    { "term": "Obhajca", "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému." },
-    { "term": "Právo nevypovedať", "definition": "Obvinený môže odmietnuť výpoveď bez uvedenia dôvodu." }
+    {
+      "term": "Obvinený",
+      "definition": "Osoba, proti ktorej bolo vznesené obvinenie."
+    },
+    {
+      "term": "Právo na obhajobu",
+      "definition": "Obvinený sa môže obhajovať sám alebo prostredníctvom obhajcu."
+    },
+    {
+      "term": "Nemo tenetur",
+      "definition": "Obvinený nemusí vypovedať ani usvedčovať sám seba."
+    },
+    {
+      "term": "Výsluch obvineného",
+      "definition": "Procesný úkon, pri ktorom sa obvinený vyjadruje k skutku a dôkazom."
+    },
+    {
+      "term": "Poučenie obvineného",
+      "definition": "Pred výsluchom musí byť obvinený poučený o svojich právach."
+    },
+    {
+      "term": "Zadržanie",
+      "definition": "Dočasné obmedzenie osobnej slobody pred vznesením obvinenia."
+    },
+    {
+      "term": "Obžaloba",
+      "definition": "Podanie prokurátora, ktorým sa vec dostáva pred súd."
+    },
+    {
+      "term": "Väzba",
+      "definition": "Zákonné obmedzenie slobody obvineného z dôvodov úteku, ovplyvňovania alebo pokračovania v trestnej činnosti."
+    },
+    {
+      "term": "Obhajca",
+      "definition": "Advokát, ktorý poskytuje právnu pomoc obvinenému."
+    },
+    {
+      "term": "Právo nevypovedať",
+      "definition": "Obvinený môže odmietnuť výpoveď bez uvedenia dôvodu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odmietnutie výpovede",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Môže obvinený odmietnuť vypovedať?",
-          "options": ["Áno", "Nie", "Len so súhlasom obhajcu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len so súhlasom obhajcu"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Môže byť odmietnutie výpovede použité proti nemu?",
-          "options": ["Áno", "Nie", "Len ak to uvedie prokurátor"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to uvedie prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nesprávne poučenie obvineného",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Je výsluch vykonaný zákonne?",
-          "options": ["Áno", "Nie", "Len ak bol prítomný prokurátor"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bol prítomný prokurátor"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Ako sa narába s takouto výpoveďou?",
-          "options": ["Je neprípustná ako dôkaz", "Je použiteľná, ak je pravdivá", "Použije sa len v prípravnom konaní"],
+          "options": [
+            "Je neprípustná ako dôkaz",
+            "Je použiteľná, ak je pravdivá",
+            "Použije sa len v prípravnom konaní"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,40 @@
   "spider": {
     "center": "Obvinený × výsluch obvineného",
     "branches": [
-      { "label": "Vznik postavenia", "leaves": ["Vznesenie obvinenia – uznesením podľa § 206 TP", "Okamih – doručením alebo oznámením uznesenia (aj pri zadržaní)", "Formálny status – zakladá najširšie procesné práva"] },
-      { "label": "Práva a povinnosti (§ 34)", "leaves": ["Práva – obhajca, nevypovedať, vyjadriť sa k dôkazom, navrhovať dôkazy, opravné prostriedky", "Ďalšie práva – prítomnosť pri úkonoch, preklad a tlmočenie", "Povinnosti – dostaviť sa, strpieť zákonné úkony (DNA, dychová skúška)"] },
-      { "label": "Postavenie v konaní", "leaves": ["Strana konania – rovnosť zbraní s prokurátorom", "Ochrana zásadami – prezumpcia neviny, obhajoba, spravodlivý proces", "Podozrivý × obvinený – práva obvineného sú širšie, nemožno ich zamieňať"] },
-      { "label": "Výsluch (§ 121)", "leaves": ["Zákaz donucovania – k výpovedi ani k priznaniu, rešpekt k osobnosti", "Poučenie – právo vypovedať/odmietnuť, obhajca, nevypovedať bez obhajcu", "Ďalšie poučenia – podmienečné zastavenie, zmier, dohoda o vine a treste", "Neúčinnosť – výpoveď podozrivého pred vznesením obvinenia nemožno použiť"] }
+      {
+        "label": "Vznik postavenia",
+        "leaves": [
+          "Vznesenie obvinenia – uznesením podľa § 206 TP",
+          "Okamih – doručením alebo oznámením uznesenia (aj pri zadržaní)",
+          "Formálny status – zakladá najširšie procesné práva"
+        ]
+      },
+      {
+        "label": "Práva a povinnosti (§ 34)",
+        "leaves": [
+          "Práva – obhajca, nevypovedať, vyjadriť sa k dôkazom, navrhovať dôkazy, opravné prostriedky",
+          "Ďalšie práva – prítomnosť pri úkonoch, preklad a tlmočenie",
+          "Povinnosti – dostaviť sa, strpieť zákonné úkony (DNA, dychová skúška)"
+        ]
+      },
+      {
+        "label": "Postavenie v konaní",
+        "leaves": [
+          "Strana konania – rovnosť zbraní s prokurátorom",
+          "Ochrana zásadami – prezumpcia neviny, obhajoba, spravodlivý proces",
+          "Podozrivý × obvinený – práva obvineného sú širšie, nemožno ich zamieňať"
+        ]
+      },
+      {
+        "label": "Výsluch (§ 121)",
+        "leaves": [
+          "Zákaz donucovania – k výpovedi ani k priznaniu, rešpekt k osobnosti",
+          "Poučenie – právo vypovedať/odmietnuť, obhajca, nevypovedať bez obhajcu",
+          "Ďalšie poučenia – podmienečné zastavenie, zmier, dohoda o vine a treste",
+          "Neúčinnosť – výpoveď podozrivého pred vznesením obvinenia nemožno použiť"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Obvinený je kľúčovou stranou trestného konania – osoba, proti ktorej bolo vznesené obvinenie. Má najširšie procesné práva, najmä právo na obhajobu, právo nevypovedať a právo byť prítomný pri úkonoch. Výsluch obvineného je upravený v § 121 Trestného poriadku a musí prebiehať zákonným, nedonucovacím spôsobom.\n\nZhrnutie (štátnicové jadro)\nObvinený je osoba, proti ktorej bolo vznesené obvinenie podľa § 206 TP. Má právo na obhajobu, právo nevypovedať, právo na obhajcu, právo zúčastniť sa úkonov a navrhovať dôkazy. Výsluch obvineného podľa § 121 TP musí byť vykonaný zákonným spôsobom, bez akéhokoľvek donucovania, po riadnom poučení o právach. Obvinený môže vypovedať, ale aj odmietnuť výpoveď bez uvedenia dôvodu.\n\n1. Obvinený\nObvineným je osoba, proti ktorej bolo vznesené obvinenie uznesením podľa § 206 TP.\nJe to formálny procesný status, ktorý zakladá najširšie procesné práva v trestnom konaní.\n\nKedy vzniká postavenie obvineného?\ndoručením uznesenia o vznesení obvinenia,\n\noznámením uznesenia obvinenému pri úkone (napr. pri zadržaní).\n\nPráva obvineného (§ 34 TP)\nprávo na obhajcu,\n\nprávo nevypovedať,\n\nprávo vyjadriť sa ku všetkým dôkazom,\n\nprávo navrhovať dôkazy,\n\nprávo byť prítomný pri úkonoch,\n\nprávo na preklad a tlmočenie,\n\nprávo podávať opravné prostriedky.\n\nPovinnosti obvineného\ndostaviť sa na úkony,\n\npodrobiť sa úkonom, ktoré zákon umožňuje (napr. odber DNA, dychová skúška).\n\n2. Postavenie obvineného v trestnom konaní\nObvinený je stranou trestného konania, má rovnaké procesné postavenie ako prokurátor v kontradiktórnom procese.\nJe chránený zásadami:\n\nprezumpcia neviny,\n\nprávo na obhajobu,\n\nrovnosť zbraní,\n\nspravodlivý proces,\n\nzákonnosť zásahov.\n\nÚstavný súd SR zdôrazňuje, že postavenie obvineného je odlišné od postavenia podozrivého – práva obvineného sú širšie a nemožno ich zamieňať .\n\n3. Výsluch obvineného\nUpravený v § 121 Trestného poriadku.\n\nZákladné pravidlá výsluchu (§ 121 ods. 1 TP)\nvýsluch vykonáva OČTK alebo súd,\n\ncieľom je zistiť podstatné skutočnosti dôležité pre konanie,\n\nobvinený nesmie byť donucovaný k výpovedi ani k priznaniu,\n\nmusí sa rešpektovať jeho osobnosť.\n\nPovinné poučenie pred výsluchom (§ 121 ods. 2 TP)\nObvinenému sa musí oznámiť:\n\nprávo vypovedať alebo odmietnuť výpoveď,\n\nzákaz donucovania k priznaniu,\n\nprávo na obhajcu,\n\nprávo žiadať ustanovenie obhajcu,\n\nprávo nevypovedať bez prítomnosti obhajcu.\n\nĎalšie poučenia (§ 121 ods. 3 TP)\nPodľa okolností prípadu musí byť obvinený poučený aj o:\n\npodmienečnom zastavení trestného stíhania,\n\nzmieri,\n\ndohode o vine a treste,\n\ntreste prepadnutia majetku pri vybraných trestných činoch.\n\nZákonnosť výsluchu\nAk bol obvinený vypočutý ako podozrivý pred vznesením obvinenia, jeho výpoveď je absolútne neúčinná a nemožno ju použiť ako dôkaz (okrem výnimiek pri zadržaní) .\n\nZapamätaj si (štátnicové jadro)\n– Obvinený = osoba, proti ktorej bolo vznesené obvinenie.\n– Má najširšie procesné práva v trestnom konaní.\n– Výsluch obvineného musí byť zákonný, bez donucovania.\n– Obvinený má právo nevypovedať a právo na obhajcu.\n– Nezákonný výsluch je neúčinný dôkaz.\n\nZdroj\n– Trestný poriadok č. 301/2005 Z. z., § 34, § 121 (overené na Slov-Lex)\n– Uznesenie Ústavného súdu SR III. ÚS 394/2024 – postavenie podozrivého vs. obvineného   \n– § 121 TP – výsluch obvineného lewik.orglewik.org. § 121 (§ 121, Trestný poriadok) | Lewik"
 }

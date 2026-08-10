@@ -2,7 +2,12 @@
   "id": "A25",
   "title": "Trestné činy proti republike",
   "schemaVersion": "1.1",
-  "tags": ["republika", "vlastizrada", "rozvracanie", "terorizmus"],
+  "tags": [
+    "republika",
+    "vlastizrada",
+    "rozvracanie",
+    "terorizmus"
+  ],
   "theory": [
     {
       "heading": "Vlastizrada",
@@ -20,46 +25,81 @@
   "quiz": [
     {
       "question": "Kto môže spáchať vlastizradu?",
-      "options": ["Každý človek", "Len občan SR", "Len verejný činiteľ"],
+      "options": [
+        "Každý človek",
+        "Len občan SR",
+        "Len verejný činiteľ"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – vlastizradu môže spáchať len občan SR.",
       "explanation_incorrect": "Nie – cudzinci nemôžu spáchať vlastizradu."
     },
     {
       "question": "Čo je cieľom terorizmu?",
-      "options": ["Zvýšenie daní", "Vyvolanie strachu alebo destabilizácia štátu", "Zlepšenie dopravy"],
+      "options": [
+        "Zvýšenie daní",
+        "Vyvolanie strachu alebo destabilizácia štátu",
+        "Zlepšenie dopravy"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – cieľom je strach a destabilizácia.",
       "explanation_incorrect": "Nie – terorizmus nesúvisí s verejnými službami."
     },
     {
       "question": "Čo je rozvracanie republiky?",
-      "options": ["Násilné narušenie ústavného zriadenia", "Bežná kritika vlády", "Náhodné porušenie zákona"],
+      "options": [
+        "Násilné narušenie ústavného zriadenia",
+        "Bežná kritika vlády",
+        "Náhodné porušenie zákona"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – ide o útok na ústavné zriadenie.",
       "explanation_incorrect": "Nie – kritika vlády nie je trestný čin."
     },
     {
       "question": "Čo je chráneným objektom týchto trestných činov?",
-      "options": ["Majetok občanov", "Bezpečnosť a ústavný poriadok SR", "Zdravie jednotlivca"],
+      "options": [
+        "Majetok občanov",
+        "Bezpečnosť a ústavný poriadok SR",
+        "Zdravie jednotlivca"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – chránený je štát a jeho bezpečnosť.",
       "explanation_incorrect": "Nie – nejde o majetok ani zdravie."
     },
     {
       "question": "Ktorý čin patrí medzi trestné činy proti republike?",
-      "options": ["Vlastizrada", "Krádež", "Podvod"],
+      "options": [
+        "Vlastizrada",
+        "Krádež",
+        "Podvod"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – vlastizrada je trestný čin proti republike.",
       "explanation_incorrect": "Nie – krádež ani podvod sem nepatria."
     }
   ],
   "tiles": [
-    { "term": "Vlastizrada", "definition": "Konanie občana SR v prospech cudzej moci." },
-    { "term": "Rozvracanie republiky", "definition": "Útok na ústavné zriadenie štátu." },
-    { "term": "Terorizmus", "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu." },
-    { "term": "Ústavné zriadenie", "definition": "Základné pravidlá fungovania štátu." },
-    { "term": "Bezpečnosť štátu", "definition": "Chránený objekt týchto trestných činov." }
+    {
+      "term": "Vlastizrada",
+      "definition": "Konanie občana SR v prospech cudzej moci."
+    },
+    {
+      "term": "Rozvracanie republiky",
+      "definition": "Útok na ústavné zriadenie štátu."
+    },
+    {
+      "term": "Terorizmus",
+      "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu."
+    },
+    {
+      "term": "Ústavné zriadenie",
+      "definition": "Základné pravidlá fungovania štátu."
+    },
+    {
+      "term": "Bezpečnosť štátu",
+      "definition": "Chránený objekt týchto trestných činov."
+    }
   ],
   "cases": [
     {
@@ -73,7 +113,11 @@
         },
         {
           "question": "Je to vlastizrada?",
-          "options": ["Áno", "Nie", "Len ak bol zaplatený"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bol zaplatený"
+          ],
           "correct": 0
         }
       ]
@@ -89,7 +133,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Terorizmus", "Výtržníctvo", "Krádež"],
+          "options": [
+            "Terorizmus",
+            "Výtržníctvo",
+            "Krádež"
+          ],
           "correct": 0
         }
       ]
@@ -104,10 +152,38 @@
   "spider": {
     "center": "TČ proti republike",
     "branches": [
-      { "label": "Vlastizrada (§ 311)", "leaves": ["Podstata – občan SR v spojení s cudzou mocou spácha TČ proti SR", "Formy – úklady proti SR, teror, sabotáž v spojení s cudzou mocou", "Závažnosť – 15–25 rokov alebo doživotie"] },
-      { "label": "Rozvracanie republiky (§ 312)", "leaves": ["Podstata – násilná zmena ústavného zriadenia", "Formy – narušenie samostatnosti, zvrchovanosti či územnej celistvosti SR", "Sadzba – vysoká, pri kvalifikovaných formách až doživotie"] },
-      { "label": "Teror (§ 313)", "leaves": ["Podstata – úmyselné usmrtenie s cieľom poškodiť ústavné zriadenie", "Cieľ – vyvolať strach, destabilizovať štát, donútiť orgány konať", "Pozn. – terorizmus ako samostatná kategória patrí do 12. hlavy (viď A30)"] },
-      { "label": "Chránený záujem", "leaves": ["Suverenita a ústavné zriadenie SR", "Bezpečnosť a obranyschopnosť štátu"] }
+      {
+        "label": "Vlastizrada (§ 311)",
+        "leaves": [
+          "Podstata – občan SR v spojení s cudzou mocou spácha TČ proti SR",
+          "Formy – úklady proti SR, teror, sabotáž v spojení s cudzou mocou",
+          "Závažnosť – 15–25 rokov alebo doživotie"
+        ]
+      },
+      {
+        "label": "Rozvracanie republiky (§ 312)",
+        "leaves": [
+          "Podstata – násilná zmena ústavného zriadenia",
+          "Formy – narušenie samostatnosti, zvrchovanosti či územnej celistvosti SR",
+          "Sadzba – vysoká, pri kvalifikovaných formách až doživotie"
+        ]
+      },
+      {
+        "label": "Teror (§ 313)",
+        "leaves": [
+          "Podstata – úmyselné usmrtenie s cieľom poškodiť ústavné zriadenie",
+          "Cieľ – vyvolať strach, destabilizovať štát, donútiť orgány konať",
+          "Pozn. – terorizmus ako samostatná kategória patrí do 12. hlavy (viď A30)"
+        ]
+      },
+      {
+        "label": "Chránený záujem",
+        "leaves": [
+          "Suverenita a ústavné zriadenie SR",
+          "Bezpečnosť a obranyschopnosť štátu"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti republike sú upravené v Siedmej hlave osobitnej časti Trestného zákona. Chránia suverenitu, ústavné zriadenie, bezpečnosť štátu a jeho obranyschopnosť. Patria sem najmä vlastizrada, rozvracanie republiky a terorizmus.\n\n1. Vlastizrada (§ 311 TZ)\nVlastizrada je konanie občana Slovenskej republiky, ktorý:\n\nv spojení s cudzou mocou alebo cudzím činiteľom,\n\nspácha trestný čin proti Slovenskej republike (napr. úklady proti SR, teror, sabotáž).\n\nIde o najzávažnejší zásah proti štátu, trestaný 15–25 rokmi alebo doživotím.\n\n2. Rozvracanie republiky (§ 312 TZ)\nRozvracanie republiky je úmyselné konanie smerujúce k:\n\nnásilnej zmene ústavného zriadenia,\n\nnarušeniu samostatnosti alebo zvrchovanosti SR,\n\nporušeniu územnej celistvosti SR.\n\nTrestná sadzba je 10–12 rokov, pri kvalifikovaných formách až doživotie.\n\n3. Terorizmus (§ 313 TZ)\nTerorizmus je úmyselné konanie, ktorým páchateľ:\n\nusmrtí alebo sa pokúsi usmrtiť osobu,\n\ns cieľom poškodiť ústavné zriadenie,\n\nvyvolať strach, destabilizovať štát,\n\nalebo donútiť orgány verejnej moci konať či nekonať.\n\nTrestná sadzba je 20–25 rokov alebo doživotie.\n\nZapamätaj si (štátnicové jadro)\n– Vlastizrada = konanie občana SR v prospech cudzej moci.\n– Rozvracanie republiky = násilné narušenie ústavného zriadenia alebo suverenity.\n– Terorizmus = úmyselné konanie s cieľom vyvolať strach alebo destabilizovať štát.\n– Ide o najzávažnejšie trestné činy v Trestnom zákone.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., §§ 311–313 (vlastizrada, rozvracanie, terorizmus)"
 }

@@ -1,7 +1,7 @@
 {
   "id": "13",
   "title": "Vecné bremená – pojem, vznik a zánik",
-  "summary": "Vecné bremeno (§ 151n OZ) obmedzuje vlastníka nehnuteľnosti v prospech iného. Druhy: in rem (viazané k panujúcej nehnuteľnosti – prechádza s ňou) alebo in personam (viazané k osobe – zanikne jej smrťou). Vznik: písomná zmluva + vklad do KN, závet, rozhodnutie súdu, vydržanie. Zánik: výmazom z KN, smrťou oprávneného (in personam).",
+  "summary": "Vecné bremeno podľa § 151n OZ je vecné právo, ktoré obmedzuje vlastníka nehnuteľnosti v prospech inej osoby. Ide o absolútne právo pôsobiace erga omnes – každý musí rešpektovať obmedzenie viazané na nehnuteľnosť. Obsahom vecného bremena je povinnosť vlastníka niečo strpieť, konať alebo sa niečoho zdržať (napr. právo prechodu, prejazdu, vedenie inžinierskych sietí).\n\nDruhy vecných bremien\n1. In rem (reálne vecné bremeno)  \nViaže sa na panujúcu nehnuteľnosť. Oprávnenie prechádza na každého ďalšieho vlastníka tejto nehnuteľnosti. Ide o klasické „droit de suite“ – vecné právo nasleduje vec.\n\n2. In personam (osobné vecné bremeno)  \nViaže sa na konkrétnu osobu. Zaniká jej smrťou, pretože nie je spojené s vlastníctvom nehnuteľnosti, ale s osobou oprávneného.\n\nVznik vecného bremena\nVecné bremeno môže vzniknúť viacerými spôsobmi:\n\n– Zmluvou – vyžaduje sa písomná forma a následný vklad do katastra nehnuteľností, ktorý má konštitutívny účinok.\n– Závetom – ak poručiteľ zriadi vecné bremeno v prospech dediča alebo tretej osoby.\n– Rozhodnutím súdu alebo správneho orgánu – napr. pri vyvlastnení alebo pri úprave prístupovej cesty.\n– Vydržaním – ak niekto dlhodobo a oprávnene vykonáva právo zodpovedajúce vecnému bremenu.\n\nZánik vecného bremena\n– Výmazom z katastra nehnuteľností – má konštitutívny účinok pri bremenách in rem.\n– Smrťou oprávneného – pri bremenách in personam.\n– Zánikom panujúcej nehnuteľnosti alebo splnením účelu bremena.\n– Dohodou strán alebo rozhodnutím súdu, ak zanikli dôvody jeho existencie.\n\nVecné bremená sú významným nástrojom usporiadania vzťahov medzi vlastníkmi nehnuteľností a zabezpečujú funkčné využívanie priestorov a infraštruktúry.\n\nZdroje: OZ (40/1964 Zb.), § 151n a nasl.; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je vecné bremeno podľa § 151n OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Vecné bremeno (§ 151n OZ)", "definition": "Obmedzuje vlastníka nehnuteľnosti povinnosťou niečo strpieť, konať alebo sa niečoho zdržať v prospech iného." },
-    { "term": "Bremeno in rem", "definition": "Viazané k panujúcej nehnuteľnosti, prechádza s ňou na nového vlastníka." },
-    { "term": "Bremeno in personam", "definition": "Viazané ku konkrétnej osobe, zaniká jej smrťou." },
-    { "term": "Vznik bremena", "definition": "Písomná zmluva a vklad do katastra, prípadne závet, zákon alebo rozhodnutie súdu." },
-    { "term": "Zrušenie bremena súdom (§ 151p ods. 3 OZ)", "definition": "Možné pri zmene pomerov, ak ho oprávnený trvalo nemôže využívať." }
+    {
+      "term": "Vecné bremeno (§ 151n OZ)",
+      "definition": "Obmedzuje vlastníka nehnuteľnosti povinnosťou niečo strpieť, konať alebo sa niečoho zdržať v prospech iného."
+    },
+    {
+      "term": "Bremeno in rem",
+      "definition": "Viazané k panujúcej nehnuteľnosti, prechádza s ňou na nového vlastníka."
+    },
+    {
+      "term": "Bremeno in personam",
+      "definition": "Viazané ku konkrétnej osobe, zaniká jej smrťou."
+    },
+    {
+      "term": "Vznik bremena",
+      "definition": "Písomná zmluva a vklad do katastra, prípadne závet, zákon alebo rozhodnutie súdu."
+    },
+    {
+      "term": "Zrušenie bremena súdom (§ 151p ods. 3 OZ)",
+      "definition": "Možné pri zmene pomerov, ak ho oprávnený trvalo nemôže využívať."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Právo prechodu cez susedný pozemok",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Vlastník pozemku A má na základe zmluvy zapísané v katastre právo prechodu cez pozemok B, ktoré slúži v prospech pozemku A bez ohľadu na to, kto je jeho aktuálnym vlastníkom.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník pozemku A má na základe zmluvy zapísané v katastre právo prechodu cez pozemok B, ktoré slúži v prospech pozemku A bez ohľadu na to, kto je jeho aktuálnym vlastníkom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ vecného bremena ide?",
-          "options": ["Vecné bremeno in rem", "Vecné bremeno in personam", "O záložné právo"],
+          "options": [
+            "Vecné bremeno in rem",
+            "Vecné bremeno in personam",
+            "O záložné právo"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bremeno viazané na panujúcu nehnuteľnosť (pozemok A), nie na konkrétnu osobu, je bremenom in rem.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo sa stane s týmto bremenom, ak vlastník pozemku A svoj pozemok predá?",
-          "options": ["Právo prechodu prejde s pozemkom A na nového vlastníka", "Právo prechodu automaticky zanikne predajom pozemku A", "Právo prechodu prejde na predávajúceho aj po predaji pozemku"],
+          "options": [
+            "Právo prechodu prejde s pozemkom A na nového vlastníka",
+            "Právo prechodu automaticky zanikne predajom pozemku A",
+            "Právo prechodu prejde na predávajúceho aj po predaji pozemku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bremeno in rem je viazané na nehnuteľnosť, nie na osobu, preto prechádza s pozemkom.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Zrušenie bremena pre zmenu pomerov",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Oprávnený z vecného bremena práva doživotného bývania sa už mnoho rokov v dome vôbec nezdržiava a trvalo býva inde, pričom povinný vlastník sa domáha zrušenia bremena.", "options": [], "correct": 0 },
+        {
+          "question": "Oprávnený z vecného bremena práva doživotného bývania sa už mnoho rokov v dome vôbec nezdržiava a trvalo býva inde, pričom povinný vlastník sa domáha zrušenia bremena.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže súd také bremeno zrušiť?",
-          "options": ["Áno, ak sa zmenili pomery a oprávnený ho trvalo nemôže využívať (§ 151p ods. 3 OZ)", "Nie, vecné bremeno je vždy trvalé a nezrušiteľné", "Áno, ale iba ak s tým oprávnený súhlasí"],
+          "options": [
+            "Áno, ak sa zmenili pomery a oprávnený ho trvalo nemôže využívať (§ 151p ods. 3 OZ)",
+            "Nie, vecné bremeno je vždy trvalé a nezrušiteľné",
+            "Áno, ale iba ak s tým oprávnený súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zmena pomerov spojená s trvalou nemožnosťou využívania bremena je zákonným dôvodom na jeho zrušenie súdom.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Kto môže takýto návrh na súd podať?",
-          "options": ["Povinný z vecného bremena (vlastník zaťaženej nehnuteľnosti)", "Iba oprávnený z vecného bremena", "Iba notár"],
+          "options": [
+            "Povinný z vecného bremena (vlastník zaťaženej nehnuteľnosti)",
+            "Iba oprávnený z vecného bremena",
+            "Iba notár"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Návrh na zrušenie alebo obmedzenie bremena podáva povinný, teda vlastník zaťaženej nehnuteľnosti.",
@@ -142,11 +181,51 @@
   "spider": {
     "center": "Vecné bremená – pojem, druhy, vznik, zánik (obmedzenie vlastníka v prospech inej osoby, erga omnes)",
     "branches": [
-      { "label": "Pojem vecného bremena (§ 151n OZ)", "leaves": ["vecné právo obmedzujúce vlastníka nehnuteľnosti", "pôsobí erga omnes, každý musí rešpektovať", "obsah: povinnosť strpieť, konať alebo sa zdržať", "typické: prechod, prejazd, inžinierske siete"] },
-      { "label": "Druhy vecných bremien", "leaves": ["in rem: viaže sa na panujúcu nehnuteľnosť", "oprávnenie prechádza na každého ďalšieho vlastníka (droit de suite)", "in personam: viaže sa na konkrétnu osobu", "zaniká jej smrťou, nie je spojené s vlastníctvom nehnuteľnosti"] },
-      { "label": "Vznik vecného bremena", "leaves": ["zmluvou: písomná forma a vklad do katastra (konštitutívny účinok)", "závetom: poručiteľ môže zriadiť bremeno v prospech dediča alebo tretej osoby", "rozhodnutím súdu alebo správneho orgánu: napr. vyvlastnenie, prístupová cesta", "vydržaním: dlhodobé a oprávnené vykonávanie práva zodpovedajúceho bremenu"] },
-      { "label": "Zánik vecného bremena", "leaves": ["výmazom z katastra (konštitutívny účinok pri in rem)", "smrťou oprávneného pri in personam", "zánikom panujúcej nehnuteľnosti alebo splnením účelu bremena", "dohodou alebo rozhodnutím súdu, ak zanikli dôvody jeho existencie"] },
-      { "label": "Význam pre prax", "leaves": ["usporiadanie vzťahov medzi vlastníkmi nehnuteľností", "zabezpečenie prístupu, infraštruktúry, funkčného využívania pozemkov", "vysoká právna istota vďaka katastru", "pôsobenie voči každému, teda silná ochrana oprávneného"] }
+      {
+        "label": "Pojem vecného bremena (§ 151n OZ)",
+        "leaves": [
+          "vecné právo obmedzujúce vlastníka nehnuteľnosti",
+          "pôsobí erga omnes, každý musí rešpektovať",
+          "obsah: povinnosť strpieť, konať alebo sa zdržať",
+          "typické: prechod, prejazd, inžinierske siete"
+        ]
+      },
+      {
+        "label": "Druhy vecných bremien",
+        "leaves": [
+          "in rem: viaže sa na panujúcu nehnuteľnosť",
+          "oprávnenie prechádza na každého ďalšieho vlastníka (droit de suite)",
+          "in personam: viaže sa na konkrétnu osobu",
+          "zaniká jej smrťou, nie je spojené s vlastníctvom nehnuteľnosti"
+        ]
+      },
+      {
+        "label": "Vznik vecného bremena",
+        "leaves": [
+          "zmluvou: písomná forma a vklad do katastra (konštitutívny účinok)",
+          "závetom: poručiteľ môže zriadiť bremeno v prospech dediča alebo tretej osoby",
+          "rozhodnutím súdu alebo správneho orgánu: napr. vyvlastnenie, prístupová cesta",
+          "vydržaním: dlhodobé a oprávnené vykonávanie práva zodpovedajúceho bremenu"
+        ]
+      },
+      {
+        "label": "Zánik vecného bremena",
+        "leaves": [
+          "výmazom z katastra (konštitutívny účinok pri in rem)",
+          "smrťou oprávneného pri in personam",
+          "zánikom panujúcej nehnuteľnosti alebo splnením účelu bremena",
+          "dohodou alebo rozhodnutím súdu, ak zanikli dôvody jeho existencie"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "usporiadanie vzťahov medzi vlastníkmi nehnuteľností",
+          "zabezpečenie prístupu, infraštruktúry, funkčného využívania pozemkov",
+          "vysoká právna istota vďaka katastru",
+          "pôsobenie voči každému, teda silná ochrana oprávneného"
+        ]
+      }
     ]
   }
 }

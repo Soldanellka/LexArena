@@ -2,7 +2,11 @@
   "id": "A14",
   "title": "Trestná zodpovednosť a trestanie právnických osôb",
   "schemaVersion": "1.1",
-  "tags": ["právnické osoby", "zodpovednosť", "sankcie"],
+  "tags": [
+    "právnické osoby",
+    "zodpovednosť",
+    "sankcie"
+  ],
   "theory": [
     {
       "heading": "Pojem trestnej zodpovednosti PO",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Môže byť právnická osoba trestne zodpovedná?",
-      "options": ["Áno", "Nie", "Len v občianskom práve"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len v občianskom práve"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – PO môže byť trestne zodpovedná.",
       "explanation_incorrect": "Nie – zákon to umožňuje."
     },
     {
       "question": "Ktorý trest nemožno uložiť PO?",
-      "options": ["Peňažný trest", "Zrušenie PO", "Trest odňatia slobody"],
+      "options": [
+        "Peňažný trest",
+        "Zrušenie PO",
+        "Trest odňatia slobody"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – PO nemožno väzniť.",
       "explanation_incorrect": "Nie – PO nemôže byť vo väzení."
     },
     {
       "question": "Kto môže konať v mene PO?",
-      "options": ["Štatutár", "Zamestnanec", "Obaja"],
+      "options": [
+        "Štatutár",
+        "Zamestnanec",
+        "Obaja"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – obaja môžu konať v mene PO.",
       "explanation_incorrect": "Nie – aj zamestnanec môže konať."
     },
     {
       "question": "Čo je najprísnejšia sankcia pre PO?",
-      "options": ["Zákaz činnosti", "Zrušenie PO", "Peňažný trest"],
+      "options": [
+        "Zákaz činnosti",
+        "Zrušenie PO",
+        "Peňažný trest"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – zrušenie PO je najprísnejšie.",
       "explanation_incorrect": "Nie – zrušenie je najprísnejšie."
     },
     {
       "question": "Kedy nesie PO zodpovednosť?",
-      "options": ["Pri konaní v jej prospech", "Pri súkromnom konaní zamestnanca", "Pri náhodnom konaní"],
+      "options": [
+        "Pri konaní v jej prospech",
+        "Pri súkromnom konaní zamestnanca",
+        "Pri náhodnom konaní"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – musí ísť o konanie v prospech PO.",
       "explanation_incorrect": "Nie – súkromné konanie nie je relevantné."
     }
   ],
   "tiles": [
-    { "term": "Právnická osoba", "definition": "Organizácia, ktorá môže niesť trestnú zodpovednosť." },
-    { "term": "Peňažný trest", "definition": "Majetková sankcia uložená PO." },
-    { "term": "Zrušenie PO", "definition": "Najprísnejší trest – zánik právnickej osoby." },
-    { "term": "Zákaz činnosti", "definition": "Zákaz vykonávať určitú činnosť." },
-    { "term": "Prepadnutie majetku", "definition": "Odňatie majetku PO." }
+    {
+      "term": "Právnická osoba",
+      "definition": "Organizácia, ktorá môže niesť trestnú zodpovednosť."
+    },
+    {
+      "term": "Peňažný trest",
+      "definition": "Majetková sankcia uložená PO."
+    },
+    {
+      "term": "Zrušenie PO",
+      "definition": "Najprísnejší trest – zánik právnickej osoby."
+    },
+    {
+      "term": "Zákaz činnosti",
+      "definition": "Zákaz vykonávať určitú činnosť."
+    },
+    {
+      "term": "Prepadnutie majetku",
+      "definition": "Odňatie majetku PO."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Nesie PO zodpovednosť?",
-          "options": ["Áno", "Nie", "Len ak o tom vedel štatutár"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak o tom vedel štatutár"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – konanie bolo v mene PO.",
           "explanation_incorrect": "Nie – PO nesie zodpovednosť."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Je zrušenie PO možné?",
-          "options": ["Áno", "Nie", "Len pri násilných činoch"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri násilných činoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – zrušenie je najprísnejší trest.",
           "explanation_incorrect": "Nie – zrušenie je možné."
@@ -108,10 +155,42 @@
   "spider": {
     "center": "Trestná zodpovednosť právnických osôb",
     "branches": [
-      { "label": "Právny základ a podmienky", "leaves": ["Zákon č. 91/2016 Z. z. – osobitný zákon o trestnej zodpovednosti PO", "Podmienka – čin spáchaný v mene, v prospech, v záujme alebo v rámci činnosti PO", "Súbežná zodpovednosť – zodpovednosť PO nevylučuje zodpovednosť konajúcej FO"] },
-      { "label": "Pričítateľnosť konania", "leaves": ["Štatutár – konanie štatutárneho orgánu sa pripisuje PO", "Riadiaca osoba – konanie osoby v riadiacej pozícii", "Zamestnanec – konanie zamestnanca v rámci činnosti PO", "S vedomím PO – konanie osoby s vedomím či súhlasom PO"] },
-      { "label": "Sankcie pre PO", "leaves": ["Peňažný trest – základná majetková sankcia", "Zákaz činnosti – organizačná sankcia", "Prepadnutie majetku – najzávažnejšia majetková sankcia", "Zákaz dotácií a verejného obstarávania – vylúčenie z verejných zdrojov", "Zrušenie PO – najprísnejší trest"] },
-      { "label": "Účel trestania PO", "leaves": ["Ochrana spoločnosti – reakcia na kriminalitu právnických osôb", "Prevencia – odradenie od zneužívania PO", "Zamedzenie zneužívania – PO nesmie byť nástrojom trestnej činnosti"] }
+      {
+        "label": "Právny základ a podmienky",
+        "leaves": [
+          "Zákon č. 91/2016 Z. z. – osobitný zákon o trestnej zodpovednosti PO",
+          "Podmienka – čin spáchaný v mene, v prospech, v záujme alebo v rámci činnosti PO",
+          "Súbežná zodpovednosť – zodpovednosť PO nevylučuje zodpovednosť konajúcej FO"
+        ]
+      },
+      {
+        "label": "Pričítateľnosť konania",
+        "leaves": [
+          "Štatutár – konanie štatutárneho orgánu sa pripisuje PO",
+          "Riadiaca osoba – konanie osoby v riadiacej pozícii",
+          "Zamestnanec – konanie zamestnanca v rámci činnosti PO",
+          "S vedomím PO – konanie osoby s vedomím či súhlasom PO"
+        ]
+      },
+      {
+        "label": "Sankcie pre PO",
+        "leaves": [
+          "Peňažný trest – základná majetková sankcia",
+          "Zákaz činnosti – organizačná sankcia",
+          "Prepadnutie majetku – najzávažnejšia majetková sankcia",
+          "Zákaz dotácií a verejného obstarávania – vylúčenie z verejných zdrojov",
+          "Zrušenie PO – najprísnejší trest"
+        ]
+      },
+      {
+        "label": "Účel trestania PO",
+        "leaves": [
+          "Ochrana spoločnosti – reakcia na kriminalitu právnických osôb",
+          "Prevencia – odradenie od zneužívania PO",
+          "Zamedzenie zneužívania – PO nesmie byť nástrojom trestnej činnosti"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestná zodpovednosť právnických osôb je upravená zákonom č. 91/2016 Z. z.. Právnická osoba môže niesť trestnú zodpovednosť za trestné činy, ktoré boli spáchané v jej mene, v jej prospech, v rámci jej činnosti alebo v jej záujme.\nZodpovednosť právnickej osoby nevylučuje zodpovednosť fyzickej osoby, ktorá konala.\n\nKonanie právnickej osoby sa pripisuje konaniu jej štatutára, zamestnanca, osoby v riadiacej pozícii alebo osoby konajúcej s vedomím či súhlasom právnickej osoby.\nIde o tzv. pripísateľnosť konania, ktorá umožňuje trestnoprávnu reakciu voči subjektu, ktorý koná prostredníctvom osôb.\n\nSankcie pre právnické osoby sú prevažne majetkové a organizačné:\n– peňažný trest,\n– zákaz činnosti,\n– prepadnutie majetku,\n– zákaz prijímať dotácie alebo verejné prostriedky,\n– zákaz účasti vo verejnom obstarávaní,\n– zrušenie právnickej osoby (najprísnejší trest).\n\nÚčelom trestania právnických osôb je ochrana spoločnosti, prevencia a zamedzenie zneužívania právnických osôb na trestnú činnosť.\n\nZapamätaj si (štátnicové jadro)\n– Právnická osoba je trestne zodpovedná podľa zákona č. 91/2016 Z. z.  \n– Zodpovednosť vzniká, ak je čin spáchaný v mene, prospech, záujem alebo v rámci činnosti PO.\n– Konanie PO = konanie štatutára, zamestnanca, riadiacej osoby alebo osoby konajúcej s vedomím PO.\n– Sankcie: peňažný trest, zákaz činnosti, prepadnutie majetku, zrušenie PO.\n\nZdroj\n– Zákon č. 91/2016 Z. z. o trestnej zodpovednosti právnických osôb\n– Trestný zákon (zákon č. 300/2005 Z. z.), všeobecná časť\n– Komentár k TZ – Čentéš, Šramel\n– Ministerstvo spravodlivosti SR – metodické usmernenia k zodpovednosti PO"
 }

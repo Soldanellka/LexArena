@@ -2,7 +2,11 @@
   "id": "A6",
   "title": "Subjektívna stránka skutkovej podstaty trestného činu, omyl",
   "schemaVersion": "1.1",
-  "tags": ["subjektívna stránka", "zavinenie", "omyl"],
+  "tags": [
+    "subjektívna stránka",
+    "zavinenie",
+    "omyl"
+  ],
   "theory": [
     {
       "heading": "Subjektívna stránka",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Čo je subjektívna stránka trestného činu?",
-      "options": ["Vonkajšie okolnosti činu", "Psychický vzťah páchateľa k činu", "Spôsob spáchania činu"],
+      "options": [
+        "Vonkajšie okolnosti činu",
+        "Psychický vzťah páchateľa k činu",
+        "Spôsob spáchania činu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – subjektívna stránka je psychický vzťah páchateľa k činu.",
       "explanation_incorrect": "Nie – ide o psychický vzťah páchateľa."
     },
     {
       "question": "Ktorá forma zavinenia je najzávažnejšia?",
-      "options": ["Nevedomá nedbanlivosť", "Úmysel priamy", "Úmysel nepriamy"],
+      "options": [
+        "Nevedomá nedbanlivosť",
+        "Úmysel priamy",
+        "Úmysel nepriamy"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – priamy úmysel je najzávažnejšia forma zavinenia.",
       "explanation_incorrect": "Nie – priamy úmysel je najzávažnejší."
     },
     {
       "question": "Čo je skutkový omyl?",
-      "options": ["Omyl o právnej norme", "Omyl o okolnostiach skutku", "Omyl o treste"],
+      "options": [
+        "Omyl o právnej norme",
+        "Omyl o okolnostiach skutku",
+        "Omyl o treste"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – skutkový omyl sa týka okolností skutku.",
       "explanation_incorrect": "Nie – omyl o norme je právny omyl."
     },
     {
       "question": "Kedy môže omyl vylúčiť zavinenie?",
-      "options": ["Ak je neodstrániteľný", "Ak je úmyselný", "Ak je spôsobený nepozornosťou"],
+      "options": [
+        "Ak je neodstrániteľný",
+        "Ak je úmyselný",
+        "Ak je spôsobený nepozornosťou"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – neodstrániteľný omyl môže vylúčiť zavinenie.",
       "explanation_incorrect": "Nie – úmyselný omyl neexistuje."
     },
     {
       "question": "Ktorá forma nedbanlivosti je menej závažná?",
-      "options": ["Vedomá nedbanlivosť", "Nevedomá nedbanlivosť", "Obe sú rovnako závažné"],
+      "options": [
+        "Vedomá nedbanlivosť",
+        "Nevedomá nedbanlivosť",
+        "Obe sú rovnako závažné"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – nevedomá nedbanlivosť je menej závažná.",
       "explanation_incorrect": "Nie – vedomá nedbanlivosť je závažnejšia."
     }
   ],
   "tiles": [
-    { "term": "Úmysel priamy", "definition": "Páchateľ chcel porušiť alebo ohroziť chránený záujem." },
-    { "term": "Úmysel nepriamy", "definition": "Páchateľ vedel, že môže porušiť záujem, a bol s tým uzrozumený." },
-    { "term": "Vedomá nedbanlivosť", "definition": "Páchateľ vedel, že môže porušiť záujem, ale spoliehal sa, že sa tak nestane." },
-    { "term": "Nevedomá nedbanlivosť", "definition": "Páchateľ nevedel, že môže porušiť záujem, hoci vedieť mal a mohol." },
-    { "term": "Skutkový omyl", "definition": "Omyl o okolnostiach skutku, ktorý môže vylúčiť zavinenie." }
+    {
+      "term": "Úmysel priamy",
+      "definition": "Páchateľ chcel porušiť alebo ohroziť chránený záujem."
+    },
+    {
+      "term": "Úmysel nepriamy",
+      "definition": "Páchateľ vedel, že môže porušiť záujem, a bol s tým uzrozumený."
+    },
+    {
+      "term": "Vedomá nedbanlivosť",
+      "definition": "Páchateľ vedel, že môže porušiť záujem, ale spoliehal sa, že sa tak nestane."
+    },
+    {
+      "term": "Nevedomá nedbanlivosť",
+      "definition": "Páchateľ nevedel, že môže porušiť záujem, hoci vedieť mal a mohol."
+    },
+    {
+      "term": "Skutkový omyl",
+      "definition": "Omyl o okolnostiach skutku, ktorý môže vylúčiť zavinenie."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Ide o skutkový omyl?",
-          "options": ["Áno", "Nie", "Len ak bicykel bol rovnaký typ"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bicykel bol rovnaký typ"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – ide o omyl o okolnostiach skutku.",
           "explanation_incorrect": "Nie – je to skutkový omyl."
         },
         {
           "question": "Krok 2: Môže omyl vylúčiť zavinenie?",
-          "options": ["Áno – ak je neodstrániteľný", "Nie", "Len pri úmyselných činoch"],
+          "options": [
+            "Áno – ak je neodstrániteľný",
+            "Nie",
+            "Len pri úmyselných činoch"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – neodstrániteľný omyl vylučuje zavinenie.",
           "explanation_incorrect": "Nie – omyl môže vylúčiť zavinenie."
@@ -98,14 +145,22 @@
         },
         {
           "question": "Krok 1: Je to úmysel?",
-          "options": ["Nie", "Áno", "Len ak bol agresívny"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak bol agresívny"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – nejde o úmysel.",
           "explanation_incorrect": "Nie – nejde o úmysel."
         },
         {
           "question": "Krok 2: Ide o vedomú alebo nevedomú nedbanlivosť?",
-          "options": ["Vedomú", "Nevedomú", "Ani jednu"],
+          "options": [
+            "Vedomú",
+            "Nevedomú",
+            "Ani jednu"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – vedel, že prekračuje rýchlosť.",
           "explanation_incorrect": "Nie – je to vedomá nedbanlivosť."
@@ -122,10 +177,39 @@
   "spider": {
     "center": "Subjektívna stránka – zavinenie × úmysel × nedbanlivosť × omyl",
     "branches": [
-      { "label": "Subjektívna stránka", "leaves": ["Psychický vzťah – vnútorný vzťah páchateľa k činu a následku.", "Zavinenie – obligatórny znak, úmysel alebo nedbanlivosť.", "Motív a pohnútka – znak skutkovej podstaty len vtedy, keď to zákon vyžaduje."] },
-      { "label": "Formy zavinenia", "leaves": ["Úmysel priamy – páchateľ chcel porušiť alebo ohroziť chránený záujem.", "Úmysel nepriamy – vedel, že môže porušiť, a bol s tým uzrozumený.", "Vedomá nedbanlivosť – vedel, že môže spôsobiť následok, ale bez primeraných dôvodov sa spoliehal, že nenastane.", "Nevedomá nedbanlivosť – nevedel, hoci vedieť mal a mohol."] },
-      { "label": "Omyl", "leaves": ["Skutkový omyl – omyl o faktoch, vylučuje úmysel.", "Právny omyl nevyhnutný – nemohol sa mu vyhnúť, vylučuje zavinenie.", "Právny omyl vyhnuteľný – mohol sa mu vyhnúť, zodpovednosť trvá, môže znížiť trest."] },
-      { "label": "Význam", "leaves": ["Vznik zodpovednosti – bez zavinenia niet trestnej zodpovednosti.", "Kvalifikácia a trest – forma zavinenia ovplyvňuje kvalifikáciu aj výmeru trestu."] }
+      {
+        "label": "Subjektívna stránka",
+        "leaves": [
+          "Psychický vzťah – vnútorný vzťah páchateľa k činu a následku.",
+          "Zavinenie – obligatórny znak, úmysel alebo nedbanlivosť.",
+          "Motív a pohnútka – znak skutkovej podstaty len vtedy, keď to zákon vyžaduje."
+        ]
+      },
+      {
+        "label": "Formy zavinenia",
+        "leaves": [
+          "Úmysel priamy – páchateľ chcel porušiť alebo ohroziť chránený záujem.",
+          "Úmysel nepriamy – vedel, že môže porušiť, a bol s tým uzrozumený.",
+          "Vedomá nedbanlivosť – vedel, že môže spôsobiť následok, ale bez primeraných dôvodov sa spoliehal, že nenastane.",
+          "Nevedomá nedbanlivosť – nevedel, hoci vedieť mal a mohol."
+        ]
+      },
+      {
+        "label": "Omyl",
+        "leaves": [
+          "Skutkový omyl – omyl o faktoch, vylučuje úmysel.",
+          "Právny omyl nevyhnutný – nemohol sa mu vyhnúť, vylučuje zavinenie.",
+          "Právny omyl vyhnuteľný – mohol sa mu vyhnúť, zodpovednosť trvá, môže znížiť trest."
+        ]
+      },
+      {
+        "label": "Význam",
+        "leaves": [
+          "Vznik zodpovednosti – bez zavinenia niet trestnej zodpovednosti.",
+          "Kvalifikácia a trest – forma zavinenia ovplyvňuje kvalifikáciu aj výmeru trestu."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Subjektívna stránka trestného činu predstavuje vnútorný psychický vzťah páchateľa k trestnému činu, teda to, ako páchateľ vnímal svoje konanie, následok a okolnosti.\nZahŕňa zavinenie (úmysel alebo nedbanlivosť) a prípadne aj motív a pohnútku, ak sú znakom skutkovej podstaty.\n\nSubjektívna stránka je nevyhnutná pre vznik trestnej zodpovednosti – bez zavinenia nie je trestný čin.\n\n1. Formy zavinenia\nÚmysel (dolus)\nPáchateľ chcel porušiť alebo ohroziť chránený záujem, alebo bol s následkom uzrozumený.\n\nPriamy úmysel (dolus directus)  \nPáchateľ chce spôsob následku.\n\nNepriamy úmysel (dolus eventualis)  \nPáchateľ vie, že môže vzniknúť následok, a je s tým uzrozumený.\n\nNedbanlivosť (culpa)\nPáchateľ nechcel následok, ale konal nedbalo.\n\nVedomá nedbanlivosť  \nPáchateľ vie, že môže vzniknúť následok, ale bez primeraného dôvodu spolieha, že nenastane.\n\nNevedomá nedbanlivosť  \nPáchateľ nevedel, že môže vzniknúť následok, hoci vzhľadom na okolnosti vedieť mal a mohol.\n\n2. Omyl v trestnom práve\nOmyl je nesúlad medzi predstavou páchateľa a skutočnosťou.\nMôže vylúčiť zavinenie, alebo ho znížiť, a tým ovplyvniť trestnú zodpovednosť.\n\nSkutkový omyl\nPáchateľ sa mýli v skutkových okolnostiach (napr. myslí si, že strieľa do zvieraťa, ale je to človek).\n\nmôže vylúčiť úmysel,\n\nmôže viesť k posúdeniu ako nedbanlivosť,\n\nak nedbanlivosť nie je trestná → páchateľ nie je trestne zodpovedný.\n\nPrávny omyl\nPáchateľ sa mýli v tom, či je konanie trestné.\n\nnevyhnutný právny omyl → vylučuje zavinenie (páchateľ nemohol vedieť, že konanie je trestné),\n\nvyhnuteľný právny omyl → nevylučuje zavinenie, ale môže znížiť trest.\n\n3. Význam subjektívnej stránky\nSubjektívna stránka je rozhodujúca pre:\n\nvznik trestnej zodpovednosti,\n\nurčenie formy zavinenia,\n\nprávnu kvalifikáciu skutku,\n\nvýmeru trestu,\n\nodlíšenie úmyselných a nedbanlivostných trestných činov.\n\nZapamätaj si (štátnicové jadro)\n– Subjektívna stránka = vnútorný psychický vzťah páchateľa k trestnému činu.\n– Formy zavinenia: úmysel priamy × nepriamy, nedbanlivosť vedomá × nevedomá.\n– Omyl môže vylúčiť úmysel, niekedy aj celú trestnú zodpovednosť.\n– Skutkový omyl = omyl o faktoch; právny omyl = omyl o trestnosti konania.\n– Nevyhnutný právny omyl vylučuje zavinenie.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nČentéš – Trestné právo hmotné\nŠámal – Trestní právo hmotné\nJudikatúra NS SR"
 }

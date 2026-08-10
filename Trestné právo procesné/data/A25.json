@@ -2,50 +2,101 @@
   "id": "A25",
   "title": "Riadne opravné prostriedky",
   "schemaVersion": "1.1",
-  "tags": ["opravné prostriedky", "odvolanie", "sťažnosť", "trestné konanie"],
-
+  "tags": [
+    "opravné prostriedky",
+    "odvolanie",
+    "sťažnosť",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktorý opravný prostriedok je riadnym opravným prostriedkom proti rozsudku?",
-      "options": ["Sťažnosť", "Odvolanie", "Dovolanie"],
+      "options": [
+        "Sťažnosť",
+        "Odvolanie",
+        "Dovolanie"
+      ],
       "correct": 1
     },
     {
       "question": "Ktorý opravný prostriedok smeruje proti uzneseniu?",
-      "options": ["Odvolanie", "Sťažnosť", "Obžaloba"],
+      "options": [
+        "Odvolanie",
+        "Sťažnosť",
+        "Obžaloba"
+      ],
       "correct": 1
     },
     {
       "question": "Kto môže podať odvolanie proti rozsudku?",
-      "options": ["Len obvinený", "Obvinený, prokurátor aj poškodený", "Len súd"],
+      "options": [
+        "Len obvinený",
+        "Obvinený, prokurátor aj poškodený",
+        "Len súd"
+      ],
       "correct": 1
     },
     {
       "question": "Kto rozhoduje o sťažnosti proti uzneseniu?",
-      "options": ["Súd alebo nadriadený prokurátor", "Polícia", "Obhajca"],
+      "options": [
+        "Súd alebo nadriadený prokurátor",
+        "Polícia",
+        "Obhajca"
+      ],
       "correct": 0
     },
     {
       "question": "Aký účinok má podanie odvolania?",
-      "options": ["Odkladá právoplatnosť rozsudku", "Nemá žiadny účinok", "Zastavuje konanie"],
+      "options": [
+        "Odkladá právoplatnosť rozsudku",
+        "Nemá žiadny účinok",
+        "Zastavuje konanie"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Riadne opravné prostriedky", "definition": "Prostriedky, ktorými možno napadnúť neprávoplatné rozhodnutia." },
-    { "term": "Odvolanie", "definition": "Riadny opravný prostriedok proti rozsudku súdu prvého stupňa." },
-    { "term": "Sťažnosť", "definition": "Riadny opravný prostriedok proti uzneseniu." },
-    { "term": "Odkladný účinok", "definition": "Podanie odvolania bráni právoplatnosti rozhodnutia." },
-    { "term": "Odvolací súd", "definition": "Súd, ktorý rozhoduje o odvolaní." },
-
-    { "term": "Rozsah odvolania", "definition": "Časť rozhodnutia, proti ktorej odvolanie smeruje." },
-    { "term": "Dôvody odvolania", "definition": "Skutočnosti, pre ktoré sa rozhodnutie napáda." },
-    { "term": "Zamietnutie sťažnosti", "definition": "Rozhodnutie, ak je sťažnosť nedôvodná." },
-    { "term": "Vyhovenie sťažnosti", "definition": "Zrušenie alebo zmena napadnutého uznesenia." },
-    { "term": "Lehota na podanie", "definition": "Odvolanie aj sťažnosť sa podávajú spravidla do 3 dní." }
+    {
+      "term": "Riadne opravné prostriedky",
+      "definition": "Prostriedky, ktorými možno napadnúť neprávoplatné rozhodnutia."
+    },
+    {
+      "term": "Odvolanie",
+      "definition": "Riadny opravný prostriedok proti rozsudku súdu prvého stupňa."
+    },
+    {
+      "term": "Sťažnosť",
+      "definition": "Riadny opravný prostriedok proti uzneseniu."
+    },
+    {
+      "term": "Odkladný účinok",
+      "definition": "Podanie odvolania bráni právoplatnosti rozhodnutia."
+    },
+    {
+      "term": "Odvolací súd",
+      "definition": "Súd, ktorý rozhoduje o odvolaní."
+    },
+    {
+      "term": "Rozsah odvolania",
+      "definition": "Časť rozhodnutia, proti ktorej odvolanie smeruje."
+    },
+    {
+      "term": "Dôvody odvolania",
+      "definition": "Skutočnosti, pre ktoré sa rozhodnutie napáda."
+    },
+    {
+      "term": "Zamietnutie sťažnosti",
+      "definition": "Rozhodnutie, ak je sťažnosť nedôvodná."
+    },
+    {
+      "term": "Vyhovenie sťažnosti",
+      "definition": "Zrušenie alebo zmena napadnutého uznesenia."
+    },
+    {
+      "term": "Lehota na podanie",
+      "definition": "Odvolanie aj sťažnosť sa podávajú spravidla do 3 dní."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Odvolanie proti rozsudku",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Aký opravný prostriedok môže podať?",
-          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "options": [
+            "Odvolanie",
+            "Sťažnosť",
+            "Dovolanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto rozhoduje o odvolaní?",
-          "options": ["Okresný súd", "Krajský súd", "Najvyšší súd"],
+          "options": [
+            "Okresný súd",
+            "Krajský súd",
+            "Najvyšší súd"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Sťažnosť proti uzneseniu",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Aký opravný prostriedok môže poškodený podať?",
-          "options": ["Odvolanie", "Sťažnosť", "Dovolanie"],
+          "options": [
+            "Odvolanie",
+            "Sťažnosť",
+            "Dovolanie"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto rozhoduje o sťažnosti?",
-          "options": ["Nadriadený prokurátor", "Súd", "Polícia"],
+          "options": [
+            "Nadriadený prokurátor",
+            "Súd",
+            "Polícia"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,40 @@
   "spider": {
     "center": "Riadne opravné prostriedky – sťažnosť × odvolanie",
     "branches": [
-      { "label": "Pojem", "leaves": ["Cieľ – napadnúť neprávoplatné rozhodnutie a odstrániť chyby pred právoplatnosťou", "Garancia – súčasť práva na spravodlivý proces"] },
-      { "label": "Sťažnosť (§§ 179–195)", "leaves": ["Proti čomu – uznesenie", "Kto – obvinený, poškodený, zúčastnená osoba, prokurátor", "Lehota – 3 dni; odkladný účinok", "Rozhodnutie – zamietnutie, zrušenie, zmena (nadriadený orgán)"] },
-      { "label": "Odvolanie (§§ 307–322)", "leaves": ["Proti čomu – rozsudok", "Kto – obžalovaný, obhajca, prokurátor, poškodený v rozsahu nároku", "Lehota – 15 dní; odkladný účinok", "Prieskum – zákonnosť, skutkové zistenia, trest, procesné chyby"] },
-      { "label": "Rozhodnutia odvolacieho súdu (§ 321)", "leaves": ["Potvrdenie – zamietnutie odvolania", "Zrušenie – nové rozhodnutie alebo vrátenie veci", "Zmena rozsudku"] }
+      {
+        "label": "Pojem",
+        "leaves": [
+          "Cieľ – napadnúť neprávoplatné rozhodnutie a odstrániť chyby pred právoplatnosťou",
+          "Garancia – súčasť práva na spravodlivý proces"
+        ]
+      },
+      {
+        "label": "Sťažnosť (§§ 179–195)",
+        "leaves": [
+          "Proti čomu – uznesenie",
+          "Kto – obvinený, poškodený, zúčastnená osoba, prokurátor",
+          "Lehota – 3 dni; odkladný účinok",
+          "Rozhodnutie – zamietnutie, zrušenie, zmena (nadriadený orgán)"
+        ]
+      },
+      {
+        "label": "Odvolanie (§§ 307–322)",
+        "leaves": [
+          "Proti čomu – rozsudok",
+          "Kto – obžalovaný, obhajca, prokurátor, poškodený v rozsahu nároku",
+          "Lehota – 15 dní; odkladný účinok",
+          "Prieskum – zákonnosť, skutkové zistenia, trest, procesné chyby"
+        ]
+      },
+      {
+        "label": "Rozhodnutia odvolacieho súdu (§ 321)",
+        "leaves": [
+          "Potvrdenie – zamietnutie odvolania",
+          "Zrušenie – nové rozhodnutie alebo vrátenie veci",
+          "Zmena rozsudku"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Riadne opravné prostriedky sú procesné nástroje, ktorými možno napadnúť neprávoplatné rozhodnutia v trestnom konaní. Trestný poriadok pozná dva riadne opravné prostriedky: sťažnosť (proti uzneseniam) a odvolanie (proti rozsudkom). Oba majú odkladný účinok, sú časovo obmedzené a smerujú k preskúmaniu zákonnosti a správnosti rozhodnutia. Riadne opravné prostriedky sú základnou garanciou práva na spravodlivý proces.\n\n1. Pojem riadneho opravného prostriedku\nRiadny opravný prostriedok je procesný prostriedok, ktorým možno napadnúť neprávoplatné rozhodnutie súdu alebo orgánu činného v trestnom konaní.\nCieľom je odstrániť chyby rozhodnutia ešte pred jeho právoplatnosťou.\n\n2. Druhy riadnych opravných prostriedkov\n2.1 Sťažnosť (§ 179–195 TP)\nSťažnosť je riadny opravný prostriedok proti uzneseniu.\n\nKto môže podať sťažnosť?\nobvinený,\n\npoškodený (ak sa ho rozhodnutie týka),\n\nzúčastnená osoba,\n\nprokurátor.\n\nLehota\n3 dni od oznámenia uznesenia.\n\nÚčinky sťažnosti\nmá odkladný účinok, ak zákon neustanovuje inak,\n\nrozhoduje nadriadený orgán (súd alebo prokurátor).\n\nRozhodnutie o sťažnosti\nzamietnutie,\n\nzrušenie uznesenia,\n\nzmena uznesenia.\n\n2.2 Odvolanie (§ 307–322 TP)\nOdvolanie je riadny opravný prostriedok proti rozsudku.\n\nKto môže podať odvolanie?\nobžalovaný,\n\nobhajca,\n\nprokurátor,\n\npoškodený (v rozsahu náhrady škody),\n\nzúčastnená osoba.\n\nLehota\n15 dní od oznámenia rozsudku.\n\nÚčinky odvolania\nmá odkladný účinok – rozsudok nie je právoplatný,\n\nvec prechádza do odvolacieho konania.\n\nRozsah preskúmania\nOdvolací súd preskúma:\n\nzákonnosť rozsudku,\n\nsprávnosť skutkových zistení,\n\nprimeranosť trestu,\n\nprocesné chyby.\n\nRozhodnutia odvolacieho súdu (§ 321 TP)\npotvrdenie rozsudku,\n\nzrušenie rozsudku a nové rozhodnutie,\n\nzrušenie rozsudku a vrátenie veci,\n\nzmena rozsudku.\n\n3. Spoločné znaky riadnych opravných prostriedkov\nsmerujú proti neprávoplatným rozhodnutiam,\n\nmajú odkladný účinok,\n\nsú časovo obmedzené,\n\nsú základnou garanciou práva na spravodlivý proces,\n\npreskúmava ich nadriadený orgán.\n\nZapamätaj si (štátnicové jadro)\nRiadne opravné prostriedky: sťažnosť a odvolanie.\n\nSťažnosť = proti uzneseniu, lehota 3 dni.\n\nOdvolanie = proti rozsudku, lehota 15 dní.\n\nOba majú odkladný účinok.\n\nOdvolací súd môže rozsudok potvrdiť, zmeniť, zrušiť alebo vrátiť.\n\nZdroj:\nTrestný poriadok – § 179–195 (sťažnosť), § 307–322 (odvolanie)\n\nLegalis – odborné články k riadnym opravným prostriedkom \n\nNajprávo – judikatúra k povinnosti podať riadny opravný prostriedok"
 }

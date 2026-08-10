@@ -2,13 +2,22 @@
   "id": "8",
   "title": "Strany sporu a účastníci konania, spoločenstvo, intervenient",
   "schemaVersion": "1.1",
-  "tags": ["strany sporu", "účastníci konania", "procesné spoločenstvo", "intervenient"],
-  "summary": "Stranami sporového konania sú žalobca a žalovaný; v mimosporovom konaní hovoríme širšie o účastníkoch konania, teda o osobách, o právach a povinnostiach ktorých sa konanie priamo týka. Ak na strane žalobcu alebo žalovaného vystupuje viac osôb, ide o procesné spoločenstvo. Pri samostatnom spoločenstve (§ 76 CSP) sa práva a povinnosti jednotlivých spoločníkov posudzujú samostatne a procesný úkon jedného sa netýka ostatných; pri nerozlučnom spoločenstve (§ 77 CSP) musí byť z hmotnoprávnych dôvodov rozhodnuté rovnako voči všetkým spoločníkom, preto účinky dispozičného úkonu jedného z nich nastanú, len ak ho urobia (alebo s ním súhlasia) všetci.\n\nOsobitným subjektom je vedľajší účastník (intervenient) – osoba s vlastným právnym záujmom na výsledku sporu, ktorá do už začatého konania vstúpi na podporu žalobcu alebo žalovaného (§ 81 – 83 CSP), napríklad poisťovňa v spore o náhradu škody. Intervenient má v konaní v zásade rovnaké práva ako strana, na ktorej vystupuje, avšak nemôže vykonávať dispozičné úkony s predmetom konania (nemôže napríklad vziať žalobu späť ani uznať nárok), lebo predmet konania patrí výlučne strane.\n\nZapamätaj si:\n- Strany sporu = žalobca a žalovaný; v mimosporovom konaní hovoríme o účastníkoch.\n- Samostatné spoločenstvo (§ 76 CSP): úkony jedného spoločníka sa netýkajú ostatných.\n- Nerozlučné spoločenstvo (§ 77 CSP): vec musí byť rozhodnutá rovnako voči všetkým spoločníkom.\n- Intervenient (§ 81 CSP): má právny záujem na výsledku, vstupuje na podporu jednej strany.\n- Intervenient nemôže robiť dispozičné úkony s predmetom konania (späťvzatie, uznanie nároku)."
-  ,
+  "tags": [
+    "strany sporu",
+    "účastníci konania",
+    "procesné spoločenstvo",
+    "intervenient"
+  ],
+  "summary": "Strany sporu a účastníci konania sú základnými subjektmi civilného procesu.\nV sporovom konaní sú stranami žalobca a žalovaný (§ 60 CSP) – osoby, ktoré majú vlastný právny záujem na výsledku konania a spĺňajú procesnú legitimáciu (t. j. podľa hmotného práva sú nositeľmi tvrdeného nároku alebo povinnosti = vecná legitimácia).\n\nV mimosporovom konaní sa používa širší pojem účastníci konania (§ 7 CMP):\n– účastníkom je ten, koho zákon označí,\n– v konaniach začínajúcich ex offo sú účastníkmi všetci, o právach a povinnostiach ktorých sa má konať.\n\nÚčastník musí mať:\n\nprocesnú subjektivitu – spôsobilosť byť stranou konania,\n\nprocesnú spôsobilosť – konať vlastnými úkonmi; osoby bez nej konajú cez zákonných zástupcov.\n\nProcesné spoločenstvo (§ 76–77 CSP)\nAk na strane žalobcu alebo žalovaného vystupuje viac osôb, vzniká procesné spoločenstvo.\nIde o subjektívnu kumuláciu – môže byť aktívna (viac žalobcov) alebo pasívna (viac žalovaných).\nSpoločenstvo môže byť dobrovoľné alebo nútené (vyplýva z hmotného práva).\n\nSamostatné spoločenstvo (§ 76 CSP)\npráva a povinnosti každého spoločníka sa posudzujú samostatne,\n\nprocesný úkon jedného nemá účinky voči ostatným,\n\ntypické pri deliteľných nárokoch.\n\nNerozlučné spoločenstvo (§ 77 CSP)\nz hmotnoprávnych dôvodov musí byť rozhodnuté rovnako voči všetkým,\n\ndispozičný úkon jedného má účinky len ak ho urobia všetci alebo s ním súhlasia,\n\ntypické pri nedeliteľných právach (napr. spoluvlastníci spoločnej veci).\n\nIntervenient (vedľajší účastník) (§ 81–83 CSP)\nIntervenient je osoba, ktorá má vlastný právny záujem na víťazstve jednej zo strán.\nVstupuje do už prebiehajúceho konania:\n\nz vlastného podnetu, alebo\n\nna výzvu strany, ktorá chce jeho podporu.\n\nIntervenient „pomáha vyhrať spor“ strane, ku ktorej sa pridáva.\n\nMá:\n\nrovnaké procesné práva ako strana, ktorú podporuje,\n\nnemôže vykonávať dispozičné úkony s predmetom konania (späťvzatie žaloby, uznanie nároku, zmier).\n\nPríklad: poisťovňa v spore o náhradu škody.\n\nZapamätaj si (štátnicové jadro)\nStrany sporu: žalobca a žalovaný; v mimosporovom konaní: účastníci podľa § 7 CMP.\n\nProcesná legitimácia: žalobca a žalovaný musia byť nositeľmi tvrdeného práva/povinnosti.\n\nSamostatné spoločenstvo: úkony jedného sa netýkajú ostatných.\n\nNerozlučné spoločenstvo: musí sa rozhodnúť rovnako voči všetkým.\n\nIntervenient: má právny záujem, podporuje stranu, nemôže disponovať predmetom konania.\n\nVecná legitimácia: vyplýva z hmotného práva.\n\nSubjektívna kumulácia: aktívna/pasívna, dobrovoľná/nútená.\n\nZdroj:\nCSP (160/2015 Z. z.), § 60, § 76–83; CMP (161/2015 Z. z.), § 7; judikatúra NS SR.",
   "quiz": [
     {
       "question": "Kto sú strany sporu v civilnom sporovom konaní?",
-      "options": ["Žalobca a žalovaný", "Súd a žalobca", "Svedok a znalec", "Prokurátor a súd"],
+      "options": [
+        "Žalobca a žalovaný",
+        "Súd a žalobca",
+        "Svedok a znalec",
+        "Prokurátor a súd"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. V sporovom konaní sú stranami žalobca (ten, kto sa domáha ochrany práva) a žalovaný (ten, proti komu smeruje žaloba).",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Čo je nerozlučné procesné spoločenstvo podľa § 77 CSP?",
-      "options": ["Spoločenstvo, kde sa právne veci spoluúčastníkov posudzujú vždy samostatne", "Spoločenstvo, v ktorom sa vec musí z hmotnoprávnych dôvodov rozhodnúť rovnako voči všetkým spoločníkom", "Spoločenstvo iba na strane žalovaného", "Spoločenstvo, ktoré vzniká len v mimosporovom konaní"],
+      "options": [
+        "Spoločenstvo, kde sa právne veci spoluúčastníkov posudzujú vždy samostatne",
+        "Spoločenstvo, v ktorom sa vec musí z hmotnoprávnych dôvodov rozhodnúť rovnako voči všetkým spoločníkom",
+        "Spoločenstvo iba na strane žalovaného",
+        "Spoločenstvo, ktoré vzniká len v mimosporovom konaní"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pri nerozlučnom spoločenstve vyžaduje hmotné právo jednotné rozhodnutie voči všetkým spoločníkom (napr. spoluvlastníci pri niektorých nárokoch).",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Kto je vedľajší účastník (intervenient)?",
-      "options": ["Osoba, ktorá vstúpi do konania na podporu žalobcu alebo žalovaného, lebo má právny záujem na výsledku sporu", "Osoba, ktorá nahrádza žalobcu", "Znalec ustanovený súdom", "Sudca vyššieho súdu"],
+      "options": [
+        "Osoba, ktorá vstúpi do konania na podporu žalobcu alebo žalovaného, lebo má právny záujem na výsledku sporu",
+        "Osoba, ktorá nahrádza žalobcu",
+        "Znalec ustanovený súdom",
+        "Sudca vyššieho súdu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Intervenient vstupuje na podporu jednej zo strán, pretože má vlastný právny záujem na tom, ako spor dopadne.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Aké procesné práva má intervenient?",
-      "options": ["Rovnaké práva ako strana, na ktorej vystupuje, s výnimkou dispozičných úkonov s predmetom konania (napr. nemôže vziať žalobu späť)", "Žiadne procesné práva", "Právo rozhodnúť namiesto súdu", "Právo podať vlastnú samostatnú žalobu v tom istom konaní"],
+      "options": [
+        "Rovnaké práva ako strana, na ktorej vystupuje, s výnimkou dispozičných úkonov s predmetom konania (napr. nemôže vziať žalobu späť)",
+        "Žiadne procesné práva",
+        "Právo rozhodnúť namiesto súdu",
+        "Právo podať vlastnú samostatnú žalobu v tom istom konaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Intervenient má procesné práva podobné strane, na podporu ktorej vystupuje, avšak dispozičné úkony s predmetom konania patria len samotnej strane.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Čo je samostatné procesné spoločenstvo podľa § 76 CSP?",
-      "options": ["Spoločenstvo, kde súd rozhoduje voči každému spoločníkovi samostatne a úkony jedného sa netýkajú ostatných", "Spoločenstvo, kde musí byť rozhodnutie jednotné pre všetkých spoločníkov", "Spoločenstvo, ktoré existuje len pri jednom účastníkovi", "Spoločenstvo výlučne v exekučnom konaní"],
+      "options": [
+        "Spoločenstvo, kde súd rozhoduje voči každému spoločníkovi samostatne a úkony jedného sa netýkajú ostatných",
+        "Spoločenstvo, kde musí byť rozhodnutie jednotné pre všetkých spoločníkov",
+        "Spoločenstvo, ktoré existuje len pri jednom účastníkovi",
+        "Spoločenstvo výlučne v exekučnom konaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri samostatnom spoločenstve konajú spoluúčastníci nezávisle a procesný úkon jedného nemá vplyv na postavenie ostatných.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Strany sporu", "definition": "Žalobca a žalovaný v civilnom sporovom konaní." },
-    { "term": "Procesné spoločenstvo", "definition": "Účasť viacerých osôb na strane žalobcu alebo žalovaného v tom istom konaní." },
-    { "term": "Samostatné spoločenstvo (§ 76 CSP)", "definition": "Úkony jedného spoločníka sa netýkajú ostatných, súd rozhoduje voči každému samostatne." },
-    { "term": "Nerozlučné spoločenstvo (§ 77 CSP)", "definition": "Vec sa musí z hmotnoprávnych dôvodov rozhodnúť rovnako voči všetkým spoločníkom." },
-    { "term": "Intervenient", "definition": "Osoba s právnym záujmom na výsledku sporu, ktorá vstúpi na podporu jednej zo strán (§ 81 CSP)." }
+    {
+      "term": "Strany sporu",
+      "definition": "Žalobca a žalovaný v civilnom sporovom konaní."
+    },
+    {
+      "term": "Procesné spoločenstvo",
+      "definition": "Účasť viacerých osôb na strane žalobcu alebo žalovaného v tom istom konaní."
+    },
+    {
+      "term": "Samostatné spoločenstvo (§ 76 CSP)",
+      "definition": "Úkony jedného spoločníka sa netýkajú ostatných, súd rozhoduje voči každému samostatne."
+    },
+    {
+      "term": "Nerozlučné spoločenstvo (§ 77 CSP)",
+      "definition": "Vec sa musí z hmotnoprávnych dôvodov rozhodnúť rovnako voči všetkým spoločníkom."
+    },
+    {
+      "term": "Intervenient",
+      "definition": "Osoba s právnym záujmom na výsledku sporu, ktorá vstúpi na podporu jednej zo strán (§ 81 CSP)."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Spoluvlastníci ako žalovaní",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Traja spoluvlastníci nehnuteľnosti sú spoločne žalovaní o vypratanie stavby postavenej na spoločnom pozemku, pričom vec musí byť z hmotnoprávnych dôvodov rozhodnutá rovnako voči všetkým.", "options": [], "correct": 0 },
+        {
+          "question": "Traja spoluvlastníci nehnuteľnosti sú spoločne žalovaní o vypratanie stavby postavenej na spoločnom pozemku, pričom vec musí byť z hmotnoprávnych dôvodov rozhodnutá rovnako voči všetkým.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ procesného spoločenstva ide?",
-          "options": ["Nerozlučné spoločenstvo", "Samostatné spoločenstvo", "Vôbec nejde o procesné spoločenstvo"],
+          "options": [
+            "Nerozlučné spoločenstvo",
+            "Samostatné spoločenstvo",
+            "Vôbec nejde o procesné spoločenstvo"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Keďže vec sa musí voči všetkým spoluvlastníkom rozhodnúť rovnako, ide o nerozlučné spoločenstvo podľa § 77 CSP.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Čo to znamená pre procesné úkony jedného zo spoluvlastníkov, napríklad uznanie nároku?",
-          "options": ["Účinky takéhoto úkonu nastanú len vtedy, ak ho urobia (alebo s ním súhlasia) všetci nerozluční spoločníci", "Postačí úkon jedného spoluvlastníka, účinný voči všetkým bez ďalšieho", "Úkon jedného spoluvlastníka je vždy bez významu"],
+          "options": [
+            "Účinky takéhoto úkonu nastanú len vtedy, ak ho urobia (alebo s ním súhlasia) všetci nerozluční spoločníci",
+            "Postačí úkon jedného spoluvlastníka, účinný voči všetkým bez ďalšieho",
+            "Úkon jedného spoluvlastníka je vždy bez významu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri nerozlučnom spoločenstve musí byť dispozičný úkon spoločný, inak nemá požadované účinky voči všetkým.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Poisťovňa ako vedľajší účastník",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "V spore o náhradu škody z dopravnej nehody vstúpi do konania poisťovňa žalovaného vodiča, pretože má záujem na výsledku (bude plniť z poistenia zodpovednosti).", "options": [], "correct": 0 },
+        {
+          "question": "V spore o náhradu škody z dopravnej nehody vstúpi do konania poisťovňa žalovaného vodiča, pretože má záujem na výsledku (bude plniť z poistenia zodpovednosti).",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa procesné postavenie poisťovne označuje?",
-          "options": ["Je vedľajším účastníkom (intervenientom) na strane žalovaného", "Stáva sa žalovaným namiesto vodiča", "Je svedkom v konaní"],
+          "options": [
+            "Je vedľajším účastníkom (intervenientom) na strane žalovaného",
+            "Stáva sa žalovaným namiesto vodiča",
+            "Je svedkom v konaní"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Poisťovňa má právny záujem na výsledku sporu, preto vystupuje ako intervenient na strane žalovaného.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Môže poisťovňa ako intervenient vziať žalobu späť namiesto žalovaného?",
-          "options": ["Nie, dispozičné úkony s predmetom konania patria len strane, na ktorej intervenient vystupuje", "Áno, má rovnaké dispozičné práva ako žalovaný", "Áno, ale iba so súhlasom žalobcu"],
+          "options": [
+            "Nie, dispozičné úkony s predmetom konania patria len strane, na ktorej intervenient vystupuje",
+            "Áno, má rovnaké dispozičné práva ako žalovaný",
+            "Áno, ale iba so súhlasom žalobcu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Predmetom konania disponuje výlučne strana (žalovaný), nie vedľajší účastník.",
@@ -120,13 +188,71 @@
   "spider": {
     "center": "Strany sporu × Účastníci × Spoločenstvo × Intervenient",
     "branches": [
-      { "label": "Strany sporu (§ 60 CSP)", "leaves": ["žalobca × žalovaný", "procesná legitimácia (kto môže byť stranou podľa procesného práva)", "vecná legitimácia (vyplýva z hmotného práva – kto je nositeľom tvrdeného nároku/povinnosti)", "majú vlastný právny záujem na výsledku konania", "vykonávajú dispozičné úkony (žaloba, späťvzatie, uznanie nároku, zmier)"] },
-      { "label": "Účastníci konania (§ 7 CMP)", "leaves": ["účastníkom je ten, koho zákon označí", "v konaniach začínajúcich ex offo: všetci, o právach a povinnostiach ktorých sa má konať", "príklady: dedičia, rodičia v opatrovníckych veciach", "musia mať procesnú subjektivitu (byť stranou konania)", "musia mať procesnú spôsobilosť (konať vlastnými úkonmi)", "osoby bez spôsobilosti konajú cez zákonných zástupcov"] },
-      { "label": "Vecná legitimácia", "leaves": ["vyplýva z hmotného práva", "odlišná od procesnej legitimácie", "nedostatok vecnej legitimácie → zamietnutie žaloby, nie zastavenie konania"] },
-      { "label": "Subjektívna kumulácia a spoločenstvo účastníkov", "leaves": ["aktívna kumulácia – viac osôb na strane žalobcu", "pasívna kumulácia – viac osôb na strane žalovaného", "dobrovoľné spoločenstvo – strany sa rozhodnú vystupovať spolu", "nútené spoločenstvo – vyplýva z hmotného práva (nedeliteľné práva)"] },
-      { "label": "Samostatné spoločenstvo (§ 76 CSP)", "leaves": ["práva a povinnosti každého sa posudzujú samostatne", "úkon jedného nemá účinky voči ostatným", "typické pri deliteľných nárokoch"] },
-      { "label": "Nerozlučné spoločenstvo (§ 77 CSP)", "leaves": ["musí sa rozhodnúť rovnako voči všetkým", "dispozičný úkon jedného účinkuje len ak ho urobia všetci", "typické pri nedeliteľných právach (napr. spoluvlastníci)"] },
-      { "label": "Intervenient (vedľajší účastník)", "leaves": ["osoba s vlastným právnym záujmom na víťazstve jednej zo strán", "vstupuje do konania: – z vlastného podnetu, alebo – na výzvu strany", "„pomáha vyhrať spor“ strane, ku ktorej sa pridáva", "má rovnaké procesné práva ako strana, ktorú podporuje", "nemôže disponovať predmetom konania: – späťvzatie žaloby – uznanie nároku – uzavretie zmieru", "príklad: poisťovňa v spore o náhradu škody"] }
+      {
+        "label": "Strany sporu (§ 60 CSP)",
+        "leaves": [
+          "žalobca × žalovaný",
+          "procesná legitimácia (kto môže byť stranou podľa procesného práva)",
+          "vecná legitimácia (vyplýva z hmotného práva – kto je nositeľom tvrdeného nároku/povinnosti)",
+          "majú vlastný právny záujem na výsledku konania",
+          "vykonávajú dispozičné úkony (žaloba, späťvzatie, uznanie nároku, zmier)"
+        ]
+      },
+      {
+        "label": "Účastníci konania (§ 7 CMP)",
+        "leaves": [
+          "účastníkom je ten, koho zákon označí",
+          "v konaniach začínajúcich ex offo: všetci, o právach a povinnostiach ktorých sa má konať",
+          "príklady: dedičia, rodičia v opatrovníckych veciach",
+          "musia mať procesnú subjektivitu (byť stranou konania)",
+          "musia mať procesnú spôsobilosť (konať vlastnými úkonmi)",
+          "osoby bez spôsobilosti konajú cez zákonných zástupcov"
+        ]
+      },
+      {
+        "label": "Vecná legitimácia",
+        "leaves": [
+          "vyplýva z hmotného práva",
+          "odlišná od procesnej legitimácie",
+          "nedostatok vecnej legitimácie → zamietnutie žaloby, nie zastavenie konania"
+        ]
+      },
+      {
+        "label": "Subjektívna kumulácia a spoločenstvo účastníkov",
+        "leaves": [
+          "aktívna kumulácia – viac osôb na strane žalobcu",
+          "pasívna kumulácia – viac osôb na strane žalovaného",
+          "dobrovoľné spoločenstvo – strany sa rozhodnú vystupovať spolu",
+          "nútené spoločenstvo – vyplýva z hmotného práva (nedeliteľné práva)"
+        ]
+      },
+      {
+        "label": "Samostatné spoločenstvo (§ 76 CSP)",
+        "leaves": [
+          "práva a povinnosti každého sa posudzujú samostatne",
+          "úkon jedného nemá účinky voči ostatným",
+          "typické pri deliteľných nárokoch"
+        ]
+      },
+      {
+        "label": "Nerozlučné spoločenstvo (§ 77 CSP)",
+        "leaves": [
+          "musí sa rozhodnúť rovnako voči všetkým",
+          "dispozičný úkon jedného účinkuje len ak ho urobia všetci",
+          "typické pri nedeliteľných právach (napr. spoluvlastníci)"
+        ]
+      },
+      {
+        "label": "Intervenient (vedľajší účastník)",
+        "leaves": [
+          "osoba s vlastným právnym záujmom na víťazstve jednej zo strán",
+          "vstupuje do konania: – z vlastného podnetu, alebo – na výzvu strany",
+          "„pomáha vyhrať spor“ strane, ku ktorej sa pridáva",
+          "má rovnaké procesné práva ako strana, ktorú podporuje",
+          "nemôže disponovať predmetom konania: – späťvzatie žaloby – uznanie nároku – uzavretie zmieru",
+          "príklad: poisťovňa v spore o náhradu škody"
+        ]
+      }
     ]
   }
 }

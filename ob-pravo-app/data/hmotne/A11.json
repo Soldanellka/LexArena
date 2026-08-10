@@ -1,7 +1,7 @@
 {
   "id": "11",
   "title": "Vecné práva – pojem, druhy, základná charakteristika",
-  "summary": "Vecné práva sú absolútne práva pôsobiace erga omnes (voči všetkým). Druhy: vlastnícke právo, spoluvlastníctvo, záložné právo, vecné bremená. Platí princíp numerus clausus – zákon taxatívne vymenúva vecné práva. Vecné právo nasleduje vec (droit de suite).",
+  "summary": "Vecné práva sú absolútne práva, ktoré pôsobia erga omnes, teda voči všetkým. Každý je povinný rešpektovať právne postavenie oprávneného subjektu k veci. Vecné práva upravujú priame právne panstvo nad vecou a poskytujú silnejšiu ochranu než záväzkové práva, ktoré pôsobia len medzi stranami.\n\nZákladné zásady vecných práv:\n– numerus clausus – vecné práva sú taxatívne vymenované zákonom, nemožno ich vytvárať zmluvne,\n– droit de suite – vecné právo „nasleduje vec“, teda pôsobí aj voči nadobúdateľom,\n– droit de préférence – prednostné postavenie pri uspokojovaní (najmä pri záložnom práve).\n\nDruhy vecných práv\nOZ upravuje najmä tieto vecné práva:\n\n1. Vlastnícke právo  \nNajširšie vecné právo, ktoré oprávňuje vlastníka vec držať, užívať, nakladať s ňou a vylúčiť iných z jej užívania. Obsahuje tri základné oprávnenia: držba, užívanie, nakladanie.\n\n2. Spoluvlastníctvo  \nVlastnícke právo viacerých osôb k tej istej veci. Môže byť podielové alebo bezpodielové (BSM). Každý spoluvlastník má podiel vyjadrujúci mieru jeho účasti na právach a povinnostiach.\n\n3. Záložné právo  \nVecné právo slúžiace na zabezpečenie pohľadávky. Oprávňuje veriteľa uspokojiť sa z predmetu záložného práva, ak dlžník nesplní záväzok. Má silný preferenčný účinok.\n\n4. Vecné bremená  \nObmedzujú vlastníka nehnuteľnosti v prospech inej osoby. Môžu spočívať v povinnosti niečo strpieť (prechod, prejazd) alebo konať (napr. udržiavať studňu). Viažu sa na nehnuteľnosť a prechádzajú na nadobúdateľov.\n\nVecné práva poskytujú vysokú mieru právnej istoty, pretože sú verejne evidované (najmä v katastri nehnuteľností) a pôsobia voči každému.\n\nZdroje: OZ (40/1964 Zb.), vecné práva; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je charakteristickým znakom vecného práva?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Vecné právo", "definition": "Absolútne právo pôsobiace erga omnes (voči všetkým)." },
-    { "term": "Numerus clausus", "definition": "Zákon taxatívne vymenúva druhy vecných práv, strany nemôžu vytvárať nové." },
-    { "term": "Droit de suite", "definition": "Vecné právo nasleduje vec aj pri zmene vlastníka." },
-    { "term": "Záložné právo", "definition": "Vecné právo zabezpečujúce pohľadávku veriteľa možnosťou uspokojenia zo zálohu." },
-    { "term": "Vlastnícke právo (§ 123 OZ)", "definition": "Najúplnejšie vecné právo zahŕňajúce právo vec držať, užívať, požívať plody a nakladať s ňou." }
+    {
+      "term": "Vecné právo",
+      "definition": "Absolútne právo pôsobiace erga omnes (voči všetkým)."
+    },
+    {
+      "term": "Numerus clausus",
+      "definition": "Zákon taxatívne vymenúva druhy vecných práv, strany nemôžu vytvárať nové."
+    },
+    {
+      "term": "Droit de suite",
+      "definition": "Vecné právo nasleduje vec aj pri zmene vlastníka."
+    },
+    {
+      "term": "Záložné právo",
+      "definition": "Vecné právo zabezpečujúce pohľadávku veriteľa možnosťou uspokojenia zo zálohu."
+    },
+    {
+      "term": "Vlastnícke právo (§ 123 OZ)",
+      "definition": "Najúplnejšie vecné právo zahŕňajúce právo vec držať, užívať, požívať plody a nakladať s ňou."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Prevod zaťaženej nehnuteľnosti",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Vlastník predá nehnuteľnosť zaťaženú záložným právom veriteľa, bez toho, aby záložné právo pred predajom zaniklo.", "options": [], "correct": 0 },
+        {
+          "question": "Vlastník predá nehnuteľnosť zaťaženú záložným právom veriteľa, bez toho, aby záložné právo pred predajom zaniklo.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Prechádza záložné právo na nového vlastníka nehnuteľnosti?",
-          "options": ["Áno, vecné právo nasleduje vec (droit de suite)", "Nie, prevodom veci záložné právo automaticky zaniká", "Áno, ale iba ak s tým nový vlastník výslovne súhlasí"],
+          "options": [
+            "Áno, vecné právo nasleduje vec (droit de suite)",
+            "Nie, prevodom veci záložné právo automaticky zaniká",
+            "Áno, ale iba ak s tým nový vlastník výslovne súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Záložné právo ako vecné právo zostáva viazané na vec bez ohľadu na zmenu vlastníka.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Prečo vecné právo takto „nasleduje“ vec?",
-          "options": ["Lebo je viazané na vec, nie na osobu pôvodného vlastníka", "Lebo ide o záväzkové právo pôsobiace len medzi pôvodnými stranami", "Lebo zákon to výslovne zakazuje, iba ak ide o hnuteľnú vec"],
+          "options": [
+            "Lebo je viazané na vec, nie na osobu pôvodného vlastníka",
+            "Lebo ide o záväzkové právo pôsobiace len medzi pôvodnými stranami",
+            "Lebo zákon to výslovne zakazuje, iba ak ide o hnuteľnú vec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Absolútna povaha vecného práva znamená jeho pôsobenie voči každému, kto sa vecou stane vlastníkom.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Pokus o dohodnutie atypického vecného práva",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Strany sa v zmluve pokúsia dohodnúť si úplne nový, zákonom neupravený typ vecného práva k nehnuteľnosti.", "options": [], "correct": 0 },
+        {
+          "question": "Strany sa v zmluve pokúsia dohodnúť si úplne nový, zákonom neupravený typ vecného práva k nehnuteľnosti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takáto dohoda o novom, atypickom vecnom práve možná?",
-          "options": ["Nie, platí zásada numerus clausus – vecné práva sú len tie, ktoré zákon taxatívne vymenúva", "Áno, strany môžu vytvoriť ľubovoľné vecné právo rovnako ako pri záväzkoch", "Áno, ak to schváli notár"],
+          "options": [
+            "Nie, platí zásada numerus clausus – vecné práva sú len tie, ktoré zákon taxatívne vymenúva",
+            "Áno, strany môžu vytvoriť ľubovoľné vecné právo rovnako ako pri záväzkoch",
+            "Áno, ak to schváli notár"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Na rozdiel od záväzkových práv sú vecné práva uzavretým, zákonom vymedzeným okruhom.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo by v takom prípade mohli strany dohodnúť namiesto toho?",
-          "options": ["Záväzkový (zmluvný) vzťah s obdobným obsahom, pôsobiaci však len medzi nimi", "Nič, žiadna dohoda o obsahu podobnom vecnému právu nie je možná", "Vecné právo, ak si to obe strany písomne odsúhlasia"],
+          "options": [
+            "Záväzkový (zmluvný) vzťah s obdobným obsahom, pôsobiaci však len medzi nimi",
+            "Nič, žiadna dohoda o obsahu podobnom vecnému právu nie je možná",
+            "Vecné právo, ak si to obe strany písomne odsúhlasia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Záväzkové právo môže mať atypický obsah, pôsobí však len medzi zmluvnými stranami, nie erga omnes.",
@@ -142,13 +181,69 @@
   "spider": {
     "center": "Vecné práva – pojem, druhy, zásady (absolútne práva pôsobiace erga omnes)",
     "branches": [
-      { "label": "Pojem vecných práv", "leaves": ["absolútne práva pôsobiace voči každému", "upravujú priame právne panstvo nad vecou", "poskytujú silnejšiu ochranu než záväzkové práva", "verejná evidencia, najmä kataster"] },
-      { "label": "Zásady vecných práv", "leaves": ["numerus clausus: taxatívny výpočet, nemožno vytvárať zmluvne", "droit de suite: právo nasleduje vec aj k nadobúdateľom", "droit de préférence: prednostné uspokojenie, najmä záložné právo"] },
-      { "label": "Vlastnícke právo", "leaves": ["najširšie vecné právo", "držba", "užívanie", "nakladanie", "umožňuje vylúčiť iných z užívania veci"] },
-      { "label": "Spoluvlastníctvo", "leaves": ["vlastnícke právo viacerých osôb k jednej veci", "podielové spoluvlastníctvo: podiel vyjadruje mieru účasti", "bezpodielové spoluvlastníctvo manželov (BSM)", "spoločné rozhodovanie o veci"] },
-      { "label": "Záložné právo", "leaves": ["zabezpečovací inštitút", "veriteľ sa môže uspokojiť z predmetu záložného práva", "silný preferenčný účinok", "pôsobí voči každému (erga omnes)"] },
-      { "label": "Vecné bremená", "leaves": ["obmedzujú vlastníka nehnuteľnosti v prospech inej osoby", "povinnosť niečo strpieť: prechod, prejazd", "alebo niečo konať: udržiavať studňu", "viažu sa na nehnuteľnosť, prechádzajú na nadobúdateľov"] },
-      { "label": "Význam pre prax", "leaves": ["vysoká právna istota", "verejná evidencia v katastri", "zásadné pre vlastníctvo, nehnuteľnosti, zabezpečenie pohľadávok", "pôsobia voči každému, teda silná ochrana oprávneného"] }
+      {
+        "label": "Pojem vecných práv",
+        "leaves": [
+          "absolútne práva pôsobiace voči každému",
+          "upravujú priame právne panstvo nad vecou",
+          "poskytujú silnejšiu ochranu než záväzkové práva",
+          "verejná evidencia, najmä kataster"
+        ]
+      },
+      {
+        "label": "Zásady vecných práv",
+        "leaves": [
+          "numerus clausus: taxatívny výpočet, nemožno vytvárať zmluvne",
+          "droit de suite: právo nasleduje vec aj k nadobúdateľom",
+          "droit de préférence: prednostné uspokojenie, najmä záložné právo"
+        ]
+      },
+      {
+        "label": "Vlastnícke právo",
+        "leaves": [
+          "najširšie vecné právo",
+          "držba",
+          "užívanie",
+          "nakladanie",
+          "umožňuje vylúčiť iných z užívania veci"
+        ]
+      },
+      {
+        "label": "Spoluvlastníctvo",
+        "leaves": [
+          "vlastnícke právo viacerých osôb k jednej veci",
+          "podielové spoluvlastníctvo: podiel vyjadruje mieru účasti",
+          "bezpodielové spoluvlastníctvo manželov (BSM)",
+          "spoločné rozhodovanie o veci"
+        ]
+      },
+      {
+        "label": "Záložné právo",
+        "leaves": [
+          "zabezpečovací inštitút",
+          "veriteľ sa môže uspokojiť z predmetu záložného práva",
+          "silný preferenčný účinok",
+          "pôsobí voči každému (erga omnes)"
+        ]
+      },
+      {
+        "label": "Vecné bremená",
+        "leaves": [
+          "obmedzujú vlastníka nehnuteľnosti v prospech inej osoby",
+          "povinnosť niečo strpieť: prechod, prejazd",
+          "alebo niečo konať: udržiavať studňu",
+          "viažu sa na nehnuteľnosť, prechádzajú na nadobúdateľov"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "vysoká právna istota",
+          "verejná evidencia v katastri",
+          "zásadné pre vlastníctvo, nehnuteľnosti, zabezpečenie pohľadávok",
+          "pôsobia voči každému, teda silná ochrana oprávneného"
+        ]
+      }
     ]
   }
 }

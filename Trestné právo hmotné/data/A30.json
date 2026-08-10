@@ -2,7 +2,13 @@
   "id": "A30",
   "title": "Trestné činy proti mieru, ľudskosti, terorizmu, extrémizmu a vojnové trestné činy",
   "schemaVersion": "1.1",
-  "tags": ["mier", "ľudskosť", "terorizmus", "extrémizmus", "vojnové zločiny"],
+  "tags": [
+    "mier",
+    "ľudskosť",
+    "terorizmus",
+    "extrémizmus",
+    "vojnové zločiny"
+  ],
   "theory": [
     {
       "heading": "Trestné činy proti mieru",
@@ -28,36 +34,71 @@
   "quiz": [
     {
       "question": "Čo je zločin proti ľudskosti?",
-      "options": ["Jednorazový priestupok", "Systematický útok proti civilistom", "Bežná kriminalita"],
+      "options": [
+        "Jednorazový priestupok",
+        "Systematický útok proti civilistom",
+        "Bežná kriminalita"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je cieľom terorizmu?",
-      "options": ["Zlepšenie verejných služieb", "Vyvolanie strachu a destabilizácia štátu", "Zvýšenie daní"],
+      "options": [
+        "Zlepšenie verejných služieb",
+        "Vyvolanie strachu a destabilizácia štátu",
+        "Zvýšenie daní"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je extrémizmus?",
-      "options": ["Bežná kritika vlády", "Nenávistné konanie proti skupine osôb", "Náhodný konflikt"],
+      "options": [
+        "Bežná kritika vlády",
+        "Nenávistné konanie proti skupine osôb",
+        "Náhodný konflikt"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy ide o vojnový zločin?",
-      "options": ["Pri porušení humanitárneho práva počas konfliktu", "Pri bežnej krádeži", "Pri dopravnej nehode"],
+      "options": [
+        "Pri porušení humanitárneho práva počas konfliktu",
+        "Pri bežnej krádeži",
+        "Pri dopravnej nehode"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je chráneným objektom týchto trestných činov?",
-      "options": ["Majetok", "Mier, ľudskosť a bezpečnosť štátov", "Verejný poriadok"],
+      "options": [
+        "Majetok",
+        "Mier, ľudskosť a bezpečnosť štátov",
+        "Verejný poriadok"
+      ],
       "correct": 1
     }
   ],
   "tiles": [
-    { "term": "Mier", "definition": "Stav bez ozbrojeného konfliktu." },
-    { "term": "Zločiny proti ľudskosti", "definition": "Systematické útoky proti civilistom." },
-    { "term": "Terorizmus", "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu." },
-    { "term": "Extrémizmus", "definition": "Nenávistné konanie proti skupine osôb." },
-    { "term": "Vojnový zločin", "definition": "Porušenie humanitárneho práva počas konfliktu." }
+    {
+      "term": "Mier",
+      "definition": "Stav bez ozbrojeného konfliktu."
+    },
+    {
+      "term": "Zločiny proti ľudskosti",
+      "definition": "Systematické útoky proti civilistom."
+    },
+    {
+      "term": "Terorizmus",
+      "definition": "Úmyselné zastrašovanie alebo destabilizácia štátu."
+    },
+    {
+      "term": "Extrémizmus",
+      "definition": "Nenávistné konanie proti skupine osôb."
+    },
+    {
+      "term": "Vojnový zločin",
+      "definition": "Porušenie humanitárneho práva počas konfliktu."
+    }
   ],
   "cases": [
     {
@@ -71,7 +112,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Vojnový zločin", "Krádež", "Výtržníctvo"],
+          "options": [
+            "Vojnový zločin",
+            "Krádež",
+            "Výtržníctvo"
+          ],
           "correct": 0
         }
       ]
@@ -87,7 +132,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Extrémizmus", "Podvod", "Sprenevera"],
+          "options": [
+            "Extrémizmus",
+            "Podvod",
+            "Sprenevera"
+          ],
           "correct": 0
         }
       ]
@@ -102,11 +151,46 @@
   "spider": {
     "center": "Mier × ľudskosť × terorizmus × vojnové TČ (12. hlava)",
     "branches": [
-      { "label": "Proti mieru", "leaves": ["Ohrozenie mieru – podnecovanie k vojne, propagácia a podpora vojnovej propagandy", "Prísnejšie – v spojení s cudzou mocou, počas krízovej situácie"] },
-      { "label": "Zločiny proti ľudskosti", "leaves": ["Genocídium – úmysel zničiť národnú, etnickú, rasovú či náboženskú skupinu", "Formy genocídia – usmrcovanie, bránenie rodeniu, prevádzanie detí, ničivé životné podmienky", "Zotročenie – otroctvo, nevoľníctvo, nútené práce, obchodovanie s ľuďmi"] },
-      { "label": "Terorizmus", "leaves": ["Podstata – zastrašenie obyvateľstva, destabilizácia usporiadania štátu", "Cieľ – donútiť vládu či medzinárodnú organizáciu konať alebo nekonať", "Prostriedok – hrozba alebo čin ohrozujúci život, zdravie, majetok"] },
-      { "label": "Extrémizmus", "leaves": ["Materiály – výroba, šírenie a držba extrémistických materiálov", "Hnutia – podpora hnutí potláčajúcich práva a slobody", "Nenávisť – hanobenie národa, rasy, etnika; podnecovanie k nenávisti"] },
-      { "label": "Vojnové TČ", "leaves": ["Podstata – závažné porušenia humanitárneho práva počas konfliktu", "Formy – útoky na civilistov, mučenie zajatcov, zakázané zbrane, ničenie chránených objektov", "Rámec – Ženevské dohovory; trestné aj podľa medzinárodného práva"] }
+      {
+        "label": "Proti mieru",
+        "leaves": [
+          "Ohrozenie mieru – podnecovanie k vojne, propagácia a podpora vojnovej propagandy",
+          "Prísnejšie – v spojení s cudzou mocou, počas krízovej situácie"
+        ]
+      },
+      {
+        "label": "Zločiny proti ľudskosti",
+        "leaves": [
+          "Genocídium – úmysel zničiť národnú, etnickú, rasovú či náboženskú skupinu",
+          "Formy genocídia – usmrcovanie, bránenie rodeniu, prevádzanie detí, ničivé životné podmienky",
+          "Zotročenie – otroctvo, nevoľníctvo, nútené práce, obchodovanie s ľuďmi"
+        ]
+      },
+      {
+        "label": "Terorizmus",
+        "leaves": [
+          "Podstata – zastrašenie obyvateľstva, destabilizácia usporiadania štátu",
+          "Cieľ – donútiť vládu či medzinárodnú organizáciu konať alebo nekonať",
+          "Prostriedok – hrozba alebo čin ohrozujúci život, zdravie, majetok"
+        ]
+      },
+      {
+        "label": "Extrémizmus",
+        "leaves": [
+          "Materiály – výroba, šírenie a držba extrémistických materiálov",
+          "Hnutia – podpora hnutí potláčajúcich práva a slobody",
+          "Nenávisť – hanobenie národa, rasy, etnika; podnecovanie k nenávisti"
+        ]
+      },
+      {
+        "label": "Vojnové TČ",
+        "leaves": [
+          "Podstata – závažné porušenia humanitárneho práva počas konfliktu",
+          "Formy – útoky na civilistov, mučenie zajatcov, zakázané zbrane, ničenie chránených objektov",
+          "Rámec – Ženevské dohovory; trestné aj podľa medzinárodného práva"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti mieru, ľudskosti, terorizmu, extrémizmu a vojnové trestné činy patria medzi najzávažnejšie skutky v Trestnom zákone. Chránia medzinárodný mier, civilné obyvateľstvo, ústavný poriadok, ľudské práva a pravidlá vedenia vojny.\n\nTrestné činy tejto kategórie sú upravené v Dvanástej hlave osobitnej časti Trestného zákona (§ 417 – § 435). Ide o skutky s mimoriadne vysokou spoločenskou nebezpečnosťou, často s trestnými sadzbami až do 25 rokov alebo výnimočným trestom.\n\n1. Trestné činy proti mieru\n(§ 148 TZ – Ohrozenie mieru)\n\nTrestné činy proti mieru sú konania, ktoré ohrozujú mierové spolužitie národov.\nPodľa Slov-Lex páchateľ sa dopustí ohrozenia mieru, ak:\n\npodnecuje k vojne,\n\npropaguje vojnu,\n\npodporuje vojnovú propagandu. \n\nPri konaní v spojení s cudzou mocou, počas krízovej situácie alebo ako člen nebezpečného zoskupenia je trestná sadzba až 10–25 rokov.\n\n2. Zločiny proti ľudskosti\n(§ 149 TZ – Genocídium; § 150 TZ – Zotročenie)\n\nZločiny proti ľudskosti sú systematické alebo rozsiahle útoky proti civilnému obyvateľstvu.\nPodľa Slov-Lex patria sem najmä:\n\ngenocídium – úmyselné zničenie národnej, etnickej, rasovej alebo náboženskej skupiny, vrátane spôsobenia smrti, prevádzania detí, bránenia rodeniu či vytvárania životných podmienok vedúcich k zničeniu skupiny, s trestom 12–25 rokov alebo výnimočným trestom; \n\nzotročenie – nútené práce, otroctvo, nevoľníctvo, obchodovanie s ľuďmi, s trestom 5–25 rokov podľa následkov. \n\n3. Terorizmus\n(§ 151 TZ)\n\nTerorizmus je úmyselné konanie, ktorým páchateľ:\n\nvážne zastrašuje obyvateľstvo,\n\ndestabilizuje ústavné, politické alebo spoločenské usporiadanie,\n\ndonúti vládu alebo medzinárodnú organizáciu konať či nekonať,\n\npričom hrozí alebo spácha čin ohrozujúci život, zdravie alebo majetok.\n\nTrestná sadzba je 12–25 rokov alebo výnimočný trest. \n\n4. Extrémizmus\n(§ 422 – § 425 TZ)\n\nExtrémizmus sú konania motivované nenávisťou voči skupine osôb.\nPatria sem:\n\nvýroba, šírenie alebo držba extrémistických materiálov,\n\npodpora hnutí smerujúcich k potláčaniu práv a slobôd,\n\nhanobenie národa, rasy, etnika či náboženstva,\n\npodnecovanie k nenávisti.\n\nExtrémizmus je úzko spojený s ochranou ľudských práv a prevenciou radikalizácie.\n\n5. Vojnové trestné činy\n(§ 433 – § 435 TZ)\n\nVojnové trestné činy sú závažné porušenia medzinárodného humanitárneho práva počas ozbrojeného konfliktu.\nPatria sem:\n\nútoky na civilistov,\n\nmučenie zajatcov,\n\npoužívanie zakázaných zbraní,\n\númyselné ničenie chránených objektov (nemocnice, kultúrne pamiatky),\n\nneľudské zaobchádzanie.\n\nIde o skutky, ktoré sú trestné podľa slovenského práva aj podľa medzinárodného práva (Ženevské dohovory).\n\nZapamätaj si (štátnicové jadro)\n– Trestné činy proti mieru = podnecovanie vojny, vojnová propaganda.\n– Zločiny proti ľudskosti = genocídium, zotročenie, systematické útoky na civilistov.\n– Terorizmus = zastrašenie obyvateľstva, destabilizácia štátu, donucovanie vlády.\n– Extrémizmus = nenávisť voči skupine, extrémistické materiály, podpora hnutí.\n– Vojnové trestné činy = porušenia humanitárneho práva počas konfliktu.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z., osobitná časť – §§ 148–151, 149, 150, 417–435"
 }

@@ -2,50 +2,101 @@
   "id": "A27",
   "title": "Osobitné spôsoby konania",
   "schemaVersion": "1.1",
-  "tags": ["osobitné spôsoby konania", "trestné konanie", "dohoda o vine a treste", "rozsudok na základe vyhlásenia"],
-
+  "tags": [
+    "osobitné spôsoby konania",
+    "trestné konanie",
+    "dohoda o vine a treste",
+    "rozsudok na základe vyhlásenia"
+  ],
   "quiz": [
     {
       "question": "Ktorý z nasledujúcich je osobitným spôsobom konania?",
-      "options": ["Hlavné pojednávanie", "Dohoda o vine a treste", "Odvolacie konanie"],
+      "options": [
+        "Hlavné pojednávanie",
+        "Dohoda o vine a treste",
+        "Odvolacie konanie"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno uzavrieť dohodu o vine a treste?",
-      "options": ["Len po vyhlásení rozsudku", "V prípravnom konaní aj na súde", "Len v odvolacom konaní"],
+      "options": [
+        "Len po vyhlásení rozsudku",
+        "V prípravnom konaní aj na súde",
+        "Len v odvolacom konaní"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je rozsudok na základe vyhlásenia obžalovaného?",
-      "options": ["Rozsudok po úplnom dokazovaní", "Rozsudok po prijatí vyhlásenia o vine", "Rozsudok bez účasti obžalovaného"],
+      "options": [
+        "Rozsudok po úplnom dokazovaní",
+        "Rozsudok po prijatí vyhlásenia o vine",
+        "Rozsudok bez účasti obžalovaného"
+      ],
       "correct": 1
     },
     {
       "question": "Kto schvaľuje dohodu o vine a treste?",
-      "options": ["Prokurátor", "Súd", "Polícia"],
+      "options": [
+        "Prokurátor",
+        "Súd",
+        "Polícia"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy môže súd odmietnuť schváliť dohodu o vine a treste?",
-      "options": ["Ak je v rozpore so zákonom", "Nikdy", "Len ak nesúhlasí poškodený"],
+      "options": [
+        "Ak je v rozpore so zákonom",
+        "Nikdy",
+        "Len ak nesúhlasí poškodený"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Osobitné spôsoby konania", "definition": "Špeciálne procesné postupy odlišné od hlavného pojednávania." },
-    { "term": "Dohoda o vine a treste", "definition": "Dohoda medzi obvineným a prokurátorom o priznaní viny a treste." },
-    { "term": "Rozsudok na základe vyhlásenia", "definition": "Rozsudok po prijatí vyhlásenia obžalovaného, že je vinný." },
-    { "term": "Konanie proti ušlému", "definition": "Konanie proti obvinenému, ktorý sa vyhýba trestnému stíhaniu." },
-    { "term": "Trestný rozkaz", "definition": "Rozhodnutie bez pojednávania pri menej závažných skutkoch." },
-
-    { "term": "Vyhlásenie o vine", "definition": "Obžalovaný môže vyhlásiť, že je vinný, čo umožňuje skrátené konanie." },
-    { "term": "Schvaľovanie dohody", "definition": "Súd skúma zákonnosť a primeranosť dohody o vine a treste." },
-    { "term": "Zjednodušené dokazovanie", "definition": "V osobitných konaniach sa dokazovanie obmedzuje." },
-    { "term": "Poškodený", "definition": "Má právo vyjadriť sa k dohode o vine a treste." },
-    { "term": "Neprítomnosť obvineného", "definition": "V niektorých osobitných konaniach môže súd konať aj bez obvineného." }
+    {
+      "term": "Osobitné spôsoby konania",
+      "definition": "Špeciálne procesné postupy odlišné od hlavného pojednávania."
+    },
+    {
+      "term": "Dohoda o vine a treste",
+      "definition": "Dohoda medzi obvineným a prokurátorom o priznaní viny a treste."
+    },
+    {
+      "term": "Rozsudok na základe vyhlásenia",
+      "definition": "Rozsudok po prijatí vyhlásenia obžalovaného, že je vinný."
+    },
+    {
+      "term": "Konanie proti ušlému",
+      "definition": "Konanie proti obvinenému, ktorý sa vyhýba trestnému stíhaniu."
+    },
+    {
+      "term": "Trestný rozkaz",
+      "definition": "Rozhodnutie bez pojednávania pri menej závažných skutkoch."
+    },
+    {
+      "term": "Vyhlásenie o vine",
+      "definition": "Obžalovaný môže vyhlásiť, že je vinný, čo umožňuje skrátené konanie."
+    },
+    {
+      "term": "Schvaľovanie dohody",
+      "definition": "Súd skúma zákonnosť a primeranosť dohody o vine a treste."
+    },
+    {
+      "term": "Zjednodušené dokazovanie",
+      "definition": "V osobitných konaniach sa dokazovanie obmedzuje."
+    },
+    {
+      "term": "Poškodený",
+      "definition": "Má právo vyjadriť sa k dohode o vine a treste."
+    },
+    {
+      "term": "Neprítomnosť obvineného",
+      "definition": "V niektorých osobitných konaniach môže súd konať aj bez obvineného."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Dohoda o vine a treste",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Kto môže uzavrieť dohodu s obvineným?",
-          "options": ["Súd", "Prokurátor", "Poškodený"],
+          "options": [
+            "Súd",
+            "Prokurátor",
+            "Poškodený"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto dohodu schvaľuje?",
-          "options": ["Súd", "Polícia", "Poškodený"],
+          "options": [
+            "Súd",
+            "Polícia",
+            "Poškodený"
+          ],
           "correct": 0
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Rozsudok na základe vyhlásenia obžalovaného",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Čo musí súd urobiť?",
-          "options": ["Prijať alebo odmietnuť vyhlásenie", "Ihneď vyhlásiť rozsudok", "Zastaviť konanie"],
+          "options": [
+            "Prijať alebo odmietnuť vyhlásenie",
+            "Ihneď vyhlásiť rozsudok",
+            "Zastaviť konanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kedy súd vyhlásenie neprijme?",
-          "options": ["Ak je zjavne nepravdivé alebo vynútené", "Ak je obžalovaný prítomný", "Ak je skutok prečin"],
+          "options": [
+            "Ak je zjavne nepravdivé alebo vynútené",
+            "Ak je obžalovaný prítomný",
+            "Ak je skutok prečin"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,35 @@
   "spider": {
     "center": "Osobitné spôsoby konania",
     "branches": [
-      { "label": "Samosudca (§§ 314a–314c) a dohoda o vine a treste (§§ 232–233a)", "leaves": ["Samosudca – menej závažné TČ (do 5 rokov), rýchlejšie, často trestný rozkaz", "Dohoda o vine a treste – priznanie, dohoda s prokurátorom, schvaľuje súd"] },
-      { "label": "Mladiství (§§ 345–363) a právnické osoby (§§ 363a–363h)", "leaves": ["Mladiství – zvýšená ochrana, výchovný účel, obmedzená väzba, zákonný zástupca", "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty"] },
-      { "label": "Ušlý (§§ 358–364) a chránený svedok (§§ 136a–136d)", "leaves": ["Proti ušlému – konanie bez prítomnosti pri vyhýbaní sa; riadne predvolanie", "Chránený svedok – anonymizácia, osobitné postupy pri ohrození"] },
-      { "label": "Medzinárodné konania – EZR (zákon č. 154/2010 Z. z.), uznanie cudzieho rozhodnutia (§§ 518–521)", "leaves": ["EZR – vydanie a prevzatie osôb v EÚ, rýchle lehoty, obmedzené odmietnutie", "Uznanie cudzieho rozhodnutia – prenos výkonu trestu"] }
+      {
+        "label": "Samosudca (§§ 314a–314c) a dohoda o vine a treste (§§ 232–233a)",
+        "leaves": [
+          "Samosudca – menej závažné TČ (do 5 rokov), rýchlejšie, často trestný rozkaz",
+          "Dohoda o vine a treste – priznanie, dohoda s prokurátorom, schvaľuje súd"
+        ]
+      },
+      {
+        "label": "Mladiství (§§ 345–363) a právnické osoby (§§ 363a–363h)",
+        "leaves": [
+          "Mladiství – zvýšená ochrana, výchovný účel, obmedzená väzba, zákonný zástupca",
+          "Právnické osoby – PO ako obvinený, súbežné konanie, špecifické tresty"
+        ]
+      },
+      {
+        "label": "Ušlý (§§ 358–364) a chránený svedok (§§ 136a–136d)",
+        "leaves": [
+          "Proti ušlému – konanie bez prítomnosti pri vyhýbaní sa; riadne predvolanie",
+          "Chránený svedok – anonymizácia, osobitné postupy pri ohrození"
+        ]
+      },
+      {
+        "label": "Medzinárodné konania – EZR (zákon č. 154/2010 Z. z.), uznanie cudzieho rozhodnutia (§§ 518–521)",
+        "leaves": [
+          "EZR – vydanie a prevzatie osôb v EÚ, rýchle lehoty, obmedzené odmietnutie",
+          "Uznanie cudzieho rozhodnutia – prenos výkonu trestu"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Osobitné spôsoby konania Osobitné spôsoby konania sú špeciálne procesné režimy, ktoré sa používajú v situáciách, keď klasické trestné konanie nie je vhodné alebo efektívne. Trestný poriadok upravuje viacero osobitných konaní, ktoré sa líšia účelom, rozsahom dokazovania, právami strán a výsledným rozhodnutím.\n\nPatria sem najmä: – konanie pred samosudcom, – konanie o dohode o vine a treste, – konanie proti mladistvým, – konanie proti právnickým osobám, – konanie proti ušlému, – konanie o chránenom svedkovi, – konanie o európskom zatýkacom rozkaze, – konanie o uznaní cudzieho rozhodnutia.\n\nIch cieľom je rýchlosť, efektívnosť, ochrana špecifických záujmov alebo medzinárodná spolupráca.\n\nKonanie pred samosudcom (§§ 314a–314c TP) Používa sa pri menej závažných trestných činoch. – rozhoduje samosudca, nie senát, – konanie je rýchlejšie a menej formálne, – často sa končí trestným rozkazom, – trestné činy s hornou hranicou trestu do 5 rokov, jednoduché skutky, jasné dôkazy.\nKonanie o dohode o vine a treste (§§ 232–233a TP) – obvinený sa prizná, – prokurátor a obvinený sa dohodnú na treste, – súd dohodu schváli alebo neschváli. Účel: rýchle ukončenie konania a úspora dokazovania.\nKonanie proti mladistvým (§§ 345–363 TP) Špeciálny režim pre osoby vo veku 14–18 rokov. – zvýšená ochrana mladistvého, – výchovný účel trestu, – obmedzené použitie väzby, – povinná účasť zákonného zástupcu, – osobitné tresty (výchovné opatrenia), odlišné lehoty a postupy.\nKonanie proti právnickým osobám (§§ 363a–363h TP) – právnická osoba má postavenie obvineného, – konanie sa vedie súbežne s konaním proti fyzickej osobe, – ukladajú sa špecifické tresty (zákaz činnosti, prepadnutie majetku).\nKonanie proti ušlému (§§ 358–364 TP) – konanie prebieha bez prítomnosti obvineného, – musí byť preukázané úmyselné vyhýbanie sa konaniu. Účel: zabrániť mareniu spravodlivosti.\nKonanie o chránenom svedkovi (§§ 136a–136d TP) – anonymizácia údajov, – osobitné procesné postupy, – ochrana identity pri ohrození života alebo zdravia svedka.\nKonanie o európskom zatýkacom rozkaze (zákon č. 154/2010 Z. z.) Medzinárodná spolupráca v trestných veciach v rámci EÚ. – vydanie alebo prevzatie osoby medzi členskými štátmi, – rýchle lehoty, obmedzené dôvody odmietnutia, – upravené osobitným zákonom o európskom zatýkacom rozkaze.\nKonanie o uznaní cudzieho rozhodnutia (§§ 518–521 TP) Používa sa pri prenose výkonu trestu alebo uznaní rozsudku cudzieho štátu.\n\nZapamätaj si (štátnicové jadro) – Osobitné spôsoby konania = špeciálne procesné režimy. – Najdôležitejšie: samosudca, dohoda o vine a treste, mladiství, právnické osoby, ušlý, EZR. – EZR upravuje osobitný zákon č. 154/2010 Z. z. – Uznanie cudzieho rozhodnutia = §§ 518–521 TP. – Cieľom je rýchlosť, efektívnosť, ochrana špecifických záujmov alebo medzinárodná spolupráca.\n\nZdroj (overené) – Trestný poriadok č. 301/2005 Z. z., znenie účinné od 1. 7. 2026 – §§ 136a–136d, 232–233a, 314a–314c, 345–363, 363a–363h, 358–364, 518–521 – Zákon č. 154/2010 Z. z. o európskom zatýkacom rozkaze – Ministerstvo spravodlivosti SR – medzinárodná justičná spolupráca"
 }

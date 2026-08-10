@@ -2,7 +2,11 @@
   "id": "A4",
   "title": "Objektívne znaky skutkovej podstaty trestného činu",
   "schemaVersion": "1.1",
-  "tags": ["objektívna stránka", "znaky", "skutková podstata"],
+  "tags": [
+    "objektívna stránka",
+    "znaky",
+    "skutková podstata"
+  ],
   "theory": [
     {
       "heading": "Objektívne znaky",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Ktorý prvok patrí medzi objektívne znaky?",
-      "options": ["Úmysel", "Následok", "Svedectvo obhajoby"],
+      "options": [
+        "Úmysel",
+        "Následok",
+        "Svedectvo obhajoby"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – následok je objektívny znak.",
       "explanation_incorrect": "Nesprávne – úmysel je subjektívny znak."
     },
     {
       "question": "Čo znamená príčinná súvislosť?",
-      "options": ["Náhoda medzi udalosťami", "Konanie spôsobilo následok", "Súvislosť s predchádzajúcim trestom"],
+      "options": [
+        "Náhoda medzi udalosťami",
+        "Konanie spôsobilo následok",
+        "Súvislosť s predchádzajúcim trestom"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – príčinná súvislosť znamená, že konanie spôsobilo následok.",
       "explanation_incorrect": "Nesprávne – nie je to náhoda."
     },
     {
       "question": "Ktorá okolnosť môže ovplyvniť kvalifikáciu?",
-      "options": ["Použitie zbrane", "Farba oblečenia páchateľa", "Počet svedkov"],
+      "options": [
+        "Použitie zbrane",
+        "Farba oblečenia páchateľa",
+        "Počet svedkov"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – použitie zbrane je relevantné okolnosť.",
       "explanation_incorrect": "Nesprávne – farba oblečenia nie je relevantná."
     },
     {
       "question": "Kedy je následok považovaný za relevantný?",
-      "options": ["Ak je priamo spôsobený konaním", "Ak sa objaví neskôr náhodou", "Ak ho spomenie svedok"],
+      "options": [
+        "Ak je priamo spôsobený konaním",
+        "Ak sa objaví neskôr náhodou",
+        "Ak ho spomenie svedok"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – následok musí byť priamo spôsobený konaním.",
       "explanation_incorrect": "Nesprávne – náhoda nie je relevantná."
     },
     {
       "question": "Čo sa skúma pri objektívnych znakoch?",
-      "options": ["Fakty a príčinnosť", "Len pohnútky páchateľa", "Len trestný register"],
+      "options": [
+        "Fakty a príčinnosť",
+        "Len pohnútky páchateľa",
+        "Len trestný register"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – skúmajú sa fakty a príčinnosť.",
       "explanation_incorrect": "Nesprávne – pohnútky sú subjektívne."
     }
   ],
   "tiles": [
-    { "term": "Konanie / opomenutie", "definition": "Faktické správanie páchateľa." },
-    { "term": "Následok", "definition": "Výsledok konania (škoda, zranenie)." },
-    { "term": "Príčinná súvislosť", "definition": "Vzťah medzi konaním a následkom." },
-    { "term": "Spôsob spáchania", "definition": "Použité prostriedky a metóda činu." },
-    { "term": "Miesto a čas", "definition": "Okolnosti, ktoré môžu ovplyvniť kvalifikáciu." }
+    {
+      "term": "Konanie / opomenutie",
+      "definition": "Faktické správanie páchateľa."
+    },
+    {
+      "term": "Následok",
+      "definition": "Výsledok konania (škoda, zranenie)."
+    },
+    {
+      "term": "Príčinná súvislosť",
+      "definition": "Vzťah medzi konaním a následkom."
+    },
+    {
+      "term": "Spôsob spáchania",
+      "definition": "Použité prostriedky a metóda činu."
+    },
+    {
+      "term": "Miesto a čas",
+      "definition": "Okolnosti, ktoré môžu ovplyvniť kvalifikáciu."
+    }
   ],
   "cases": [
     {
@@ -73,14 +112,22 @@
         },
         {
           "question": "Krok 1: Je zranenie priamym následkom nárazu?",
-          "options": ["Áno", "Nie", "Len čiastočne"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len čiastočne"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – zranenie je priamym následkom nárazu.",
           "explanation_incorrect": "Nesprávne – je priamy následok."
         },
         {
           "question": "Krok 2: Potrebujeme ďalšie dôkazy?",
-          "options": ["Áno – lekárska správa", "Nie", "Len svedectvo vodiča"],
+          "options": [
+            "Áno – lekárska správa",
+            "Nie",
+            "Len svedectvo vodiča"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – lekárska správa potvrdí príčinnú súvislosť.",
           "explanation_incorrect": "Nesprávne – svedectvo samo o sebe nemusí stačiť."
@@ -98,14 +145,22 @@
         },
         {
           "question": "Krok 1: Je použitie noža relevantné?",
-          "options": ["Áno – zvyšuje závažnosť", "Nie", "Len ak došlo k smrti"],
+          "options": [
+            "Áno – zvyšuje závažnosť",
+            "Nie",
+            "Len ak došlo k smrti"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – použitie nebezpečného nástroja zvyšuje závažnosť činu.",
           "explanation_incorrect": "Nesprávne – nie je podmienené smrťou."
         },
         {
           "question": "Krok 2: Aké dôkazy sú potrebné?",
-          "options": ["Forenzické stopy, svedkovia", "Len výpoveď páchateľa", "Len fotografia miesta"],
+          "options": [
+            "Forenzické stopy, svedkovia",
+            "Len výpoveď páchateľa",
+            "Len fotografia miesta"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – forenzika a svedkovia sú kľúčové.",
           "explanation_incorrect": "Nesprávne – fotografia sama o sebe nemusí stačiť."
@@ -122,11 +177,44 @@
   "spider": {
     "center": "Objektívne znaky – konanie × následok × príčinná súvislosť",
     "branches": [
-      { "label": "Konanie a opomenutie", "leaves": ["Konanie – aktívny zásah do chráneného záujmu.", "Opomenutie – pasívne nekonanie tam, kde existovala povinnosť konať."] },
-      { "label": "Následok", "leaves": ["Poruchový – skutočná ujma na chránenom záujme.", "Ohrozovací – stačí vytvorenie nebezpečenstva pre chránený záujem."] },
-      { "label": "Príčinná súvislosť", "leaves": ["Conditio sine qua non – bez konania by následok nenastal.", "Právna relevancia – príčina musí byť právne významná, nie akákoľvek."] },
-      { "label": "Okolnosti činu", "leaves": ["Miesto a čas – kde a kedy bol čin spáchaný.", "Spôsob a prostriedky – ako a čím bol čin spáchaný.", "Kvalifikačné znaky – okolnosti zvyšujúce závažnosť (kvalifikované skutkové podstaty)."] },
-      { "label": "Význam", "leaves": ["Právna kvalifikácia – podklad zaradenia skutku.", "Závažnosť – určenie závažnosti a výmery trestu.", "Odlíšenie od priestupku – hranica trestnosti."] }
+      {
+        "label": "Konanie a opomenutie",
+        "leaves": [
+          "Konanie – aktívny zásah do chráneného záujmu.",
+          "Opomenutie – pasívne nekonanie tam, kde existovala povinnosť konať."
+        ]
+      },
+      {
+        "label": "Následok",
+        "leaves": [
+          "Poruchový – skutočná ujma na chránenom záujme.",
+          "Ohrozovací – stačí vytvorenie nebezpečenstva pre chránený záujem."
+        ]
+      },
+      {
+        "label": "Príčinná súvislosť",
+        "leaves": [
+          "Conditio sine qua non – bez konania by následok nenastal.",
+          "Právna relevancia – príčina musí byť právne významná, nie akákoľvek."
+        ]
+      },
+      {
+        "label": "Okolnosti činu",
+        "leaves": [
+          "Miesto a čas – kde a kedy bol čin spáchaný.",
+          "Spôsob a prostriedky – ako a čím bol čin spáchaný.",
+          "Kvalifikačné znaky – okolnosti zvyšujúce závažnosť (kvalifikované skutkové podstaty)."
+        ]
+      },
+      {
+        "label": "Význam",
+        "leaves": [
+          "Právna kvalifikácia – podklad zaradenia skutku.",
+          "Závažnosť – určenie závažnosti a výmery trestu.",
+          "Odlíšenie od priestupku – hranica trestnosti."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Objektívne znaky skutkovej podstaty sú tie znaky trestného činu, ktoré sa prejavujú navonok a ktoré možno vnímať, dokazovať a hodnotiť podľa objektívnych kritérií.\nPredstavujú vonkajšiu stránku trestného činu – teda to, čo sa „stalo“ vo vonkajšom svete.\n\n1. Základné objektívne znaky\nKonanie alebo opomenutie\nKonanie = aktívny zásah do chráneného záujmu.\n\nOpomenutie = pasívne nekonanie tam, kde mal páchateľ povinnosť konať (napr. rodič, lekár, vodič).\nKonanie/opomenutie je základným prvkom objektívnej stránky.\n\nNásledok\nPorušenie alebo ohrozenie chráneného záujmu (objektu).\n\nPri poruchových trestných činoch musí vzniknúť škoda alebo ujma (napr. ublíženie na zdraví).\n\nPri ohrozovacích trestných činoch postačuje vytvorenie nebezpečenstva (napr. všeobecné ohrozenie).\n\nPríčinná súvislosť\nVzťah medzi konaním a následkom.\n\nMusí byť preukázané, že konanie páchateľa bolo príčinou následku.\n\nPríčinná súvislosť sa hodnotí podľa zásady conditio sine qua non + normatívne korekcie (právna relevancia príčiny).\n\nOkolnosti spáchania činu\nmiesto,\n\nčas,\n\nspôsob,\n\nprostriedky,\n\nsituácia, v ktorej bol čin spáchaný.\nTieto okolnosti môžu byť obligatórne znaky skutkovej podstaty (napr. vlámanie = spôsob spáchania) alebo len kvalifikačné znaky (napr. spáchanie činu so zbraňou).\n\n2. Význam objektívnych znakov\nObjektívne znaky sú nevyhnutné na:\n\nprávnu kvalifikáciu skutku,\n\nurčenie, či ide o poruchový alebo ohrozovací trestný čin,\n\nposúdenie závažnosti konania,\n\nodlíšenie trestného činu od priestupku,\n\nurčenie výmery trestu.\n\nZapamätaj si (štátnicové jadro)\n– Objektívne znaky = konanie/opomenutie, následok, príčinná súvislosť, okolnosti činu.\n– Príčinná súvislosť musí byť preukázaná a právne relevantná.\n– Okolnosti (miesto, čas, spôsob, prostriedky) môžu meniť právnu kvalifikáciu.\n– Objektívne znaky tvoria vonkajšiu stránku trestného činu.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.)\nČentéš – Trestné právo hmotné\nŠámal – Trestní právo hmotné\nJudikatúra NS SR"
 }

@@ -2,50 +2,101 @@
   "id": "A26",
   "title": "Mimoriadne opravné prostriedky",
   "schemaVersion": "1.1",
-  "tags": ["mimoriadne opravné prostriedky", "dovolanie", "obnova konania", "trestné konanie"],
-
+  "tags": [
+    "mimoriadne opravné prostriedky",
+    "dovolanie",
+    "obnova konania",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktorý z nasledujúcich je mimoriadnym opravným prostriedkom?",
-      "options": ["Odvolanie", "Dovolanie", "Sťažnosť"],
+      "options": [
+        "Odvolanie",
+        "Dovolanie",
+        "Sťažnosť"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy možno podať dovolanie?",
-      "options": ["Proti každému rozhodnutiu", "Len proti právoplatnému rozhodnutiu súdu", "Len v prípravnom konaní"],
+      "options": [
+        "Proti každému rozhodnutiu",
+        "Len proti právoplatnému rozhodnutiu súdu",
+        "Len v prípravnom konaní"
+      ],
       "correct": 1
     },
     {
       "question": "Kto rozhoduje o dovolaní?",
-      "options": ["Krajský súd", "Najvyšší súd", "Prokurátor"],
+      "options": [
+        "Krajský súd",
+        "Najvyšší súd",
+        "Prokurátor"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je obnova konania?",
-      "options": ["Opätovné preskúmanie právoplatného rozhodnutia na základe nových skutočností", "Odvolanie proti rozsudku", "Zrušenie obžaloby"],
+      "options": [
+        "Opätovné preskúmanie právoplatného rozhodnutia na základe nových skutočností",
+        "Odvolanie proti rozsudku",
+        "Zrušenie obžaloby"
+      ],
       "correct": 0
     },
     {
       "question": "Kedy možno povoliť obnovu konania?",
-      "options": ["Ak sa objavia nové dôkazy", "Kedykoľvek bez dôvodu", "Len na žiadosť poškodeného"],
+      "options": [
+        "Ak sa objavia nové dôkazy",
+        "Kedykoľvek bez dôvodu",
+        "Len na žiadosť poškodeného"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Mimoriadne opravné prostriedky", "definition": "Prostriedky proti právoplatným rozhodnutiam súdu." },
-    { "term": "Dovolanie", "definition": "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu súdu." },
-    { "term": "Obnova konania", "definition": "Opätovné konanie vo veci na základe nových skutočností alebo dôkazov." },
-    { "term": "Najvyšší súd", "definition": "Súd, ktorý rozhoduje o dovolaní." },
-    { "term": "Dovolacie dôvody", "definition": "Zákonom vymedzené dôvody, pre ktoré možno podať dovolanie." },
-
-    { "term": "Nové dôkazy", "definition": "Skutočnosti alebo dôkazy, ktoré neboli známe v pôvodnom konaní." },
-    { "term": "Zamietnutie dovolania", "definition": "Rozhodnutie, ak dovolanie nie je dôvodné." },
-    { "term": "Zrušenie rozhodnutia", "definition": "Najvyšší súd môže zrušiť napadnuté rozhodnutie." },
-    { "term": "Povolenie obnovy", "definition": "Rozhodnutie súdu, ak sú splnené podmienky obnovy konania." },
-    { "term": "Zastavenie obnovy", "definition": "Rozhodnutie, ak podmienky obnovy nie sú splnené." }
+    {
+      "term": "Mimoriadne opravné prostriedky",
+      "definition": "Prostriedky proti právoplatným rozhodnutiam súdu."
+    },
+    {
+      "term": "Dovolanie",
+      "definition": "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu súdu."
+    },
+    {
+      "term": "Obnova konania",
+      "definition": "Opätovné konanie vo veci na základe nových skutočností alebo dôkazov."
+    },
+    {
+      "term": "Najvyšší súd",
+      "definition": "Súd, ktorý rozhoduje o dovolaní."
+    },
+    {
+      "term": "Dovolacie dôvody",
+      "definition": "Zákonom vymedzené dôvody, pre ktoré možno podať dovolanie."
+    },
+    {
+      "term": "Nové dôkazy",
+      "definition": "Skutočnosti alebo dôkazy, ktoré neboli známe v pôvodnom konaní."
+    },
+    {
+      "term": "Zamietnutie dovolania",
+      "definition": "Rozhodnutie, ak dovolanie nie je dôvodné."
+    },
+    {
+      "term": "Zrušenie rozhodnutia",
+      "definition": "Najvyšší súd môže zrušiť napadnuté rozhodnutie."
+    },
+    {
+      "term": "Povolenie obnovy",
+      "definition": "Rozhodnutie súdu, ak sú splnené podmienky obnovy konania."
+    },
+    {
+      "term": "Zastavenie obnovy",
+      "definition": "Rozhodnutie, ak podmienky obnovy nie sú splnené."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Dovolanie proti právoplatnému rozsudku",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Aký opravný prostriedok môže podať?",
-          "options": ["Odvolanie", "Dovolanie", "Sťažnosť"],
+          "options": [
+            "Odvolanie",
+            "Dovolanie",
+            "Sťažnosť"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto rozhoduje o dovolaní?",
-          "options": ["Krajský súd", "Najvyšší súd", "Prokurátor"],
+          "options": [
+            "Krajský súd",
+            "Najvyšší súd",
+            "Prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nové dôkazy po právoplatnom rozsudku",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Aký opravný prostriedok prichádza do úvahy?",
-          "options": ["Obnova konania", "Odvolanie", "Dovolanie"],
+          "options": [
+            "Obnova konania",
+            "Odvolanie",
+            "Dovolanie"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kedy možno obnovu povoliť?",
-          "options": ["Ak nové dôkazy môžu viesť k inému rozhodnutiu", "Kedykoľvek", "Len ak súhlasí prokurátor"],
+          "options": [
+            "Ak nové dôkazy môžu viesť k inému rozhodnutiu",
+            "Kedykoľvek",
+            "Len ak súhlasí prokurátor"
+          ],
           "correct": 0
         },
         {
@@ -118,10 +184,38 @@
   "spider": {
     "center": "Mimoriadne opravné prostriedky – zásah do právoplatnosti",
     "branches": [
-      { "label": "Dovolanie (§§ 368–382)", "leaves": ["Kto – obvinený a osoby v jeho prospech, generálny prokurátor, minister spravodlivosti", "Dôvody (§ 371) – porušenie zákona, nesprávne posúdenie, procesné chyby, trest mimo hraníc", "Kam – Najvyšší súd SR; jednota aplikácie práva"] },
-      { "label": "Obnova konania (§§ 394–402)", "leaves": ["Dôvody – nové skutočnosti a dôkazy, falšované dôkazy, závažná chyba", "Účel – materiálna spravodlivosť pri nesprávnom skutkovom stave"] },
-      { "label": "§ 363 TP", "leaves": ["Kto – generálny prokurátor, aj bez návrhu", "Proti čomu – právoplatné rozhodnutia OČTK v prípravnom konaní (nie súdov)", "Limity – prísne časové obmedzenie; rozhodnutie konečné", "Kontroverzie – ÚS SR: riziko nerovnosti strán, len jasná nezákonnosť"] },
-      { "label": "Spoločné znaky", "leaves": ["Výnimočnosť – len závažné právne či skutkové chyby", "Deľba – dovolanie právo × obnova fakty × § 363 nezákonnosť OČTK"] }
+      {
+        "label": "Dovolanie (§§ 368–382)",
+        "leaves": [
+          "Kto – obvinený a osoby v jeho prospech, generálny prokurátor, minister spravodlivosti",
+          "Dôvody (§ 371) – porušenie zákona, nesprávne posúdenie, procesné chyby, trest mimo hraníc",
+          "Kam – Najvyšší súd SR; jednota aplikácie práva"
+        ]
+      },
+      {
+        "label": "Obnova konania (§§ 394–402)",
+        "leaves": [
+          "Dôvody – nové skutočnosti a dôkazy, falšované dôkazy, závažná chyba",
+          "Účel – materiálna spravodlivosť pri nesprávnom skutkovom stave"
+        ]
+      },
+      {
+        "label": "§ 363 TP",
+        "leaves": [
+          "Kto – generálny prokurátor, aj bez návrhu",
+          "Proti čomu – právoplatné rozhodnutia OČTK v prípravnom konaní (nie súdov)",
+          "Limity – prísne časové obmedzenie; rozhodnutie konečné",
+          "Kontroverzie – ÚS SR: riziko nerovnosti strán, len jasná nezákonnosť"
+        ]
+      },
+      {
+        "label": "Spoločné znaky",
+        "leaves": [
+          "Výnimočnosť – len závažné právne či skutkové chyby",
+          "Deľba – dovolanie právo × obnova fakty × § 363 nezákonnosť OČTK"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Mimoriadne opravné prostriedky sú výnimočné procesné nástroje, ktoré umožňujú zasiahnuť do právoplatných rozhodnutí. Používajú sa len vtedy, keď riadne opravné prostriedky nestačia a rozhodnutie obsahuje závažnú právnu alebo skutkovú chybu. Trestný poriadok upravuje tri základné mimoriadne opravné prostriedky: dovolanie, obnovu konania a postup podľa § 363 Trestného poriadku. Každý má odlišný účel, prísne podmienky a obmedzený okruh oprávnených osôb.\n\n1. Dovolanie (§ 368 – 382 TP)\nDovolanie je mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu súdu.\n\nKto môže podať dovolanie?\nobvinený (vo svoj prospech),\n\nobhajca v prospech obvineného,\n\nblízke osoby v prospech obvineného,\n\ngenerálny prokurátor,\n\nminister spravodlivosti.\n\nDôvody dovolania (§ 371 TP)\nporušenie zákona,\n\nnesprávne právne posúdenie skutku,\n\nzásadné procesné chyby,\n\nuloženie trestu mimo zákonných hraníc.\n\nÚčel dovolania\nOdstrániť nezákonnosť právoplatného rozhodnutia a zabezpečiť jednotnú aplikáciu práva.\n\n2. Obnova konania (§ 394 – 402 TP)\nObnova konania slúži na opätovné otvorenie právoplatne skončeného konania.\n\nKedy je obnova prípustná?\nobjavili sa nové dôkazy alebo skutočnosti, ktoré neboli známe v pôvodnom konaní,\n\npôvodné rozhodnutie vychádzalo z falšovaných dôkazov,\n\ndošlo k závažnej procesnej chybe, ktorá mohla ovplyvniť výsledok.\n\nÚčel obnovy konania\nDosiahnuť materiálnu spravodlivosť, ak pôvodné rozhodnutie bolo založené na neúplnom alebo nesprávnom skutkovom stave.\n\n3. Mimoriadny opravný prostriedok podľa § 363 a nasl. TP\n§ 363 umožňuje generálnemu prokurátorovi zrušiť právoplatné rozhodnutie policajta alebo prokurátora v prípravnom konaní, ak bolo vydané v rozpore so zákonom.\n\nKľúčové znaky § 363 TP\nvzťahuje sa len na rozhodnutia OČTK, nie na rozhodnutia súdov,\n\ngenerálny prokurátor môže konať na návrh alebo aj bez návrhu,\n\nide o zásah do právoplatnosti, preto je prísne časovo obmedzený,\n\nrozhodnutie generálneho prokurátora je konečné.\n\nKontroverzie\nÚstavný súd SR upozorňuje, že § 363 môže viesť k nerovnosti strán, preto je jeho aplikácia striktne obmedzená na prípady jasnej nezákonnosti.\n\nZapamätaj si (štátnicové jadro)\nMimoriadne opravné prostriedky zasahujú do právoplatných rozhodnutí.\n\nZákladné typy: dovolanie, obnova konania, § 363 TP.\n\nPoužívajú sa len vo výnimočných prípadoch závažných chýb.\n\nDovolanie rieši právne chyby, obnova konania nové dôkazy, § 363 nezákonnosť rozhodnutí OČTK.\n\nZdroj:\nTrestný poriadok – § 368–382 (dovolanie), § 394–402 (obnova konania), § 363 a nasl.\n\nJudikatúra Ústavného súdu SR k § 363 TP\n\nOdborné články k mimoriadnym opravným prostriedkom (Justičná revue, Legalis)"
 }

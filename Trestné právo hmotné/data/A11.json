@@ -2,7 +2,11 @@
   "id": "A11",
   "title": "Pojem a účel trestu, jednotlivé druhy trestov",
   "schemaVersion": "1.1",
-  "tags": ["tresty", "účel trestu", "druhy trestov"],
+  "tags": [
+    "tresty",
+    "účel trestu",
+    "druhy trestov"
+  ],
   "theory": [
     {
       "heading": "Pojem trestu",
@@ -20,46 +24,81 @@
   "quiz": [
     {
       "question": "Čo je účelom trestu?",
-      "options": ["Pomsta", "Ochrana spoločnosti a prevencia", "Zvýšenie príjmov štátu"],
+      "options": [
+        "Pomsta",
+        "Ochrana spoločnosti a prevencia",
+        "Zvýšenie príjmov štátu"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – účelom je ochrana spoločnosti a prevencia.",
       "explanation_incorrect": "Nie – pomsta nie je účel trestu."
     },
     {
       "question": "Ktorý trest je najzávažnejší?",
-      "options": ["Peňažný trest", "Zákaz činnosti", "Trest odňatia slobody"],
+      "options": [
+        "Peňažný trest",
+        "Zákaz činnosti",
+        "Trest odňatia slobody"
+      ],
       "correct": 2,
       "explanation_correct": "Správne – trest odňatia slobody je najzávažnejší.",
       "explanation_incorrect": "Nie – odňatie slobody je najzávažnejšie."
     },
     {
       "question": "Ktorý trest je majetkový?",
-      "options": ["Peňažný trest", "Domáce väzenie", "Zákaz pobytu"],
+      "options": [
+        "Peňažný trest",
+        "Domáce väzenie",
+        "Zákaz pobytu"
+      ],
       "correct": 0,
       "explanation_correct": "Správne – peňažný trest je majetkový.",
       "explanation_incorrect": "Nie – peňažný trest je správny."
     },
     {
       "question": "Čo je zákaz činnosti?",
-      "options": ["Zákaz pracovať", "Zákaz vykonávať určitú profesiu", "Zákaz cestovať"],
+      "options": [
+        "Zákaz pracovať",
+        "Zákaz vykonávať určitú profesiu",
+        "Zákaz cestovať"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – zákaz činnosti sa týka konkrétnej profesie.",
       "explanation_incorrect": "Nie – nejde o všeobecný zákaz práce."
     },
     {
       "question": "Ktorý trest možno uložiť právnickej osobe?",
-      "options": ["Domáce väzenie", "Peňažný trest", "Trest odňatia slobody"],
+      "options": [
+        "Domáce väzenie",
+        "Peňažný trest",
+        "Trest odňatia slobody"
+      ],
       "correct": 1,
       "explanation_correct": "Správne – PO možno uložiť peňažný trest.",
       "explanation_incorrect": "Nie – PO nemožno väzniť."
     }
   ],
   "tiles": [
-    { "term": "Trest odňatia slobody", "definition": "Najzávažnejší trest, vykonávaný vo väzení." },
-    { "term": "Peňažný trest", "definition": "Majetkový trest uložený v peniazoch." },
-    { "term": "Zákaz činnosti", "definition": "Zákaz vykonávať určitú profesiu alebo činnosť." },
-    { "term": "Domáce väzenie", "definition": "Trest vykonávaný v obydlí odsúdeného." },
-    { "term": "Vyhostenie", "definition": "Trest spočívajúci v zákaze pobytu na území štátu." }
+    {
+      "term": "Trest odňatia slobody",
+      "definition": "Najzávažnejší trest, vykonávaný vo väzení."
+    },
+    {
+      "term": "Peňažný trest",
+      "definition": "Majetkový trest uložený v peniazoch."
+    },
+    {
+      "term": "Zákaz činnosti",
+      "definition": "Zákaz vykonávať určitú profesiu alebo činnosť."
+    },
+    {
+      "term": "Domáce väzenie",
+      "definition": "Trest vykonávaný v obydlí odsúdeného."
+    },
+    {
+      "term": "Vyhostenie",
+      "definition": "Trest spočívajúci v zákaze pobytu na území štátu."
+    }
   ],
   "cases": [
     {
@@ -73,7 +112,11 @@
         },
         {
           "question": "Krok 1: Je vhodný trest odňatia slobody?",
-          "options": ["Nie", "Áno", "Len pri recidíve"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len pri recidíve"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – pri drobnej krádeži sa preferujú miernejšie tresty.",
           "explanation_incorrect": "Nie – odňatie slobody nie je primerané."
@@ -91,7 +134,11 @@
         },
         {
           "question": "Krok 1: Je zákaz činnosti vhodný?",
-          "options": ["Áno", "Nie", "Len ak ide o recidívu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o recidívu"
+          ],
           "correct": 0,
           "explanation_correct": "Správne – zákaz činnosti je primeraný pri zneužití povolania.",
           "explanation_incorrect": "Nie – zákaz činnosti je vhodný."
@@ -108,10 +155,45 @@
   "spider": {
     "center": "Trest – pojem × účel × druhy × zásady",
     "branches": [
-      { "label": "Pojem trestu", "leaves": ["Ujma podľa zákona – ujma na slobode, majetkových alebo iných právach odsúdeného (§ 31 ods. 2 TZ).", "Ukladá len súd – jediný orgán oprávnený uložiť trest.", "Reakcia na TČ – základný sankčný prostriedok trestného práva."] },
-      { "label": "Účel trestu (§ 34 TZ)", "leaves": ["Ochrana spoločnosti – chrániť spoločnosť pred páchateľom.", "Zabránenie – zabrániť v páchaní ďalšej trestnej činnosti.", "Výchova – vychovať páchateľa k riadnemu životu.", "Generálna prevencia – odradiť ostatných od páchania TČ.", "Morálne odsúdenie – vyjadrenie morálneho odsúdenia spoločnosťou."] },
-      { "label": "Druhy trestov", "leaves": ["Odňatie slobody – najprísnejší trest; pre mladistvých len výnimočne.", "Domáce väzenie – obmedzenie slobody v domácom prostredí.", "Peňažný trest – majetková sankcia.", "Prepadnutie majetku alebo veci – majetkové tresty prepadnutia.", "Zákazy – zákaz činnosti, pobytu, účasti na verejných podujatiach.", "Ďalšie – povinná práca, vyhostenie, strata titulov a hodností."] },
-      { "label": "Zásady ukladania", "leaves": ["Zákonnosť – nulla poena sine lege.", "Úmernosť a spravodlivosť – trest primeraný a spravodlivý.", "Humánnosť – rešpekt k ľudskej dôstojnosti.", "Ne bis in idem – nie dvakrát za to isté."] }
+      {
+        "label": "Pojem trestu",
+        "leaves": [
+          "Ujma podľa zákona – ujma na slobode, majetkových alebo iných právach odsúdeného (§ 31 ods. 2 TZ).",
+          "Ukladá len súd – jediný orgán oprávnený uložiť trest.",
+          "Reakcia na TČ – základný sankčný prostriedok trestného práva."
+        ]
+      },
+      {
+        "label": "Účel trestu (§ 34 TZ)",
+        "leaves": [
+          "Ochrana spoločnosti – chrániť spoločnosť pred páchateľom.",
+          "Zabránenie – zabrániť v páchaní ďalšej trestnej činnosti.",
+          "Výchova – vychovať páchateľa k riadnemu životu.",
+          "Generálna prevencia – odradiť ostatných od páchania TČ.",
+          "Morálne odsúdenie – vyjadrenie morálneho odsúdenia spoločnosťou."
+        ]
+      },
+      {
+        "label": "Druhy trestov",
+        "leaves": [
+          "Odňatie slobody – najprísnejší trest; pre mladistvých len výnimočne.",
+          "Domáce väzenie – obmedzenie slobody v domácom prostredí.",
+          "Peňažný trest – majetková sankcia.",
+          "Prepadnutie majetku alebo veci – majetkové tresty prepadnutia.",
+          "Zákazy – zákaz činnosti, pobytu, účasti na verejných podujatiach.",
+          "Ďalšie – povinná práca, vyhostenie, strata titulov a hodností."
+        ]
+      },
+      {
+        "label": "Zásady ukladania",
+        "leaves": [
+          "Zákonnosť – nulla poena sine lege.",
+          "Úmernosť a spravodlivosť – trest primeraný a spravodlivý.",
+          "Humánnosť – rešpekt k ľudskej dôstojnosti.",
+          "Ne bis in idem – nie dvakrát za to isté."
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trest je podľa § 31 ods. 2 Trestného zákona ujma na osobnej slobode, majetkových alebo iných právach odsúdeného, ktorú môže uložiť páchateľovi len súd za spáchaný trestný čin .\nTrest je základným sankčným prostriedkom trestného práva a predstavuje reakciu štátu na trestný čin.\n\n1. Účel trestu (§ 34 TZ)\nÚčel trestu je zákonom presne definovaný:\n\nochrana spoločnosti pred páchateľom,\n\nzabránenie v páchaní ďalšej trestnej činnosti,\n\nvýchova páchateľa k riadnemu životu,\n\ngenerálna prevencia – odradiť ostatných od páchania trestných činov,\n\nmorálne odsúdenie páchateľa spoločnosťou .\n\nÚčel trestu je jadrom trestnej politiky štátu a súd je povinný ho rešpektovať pri ukladaní trestu.\n\n2. Druhy trestov podľa Trestného zákona (§ 31 – § 33 TZ)\nTrestný zákon upravuje druhy trestov, ktoré možno uložiť dospelej osobe. Patria sem najmä:\n\nTrest odňatia slobody\n\nTrest domáceho väzenia\n\nPeňažný trest\n\nTrest prepadnutia majetku\n\nTrest prepadnutia veci\n\nTrest zákazu činnosti\n\nTrest zákazu pobytu\n\nTrest zákazu účasti na verejných podujatiach\n\nTrest povinnej práce\n\nTrest straty čestných titulov a vyznamenaní\n\nTrest straty vojenskej a inej hodnosti\n\nTrest vyhostenia \n\nPre mladistvých sú upravené osobitné druhy trestov (napr. povinná práca, peňažný trest, zákaz činnosti, domáce väzenie, odňatie slobody) .\n\n3. Zásady ukladania trestu (§ 34 TZ)\nPri ukladaní trestu musí súd rešpektovať:\n\nzásadu zákonnosti (nulla poena sine lege),\n\nzásadu personality trestu,\n\nzásadu úmernosti,\n\nzásadu spravodlivosti,\n\nzásadu humánnosti,\n\nzásadu ne bis in idem .\n\nTieto zásady určujú, aby trest bol zákonný, primeraný a spravodlivý.\n\nZapamätaj si (štátnicové jadro)\n– Trest = zákonom ustanovená ujma uložená súdom za trestný čin.\n– Účel trestu: ochrana spoločnosti, prevencia, výchova, morálne odsúdenie.\n– Druhy trestov: odňatie slobody, domáce väzenie, peňažný trest, zákaz činnosti, prepadnutie majetku, vyhostenie atď.\n– Súd musí rešpektovať zásady zákonnosti, úmernosti, spravodlivosti a humánnosti.\n\nZdroj\nTrestný zákon (zákon č. 300/2005 Z. z.) – § 31, § 34\nNajprávo.sk – definícia trestu a účel trestu"
 }

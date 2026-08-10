@@ -2,7 +2,13 @@
   "id": "A29",
   "title": "Trestné činy proti brannosti, civilnej službe, službe v ozbrojených silách a proti obrane vlasti; Trestné činy vojenské",
   "schemaVersion": "1.1",
-  "tags": ["brannosť", "civilná služba", "obrana vlasti", "vojenské trestné činy", "dezercia"],
+  "tags": [
+    "brannosť",
+    "civilná služba",
+    "obrana vlasti",
+    "vojenské trestné činy",
+    "dezercia"
+  ],
   "theory": [
     {
       "heading": "Trestné činy proti brannosti",
@@ -28,36 +34,71 @@
   "quiz": [
     {
       "question": "Kto môže spáchať vojenský trestný čin?",
-      "options": ["Každý občan", "Len vojak", "Len verejný činiteľ"],
+      "options": [
+        "Každý občan",
+        "Len vojak",
+        "Len verejný činiteľ"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je dezercia?",
-      "options": ["Svojvoľné opustenie služby", "Bežné omeškanie", "Zmena pracovného miesta"],
+      "options": [
+        "Svojvoľné opustenie služby",
+        "Bežné omeškanie",
+        "Zmena pracovného miesta"
+      ],
       "correct": 0
     },
     {
       "question": "Kedy ide o trestný čin proti brannosti?",
-      "options": ["Pri úmyselnom vyhýbaní sa brannej povinnosti", "Pri riadnom nástupe služby", "Pri civilnej službe"],
+      "options": [
+        "Pri úmyselnom vyhýbaní sa brannej povinnosti",
+        "Pri riadnom nástupe služby",
+        "Pri civilnej službe"
+      ],
       "correct": 0
     },
     {
       "question": "Čo je chráneným objektom týchto trestných činov?",
-      "options": ["Majetok štátu", "Obrana a bezpečnosť štátu", "Verejný poriadok"],
+      "options": [
+        "Majetok štátu",
+        "Obrana a bezpečnosť štátu",
+        "Verejný poriadok"
+      ],
       "correct": 1
     },
     {
       "question": "Čo je neuposlúchnutie rozkazu?",
-      "options": ["Nesplnenie zákonného rozkazu nadriadeného", "Nesúhlas v diskusii", "Náhodné zabudnutie"],
+      "options": [
+        "Nesplnenie zákonného rozkazu nadriadeného",
+        "Nesúhlas v diskusii",
+        "Náhodné zabudnutie"
+      ],
       "correct": 0
     }
   ],
   "tiles": [
-    { "term": "Brannosť", "definition": "Povinnosť občanov podieľať sa na obrane štátu." },
-    { "term": "Dezercia", "definition": "Svojvoľné opustenie služby vojakom." },
-    { "term": "Neuposlúchnutie rozkazu", "definition": "Nesplnenie zákonného rozkazu nadriadeného." },
-    { "term": "Civilná služba", "definition": "Alternatíva vojenskej služby z dôvodu svedomia." },
-    { "term": "Obrana vlasti", "definition": "Chránený objekt týchto trestných činov." }
+    {
+      "term": "Brannosť",
+      "definition": "Povinnosť občanov podieľať sa na obrane štátu."
+    },
+    {
+      "term": "Dezercia",
+      "definition": "Svojvoľné opustenie služby vojakom."
+    },
+    {
+      "term": "Neuposlúchnutie rozkazu",
+      "definition": "Nesplnenie zákonného rozkazu nadriadeného."
+    },
+    {
+      "term": "Civilná služba",
+      "definition": "Alternatíva vojenskej služby z dôvodu svedomia."
+    },
+    {
+      "term": "Obrana vlasti",
+      "definition": "Chránený objekt týchto trestných činov."
+    }
   ],
   "cases": [
     {
@@ -71,7 +112,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Trestný čin proti brannosti", "Krádež", "Výtržníctvo"],
+          "options": [
+            "Trestný čin proti brannosti",
+            "Krádež",
+            "Výtržníctvo"
+          ],
           "correct": 0
         }
       ]
@@ -87,7 +132,11 @@
         },
         {
           "question": "O aký čin ide?",
-          "options": ["Dezercia", "Podvod", "Neoprávnené podnikanie"],
+          "options": [
+            "Dezercia",
+            "Podvod",
+            "Neoprávnené podnikanie"
+          ],
           "correct": 0
         }
       ]
@@ -102,10 +151,37 @@
   "spider": {
     "center": "Brannosť × obrana vlasti × vojenské TČ",
     "branches": [
-      { "label": "Proti brannosti a civilnej službe", "leaves": ["Brannosť – vyhýbanie sa povinnostiam obrany štátu (nenastúpenie, marenie, útek)", "Civilná služba – vyhýbanie sa zákonnej alternatíve vojenskej služby", "Rámec – branná povinnosť podľa zákona č. 150/2025 Z. z."] },
-      { "label": "Proti službe v ozbrojených silách", "leaves": ["Podstata – narúšanie disciplíny a pripravenosti ozbrojených síl", "Formy – nenastúpenie, neuposlúchnutie rozkazu, svojvoľné opustenie jednotky"] },
-      { "label": "Proti obrane vlasti", "leaves": ["Podstata – oslabovanie obranyschopnosti štátu", "Formy – sabotáž, poškodzovanie vojenského materiálu, konanie v prospech nepriateľa"] },
-      { "label": "Vojenské TČ", "leaves": ["Páchateľ – len vojak (osobitný subjekt)", "Formy – dezercia, neuposlúchnutie rozkazu, urážka nadriadeného, porušenie strážnej služby", "Chránené – vojenská disciplína, hierarchia, pripravenosť"] }
+      {
+        "label": "Proti brannosti a civilnej službe",
+        "leaves": [
+          "Brannosť – vyhýbanie sa povinnostiam obrany štátu (nenastúpenie, marenie, útek)",
+          "Civilná služba – vyhýbanie sa zákonnej alternatíve vojenskej služby",
+          "Rámec – branná povinnosť podľa zákona č. 150/2025 Z. z."
+        ]
+      },
+      {
+        "label": "Proti službe v ozbrojených silách",
+        "leaves": [
+          "Podstata – narúšanie disciplíny a pripravenosti ozbrojených síl",
+          "Formy – nenastúpenie, neuposlúchnutie rozkazu, svojvoľné opustenie jednotky"
+        ]
+      },
+      {
+        "label": "Proti obrane vlasti",
+        "leaves": [
+          "Podstata – oslabovanie obranyschopnosti štátu",
+          "Formy – sabotáž, poškodzovanie vojenského materiálu, konanie v prospech nepriateľa"
+        ]
+      },
+      {
+        "label": "Vojenské TČ",
+        "leaves": [
+          "Páchateľ – len vojak (osobitný subjekt)",
+          "Formy – dezercia, neuposlúchnutie rozkazu, urážka nadriadeného, porušenie strážnej služby",
+          "Chránené – vojenská disciplína, hierarchia, pripravenosť"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Trestné činy proti brannosti, civilnej službe, službe v ozbrojených silách a proti obrane vlasti, ako aj trestné činy vojenské, chránia obranyschopnosť štátu, disciplínu ozbrojených síl a plnenie zákonných povinností občanov. Ide o skutky, ktoré zasahujú do bezpečnosti štátu a jeho vojenského fungovania.\n\nTrestné činy proti brannosti a vojenské trestné činy sú upravené v Trestnom zákone č. 300/2005 Z. z., najmä v ustanoveniach o brannosti a vojenských trestných činoch. Ich cieľom je chrániť obranu štátu, disciplínu ozbrojených síl, povinnosti občanov pri brannej povinnosti a riadny výkon vojenskej služby.\n\n1. Trestné činy proti brannosti\nIde o konania, ktorými sa osoba vyhýba povinnostiam súvisiacim s obranou štátu.\nTypické formy:\n\nnenastúpenie služby po povolaní,\n\nmarenie brannej povinnosti,\n\nútek do zahraničia s cieľom vyhnúť sa službe.\n\nBranná povinnosť je upravená aj v zákone č. 150/2025 Z. z., ktorý definuje povinnosti občanov pri obrane štátu.\n\n2. Trestné činy proti civilnej službe\nCivilná služba je zákonná alternatíva vojenskej služby pre osoby, ktoré ju odmietajú z dôvodu svedomia alebo náboženského presvedčenia.\nTrestné činy proti civilnej službe spočívajú v tom, že osoba:\n\nnenastúpi civilnú službu,\n\númyselne sa jej vyhýba,\n\nmarí jej výkon.\n\n3. Trestné činy proti službe v ozbrojených silách\nIde o konania narúšajúce disciplínu, pripravenosť a funkčnosť ozbrojených síl.\nTypické formy:\n\nnenastúpenie služby,\n\nneuposlúchnutie rozkazu,\n\nsvojvoľné opustenie jednotky,\n\nodmietnutie plnenia služobných povinností.\n\nTieto skutky ohrozujú plnenie úloh ozbrojených síl v krízových situáciách.\n\n4. Trestné činy proti obrane vlasti\nIde o konania, ktoré oslabujú obranyschopnosť štátu.\nTypické formy:\n\nsabotáž,\n\númyselné poškodzovanie vojenského materiálu,\n\nmarenie obranných opatrení,\n\nkonanie v prospech nepriateľa.\n\nTieto skutky majú vysokú spoločenskú nebezpečnosť, pretože zasahujú do bezpečnosti štátu.\n\n5. Vojenské trestné činy\nVojenské trestné činy sú špecifické skutky, ktorých páchateľom môže byť len vojak.\nPatria sem najmä:\n\ndezercia (útek zo služby),\n\nneuposlúchnutie rozkazu,\n\nurážka nadriadeného,\n\nporušenie strážnej služby,\n\nsvojvoľné opustenie služby.\n\nIch cieľom je chrániť vojenskú disciplínu, hierarchiu a pripravenosť ozbrojených síl.\n\nZapamätaj si (štátnicové jadro)\n– Trestné činy proti brannosti = vyhýbanie sa povinnostiam obrany štátu.\n– Trestné činy proti civilnej službe = vyhýbanie sa zákonnej alternatíve vojenskej služby.\n– Trestné činy proti službe v ozbrojených silách = porušenie disciplíny a rozkazov.\n– Trestné činy proti obrane vlasti = sabotáž a oslabenie obranyschopnosti štátu.\n– Vojenské trestné činy = dezercia, neuposlúchnutie rozkazu, urážka nadriadeného.\n\nZdroj\n– Trestný zákon č. 300/2005 Z. z. – skutkové podstaty trestných činov proti brannosti a vojenských trestných činov   \n– Zákon č. 150/2025 Z. z. – branná povinnosť a obrana štátu Zákony pre ľudíZákony pre ľudí. Zbierka zákonov SR - 150/2025 Z. z. znenie 1. 3. 2026"
 }

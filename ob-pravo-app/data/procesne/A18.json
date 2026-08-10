@@ -2,13 +2,22 @@
   "id": "18",
   "title": "Neodkladné a zabezpečovacie opatrenia podľa CSP",
   "schemaVersion": "1.1",
-  "tags": ["neodkladné opatrenie", "zabezpečovacie opatrenie", "osvedčenie nároku", "CSP"],
-  "summary": "Štvrtá časť CSP upravuje neodkladné a zabezpečovacie opatrenia ako nástroje dočasnej ochrany práv strán ešte pred tým, než súd rozhodne vo veci samej. Neodkladné opatrenie (§ 325 a nasl. CSP) súd nariadi, ak je potrebné bezodkladne upraviť pomery strán alebo ak existuje obava, že by výkon budúceho rozhodnutia bol ohrozený; možno ho nariadiť pred začatím konania, počas neho, ako aj po jeho skončení. Typickým príkladom je predbežná úprava výživného alebo zákaz nakladania s vecou.\n\nZabezpečovacie opatrenie (§ 343 a nasl. CSP) slúži na zabezpečenie peňažnej pohľadávky (napríklad zriadením záložného práva na majetok povinného) alebo nepeňažnej pohľadávky, aby bola vymožiteľná aj po skončení konania. Na nariadenie oboch typov opatrení postačuje osvedčenie nároku a naliehavosti potreby – nevyžaduje sa jeho úplné dokázanie ako pri rozhodnutí vo veci samej. Opatrenie zaniká najmä splnením zabezpečenej povinnosti, právoplatným rozhodnutím vo veci samej, uplynutím doby, na ktorú bolo nariadené, alebo jeho zrušením súdom.\n\nZapamätaj si:\n- Neodkladné opatrenie (§ 325 CSP) rieši naliehavú potrebu dočasnej úpravy pomerov.\n- Zabezpečovacie opatrenie (§ 343 CSP) zabezpečuje peňažnú alebo nepeňažnú pohľadávku pre budúcu exekúciu.\n- Postačuje osvedčenie nároku, nie jeho úplné dokázanie.\n- Oba typy opatrení možno nariadiť aj pred začatím konania vo veci samej.\n- Opatrenie zaniká splnením povinnosti, rozhodnutím vo veci, uplynutím doby alebo zrušením súdom."
-  ,
+  "tags": [
+    "neodkladné opatrenie",
+    "zabezpečovacie opatrenie",
+    "osvedčenie nároku",
+    "CSP"
+  ],
+  "summary": "Štvrtá časť CSP upravuje dočasné procesné nástroje, ktoré chránia práva strán ešte pred meritórnym rozhodnutím.\nIde o zásahy súdu, ktoré majú predísť nenapraviteľným následkom, ohrozeniu budúcej exekúcie alebo potrebe okamžite upraviť pomery strán.\n\nOpatrenia možno nariadiť:\n\npred začatím konania,\n\npočas konania,\n\npo jeho skončení (ak je potrebné zabezpečiť výkon rozhodnutia).\n\nRozhoduje sa uznesením, často v krátkych lehotách a v menej formálnom režime – bez pojednávania, bez vyjadrenia protistrany.\n\n1. Neodkladné opatrenie (§ 325 a nasl. CSP)\nSúd ho nariadi, ak je potrebné:\n\nbezodkladne upraviť pomery strán, alebo\n\nak existuje obava, že výkon budúceho rozhodnutia bude ohrozený.\n\nKedy možno nariadiť\npred začatím konania (typické pri urgentných zásahoch),\n\npočas konania,\n\npo jeho skončení (napr. ochrana pred marením výkonu rozhodnutia).\n\nTypické príklady\npredbežná úprava výživného,\n\nzákaz nakladania s vecou,\n\nzákaz priblíženia sa (civilná ochrana osobnosti),\n\nuloženie povinnosti niečo vykonať alebo zdržať sa konania.\n\nNeodkladné opatrenie má dočasný charakter – trvá len do rozhodnutia vo veci samej alebo do splnenia účelu.\n\n2. Zabezpečovacie opatrenie (§ 343 a nasl. CSP)\nÚčelom je zabezpečiť pohľadávku, aby bola vymožiteľná aj po skončení konania.\n\nPeňažná pohľadávka\n(prioritne určené pre peňažné nároky; v CMP sa neuplatňuje)\n\nzriadenie záložného práva na majetok povinného,\n\nobmedzenie nakladania s majetkom.\n\nNepeňažná pohľadávka\nuloženie povinnosti niečo zachovať,\n\nopatrenia, ktoré zabezpečia budúci výkon rozhodnutia.\n\nZabezpečovacie opatrenie je silnejší zásah než neodkladné opatrenie – jeho cieľom je priamo chrániť budúcu exekúciu.\n\n3. Miera dokazovania – osvedčenie nároku\nNa nariadenie oboch typov opatrení postačuje:\n\nosvedčenie nároku,\n\nosvedčenie naliehavosti potreby.\n\nNevyžaduje sa úplné dokazovanie ako pri meritórnom rozhodnutí – súd skúma pravdepodobnosť tvrdení, nie ich úplné preukázanie.\n\nPostup je:\n\nmenej formálny,\n\nčasto bez pojednávania,\n\nčasto bez vyjadrenia protistrany (ak by to ohrozilo účel opatrenia).\n\n4. Zánik opatrenia\nOpatrenie zaniká najmä:\n\nsplnením zabezpečenej povinnosti,\n\nprávoplatným rozhodnutím vo veci samej,\n\nuplynutím doby, na ktorú bolo nariadené,\n\nzrušením súdom, ak pominú dôvody jeho trvania.\n\nZapamätaj si (štátnicové jadro)\nNeodkladné opatrenie rieši naliehavú potrebu úpravy pomerov (§ 325 CSP).\n\nZabezpečovacie opatrenie chráni peňažnú alebo nepeňažnú pohľadávku (§ 343 CSP).\n\nStačí osvedčenie nároku, nie úplné dokazovanie.\n\nOpatrenia možno nariadiť pred, počas aj po konaní.\n\nZanikajú splnením povinnosti, rozhodnutím vo veci, uplynutím doby alebo zrušením súdom.\n\nRozhoduje sa uznesením, často bez pojednávania a bez vyjadrenia protistrany.\n\nZdroj:\nCSP (160/2015 Z. z.), § 325–343; Exekučný poriadok; judikatúra NS SR; Števček–Macej–Šramel; Šramel (2020).",
   "quiz": [
     {
       "question": "Na čo slúži neodkladné opatrenie podľa CSP?",
-      "options": ["Na definitívne rozhodnutie sporu", "Na bezodkladnú, dočasnú úpravu pomerov strán alebo zabezpečenie výkonu budúceho rozhodnutia", "Na zastavenie konania", "Na zmenu žaloby"],
+      "options": [
+        "Na definitívne rozhodnutie sporu",
+        "Na bezodkladnú, dočasnú úpravu pomerov strán alebo zabezpečenie výkonu budúceho rozhodnutia",
+        "Na zastavenie konania",
+        "Na zmenu žaloby"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Neodkladné opatrenie je dočasným nástrojom, nie konečným rozhodnutím vo veci samej.",
@@ -17,7 +26,12 @@
     },
     {
       "question": "Čo musí navrhovateľ neodkladného opatrenia preukázať?",
-      "options": ["Úplné a nepochybné dokázanie nároku", "Osvedčenie (nie úplné dokázanie) nároku a naliehavosť potreby dočasnej úpravy", "Len svoju totožnosť", "Súhlas protistrany"],
+      "options": [
+        "Úplné a nepochybné dokázanie nároku",
+        "Osvedčenie (nie úplné dokázanie) nároku a naliehavosť potreby dočasnej úpravy",
+        "Len svoju totožnosť",
+        "Súhlas protistrany"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Na nariadenie opatrenia postačuje nižší dôkazný štandard – osvedčenie nároku a naliehavosti.",
@@ -26,7 +40,12 @@
     },
     {
       "question": "Čo je zabezpečovacie opatrenie podľa § 343 CSP?",
-      "options": ["Opatrenie slúžiace na zabezpečenie peňažnej alebo nepeňažnej pohľadávky pre prípad budúcej exekúcie", "Opatrenie na doručovanie písomností", "Opatrenie na vylúčenie sudcu", "Opatrenie na zmenu príslušnosti súdu"],
+      "options": [
+        "Opatrenie slúžiace na zabezpečenie peňažnej alebo nepeňažnej pohľadávky pre prípad budúcej exekúcie",
+        "Opatrenie na doručovanie písomností",
+        "Opatrenie na vylúčenie sudcu",
+        "Opatrenie na zmenu príslušnosti súdu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zabezpečovacie opatrenie chráni vymožiteľnosť pohľadávky do budúcna, napríklad zriadením záložného práva.",
@@ -35,7 +54,12 @@
     },
     {
       "question": "Môže súd nariadiť neodkladné opatrenie ešte pred podaním žaloby vo veci samej?",
-      "options": ["Nie, len počas už prebiehajúceho konania", "Áno, aj pred začatím konania vo veci samej", "Len po právoplatnom skončení konania", "Len so súhlasom Ministerstva spravodlivosti SR"],
+      "options": [
+        "Nie, len počas už prebiehajúceho konania",
+        "Áno, aj pred začatím konania vo veci samej",
+        "Len po právoplatnom skončení konania",
+        "Len so súhlasom Ministerstva spravodlivosti SR"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Neodkladné opatrenie možno nariadiť aj pred začatím konania vo veci samej, práve pre jeho naliehavú povahu.",
@@ -44,7 +68,12 @@
     },
     {
       "question": "Kedy zaniká neodkladné alebo zabezpečovacie opatrenie?",
-      "options": ["Nikdy, opatrenie je trvalé", "Splnením zabezpečenej povinnosti, právoplatným rozhodnutím vo veci, uplynutím určenej doby alebo zrušením súdom", "Len rozhodnutím Národnej rady SR", "Len uplynutím desiatich rokov bez ohľadu na okolnosti"],
+      "options": [
+        "Nikdy, opatrenie je trvalé",
+        "Splnením zabezpečenej povinnosti, právoplatným rozhodnutím vo veci, uplynutím určenej doby alebo zrušením súdom",
+        "Len rozhodnutím Národnej rady SR",
+        "Len uplynutím desiatich rokov bez ohľadu na okolnosti"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon vymenúva viacero dôvodov zániku opatrenia, viazaných na konkrétne okolnosti veci.",
@@ -53,21 +82,44 @@
     }
   ],
   "tiles": [
-    { "term": "Neodkladné opatrenie (§ 325 CSP)", "definition": "Slúži na bezodkladnú, dočasnú úpravu pomerov strán pred alebo počas konania." },
-    { "term": "Zabezpečovacie opatrenie (§ 343 CSP)", "definition": "Zabezpečuje peňažnú alebo nepeňažnú pohľadávku pre prípad budúcej exekúcie." },
-    { "term": "Osvedčenie nároku", "definition": "Nižší dôkazný štandard než plné dokázanie, postačujúci na nariadenie opatrenia." },
-    { "term": "Nariadenie pred začatím konania", "definition": "Neodkladné opatrenie možno nariadiť aj pred podaním žaloby vo veci samej." },
-    { "term": "Zánik opatrenia", "definition": "Splnením povinnosti, právoplatným rozhodnutím vo veci, uplynutím doby alebo zrušením súdom." }
+    {
+      "term": "Neodkladné opatrenie (§ 325 CSP)",
+      "definition": "Slúži na bezodkladnú, dočasnú úpravu pomerov strán pred alebo počas konania."
+    },
+    {
+      "term": "Zabezpečovacie opatrenie (§ 343 CSP)",
+      "definition": "Zabezpečuje peňažnú alebo nepeňažnú pohľadávku pre prípad budúcej exekúcie."
+    },
+    {
+      "term": "Osvedčenie nároku",
+      "definition": "Nižší dôkazný štandard než plné dokázanie, postačujúci na nariadenie opatrenia."
+    },
+    {
+      "term": "Nariadenie pred začatím konania",
+      "definition": "Neodkladné opatrenie možno nariadiť aj pred podaním žaloby vo veci samej."
+    },
+    {
+      "term": "Zánik opatrenia",
+      "definition": "Splnením povinnosti, právoplatným rozhodnutím vo veci, uplynutím doby alebo zrušením súdom."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Naliehavá úprava styku s dieťaťom",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Rodičia sú v rozvodovom konaní a jeden z nich bráni druhému akémukoľvek kontaktu s dieťaťom ešte pred rozhodnutím vo veci samej.", "options": [], "correct": 0 },
+        {
+          "question": "Rodičia sú v rozvodovom konaní a jeden z nich bráni druhému akémukoľvek kontaktu s dieťaťom ešte pred rozhodnutím vo veci samej.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký procesný nástroj môže dotknutý rodič využiť na rýchlu, dočasnú úpravu?",
-          "options": ["Návrh na nariadenie neodkladného opatrenia", "Musí počkať na právoplatný rozsudok vo veci samej", "Podanie na políciu ako jediné možné riešenie"],
+          "options": [
+            "Návrh na nariadenie neodkladného opatrenia",
+            "Musí počkať na právoplatný rozsudok vo veci samej",
+            "Podanie na políciu ako jediné možné riešenie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neodkladné opatrenie umožňuje rýchlu, dočasnú úpravu pomerov ešte pred konečným rozhodnutím vo veci.",
@@ -76,7 +128,11 @@
         },
         {
           "question": "Aký štandard preukázania sa na nariadenie tohto opatrenia vyžaduje?",
-          "options": ["Postačuje osvedčenie nároku a naliehavosti, nie plné dokázanie", "Musí byť nárok bez pochýb úplne dokázaný ako pri rozsudku", "Nevyžaduje sa žiadne preukázanie"],
+          "options": [
+            "Postačuje osvedčenie nároku a naliehavosti, nie plné dokázanie",
+            "Musí byť nárok bez pochýb úplne dokázaný ako pri rozsudku",
+            "Nevyžaduje sa žiadne preukázanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pre neodkladné opatrenie postačuje nižší dôkazný štandard – osvedčenie, nie úplné dokázanie.",
@@ -89,10 +145,18 @@
       "title": "Prípad 2 – Zabezpečenie peňažnej pohľadávky",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Veriteľ sa obáva, že dlžník počas súdneho sporu prevedie svoj jediný majetok na tretiu osobu, aby zmaril budúcu exekúciu.", "options": [], "correct": 0 },
+        {
+          "question": "Veriteľ sa obáva, že dlžník počas súdneho sporu prevedie svoj jediný majetok na tretiu osobu, aby zmaril budúcu exekúciu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký inštitút môže veriteľ využiť?",
-          "options": ["Návrh na nariadenie zabezpečovacieho opatrenia (napr. zriadenie záložného práva na majetok dlžníka)", "Musí počkať, kým spor skončí, a potom konať", "Nemôže urobiť nič, kým nie je nárok právoplatne priznaný"],
+          "options": [
+            "Návrh na nariadenie zabezpečovacieho opatrenia (napr. zriadenie záložného práva na majetok dlžníka)",
+            "Musí počkať, kým spor skončí, a potom konať",
+            "Nemôže urobiť nič, kým nie je nárok právoplatne priznaný"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zabezpečovacie opatrenie chráni pohľadávku ešte pred právoplatným rozhodnutím vo veci samej.",
@@ -101,7 +165,11 @@
         },
         {
           "question": "Aký je účel takéhoto opatrenia?",
-          "options": ["Zabezpečiť, aby bola pohľadávka vymožiteľná aj po skončení konania", "Rozhodnúť s konečnou platnosťou o výške pohľadávky", "Nahradiť potrebu podať žalobu vo veci samej"],
+          "options": [
+            "Zabezpečiť, aby bola pohľadávka vymožiteľná aj po skončení konania",
+            "Rozhodnúť s konečnou platnosťou o výške pohľadávky",
+            "Nahradiť potrebu podať žalobu vo veci samej"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zabezpečovacie opatrenie chráni budúcu vymožiteľnosť nároku, nerieši jeho výšku ani nenahrádza žalobu.",
@@ -120,10 +188,45 @@
   "spider": {
     "center": "Neodkladné × Zabezpečovacie × Osvedčenie × Dočasnosť × Zánik",
     "branches": [
-      { "label": "Neodkladné opatrenie (§ 325 CSP)", "leaves": ["slúži na bezodkladnú úpravu pomerov strán alebo na odvrátenie ohrozenia budúceho výkonu rozhodnutia", "možno nariadiť: – pred začatím konania – počas konania – po jeho skončení", "menej formálny postup: často bez pojednávania, bez vyjadrenia protistrany", "rozhoduje sa uznesením, v krátkych lehotách", "príklady: – predbežná úprava výživného – zákaz nakladania s vecou – zákaz priblíženia sa", "má dočasný charakter – trvá do rozhodnutia vo veci samej alebo do splnenia účelu"] },
-      { "label": "Zabezpečovacie opatrenie (§ 343 CSP)", "leaves": ["účel: zabezpečiť pohľadávku, aby bola vymožiteľná po skončení konania", "priorita: určené najmä pre peňažné nároky (v CMP sa neuplatňuje)", "peňažná pohľadávka: – zriadenie záložného práva na majetok povinného – obmedzenie nakladania s majetkom", "nepeňažná pohľadávka: – uloženie povinnosti niečo zachovať alebo zdržať sa konania", "menej formálny postup, rozhoduje sa uznesením"] },
-      { "label": "Miera dokazovania – osvedčenie nároku", "leaves": ["postačuje osvedčenie nároku a naliehavosti potreby", "nevyžaduje sa úplné dokazovanie", "súd skúma pravdepodobnosť tvrdení, nie ich úplné preukázanie", "opatrenia možno nariadiť aj bez pojednávania a bez vyjadrenia protistrany"] },
-      { "label": "Zánik opatrenia", "leaves": ["splnením zabezpečenej povinnosti", "právoplatným rozhodnutím vo veci samej", "uplynutím doby, na ktorú bolo nariadené", "zrušením súdom, ak pominú dôvody jeho trvania"] }
+      {
+        "label": "Neodkladné opatrenie (§ 325 CSP)",
+        "leaves": [
+          "slúži na bezodkladnú úpravu pomerov strán alebo na odvrátenie ohrozenia budúceho výkonu rozhodnutia",
+          "možno nariadiť: – pred začatím konania – počas konania – po jeho skončení",
+          "menej formálny postup: často bez pojednávania, bez vyjadrenia protistrany",
+          "rozhoduje sa uznesením, v krátkych lehotách",
+          "príklady: – predbežná úprava výživného – zákaz nakladania s vecou – zákaz priblíženia sa",
+          "má dočasný charakter – trvá do rozhodnutia vo veci samej alebo do splnenia účelu"
+        ]
+      },
+      {
+        "label": "Zabezpečovacie opatrenie (§ 343 CSP)",
+        "leaves": [
+          "účel: zabezpečiť pohľadávku, aby bola vymožiteľná po skončení konania",
+          "priorita: určené najmä pre peňažné nároky (v CMP sa neuplatňuje)",
+          "peňažná pohľadávka: – zriadenie záložného práva na majetok povinného – obmedzenie nakladania s majetkom",
+          "nepeňažná pohľadávka: – uloženie povinnosti niečo zachovať alebo zdržať sa konania",
+          "menej formálny postup, rozhoduje sa uznesením"
+        ]
+      },
+      {
+        "label": "Miera dokazovania – osvedčenie nároku",
+        "leaves": [
+          "postačuje osvedčenie nároku a naliehavosti potreby",
+          "nevyžaduje sa úplné dokazovanie",
+          "súd skúma pravdepodobnosť tvrdení, nie ich úplné preukázanie",
+          "opatrenia možno nariadiť aj bez pojednávania a bez vyjadrenia protistrany"
+        ]
+      },
+      {
+        "label": "Zánik opatrenia",
+        "leaves": [
+          "splnením zabezpečenej povinnosti",
+          "právoplatným rozhodnutím vo veci samej",
+          "uplynutím doby, na ktorú bolo nariadené",
+          "zrušením súdom, ak pominú dôvody jeho trvania"
+        ]
+      }
     ]
   }
 }

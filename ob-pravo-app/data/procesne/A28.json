@@ -2,13 +2,23 @@
   "id": "28",
   "title": "Opravné systémy a opravné prostriedky v súdnom konaní",
   "schemaVersion": "1.1",
-  "tags": ["opravné prostriedky", "devolutívny účinok", "suspenzívny účinok", "neúplná apelácia", "autoremedúra"],
-  "summary": "Opravné prostriedky sa delia na riadne, ktoré smerujú proti rozhodnutiu, ktoré ešte nenadobudlo právoplatnosť (typicky odvolanie), a mimoriadne, ktoré smerujú proti už právoplatnému rozhodnutiu (dovolanie, žaloba na obnovu konania, dovolanie generálneho prokurátora a kasačná sťažnosť). Pri hodnotení opravných prostriedkov sa rozlišuje ich devolutívny účinok (o opravnom prostriedku rozhoduje spravidla vyšší, nadriadený súd) a suspenzívny účinok (podanie opravného prostriedku odkladá právoplatnosť, prípadne vykonateľnosť napadnutého rozhodnutia).\n\nZ hľadiska rozsahu právomocí súdu, ktorý o opravnom prostriedku rozhoduje, sa tradične rozlišuje apelačný systém (súd môže sám vo veci rozhodnúť, teda rozhodnutie zmeniť) a kasačný systém (súd môže rozhodnutie len zrušiť a vrátiť vec na ďalšie konanie). Slovenský CSP v odvolacom konaní uplatňuje tzv. neúplnú apeláciu, ktorá kombinuje prvky oboch systémov – odvolací súd môže rozhodnutie potvrdiť, zmeniť, alebo ho zrušiť a vec vrátiť súdu prvej inštancie, pričom uplatňovanie nových skutočností a dôkazov je obmedzené. Osobitným inštitútom je autoremedúra – možnosť súdu prvej inštancie sám vyhovieť podanému odvolaniu (typicky pri niektorých uzneseniach) bez toho, aby vec musel postúpiť odvolaciemu súdu.\n\nZapamätaj si:\n- Riadny opravný prostriedok smeruje proti neprávoplatnému rozhodnutiu (odvolanie).\n- Mimoriadny opravný prostriedok smeruje proti právoplatnému rozhodnutiu (dovolanie, obnova konania).\n- Devolutívny účinok = rozhoduje vyšší súd; suspenzívny účinok = odkladá právoplatnosť/vykonateľnosť.\n- CSP uplatňuje neúplnú apeláciu – kombináciu apelačných a kasačných prvkov.\n- Autoremedúra umožňuje súdu prvej inštancie sám vyhovieť odvolaniu bez postúpenia veci vyššiemu súdu."
-  ,
+  "tags": [
+    "opravné prostriedky",
+    "devolutívny účinok",
+    "suspenzívny účinok",
+    "neúplná apelácia",
+    "autoremedúra"
+  ],
+  "summary": "Opravné prostriedky slúžia na preskúmanie zákonnosti a správnosti súdnych rozhodnutí.\nIch účelom je umožniť kontrolu rozhodnutia a jeho prípadnú modifikáciu alebo zrušenie, čím sa zabezpečuje právna istota a ochrana práv účastníkov.\n\nOpravné prostriedky sa delia podľa viacerých kritérií:\n\nriadne × mimoriadne,\n\ns devolutívnym účinkom × bez neho,\n\ns právom novôt × bez novôt,\n\npodľa opravného systému (apelačný, kasačný, revízny).\n\n1. Riadne opravné prostriedky\nOdvolanie\nJediný riadny opravný prostriedok v civilnom konaní.\n\nSmeruje proti neprávoplatnému rozhodnutiu.\n\nÚčinky odvolania\ndevolutívny účinok – rozhoduje vyšší súd,\n\nsuspenzívny účinok – odkladá právoplatnosť (a často aj vykonateľnosť).\n\nNovoty v odvolaní\nv CSP sú obmedzené (koncentrácia konania),\n\nnové tvrdenia a dôkazy možno uplatniť len v zákonom stanovených prípadoch.\n\nAutoremedúra\nSúd prvej inštancie môže sám vyhovieť odvolaniu, ak tým nezasiahne do práv iných strán.\nIde o rýchlu nápravu bez zásahu odvolacieho súdu.\n\n2. Mimoriadne opravné prostriedky\nSmerujú proti právoplatným rozhodnutiam.\n\nDovolanie (§ 419 CSP)\nmimoriadny opravný prostriedok,\n\nobmedzené dovolacie dôvody,\n\nslúži na odstránenie závažných právnych chýb.\n\nŽaloba na obnovu konania\nsmeruje proti rozhodnutiu, ktoré je právoplatné,\n\ndôvody: nové skutočnosti alebo dôkazy, ktoré nemohli byť uplatnené skôr.\n\nDovolanie generálneho prokurátora\nmimoriadny zásah do právoplatného rozhodnutia,\n\nslúži na ochranu zákonnosti.\n\nKasačná sťažnosť\npoužíva sa v správnom súdnictve (nie v CSP),\n\nmá čisto kasačný charakter.\n\n3. Opravné systémy\nApelačný systém\nOdvolací súd môže:\n\nrozhodnutie zmeniť,\n\nsám vo veci rozhodnúť.\n\nApelácia môže byť:\n\núplná – odvolací súd preskúmava skutkový aj právny stav,\n\nneúplná – preskúmanie je obmedzené (napr. zákaz novôt).\n\nKasačný systém\nOdvolací súd môže rozhodnutie iba:\n\nzrušiť,\n\nvec vrátiť na nové konanie.\n\nNepreskúmava skutkový stav v plnom rozsahu.\n\nRevízny systém\nodvolací súd preskúmava len právne otázky,\n\nskutkový stav je záväzný.\n\nNeúplná apelácia v CSP\nCSP kombinuje apelačné a kasačné prvky:\n\nodvolací súd môže rozhodnutie potvrdiť, zmeniť alebo zrušiť,\n\nnovoty sú obmedzené (koncentrácia konania),\n\ncieľom je efektívna kontrola bez neprimeraného predlžovania konania.\n\nZapamätaj si (štátnicové jadro)\nRiadny opravný prostriedok = odvolanie.\n\nMimoriadne opravné prostriedky smerujú proti právoplatným rozhodnutiam.\n\nDevolutívny účinok = rozhoduje vyšší súd; suspenzívny účinok = odkladá právoplatnosť/vykonateľnosť.\n\nCSP uplatňuje neúplnú apeláciu – kombináciu apelačných a kasačných prvkov.\n\nAutoremedúra = súd prvej inštancie môže sám vyhovieť odvolaniu.\n\nOpravné systémy: apelačný × kasačný × revízny.\n\nZdroj:\nCSP (160/2015 Z. z.), § 362–393, § 419 a nasl.; Števček–Macej–Šramel: Civilný sporový poriadok. Komentár (2016); Števček–Macej–Šramel: Civilné procesné právo (2017); judikatúra NS SR.",
   "quiz": [
     {
       "question": "Aký je rozdiel medzi riadnym a mimoriadnym opravným prostriedkom?",
-      "options": ["Riadny smeruje proti neprávoplatnému rozhodnutiu (napr. odvolanie), mimoriadny proti právoplatnému rozhodnutiu (napr. dovolanie)", "Riadny sa podáva na Ústavný súd SR, mimoriadny na okresný súd", "Medzi nimi niet žiadneho rozdielu", "Mimoriadny opravný prostriedok možno podať kedykoľvek bez lehoty"],
+      "options": [
+        "Riadny smeruje proti neprávoplatnému rozhodnutiu (napr. odvolanie), mimoriadny proti právoplatnému rozhodnutiu (napr. dovolanie)",
+        "Riadny sa podáva na Ústavný súd SR, mimoriadny na okresný súd",
+        "Medzi nimi niet žiadneho rozdielu",
+        "Mimoriadny opravný prostriedok možno podať kedykoľvek bez lehoty"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Kľúčovým rozlišovacím znakom je práve to, či rozhodnutie už nadobudlo právoplatnosť.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Čo je devolutívny účinok opravného prostriedku?",
-      "options": ["O opravnom prostriedku rozhoduje spravidla vyšší (nadriadený) súd", "Rozhodnutie stráca platnosť automaticky", "Opravný prostriedok odkladá vykonateľnosť rozhodnutia", "Rozhoduje ten istý súd, ktorý vydal napadnuté rozhodnutie"],
+      "options": [
+        "O opravnom prostriedku rozhoduje spravidla vyšší (nadriadený) súd",
+        "Rozhodnutie stráca platnosť automaticky",
+        "Opravný prostriedok odkladá vykonateľnosť rozhodnutia",
+        "Rozhoduje ten istý súd, ktorý vydal napadnuté rozhodnutie"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Devolutívny účinok znamená prenesenie rozhodovacej právomoci na vyšší súd.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Čo je suspenzívny účinok opravného prostriedku?",
-      "options": ["Odkladá právoplatnosť, prípadne vykonateľnosť napadnutého rozhodnutia", "Znamená, že súd musí rozhodnúť do 24 hodín", "Znamená automatické zrušenie rozhodnutia", "Nemá žiadny vplyv na priebeh konania"],
+      "options": [
+        "Odkladá právoplatnosť, prípadne vykonateľnosť napadnutého rozhodnutia",
+        "Znamená, že súd musí rozhodnúť do 24 hodín",
+        "Znamená automatické zrušenie rozhodnutia",
+        "Nemá žiadny vplyv na priebeh konania"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Suspenzívny účinok bráni nadobudnutiu právoplatnosti alebo vykonateľnosti počas rozhodovania o opravnom prostriedku.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Aký systém preskúmavania CSP prevažne uplatňuje v odvolacom konaní?",
-      "options": ["Neúplnú apeláciu, kombinujúcu prvky apelačného aj kasačného systému", "Čistú kasáciu bez možnosti zmeny rozhodnutia odvolacím súdom", "Čistú apeláciu s neobmedzeným pripustením nových dôkazov", "Systém, v ktorom odvolací súd nikdy nemôže rozhodnutie zmeniť"],
+      "options": [
+        "Neúplnú apeláciu, kombinujúcu prvky apelačného aj kasačného systému",
+        "Čistú kasáciu bez možnosti zmeny rozhodnutia odvolacím súdom",
+        "Čistú apeláciu s neobmedzeným pripustením nových dôkazov",
+        "Systém, v ktorom odvolací súd nikdy nemôže rozhodnutie zmeniť"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Odvolací súd môže podľa CSP rozhodnutie potvrdiť, zmeniť aj zrušiť, pri obmedzenom pripúšťaní noviel.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Čo je autoremedúra?",
-      "options": ["Možnosť súdu prvej inštancie sám zmeniť alebo zrušiť svoje rozhodnutie pred postúpením veci odvolaciemu súdu, ak to zákon pripúšťa", "Rozhodnutie výlučne Najvyššieho súdu SR", "Mimoriadny opravný prostriedok podávaný generálnym prokurátorom", "Rozhodnutie o vylúčení sudcu"],
+      "options": [
+        "Možnosť súdu prvej inštancie sám zmeniť alebo zrušiť svoje rozhodnutie pred postúpením veci odvolaciemu súdu, ak to zákon pripúšťa",
+        "Rozhodnutie výlučne Najvyššieho súdu SR",
+        "Mimoriadny opravný prostriedok podávaný generálnym prokurátorom",
+        "Rozhodnutie o vylúčení sudcu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Autoremedúra umožňuje rýchle vyriešenie veci bez zaťaženia odvolacieho súdu, ak s odvolaním súd prvej inštancie plne súhlasí.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Riadny opravný prostriedok", "definition": "Smeruje proti neprávoplatnému rozhodnutiu (napr. odvolanie)." },
-    { "term": "Mimoriadny opravný prostriedok", "definition": "Smeruje proti právoplatnému rozhodnutiu (napr. dovolanie, obnova konania)." },
-    { "term": "Devolutívny účinok", "definition": "O opravnom prostriedku rozhoduje spravidla vyšší (nadriadený) súd." },
-    { "term": "Suspenzívny účinok", "definition": "Odkladá právoplatnosť, prípadne vykonateľnosť napadnutého rozhodnutia." },
-    { "term": "Neúplná apelácia", "definition": "Systém kombinujúci prvky apelácie (možnosť zmeny) a kasácie (zrušenie a vrátenie veci), typický pre CSP." }
+    {
+      "term": "Riadny opravný prostriedok",
+      "definition": "Smeruje proti neprávoplatnému rozhodnutiu (napr. odvolanie)."
+    },
+    {
+      "term": "Mimoriadny opravný prostriedok",
+      "definition": "Smeruje proti právoplatnému rozhodnutiu (napr. dovolanie, obnova konania)."
+    },
+    {
+      "term": "Devolutívny účinok",
+      "definition": "O opravnom prostriedku rozhoduje spravidla vyšší (nadriadený) súd."
+    },
+    {
+      "term": "Suspenzívny účinok",
+      "definition": "Odkladá právoplatnosť, prípadne vykonateľnosť napadnutého rozhodnutia."
+    },
+    {
+      "term": "Neúplná apelácia",
+      "definition": "Systém kombinujúci prvky apelácie (možnosť zmeny) a kasácie (zrušenie a vrátenie veci), typický pre CSP."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Odvolanie ako riadny opravný prostriedok",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Účastník podá odvolanie proti neprávoplatnému rozsudku súdu prvej inštancie v zákonnej lehote.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník podá odvolanie proti neprávoplatnému rozsudku súdu prvej inštancie v zákonnej lehote.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ opravného prostriedku ide?",
-          "options": ["Riadny opravný prostriedok", "Mimoriadny opravný prostriedok", "Ani jeden z uvedených, ide o samostatnú žalobu"],
+          "options": [
+            "Riadny opravný prostriedok",
+            "Mimoriadny opravný prostriedok",
+            "Ani jeden z uvedených, ide o samostatnú žalobu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odvolanie proti ešte neprávoplatnému rozhodnutiu je typickým riadnym opravným prostriedkom.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Má podané odvolanie suspenzívny účinok na právoplatnosť rozsudku?",
-          "options": ["Áno, bráni nadobudnutiu právoplatnosti napadnutého rozsudku", "Nie, rozsudok je právoplatný bez ohľadu na odvolanie", "Áno, ale iba pri rozsudkoch nad 10 000 eur"],
+          "options": [
+            "Áno, bráni nadobudnutiu právoplatnosti napadnutého rozsudku",
+            "Nie, rozsudok je právoplatný bez ohľadu na odvolanie",
+            "Áno, ale iba pri rozsudkoch nad 10 000 eur"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Riadne podané odvolanie má suspenzívny účinok voči právoplatnosti napadnutého rozsudku.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Dovolanie proti právoplatnému rozsudku",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Účastník sa domnieva, že právoplatný rozsudok odvolacieho súdu je založený na nesprávnom právnom posúdení veci v rozpore s ustálenou rozhodovacou praxou Najvyššieho súdu SR.", "options": [], "correct": 0 },
+        {
+          "question": "Účastník sa domnieva, že právoplatný rozsudok odvolacieho súdu je založený na nesprávnom právnom posúdení veci v rozpore s ustálenou rozhodovacou praxou Najvyššieho súdu SR.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "O aký typ opravného prostriedku pôjde, ak sa rozhodne brániť?",
-          "options": ["O mimoriadny opravný prostriedok (dovolanie)", "O riadny opravný prostriedok (odvolanie)", "O žiadny opravný prostriedok, keďže rozsudok je už právoplatný a nemenný"],
+          "options": [
+            "O mimoriadny opravný prostriedok (dovolanie)",
+            "O riadny opravný prostriedok (odvolanie)",
+            "O žiadny opravný prostriedok, keďže rozsudok je už právoplatný a nemenný"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Proti právoplatnému rozhodnutiu odvolacieho súdu prichádza do úvahy mimoriadny opravný prostriedok – dovolanie.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Prečo nemôže ísť o odvolanie?",
-          "options": ["Odvolanie smeruje len proti neprávoplatnému rozhodnutiu, tu je rozsudok už právoplatný", "Odvolanie sa podáva len v exekučnom konaní", "Odvolanie a dovolanie sú úplne totožné pojmy"],
+          "options": [
+            "Odvolanie smeruje len proti neprávoplatnému rozhodnutiu, tu je rozsudok už právoplatný",
+            "Odvolanie sa podáva len v exekučnom konaní",
+            "Odvolanie a dovolanie sú úplne totožné pojmy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odvolanie je viazané na neprávoplatnosť rozhodnutia, ktorá tu už neexistuje.",
@@ -120,13 +189,77 @@
   "spider": {
     "center": "Opravné prostriedky – riadne × mimoriadne × apelácia × kasačný systém × autoremedúra",
     "branches": [
-      { "label": "Pojem a účel opravného konania", "leaves": ["opravný prostriedok = procesný nástroj na preskúmanie rozhodnutia", "opravné konanie slúži na preskúmanie a prípadnú modifikáciu rozhodnutia", "účel: kontrola zákonnosti a správnosti rozhodnutí, ochrana práv účastníkov"] },
-      { "label": "Klasifikácia opravných prostriedkov", "leaves": ["riadne × mimoriadne", "s devolutívnym účinkom × bez devolutívneho účinku", "s právom novôt × bez práva novôt", "úplné × neúplné"] },
-      { "label": "Riadne opravné prostriedky", "leaves": ["Odvolanie – smeruje proti neprávoplatnému rozhodnutiu", "devolutívny účinok – rozhoduje vyšší súd", "suspenzívny účinok – odkladá právoplatnosť (a často aj vykonateľnosť)", "odvolanie je základný nástroj kontroly rozhodnutí v CSP", "sťažnosť proti uzneseniam VSÚ – bez devolutívneho účinku (rozhoduje ten istý súd)"] },
-      { "label": "Autoremedúra", "leaves": ["súd prvej inštancie môže sám vyhovieť odvolaniu", "len ak tým nezasiahne do práv iných strán", "zrýchľuje konanie a odbremeňuje odvolací súd"] },
-      { "label": "Mimoriadne opravné prostriedky", "leaves": ["Smerujú proti právoplatným rozhodnutiam:", "Dovolanie (§ 419 CSP)", "Žaloba na obnovu konania", "Dovolanie generálneho prokurátora", "Kasačná sťažnosť (v správnom súdnictve)", "Majú obmedzené dôvody – slúžia na odstránenie závažných chýb rozhodnutia."] },
-      { "label": "Opravné systémy", "leaves": ["Apelačný systém", "odvolací súd môže rozhodnutie zmeniť a sám vo veci rozhodnúť", "úplná apelácia: novoty bez obmedzenia", "neúplná apelácia: novoty sú obmedzené", "Kasačný systém", "odvolací súd môže rozhodnutie len zrušiť", "vec vráti na nové konanie", "nepreskúmava skutkový stav v plnom rozsahu", "Revízny systém", "preskúmanie sa obmedzuje na právne otázky", "skutkový stav je záväzný"] },
-      { "label": "CSP – neúplná apelácia", "leaves": ["CSP kombinuje apelačné a kasačné prvky", "odvolací súd môže rozhodnutie potvrdiť, zmeniť alebo zrušiť", "novoty sú obmedzené koncentráciou konania", "cieľ: efektívna kontrola rozhodnutí bez neprimeraného predlžovania konania"] }
+      {
+        "label": "Pojem a účel opravného konania",
+        "leaves": [
+          "opravný prostriedok = procesný nástroj na preskúmanie rozhodnutia",
+          "opravné konanie slúži na preskúmanie a prípadnú modifikáciu rozhodnutia",
+          "účel: kontrola zákonnosti a správnosti rozhodnutí, ochrana práv účastníkov"
+        ]
+      },
+      {
+        "label": "Klasifikácia opravných prostriedkov",
+        "leaves": [
+          "riadne × mimoriadne",
+          "s devolutívnym účinkom × bez devolutívneho účinku",
+          "s právom novôt × bez práva novôt",
+          "úplné × neúplné"
+        ]
+      },
+      {
+        "label": "Riadne opravné prostriedky",
+        "leaves": [
+          "Odvolanie – smeruje proti neprávoplatnému rozhodnutiu",
+          "devolutívny účinok – rozhoduje vyšší súd",
+          "suspenzívny účinok – odkladá právoplatnosť (a často aj vykonateľnosť)",
+          "odvolanie je základný nástroj kontroly rozhodnutí v CSP",
+          "sťažnosť proti uzneseniam VSÚ – bez devolutívneho účinku (rozhoduje ten istý súd)"
+        ]
+      },
+      {
+        "label": "Autoremedúra",
+        "leaves": [
+          "súd prvej inštancie môže sám vyhovieť odvolaniu",
+          "len ak tým nezasiahne do práv iných strán",
+          "zrýchľuje konanie a odbremeňuje odvolací súd"
+        ]
+      },
+      {
+        "label": "Mimoriadne opravné prostriedky",
+        "leaves": [
+          "Smerujú proti právoplatným rozhodnutiam:",
+          "Dovolanie (§ 419 CSP)",
+          "Žaloba na obnovu konania",
+          "Dovolanie generálneho prokurátora",
+          "Kasačná sťažnosť (v správnom súdnictve)",
+          "Majú obmedzené dôvody – slúžia na odstránenie závažných chýb rozhodnutia."
+        ]
+      },
+      {
+        "label": "Opravné systémy",
+        "leaves": [
+          "Apelačný systém",
+          "odvolací súd môže rozhodnutie zmeniť a sám vo veci rozhodnúť",
+          "úplná apelácia: novoty bez obmedzenia",
+          "neúplná apelácia: novoty sú obmedzené",
+          "Kasačný systém",
+          "odvolací súd môže rozhodnutie len zrušiť",
+          "vec vráti na nové konanie",
+          "nepreskúmava skutkový stav v plnom rozsahu",
+          "Revízny systém",
+          "preskúmanie sa obmedzuje na právne otázky",
+          "skutkový stav je záväzný"
+        ]
+      },
+      {
+        "label": "CSP – neúplná apelácia",
+        "leaves": [
+          "CSP kombinuje apelačné a kasačné prvky",
+          "odvolací súd môže rozhodnutie potvrdiť, zmeniť alebo zrušiť",
+          "novoty sú obmedzené koncentráciou konania",
+          "cieľ: efektívna kontrola rozhodnutí bez neprimeraného predlžovania konania"
+        ]
+      }
     ]
   }
 }

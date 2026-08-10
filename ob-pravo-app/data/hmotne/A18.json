@@ -1,7 +1,7 @@
 {
   "id": "18",
   "title": "Zabezpečenie záväzkov",
-  "summary": "Zabezpečovanie záväzkov (§ 544–558 OZ) posilňuje postavenie veriteľa. Prostriedky: zmluvná pokuta (§ 544 OZ), ručenie (§ 546–550 OZ), záložné právo, záloha, uznanie záväzku, zádržné právo. Zmluvná pokuta: paušalizovaná náhrada škody, možno ju znížiť súdom. Ručiteľ plní subsidiárne – až keď dlžník neplní po výzve.",
+  "summary": "Zabezpečenie záväzkov podľa § 544–558 OZ slúži na posilnenie postavenia veriteľa a zvýšenie istoty, že dlžník splní svoj záväzok. Ide o právne prostriedky, ktoré motivujú dlžníka k riadnemu plneniu a poskytujú veriteľovi dodatočné možnosti uspokojenia.\n\nZmluvná pokuta (§ 544 OZ)\nZmluvná pokuta je paušalizovaná náhrada škody. Dlžník sa zaväzuje zaplatiť veriteľovi určitú sumu, ak poruší povinnosť zo zmluvy.\n– Veriteľ môže požadovať pokutu aj bez vzniku škody.\n– Súd môže zmluvnú pokutu primerane znížiť, ak je neprimerane vysoká.\n– Zmluvná pokuta má silný preventívny účinok.\n\nRučenie (§ 546–550 OZ)\nRučiteľ sa zaväzuje, že splní záväzok dlžníka, ak dlžník nesplní po výzve veriteľa.\n– Ručenie je subsidiárne – veriteľ sa najprv obracia na dlžníka.\n– Ručiteľ môže uplatniť všetky námietky, ktoré má dlžník.\n– Ručenie vzniká najčastejšie písomnou zmluvou.\n\nZáložné právo\nVecné právo umožňujúce veriteľovi uspokojiť sa zo zálohu, ak dlžník neplní.\n– Predmetom môže byť vec, nehnuteľnosť, pohľadávka, podnik.\n– Má droit de préférence a droit de suite.\n\nZáloha\nDlžník odovzdá veriteľovi vec ako zabezpečenie. Pri nesplnení záväzku môže veriteľ vec použiť na uspokojenie pohľadávky.\n\nUznanie záväzku (§ 558 OZ)\nDlžník písomne uzná svoj dlh, čím posilní postavenie veriteľa. Uznanie má účinky prerušenia premlčania.\n\nZádržné právo\nVeriteľ môže zadržať vec dlžníka, ktorú má u seba, až do splnenia záväzku. Ide o praktický a rýchly zabezpečovací prostriedok.\n\nFunkcia zabezpečenia\nZabezpečovacie prostriedky zvyšujú istotu veriteľa, motivujú dlžníka k plneniu a poskytujú alternatívne možnosti uspokojenia pohľadávky.\n\nZdroje: OZ (40/1964 Zb.), § 544–558; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je zmluvná pokuta (§ 544 OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Zmluvná pokuta (§ 544 OZ)", "definition": "Dohodnutá suma, ktorú dlžník zaplatí veriteľovi pri porušení záväzku." },
-    { "term": "Moderačné právo súdu (§ 545a OZ)", "definition": "Súd môže neprimeranú zmluvnú pokutu znížiť." },
-    { "term": "Ručenie (§ 546 – 550 OZ)", "definition": "Subsidiárny záväzok ručiteľa plniť, ak dlžník nesplní po výzve." },
-    { "term": "Záloha (preddavok)", "definition": "Suma zaplatená vopred, zarátava sa do plnenia alebo prepadá pri nesplnení." },
-    { "term": "Zádržné právo (§ 175 OZ)", "definition": "Právo zadržať cudziu vec ako zabezpečenie splatnej pohľadávky." }
+    {
+      "term": "Zmluvná pokuta (§ 544 OZ)",
+      "definition": "Dohodnutá suma, ktorú dlžník zaplatí veriteľovi pri porušení záväzku."
+    },
+    {
+      "term": "Moderačné právo súdu (§ 545a OZ)",
+      "definition": "Súd môže neprimeranú zmluvnú pokutu znížiť."
+    },
+    {
+      "term": "Ručenie (§ 546 – 550 OZ)",
+      "definition": "Subsidiárny záväzok ručiteľa plniť, ak dlžník nesplní po výzve."
+    },
+    {
+      "term": "Záloha (preddavok)",
+      "definition": "Suma zaplatená vopred, zarátava sa do plnenia alebo prepadá pri nesplnení."
+    },
+    {
+      "term": "Zádržné právo (§ 175 OZ)",
+      "definition": "Právo zadržať cudziu vec ako zabezpečenie splatnej pohľadávky."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Neprimerane vysoká zmluvná pokuta",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Strany si dohodli zmluvnú pokutu vo výške niekoľkonásobne prevyšujúcej hodnotu celého plnenia zo zmluvy.", "options": [], "correct": 0 },
+        {
+          "question": "Strany si dohodli zmluvnú pokutu vo výške niekoľkonásobne prevyšujúcej hodnotu celého plnenia zo zmluvy.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Môže súd takúto pokutu znížiť?",
-          "options": ["Áno, súd môže neprimeranú zmluvnú pokutu znížiť (§ 545a OZ)", "Nie, zmluvná pokuta je vždy záväzná v dohodnutej výške", "Nie, iba veriteľ sám môže dobrovoľne pokutu znížiť"],
+          "options": [
+            "Áno, súd môže neprimeranú zmluvnú pokutu znížiť (§ 545a OZ)",
+            "Nie, zmluvná pokuta je vždy záväzná v dohodnutej výške",
+            "Nie, iba veriteľ sám môže dobrovoľne pokutu znížiť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon dáva súdu moderačné právo pri zjavne neprimeranej zmluvnej pokute.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Čo súd zohľadňuje pri rozhodovaní o znížení pokuty?",
-          "options": ["Hodnotu a význam zabezpečovanej povinnosti", "Iba osobné sympatie k jednej zo strán", "Výlučne majetkové pomery veriteľa"],
+          "options": [
+            "Hodnotu a význam zabezpečovanej povinnosti",
+            "Iba osobné sympatie k jednej zo strán",
+            "Výlučne majetkové pomery veriteľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Súd posudzuje primeranosť pokuty vo vzťahu k hodnote a významu zabezpečenej povinnosti.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Plnenie ručiteľa",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Veriteľ vyzve dlžníka na splnenie záväzku, dlžník však ani po výzve neplní.", "options": [], "correct": 0 },
+        {
+          "question": "Veriteľ vyzve dlžníka na splnenie záväzku, dlžník však ani po výzve neplní.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Kedy je ručiteľ povinný namiesto dlžníka plniť?",
-          "options": ["Až keď dlžník nesplní záväzok ani po výzve veriteľa (subsidiárne)", "Ihneď po uzavretí ručiteľskej zmluvy bez ďalšieho", "Iba ak dlžník zomrie"],
+          "options": [
+            "Až keď dlžník nesplní záväzok ani po výzve veriteľa (subsidiárne)",
+            "Ihneď po uzavretí ručiteľskej zmluvy bez ďalšieho",
+            "Iba ak dlžník zomrie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ručenie je subsidiárne – ručiteľ plní až po neúspešnej výzve dlžníkovi.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo vyjadruje subsidiárna povaha ručenia?",
-          "options": ["Ručiteľ plní až vtedy, keď zlyhá primárny dlžník", "Ručiteľ plní vždy súčasne s dlžníkom bez rozdielu", "Ručiteľ nikdy neplní, iba garantuje záväzok formálne"],
+          "options": [
+            "Ručiteľ plní až vtedy, keď zlyhá primárny dlžník",
+            "Ručiteľ plní vždy súčasne s dlžníkom bez rozdielu",
+            "Ručiteľ nikdy neplní, iba garantuje záväzok formálne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Subsidiarita znamená, že ručiteľ nastupuje až po zlyhaní hlavného dlžníka.",
@@ -142,14 +181,76 @@
   "spider": {
     "center": "Zabezpečenie záväzkov – druhy, funkcie, účinky (posilnenie veriteľa, motivácia dlžníka, istota plnenia)",
     "branches": [
-      { "label": "Pojem zabezpečenia záväzkov", "leaves": ["právne prostriedky posilňujúce postavenie veriteľa", "motivujú dlžníka k riadnemu plneniu", "poskytujú alternatívne možnosti uspokojenia pohľadávky", "zvyšujú právnu istotu"] },
-      { "label": "Zmluvná pokuta (§ 544 OZ)", "leaves": ["paušalizovaná náhrada škody", "dlžník zaplatí pokutu pri porušení povinnosti", "veriteľ ju môže požadovať aj bez vzniku škody", "súd môže pokutu primerane znížiť", "silný preventívny účinok"] },
-      { "label": "Ručenie (§ 546–550 OZ)", "leaves": ["ručiteľ plní, ak dlžník nesplní po výzve veriteľa", "subsidiárne: veriteľ sa najprv obracia na dlžníka", "ručiteľ môže uplatniť námietky dlžníka", "vzniká najčastejšie písomnou zmluvou"] },
-      { "label": "Záložné právo", "leaves": ["vecné právo umožňujúce uspokojenie zo zálohu", "predmet: vec, nehnuteľnosť, pohľadávka, podnik", "droit de préférence: prednostné uspokojenie", "droit de suite: právo nasleduje vec"] },
-      { "label": "Záloha", "leaves": ["dlžník odovzdá veriteľovi vec ako zabezpečenie", "pri nesplnení záväzku môže veriteľ vec použiť na uspokojenie pohľadávky", "jednoduchý a praktický prostriedok"] },
-      { "label": "Uznanie záväzku (§ 558 OZ)", "leaves": ["dlžník písomne uzná svoj dlh", "posilňuje postavenie veriteľa", "má účinok prerušenia premlčania"] },
-      { "label": "Zádržné právo", "leaves": ["veriteľ môže zadržať vec dlžníka, ktorú má u seba", "trvá do splnenia záväzku", "rýchly a efektívny zabezpečovací prostriedok"] },
-      { "label": "Význam pre prax", "leaves": ["zvyšujú istotu veriteľa", "motivujú dlžníka k riadnemu plneniu", "umožňujú rýchlejšie a efektívnejšie uspokojenie pohľadávok", "kľúčové v obchodných vzťahoch, úveroch, zmluvách"] }
+      {
+        "label": "Pojem zabezpečenia záväzkov",
+        "leaves": [
+          "právne prostriedky posilňujúce postavenie veriteľa",
+          "motivujú dlžníka k riadnemu plneniu",
+          "poskytujú alternatívne možnosti uspokojenia pohľadávky",
+          "zvyšujú právnu istotu"
+        ]
+      },
+      {
+        "label": "Zmluvná pokuta (§ 544 OZ)",
+        "leaves": [
+          "paušalizovaná náhrada škody",
+          "dlžník zaplatí pokutu pri porušení povinnosti",
+          "veriteľ ju môže požadovať aj bez vzniku škody",
+          "súd môže pokutu primerane znížiť",
+          "silný preventívny účinok"
+        ]
+      },
+      {
+        "label": "Ručenie (§ 546–550 OZ)",
+        "leaves": [
+          "ručiteľ plní, ak dlžník nesplní po výzve veriteľa",
+          "subsidiárne: veriteľ sa najprv obracia na dlžníka",
+          "ručiteľ môže uplatniť námietky dlžníka",
+          "vzniká najčastejšie písomnou zmluvou"
+        ]
+      },
+      {
+        "label": "Záložné právo",
+        "leaves": [
+          "vecné právo umožňujúce uspokojenie zo zálohu",
+          "predmet: vec, nehnuteľnosť, pohľadávka, podnik",
+          "droit de préférence: prednostné uspokojenie",
+          "droit de suite: právo nasleduje vec"
+        ]
+      },
+      {
+        "label": "Záloha",
+        "leaves": [
+          "dlžník odovzdá veriteľovi vec ako zabezpečenie",
+          "pri nesplnení záväzku môže veriteľ vec použiť na uspokojenie pohľadávky",
+          "jednoduchý a praktický prostriedok"
+        ]
+      },
+      {
+        "label": "Uznanie záväzku (§ 558 OZ)",
+        "leaves": [
+          "dlžník písomne uzná svoj dlh",
+          "posilňuje postavenie veriteľa",
+          "má účinok prerušenia premlčania"
+        ]
+      },
+      {
+        "label": "Zádržné právo",
+        "leaves": [
+          "veriteľ môže zadržať vec dlžníka, ktorú má u seba",
+          "trvá do splnenia záväzku",
+          "rýchly a efektívny zabezpečovací prostriedok"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "zvyšujú istotu veriteľa",
+          "motivujú dlžníka k riadnemu plneniu",
+          "umožňujú rýchlejšie a efektívnejšie uspokojenie pohľadávok",
+          "kľúčové v obchodných vzťahoch, úveroch, zmluvách"
+        ]
+      }
     ]
   }
 }

@@ -2,50 +2,101 @@
   "id": "A24",
   "title": "Verejné a neverejné zasadnutie súdu",
   "schemaVersion": "1.1",
-  "tags": ["verejné zasadnutie", "neverejné zasadnutie", "súd", "trestné konanie"],
-
+  "tags": [
+    "verejné zasadnutie",
+    "neverejné zasadnutie",
+    "súd",
+    "trestné konanie"
+  ],
   "quiz": [
     {
       "question": "Ktoré zasadnutie je spravidla prístupné verejnosti?",
-      "options": ["Neverejné zasadnutie", "Verejné zasadnutie", "Žiadne"],
+      "options": [
+        "Neverejné zasadnutie",
+        "Verejné zasadnutie",
+        "Žiadne"
+      ],
       "correct": 1
     },
     {
       "question": "Kedy súd koná na neverejnom zasadnutí?",
-      "options": ["Pri rozhodovaní o väzbe", "Pri hlavnom pojednávaní", "Pri prednese obžaloby"],
+      "options": [
+        "Pri rozhodovaní o väzbe",
+        "Pri hlavnom pojednávaní",
+        "Pri prednese obžaloby"
+      ],
       "correct": 0
     },
     {
       "question": "Kto sa zúčastňuje verejného zasadnutia?",
-      "options": ["Len sudca", "Strany konania a verejnosť", "Len prokurátor"],
+      "options": [
+        "Len sudca",
+        "Strany konania a verejnosť",
+        "Len prokurátor"
+      ],
       "correct": 1
     },
     {
       "question": "Kto sa zúčastňuje neverejného zasadnutia?",
-      "options": ["Len súd", "Súd a strany, ak to zákon umožňuje", "Verejnosť vždy"],
+      "options": [
+        "Len súd",
+        "Súd a strany, ak to zákon umožňuje",
+        "Verejnosť vždy"
+      ],
       "correct": 1
     },
     {
       "question": "Ktoré rozhodnutie sa typicky prijíma na neverejnom zasadnutí?",
-      "options": ["Rozsudok o vine", "Rozhodnutie o väzbe", "Prednes obžaloby"],
+      "options": [
+        "Rozsudok o vine",
+        "Rozhodnutie o väzbe",
+        "Prednes obžaloby"
+      ],
       "correct": 1
     }
   ],
-
   "tiles": [
-    { "term": "Verejné zasadnutie", "definition": "Zasadnutie súdu prístupné verejnosti, ak zákon neustanovuje inak." },
-    { "term": "Neverejné zasadnutie", "definition": "Zasadnutie bez účasti verejnosti, často pri procesných rozhodnutiach." },
-    { "term": "Vylúčenie verejnosti", "definition": "Možnosť súdu vylúčiť verejnosť z dôvodov ochrany záujmov konania." },
-    { "term": "Rozhodnutie o väzbe", "definition": "Rozhodnutie, ktoré sa prijíma na neverejnom zasadnutí." },
-    { "term": "Záverečné rozhodnutia", "definition": "Niektoré rozhodnutia sa prijímajú na verejnom zasadnutí, napr. odvolacie rozsudky." },
-
-    { "term": "Účasť strán", "definition": "Strany sa môžu zúčastniť verejného aj niektorých neverejných zasadnutí." },
-    { "term": "Procesná ekonomika", "definition": "Dôvod, pre ktorý sa niektoré úkony vykonávajú neverejne." },
-    { "term": "Zverejnenie rozhodnutia", "definition": "Rozhodnutie musí byť oznámené stranám, aj keď bolo prijaté neverejne." },
-    { "term": "Odvolacie verejné zasadnutie", "definition": "Zasadnutie, na ktorom odvolací súd verejne prerokúva odvolanie." },
-    { "term": "Uznesenie", "definition": "Rozhodnutie, ktoré sa často prijíma na neverejnom zasadnutí." }
+    {
+      "term": "Verejné zasadnutie",
+      "definition": "Zasadnutie súdu prístupné verejnosti, ak zákon neustanovuje inak."
+    },
+    {
+      "term": "Neverejné zasadnutie",
+      "definition": "Zasadnutie bez účasti verejnosti, často pri procesných rozhodnutiach."
+    },
+    {
+      "term": "Vylúčenie verejnosti",
+      "definition": "Možnosť súdu vylúčiť verejnosť z dôvodov ochrany záujmov konania."
+    },
+    {
+      "term": "Rozhodnutie o väzbe",
+      "definition": "Rozhodnutie, ktoré sa prijíma na neverejnom zasadnutí."
+    },
+    {
+      "term": "Záverečné rozhodnutia",
+      "definition": "Niektoré rozhodnutia sa prijímajú na verejnom zasadnutí, napr. odvolacie rozsudky."
+    },
+    {
+      "term": "Účasť strán",
+      "definition": "Strany sa môžu zúčastniť verejného aj niektorých neverejných zasadnutí."
+    },
+    {
+      "term": "Procesná ekonomika",
+      "definition": "Dôvod, pre ktorý sa niektoré úkony vykonávajú neverejne."
+    },
+    {
+      "term": "Zverejnenie rozhodnutia",
+      "definition": "Rozhodnutie musí byť oznámené stranám, aj keď bolo prijaté neverejne."
+    },
+    {
+      "term": "Odvolacie verejné zasadnutie",
+      "definition": "Zasadnutie, na ktorom odvolací súd verejne prerokúva odvolanie."
+    },
+    {
+      "term": "Uznesenie",
+      "definition": "Rozhodnutie, ktoré sa často prijíma na neverejnom zasadnutí."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Rozhodovanie o väzbe",
@@ -58,12 +109,20 @@
         },
         {
           "question": "Krok 1: Na akom zasadnutí sa rozhoduje o väzbe?",
-          "options": ["Verejnom", "Neverejnom", "Na hlavnom pojednávaní"],
+          "options": [
+            "Verejnom",
+            "Neverejnom",
+            "Na hlavnom pojednávaní"
+          ],
           "correct": 1
         },
         {
           "question": "Krok 2: Kto sa môže zúčastniť?",
-          "options": ["Len súd", "Súd, obvinený a obhajca", "Verejnosť"],
+          "options": [
+            "Len súd",
+            "Súd, obvinený a obhajca",
+            "Verejnosť"
+          ],
           "correct": 1
         },
         {
@@ -77,7 +136,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Odvolacie verejné zasadnutie",
       "difficulty": "stredná",
@@ -89,12 +147,20 @@
         },
         {
           "question": "Krok 1: Kedy odvolací súd nariaďuje verejné zasadnutie?",
-          "options": ["Ak je potrebné prerokovať vec za účasti strán", "Nikdy", "Len pri zločinoch"],
+          "options": [
+            "Ak je potrebné prerokovať vec za účasti strán",
+            "Nikdy",
+            "Len pri zločinoch"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Kto sa môže zúčastniť verejného zasadnutia?",
-          "options": ["Len súd", "Strany konania a verejnosť", "Len prokurátor"],
+          "options": [
+            "Len súd",
+            "Strany konania a verejnosť",
+            "Len prokurátor"
+          ],
           "correct": 1
         },
         {
@@ -118,10 +184,37 @@
   "spider": {
     "center": "Verejné × neverejné zasadnutie súdu",
     "branches": [
-      { "label": "Verejné zasadnutie", "leaves": ["Charakter – prístupné verejnosti; vylúčenie len zo zákonných dôvodov", "Použitie – odvolanie, dohoda o vine a treste, podmienečné prepustenie, ochranné liečenie", "Účel – dôkazy, vypočutie strán, verejné prerokovanie"] },
-      { "label": "Neverejné zasadnutie", "leaves": ["Charakter – bez verejnosti, spravidla bez strán, zo spisu", "Použitie – procesné rozhodnutia, predbežné prejednanie, sťažnosti, odklony", "Účel – rýchle rozhodnutie bez dokazovania"] },
-      { "label": "Rozdiely", "leaves": ["Verejnosť – áno (s výnimkami) × nie", "Rozhodnutia – meritórne aj procesné × prevažne procesné", "Dokazovanie – možné × spravidla nie"] },
-      { "label": "Voľba formy", "leaves": ["Rozhoduje – zákon alebo predseda senátu"] }
+      {
+        "label": "Verejné zasadnutie",
+        "leaves": [
+          "Charakter – prístupné verejnosti; vylúčenie len zo zákonných dôvodov",
+          "Použitie – odvolanie, dohoda o vine a treste, podmienečné prepustenie, ochranné liečenie",
+          "Účel – dôkazy, vypočutie strán, verejné prerokovanie"
+        ]
+      },
+      {
+        "label": "Neverejné zasadnutie",
+        "leaves": [
+          "Charakter – bez verejnosti, spravidla bez strán, zo spisu",
+          "Použitie – procesné rozhodnutia, predbežné prejednanie, sťažnosti, odklony",
+          "Účel – rýchle rozhodnutie bez dokazovania"
+        ]
+      },
+      {
+        "label": "Rozdiely",
+        "leaves": [
+          "Verejnosť – áno (s výnimkami) × nie",
+          "Rozhodnutia – meritórne aj procesné × prevažne procesné",
+          "Dokazovanie – možné × spravidla nie"
+        ]
+      },
+      {
+        "label": "Voľba formy",
+        "leaves": [
+          "Rozhoduje – zákon alebo predseda senátu"
+        ]
+      }
     ]
-  }
+  },
+  "summary": "Verejné a neverejné zasadnutie súdu sú osobitné formy konania pred súdom, ktoré sa používajú v situáciách, keď nie je potrebné alebo vhodné konať hlavné pojednávanie. Verejné zasadnutie je prístupné verejnosti a využíva sa najmä pri rozhodovaní o odvolaní, podmienečnom prepustení, dohode o vine a treste či pri niektorých procesných návrhoch. Neverejné zasadnutie je uzavreté, koná sa bez verejnosti a súd na ňom rozhoduje najmä o procesných otázkach, ktoré nevyžadujú dokazovanie alebo prítomnosť strán. O tom, či sa koná verejné alebo neverejné zasadnutie, rozhoduje zákon alebo predseda senátu.\n\n1. Verejné zasadnutie súdu\nCharakteristika\nkoná sa za účasti verejnosti, podobne ako hlavné pojednávanie,\n\nsúd môže verejnosť vylúčiť len zo zákonných dôvodov (ochrana maloletých, utajované skutočnosti, mravnosť, bezpečnosť svedka).\n\nKedy sa koná verejné zasadnutie?\nNajčastejšie pri:\n\nodvolacom konaní,\n\nkonaní o dohode o vine a treste,\n\npodmienečnom prepustení,\n\nvýkone trestu,\n\nrozhodovaní o zmene trestu,\n\nrozhodovaní o ochrannom liečení.\n\nÚčel\nvykonanie dôkazov,\n\nvypočutie strán,\n\nverejné prerokovanie návrhu.\n\n2. Neverejné zasadnutie súdu\nCharakteristika\nkoná sa bez účasti verejnosti,\n\nspravidla bez prítomnosti strán, pokiaľ zákon neustanovuje inak,\n\nsúd rozhoduje na základe spisu.\n\nKedy sa koná neverejné zasadnutie?\nNajmä pri:\n\nprocesných rozhodnutiach,\n\npredbežnom prejednaní obžaloby,\n\nrozhodovaní o väzbe v niektorých prípadoch,\n\nrozhodovaní o odklonoch,\n\nrozhodovaní o sťažnostiach proti uzneseniam,\n\nrozhodovaní o návrhoch, ktoré nevyžadujú dokazovanie.\n\nÚčel\nrýchle a efektívne rozhodnutie,\n\nrozhodovanie bez potreby verejného prerokovania,\n\nprocesné úkony, ktoré nevyžadujú prítomnosť strán.\n\n3. Rozdiely medzi verejným a neverejným zasadnutím\nTyp zasadnutia\tPrítomnosť verejnosti\tTyp rozhodnutí\tVykonávanie dôkazov\nVerejné\táno (možno vylúčiť)\tmeritórne aj procesné\táno, ak je potrebné\nNeverejné\tnie\tprevažne procesné\tspravidla nie\n\n\nZapamätaj si (štátnicové jadro)\nVerejné zasadnutie = prístupné verejnosti, používa sa pri odvolaní, dohode o vine a treste, podmienečnom prepustení.\n\nNeverejné zasadnutie = bez verejnosti, rozhoduje sa najmä o procesných otázkach.\n\nO forme zasadnutia rozhoduje zákon alebo predseda senátu.\n\nVerejné zasadnutie môže vykonávať dôkazy, neverejné spravidla nie.\n\nZdroj:\nTrestný poriadok – systematika hlavy V (konanie pred súdom) \n\nTrestný poriadok – všeobecné zásady konania (verejnosť, ústnosť, bezprostrednosť)"
 }

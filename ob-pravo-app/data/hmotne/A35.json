@@ -1,7 +1,7 @@
 {
   "id": "35",
   "title": "Príkazná zmluva, sprostredkovateľská zmluva a obstarávacie zmluvy",
-  "summary": "Príkazná zmluva (§ 724-736 OZ): príkazník sa zaväzuje obstará príkazcovi určitú vec alebo vykoná iný úkon. Môže byť bezodplatná (príkaz) alebo odplatná. Sprostredkovateľská zmluva (§ 642-651 OZ ObchZ subsidiárne): sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy. Obstarávacie zmluvy: zmluva o obstaraní veci (§ 733 OZ) a zmluva o obstaraní predaja veci.",
+  "summary": "Príkazná zmluva (§ 724–736 OZ)\nPríkazná zmluva je zmluva, v ktorej sa príkazník zaväzuje obstarať pre príkazcu určitú vec alebo vykonať iný právny úkon.\nPodstatné znaky:\n– môže byť bezodplatná (typický príkaz), ale aj odplatná,\n– príkazník koná v mene príkazcu,\n– príkazník je povinný konať s odbornou starostlivosťou,\n– príkazca je povinný poskytnúť potrebnú súčinnosť a nahradiť náklady.\n\nPríkazník zodpovedá za škodu spôsobenú porušením povinností. Príkaz možno vypovedať, ale príkazník musí dokončiť úkony, ktoré neznesú odklad.\n\nSprostredkovateľská zmluva (§ 642–651 ObchZ, subsidiárne OZ)\nSprostredkovateľ sa zaväzuje vyhľadať záujemcu na uzavretie určitej zmluvy (napr. kúpa nehnuteľnosti, pracovná zmluva, obchodná dohoda).\nPodstatné znaky:\n– sprostredkovateľ nevykonáva právny úkon, len vyhľadá záujemcu,\n– odmena sa spravidla platí až po uzavretí zmluvy,\n– sprostredkovateľ musí konať čestne, informovať o okolnostiach a chrániť záujmy objednávateľa.\n\nObchZ upravuje najmä obchodné sprostredkovanie; v občianskoprávnych vzťahoch sa použije subsidiárne.\n\nObstarávacie zmluvy (OZ)\nObstarávacie zmluvy sú osobitné typy príkazných vzťahov, kde obstarávateľ koná vlastným menom, ale na účet objednávateľa.\n\n1. Zmluva o obstaraní veci (§ 733 OZ)\nObstarávateľ sa zaväzuje obstarať pre objednávateľa určitú vec, typicky kúpu veci alebo jej dodanie.\n– obstarávateľ koná vlastným menom,\n– objednávateľ je povinný nahradiť náklady a zaplatiť odmenu,\n– obstarávateľ musí konať podľa pokynov objednávateľa.\n\n2. Zmluva o obstaraní predaja veci (§ 734 OZ)\nObstarávateľ sa zaväzuje obstarať predaj veci objednávateľa.\n– ide o obdobu komisionárskej zmluvy,\n– obstarávateľ predáva vec vo vlastnom mene, ale na účet objednávateľa,\n– odmena je spravidla percentuálna.\n\nPodstata rozdielov\n– Príkazná zmluva: príkazník koná v mene príkazcu.\n– Sprostredkovanie: sprostredkovateľ len vyhľadá záujemcu.\n– Obstarávacie zmluvy: obstarávateľ koná vo vlastnom mene, ale na účet objednávateľa.\n\nZdroje: OZ (40/1964 Zb.), § 724–736, § 733–734; ObchZ § 642–651; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je predmetom príkaznej zmluvy (§ 724 OZ)?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Príkazná zmluva (§ 724 OZ)", "definition": "Príkazník sa zaväzuje obstarať príkazcovi určitú záležitosť alebo vykonať úkon." },
-    { "term": "Odplatnosť príkaznej zmluvy", "definition": "Môže byť bezodplatná (príkaz) aj odplatná, podľa dohody strán." },
-    { "term": "Sprostredkovateľská zmluva", "definition": "Sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy, odmena je viazaná na výsledok." },
-    { "term": "Odmena sprostredkovateľa", "definition": "Patrí mu až po skutočnom uzavretí sprostredkovanej zmluvy." },
-    { "term": "Odstúpenie príkazníka", "definition": "Možné, ak je to v záujme príkazcu alebo ak plnenie príkazu už nie je možné." }
+    {
+      "term": "Príkazná zmluva (§ 724 OZ)",
+      "definition": "Príkazník sa zaväzuje obstarať príkazcovi určitú záležitosť alebo vykonať úkon."
+    },
+    {
+      "term": "Odplatnosť príkaznej zmluvy",
+      "definition": "Môže byť bezodplatná (príkaz) aj odplatná, podľa dohody strán."
+    },
+    {
+      "term": "Sprostredkovateľská zmluva",
+      "definition": "Sprostredkovateľ vyhľadá záujemcu o uzavretie zmluvy, odmena je viazaná na výsledok."
+    },
+    {
+      "term": "Odmena sprostredkovateľa",
+      "definition": "Patrí mu až po skutočnom uzavretí sprostredkovanej zmluvy."
+    },
+    {
+      "term": "Odstúpenie príkazníka",
+      "definition": "Možné, ak je to v záujme príkazcu alebo ak plnenie príkazu už nie je možné."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Bezodplatný príkaz medzi priateľmi",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Jeden priateľ požiada druhého, aby počas jeho dovolenky zariadil zaňho vybavenie určitej úradnej záležitosti, bez toho, aby mu za to zaplatil odmenu.", "options": [], "correct": 0 },
+        {
+          "question": "Jeden priateľ požiada druhého, aby počas jeho dovolenky zariadil zaňho vybavenie určitej úradnej záležitosti, bez toho, aby mu za to zaplatil odmenu.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Je takáto zmluva platná aj bez dohodnutej odmeny?",
-          "options": ["Áno, príkazná zmluva môže byť bezodplatná", "Nie, príkazná zmluva musí byť vždy odplatná", "Nie, bez odmeny nejde o žiadnu platnú zmluvu"],
+          "options": [
+            "Áno, príkazná zmluva môže byť bezodplatná",
+            "Nie, príkazná zmluva musí byť vždy odplatná",
+            "Nie, bez odmeny nejde o žiadnu platnú zmluvu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Príkazná zmluva môže byť bezodplatná, odmena nie je jej podstatnou náležitosťou.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ako sa takáto bezodplatná forma príkaznej zmluvy bežne označuje?",
-          "options": ["Príkaz", "Mandátna zmluva", "Sprostredkovateľská zmluva"],
+          "options": [
+            "Príkaz",
+            "Mandátna zmluva",
+            "Sprostredkovateľská zmluva"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bezodplatná forma príkaznej zmluvy sa tradične označuje ako príkaz.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Odmena sprostredkovateľa nehnuteľností",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Realitná kancelária ako sprostredkovateľ nájde záujemcu o kúpu nehnuteľnosti, no k podpisu kúpnej zmluvy napokon vôbec nedôjde.", "options": [], "correct": 0 },
+        {
+          "question": "Realitná kancelária ako sprostredkovateľ nájde záujemcu o kúpu nehnuteľnosti, no k podpisu kúpnej zmluvy napokon vôbec nedôjde.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Patrí sprostredkovateľovi odmena, hoci k zmluve nedošlo?",
-          "options": ["Spravidla nie, odmena je viazaná na výsledok – uzavretie sprostredkovanej zmluvy", "Áno, odmena patrí bez ohľadu na to, či zmluva vznikla", "Áno, ale iba v polovičnej výške"],
+          "options": [
+            "Spravidla nie, odmena je viazaná na výsledok – uzavretie sprostredkovanej zmluvy",
+            "Áno, odmena patrí bez ohľadu na to, či zmluva vznikla",
+            "Áno, ale iba v polovičnej výške"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez uzavretia sprostredkovanej zmluvy sprostredkovateľovi spravidla odmena nevzniká.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Čo musí sprostredkovateľ urobiť, aby si odmenu zaslúžil?",
-          "options": ["Vyhľadať záujemcu, s ktorým napokon dôjde k uzavretiu sprostredkovanej zmluvy", "Stačí, že osloví akéhokoľvek potenciálneho záujemcu", "Musí sám podpísať zmluvu namiesto klienta"],
+          "options": [
+            "Vyhľadať záujemcu, s ktorým napokon dôjde k uzavretiu sprostredkovanej zmluvy",
+            "Stačí, že osloví akéhokoľvek potenciálneho záujemcu",
+            "Musí sám podpísať zmluvu namiesto klienta"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odmena je podmienená skutočným uzavretím zmluvy so sprostredkovaným záujemcom.",
@@ -142,12 +181,63 @@
   "spider": {
     "center": "Príkaz, sprostredkovanie a obstaranie – pojem, náležitosti, rozdiely (konanie v mene príkazcu, vyhľadanie záujemcu, konanie vo vlastnom mene)",
     "branches": [
-      { "label": "Príkazná zmluva (§ 724–736 OZ)", "leaves": ["príkazník sa zaväzuje obstarať vec alebo vykonať právny úkon pre príkazcu", "môže byť bezodplatná alebo odplatná", "príkazník koná v mene príkazcu", "povinnosť konať s odbornou starostlivosťou", "príkazca poskytuje súčinnosť a nahrádza náklady", "príkaz možno vypovedať, ale príkazník musí dokončiť úkony, ktoré neznesú odklad"] },
-      { "label": "Sprostredkovateľská zmluva (§ 642–651 ObchZ)", "leaves": ["sprostredkovateľ sa zaväzuje vyhľadať záujemcu na uzavretie určitej zmluvy", "sprostredkovateľ nevykonáva právny úkon", "odmena sa platí spravidla až po uzavretí zmluvy", "povinnosť konať čestne, informovať a chrániť záujmy objednávateľa", "v občianskoprávnych vzťahoch sa OZ použije subsidiárne", "typické príklady: realitné služby, pracovné agentúry, obchodné kontakty"] },
-      { "label": "Zmluva o obstaraní veci (§ 733 OZ)", "leaves": ["obstaranie kúpy alebo dodania veci", "obstarávateľ koná vlastným menom, ale na účet objednávateľa", "objednávateľ nahrádza náklady a platí odmenu", "obstarávateľ musí konať podľa pokynov objednávateľa"] },
-      { "label": "Zmluva o obstaraní predaja veci (§ 734 OZ)", "leaves": ["obstaranie predaja veci objednávateľa", "obstarávateľ predáva vo vlastnom mene, ale na účet objednávateľa", "odmena býva percentuálna", "podobná komisionárskej zmluve"] },
-      { "label": "Rozdiely medzi zmluvami", "leaves": ["príkazná zmluva: príkazník koná v mene príkazcu", "sprostredkovanie: sprostredkovateľ len vyhľadá záujemcu, právny úkon nevykonáva", "obstarávacie zmluvy: obstarávateľ koná vo vlastnom mene, ale na účet objednávateľa"] },
-      { "label": "Význam pre prax", "leaves": ["príkaz sa využíva pri právnych úkonoch, zastupovaní, správe majetku", "sprostredkovanie pri realitných službách, obchodných kontaktoch, pracovných agentúrach", "obstaranie pri nákupe, predaji, komisionárskych vzťahoch", "jasné odlíšenie bráni sporom o zodpovednosť, odmenu a právne účinky konania"] }
+      {
+        "label": "Príkazná zmluva (§ 724–736 OZ)",
+        "leaves": [
+          "príkazník sa zaväzuje obstarať vec alebo vykonať právny úkon pre príkazcu",
+          "môže byť bezodplatná alebo odplatná",
+          "príkazník koná v mene príkazcu",
+          "povinnosť konať s odbornou starostlivosťou",
+          "príkazca poskytuje súčinnosť a nahrádza náklady",
+          "príkaz možno vypovedať, ale príkazník musí dokončiť úkony, ktoré neznesú odklad"
+        ]
+      },
+      {
+        "label": "Sprostredkovateľská zmluva (§ 642–651 ObchZ)",
+        "leaves": [
+          "sprostredkovateľ sa zaväzuje vyhľadať záujemcu na uzavretie určitej zmluvy",
+          "sprostredkovateľ nevykonáva právny úkon",
+          "odmena sa platí spravidla až po uzavretí zmluvy",
+          "povinnosť konať čestne, informovať a chrániť záujmy objednávateľa",
+          "v občianskoprávnych vzťahoch sa OZ použije subsidiárne",
+          "typické príklady: realitné služby, pracovné agentúry, obchodné kontakty"
+        ]
+      },
+      {
+        "label": "Zmluva o obstaraní veci (§ 733 OZ)",
+        "leaves": [
+          "obstaranie kúpy alebo dodania veci",
+          "obstarávateľ koná vlastným menom, ale na účet objednávateľa",
+          "objednávateľ nahrádza náklady a platí odmenu",
+          "obstarávateľ musí konať podľa pokynov objednávateľa"
+        ]
+      },
+      {
+        "label": "Zmluva o obstaraní predaja veci (§ 734 OZ)",
+        "leaves": [
+          "obstaranie predaja veci objednávateľa",
+          "obstarávateľ predáva vo vlastnom mene, ale na účet objednávateľa",
+          "odmena býva percentuálna",
+          "podobná komisionárskej zmluve"
+        ]
+      },
+      {
+        "label": "Rozdiely medzi zmluvami",
+        "leaves": [
+          "príkazná zmluva: príkazník koná v mene príkazcu",
+          "sprostredkovanie: sprostredkovateľ len vyhľadá záujemcu, právny úkon nevykonáva",
+          "obstarávacie zmluvy: obstarávateľ koná vo vlastnom mene, ale na účet objednávateľa"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "príkaz sa využíva pri právnych úkonoch, zastupovaní, správe majetku",
+          "sprostredkovanie pri realitných službách, obchodných kontaktoch, pracovných agentúrach",
+          "obstaranie pri nákupe, predaji, komisionárskych vzťahoch",
+          "jasné odlíšenie bráni sporom o zodpovednosť, odmenu a právne účinky konania"
+        ]
+      }
     ]
   }
 }

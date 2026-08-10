@@ -1,7 +1,7 @@
 {
   "id": "25",
   "title": "Bezdôvodné obohatenie",
-  "summary": "Bezdôvodné obohatenie (§ 451-459 OZ) je majetkový prospech získaný bez právneho dôvodu alebo z neplatného úkonu. Vydáva sa to, o čo sa niekto obohatil. Premlčanie: 2 roky subjektívna, 3 roky objektívna (§ 107 OZ).",
+  "summary": "Bezdôvodné obohatenie podľa § 451–459 OZ je situácia, keď sa niekto majetkovo obohatí bez právneho dôvodu, na úkor iného. Ide o záväzok vznikajúci zo zákona, ktorého účelom je navrátiť majetkovú rovnováhu medzi stranami.\n\nPodstata bezdôvodného obohatenia (§ 451 OZ)\nBezdôvodné obohatenie vzniká, ak niekto získal majetkový prospech:\n– bez právneho dôvodu (napr. omylom zaslané peniaze),\n– z neplatného právneho úkonu,\n– z právneho dôvodu, ktorý odpadol (napr. plnenie z neplatnej zmluvy),\n– z konania bez príkazu, ak konanie nie je v súlade so zákonom,\n– z majetku iného, ak sa obohatenie nedá právne odôvodniť.\n\nObohatený je povinný vydať to, o čo sa obohatil, teda buď vec, alebo jej hodnotu.\n\nPredmet vydania (§ 456 OZ)\nVydáva sa:\n– skutočný prospech,\n– úžitky, ktoré obohatený získal,\n– hodnota, ak vec nemožno vrátiť.\n\nAk obohatený konal v dobrej viere, vydáva len to, čo mu zostalo. Ak konal v zlej viere, vydáva všetko vrátane úžitkov.\n\nŠpeciálne prípady (§ 458 OZ)\nAk sa plnilo za niekoho iného, vzniká právo požadovať náhradu od osoby, za ktorú sa plnilo.\nAk sa plnilo z neplatného právneho úkonu, strany si vracajú plnenia navzájom.\n\nPremlčanie (§ 107 OZ)\nNárok na vydanie bezdôvodného obohatenia sa premlčuje:\n– 2 roky subjektívna lehota – odo dňa, keď sa poškodený dozvedel o obohatení a o tom, kto sa obohatil,\n– 3 roky objektívna lehota – odo dňa, keď k obohateniu došlo.\n\nPri úmyselnom obohatení je objektívna lehota 10 rokov.\n\nFunkcia inštitútu\nBezdôvodné obohatenie zabraňuje tomu, aby niekto neoprávnene profitoval na úkor iného. Ide o nástroj spravodlivosti a korekcie majetkových vzťahov.\n\nZdroje: OZ (40/1964 Zb.), § 451–459, § 107; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je bezdôvodné obohatenie podľa § 451 OZ?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Bezdôvodné obohatenie (§ 451 OZ)", "definition": "Majetkový prospech získaný bez právneho dôvodu, z neplatného úkonu alebo z dôvodu, ktorý odpadol." },
-    { "term": "Povinná osoba", "definition": "Ten, kto sa na úkor iného bezdôvodne obohatil." },
-    { "term": "Vydanie obohatenia (§ 456 OZ)", "definition": "Vydáva sa to, o čo sa niekto obohatil; ak to nie je možné, peňažná náhrada." },
-    { "term": "Premlčanie (§ 107 OZ)", "definition": "2 roky subjektívna a 3 roky objektívna lehota." },
-    { "term": "Condictio indebiti", "definition": "Nárok na vrátenie plnenia poskytnutého omylom bez existujúceho dlhu." }
+    {
+      "term": "Bezdôvodné obohatenie (§ 451 OZ)",
+      "definition": "Majetkový prospech získaný bez právneho dôvodu, z neplatného úkonu alebo z dôvodu, ktorý odpadol."
+    },
+    {
+      "term": "Povinná osoba",
+      "definition": "Ten, kto sa na úkor iného bezdôvodne obohatil."
+    },
+    {
+      "term": "Vydanie obohatenia (§ 456 OZ)",
+      "definition": "Vydáva sa to, o čo sa niekto obohatil; ak to nie je možné, peňažná náhrada."
+    },
+    {
+      "term": "Premlčanie (§ 107 OZ)",
+      "definition": "2 roky subjektívna a 3 roky objektívna lehota."
+    },
+    {
+      "term": "Condictio indebiti",
+      "definition": "Nárok na vrátenie plnenia poskytnutého omylom bez existujúceho dlhu."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Omylom zaplatená suma",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Osoba omylom prevedie peniaze na účet cudzej osoby, s ktorou nemá žiadny záväzkový vzťah.", "options": [], "correct": 0 },
+        {
+          "question": "Osoba omylom prevedie peniaze na účet cudzej osoby, s ktorou nemá žiadny záväzkový vzťah.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Vzniká príjemcovi povinnosť tieto peniaze vrátiť?",
-          "options": ["Áno, ide o bezdôvodné obohatenie, ktoré je povinný vydať", "Nie, peniaze mu už patria bez ďalšieho", "Áno, ale iba ak s tým sám súhlasí"],
+          "options": [
+            "Áno, ide o bezdôvodné obohatenie, ktoré je povinný vydať",
+            "Nie, peniaze mu už patria bez ďalšieho",
+            "Áno, ale iba ak s tým sám súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Prijatie peňazí bez právneho dôvodu zakladá povinnosť ich vydania.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Ako sa tento konkrétny nárok na vrátenie omylom zaplatenej sumy označuje?",
-          "options": ["Condictio indebiti", "Reivindikačná žaloba", "Negatórna žaloba"],
+          "options": [
+            "Condictio indebiti",
+            "Reivindikačná žaloba",
+            "Negatórna žaloba"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Condictio indebiti je klasické označenie nároku na vrátenie plnenia poskytnutého omylom bez dlhu.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Neplatná zmluva a už poskytnuté plnenie",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Strany si na základe neskôr zrušenej (neplatnej) zmluvy navzájom poskytli plnenia – jedna zaplatila peniaze, druhá odovzdala tovar.", "options": [], "correct": 0 },
+        {
+          "question": "Strany si na základe neskôr zrušenej (neplatnej) zmluvy navzájom poskytli plnenia – jedna zaplatila peniaze, druhá odovzdala tovar.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Čo sa deje s takto poskytnutými plneniami po zistení neplatnosti zmluvy?",
-          "options": ["Ide o bezdôvodné obohatenie, ktoré si strany musia navzájom vydať", "Plnenia zostávajú bez ďalšieho tak, ako boli poskytnuté", "Iba jedna strana má povinnosť čokoľvek vrátiť"],
+          "options": [
+            "Ide o bezdôvodné obohatenie, ktoré si strany musia navzájom vydať",
+            "Plnenia zostávajú bez ďalšieho tak, ako boli poskytnuté",
+            "Iba jedna strana má povinnosť čokoľvek vrátiť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Plnenia z neplatnej zmluvy sú bezdôvodným obohatením a musia sa vzájomne vydať.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Aká je premlčacia doba nároku na vydanie takéhoto bezdôvodného obohatenia?",
-          "options": ["2 roky subjektívna a 3 roky objektívna lehota", "Len všeobecná 3-ročná lehota bez rozlíšenia", "Nárok sa nepremlčuje vôbec"],
+          "options": [
+            "2 roky subjektívna a 3 roky objektívna lehota",
+            "Len všeobecná 3-ročná lehota bez rozlíšenia",
+            "Nárok sa nepremlčuje vôbec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 107 OZ stanovuje osobitnú dvojstupňovú premlčaciu dobu pre bezdôvodné obohatenie.",
@@ -142,11 +181,51 @@
   "spider": {
     "center": "Bezdôvodné obohatenie – podstata, predmet vydania, špeciálne prípady, premlčanie (navrátenie majetkovej rovnováhy)",
     "branches": [
-      { "label": "Podstata bezdôvodného obohatenia (§ 451 OZ)", "leaves": ["majetkový prospech bez právneho dôvodu, napr. omylom zaslané peniaze", "prospech z neplatného právneho úkonu", "prospech z právneho dôvodu, ktorý odpadol", "prospech z konania bez príkazu, ak nie je v súlade so zákonom", "prospech z majetku iného bez právneho odôvodnenia", "obohatený musí vydať vec alebo jej hodnotu"] },
-      { "label": "Predmet vydania (§ 456 OZ)", "leaves": ["skutočný prospech", "úžitky, ktoré obohatený získal", "hodnota, ak vec nemožno vrátiť", "pri dobrej viere vydáva len to, čo mu zostalo", "pri zlej viere vydáva všetko vrátane úžitkov"] },
-      { "label": "Špeciálne prípady (§ 458 OZ)", "leaves": ["plnenie za iného: kto plnil za niekoho iného, má právo požadovať náhradu od tejto osoby", "neplatný právny úkon: strany si vracajú plnenia navzájom"] },
-      { "label": "Premlčanie (§ 107 OZ)", "leaves": ["subjektívna lehota 2 roky odo dňa, keď sa poškodený dozvedel o obohatení a o tom, kto sa obohatil", "objektívna lehota 3 roky odo dňa, keď k obohateniu došlo", "úmyselné obohatenie: predĺžená objektívna lehota 10 rokov"] },
-      { "label": "Význam pre prax", "leaves": ["zabraňuje neoprávnenému obohateniu na úkor iného", "obnovuje majetkovú rovnováhu", "kľúčové pri omylom zaslaných platbách, neplatných zmluvách, konaní bez príkazu", "jasné pravidlá pre vydanie prospechu a premlčanie"] }
+      {
+        "label": "Podstata bezdôvodného obohatenia (§ 451 OZ)",
+        "leaves": [
+          "majetkový prospech bez právneho dôvodu, napr. omylom zaslané peniaze",
+          "prospech z neplatného právneho úkonu",
+          "prospech z právneho dôvodu, ktorý odpadol",
+          "prospech z konania bez príkazu, ak nie je v súlade so zákonom",
+          "prospech z majetku iného bez právneho odôvodnenia",
+          "obohatený musí vydať vec alebo jej hodnotu"
+        ]
+      },
+      {
+        "label": "Predmet vydania (§ 456 OZ)",
+        "leaves": [
+          "skutočný prospech",
+          "úžitky, ktoré obohatený získal",
+          "hodnota, ak vec nemožno vrátiť",
+          "pri dobrej viere vydáva len to, čo mu zostalo",
+          "pri zlej viere vydáva všetko vrátane úžitkov"
+        ]
+      },
+      {
+        "label": "Špeciálne prípady (§ 458 OZ)",
+        "leaves": [
+          "plnenie za iného: kto plnil za niekoho iného, má právo požadovať náhradu od tejto osoby",
+          "neplatný právny úkon: strany si vracajú plnenia navzájom"
+        ]
+      },
+      {
+        "label": "Premlčanie (§ 107 OZ)",
+        "leaves": [
+          "subjektívna lehota 2 roky odo dňa, keď sa poškodený dozvedel o obohatení a o tom, kto sa obohatil",
+          "objektívna lehota 3 roky odo dňa, keď k obohateniu došlo",
+          "úmyselné obohatenie: predĺžená objektívna lehota 10 rokov"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "zabraňuje neoprávnenému obohateniu na úkor iného",
+          "obnovuje majetkovú rovnováhu",
+          "kľúčové pri omylom zaslaných platbách, neplatných zmluvách, konaní bez príkazu",
+          "jasné pravidlá pre vydanie prospechu a premlčanie"
+        ]
+      }
     ]
   }
 }

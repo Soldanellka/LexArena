@@ -1,7 +1,7 @@
 {
   "id": "15",
   "title": "Podielové spoluvlastníctvo",
-  "summary": "Podielové spoluvlastníctvo (§ 137–142 OZ) vzniká keď viac osôb vlastní vec spoločne, pričom každý má ideálny podiel (nie reálnu časť). Podiely sa predpokladajú rovnaké. Hospodárenie: väčšinou podielov. Predkupné právo spoluvlastníkov (§ 140 OZ) – pri prevode podielu majú ostatní spoluvlastníci predkupné právo. Zánik: dohodou o rozdelení, súdnym rozdelením alebo dražbou.",
+  "summary": "Podielové spoluvlastníctvo podľa § 137–142 OZ vzniká vtedy, keď viac osôb vlastní tú istú vec, pričom každá má ideálny podiel vyjadrujúci mieru jej účasti na právach a povinnostiach. Podiel nepredstavuje fyzicky oddelenú časť veci, ale matematický podiel na celku. Ak nie je určené inak, podiely sa považujú za rovnaké.\n\nPráva a povinnosti spoluvlastníkov\nKaždý spoluvlastník má právo vec užívať, držať a nakladať s ňou primerane veľkosti svojho podielu. O hospodárení so spoločnou vecou rozhodujú spoluvlastníci väčšinou počítanou podľa veľkosti podielov. Menšinový spoluvlastník je chránený – rozhodnutie väčšiny nesmie byť v rozpore s dobrými mravmi alebo neprimerane zasahovať do jeho práv.\n\nPredkupné právo (§ 140 OZ)\nPri prevode spoluvlastníckeho podielu majú ostatní spoluvlastníci predkupné právo, ak zákon neustanovuje výnimku (napr. prevod medzi blízkymi osobami). Predkupné právo je zákonné, automatické a jeho porušenie zakladá možnosť domáhať sa relatívnej neplatnosti právneho úkonu alebo požadovať nahradenie prejavu vôle.\n\nPredkupné právo chráni stabilitu spoluvlastníckych vzťahov a zabraňuje vstupu nežiaducich osôb do spoluvlastníctva.\n\nZánik spoluvlastníctva (§ 142 OZ)\nSpoluvlastníctvo môže zaniknúť:\n\n– dohodou spoluvlastníkov o rozdelení veci alebo o zrušení spoluvlastníctva,\n– súdnym rozhodnutím, ak sa spoluvlastníci nedohodnú; súd môže vec rozdeliť, prikázať ju jednému spoluvlastníkovi za náhradu alebo nariadiť predaj,\n– predajom veci v dražbe, ak je to najvhodnejší spôsob vyporiadania.\n\nKaždý spoluvlastník má právo domáhať sa zrušenia a vyporiadania spoluvlastníctva, pretože nikto nemôže byť nútený zotrvať v spoluvlastníckom vzťahu.\n\nZdroje: OZ (40/1964 Zb.), § 137–142; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo je podiel spoluvlastníka v podielovom spoluvlastníctve?",
@@ -75,21 +75,44 @@
     }
   ],
   "tiles": [
-    { "term": "Ideálny podiel", "definition": "Abstraktný (matematický) podiel na celej veci, nie reálna časť." },
-    { "term": "Predpoklad rovnosti podielov (§ 137 ods. 1 OZ)", "definition": "Ak nie je dohodnuté inak, podiely sa považujú za rovnaké." },
-    { "term": "Predkupné právo spoluvlastníkov (§ 140 OZ)", "definition": "Pri prevode podielu na tretiu osobu majú ostatní spoluvlastníci právo kúpiť ho prednostne." },
-    { "term": "Hospodárenie so spoločnou vecou (§ 139 OZ)", "definition": "Rozhoduje väčšina počítaná podľa veľkosti podielov." },
-    { "term": "Zrušenie spoluvlastníctva (§ 142 OZ)", "definition": "Každý spoluvlastník má právo kedykoľvek žiadať o zrušenie a vyporiadanie." }
+    {
+      "term": "Ideálny podiel",
+      "definition": "Abstraktný (matematický) podiel na celej veci, nie reálna časť."
+    },
+    {
+      "term": "Predpoklad rovnosti podielov (§ 137 ods. 1 OZ)",
+      "definition": "Ak nie je dohodnuté inak, podiely sa považujú za rovnaké."
+    },
+    {
+      "term": "Predkupné právo spoluvlastníkov (§ 140 OZ)",
+      "definition": "Pri prevode podielu na tretiu osobu majú ostatní spoluvlastníci právo kúpiť ho prednostne."
+    },
+    {
+      "term": "Hospodárenie so spoločnou vecou (§ 139 OZ)",
+      "definition": "Rozhoduje väčšina počítaná podľa veľkosti podielov."
+    },
+    {
+      "term": "Zrušenie spoluvlastníctva (§ 142 OZ)",
+      "definition": "Každý spoluvlastník má právo kedykoľvek žiadať o zrušenie a vyporiadanie."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Predaj podielu bez ponuky ostatným",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Spoluvlastník predá svoj podiel na nehnuteľnosti cudzej, nespriaznenej osobe bez toho, aby ho vopred ponúkol ostatným spoluvlastníkom.", "options": [], "correct": 0 },
+        {
+          "question": "Spoluvlastník predá svoj podiel na nehnuteľnosti cudzej, nespriaznenej osobe bez toho, aby ho vopred ponúkol ostatným spoluvlastníkom.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Porušil týmto postupom niektoré právo ostatných spoluvlastníkov?",
-          "options": ["Áno, porušil ich zákonné predkupné právo podľa § 140 OZ", "Nie, spoluvlastník môže svoj podiel predať komukoľvek bez obmedzenia", "Nie, predkupné právo sa uplatňuje len pri predaji celej veci"],
+          "options": [
+            "Áno, porušil ich zákonné predkupné právo podľa § 140 OZ",
+            "Nie, spoluvlastník môže svoj podiel predať komukoľvek bez obmedzenia",
+            "Nie, predkupné právo sa uplatňuje len pri predaji celej veci"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri prevode podielu na tretiu osobu majú ostatní spoluvlastníci zákonné predkupné právo.",
@@ -98,7 +121,11 @@
         },
         {
           "question": "Platilo by rovnaké obmedzenie, keby podiel predával svojmu blízkemu príbuznému?",
-          "options": ["Nie, pri prevode na blízku osobu sa predkupné právo ostatných spoluvlastníkov neuplatní", "Áno, výnimka pre blízke osoby neexistuje", "Áno, ale iba ak s tým blízka osoba súhlasí"],
+          "options": [
+            "Nie, pri prevode na blízku osobu sa predkupné právo ostatných spoluvlastníkov neuplatní",
+            "Áno, výnimka pre blízke osoby neexistuje",
+            "Áno, ale iba ak s tým blízka osoba súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zákon výslovne vyníma prevod na blízku osobu spod predkupného práva ostatných spoluvlastníkov.",
@@ -111,10 +138,18 @@
       "title": "Prípad 2 – Rozhodovanie o oprave spoločnej strechy",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Traja spoluvlastníci domu s rovnakými podielmi sa nevedia dohodnúť, či opraviť spoločnú strechu; dvaja z nich sú za opravu, jeden proti.", "options": [], "correct": 0 },
+        {
+          "question": "Traja spoluvlastníci domu s rovnakými podielmi sa nevedia dohodnúť, či opraviť spoločnú strechu; dvaja z nich sú za opravu, jeden proti.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ako sa v takomto prípade rozhodne o hospodárení so spoločnou vecou?",
-          "options": ["Rozhoduje väčšina počítaná podľa veľkosti podielov, teda návrh dvoch spoluvlastníkov prevládne", "Musí byť dosiahnutá jednomyseľná zhoda všetkých spoluvlastníkov", "Rozhoduje výlučne najstarší spoluvlastník"],
+          "options": [
+            "Rozhoduje väčšina počítaná podľa veľkosti podielov, teda návrh dvoch spoluvlastníkov prevládne",
+            "Musí byť dosiahnutá jednomyseľná zhoda všetkých spoluvlastníkov",
+            "Rozhoduje výlučne najstarší spoluvlastník"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. O hospodárení so spoločnou vecou rozhoduje väčšina počítaná podľa veľkosti podielov.",
@@ -123,7 +158,11 @@
         },
         {
           "question": "Môže nesúhlasiaci spoluvlastník namiesto ďalšieho spolužitia žiadať zrušenie spoluvlastníctva?",
-          "options": ["Áno, kedykoľvek môže žiadať o zrušenie a vyporiadanie spoluvlastníctva (§ 142 OZ)", "Nie, spoluvlastníctvo možno zrušiť len jednomyseľnou dohodou všetkých", "Nie, zrušenie spoluvlastníctva zákon nepripúšťa"],
+          "options": [
+            "Áno, kedykoľvek môže žiadať o zrušenie a vyporiadanie spoluvlastníctva (§ 142 OZ)",
+            "Nie, spoluvlastníctvo možno zrušiť len jednomyseľnou dohodou všetkých",
+            "Nie, zrušenie spoluvlastníctva zákon nepripúšťa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Žiadny spoluvlastník nemôže byť nútený zotrvávať v spoluvlastníctve proti svojej vôli.",
@@ -142,11 +181,53 @@
   "spider": {
     "center": "Podielové spoluvlastníctvo, § 137–142 OZ (viac osôb vlastní tú istú vec, ideálne podiely)",
     "branches": [
-      { "label": "Pojem podielového spoluvlastníctva", "leaves": ["viac osôb vlastní tú istú vec", "každý má ideálny podiel (matematický, nie fyzický)", "ak nie je určené inak, podiely sú rovnaké", "podiel vyjadruje mieru účasti na právach a povinnostiach"] },
-      { "label": "Práva a povinnosti spoluvlastníkov", "leaves": ["právo vec držať, užívať, nakladať podľa veľkosti podielu", "o hospodárení rozhoduje väčšina podľa podielov", "rozhodnutie väčšiny nesmie byť v rozpore s dobrými mravmi", "nesmie neprimerane zasahovať do práv menšinového spoluvlastníka"] },
-      { "label": "Predkupné právo (§ 140 OZ)", "leaves": ["zákonné, automatické", "pri prevode podielu majú ostatní spoluvlastníci predkupné právo", "výnimka: prevod medzi blízkymi osobami", "porušenie: relatívna neplatnosť a možnosť požadovať nahradenie prejavu vôle", "chráni stabilitu spoluvlastníckych vzťahov"] },
-      { "label": "Zánik spoluvlastníctva (§ 142 OZ)", "leaves": ["dohodou spoluvlastníkov: rozdelenie veci alebo zrušenie spoluvlastníctva", "súdnym rozhodnutím, ak sa spoluvlastníci nedohodnú", "súd môže vec rozdeliť, prikázať jednému spoluvlastníkovi za náhradu alebo nariadiť predaj", "predajom v dražbe, ak je to najvhodnejší spôsob vyporiadania", "nikto nesmie byť nútený zotrvať v spoluvlastníctve"] },
-      { "label": "Význam pre prax", "leaves": ["časté pri nehnuteľnostiach, dedičstve, spoločnom majetku", "predkupné právo stabilizuje vlastnícke vzťahy", "súdne vyporiadanie chráni menšinu", "vysoká právna istota vďaka jasným pravidlám OZ"] }
+      {
+        "label": "Pojem podielového spoluvlastníctva",
+        "leaves": [
+          "viac osôb vlastní tú istú vec",
+          "každý má ideálny podiel (matematický, nie fyzický)",
+          "ak nie je určené inak, podiely sú rovnaké",
+          "podiel vyjadruje mieru účasti na právach a povinnostiach"
+        ]
+      },
+      {
+        "label": "Práva a povinnosti spoluvlastníkov",
+        "leaves": [
+          "právo vec držať, užívať, nakladať podľa veľkosti podielu",
+          "o hospodárení rozhoduje väčšina podľa podielov",
+          "rozhodnutie väčšiny nesmie byť v rozpore s dobrými mravmi",
+          "nesmie neprimerane zasahovať do práv menšinového spoluvlastníka"
+        ]
+      },
+      {
+        "label": "Predkupné právo (§ 140 OZ)",
+        "leaves": [
+          "zákonné, automatické",
+          "pri prevode podielu majú ostatní spoluvlastníci predkupné právo",
+          "výnimka: prevod medzi blízkymi osobami",
+          "porušenie: relatívna neplatnosť a možnosť požadovať nahradenie prejavu vôle",
+          "chráni stabilitu spoluvlastníckych vzťahov"
+        ]
+      },
+      {
+        "label": "Zánik spoluvlastníctva (§ 142 OZ)",
+        "leaves": [
+          "dohodou spoluvlastníkov: rozdelenie veci alebo zrušenie spoluvlastníctva",
+          "súdnym rozhodnutím, ak sa spoluvlastníci nedohodnú",
+          "súd môže vec rozdeliť, prikázať jednému spoluvlastníkovi za náhradu alebo nariadiť predaj",
+          "predajom v dražbe, ak je to najvhodnejší spôsob vyporiadania",
+          "nikto nesmie byť nútený zotrvať v spoluvlastníctve"
+        ]
+      },
+      {
+        "label": "Význam pre prax",
+        "leaves": [
+          "časté pri nehnuteľnostiach, dedičstve, spoločnom majetku",
+          "predkupné právo stabilizuje vlastnícke vzťahy",
+          "súdne vyporiadanie chráni menšinu",
+          "vysoká právna istota vďaka jasným pravidlám OZ"
+        ]
+      }
     ]
   }
 }

@@ -2,13 +2,23 @@
   "id": "10",
   "title": "Procesné úkony súdu",
   "schemaVersion": "1.1",
-  "tags": ["procesné úkony súdu", "rozsudok", "uznesenie", "poučovacia povinnosť", "zápisnica"],
-  "summary": "Procesné úkony súdu sú prejavy vôle súdu smerujúce k priebehu a rozhodnutiu konania. Základnými formami rozhodnutí v civilnom sporovom konaní sú rozsudok, ktorým sa rozhoduje vo veci samej (meritórne), a uznesenie, ktorým sa rozhoduje spravidla o procesných otázkach (napríklad o zastavení konania, o trovách, o predbežnom opatrení). Popri rozhodnutiach súd vykonáva aj ďalšie procesné úkony – predvolania na pojednávanie, výzvy a upovedomenia účastníkov, poučenia o procesných právach a povinnostiach, ako aj doručovanie písomností.\n\nDôležitou súčasťou činnosti súdu je poučovacia povinnosť – súd je povinný poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom, najmä ak nie sú zastúpení; opomenutie poučenia môže byť vadou konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci, a účastník ju môže namietať napríklad v odvolaní. O priebehu pojednávania sa vyhotovuje zápisnica, ktorá je verejnou listinou zaznamenávajúcou obsah a priebeh úkonov vykonaných na pojednávaní.\n\nZapamätaj si:\n- Rozsudok = rozhodnutie vo veci samej; uznesenie = rozhodnutie spravidla o procesných otázkach.\n- Ďalšie procesné úkony súdu: predvolanie, poučenie, doručovanie, zápisnica o pojednávaní.\n- Poučovacia povinnosť súdu chráni najmä nezastúpených účastníkov.\n- Opomenutie poučenia môže byť vadou konania s vplyvom na správnosť rozhodnutia.\n- Zápisnica o pojednávaní je verejná listina o priebehu a obsahu konania."
-  ,
+  "tags": [
+    "procesné úkony súdu",
+    "rozsudok",
+    "uznesenie",
+    "poučovacia povinnosť",
+    "zápisnica"
+  ],
+  "summary": "Procesné úkony súdu sú prejavy vôle súdu, ktorými súd vedie konanie, zabezpečuje jeho priebeh a rozhoduje o procesných aj meritórnych otázkach.\nIde o procesné úkony orgánu verejnej moci – vykonáva ich samosudca, senát, ale aj VSÚ, notár ako súdny komisár či exekútor, ak im to zákon zveruje.\n\nProcesný úkon je prejav vôle podľa teórie prejavu – hodnotí sa to, čo bolo navonok prejavené, nie vnútorné vady vôle.\n\nProcesné úkony môžu byť:\n\nvýslovné (najčastejšie),\n\nkonkludentné (napr. „súd neprihliada“ na oneskorený úkon).\n\nProcesné úkony sa vykonávajú:\n\nv budove súdu,\n\nmimo súdu (napr. obhliadka),\n\nv zákonom určenom procesnom čase (pojednávanie, lehoty).\n\n1. Rozhodnutia súdu\nRozhodnutia sú najvýznamnejšie procesné úkony súdu. Majú povahu autoritatívneho prejavu vôle, ktorý zakladá, mení alebo ruší procesné vzťahy.\n\nRozsudok\nzákladné meritórne rozhodnutie,\n\nrozhoduje vo veci samej,\n\nmôže byť:\n– medzitýmny,\n– čiastočný,\n– konečný.\n\nUznesenie\nrozhoduje spravidla o procesných otázkach,\n\npríklady:\n– zastavenie konania,\n– predbežné opatrenie,\n– prerušenie konania,\n– delegácia,\n– rozhodnutie o trovách.\n\nFormálne náležitosti rozhodnutí\nRozsudok aj uznesenie musia obsahovať:\n\nvýrok,\n\nodôvodnenie,\n\npoučenie o opravnom prostriedku.\n\n2. Ďalšie procesné úkony súdu\nIde o úkony, ktoré nie sú rozhodnutiami, ale zabezpečujú priebeh konania:\n\npredvolania na pojednávanie,\n\nvýzvy na doplnenie podania alebo predloženie dôkazov,\n\nupovedomenia o procesných krokoch,\n\npoučenia o právach a povinnostiach,\n\ndoručovanie písomností účastníkom,\n\nzápisnica o pojednávaní – verejná listina zachytávajúca priebeh konania.\n\n3. Poučovacia povinnosť súdu\nSúd je povinný poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu zákona, najmä ak nie sú zastúpení.\n\nopomenutie poučenia môže byť vadou konania, ktorá mohla mať vplyv na správnosť rozhodnutia,\n\núčastník ju môže namietať v odvolaní.\n\nPoučovacia povinnosť však nezasahuje do kontradiktórnosti – súd nesmie suplovať tvrdenia a dôkazy strán.\n\nZapamätaj si (štátnicové jadro)\nRozsudok = meritórne rozhodnutie; uznesenie = procesné otázky.\n\nĎalšie úkony: predvolanie, výzva, poučenie, doručovanie, zápisnica.\n\nPoučovacia povinnosť chráni najmä nezastúpených účastníkov.\n\nOpomenutie poučenia môže byť vadou konania.\n\nZápisnica je verejná listina o priebehu pojednávania.\n\nProcesné úkony sú prejavy vôle súdu (výslovné aj konkludentné).\n\nÚkony vykonáva samosudca, senát, VSÚ, notár, exekútor.\n\nZdroj:\nCSP (160/2015 Z. z.); CMP (161/2015 Z. z.); SSP (162/2015 Z. z.); Ústava SR čl. 46–50.",
   "quiz": [
     {
       "question": "Aké sú základné formy rozhodnutí súdu v civilnom sporovom konaní?",
-      "options": ["Iba rozsudok", "Rozsudok a uznesenie", "Nález a uznesenie", "Rozsudok a nález"],
+      "options": [
+        "Iba rozsudok",
+        "Rozsudok a uznesenie",
+        "Nález a uznesenie",
+        "Rozsudok a nález"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súd v civilnom sporovom konaní rozhoduje formou rozsudku alebo uznesenia.",
@@ -17,7 +27,12 @@
     },
     {
       "question": "Čím sa rozsudok líši od uznesenia?",
-      "options": ["Rozsudkom sa spravidla rozhoduje vo veci samej, uznesením najmä o procesných otázkach", "Uznesenie sa vydáva iba v trestnom konaní", "Rozsudok vydáva iba Najvyšší súd SR", "Medzi rozsudkom a uznesením niet rozdielu"],
+      "options": [
+        "Rozsudkom sa spravidla rozhoduje vo veci samej, uznesením najmä o procesných otázkach",
+        "Uznesenie sa vydáva iba v trestnom konaní",
+        "Rozsudok vydáva iba Najvyšší súd SR",
+        "Medzi rozsudkom a uznesením niet rozdielu"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Rozsudok je meritórnym rozhodnutím vo veci samej, kým uznesením súd rieši spravidla procesné otázky.",
@@ -26,7 +41,12 @@
     },
     {
       "question": "Ktoré z nasledujúcich sú procesné úkony súdu popri rozhodnutiach?",
-      "options": ["Iba podanie žaloby", "Predvolanie na pojednávanie, poučenie účastníka, doručovanie písomností, zápisnica o pojednávaní", "Iba vyjadrenie znalca", "Iba plnomocenstvo"],
+      "options": [
+        "Iba podanie žaloby",
+        "Predvolanie na pojednávanie, poučenie účastníka, doručovanie písomností, zápisnica o pojednávaní",
+        "Iba vyjadrenie znalca",
+        "Iba plnomocenstvo"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súd okrem rozhodnutí vykonáva aj ďalšie procesné úkony – predvoláva, poučuje, doručuje a vedie zápisnicu o pojednávaní.",
@@ -35,7 +55,12 @@
     },
     {
       "question": "Aký je význam poučovacej povinnosti súdu voči účastníkom?",
-      "options": ["Súd nesmie účastníkov poučovať o ich procesných právach", "Súd je povinný účastníkov poučiť o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom", "Poučovacia povinnosť sa týka iba zástupcov účastníkov", "Poučenie sa dáva iba na konci konania"],
+      "options": [
+        "Súd nesmie účastníkov poučovať o ich procesných právach",
+        "Súd je povinný účastníkov poučiť o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom",
+        "Poučovacia povinnosť sa týka iba zástupcov účastníkov",
+        "Poučenie sa dáva iba na konci konania"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Súd má zákonnú povinnosť poučiť účastníkov, najmä nezastúpených, o ich procesných právach a povinnostiach.",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Kto vedie zápisnicu o pojednávaní a aká je jej povaha?",
-      "options": ["Súd (zapisovateľ) zaznamenáva priebeh pojednávania do zápisnice, ktorá je verejnou listinou o priebehu konania", "Zapisuje ju výlučne žalobca", "Zápisnica sa v civilnom konaní nevedie", "Vedie ju advokát žalovaného"],
+      "options": [
+        "Súd (zapisovateľ) zaznamenáva priebeh pojednávania do zápisnice, ktorá je verejnou listinou o priebehu konania",
+        "Zapisuje ju výlučne žalobca",
+        "Zápisnica sa v civilnom konaní nevedie",
+        "Vedie ju advokát žalovaného"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. O pojednávaní sa vedie zápisnica ako verejná listina, ktorú vyhotovuje súd (zapisovateľ) a ktorá je dôkazom o priebehu konania.",
@@ -53,21 +83,44 @@
     }
   ],
   "tiles": [
-    { "term": "Rozsudok", "definition": "Rozhodnutie súdu vo veci samej (meritórne rozhodnutie)." },
-    { "term": "Uznesenie", "definition": "Rozhodnutie súdu spravidla o procesných otázkach (nie vo veci samej), napr. o zastavení konania." },
-    { "term": "Predvolanie", "definition": "Procesný úkon súdu, ktorým vyzýva účastníka alebo inú osobu, aby sa dostavila na pojednávanie." },
-    { "term": "Poučovacia povinnosť", "definition": "Povinnosť súdu poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom." },
-    { "term": "Zápisnica o pojednávaní", "definition": "Verejná listina zaznamenávajúca priebeh a obsah pojednávania." }
+    {
+      "term": "Rozsudok",
+      "definition": "Rozhodnutie súdu vo veci samej (meritórne rozhodnutie)."
+    },
+    {
+      "term": "Uznesenie",
+      "definition": "Rozhodnutie súdu spravidla o procesných otázkach (nie vo veci samej), napr. o zastavení konania."
+    },
+    {
+      "term": "Predvolanie",
+      "definition": "Procesný úkon súdu, ktorým vyzýva účastníka alebo inú osobu, aby sa dostavila na pojednávanie."
+    },
+    {
+      "term": "Poučovacia povinnosť",
+      "definition": "Povinnosť súdu poučiť účastníkov o ich procesných právach a povinnostiach v rozsahu ustanovenom zákonom."
+    },
+    {
+      "term": "Zápisnica o pojednávaní",
+      "definition": "Verejná listina zaznamenávajúca priebeh a obsah pojednávania."
+    }
   ],
   "cases": [
     {
       "title": "Prípad 1 – Zastavenie konania uznesením",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Žalobca vzal žalobu späť ešte pred vydaním rozsudku.", "options": [], "correct": 0 },
+        {
+          "question": "Žalobca vzal žalobu späť ešte pred vydaním rozsudku.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Akou formou súd na to zareaguje?",
-          "options": ["Uznesením o zastavení konania", "Rozsudkom vo veci samej", "Iba neformálnym oznámením"],
+          "options": [
+            "Uznesením o zastavení konania",
+            "Rozsudkom vo veci samej",
+            "Iba neformálnym oznámením"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. O procesnom následku späťvzatia žaloby (zastavení konania) rozhoduje súd uznesením.",
@@ -76,7 +129,11 @@
         },
         {
           "question": "Prečo sa v tomto prípade nepoužije rozsudok?",
-          "options": ["Lebo sa nerozhoduje vo veci samej, ale o procesnej otázke (zastavení konania)", "Lebo rozsudok môže vydať iba odvolací súd", "Lebo žalovaný by s rozsudkom nesúhlasil"],
+          "options": [
+            "Lebo sa nerozhoduje vo veci samej, ale o procesnej otázke (zastavení konania)",
+            "Lebo rozsudok môže vydať iba odvolací súd",
+            "Lebo žalovaný by s rozsudkom nesúhlasil"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zastavenie konania je procesné rozhodnutie, nie rozhodnutie o veci samej, preto sa vydáva uznesením.",
@@ -89,10 +146,18 @@
       "title": "Prípad 2 – Chýbajúce poučenie účastníka",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Súd opomenul poučiť nezastúpeného účastníka o dôkaznej povinnosti a následkoch jej nesplnenia.", "options": [], "correct": 0 },
+        {
+          "question": "Súd opomenul poučiť nezastúpeného účastníka o dôkaznej povinnosti a následkoch jej nesplnenia.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Aký to môže mať dôsledok pre konanie?",
-          "options": ["Môže ísť o vadu konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci", "Žiadny, poučenie je len formalita bez významu", "Konanie sa tým automaticky stáva neplatným od začiatku"],
+          "options": [
+            "Môže ísť o vadu konania, ktorá mohla mať za následok nesprávne rozhodnutie vo veci",
+            "Žiadny, poučenie je len formalita bez významu",
+            "Konanie sa tým automaticky stáva neplatným od začiatku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Opomenutie zákonom vyžadovaného poučenia môže predstavovať vadu konania s možným vplyvom na správnosť rozhodnutia.",
@@ -101,7 +166,11 @@
         },
         {
           "question": "Kto môže takúto vadu namietať?",
-          "options": ["Dotknutý účastník, napríklad v odvolaní", "Iba súd sám voči sebe", "Iba znalec"],
+          "options": [
+            "Dotknutý účastník, napríklad v odvolaní",
+            "Iba súd sám voči sebe",
+            "Iba znalec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vadu spočívajúcu v absencii poučenia môže namietať dotknutý účastník, typicky v opravnom prostriedku.",
@@ -120,13 +189,78 @@
   "spider": {
     "center": "Procesné úkony súdu – rozhodnutia × ostatné úkony × poučovacia povinnosť",
     "branches": [
-      { "label": "Pojem procesného úkonu súdu", "leaves": ["procesný úkon = prejav vôle súdu", "platí teória prejavu – rozhodujúci je prejavený úkon, nie vnútorné vady vôle", "spravidla výslovne, výnimočne konkludentne (napr. súd „neprihliadne“ na oneskorený úkon)"] },
-      { "label": "Kto koná za súd", "leaves": ["samosudca", "senát", "vyšší súdny úradník (VSÚ)", "notár ako súdny komisár", "exekútor", "(všetci vykonávajú procesné úkony, ak im to zákon zveruje)"] },
-      { "label": "Rozhodnutia súdu", "leaves": ["prejavy vôle súdu, ktoré riešia merito veci alebo procesné otázky", "Rozsudok", "meritórne rozhodnutie", "rozhoduje vo veci samej", "môže byť: – medzitýmny – čiastočný – konečný", "Uznesenie", "spravidla rozhoduje o procesných otázkach", "príklady: – zastavenie konania – predbežné opatrenie – prerušenie konania – delegácia – rozhodnutie o trovách", "Formálne náležitosti", "výrok", "odôvodnenie", "poučenie o opravnom prostriedku"] },
-      { "label": "Ostatné procesné úkony", "leaves": ["Úkony, ktoré nie sú rozhodnutím, ale zabezpečujú priebeh konania:", "predvolania na pojednávanie", "výzvy na doplnenie podania alebo predloženie dôkazov", "upovedomenia o procesných krokoch", "poučenia o právach a povinnostiach", "doručovanie písomností účastníkom"] },
-      { "label": "Miesto a čas procesných úkonov", "leaves": ["spravidla sa vykonávajú v budove súdu", "výnimočne mimo budovy súdu (napr. ohliadka na mieste)", "čas procesných úkonov určuje súd v súlade so zákonom (pojednávanie, lehoty)"] },
-      { "label": "Poučovacia povinnosť", "leaves": ["súd poučuje účastníkov o ich procesných právach a povinnostiach", "najmä ak nie sú zastúpení", "opomenutie poučenia môže byť vadou konania, ktorú možno namietať v odvolaní", "súd nesmie suplovať tvrdenia a dôkazy strán → kontradiktórnosť"] },
-      { "label": "Zápisnica o pojednávaní", "leaves": ["verejná listina", "zachytáva priebeh pojednávania", "obsahuje: – čas a miesto – prítomných – vykonané dôkazy – procesné návrhy – výroky súdu"] }
+      {
+        "label": "Pojem procesného úkonu súdu",
+        "leaves": [
+          "procesný úkon = prejav vôle súdu",
+          "platí teória prejavu – rozhodujúci je prejavený úkon, nie vnútorné vady vôle",
+          "spravidla výslovne, výnimočne konkludentne (napr. súd „neprihliadne“ na oneskorený úkon)"
+        ]
+      },
+      {
+        "label": "Kto koná za súd",
+        "leaves": [
+          "samosudca",
+          "senát",
+          "vyšší súdny úradník (VSÚ)",
+          "notár ako súdny komisár",
+          "exekútor",
+          "(všetci vykonávajú procesné úkony, ak im to zákon zveruje)"
+        ]
+      },
+      {
+        "label": "Rozhodnutia súdu",
+        "leaves": [
+          "prejavy vôle súdu, ktoré riešia merito veci alebo procesné otázky",
+          "Rozsudok",
+          "meritórne rozhodnutie",
+          "rozhoduje vo veci samej",
+          "môže byť: – medzitýmny – čiastočný – konečný",
+          "Uznesenie",
+          "spravidla rozhoduje o procesných otázkach",
+          "príklady: – zastavenie konania – predbežné opatrenie – prerušenie konania – delegácia – rozhodnutie o trovách",
+          "Formálne náležitosti",
+          "výrok",
+          "odôvodnenie",
+          "poučenie o opravnom prostriedku"
+        ]
+      },
+      {
+        "label": "Ostatné procesné úkony",
+        "leaves": [
+          "Úkony, ktoré nie sú rozhodnutím, ale zabezpečujú priebeh konania:",
+          "predvolania na pojednávanie",
+          "výzvy na doplnenie podania alebo predloženie dôkazov",
+          "upovedomenia o procesných krokoch",
+          "poučenia o právach a povinnostiach",
+          "doručovanie písomností účastníkom"
+        ]
+      },
+      {
+        "label": "Miesto a čas procesných úkonov",
+        "leaves": [
+          "spravidla sa vykonávajú v budove súdu",
+          "výnimočne mimo budovy súdu (napr. ohliadka na mieste)",
+          "čas procesných úkonov určuje súd v súlade so zákonom (pojednávanie, lehoty)"
+        ]
+      },
+      {
+        "label": "Poučovacia povinnosť",
+        "leaves": [
+          "súd poučuje účastníkov o ich procesných právach a povinnostiach",
+          "najmä ak nie sú zastúpení",
+          "opomenutie poučenia môže byť vadou konania, ktorú možno namietať v odvolaní",
+          "súd nesmie suplovať tvrdenia a dôkazy strán → kontradiktórnosť"
+        ]
+      },
+      {
+        "label": "Zápisnica o pojednávaní",
+        "leaves": [
+          "verejná listina",
+          "zachytáva priebeh pojednávania",
+          "obsahuje: – čas a miesto – prítomných – vykonané dôkazy – procesné návrhy – výroky súdu"
+        ]
+      }
     ]
   }
 }
