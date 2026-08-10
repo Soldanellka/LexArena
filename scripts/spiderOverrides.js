@@ -84,13 +84,20 @@ export async function saveSpiderOverride({ areaTitle, okruhCislo, spider, autor,
 
   const okruh = `A${okruhCislo}`;
   const { ref, update } = await fbApi();
+  /* committed/committedAt/committedHash/commitSha sa zhadzujú explicitne –
+     dôvod je rovnaký ako v saveContentOverride() v contentOverrides.js:
+     update() merguje, takže stará vlajka prežije novú verziu pavúka. */
   const payload = {
     app, okruh, cast: 'spider',
     novyObsah: { spider },
     autor: autor || 'Anonymous',
     rola: rola === 'garant' ? 'garant' : 'admin',
     pecat: rola === 'garant',
-    timestamp: Date.now()
+    timestamp: Date.now(),
+    committed: false,
+    committedAt: null,
+    committedHash: null,
+    commitSha: null
   };
   await update(ref(db, `contentOverrides/${app}/${okruh}/spider`), payload);
   return payload;

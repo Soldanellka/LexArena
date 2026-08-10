@@ -99,11 +99,52 @@ async function fetchOverrides(googleToken, dbUrl) {
   return data || {};
 }
 
-async function markOverrideCommitted(googleToken, dbUrl, app, okruh, cast, commitSha) {
+/* Odtlačok obsahu overridu. Kľúče sa triedia rekurzívne, aby to isté
+   `novyObsah` dalo vždy ten istý hash bez ohľadu na poradie kľúčov, v akom
+   ho vráti Firebase. */
+function stableStringify(v) {
+  if (v === null || typeof v !== 'object') return JSON.stringify(v === undefined ? null : v);
+  if (Array.isArray(v)) return '[' + v.map(stableStringify).join(',') + ']';
+  return '{' + Object.keys(v).sort().map(k => JSON.stringify(k) + ':' + stableStringify(v[k])).join(',') + '}';
+}
+function contentHash(novyObsah) {
+  return crypto.createHash('sha256').update(stableStringify(novyObsah == null ? null : novyObsah)).digest('hex');
+}
+
+/* Čaká override na zapečenie?
+
+   Nestačí sa spoliehať na vlajku `committed`: editor ukladá cez Firebase
+   update(), ktorý payload MERGUJE – vlajka z predchádzajúceho syncu prežije
+   uloženie novej verzie textu a náhľad by úpravu nikdy neukázal (presne toto
+   sa stalo po prvom synce 7ed2886 s TPP A13–A17).
+
+   Preto rozhoduje obsah, nie vlajka:
+   - `committedHash` sedí  -> v repe je presne toto, netreba nič robiť;
+   - `committedHash` nesedí -> obsah sa po zapečení zmenil, znova do frontu;
+   - `committedHash` chýba  -> override zapečený ešte pred touto opravou;
+     porovná sa čas uloženia proti času zapečenia (úprava po zapečení = pending).
+
+   Vďaka tomu je zdrojom pravdy stav dát, nie disciplína zapisovacích ciest:
+   aj keby budúca save cesta na zhodenie vlajky zabudla, zmena sa v náhľade
+   objaví. Klientske `committed: false` v contentOverrides.js/spiderOverrides.js
+   je druhá, nezávislá poistka. */
+function isPending(ov) {
+  if (!ov) return false;
+  if (!ov.committed) return true;
+  if (ov.committedHash) return contentHash(ov.novyObsah) !== ov.committedHash;
+  return Number(ov.timestamp || 0) > Number(ov.committedAt || 0);
+}
+
+async function markOverrideCommitted(googleToken, dbUrl, app, okruh, cast, commitSha, novyObsah) {
   await fetch(`${dbUrl}/contentOverrides/${app}/${okruh}/${cast}.json`, {
     method: 'PATCH',
     headers: { Authorization: `Bearer ${googleToken}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ committed: true, committedAt: Date.now(), commitSha })
+    body: JSON.stringify({
+      committed: true,
+      committedAt: Date.now(),
+      committedHash: contentHash(novyObsah),
+      commitSha
+    })
   });
 }
 
@@ -249,7 +290,7 @@ module.exports = async (req, res) => {
       const byOkruh = overridesByApp[app] || {};
       for (const okruh of Object.keys(byOkruh)) {
         const casts = byOkruh[okruh] || {};
-        const pendingCount = Object.values(casts).filter(o => o && !o.committed).length;
+        const pendingCount = Object.values(casts).filter(isPending).length;
         if (pendingCount > 0) {
           affected.push({ app, okruh, path: `${AREA_PATHS[app]}${okruh}.json`, overridesCount: pendingCount });
         }
@@ -292,10 +333,7 @@ module.exports = async (req, res) => {
       const original = JSON.parse(Buffer.from(fileRes.content, 'base64').toString('utf8'));
       const { result: merged, applied } = applyOverrides(original, overridesByApp[a.app][a.okruh]);
 
-      const pendingApplied = applied.filter(cast => {
-        const ov = overridesByApp[a.app][a.okruh][cast];
-        return ov && !ov.committed;
-      });
+      const pendingApplied = applied.filter(cast => isPending(overridesByApp[a.app][a.okruh][cast]));
       if (!pendingApplied.length) {
         skipped.push({ path: a.path, reason: 'žiadny z nevybavených overridov sa nedal zapísať' });
         continue;
@@ -339,7 +377,8 @@ module.exports = async (req, res) => {
     for (const key of Object.keys(appliedByOkruh)) {
       const [app, okruh] = key.split('/');
       for (const castKey of appliedByOkruh[key]) {
-        await markOverrideCommitted(googleToken, dbUrl, app, okruh, castKey, commit.sha);
+        const ov = overridesByApp[app][okruh][castKey];
+        await markOverrideCommitted(googleToken, dbUrl, app, okruh, castKey, commit.sha, ov && ov.novyObsah);
         overridesBaked++;
       }
     }

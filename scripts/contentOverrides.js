@@ -171,12 +171,22 @@ export async function saveContentOverride({ app, okruh, cast, novyObsah, autor, 
   if (!app || !okruh || !cast) throw new Error('Chýba app/okruh/cast pre uloženie zmeny.');
 
   const { ref, update } = await fbApi();
+  /* `committed: false` sa musí zapísať EXPLICITNE. update() payload merguje,
+     takže vlajka z predchádzajúceho syncu by prežila uloženie novej verzie
+     textu a sync by úpravu považoval za vybavenú (stalo sa po prvom synce
+     pri TPP A13–A17). Rovnako sa čistí committedHash/commitSha, nech
+     nezostane odtlačok cudzieho obsahu. Server má vlastnú, nezávislú
+     kontrolu podľa hashu – toto je poistka, nie jediná obrana. */
   const payload = {
     app, okruh, cast, novyObsah,
     autor: autor || 'Anonymous',
     rola: rola === 'garant' ? 'garant' : 'admin',
     pecat: rola === 'garant',
-    timestamp: Date.now()
+    timestamp: Date.now(),
+    committed: false,
+    committedAt: null,
+    committedHash: null,
+    commitSha: null
   };
   await update(ref(db, `contentOverrides/${app}/${okruh}/${cast}`), payload);
   return payload;
