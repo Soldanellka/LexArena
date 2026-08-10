@@ -181,40 +181,44 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Uznesenie × rozsudok × trestný rozkaz",
+    "center": "Uznesenie × rozsudok × trestný rozkaz (§ 162)",
     "branches": [
       {
-        "label": "Uznesenie",
+        "label": "Uznesenie (§ 176)",
         "leaves": [
+          "Spôsob rozhodovania (§ 162) – súd rozsudkom, trestným rozkazom či príkazom, inak uznesením",
           "Kto – policajt, prokurátor, súd; najčastejšia forma",
           "O čom – začatie stíhania, obvinenie, väzba, zaistenie, zastavenie, postúpenie",
-          "Náležitosti – výrok, odôvodnenie, poučenie",
-          "Opravný prostriedok – sťažnosť"
+          "Náležitosti (§ 176) – výrok, odôvodnenie, poučenie",
+          "Opravný prostriedok – sťažnosť (§§ 185–195)"
         ]
       },
       {
-        "label": "Rozsudok (§§ 163–172)",
+        "label": "Rozsudok (§§ 163–175)",
         "leaves": [
           "Povaha – meritórne rozhodnutie o vine a treste po dokazovaní",
-          "Výrok (§ 164) – vina/nevina, trest, ochranné opatrenia, náhrada škody",
+          "Obsah (§ 163) – označenie súdu, skutok, právna kvalifikácia, výroky",
+          "Výroky (§§ 164–165) – náhrada škody a ochranné opatrenie (§ 164), trest a oslobodenie (§ 165)",
           "Odôvodnenie (§ 168) – dôkazy, hodnotenie, kvalifikácia, úvahy o treste",
           "Opravný prostriedok – odvolanie"
         ]
       },
       {
-        "label": "Trestný rozkaz (§§ 353–358)",
+        "label": "Trestný rozkaz (§§ 353–357)",
         "leaves": [
-          "Povaha – skrátená forma bez hlavného pojednávania",
-          "Podmienky – spoľahlivo preukázaný skutok, vybrané tresty",
-          "Odpor – ruší rozkaz, koná sa hlavné pojednávanie"
+          "Povaha – skrátená forma bez hlavného pojednávania; vydá ho samosudca",
+          "Podmienky (§ 353) – skutkový stav spoľahlivo preukázaný; len tresty podľa ods. 2",
+          "Obsah (§ 354) – označenie súdu, samosudcu, skutok, výrok, poučenie",
+          "Odpor (§ 355) – ruší rozkaz, koná sa hlavné pojednávanie"
         ]
       },
       {
         "label": "Právoplatnosť a prostriedky",
         "leaves": [
-          "Riadne – sťažnosť (uznesenie), odvolanie (rozsudok)",
+          "Riadne – sťažnosť (uznesenie), odvolanie (rozsudok), odpor (trestný rozkaz)",
           "Mimoriadne – dovolanie, obnova konania",
-          "Právoplatnosť (§ 172) – márne uplynutie lehoty alebo zamietnutie prostriedku"
+          "Právoplatnosť – rozsudok § 183, uznesenie § 184, trestný rozkaz § 356",
+          "Kedy – márne uplynutie lehoty alebo zamietnutie opravného prostriedku"
         ]
       }
     ]

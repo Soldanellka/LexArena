@@ -181,22 +181,32 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Svedok – povinnosti × odmietnutie × ochrana",
+    "center": "Svedok – povinnosti × odopretie × ochrana (§§ 127–140)",
     "branches": [
       {
-        "label": "Pojem a povinnosti (§ 126)",
+        "label": "Povinnosť svedčiť (§ 127)",
         "leaves": [
           "Kto – osoba s vedomosťou o dôležitých skutočnostiach (aj poškodený, zúčastnená osoba)",
           "Povinnosti – dostaviť sa, vypovedať pravdu, nič nezamlčať",
-          "Nedostavenie – možné predvedenie"
+          "Nedostavenie – predvolanie, predvedenie a zabezpečenie svedka (§ 128)",
+          "Svedočné (§ 140) – nárok na náhradu výdavkov a ušlého príjmu"
         ]
       },
       {
-        "label": "Odmietnutie výpovede (§ 127)",
+        "label": "Právo odoprieť výpoveď (§ 130)",
         "leaves": [
-          "Sebaobvinenie – nebezpečenstvo stíhania sebe alebo blízkej osobe",
-          "Tajomstvá – spovedné; advokátske, lekárske, bankové (ak nezbavený mlčanlivosti)",
-          "Charakter – absolútne právo, nemožno prelomiť"
+          "Príbuzenstvo – príbuzný v priamom rade, súrodenec, osvojiteľ, osvojenec, manžel, druh",
+          "Sebaobvinenie – nebezpečenstvo trestného stíhania sebe alebo týmto osobám",
+          "Charakter – právo svedka; uplatní ho on sám, nie orgán"
+        ]
+      },
+      {
+        "label": "Zákaz výsluchu svedka (§ 129)",
+        "leaves": [
+          "Utajovaná skutočnosť – nesmie byť vypočúvaný, ak nebol oslobodený príslušným orgánom",
+          "Mlčanlivosť – zákonná alebo zmluvná (spovedné tajomstvo, advokát, lekár), ak nebol oslobodený",
+          "Rozdiel od § 130 – prekážka zo zákona, nie právo svedka",
+          "Výnimka – neplatí pri TČ, ktorý má svedok povinnosť prekaziť"
         ]
       },
       {

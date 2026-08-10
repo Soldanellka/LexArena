@@ -2,7 +2,7 @@
 
 > Garantský materiál vo formáte série. Kľúčové body z tvojich summary; otázky/chyby/vodítka dogeneroval Claude — over.
 
-> ⚠️ **Čísla §§ pri A14, A15, A16 a A17 nesedia so znením TP účinným od 1. 7. 2026.** Vecný obsah je v poriadku, posunuté sú len paragrafy — opravná tabuľka je na konci súboru („Poznámka Code“). Pri učení sa drž tabuľky, nie čísel v tele podkladu.
+> ⚠️ **Čísla §§ pri A14, A15, A16 a A17 nesedia so znením TP účinným od 1. 7. 2026.** Vecný obsah je v poriadku, posunuté sú len paragrafy — opravná tabuľka je na konci súboru („Poznámka Code“). Pri učení sa drž tabuľky, nie čísel v tele podkladu. **Nasadené pavúky A14–A17 už opravené sú** (10. 8. 2026).
 
 ## A14 — Svedok
 **Kľúčové body:** svedok = osoba s vedomosťou o dôležitých skutočnostiach; aj poškodený či zúčastnená osoba (§ 126) · povinnosti: dostaviť sa, vypovedať pravdu, nič nezamlčať; pri nedostavení predvedenie (§ 128) · odmietnutie výpovede (§ 127): nebezpečenstvo stíhania sebe/blízkej osobe; spovedné tajomstvo; mlčanlivosť (advokát, lekár…), ak nezbavený — absolútne právo · ochrana (§§ 136–139): anonymita, technika (videokonferencia, zmena hlasu), program ochrany podľa osobitného zákona · výsluch (§§ 131–134): poučenie, vzťah k obvinenému, súvislé rozprávanie, otázky bez sugescie · maloletý (§ 135): šetrne, psychológ, bez opakovania · zodpovednosť: krivá výpoveď (§ 346 TZ).
@@ -106,13 +106,15 @@ Tu je posun najväčší — sedí prakticky len rozsah dielu.
 ### A18 — Predsúdne konanie
 Bez § odkazov, niet čo rozporovať. Vecne sedí s A17 aj s nasadeným pavúkom.
 
-### Čo z toho vyplýva pre nasadený obsah
+### Nasadené opravy pavúkov (10. 8. 2026)
 
-Chybné čísla nie sú len v tomto podklade — sú aj v **nasadených pavúkoch A14, A15, A16, A17** a v **tvojich summary** (odtiaľ sa do pavúkov dostali). Rozsah:
+Chybné čísla neboli len v tomto podklade — boli aj v nasadených pavúkoch a v tvojich summary (odtiaľ sa do pavúkov dostali). **Pavúky A14–A17 sú prepísané podľa overených §§; summary zostávajú nedotknuté** (sú to tvoje texty).
 
-- **A15** — prepísať treba všetkých päť vetiev vrátane centra („§§ 144–151“ → „§§ 141–152“).
-- **A16** — vetva „Rozsudok“ (výrok → §§ 163–165), vetva „Trestný rozkaz“ (→ §§ 353–357), vetva „Právoplatnosť a prostriedky“ (§ 172 → §§ 183–184), plus doplniť §§ do vetvy „Uznesenie“ (§ 162, § 176).
-- **A14** — vetva „Pojem a povinnosti“ (§ 126 → § 127), vetva „Odmietnutie výpovede“ (§ 127 → § 130) a doplniť § 129 zákaz výsluchu.
-- **A17** — vetva „Pred začatím stíhania“ (§§ 197–198 → §§ 196–198) a „Konanie pred súdom“ (§§ 250–290 → §§ 246–289).
+- **A14** (6 → 7 vetiev, 21 listov) — „Pojem a povinnosti (§ 126)“ → **„Povinnosť svedčiť (§ 127)“** s doplneným predvedením (§ 128) a svedočným (§ 140); „Odmietnutie výpovede (§ 127)“ → **„Právo odoprieť výpoveď (§ 130)“** s okruhom osôb podľa ods. 1; nová vetva **„Zákaz výsluchu svedka (§ 129)“** (utajovaná skutočnosť, mlčanlivosť, výnimka pri povinnosti prekaziť TČ) — tajomstvá sa presunuli sem, kam podľa zákona patria. Centrum nesie rozsah dielu **§§ 127–140**.
+- **A15** (5 → 6 vetiev, 22 listov) — prečíslované celé: centrum **§§ 141–152**, „Odborná činnosť (§ 141)“, „Pribratie znalca (§§ 142–144)“, „Posudok a výsluch znalca (§ 145)“, „Chyby posudku (§ 146)“ s ústavom (§ 147), nová vetva „Duševný stav a konzultant (§§ 148–151)“, a k hodnoteniu pribudol posudok predložený stranou (**§ 268**).
+- **A16** (4 vetvy, 18 listov) — „Uznesenie“ dostalo **§ 162** (spôsob rozhodovania) a **§ 176** (obsah) plus sťažnosť **§§ 185–195**; „Rozsudok“ → **§§ 163–175** s rozpísanými výrokmi (**§§ 163–165**); „Trestný rozkaz“ → **§§ 353–357** s odporom podľa **§ 355**; právoplatnosť → **§ 183 / § 184 / § 356** namiesto § 172.
+- **A17** (5 vetiev, 18 listov) — „Pred začatím stíhania“ → **§§ 196–198** s doplneným § 196 a preskúmaním postupu policajta podľa § 198; hlavné pojednávanie → **§§ 246–289**.
 
-**Nič z toho som zatiaľ nenasadil** — čakám na tvoje slovo, rovnako ako pri A11. Summary sú tvoje texty, tie nebudem prepisovať bez pokynu; pavúky viem opraviť hneď.
+Overené po nasadení: 30/30 pavúkov TPP validných podľa `isValidSpider()`, kvízy aj zhrnutia vo všetkých okruhoch nedotknuté, stromy sa v UI kreslia, konzola čistá.
+
+Zostáva na tebe: v **summary A16** je § 119a (neexistujúci) a „§ 179–195“ pri opravných prostriedkoch, v **summary A14** predvedenie „podľa § 89“ a v **summary A15** celá stará číselná rada. Pavúky ich už nekopírujú, ale samotné texty prepíšem až na tvoj pokyn.

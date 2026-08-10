@@ -193,11 +193,12 @@
         ]
       },
       {
-        "label": "Pred začatím stíhania (§§ 197–198)",
+        "label": "Pred začatím stíhania (§§ 196–198)",
         "leaves": [
-          "Účel – preveriť podnet",
+          "Účel – prijatie a preverenie trestného oznámenia (§ 196)",
           "Úkony – vysvetlenia, prvotné zaistenie dôkazov",
-          "Výsledok – začatie stíhania alebo odloženie veci"
+          "Výsledok (§ 197) – začatie stíhania, odloženie alebo odovzdanie veci",
+          "Prokurátor (§ 198) – preskúma postup policajta na žiadosť oznamovateľa či poškodeného"
         ]
       },
       {
@@ -212,8 +213,8 @@
       {
         "label": "Konanie pred súdom (Hlava V)",
         "leaves": [
-          "Predbežné prejednanie obžaloby (§§ 241–244)",
-          "Hlavné pojednávanie (§§ 250–290) – dôkazy, návrhy, rozsudok",
+          "Preskúmanie a predbežné prejednanie obžaloby (§§ 241–244)",
+          "Hlavné pojednávanie (§§ 246–289) – príprava, dôkazy, návrhy, rozsudok",
           "Verejné a neverejné zasadnutie – vybrané rozhodnutia"
         ]
       },

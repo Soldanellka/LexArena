@@ -182,38 +182,49 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Odborné vyjadrenie × znalecký posudok (§§ 144–151)",
+    "center": "Odborná činnosť × znalecká činnosť (§§ 141–152)",
     "branches": [
       {
-        "label": "Odborné vyjadrenie (§ 144)",
+        "label": "Odborná činnosť (§ 141)",
         "leaves": [
-          "Kto – osoba s odbornými vedomosťami, nie znalec",
-          "Použitie – jednoduchšie odborné otázky",
-          "Povaha – dôkazný prostriedok, nie posudok"
+          "Kto – osoba či organizácia s odbornými znalosťami, nie znalec",
+          "Použitie – jednoduchšie odborné otázky; odborné vyjadrenie alebo písomné potvrdenie",
+          "Forma – vyžiada sa opatrením, nie uznesením",
+          "Štátny orgán – odborné vyjadrenie predloží vždy bez náhrady"
         ]
       },
       {
-        "label": "Ustanovenie znalca (§ 145)",
+        "label": "Pribratie znalca (§§ 142–144)",
         "leaves": [
-          "Kto ustanovuje – OČTK alebo súd uznesením",
-          "Znalec – zapísaný v zozname znalcov",
-          "Uznesenie – úloha, otázky, lehota"
+          "Kedy (§ 142) – ak postup podľa § 141 pre zložitosť veci nepostačuje",
+          "Prednosť (§ 143) – znalecká organizácia špecializovaná na daný odbor",
+          "Vylúčenie (§ 144) – znalec musí bez odkladu oznámiť dôvody, pre ktoré nemôže konať"
         ]
       },
       {
-        "label": "Znalecký posudok (§ 147)",
+        "label": "Posudok a výsluch znalca (§ 145)",
         "leaves": [
           "Povaha – samostatný dôkazný prostriedok",
           "Náležitosti – úkony, podklady, výsledky, závery, odpovede",
-          "Formy – písomný alebo ústny"
+          "Formy – písomný posudok alebo výsluch znalca"
         ]
       },
       {
-        "label": "Kontrola posudku (§§ 148–150)",
+        "label": "Chyby posudku (§ 146)",
         "leaves": [
-          "Výsluch znalca – objasnenie záverov, rozpory",
-          "Doplnenie – pri neúplnosti či nejasnosti",
-          "Kontrolný posudok – iný znalec pri pochybnostiach"
+          "Kedy – pochybnosť o správnosti, nejasnosť alebo neúplnosť",
+          "Najprv – vysvetlenie či doplnenie od toho istého znalca",
+          "Až potom – posudok iného znalca",
+          "Ústav (§ 147) – posudok znaleckého ústavu v najzložitejších veciach"
+        ]
+      },
+      {
+        "label": "Duševný stav a konzultant (§§ 148–151)",
+        "leaves": [
+          "Obvinený (§ 148) – duševný stav vyšetruje znalec z odboru psychiatrie",
+          "Pozorovanie (§ 149) – v zdravotníckom ústave najviac dva mesiace",
+          "Svedok (§ 150) – vyšetrenie duševného stavu svedka",
+          "Konzultant (§ 151) – odborný konzultant pribratý k úkonu"
         ]
       },
       {
@@ -221,7 +232,8 @@
         "leaves": [
           "Povinnosti – osobne, nestranne, mlčanlivosť, včas",
           "Práva – odmena, podklady, odmietnutie pri konflikte záujmov",
-          "Hodnotenie – voľné; posudok nie je nadradený iným dôkazom"
+          "Hodnotenie – voľné; posudok nie je nadradený iným dôkazom",
+          "Posudok strany (§ 268) – ak podávateľ nie je v zozname znalcov, zloží pred súdom sľub"
         ]
       }
     ]
