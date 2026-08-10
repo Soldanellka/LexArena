@@ -37,5 +37,5 @@
 ## Poznámka Code (overenie k 10. 8. 2026)
 
 - **A9, otázka 4 — „§ 80–81?" potvrdené.** V znení TP účinnom od 1. 7. 2026 je **§ 80 „Nahradenie väzby zárukou, sľubom alebo dohľadom"** a **§ 81 „Peňažná záruka"**. Otáznik možno zmazať. (Susedné: § 82 „Primerané povinnosti a obmedzenia", § 83 „Sťažnosť proti rozhodnutiu o väzbe".)
-- **A11 — podklad a pavúk sa rozchádzajú.** Podklad tu správne hovorí „príkaz prokurátora s následným potvrdením sudcu", ale nasadený pavúk A11 má vo vetve „Vec, ktorá neznesie odklad" ešte staré lehoty **„oznámenie sudcovi do 1 hodiny"** a **„bez súhlasu do 12 hodín"**, ktoré sa v § 115 nenašli. Pri najbližšej korekcii ich zladiť s touto formuláciou.
+- **A11 — zladené s týmto podkladom (10. 8. 2026).** Vetva „Vec, ktorá neznesie odklad" mala staré lehoty „oznámenie sudcovi do 1 hodiny" a „bez súhlasu do 12 hodín", ktoré sa v § 115 nenašli. Nahradené znením zo zákona: príkaz vydá prokurátor, sudca pre prípravné konanie ho musí následne potvrdiť, inak sa odpočúvanie skončí a záznamy sú nepoužiteľné. Vetva tým dostala späť aj číslo — **(§ 115)**.
 - Všetky ostatné §§ v dávke sedia s tým, čo je nasadené v pavúkoch TPP A9–A13.

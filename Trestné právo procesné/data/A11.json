@@ -201,11 +201,12 @@
         ]
       },
       {
-        "label": "Vec, ktorá neznesie odklad",
+        "label": "Vec, ktorá neznesie odklad (§ 115)",
         "leaves": [
-          "Výnimka – vec neznesie odklad, súhlas nemožno včas získať",
-          "Poistky – oznámenie sudcovi do 1 hodiny, dodatočný súhlas",
-          "Limit – bez súhlasu do 12 hodín sa ITP okamžite ukončí"
+          "Kedy – vec neznesie odklad a príkaz sudcu nemožno získať vopred",
+          "Kto vydá príkaz – prokurátor, pred začatím stíhania aj v prípravnom konaní",
+          "Potvrdenie – sudca pre prípravné konanie musí príkaz následne potvrdiť",
+          "Ak nepotvrdí – odpočúvanie sa skončí a záznamy sú nepoužiteľné"
         ]
       },
       {
