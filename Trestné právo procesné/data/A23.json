@@ -201,22 +201,23 @@
       {
         "label": "Oslobodzujúci rozsudok (§ 285)",
         "leaves": [
-          "Dôvody – skutok sa nestal, nie je TČ, nespáchal ho obžalovaný, neprípustnosť",
+          "Dôvody (písm. a–e) – nedokázané, že sa stal skutok; nie je TČ; nedokázané, že ho spáchal; nepríčetnosť; nevyspelosť mladistvého do 15 rokov",
           "Dôsledky – nevinnosť; náhrada škody spravidla na civilné konanie"
         ]
       },
       {
         "label": "Ďalšie rozhodnutia",
         "leaves": [
-          "Zastavenie (§ 281) – dôvody podľa § 215 aj na pojednávaní",
-          "Postúpenie (§ 282) – priestupok či iný delikt",
+          "Zastavenie (§ 281) – neprípustnosť podľa § 9 ods. 1; fakultatívne dôvody § 215 ods. 2 a 3",
+          "Postúpenie (§ 280) – nepríslušnosť súdu, priestupok či iný delikt",
+          "Podmienečné zastavenie a zmier (§ 282) – odklony aj na pojednávaní",
           "Prerušenie (§ 283) – prekážka konania"
         ]
       },
       {
         "label": "Vyhlásenie",
         "leaves": [
-          "Verejne – aj pri neverejnom pojednávaní",
+          "Verejne vždy (§ 171 ods. 1) – aj keď bola verejnosť vylúčená",
           "Predseda senátu – stručné odôvodnenie"
         ]
       }

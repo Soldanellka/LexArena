@@ -185,9 +185,9 @@
     "center": "Preskúmanie × predbežné prejednanie obžaloby (§§ 241–244)",
     "branches": [
       {
-        "label": "Preskúmanie (§§ 241–242)",
+        "label": "Preskúmanie (§ 241)",
         "leaves": [
-          "Kto – predseda senátu alebo poverený člen",
+          "Kto – samosudca; obžalobu pre zločin s dolnou hranicou od 12 rokov predseda senátu (§ 243 ods. 1)",
           "Čo – oprávnenosť, opis skutku, podmienky konania, zákonnosť dôkazov",
           "Výsledok – hlavné pojednávanie alebo predbežné prejednanie"
         ]

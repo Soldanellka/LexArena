@@ -192,26 +192,26 @@
         ]
       },
       {
-        "label": "Príprava (§§ 250–252)",
+        "label": "Príprava (§§ 246–251)",
         "leaves": [
           "Predseda senátu – termín, predvolania, zabezpečenie dôkazov, návrhy strán"
         ]
       },
       {
-        "label": "Priebeh (§§ 253–290)",
+        "label": "Priebeh (§§ 252–276)",
         "leaves": [
-          "Začiatok – otvorenie, prítomnosť, poučenie, prečítanie obžaloby",
+          "Začiatok – otvorenie, prítomnosť (§ 252), poučenie, prečítanie obžaloby",
           "Výsluch obžalovaného – môže odmietnuť; bez nátlaku a sugescie",
           "Dokazovanie – svedkovia, znalci, listiny, vecné dôkazy, záznamy",
-          "Záverečné návrhy – prokurátor → poškodený → obhajca → obžalovaný",
-          "Posledné slovo a rozsudok – porada a vyhlásenie"
+          "Záverečné reči (§ 274) – prokurátor → poškodený → obhajca a obžalovaný vždy poslední",
+          "Posledné slovo (§ 275) a rozsudok – bez otázok; porada a vyhlásenie"
         ]
       },
       {
         "label": "Verejnosť a odročenie",
         "leaves": [
           "Vylúčenie verejnosti – maloletí, utajenie, bezpečnosť svedka, mravnosť",
-          "Odročenie – chýbajúci svedok, doplnenie dokazovania, prekážky"
+          "Odročenie (§ 277) – chýbajúci svedok, doplnenie dokazovania, prekážky"
         ]
       }
     ]

@@ -185,18 +185,18 @@
     "center": "Verejné × neverejné zasadnutie súdu",
     "branches": [
       {
-        "label": "Verejné zasadnutie",
+        "label": "Verejné zasadnutie (§§ 291–300)",
         "leaves": [
-          "Charakter – prístupné verejnosti; vylúčenie len zo zákonných dôvodov",
-          "Použitie – odvolanie, dohoda o vine a treste, podmienečné prepustenie, ochranné liečenie",
+          "Charakter – prístupné verejnosti; koná sa, len ak to zákon výslovne ustanovuje (§ 291)",
+          "Použitie – odvolanie, dohoda o vine a treste (§ 333), podmienečné prepustenie, ochranné liečenie",
           "Účel – dôkazy, vypočutie strán, verejné prerokovanie"
         ]
       },
       {
-        "label": "Neverejné zasadnutie",
+        "label": "Neverejné zasadnutie (§§ 301–303)",
         "leaves": [
-          "Charakter – bez verejnosti, spravidla bez strán, zo spisu",
-          "Použitie – procesné rozhodnutia, predbežné prejednanie, sťažnosti, odklony",
+          "Charakter – bez verejnosti, spravidla bez strán, zo spisu (§§ 302–303)",
+          "Použitie – zvyškové pravidlo (§ 301): procesné rozhodnutia, sťažnosti, väzba; predbežné prejednanie len niekedy",
           "Účel – rýchle rozhodnutie bez dokazovania"
         ]
       },
