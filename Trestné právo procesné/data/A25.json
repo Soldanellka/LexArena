@@ -192,29 +192,37 @@
         ]
       },
       {
-        "label": "Sťažnosť (§§ 179–195)",
+        "label": "Sťažnosť (§§ 185–195)",
         "leaves": [
-          "Proti čomu – uznesenie",
-          "Kto – obvinený, poškodený, zúčastnená osoba, prokurátor",
-          "Lehota – 3 dni; odkladný účinok",
+          "Proti čomu – uznesenie (§ 185)",
+          "Kto (§ 186) – obvinený, poškodený, zúčastnená osoba, prokurátor",
+          "Lehota (§ 187) – tri pracovné dni od oznámenia; odkladný účinok",
           "Rozhodnutie – zamietnutie, zrušenie, zmena (nadriadený orgán)"
         ]
       },
       {
-        "label": "Odvolanie (§§ 307–322)",
+        "label": "Odvolanie (§§ 306–329)",
         "leaves": [
-          "Proti čomu – rozsudok",
-          "Kto – obžalovaný, obhajca, prokurátor, poškodený v rozsahu nároku",
-          "Lehota – 15 dní; odkladný účinok",
+          "Proti čomu – rozsudok (§ 306)",
+          "Kto (§§ 307–308) – obžalovaný, obhajca, prokurátor; v neprospech len prokurátor, poškodený čo do náhrady škody",
+          "Lehota (§ 309) – 15 dní od oznámenia rozsudku; odkladný účinok",
           "Prieskum – zákonnosť, skutkové zistenia, trest, procesné chyby"
         ]
       },
       {
-        "label": "Rozhodnutia odvolacieho súdu (§ 321)",
+        "label": "Rozhodnutia odvolacieho súdu (§§ 319–322)",
         "leaves": [
-          "Potvrdenie – zamietnutie odvolania",
-          "Zrušenie – nové rozhodnutie alebo vrátenie veci",
-          "Zmena rozsudku"
+          "Zamietnutie (§ 319) – odvolanie nie je dôvodné",
+          "Zrušenie (§§ 320–321) – vrátenie veci alebo nové rozhodnutie",
+          "Zmena rozsudku (§ 322) – odvolací súd rozhodne sám"
+        ]
+      },
+      {
+        "label": "Poistky v prospech obžalovaného",
+        "leaves": [
+          "Reformatio in peius – v neprospech len na odvolanie prokurátora podané v neprospech (§ 322 ods. 3); pri sťažnosti § 195",
+          "Zákazy (§ 322 ods. 4) – odvolací súd nemôže sám uznať vinným zo skutku, z ktorého bol oslobodený, ani z ťažšieho TČ",
+          "Beneficium cohaesionis (§ 324) – prospech aj spoluobžalovanému, ktorý odvolanie nepodal"
         ]
       }
     ]

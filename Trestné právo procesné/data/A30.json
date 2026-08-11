@@ -189,7 +189,7 @@
       {
         "label": "Právny základ",
         "leaves": [
-          "Čl. 82–86 ZFEÚ – justičná spolupráca, uznávanie, aproximácia",
+          "Čl. 82–86 ZFEÚ – uznávanie a aproximácia (82), minimálne pravidlá (83), prevencia (84), Eurojust (85), EPPO (86)",
           "Rámec – priestor slobody, bezpečnosti a spravodlivosti"
         ]
       },
@@ -203,16 +203,17 @@
       {
         "label": "Nástroje",
         "leaves": [
-          "EZR – rýchle vydanie osoby, nahrádza extradíciu",
-          "EVP/EYP – nariadenie dôkazov v inom štáte",
+          "EZR – rýchle vydanie osoby, nahrádza extradíciu (zákon č. 154/2010 Z. z.)",
+          "EVP/EYP – nariadenie dôkazov v inom štáte (zákon č. 236/2017 Z. z.)",
           "Konfiškácia – zmrazenie a odňatie výnosov v celej EÚ"
         ]
       },
       {
         "label": "Agentúry a siete",
         "leaves": [
-          "Eurojust – koordinácia stíhaní, konflikty jurisdikcií, spoločné tímy",
-          "Europol – spravodajstvo a podpora proti organizovanému zločinu",
+          "Eurojust (čl. 85 ZFEÚ) – koordinácia stíhaní, konflikty jurisdikcií, spoločné tímy",
+          "Europol – spravodajstvo a podpora proti organizovanému zločinu; sám nevyšetruje ani nestíha",
+          "EPPO (čl. 86 ZFEÚ) – vyšetruje a stíha trestné činy proti finančným záujmom EÚ; SR je účastnícky štát",
           "EJS – priamy kontakt justičných orgánov"
         ]
       },

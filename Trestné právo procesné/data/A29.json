@@ -182,7 +182,7 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Právny styk s cudzinou (§§ 477–522)",
+    "center": "Právny styk s cudzinou (Piata časť TP, od § 477)",
     "branches": [
       {
         "label": "Právny základ",
@@ -214,8 +214,9 @@
         ]
       },
       {
-        "label": "Uznávanie a prevzatie (§§ 518–521)",
+        "label": "Uznávanie a prevzatie (§§ 515–521)",
         "leaves": [
+          "Podmienky (§§ 515–517) – cudzie rozhodnutie, podmienky uznania, premena trestu",
           "Uznanie cudzieho rozhodnutia (§§ 518–521) – uznávacie konanie, účinky, väzba, vykonávacie konanie",
           "Prevzatie a odovzdanie konania – účelnosť, pobyt, dôkazy, resocializácia"
         ]

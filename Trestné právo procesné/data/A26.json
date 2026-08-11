@@ -185,17 +185,20 @@
     "center": "Mimoriadne opravné prostriedky – zásah do právoplatnosti",
     "branches": [
       {
-        "label": "Dovolanie (§§ 368–382)",
+        "label": "Dovolanie (§§ 368–392)",
         "leaves": [
-          "Kto – obvinený a osoby v jeho prospech, generálny prokurátor, minister spravodlivosti",
+          "Kto (§ 369) – obvinený a osoby v jeho prospech, generálny prokurátor, minister spravodlivosti",
           "Dôvody (§ 371) – porušenie zákona, nesprávne posúdenie, procesné chyby, trest mimo hraníc",
+          "Lehota (§ 370) – v neprospech obvineného do troch rokov od doručenia rozhodnutia",
           "Kam – Najvyšší súd SR; jednota aplikácie práva"
         ]
       },
       {
-        "label": "Obnova konania (§§ 394–402)",
+        "label": "Obnova konania (§§ 393–405)",
         "leaves": [
           "Dôvody – nové skutočnosti a dôkazy, falšované dôkazy, závažná chyba",
+          "Kto (§ 396) – osoby oprávnené na návrh na povolenie obnovy",
+          "Hranica (§ 395) – obnova v neprospech obvineného je za ustanovených podmienok vylúčená",
           "Účel – materiálna spravodlivosť pri nesprávnom skutkovom stave"
         ]
       },
