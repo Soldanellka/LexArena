@@ -46,17 +46,17 @@
       }
     },
     {
-      "question": "Čo je záloha (preddavok) ako zabezpečovací prostriedok?",
+      "question": "Ktorý z uvedených je zabezpečovací prostriedok podľa Občianskeho zákonníka?",
       "options": [
-        "Suma zaplatená vopred, ktorá sa pri splnení zmluvy zarátava do plnenia alebo prepadá pri nesplnení",
-        "Záložné právo k nehnuteľnosti",
-        "Ručiteľský záväzok",
-        "Depozit u notára"
+        "Záložné právo",
+        "Záloha (preddavok)",
+        "Faktúra so splatnosťou",
+        "Výzva na zaplatenie"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Záloha (preddavok) je suma zaplatená vopred – pri splnení zmluvy sa zarátava do plnenia; pri nesplnení závisí od dohody, či prepadá.",
-        "wrong": "Nesprávne. Záloha nie je záložné právo – je to forma platby vopred slúžiaca aj ako zabezpečenie."
+        "correct": "Správne. Záložné právo je klasický zabezpečovací prostriedok podľa § 151a a nasl. OZ.",
+        "wrong": "Nesprávne. Záloha (preddavok) je forma platby vopred, nie zabezpečovací prostriedok; faktúra ani výzva záväzok nezabezpečujú."
       }
     },
     {
@@ -88,8 +88,8 @@
       "definition": "Subsidiárny záväzok ručiteľa plniť, ak dlžník nesplní po výzve."
     },
     {
-      "term": "Záloha (preddavok)",
-      "definition": "Suma zaplatená vopred, zarátava sa do plnenia alebo prepadá pri nesplnení."
+      "term": "Zábezpeka (§ 555 OZ)",
+      "definition": "Zloženie peňazí alebo cenných papierov na zabezpečenie záväzku; nezamieňať so zálohou (preddavkom), ktorá je platbou vopred."
     },
     {
       "term": "Zádržné právo (§ 175 OZ)",
@@ -219,11 +219,11 @@
         ]
       },
       {
-        "label": "Záloha",
+        "label": "Zábezpeka (§ 555 OZ)",
         "leaves": [
-          "dlžník odovzdá veriteľovi vec ako zabezpečenie",
-          "pri nesplnení záväzku môže veriteľ vec použiť na uspokojenie pohľadávky",
-          "jednoduchý a praktický prostriedok"
+          "dlžník zloží peniaze alebo cenné papiere na zabezpečenie záväzku",
+          "pri nesplnení záväzku sa veriteľ uspokojí zo zloženej zábezpeky",
+          "nezamieňať so zálohou (preddavkom) – tá je platbou vopred, nie zabezpečením"
         ]
       },
       {
@@ -231,7 +231,7 @@
         "leaves": [
           "dlžník písomne uzná svoj dlh",
           "posilňuje postavenie veriteľa",
-          "má účinok prerušenia premlčania"
+          "uznaním dlhu začína plynúť nová premlčacia doba (§ 110 ods. 1)"
         ]
       },
       {

@@ -60,17 +60,17 @@
       }
     },
     {
-      "question": "Čo je osobitosťou cestovnej zmluvy (zákon č. 281/2001 Z.z.)?",
+      "question": "Čo je osobitosťou zmluvy o zájazde (zákon č. 170/2018 Z. z.)?",
       "options": [
         "Je len o preprave",
-        "Komplexná zmluva zahŕňajúca prepravu, ubytovanie a iné služby - organizátor zodpovedá za celý zájazd",
+        "Komplexná zmluva zahŕňajúca prepravu, ubytovanie a iné služby - obstarávateľ zodpovedá za celý zájazd",
         "Len o ubytovaní",
         "Je synonymom letenky"
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Cestovná zmluva o organizovanom zájazde zaväzuje organizátora zabezpečiť balík služieb a zodpovedá za ich riadne poskytnutie.",
-        "wrong": "Nesprávne. Cestovná zmluva nie je len o preprave - ide o komplexný balík služieb (dovolenkový balík)."
+        "correct": "Správne. Zmluva o zájazde zaväzuje obstarávateľa zabezpečiť balík služieb cestovného ruchu a zodpovedá za ich riadne poskytnutie. Úpravu cestovnej zmluvy v OZ (§ 741a a nasl.) nahradil zákon č. 170/2018 Z. z.",
+        "wrong": "Nesprávne. Zmluva o zájazde nie je len o preprave - ide o komplexný balík služieb cestovného ruchu."
       }
     }
   ],
@@ -88,8 +88,8 @@
       "definition": "Zasielateľ vo vlastnom mene, na cudzí účet obstaráva prepravu veci."
     },
     {
-      "term": "Cestovná zmluva (zákon č. 281/2001 Z. z.)",
-      "definition": "Komplexná zmluva o organizovanom zájazde, organizátor zodpovedá za celý balík služieb."
+      "term": "Zmluva o zájazde (zákon č. 170/2018 Z. z.)",
+      "definition": "Komplexná zmluva o zájazde; obstarávateľ zodpovedá za celý balík služieb cestovného ruchu. Nahradila cestovnú zmluvu v OZ."
     },
     {
       "term": "Odstúpenie cestujúceho",
@@ -135,11 +135,11 @@
       ]
     },
     {
-      "title": "Prípad 2 – Odstúpenie od cestovnej zmluvy",
+      "title": "Prípad 2 – Odstúpenie od zmluvy o zájazde",
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Zákazník si objedná organizovaný zájazd, no mesiac pred odchodom sa rozhodne od cestovnej zmluvy odstúpiť.",
+          "question": "Zákazník si objedná organizovaný zájazd, no mesiac pred odchodom sa rozhodne od zmluvy o zájazde odstúpiť.",
           "options": [],
           "correct": 0
         },
@@ -147,12 +147,12 @@
           "question": "Môže tak urobiť?",
           "options": [
             "Áno, cestujúci môže od zmluvy o zájazde odstúpiť aj pred odchodom",
-            "Nie, cestovná zmluva je vždy absolútne záväzná bez možnosti odstúpenia",
+            "Nie, zmluva o zájazde je vždy absolútne záväzná bez možnosti odstúpenia",
             "Áno, ale iba ak zájazd zruší sám organizátor"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Cestujúci má právo odstúpiť od cestovnej zmluvy aj z vlastnej iniciatívy.",
+            "correct": "Správne. Cestujúci má právo odstúpiť od zmluvy o zájazde aj z vlastnej iniciatívy (zákon č. 170/2018 Z. z.).",
             "wrong": "Nesprávne. Zmluva nie je absolútne neodstúpiteľná a odstúpenie nezávisí len od zrušenia zájazdu organizátorom."
           }
         },
@@ -221,11 +221,11 @@
         ]
       },
       {
-        "label": "Cestovná zmluva (organizovaný zájazd)",
+        "label": "Zmluva o zájazde (zákon č. 170/2018 Z. z.)",
         "leaves": [
           "komplexná zmluva o kombinácii služieb cestovného ruchu",
-          "upravená zákonom o zájazdoch",
-          "organizátor poskytuje dopravu, ubytovanie a program",
+          "nahradila cestovnú zmluvu v OZ (§ 741a a nasl. zrušené)",
+          "obstarávateľ poskytuje dopravu, ubytovanie a program",
           "vysoká ochrana spotrebiteľa"
         ]
       },
@@ -235,7 +235,7 @@
           "kľúčové pri cestovaní, logistike, doručovaní zásielok",
           "jasné pravidlá zodpovednosti dopravcu",
           "ochrana cestujúceho pri úrazoch a škodách",
-          "cestovná zmluva chráni spotrebiteľa pri zájazdoch"
+          "zmluva o zájazde chráni cestujúceho ako spotrebiteľa"
         ]
       }
     ]

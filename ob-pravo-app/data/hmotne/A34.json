@@ -35,14 +35,14 @@
       "question": "Čo je krátkodobý nájom bytu podľa zákona č. 98/2014 Z.z.?",
       "options": [
         "Nájom kratší ako 1 rok",
-        "Nájom na dobu určitú maximálne 6 rokov uzavretý v zákonom predpísanej forme s registráciou u notára",
+        "Nájom na dobu určitú maximálne 6 rokov uzavretý v písomnej forme, s registráciou prenajímateľa u správcu dane (daňový úrad)",
         "Nájom bez výpovednej lehoty",
         "Iba turistický prenájom"
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Zákon č. 98/2014 Z.z. upravuje krátkodobý nájom bytu: doba do 6 rokov, zmluva registrovaná u notára, kratšia ochrana nájomcu.",
-        "wrong": "Nesprávne. Krátkodobý nájom podľa tohto zákona nemá maximálnu dobu 1 rok - je to až 6 rokov."
+        "correct": "Správne. Zákon č. 98/2014 Z. z. upravuje krátkodobý nájom bytu: doba do 6 rokov, písomná zmluva a registrácia prenajímateľa u správcu dane, kratšia ochrana nájomcu.",
+        "wrong": "Nesprávne. Krátkodobý nájom podľa tohto zákona nemá maximálnu dobu 1 rok – je to až 6 rokov; podmienkou je registrácia u správcu dane, nie u notára."
       }
     },
     {
@@ -81,7 +81,7 @@
     },
     {
       "term": "Krátkodobý nájom bytu (zákon č. 98/2014 Z. z.)",
-      "definition": "Na dobu určitú do 6 rokov, so zápisom u notára."
+      "definition": "Na dobu určitú do 6 rokov, s registráciou prenajímateľa u správcu dane."
     },
     {
       "term": "Výpovedná lehota pri krátkodobom nájme",
@@ -139,7 +139,7 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vlastník bytu sa rozhodne prenajať byt na presne 2 roky formou krátkodobého nájmu podľa zákona č. 98/2014 Z. z., so zápisom zmluvy u notára.",
+          "question": "Vlastník bytu sa rozhodne prenajať byt na presne 2 roky formou krátkodobého nájmu podľa zákona č. 98/2014 Z. z. a ako prenajímateľ sa registruje u správcu dane.",
           "options": [],
           "correct": 0
         },
@@ -215,7 +215,7 @@
         "leaves": [
           "určený na flexibilné bývanie, najviac 6 rokov",
           "zmluva musí byť písomná",
-          "musí byť registrovaná v Notárskom centrálnom registri nájmov",
+          "prenajímateľ musí byť registrovaný u správcu dane; notársky register nájmov neexistuje",
           "výpovedná lehota len 15 dní, jednoduchšie ukončenie nájmu",
           "prenajímateľ má širšie možnosti výpovede a väčšiu kontrolu"
         ]

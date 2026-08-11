@@ -1,10 +1,10 @@
 {
   "id": "38",
   "title": "Zmluva o úschove a zmluva o združení",
-  "summary": "Zmluva o úschove (§ 747–753 OZ)\nZmluva o úschove je záväzok, v ktorom schovateľ prevezme vec od uschovateľa a zaväzuje sa ju uschovať a vrátiť v neporušenom stave.\nPodstatné znaky:\n– predmetom je individuálne určená vec,\n– schovateľ vec len drží, nevyužíva ju,\n– úschova môže byť odplatná aj bezodplatná.\n\nSchovateľ je povinný:\n– starať sa o vec s odbornou starostlivosťou,\n– chrániť ju pred poškodením, stratou či zničením,\n– vrátiť ju v stave, v akom ju prevzal (s prihliadnutím na obvyklé opotrebenie, ak je prípustné).\n\nZodpovedá za škodu, ak poruší povinnosti alebo ak vec poškodí osoba, ktorú pri úschove použil.\nUschovateľ je povinný nahradiť náklady spojené s úschovou.\n\nZmluva o združení (§ 829–841 OZ)\nZmluva o združení je záväzok, v ktorom sa viacero osôb združí na dosiahnutie dohodnutého účelu.\nZdruženie nie je právnickou osobou – ide o zmluvný záväzkový vzťah medzi účastníkmi.\n\nPodstatné znaky:\n– účastníci sa zaväzujú spolupracovať,\n– vkladajú prácu, majetok alebo iné hodnoty,\n– nesú spoločné záväzky voči tretím osobám, ak vzniknú pri plnení účelu združenia.\n\nZdruženie sa riadi:\n– dohodou účastníkov,\n– subsidiárne ustanoveniami OZ.\n\nKaždý účastník má právo:\n– podieľať sa na rozhodovaní,\n– kontrolovať činnosť združenia,\n– vystúpiť zo združenia, ak tým neohrozí jeho účel.\n\nMajetok získaný činnosťou združenia je spoločný majetok účastníkov.\nZánik združenia nastáva dohodou, splnením účelu alebo vystúpením účastníkov, ak tým združenie stratí zmysel.\n\nZdroje: OZ (40/1964 Zb.), § 747–753, § 829–841; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
+  "summary": "Zmluva o úschove (§ 747–753 OZ)\nZmluva o úschove je záväzok, v ktorom uschovávateľ prevezme vec od zložiteľa a zaväzuje sa ju uschovať a vrátiť v neporušenom stave.\nPodstatné znaky:\n– predmetom je individuálne určená vec,\n– uschovávateľ vec len drží, nevyužíva ju,\n– úschova môže byť odplatná aj bezodplatná.\n\nSchovateľ je povinný:\n– starať sa o vec s odbornou starostlivosťou,\n– chrániť ju pred poškodením, stratou či zničením,\n– vrátiť ju v stave, v akom ju prevzal (s prihliadnutím na obvyklé opotrebenie, ak je prípustné).\n\nZodpovedá za škodu, ak poruší povinnosti alebo ak vec poškodí osoba, ktorú pri úschove použil.\nUuschovávateľ je povinný nahradiť náklady spojené s úschovou.\n\nZmluva o združení (§ 829–841 OZ)\nZmluva o združení je záväzok, v ktorom sa viacero osôb združí na dosiahnutie dohodnutého účelu.\nZdruženie nie je právnickou osobou – ide o zmluvný záväzkový vzťah medzi účastníkmi.\n\nPodstatné znaky:\n– účastníci sa zaväzujú spolupracovať,\n– vkladajú prácu, majetok alebo iné hodnoty,\n– nesú spoločné záväzky voči tretím osobám, ak vzniknú pri plnení účelu združenia.\n\nZdruženie sa riadi:\n– dohodou účastníkov,\n– subsidiárne ustanoveniami OZ.\n\nKaždý účastník má právo:\n– podieľať sa na rozhodovaní,\n– kontrolovať činnosť združenia,\n– vystúpiť zo združenia, ak tým neohrozí jeho účel.\n\nMajetok získaný činnosťou združenia je spoločný majetok účastníkov.\nZánik združenia nastáva dohodou, splnením účelu alebo vystúpením účastníkov, ak tým združenie stratí zmysel.\n\nZdroje: OZ (40/1964 Zb.), § 747–753, § 829–841; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
-      "question": "Čo je povinnosťou schovateľa pri zmluve o úschove?",
+      "question": "Čo je povinnosťou uschovávateľa pri zmluve o úschove?",
       "options": [
         "Len prevziať vec",
         "Prevziať vec, uschovať ju a vrátiť ju v pôvodnom stave úschovu",
@@ -18,10 +18,10 @@
       }
     },
     {
-      "question": "Zodpovedá schovateľ za škodu na uchovávanej veci?",
+      "question": "Zodpovedá uschovávateľ za škodu na uchovávanej veci?",
       "options": [
         "Nie, riziko nesie vkladateľ",
-        "Áno - schovateľ zodpovedá za škodu na veci, ak nepostupoval s patričnou starostlivosťou",
+        "Áno - uschovávateľ zodpovedá za škodu na veci, ak nepostupoval s patričnou starostlivosťou",
         "Len za úmyselné poškodenie",
         "Len ak je zmluva písomná"
       ],
@@ -80,7 +80,7 @@
       "definition": "Schovateľ prevezme vec, uschová ju a vráti v pôvodnom stave."
     },
     {
-      "term": "Zodpovednosť schovateľa",
+      "term": "Zodpovednosť uschovávateľa",
       "definition": "Zodpovedá za škodu na veci, ak nepostupoval s náležitou starostlivosťou."
     },
     {
@@ -102,12 +102,12 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Osoba dá do úschovy cenný obraz; schovateľ ho neuloží v primeraných podmienkach a obraz sa počas úschovy poškodí vlhkosťou.",
+          "question": "Osoba dá do úschovy cenný obraz; uschovávateľ ho neuloží v primeraných podmienkach a obraz sa počas úschovy poškodí vlhkosťou.",
           "options": [],
           "correct": 0
         },
         {
-          "question": "Zodpovedá schovateľ za takto vzniknutú škodu?",
+          "question": "Zodpovedá uschovávateľ za takto vzniknutú škodu?",
           "options": [
             "Áno, ak nepostupoval s náležitou starostlivosťou pri opatere zverenej veci",
             "Nie, riziko poškodenia nesie vždy vkladateľ",
@@ -120,7 +120,7 @@
           }
         },
         {
-          "question": "Aká je základná povinnosť schovateľa pri zmluve o úschove?",
+          "question": "Aká je základná povinnosť uschovávateľa pri zmluve o úschove?",
           "options": [
             "Prevziať vec, riadne sa o ňu starať a vrátiť ju v pôvodnom stave",
             "Iba prevziať vec bez ďalších povinností",
@@ -129,7 +129,7 @@
           "correct": 0,
           "explanation": {
             "correct": "Správne. Schovateľ má trojitú povinnosť – prevzatie, riadnu starostlivosť a vrátenie veci.",
-            "wrong": "Nesprávne. Samotné prevzatie bez ďalšej starostlivosti nestačí a schovateľ vec štandardne nepredáva."
+            "wrong": "Nesprávne. Samotné prevzatie bez ďalšej starostlivosti nestačí a uschovávateľ vec štandardne nepredáva."
           }
         }
       ]
@@ -184,26 +184,26 @@
       {
         "label": "Zmluva o úschove (§ 747–753 OZ)",
         "leaves": [
-          "schovateľ prevezme vec a zaväzuje sa ju uschovať a vrátiť",
+          "uschovávateľ prevezme vec a zaväzuje sa ju uschovať a vrátiť",
           "predmetom je individuálne určená vec",
-          "schovateľ vec len drží, nevyužíva ju",
+          "uschovávateľ vec len drží, nevyužíva ju",
           "úschova môže byť odplatná aj bezodplatná"
         ]
       },
       {
-        "label": "Povinnosti schovateľa a uschovateľa",
+        "label": "Povinnosti uschovávateľa a zložiteľa",
         "leaves": [
-          "schovateľ: starať sa o vec s odbornou starostlivosťou",
-          "schovateľ: chrániť ju pred poškodením, stratou, zničením",
-          "schovateľ: vrátiť ju v stave, v akom ju prevzal",
-          "uschovateľ: nahradiť náklady spojené s úschovou",
-          "uschovateľ: prevziať vec späť po skončení úschovy"
+          "uschovávateľ: starať sa o vec s odbornou starostlivosťou",
+          "uschovávateľ: chrániť ju pred poškodením, stratou, zničením",
+          "uschovávateľ: vrátiť ju v stave, v akom ju prevzal",
+          "zložiteľ: nahradiť náklady spojené s úschovou",
+          "zložiteľ: prevziať vec späť po skončení úschovy"
         ]
       },
       {
         "label": "Zodpovednosť pri úschove",
         "leaves": [
-          "schovateľ zodpovedá za škodu pri porušení povinností",
+          "uschovávateľ zodpovedá za škodu pri porušení povinností",
           "zodpovedá aj za škodu spôsobenú osobou, ktorú pri úschove použil",
           "ak vec zanikne alebo sa poškodí bez jeho zavinenia, nezodpovedá"
         ]

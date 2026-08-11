@@ -1,7 +1,7 @@
 {
   "id": "12",
   "title": "Vlastnícke právo – pojem, obsah, nadobúdanie, ochrana",
-  "summary": "Vlastnícke právo je najúplnejšie vecné právo, ktoré poskytuje vlastníkovi najširšie právne panstvo nad vecou (§ 123 OZ). Je absolútnym právom pôsobiacim erga omnes – každý je povinný rešpektovať vlastnícke postavenie oprávneného.\n\nObsah vlastníckeho práva\nVlastnícke právo zahŕňa tradičné oprávnenia:\n– ius possidendi – právo vec držať,\n– ius utendi – právo vec užívať,\n– ius fruendi – právo požívať plody a úžitky,\n– ius disponendi – právo s vecou nakladať (previesť, zaťažiť, zničiť).\n\nVlastník môže svoje právo obmedziť zmluvne alebo ho obmedzuje zákon (napr. susedské práva, ochrana životného prostredia).\n\nNadobúdanie vlastníckeho práva\nVlastníctvo možno nadobudnúť rôznymi spôsobmi:\n\n1. Zmluvou  \nPri nehnuteľnostiach je potrebné:\n– uzavretie zmluvy,\n– vklad do katastra nehnuteľností, ktorý má konštitutívny účinok.\n\n2. Vydržaním (§ 134 OZ)  \nVydržanie je originárny spôsob nadobudnutia vlastníctva. Podmienky:\n– oprávnená držba,\n– dobrá viera držiteľa,\n– nepretržitá držba počas zákonom stanovenej doby.\nLehota: 10 rokov pri nehnuteľnostiach, 3 roky pri hnuteľných veciach.\n\n3. Dedičstvom  \nVlastníctvo prechádza na dediča smrťou poručiteľa.\n\n4. Rozhodnutím orgánu verejnej moci  \nNapr. v rámci exekúcie, konkurzu či vyvlastnenia.\n\nOchrana vlastníckeho práva\nOZ poskytuje vlastníkom silnú súdnu ochranu:\n\n– Reivindikačná žaloba (§ 126 OZ)  \nŽaloba na vydanie veci proti tomu, kto ju neoprávnene drží.\n\n– Negatórna žaloba (§ 127 OZ)  \nŽaloba na odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov (napr. imisie, obťažovanie).\n\nOchrana vlastníctva je absolútna a súdy ju poskytujú aj proti zásahom verejnej moci, ak nie sú zákonné.\n\nZdroje: OZ (40/1964 Zb.), § 123, § 126, § 127, § 134; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
+  "summary": "Vlastnícke právo je najúplnejšie vecné právo, ktoré poskytuje vlastníkovi najširšie právne panstvo nad vecou (§ 123 OZ). Je absolútnym právom pôsobiacim erga omnes – každý je povinný rešpektovať vlastnícke postavenie oprávneného.\n\nObsah vlastníckeho práva\nVlastnícke právo zahŕňa tradičné oprávnenia:\n– ius possidendi – právo vec držať,\n– ius utendi – právo vec užívať,\n– ius fruendi – právo požívať plody a úžitky,\n– ius disponendi – právo s vecou nakladať (previesť, zaťažiť, zničiť).\n\nVlastník môže svoje právo obmedziť zmluvne alebo ho obmedzuje zákon (napr. susedské práva, ochrana životného prostredia).\n\nNadobúdanie vlastníckeho práva\nVlastníctvo možno nadobudnúť rôznymi spôsobmi:\n\n1. Zmluvou  \nPri nehnuteľnostiach je potrebné:\n– uzavretie zmluvy,\n– vklad do katastra nehnuteľností, ktorý má konštitutívny účinok.\n\n2. Vydržaním (§ 134 OZ)  \nVydržanie je originárny spôsob nadobudnutia vlastníctva. Podmienky:\n– oprávnená držba,\n– dobrá viera držiteľa,\n– nepretržitá držba počas zákonom stanovenej doby.\nLehota: 10 rokov pri nehnuteľnostiach, 3 roky pri hnuteľných veciach.\n\n3. Dedičstvom  \nVlastníctvo prechádza na dediča smrťou poručiteľa.\n\n4. Rozhodnutím orgánu verejnej moci  \nNapr. v rámci exekúcie, konkurzu či vyvlastnenia.\n\nOchrana vlastníckeho práva\nOZ poskytuje vlastníkom silnú súdnu ochranu:\n\n– Reivindikačná žaloba (§ 126 OZ)  \nŽaloba na vydanie veci proti tomu, kto ju neoprávnene drží.\n\n– Negatórna žaloba (§ 126 OZ)  \nŽaloba na odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov (napr. imisie, obťažovanie).\n\nOchrana vlastníctva je absolútna a súdy ju poskytujú aj proti zásahom verejnej moci, ak nie sú zákonné.\n\nZdroje: OZ (40/1964 Zb.), § 123, § 126, § 127, § 134; judikatúra NS SR; Lazar – Števček a kol.: Občiansky zákonník. Veľký komentár;",
   "quiz": [
     {
       "question": "Čo vyjadruje ius disponendi ako súčasť vlastníckeho práva?",
@@ -42,7 +42,7 @@
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 126 OZ: vlastník má právo na vydanie veci od toho, kto mu ju neoprávnene zadržuje – reivindikačná (vindikačná) žaloba.",
-        "wrong": "Nesprávne. Žaloba na zdržanie sa rušenia je negatórna (§ 127 OZ). Reivindikačná žaloba smeruje na vydanie veci."
+        "wrong": "Nesprávne. Žaloba na zdržanie sa rušenia je negatórna (§ 126 OZ). Reivindikačná žaloba smeruje na vydanie veci."
       }
     },
     {
@@ -60,7 +60,7 @@
       }
     },
     {
-      "question": "Čo je negatórna žaloba (§ 127 OZ)?",
+      "question": "Čo je negatórna žaloba (§ 126 OZ)?",
       "options": [
         "Žaloba na vydanie veci",
         "Žaloba vlastníka na zdržanie sa neoprávnených zásahov do jeho vlastníckeho práva",
@@ -88,7 +88,7 @@
       "definition": "Žaloba vlastníka na vydanie veci od neoprávneného držiteľa."
     },
     {
-      "term": "Negatórna žaloba (§ 127 OZ)",
+      "term": "Negatórna žaloba (§ 126 OZ)",
       "definition": "Žaloba na zdržanie sa neoprávnených zásahov do vlastníckeho práva."
     },
     {
@@ -214,7 +214,7 @@
         "label": "Ochrana vlastníckeho práva",
         "leaves": [
           "reivindikačná žaloba (§ 126 OZ): žaloba na vydanie veci proti tomu, kto ju neoprávnene drží",
-          "negatórna žaloba (§ 127 OZ): odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov",
+          "negatórna žaloba (§ 126 OZ): odstránenie neoprávneného zásahu a zdržanie sa ďalších zásahov",
           "typicky: imisie, obťažovanie, zásahy do pozemku",
           "ochrana vlastníctva je absolútna",
           "súdy chránia vlastníka aj proti zásahom verejnej moci, ak nie sú zákonné"

@@ -20,15 +20,15 @@
     {
       "question": "Aký je primárny spôsob náhrady škody?",
       "options": [
-        "Vždy peňažná náhrada",
-        "Naturálna reštitúcia (uvedenie do pôvodného stavu) – § 442 ods. 2 OZ",
+        "Peňažná náhrada (§ 442); uvedenie do predošlého stavu len na žiadosť poškodeného, ak je možné a účelné",
+        "Naturálna reštitúcia vždy a bez výnimky",
         "Závisí od výšky škody",
         "Len dohodou strán"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. § 442 ods. 2 OZ: škoda sa nahrádza predovšetkým uvedením do predošlého stavu (naturálna reštitúcia). Ak to nie je možné alebo účelné, nahrádza sa peňažne.",
-        "wrong": "Nesprávne. Primárnou formou je naturálna reštitúcia, nie peňažná náhrada."
+        "correct": "Správne. § 442 OZ: škoda sa uhrádza v peniazoch. Uvedenie do predošlého stavu prichádza do úvahy len vtedy, ak o to poškodený požiada a je to možné a účelné.",
+        "wrong": "Nesprávne. Pravidlom je peňažná náhrada, naturálna reštitúcia je výnimka viazaná na žiadosť poškodeného."
       }
     },
     {
@@ -84,8 +84,8 @@
       "definition": "Majetkový prospech, o ktorý poškodený prišiel v dôsledku škodovej udalosti."
     },
     {
-      "term": "Naturálna reštitúcia (§ 442 ods. 2 OZ)",
-      "definition": "Prednostný spôsob náhrady – uvedenie do predošlého stavu."
+      "term": "Peňažná náhrada ako pravidlo (§ 442 OZ); naturálna reštitúcia na žiadosť",
+      "definition": "Škoda sa uhrádza v peniazoch; uvedenie do predošlého stavu len na žiadosť poškodeného, ak je možné a účelné."
     },
     {
       "term": "Spoluzavinenie poškodeného (§ 441 OZ)",
@@ -109,14 +109,14 @@
         {
           "question": "Aký spôsob náhrady škody má prednosť?",
           "options": [
-            "Naturálna reštitúcia – uvedenie veci do pôvodného stavu (napr. oprava)",
-            "Vždy len peňažná náhrada bez ohľadu na možnosť opravy",
+            "Peňažná náhrada",
+            "Naturálna reštitúcia vždy, bez ohľadu na vôľu poškodeného",
             "Poškodený si nemôže vybrať žiadny spôsob"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zákon uprednostňuje naturálnu reštitúciu pred peňažnou náhradou, ak je možná a účelná.",
-            "wrong": "Nesprávne. Peňažná náhrada nie je vždy prvou voľbou a poškodený nie je bez akejkoľvek možnosti voľby."
+            "correct": "Správne. Pravidlom je peňažná náhrada (§ 442 OZ); uvedenie veci do predošlého stavu len ak o to poškodený požiada a je to možné a účelné.",
+            "wrong": "Nesprávne. Naturálna reštitúcia nie je pravidlom – nastupuje len na žiadosť poškodeného."
           }
         },
         {
@@ -191,12 +191,11 @@
         ]
       },
       {
-        "label": "Spôsob náhrady škody",
+        "label": "Spôsob náhrady škody (§ 442 OZ)",
         "leaves": [
-          "naturálna reštitúcia: uvedenie do pôvodného stavu",
-          "oprava veci, obnovenie stavu, vrátenie veci",
-          "preferovaná, ak je možná a účelná",
-          "peňažná náhrada, ak naturálna reštitúcia nie je možná alebo účelná",
+          "peňažná náhrada – pravidlo, škoda sa uhrádza predovšetkým v peniazoch",
+          "uvedenie do predošlého stavu – len na žiadosť poškodeného, ak je možné a účelné",
+          "podoba reštitúcie: oprava veci, obnovenie stavu, vrátenie veci",
           "výška podľa ceny v čase vzniku škody"
         ]
       },
