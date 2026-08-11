@@ -2,14 +2,23 @@
   "id": "14. A",
   "title": "Spôsoby skončenia pracovného pomeru – formálne náležitosti, odstupné, odchodné",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "skončenie pracovného pomeru", "odstupné", "odchodné", "výpoveď", "dohoda"],
-
-  "summary": "Pracovný pomer možno skončiť len spôsobmi uvedenými v § 59 Zákonníka práce – ide o kogentnú úpravu, od ktorej sa nemožno odchýliť. Skončenie pracovného pomeru môže nastať na základe právnych úkonov (dohoda, výpoveď, okamžité skončenie, skončenie v skúšobnej dobe), právnych udalostí (plynutie času, smrť zamestnanca), iných právnych skutočností (úradné rozhodnutie) alebo priamo zo zákona (napr. porušenie podmienok dočasného pridelenia). Každý spôsob má vlastné formálne náležitosti, najmä písomnú formu a doručenie.\n\nOdstupné predstavuje kompenzáciu pri skončení pracovného pomeru z dôvodov na strane zamestnávateľa alebo zo zdravotných dôvodov. Výška odstupného závisí od dĺžky trvania pracovného pomeru, pričom pri pracovnom úraze alebo chorobe z povolania patrí 10-násobok priemerného zárobku. Odchodné je jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok.\n\nPríklad: Zamestnávateľ ruší časť prevádzky a dáva zamestnancovi výpoveď. Ide o organizačný dôvod podľa § 63 ods. 1 písm. b) ZP, preto zamestnancovi patrí odstupné podľa dĺžky trvania pracovného pomeru.\n\nKľúčové slová: dohoda; výpoveď; okamžité skončenie; skúšobná doba; odstupné; odchodné; právne udalosti; písomná forma.\n\nZapamätaj si:\n- Spôsoby skončenia pracovného pomeru sú kogentné – nemožno ich rozširovať.\n- Výpoveď zamestnávateľa musí byť vždy písomná a odôvodnená.\n- Dohoda musí byť písomná a na žiadosť zamestnanca obsahovať dôvod.\n- Odstupné patrí len pri zákonom stanovených dôvodoch.\n- Odchodné patrí len pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok.",
-
+  "tags": [
+    "pracovné právo",
+    "skončenie pracovného pomeru",
+    "odstupné",
+    "odchodné",
+    "výpoveď",
+    "dohoda"
+  ],
+  "summary": "Spôsoby skončenia pracovného pomeru – formálne náležitosti, odstupné, odchodné Pracovný pomer možno skončiť len spôsobmi uvedenými v § 59 Zákonníka práce – ide o kogentnú úpravu, od ktorej sa nemožno odchýliť. Skončenie môže nastať právnym úkonom (dohoda § 60, výpoveď § 61 – 62, okamžité skončenie § 68 – 70, skončenie v skúšobnej dobe § 72), právnou udalosťou (uplynutie dohodnutej doby, smrť zamestnanca), úradným rozhodnutím (napr. u cudzinca zrušenie povolenia na pobyt) alebo priamo zo zákona. Právne úkony smerujúce k skončeniu musia byť písomné a doručené, inak sú neplatné; výpoveď a okamžité skončenie musia mať skutkovo vymedzený dôvod, ktorý nemožno dodatočne meniť.\n\nOdstupné (§ 76 ZP) patrí zamestnancovi pri skončení dohodou alebo výpoveďou z organizačných dôvodov (§ 63 ods. 1 písm. a, b) alebo zo zdravotných dôvodov (písm. c). Jeho výška sa odstupňuje podľa dĺžky trvania pracovného pomeru (spravidla od jedného po najviac päť priemerných mesačných zárobkov pri dohode; presné pásma podľa aktuálneho § 76). Ak pracovný pomer skončil pre pracovný úraz alebo chorobu z povolania, patrí odstupné najmenej v sume 10-násobku priemerného mesačného zárobku (§ 76 ods. 2 ZP).\n\nOdchodné (§ 76a ZP) je jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na starobný, predčasný starobný alebo invalidný dôchodok (nad 70 %), ak zamestnanec oň požiada; patrí najmenej v sume priemerného mesačného zárobku.\n\nPríklad: Zamestnávateľ ruší časť prevádzky a dáva zamestnancovi výpoveď. Ide o organizačný dôvod podľa § 63 ods. 1 písm. b) ZP, preto zamestnancovi patrí odstupné podľa dĺžky trvania pracovného pomeru (§ 76 ZP).\n\nZapamätaj si:\n\nSpôsoby skončenia sú kogentné (§ 59 ZP) – nemožno ich rozširovať.\nPrávne úkony na skončenie musia byť písomné a doručené; výpoveď a okamžité skončenie s presným dôvodom.\nOdstupné (§ 76) patrí pri skončení z organizačných alebo zdravotných dôvodov; pri úraze/chorobe z povolania min. 10-násobok priemerného zárobku.\nOdchodné (§ 76a) patrí pri prvom skončení po vzniku nároku na dôchodok, min. priemerný mesačný zárobok.\nVýška odstupného sa odstupňuje podľa dĺžky trvania pracovného pomeru.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 59 – § 62, § 68 – § 72, § 76, § 76a",
   "quiz": [
     {
       "question": "Ktorý spôsob skončenia pracovného pomeru je dvojstranný právny úkon?",
-      "options": ["Výpoveď", "Dohoda", "Okamžité skončenie"],
+      "options": [
+        "Výpoveď",
+        "Dohoda",
+        "Okamžité skončenie"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Dohoda je dvojstranný právny úkon vyžadujúci súhlas oboch strán.",
@@ -18,7 +27,11 @@
     },
     {
       "question": "Kedy musí byť výpoveď zamestnávateľa odôvodnená?",
-      "options": ["Vždy", "Nikdy", "Len ak o to zamestnanec požiada"],
+      "options": [
+        "Vždy",
+        "Nikdy",
+        "Len ak o to zamestnanec požiada"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zamestnávateľ môže dať výpoveď len z dôvodov uvedených v § 63 ZP.",
@@ -27,7 +40,11 @@
     },
     {
       "question": "Kedy vzniká nárok na odstupné?",
-      "options": ["Pri výpovedi zo strany zamestnanca", "Pri organizačných dôvodoch alebo zdravotnej nespôsobilosti", "Pri skončení v skúšobnej dobe"],
+      "options": [
+        "Pri výpovedi zo strany zamestnanca",
+        "Pri organizačných dôvodoch alebo zdravotnej nespôsobilosti",
+        "Pri skončení v skúšobnej dobe"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odstupné patrí pri zákonom stanovených dôvodoch podľa § 76 ZP.",
@@ -36,7 +53,11 @@
     },
     {
       "question": "Kedy patrí odchodné?",
-      "options": ["Pri nástupe na materskú dovolenku", "Pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok", "Pri PN"],
+      "options": [
+        "Pri nástupe na materskú dovolenku",
+        "Pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok",
+        "Pri PN"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odchodné patrí pri prvom skončení po vzniku nároku na dôchodok.",
@@ -45,7 +66,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Skončenie v skúšobnej dobe musí byť písomné", "Výpoveď môže byť ústna", "Dohoda nemusí byť písomná"],
+      "options": [
+        "Skončenie v skúšobnej dobe musí byť písomné",
+        "Výpoveď môže byť ústna",
+        "Dohoda nemusí byť písomná"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Všetky spôsoby skončenia pracovného pomeru musia byť písomné.",
@@ -53,15 +78,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Dohoda", "definition": "Dvojstranný právny úkon, ktorým sa pracovný pomer končí ku dňu dohodnutému stranami." },
-    { "term": "Výpoveď", "definition": "Jednostranné skončenie pracovného pomeru s výpovednou dobou; zamestnávateľ musí uviesť zákonný dôvod." },
-    { "term": "Okamžité skončenie", "definition": "Mimoriadny spôsob skončenia pracovného pomeru možný len v taxatívne uvedených prípadoch." },
-    { "term": "Odstupné", "definition": "Finančné plnenie pri skončení pracovného pomeru z organizačných alebo zdravotných dôvodov." },
-    { "term": "Odchodné", "definition": "Jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok." }
+    {
+      "term": "Dohoda",
+      "definition": "Dvojstranný právny úkon, ktorým sa pracovný pomer končí ku dňu dohodnutému stranami."
+    },
+    {
+      "term": "Výpoveď",
+      "definition": "Jednostranné skončenie pracovného pomeru s výpovednou dobou; zamestnávateľ musí uviesť zákonný dôvod."
+    },
+    {
+      "term": "Okamžité skončenie",
+      "definition": "Mimoriadny spôsob skončenia pracovného pomeru možný len v taxatívne uvedených prípadoch."
+    },
+    {
+      "term": "Odstupné",
+      "definition": "Finančné plnenie pri skončení pracovného pomeru z organizačných alebo zdravotných dôvodov."
+    },
+    {
+      "term": "Odchodné",
+      "definition": "Jednorazové plnenie pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Výpoveď z organizačných dôvodov a nárok na odstupné",
@@ -74,7 +112,11 @@
         },
         {
           "question": "Krok 1: Ide o zákonný dôvod na výpoveď?",
-          "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zrušenie pracovného miesta je organizačný dôvod podľa § 63 ods. 1 písm. b) ZP.",
@@ -83,7 +125,11 @@
         },
         {
           "question": "Krok 2: Patrí odstupné?",
-          "options": ["Áno", "Nie", "Len ak je zamestnanec vo firme viac ako 10 rokov"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak je zamestnanec vo firme viac ako 10 rokov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri organizačných dôvodoch vzniká nárok na odstupné podľa § 76 ZP.",
@@ -105,7 +151,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Odchodné pri odchode do dôchodku",
       "difficulty": "ľahká",
@@ -117,7 +162,11 @@
         },
         {
           "question": "Krok 1: Ide o prvé skončenie pracovného pomeru po vzniku nároku na dôchodok?",
-          "options": ["Áno", "Nie", "Nie je to podstatné"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Nie je to podstatné"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odchodné patrí len pri prvom skončení pracovného pomeru po vzniku nároku.",
@@ -126,7 +175,11 @@
         },
         {
           "question": "Krok 2: Patrí odchodné?",
-          "options": ["Áno", "Nie", "Len ak zamestnávateľ rozhodne"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnávateľ rozhodne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Odchodné je zákonný nárok podľa § 76a ZP.",
@@ -158,14 +211,80 @@
   "spider": {
     "center": "Skončenie pracovného pomeru – dohoda × výpoveď × okamžité skončenie × skúšobná doba × odstupné × odchodné",
     "branches": [
-      { "label": "Spôsoby skončenia pracovného pomeru (§ 59 ZP)", "leaves": ["Kogentné, uzavretý výpočet: dohoda", "Kogentné, uzavretý výpočet: výpoveď", "Kogentné, uzavretý výpočet: okamžité skončenie", "Kogentné, uzavretý výpočet: skončenie v skúšobnej dobe", "Kogentné, uzavretý výpočet: uplynutie doby určitej", "Kogentné, uzavretý výpočet: smrť zamestnanca", "Kogentné, uzavretý výpočet: úradné rozhodnutie", "Kogentné, uzavretý výpočet: iné zákonné dôvody (napr. porušenie podmienok dočasného pridelenia)"] },
-      { "label": "Formálne náležitosti", "leaves": ["písomná forma (výpoveď, okamžité skončenie, dohoda),", "doručenie druhej strane,", "výpoveď zamestnávateľa musí byť odôvodnená,", "dôvod musí byť presne skutkovo vymedzený."] },
-      { "label": "Dohoda (§ 60 ZP)", "leaves": ["najflexibilnejší spôsob,", "musí byť písomná,", "na žiadosť zamestnanca musí obsahovať dôvod,", "účinky nastávajú dňom uvedeným v dohode."] },
-      { "label": "Výpoveď (§ 63 – 64 ZP)", "leaves": ["jednostranný právny úkon,", "zamestnávateľ musí uviesť konkrétny zákonný dôvod,", "výpovedná lehota: 1 – 3 mesiace podľa dĺžky trvania pomeru,", "zákaz výpovede v ochrannej dobe."] },
-      { "label": "Okamžité skončenie (§ 68 – 70 ZP)", "leaves": ["mimoriadny spôsob,", "pôsobí okamžite,", "prísne zákonné dôvody (úmyselný trestný čin, závažná disciplína; nevyplatenie mzdy, ohrozenie zdravia)."] },
-      { "label": "Skončenie v skúšobnej dobe (§ 72 ZP)", "leaves": ["bez uvedenia dôvodu,", "musí byť písomné,", "doručené pred uplynutím skúšobnej doby."] },
-      { "label": "Odstupné (§ 76 ZP)", "leaves": ["Patrí pri skončení pracovného pomeru", "z organizačných dôvodov (§ 63 ods. 1 písm. a – c)", "zo zdravotných dôvodov (strata spôsobilosti)", "pri pracovnom úraze alebo chorobe z povolania – 10-násobok priemerného zárobku", "Výška podľa dĺžky trvania pomeru: 1 – 4-násobok priemerného zárobku, pri úrazoch a chorobách z povolania až 10-násobok"] },
-      { "label": "Odchodné (§ 76a ZP)", "leaves": ["jednorazové plnenie,", "patrí pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok,", "výška: minimálne priemerný mesačný zárobok."] }
+      {
+        "label": "Spôsoby skončenia pracovného pomeru (§ 59 ZP)",
+        "leaves": [
+          "Kogentné, uzavretý výpočet: dohoda",
+          "Kogentné, uzavretý výpočet: výpoveď",
+          "Kogentné, uzavretý výpočet: okamžité skončenie",
+          "Kogentné, uzavretý výpočet: skončenie v skúšobnej dobe",
+          "Kogentné, uzavretý výpočet: uplynutie doby určitej",
+          "Kogentné, uzavretý výpočet: smrť zamestnanca",
+          "Kogentné, uzavretý výpočet: úradné rozhodnutie",
+          "Kogentné, uzavretý výpočet: iné zákonné dôvody (napr. porušenie podmienok dočasného pridelenia)"
+        ]
+      },
+      {
+        "label": "Formálne náležitosti",
+        "leaves": [
+          "písomná forma (výpoveď, okamžité skončenie, dohoda),",
+          "doručenie druhej strane,",
+          "výpoveď zamestnávateľa musí byť odôvodnená,",
+          "dôvod musí byť presne skutkovo vymedzený."
+        ]
+      },
+      {
+        "label": "Dohoda (§ 60 ZP)",
+        "leaves": [
+          "najflexibilnejší spôsob,",
+          "musí byť písomná,",
+          "na žiadosť zamestnanca musí obsahovať dôvod,",
+          "účinky nastávajú dňom uvedeným v dohode."
+        ]
+      },
+      {
+        "label": "Výpoveď (§ 63 – 64 ZP)",
+        "leaves": [
+          "jednostranný právny úkon,",
+          "zamestnávateľ musí uviesť konkrétny zákonný dôvod,",
+          "výpovedná lehota: 1 – 3 mesiace podľa dĺžky trvania pomeru,",
+          "zákaz výpovede v ochrannej dobe."
+        ]
+      },
+      {
+        "label": "Okamžité skončenie (§ 68 – 70 ZP)",
+        "leaves": [
+          "mimoriadny spôsob,",
+          "pôsobí okamžite,",
+          "prísne zákonné dôvody (úmyselný trestný čin, závažná disciplína; nevyplatenie mzdy, ohrozenie zdravia)."
+        ]
+      },
+      {
+        "label": "Skončenie v skúšobnej dobe (§ 72 ZP)",
+        "leaves": [
+          "bez uvedenia dôvodu,",
+          "musí byť písomné,",
+          "doručené pred uplynutím skúšobnej doby."
+        ]
+      },
+      {
+        "label": "Odstupné (§ 76 ZP)",
+        "leaves": [
+          "Patrí pri skončení pracovného pomeru",
+          "z organizačných dôvodov (§ 63 ods. 1 písm. a – c)",
+          "zo zdravotných dôvodov (strata spôsobilosti)",
+          "pri pracovnom úraze alebo chorobe z povolania – 10-násobok priemerného zárobku",
+          "Výška podľa dĺžky trvania pomeru: 1 – 4-násobok priemerného zárobku, pri úrazoch a chorobách z povolania až 10-násobok"
+        ]
+      },
+      {
+        "label": "Odchodné (§ 76a ZP)",
+        "leaves": [
+          "jednorazové plnenie,",
+          "patrí pri prvom skončení pracovného pomeru po vzniku nároku na dôchodok,",
+          "výška: minimálne priemerný mesačný zárobok."
+        ]
+      }
     ]
   }
 }

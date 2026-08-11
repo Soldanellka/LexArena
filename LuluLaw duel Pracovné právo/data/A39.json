@@ -2,14 +2,21 @@
   "id": "20. A",
   "title": "Dovolenka, krátenie dovolenky",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "dovolenka", "krátenie dovolenky", "pracovný pomer"],
-
-  "summary": "Dovolenka je zákonom garantovaný čas odpočinku, na ktorý má zamestnanec nárok po splnení podmienok. Základná výmera dovolenky je najmenej 4 týždne, pri zamestnancoch nad 33 rokov najmenej 5 týždňov. Nárok na celoročnú dovolenku vzniká po odpracovaní 60 dní v kalendárnom roku. Zamestnanec má nárok aj na pomernú časť dovolenky pri kratšom trvaní pracovného pomeru.\n\nKrátenie dovolenky je možné len zo zákonných dôvodov: pri dlhodobej PN, rodičovskej dovolenke, neospravedlnenej absencii a pri prekážkach na strane zamestnanca. Krátenie má presné limity – za každých 21 dní prekážok možno krátiť o 1/12. Za prvých 100 dní prekážok sa dovolenka nekráti. Materská dovolenka sa nikdy nekráti.\n\nCieľom úpravy je ochrana práva na odpočinok a spravodlivé pravidlá pri jeho krátení.\n\nPríklad:\nZamestnanec bol PN 90 dní. Zamestnávateľ tvrdí, že môže krátiť dovolenku o polovicu. Správne krátenie je 4/12, pretože za každých 21 dní PN možno krátiť o 1/12.\n\nKľúčové slová:\ndovolenka; výmera; krátenie; PN; rodičovská dovolenka; 21 dní; 100 dní.\n\nZapamätaj si:\n- Základná výmera je 4 týždne, nad 33 rokov 5 týždňov.\n- Nárok na celoročnú dovolenku vzniká po 60 odpracovaných dňoch.\n- Za prvých 100 dní prekážok sa dovolenka nekráti.\n- Krátenie je o 1/12 za každých 21 dní prekážok.\n- Materská dovolenka sa nikdy nekráti.",
-
+  "tags": [
+    "pracovné právo",
+    "dovolenka",
+    "krátenie dovolenky",
+    "pracovný pomer"
+  ],
+  "summary": "Dovolenka, krátenie dovolenky Dovolenka je zákonom garantovaný čas odpočinku (§ 100 a nasl. ZP). Základná výmera je najmenej 4 týždne; zamestnanec, ktorý do konca kalendárneho roka dovŕši 33 rokov, alebo ktorý sa trvale stará o dieťa, má nárok na najmenej 5 týždňov (§ 103 ZP). Nárok na dovolenku za kalendárny rok vzniká, ak zamestnanec počas nepretržitého trvania pomeru u toho istého zamestnávateľa vykonával prácu aspoň 60 dní v roku; inak patrí dovolenka za odpracované dni alebo jej pomerná časť.\n\nKrátenie dovolenky (§ 109 ZP) je možné len zo zákonných dôvodov: za neospravedlnene zameškané zmeny (o 1–2 dni za každú), a za obdobia, keď zamestnanec nepracoval pre prekážky nezakladajúce nárok (napr. dlhodobá PN, rodičovská dovolenka) – za prvých 100 zameškaných dní sa dovolenka kráti o 1/12, za každých ďalších 21 dní o ďalšiu 1/12. Materská dovolenka a čerpanie rodičovskej dovolenky mužom sa na účely krátenia posudzujú ako výkon práce (nekrátia sa štandardne ako iné prekážky). Zamestnancovi, ktorému vznikol nárok, nemožno krátením znížiť dovolenku pod zákonné minimum spôsobom odporujúcim zákonu.\n\nPríklad: Zamestnanec bol PN 90 dní. Keďže za prvých 100 dní prekážok sa kráti o 1/12, dovolenka sa pri 90 dňoch PN kráti o 1/12 (nie o polovicu).\n\nZapamätaj si:\n\nZákladná výmera 4 týždne; od 33 rokov alebo pri trvalej starostlivosti o dieťa 5 týždňov (§ 103 ZP).\nNárok na dovolenku za rok: aspoň 60 odpracovaných dní; inak pomerná časť.\nKrátenie (§ 109) len zo zákonných dôvodov; za prvých 100 dní prekážok o 1/12, za každých ďalších 21 dní o 1/12.\nZa neospravedlnenú absenciu možno krátiť 1–2 dni za zmeškanú zmenu.\nMaterská dovolenka sa neposudzuje ako bežná prekážka na účely krátenia.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 100 – § 109 (číselné pravidlá krátenia over podľa aktuálneho znenia § 109)",
   "quiz": [
     {
       "question": "Aká je základná výmera dovolenky?",
-      "options": ["3 týždne", "4 týždne", "6 týždňov"],
+      "options": [
+        "3 týždne",
+        "4 týždne",
+        "6 týždňov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Základná výmera je najmenej 4 týždne.",
@@ -18,7 +25,11 @@
     },
     {
       "question": "Kedy vzniká zamestnancovi nárok na celoročnú dovolenku?",
-      "options": ["Po odpracovaní 30 dní", "Po odpracovaní 60 dní", "Ihneď po nástupe"],
+      "options": [
+        "Po odpracovaní 30 dní",
+        "Po odpracovaní 60 dní",
+        "Ihneď po nástupe"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Nárok vzniká po 60 odpracovaných dňoch.",
@@ -27,7 +38,11 @@
     },
     {
       "question": "Môže sa dovolenka krátiť za materskú dovolenku?",
-      "options": ["Áno", "Nie", "Len ak to zamestnávateľ určí"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak to zamestnávateľ určí"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Materská dovolenka sa nepovažuje za prekážku na strane zamestnanca.",
@@ -36,7 +51,11 @@
     },
     {
       "question": "Za koľko dní prekážok na strane zamestnanca možno krátiť dovolenku o 1/12?",
-      "options": ["21 dní", "30 dní", "60 dní"],
+      "options": [
+        "21 dní",
+        "30 dní",
+        "60 dní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Krátenie o 1/12 je možné za každých 21 dní.",
@@ -45,7 +64,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Dovolenku určuje výlučne zamestnanec", "Dovolenku určuje zamestnávateľ, ale musí prihliadať na zamestnanca", "Dovolenka sa musí vyčerpať do konca mesiaca"],
+      "options": [
+        "Dovolenku určuje výlučne zamestnanec",
+        "Dovolenku určuje zamestnávateľ, ale musí prihliadať na zamestnanca",
+        "Dovolenka sa musí vyčerpať do konca mesiaca"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zamestnávateľ určuje čerpanie, ale nie svojvoľne.",
@@ -53,15 +76,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Základná výmera", "definition": "Najmenej 4 týždne, nad 33 rokov najmenej 5 týždňov." },
-    { "term": "Nárok po 60 dňoch", "definition": "Celoročná dovolenka vzniká po odpracovaní 60 dní." },
-    { "term": "Pomerná časť", "definition": "Pri kratšom trvaní pracovného pomeru patrí 1/12 za každý mesiac." },
-    { "term": "Krátenie dovolenky", "definition": "Možné len zo zákonných dôvodov, napr. PN, rodičovská, absencia." },
-    { "term": "21-dňové pravidlo", "definition": "Za každých 21 dní prekážok možno krátiť o 1/12." }
+    {
+      "term": "Základná výmera",
+      "definition": "Najmenej 4 týždne, nad 33 rokov najmenej 5 týždňov."
+    },
+    {
+      "term": "Nárok po 60 dňoch",
+      "definition": "Celoročná dovolenka vzniká po odpracovaní 60 dní."
+    },
+    {
+      "term": "Pomerná časť",
+      "definition": "Pri kratšom trvaní pracovného pomeru patrí 1/12 za každý mesiac."
+    },
+    {
+      "term": "Krátenie dovolenky",
+      "definition": "Možné len zo zákonných dôvodov, napr. PN, rodičovská, absencia."
+    },
+    {
+      "term": "21-dňové pravidlo",
+      "definition": "Za každých 21 dní prekážok možno krátiť o 1/12."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Krátenie dovolenky pri dlhodobej PN",
@@ -74,7 +110,11 @@
         },
         {
           "question": "Krok 1: Je PN dôvodom na krátenie?",
-          "options": ["Áno", "Nie", "Len ak PN presiahne 6 mesiacov"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak PN presiahne 6 mesiacov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. PN je prekážka na strane zamestnanca.",
@@ -83,7 +123,11 @@
         },
         {
           "question": "Krok 2: O koľko možno krátiť?",
-          "options": ["O 1/12 za každých 21 dní", "O polovicu", "O 1/12 za každý mesiac"],
+          "options": [
+            "O 1/12 za každých 21 dní",
+            "O polovicu",
+            "O 1/12 za každý mesiac"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. 90 dní = 4×21 dní → krátenie o 4/12.",
@@ -105,7 +149,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Krátenie dovolenky pri rodičovskej dovolenke",
       "difficulty": "ľahká",
@@ -117,7 +160,11 @@
         },
         {
           "question": "Krok 1: Je rodičovská dovolenka dôvodom na krátenie?",
-          "options": ["Áno", "Nie", "Len ak trvá viac ako 6 mesiacov"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak trvá viac ako 6 mesiacov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rodičovská dovolenka je prekážka na strane zamestnanca.",
@@ -126,7 +173,11 @@
         },
         {
           "question": "Krok 2: Má nárok na nejakú dovolenku?",
-          "options": ["Áno, za prvých 100 dní prekážok", "Nie", "Len ak pracovala aspoň 1 mesiac"],
+          "options": [
+            "Áno, za prvých 100 dní prekážok",
+            "Nie",
+            "Len ak pracovala aspoň 1 mesiac"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Za prvých 100 dní prekážok sa dovolenka nekráti.",
@@ -158,13 +209,52 @@
   "spider": {
     "center": "Dovolenka – výmera × nárok × krátenie × 21 dní × 100 dní × PN × rodičovská",
     "branches": [
-      { "label": "Výmera dovolenky (§ 103 ZP)", "leaves": ["Základná výmera: 4 týždne, 5 týždňov – zamestnanec nad 33 rokov, 8 týždňov – pedagogickí a odborní zamestnanci"] },
-      { "label": "Vznik nároku", "leaves": ["Nárok na celoročnú dovolenku vzniká po: 60 odpracovaných dňoch v kalendárnom roku", "Nárok vzniká aj pri kratšom trvaní pracovného pomeru – pomerná časť."] },
-      { "label": "Pomerná časť dovolenky", "leaves": ["Pri kratšom trvaní pracovného pomeru: za každý celý mesiac trvania pomeru patrí 1/12 ročnej výmery"] },
-      { "label": "Krátenie dovolenky (§ 109 ZP)", "leaves": ["Krátenie je možné len zo zákonných dôvodov: dlhodobá PN, rodičovská dovolenka, neospravedlnená absencia, iné prekážky na strane zamestnanca", "Limity: prvých 100 dní prekážok sa nekráti, za každých 21 dní prekážok možno krátiť o 1/12 ročnej výmery"] },
-      { "label": "Prekážky na strane zamestnanca", "leaves": ["Prekážky, ktoré môžu viesť ku kráteniu: PN nad 100 dní, rodičovská dovolenka, neospravedlnená absencia, dlhodobé osobné prekážky"] },
-      { "label": "PN a rodičovská dovolenka", "leaves": ["PN sa kráti až po 100 dňoch,", "rodičovská dovolenka sa kráti od začiatku (nie je chránená ako materská)."] },
-      { "label": "Materská dovolenka", "leaves": ["nikdy sa nekráti,", "materská dovolenka je chránená ako výkon práce."] }
+      {
+        "label": "Výmera dovolenky (§ 103 ZP)",
+        "leaves": [
+          "Základná výmera: 4 týždne, 5 týždňov – zamestnanec nad 33 rokov, 8 týždňov – pedagogickí a odborní zamestnanci"
+        ]
+      },
+      {
+        "label": "Vznik nároku",
+        "leaves": [
+          "Nárok na celoročnú dovolenku vzniká po: 60 odpracovaných dňoch v kalendárnom roku",
+          "Nárok vzniká aj pri kratšom trvaní pracovného pomeru – pomerná časť."
+        ]
+      },
+      {
+        "label": "Pomerná časť dovolenky",
+        "leaves": [
+          "Pri kratšom trvaní pracovného pomeru: za každý celý mesiac trvania pomeru patrí 1/12 ročnej výmery"
+        ]
+      },
+      {
+        "label": "Krátenie dovolenky (§ 109 ZP)",
+        "leaves": [
+          "Krátenie je možné len zo zákonných dôvodov: dlhodobá PN, rodičovská dovolenka, neospravedlnená absencia, iné prekážky na strane zamestnanca",
+          "Limity: prvých 100 dní prekážok sa nekráti, za každých 21 dní prekážok možno krátiť o 1/12 ročnej výmery"
+        ]
+      },
+      {
+        "label": "Prekážky na strane zamestnanca",
+        "leaves": [
+          "Prekážky, ktoré môžu viesť ku kráteniu: PN nad 100 dní, rodičovská dovolenka, neospravedlnená absencia, dlhodobé osobné prekážky"
+        ]
+      },
+      {
+        "label": "PN a rodičovská dovolenka",
+        "leaves": [
+          "PN sa kráti až po 100 dňoch,",
+          "rodičovská dovolenka sa kráti od začiatku (nie je chránená ako materská)."
+        ]
+      },
+      {
+        "label": "Materská dovolenka",
+        "leaves": [
+          "nikdy sa nekráti,",
+          "materská dovolenka je chránená ako výkon práce."
+        ]
+      }
     ]
   }
 }

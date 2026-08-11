@@ -2,14 +2,22 @@
   "id": "13. A",
   "title": "Prekážky v práci na strane zamestnanca",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "prekážky v práci", "zamestnanec", "náhrada mzdy", "Zákonník práce"],
-
-  "summary": "Prekážky v práci na strane zamestnanca sú okolnosti, ktoré zamestnancovi objektívne bránia vykonávať prácu podľa pracovnej zmluvy. Zákonník práce rozlišuje štyri základné skupiny prekážok: (1) prekážky z dôvodov všeobecného záujmu (§ 136 – 138 ZP), (2) prekážky z dôvodu plnenia brannej povinnosti, pravidelného cvičenia a úloh ozbrojených síl a dobrovoľnej vojenskej prípravy (§ 138 – 138b ZP), (3) prekážky z dôvodu zvyšovania kvalifikácie (§ 140 ZP) a (4) dôležité osobné prekážky v práci (§ 141 ZP). Zamestnanec je povinný prekážku oznámiť a preukázať bez zbytočného odkladu. Pri niektorých prekážkach patrí náhrada mzdy, pri iných nie; niektoré sú spojené s dávkami zo sociálneho poistenia (PN, OČR). Zákonník práce presne určuje rozsah pracovného voľna a podmienky jeho poskytovania. Prekážky chránia zamestnanca v situáciách, keď nemôže pracovať z dôvodov, ktoré nesúvisia so zamestnávateľom.",
-
+  "tags": [
+    "pracovné právo",
+    "prekážky v práci",
+    "zamestnanec",
+    "náhrada mzdy",
+    "Zákonník práce"
+  ],
+  "summary": "Prekážky v práci na strane zamestnanca Prekážky v práci na strane zamestnanca sú okolnosti, ktoré zamestnancovi objektívne bránia vykonávať prácu podľa pracovnej zmluvy. Zákonník práce ich člení na: – prekážky z dôvodov všeobecného záujmu (§ 136 – § 138b ZP) – výkon verejnej funkcie, občianskej povinnosti (napr. svedok, člen volebnej komisie), darovanie krvi, branná povinnosť a vojenská príprava, – prekážky z dôvodu zvyšovania kvalifikácie (§ 140 ZP) – účasť na vzdelávaní v záujme zamestnávateľa, – dôležité osobné prekážky v práci (§ 141 ZP) – dočasná PN, karanténa, ošetrovanie člena rodiny (OČR), materská a rodičovská dovolenka, svadba, úmrtie blízkej osoby, sprevádzanie k lekárovi a i.\n\nPri niektorých prekážkach patrí náhrada mzdy (napr. časť osobných prekážok, darovanie krvi), pri iných len pracovné voľno bez náhrady mzdy; časť je krytá dávkami zo sociálneho poistenia (nemocenské pri PN, ošetrovné pri OČR). Zamestnanec je povinný prekážku a jej trvanie zamestnávateľovi oznámiť a preukázať bez zbytočného odkladu; ak je prekážka vopred známa, požiadať o voľno vopred. Zákonník práce presne určuje rozsah pracovného voľna (napr. počet dní pri svadbe, úmrtí, sťahovaní).\n\nZapamätaj si:\n\nPrekážky na strane zamestnanca: všeobecný záujem (§ 136 – 138b), zvyšovanie kvalifikácie (§ 140), dôležité osobné prekážky (§ 141).\nPri niektorých patrí náhrada mzdy, pri iných voľno bez náhrady; PN a OČR sú kryté dávkami sociálneho poistenia.\nZamestnanec musí prekážku oznámiť a preukázať bez zbytočného odkladu.\nRozsah voľna pri osobných prekážkach určuje § 141 ZP.\nPrekážky chránia zamestnanca v situáciách nezávislých od zamestnávateľa.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 136 – § 141",
   "quiz": [
     {
       "question": "Ktoré tvrdenie najlepšie vystihuje pojem prekážky v práci na strane zamestnanca?",
-      "options": ["Ide o situácie, keď zamestnávateľ nemá prácu", "Ide o okolnosti, ktoré bránia zamestnancovi vykonávať prácu", "Ide o porušenie pracovnej disciplíny"],
+      "options": [
+        "Ide o situácie, keď zamestnávateľ nemá prácu",
+        "Ide o okolnosti, ktoré bránia zamestnancovi vykonávať prácu",
+        "Ide o porušenie pracovnej disciplíny"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Prekážky sú objektívne okolnosti na strane zamestnanca.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Ktorá z nasledujúcich je prekážkou z dôvodov všeobecného záujmu?",
-      "options": ["Sťahovanie", "Darovanie krvi", "PN"],
+      "options": [
+        "Sťahovanie",
+        "Darovanie krvi",
+        "PN"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Darovanie krvi je úkon vo všeobecnom záujme.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Kedy patrí zamestnancovi náhrada mzdy pri prekážkach z dôvodov všeobecného záujmu?",
-      "options": ["Pri darovaní krvi", "Pri výkone verejnej funkcie", "Pri sťahovaní"],
+      "options": [
+        "Pri darovaní krvi",
+        "Pri výkone verejnej funkcie",
+        "Pri sťahovaní"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri darovaní krvi patrí náhrada mzdy.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Koľko dní voľna patrí zamestnancovi pri vlastnej svadbe?",
-      "options": ["1 deň", "2 dni", "3 dni"],
+      "options": [
+        "1 deň",
+        "2 dni",
+        "3 dni"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pri vlastnej svadbe patria 2 dni pracovného voľna.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnávateľ môže odmietnuť PN", "Zamestnanec musí prekážku oznámiť bez zbytočného odkladu"],
+      "options": [
+        "Zamestnanec nemusí prekážku preukazovať",
+        "Zamestnávateľ môže odmietnuť PN",
+        "Zamestnanec musí prekážku oznámiť bez zbytočného odkladu"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Oznámenie a preukázanie prekážky je povinnosťou zamestnanca.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Prekážky z dôvodov všeobecného záujmu", "definition": "Výkon verejných funkcií, občianskych povinností a iných úkonov vo všeobecnom záujme (napr. darovanie krvi)." },
-    { "term": "Branná povinnosť a ozbrojené sily", "definition": "Pracovné voľno pri povinnostiach voči štátu, často s náhradou mzdy." },
-    { "term": "Zvyšovanie kvalifikácie", "definition": "Účasť na vzdelávaní potrebnom pre výkon práce; môže patriť náhrada mzdy." },
-    { "term": "Dôležité osobné prekážky", "definition": "PN, OČR, svadba, pohreb, sprevádzanie k lekárovi, sťahovanie a iné." },
-    { "term": "Oznamovacia povinnosť", "definition": "Zamestnanec musí prekážku oznámiť a preukázať bez zbytočného odkladu." }
+    {
+      "term": "Prekážky z dôvodov všeobecného záujmu",
+      "definition": "Výkon verejných funkcií, občianskych povinností a iných úkonov vo všeobecnom záujme (napr. darovanie krvi)."
+    },
+    {
+      "term": "Branná povinnosť a ozbrojené sily",
+      "definition": "Pracovné voľno pri povinnostiach voči štátu, často s náhradou mzdy."
+    },
+    {
+      "term": "Zvyšovanie kvalifikácie",
+      "definition": "Účasť na vzdelávaní potrebnom pre výkon práce; môže patriť náhrada mzdy."
+    },
+    {
+      "term": "Dôležité osobné prekážky",
+      "definition": "PN, OČR, svadba, pohreb, sprevádzanie k lekárovi, sťahovanie a iné."
+    },
+    {
+      "term": "Oznamovacia povinnosť",
+      "definition": "Zamestnanec musí prekážku oznámiť a preukázať bez zbytočného odkladu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Darovanie krvi",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Ide o prekážku v práci?",
-          "options": ["Áno", "Nie", "Len ak ide o plazmu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o plazmu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Darovanie krvi je úkon vo všeobecnom záujme.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Áno", "Nie", "Len ak zamestnávateľ súhlasí"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnávateľ súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri darovaní krvi patrí náhrada mzdy v plnej výške.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zvyšovanie kvalifikácie",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Ide o prekážku v práci?",
-          "options": ["Áno, ak ide o zvyšovanie kvalifikácie", "Nie", "Len ak ide o prehlbovanie kvalifikácie"],
+          "options": [
+            "Áno, ak ide o zvyšovanie kvalifikácie",
+            "Nie",
+            "Len ak ide o prehlbovanie kvalifikácie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zvyšovanie kvalifikácie je prekážka podľa § 140 ZP.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Len ak existuje dohoda o zvýšení kvalifikácie", "Vždy", "Nikdy"],
+          "options": [
+            "Len ak existuje dohoda o zvýšení kvalifikácie",
+            "Vždy",
+            "Nikdy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Náhrada mzdy patrí len pri písomnej dohode podľa § 155 ZP.",
@@ -158,12 +210,54 @@
   "spider": {
     "center": "Prekážky na strane zamestnanca – všeobecný záujem × branná povinnosť × kvalifikácia × osobné prekážky",
     "branches": [
-      { "label": "Všeobecný záujem (§ 136 – 138 ZP)", "leaves": ["Zamestnanec má pracovné voľno pri činnostiach vo verejnom záujme, napr.: darovanie krvi, svadba, pohreb, účasť na súdnom konaní ako svedok, výkon verejnej funkcie, činnosť odborov", "Náhrada mzdy sa poskytuje podľa zákona – niekedy plná, niekedy čiastočná, niekedy žiadna."] },
-      { "label": "Branná povinnosť, ozbrojené sily (§ 138 – 138b ZP)", "leaves": ["Patrí sem: pravidelné cvičenie, úlohy ozbrojených síl, dobrovoľná vojenská príprava", "Zamestnanec má nárok na pracovné voľno, niekedy aj na náhradu mzdy alebo dávky zo sociálneho poistenia."] },
-      { "label": "Zvyšovanie kvalifikácie (§ 140 ZP)", "leaves": ["Zamestnanec má pracovné voľno pri: štúdiu, skúškach, vzdelávaní súvisiacom s výkonom práce", "Ak ide o prehlbovanie kvalifikácie, zamestnávateľ poskytuje pracovné voľno s náhradou mzdy.", "Pri zvyšovaní kvalifikácie je voľno bez náhrady, ak sa strany nedohodnú inak."] },
-      { "label": "Dôležité osobné prekážky (§ 141 ZP)", "leaves": ["Najčastejšie situácie: PN (práceneschopnosť) – dávka zo sociálneho poistenia, nie mzda", "Najčastejšie situácie: OČR – ošetrovanie člena rodiny, dávka zo SP", "Najčastejšie situácie: svadba zamestnanca", "Najčastejšie situácie: narodenie dieťaťa", "Najčastejšie situácie: úmrtie rodinného príslušníka", "Najčastejšie situácie: sťahovanie", "Najčastejšie situácie: návšteva lekára", "Najčastejšie situácie: starostlivosť o dieťa", "Zákon presne určuje počet dní a nárok na náhradu mzdy."] },
-      { "label": "Náhrada mzdy", "leaves": ["Podľa druhu prekážky: niekedy plná náhrada (napr. darovanie krvi), niekedy čiastočná, niekedy bez náhrady, pri PN a OČR sa poskytujú dávky sociálneho poistenia"] },
-      { "label": "Oznamovacia povinnosť", "leaves": ["Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať ju (napr. potvrdenie od lekára, predvolanie na súd)"] }
+      {
+        "label": "Všeobecný záujem (§ 136 – 138 ZP)",
+        "leaves": [
+          "Zamestnanec má pracovné voľno pri činnostiach vo verejnom záujme, napr.: darovanie krvi, svadba, pohreb, účasť na súdnom konaní ako svedok, výkon verejnej funkcie, činnosť odborov",
+          "Náhrada mzdy sa poskytuje podľa zákona – niekedy plná, niekedy čiastočná, niekedy žiadna."
+        ]
+      },
+      {
+        "label": "Branná povinnosť, ozbrojené sily (§ 138 – 138b ZP)",
+        "leaves": [
+          "Patrí sem: pravidelné cvičenie, úlohy ozbrojených síl, dobrovoľná vojenská príprava",
+          "Zamestnanec má nárok na pracovné voľno, niekedy aj na náhradu mzdy alebo dávky zo sociálneho poistenia."
+        ]
+      },
+      {
+        "label": "Zvyšovanie kvalifikácie (§ 140 ZP)",
+        "leaves": [
+          "Zamestnanec má pracovné voľno pri: štúdiu, skúškach, vzdelávaní súvisiacom s výkonom práce",
+          "Ak ide o prehlbovanie kvalifikácie, zamestnávateľ poskytuje pracovné voľno s náhradou mzdy.",
+          "Pri zvyšovaní kvalifikácie je voľno bez náhrady, ak sa strany nedohodnú inak."
+        ]
+      },
+      {
+        "label": "Dôležité osobné prekážky (§ 141 ZP)",
+        "leaves": [
+          "Najčastejšie situácie: PN (práceneschopnosť) – dávka zo sociálneho poistenia, nie mzda",
+          "Najčastejšie situácie: OČR – ošetrovanie člena rodiny, dávka zo SP",
+          "Najčastejšie situácie: svadba zamestnanca",
+          "Najčastejšie situácie: narodenie dieťaťa",
+          "Najčastejšie situácie: úmrtie rodinného príslušníka",
+          "Najčastejšie situácie: sťahovanie",
+          "Najčastejšie situácie: návšteva lekára",
+          "Najčastejšie situácie: starostlivosť o dieťa",
+          "Zákon presne určuje počet dní a nárok na náhradu mzdy."
+        ]
+      },
+      {
+        "label": "Náhrada mzdy",
+        "leaves": [
+          "Podľa druhu prekážky: niekedy plná náhrada (napr. darovanie krvi), niekedy čiastočná, niekedy bez náhrady, pri PN a OČR sa poskytujú dávky sociálneho poistenia"
+        ]
+      },
+      {
+        "label": "Oznamovacia povinnosť",
+        "leaves": [
+          "Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať ju (napr. potvrdenie od lekára, predvolanie na súd)"
+        ]
+      }
     ]
   }
 }

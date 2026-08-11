@@ -2,14 +2,22 @@
   "id": "12. A",
   "title": "Subjekty pracovného práva – pracovnoprávna subjektivita",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "subjekty", "pracovnoprávna subjektivita", "zamestnanec", "zamestnávateľ"],
-
-  "summary": "Subjekty pracovného práva sú nositelia práv a povinností v pracovnoprávnych vzťahoch. Základnými subjektmi sú zamestnanec a zamestnávateľ. Zamestnancom je fyzická osoba vykonávajúca závislú prácu podľa pokynov zamestnávateľa za mzdu. Zamestnávateľom je fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca.\n\nPracovnoprávna subjektivita zahŕňa spôsobilosť mať pracovnoprávne práva a povinnosti (pasívna zložka), spôsobilosť vlastnými úkonmi tieto práva nadobúdať (aktívna zložka), deliktuálnu spôsobilosť a procesnú spôsobilosť. Zamestnanec nadobúda pracovnoprávnu subjektivitu dovŕšením 15 rokov a ukončením povinnej školskej dochádzky. Zamestnávateľ nadobúda subjektivitu vznikom – napr. zápisom do obchodného registra alebo vznikom SZČO.\n\nOsobitnými subjektmi pracovného práva sú odborové organizácie, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP a štát. Tieto subjekty vykonávajú kontrolnú, informačnú a zastupiteľskú funkciu.\n\nPríklad:\n14-ročná osoba nemôže uzavrieť pracovnú zmluvu, pretože nemá pracovnoprávnu subjektivitu. Môže však vykonávať len ľahké práce podľa osobitných predpisov.\n\nKľúčové slová:\nzamestnanec; zamestnávateľ; subjektivita; spôsobilosť na právne úkony; zástupcovia zamestnancov.\n\nZapamätaj si:\n- Základnými subjektmi pracovného práva sú zamestnanec a zamestnávateľ.\n- Zamestnanec nadobúda subjektivitu dovŕšením 15 rokov a ukončením povinnej školskej dochádzky.\n- Zamestnávateľom môže byť fyzická aj právnická osoba.\n- Subjektivita je nevyhnutná pre platný vznik pracovnoprávnych vzťahov.\n- Osobitné subjekty (odbory, zamestnanecké rady, BOZP) vykonávajú kontrolnú a zastupiteľskú funkciu.",
-
+  "tags": [
+    "pracovné právo",
+    "subjekty",
+    "pracovnoprávna subjektivita",
+    "zamestnanec",
+    "zamestnávateľ"
+  ],
+  "summary": "Subjekty pracovného práva – pracovnoprávna subjektivita Subjekty pracovného práva sú nositelia práv a povinností v pracovnoprávnych vzťahoch. Základnými subjektmi sú zamestnanec a zamestnávateľ. Zamestnancom je fyzická osoba, ktorá vykonáva závislú prácu podľa pokynov zamestnávateľa za mzdu (§ 11 ZP). Zamestnávateľom je fyzická alebo právnická osoba, ktorá zamestnáva aspoň jednu fyzickú osobu v pracovnoprávnom vzťahu (§ 7 ZP).\n\nPracovnoprávna subjektivita zahŕňa spôsobilosť mať pracovnoprávne práva a povinnosti (pasívna zložka), spôsobilosť vlastnými právnymi úkonmi ich nadobúdať a zaväzovať sa (aktívna zložka), deliktuálnu spôsobilosť (zodpovednosť za porušenie povinností) a procesnú spôsobilosť. U zamestnanca vzniká spôsobilosť mať práva a povinnosti a spôsobilosť vlastnými úkonmi ich nadobúdať dňom, keď dovŕši 15 rokov veku; zamestnávateľ s ním však nesmie dohodnúť deň nástupu do práce pred skončením povinnej školskej dochádzky (§ 11 ods. 2 ZP). Práca detí do 15 rokov (resp. pred skončením povinnej školskej dochádzky) je zakázaná; výnimočne sú povolené ľahké práce pri umeleckých, športových a reklamných činnostiach so súhlasom inšpektorátu práce.\n\nZamestnávateľ – fyzická osoba nadobúda subjektivitu narodením (spôsobilosť na úkony dovŕšením plnoletosti), právnická osoba svojím vznikom (napr. zápisom do obchodného registra).\n\nOsobitnými subjektmi pracovného práva sú odborové organizácie, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP a štát (orgány inšpekcie práce). Vykonávajú kontrolnú, informačnú a zastupiteľskú funkciu.\n\nPríklad: 14-ročná osoba nemôže byť zmluvnou stranou pracovnej zmluvy, pretože ešte nenadobudla pracovnoprávnu subjektivitu; ľahké práce (napr. účinkovanie v reklame) môže vykonávať len výnimočne so súhlasom inšpektorátu práce.\n\nZapamätaj si:\n\nZákladnými subjektmi sú zamestnanec (§ 11 ZP) a zamestnávateľ (§ 7 ZP).\nSubjektivita zamestnanca vzniká dovŕšením 15 rokov; deň nástupu nesmie predchádzať skončeniu povinnej školskej dochádzky (§ 11 ods. 2 ZP).\nZamestnávateľom môže byť fyzická aj právnická osoba.\nSubjektivita zahŕňa pasívnu, aktívnu, deliktuálnu a procesnú zložku.\nOsobitné subjekty (odbory, zamestnanecké rady, zástupcovia pre BOZP, štát) plnia kontrolnú a zastupiteľskú funkciu.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 7, § 11",
   "quiz": [
     {
       "question": "Kto sú základné subjekty pracovného práva?",
-      "options": ["Zamestnanec a zamestnávateľ", "Súd a inšpektorát práce", "Odbory a zamestnanecká rada"],
+      "options": [
+        "Zamestnanec a zamestnávateľ",
+        "Súd a inšpektorát práce",
+        "Odbory a zamestnanecká rada"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Základnými subjektmi sú zamestnanec a zamestnávateľ.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kedy vzniká pracovnoprávna subjektivita zamestnanca?",
-      "options": ["Dovŕšením 18 rokov", "Dovŕšením 15 rokov a ukončením povinnej školskej dochádzky", "Podpisom pracovnej zmluvy"],
+      "options": [
+        "Dovŕšením 18 rokov",
+        "Dovŕšením 15 rokov a ukončením povinnej školskej dochádzky",
+        "Podpisom pracovnej zmluvy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Musia byť splnené obe podmienky.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Kto môže byť zamestnávateľom?",
-      "options": ["Len právnická osoba", "Len fyzická osoba – podnikateľ", "Fyzická aj právnická osoba"],
+      "options": [
+        "Len právnická osoba",
+        "Len fyzická osoba – podnikateľ",
+        "Fyzická aj právnická osoba"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Zamestnávateľom môže byť fyzická aj právnická osoba.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Čo znamená spôsobilosť na právne úkony v pracovnom práve?",
-      "options": ["Možnosť mať práva", "Schopnosť vlastnými úkonmi nadobúdať práva a povinnosti", "Možnosť byť členom odborov"],
+      "options": [
+        "Možnosť mať práva",
+        "Schopnosť vlastnými úkonmi nadobúdať práva a povinnosti",
+        "Možnosť byť členom odborov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o schopnosť konať vlastnými úkonmi.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnanec môže mať subjektivitu aj pred 15. rokom", "Zamestnávateľ nadobúda subjektivitu vznikom organizácie", "Subjektivita nie je potrebná pre pracovný pomer"],
+      "options": [
+        "Zamestnanec môže mať subjektivitu aj pred 15. rokom",
+        "Zamestnávateľ nadobúda subjektivitu vznikom organizácie",
+        "Subjektivita nie je potrebná pre pracovný pomer"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zamestnávateľ má subjektivitu okamihom vzniku.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Zamestnanec", "definition": "Fyzická osoba vykonávajúca závislú prácu podľa pokynov zamestnávateľa za mzdu." },
-    { "term": "Zamestnávateľ", "definition": "Fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca." },
-    { "term": "Pracovnoprávna subjektivita", "definition": "Spôsobilosť mať pracovnoprávne práva a povinnosti a konať vlastnými úkonmi." },
-    { "term": "Spôsobilosť na právne úkony", "definition": "Schopnosť vlastnými úkonmi nadobúdať pracovnoprávne práva a povinnosti." },
-    { "term": "Zástupcovia zamestnancov", "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP." }
+    {
+      "term": "Zamestnanec",
+      "definition": "Fyzická osoba vykonávajúca závislú prácu podľa pokynov zamestnávateľa za mzdu."
+    },
+    {
+      "term": "Zamestnávateľ",
+      "definition": "Fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca."
+    },
+    {
+      "term": "Pracovnoprávna subjektivita",
+      "definition": "Spôsobilosť mať pracovnoprávne práva a povinnosti a konať vlastnými úkonmi."
+    },
+    {
+      "term": "Spôsobilosť na právne úkony",
+      "definition": "Schopnosť vlastnými úkonmi nadobúdať pracovnoprávne práva a povinnosti."
+    },
+    {
+      "term": "Zástupcovia zamestnancov",
+      "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Môže 14-ročný uzavrieť pracovnú zmluvu?",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Má pracovnoprávnu subjektivitu?",
-          "options": ["Nie", "Áno", "Len ak súhlasí rodič"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak súhlasí rodič"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Subjektivita vzniká až dovŕšením 15 rokov a ukončením školskej dochádzky.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Môže pracovať inou formou?",
-          "options": ["Áno, môže vykonávať ľahké práce podľa osobitných predpisov", "Nie, vôbec nemôže pracovať", "Môže pracovať na plný úväzok"],
+          "options": [
+            "Áno, môže vykonávať ľahké práce podľa osobitných predpisov",
+            "Nie, vôbec nemôže pracovať",
+            "Môže pracovať na plný úväzok"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Mladiství pod 15 rokov môžu vykonávať len ľahké práce podľa osobitných pravidiel.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Kto môže byť zamestnávateľ?",
       "difficulty": "ľahká",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Môžu byť zamestnávateľmi?",
-          "options": ["Nie, musia mať právnu formu alebo byť SZČO", "Áno, ako skupina osôb", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Nie, musia mať právnu formu alebo byť SZČO",
+            "Áno, ako skupina osôb",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí byť fyzická osoba – podnikateľ alebo právnická osoba.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Ako môžu vzniknúť ako zamestnávateľ?",
-          "options": ["Založením firmy alebo registráciou ako SZČO", "Podpisom pracovnej zmluvy", "Ústnou dohodou"],
+          "options": [
+            "Založením firmy alebo registráciou ako SZČO",
+            "Podpisom pracovnej zmluvy",
+            "Ústnou dohodou"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí mať právnu subjektivitu.",
@@ -158,12 +210,51 @@
   "spider": {
     "center": "Subjekty pracovného práva – zamestnanec × zamestnávateľ × subjektivita × spôsobilosť × osobitné subjekty",
     "branches": [
-      { "label": "Zamestnanec", "leaves": ["Zamestnancom je: fyzická osoba vykonávajúca závislú prácu, podľa pokynov zamestnávateľa, v jeho mene, za mzdu", "Závislá práca je definovaná v § 1 ods. 2 ZP – osobný výkon, podriadenosť, pokyny, pracovný čas, odmena."] },
-      { "label": "Zamestnávateľ", "leaves": ["Zamestnávateľom je: fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca", "Vznik subjektivity: právnická osoba – zápis do registra, fyzická osoba – vznik SZČO alebo iné zákonné formy"] },
-      { "label": "Pracovnoprávna subjektivita", "leaves": ["Zahŕňa štyri zložky: spôsobilosť mať práva a povinnosti (pasívna)", "Zahŕňa štyri zložky: spôsobilosť vlastnými úkonmi ich nadobúdať (aktívna)", "Zahŕňa štyri zložky: deliktuálna spôsobilosť – niesť následky porušenia povinností", "Zahŕňa štyri zložky: procesná spôsobilosť – vystupovať v konaní pred súdom", "Zamestnanec ju nadobúda: dovŕšením 15 rokov, ukončením povinnej školskej dochádzky"] },
-      { "label": "Spôsobilosť na právne úkony", "leaves": ["Zamestnanec musí byť schopný vykonávať právne úkony súvisiace s pracovným pomerom.", "Mladiství majú osobitnú ochranu a obmedzenia (ľahké práce, skrátený čas, zákaz rizikových činností)."] },
-      { "label": "Deliktuálna a procesná spôsobilosť", "leaves": ["Deliktuálna spôsobilosť = schopnosť niesť následky porušenia pracovných povinností (napr. zodpovednosť za škodu).", "Procesná spôsobilosť = schopnosť vystupovať v konaní pred súdom alebo inšpekciou práce."] },
-      { "label": "Osobitné subjekty pracovného práva", "leaves": ["Patria sem: odbory, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP, štát (inšpekcia práce, ministerstvo)", "Ich funkcie: kontrolná, informačná, zastupiteľská, ochranná"] }
+      {
+        "label": "Zamestnanec",
+        "leaves": [
+          "Zamestnancom je: fyzická osoba vykonávajúca závislú prácu, podľa pokynov zamestnávateľa, v jeho mene, za mzdu",
+          "Závislá práca je definovaná v § 1 ods. 2 ZP – osobný výkon, podriadenosť, pokyny, pracovný čas, odmena."
+        ]
+      },
+      {
+        "label": "Zamestnávateľ",
+        "leaves": [
+          "Zamestnávateľom je: fyzická alebo právnická osoba, ktorá zamestnáva aspoň jedného zamestnanca",
+          "Vznik subjektivity: právnická osoba – zápis do registra, fyzická osoba – vznik SZČO alebo iné zákonné formy"
+        ]
+      },
+      {
+        "label": "Pracovnoprávna subjektivita",
+        "leaves": [
+          "Zahŕňa štyri zložky: spôsobilosť mať práva a povinnosti (pasívna)",
+          "Zahŕňa štyri zložky: spôsobilosť vlastnými úkonmi ich nadobúdať (aktívna)",
+          "Zahŕňa štyri zložky: deliktuálna spôsobilosť – niesť následky porušenia povinností",
+          "Zahŕňa štyri zložky: procesná spôsobilosť – vystupovať v konaní pred súdom",
+          "Zamestnanec ju nadobúda: dovŕšením 15 rokov, ukončením povinnej školskej dochádzky"
+        ]
+      },
+      {
+        "label": "Spôsobilosť na právne úkony",
+        "leaves": [
+          "Zamestnanec musí byť schopný vykonávať právne úkony súvisiace s pracovným pomerom.",
+          "Mladiství majú osobitnú ochranu a obmedzenia (ľahké práce, skrátený čas, zákaz rizikových činností)."
+        ]
+      },
+      {
+        "label": "Deliktuálna a procesná spôsobilosť",
+        "leaves": [
+          "Deliktuálna spôsobilosť = schopnosť niesť následky porušenia pracovných povinností (napr. zodpovednosť za škodu).",
+          "Procesná spôsobilosť = schopnosť vystupovať v konaní pred súdom alebo inšpekciou práce."
+        ]
+      },
+      {
+        "label": "Osobitné subjekty pracovného práva",
+        "leaves": [
+          "Patria sem: odbory, zamestnanecké rady, zamestnaneckí dôverníci, zástupcovia pre BOZP, štát (inšpekcia práce, ministerstvo)",
+          "Ich funkcie: kontrolná, informačná, zastupiteľská, ochranná"
+        ]
+      }
     ]
   }
 }

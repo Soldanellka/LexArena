@@ -2,89 +2,155 @@
   "id": "7. A",
   "title": "Pôsobnosť Zákonníka práce",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "Zákonník práce", "pôsobnosť", "závislá práca"],
-
-  "summary": "Pôsobnosť Zákonníka práce určuje, na aké pracovnoprávne vzťahy, subjekty, územie a čas sa jeho ustanovenia vzťahujú. Rozlišujeme vecnú, osobnú, územnú a časovú pôsobnosť. Vecná pôsobnosť vychádza z § 1 ZP a zahŕňa úpravu závislej práce, pracovného pomeru, dohôd mimo pracovného pomeru, kolektívnych vzťahov a BOZP. Základom je definícia závislej práce (§ 1 ods. 2 ZP), ktorá vychádza z odporúčania MOP č. 198/2006. Vecná pôsobnosť môže byť priama (úplná alebo obmedzená), delegovaná alebo subsidiárna. Osobná pôsobnosť určuje, že Zákonník práce sa vzťahuje na zamestnancov vykonávajúcich závislú prácu a na zamestnávateľov. Niektoré skupiny majú osobitnú úpravu (štátna služba, ozbrojené zbory, cirkvi, zdravotníci, doprava, umelci). Územná pôsobnosť znamená, že Zákonník práce platí na území SR, avšak pri vysielaní pracovníkov sa uplatňujú aj minimálne štandardy hostiteľského štátu podľa smernice 96/71/ES. Časová pôsobnosť určuje obdobie platnosti a účinnosti právnych noriem. Správne určenie pôsobnosti je kľúčové najmä pri posudzovaní zakrytého pracovného pomeru, vysielaní pracovníkov a pri aplikácii osobitných predpisov.\n\nJudikatúra: R 9/1971 – používanie vlastného pracovného nástroja nevylučuje pracovný pomer; R 19/1977 – rozhoduje skutočný obsah práce; R 36/2005 – zákaz diskriminácie pri informovaní zamestnancov; R 44/2012 – voľné pracovné miesto pri výpovedi; R 57/2014 – nárok na úrok z omeškania aj pre štátnych zamestnancov.\n\nPríklad: Slovenský zamestnávateľ vyšle zamestnanca na 4 mesiace do Nemecka. Naďalej sa naňho vzťahuje slovenský Zákonník práce (osobná pôsobnosť), ale musí mať zabezpečené minimálne pracovné podmienky podľa nemeckého práva (územná pôsobnosť + smernica o vysielaní pracovníkov).\n\nKľúčové slová: vecná pôsobnosť; osobná pôsobnosť; územná pôsobnosť; časová pôsobnosť; závislá práca; delegovaná pôsobnosť; subsidiárna pôsobnosť; vysielanie pracovníkov.\n\nZapamätaj si:\n- Základom pôsobnosti je definícia závislej práce (§ 1 ods. 2 ZP).\n- Vecná pôsobnosť môže byť priama, delegovaná alebo subsidiárna.\n- Osobná pôsobnosť sa vzťahuje na zamestnancov vykonávajúcich závislú prácu.\n- Územná pôsobnosť: ZP platí na území SR, pri vyslaní sa uplatňujú aj minimálne štandardy hostiteľského štátu.\n- Subsidiárna pôsobnosť sa týka zdravotníkov, dopravy, umelcov, cirkví, bezpečnostných služieb a ďalších skupín.\n- Zakrytý pracovný pomer sa posudzuje podľa skutočného obsahu práce."
-  ,
-
+  "tags": [
+    "pracovné právo",
+    "Zákonník práce",
+    "pôsobnosť",
+    "závislá práca"
+  ],
+  "summary": "Pôsobnosť Zákonníka práce určuje, na aké pracovnoprávne vzťahy, subjekty, územie a čas sa jeho ustanovenia vzťahujú. Rozlišujeme vecnú, osobnú, územnú a časovú pôsobnosť.\n\nVecná pôsobnosť vychádza z § 1 ZP a zahŕňa úpravu závislej práce, pracovného pomeru, dohôd o prácach vykonávaných mimo pracovného pomeru, kolektívnych pracovnoprávnych vzťahov a BOZP. Základom je definícia závislej práce (§ 1 ods. 2 ZP), ktorá zodpovedá aj odporúčaniu MOP č. 198 (2006). Vecnú pôsobnosť možno členiť na priamu (úplnú alebo obmedzenú), delegovanú (ZP sa použije, ak naň osobitný predpis odkáže) a subsidiárnu (ZP sa použije podporne tam, kde osobitný predpis nemá vlastnú úpravu); vo veciach neupravených ZP sa subsidiárne použije Občiansky zákonník (§ 1 ods. 4 ZP).\n\nOsobná pôsobnosť určuje, že Zákonník práce sa vzťahuje na zamestnancov vykonávajúcich závislú prácu a na zamestnávateľov. Niektoré skupiny majú osobitnú alebo prednostnú úpravu (štátna služba – zákon č. 55/2017 Z. z.; práca vo verejnom záujme – zákon č. 552/2003 Z. z.; ozbrojené a bezpečnostné zbory; osobitosti pri niektorých povolaniach). Vzťah k osobitným predpisom rieši § 3 ZP.\n\nÚzemná pôsobnosť znamená, že Zákonník práce platí na území SR; pri vysielaní pracovníkov sa uplatňujú aj minimálne štandardy (tvrdé jadro podmienok) hostiteľského štátu podľa smerníc 96/71/ES a 2018/957. Časová pôsobnosť určuje obdobie platnosti a účinnosti právnych noriem (platnosť × účinnosť; zákaz spätnej účinnosti v neprospech). Správne určenie pôsobnosti je kľúčové najmä pri posudzovaní zakrytého (zastretého) pracovného pomeru, pri vysielaní pracovníkov a pri aplikácii osobitných predpisov.\n\nJudikatúra: R 9/1971 – používanie vlastného pracovného nástroja nevylučuje pracovný pomer; R 19/1977 – rozhoduje skutočný obsah práce.\n\nPríklad: Slovenský zamestnávateľ vyšle zamestnanca na 4 mesiace do Nemecka. Naďalej sa naňho vzťahuje slovenský Zákonník práce (osobná pôsobnosť), ale musí mať zabezpečené minimálne pracovné podmienky podľa nemeckého práva (územná pôsobnosť + smernica o vysielaní pracovníkov).\n\nKľúčové slová (štátnicové):\n- vecná pôsobnosť (§ 1 ZP) – ktoré vzťahy ZP upravuje,\n- osobná pôsobnosť – na koho sa ZP vzťahuje; osobitné predpisy (§ 3 ZP),\n- územná pôsobnosť – ZP platí na území SR; vysielanie (96/71/ES, 2018/957),\n- časová pôsobnosť – platnosť × účinnosť,\n- závislá práca (§ 1 ods. 2 ZP) ako základ pôsobnosti,\n- priama × delegovaná × subsidiárna pôsobnosť; subsidiarita Občianskeho zákonníka (§ 1 ods. 4 ZP),\n- zastretý pracovný pomer – posudzuje sa podľa skutočného obsahu práce.\n\nZapamätaj si:\n- Základom pôsobnosti je definícia závislej práce (§ 1 ods. 2 ZP).\n- Vecná pôsobnosť môže byť priama, delegovaná alebo subsidiárna; podporne platí Občiansky zákonník (§ 1 ods. 4 ZP).\n- Osobná pôsobnosť sa vzťahuje na zamestnancov vykonávajúcich závislú prácu; osobitné skupiny majú vlastnú úpravu (§ 3 ZP).\n- Územná pôsobnosť: ZP platí na území SR, pri vyslaní sa uplatňujú aj minimálne štandardy hostiteľského štátu.\n- Časová pôsobnosť rozlišuje platnosť a účinnosť normy.\n- Zastretý pracovný pomer sa posudzuje podľa skutočného obsahu práce, nie podľa názvu zmluvy.\n\nZdroj:\nZákonník práce č. 311/2001 Z. z. – § 1, § 3\nZákony č. 55/2017 Z. z., č. 552/2003 Z. z.\nSmernice 96/71/ES a (EÚ) 2018/957 o vysielaní pracovníkov; odporúčanie MOP č. 198 (2006)\nJudikatúra: R 9/1971, R 19/1977",
   "quiz": [
     {
       "question": "Čo určuje vecná pôsobnosť Zákonníka práce?",
-      "options": ["Ktoré pracovnoprávne vzťahy ZP upravuje", "Na akom území platí ZP", "Ktoré osoby sú zamestnancami"],
+      "options": [
+        "Ktoré pracovnoprávne vzťahy ZP upravuje",
+        "Na akom území platí ZP",
+        "Ktoré osoby sú zamestnancami"
+      ],
       "correct": 0
     },
     {
       "question": "Kto patrí do osobnej pôsobnosti Zákonníka práce?",
-      "options": ["Zamestnanci vykonávajúci závislú prácu", "Živnostníci", "Študenti bez zmluvy"],
+      "options": [
+        "Zamestnanci vykonávajúci závislú prácu",
+        "Živnostníci",
+        "Študenti bez zmluvy"
+      ],
       "correct": 0
     },
     {
       "question": "Čo znamená delegovaná pôsobnosť Zákonníka práce?",
-      "options": ["ZP sa použije len ak to ustanoví osobitný predpis", "ZP sa použije vždy priamo", "ZP sa nepoužije nikdy"],
+      "options": [
+        "ZP sa použije len ak to ustanoví osobitný predpis",
+        "ZP sa použije vždy priamo",
+        "ZP sa nepoužije nikdy"
+      ],
       "correct": 0
     },
     {
       "question": "Na akom území platí Zákonník práce?",
-      "options": ["Na území SR", "V celej EÚ", "Len v súkromnom sektore"],
+      "options": [
+        "Na území SR",
+        "V celej EÚ",
+        "Len v súkromnom sektore"
+      ],
       "correct": 0
     },
     {
       "question": "Čo znamená subsidiárna pôsobnosť?",
-      "options": ["ZP sa použije, ak osobitný predpis neustanovuje inak", "ZP sa nepoužije vôbec", "ZP sa použije len na dohody"],
+      "options": [
+        "ZP sa použije, ak osobitný predpis neustanovuje inak",
+        "ZP sa nepoužije vôbec",
+        "ZP sa použije len na dohody"
+      ],
       "correct": 0
     }
   ],
-
   "tiles": [
-    { "term": "Vecná pôsobnosť", "definition": "Určuje, ktoré pracovnoprávne vzťahy Zákonník práce upravuje (závislá práca, pracovný pomer, dohody, kolektívne vzťahy)." },
-    { "term": "Osobná pôsobnosť", "definition": "Určuje, na ktoré subjekty sa Zákonník práce vzťahuje – zamestnanci a zamestnávatelia." },
-    { "term": "Územná pôsobnosť", "definition": "ZP platí na území SR; pri vyslaní sa uplatňujú aj minimálne štandardy hostiteľského štátu." },
-    { "term": "Časová pôsobnosť", "definition": "Určuje obdobie platnosti a účinnosti právnej normy." },
-    { "term": "Delegovaná pôsobnosť", "definition": "ZP sa použije, ak to výslovne ustanoví osobitný predpis (štátna služba, verejná funkcia, profesionálni športovci)." }
+    {
+      "term": "Vecná pôsobnosť",
+      "definition": "Určuje, ktoré pracovnoprávne vzťahy Zákonník práce upravuje (závislá práca, pracovný pomer, dohody, kolektívne vzťahy)."
+    },
+    {
+      "term": "Osobná pôsobnosť",
+      "definition": "Určuje, na ktoré subjekty sa Zákonník práce vzťahuje – zamestnanci a zamestnávatelia."
+    },
+    {
+      "term": "Územná pôsobnosť",
+      "definition": "ZP platí na území SR; pri vyslaní sa uplatňujú aj minimálne štandardy hostiteľského štátu."
+    },
+    {
+      "term": "Časová pôsobnosť",
+      "definition": "Určuje obdobie platnosti a účinnosti právnej normy."
+    },
+    {
+      "term": "Delegovaná pôsobnosť",
+      "definition": "ZP sa použije, ak to výslovne ustanoví osobitný predpis (štátna služba, verejná funkcia, profesionálni športovci)."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Vyslanie zamestnanca do zahraničia",
       "difficulty": "stredná",
       "steps": [
-        { "question": "Zadanie: Zamestnanec je vyslaný na 4 mesiace do Nemecka.", "options": [], "correct": 0 },
+        {
+          "question": "Zadanie: Zamestnanec je vyslaný na 4 mesiace do Nemecka.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Ktorá pôsobnosť je rozhodujúca?",
-          "options": ["Osobná pôsobnosť", "Územná pôsobnosť", "Časová pôsobnosť"],
+          "options": [
+            "Osobná pôsobnosť",
+            "Územná pôsobnosť",
+            "Časová pôsobnosť"
+          ],
           "correct": 0
         },
         {
           "question": "Ktoré právo sa uplatní?",
-          "options": ["Slovenské právo + minimálne štandardy Nemecka", "Len nemecké právo", "Len slovenské právo"],
+          "options": [
+            "Slovenské právo + minimálne štandardy Nemecka",
+            "Len nemecké právo",
+            "Len slovenské právo"
+          ],
           "correct": 0
         },
         {
           "question": "Ako má právnik postupovať?",
-          "options": ["Informovať o smernici o vysielaní pracovníkov", "Ignorovať otázku", "Odporučiť odmietnutie vyslania"],
+          "options": [
+            "Informovať o smernici o vysielaní pracovníkov",
+            "Ignorovať otázku",
+            "Odporučiť odmietnutie vyslania"
+          ],
           "correct": 0
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Zakrytý pracovný pomer",
       "difficulty": "ľahká",
       "steps": [
-        { "question": "Zadanie: Osoba pracuje na živnosť, ale má znaky závislej práce.", "options": [], "correct": 0 },
+        {
+          "question": "Zadanie: Osoba pracuje na živnosť, ale má znaky závislej práce.",
+          "options": [],
+          "correct": 0
+        },
         {
           "question": "Spadá do osobnej pôsobnosti ZP?",
-          "options": ["Áno, ide o závislú prácu", "Nie", "Len ak má pracovnú zmluvu"],
+          "options": [
+            "Áno, ide o závislú prácu",
+            "Nie",
+            "Len ak má pracovnú zmluvu"
+          ],
           "correct": 0
         },
         {
           "question": "Ako sa posudzuje vzťah?",
-          "options": ["Podľa skutočného obsahu práce", "Podľa názvu zmluvy", "Podľa želania zamestnávateľa"],
+          "options": [
+            "Podľa skutočného obsahu práce",
+            "Podľa názvu zmluvy",
+            "Podľa želania zamestnávateľa"
+          ],
           "correct": 0
         },
         {
           "question": "Ako má právnik postupovať?",
-          "options": ["Navrhnúť preklasifikovanie na pracovný pomer", "Ignorovať situáciu", "Odporučiť pokračovať v živnosti"],
+          "options": [
+            "Navrhnúť preklasifikovanie na pracovný pomer",
+            "Ignorovať situáciu",
+            "Odporučiť pokračovať v živnosti"
+          ],
           "correct": 0
         }
       ]
@@ -99,13 +165,59 @@
   "spider": {
     "center": "Pôsobnosť ZP – vecná × osobná × územná × časová × závislá práca × vysielanie pracovníkov",
     "branches": [
-      { "label": "Vecná pôsobnosť (§ 1 ZP)", "leaves": ["Zahŕňa úpravu: závislej práce (kľúčový základ pôsobnosti), pracovného pomeru, dohôd mimo pracovného pomeru, kolektívnych pracovnoprávnych vzťahov, BOZP", "Typy vecnej pôsobnosti: priama úplná – ZP sa uplatní v plnom rozsahu", "Typy vecnej pôsobnosti: priama obmedzená – len niektoré ustanovenia", "Typy vecnej pôsobnosti: delegovaná – ZP sa použije, ak osobitný predpis odkáže", "Typy vecnej pôsobnosti: subsidiárna – použije sa, ak osobitný predpis neobsahuje úpravu (napr. zdravotníci, doprava, cirkvi, umelci)"] },
-      { "label": "Osobná pôsobnosť", "leaves": ["ZP sa vzťahuje na: zamestnancov vykonávajúcich závislú prácu, zamestnávateľov", "Osobitné predpisy platia pre: štátnu službu, verejnú službu, ozbrojené zbory, cirkvi, zdravotníkov, dopravu, umelcov"] },
-      { "label": "Územná pôsobnosť", "leaves": ["ZP platí na území SR.", "Pri vysielaní pracovníkov do iného štátu EÚ sa uplatňuje: slovenské pracovné právo, minimálne pracovné podmienky hostiteľského štátu (smernica 96/71/ES)"] },
-      { "label": "Časová pôsobnosť", "leaves": ["Určuje: odkedy právna norma platí, dokedy účinkuje, ako sa uplatňuje pri novelách (prechodné ustanovenia)"] },
-      { "label": "Delegovaná a subsidiárna pôsobnosť", "leaves": ["Delegovaná – osobitný predpis výslovne odkáže na použitie ZP.", "Subsidiárna – ZP sa použije tam, kde osobitný predpis nemá vlastnú úpravu."] },
-      { "label": "Vysielanie pracovníkov", "leaves": ["Pri vyslaní zamestnanca do iného štátu EÚ: vzťahuje sa naňho slovenský ZP, musí mať zabezpečené minimálne podmienky hostiteľského štátu (mzda, pracovný čas, BOZP)"] },
-      { "label": "Judikatúra", "leaves": ["R 9/1971 – vlastný pracovný nástroj nevylučuje pracovný pomer.", "R 19/1977 – rozhoduje skutočný obsah práce.", "R 36/2005 – zákaz diskriminácie pri informovaní zamestnancov.", "R 44/2012 – voľné pracovné miesto pri výpovedi.", "R 57/2014 – úrok z omeškania aj pre štátnych zamestnancov."] }
+      {
+        "label": "Vecná pôsobnosť (§ 1 ZP)",
+        "leaves": [
+          "Zahŕňa úpravu: závislej práce (kľúčový základ pôsobnosti), pracovného pomeru, dohôd mimo pracovného pomeru, kolektívnych pracovnoprávnych vzťahov, BOZP",
+          "Typy vecnej pôsobnosti: priama úplná – ZP sa uplatní v plnom rozsahu",
+          "Typy vecnej pôsobnosti: priama obmedzená – len niektoré ustanovenia",
+          "Typy vecnej pôsobnosti: delegovaná – ZP sa použije, ak osobitný predpis odkáže",
+          "Typy vecnej pôsobnosti: subsidiárna – použije sa, ak osobitný predpis neobsahuje úpravu (napr. zdravotníci, doprava, cirkvi, umelci)"
+        ]
+      },
+      {
+        "label": "Osobná pôsobnosť",
+        "leaves": [
+          "ZP sa vzťahuje na: zamestnancov vykonávajúcich závislú prácu, zamestnávateľov",
+          "Osobitné predpisy platia pre: štátnu službu, verejnú službu, ozbrojené zbory, cirkvi, zdravotníkov, dopravu, umelcov"
+        ]
+      },
+      {
+        "label": "Územná pôsobnosť",
+        "leaves": [
+          "ZP platí na území SR.",
+          "Pri vysielaní pracovníkov do iného štátu EÚ sa uplatňuje: slovenské pracovné právo, minimálne pracovné podmienky hostiteľského štátu (smernica 96/71/ES)"
+        ]
+      },
+      {
+        "label": "Časová pôsobnosť",
+        "leaves": [
+          "Určuje: odkedy právna norma platí, dokedy účinkuje, ako sa uplatňuje pri novelách (prechodné ustanovenia)"
+        ]
+      },
+      {
+        "label": "Delegovaná a subsidiárna pôsobnosť",
+        "leaves": [
+          "Delegovaná – osobitný predpis výslovne odkáže na použitie ZP.",
+          "Subsidiárna – ZP sa použije tam, kde osobitný predpis nemá vlastnú úpravu."
+        ]
+      },
+      {
+        "label": "Vysielanie pracovníkov",
+        "leaves": [
+          "Pri vyslaní zamestnanca do iného štátu EÚ: vzťahuje sa naňho slovenský ZP, musí mať zabezpečené minimálne podmienky hostiteľského štátu (mzda, pracovný čas, BOZP)"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "R 9/1971 – vlastný pracovný nástroj nevylučuje pracovný pomer.",
+          "R 19/1977 – rozhoduje skutočný obsah práce.",
+          "R 36/2005 – zákaz diskriminácie pri informovaní zamestnancov.",
+          "R 44/2012 – voľné pracovné miesto pri výpovedi.",
+          "R 57/2014 – úrok z omeškania aj pre štátnych zamestnancov."
+        ]
+      }
     ]
   }
 }

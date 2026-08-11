@@ -1,45 +1,85 @@
 {
   "id": "A15",
   "title": "Všeobecné zásady práva Únie, medzinárodné dohody Únie a členských štátov",
-  "summary": "Všeobecné zásady práva Európskej únie sú základné právne princípy, ktoré Súdny dvor EÚ vyvodil z ústavných tradícií členských štátov, medzinárodného práva a z povahy práva EÚ. Medzi najdôležitejšie patria zásada právnej istoty, ochrany legitímnych očakávaní, proporcionality, rovnosti, zákazu diskriminácie, efektívnej súdnej ochrany, lojálnej spolupráce a zásada dobrej správy.\n\nTieto zásady majú rovnakú právnu silu ako primárne právo a sú záväzné pre inštitúcie EÚ aj členské štáty pri vykonávaní práva EÚ. Súdny dvor ich používa pri kontrole zákonnosti aktov EÚ a pri výklade práva Únie.\n\nMedzinárodné dohody Únie sú upravené v čl. 216 – 218 ZFEÚ. Únia môže uzatvárať medzinárodné dohody v oblastiach, v ktorých má právomoc konať. Dohody sú záväzné pre inštitúcie EÚ aj členské štáty. Majú vyššiu právnu silu ako sekundárne právo, ale nesmú odporovať primárnemu právu.\n\nČlenské štáty môžu uzatvárať medzinárodné dohody, ak sú v súlade s právom EÚ. Ak je oblasť výlučnou právomocou EÚ, členské štáty nemôžu konať samostatne. V oblastiach zdieľaných právomocí môžu členské štáty uzatvárať dohody, ak tým neohrozia ciele práva EÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam všeobecných zásad, právnu silu medzinárodných dohôd a hranice právomocí členských štátov, najmä v rozsudkoch C‑157/02, C‑104/16 a stanovisku 1/91.",
+  "summary": "Všeobecné zásady práva Európskej únie sú základné právne princípy, ktoré Súdny dvor vyvodil z ústavných tradícií členských štátov, z medzinárodného práva a z povahy a cieľov práva EÚ. Patria k nim najmä právna istota, ochrana legitímnych očakávaní, proporcionalita, rovnosť a zákaz diskriminácie, účinná súdna ochrana, lojálna spolupráca a právo na dobrú správu. Tieto zásady majú rovnakú právnu silu ako primárne právo, zaväzujú inštitúcie EÚ aj členské štáty pri vykonávaní práva EÚ a Súdny dvor ich používa pri kontrole zákonnosti aktov EÚ i pri výklade práva Únie.\n\nMedzinárodné dohody Únie sú upravené v čl. 216 – 218 ZFEÚ. Únia môže uzatvárať dohody v oblastiach, v ktorých má právomoc (výslovnú alebo implicitnú); dohody uzavreté Úniou sú záväzné pre inštitúcie EÚ aj členské štáty (čl. 216 ods. 2 ZFEÚ) a v hierarchii prameňov stoja nižšie ako primárne právo, ale vyššie ako sekundárne právo, ktoré s nimi nesmie byť v rozpore. Postup uzatvárania (rokovanie, súhlas alebo konzultácia Parlamentu, uzavretie Radou) upravuje čl. 218 ZFEÚ.\n\nČlenské štáty môžu uzatvárať vlastné medzinárodné dohody, len ak sú v súlade s právom EÚ. V oblastiach výlučnej právomoci EÚ nemôžu konať samostatne; v oblastiach zdieľaných právomocí môžu, ak tým neohrozia dosiahnutie cieľov Únie (zásada lojálnej spolupráce). Staršie dohody uzavreté pred vstupom do EÚ upravuje čl. 351 ZFEÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam všeobecných zásad, právnu silu a hranice medzinárodných dohôd. V rozsudku C-104/16 P (Rada v Front Polisario) Súdny dvor vyložil územný rozsah dohody medzi EÚ a Marokom vo svetle medzinárodného práva vrátane zásady sebaurčenia. V stanovisku 1/91 (o Dohode o Európskom hospodárskom priestore) zdôraznil autonómiu právneho poriadku EÚ ako hranicu pri uzatváraní medzinárodných dohôd.\n\nZapamätaj si:\n– Všeobecné zásady: právna istota, legitímne očakávania, proporcionalita, rovnosť/zákaz diskriminácie, účinná súdna ochrana, lojálna spolupráca, dobrá správa. Sila ako primárne právo; slúžia na kontrolu zákonnosti + výklad.\n– Medzinárodné dohody Únie (čl. 216 – 218 ZFEÚ): Únia uzatvára v rámci svojich právomocí (aj implicitných); záväzné pre inštitúcie aj štáty; v hierarchii nad sekundárnym, pod primárnym právom. Postup: čl. 218.\n– Dohody členských štátov: len v súlade s právom EÚ; vo výlučných právomociach nesmú konať samy; v zdieľaných nesmú mariť ciele EÚ; staršie dohody čl. 351 ZFEÚ.\n– Judikatúra: C-104/16 P (Front Polisario – dohoda EÚ–Maroko, sebaurčenie, medzinárodné právo), stanovisko 1/91 (EHP – autonómia práva EÚ). Pozor: C-157/02 (Rieser) je o priamom účinku smerníc – patrí do A12.\n\nZdroj: Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016), čl. 216 – 218 a 351; judikatúra Súdneho dvora EÚ (C-104/16 P Council v Front Polisario, stanovisko 1/91 o EHP); EUR-Lex.",
   "quiz": [
     {
       "q": "Čo sú všeobecné zásady práva EÚ?",
-      "options": ["Sekundárne právo", "Základné právne princípy odvodené zo zmlúv a ústavných tradícií", "Rozhodnutia Komisie", "Právne akty členských štátov"],
+      "options": [
+        "Sekundárne právo",
+        "Základné právne princípy odvodené zo zmlúv a ústavných tradícií",
+        "Rozhodnutia Komisie",
+        "Právne akty členských štátov"
+      ],
       "correct": 1,
       "explanation": "Všeobecné zásady sú základné právne princípy odvodené zo zmlúv a ústavných tradícií."
     },
     {
       "q": "Ktorý článok upravuje medzinárodné dohody Únie?",
-      "options": ["Čl. 216 – 218 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 288 ZFEÚ"],
+      "options": [
+        "Čl. 216 – 218 ZFEÚ",
+        "Čl. 48 ZEÚ",
+        "Čl. 7 ZEÚ",
+        "Čl. 288 ZFEÚ"
+      ],
       "correct": 0,
       "explanation": "Medzinárodné dohody sú upravené v čl. 216 – 218 ZFEÚ."
     },
     {
       "q": "Môžu členské štáty uzatvárať medzinárodné dohody?",
-      "options": ["Nie, nikdy", "Áno, ak sú v súlade s právom EÚ", "Áno, aj v oblastiach výlučných právomocí EÚ", "Len so súhlasom Súdneho dvora"],
+      "options": [
+        "Nie, nikdy",
+        "Áno, ak sú v súlade s právom EÚ",
+        "Áno, aj v oblastiach výlučných právomocí EÚ",
+        "Len so súhlasom Súdneho dvora"
+      ],
       "correct": 1,
       "explanation": "Členské štáty môžu uzatvárať dohody, ak sú v súlade s právom EÚ."
     },
     {
       "q": "Ktorá zásada chráni jednotlivca pred retroaktívnymi zásahmi?",
-      "options": ["Proporcionalita", "Právna istota", "Lojálna spolupráca", "Efektívna súdna ochrana"],
+      "options": [
+        "Proporcionalita",
+        "Právna istota",
+        "Lojálna spolupráca",
+        "Efektívna súdna ochrana"
+      ],
       "correct": 1,
       "explanation": "Zásada právnej istoty chráni pred retroaktívnymi zásahmi."
     },
     {
       "q": "Ktorý rozsudok sa týka právnej sily medzinárodných dohôd?",
-      "options": ["C‑104/16", "C‑34/09 Ruiz Zambrano", "C‑62/14 Gauweiler", "C‑106/77 Simmenthal"],
+      "options": [
+        "C‑104/16",
+        "C‑34/09 Ruiz Zambrano",
+        "C‑62/14 Gauweiler",
+        "C‑106/77 Simmenthal"
+      ],
       "correct": 0,
       "explanation": "V rozsudku C‑104/16 Súdny dvor riešil právnu silu medzinárodných dohôd."
     }
   ],
   "tiles": [
-    { "term": "Všeobecné zásady práva", "definition": "Základné princípy ako právna istota, proporcionalita, rovnosť, efektívna súdna ochrana." },
-    { "term": "Medzinárodné dohody EÚ", "definition": "Dohody uzatvárané Úniou podľa čl. 216 – 218 ZFEÚ." },
-    { "term": "Výlučné právomoci", "definition": "Oblasti, v ktorých môže konať iba EÚ." },
-    { "term": "Zdieľané právomoci", "definition": "Oblasti, v ktorých môžu konať EÚ aj členské štáty." },
-    { "term": "Stanovisko 1/91", "definition": "Súdny dvor potvrdil autonómiu právneho poriadku EÚ vo vzťahu k medzinárodným súdnym orgánom." }
+    {
+      "term": "Všeobecné zásady práva",
+      "definition": "Základné princípy ako právna istota, proporcionalita, rovnosť, efektívna súdna ochrana."
+    },
+    {
+      "term": "Medzinárodné dohody EÚ",
+      "definition": "Dohody uzatvárané Úniou podľa čl. 216 – 218 ZFEÚ."
+    },
+    {
+      "term": "Výlučné právomoci",
+      "definition": "Oblasti, v ktorých môže konať iba EÚ."
+    },
+    {
+      "term": "Zdieľané právomoci",
+      "definition": "Oblasti, v ktorých môžu konať EÚ aj členské štáty."
+    },
+    {
+      "term": "Stanovisko 1/91",
+      "definition": "Súdny dvor potvrdil autonómiu právneho poriadku EÚ vo vzťahu k medzinárodným súdnym orgánom."
+    }
   ],
   "cases": [
     {

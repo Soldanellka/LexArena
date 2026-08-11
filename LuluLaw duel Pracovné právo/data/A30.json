@@ -2,14 +2,22 @@
   "id": "15. B",
   "title": "Pracovná disciplína a sankcie za porušenie pracovnej disciplíny",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovná disciplína", "porušenie povinností", "sankcie", "Zákonník práce"],
-
-  "summary": "Pracovná disciplína je podľa doktríny súhrn všetkých povinností zamestnanca, ktoré mu vyplývajú zo Zákonníka práce, pracovnej zmluvy, kolektívnej zmluvy, pracovného poriadku a pokynov zamestnávateľa, s ktorými bol riadne oboznámený. Zavinené porušenie týchto povinností sa považuje za porušenie pracovnej disciplíny.\n\nZákonník práce rozlišuje tri úrovne porušenia pracovnej disciplíny: menej závažné, závažné a obzvlášť hrubé porušenie. Intenzita porušenia sa posudzuje individuálne podľa okolností prípadu, miery zavinenia, následkov, doterajšieho správania zamestnanca a charakteru povinností.\n\nZákonné sankcie sú: krátenie dovolenky (§ 109 ods. 3 ZP), výpoveď z dôvodu porušenia pracovnej disciplíny (§ 63 ods. 1 písm. e) ZP) a okamžité skončenie pracovného pomeru pri závažnom porušení pracovnej disciplíny (§ 68 ods. 1 písm. b) ZP). Zamestnávateľ nesmie ukladať pokuty ani zrážky zo mzdy ako disciplinárny trest.\n\nPri okamžitom skončení pracovného pomeru musí byť porušenie pracovnej disciplíny také závažné, že od zamestnávateľa nemožno spravodlivo požadovať, aby zamestnanca ďalej zamestnával ani počas výpovednej doby. Zamestnávateľ musí dodržať subjektívnu dvojmesačnú a objektívnu jednoročnú prekluzívnu lehotu.\n\nPríklad: Zamestnanec nastúpi do práce pod vplyvom alkoholu. Ide o závažné porušenie pracovnej disciplíny, ktoré môže odôvodniť okamžité skončenie pracovného pomeru.\n\nKľúčové slová: pracovná disciplína; povinnosti zamestnanca; porušenie pracovnej disciplíny; výpoveď; okamžité skončenie; krátenie dovolenky; prekluzívne lehoty.\n\nZapamätaj si:\n- Pracovná disciplína zahŕňa všetky povinnosti zamestnanca podľa § 81 ZP a ďalších predpisov.\n- Menej závažné porušenia umožňujú výpoveď len po písomnom upozornení.\n- Závažné porušenie umožňuje okamžité skončenie pracovného pomeru.\n- Zamestnávateľ nesmie ukladať pokuty ani zrážky zo mzdy ako trest.\n- Dôvod výpovede alebo okamžitého skončenia musí byť presne skutkovo vymedzený a písomne doručený.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovná disciplína",
+    "porušenie povinností",
+    "sankcie",
+    "Zákonník práce"
+  ],
+  "summary": "Pracovná disciplína a sankcie za porušenie pracovnej disciplíny Pracovná disciplína je súhrn všetkých povinností zamestnanca, ktoré mu vyplývajú zo Zákonníka práce, pracovnej zmluvy, kolektívnej zmluvy, pracovného poriadku a pokynov nadriadeného, s ktorými bol riadne oboznámený (základné povinnosti § 81 ZP; vedúci zamestnanci § 82 ZP). Zavinené porušenie týchto povinností je porušením pracovnej disciplíny.\n\nZákonník práce rozlišuje tri intenzity: menej závažné porušenie, závažné porušenie a porušenie pracovnej disciplíny zvlášť hrubým spôsobom. Intenzita sa posudzuje individuálne podľa okolností, miery zavinenia, následkov, doterajšieho správania a povahy povinností.\n\nNásledky (nejde o „disciplinárne tresty\" v pravom zmysle): – pri menej závažnom porušení možno dať výpoveď (§ 63 ods. 1 písm. e) len ak bol zamestnanec v posledných 6 mesiacoch v súvislosti s porušením disciplíny písomne upozornený na možnosť výpovede, – pri závažnom porušení možno dať výpoveď (§ 63 ods. 1 písm. e) aj bez predchádzajúceho upozornenia, alebo okamžite skončiť pracovný pomer (§ 68 ods. 1 písm. b), – možno krátiť dovolenku za neospravedlnene zameškané zmeny (§ 109 ods. 3 ZP). Zamestnávateľ nesmie ukladať peňažné pokuty ani zrážky zo mzdy ako sankciu za porušenie disciplíny.\n\nPri okamžitom skončení musí byť porušenie také, že od zamestnávateľa nemožno spravodlivo požadovať ďalšie zamestnávanie ani počas výpovednej doby. Platia lehoty: 2 mesiace od zistenia dôvodu, najneskôr 1 rok od jeho vzniku (§ 68 ods. 2 ZP).\n\nPríklad: Zamestnanec nastúpi do práce pod vplyvom alkoholu. Ide spravidla o závažné (podľa okolností až zvlášť hrubé) porušenie pracovnej disciplíny, ktoré môže odôvodniť okamžité skončenie pracovného pomeru (§ 68 ods. 1 písm. b).\n\nZapamätaj si:\n\nPracovná disciplína = všetky povinnosti zamestnanca podľa § 81 ZP a ďalších prameňov.\nTri intenzity: menej závažné, závažné, zvlášť hrubé porušenie.\nMenej závažné → výpoveď len po písomnom upozornení v posledných 6 mesiacoch (§ 63 ods. 1 písm. e).\nZávažné/zvlášť hrubé → výpoveď alebo okamžité skončenie (§ 68 ods. 1 písm. b).\nZamestnávateľ nesmie ukladať pokuty ani zrážky zo mzdy ako trest.\nDôvod musí byť skutkovo vymedzený a písomne doručený; lehoty 2 mesiace/1 rok.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 63 ods. 1 písm. e), § 68, § 81, § 82, § 109 ods. 3",
   "quiz": [
     {
       "question": "Ako definuje pracovnú disciplínu doktrína?",
-      "options": ["Súbor povinností zamestnávateľa", "Súbor povinností zamestnanca vyplývajúcich z právnych a interných predpisov", "Len povinnosti podľa pracovnej zmluvy"],
+      "options": [
+        "Súbor povinností zamestnávateľa",
+        "Súbor povinností zamestnanca vyplývajúcich z právnych a interných predpisov",
+        "Len povinnosti podľa pracovnej zmluvy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o súhrn povinností zamestnanca podľa zákona, zmluvy a interných predpisov.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kedy môže zamestnávateľ dať výpoveď pre menej závažné porušenie pracovnej disciplíny?",
-      "options": ["Kedykoľvek", "Len po písomnom upozornení v posledných 6 mesiacoch", "Len ak zamestnanec súhlasí"],
+      "options": [
+        "Kedykoľvek",
+        "Len po písomnom upozornení v posledných 6 mesiacoch",
+        "Len ak zamestnanec súhlasí"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 63 ods. 1 písm. e) ZP vyžaduje písomné upozornenie.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Ktoré z nasledujúcich je závažné porušenie pracovnej disciplíny?",
-      "options": ["Neskorý príchod", "Požívanie alkoholu na pracovisku", "Zabudnutie vyplniť formulár"],
+      "options": [
+        "Neskorý príchod",
+        "Požívanie alkoholu na pracovisku",
+        "Zabudnutie vyplniť formulár"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Alkohol je typickým príkladom závažného porušenia.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Kedy môže zamestnávateľ okamžite skončiť pracovný pomer?",
-      "options": ["Pri akomkoľvek porušení", "Pri závažnom porušení pracovnej disciplíny", "Len pri sústavnom meškaní"],
+      "options": [
+        "Pri akomkoľvek porušení",
+        "Pri závažnom porušení pracovnej disciplíny",
+        "Len pri sústavnom meškaní"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 68 ods. 1 písm. b) ZP umožňuje okamžité skončenie pri závažnom porušení.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ môže ukladať pokuty", "Zamestnávateľ môže krátiť dovolenku za neospravedlnenú absenciu", "Zamestnávateľ môže robiť zrážky zo mzdy ako trest"],
+      "options": [
+        "Zamestnávateľ môže ukladať pokuty",
+        "Zamestnávateľ môže krátiť dovolenku za neospravedlnenú absenciu",
+        "Zamestnávateľ môže robiť zrážky zo mzdy ako trest"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 109 ods. 3 ZP umožňuje krátenie dovolenky.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Pracovná disciplína", "definition": "Súhrn povinností zamestnanca vyplývajúcich zo zákona, zmluvy a interných predpisov." },
-    { "term": "Menej závažné porušenie", "definition": "Porušenie nižšej intenzity, umožňuje výpoveď len po písomnom upozornení." },
-    { "term": "Závažné porušenie", "definition": "Porušenie vysokej intenzity umožňujúce okamžité skončenie pracovného pomeru." },
-    { "term": "Obzvlášť hrubé porušenie", "definition": "Najvyššia intenzita porušenia, typicky alkohol, krádež, fyzické útoky." },
-    { "term": "Krátenie dovolenky", "definition": "Sankcia podľa § 109 ods. 3 ZP za neospravedlnenú absenciu." }
+    {
+      "term": "Pracovná disciplína",
+      "definition": "Súhrn povinností zamestnanca vyplývajúcich zo zákona, zmluvy a interných predpisov."
+    },
+    {
+      "term": "Menej závažné porušenie",
+      "definition": "Porušenie nižšej intenzity, umožňuje výpoveď len po písomnom upozornení."
+    },
+    {
+      "term": "Závažné porušenie",
+      "definition": "Porušenie vysokej intenzity umožňujúce okamžité skončenie pracovného pomeru."
+    },
+    {
+      "term": "Obzvlášť hrubé porušenie",
+      "definition": "Najvyššia intenzita porušenia, typicky alkohol, krádež, fyzické útoky."
+    },
+    {
+      "term": "Krátenie dovolenky",
+      "definition": "Sankcia podľa § 109 ods. 3 ZP za neospravedlnenú absenciu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Sústavné meškanie",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Ide o menej závažné porušenie?",
-          "options": ["Áno", "Nie", "Je to závažné porušenie"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Je to závažné porušenie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Meškanie je typické menej závažné porušenie.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Môže zamestnávateľ dať výpoveď?",
-          "options": ["Áno, ak bolo doručené písomné upozornenie", "Nie", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Áno, ak bolo doručené písomné upozornenie",
+            "Nie",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 63 ods. 1 písm. e) ZP vyžaduje písomné upozornenie.",
@@ -92,7 +137,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Alkohol na pracovisku",
       "difficulty": "stredná",
@@ -104,7 +148,11 @@
         },
         {
           "question": "Krok 1: Ide o závažné porušenie pracovnej disciplíny?",
-          "options": ["Áno", "Nie", "Len ak pracuje v rizikovom prostredí"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak pracuje v rizikovom prostredí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Alkohol je podľa judikatúry typické závažné porušenie.",
@@ -113,7 +161,11 @@
         },
         {
           "question": "Krok 2: Môže zamestnávateľ okamžite skončiť pracovný pomer?",
-          "options": ["Áno, ak je skutok preukázaný", "Nie", "Len ak zamestnanec prizná vinu"],
+          "options": [
+            "Áno, ak je skutok preukázaný",
+            "Nie",
+            "Len ak zamestnanec prizná vinu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 68 ods. 1 písm. b) ZP umožňuje okamžité skončenie.",
@@ -132,13 +184,55 @@
   "spider": {
     "center": "Pracovná disciplína – povinnosti × porušenia × sankcie × výpoveď × okamžité skončenie",
     "branches": [
-      { "label": "Pracovná disciplína (§ 81 ZP + interné predpisy)", "leaves": ["Zahŕňa všetky povinnosti zamestnanca: povinnosti podľa Zákonníka práce, pracovnej zmluvy, kolektívnej zmluvy, pracovného poriadku, pokynov zamestnávateľa, BOZP", "Porušenie musí byť zavinené (úmysel alebo nedbanlivosť)."] },
-      { "label": "Druhy porušenia pracovnej disciplíny", "leaves": ["Posudzujú sa podľa: miery zavinenia, následkov, doterajšieho správania, charakteru povinnosti, okolností prípadu", "Tri úrovne: menej závažné, závažné, obzvlášť hrubé"] },
-      { "label": "Menej závažné porušenie", "leaves": ["Príklady: opakované meškanie, nedodržanie interných pravidiel, menšie nedostatky v práci", "Sankcia: výpoveď je možná až po písomnom upozornení na porušenie povinností"] },
-      { "label": "Závažné porušenie", "leaves": ["Príklady: hrubé porušenie BOZP, odmietnutie pokynu, príchod do práce pod vplyvom alkoholu", "Sankcia: okamžité skončenie pracovného pomeru, ak je intenzita dostatočná"] },
-      { "label": "Obzvlášť hrubé porušenie", "leaves": ["Najvyššia intenzita: úmyselné konanie proti záujmom zamestnávateľa, krádež, fyzické útoky, závažné ohrozenie života alebo zdravia", "Sankcia: okamžité skončenie je spravidla odôvodnené"] },
-      { "label": "Sankcie za porušenie disciplíny", "leaves": ["Zákon umožňuje len: krátenie dovolenky (§ 109 ods. 3 ZP), výpoveď (§ 63 ods. 1 písm. e) ZP), okamžité skončenie (§ 68 ods. 1 písm. b) ZP)", "Zamestnávateľ nesmie ukladať pokuty, zrážky zo mzdy ani iné disciplinárne tresty."] },
-      { "label": "Prekluzívne lehoty", "leaves": ["Zamestnávateľ musí konať: do 2 mesiacov od zistenia porušenia, najneskôr do 1 roka od jeho spáchania", "Po uplynutí lehoty už sankciu uložiť nemožno."] }
+      {
+        "label": "Pracovná disciplína (§ 81 ZP + interné predpisy)",
+        "leaves": [
+          "Zahŕňa všetky povinnosti zamestnanca: povinnosti podľa Zákonníka práce, pracovnej zmluvy, kolektívnej zmluvy, pracovného poriadku, pokynov zamestnávateľa, BOZP",
+          "Porušenie musí byť zavinené (úmysel alebo nedbanlivosť)."
+        ]
+      },
+      {
+        "label": "Druhy porušenia pracovnej disciplíny",
+        "leaves": [
+          "Posudzujú sa podľa: miery zavinenia, následkov, doterajšieho správania, charakteru povinnosti, okolností prípadu",
+          "Tri úrovne: menej závažné, závažné, obzvlášť hrubé"
+        ]
+      },
+      {
+        "label": "Menej závažné porušenie",
+        "leaves": [
+          "Príklady: opakované meškanie, nedodržanie interných pravidiel, menšie nedostatky v práci",
+          "Sankcia: výpoveď je možná až po písomnom upozornení na porušenie povinností"
+        ]
+      },
+      {
+        "label": "Závažné porušenie",
+        "leaves": [
+          "Príklady: hrubé porušenie BOZP, odmietnutie pokynu, príchod do práce pod vplyvom alkoholu",
+          "Sankcia: okamžité skončenie pracovného pomeru, ak je intenzita dostatočná"
+        ]
+      },
+      {
+        "label": "Obzvlášť hrubé porušenie",
+        "leaves": [
+          "Najvyššia intenzita: úmyselné konanie proti záujmom zamestnávateľa, krádež, fyzické útoky, závažné ohrozenie života alebo zdravia",
+          "Sankcia: okamžité skončenie je spravidla odôvodnené"
+        ]
+      },
+      {
+        "label": "Sankcie za porušenie disciplíny",
+        "leaves": [
+          "Zákon umožňuje len: krátenie dovolenky (§ 109 ods. 3 ZP), výpoveď (§ 63 ods. 1 písm. e) ZP), okamžité skončenie (§ 68 ods. 1 písm. b) ZP)",
+          "Zamestnávateľ nesmie ukladať pokuty, zrážky zo mzdy ani iné disciplinárne tresty."
+        ]
+      },
+      {
+        "label": "Prekluzívne lehoty",
+        "leaves": [
+          "Zamestnávateľ musí konať: do 2 mesiacov od zistenia porušenia, najneskôr do 1 roka od jeho spáchania",
+          "Po uplynutí lehoty už sankciu uložiť nemožno."
+        ]
+      }
     ]
   }
 }

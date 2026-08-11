@@ -2,14 +2,22 @@
   "id": "22. A",
   "title": "Právna úprava odmeňovania za prácu v nepodnikateľskej sfére",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "odmeňovanie", "verejný sektor", "plat", "tarifné tabuľky"],
-
-  "summary": "Odmeňovanie zamestnancov v nepodnikateľskej sfére (štátna správa, samospráva, rozpočtové a príspevkové organizácie) sa riadi zákonom č. 553/2003 Z. z. o odmeňovaní pri výkone práce vo verejnom záujme. Na rozdiel od podnikateľskej sféry sa neposkytuje mzda, ale plat. Plat je určený tarifnými tabuľkami, ktoré zohľadňujú náročnosť práce (platová trieda) a dĺžku započítanej praxe (platový stupeň). Zamestnávateľ nemôže plat dohodnúť individuálne – musí rešpektovať zákonné tarify.\n\nSúčasťou platu sú tarifný plat, osobný príplatok, príplatky za prácu (napr. nočná práca, sviatok, víkend), odmeny a ďalšie zákonné zložky. Zaradenie zamestnanca do triedy musí zodpovedať katalógu pracovných činností. Odmeňovanie je prísne regulované s cieľom zabezpečiť rovnosť, transparentnosť a predvídateľnosť.\n\nPríklad:\nZamestnávateľ zaradí zamestnanca do nižšej triedy, než zodpovedá jeho pracovnej činnosti, aby ušetril. Takýto postup je nezákonný – trieda musí zodpovedať katalógu pracovných činností.\n\nKľúčové slová:\nplat; tarifný plat; platová trieda; platový stupeň; osobný príplatok; verejný sektor.\n\nZapamätaj si:\n- V nepodnikateľskej sfére sa poskytuje plat, nie mzda.\n- Plat je určený tarifnými tabuľkami, nie dohodou.\n- Platová trieda musí zodpovedať náročnosti práce.\n- Platový stupeň závisí od započítanej praxe.\n- Osobný príplatok je možný, ale musí byť objektívne odôvodnený.\n- Odmeňovanie vo verejnom sektore musí byť transparentné a rovnaké.",
-
+  "tags": [
+    "pracovné právo",
+    "odmeňovanie",
+    "verejný sektor",
+    "plat",
+    "tarifné tabuľky"
+  ],
+  "summary": "Právna úprava odmeňovania za prácu v nepodnikateľskej sfére Odmeňovanie vo verejnej sfére (štátna správa, samospráva, rozpočtové a príspevkové organizácie) sa riadi zákonom č. 553/2003 Z. z. o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme. Na rozdiel od podnikateľskej sféry sa neposkytuje mzda, ale plat, ktorý je určený tarifne – nemožno ho dohodnúť individuálne.\n\nPlat sa určuje podľa zaradenia do platovej triedy (podľa najnáročnejšej pracovnej činnosti v rámci druhu práce a katalógu pracovných činností) a platového stupňa (podľa dĺžky započítanej praxe). Zložky platu: tarifný plat, príplatky (za riadenie, zastupovanie, osobný príplatok, príplatok za nočnú prácu, prácu vo sviatok, v sobotu a nedeľu, za prácu nadčas, za sťažený výkon), odmeny a ďalšie zákonné zložky. Zaradenie do triedy musí zodpovedať katalógu pracovných činností.\n\nPríklad: Zamestnávateľ zaradí zamestnanca do nižšej triedy, než zodpovedá jeho pracovnej činnosti, aby ušetril. Postup je nezákonný – trieda musí zodpovedať najnáročnejšej vykonávanej činnosti podľa katalógu.\n\nZapamätaj si:\n\nVo verejnej sfére sa poskytuje plat (zákon č. 553/2003 Z. z.), nie mzda.\nPlat je určený tarifne – platová trieda (náročnosť) a platový stupeň (prax).\nZaradenie musí zodpovedať katalógu pracovných činností.\nZložky: tarifný plat, príplatky, osobný príplatok, odmeny.\nOdmeňovanie je transparentné a viazané na zákon, nie na individuálnu dohodu.\n\nZdroj: Zákon č. 553/2003 Z. z. o odmeňovaní niektorých zamestnancov pri výkone práce vo verejnom záujme",
   "quiz": [
     {
       "question": "Ako sa nazýva odmena za prácu v nepodnikateľskej sfére?",
-      "options": ["Mzda", "Plat", "Honorár"],
+      "options": [
+        "Mzda",
+        "Plat",
+        "Honorár"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. V nepodnikateľskej sfére sa poskytuje plat.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Od čoho závisí tarifný plat?",
-      "options": ["Od dohody so zamestnávateľom", "Od platovej triedy a stupňa", "Od kolektívnej zmluvy"],
+      "options": [
+        "Od dohody so zamestnávateľom",
+        "Od platovej triedy a stupňa",
+        "Od kolektívnej zmluvy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Trieda = náročnosť práce, stupeň = prax.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ môže určiť plat ľubovoľne", "Plat je určený podľa zákonných tabuliek", "Plat sa určuje podľa trhových podmienok"],
+      "options": [
+        "Zamestnávateľ môže určiť plat ľubovoľne",
+        "Plat je určený podľa zákonných tabuliek",
+        "Plat sa určuje podľa trhových podmienok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odmeňovanie je regulované zákonom.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Ktorý príplatok patrí aj v nepodnikateľskej sfére?",
-      "options": ["Za nočnú prácu", "Za prítomnosť na pracovisku", "Za obed"],
+      "options": [
+        "Za nočnú prácu",
+        "Za prítomnosť na pracovisku",
+        "Za obed"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Príplatok za nočnú prácu je zákonný.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Môže zamestnávateľ poskytnúť osobný príplatok?",
-      "options": ["Áno", "Nie", "Len ak to schváli ministerstvo"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak to schváli ministerstvo"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Osobný príplatok je možný, ale musí byť odôvodnený.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Plat", "definition": "Odmena za prácu vo verejnom záujme; určená zákonom." },
-    { "term": "Platová trieda", "definition": "Zohľadňuje náročnosť pracovnej činnosti podľa katalógu." },
-    { "term": "Platový stupeň", "definition": "Zohľadňuje dĺžku započítanej praxe." },
-    { "term": "Tarifný plat", "definition": "Základná zložka platu podľa zákonných tabuliek." },
-    { "term": "Osobný príplatok", "definition": "Dobrovoľná zložka platu za mimoriadne výsledky alebo vyššiu záťaž." }
+    {
+      "term": "Plat",
+      "definition": "Odmena za prácu vo verejnom záujme; určená zákonom."
+    },
+    {
+      "term": "Platová trieda",
+      "definition": "Zohľadňuje náročnosť pracovnej činnosti podľa katalógu."
+    },
+    {
+      "term": "Platový stupeň",
+      "definition": "Zohľadňuje dĺžku započítanej praxe."
+    },
+    {
+      "term": "Tarifný plat",
+      "definition": "Základná zložka platu podľa zákonných tabuliek."
+    },
+    {
+      "term": "Osobný príplatok",
+      "definition": "Dobrovoľná zložka platu za mimoriadne výsledky alebo vyššiu záťaž."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nesprávne zaradenie do platovej triedy",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Môže zamestnávateľ znížiť triedu podľa uváženia?",
-          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Trieda musí zodpovedať náročnosti práce podľa katalógu.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Ako sa určuje trieda?",
-          "options": ["Podľa katalógu pracovných činností", "Podľa rozhodnutia zamestnávateľa", "Podľa kolektívnej zmluvy"],
+          "options": [
+            "Podľa katalógu pracovných činností",
+            "Podľa rozhodnutia zamestnávateľa",
+            "Podľa kolektívnej zmluvy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Katalóg presne určuje zaradenie podľa náročnosti.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Osobný príplatok a rovnaké zaobchádzanie",
       "difficulty": "ľahká",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Môže byť osobný príplatok diferencovaný?",
-          "options": ["Áno, ale musí byť odôvodnený", "Nie, musí byť rovnaký pre všetkých", "Áno, bez obmedzení"],
+          "options": [
+            "Áno, ale musí byť odôvodnený",
+            "Nie, musí byť rovnaký pre všetkých",
+            "Áno, bez obmedzení"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Diferenciácia je možná, ale musí byť objektívna a nediskriminačná.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Je postup zamestnávateľa v poriadku?",
-          "options": ["Nie, ak neexistuje objektívne kritérium", "Áno", "Len ak zamestnanci súhlasia"],
+          "options": [
+            "Nie, ak neexistuje objektívne kritérium",
+            "Áno",
+            "Len ak zamestnanci súhlasia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Bez kritérií môže ísť o nerovnaké zaobchádzanie.",
@@ -158,13 +210,53 @@
   "spider": {
     "center": "Plat – tarifné tabuľky × trieda × stupeň × osobný príplatok × verejný sektor",
     "branches": [
-      { "label": "Plat vs. mzda", "leaves": ["v podnikateľskej sfére → mzda,", "vo verejnom sektore → plat,", "plat je zákonom určený, nie dohodou."] },
-      { "label": "Tarifné tabuľky (zákon č. 553/2003 Z. z.)", "leaves": ["Plat sa určuje podľa: platovej triedy – náročnosť práce, platového stupňa – dĺžka započítanej praxe", "Zamestnávateľ nemôže určiť plat svojvoľne."] },
-      { "label": "Platová trieda", "leaves": ["Určuje sa podľa: katalógu pracovných činností, zložitosti, zodpovednosti a náročnosti práce", "Zaradenie do nižšej triedy je nezákonné."] },
-      { "label": "Platový stupeň", "leaves": ["Závisí od: započítanej praxe, prax sa započítava podľa pravidiel zákona (nie vždy 1:1)", "Vyšší stupeň = vyšší plat."] },
-      { "label": "Zložky platu", "leaves": ["Plat sa skladá z: tarifného platu, osobného príplatku, príplatkov (noc, sviatok, víkend), odmien, ďalších zákonných zložiek"] },
-      { "label": "Osobný príplatok", "leaves": ["Možno ho priznať: za kvalitný výkon, za špecifické schopnosti, musí byť objektívne odôvodnený, nesmie byť diskriminačný"] },
-      { "label": "Transparentnosť a rovnosť", "leaves": ["Odmeňovanie vo verejnom sektore musí byť: rovnaké, predvídateľné, nediskriminačné, kontrolovateľné"] }
+      {
+        "label": "Plat vs. mzda",
+        "leaves": [
+          "v podnikateľskej sfére → mzda,",
+          "vo verejnom sektore → plat,",
+          "plat je zákonom určený, nie dohodou."
+        ]
+      },
+      {
+        "label": "Tarifné tabuľky (zákon č. 553/2003 Z. z.)",
+        "leaves": [
+          "Plat sa určuje podľa: platovej triedy – náročnosť práce, platového stupňa – dĺžka započítanej praxe",
+          "Zamestnávateľ nemôže určiť plat svojvoľne."
+        ]
+      },
+      {
+        "label": "Platová trieda",
+        "leaves": [
+          "Určuje sa podľa: katalógu pracovných činností, zložitosti, zodpovednosti a náročnosti práce",
+          "Zaradenie do nižšej triedy je nezákonné."
+        ]
+      },
+      {
+        "label": "Platový stupeň",
+        "leaves": [
+          "Závisí od: započítanej praxe, prax sa započítava podľa pravidiel zákona (nie vždy 1:1)",
+          "Vyšší stupeň = vyšší plat."
+        ]
+      },
+      {
+        "label": "Zložky platu",
+        "leaves": [
+          "Plat sa skladá z: tarifného platu, osobného príplatku, príplatkov (noc, sviatok, víkend), odmien, ďalších zákonných zložiek"
+        ]
+      },
+      {
+        "label": "Osobný príplatok",
+        "leaves": [
+          "Možno ho priznať: za kvalitný výkon, za špecifické schopnosti, musí byť objektívne odôvodnený, nesmie byť diskriminačný"
+        ]
+      },
+      {
+        "label": "Transparentnosť a rovnosť",
+        "leaves": [
+          "Odmeňovanie vo verejnom sektore musí byť: rovnaké, predvídateľné, nediskriminačné, kontrolovateľné"
+        ]
+      }
     ]
   }
 }

@@ -2,14 +2,23 @@
   "id": "24. B",
   "title": "Bezpečnosť a ochrana zdravia pri práci (BOZP)",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "BOZP", "bezpečnosť práce", "ochrana zdravia", "pracovný úraz", "zamestnávateľ"],
-
-  "summary": "Bezpečnosť a ochrana zdravia pri práci (BOZP) je systém právnych, organizačných, technických, zdravotníckych a sociálnych opatrení, ktorých cieľom je vytvárať pracovné podmienky, ktoré vylučujú alebo minimalizujú pôsobenie nebezpečných a škodlivých faktorov na zdravie zamestnancov. BOZP je neoddeliteľnou súčasťou pracovnoprávnych vzťahov a je upravené najmä Zákonníkom práce (§ 146–150), zákonom č. 124/2006 Z. z. o BOZP, zákonom č. 355/2007 Z. z. o verejnom zdraví, zákonom č. 125/2006 Z. z. o inšpekcii práce, smernicami EÚ a dohovormi MOP.\n\nZamestnávateľ je povinný sústavne zabezpečovať BOZP, hodnotiť riziká, vypracovať dokument o posúdení rizík, vydávať vnútorné predpisy, zabezpečiť školenia, poskytovať OOPP, zabezpečiť prvú pomoc, evakuačné postupy, rekondičné pobyty pre zamestnancov v rizikových kategóriách, zriadiť komisiu BOZP (pri 100+ zamestnancoch) a spolupracovať so zástupcami zamestnancov pre BOZP.\n\nZamestnanec je povinný dodržiavať predpisy BOZP, používať OOPP, zúčastňovať sa školení, oznamovať nebezpečné situácie, podrobiť sa vyšetreniu na alkohol a omamné látky, dodržiavať zákaz fajčenia a zúčastňovať sa rekondičných pobytov. Má právo odmietnuť prácu pri bezprostrednom ohrození života alebo zdravia.\n\nKontrolu BOZP vykonávajú odborové orgány, zástupcovia zamestnancov pre BOZP, komisia BOZP a inšpekcia práce. Pri porušení povinností môže zamestnávateľ niesť zodpovednosť za pracovný úraz.\n\nPríklad:\nZamestnávateľ odmietne poskytnúť zamestnancovi ochranné rukavice pri rizikovej práci. Ide o porušenie zákona – OOPP musí poskytnúť bezplatne.\n\nKľúčové slová:\nBOZP; OOPP; hodnotenie rizík; školenie BOZP; pracovný úraz; rekondičný pobyt; inšpekcia práce.\n\nZapamätaj si:\n- BOZP je povinnosť zamestnávateľa, nie dobrovoľná aktivita.\n- OOPP sa poskytujú bezplatne.\n- Školenie BOZP je povinné a považuje sa za výkon práce.\n- Zamestnanec môže odmietnuť prácu pri bezprostrednom ohrození.\n- Rekondičné pobyty sú povinné pri práci v 3. a 4. kategórii.\n- Kontrolu BOZP vykonáva aj inšpekcia práce a odbory.",
-
+  "tags": [
+    "pracovné právo",
+    "BOZP",
+    "bezpečnosť práce",
+    "ochrana zdravia",
+    "pracovný úraz",
+    "zamestnávateľ"
+  ],
+  "summary": "Bezpečnosť a ochrana zdravia pri práci (BOZP) BOZP je systém právnych, organizačných, technických, zdravotníckych a sociálnych opatrení na vylúčenie alebo obmedzenie pôsobenia nebezpečných a škodlivých faktorov na zdravie zamestnancov. Je súčasťou pracovnoprávnych vzťahov; upravuje ju Zákonník práce (§ 146 – § 150 ZP – ochrana práce), zákon č. 124/2006 Z. z. o BOZP, zákon č. 355/2007 Z. z. o ochrane verejného zdravia, zákon č. 125/2006 Z. z. o inšpekcii práce, smernica 89/391/EHS a dohovory MOP.\n\nZamestnávateľ je povinný sústavne zaisťovať BOZP, posudzovať riziká a viesť dokument o posúdení rizika, prijímať opatrenia, bezplatne poskytovať osobné ochranné pracovné prostriedky (OOPP), zabezpečiť pravidelné oboznamovanie a školenia (považujú sa za výkon práce), prvú pomoc, rekondičné pobyty pre zamestnancov v rizikových kategóriách, a spolupracovať so zástupcami zamestnancov pre bezpečnosť.\n\nZamestnanec je povinný dodržiavať predpisy BOZP, používať OOPP, zúčastňovať sa školení, oznamovať nedostatky a nebezpečenstvá, podrobiť sa vyšetreniu na alkohol a iné návykové látky. Má právo odmietnuť prácu, ktorá bezprostredne a vážne ohrozuje jeho život alebo zdravie. Kontrolu vykonávajú inšpekcia práce, orgány verejného zdravotníctva a zástupcovia zamestnancov pre BOZP.\n\nPríklad: Zamestnávateľ odmietne poskytnúť ochranné rukavice pri rizikovej práci. Ide o porušenie zákona – OOPP sa poskytujú bezplatne.\n\nZapamätaj si:\n\nBOZP je zákonná povinnosť zamestnávateľa (§ 146 – 150 ZP; zákon č. 124/2006 Z. z.).\nZamestnávateľ posudzuje riziká, bezplatne poskytuje OOPP, zabezpečuje školenia (výkon práce).\nZamestnanec dodržiava predpisy, používa OOPP, podrobí sa kontrole na alkohol.\nZamestnanec môže odmietnuť prácu pri bezprostrednom a vážnom ohrození života/zdravia.\nKontrolu vykonáva inšpekcia práce, verejné zdravotníctvo a zástupcovia pre BOZP.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 146 – § 150 Zákony č. 124/2006 Z. z., č. 355/2007 Z. z., č. 125/2006 Z. z.; smernica 89/391/EHS",
   "quiz": [
     {
       "question": "Čo je BOZP?",
-      "options": ["Dobrovoľný program firmy", "Systém opatrení na ochranu zdravia pri práci", "Len školenie zamestnancov"],
+      "options": [
+        "Dobrovoľný program firmy",
+        "Systém opatrení na ochranu zdravia pri práci",
+        "Len školenie zamestnancov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. BOZP je komplexný systém opatrení na ochranu zdravia a bezpečnosti.",
@@ -18,7 +27,11 @@
     },
     {
       "question": "Kto zodpovedá za bezpečné pracovné podmienky?",
-      "options": ["Zamestnanec", "Zamestnávateľ", "Inšpektorát práce"],
+      "options": [
+        "Zamestnanec",
+        "Zamestnávateľ",
+        "Inšpektorát práce"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Primárnu zodpovednosť nesie zamestnávateľ.",
@@ -27,7 +40,11 @@
     },
     {
       "question": "Čo sú OOPP?",
-      "options": ["Osobné ochranné pracovné prostriedky", "Organizačné opatrenia pri práci", "Odborové opatrenia"],
+      "options": [
+        "Osobné ochranné pracovné prostriedky",
+        "Organizačné opatrenia pri práci",
+        "Odborové opatrenia"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. OOPP sú ochranné pomôcky poskytované zamestnávateľom.",
@@ -36,7 +53,11 @@
     },
     {
       "question": "Kedy môže zamestnanec odmietnuť prácu?",
-      "options": ["Keď sa mu nechce pracovať", "Pri bezprostrednom ohrození života alebo zdravia", "Len ak to schváli odborová organizácia"],
+      "options": [
+        "Keď sa mu nechce pracovať",
+        "Pri bezprostrednom ohrození života alebo zdravia",
+        "Len ak to schváli odborová organizácia"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zamestnanec môže odmietnuť prácu pri vážnom ohrození.",
@@ -45,7 +66,11 @@
     },
     {
       "question": "Kto vykonáva kontrolu BOZP?",
-      "options": ["Len zamestnávateľ", "Odbory, zástupcovia BOZP, komisia BOZP a inšpekcia práce", "Len polícia"],
+      "options": [
+        "Len zamestnávateľ",
+        "Odbory, zástupcovia BOZP, komisia BOZP a inšpekcia práce",
+        "Len polícia"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Kontrolu vykonáva viacero subjektov.",
@@ -53,15 +78,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "BOZP", "definition": "Systém opatrení na ochranu zdravia a života pri práci." },
-    { "term": "OOPP", "definition": "Ochranné prostriedky poskytované zamestnávateľom bezplatne." },
-    { "term": "Posúdenie rizík", "definition": "Písomný dokument, ktorý musí zamestnávateľ vypracovať pre všetky činnosti." },
-    { "term": "Rekondičný pobyt", "definition": "Povinná prevencia pre práce v 3. a 4. kategórii." },
-    { "term": "Inšpekcia práce", "definition": "Orgán dozoru nad BOZP." }
+    {
+      "term": "BOZP",
+      "definition": "Systém opatrení na ochranu zdravia a života pri práci."
+    },
+    {
+      "term": "OOPP",
+      "definition": "Ochranné prostriedky poskytované zamestnávateľom bezplatne."
+    },
+    {
+      "term": "Posúdenie rizík",
+      "definition": "Písomný dokument, ktorý musí zamestnávateľ vypracovať pre všetky činnosti."
+    },
+    {
+      "term": "Rekondičný pobyt",
+      "definition": "Povinná prevencia pre práce v 3. a 4. kategórii."
+    },
+    {
+      "term": "Inšpekcia práce",
+      "definition": "Orgán dozoru nad BOZP."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Neposkytnutie OOPP",
@@ -74,7 +112,11 @@
         },
         {
           "question": "Krok 1: Je poskytovanie OOPP povinné?",
-          "options": ["Áno", "Nie", "Len ak zamestnanec požiada"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnanec požiada"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí poskytnúť OOPP pri rizikovej práci.",
@@ -83,7 +125,11 @@
         },
         {
           "question": "Krok 2: Porušuje zamestnávateľ zákon?",
-          "options": ["Áno", "Nie", "Len ak dôjde k úrazu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak dôjde k úrazu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neposkytnutie OOPP je porušením BOZP.",
@@ -105,7 +151,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nevykonané školenie BOZP",
       "difficulty": "stredná",
@@ -117,7 +162,11 @@
         },
         {
           "question": "Krok 1: Je školenie BOZP povinné pred začiatkom práce?",
-          "options": ["Áno", "Nie", "Len pri rizikových profesiách"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri rizikových profesiách"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Školenie je povinné pre všetkých zamestnancov.",
@@ -126,7 +175,11 @@
         },
         {
           "question": "Krok 2: Zodpovedá zamestnávateľ za úraz?",
-          "options": ["Áno", "Nie", "Len ak úraz je vážny"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak úraz je vážny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nevykonanie školenia je porušením povinností zamestnávateľa.",
@@ -158,12 +211,62 @@
   "spider": {
     "center": "BOZP – povinnosti zamestnávateľa × povinnosti zamestnanca × riziká × OOPP × kontrola",
     "branches": [
-      { "label": "Povinnosti zamestnávateľa (§ 146 – 150 ZP, zákon č. 124/2006 Z. z.)", "leaves": ["Zamestnávateľ musí: sústavne zabezpečovať BOZP", "Zamestnávateľ musí: hodnotiť riziká a vypracovať dokument o posúdení rizík", "Zamestnávateľ musí: vydávať vnútorné predpisy BOZP", "Zamestnávateľ musí: zabezpečiť školenia BOZP", "Zamestnávateľ musí: poskytovať OOPP bezplatne", "Zamestnávateľ musí: zabezpečiť prvú pomoc, evakuáciu, PO", "Zamestnávateľ musí: organizovať rekondičné pobyty pre rizikové kategórie", "Zamestnávateľ musí: zriadiť komisiu BOZP (100+ zamestnancov)", "Zamestnávateľ musí: spolupracovať so zástupcami zamestnancov pre BOZP"] },
-      { "label": "Povinnosti zamestnanca", "leaves": ["Zamestnanec musí: dodržiavať predpisy BOZP", "Zamestnanec musí: používať OOPP", "Zamestnanec musí: zúčastňovať sa školení", "Zamestnanec musí: oznamovať nebezpečné situácie", "Zamestnanec musí: podrobiť sa testu na alkohol a omamné látky", "Zamestnanec musí: dodržiavať zákaz fajčenia", "Zamestnanec musí: zúčastniť sa rekondičných pobytov", "Má právo: odmietnuť prácu pri bezprostrednom ohrození života alebo zdravia"] },
-      { "label": "Hodnotenie rizík", "leaves": ["Zamestnávateľ musí: identifikovať nebezpečné faktory, vyhodnotiť ich závažnosť, prijať opatrenia na ich odstránenie alebo minimalizáciu, pravidelne aktualizovať dokumentáciu", "OOPP (osobné ochranné pracovné prostriedky)", "Zamestnávateľ musí: poskytovať OOPP bezplatne, zabezpečiť ich údržbu, výmenu a kontrolu, viesť evidenciu vydaných OOPP"] },
-      { "label": "Školenia BOZP", "leaves": ["sú povinné,", "považujú sa za výkon práce – patrí mzda,", "musia byť pravidelné a preukázateľné (podpisová listina)."] },
-      { "label": "Rekondičné pobyty", "leaves": ["Povinné pri práci v: 3. a 4. kategórii rizika, zamestnávateľ ich musí hradiť, cieľom je regenerácia zdravia"] },
-      { "label": "Kontrola BOZP", "leaves": ["Kontrolu vykonávajú: inšpekcia práce, odborové orgány, zástupcovia zamestnancov pre BOZP, komisia BOZP", "Pri porušení povinností: zamestnávateľ nesie zodpovednosť za pracovný úraz"] }
+      {
+        "label": "Povinnosti zamestnávateľa (§ 146 – 150 ZP, zákon č. 124/2006 Z. z.)",
+        "leaves": [
+          "Zamestnávateľ musí: sústavne zabezpečovať BOZP",
+          "Zamestnávateľ musí: hodnotiť riziká a vypracovať dokument o posúdení rizík",
+          "Zamestnávateľ musí: vydávať vnútorné predpisy BOZP",
+          "Zamestnávateľ musí: zabezpečiť školenia BOZP",
+          "Zamestnávateľ musí: poskytovať OOPP bezplatne",
+          "Zamestnávateľ musí: zabezpečiť prvú pomoc, evakuáciu, PO",
+          "Zamestnávateľ musí: organizovať rekondičné pobyty pre rizikové kategórie",
+          "Zamestnávateľ musí: zriadiť komisiu BOZP (100+ zamestnancov)",
+          "Zamestnávateľ musí: spolupracovať so zástupcami zamestnancov pre BOZP"
+        ]
+      },
+      {
+        "label": "Povinnosti zamestnanca",
+        "leaves": [
+          "Zamestnanec musí: dodržiavať predpisy BOZP",
+          "Zamestnanec musí: používať OOPP",
+          "Zamestnanec musí: zúčastňovať sa školení",
+          "Zamestnanec musí: oznamovať nebezpečné situácie",
+          "Zamestnanec musí: podrobiť sa testu na alkohol a omamné látky",
+          "Zamestnanec musí: dodržiavať zákaz fajčenia",
+          "Zamestnanec musí: zúčastniť sa rekondičných pobytov",
+          "Má právo: odmietnuť prácu pri bezprostrednom ohrození života alebo zdravia"
+        ]
+      },
+      {
+        "label": "Hodnotenie rizík",
+        "leaves": [
+          "Zamestnávateľ musí: identifikovať nebezpečné faktory, vyhodnotiť ich závažnosť, prijať opatrenia na ich odstránenie alebo minimalizáciu, pravidelne aktualizovať dokumentáciu",
+          "OOPP (osobné ochranné pracovné prostriedky)",
+          "Zamestnávateľ musí: poskytovať OOPP bezplatne, zabezpečiť ich údržbu, výmenu a kontrolu, viesť evidenciu vydaných OOPP"
+        ]
+      },
+      {
+        "label": "Školenia BOZP",
+        "leaves": [
+          "sú povinné,",
+          "považujú sa za výkon práce – patrí mzda,",
+          "musia byť pravidelné a preukázateľné (podpisová listina)."
+        ]
+      },
+      {
+        "label": "Rekondičné pobyty",
+        "leaves": [
+          "Povinné pri práci v: 3. a 4. kategórii rizika, zamestnávateľ ich musí hradiť, cieľom je regenerácia zdravia"
+        ]
+      },
+      {
+        "label": "Kontrola BOZP",
+        "leaves": [
+          "Kontrolu vykonávajú: inšpekcia práce, odborové orgány, zástupcovia zamestnancov pre BOZP, komisia BOZP",
+          "Pri porušení povinností: zamestnávateľ nesie zodpovednosť za pracovný úraz"
+        ]
+      }
     ]
   }
 }

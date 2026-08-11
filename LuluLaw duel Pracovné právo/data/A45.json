@@ -2,14 +2,23 @@
   "id": "23. A",
   "title": "Prekážky v práci na strane zamestnávateľa",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "prekážky v práci", "zamestnávateľ", "náhrada mzdy", "prestoje", "vážne prevádzkové dôvody"],
-
-  "summary": "Prekážky v práci na strane zamestnávateľa sú situácie, keď zamestnávateľ nemôže prideľovať zamestnancovi prácu podľa pracovnej zmluvy, hoci zamestnanec je pripravený ju vykonávať (§ 142 ZP). Ide o právne významné prekážky, pri ktorých zamestnanec nesmie byť bez príjmu. Zákon rozlišuje tri kategórie: prestoje, nepriaznivé poveternostné vplyvy a iné prekážky.\n\nPri prestojoch (porucha stroja, výpadok surovín, technické poruchy) patrí zamestnancovi náhrada mzdy vo výške 100 % priemerného zárobku, ak nebol preradený na inú prácu. Pri nepriaznivých poveternostných vplyvoch patrí náhrada najmenej 50 %. Pri iných prekážkach (napr. protiprávne konanie zamestnávateľa) patrí náhrada 100 %.\n\nOsobitnou kategóriou sú vážne prevádzkové dôvody, ktoré musia byť vymedzené v písomnej dohode so zástupcami zamestnancov. Vtedy patrí náhrada najmenej 60 % priemerného zárobku. Dohodu nemožno nahradiť jednostranným rozhodnutím zamestnávateľa. Pri vážnych prevádzkových dôvodoch môže zamestnávateľ použiť aj konto pracovného času.\n\nPri podpore v čase skrátenej práce (tzv. kurzarbeit) patrí zamestnancovi najmenej 80 % priemerného zárobku, ak je uzavretá dohoda so zástupcami zamestnancov alebo so zamestnancom.\n\nPríklad:\nPorucha stroja spôsobí prerušenie práce. Zamestnávateľ tvrdí, že náhrada mzdy nepatrí. Ide o nezákonný postup – pri prestoji patrí 100 % priemerného zárobku.\n\nKľúčové slová:\nprestoje; nepriaznivé počasie; vážne prevádzkové dôvody; náhrada mzdy; konto pracovného času; kurzarbeit.\n\nZapamätaj si:\n- Prestoje = 100 % priemerného zárobku.\n- Nepriaznivé počasie = min. 50 % priemerného zárobku.\n- Iné prekážky = 100 % priemerného zárobku.\n- Vážne prevádzkové dôvody = min. 60 % + dohoda so zástupcami.\n- Kurzarbeit = min. 80 % priemerného zárobku.\n- Zamestnávateľ musí prekážku preukázať a nesmie ju zneužívať.",
-
+  "tags": [
+    "pracovné právo",
+    "prekážky v práci",
+    "zamestnávateľ",
+    "náhrada mzdy",
+    "prestoje",
+    "vážne prevádzkové dôvody"
+  ],
+  "summary": "Prekážky v práci na strane zamestnávateľa Prekážky na strane zamestnávateľa sú situácie, keď zamestnávateľ nemôže prideľovať prácu podľa pracovnej zmluvy, hoci zamestnanec je pripravený ju vykonávať (§ 142 ZP). Zamestnanec pri nich nesmie zostať bez príjmu.\n\nNáhrady mzdy podľa § 142 ZP: – prestoje (§ 142 ods. 1) – prechodná porucha, výpadok surovín, energie a pod.; ak zamestnanec nebol preradený na inú prácu, patrí náhrada mzdy najmenej 80 % priemerného zárobku, – nepriaznivé poveternostné vplyvy (§ 142 ods. 2) – náhrada najmenej 50 % priemerného zárobku, – iné prekážky na strane zamestnávateľa (§ 142 ods. 3) – napr. nedostatok práce z odbytových dôvodov, ak nie je uzavretá dohoda o vážnych prevádzkových dôvodoch: náhrada 100 % priemerného zárobku.\n\nVážne prevádzkové dôvody (§ 142 ods. 4 ZP): ak sú vymedzené v písomnej dohode so zástupcami zamestnancov, patrí zamestnancovi náhrada mzdy najmenej 60 % priemerného zárobku. Dohodu nemožno nahradiť jednostranným rozhodnutím zamestnávateľa.\n\nPodpora v čase skrátenej práce („kurzarbeit\", § 250b ZP a zákon č. 215/2021 Z. z.): pri obmedzení činnosti z vonkajších príčin patrí zamestnancovi náhrada mzdy najmenej 80 % priemerného zárobku, ak sú splnené podmienky poskytnutia podpory.\n\nPríklad: Porucha stroja preruší prácu a zamestnávateľ nepreradí zamestnanca. Ide o prestoj – patrí náhrada mzdy najmenej 80 % priemerného zárobku (§ 142 ods. 1 ZP).\n\nZapamätaj si:\n\nPrekážky na strane zamestnávateľa (§ 142 ZP) – zamestnanec nesmie zostať bez príjmu.\nPrestoj = min. 80 % priemerného zárobku; nepriaznivé počasie = min. 50 %; iné prekážky = 100 %.\nVážne prevádzkové dôvody = min. 60 %, len na základe dohody so zástupcami zamestnancov.\nKurzarbeit (§ 250b, zákon 215/2021) = min. 80 % pri splnení podmienok.\nPrekážku musí zamestnávateľ preukázať; dohoda sa nedá nahradiť jednostranne.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 142, § 250b Zákon č. 215/2021 Z. z. o podpore v čase skrátenej práce (percentá náhrad over podľa aktuálneho znenia § 142)",
   "quiz": [
     {
       "question": "Kedy ide o prekážku v práci na strane zamestnávateľa?",
-      "options": ["Keď zamestnanec nepríde do práce", "Keď zamestnávateľ nemôže prideľovať prácu", "Keď zamestnanec čerpá dovolenku"],
+      "options": [
+        "Keď zamestnanec nepríde do práce",
+        "Keď zamestnávateľ nemôže prideľovať prácu",
+        "Keď zamestnanec čerpá dovolenku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zamestnávateľ nemôže prideľovať prácu, hoci zamestnanec je pripravený.",
@@ -18,7 +27,11 @@
     },
     {
       "question": "Aká je náhrada mzdy pri prestojoch?",
-      "options": ["50 % priemerného zárobku", "60 % priemerného zárobku", "100 % priemerného zárobku"],
+      "options": [
+        "50 % priemerného zárobku",
+        "60 % priemerného zárobku",
+        "100 % priemerného zárobku"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Pri prestojoch patrí 100 % priemerného zárobku.",
@@ -27,7 +40,11 @@
     },
     {
       "question": "Aká je náhrada mzdy pri nepriaznivých poveternostných vplyvoch?",
-      "options": ["Najmenej 50 %", "Najmenej 60 %", "100 %"],
+      "options": [
+        "Najmenej 50 %",
+        "Najmenej 60 %",
+        "100 %"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zákon stanovuje minimálne 50 %.",
@@ -36,7 +53,11 @@
     },
     {
       "question": "Kedy patrí náhrada najmenej 60 % priemerného zárobku?",
-      "options": ["Pri prestojoch", "Pri vážnych prevádzkových dôvodoch", "Pri iných prekážkach"],
+      "options": [
+        "Pri prestojoch",
+        "Pri vážnych prevádzkových dôvodoch",
+        "Pri iných prekážkach"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Vážne prevádzkové dôvody musia byť vymedzené v dohode.",
@@ -45,7 +66,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ môže jednostranne určiť vážne prevádzkové dôvody", "Dohoda so zástupcami je povinná", "Nepriaznivé počasie nepatrí medzi prekážky"],
+      "options": [
+        "Zamestnávateľ môže jednostranne určiť vážne prevádzkové dôvody",
+        "Dohoda so zástupcami je povinná",
+        "Nepriaznivé počasie nepatrí medzi prekážky"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Vážne prevádzkové dôvody musia byť v dohode.",
@@ -53,15 +78,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Prestoje", "definition": "Porucha stroja, výpadok surovín, technické poruchy – náhrada 100 %." },
-    { "term": "Nepriaznivé počasie", "definition": "Prekážka pri prácach závislých od počasia – náhrada min. 50 %." },
-    { "term": "Iné prekážky", "definition": "Protiprávne konanie zamestnávateľa alebo iné dôvody – náhrada 100 %." },
-    { "term": "Vážne prevádzkové dôvody", "definition": "Musí byť dohoda so zástupcami – náhrada min. 60 %." },
-    { "term": "Kurzarbeit", "definition": "Podpora v čase skrátenej práce – náhrada min. 80 %." }
+    {
+      "term": "Prestoje",
+      "definition": "Porucha stroja, výpadok surovín, technické poruchy – náhrada 100 %."
+    },
+    {
+      "term": "Nepriaznivé počasie",
+      "definition": "Prekážka pri prácach závislých od počasia – náhrada min. 50 %."
+    },
+    {
+      "term": "Iné prekážky",
+      "definition": "Protiprávne konanie zamestnávateľa alebo iné dôvody – náhrada 100 %."
+    },
+    {
+      "term": "Vážne prevádzkové dôvody",
+      "definition": "Musí byť dohoda so zástupcami – náhrada min. 60 %."
+    },
+    {
+      "term": "Kurzarbeit",
+      "definition": "Podpora v čase skrátenej práce – náhrada min. 80 %."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Prestoje spôsobené poruchou stroja",
@@ -74,7 +112,11 @@
         },
         {
           "question": "Krok 1: Ide o prestoj?",
-          "options": ["Áno", "Nie", "Len ak porucha trvá viac ako týždeň"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak porucha trvá viac ako týždeň"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Porucha stroja je typický prestoj.",
@@ -83,7 +125,11 @@
         },
         {
           "question": "Krok 2: Aká náhrada patrí?",
-          "options": ["50 %", "60 %", "100 %"],
+          "options": [
+            "50 %",
+            "60 %",
+            "100 %"
+          ],
           "correct": 2,
           "explanation": {
             "correct": "Správne. Pri prestojoch patrí 100 % priemerného zárobku.",
@@ -105,7 +151,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nepriaznivé počasie",
       "difficulty": "stredná",
@@ -117,7 +162,11 @@
         },
         {
           "question": "Krok 1: Je nepriaznivé počasie prekážkou?",
-          "options": ["Áno", "Nie", "Len ak trvá viac ako 3 dni"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak trvá viac ako 3 dni"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Počasie je zákonná prekážka.",
@@ -126,7 +175,11 @@
         },
         {
           "question": "Krok 2: Aká náhrada patrí?",
-          "options": ["Najmenej 50 %", "60 %", "100 %"],
+          "options": [
+            "Najmenej 50 %",
+            "60 %",
+            "100 %"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Minimálne 50 % priemerného zárobku.",
@@ -158,11 +211,45 @@
   "spider": {
     "center": "Prekážky na strane zamestnávateľa – prestoje × počasie × vážne prevádzkové dôvody × kurzarbeit × náhrada mzdy",
     "branches": [
-      { "label": "Prestoje (§ 142 ods. 1 ZP)", "leaves": ["Vznikajú pri: poruche stroja, výpadku surovín, technických poruchách, iných prevádzkových problémoch", "Náhrada mzdy: 100 % priemerného zárobku, ak zamestnanec nie je preradený na inú prácu", "Nepriaznivé poveternostné vplyvy (§ 142 ods. 2 ZP)", "Ide o situácie, keď: počasie znemožňuje výkon práce (napr. stavebné práce, poľnohospodárstvo)", "Náhrada mzdy: minimálne 50 % priemerného zárobku, môže byť vyššia podľa kolektívnej zmluvy"] },
-      { "label": "Iné prekážky na strane zamestnávateľa (§ 142 ods. 3 ZP)", "leaves": ["Patria sem: protiprávne konanie zamestnávateľa, organizačné zlyhania, chybné plánovanie práce", "Náhrada mzdy: 100 % priemerného zárobku"] },
-      { "label": "Vážne prevádzkové dôvody (§ 142 ods. 4 ZP)", "leaves": ["Podmienky: musia byť vymedzené v písomnej dohode so zástupcami zamestnancov, zamestnávateľ ich nemôže určiť jednostranne", "Náhrada mzdy: minimálne 60 % priemerného zárobku", "Možnosť: využitie konta pracovného času"] },
-      { "label": "Konto pracovného času", "leaves": ["Používa sa pri: kolísaní práce, vážnych prevádzkových dôvodoch", "Umožňuje: kladný účet (viac odpracovaných hodín), záporný účet (menej odpracovaných hodín)"] },
-      { "label": "Kurzarbeit (podpora v čase skrátenej práce)", "leaves": ["Podmienky: dohoda so zástupcami zamestnancov alebo so zamestnancom, prekážka na strane zamestnávateľa", "Náhrada mzdy: minimálne 80 % priemerného zárobku"] }
+      {
+        "label": "Prestoje (§ 142 ods. 1 ZP)",
+        "leaves": [
+          "Vznikajú pri: poruche stroja, výpadku surovín, technických poruchách, iných prevádzkových problémoch",
+          "Náhrada mzdy: 100 % priemerného zárobku, ak zamestnanec nie je preradený na inú prácu",
+          "Nepriaznivé poveternostné vplyvy (§ 142 ods. 2 ZP)",
+          "Ide o situácie, keď: počasie znemožňuje výkon práce (napr. stavebné práce, poľnohospodárstvo)",
+          "Náhrada mzdy: minimálne 50 % priemerného zárobku, môže byť vyššia podľa kolektívnej zmluvy"
+        ]
+      },
+      {
+        "label": "Iné prekážky na strane zamestnávateľa (§ 142 ods. 3 ZP)",
+        "leaves": [
+          "Patria sem: protiprávne konanie zamestnávateľa, organizačné zlyhania, chybné plánovanie práce",
+          "Náhrada mzdy: 100 % priemerného zárobku"
+        ]
+      },
+      {
+        "label": "Vážne prevádzkové dôvody (§ 142 ods. 4 ZP)",
+        "leaves": [
+          "Podmienky: musia byť vymedzené v písomnej dohode so zástupcami zamestnancov, zamestnávateľ ich nemôže určiť jednostranne",
+          "Náhrada mzdy: minimálne 60 % priemerného zárobku",
+          "Možnosť: využitie konta pracovného času"
+        ]
+      },
+      {
+        "label": "Konto pracovného času",
+        "leaves": [
+          "Používa sa pri: kolísaní práce, vážnych prevádzkových dôvodoch",
+          "Umožňuje: kladný účet (viac odpracovaných hodín), záporný účet (menej odpracovaných hodín)"
+        ]
+      },
+      {
+        "label": "Kurzarbeit (podpora v čase skrátenej práce)",
+        "leaves": [
+          "Podmienky: dohoda so zástupcami zamestnancov alebo so zamestnancom, prekážka na strane zamestnávateľa",
+          "Náhrada mzdy: minimálne 80 % priemerného zárobku"
+        ]
+      }
     ]
   }
 }

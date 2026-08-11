@@ -2,14 +2,22 @@
   "id": "21. A",
   "title": "Predzmluvné vzťahy",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "predzmluvné vzťahy", "vznik pracovného pomeru", "informovanie", "rovnaké zaobchádzanie"],
-
-  "summary": "Predzmluvné vzťahy sú právne významné úkony a komunikácia medzi budúcim zamestnávateľom a uchádzačom o zamestnanie pred uzavretím pracovnej zmluvy. Zákonník práce (§ 41 ZP) presne upravuje, aké informácie môže zamestnávateľ požadovať, aké povinnosti musí splniť a aké práva má uchádzač.\n\nZamestnávateľ môže od uchádzača požadovať len údaje súvisiace s prácou. Pri prvom zamestnaní môže zisťovať iba informácie potrebné pre výkon práce; pri uchádzačovi, ktorý už pracoval, môže vyžadovať pracovný posudok a potvrdenie o zamestnaní. Zamestnávateľ nesmie zisťovať tehotenstvo, rodinné pomery, politickú či odborovú príslušnosť, ani bezúhonnosť, pokiaľ to nevyžaduje osobitný predpis alebo povaha práce.\n\nZamestnávateľ je povinný oboznámiť uchádzača s právami a povinnosťami vyplývajúcimi z pracovnej zmluvy, s pracovnými a mzdovými podmienkami, a ak to vyžaduje osobitný predpis, overiť zdravotnú či psychickú spôsobilosť. Pri mladistvom uchádzačovi musí zabezpečiť lekárske vyšetrenie a vyžiadať si vyjadrenie zákonného zástupcu.\n\nUchádzač je povinný uvádzať pravdivé údaje a informovať o skutočnostiach, ktoré bránia výkonu práce alebo môžu spôsobiť zamestnávateľovi ujmu. Ak zamestnávateľ poruší zásadu rovnakého zaobchádzania alebo požaduje zakázané informácie, uchádzač má právo na primeranú peňažnú náhradu.\n\nPredzmluvné vzťahy sú chránené zásadou rovnakého zaobchádzania, zákazom diskriminácie a povinnosťou oboch strán konať čestne a pravdivo.",
-
+  "tags": [
+    "pracovné právo",
+    "predzmluvné vzťahy",
+    "vznik pracovného pomeru",
+    "informovanie",
+    "rovnaké zaobchádzanie"
+  ],
+  "summary": "Predzmluvné vzťahy Predzmluvné vzťahy sú právne významné úkony a komunikácia medzi budúcim zamestnávateľom a uchádzačom o zamestnanie pred uzavretím pracovnej zmluvy (§ 41 ZP). Zákon upravuje, aké informácie môže zamestnávateľ požadovať, aké povinnosti musí splniť a aké práva má uchádzač.\n\nZamestnávateľ smie od uchádzača požadovať len informácie súvisiace s prácou, ktorú má vykonávať. Nesmie vyžadovať informácie o tehotenstve, rodinných pomeroch, bezúhonnosti (okrem prípadov, keď to vyžaduje osobitný predpis alebo povaha práce) a o politickej, odborovej a náboženskej príslušnosti (§ 41 ods. 6 ZP). Ak už uchádzač pracoval, zamestnávateľ môže vyžadovať potvrdenie o zamestnaní a pracovný posudok.\n\nZamestnávateľ je povinný pred uzavretím zmluvy oboznámiť uchádzača s právami a povinnosťami z pracovnej zmluvy a s pracovnými a mzdovými podmienkami; ak to vyžaduje predpis, zabezpečiť posúdenie zdravotnej spôsobilosti. Pri mladistvom si vyžiada vyjadrenie zákonného zástupcu.\n\nUchádzač je povinný uvádzať pravdivé údaje a informovať o skutočnostiach, ktoré bránia výkonu práce alebo by zamestnávateľovi spôsobili ujmu. Ak zamestnávateľ pri predzmluvných vzťahoch poruší zásadu rovnakého zaobchádzania alebo vyžaduje zakázané informácie, uchádzač sa môže domáhať ochrany vrátane primeranej náhrady nemajetkovej ujmy (§ 13 ZP; antidiskriminačný zákon).\n\nZapamätaj si:\n\nPredzmluvné vzťahy upravuje § 41 ZP.\nZamestnávateľ smie žiadať len údaje súvisiace s prácou; zakázané: tehotenstvo, rodina, príslušnosti, bezúhonnosť (ak nie je nutná).\nPovinnosť oboznámiť uchádzača s podmienkami a právami/povinnosťami.\nUchádzač musí uvádzať pravdivé údaje a upozorniť na prekážky výkonu práce.\nPorušenie zakladá nárok na ochranu a náhradu nemajetkovej ujmy (§ 13 ZP).\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 41 Zákon č. 365/2004 Z. z. (antidiskriminačný zákon)",
   "quiz": [
     {
       "question": "Čo môže zamestnávateľ požadovať od uchádzača o prvé zamestnanie?",
-      "options": ["Informácie o rodinnom stave", "Len údaje súvisiace s prácou", "Bezúhonnosť vždy"],
+      "options": [
+        "Informácie o rodinnom stave",
+        "Len údaje súvisiace s prácou",
+        "Bezúhonnosť vždy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pri prvom zamestnaní môže zamestnávateľ zisťovať iba údaje potrebné pre výkon práce.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Ktorá informácia je zakázaná?",
-      "options": ["Tehotenstvo", "Zdravotná spôsobilosť, ak ju vyžaduje zákon", "Kvalifikácia"],
+      "options": [
+        "Tehotenstvo",
+        "Zdravotná spôsobilosť, ak ju vyžaduje zákon",
+        "Kvalifikácia"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Tehotenstvo je zakázané zisťovať.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Akú povinnosť má zamestnávateľ pred uzavretím pracovnej zmluvy?",
-      "options": ["Oboznámiť uchádzača s pracovnými a mzdovými podmienkami", "Zabezpečiť dopravu do práce", "Poskytnúť pracovnú zmluvu týždeň vopred"],
+      "options": [
+        "Oboznámiť uchádzača s pracovnými a mzdovými podmienkami",
+        "Zabezpečiť dopravu do práce",
+        "Poskytnúť pracovnú zmluvu týždeň vopred"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zamestnávateľ musí poskytnúť pravdivé informácie o práci a mzde.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Uchádzač môže uvádzať nepravdivé údaje", "Zamestnávateľ musí dodržiavať zásadu rovnakého zaobchádzania", "Zamestnávateľ môže zisťovať politickú príslušnosť"],
+      "options": [
+        "Uchádzač môže uvádzať nepravdivé údaje",
+        "Zamestnávateľ musí dodržiavať zásadu rovnakého zaobchádzania",
+        "Zamestnávateľ môže zisťovať politickú príslušnosť"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Rovnaké zaobchádzanie je povinnosťou zamestnávateľa.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Čo môže uchádzač požadovať, ak zamestnávateľ poruší zákaz diskriminácie?",
-      "options": ["Primeranú peňažnú náhradu", "Automatické prijatie do práce", "Nič"],
+      "options": [
+        "Primeranú peňažnú náhradu",
+        "Automatické prijatie do práce",
+        "Nič"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Uchádzač má právo na primeranú peňažnú náhradu.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Predzmluvné vzťahy", "definition": "Vzťahy medzi zamestnávateľom a uchádzačom pred uzavretím pracovnej zmluvy." },
-    { "term": "Zakázané otázky", "definition": "Tehotenstvo, rodinné pomery, politická či odborová príslušnosť." },
-    { "term": "Povinnosť informovať", "definition": "Zamestnávateľ musí oboznámiť uchádzača s pracovnými a mzdovými podmienkami." },
-    { "term": "Pravdivé údaje", "definition": "Uchádzač musí uvádzať pravdivé informácie o kvalifikácii a spôsobilosti." },
-    { "term": "Rovnaké zaobchádzanie", "definition": "Zákaz diskriminácie pri prístupe k zamestnaniu." }
+    {
+      "term": "Predzmluvné vzťahy",
+      "definition": "Vzťahy medzi zamestnávateľom a uchádzačom pred uzavretím pracovnej zmluvy."
+    },
+    {
+      "term": "Zakázané otázky",
+      "definition": "Tehotenstvo, rodinné pomery, politická či odborová príslušnosť."
+    },
+    {
+      "term": "Povinnosť informovať",
+      "definition": "Zamestnávateľ musí oboznámiť uchádzača s pracovnými a mzdovými podmienkami."
+    },
+    {
+      "term": "Pravdivé údaje",
+      "definition": "Uchádzač musí uvádzať pravdivé informácie o kvalifikácii a spôsobilosti."
+    },
+    {
+      "term": "Rovnaké zaobchádzanie",
+      "definition": "Zákaz diskriminácie pri prístupe k zamestnaniu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Zakázaná otázka na pohovore",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je otázka prípustná?",
-          "options": ["Nie", "Áno", "Len ak ide o rizikovú prácu"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak ide o rizikovú prácu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zisťovanie tehotenstva je zakázané.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Ako má uchádzačka reagovať?",
-          "options": ["Môže odmietnuť odpovedať", "Musí odpovedať", "Musí predložiť lekárske potvrdenie"],
+          "options": [
+            "Môže odmietnuť odpovedať",
+            "Musí odpovedať",
+            "Musí predložiť lekárske potvrdenie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uchádzačka nemusí odpovedať na zakázané otázky.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Nepravdivé údaje uchádzača",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Porušil uchádzač povinnosti?",
-          "options": ["Áno", "Nie", "Len ak vznikla škoda"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak vznikla škoda"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Uchádzač musí uvádzať pravdivé údaje.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Môže zamestnávateľ skončiť pracovný pomer?",
-          "options": ["Áno, pre nesplnenie predpokladov", "Nie", "Len ak uchádzač odmietne ospravedlnenie"],
+          "options": [
+            "Áno, pre nesplnenie predpokladov",
+            "Nie",
+            "Len ak uchádzač odmietne ospravedlnenie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nepravdivé údaje môžu byť dôvodom na výpoveď.",
@@ -135,7 +187,11 @@
         },
         {
           "question": "Krok 3: Môže zamestnávateľ požadovať náhradu škody?",
-          "options": ["Áno, ak škoda vznikla", "Nie", "Len ak škoda presiahla 500 €"],
+          "options": [
+            "Áno, ak škoda vznikla",
+            "Nie",
+            "Len ak škoda presiahla 500 €"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Porušenie predzmluvných povinností môže viesť k zodpovednosti za škodu.",
@@ -154,12 +210,53 @@
   "spider": {
     "center": "Predzmluvné vzťahy – údaje × povinnosti × zákaz diskriminácie × práva uchádzača",
     "branches": [
-      { "label": "Povolené údaje (§ 41 ZP)", "leaves": ["Zamestnávateľ môže požadovať len údaje", "súvisiace s prácou", "potrebné na posúdenie spôsobilosti uchádzača", "pri prvom zamestnaní len nevyhnutné informácie", "pri uchádzačovi, ktorý už pracoval: pracovný posudok, potvrdenie o zamestnaní"] },
-      { "label": "Zakázané údaje", "leaves": ["Zamestnávateľ nesmie zisťovať: tehotenstvo, rodinné pomery, politickú či odborovú príslušnosť, bezúhonnosť, ak to nevyžaduje osobitný predpis, informácie nesúvisiace s výkonom práce"] },
-      { "label": "Povinnosti zamestnávateľa", "leaves": ["Zamestnávateľ musí: oboznámiť uchádzača s pracovnými a mzdovými podmienkami", "Zamestnávateľ musí: informovať o právach a povinnostiach vyplývajúcich z pracovnej zmluvy", "Zamestnávateľ musí: overiť zdravotnú alebo psychickú spôsobilosť, ak to vyžaduje osobitný predpis", "Zamestnávateľ musí: pri mladistvom uchádzačovi zabezpečiť lekárske vyšetrenie a vyžiadať si vyjadrenie zákonného zástupcu"] },
-      { "label": "Práva uchádzača", "leaves": ["Uchádzač má právo: na rovnaké zaobchádzanie", "Uchádzač má právo: na ochranu pred diskrimináciou", "Uchádzač má právo: na primeranú peňažnú náhradu, ak zamestnávateľ poruší zákaz diskriminácie alebo požaduje zakázané údaje", "Uchádzač má právo: uvádzať len pravdivé údaje", "Uchádzač má právo: informovať o skutočnostiach, ktoré bránia výkonu práce"] },
-      { "label": "Mladiství uchádzači", "leaves": ["Zamestnávateľ musí: zabezpečiť lekársku prehliadku, vyžiadať stanovisko zákonného zástupcu, rešpektovať osobitné obmedzenia pri zamestnávaní mladistvých"] },
-      { "label": "Rovnaké zaobchádzanie", "leaves": ["Predzmluvné vzťahy sú chránené: zákazom diskriminácie, povinnosťou konať čestne a pravdivo, zásadou transparentnosti"] }
+      {
+        "label": "Povolené údaje (§ 41 ZP)",
+        "leaves": [
+          "Zamestnávateľ môže požadovať len údaje",
+          "súvisiace s prácou",
+          "potrebné na posúdenie spôsobilosti uchádzača",
+          "pri prvom zamestnaní len nevyhnutné informácie",
+          "pri uchádzačovi, ktorý už pracoval: pracovný posudok, potvrdenie o zamestnaní"
+        ]
+      },
+      {
+        "label": "Zakázané údaje",
+        "leaves": [
+          "Zamestnávateľ nesmie zisťovať: tehotenstvo, rodinné pomery, politickú či odborovú príslušnosť, bezúhonnosť, ak to nevyžaduje osobitný predpis, informácie nesúvisiace s výkonom práce"
+        ]
+      },
+      {
+        "label": "Povinnosti zamestnávateľa",
+        "leaves": [
+          "Zamestnávateľ musí: oboznámiť uchádzača s pracovnými a mzdovými podmienkami",
+          "Zamestnávateľ musí: informovať o právach a povinnostiach vyplývajúcich z pracovnej zmluvy",
+          "Zamestnávateľ musí: overiť zdravotnú alebo psychickú spôsobilosť, ak to vyžaduje osobitný predpis",
+          "Zamestnávateľ musí: pri mladistvom uchádzačovi zabezpečiť lekárske vyšetrenie a vyžiadať si vyjadrenie zákonného zástupcu"
+        ]
+      },
+      {
+        "label": "Práva uchádzača",
+        "leaves": [
+          "Uchádzač má právo: na rovnaké zaobchádzanie",
+          "Uchádzač má právo: na ochranu pred diskrimináciou",
+          "Uchádzač má právo: na primeranú peňažnú náhradu, ak zamestnávateľ poruší zákaz diskriminácie alebo požaduje zakázané údaje",
+          "Uchádzač má právo: uvádzať len pravdivé údaje",
+          "Uchádzač má právo: informovať o skutočnostiach, ktoré bránia výkonu práce"
+        ]
+      },
+      {
+        "label": "Mladiství uchádzači",
+        "leaves": [
+          "Zamestnávateľ musí: zabezpečiť lekársku prehliadku, vyžiadať stanovisko zákonného zástupcu, rešpektovať osobitné obmedzenia pri zamestnávaní mladistvých"
+        ]
+      },
+      {
+        "label": "Rovnaké zaobchádzanie",
+        "leaves": [
+          "Predzmluvné vzťahy sú chránené: zákazom diskriminácie, povinnosťou konať čestne a pravdivo, zásadou transparentnosti"
+        ]
+      }
     ]
   }
 }

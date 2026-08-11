@@ -2,14 +2,21 @@
   "id": "17. B",
   "title": "Dôležité osobné prekážky v práci na strane zamestnanca",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "prekážky v práci", "osobné prekážky", "zamestnanec"],
-
-  "summary": "Dôležité osobné prekážky v práci sú zákonom uznané situácie, ktoré zamestnancovi objektívne bránia vykonávať prácu. Zákonník práce (§ 136 – § 141 ZP) presne určuje, ktoré prekážky sa považujú za relevantné, či zamestnávateľ musí poskytnúť pracovné voľno, a či patrí náhrada mzdy.\n\nZamestnanec je povinný prekážku oznámiť bez zbytočného odkladu a preukázať jej trvanie. Prekážky sa delia na: prekážky z dôvodov všeobecného záujmu (napr. darovanie krvi, výkon verejnej funkcie), prekážky z dôvodu brannej povinnosti, prekážky z dôvodu zvyšovania kvalifikácie a dôležité osobné prekážky podľa § 141 ZP.\n\nPri osobných prekážkach zákon rozlišuje tri režimy: (1) prekážky, pri ktorých zamestnávateľ len ospravedlní neprítomnosť (napr. PN, karanténa, ošetrovanie člena rodiny), (2) prekážky, pri ktorých je povinný poskytnúť pracovné voľno – s náhradou mzdy alebo bez nej (napr. vyšetrenie, sprevádzanie, úmrtie blízkej osoby, svadba, sťahovanie), (3) prekážky, pri ktorých môže voľno poskytnúť dobrovoľne.\n\nRozsah voľna je presne určený nariadením vlády č. 76/2005 Z. z. Napríklad pri úmrtí blízkej osoby patrí 2 dni + 1 deň na pohreb, pri svadbe zamestnanca 1 deň, pri vyšetrení v zdravotníckom zariadení nevyhnutný čas.\n\nCieľom právnej úpravy je umožniť zamestnancovi riešiť neodkladné osobné situácie bez ohrozenia pracovného pomeru a zároveň zabezpečiť predvídateľnosť a spravodlivosť pre zamestnávateľa.",
-
+  "tags": [
+    "pracovné právo",
+    "prekážky v práci",
+    "osobné prekážky",
+    "zamestnanec"
+  ],
+  "summary": "Dôležité osobné prekážky v práci na strane zamestnanca Dôležité osobné prekážky v práci sú zákonom uznané situácie, ktoré zamestnancovi objektívne bránia vykonávať prácu (§ 141 ZP; v systéme prekážok § 136 – § 141 ZP). Zamestnanec je povinný prekážku a jej trvanie oznámiť bez zbytočného odkladu a preukázať; ak je vopred známa, požiadať o voľno včas.\n\nRežimy podľa § 141 ZP: – neprítomnosť sa ospravedlní a je krytá dávkou sociálneho poistenia bez náhrady mzdy od zamestnávateľa – dočasná PN, karanténa, ošetrovanie/starostlivosť o člena rodiny (OČR), materská a rodičovská dovolenka, – pracovné voľno s náhradou mzdy – napr. vyšetrenie alebo ošetrenie v zdravotníckom zariadení (nevyhnutný čas, spravidla max 7 dní ročne s náhradou), sprevádzanie rodinného príslušníka, úmrtie blízkej osoby, vlastná svadba, presťahovanie za istých podmienok, darovanie krvi, – pracovné voľno bez náhrady mzdy – v rozsahu, ktorý zákon pre danú prekážku určí.\n\nRozsah voľna pri jednotlivých prekážkach (napr. úmrtie, svadba, sťahovanie) je vymedzený v § 141 ZP; podrobnosti k niektorým prekážkam upravujú osobitné predpisy. (Konkrétne počty dní over podľa aktuálneho znenia § 141 ZP.)\n\nZapamätaj si:\n\nDôležité osobné prekážky (§ 141 ZP) – zamestnanec ich musí oznámiť a preukázať bez zbytočného odkladu.\nTri režimy: ospravedlnenie s dávkou (PN, OČR), voľno s náhradou mzdy (vyšetrenie, úmrtie, svadba…), voľno bez náhrady.\nRozsah voľna pre jednotlivé prekážky určuje § 141 ZP.\nPN a OČR sú kryté nemocenským a ošetrovným zo sociálneho poistenia.\nCieľ: riešiť neodkladné osobné situácie bez ohrozenia pracovného pomeru.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 136 – § 141",
   "quiz": [
     {
       "question": "Ktorá z nasledujúcich je dôležitá osobná prekážka v práci?",
-      "options": ["Porucha stroja", "Sprevádzanie dieťaťa k lekárovi", "Nedostatok práce u zamestnávateľa"],
+      "options": [
+        "Porucha stroja",
+        "Sprevádzanie dieťaťa k lekárovi",
+        "Nedostatok práce u zamestnávateľa"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Sprevádzanie rodinného príslušníka je zákonná osobná prekážka podľa § 141 ods. 2 ZP.",
@@ -18,7 +25,11 @@
     },
     {
       "question": "Patrí náhrada mzdy pri svadbe zamestnanca?",
-      "options": ["Áno", "Nie", "Len ak to zamestnávateľ schváli"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak to zamestnávateľ schváli"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri vlastnej svadbe patrí zamestnancovi 1 deň pracovného voľna s náhradou mzdy podľa nariadenia vlády č. 76/2005 Z. z.",
@@ -27,7 +38,11 @@
     },
     {
       "question": "Koľko dní voľna patrí pri úmrtí blízkej osoby?",
-      "options": ["1 deň", "2 dni + 1 deň na pohreb", "5 dní"],
+      "options": [
+        "1 deň",
+        "2 dni + 1 deň na pohreb",
+        "5 dní"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o zákonnú osobnú prekážku s náhradou mzdy podľa nariadenia vlády č. 76/2005 Z. z.",
@@ -36,7 +51,11 @@
     },
     {
       "question": "Kedy zamestnancovi patrí pracovné voľno bez náhrady mzdy?",
-      "options": ["Pri sťahovaní", "Pri pohrebe rodiča", "Pri vyšetrení u lekára"],
+      "options": [
+        "Pri sťahovaní",
+        "Pri pohrebe rodiča",
+        "Pri vyšetrení u lekára"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Sťahovanie je osobná prekážka bez náhrady mzdy podľa § 141 ods. 2 ZP.",
@@ -45,7 +64,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnanec nemusí prekážku preukazovať", "Zamestnanec musí oznámiť prekážku bez zbytočného odkladu", "Zamestnávateľ môže odmietnuť zákonnú prekážku"],
+      "options": [
+        "Zamestnanec nemusí prekážku preukazovať",
+        "Zamestnanec musí oznámiť prekážku bez zbytočného odkladu",
+        "Zamestnávateľ môže odmietnuť zákonnú prekážku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zamestnanec musí prekážku oznámiť a preukázať jej trvanie.",
@@ -53,15 +76,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Vyšetrenie alebo ošetrenie", "definition": "Pracovné voľno s náhradou mzdy za nevyhnutný čas." },
-    { "term": "Sprevádzanie k lekárovi", "definition": "Voľno s náhradou mzdy pri sprevádzaní blízkej osoby." },
-    { "term": "Svadba", "definition": "Zamestnancovi patrí 1 deň voľna s náhradou mzdy." },
-    { "term": "Pohreb", "definition": "2 dni + 1 deň na pohreb blízkej osoby, s náhradou mzdy." },
-    { "term": "Sťahovanie", "definition": "Pracovné voľno bez náhrady mzdy." }
+    {
+      "term": "Vyšetrenie alebo ošetrenie",
+      "definition": "Pracovné voľno s náhradou mzdy za nevyhnutný čas."
+    },
+    {
+      "term": "Sprevádzanie k lekárovi",
+      "definition": "Voľno s náhradou mzdy pri sprevádzaní blízkej osoby."
+    },
+    {
+      "term": "Svadba",
+      "definition": "Zamestnancovi patrí 1 deň voľna s náhradou mzdy."
+    },
+    {
+      "term": "Pohreb",
+      "definition": "2 dni + 1 deň na pohreb blízkej osoby, s náhradou mzdy."
+    },
+    {
+      "term": "Sťahovanie",
+      "definition": "Pracovné voľno bez náhrady mzdy."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Sprevádzanie dieťaťa k lekárovi",
@@ -74,7 +110,11 @@
         },
         {
           "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
-          "options": ["Áno", "Nie", "Len ak ide o hospitalizáciu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o hospitalizáciu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Sprevádzanie rodinného príslušníka je zákonná prekážka podľa § 141 ods. 2 ZP.",
@@ -83,7 +123,11 @@
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Áno, za nevyhnutný čas", "Nie", "Len ak to zamestnávateľ schváli"],
+          "options": [
+            "Áno, za nevyhnutný čas",
+            "Nie",
+            "Len ak to zamestnávateľ schváli"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Náhrada mzdy patrí za nevyhnutný čas sprevádzania.",
@@ -105,7 +149,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Sťahovanie zamestnanca",
       "difficulty": "ľahká",
@@ -117,7 +160,11 @@
         },
         {
           "question": "Krok 1: Ide o dôležitú osobnú prekážku?",
-          "options": ["Áno", "Nie", "Len ak ide o služobné sťahovanie"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak ide o služobné sťahovanie"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Sťahovanie je zákonná osobná prekážka podľa § 141 ods. 2 ZP.",
@@ -126,7 +173,11 @@
         },
         {
           "question": "Krok 2: Patrí náhrada mzdy?",
-          "options": ["Nie", "Áno", "Len ak zamestnávateľ rozhodne"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak zamestnávateľ rozhodne"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Sťahovanie je prekážka bez náhrady mzdy.",
@@ -158,12 +209,54 @@
   "spider": {
     "center": "Osobné prekážky – ospravedlnenie × pracovné voľno × náhrada mzdy × PN × OČR",
     "branches": [
-      { "label": "Pojem osobných prekážok (§ 141 ZP)", "leaves": ["Dôležité osobné prekážky sú situácie, keď zamestnanec: objektívne nemôže vykonávať prácu, prekážka je nezávislá od zamestnávateľa, zákon presne určuje, či patrí voľno a či patrí náhrada mzdy", "Cieľ: ochrana zamestnanca v neodkladných životných situáciách."] },
-      { "label": "Oznamovacia povinnosť", "leaves": ["Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať jej trvanie (napr. potvrdenie lekára, predvolanie na súd)"] },
-      { "label": "Prekážky bez náhrady mzdy", "leaves": ["Zamestnávateľ len ospravedlní neprítomnosť: PN (práceneschopnosť), karanténa, OČR – ošetrovanie člena rodiny, starostlivosť o dieťa, iné zdravotné prekážky kryté sociálnym poistením", "Náhradu mzdy poskytuje Sociálna poisťovňa formou dávok."] },
-      { "label": "Prekážky s náhradou mzdy", "leaves": ["Zamestnávateľ musí poskytnúť pracovné voľno s náhradou mzdy", "vyšetrenie alebo ošetrenie – nevyhnutný čas", "sprevádzanie rodinného príslušníka k lekárovi", "úmrtie blízkej osoby – 2 dni + 1 deň na pohreb", "svadba zamestnanca – 1 deň", "narodenie dieťaťa – 1 deň pre otca", "sťahovanie – 1 deň (pri zmene bydliska)", "Prekážky bez náhrady mzdy, ale s povinným voľnom", "Zamestnávateľ musí poskytnúť voľno, ale bez náhrady mzdy: súdne konanie (ako účastník), účasť na štátnych skúškach, iné osobné úkony, ak sú nevyhnutné"] },
-      { "label": "Prekážky podľa uváženia zamestnávateľa", "leaves": ["Zamestnávateľ môže poskytnúť voľno dobrovoľne: osobné záležitosti, rodinné udalosti mimo zákonného zoznamu, administratívne úkony (napr. vybavenie na úradoch)", "Rozsah pracovného voľna – nariadenie vlády č. 76/2005 Z. z.", "Príklady: úmrtie blízkej osoby – 2 + 1 deň, svadba zamestnanca – 1 deň, sťahovanie – 1 deň, vyšetrenie – nevyhnutný čas, sprevádzanie – 1 deň, narodenie dieťaťa – 1 deň"] },
-      { "label": "Prekážky z iných dôvodov (§ 136 – 140 ZP)", "leaves": ["Patria sem: všeobecný záujem (darovanie krvi, výkon verejnej funkcie), branná povinnosť, zvyšovanie kvalifikácie"] }
+      {
+        "label": "Pojem osobných prekážok (§ 141 ZP)",
+        "leaves": [
+          "Dôležité osobné prekážky sú situácie, keď zamestnanec: objektívne nemôže vykonávať prácu, prekážka je nezávislá od zamestnávateľa, zákon presne určuje, či patrí voľno a či patrí náhrada mzdy",
+          "Cieľ: ochrana zamestnanca v neodkladných životných situáciách."
+        ]
+      },
+      {
+        "label": "Oznamovacia povinnosť",
+        "leaves": [
+          "Zamestnanec musí: prekážku oznámiť bez zbytočného odkladu, preukázať jej trvanie (napr. potvrdenie lekára, predvolanie na súd)"
+        ]
+      },
+      {
+        "label": "Prekážky bez náhrady mzdy",
+        "leaves": [
+          "Zamestnávateľ len ospravedlní neprítomnosť: PN (práceneschopnosť), karanténa, OČR – ošetrovanie člena rodiny, starostlivosť o dieťa, iné zdravotné prekážky kryté sociálnym poistením",
+          "Náhradu mzdy poskytuje Sociálna poisťovňa formou dávok."
+        ]
+      },
+      {
+        "label": "Prekážky s náhradou mzdy",
+        "leaves": [
+          "Zamestnávateľ musí poskytnúť pracovné voľno s náhradou mzdy",
+          "vyšetrenie alebo ošetrenie – nevyhnutný čas",
+          "sprevádzanie rodinného príslušníka k lekárovi",
+          "úmrtie blízkej osoby – 2 dni + 1 deň na pohreb",
+          "svadba zamestnanca – 1 deň",
+          "narodenie dieťaťa – 1 deň pre otca",
+          "sťahovanie – 1 deň (pri zmene bydliska)",
+          "Prekážky bez náhrady mzdy, ale s povinným voľnom",
+          "Zamestnávateľ musí poskytnúť voľno, ale bez náhrady mzdy: súdne konanie (ako účastník), účasť na štátnych skúškach, iné osobné úkony, ak sú nevyhnutné"
+        ]
+      },
+      {
+        "label": "Prekážky podľa uváženia zamestnávateľa",
+        "leaves": [
+          "Zamestnávateľ môže poskytnúť voľno dobrovoľne: osobné záležitosti, rodinné udalosti mimo zákonného zoznamu, administratívne úkony (napr. vybavenie na úradoch)",
+          "Rozsah pracovného voľna – nariadenie vlády č. 76/2005 Z. z.",
+          "Príklady: úmrtie blízkej osoby – 2 + 1 deň, svadba zamestnanca – 1 deň, sťahovanie – 1 deň, vyšetrenie – nevyhnutný čas, sprevádzanie – 1 deň, narodenie dieťaťa – 1 deň"
+        ]
+      },
+      {
+        "label": "Prekážky z iných dôvodov (§ 136 – 140 ZP)",
+        "leaves": [
+          "Patria sem: všeobecný záujem (darovanie krvi, výkon verejnej funkcie), branná povinnosť, zvyšovanie kvalifikácie"
+        ]
+      }
     ]
   }
 }

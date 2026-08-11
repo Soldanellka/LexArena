@@ -2,14 +2,22 @@
   "id": "21. B",
   "title": "Sociálna politika zamestnávateľa",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "sociálna politika", "pracovné podmienky", "zamestnávateľ", "benefity"],
-
-  "summary": "Sociálna politika zamestnávateľa je súbor povinných a dobrovoľných opatrení, ktorými zamestnávateľ vytvára priaznivé pracovné podmienky, podporuje sociálne istoty zamestnancov a prispieva k ich pracovnej spokojnosti. Povinná sociálna politika zahŕňa najmä bezpečnosť a ochranu zdravia pri práci (BOZP), pracovné podmienky, stravovanie, prekážky v práci, ochranu zdravia a povinnosti vyplývajúce zo Zákonníka práce. Dobrovoľná sociálna politika zahŕňa benefity, príspevky, flexibilitu, vzdelávanie, programy starostlivosti o zamestnancov či podporu duševného zdravia.\n\nZamestnávateľ môže poskytovať rôzne nadštandardné benefity, ako príspevky na šport a kultúru, vzdelávanie, dopravu, zdravotnú starostlivosť, dôchodkové sporenie, flexibilný pracovný čas, home office, firemné akcie či programy well-beingu. Sociálna politika môže byť rozšírená aj kolektívnou zmluvou, ktorá často upravuje benefity nad rámec zákona.\n\nCieľom sociálnej politiky je vytvoriť bezpečné, motivujúce a stabilné pracovné prostredie, podporiť lojalitu zamestnancov, znižovať fluktuáciu a zlepšovať pracovnú kultúru.\n\nPríklad:\nZamestnávateľ odmieta zabezpečiť stravovanie s tvrdením, že ide o dobrovoľný benefit. Takýto postup je nezákonný – stravovanie je povinnou súčasťou sociálnej politiky.\n\nKľúčové slová:\nsociálna politika; BOZP; stravovanie; benefity; kolektívna zmluva; pracovné podmienky.\n\nZapamätaj si:\n- Sociálna politika zahŕňa povinné aj dobrovoľné opatrenia.\n- Stravovanie je zákonná povinnosť zamestnávateľa.\n- Benefity musia byť poskytované spravodlivo a nediskriminačne.\n- Kolektívna zmluva môže sociálnu politiku rozšíriť.\n- Cieľom je podpora pracovných podmienok, zdravia a spokojnosti zamestnancov.",
-
+  "tags": [
+    "pracovné právo",
+    "sociálna politika",
+    "pracovné podmienky",
+    "zamestnávateľ",
+    "benefity"
+  ],
+  "summary": "Sociálna politika zamestnávateľa Sociálna politika zamestnávateľa je súbor povinných a dobrovoľných opatrení, ktorými zamestnávateľ vytvára priaznivé pracovné podmienky a podporuje sociálne istoty zamestnancov. Povinná časť vyplýva zo Zákonníka práce a osobitných predpisov: BOZP, pracovné podmienky, stravovanie zamestnancov (§ 152 ZP), pitný režim, prekážky v práci, tvorba a použitie sociálneho fondu (zákon č. 152/1994 Z. z.). Dobrovoľná časť zahŕňa benefity nad rámec zákona.\n\nStravovanie: zamestnávateľ je povinný zabezpečovať zamestnancom stravovanie (§ 152 ZP), spravidla poskytnutím jedla, alebo poskytnutím finančného príspevku na stravovanie, resp. stravovacej poukážky; zamestnanec si spravidla môže vybrať medzi gastrolístkom a finančným príspevkom. Zamestnávateľ prispieva zákonom určenou minimálnou sumou a zo sociálneho fondu.\n\nDobrovoľné benefity: príspevky na šport, kultúru, vzdelávanie, dopravu, zdravotnú starostlivosť, doplnkové dôchodkové sporenie, flexibilný čas, prácu z domu, programy well-beingu. Sociálnu politiku možno rozšíriť kolektívnou zmluvou. Benefity sa musia poskytovať v súlade so zásadou rovnakého zaobchádzania.\n\nPríklad: Zamestnávateľ odmieta zabezpečiť stravovanie s tvrdením, že ide o dobrovoľný benefit. Postup je nezákonný – zabezpečenie stravovania je povinnosťou podľa § 152 ZP.\n\nZapamätaj si:\n\nSociálna politika = povinné (BOZP, stravovanie, sociálny fond) + dobrovoľné opatrenia (benefity).\nStravovanie je zákonná povinnosť (§ 152 ZP); zamestnanec má spravidla právo výberu medzi gastrolístkom a finančným príspevkom.\nSociálny fond sa tvorí a používa podľa zákona č. 152/1994 Z. z.\nBenefity sa poskytujú nediskriminačne; možno ich rozšíriť kolektívnou zmluvou.\nCieľ: bezpečné, motivujúce a stabilné pracovné prostredie.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 152 Zákon č. 152/1994 Z. z. o sociálnom fonde (minimálne sumy príspevku na stravovanie over podľa aktuálneho znenia)",
   "quiz": [
     {
       "question": "Čo je sociálna politika zamestnávateľa?",
-      "options": ["Súbor opatrení na podporu zamestnancov", "Zákon o sociálnom poistení", "Len povinné benefity"],
+      "options": [
+        "Súbor opatrení na podporu zamestnancov",
+        "Zákon o sociálnom poistení",
+        "Len povinné benefity"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Sociálna politika zahŕňa povinné aj dobrovoľné opatrenia na podporu pracovných podmienok.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Ktorý benefit je povinný zo zákona?",
-      "options": ["Stravovanie", "Príspevok na šport", "Firemné akcie"],
+      "options": [
+        "Stravovanie",
+        "Príspevok na šport",
+        "Firemné akcie"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Stravovanie je zákonná povinnosť zamestnávateľa.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Sociálna politika môže byť aj dobrovoľná", "Zamestnávateľ nesmie poskytovať benefity", "Benefity sú povinné pre všetkých zamestnávateľov"],
+      "options": [
+        "Sociálna politika môže byť aj dobrovoľná",
+        "Zamestnávateľ nesmie poskytovať benefity",
+        "Benefity sú povinné pre všetkých zamestnávateľov"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zamestnávateľ môže poskytovať nadštandardné benefity podľa svojich možností.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Čo môže byť súčasťou sociálnej politiky?",
-      "options": ["BOZP", "Príspevok na dôchodkové sporenie", "Oboje"],
+      "options": [
+        "BOZP",
+        "Príspevok na dôchodkové sporenie",
+        "Oboje"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Sociálna politika zahŕňa povinné aj dobrovoľné opatrenia.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Kde môže byť sociálna politika upravená?",
-      "options": ["V kolektívnej zmluve", "Len v zákone", "Nikde"],
+      "options": [
+        "V kolektívnej zmluve",
+        "Len v zákone",
+        "Nikde"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Kolektívna zmluva môže rozširovať sociálnu politiku zamestnávateľa.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Zákonná sociálna politika", "definition": "Povinné opatrenia – BOZP, stravovanie, pracovné podmienky, prekážky v práci." },
-    { "term": "Dobrovoľné benefity", "definition": "Príspevky, flexibilita, vzdelávanie, zdravotná starostlivosť, šport, kultúra." },
-    { "term": "Motivácia zamestnancov", "definition": "Cieľom sociálnej politiky je stabilizácia, spokojnosť a lojalita zamestnancov." },
-    { "term": "Kolektívna zmluva", "definition": "Dokument, ktorý môže rozširovať sociálnu politiku nad rámec zákona." },
-    { "term": "Firemná kultúra", "definition": "Sociálna politika je súčasťou personálnej stratégie a ovplyvňuje pracovné prostredie." }
+    {
+      "term": "Zákonná sociálna politika",
+      "definition": "Povinné opatrenia – BOZP, stravovanie, pracovné podmienky, prekážky v práci."
+    },
+    {
+      "term": "Dobrovoľné benefity",
+      "definition": "Príspevky, flexibilita, vzdelávanie, zdravotná starostlivosť, šport, kultúra."
+    },
+    {
+      "term": "Motivácia zamestnancov",
+      "definition": "Cieľom sociálnej politiky je stabilizácia, spokojnosť a lojalita zamestnancov."
+    },
+    {
+      "term": "Kolektívna zmluva",
+      "definition": "Dokument, ktorý môže rozširovať sociálnu politiku nad rámec zákona."
+    },
+    {
+      "term": "Firemná kultúra",
+      "definition": "Sociálna politika je súčasťou personálnej stratégie a ovplyvňuje pracovné prostredie."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Zamestnávateľ odmieta zabezpečiť stravovanie",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je stravovanie povinné?",
-          "options": ["Áno", "Nie", "Len pri zmennosti"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len pri zmennosti"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Stravovanie je zákonná povinnosť zamestnávateľa.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Ako má zamestnávateľ postupovať?",
-          "options": ["Zabezpečiť stravovanie alebo príspevok", "Poskytnúť len vodu", "Nič nerobiť"],
+          "options": [
+            "Zabezpečiť stravovanie alebo príspevok",
+            "Poskytnúť len vodu",
+            "Nič nerobiť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí zabezpečiť stravu alebo finančný príspevok.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Dobrovoľné benefity a nerovnaké zaobchádzanie",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Môže zamestnávateľ poskytovať benefity len niekomu?",
-          "options": ["Áno, ale musí dodržať zásadu rovnakého zaobchádzania", "Nie, benefity musia byť pre všetkých", "Áno, bez obmedzení"],
+          "options": [
+            "Áno, ale musí dodržať zásadu rovnakého zaobchádzania",
+            "Nie, benefity musia byť pre všetkých",
+            "Áno, bez obmedzení"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Benefity môžu byť diferencované, ale nie diskriminačné.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Je postup zamestnávateľa v poriadku?",
-          "options": ["Nie, ak neexistujú objektívne kritériá", "Áno", "Len ak zamestnanci súhlasia"],
+          "options": [
+            "Nie, ak neexistujú objektívne kritériá",
+            "Áno",
+            "Len ak zamestnanci súhlasia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez objektívnych kritérií môže ísť o diskrimináciu.",
@@ -158,12 +210,57 @@
   "spider": {
     "center": "Sociálna politika – povinné × dobrovoľné × BOZP × stravovanie × benefity",
     "branches": [
-      { "label": "Povinná sociálna politika", "leaves": ["Zamestnávateľ musí zabezpečiť: BOZP – bezpečné pracovné prostredie, školenia, ochranné prostriedky, prevencia rizík", "Zamestnávateľ musí zabezpečiť: stravovanie – povinnosť zabezpečiť stravu alebo príspevok", "Zamestnávateľ musí zabezpečiť: pracovné podmienky – hygienické, technické, organizačné", "Zamestnávateľ musí zabezpečiť: prekážky v práci – poskytovanie voľna podľa zákona", "Zamestnávateľ musí zabezpečiť: ochranu zdravia – lekárske prehliadky, ergonomické podmienky", "Zamestnávateľ musí zabezpečiť: dodržiavanie Zákonníka práce – mzda, pracovný čas, odpočinok"] },
-      { "label": "Dobrovoľná sociálna politika", "leaves": ["Zamestnávateľ môže poskytovať: príspevky na šport, kultúru, vzdelávanie", "Zamestnávateľ môže poskytovať: príspevky na dopravu", "Zamestnávateľ môže poskytovať: zdravotnú starostlivosť (napr. preventívne prehliadky)", "Zamestnávateľ môže poskytovať: dôchodkové sporenie", "Zamestnávateľ môže poskytovať: flexibilný pracovný čas", "Zamestnávateľ môže poskytovať: home office", "Zamestnávateľ môže poskytovať: firemné akcie", "Zamestnávateľ môže poskytovať: programy well-beingu a duševného zdravia", "Cieľ: motivácia, lojalita, znižovanie fluktuácie.", "BOZP – základ sociálnej politiky", "Zamestnávateľ musí: hodnotiť riziká, poskytovať OOPP, zabezpečiť školenia, vytvoriť bezpečné pracovné prostredie, spolupracovať so zástupcami zamestnancov"] },
-      { "label": "Stravovanie (§ 152 ZP)", "leaves": ["Zamestnávateľ musí: zabezpečiť stravu alebo finančný príspevok, stravovanie je povinné, nie dobrovoľné, príspevok musí byť minimálne 55 % ceny jedla"] },
-      { "label": "Pracovné podmienky", "leaves": ["Zahŕňajú: pracovné prostredie, teplotu, osvetlenie, hluk, pracovné nástroje a vybavenie, organizáciu práce"] },
-      { "label": "Benefity", "leaves": ["Benefity musia byť: poskytované nediskriminačne, transparentné, často upravené v kolektívnej zmluve"] },
-      { "label": "Kolektívna zmluva", "leaves": ["Môže rozšíriť sociálnu politiku: vyššie príspevky, dlhšia dovolenka, príspevky na rekreáciu, sociálny fond, ďalšie benefity nad rámec zákona"] }
+      {
+        "label": "Povinná sociálna politika",
+        "leaves": [
+          "Zamestnávateľ musí zabezpečiť: BOZP – bezpečné pracovné prostredie, školenia, ochranné prostriedky, prevencia rizík",
+          "Zamestnávateľ musí zabezpečiť: stravovanie – povinnosť zabezpečiť stravu alebo príspevok",
+          "Zamestnávateľ musí zabezpečiť: pracovné podmienky – hygienické, technické, organizačné",
+          "Zamestnávateľ musí zabezpečiť: prekážky v práci – poskytovanie voľna podľa zákona",
+          "Zamestnávateľ musí zabezpečiť: ochranu zdravia – lekárske prehliadky, ergonomické podmienky",
+          "Zamestnávateľ musí zabezpečiť: dodržiavanie Zákonníka práce – mzda, pracovný čas, odpočinok"
+        ]
+      },
+      {
+        "label": "Dobrovoľná sociálna politika",
+        "leaves": [
+          "Zamestnávateľ môže poskytovať: príspevky na šport, kultúru, vzdelávanie",
+          "Zamestnávateľ môže poskytovať: príspevky na dopravu",
+          "Zamestnávateľ môže poskytovať: zdravotnú starostlivosť (napr. preventívne prehliadky)",
+          "Zamestnávateľ môže poskytovať: dôchodkové sporenie",
+          "Zamestnávateľ môže poskytovať: flexibilný pracovný čas",
+          "Zamestnávateľ môže poskytovať: home office",
+          "Zamestnávateľ môže poskytovať: firemné akcie",
+          "Zamestnávateľ môže poskytovať: programy well-beingu a duševného zdravia",
+          "Cieľ: motivácia, lojalita, znižovanie fluktuácie.",
+          "BOZP – základ sociálnej politiky",
+          "Zamestnávateľ musí: hodnotiť riziká, poskytovať OOPP, zabezpečiť školenia, vytvoriť bezpečné pracovné prostredie, spolupracovať so zástupcami zamestnancov"
+        ]
+      },
+      {
+        "label": "Stravovanie (§ 152 ZP)",
+        "leaves": [
+          "Zamestnávateľ musí: zabezpečiť stravu alebo finančný príspevok, stravovanie je povinné, nie dobrovoľné, príspevok musí byť minimálne 55 % ceny jedla"
+        ]
+      },
+      {
+        "label": "Pracovné podmienky",
+        "leaves": [
+          "Zahŕňajú: pracovné prostredie, teplotu, osvetlenie, hluk, pracovné nástroje a vybavenie, organizáciu práce"
+        ]
+      },
+      {
+        "label": "Benefity",
+        "leaves": [
+          "Benefity musia byť: poskytované nediskriminačne, transparentné, často upravené v kolektívnej zmluve"
+        ]
+      },
+      {
+        "label": "Kolektívna zmluva",
+        "leaves": [
+          "Môže rozšíriť sociálnu politiku: vyššie príspevky, dlhšia dovolenka, príspevky na rekreáciu, sociálny fond, ďalšie benefity nad rámec zákona"
+        ]
+      }
     ]
   }
 }

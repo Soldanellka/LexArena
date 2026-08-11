@@ -2,14 +2,22 @@
   "id": "22. B",
   "title": "Zvyšovanie a prehlbovanie kvalifikácie",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "kvalifikácia", "vzdelávanie", "zamestnanec", "zamestnávateľ"],
-
-  "summary": "Zvyšovanie a prehlbovanie kvalifikácie predstavuje odborné vzdelávanie zamestnanca podľa § 153 – 155 Zákonníka práce. Prehlbovanie kvalifikácie je povinnosťou zamestnanca a znamená dopĺňanie, udržiavanie alebo obnovovanie vedomostí v rámci existujúcej kvalifikácie (napr. školenia, kurzy, BOZP, rekvalifikácia pri zmene pracoviska). Ide o výkon práce, za ktorý patrí mzda.\n\nZvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania (napr. VŠ štúdium). Zamestnávateľ nie je povinný umožniť zvyšovanie kvalifikácie, pokiaľ neuzavrie so zamestnancom kvalifikačnú dohodu. Kvalifikačná dohoda musí byť písomná, môže trvať najviac 5 rokov a zakladá povinnosť zamestnávateľa poskytovať pracovné voľno, náhradu mzdy a úhradu nákladov. Zamestnanec sa zaväzuje zotrvať v pracovnom pomere alebo uhradiť náklady, ak záväzok poruší.\n\nPovinnosť uhradiť náklady nevzniká v prípadoch uvedených v zákone, napr. pri organizačných dôvodoch, zdravotnej nespôsobilosti, chorobe z povolania, materskej a rodičovskej dovolenke či pri porušení povinností zamestnávateľa. Pri prehlbovaní kvalifikácie možno uzavrieť dohodu len vtedy, ak náklady presiahnu 1700 eur – v takom prípade zamestnanec nemá povinnosť prehlbovať si kvalifikáciu.\n\nCieľom právnej úpravy je podpora odborného rastu zamestnancov, stabilizácia pracovnej sily a zabezpečenie kvalifikovaného výkonu práce.\n\nPríklad:\nZamestnávateľ nariadi zamestnancovi povinné školenie BOZP a požaduje, aby si ho uhradil sám. Ide o nezákonný postup – prehlbovanie kvalifikácie musí uhradiť zamestnávateľ.\n\nKľúčové slová:\nzvyšovanie kvalifikácie; prehlbovanie kvalifikácie; kvalifikačná dohoda; náhrada nákladov; pracovné voľno; rekvalifikácia.\n\nZapamätaj si:\n- Prehlbovanie kvalifikácie je povinnosť zamestnanca a je to výkon práce.\n- Zvyšovanie kvalifikácie je dobrovoľné a vyžaduje písomnú kvalifikačnú dohodu.\n- Maximálna viazanosť v kvalifikačnej dohode je 5 rokov.\n- Náklady sa uhrádzajú len pri platnej dohode a preukázaných výdavkoch.\n- Povinné školenia hradí zamestnávateľ.\n- Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy.",
-
+  "tags": [
+    "pracovné právo",
+    "kvalifikácia",
+    "vzdelávanie",
+    "zamestnanec",
+    "zamestnávateľ"
+  ],
+  "summary": "Zvyšovanie a prehlbovanie kvalifikácie Odborné vzdelávanie zamestnanca upravuje § 153 – § 155 ZP. Treba rozlišovať dva pojmy:\n\nPrehlbovanie kvalifikácie (§ 153, § 154 ZP) je jej priebežné dopĺňanie, udržiavanie a obnovovanie v rámci existujúcej kvalifikácie. Je povinnosťou zamestnanca; zamestnávateľ ho môže nariadiť. Účasť na prehlbovaní je výkonom práce, za ktorý patrí mzda.\n\nZvyšovanie kvalifikácie je získanie vyššieho stupňa vzdelania alebo rozšírenie kvalifikácie (napr. VŠ štúdium popri práci). Nie je pracovnou povinnosťou; ak je v súlade s potrebou zamestnávateľa, patrí zamestnancovi pracovné voľno a náhrada mzdy v rozsahu podľa § 140 ZP. Podmienky možno upraviť dohodou o zvýšení kvalifikácie (§ 155 ZP): musí byť písomná, záväzok zotrvať v pracovnom pomere je najviac 5 rokov; ak zamestnanec záväzok poruší, uhradí pomernú časť nákladov. Povinnosť úhrady nevzniká v zákonom určených prípadoch (napr. organizačné dôvody, zdravotná nespôsobilosť, porušenie povinností zamestnávateľom). Dohodu o zvýšení kvalifikácie možno uzavrieť, ak náklady dosahujú aspoň zákonom určenú sumu (spravidla nad 1 700 €).\n\nPríklad: Zamestnávateľ nariadi povinné školenie BOZP a žiada, aby si ho zamestnanec uhradil sám. Postup je nezákonný – prehlbovanie kvalifikácie je výkon práce, náklady znáša zamestnávateľ.\n\nZapamätaj si:\n\nPrehlbovanie kvalifikácie (§ 154) = povinnosť zamestnanca, výkon práce, hradí zamestnávateľ.\nZvyšovanie kvalifikácie = získanie vyššieho stupňa; dobrovoľné, pri záujme zamestnávateľa voľno a náhrada mzdy (§ 140).\nDohoda o zvýšení kvalifikácie (§ 155): písomná, viazanosť max 5 rokov, pri porušení pomerná úhrada nákladov.\nÚhrada nákladov nevzniká zo zákonných dôvodov (organizačné, zdravotné, pochybenie zamestnávateľa).\nPovinné školenia (BOZP a pod.) hradí zamestnávateľ.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 140, § 153 – § 155 (minimálna suma nákladov pre dohodu over podľa aktuálneho znenia)",
   "quiz": [
     {
       "question": "Čo je zvyšovanie kvalifikácie?",
-      "options": ["Doplnenie vedomostí v rámci existujúcej kvalifikácie", "Získanie vyššieho stupňa vzdelania", "Krátke interné školenie"],
+      "options": [
+        "Doplnenie vedomostí v rámci existujúcej kvalifikácie",
+        "Získanie vyššieho stupňa vzdelania",
+        "Krátke interné školenie"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zvyšovanie kvalifikácie znamená získanie vyššieho stupňa vzdelania.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kedy môže zamestnávateľ uzavrieť kvalifikačnú dohodu?",
-      "options": ["Pri akomkoľvek školení", "Len pri zvyšovaní kvalifikácie", "Len ak to chce zamestnanec"],
+      "options": [
+        "Pri akomkoľvek školení",
+        "Len pri zvyšovaní kvalifikácie",
+        "Len ak to chce zamestnanec"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Kvalifikačná dohoda sa uzatvára len pri zvyšovaní kvalifikácie.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Aká je maximálna doba viazanosti v kvalifikačnej dohode?",
-      "options": ["2 roky", "5 rokov", "10 rokov"],
+      "options": [
+        "2 roky",
+        "5 rokov",
+        "10 rokov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákon stanovuje limit 5 rokov.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Kto hradí prehlbovanie kvalifikácie?",
-      "options": ["Zamestnanec", "Zamestnávateľ", "Obaja rovnako"],
+      "options": [
+        "Zamestnanec",
+        "Zamestnávateľ",
+        "Obaja rovnako"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Prehlbovanie kvalifikácie je povinnosť zamestnávateľa.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Kvalifikačná dohoda je povinná pri každom školení", "Zamestnanec má nárok na pracovné voľno pri zvyšovaní kvalifikácie", "Zamestnávateľ nemusí preukazovať náklady"],
+      "options": [
+        "Kvalifikačná dohoda je povinná pri každom školení",
+        "Zamestnanec má nárok na pracovné voľno pri zvyšovaní kvalifikácie",
+        "Zamestnávateľ nemusí preukazovať náklady"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Zvyšovanie kvalifikácie", "definition": "Získanie vyššieho stupňa vzdelania (napr. VŠ štúdium)." },
-    { "term": "Prehlbovanie kvalifikácie", "definition": "Doplnenie, udržiavanie alebo obnovovanie vedomostí v rámci existujúcej kvalifikácie." },
-    { "term": "Kvalifikačná dohoda", "definition": "Písomná dohoda o zvyšovaní kvalifikácie s viazanosťou najviac 5 rokov." },
-    { "term": "Náhrada nákladov", "definition": "Zamestnanec ich hradí len pri porušení platnej kvalifikačnej dohody." },
-    { "term": "Pracovné voľno", "definition": "Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy." }
+    {
+      "term": "Zvyšovanie kvalifikácie",
+      "definition": "Získanie vyššieho stupňa vzdelania (napr. VŠ štúdium)."
+    },
+    {
+      "term": "Prehlbovanie kvalifikácie",
+      "definition": "Doplnenie, udržiavanie alebo obnovovanie vedomostí v rámci existujúcej kvalifikácie."
+    },
+    {
+      "term": "Kvalifikačná dohoda",
+      "definition": "Písomná dohoda o zvyšovaní kvalifikácie s viazanosťou najviac 5 rokov."
+    },
+    {
+      "term": "Náhrada nákladov",
+      "definition": "Zamestnanec ich hradí len pri porušení platnej kvalifikačnej dohody."
+    },
+    {
+      "term": "Pracovné voľno",
+      "definition": "Pri zvyšovaní kvalifikácie patrí pracovné voľno a náhrada mzdy."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Neplatná kvalifikačná dohoda",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je dohoda platná?",
-          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Dohoda presahuje zákonný limit 5 rokov, preto je neplatná.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Musí zamestnanec nahradiť náklady?",
-          "options": ["Nie, ak dohoda je neplatná", "Áno, vždy", "Len ak odíde do 2 rokov"],
+          "options": [
+            "Nie, ak dohoda je neplatná",
+            "Áno, vždy",
+            "Len ak odíde do 2 rokov"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Neplatná dohoda nezakladá povinnosť náhrady.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Povinné školenie ako prehlbovanie kvalifikácie",
       "difficulty": "ľahká",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Ide o prehlbovanie kvalifikácie?",
-          "options": ["Áno", "Nie", "Len ak školenie trvá viac ako 2 dni"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak školenie trvá viac ako 2 dni"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "BOZP je typické prehlbovanie kvalifikácie.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Kto hradí náklady?",
-          "options": ["Zamestnávateľ", "Zamestnanec", "Obaja rovnako"],
+          "options": [
+            "Zamestnávateľ",
+            "Zamestnanec",
+            "Obaja rovnako"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Povinné školenia hradí zamestnávateľ.",
@@ -158,12 +210,56 @@
   "spider": {
     "center": "Kvalifikácia – prehlbovanie × zvyšovanie × kvalifikačná dohoda × náklady × pracovné voľno",
     "branches": [
-      { "label": "Prehlbovanie kvalifikácie (§ 153 ZP)", "leaves": ["povinnosť zamestnanca,", "dopĺňanie, udržiavanie alebo obnovovanie vedomostí,", "BOZP, školenia, kurzy, rekvalifikácia pri zmene pracoviska,", "považuje sa za výkon práce – patrí mzda,", "náklady hradí zamestnávateľ.", "Možno uzavrieť dohodu len ak náklady presiahnu 1700 €."] },
-      { "label": "Zvyšovanie kvalifikácie (§ 154 – 155 ZP)", "leaves": ["získanie vyššieho stupňa vzdelania (napr. VŠ),", "dobrovoľné – zamestnávateľ nemusí umožniť,", "vyžaduje písomnú kvalifikačnú dohodu,", "zamestnávateľ poskytuje pracovné voľno, náhradu mzdy, úhradu nákladov."] },
-      { "label": "Kvalifikačná dohoda", "leaves": ["Musí byť: písomná, max. na 5 rokov, obsahovať záväzok zamestnanca zotrvať v pracovnom pomere, obsahovať presnú výšku nákladov a spôsob ich úhrady"] },
-      { "label": "Náhrada nákladov", "leaves": ["Zamestnanec uhrádza náklady len: ak poruší záväzok zotrvať, ak sú náklady preukázané, ak dohoda je platná a zákonná"] },
-      { "label": "Pracovné voľno a mzda", "leaves": ["Pri zvyšovaní kvalifikácie: patrí pracovné voľno, patrí náhrada mzdy, zamestnávateľ hradí náklady podľa dohody", "Pri prehlbovaní kvalifikácie: ide o výkon práce – patrí mzda"] },
-      { "label": "Výnimky z povinnosti uhradiť náklady", "leaves": ["Zamestnanec nehradí náklady, ak skončenie pracovného pomeru nastalo", "z organizačných dôvodov", "pre zdravotnú nespôsobilosť", "pre chorobu z povolania", "pri materskej alebo rodičovskej dovolenke", "pre porušenie povinností zamestnávateľa"] }
+      {
+        "label": "Prehlbovanie kvalifikácie (§ 153 ZP)",
+        "leaves": [
+          "povinnosť zamestnanca,",
+          "dopĺňanie, udržiavanie alebo obnovovanie vedomostí,",
+          "BOZP, školenia, kurzy, rekvalifikácia pri zmene pracoviska,",
+          "považuje sa za výkon práce – patrí mzda,",
+          "náklady hradí zamestnávateľ.",
+          "Možno uzavrieť dohodu len ak náklady presiahnu 1700 €."
+        ]
+      },
+      {
+        "label": "Zvyšovanie kvalifikácie (§ 154 – 155 ZP)",
+        "leaves": [
+          "získanie vyššieho stupňa vzdelania (napr. VŠ),",
+          "dobrovoľné – zamestnávateľ nemusí umožniť,",
+          "vyžaduje písomnú kvalifikačnú dohodu,",
+          "zamestnávateľ poskytuje pracovné voľno, náhradu mzdy, úhradu nákladov."
+        ]
+      },
+      {
+        "label": "Kvalifikačná dohoda",
+        "leaves": [
+          "Musí byť: písomná, max. na 5 rokov, obsahovať záväzok zamestnanca zotrvať v pracovnom pomere, obsahovať presnú výšku nákladov a spôsob ich úhrady"
+        ]
+      },
+      {
+        "label": "Náhrada nákladov",
+        "leaves": [
+          "Zamestnanec uhrádza náklady len: ak poruší záväzok zotrvať, ak sú náklady preukázané, ak dohoda je platná a zákonná"
+        ]
+      },
+      {
+        "label": "Pracovné voľno a mzda",
+        "leaves": [
+          "Pri zvyšovaní kvalifikácie: patrí pracovné voľno, patrí náhrada mzdy, zamestnávateľ hradí náklady podľa dohody",
+          "Pri prehlbovaní kvalifikácie: ide o výkon práce – patrí mzda"
+        ]
+      },
+      {
+        "label": "Výnimky z povinnosti uhradiť náklady",
+        "leaves": [
+          "Zamestnanec nehradí náklady, ak skončenie pracovného pomeru nastalo",
+          "z organizačných dôvodov",
+          "pre zdravotnú nespôsobilosť",
+          "pre chorobu z povolania",
+          "pri materskej alebo rodičovskej dovolenke",
+          "pre porušenie povinností zamestnávateľa"
+        ]
+      }
     ]
   }
 }

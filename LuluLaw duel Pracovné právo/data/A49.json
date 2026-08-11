@@ -2,14 +2,22 @@
   "id": "25. A",
   "title": "Práca nadčas, nočná práca, evidencia pracovného času",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný čas", "nadčas", "nočná práca", "evidencia"],
-
-  "summary": "Práca nadčas je práca vykonávaná nad určený týždenný pracovný čas na príkaz zamestnávateľa alebo s jeho súhlasom. Nadčas musí byť výnimočný a zákon stanovuje limity: 150 hodín nariadeného nadčasu ročne a 400 hodín celkového nadčasu vrátane dohodnutého. Niektorým skupinám zamestnancov nemožno nadčas nariadiť, napríklad tehotným ženám alebo mladistvým. Nočná práca je práca vykonávaná medzi 22:00 a 6:00. Zamestnávateľ musí zabezpečiť zdravotnú spôsobilosť zamestnanca, poskytovať príplatky a rešpektovať osobitnú ochranu pre tehotné ženy, dojčiace ženy, matky do deviatich mesiacov po pôrode a osamelých rodičov. Evidencia pracovného času je povinnosťou zamestnávateľa. Musí obsahovať presné údaje o začiatku a konci pracovného času, prestávkach, nadčasoch, nočnej práci a pracovnej pohotovosti. Účelom právnej úpravy je ochrana zdravia zamestnancov a kontrola dodržiavania pracovnoprávnych predpisov.\n\nPríklad:\nZamestnávateľ neeviduje začiatok a koniec pracovného času a tvrdí, že stačí evidovať len počet hodín. Takýto postup je nezákonný – evidencia musí byť presná a podrobná.\n\nKľúčové slová:\nnadčas; nočná práca; evidencia pracovného času; limity nadčasov; zdravotná spôsobilosť; príplatky.\n\nZapamätaj si:\n- Nadčas musí byť výnimočný a má zákonné limity.\n- Tehotné ženy a mladiství nesmú pracovať nadčas.\n- Nočná práca vyžaduje zdravotnú spôsobilosť a poskytuje sa za ňu príplatok.\n- Evidencia pracovného času je povinná a musí byť presná.\n- Cieľom úpravy je ochrana zdravia a kontrola dodržiavania pracovného práva.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovný čas",
+    "nadčas",
+    "nočná práca",
+    "evidencia"
+  ],
+  "summary": "Práca nadčas, nočná práca, evidencia pracovného času Práca nadčas (§ 97 ZP) je práca nad určený týždenný pracovný čas vykonávaná na príkaz zamestnávateľa alebo s jeho súhlasom. Je výnimočná; limity: nariadiť možno najviac 150 hodín ročne, celkový rozsah práce nadčas (nariadenej aj dohodnutej) je najviac 400 hodín ročne. Nadčas nemožno nariadiť tehotnej žene, žene alebo mužovi trvale sa starajúcemu o dieťa do 3 rokov, osamelému zamestnancovi starajúcemu sa o dieťa do 15 rokov a mladistvému. Za prácu nadčas patrí dosiahnutá mzda a mzdové zvýhodnenie (§ 121 ZP), prípadne náhradné voľno.\n\nNočná práca (§ 98 ZP) je práca medzi 22:00 a 6:00. Zamestnávateľ musí zabezpečiť posúdenie zdravotnej spôsobilosti, primerané sociálne zabezpečenie a bezpečné podmienky; za nočnú prácu patrí mzdové zvýhodnenie (§ 123 ZP). Osobitná ochrana platí pre tehotné ženy, matky do 9. mesiaca po pôrode a dojčiace ženy.\n\nEvidencia pracovného času (§ 99 ZP) je povinnosťou zamestnávateľa. Musí evidovať pracovný čas, prácu nadčas, nočnú prácu, aktívnu aj neaktívnu časť pracovnej pohotovosti tak, aby bol zaznamenaný začiatok a koniec časového úseku.\n\nPríklad: Zamestnávateľ eviduje len počet odpracovaných hodín bez začiatku a konca. Postup je nezákonný – evidencia musí zaznamenávať začiatok a koniec pracovného času (§ 99 ZP).\n\nZapamätaj si:\n\nNadčas (§ 97): nariadiť max 150 h/rok, celkovo max 400 h/rok; výnimočný.\nNadčas nemožno nariadiť tehotnej, rodičovi dieťaťa do 3 rokov (trvalá starostlivosť), osamelému rodičovi dieťaťa do 15 r., mladistvému.\nNočná práca (§ 98): 22:00–6:00; zdravotná spôsobilosť + príplatok (§ 123).\nEvidencia (§ 99): začiatok a koniec, nadčas, noc, pohotovosť.\nZa nadčas patrí zvýhodnenie (§ 121) alebo náhradné voľno.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 97, § 98, § 99, § 121, § 123",
   "quiz": [
     {
       "question": "Koľko hodín nadčasovej práce môže zamestnávateľ nariadiť ročne?",
-      "options": ["150 hodín", "300 hodín", "400 hodín"],
+      "options": [
+        "150 hodín",
+        "300 hodín",
+        "400 hodín"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Nariadený nadčas je limitovaný na 150 hodín ročne.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kedy sa vykonáva nočná práca?",
-      "options": ["Medzi 20:00 a 4:00", "Medzi 22:00 a 6:00", "Medzi 0:00 a 8:00"],
+      "options": [
+        "Medzi 20:00 a 4:00",
+        "Medzi 22:00 a 6:00",
+        "Medzi 0:00 a 8:00"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Nočná práca je definovaná zákonom.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Kto nesmie pracovať nadčas?",
-      "options": ["Mladiství a tehotné ženy", "Muži nad 50 rokov", "Zamestnanci na skrátený úväzok"],
+      "options": [
+        "Mladiství a tehotné ženy",
+        "Muži nad 50 rokov",
+        "Zamestnanci na skrátený úväzok"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Tieto skupiny sú chránené.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Čo musí obsahovať evidencia pracovného času?",
-      "options": ["Len počet odpracovaných dní", "Začiatok a koniec práce, prestávky, nadčasy, nočnú prácu", "Len nadčasy"],
+      "options": [
+        "Len počet odpracovaných dní",
+        "Začiatok a koniec práce, prestávky, nadčasy, nočnú prácu",
+        "Len nadčasy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Evidencia musí byť podrobná.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Nočná práca nevyžaduje zdravotnú spôsobilosť", "Nadčas musí byť výnimočný", "Evidencia pracovného času je dobrovoľná"],
+      "options": [
+        "Nočná práca nevyžaduje zdravotnú spôsobilosť",
+        "Nadčas musí byť výnimočný",
+        "Evidencia pracovného času je dobrovoľná"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Nadčas nesmie byť bežným spôsobom organizácie práce.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Práca nadčas", "definition": "Práca nad určený týždenný pracovný čas; limit 150/400 hodín." },
-    { "term": "Nočná práca", "definition": "Práca medzi 22:00 a 6:00; vyžaduje zdravotnú spôsobilosť." },
-    { "term": "Zákazy nadčasov", "definition": "Tehotné ženy, mladiství, niektorí rodičia." },
-    { "term": "Príplatky", "definition": "Za nadčas, nočnú prácu, sviatok, víkend." },
-    { "term": "Evidencia pracovného času", "definition": "Povinnosť viesť presné údaje o pracovnom čase a nadčasoch." }
+    {
+      "term": "Práca nadčas",
+      "definition": "Práca nad určený týždenný pracovný čas; limit 150/400 hodín."
+    },
+    {
+      "term": "Nočná práca",
+      "definition": "Práca medzi 22:00 a 6:00; vyžaduje zdravotnú spôsobilosť."
+    },
+    {
+      "term": "Zákazy nadčasov",
+      "definition": "Tehotné ženy, mladiství, niektorí rodičia."
+    },
+    {
+      "term": "Príplatky",
+      "definition": "Za nadčas, nočnú prácu, sviatok, víkend."
+    },
+    {
+      "term": "Evidencia pracovného času",
+      "definition": "Povinnosť viesť presné údaje o pracovnom čase a nadčasoch."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Nezákonne nariadený nadčas",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Môže tehotná žena pracovať nadčas?",
-          "options": ["Nie", "Áno", "Len ak súhlasí"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Tehotné ženy nesmú pracovať nadčas.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Je postup zamestnávateľa zákonný?",
-          "options": ["Nie", "Áno", "Len ak ide o krízovú situáciu"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak ide o krízovú situáciu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nadčas je zakázaný bez výnimky.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Chýbajúca evidencia pracovného času",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Je evidencia len počtu hodín postačujúca?",
-          "options": ["Nie", "Áno", "Len pri administratívnych prácach"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len pri administratívnych prácach"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Evidencia musí obsahovať presné časové údaje.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Porušuje zamestnávateľ zákon?",
-          "options": ["Áno", "Nie", "Len ak zamestnanec podá sťažnosť"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnanec podá sťažnosť"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Evidencia pracovného času je povinná.",
@@ -158,13 +210,50 @@
   "spider": {
     "center": "Nadčas – limity × nočná práca × zdravotná spôsobilosť × evidencia × ochrana zamestnancov",
     "branches": [
-      { "label": "Práca nadčas (§ 97 ZP)", "leaves": ["Nadčas je práca: nad určený týždenný pracovný čas, vykonávaná na príkaz zamestnávateľa alebo s jeho súhlasom, musí byť výnimočná, nie pravidelná"] },
-      { "label": "Limity nadčasov", "leaves": ["Zákon stanovuje: 150 hodín nariadeného nadčasu ročne, 400 hodín celkového nadčasu (vrátane dohodnutého), vyššie limity sú možné len pri kolektívnej zmluve"] },
-      { "label": "Zákazy nadčasov", "leaves": ["Nadčas nemožno nariadiť: tehotným ženám, matkám do 9 mesiacov po pôrode, dojčiacim ženám, osamelým rodičom bez súhlasu, mladistvým (<18 rokov)"] },
-      { "label": "Nočná práca (§ 98 ZP)", "leaves": ["Nočná práca je práca: medzi 22:00 – 6:00, vyžaduje zdravotnú spôsobilosť, zamestnávateľ musí zabezpečiť posúdenie zdravotného stavu", "Osobitná ochrana: tehotné ženy, matky do 9 mesiacov po pôrode, dojčiace ženy, osamelí rodičia"] },
-      { "label": "Zdravotná spôsobilosť", "leaves": ["Zamestnávateľ musí: zabezpečiť lekárske posúdenie, pravidelne kontrolovať zdravotný stav nočných pracovníkov, preradiť zamestnanca, ak nočnú prácu nemôže vykonávať"] },
-      { "label": "Príplatky", "leaves": ["Za nadčas a nočnú prácu patrí: príplatok za nadčas, príplatok za nočnú prácu, príplatok za sviatok, príplatok za víkend"] },
-      { "label": "Evidencia pracovného času (§ 99 ZP)", "leaves": ["Zamestnávateľ musí viesť presnú evidenciu: začiatok a koniec pracovného času, prestávky, nadčasy, nočnú prácu, pracovnú pohotovosť", "Nestačí evidovať len počet hodín – musí byť presná a podrobná."] }
+      {
+        "label": "Práca nadčas (§ 97 ZP)",
+        "leaves": [
+          "Nadčas je práca: nad určený týždenný pracovný čas, vykonávaná na príkaz zamestnávateľa alebo s jeho súhlasom, musí byť výnimočná, nie pravidelná"
+        ]
+      },
+      {
+        "label": "Limity nadčasov",
+        "leaves": [
+          "Zákon stanovuje: 150 hodín nariadeného nadčasu ročne, 400 hodín celkového nadčasu (vrátane dohodnutého), vyššie limity sú možné len pri kolektívnej zmluve"
+        ]
+      },
+      {
+        "label": "Zákazy nadčasov",
+        "leaves": [
+          "Nadčas nemožno nariadiť: tehotným ženám, matkám do 9 mesiacov po pôrode, dojčiacim ženám, osamelým rodičom bez súhlasu, mladistvým (<18 rokov)"
+        ]
+      },
+      {
+        "label": "Nočná práca (§ 98 ZP)",
+        "leaves": [
+          "Nočná práca je práca: medzi 22:00 – 6:00, vyžaduje zdravotnú spôsobilosť, zamestnávateľ musí zabezpečiť posúdenie zdravotného stavu",
+          "Osobitná ochrana: tehotné ženy, matky do 9 mesiacov po pôrode, dojčiace ženy, osamelí rodičia"
+        ]
+      },
+      {
+        "label": "Zdravotná spôsobilosť",
+        "leaves": [
+          "Zamestnávateľ musí: zabezpečiť lekárske posúdenie, pravidelne kontrolovať zdravotný stav nočných pracovníkov, preradiť zamestnanca, ak nočnú prácu nemôže vykonávať"
+        ]
+      },
+      {
+        "label": "Príplatky",
+        "leaves": [
+          "Za nadčas a nočnú prácu patrí: príplatok za nadčas, príplatok za nočnú prácu, príplatok za sviatok, príplatok za víkend"
+        ]
+      },
+      {
+        "label": "Evidencia pracovného času (§ 99 ZP)",
+        "leaves": [
+          "Zamestnávateľ musí viesť presnú evidenciu: začiatok a koniec pracovného času, prestávky, nadčasy, nočnú prácu, pracovnú pohotovosť",
+          "Nestačí evidovať len počet hodín – musí byť presná a podrobná."
+        ]
+      }
     ]
   }
 }

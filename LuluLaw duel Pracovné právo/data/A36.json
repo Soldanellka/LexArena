@@ -2,14 +2,22 @@
   "id": "18. B",
   "title": "Predpoklady zodpovednosti za škodu v pracovnom práve",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "zodpovednosť za škodu", "predpoklady", "zamestnanec", "zamestnávateľ"],
-
-  "summary": "Zodpovednosť za škodu v pracovnom práve je osobitný právny režim, ktorý upravuje, kedy zamestnanec alebo zamestnávateľ nesú následky škody vzniknutej pri plnení pracovných úloh. Predpoklady vzniku zodpovednosti sú presne definované a musia byť splnené kumulatívne.\n\nZodpovednosť zamestnanca je subjektívna – vyžaduje sa zavinenie. Predpoklady sú: existencia pracovnoprávneho vzťahu, protiprávny úkon alebo škodná udalosť, vznik škody, príčinná súvislosť a zavinenie. Zavinenie môže byť úmyselné alebo nedbanlivostné. Pri niektorých druhoch zodpovednosti (napr. schodok na zverených hodnotách) sa zavinenie predpokladá.\n\nZodpovednosť zamestnávateľa za pracovné úrazy a choroby z povolania je objektívna – nevyžaduje sa zavinenie. Predpokladmi sú: pracovný úraz alebo choroba z povolania, vznik škody a príčinná súvislosť.\n\nŠkoda musí byť majetková a vyčísliteľná v peniazoch. Rozlišuje sa skutočná škoda a iná škoda (ušlý zisk). Náhrada škody sa poskytuje v peniazoch, ak nie je možné uviesť vec do pôvodného stavu.\n\nCieľom právnej úpravy je vyvážiť ochranu majetku zamestnávateľa a ochranu zamestnanca pred neprimeranou zodpovednosťou, pričom dôkazné bremeno je rozdelené medzi obe strany podľa typu zodpovednosti.",
-
+  "tags": [
+    "pracovné právo",
+    "zodpovednosť za škodu",
+    "predpoklady",
+    "zamestnanec",
+    "zamestnávateľ"
+  ],
+  "summary": "Zodpovednosť za škodu v pracovnom práve je osobitný právny režim, ktorý určuje, kedy zamestnanec alebo zamestnávateľ nesú následky škody vzniknutej pri plnení pracovných úloh. Predpoklady musia byť splnené kumulatívne.\n\nZodpovednosť zamestnanca je subjektívna – vyžaduje zavinenie. Predpoklady: existencia pracovnoprávneho vzťahu, porušenie povinnosti (protiprávnosť), vznik škody, príčinná súvislosť medzi porušením a škodou a zavinenie (úmysel alebo nedbanlivosť). Pri všeobecnej zodpovednosti (§ 179 ZP) zavinenie preukazuje zamestnávateľ; pri schodku na zverených hodnotách (§ 182 ZP) a strate zverených predmetov (§ 185 ZP) sa zavinenie predpokladá (zamestnanec sa musí vyviniť).\n\nZodpovednosť zamestnávateľa za pracovný úraz a chorobu z povolania je objektívna – bez zavinenia (§ 195 ZP). Predpoklady: pracovný úraz alebo choroba z povolania, vznik škody a príčinná súvislosť; zamestnávateľ sa zbaví len zo zákonných liberačných dôvodov (§ 196 ZP).\n\nŠkoda musí byť majetková a vyčísliteľná v peniazoch; rozlišuje sa skutočná škoda a ušlý zisk. Náhrada sa poskytuje v peniazoch, ak sa škoda neuvedie do pôvodného stavu. Dôkazné bremeno je rozdelené podľa typu zodpovednosti (prezumpcia neviny × prezumpcia viny).\n\nZapamätaj si:\n\nPredpoklady sú kumulatívne: (protiprávnosť/škodná udalosť) + škoda + príčinná súvislosť + prípadne zavinenie.\nZodpovednosť zamestnanca je subjektívna (zavinenie); zamestnávateľa za úraz objektívna (bez zavinenia).\nPri schodku a strate zverených predmetov sa zavinenie predpokladá.\nŠkoda musí byť majetková a vyčísliteľná; rozlišuje sa skutočná škoda a ušlý zisk.\nDôkazné bremeno závisí od typu zodpovednosti.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 179, § 182, § 185, § 195, § 196",
   "quiz": [
     {
       "question": "Ktoré sú základné predpoklady zodpovednosti zamestnanca za škodu?",
-      "options": ["Škoda, porušenie povinnosti, príčinná súvislosť, zavinenie", "Len škoda a zavinenie", "Len porušenie povinnosti"],
+      "options": [
+        "Škoda, porušenie povinnosti, príčinná súvislosť, zavinenie",
+        "Len škoda a zavinenie",
+        "Len porušenie povinnosti"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Vznik zodpovednosti vyžaduje splnenie všetkých štyroch predpokladov.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kto preukazuje zavinenie pri všeobecnej zodpovednosti zamestnanca?",
-      "options": ["Zamestnávateľ", "Zamestnanec", "Inšpektorát práce"],
+      "options": [
+        "Zamestnávateľ",
+        "Zamestnanec",
+        "Inšpektorát práce"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zavinenie preukazuje zamestnanec, keďže ide o subjektívnu zodpovednosť.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Ktorý predpoklad sa nevyžaduje pri objektívnej zodpovednosti zamestnávateľa?",
-      "options": ["Škoda", "Príčinná súvislosť", "Zavinenie"],
+      "options": [
+        "Škoda",
+        "Príčinná súvislosť",
+        "Zavinenie"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Zavinenie sa pri pracovných úrazoch a chorobách z povolania nevyžaduje.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Kedy sa zavinenie zamestnanca predpokladá?",
-      "options": ["Pri schodku na zverených hodnotách", "Pri bežnej nedbanlivosti", "Pri meškaní do práce"],
+      "options": [
+        "Pri schodku na zverených hodnotách",
+        "Pri bežnej nedbanlivosti",
+        "Pri meškaní do práce"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pri schodku sa zavinenie predpokladá, ide o zodpovednosť s prezumpciou viny.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Zamestnávateľ nemusí preukazovať vznik škody", "Zamestnávateľ musí preukázať škodu, porušenie povinnosti a príčinnú súvislosť", "Zamestnanec vždy zodpovedá v plnej výške"],
+      "options": [
+        "Zamestnávateľ nemusí preukazovať vznik škody",
+        "Zamestnávateľ musí preukázať škodu, porušenie povinnosti a príčinnú súvislosť",
+        "Zamestnanec vždy zodpovedá v plnej výške"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o základné predpoklady zodpovednosti zamestnanca.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Škoda", "definition": "Majetková ujma vyčísliteľná v peniazoch; môže ísť o skutočnú škodu alebo inú škodu (ušlý zisk)." },
-    { "term": "Porušenie povinnosti", "definition": "Konanie alebo opomenutie zamestnanca v rozpore s pracovnými povinnosťami." },
-    { "term": "Príčinná súvislosť", "definition": "Priama väzba medzi porušením povinnosti a vznikom škody." },
-    { "term": "Zavinenie", "definition": "Úmysel alebo nedbanlivosť zamestnanca; pri niektorých druhoch zodpovednosti sa predpokladá." },
-    { "term": "Objektívna zodpovednosť", "definition": "Zodpovednosť bez ohľadu na zavinenie, typicky pri pracovných úrazoch a chorobách z povolania." }
+    {
+      "term": "Škoda",
+      "definition": "Majetková ujma vyčísliteľná v peniazoch; môže ísť o skutočnú škodu alebo inú škodu (ušlý zisk)."
+    },
+    {
+      "term": "Porušenie povinnosti",
+      "definition": "Konanie alebo opomenutie zamestnanca v rozpore s pracovnými povinnosťami."
+    },
+    {
+      "term": "Príčinná súvislosť",
+      "definition": "Priama väzba medzi porušením povinnosti a vznikom škody."
+    },
+    {
+      "term": "Zavinenie",
+      "definition": "Úmysel alebo nedbanlivosť zamestnanca; pri niektorých druhoch zodpovednosti sa predpokladá."
+    },
+    {
+      "term": "Objektívna zodpovednosť",
+      "definition": "Zodpovednosť bez ohľadu na zavinenie, typicky pri pracovných úrazoch a chorobách z povolania."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Poškodenie stroja nesprávnou manipuláciou",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je splnený predpoklad porušenia povinnosti?",
-          "options": ["Áno", "Nie", "Len ak bol stroj nový"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bol stroj nový"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nesprávna manipulácia je porušením pracovnej povinnosti.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Kto preukazuje zavinenie?",
-          "options": ["Zamestnanec", "Zamestnávateľ", "Súd"],
+          "options": [
+            "Zamestnanec",
+            "Zamestnávateľ",
+            "Súd"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri všeobecnej zodpovednosti zavinenie preukazuje zamestnanec.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Pracovný úraz a objektívna zodpovednosť zamestnávateľa",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Vyžaduje sa zavinenie zamestnávateľa?",
-          "options": ["Nie", "Áno", "Len pri ťažkých úrazoch"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len pri ťažkých úrazoch"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri pracovných úrazoch ide o objektívnu zodpovednosť bez ohľadu na zavinenie.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Ktoré predpoklady musia byť splnené?",
-          "options": ["Úraz, škoda, príčinná súvislosť", "Len úraz", "Len škoda"],
+          "options": [
+            "Úraz, škoda, príčinná súvislosť",
+            "Len úraz",
+            "Len škoda"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ide o tri základné predpoklady objektívnej zodpovednosti.",
@@ -158,13 +210,54 @@
   "spider": {
     "center": "Zodpovednosť za škodu – predpoklady × zamestnanec × zamestnávateľ × zavinenie × príčinná súvislosť",
     "branches": [
-      { "label": "Predpoklady zodpovednosti", "leaves": ["Musí byť splnené všetkých päť podmienok: existencia pracovnoprávneho vzťahu, protiprávny úkon (porušenie povinnosti), vznik škody, príčinná súvislosť, zavinenie (len pri zamestnancovi)"] },
-      { "label": "Zodpovednosť zamestnanca (§ 179 a nasl. ZP)", "leaves": ["Je subjektívna – vyžaduje sa zavinenie.", "Zamestnanec zodpovedá za škodu spôsobenú: porušením povinností pri práci, úmyselným konaním proti dobrým mravom", "Pri všeobecnej zodpovednosti platí prezumpcia neviny – zamestnávateľ musí preukázať zavinenie."] },
-      { "label": "Zodpovednosť zamestnávateľa", "leaves": ["Je objektívna – zavinenie sa nevyžaduje.", "Predpoklady: pracovný úraz alebo choroba z povolania, vznik škody, príčinná súvislosť"] },
-      { "label": "Zavinenie", "leaves": ["Formy zavinenia: nedbanlivosť, úmysel", "Pri niektorých druhoch zodpovednosti sa zavinenie predpokladá: schodok na zverených hodnotách, strata zverených predmetov"] },
-      { "label": "Príčinná súvislosť", "leaves": ["Musí byť preukázané, že škoda vznikla v dôsledku konania zamestnanca alebo pracovného úrazu."] },
-      { "label": "Druhy škody", "leaves": ["Skutočná škoda – poškodenie majetku, náklady, strata hodnoty,", "Ušlý zisk – len pri úmysle alebo alkohole, ak to neodporuje dobrým mravom."] },
-      { "label": "Limity náhrady škody", "leaves": ["pri nedbanlivosti: max. 4–4,5-násobok priemerného zárobku,", "pri úmysle, alkohole, schodku alebo strate predmetov: plná náhrada."] }
+      {
+        "label": "Predpoklady zodpovednosti",
+        "leaves": [
+          "Musí byť splnené všetkých päť podmienok: existencia pracovnoprávneho vzťahu, protiprávny úkon (porušenie povinnosti), vznik škody, príčinná súvislosť, zavinenie (len pri zamestnancovi)"
+        ]
+      },
+      {
+        "label": "Zodpovednosť zamestnanca (§ 179 a nasl. ZP)",
+        "leaves": [
+          "Je subjektívna – vyžaduje sa zavinenie.",
+          "Zamestnanec zodpovedá za škodu spôsobenú: porušením povinností pri práci, úmyselným konaním proti dobrým mravom",
+          "Pri všeobecnej zodpovednosti platí prezumpcia neviny – zamestnávateľ musí preukázať zavinenie."
+        ]
+      },
+      {
+        "label": "Zodpovednosť zamestnávateľa",
+        "leaves": [
+          "Je objektívna – zavinenie sa nevyžaduje.",
+          "Predpoklady: pracovný úraz alebo choroba z povolania, vznik škody, príčinná súvislosť"
+        ]
+      },
+      {
+        "label": "Zavinenie",
+        "leaves": [
+          "Formy zavinenia: nedbanlivosť, úmysel",
+          "Pri niektorých druhoch zodpovednosti sa zavinenie predpokladá: schodok na zverených hodnotách, strata zverených predmetov"
+        ]
+      },
+      {
+        "label": "Príčinná súvislosť",
+        "leaves": [
+          "Musí byť preukázané, že škoda vznikla v dôsledku konania zamestnanca alebo pracovného úrazu."
+        ]
+      },
+      {
+        "label": "Druhy škody",
+        "leaves": [
+          "Skutočná škoda – poškodenie majetku, náklady, strata hodnoty,",
+          "Ušlý zisk – len pri úmysle alebo alkohole, ak to neodporuje dobrým mravom."
+        ]
+      },
+      {
+        "label": "Limity náhrady škody",
+        "leaves": [
+          "pri nedbanlivosti: max. 4–4,5-násobok priemerného zárobku,",
+          "pri úmysle, alkohole, schodku alebo strate predmetov: plná náhrada."
+        ]
+      }
     ]
   }
 }

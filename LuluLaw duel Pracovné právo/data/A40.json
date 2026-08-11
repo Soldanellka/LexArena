@@ -2,14 +2,22 @@
   "id": "20. B",
   "title": "Vznik odborov a ich postavenie v pracovnoprávnych vzťahoch",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "odbory", "kolektívne vyjednávanie", "zástupcovia zamestnancov", "participácia zamestnancov"],
-
-  "summary": "Odbory sú dobrovoľné združenia zamestnancov založené na ústavnom práve slobodne sa združovať. Vznikajú registráciou stanov na Ministerstve vnútra SR podľa zákona o združovaní občanov. Odbory pôsobia nezávisle od zamestnávateľa a štátu.\n\nV pracovnoprávnych vzťahoch majú odbory silné postavenie: zastupujú zamestnancov, vykonávajú kontrolnú činnosť, prerokúvajú zásadné otázky (pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie) a sú jediným subjektom oprávneným uzatvárať kolektívne zmluvy. Zamestnávateľ je povinný umožniť odborom pôsobenie na pracovisku, poskytovať im informácie a prerokovať zákonom určené otázky.\n\nZástupcami zamestnancov sú odborová organizácia, zamestnanecká rada, zamestnanecký dôverník a zástupca pre BOZP. Odbory majú najširšie právomoci – spolurozhodovanie, kontrolu, informácie a kolektívne vyjednávanie. Zamestnanecká rada a dôverník majú právo na prerokovanie a informácie.\n\nOdboroví funkcionári sú chránení pred výpoveďou počas výkonu funkcie a 6 mesiacov po jej skončení. Zamestnávateľ im nemôže dať výpoveď bez predchádzajúceho súhlasu odborov.\n\nCieľom právnej úpravy je vyvážiť postavenie zamestnanca a zamestnávateľa, podporiť participáciu zamestnancov a zabezpečiť kolektívnu ochranu práv zamestnancov.\n\nPríklad:\nZamestnávateľ chce zaviesť nový pracovný poriadok bez prerokovania s odbormi. Takýto postup je neplatný – pracovný poriadok musí byť prerokovaný so zástupcami zamestnancov.\n\nKľúčové slová:\nodbory; kolektívne vyjednávanie; zamestnanecká rada; prerokovanie; spolurozhodovanie; kontrolná činnosť; ochrana funkcionárov.",
-
+  "tags": [
+    "pracovné právo",
+    "odbory",
+    "kolektívne vyjednávanie",
+    "zástupcovia zamestnancov",
+    "participácia zamestnancov"
+  ],
+  "summary": "Vznik odborov a ich postavenie v pracovnoprávnych vzťahoch Odborová organizácia je dobrovoľné združenie zamestnancov založené na ústavnom práve slobodne sa združovať na ochranu hospodárskych a sociálnych záujmov (čl. 37 Ústavy SR). Vzniká podľa zákona č. 83/1990 Zb. o združovaní občanov dňom nasledujúcim po doručení oznámenia o založení Ministerstvu vnútra SR (evidenčný, nie povoľovací režim). Odbory pôsobia nezávisle od zamestnávateľa a štátu; u zamestnávateľa začínajú pôsobiť a získavajú oprávnenia po tom, čo písomne preukážu, že u neho pôsobia.\n\nV pracovnoprávnych vzťahoch majú odbory najsilnejšie postavenie zo zástupcov zamestnancov: kolektívne vyjednávajú a uzatvárajú kolektívne zmluvy (výlučne), majú právo na spolurozhodovanie, kontrolu (§ 149 ZP – kontrola dodržiavania pracovnoprávnych predpisov a BOZP), prerokovanie a informácie. Zamestnanecká rada a dôverník majú práva najmä na prerokovanie a informovanie, ale nemôžu uzatvárať kolektívne zmluvy.\n\nČlenovia odborového orgánu sú chránení: na výpoveď alebo okamžité skončenie počas funkčného obdobia a jeden rok po ňom je potrebný predchádzajúci súhlas zástupcov zamestnancov (§ 240 ods. 8 ZP), inak je neplatné. Pracovný poriadok a ďalšie zásadné otázky musí zamestnávateľ so zástupcami prerokovať, resp. na pracovný poriadok získať ich súhlas (§ 84 ZP).\n\nPríklad: Zamestnávateľ chce vydať nový pracovný poriadok bez súhlasu odborov. Postup je neplatný – na vydanie pracovného poriadku je potrebný predchádzajúci súhlas zástupcov zamestnancov (§ 84 ZP).\n\nZapamätaj si:\n\nOdbory vznikajú podľa zákona č. 83/1990 Zb. evidenciou na Ministerstve vnútra SR (nie povolením).\nU zamestnávateľa pôsobia po písomnom preukázaní; konajú nezávisle.\nMajú najširšie oprávnenia: kolektívne vyjednávanie (výlučne), spolurozhodovanie, kontrola (§ 149), prerokovanie, informácie.\nČlenovia orgánu sú chránení – výpoveď len s predchádzajúcim súhlasom (§ 240 ZP), +1 rok po funkcii.\nPracovný poriadok vyžaduje súhlas zástupcov zamestnancov (§ 84 ZP).\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 84, § 149, § 229 – § 240 Zákon č. 83/1990 Zb. o združovaní občanov; Ústava SR čl. 37",
   "quiz": [
     {
       "question": "Ako vzniká odborová organizácia?",
-      "options": ["Rozhodnutím zamestnávateľa", "Registráciou stanov na Ministerstve vnútra SR", "Automaticky pri vzniku firmy"],
+      "options": [
+        "Rozhodnutím zamestnávateľa",
+        "Registráciou stanov na Ministerstve vnútra SR",
+        "Automaticky pri vzniku firmy"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Odbory vznikajú registráciou stanov podľa zákona o združovaní občanov.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Kto môže uzatvárať kolektívnu zmluvu?",
-      "options": ["Odbory a zamestnávateľ", "Zamestnanec individuálne", "Inšpektorát práce"],
+      "options": [
+        "Odbory a zamestnávateľ",
+        "Zamestnanec individuálne",
+        "Inšpektorát práce"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Kolektívnu zmluvu uzatvára odborový orgán so zamestnávateľom.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Ktorý zástupca zamestnancov má najširšie právomoci?",
-      "options": ["Zamestnanecká rada", "Zamestnanecký dôverník", "Odborová organizácia"],
+      "options": [
+        "Zamestnanecká rada",
+        "Zamestnanecký dôverník",
+        "Odborová organizácia"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Odbory majú právo spolurozhodovania, kontroly, informácií aj kolektívneho vyjednávania.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Môže zamestnávateľ odmietnuť prerokovanie otázok, ktoré zákon prikazuje prerokovať?",
-      "options": ["Nie", "Áno", "Len ak odbory nemajú 50 členov"],
+      "options": [
+        "Nie",
+        "Áno",
+        "Len ak odbory nemajú 50 členov"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Prerokovanie je zákonná povinnosť zamestnávateľa.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Kto je chránený pred výpoveďou?",
-      "options": ["Každý člen odborov", "Odboroví funkcionári", "Nikto"],
+      "options": [
+        "Každý člen odborov",
+        "Odboroví funkcionári",
+        "Nikto"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ochrana sa vzťahuje na funkcionárov počas výkonu funkcie a 6 mesiacov po jej skončení.",
@@ -53,16 +77,32 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Vznik odborov", "definition": "Registráciou stanov na Ministerstve vnútra SR podľa zákona o združovaní občanov." },
-    { "term": "Zástupcovia zamestnancov", "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP." },
-    { "term": "Spolurozhodovanie", "definition": "Odbory majú právo spolurozhodovať pri pracovnom poriadku, BOZP, pracovnom čase a ďalších otázkach." },
-    { "term": "Prerokovanie", "definition": "Zamestnávateľ musí prerokovať zásadné otázky so zástupcami zamestnancov." },
-    { "term": "Kontrolná činnosť", "definition": "Odbory kontrolujú dodržiavanie pracovnoprávnych predpisov a kolektívnej zmluvy." },
-    { "term": "Ochrana funkcionárov", "definition": "Výpoveď odborového funkcionára je možná len so súhlasom odborov." }
+    {
+      "term": "Vznik odborov",
+      "definition": "Registráciou stanov na Ministerstve vnútra SR podľa zákona o združovaní občanov."
+    },
+    {
+      "term": "Zástupcovia zamestnancov",
+      "definition": "Odbory, zamestnanecká rada, dôverník, zástupca pre BOZP."
+    },
+    {
+      "term": "Spolurozhodovanie",
+      "definition": "Odbory majú právo spolurozhodovať pri pracovnom poriadku, BOZP, pracovnom čase a ďalších otázkach."
+    },
+    {
+      "term": "Prerokovanie",
+      "definition": "Zamestnávateľ musí prerokovať zásadné otázky so zástupcami zamestnancov."
+    },
+    {
+      "term": "Kontrolná činnosť",
+      "definition": "Odbory kontrolujú dodržiavanie pracovnoprávnych predpisov a kolektívnej zmluvy."
+    },
+    {
+      "term": "Ochrana funkcionárov",
+      "definition": "Výpoveď odborového funkcionára je možná len so súhlasom odborov."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Zamestnávateľ odmieta prerokovať pracovný poriadok",
@@ -75,7 +115,11 @@
         },
         {
           "question": "Krok 1: Je prerokovanie pracovného poriadku povinné?",
-          "options": ["Áno", "Nie", "Len ak to zamestnávateľ uzná"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak to zamestnávateľ uzná"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pracovný poriadok musí byť prerokovaný so zástupcami zamestnancov.",
@@ -84,7 +128,11 @@
         },
         {
           "question": "Krok 2: Môže zamestnávateľ odmietnuť komunikáciu s odbormi?",
-          "options": ["Nie", "Áno", "Len ak odbory nemajú právnu subjektivitu"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak odbory nemajú právnu subjektivitu"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ je povinný spolupracovať s odbormi.",
@@ -106,7 +154,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Výpoveď odborového funkcionára",
       "difficulty": "stredná",
@@ -118,7 +165,11 @@
         },
         {
           "question": "Krok 1: Je funkcionár chránený pred výpoveďou?",
-          "options": ["Áno", "Nie", "Len ak je vo funkcii viac ako rok"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak je vo funkcii viac ako rok"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Funkcionár je chránený počas výkonu funkcie a 6 mesiacov po jej skončení.",
@@ -127,7 +178,11 @@
         },
         {
           "question": "Krok 2: Je výpoveď bez súhlasu odborov platná?",
-          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Bez súhlasu odborov je výpoveď neplatná.",
@@ -159,13 +214,55 @@
   "spider": {
     "center": "Odbory – vznik × registrácia × kolektívne vyjednávanie × prerokovanie × ochrana funkcionárov",
     "branches": [
-      { "label": "Vznik odborov", "leaves": ["Odbory vznikajú: na základe ústavného práva združovania, registráciou stanov na Ministerstve vnútra SR, podľa zákona o združovaní občanov", "Odbory sú: nezávislé od zamestnávateľa, nezávislé od štátu, financované z členských príspevkov"] },
-      { "label": "Postavenie odborov v pracovnoprávnych vzťahoch", "leaves": ["Odbory sú: najsilnejší zástupca zamestnancov, jediný subjekt oprávnený uzatvárať kolektívne zmluvy, partner zamestnávateľa pri prerokovaní zásadných otázok", "Zamestnávateľ je povinný: umožniť odborom pôsobenie na pracovisku, poskytovať im informácie, prerokovať zákonom určené otázky"] },
-      { "label": "Právomoci odborov", "leaves": ["Odbory majú právo: kontrolovať dodržiavanie pracovnoprávnych predpisov", "Odbory majú právo: prerokovať pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie", "Odbory majú právo: spolurozhodovať v otázkach sociálnej politiky", "Odbory majú právo: kolektívne vyjednávať a uzatvárať kolektívne zmluvy"] },
-      { "label": "Zástupcovia zamestnancov", "leaves": ["Patria sem: odborová organizácia, zamestnanecká rada, zamestnanecký dôverník, zástupca pre BOZP", "Odbory majú: najširšie právomoci (kontrola, spolurozhodovanie, vyjednávanie)", "Rada a dôverník majú: právo na informácie a prerokovanie, nie však právo uzatvárať kolektívne zmluvy"] },
-      { "label": "Kolektívne vyjednávanie", "leaves": ["Odbory sú jediným subjektom, ktorý môže: uzatvárať kolektívne zmluvy, vyjednávať o mzdách, pracovných podmienkach, sociálnych benefitoch, iniciovať kolektívny spor"] },
-      { "label": "Prerokovanie a informácie", "leaves": ["Zamestnávateľ musí odborom prerokovať: pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie, zásadné otázky pracovných podmienok"] },
-      { "label": "Ochrana odborových funkcionárov (§ 240 ZP)", "leaves": ["Odboroví funkcionári majú: zákaz výpovede počas výkonu funkcie, ochranu ešte 6 mesiacov po skončení funkcie, zamestnávateľ im môže dať výpoveď len so súhlasom odborov"] }
+      {
+        "label": "Vznik odborov",
+        "leaves": [
+          "Odbory vznikajú: na základe ústavného práva združovania, registráciou stanov na Ministerstve vnútra SR, podľa zákona o združovaní občanov",
+          "Odbory sú: nezávislé od zamestnávateľa, nezávislé od štátu, financované z členských príspevkov"
+        ]
+      },
+      {
+        "label": "Postavenie odborov v pracovnoprávnych vzťahoch",
+        "leaves": [
+          "Odbory sú: najsilnejší zástupca zamestnancov, jediný subjekt oprávnený uzatvárať kolektívne zmluvy, partner zamestnávateľa pri prerokovaní zásadných otázok",
+          "Zamestnávateľ je povinný: umožniť odborom pôsobenie na pracovisku, poskytovať im informácie, prerokovať zákonom určené otázky"
+        ]
+      },
+      {
+        "label": "Právomoci odborov",
+        "leaves": [
+          "Odbory majú právo: kontrolovať dodržiavanie pracovnoprávnych predpisov",
+          "Odbory majú právo: prerokovať pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie",
+          "Odbory majú právo: spolurozhodovať v otázkach sociálnej politiky",
+          "Odbory majú právo: kolektívne vyjednávať a uzatvárať kolektívne zmluvy"
+        ]
+      },
+      {
+        "label": "Zástupcovia zamestnancov",
+        "leaves": [
+          "Patria sem: odborová organizácia, zamestnanecká rada, zamestnanecký dôverník, zástupca pre BOZP",
+          "Odbory majú: najširšie právomoci (kontrola, spolurozhodovanie, vyjednávanie)",
+          "Rada a dôverník majú: právo na informácie a prerokovanie, nie však právo uzatvárať kolektívne zmluvy"
+        ]
+      },
+      {
+        "label": "Kolektívne vyjednávanie",
+        "leaves": [
+          "Odbory sú jediným subjektom, ktorý môže: uzatvárať kolektívne zmluvy, vyjednávať o mzdách, pracovných podmienkach, sociálnych benefitoch, iniciovať kolektívny spor"
+        ]
+      },
+      {
+        "label": "Prerokovanie a informácie",
+        "leaves": [
+          "Zamestnávateľ musí odborom prerokovať: pracovný poriadok, BOZP, organizačné zmeny, hromadné prepúšťanie, zásadné otázky pracovných podmienok"
+        ]
+      },
+      {
+        "label": "Ochrana odborových funkcionárov (§ 240 ZP)",
+        "leaves": [
+          "Odboroví funkcionári majú: zákaz výpovede počas výkonu funkcie, ochranu ešte 6 mesiacov po skončení funkcie, zamestnávateľ im môže dať výpoveď len so súhlasom odborov"
+        ]
+      }
     ]
   }
 }

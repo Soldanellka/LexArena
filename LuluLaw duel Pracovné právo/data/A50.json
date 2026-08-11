@@ -2,14 +2,24 @@
   "id": "25. B",
   "title": "Dohody o prácach vykonávaných mimo pracovného pomeru vs. Pracovný pomer",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "dohody", "pracovný pomer", "DPP", "DPČ", "DoVP", "študenti"],
-
-  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru (DoVP, DBPŠ, DPČ) sú osobitné pracovnoprávne vzťahy, ktoré sa uzatvárajú výnimočne – najmä pri príležitostnej, krátkodobej alebo sezónnej práci. Nezakladajú pracovný pomer a neposkytujú plný rozsah práv ako pracovná zmluva: nepatrí dovolenka, odstupné, výpovedná doba (ak nie je dohodnutá), ani prekážky v práci s náhradou mzdy. Pracovný pomer je základná forma závislej práce, poskytuje stabilitu, sociálne istoty, ochranu pri výpovedi, dovolenku, prekážky v práci, pravidelný pracovný čas a vyššiu právnu ochranu.\n\nDohody majú zákonné limity: DoVP najviac 350 hodín ročne, DBPŠ najviac 20 hodín týždenne v priemere, DPČ najviac 10 hodín týždenne. Pri dohodách nemožno nariadiť ani dohodnúť nadčas ani pracovnú pohotovosť. Pracovný čas pri dohodách nesmie presiahnuť 12 hodín denne (u mladistvých 8 hodín). Dohody sú vhodné na doplnkovú prácu, pracovný pomer na stabilný výkon práce.\n\nÚčelom právnej úpravy je odlíšiť flexibilné formy práce od štandardného zamestnania a zabrániť obchádzaniu pracovnoprávnych predpisov.\n\nPríklad:\nZamestnávateľ uzatvára so zamestnancami DoVP, hoci pracujú denne 8 hodín podľa pokynov nadriadeného. Ide o závislú prácu, ktorá musí byť vykonávaná v pracovnom pomere.\n\nKľúčové slová:\nDoVP; DBPŠ; DPČ; pracovný pomer; závislá práca; limity dohôd; odmena; skončenie dohody.\n\nZapamätaj si:\n- Dohody sú výnimočné a nesmú nahrádzať pracovný pomer.\n- Pracovný pomer poskytuje dovolenku, odstupné, výpovednú ochranu.\n- DoVP má limit 350 hodín ročne.\n- DBPŠ má limit 20 hodín týždenne v priemere.\n- DPČ má limit 10 hodín týždenne.\n- Pri dohodách nemožno nariadiť nadčas ani pracovnú pohotovosť.\n- Dohody musia byť vždy písomné.",
-
+  "tags": [
+    "pracovné právo",
+    "dohody",
+    "pracovný pomer",
+    "DPP",
+    "DPČ",
+    "DoVP",
+    "študenti"
+  ],
+  "summary": "Dohody o prácach vykonávaných mimo pracovného pomeru vs. pracovný pomer Dohody o prácach vykonávaných mimo pracovného pomeru (dohoda o vykonaní práce, dohoda o pracovnej činnosti, dohoda o brigádnickej práci študentov) sú osobitné pracovnoprávne vzťahy podľa § 223 – § 228a ZP. Uzatvárajú sa výnimočne, na príležitostné alebo vymedzené činnosti, a nezakladajú pracovný pomer.\n\nRozdiel oproti pracovnému pomeru: – pracovný pomer je základná forma závislej práce – poskytuje stabilitu, dovolenku, odstupné, výpovednú ochranu, prekážky v práci s náhradou mzdy, pravidelný pracovný čas a plnú právnu ochranu, – dohody poskytujú užší rozsah práv (od r. 2013 sa však aj na dohodárov vzťahuje minimálna mzda, BOZP, viaceré prekážky v práci, obmedzenia pracovného času a odvodová povinnosť); dovolenka a niektoré náhrady sa pri dohodách poskytujú v obmedzenom rozsahu a len za zákonných podmienok.\n\nLimity: DVP najviac 350 hodín ročne u jedného zamestnávateľa (§ 226); DPČ v priemere najviac 10 hodín týždenne, spravidla do 520 hodín ročne (§ 228a); DBPŠ len pre študenta do 26 rokov, v priemere najviac 20 hodín týždenne (§ 227). Pri dohodách nemožno nariadiť ani dohodnúť prácu nadčas ani pracovnú pohotovosť; pracovný čas za 24 hodín nesmie presiahnuť 12 hodín (u mladistvého 8 hodín). Všetky dohody musia byť písomné, inak sú neplatné.\n\nKľúčovým pravidlom je zákaz obchádzania: závislú prácu, ktorá spĺňa znaky podľa § 1 ods. 2 ZP, nemožno vykonávať na dohodu namiesto pracovného pomeru.\n\nPríklad: Zamestnávateľ uzatvára DVP, hoci zamestnanci pracujú denne 8 hodín podľa pokynov nadriadeného. Ide o závislú prácu, ktorá musí byť vykonávaná v pracovnom pomere.\n\nZapamätaj si:\n\nDohody (§ 223 – 228a) sú výnimočné a nesmú nahrádzať pracovný pomer.\nPracovný pomer poskytuje dovolenku, odstupné, výpovednú ochranu, prekážky s náhradou.\nDVP max 350 h/rok; DPČ priemer 10 h/týž. (do ~520 h/rok); DBPŠ študent do 26 r., priemer 20 h/týž.\nNa dohodárov sa vzťahuje minimálna mzda, BOZP, odvody a obmedzenia pracovného času.\nPri dohodách nemožno nariadiť nadčas ani pohotovosť; musia byť písomné.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 1 ods. 2, § 223 – § 228a",
   "quiz": [
     {
       "question": "Ktorá forma je základnou formou závislej práce?",
-      "options": ["Dohoda o vykonaní práce", "Pracovný pomer", "Dohoda o pracovnej činnosti"],
+      "options": [
+        "Dohoda o vykonaní práce",
+        "Pracovný pomer",
+        "Dohoda o pracovnej činnosti"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pracovný pomer je štandardná forma závislej práce.",
@@ -18,7 +28,11 @@
     },
     {
       "question": "Koľko hodín možno odpracovať na DoVP?",
-      "options": ["350 hodín ročne", "40 hodín mesačne", "10 hodín týždenne"],
+      "options": [
+        "350 hodín ročne",
+        "40 hodín mesačne",
+        "10 hodín týždenne"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. DoVP má limit 350 hodín ročne.",
@@ -27,7 +41,11 @@
     },
     {
       "question": "Patrí pri dohode dovolenka?",
-      "options": ["Nie", "Áno", "Len pri DPČ"],
+      "options": [
+        "Nie",
+        "Áno",
+        "Len pri DPČ"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Dovolenka patrí len v pracovnom pomere.",
@@ -36,7 +54,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Dohody majú zákonnú výpovednú dobu 2 mesiace", "Pracovný pomer poskytuje vyššiu ochranu zamestnanca", "Dohody sú určené na trvalý výkon práce"],
+      "options": [
+        "Dohody majú zákonnú výpovednú dobu 2 mesiace",
+        "Pracovný pomer poskytuje vyššiu ochranu zamestnanca",
+        "Dohody sú určené na trvalý výkon práce"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Pracovný pomer poskytuje komplexnú ochranu.",
@@ -45,7 +67,11 @@
     },
     {
       "question": "Na čo slúži dohoda o vykonaní práce (DoVP)?",
-      "options": ["Na pravidelnú prácu", "Na jednorazové dielo", "Na prácu na zmeny"],
+      "options": [
+        "Na pravidelnú prácu",
+        "Na jednorazové dielo",
+        "Na prácu na zmeny"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. DoVP sa uzatvára na konkrétne dielo.",
@@ -53,15 +79,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Pracovný pomer", "definition": "Základná forma závislej práce s plnými právami zamestnanca." },
-    { "term": "DoVP", "definition": "Dohoda o vykonaní práce – max. 350 hodín ročne, práca vymedzená výsledkom." },
-    { "term": "DBPŠ", "definition": "Dohoda o brigádnickej práci študentov – max. 20 hodín týždenne v priemere." },
-    { "term": "DPČ", "definition": "Dohoda o pracovnej činnosti – max. 10 hodín týždenne." },
-    { "term": "Rozdiely", "definition": "Dohody nemajú dovolenku, odstupné, výpovednú dobu ani ochranu." }
+    {
+      "term": "Pracovný pomer",
+      "definition": "Základná forma závislej práce s plnými právami zamestnanca."
+    },
+    {
+      "term": "DoVP",
+      "definition": "Dohoda o vykonaní práce – max. 350 hodín ročne, práca vymedzená výsledkom."
+    },
+    {
+      "term": "DBPŠ",
+      "definition": "Dohoda o brigádnickej práci študentov – max. 20 hodín týždenne v priemere."
+    },
+    {
+      "term": "DPČ",
+      "definition": "Dohoda o pracovnej činnosti – max. 10 hodín týždenne."
+    },
+    {
+      "term": "Rozdiely",
+      "definition": "Dohody nemajú dovolenku, odstupné, výpovednú dobu ani ochranu."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Dohoda namiesto pracovného pomeru",
@@ -74,7 +113,11 @@
         },
         {
           "question": "Krok 1: Ide o závislú prácu?",
-          "options": ["Áno", "Nie", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Denná práca podľa pokynov je závislá práca.",
@@ -83,7 +126,11 @@
         },
         {
           "question": "Krok 2: Je DoVP v tejto situácii zákonná?",
-          "options": ["Nie", "Áno", "Len ak je práca sezónna"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak je práca sezónna"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dohody nesmú nahrádzať pracovný pomer.",
@@ -105,7 +152,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Ukončenie DPČ bez výpovednej doby",
       "difficulty": "ľahká",
@@ -117,7 +163,11 @@
         },
         {
           "question": "Krok 1: Majú dohody výpovednú dobu?",
-          "options": ["Nie, ak nie je dohodnutá", "Áno, vždy 1 mesiac", "Áno, vždy 2 mesiace"],
+          "options": [
+            "Nie, ak nie je dohodnutá",
+            "Áno, vždy 1 mesiac",
+            "Áno, vždy 2 mesiace"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dohody nemajú zákonnú výpovednú dobu.",
@@ -126,7 +176,11 @@
         },
         {
           "question": "Krok 2: Je ukončenie okamžite zákonné?",
-          "options": ["Áno, ak výpovedná doba nebola dohodnutá", "Nie", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Áno, ak výpovedná doba nebola dohodnutá",
+            "Nie",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Dohoda môže skončiť aj okamžite.",
@@ -158,13 +212,58 @@
   "spider": {
     "center": "Dohody vs. pracovný pomer – flexibilita × limity × nároky × ochrana × závislá práca",
     "branches": [
-      { "label": "Dohody – všeobecne (§ 223–228a ZP)", "leaves": ["Dohody sú: DoVP – dohoda o vykonaní práce, DBPŠ – dohoda o brigádnickej práci študentov, DPČ – dohoda o pracovnej činnosti", "Charakteristika: uzatvárajú sa výnimočne, sú vhodné na krátkodobú, sezónnu, príležitostnú prácu, nezakladajú pracovný pomer, poskytujú obmedzené práva"] },
-      { "label": "Pracovný pomer", "leaves": ["Pracovný pomer je: základná forma závislej práce, poskytuje dovolenku, výpovednú ochranu, odstupné, obsahuje pracovný čas, prestávky, prekážky v práci, garantuje sociálne istoty a stabilitu"] },
-      { "label": "Limity dohôd", "leaves": ["DoVP – max. 350 hodín ročne,", "DBPŠ – max. 20 hodín týždenne v priemere,", "DPČ – max. 10 hodín týždenne,", "pri dohodách nemožno nariadiť nadčas,", "pracovný čas pri dohodách max. 12 hodín denne (mladiství 8 hodín)."] },
-      { "label": "Práva pri dohodách", "leaves": ["Pri dohodách nepatrí: dovolenka, odstupné, výpovedná doba (ak nie je dohodnutá), prekážky v práci s náhradou mzdy, ochrana pri výpovedi ako v pracovnom pomere", "Patrí: odmena za vykonanú prácu, príplatky podľa zákona (napr. sviatok, noc, víkend)"] },
-      { "label": "Závislá práca (§ 1 ZP)", "leaves": ["Ak práca má znaky závislej práce: vykonáva sa osobne, podľa pokynov zamestnávateľa, v pracovnom čase, v mene zamestnávateľa, za mzdu, musí byť vykonávaná v pracovnom pomere, nie na dohodu"] },
-      { "label": "Skončenie dohôd", "leaves": ["dohody musia byť písomné,", "skončenie podľa podmienok v dohode,", "ak nie je dohodnuté – skončenie výpoveďou alebo uplynutím času,", "bez výpovednej ochrany ako v pracovnom pomere."] },
-      { "label": "Porovnanie výhod", "leaves": ["Pracovný pomer poskytuje: stabilitu, dovolenku, odstupné, ochranu pri výpovedi, prekážky v práci, sociálne istoty", "Dohody poskytujú: flexibilitu, jednoduché skončenie, vhodné na doplnkovú prácu"] }
+      {
+        "label": "Dohody – všeobecne (§ 223–228a ZP)",
+        "leaves": [
+          "Dohody sú: DoVP – dohoda o vykonaní práce, DBPŠ – dohoda o brigádnickej práci študentov, DPČ – dohoda o pracovnej činnosti",
+          "Charakteristika: uzatvárajú sa výnimočne, sú vhodné na krátkodobú, sezónnu, príležitostnú prácu, nezakladajú pracovný pomer, poskytujú obmedzené práva"
+        ]
+      },
+      {
+        "label": "Pracovný pomer",
+        "leaves": [
+          "Pracovný pomer je: základná forma závislej práce, poskytuje dovolenku, výpovednú ochranu, odstupné, obsahuje pracovný čas, prestávky, prekážky v práci, garantuje sociálne istoty a stabilitu"
+        ]
+      },
+      {
+        "label": "Limity dohôd",
+        "leaves": [
+          "DoVP – max. 350 hodín ročne,",
+          "DBPŠ – max. 20 hodín týždenne v priemere,",
+          "DPČ – max. 10 hodín týždenne,",
+          "pri dohodách nemožno nariadiť nadčas,",
+          "pracovný čas pri dohodách max. 12 hodín denne (mladiství 8 hodín)."
+        ]
+      },
+      {
+        "label": "Práva pri dohodách",
+        "leaves": [
+          "Pri dohodách nepatrí: dovolenka, odstupné, výpovedná doba (ak nie je dohodnutá), prekážky v práci s náhradou mzdy, ochrana pri výpovedi ako v pracovnom pomere",
+          "Patrí: odmena za vykonanú prácu, príplatky podľa zákona (napr. sviatok, noc, víkend)"
+        ]
+      },
+      {
+        "label": "Závislá práca (§ 1 ZP)",
+        "leaves": [
+          "Ak práca má znaky závislej práce: vykonáva sa osobne, podľa pokynov zamestnávateľa, v pracovnom čase, v mene zamestnávateľa, za mzdu, musí byť vykonávaná v pracovnom pomere, nie na dohodu"
+        ]
+      },
+      {
+        "label": "Skončenie dohôd",
+        "leaves": [
+          "dohody musia byť písomné,",
+          "skončenie podľa podmienok v dohode,",
+          "ak nie je dohodnuté – skončenie výpoveďou alebo uplynutím času,",
+          "bez výpovednej ochrany ako v pracovnom pomere."
+        ]
+      },
+      {
+        "label": "Porovnanie výhod",
+        "leaves": [
+          "Pracovný pomer poskytuje: stabilitu, dovolenku, odstupné, ochranu pri výpovedi, prekážky v práci, sociálne istoty",
+          "Dohody poskytujú: flexibilitu, jednoduché skončenie, vhodné na doplnkovú prácu"
+        ]
+      }
     ]
   }
 }

@@ -2,14 +2,22 @@
   "id": "13. B",
   "title": "Dni pracovného pokoja, pracovná pohotovosť a sviatky",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný čas", "odpočinok", "sviatky", "pracovná pohotovosť"],
-
-  "summary": "Dni pracovného pokoja predstavujú obdobie, počas ktorého zamestnanec nepracuje a má zabezpečený nepretržitý odpočinok. Patria sem nedele, sviatky a ďalšie dni, na ktoré pripadá týždenný odpočinok. Práca v tieto dni je možná len výnimočne a za zákonom stanovených podmienok. Pracovná pohotovosť je stav, keď je zamestnanec pripravený na výkon práce na pokyn zamestnávateľa. Pohotovosť na pracovisku sa považuje za pracovný čas, pohotovosť mimo pracoviska nie, avšak patrí za ňu náhrada. Za prácu vo sviatok patrí zamestnancovi mzdové zvýhodnenie najmenej 100 % priemerného zárobku. Zákon zároveň zakazuje maloobchodný predaj počas väčšiny sviatkov, s presne určenými výnimkami.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovný čas",
+    "odpočinok",
+    "sviatky",
+    "pracovná pohotovosť"
+  ],
+  "summary": "Dni pracovného pokoja, pracovná pohotovosť a sviatky Dňami pracovného pokoja sú dni nepretržitého odpočinku zamestnanca v týždni a sviatky (§ 94 ZP). Práca v dňoch pracovného pokoja sa môže nariadiť len výnimočne, a to na nevyhnutne potrebné práce, ktoré nemožno vykonať v pracovných dňoch (§ 94 ods. 2 – 4 ZP).\n\nPracovná pohotovosť (§ 96 ZP) je čas, počas ktorého je zamestnanec pripravený na výkon práce podľa pokynu zamestnávateľa. Aktívna časť pohotovosti (keď zamestnanec prácu skutočne vykonáva) je pracovným časom. Neaktívna pohotovosť na pracovisku sa tiež považuje za pracovný čas; neaktívna pohotovosť mimo pracoviska sa za pracovný čas nepovažuje, patrí však za ňu náhrada najmenej 20 % minimálnej mzdy za hodinu.\n\nZa prácu vo sviatok patrí zamestnancovi dosiahnutá mzda a mzdové zvýhodnenie najmenej 100 % jeho priemerného zárobku (§ 122 ZP). Za prácu v sobotu patrí príplatok a za prácu v nedeľu vyšší príplatok (§ 122a, § 122b ZP) – ich výška je naviazaná na minimálnu mzdu, presné sumy treba overiť podľa aktuálneho znenia. Osobitný predpis (zákon č. 241/1993 Z. z. o štátnych sviatkoch) zakazuje maloobchodný predaj počas vymedzených sviatkov, s presne určenými výnimkami.\n\nZapamätaj si:\n\nDni pracovného pokoja = nepretržitý týždenný odpočinok a sviatky (§ 94 ZP); práca len výnimočne.\nPracovná pohotovosť (§ 96 ZP): na pracovisku = pracovný čas; mimo pracoviska = nie je pracovný čas, patrí náhrada (min. 20 % minimálnej mzdy/h).\nZa prácu vo sviatok patrí mzdové zvýhodnenie najmenej 100 % priemerného zárobku (§ 122 ZP).\nZa prácu v sobotu a v nedeľu patria príplatky viazané na minimálnu mzdu (§ 122a, 122b) – sumy overiť podľa aktuálneho znenia.\nPočas vymedzených sviatkov je maloobchodný predaj zakázaný (zákon č. 241/1993 Z. z.).\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 94, § 96, § 122, § 122a, § 122b Zákon č. 241/1993 Z. z. o štátnych sviatkoch, dňoch pracovného pokoja a pamätných dňoch",
   "quiz": [
     {
       "question": "Čo patrí medzi dni pracovného pokoja?",
-      "options": ["Len sviatky", "Nedele a sviatky", "Len soboty"],
+      "options": [
+        "Len sviatky",
+        "Nedele a sviatky",
+        "Len soboty"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Dni pracovného pokoja sú nedele a sviatky.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Aké mzdové zvýhodnenie patrí za prácu vo sviatok?",
-      "options": ["50 % priemerného zárobku", "100 % priemerného zárobku", "25 % priemerného zárobku"],
+      "options": [
+        "50 % priemerného zárobku",
+        "100 % priemerného zárobku",
+        "25 % priemerného zárobku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Minimálne 100 % priemerného zárobku.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Započítava sa pracovná pohotovosť na pracovisku do pracovného času?",
-      "options": ["Áno", "Nie", "Len ak trvá viac ako 4 hodiny"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak trvá viac ako 4 hodiny"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Pohotovosť na pracovisku je pracovným časom.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Aká náhrada patrí za pohotovosť mimo pracoviska?",
-      "options": ["Žiadna", "20 % minimálnej mzdy", "100 % priemerného zárobku"],
+      "options": [
+        "Žiadna",
+        "20 % minimálnej mzdy",
+        "100 % priemerného zárobku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Ide o zákonné minimum.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Práca vo sviatok je vždy zakázaná", "Práca vo sviatok je možná len pri zákonných výnimkách", "Pohotovosť mimo pracoviska sa započítava do pracovného času"],
+      "options": [
+        "Práca vo sviatok je vždy zakázaná",
+        "Práca vo sviatok je možná len pri zákonných výnimkách",
+        "Pohotovosť mimo pracoviska sa započítava do pracovného času"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Práca vo sviatok je možná len v zákonom určených prípadoch.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Dni pracovného pokoja", "definition": "Nedele a sviatky, počas ktorých zamestnanec spravidla nepracuje." },
-    { "term": "Sviatok", "definition": "Štátom určený deň pracovného pokoja s nárokom na príplatok pri práci." },
-    { "term": "Pracovná pohotovosť", "definition": "Stav pripravenosti zamestnanca nastúpiť na výkon práce na pokyn zamestnávateľa." },
-    { "term": "Pohotovosť na pracovisku", "definition": "Považuje sa za pracovný čas a môže byť aj nadčasom." },
-    { "term": "Pohotovosť mimo pracoviska", "definition": "Nie je pracovným časom; patrí náhrada najmenej 20 % minimálnej mzdy." }
+    {
+      "term": "Dni pracovného pokoja",
+      "definition": "Nedele a sviatky, počas ktorých zamestnanec spravidla nepracuje."
+    },
+    {
+      "term": "Sviatok",
+      "definition": "Štátom určený deň pracovného pokoja s nárokom na príplatok pri práci."
+    },
+    {
+      "term": "Pracovná pohotovosť",
+      "definition": "Stav pripravenosti zamestnanca nastúpiť na výkon práce na pokyn zamestnávateľa."
+    },
+    {
+      "term": "Pohotovosť na pracovisku",
+      "definition": "Považuje sa za pracovný čas a môže byť aj nadčasom."
+    },
+    {
+      "term": "Pohotovosť mimo pracoviska",
+      "definition": "Nie je pracovným časom; patrí náhrada najmenej 20 % minimálnej mzdy."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Práca vo sviatok v obchode",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je 1. január sviatok?",
-          "options": ["Áno", "Nie", "Závisí od zamestnávateľa"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Závisí od zamestnávateľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. 1. január je štátny sviatok.",
@@ -83,7 +124,11 @@
         },
         {
           "question": "Krok 2: Môže predavačka pracovať vo sviatok?",
-          "options": ["Nie, predaj je zakázaný", "Áno, bez obmedzení", "Áno, ak ide o nevyhnutnú prevádzku"],
+          "options": [
+            "Nie, predaj je zakázaný",
+            "Áno, bez obmedzení",
+            "Áno, ak ide o nevyhnutnú prevádzku"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Maloobchodný predaj je vo sviatky zakázaný.",
@@ -105,7 +150,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Pohotovosť mimo pracoviska",
       "difficulty": "stredná",
@@ -117,7 +161,11 @@
         },
         {
           "question": "Krok 1: Patrí náhrada za pohotovosť mimo pracoviska?",
-          "options": ["Áno, najmenej 20 % minimálnej mzdy", "Nie", "Len ak bol privolaný do práce"],
+          "options": [
+            "Áno, najmenej 20 % minimálnej mzdy",
+            "Nie",
+            "Len ak bol privolaný do práce"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Náhrada patrí aj bez výkonu práce.",
@@ -126,7 +174,11 @@
         },
         {
           "question": "Krok 2: Započítava sa pohotovosť do pracovného času?",
-          "options": ["Nie", "Áno", "Len ak trvá viac ako 4 hodiny"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak trvá viac ako 4 hodiny"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pohotovosť mimo pracoviska nie je pracovným časom.",
@@ -158,12 +210,50 @@
   "spider": {
     "center": "Dni pracovného pokoja – nedele × sviatky × odpočinok × pohotovosť × mzdové zvýhodnenie",
     "branches": [
-      { "label": "Dni pracovného pokoja", "leaves": ["Patria sem: nedele, štátne sviatky, ďalšie dni, na ktoré pripadá týždenný odpočinok", "Zamestnanec má právo na nepretržitý odpočinok."] },
-      { "label": "Sviatky", "leaves": ["Sviatky sú zákonom určené dni pracovného pokoja (napr. 1. január, Veľká noc, 1. máj, 29. august, Vianoce).", "Práca je možná len: pri nevyhnutných službách, pri naliehavých opravách, v zdravotníctve, v doprave, pri nepretržitej prevádzke"] },
-      { "label": "Práca v dňoch pracovného pokoja", "leaves": ["Práca je výnimočná a musí byť: odôvodnená, v súlade so zákonom, kompenzovaná mzdovým zvýhodnením", "Zamestnávateľ musí rešpektovať zásadu odpočinku a regenerácie."] },
-      { "label": "Pracovná pohotovosť", "leaves": ["Pracovná pohotovosť je stav, keď je zamestnanec pripravený na výkon práce na pokyn zamestnávateľa.", "Druhy: pohotovosť na pracovisku – považuje sa za pracovný čas, pohotovosť mimo pracoviska – nie je pracovným časom, ale patrí za ňu náhrada", "Pohotovosť musí byť dohodnutá v pracovnej zmluve alebo kolektívnej zmluve."] },
-      { "label": "Mzdové zvýhodnenie", "leaves": ["Za prácu vo sviatok patrí: minimálne 100 % priemerného zárobku ako mzdové zvýhodnenie, možnosť náhradného voľna po dohode", "Za prácu v nedeľu patrí: minimálne 50 % priemerného zárobku"] },
-      { "label": "Zákaz maloobchodného predaja", "leaves": ["Zákon zakazuje maloobchodný predaj počas väčšiny sviatkov.", "Výnimky: čerpacie stanice, lekárne, predaj na letiskách, predaj v nemocniciach", "Cieľom je ochrana zamestnancov v maloobchode."] }
+      {
+        "label": "Dni pracovného pokoja",
+        "leaves": [
+          "Patria sem: nedele, štátne sviatky, ďalšie dni, na ktoré pripadá týždenný odpočinok",
+          "Zamestnanec má právo na nepretržitý odpočinok."
+        ]
+      },
+      {
+        "label": "Sviatky",
+        "leaves": [
+          "Sviatky sú zákonom určené dni pracovného pokoja (napr. 1. január, Veľká noc, 1. máj, 29. august, Vianoce).",
+          "Práca je možná len: pri nevyhnutných službách, pri naliehavých opravách, v zdravotníctve, v doprave, pri nepretržitej prevádzke"
+        ]
+      },
+      {
+        "label": "Práca v dňoch pracovného pokoja",
+        "leaves": [
+          "Práca je výnimočná a musí byť: odôvodnená, v súlade so zákonom, kompenzovaná mzdovým zvýhodnením",
+          "Zamestnávateľ musí rešpektovať zásadu odpočinku a regenerácie."
+        ]
+      },
+      {
+        "label": "Pracovná pohotovosť",
+        "leaves": [
+          "Pracovná pohotovosť je stav, keď je zamestnanec pripravený na výkon práce na pokyn zamestnávateľa.",
+          "Druhy: pohotovosť na pracovisku – považuje sa za pracovný čas, pohotovosť mimo pracoviska – nie je pracovným časom, ale patrí za ňu náhrada",
+          "Pohotovosť musí byť dohodnutá v pracovnej zmluve alebo kolektívnej zmluve."
+        ]
+      },
+      {
+        "label": "Mzdové zvýhodnenie",
+        "leaves": [
+          "Za prácu vo sviatok patrí: minimálne 100 % priemerného zárobku ako mzdové zvýhodnenie, možnosť náhradného voľna po dohode",
+          "Za prácu v nedeľu patrí: minimálne 50 % priemerného zárobku"
+        ]
+      },
+      {
+        "label": "Zákaz maloobchodného predaja",
+        "leaves": [
+          "Zákon zakazuje maloobchodný predaj počas väčšiny sviatkov.",
+          "Výnimky: čerpacie stanice, lekárne, predaj na letiskách, predaj v nemocniciach",
+          "Cieľom je ochrana zamestnancov v maloobchode."
+        ]
+      }
     ]
   }
 }

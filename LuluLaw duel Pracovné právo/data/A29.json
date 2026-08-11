@@ -2,14 +2,22 @@
   "id": "15. A",
   "title": "Pracovnoprávne skutočnosti",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovnoprávne skutočnosti", "pracovná zmluva", "právne úkony", "udalosti"],
-
-  "summary": "Pracovnoprávne skutočnosti sú právne významné okolnosti, s ktorými právny poriadok spája vznik, zmenu alebo zánik pracovnoprávnych vzťahov. Môžu mať podobu právnych úkonov (napr. pracovná zmluva, výpoveď), právnych udalostí (napr. smrť zamestnanca), rozhodnutí orgánov (napr. lekársky posudok), faktických úkonov (výkon práce) alebo protiprávnych úkonov (porušenie disciplíny). Pracovná zmluva musí obsahovať podstatné náležitosti podľa § 43 ZP a môže obsahovať aj ďalšie dohodnuté podmienky. Skúšobná doba musí byť písomná a jej dĺžka je limitovaná zákonom. Pracovný pomer vzniká dňom nástupu do práce a zaniká právnym úkonom, právnou udalosťou alebo rozhodnutím orgánu.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovnoprávne skutočnosti",
+    "pracovná zmluva",
+    "právne úkony",
+    "udalosti"
+  ],
+  "summary": "Pracovnoprávne skutočnosti Pracovnoprávne skutočnosti sú právne významné okolnosti, s ktorými právny poriadok spája vznik, zmenu alebo zánik pracovnoprávnych vzťahov. Členia sa na: – právne úkony – prejavy vôle smerujúce k právnym následkom (pracovná zmluva, výpoveď, dohoda o skončení, kolektívna zmluva), – právne udalosti – nastávajú nezávisle od vôle (smrť zamestnanca, uplynutie dohodnutej doby), – rozhodnutia orgánov – lekársky posudok, rozhodnutie súdu či správneho orgánu, – faktické (protiprávne) konania – porušenie pracovnej disciplíny, spôsobenie škody.\n\nPrávne úkony v pracovnom práve musia spĺňať náležitosti vôle a prejavu; niektoré vyžadujú písomnú formu pod sankciou neplatnosti (napr. pracovná zmluva sa spíše písomne, výpoveď a okamžité skončenie sú neplatné bez písomnej formy a doručenia). Pracovná zmluva musí obsahovať podstatné náležitosti (§ 43 ZP); skúšobná doba musí byť dohodnutá písomne. Pracovný pomer vzniká dňom nástupu do práce a zaniká právnym úkonom, právnou udalosťou alebo rozhodnutím orgánu. Vo veciach neupravených ZP sa na právne úkony subsidiárne použije Občiansky zákonník (§ 1 ods. 4 ZP).\n\nZapamätaj si:\n\nPracovnoprávne skutočnosti = okolnosti spôsobujúce vznik, zmenu alebo zánik vzťahu.\nDelia sa na právne úkony, právne udalosti, rozhodnutia orgánov a protiprávne konania.\nNiektoré úkony vyžadujú písomnú formu pod sankciou neplatnosti (výpoveď, okamžité skončenie).\nPracovná zmluva musí mať podstatné náležitosti (§ 43 ZP); skúšobná doba písomne.\nSubsidiárne platí Občiansky zákonník (§ 1 ods. 4 ZP).\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 1 ods. 4, § 17, § 43",
   "quiz": [
     {
       "question": "Ktorá z nasledujúcich možností je právna udalosť?",
-      "options": ["Výpoveď", "Smrť zamestnanca", "Dohoda o skončení pracovného pomeru"],
+      "options": [
+        "Výpoveď",
+        "Smrť zamestnanca",
+        "Dohoda o skončení pracovného pomeru"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Smrť zamestnanca je právna udalosť, ktorá nastáva nezávisle od vôle strán.",
@@ -18,7 +26,11 @@
     },
     {
       "question": "Ktoré tvrdenie o pracovnej zmluve je správne?",
-      "options": ["Musí byť písomná, inak je neplatná", "Musí obsahovať podstatné náležitosti podľa § 43 ZP", "Nemôže obsahovať ďalšie dohodnuté podmienky"],
+      "options": [
+        "Musí byť písomná, inak je neplatná",
+        "Musí obsahovať podstatné náležitosti podľa § 43 ZP",
+        "Nemôže obsahovať ďalšie dohodnuté podmienky"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Podstatné náležitosti sú nevyhnutné pre vznik pracovnej zmluvy.",
@@ -27,7 +39,11 @@
     },
     {
       "question": "Čo je faktický pracovný pomer?",
-      "options": ["Vzťah založený platnou pracovnou zmluvou", "Situácia, keď zamestnanec pracuje bez platného vzniku pracovného pomeru", "Pracovný pomer na dobu určitú"],
+      "options": [
+        "Vzťah založený platnou pracovnou zmluvou",
+        "Situácia, keď zamestnanec pracuje bez platného vzniku pracovného pomeru",
+        "Pracovný pomer na dobu určitú"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Faktický pracovný pomer vzniká, keď zamestnanec pracuje s vedomím zamestnávateľa bez platnej zmluvy.",
@@ -36,7 +52,11 @@
     },
     {
       "question": "Kedy je skúšobná doba neplatná?",
-      "options": ["Ak je dlhšia ako 3 mesiace", "Ak nie je dohodnutá písomne v pracovnej zmluve", "Ak je kratšia ako 1 mesiac"],
+      "options": [
+        "Ak je dlhšia ako 3 mesiace",
+        "Ak nie je dohodnutá písomne v pracovnej zmluve",
+        "Ak je kratšia ako 1 mesiac"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Skúšobná doba musí byť dohodnutá písomne, inak je neplatná.",
@@ -45,7 +65,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Pracovný pomer vzniká podpisom zmluvy", "Pracovný pomer vzniká dňom nástupu do práce", "Pracovný pomer vzniká doručením zmluvy zamestnancovi"],
+      "options": [
+        "Pracovný pomer vzniká podpisom zmluvy",
+        "Pracovný pomer vzniká dňom nástupu do práce",
+        "Pracovný pomer vzniká doručením zmluvy zamestnancovi"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Podľa § 46 ZP pracovný pomer vzniká až dňom nástupu do práce.",
@@ -53,15 +77,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Právny úkon", "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku pracovnoprávneho vzťahu (napr. výpoveď, dohoda)." },
-    { "term": "Právna udalosť", "definition": "Skutočnosť nezávislá od vôle subjektov (napr. smrť zamestnanca, uplynutie času)." },
-    { "term": "Faktický pracovný pomer", "definition": "Situácia, keď zamestnanec pracuje bez platného vzniku pracovného pomeru, ale s vedomím zamestnávateľa." },
-    { "term": "Skúšobná doba", "definition": "Musí byť písomná; najviac 3 mesiace (6 pri vedúcich), pri dobe určitej max. polovica trvania pomeru." },
-    { "term": "Pracovná zmluva", "definition": "Musí obsahovať podstatné náležitosti podľa § 43 ZP; môže obsahovať aj ďalšie dohodnuté podmienky." }
+    {
+      "term": "Právny úkon",
+      "definition": "Prejav vôle smerujúci k vzniku, zmene alebo zániku pracovnoprávneho vzťahu (napr. výpoveď, dohoda)."
+    },
+    {
+      "term": "Právna udalosť",
+      "definition": "Skutočnosť nezávislá od vôle subjektov (napr. smrť zamestnanca, uplynutie času)."
+    },
+    {
+      "term": "Faktický pracovný pomer",
+      "definition": "Situácia, keď zamestnanec pracuje bez platného vzniku pracovného pomeru, ale s vedomím zamestnávateľa."
+    },
+    {
+      "term": "Skúšobná doba",
+      "definition": "Musí byť písomná; najviac 3 mesiace (6 pri vedúcich), pri dobe určitej max. polovica trvania pomeru."
+    },
+    {
+      "term": "Pracovná zmluva",
+      "definition": "Musí obsahovať podstatné náležitosti podľa § 43 ZP; môže obsahovať aj ďalšie dohodnuté podmienky."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Neplatná skúšobná doba",
@@ -74,7 +111,11 @@
         },
         {
           "question": "Krok 1: Je skúšobná doba platná?",
-          "options": ["Nie", "Áno", "Len ak zamestnanec súhlasí"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak zamestnanec súhlasí"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Skúšobná doba musí byť dohodnutá písomne pred nástupom do práce.",
@@ -92,7 +133,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Faktický pracovný pomer",
       "difficulty": "stredná",
@@ -104,12 +144,20 @@
         },
         {
           "question": "Krok 1: Ide o pracovnoprávnu skutočnosť?",
-          "options": ["Áno, ide o faktický pracovný pomer", "Nie", "Len ak zamestnávateľ podpíše zmluvu spätne"],
+          "options": [
+            "Áno, ide o faktický pracovný pomer",
+            "Nie",
+            "Len ak zamestnávateľ podpíše zmluvu spätne"
+          ],
           "correct": 0
         },
         {
           "question": "Krok 2: Má zamestnanec nároky ako pri riadnom pracovnom pomere?",
-          "options": ["Áno", "Nie", "Len na mzdu"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len na mzdu"
+          ],
           "correct": 0
         },
         {
@@ -133,14 +181,61 @@
   "spider": {
     "center": "Pracovnoprávne skutočnosti – vznik × zmena × zánik × právne úkony × právne udalosti",
     "branches": [
-      { "label": "Právne úkony", "leaves": ["Najčastejšie pracovnoprávne skutočnosti: pracovná zmluva, dohoda o skončení, výpoveď, okamžité skončenie, zmena pracovnej zmluvy", "Musí byť dodržaná: písomná forma, doručenie, určitosť a zrozumiteľnosť"] },
-      { "label": "Právne udalosti", "leaves": ["Skutočnosti, ktoré nastávajú nezávisle od vôle účastníkov: smrť zamestnanca, uplynutie doby určitej, vznik invalidity, iné udalosti, ktoré zákon spája so zánikom pomeru"] },
-      { "label": "Rozhodnutia orgánov", "leaves": ["Pracovnoprávne vzťahy ovplyvňujú: lekársky posudok (zdravotná nespôsobilosť), rozhodnutie súdu, rozhodnutie inšpekcie práce, rozhodnutie úradu práce (napr. zákaz činnosti)"] },
-      { "label": "Faktické úkony", "leaves": ["Skutočnosti založené na konaní: výkon práce, nástup do práce – pracovný pomer vzniká dňom nástupu, splnenie pracovných povinností, porušenie disciplíny"] },
-      { "label": "Protiprávne úkony", "leaves": ["Konania porušujúce pracovnoprávne povinnosti: závažné porušenie disciplíny, neoprávnené nakladanie s majetkom, porušenie BOZP, šikana, mobbing, bossing", "Môžu viesť k: výpovedi, okamžitému skončeniu, zodpovednosti za škodu"] },
-      { "label": "Pracovná zmluva (§ 43 ZP)", "leaves": ["Musí obsahovať: druh práce, miesto výkonu práce, deň nástupu, mzdu (ak nie je určená v kolektívnej zmluve)", "Môže obsahovať aj: skúšobnú dobu, benefity, pracovné podmienky, ďalšie dohodnuté náležitosti"] },
-      { "label": "Skúšobná doba (§ 45 ZP)", "leaves": ["musí byť písomná,", "max. 3 mesiace,", "pri vedúcich zamestnancoch 6 mesiacov,", "počas skúšobnej doby možno skončiť pomer bez uvedenia dôvodu."] },
-      { "label": "Vznik a zánik pracovného pomeru", "leaves": ["Vznik: uzavretím pracovnej zmluvy, nástupom do práce", "Zánik: právnym úkonom (výpoveď, dohoda, okamžité skončenie), právnou udalosťou (smrť, uplynutie doby), rozhodnutím orgánu, priamo zo zákona"] }
+      {
+        "label": "Právne úkony",
+        "leaves": [
+          "Najčastejšie pracovnoprávne skutočnosti: pracovná zmluva, dohoda o skončení, výpoveď, okamžité skončenie, zmena pracovnej zmluvy",
+          "Musí byť dodržaná: písomná forma, doručenie, určitosť a zrozumiteľnosť"
+        ]
+      },
+      {
+        "label": "Právne udalosti",
+        "leaves": [
+          "Skutočnosti, ktoré nastávajú nezávisle od vôle účastníkov: smrť zamestnanca, uplynutie doby určitej, vznik invalidity, iné udalosti, ktoré zákon spája so zánikom pomeru"
+        ]
+      },
+      {
+        "label": "Rozhodnutia orgánov",
+        "leaves": [
+          "Pracovnoprávne vzťahy ovplyvňujú: lekársky posudok (zdravotná nespôsobilosť), rozhodnutie súdu, rozhodnutie inšpekcie práce, rozhodnutie úradu práce (napr. zákaz činnosti)"
+        ]
+      },
+      {
+        "label": "Faktické úkony",
+        "leaves": [
+          "Skutočnosti založené na konaní: výkon práce, nástup do práce – pracovný pomer vzniká dňom nástupu, splnenie pracovných povinností, porušenie disciplíny"
+        ]
+      },
+      {
+        "label": "Protiprávne úkony",
+        "leaves": [
+          "Konania porušujúce pracovnoprávne povinnosti: závažné porušenie disciplíny, neoprávnené nakladanie s majetkom, porušenie BOZP, šikana, mobbing, bossing",
+          "Môžu viesť k: výpovedi, okamžitému skončeniu, zodpovednosti za škodu"
+        ]
+      },
+      {
+        "label": "Pracovná zmluva (§ 43 ZP)",
+        "leaves": [
+          "Musí obsahovať: druh práce, miesto výkonu práce, deň nástupu, mzdu (ak nie je určená v kolektívnej zmluve)",
+          "Môže obsahovať aj: skúšobnú dobu, benefity, pracovné podmienky, ďalšie dohodnuté náležitosti"
+        ]
+      },
+      {
+        "label": "Skúšobná doba (§ 45 ZP)",
+        "leaves": [
+          "musí byť písomná,",
+          "max. 3 mesiace,",
+          "pri vedúcich zamestnancoch 6 mesiacov,",
+          "počas skúšobnej doby možno skončiť pomer bez uvedenia dôvodu."
+        ]
+      },
+      {
+        "label": "Vznik a zánik pracovného pomeru",
+        "leaves": [
+          "Vznik: uzavretím pracovnej zmluvy, nástupom do práce",
+          "Zánik: právnym úkonom (výpoveď, dohoda, okamžité skončenie), právnou udalosťou (smrť, uplynutie doby), rozhodnutím orgánu, priamo zo zákona"
+        ]
+      }
     ]
   }
 }

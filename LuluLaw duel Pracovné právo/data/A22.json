@@ -2,14 +2,21 @@
   "id": "11. B",
   "title": "Zodpovednosť zamestnávateľa za pracovné úrazy a choroby z povolania",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný úraz", "choroba z povolania", "zodpovednosť zamestnávateľa"],
-
-  "summary": "Zodpovednosť zamestnávateľa za škodu spôsobenú zamestnancovi pri práci je v Zákonníku práce koncipovaná ako objektívna – zamestnávateľ zodpovedá bez ohľadu na zavinenie. Rozlišuje sa všeobecná zodpovednosť (§ 192 ZP) a osobitná zodpovednosť (§ 193 – 198 ZP), pričom osobitná zodpovednosť zahŕňa škodu na odložených veciach, škodu pri odvracaní škody a najmä zodpovednosť za pracovné úrazy a choroby z povolania. Pracovný úraz je poškodenie zdravia spôsobené krátkodobým, náhlym a násilným pôsobením vonkajších vplyvov pri plnení pracovných úloh alebo v priamej súvislosti s nimi. Choroba z povolania je ochorenie uvedené v zozname chorôb z povolania, ktoré vzniklo v dôsledku dlhodobého pôsobenia rizikových pracovných podmienok. Zamestnávateľ sa môže zbaviť zodpovednosti celkom alebo sčasti len v zákonom presne určených prípadoch, napr. ak zamestnanec porušil predpisy BOZP, bol pod vplyvom alkoholu alebo konal ľahkomyseľne. Zamestnancovi patrí náhrada za bolesť, sťaženie spoločenského uplatnenia, strata na zárobku, náklady liečenia a vecná škoda. Náhrady poskytuje zamestnávateľ, pričom sú kryté úrazovým poistením podľa zákona o sociálnom poistení.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovný úraz",
+    "choroba z povolania",
+    "zodpovednosť zamestnávateľa"
+  ],
+  "summary": "Zodpovednosť zamestnávateľa za pracovné úrazy a choroby z povolania Zodpovednosť zamestnávateľa za škodu pri pracovnom úraze a chorobe z povolania je objektívna – zamestnávateľ zodpovedá bez ohľadu na zavinenie (§ 195 ZP). Ide o osobitný druh zodpovednosti zamestnávateľa za škodu (§ 195 – § 198 ZP) popri všeobecnej zodpovednosti (§ 192 ZP) a zodpovednosti za škodu na odložených veciach (§ 193) a pri odvracaní škody (§ 194).\n\nPracovný úraz je poškodenie zdravia alebo smrť zamestnanca spôsobené nezávisle od jeho vôle krátkodobým, náhlym a násilným pôsobením vonkajších vplyvov pri plnení pracovných úloh alebo v priamej súvislosti s nimi (§ 195 ods. 2 ZP). Nie je ním úraz na ceste do zamestnania a späť. Choroba z povolania je ochorenie uvedené v zozname chorôb z povolania, vzniknuté následkom dlhodobého pôsobenia škodlivých vplyvov práce.\n\nZamestnávateľ sa môže zbaviť zodpovednosti úplne alebo sčasti (§ 196 ZP) len zo zákonných liberačných dôvodov – najmä ak škodu zavinil postihnutý porušením predpisov o BOZP, s ktorými bol oboznámený, alebo v dôsledku opitosti či zneužitia iných návykových látok, prípadne ľahkomyseľného konania. Úplne sa zbaviť zodpovednosti nemôže, ak škoda vznikla pri odvracaní hroziacej škody alebo nebezpečenstva.\n\nZamestnancovi (alebo pozostalým) patria náhrady (§ 197 – § 198 ZP): náhrada za bolesť a sťaženie spoločenského uplatnenia, náhrada za stratu na zárobku, náhrada účelne vynaložených nákladov liečenia a vecná škoda; pri smrti náhrada nákladov pohrebu a pozostalostné náhrady. Náhrady sú kryté zákonným úrazovým poistením zamestnávateľa podľa zákona č. 461/2003 Z. z. o sociálnom poistení.\n\nZapamätaj si:\n\nZodpovednosť za pracovný úraz a chorobu z povolania je objektívna (§ 195 ZP) – bez ohľadu na zavinenie.\nPracovný úraz = náhle vonkajšie pôsobenie pri plnení úloh; úraz cestou do práce ním nie je.\nChoroba z povolania = ochorenie zo zoznamu, z dlhodobého pôsobenia škodlivých vplyvov.\nLiberácia (§ 196) len zo zákonných dôvodov: porušenie BOZP, opitosť, ľahkomyseľnosť.\nNáhrady: bolesť, sťaženie uplatnenia, strata na zárobku, náklady liečenia, vecná škoda; kryté úrazovým poistením.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 195 – § 198 Zákon č. 461/2003 Z. z. o sociálnom poistení (úrazové poistenie)",
   "quiz": [
     {
       "question": "Aký typ zodpovednosti nesie zamestnávateľ za pracovné úrazy?",
-      "options": ["Subjektívnu (na základe zavinenia)", "Objektívnu (bez ohľadu na zavinenie)", "Zmluvnú"],
+      "options": [
+        "Subjektívnu (na základe zavinenia)",
+        "Objektívnu (bez ohľadu na zavinenie)",
+        "Zmluvnú"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zodpovednosť je objektívna – zamestnávateľ zodpovedá bez ohľadu na zavinenie.",
@@ -18,7 +25,11 @@
     },
     {
       "question": "Kedy ide o pracovný úraz?",
-      "options": ["Pri akomkoľvek ochorení", "Pri poškodení zdravia pri plnení pracovných úloh alebo v priamej súvislosti", "Len pri úraze na pracovisku"],
+      "options": [
+        "Pri akomkoľvek ochorení",
+        "Pri poškodení zdravia pri plnení pracovných úloh alebo v priamej súvislosti",
+        "Len pri úraze na pracovisku"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Rozhodujúca je súvislosť s plnením pracovných úloh.",
@@ -27,7 +38,11 @@
     },
     {
       "question": "Kedy sa môže zamestnávateľ zbaviť zodpovednosti celkom?",
-      "options": ["Ak zamestnanec porušil predpisy BOZP a je to jediná príčina úrazu", "Ak zamestnávateľ nemal úrazové poistenie", "Ak zamestnanec pracoval nadčas"],
+      "options": [
+        "Ak zamestnanec porušil predpisy BOZP a je to jediná príčina úrazu",
+        "Ak zamestnávateľ nemal úrazové poistenie",
+        "Ak zamestnanec pracoval nadčas"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Zbavenie zodpovednosti je možné len ak je porušenie predpisov zamestnancom jedinou príčinou škody.",
@@ -36,7 +51,11 @@
     },
     {
       "question": "Kto poskytuje náhrady pri pracovnom úraze?",
-      "options": ["Zamestnávateľ (krytý úrazovým poistením)", "Úrad práce", "Zdravotná poisťovňa"],
+      "options": [
+        "Zamestnávateľ (krytý úrazovým poistením)",
+        "Úrad práce",
+        "Zdravotná poisťovňa"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Náhrady poskytuje zamestnávateľ, financované z úrazového poistenia.",
@@ -45,7 +64,11 @@
     },
     {
       "question": "Ktoré tvrdenie je pravdivé?",
-      "options": ["Choroba z povolania musí byť v zozname chorôb z povolania", "Choroba z povolania je akékoľvek ochorenie vzniknuté pri práci", "Zamestnávateľ nenesie zodpovednosť za choroby z povolania"],
+      "options": [
+        "Choroba z povolania musí byť v zozname chorôb z povolania",
+        "Choroba z povolania je akékoľvek ochorenie vzniknuté pri práci",
+        "Zamestnávateľ nenesie zodpovednosť za choroby z povolania"
+      ],
       "correct": 0,
       "explanation": {
         "correct": "Správne. Choroba musí byť uvedená v oficiálnom zozname.",
@@ -53,15 +76,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Pracovný úraz", "definition": "Poškodenie zdravia spôsobené krátkodobým, náhlym a násilným pôsobením vonkajších vplyvov pri plnení pracovných úloh alebo v priamej súvislosti." },
-    { "term": "Choroba z povolania", "definition": "Ochorenie uvedené v zozname chorôb z povolania, ktoré vzniklo v dôsledku dlhodobého pôsobenia rizikových pracovných podmienok." },
-    { "term": "Objektívna zodpovednosť", "definition": "Zodpovednosť zamestnávateľa bez ohľadu na zavinenie." },
-    { "term": "Zbavenie zodpovednosti", "definition": "Možné len ak je jedinou príčinou škody porušenie predpisov zamestnancom, alkohol alebo ľahkomyseľné konanie." },
-    { "term": "Náhrady škody", "definition": "Náhrada za bolesť, sťaženie spoločenského uplatnenia, strata na zárobku, náklady liečenia a vecná škoda." }
+    {
+      "term": "Pracovný úraz",
+      "definition": "Poškodenie zdravia spôsobené krátkodobým, náhlym a násilným pôsobením vonkajších vplyvov pri plnení pracovných úloh alebo v priamej súvislosti."
+    },
+    {
+      "term": "Choroba z povolania",
+      "definition": "Ochorenie uvedené v zozname chorôb z povolania, ktoré vzniklo v dôsledku dlhodobého pôsobenia rizikových pracovných podmienok."
+    },
+    {
+      "term": "Objektívna zodpovednosť",
+      "definition": "Zodpovednosť zamestnávateľa bez ohľadu na zavinenie."
+    },
+    {
+      "term": "Zbavenie zodpovednosti",
+      "definition": "Možné len ak je jedinou príčinou škody porušenie predpisov zamestnancom, alkohol alebo ľahkomyseľné konanie."
+    },
+    {
+      "term": "Náhrady škody",
+      "definition": "Náhrada za bolesť, sťaženie spoločenského uplatnenia, strata na zárobku, náklady liečenia a vecná škoda."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Úraz počas prestávky",
@@ -74,7 +110,11 @@
         },
         {
           "question": "Krok 1: Ide o pracovný úraz?",
-          "options": ["Áno", "Nie", "Len ak bol v pracovnom oblečení"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak bol v pracovnom oblečení"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Prestávka je v priamej súvislosti s plnením pracovných úloh.",
@@ -83,7 +123,11 @@
         },
         {
           "question": "Krok 2: Nesie zamestnávateľ zodpovednosť?",
-          "options": ["Áno, objektívnu", "Nie", "Len ak bola chyba na strane zamestnávateľa"],
+          "options": [
+            "Áno, objektívnu",
+            "Nie",
+            "Len ak bola chyba na strane zamestnávateľa"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zodpovednosť je objektívna.",
@@ -92,7 +136,11 @@
         },
         {
           "question": "Krok 3: Aké náhrady môže zamestnanec požadovať?",
-          "options": ["Náhradu za bolesť a stratu na zárobku", "Len náhradu za lieky", "Žiadne náhrady"],
+          "options": [
+            "Náhradu za bolesť a stratu na zárobku",
+            "Len náhradu za lieky",
+            "Žiadne náhrady"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Patrí mu kompletný balík náhrad.",
@@ -101,7 +149,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Alkohol a spoluzavinenie",
       "difficulty": "stredná",
@@ -113,7 +160,11 @@
         },
         {
           "question": "Krok 1: Môže sa zamestnávateľ zbaviť zodpovednosti?",
-          "options": ["Len ak bol alkohol jedinou príčinou úrazu", "Áno vždy", "Nie, nikdy"],
+          "options": [
+            "Len ak bol alkohol jedinou príčinou úrazu",
+            "Áno vždy",
+            "Nie, nikdy"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Alkohol musí byť jedinou príčinou.",
@@ -122,7 +173,11 @@
         },
         {
           "question": "Krok 2: Čo ak stroj nemal ochranné kryty?",
-          "options": ["Zamestnávateľ zodpovedá – existuje spolupôsobenie príčin", "Zamestnávateľ sa zbavuje zodpovednosti", "Zodpovednosť nesie zamestnanec"],
+          "options": [
+            "Zamestnávateľ zodpovedá – existuje spolupôsobenie príčin",
+            "Zamestnávateľ sa zbavuje zodpovednosti",
+            "Zodpovednosť nesie zamestnanec"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Ak existuje spoluzavinenie zamestnávateľa, zbavenie zodpovednosti nie je možné.",
@@ -131,7 +186,11 @@
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
-          "options": ["Preskúmať všetky príčiny úrazu a mieru zavinenia", "Automaticky uznať alkohol ako dôvod zbavenia sa zodpovednosti", "Ignorovať technický stav stroja"],
+          "options": [
+            "Preskúmať všetky príčiny úrazu a mieru zavinenia",
+            "Automaticky uznať alkohol ako dôvod zbavenia sa zodpovednosti",
+            "Ignorovať technický stav stroja"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Je potrebné komplexné posúdenie všetkých príčin.",
@@ -150,12 +209,54 @@
   "spider": {
     "center": "Zodpovednosť zamestnávateľa – objektívna × pracovný úraz × choroba z povolania × náhrada škody × úrazové poistenie",
     "branches": [
-      { "label": "Podstata zodpovednosti (§ 192 – 198 ZP)", "leaves": ["zodpovednosť je objektívna – nezávisí od zavinenia zamestnávateľa,", "zamestnávateľ zodpovedá za škodu vzniknutú pri plnení pracovných úloh alebo v priamej súvislosti s nimi,", "zahŕňa všeobecnú aj osobitnú zodpovednosť."] },
-      { "label": "Pracovný úraz", "leaves": ["Pracovný úraz je: náhle, krátkodobé, násilné poškodenie zdravia, spôsobené vonkajšími vplyvmi, pri práci alebo v priamej súvislosti s ňou", "Príklady: pád z rebríka, úraz strojom, zranenie pri manipulácii s materiálom"] },
-      { "label": "Choroba z povolania", "leaves": ["Choroba z povolania je: ochorenie uvedené v zozname chorôb z povolania, vzniká v dôsledku dlhodobého pôsobenia rizikových faktorov, potvrdzuje ju odborné pracovné lekárstvo", "Príklady: karpálny tunel, silikóza, hlukové poškodenie sluchu"] },
-      { "label": "Možnosti zbavenia sa zodpovednosti", "leaves": ["Zamestnávateľ sa môže zbaviť zodpovednosti: celkom, ak škodu spôsobil zamestnanec úmyselne", "sčasti, ak: zamestnanec porušil BOZP, bol pod vplyvom alkoholu alebo omamných látok, konal ľahkomyseľne", "Dôkazné bremeno nesie zamestnávateľ."] },
-      { "label": "Náhrady škody", "leaves": ["Zamestnancovi patrí: náhrada za bolesť", "Zamestnancovi patrí: náhrada za sťaženie spoločenského uplatnenia", "Zamestnancovi patrí: strata na zárobku počas PN aj po jej skončení", "Zamestnancovi patrí: náklady liečenia", "Zamestnancovi patrí: vecná škoda (napr. poškodené okuliare, oblečenie)"] },
-      { "label": "Úrazové poistenie", "leaves": ["náhrady poskytuje zamestnávateľ,", "sú kryté úrazovým poistením podľa zákona o sociálnom poistení,", "Sociálna poisťovňa prepláca zamestnávateľovi časť nákladov."] }
+      {
+        "label": "Podstata zodpovednosti (§ 192 – 198 ZP)",
+        "leaves": [
+          "zodpovednosť je objektívna – nezávisí od zavinenia zamestnávateľa,",
+          "zamestnávateľ zodpovedá za škodu vzniknutú pri plnení pracovných úloh alebo v priamej súvislosti s nimi,",
+          "zahŕňa všeobecnú aj osobitnú zodpovednosť."
+        ]
+      },
+      {
+        "label": "Pracovný úraz",
+        "leaves": [
+          "Pracovný úraz je: náhle, krátkodobé, násilné poškodenie zdravia, spôsobené vonkajšími vplyvmi, pri práci alebo v priamej súvislosti s ňou",
+          "Príklady: pád z rebríka, úraz strojom, zranenie pri manipulácii s materiálom"
+        ]
+      },
+      {
+        "label": "Choroba z povolania",
+        "leaves": [
+          "Choroba z povolania je: ochorenie uvedené v zozname chorôb z povolania, vzniká v dôsledku dlhodobého pôsobenia rizikových faktorov, potvrdzuje ju odborné pracovné lekárstvo",
+          "Príklady: karpálny tunel, silikóza, hlukové poškodenie sluchu"
+        ]
+      },
+      {
+        "label": "Možnosti zbavenia sa zodpovednosti",
+        "leaves": [
+          "Zamestnávateľ sa môže zbaviť zodpovednosti: celkom, ak škodu spôsobil zamestnanec úmyselne",
+          "sčasti, ak: zamestnanec porušil BOZP, bol pod vplyvom alkoholu alebo omamných látok, konal ľahkomyseľne",
+          "Dôkazné bremeno nesie zamestnávateľ."
+        ]
+      },
+      {
+        "label": "Náhrady škody",
+        "leaves": [
+          "Zamestnancovi patrí: náhrada za bolesť",
+          "Zamestnancovi patrí: náhrada za sťaženie spoločenského uplatnenia",
+          "Zamestnancovi patrí: strata na zárobku počas PN aj po jej skončení",
+          "Zamestnancovi patrí: náklady liečenia",
+          "Zamestnancovi patrí: vecná škoda (napr. poškodené okuliare, oblečenie)"
+        ]
+      },
+      {
+        "label": "Úrazové poistenie",
+        "leaves": [
+          "náhrady poskytuje zamestnávateľ,",
+          "sú kryté úrazovým poistením podľa zákona o sociálnom poistení,",
+          "Sociálna poisťovňa prepláca zamestnávateľovi časť nákladov."
+        ]
+      }
     ]
   }
 }

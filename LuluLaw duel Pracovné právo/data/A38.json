@@ -2,14 +2,21 @@
   "id": "19. B",
   "title": "Osobitné pracovné podmienky mladistvých zamestnancov",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "mladiství", "ochrana zamestnancov", "pracovné podmienky"],
-
-  "summary": "Mladistvým zamestnancom je podľa § 40 ods. 3 Zákonníka práce osoba mladšia ako 18 rokov. Ide o skupinu zamestnancov, ktorá požíva zvýšenú pracovnoprávnu ochranu, vyplývajúcu z ich fyzického, psychického a sociálneho vývoja. Zamestnávateľ môže mladistvých zamestnávať len prácami primeranými ich rozumovému a telesnému rozvoju, ktoré neohrozujú ich mravnosť.\n\nZamestnávateľ má rozsiahle povinnosti: musí viesť evidenciu mladistvých, zabezpečiť lekárske prehliadky pred vznikom pracovného pomeru aj pravidelne počas neho, spolupracovať so zákonnými zástupcami, informovať ich o výpovedi či okamžitom skončení pracovného pomeru a pri skončení pracovného pomeru mladistvého si vyžiadať stanovisko zákonného zástupcu.\n\nMladistvým sú zakázané práce pod zemou, práce neprimerané ich vývoju, práce so zvýšeným rizikom úrazu a práce, ktoré môžu ohroziť bezpečnosť iných osôb. Zoznam zakázaných prác upravuje nariadenie vlády č. 286/2004 Z. z.\n\nMladiství nesmú vykonávať prácu nadčas, prácu v noci ani pracovnú pohotovosť. Výnimka z nočnej práce existuje len pre mladistvých nad 16 rokov v rámci prípravy na povolanie, najviac v rozsahu jednej hodiny, a musí bezprostredne nadväzovať na dennú prácu.\n\nCieľom právnej úpravy je ochrana zdravia, bezpečnosti a harmonického vývoja mladistvých, v súlade s čl. 38 Ústavy SR a Dohovorom MOP č. 138 o minimálnom veku.",
-
+  "tags": [
+    "pracovné právo",
+    "mladiství",
+    "ochrana zamestnancov",
+    "pracovné podmienky"
+  ],
+  "summary": "Osobitné pracovné podmienky mladistvých zamestnancov Mladistvým zamestnancom je zamestnanec mladší ako 18 rokov (§ 40 ods. 4 ZP). Mladiství požívajú zvýšenú ochranu pre svoj fyzický, psychický a sociálny vývoj; zamestnávateľ ich smie zamestnávať len prácami primeranými ich rozvoju, ktoré neohrozujú ich mravnosť.\n\nPovinnosti zamestnávateľa (§ 172 a nasl. ZP): viesť evidenciu mladistvých, zabezpečiť lekárske prehliadky pred nástupom a pravidelne, prihliadať na posudok lekára, spolupracovať so zákonným zástupcom a vyžiadať si jeho vyjadrenie pri skončení pracovného pomeru mladistvého (výpoveď a okamžité skončenie sa dáva aj na vedomie zákonnému zástupcovi).\n\nMladistvým sú zakázané práce pod zemou pri ťažbe nerastov a razení tunelov, práce neprimerané ich vývoju, so zvýšeným rizikom úrazu a práce ohrozujúce ich zdravie (§ 175 ZP; zoznam prác nariadenie vlády č. 286/2004 Z. z.). Mladiství nesmú byť zamestnávaní prácou nadčas, nočnou prácou ani pracovnou pohotovosťou (§ 174 ZP). Výnimočne mladistvý starší ako 16 rokov môže výnimočne vykonávať nočnú prácu nepresahujúcu jednu hodinu, ak to je potrebné pre jeho výchovu na povolanie a bezprostredne nadväzuje na jeho prácu vo dne.\n\nZapamätaj si:\n\nMladistvý = zamestnanec do 18 rokov (§ 40 ods. 4 ZP); zvýšená ochrana.\nZákaz nadčasov, nočnej práce a pohotovosti (§ 174 ZP); úzka výnimka pre nad 16 r. (max 1 h, nadväzne na dennú prácu).\nZakázané práce: pod zemou, rizikové, neprimerané vývoju (§ 175; NV 286/2004 Z. z.).\nPovinné lekárske prehliadky pred nástupom aj priebežne.\nSúčinnosť so zákonným zástupcom vrátane skončenia pomeru.\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 40 ods. 4, § 172 – § 176 Nariadenie vlády č. 286/2004 Z. z.; Ústava SR čl. 38; Dohovor MOP č. 138",
   "quiz": [
     {
       "question": "Kto je mladistvý zamestnanec podľa Zákonníka práce?",
-      "options": ["Osoba do 21 rokov", "Osoba od 15 do 18 rokov", "Osoba mladšia ako 15 rokov"],
+      "options": [
+        "Osoba do 21 rokov",
+        "Osoba od 15 do 18 rokov",
+        "Osoba mladšia ako 15 rokov"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Mladistvý je zamestnanec vo veku 15–18 rokov.",
@@ -18,7 +25,11 @@
     },
     {
       "question": "Môže mladistvý pracovať v noci?",
-      "options": ["Áno", "Nie", "Len ak súhlasí zákonný zástupca"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len ak súhlasí zákonný zástupca"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Nočná práca mladistvých je zakázaná, okrem výnimočnej 1-hodinovej prípravy na povolanie.",
@@ -27,7 +38,11 @@
     },
     {
       "question": "Kedy musí mladistvý dostať prestávku?",
-      "options": ["Po 6 hodinách práce", "Po 4,5 hodinách práce", "Po 8 hodinách práce"],
+      "options": [
+        "Po 6 hodinách práce",
+        "Po 4,5 hodinách práce",
+        "Po 8 hodinách práce"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Prestávka musí byť najneskôr po 4,5 hodinách práce.",
@@ -36,7 +51,11 @@
     },
     {
       "question": "Môže mladistvý pracovať nadčas?",
-      "options": ["Áno", "Nie", "Len v nevyhnutných prípadoch"],
+      "options": [
+        "Áno",
+        "Nie",
+        "Len v nevyhnutných prípadoch"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Nadčasy sú mladistvým zakázané bez výnimky.",
@@ -45,7 +64,11 @@
     },
     {
       "question": "Aký musí byť denný odpočinok mladistvého?",
-      "options": ["12 hodín", "10 hodín", "14 hodín"],
+      "options": [
+        "12 hodín",
+        "10 hodín",
+        "14 hodín"
+      ],
       "correct": 2,
       "explanation": {
         "correct": "Správne. Denný odpočinok mladistvého je najmenej 14 hodín.",
@@ -53,15 +76,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Mladistvý zamestnanec", "definition": "Osoba vo veku 15–18 rokov s osobitnou pracovnoprávnou ochranou." },
-    { "term": "Zákaz nočnej práce", "definition": "Mladiství nesmú pracovať medzi 22:00 a 6:00, okrem výnimočnej 1-hodinovej prípravy na povolanie." },
-    { "term": "Zákaz nadčasov", "definition": "Mladiství nesmú vykonávať žiadnu nadčasovú prácu ani pracovnú pohotovosť." },
-    { "term": "Prestávka po 4,5 h", "definition": "Mladistvým patrí prestávka najneskôr po 4,5 hodinách práce." },
-    { "term": "Lekárske prehliadky", "definition": "Zamestnávateľ musí zabezpečiť vstupné a pravidelné lekárske prehliadky najmenej raz ročne." }
+    {
+      "term": "Mladistvý zamestnanec",
+      "definition": "Osoba vo veku 15–18 rokov s osobitnou pracovnoprávnou ochranou."
+    },
+    {
+      "term": "Zákaz nočnej práce",
+      "definition": "Mladiství nesmú pracovať medzi 22:00 a 6:00, okrem výnimočnej 1-hodinovej prípravy na povolanie."
+    },
+    {
+      "term": "Zákaz nadčasov",
+      "definition": "Mladiství nesmú vykonávať žiadnu nadčasovú prácu ani pracovnú pohotovosť."
+    },
+    {
+      "term": "Prestávka po 4,5 h",
+      "definition": "Mladistvým patrí prestávka najneskôr po 4,5 hodinách práce."
+    },
+    {
+      "term": "Lekárske prehliadky",
+      "definition": "Zamestnávateľ musí zabezpečiť vstupné a pravidelné lekárske prehliadky najmenej raz ročne."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Mladistvý na nočnej zmene",
@@ -74,7 +110,11 @@
         },
         {
           "question": "Krok 1: Môže mladistvý pracovať v noci?",
-          "options": ["Nie", "Áno", "Len ak súhlasí rodič"],
+          "options": [
+            "Nie",
+            "Áno",
+            "Len ak súhlasí rodič"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Nočná práca mladistvých je zakázaná bez výnimky, okrem 1-hodinovej prípravy na povolanie.",
@@ -83,7 +123,11 @@
         },
         {
           "question": "Krok 2: Ako má zamestnávateľ postupovať?",
-          "options": ["Zmeniť rozvrh práce", "Nechať mladistvého na nočnej", "Dať mu neplatené voľno"],
+          "options": [
+            "Zmeniť rozvrh práce",
+            "Nechať mladistvého na nočnej",
+            "Dať mu neplatené voľno"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí rešpektovať zákaz nočnej práce mladistvých.",
@@ -105,7 +149,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Prestávka mladistvého",
       "difficulty": "ľahká",
@@ -117,7 +160,11 @@
         },
         {
           "question": "Krok 1: Kedy patrí mladistvému prestávka?",
-          "options": ["Po 4,5 hodinách", "Po 6 hodinách", "Po 8 hodinách"],
+          "options": [
+            "Po 4,5 hodinách",
+            "Po 6 hodinách",
+            "Po 8 hodinách"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Prestávka musí byť najneskôr po 4,5 hodinách práce.",
@@ -126,7 +173,11 @@
         },
         {
           "question": "Krok 2: Porušil zamestnávateľ zákon?",
-          "options": ["Áno", "Nie", "Len ak mladistvý protestuje"],
+          "options": [
+            "Áno",
+            "Nie",
+            "Len ak mladistvý protestuje"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Neposkytnutie prestávky je porušením zákona.",
@@ -158,13 +209,53 @@
   "spider": {
     "center": "Mladiství – <18 rokov × zákaz rizikových prác × zákaz nočnej práce × zákaz nadčasov × lekárske prehliadky",
     "branches": [
-      { "label": "Pojem mladistvého (§ 40 ods. 3 ZP)", "leaves": ["Mladistvý zamestnanec je osoba: mladšia ako 18 rokov, s osobitnou právnou ochranou, ktorá vyplýva z ich fyzického, psychického a sociálneho vývoja"] },
-      { "label": "Zamestnávanie mladistvých", "leaves": ["Zamestnávateľ môže mladistvých zamestnávať len prácami: primeranými ich telesnému a rozumovému rozvoju, ktoré neohrozujú ich mravnosť, ktoré sú bezpečné a vhodné", "Zamestnávateľ musí: viesť evidenciu mladistvých, zabezpečiť vstupné a pravidelné lekárske prehliadky, spolupracovať so zákonným zástupcom"] },
-      { "label": "Zakázané práce (nariadenie vlády č. 286/2004 Z. z.)", "leaves": ["Mladistvým sú zakázané práce: pod zemou, so zvýšeným rizikom úrazu, neprimerané ich vývoju, ohrozujúce bezpečnosť iných osôb, s toxickými látkami, vibráciami, extrémnou fyzickou záťažou"] },
-      { "label": "Nočná práca a nadčasy", "leaves": ["Mladiství nesmú: vykonávať nočnú prácu, pracovať nadčas, byť zaradení do nepretržitých prevádzok", "Výnimka: mladiství nad 16 rokov v rámci prípravy na povolanie, max. 1 hodina nočnej práce, musí bezprostredne nadväzovať na dennú prácu"] },
-      { "label": "Pracovná pohotovosť", "leaves": ["Mladiství nesmú: vykonávať pracovnú pohotovosť, byť pripravení na výkon práce mimo pracovného času"] },
-      { "label": "Lekárske prehliadky", "leaves": ["Zamestnávateľ musí zabezpečiť: vstupnú lekársku prehliadku pred vznikom pracovného pomeru, pravidelné prehliadky počas trvania pomeru, zvýšenú kontrolu pri rizikových faktoroch"] },
-      { "label": "Zákonný zástupca", "leaves": ["Zamestnávateľ musí: informovať zákonného zástupcu o výpovedi", "Zamestnávateľ musí: informovať o okamžitom skončení", "Zamestnávateľ musí: vyžiadať si stanovisko pri skončení pracovného pomeru", "Zamestnávateľ musí: spolupracovať pri riešení pracovných podmienok"] }
+      {
+        "label": "Pojem mladistvého (§ 40 ods. 3 ZP)",
+        "leaves": [
+          "Mladistvý zamestnanec je osoba: mladšia ako 18 rokov, s osobitnou právnou ochranou, ktorá vyplýva z ich fyzického, psychického a sociálneho vývoja"
+        ]
+      },
+      {
+        "label": "Zamestnávanie mladistvých",
+        "leaves": [
+          "Zamestnávateľ môže mladistvých zamestnávať len prácami: primeranými ich telesnému a rozumovému rozvoju, ktoré neohrozujú ich mravnosť, ktoré sú bezpečné a vhodné",
+          "Zamestnávateľ musí: viesť evidenciu mladistvých, zabezpečiť vstupné a pravidelné lekárske prehliadky, spolupracovať so zákonným zástupcom"
+        ]
+      },
+      {
+        "label": "Zakázané práce (nariadenie vlády č. 286/2004 Z. z.)",
+        "leaves": [
+          "Mladistvým sú zakázané práce: pod zemou, so zvýšeným rizikom úrazu, neprimerané ich vývoju, ohrozujúce bezpečnosť iných osôb, s toxickými látkami, vibráciami, extrémnou fyzickou záťažou"
+        ]
+      },
+      {
+        "label": "Nočná práca a nadčasy",
+        "leaves": [
+          "Mladiství nesmú: vykonávať nočnú prácu, pracovať nadčas, byť zaradení do nepretržitých prevádzok",
+          "Výnimka: mladiství nad 16 rokov v rámci prípravy na povolanie, max. 1 hodina nočnej práce, musí bezprostredne nadväzovať na dennú prácu"
+        ]
+      },
+      {
+        "label": "Pracovná pohotovosť",
+        "leaves": [
+          "Mladiství nesmú: vykonávať pracovnú pohotovosť, byť pripravení na výkon práce mimo pracovného času"
+        ]
+      },
+      {
+        "label": "Lekárske prehliadky",
+        "leaves": [
+          "Zamestnávateľ musí zabezpečiť: vstupnú lekársku prehliadku pred vznikom pracovného pomeru, pravidelné prehliadky počas trvania pomeru, zvýšenú kontrolu pri rizikových faktoroch"
+        ]
+      },
+      {
+        "label": "Zákonný zástupca",
+        "leaves": [
+          "Zamestnávateľ musí: informovať zákonného zástupcu o výpovedi",
+          "Zamestnávateľ musí: informovať o okamžitom skončení",
+          "Zamestnávateľ musí: vyžiadať si stanovisko pri skončení pracovného pomeru",
+          "Zamestnávateľ musí: spolupracovať pri riešení pracovných podmienok"
+        ]
+      }
     ]
   }
 }

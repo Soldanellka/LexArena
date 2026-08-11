@@ -2,14 +2,23 @@
   "id": "16. B",
   "title": "Pracovný čas, rozvrhnutie pracovného času, konto pracovného času, pracovný čas tehotných žien a rodičov",
   "schemaVersion": "1.1",
-  "tags": ["pracovné právo", "pracovný čas", "rozvrhnutie pracovného času", "konto pracovného času", "tehotné ženy", "rodičia"],
-
-  "summary": "Pracovný čas je podľa § 85 ods. 1 Zákonníka práce časový úsek, v ktorom je zamestnanec k dispozícii zamestnávateľovi, vykonáva prácu a plní povinnosti podľa pracovnej zmluvy. Ide o kogentnú právnu úpravu, ktorá chráni zdravie zamestnancov a stanovuje limity pracovného času, odpočinku, prestávok a pracovnej pohotovosti.\n\nZákonný týždenný pracovný čas je najviac 40 hodín; pri dvojzmennej prevádzke 38¾ hodiny, pri trojzmennej a nepretržitej prevádzke 37½ hodiny a pri rizikových pracoviskách 33½ hodiny. Pracovný čas mladistvých je osobitne limitovaný a nesmie presiahnuť 8 hodín denne.\n\nRozvrhnutie pracovného času môže byť rovnomerné (§ 86 ZP) alebo nerovnomerné (§ 87 ZP). Pri rovnomernom rozvrhnutí nesmie pracovný čas v jednotlivých dňoch presiahnuť 9 hodín a rozdiel medzi týždňami nesmie byť väčší ako 3 hodiny. Pri nerovnomernom rozvrhnutí môže pracovná zmena trvať až 12 hodín, pričom priemerný týždenný pracovný čas nesmie prekročiť ustanovený týždenný pracovný čas v období 4 alebo 12 mesiacov.\n\nKonto pracovného času (§ 87a ZP) je osobitný spôsob nerovnomerného rozvrhnutia pracovného času. Umožňuje vytvárať kladný účet (viac odpracovaných hodín) a záporný účet (menej odpracovaných hodín). Zamestnávateľ musí poskytovať stabilnú základnú zložku mzdy, viesť účet konta pracovného času a vyrovnávacie obdobie nesmie presiahnuť 30 mesiacov.\n\nTehotné ženy, ženy a muži starajúci sa o deti majú osobitnú ochranu. Tehotné ženy nesmú pracovať v noci (§ 98 ZP) ani nadčas (§ 97 ZP). Zamestnávateľ je povinný preradiť tehotnú ženu na dennú prácu, ak vykonáva nočnú prácu alebo prácu ohrozujúcu jej zdravie. Rodičia detí mladších ako 15 rokov majú právo žiadať kratší pracovný čas (§ 49 ZP) a zamestnávateľ musí žiadosti vyhovieť, ak tomu nebránia vážne prevádzkové dôvody.\n\nCieľom právnej úpravy je ochrana zdravia zamestnancov, prevencia rizík, podpora rodiny a zosúladenie pracovného a súkromného života.",
-
+  "tags": [
+    "pracovné právo",
+    "pracovný čas",
+    "rozvrhnutie pracovného času",
+    "konto pracovného času",
+    "tehotné ženy",
+    "rodičia"
+  ],
+  "summary": "Pracovný čas, rozvrhnutie pracovného času, konto pracovného času, pracovný čas tehotných žien a rodičov Pracovný čas je časový úsek, v ktorom je zamestnanec k dispozícii zamestnávateľovi, vykonáva prácu a plní povinnosti podľa pracovnej zmluvy (§ 85 ods. 1 ZP). Ide o kogentnú úpravu chrániacu zdravie zamestnancov.\n\nUstanovený týždenný pracovný čas je najviac 40 hodín; pri dvojzmennej prevádzke najviac 38 a ¾ hodiny, pri trojzmennej a nepretržitej prevádzke najviac 37 a ½ hodiny (§ 85 ods. 5 – 7 ZP). Priemerný týždenný pracovný čas vrátane nadčasov nesmie prekročiť 48 hodín. Pracovný čas mladistvého do 16 rokov je najviac 30 hodín týždenne, mladistvého nad 16 rokov najviac 37 a ½ hodiny, aj pri viacerých zamestnávateľoch; zmena mladistvého nesmie presiahnuť 8 hodín.\n\nRozvrhnutie môže byť rovnomerné (§ 86 ZP) alebo nerovnomerné (§ 87 ZP). Pri nerovnomernom rozvrhnutí môže zmena trvať až 12 hodín, pričom priemerný týždenný čas sa musí dodržať vo vyrovnávacom období (spravidla najviac 4 mesiace, po dohode so zástupcami zamestnancov až 12 mesiacov). Konto pracovného času (§ 87a ZP) je osobitný spôsob nerovnomerného rozvrhnutia s kladným a záporným účtom; zamestnávateľ poskytuje stabilnú základnú zložku mzdy a vedie účet konta; vyrovnávacie obdobie je najviac 30 mesiacov, ak to dohodne v kolektívnej zmluve. (Presné dĺžky vyrovnávacích období over podľa aktuálneho znenia.)\n\nTehotné ženy, matky do konca 9. mesiaca po pôrode a dojčiace ženy nesmú byť zamestnávané prácou nadčas (§ 164 ods. 3 ZP) a nočnou prácou majú osobitnú ochranu; zamestnávateľ je povinný preradiť ich na vhodnú dennú prácu, ak vykonávajú zakázanú alebo rizikovú prácu (§ 162 ZP). Rodič dieťaťa do 15 rokov môže požiadať o kratší alebo inak vhodne upravený pracovný čas (§ 164 ods. 2 ZP) a zamestnávateľ musí vyhovieť, ak nebránia vážne prevádzkové dôvody.\n\nZapamätaj si:\n\nPracovný čas (§ 85 ZP) max 40 h/týž.; dvojzmenná 38¾, troj-/nepretržitá 37½; s nadčasmi priemer max 48 h.\nRozvrhnutie rovnomerné (§ 86) × nerovnomerné (§ 87); pri nerovnomernom zmena až 12 h.\nKonto pracovného času (§ 87a) – kladný/záporný účet, stabilná mzda; vyrovnávacie obdobie do 30 mesiacov (dohodou v KZ).\nTehotné a dojčiace ženy: zákaz nadčasov, ochrana pred nočnou prácou, preradenie (§ 162, § 164 ZP).\nRodič dieťaťa do 15 rokov môže žiadať úpravu času (§ 164 ods. 2 ZP).\n\nZdroj: Zákonník práce č. 311/2001 Z. z. – § 85, § 86, § 87, § 87a, § 162, § 164 (číselné limity a vyrovnávacie obdobia over podľa aktuálneho znenia)",
   "quiz": [
     {
       "question": "Ako definuje pracovný čas Zákonník práce?",
-      "options": ["Čas, keď je zamestnanec doma", "Čas, v ktorom je zamestnanec k dispozícii zamestnávateľovi a vykonáva prácu", "Len čas, keď zamestnanec vykonáva fyzickú prácu"],
+      "options": [
+        "Čas, keď je zamestnanec doma",
+        "Čas, v ktorom je zamestnanec k dispozícii zamestnávateľovi a vykonáva prácu",
+        "Len čas, keď zamestnanec vykonáva fyzickú prácu"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 85 ods. 1 ZP presne definuje pracovný čas ako časový úsek, v ktorom je zamestnanec k dispozícii zamestnávateľovi.",
@@ -18,7 +27,11 @@
     },
     {
       "question": "Aká je základná dĺžka týždenného pracovného času?",
-      "options": ["48 hodín", "40 hodín", "35 hodín"],
+      "options": [
+        "48 hodín",
+        "40 hodín",
+        "35 hodín"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Zákonný pracovný čas je najviac 40 hodín týždenne.",
@@ -27,7 +40,11 @@
     },
     {
       "question": "Kedy je možné nerovnomerné rozvrhnutie pracovného času?",
-      "options": ["Vždy, podľa uváženia zamestnávateľa", "Ak povaha práce alebo prevádzka nedovoľuje rovnomerné rozvrhnutie", "Len ak zamestnanec súhlasí"],
+      "options": [
+        "Vždy, podľa uváženia zamestnávateľa",
+        "Ak povaha práce alebo prevádzka nedovoľuje rovnomerné rozvrhnutie",
+        "Len ak zamestnanec súhlasí"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 87 ZP umožňuje nerovnomerné rozvrhnutie pri prevádzkových alebo technologických dôvodoch.",
@@ -36,7 +53,11 @@
     },
     {
       "question": "Môže tehotná žena pracovať v noci?",
-      "options": ["Áno, ak podpíše súhlas", "Nie, nočná práca je zakázaná", "Áno, ak to vyžaduje prevádzka"],
+      "options": [
+        "Áno, ak podpíše súhlas",
+        "Nie, nočná práca je zakázaná",
+        "Áno, ak to vyžaduje prevádzka"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. § 98 ZP zakazuje nočnú prácu tehotných žien bez výnimky.",
@@ -45,7 +66,11 @@
     },
     {
       "question": "Čo je konto pracovného času?",
-      "options": ["Dochádzkový systém", "Spôsob nerovnomerného rozvrhnutia pracovného času s kladným a záporným účtom", "Pracovná zmluva na kratší úväzok"],
+      "options": [
+        "Dochádzkový systém",
+        "Spôsob nerovnomerného rozvrhnutia pracovného času s kladným a záporným účtom",
+        "Pracovná zmluva na kratší úväzok"
+      ],
       "correct": 1,
       "explanation": {
         "correct": "Správne. Konto pracovného času je upravené v § 87a ZP.",
@@ -53,15 +78,28 @@
       }
     }
   ],
-
   "tiles": [
-    { "term": "Pracovný čas", "definition": "Časový úsek podľa § 85 ods. 1 ZP, v ktorom je zamestnanec k dispozícii zamestnávateľovi." },
-    { "term": "Rovnomerné rozvrhnutie", "definition": "Max. 9 hodín denne, rozdiel medzi týždňami najviac 3 hodiny (§ 86 ZP)." },
-    { "term": "Nerovnomerné rozvrhnutie", "definition": "Pracovná zmena môže trvať až 12 hodín; priemerný týždenný čas sa sleduje v období 4–12 mesiacov (§ 87 ZP)." },
-    { "term": "Konto pracovného času", "definition": "Systém kladného a záporného účtu pracovného času so stabilnou základnou mzdou (§ 87a ZP)." },
-    { "term": "Tehotné ženy a rodičia", "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na kratší pracovný čas a povinnosť preradenia (§ 97, § 98, § 49 ZP)." }
+    {
+      "term": "Pracovný čas",
+      "definition": "Časový úsek podľa § 85 ods. 1 ZP, v ktorom je zamestnanec k dispozícii zamestnávateľovi."
+    },
+    {
+      "term": "Rovnomerné rozvrhnutie",
+      "definition": "Max. 9 hodín denne, rozdiel medzi týždňami najviac 3 hodiny (§ 86 ZP)."
+    },
+    {
+      "term": "Nerovnomerné rozvrhnutie",
+      "definition": "Pracovná zmena môže trvať až 12 hodín; priemerný týždenný čas sa sleduje v období 4–12 mesiacov (§ 87 ZP)."
+    },
+    {
+      "term": "Konto pracovného času",
+      "definition": "Systém kladného a záporného účtu pracovného času so stabilnou základnou mzdou (§ 87a ZP)."
+    },
+    {
+      "term": "Tehotné ženy a rodičia",
+      "definition": "Zákaz nočnej práce, zákaz nadčasov, právo na kratší pracovný čas a povinnosť preradenia (§ 97, § 98, § 49 ZP)."
+    }
   ],
-
   "cases": [
     {
       "title": "Prípad 1 – Tehotná žena a nočná práca",
@@ -74,7 +112,11 @@
         },
         {
           "question": "Krok 1: Môže tehotná žena pracovať v noci?",
-          "options": ["Nie", "Áno, ak súhlasí", "Áno, ak to vyžaduje prevádzka"],
+          "options": [
+            "Nie",
+            "Áno, ak súhlasí",
+            "Áno, ak to vyžaduje prevádzka"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. § 98 ZP zakazuje nočnú prácu tehotných žien.",
@@ -83,7 +125,11 @@
         },
         {
           "question": "Krok 2: Ako má zamestnávateľ postupovať?",
-          "options": ["Preradiť ju na dennú prácu", "Nechať ju pracovať v noci", "Dať jej neplatené voľno"],
+          "options": [
+            "Preradiť ju na dennú prácu",
+            "Nechať ju pracovať v noci",
+            "Dať jej neplatené voľno"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zamestnávateľ musí preradiť tehotnú ženu na dennú prácu.",
@@ -92,7 +138,6 @@
         }
       ]
     },
-
     {
       "title": "Prípad 2 – Konto pracovného času a výkyvy v práci",
       "difficulty": "stredná",
@@ -104,7 +149,11 @@
         },
         {
           "question": "Krok 1: Je takéto rozvrhnutie prípustné?",
-          "options": ["Áno, v rámci konta pracovného času", "Nie", "Len ak zamestnanci súhlasia"],
+          "options": [
+            "Áno, v rámci konta pracovného času",
+            "Nie",
+            "Len ak zamestnanci súhlasia"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Konto pracovného času umožňuje nerovnomerné rozvrhnutie.",
@@ -113,7 +162,11 @@
         },
         {
           "question": "Krok 2: Môže mzda kolísať?",
-          "options": ["Nie, mzda musí byť stabilná", "Áno, podľa odpracovaných hodín", "Len pri nadčasoch"],
+          "options": [
+            "Nie, mzda musí byť stabilná",
+            "Áno, podľa odpracovaných hodín",
+            "Len pri nadčasoch"
+          ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Pri konte pracovného času musí byť základná mzda stabilná.",
@@ -132,13 +185,63 @@
   "spider": {
     "center": "Pracovný čas – limity × rozvrhnutie × konto × ochrana tehotných a rodičov",
     "branches": [
-      { "label": "Pracovný čas (§ 85 ZP)", "leaves": ["Pracovný čas je čas, v ktorom je zamestnanec: k dispozícii zamestnávateľovi, vykonáva prácu, plní povinnosti podľa pracovnej zmluvy", "Je to kogentná úprava – nemožno sa odchýliť v neprospech zamestnanca."] },
-      { "label": "Limity pracovného času", "leaves": ["Maximálny týždenný pracovný čas: 40 hodín – základný, 38¾ hodiny – dvojzmenná prevádzka, 37½ hodiny – trojzmenná a nepretržitá prevádzka, 33½ hodiny – rizikové pracoviská", "Mladiství: max. 8 hodín denne, zákaz nadčasov a nočnej práce (s výnimkami)"] },
-      { "label": "Rovnomerné rozvrhnutie (§ 86 ZP)", "leaves": ["pracovný čas je rozvrhnutý rovnomerne na jednotlivé dni,", "max. 9 hodín denne,", "rozdiel medzi týždňami nesmie byť väčší ako 3 hodiny,", "vhodné pre stabilné prevádzky."] },
-      { "label": "Nerovnomerné rozvrhnutie (§ 87 ZP)", "leaves": ["pracovná zmena môže trvať až 12 hodín,", "priemerný týždenný pracovný čas nesmie prekročiť zákonný limit v období: 4 mesiacov, alebo 12 mesiacov (pri kolektívnej zmluve)", "Používa sa pri sezónnych, nepretržitých alebo kolísavých prevádzkach."] },
-      { "label": "Konto pracovného času (§ 87a ZP)", "leaves": ["Osobitný režim nerovnomerného rozvrhnutia", "vytvára sa kladný účet (viac odpracovaných hodín) a záporný účet (menej odpracovaných hodín)", "zamestnávateľ musí poskytovať stabilnú základnú mzdu", "vedie účet konta pracovného času", "vyrovnávacie obdobie max. 30 mesiacov", "cieľ: flexibilita pri kolísaní práce"] },
-      { "label": "Tehotné ženy", "leaves": ["Osobitná ochrana: zákaz nočnej práce (§ 98 ZP), zákaz nadčasov (§ 97 ZP), povinnosť preradiť na dennú prácu, povinnosť preradiť pri práci ohrozujúcej zdravie matky alebo plodu"] },
-      { "label": "Rodičia detí", "leaves": ["Rodičia detí mladších ako 15 rokov", "právo žiadať kratší pracovný čas alebo inú úpravu pracovného času (§ 49 ZP)", "zamestnávateľ musí vyhovieť, ak tomu nebránia vážne prevádzkové dôvody", "ochrana pri nočnej práci a nadčasoch"] }
+      {
+        "label": "Pracovný čas (§ 85 ZP)",
+        "leaves": [
+          "Pracovný čas je čas, v ktorom je zamestnanec: k dispozícii zamestnávateľovi, vykonáva prácu, plní povinnosti podľa pracovnej zmluvy",
+          "Je to kogentná úprava – nemožno sa odchýliť v neprospech zamestnanca."
+        ]
+      },
+      {
+        "label": "Limity pracovného času",
+        "leaves": [
+          "Maximálny týždenný pracovný čas: 40 hodín – základný, 38¾ hodiny – dvojzmenná prevádzka, 37½ hodiny – trojzmenná a nepretržitá prevádzka, 33½ hodiny – rizikové pracoviská",
+          "Mladiství: max. 8 hodín denne, zákaz nadčasov a nočnej práce (s výnimkami)"
+        ]
+      },
+      {
+        "label": "Rovnomerné rozvrhnutie (§ 86 ZP)",
+        "leaves": [
+          "pracovný čas je rozvrhnutý rovnomerne na jednotlivé dni,",
+          "max. 9 hodín denne,",
+          "rozdiel medzi týždňami nesmie byť väčší ako 3 hodiny,",
+          "vhodné pre stabilné prevádzky."
+        ]
+      },
+      {
+        "label": "Nerovnomerné rozvrhnutie (§ 87 ZP)",
+        "leaves": [
+          "pracovná zmena môže trvať až 12 hodín,",
+          "priemerný týždenný pracovný čas nesmie prekročiť zákonný limit v období: 4 mesiacov, alebo 12 mesiacov (pri kolektívnej zmluve)",
+          "Používa sa pri sezónnych, nepretržitých alebo kolísavých prevádzkach."
+        ]
+      },
+      {
+        "label": "Konto pracovného času (§ 87a ZP)",
+        "leaves": [
+          "Osobitný režim nerovnomerného rozvrhnutia",
+          "vytvára sa kladný účet (viac odpracovaných hodín) a záporný účet (menej odpracovaných hodín)",
+          "zamestnávateľ musí poskytovať stabilnú základnú mzdu",
+          "vedie účet konta pracovného času",
+          "vyrovnávacie obdobie max. 30 mesiacov",
+          "cieľ: flexibilita pri kolísaní práce"
+        ]
+      },
+      {
+        "label": "Tehotné ženy",
+        "leaves": [
+          "Osobitná ochrana: zákaz nočnej práce (§ 98 ZP), zákaz nadčasov (§ 97 ZP), povinnosť preradiť na dennú prácu, povinnosť preradiť pri práci ohrozujúcej zdravie matky alebo plodu"
+        ]
+      },
+      {
+        "label": "Rodičia detí",
+        "leaves": [
+          "Rodičia detí mladších ako 15 rokov",
+          "právo žiadať kratší pracovný čas alebo inú úpravu pracovného času (§ 49 ZP)",
+          "zamestnávateľ musí vyhovieť, ak tomu nebránia vážne prevádzkové dôvody",
+          "ochrana pri nočnej práci a nadčasoch"
+        ]
+      }
     ]
   }
 }
