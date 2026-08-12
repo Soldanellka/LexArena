@@ -82,11 +82,11 @@
   ],
   "tiles": [
     {
-      "term": "Odklad exekúcie (§ 56 Exekučného poriadku)",
+      "term": "Odklad exekúcie (§ 61h a nasl. EP)",
       "definition": "Dočasné odloženie vykonania exekúcie za splnenia zákonných podmienok."
     },
     {
-      "term": "Zastavenie exekúcie (§ 57 Exekučného poriadku)",
+      "term": "Zastavenie exekúcie (§ 61k súdom, § 61n exekútorom)",
       "definition": "Definitívne skončenie exekučného konania z dôvodov ustanovených zákonom."
     },
     {
@@ -185,10 +185,10 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Odklad (§ 56 EP) × Zastavenie (§ 57 EP) × dočasnosť × definitívnosť × ochrana povinného aj oprávneného",
+    "center": "Odklad (§ 61h EP) × Zastavenie (§ 61k / § 61n EP) × dočasnosť × definitívnosť × ochrana povinného aj oprávneného",
     "branches": [
       {
-        "label": "Odklad exekúcie (§ 56 EP)",
+        "label": "Odklad exekúcie (§ 61h a nasl. EP)",
         "leaves": [
           "dočasné prerušenie vykonávania exekúcie",
           "exekúcia je nariadená, ale nevykonáva sa",
@@ -213,7 +213,7 @@
         ]
       },
       {
-        "label": "Zastavenie exekúcie (§ 57 EP)",
+        "label": "Zastavenie exekúcie (§ 61k súdom, § 61n exekútorom)",
         "leaves": [
           "definitívne skončenie exekučného konania",
           "exekúcia sa už nevykonáva a exekútor nemôže pokračovať",

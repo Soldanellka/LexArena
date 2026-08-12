@@ -62,7 +62,7 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Práve tu je zásadný rozdiel oproti CSP, kde sa vo veci samej rozhoduje rozsudkom.",
+        "correct": "Správne. Spravidla uznesením – tu je zásadný rozdiel oproti CSP. Výnimkou sú statusové veci (rozvod, rodičovstvo, osvojenie, spôsobilosť na právne úkony), kde súd rozhoduje rozsudkom (§ 45 CMP).",
         "wrong": "Nesprávne. Nález vydáva výlučne Ústavný súd SR a neformálny záznam nie je platnou formou súdneho rozhodnutia."
       }
     },
@@ -95,7 +95,7 @@
       "definition": "Výraznejšie uplatnené v CMP než v CSP."
     },
     {
-      "term": "Uznesenie vo veci samej",
+      "term": "Uznesenie vo veci samej (výnimka: statusové veci rozsudkom, § 45 CMP)",
       "definition": "Typická forma rozhodnutia v mimosporovom konaní podľa CMP."
     },
     {
@@ -159,7 +159,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Vo veci samej sa v mimosporovom konaní rozhoduje uznesením.",
+            "correct": "Správne. Vo veci samej sa v mimosporovom konaní rozhoduje spravidla uznesením; v statusových veciach však rozsudkom (§ 45 CMP).",
             "wrong": "Nesprávne. Rozsudok je formou rozhodnutia v CSP a nález vydáva iba Ústavný súd SR."
           }
         },
@@ -231,7 +231,7 @@
           "príslušnosť sa skúma počas celého konania",
           "konanie môže prebehnúť bez pojednávania, ak to zákon umožňuje",
           "priznáva sa procesná spôsobilosť inak nespôsobilým subjektom vo vybraných konaniach",
-          "vo veci samej sa rozhoduje uznesením, nie rozsudkom",
+          "vo veci samej sa rozhoduje spravidla uznesením; v statusových veciach rozsudkom (§ 45 CMP)",
           "vylúčenie prvkov formálnosti: – koncentrácia – rozkazné konanie – kontumácia",
           "zvýšená ochrana maloletých, osôb s obmedzenou spôsobilosťou a zraniteľných osôb"
         ]

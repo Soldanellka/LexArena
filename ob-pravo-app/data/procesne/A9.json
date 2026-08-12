@@ -93,7 +93,7 @@
     },
     {
       "term": "Procesný opatrovník",
-      "definition": "Zástupca ustanovený súdom, napríklad ak je pobyt účastníka neznámy (§ 78 CSP)."
+      "definition": "Zástupca ustanovený súdom, napríklad ak je pobyt účastníka neznámy (§§ 68–72 CSP)."
     },
     {
       "term": "Kolízny opatrovník",
@@ -228,7 +228,7 @@
         ]
       },
       {
-        "label": "Procesný opatrovník (§ 78 CSP)",
+        "label": "Procesný opatrovník (§§ 68–72 CSP)",
         "leaves": [
           "súd ho ustanoví, ak je pobyt účastníka neznámy",
           "ak nemožno doručovať na známu adresu v cudzine",

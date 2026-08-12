@@ -116,7 +116,7 @@
         {
           "question": "Aký prostriedok súdnej ochrany môže využiť?",
           "options": [
-            "Podať správnu žalobu na príslušný správny súd (krajský súd)",
+            "Podať správnu žalobu na príslušný správny súd (Bratislava, Banská Bystrica alebo Košice)",
             "Podať žalobu na všeobecný súd podľa CSP ako v bežnom obchodnom spore",
             "Musí sa obrátiť rovno na Najvyšší súd SR"
           ],
@@ -186,7 +186,7 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Správne súdnictvo – kontrola verejnej správy × SSP × krajské súdy × NSS SR × žalobné body",
+    "center": "Správne súdnictvo – kontrola verejnej správy × SSP × správne súdy × NSS SR × žalobné body",
     "branches": [
       {
         "label": "Účel správneho súdnictva",
@@ -233,9 +233,9 @@
       {
         "label": "Sústava správneho súdnictva",
         "leaves": [
-          "Krajské súdy: správne súdy prvej inštancie, preskúmavajú zákonnosť rozhodnutí a postupov správnych orgánov",
+          "Správne súdy (Bratislava, Banská Bystrica, Košice): prvá a jediná inštancia od 1. 6. 2023, preskúmavajú zákonnosť rozhodnutí a postupov správnych orgánov",
           "Najvyšší správny súd SR: od 1. 8. 2021 je kasačným súdom",
-          "rozhoduje o kasačných sťažnostiach proti rozhodnutiam krajských súdov",
+          "rozhoduje o kasačných sťažnostiach proti rozhodnutiam správnych súdov",
           "pôsobí aj ako súd prvej inštancie v osobitných veciach (voľby, politické strany)"
         ]
       },

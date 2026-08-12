@@ -20,7 +20,7 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Súčasný CSP zjednotil terminológiu – opravným prostriedkom je aj proti uzneseniu odvolanie, nie samostatná sťažnosť.",
+        "correct": "Správne. Proti uzneseniu sudcu je opravným prostriedkom odvolanie (§ 357 CSP). Sťažnosť CSP pozná tiež, ale slúži proti uzneseniam vyššieho súdneho úradníka (§ 239 a nasl.) a rozhoduje o nej sudca prvej inštancie (§ 248).",
         "wrong": "Nesprávne. Sťažnosť ako civilnoprocesný opravný prostriedok patrí k terminológii zrušeného OSP; dovolanie a kasačná sťažnosť sú mimoriadne opravné prostriedky iného druhu."
       }
     },
@@ -123,7 +123,7 @@
           "correct": 0,
           "explanation": {
             "correct": "Správne. Zastavenie konania patrí medzi uznesenia, proti ktorým súčasný CSP pripúšťa odvolanie.",
-            "wrong": "Nesprávne. Sťažnosť už súčasná úprava nepozná a dovolanie prichádza do úvahy až proti právoplatnému rozhodnutiu odvolacieho súdu."
+            "wrong": "Nesprávne. Sťažnosť podľa CSP smeruje proti uzneseniam vyššieho súdneho úradníka, nie proti uzneseniu sudcu; dovolanie prichádza do úvahy až proti právoplatnému rozhodnutiu odvolacieho súdu."
           }
         },
         {

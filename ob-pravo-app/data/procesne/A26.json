@@ -95,8 +95,8 @@
       "definition": "Riadny prostriedok obrany žalovaného proti platobnému rozkazu; jeho podanie ruší rozkaz v celom rozsahu."
     },
     {
-      "term": "Zmenkový a šekový platobný rozkaz",
-      "definition": "Osobitný druh platobného rozkazu vydávaný na základe zmenky alebo šeku."
+      "term": "Európsky platobný rozkaz (EPR)",
+      "definition": "Cezhraničné nesporné peňažné nároky podľa nariadenia (ES) č. 1896/2006 – nezamieňať s upomínacím konaním ani so zrušeným zmenkovým platobným rozkazom."
     },
     {
       "term": "Zjednodušené konania",
@@ -201,7 +201,8 @@
         "label": "Skrátené rozhodnutia",
         "leaves": [
           "platobný rozkaz (PR)",
-          "upomínací platobný rozkaz (EPR / UPR)",
+          "upomínací platobný rozkaz (UPR) – zákon č. 307/2016 Z. z., OS Banská Bystrica",
+          "európsky platobný rozkaz (EPR) – nariadenie (ES) č. 1896/2006, cezhraničné veci",
           "kontumačný rozsudok (KR) – rozsudok pre zmeškanie",
           "rozsudok pre uznanie",
           "rozsudok pre vzdanie sa nároku"
@@ -220,11 +221,11 @@
         ]
       },
       {
-        "label": "Zmenkový a šekový platobný rozkaz",
+        "label": "Európsky platobný rozkaz (EPR)",
         "leaves": [
-          "osobitný druh PR",
-          "vydáva sa na základe zmenky alebo šeku",
-          "tieto listiny majú osobitnú dôkaznú silu"
+          "nariadenie (ES) č. 1896/2006 – cezhraničné nesporné peňažné nároky",
+          "obranou žalovaného je odpor, po ktorom sa pokračuje riadnym konaním",
+          "zmenkový a šekový platobný rozkaz CSP nepozná – bol zrušený rekodifikáciou"
         ]
       },
       {

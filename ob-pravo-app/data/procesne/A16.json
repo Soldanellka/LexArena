@@ -20,7 +20,7 @@
       ],
       "correct": 0,
       "explanation": {
-        "correct": "Správne. Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 143 CSP).",
+        "correct": "Správne. Konanie je začaté dňom, keď žaloba dôjde vecne a miestne príslušnému súdu (§ 156 CSP).",
         "wrong": "Nesprávne. Doručenie žalovanému, nariadenie pojednávania ani vydanie rozsudku nie sú okamihom začatia konania."
       }
     },
@@ -123,7 +123,7 @@
           "correct": 0,
           "explanation": {
             "correct": "Správne. Rozhodujúci je deň, keď žaloba skutočne dôjde príslušnému súdu, nie deň jej podania na pošte.",
-            "wrong": "Nesprávne. Podanie na poštu ani doručenie žalovanému nie sú okamihom začatia konania podľa § 143 CSP."
+            "wrong": "Nesprávne. Podanie na poštu ani doručenie žalovanému nie sú okamihom začatia konania podľa § 156 CSP."
           }
         },
         {

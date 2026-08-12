@@ -42,7 +42,7 @@
       "question": "Čo je kasačná sťažnosť?",
       "options": [
         "Riadny opravný prostriedok v sporovom konaní podľa CSP",
-        "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu krajského súdu v správnom súdnictve, o ktorom rozhoduje Najvyšší správny súd SR",
+        "Mimoriadny opravný prostriedok proti právoplatnému rozhodnutiu správneho súdu v správnom súdnictve, o ktorom rozhoduje Najvyšší správny súd SR",
         "Opravný prostriedok proti rozhodnutiu notára",
         "Prostriedok použiteľný len v exekučnom konaní"
       ],
@@ -96,7 +96,7 @@
     },
     {
       "term": "Kasačná sťažnosť",
-      "definition": "Mimoriadny opravný prostriedok v správnom súdnictve proti rozhodnutiu krajského súdu, rozhoduje Najvyšší správny súd SR."
+      "definition": "Mimoriadny opravný prostriedok v správnom súdnictve proti rozhodnutiu správneho súdu, rozhoduje Najvyšší správny súd SR."
     },
     {
       "term": "Kasačný princíp",
@@ -146,7 +146,7 @@
       "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Účastník správneho súdneho konania nesúhlasí s právoplatným rozsudkom krajského súdu, ktorý ako správny súd preskúmaval rozhodnutie správneho orgánu.",
+          "question": "Účastník správneho súdneho konania nesúhlasí s právoplatným rozsudkom správneho súdu, ktorý preskúmaval rozhodnutie správneho orgánu.",
           "options": [],
           "correct": 0
         },
@@ -155,7 +155,7 @@
           "options": [
             "Kasačnú sťažnosť na Najvyšší správny súd SR",
             "Dovolanie na Najvyšší súd SR",
-            "Odvolanie na ten istý krajský súd"
+            "Odvolanie na ten istý správny súd"
           ],
           "correct": 0,
           "explanation": {
@@ -164,10 +164,10 @@
           }
         },
         {
-          "question": "Môže Najvyšší správny súd SR pri kasačnej sťažnosti sám vo veci rozhodnúť namiesto krajského súdu?",
+          "question": "Môže Najvyšší správny súd SR pri kasačnej sťažnosti sám vo veci rozhodnúť namiesto správneho súdu?",
           "options": [
             "Spravidla nie, kasačný princíp znamená, že súd rozhodnutie zruší, nie že ho sám nahradí vlastným rozhodnutím vo veci",
-            "Áno, vždy sám rozhodne namiesto krajského súdu",
+            "Áno, vždy sám rozhodne namiesto správneho súdu",
             "Áno, ale iba ak s tým súhlasia obe strany"
           ],
           "correct": 0,
@@ -221,7 +221,7 @@
         "leaves": [
           "Povaha",
           "kasačná sťažnosť — mimoriadny opravný prostriedok v správnom súdnictve",
-          "smeruje proti právoplatnému rozhodnutiu krajského súdu (rozsudok aj uznesenie)",
+          "smeruje proti právoplatnému rozhodnutiu správneho súdu (rozsudok aj uznesenie)",
           "rozhoduje Najvyšší správny súd SR",
           "obligatórne zastúpenie advokátom",
           "lehota: 1 mesiac od doručenia rozhodnutia",
@@ -236,7 +236,7 @@
           "kasačný súd môže fakultatívne odložiť vykonateľnosť",
           "Kasačný princíp",
           "kasačný súd zruší napadnuté rozhodnutie",
-          "vec vráti krajskému súdu na ďalšie konanie",
+          "vec vráti správnemu súdu na ďalšie konanie",
           "spravidla sám nerozhoduje vo veci (na rozdiel od civilného odvolania)",
           "cieľ: zabezpečiť zákonnosť rozhodovania správnych súdov a zachovať dvojstupňovosť konania"
         ]

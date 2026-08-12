@@ -4,9 +4,9 @@
   "schemaVersion": "1.1",
   "tags": [
     "statusové veci",
-    "obmedzenie svojprávnosti",
+    "obmedzenie spôsobilosti na právne úkony",
     "vyhlásenie za mŕtveho",
-    "navrátenie svojprávnosti"
+    "navrátenie spôsobilosti na právne úkony"
   ],
   "summary": "# A37 — Konania v niektorých statusových veciach fyzických osôb\n\nStatusové veci sú mimosporové konania podľa CMP týkajúce sa osobného stavu fyzickej osoby. Rozhodnutia majú účinky voči každému (erga omnes), preto CMP poskytuje zvýšenú procesnú ochranu dotknutej osoby. Patria sem najmä: konanie o spôsobilosti na právne úkony (obmedzenie a jeho zmena/navrátenie), vyhlásenie za mŕtveho a konanie o určení dňa smrti (dôkaz smrti); v širšom zmysle aj detenčné (o prípustnosti prevzatia do zdravotníckeho zariadenia) a opatrovnícke konania.\n\n1. Konanie o spôsobilosti na právne úkony (§ 231 a nasl. CMP)\nSúd môže spôsobilosť fyzickej osoby obmedziť len v rozsahu, v akom pre duševnú poruchu nie je schopná robiť určité právne úkony; zásah musí byť primeraný, nevyhnutný a individualizovaný.\nProcesné záruky: povinné znalecké dokazovanie (výsluch znalca), spravidla výsluch a povinné vzhliadnutie dotknutej osoby súdom (ak to jej stav umožňuje), dôsledné zisťovanie skutkového stavu (vyšetrovacia zásada), možnosť účasti dôverníka; dotknutá osoba má v konaní procesnú spôsobilosť v plnom rozsahu. Ak dôjde k obmedzeniu, súd musí presne vymedziť jeho rozsah a ustanoviť opatrovníka.\nForma rozhodnutia: ROZSUDOK (statusové rozhodnutie s konštitutívnymi účinkami), nie uznesenie. Rozhodnutie sa eviduje v notárskom centrálnom registri vedenom Notárskou komorou SR.\nZákladná charakteristika: začiatok na návrh alebo aj bez návrhu · účastníci: dotknutá osoba, navrhovateľ, prípadne opatrovník a prokurátor · príslušnosť: okresný súd · účinky: erga omnes.\n\n2. Zmena a navrátenie spôsobilosti\nAk sa pomery zmenia alebo dôvody obmedzenia pominú, súd na návrh (alebo aj bez návrhu) obmedzenie zmení alebo zruší (vráti plnú spôsobilosť). Opätovne skúma zdravotný stav a vykonáva znalecké dokazovanie; rozhoduje rozsudkom, s účinkami erga omnes.\n\n3. Vyhlásenie za mŕtveho\nPrichádza do úvahy, ak osoba zmizla za okolností ohrozujúcich život alebo o nej dlhodobo niet správ a uplynula zákonná lehota. Rozhodnutie má účinky obdobné smrti (dedičské pomery, zánik manželstva, majetkové vzťahy).\nForma: uznesenie · účinky: erga omnes.\n\n4. Konanie o určení dňa smrti (dôkaz smrti)\nVedie sa, ak je isté, že osoba zomrela, no jej smrť nemožno preukázať obvyklým spôsobom (napr. chýba zápis do matriky). Súd zisťuje smrť dokazovaním (svedkovia, listiny, znalecké posudky); rozhodnutie nahrádza matričný zápis o úmrtí a pôsobí erga omnes. Forma: uznesenie.\n\nZapamätaj si (štátnicové jadro)\n- statusové veci pôsobia erga omnes; CMP poskytuje zvýšenú ochranu dotknutej osoby\n- obmedzenie spôsobilosti len v rozsahu zodpovedajúcom duševnej poruche (primerané, nevyhnutné)\n- konanie o spôsobilosti sa rozhoduje ROZSUDKOM (nie uznesením); vyhlásenie za mŕtveho a dôkaz smrti uznesením\n- povinné znalecké dokazovanie a spravidla vzhliadnutie/výsluch dotknutej osoby\n- navrátenie/zmena spôsobilosti, ak sa pomery zmenia alebo dôvody pominú\n- vyhlásenie za mŕtveho má účinky smrti (najmä dedičské)\n\nZdroj: CMP (161/2015 Z. z.), § 231 a nasl. (spôsobilosť), § 220 a nasl. (vyhlásenie za mŕtveho); Občiansky zákonník (40/1964 Zb.), § 10; Števček – Ficová – Baricová a kol.: Civilný mimosporový poriadok. Komentár (C. H. Beck).",
   "quiz": [
@@ -39,7 +39,7 @@
       }
     },
     {
-      "question": "Čo musí súd urobiť pred rozhodnutím o obmedzení svojprávnosti?",
+      "question": "Čo musí súd urobiť pred rozhodnutím o obmedzení spôsobilosti na právne úkony?",
       "options": [
         "Vypočuť znalca a spravidla aj osobne vypočuť dotknutú osobu, ak to jej stav umožňuje",
         "Rozhodnúť bez akéhokoľvek dokazovania",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "question": "V akom rozsahu môže súd obmedziť svojprávnosť?",
+      "question": "V akom rozsahu môže súd obmedziť spôsobilosť na právne úkony?",
       "options": [
         "Vždy v plnom rozsahu bez ohľadu na stav osoby",
         "Len v rozsahu, v akom osoba pre duševnú poruchu nie je schopná robiť právne úkony",
@@ -87,29 +87,29 @@
       "definition": "Konania týkajúce sa osobného stavu fyzickej osoby s účinkami voči všetkým (erga omnes)."
     },
     {
-      "term": "Konanie o obmedzení svojprávnosti",
+      "term": "Konanie o obmedzení spôsobilosti na právne úkony",
       "definition": "Súd obmedzuje spôsobilosť na právne úkony len v rozsahu zodpovedajúcom duševnej poruche osoby."
     },
     {
       "term": "Vypočutie znalca a dotknutej osoby",
-      "definition": "Povinná súčasť konania o obmedzení svojprávnosti."
+      "definition": "Povinná súčasť konania o obmedzení spôsobilosti na právne úkony."
     },
     {
       "term": "Konanie o vyhlásení za mŕtveho",
       "definition": "Rieši situáciu dlhodobej nezvestnosti alebo zmiznutia za život ohrozujúcich okolností."
     },
     {
-      "term": "Navrátenie svojprávnosti",
-      "definition": "Konanie, ktorým možno pôvodne obmedzenú svojprávnosť opäť vrátiť, ak pominuli dôvody obmedzenia."
+      "term": "Navrátenie spôsobilosti na právne úkony",
+      "definition": "Konanie, ktorým možno pôvodne obmedzenú spôsobilosť na právne úkony opäť vrátiť, ak pominuli dôvody obmedzenia."
     }
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Návrh na obmedzenie svojprávnosti",
+      "title": "Prípad 1 – Návrh na obmedzenie spôsobilosti na právne úkony",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Rodina podá návrh na obmedzenie svojprávnosti príbuzného trpiaceho ťažkou duševnou poruchou, pre ktorú nie je schopný spravovať svoj majetok.",
+          "question": "Rodina podá návrh na obmedzenie spôsobilosti na právne úkony príbuzného trpiaceho ťažkou duševnou poruchou, pre ktorú nie je schopný spravovať svoj majetok.",
           "options": [],
           "correct": 0
         },
@@ -127,7 +127,7 @@
           }
         },
         {
-          "question": "V akom rozsahu môže súd svojprávnosť obmedziť?",
+          "question": "V akom rozsahu môže súd spôsobilosť na právne úkony obmedziť?",
           "options": [
             "Len v rozsahu zodpovedajúcom neschopnosti osoby robiť právne úkony pre jej duševnú poruchu",
             "Vždy v plnom rozsahu bez výnimky",
@@ -135,7 +135,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zásah do svojprávnosti musí byť primeraný skutočnému stavu dotknutej osoby.",
+            "correct": "Správne. Zásah do spôsobilosti na právne úkony musí byť primeraný skutočnému stavu dotknutej osoby.",
             "wrong": "Nesprávne. Plošné obmedzenie bez ohľadu na skutočný stav ani rozsah určený návrhom rodiny nezodpovedajú zákonnej úprave."
           }
         }
@@ -168,12 +168,12 @@
           "options": [
             "Nastávajú účinky obdobné smrti osoby (napr. na dedičské pomery)",
             "Nemá žiadny právny účinok",
-            "Osoba je tým automaticky vyhlásená za nesvojprávnu"
+            "Osoba je tým automaticky pozbavená spôsobilosti na právne úkony"
           ],
           "correct": 0,
           "explanation": {
             "correct": "Správne. Vyhlásenie za mŕtveho má zásadné právne účinky obdobné skutočnej smrti, napríklad pre dedičské konanie.",
-            "wrong": "Nesprávne. Rozhodnutie nie je bez účinku a netýka sa priamo otázky svojprávnosti."
+            "wrong": "Nesprávne. Rozhodnutie nie je bez účinku a netýka sa priamo otázky spôsobilosti na právne úkony."
           }
         }
       ]
@@ -186,7 +186,7 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Statusové konania – svojprávnosť × navrátenie × vyhlásenie za mŕtveho × detenčné × opatrovnícke",
+    "center": "Statusové konania – spôsobilosť na právne úkony × navrátenie × vyhlásenie za mŕtveho × detenčné × opatrovnícke",
     "branches": [
       {
         "label": "Ktoré konania sem patria",
@@ -205,7 +205,8 @@
           "povinný výsluch znalca",
           "vzhliadnutie dotknutej osoby súdom",
           "dôsledné zisťovanie skutkového stavu (vyšetrovacia zásada)",
-          "obmedzenie svojprávnosti je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované"
+          "obmedzenie spôsobilosti na právne úkony je zásah do základných práv → musí byť primerané, nevyhnutné, individualizované",
+          "forma rozhodnutia: rozsudok (statusová vec, § 45 CMP)"
         ]
       },
       {
@@ -214,16 +215,16 @@
           "zákon priznáva procesnú spôsobilosť aj inak nespôsobilým subjektom",
           "zvýšená poučovacia povinnosť súdu",
           "dotknutá osoba si môže zvoliť dôverníka",
-          "evidencia rozhodnutia v Centrálnom notárskom registri listín (CNRL)"
+          "evidencia rozhodnutia v notárskom centrálnom registri"
         ]
       },
       {
-        "label": "Navrátenie svojprávnosti",
+        "label": "Navrátenie spôsobilosti na právne úkony",
         "leaves": [
-          "ak dôvody obmedzenia pominú, možno podať návrh na navrátenie svojprávnosti",
+          "ak dôvody obmedzenia pominú, možno podať návrh na navrátenie spôsobilosti na právne úkony",
           "súd opätovne skúma zdravotný stav",
           "vykonáva znalecké dokazovanie",
-          "rozhoduje uznesením"
+          "rozhoduje rozsudkom (statusová vec, § 45 CMP)"
         ]
       },
       {
@@ -240,7 +241,7 @@
       {
         "label": "Forma rozhodnutia a účinky",
         "leaves": [
-          "rozhoduje sa uznesením, v niektorých konaniach rozsudkom",
+          "o spôsobilosti na právne úkony (obmedzenie aj navrátenie) sa rozhoduje rozsudkom (§ 45 CMP); vyhlásenie za mŕtveho a dôkaz smrti uznesením",
           "statusové rozhodnutia pôsobia erga omnes",
           "preto CMP kladie dôraz na zvýšenú procesnú ochranu a odborné dokazovanie"
         ]

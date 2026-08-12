@@ -25,7 +25,7 @@
       }
     },
     {
-      "question": "Čo je medzitýmny rozsudok (§ 216 CSP)?",
+      "question": "Čo je medzitýmny rozsudok (§ 214 CSP)?",
       "options": [
         "Rozsudok riešiaci základ nároku, pričom o jeho výške rozhodne súd neskôr",
         "Rozsudok riešiaci iba trovy konania",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "question": "Čo je čiastočný rozsudok (§ 217 CSP)?",
+      "question": "Čo je čiastočný rozsudok (§ 215 CSP)?",
       "options": [
         "Rozsudok, ktorým súd rozhodne len o časti prejednávanej veci, ak je táto časť spôsobilá na samostatné rozhodnutie",
         "Rozsudok vydaný polovicou senátu",
@@ -87,11 +87,11 @@
       "definition": "Meritórne rozhodnutie súdu vo veci samej, vydávané v mene Slovenskej republiky."
     },
     {
-      "term": "Medzitýmny rozsudok (§ 216 CSP)",
+      "term": "Medzitýmny rozsudok (§ 214 CSP)",
       "definition": "Rieši základ nároku, o jeho výške rozhodne súd neskôr."
     },
     {
-      "term": "Čiastočný rozsudok (§ 217 CSP)",
+      "term": "Čiastočný rozsudok (§ 215 CSP)",
       "definition": "Rozhoduje len o časti veci spôsobilej na samostatné rozhodnutie."
     },
     {
@@ -201,8 +201,8 @@
         "label": "Druhy rozsudkov",
         "leaves": [
           "Konečný rozsudok – rozhoduje o celom predmete konania",
-          "Čiastočný rozsudok (§ 217 CSP) – rozhoduje o časti veci spôsobilej na samostatné prejednanie (viaceré nároky, viacerí žalovaní)",
-          "Medzitýmny rozsudok (§ 216 CSP) – rozhoduje o základe nároku, o výške sa rozhodne až následne; musí obsahovať úplné právne posúdenie základu",
+          "Čiastočný rozsudok (§ 215 CSP) – rozhoduje o časti veci spôsobilej na samostatné prejednanie (viaceré nároky, viacerí žalovaní)",
+          "Medzitýmny rozsudok (§ 214 CSP) – rozhoduje o základe nároku, o výške sa rozhodne až následne; musí obsahovať úplné právne posúdenie základu",
           "Prvoinštančný rozsudok",
           "Druhoinštančný rozsudok (odvolací súd môže rozhodnúť meritórne)"
         ]

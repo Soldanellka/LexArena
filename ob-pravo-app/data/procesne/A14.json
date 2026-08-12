@@ -63,7 +63,7 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Podľa § 142 CSP môže žalobca žalobu zmeniť len so súhlasom súdu, ktorý ho môže odoprieť, ak by to bránilo hospodárnemu priebehu konania.",
+        "correct": "Správne. Podľa § 139 CSP môže žalobca žalobu zmeniť len so súhlasom súdu, ktorý ho môže odoprieť, ak by to bránilo hospodárnemu priebehu konania.",
         "wrong": "Nesprávne. Zmena žaloby nie je ani úplne voľná, ani úplne vylúčená – vyžaduje procesný súhlas súdu."
       }
     },
@@ -100,7 +100,7 @@
       "definition": "Žaloba o určenie, či tu právo alebo právny vzťah je, alebo nie je, pri naliehavom právnom záujme (§ 137 písm. c) CSP)."
     },
     {
-      "term": "Zmena žaloby (§ 142 CSP)",
+      "term": "Zmena žaloby (§ 139 CSP)",
       "definition": "Zmenu žaloby môže žalobca urobiť len so súhlasom súdu."
     }
   ],
@@ -160,7 +160,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Rozšírenie žaloby je jej zmenou v zmysle § 142 CSP a vyžaduje súhlas súdu.",
+            "correct": "Správne. Rozšírenie žaloby je jej zmenou v zmysle § 139 CSP a vyžaduje súhlas súdu.",
             "wrong": "Nesprávne. Zmena žaloby nie je ani úplne voľná, ani absolútne vylúčená."
           }
         },

@@ -40,17 +40,17 @@
       }
     },
     {
-      "question": "Čo je prorogácia príslušnosti?",
+      "question": "Možno si v civilnom spore dohodou strán určiť miestne príslušný súd (prorogácia)?",
       "options": [
-        "Postúpenie veci inému súdu rozhodnutím súdu",
-        "Dohodou strán určená miestna príslušnosť iného súdu",
-        "Odvolanie sa na vyšší súd",
-        "Námietka miestnej nepríslušnosti"
+        "Miestna príslušnosť sa určuje podľa zákona; vnútroštátna dohoda o príslušnosti (prorogácia) nie je v CSP prípustná",
+        "Dohodou strán možno určiť miestnu príslušnosť ktoréhokoľvek súdu",
+        "Áno, ale len so súhlasom nadriadeného súdu",
+        "Áno, prorogácia je jedným zo spôsobov určenia vecnej príslušnosti"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Prorogácia (§ 17 CSP) umožňuje stranám dohodou písomne určiť miestnu príslušnosť iného súdu, než by bola inak príslušná.",
-        "wrong": "Nesprávne. Prorogácia je dohoda strán o miestnej príslušnosti – nie postúpenie veci ani odvolanie."
+        "correct": "Správne. CSP vnútroštátnu prorogáciu zrušil – miestna príslušnosť sa určuje výlučne podľa zákona (§ 13 a nasl.). Dohoda o príslušnosti prichádza do úvahy len v cezhraničných veciach podľa nariadenia Brusel Ia.",
+        "wrong": "Nesprávne. Dohoda strán o vnútroštátnej miestnej príslušnosti dnes možná nie je a prorogácia sa nikdy netýkala vecnej príslušnosti."
       }
     },
     {
