@@ -198,7 +198,7 @@
         ]
       },
       {
-        "label": "Spôsobilosť dediť (§ 469 OZ)",
+        "label": "Dedičská nespôsobilosť (§ 469 OZ)",
         "leaves": [
           "dedič musí mať právnu subjektivitu",
           "nesmie existovať dôvod dedičskej nespôsobilosti",
@@ -215,7 +215,7 @@
         ]
       },
       {
-        "label": "Dedičská nespôsobilosť (§ 469a OZ)",
+        "label": "Vydedenie (§ 469a OZ)",
         "leaves": [
           "úmyselný trestný čin proti poručiteľovi, jeho manželovi, deťom alebo rodičom",
           "závažné porušenie povinností voči poručiteľovi",

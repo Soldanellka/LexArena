@@ -53,10 +53,10 @@
         "Najvyšší súd",
         "Ústavný súd"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. Spory o ochranu osobnosti podľa § 11 OZ patria do vecnej príslušnosti krajských súdov (§ 22 CSP).",
-        "wrong": "Nesprávne. Ide o výnimočnú vecnú príslušnosť krajského súdu v prvom stupni."
+        "correct": "Správne. Spory o ochranu osobnosti prejednáva v prvej inštancii okresný súd; krajský súd je súdom odvolacím.",
+        "wrong": "Nesprávne. Krajský súd v týchto sporoch nekoná v prvej inštancii, ale ako súd odvolací."
       }
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "term": "Vecná príslušnosť",
-      "definition": "Spory o ochranu osobnosti patria krajskému súdu ako súdu prvej inštancie."
+      "definition": "Spory o ochranu osobnosti patria okresnému súdu ako súdu prvej inštancie; krajský súd je odvolací."
     },
     {
       "term": "Súhlas dotknutej osoby",
@@ -122,14 +122,14 @@
         {
           "question": "Na ktorý súd sa dotknutá osoba obráti v prvom stupni?",
           "options": [
+            "Na okresný súd (prvá inštancia)",
             "Na krajský súd",
-            "Na okresný súd",
             "Na Najvyšší súd SR"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Spory o ochranu osobnosti patria do vecnej príslušnosti krajského súdu.",
-            "wrong": "Nesprávne. Okresný súd ani Najvyšší súd SR nie sú príslušné na prvostupňové prejednanie tejto veci."
+            "correct": "Správne. V prvej inštancii koná okresný súd; krajský súd rozhoduje až o odvolaní.",
+            "wrong": "Nesprávne. Krajský súd ani Najvyšší súd SR vec v prvej inštancii neprejednávajú."
           }
         }
       ]
@@ -231,7 +231,7 @@
       {
         "label": "Konanie vo veciach ochrany osobnosti",
         "leaves": [
-          "právomoc: krajský súd ako súd prvého stupňa",
+          "príslušnosť: okresný súd ako súd prvej inštancie (od 1. 7. 2016 podľa CSP; krajský = odvolací)",
           "dôvod: závažnosť a osobitný charakter sporov",
           "rozhoduje o zásahu, následkoch, zadosťučinení"
         ]

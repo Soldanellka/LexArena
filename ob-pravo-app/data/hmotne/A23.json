@@ -32,17 +32,17 @@
       }
     },
     {
-      "question": "Čo je zodpovednosť za škodu spôsobenú zvieraťom (OZ)?",
+      "question": "Ako sa posudzuje škoda spôsobená zvieraťom podľa Občianskeho zákonníka?",
       "options": [
+        "Podľa všeobecnej zodpovednosti (§ 420 OZ); vlastník sa zbaví, ak preukáže, že škodu nezavinil",
+        "Podľa osobitnej objektívnej zodpovednosti za zvieratá v § 431 OZ",
         "Zodpovedá len ten, kto zviera vyprovokoval",
-        "Za škodu spôsobenú zvieraťom zodpovedá jeho vlastník bez ohľadu na zavinenie",
-        "Zodpovednosť nesie len osoba, ktorá zviera strážila",
         "Zodpovednosť nevzniká"
       ],
-      "correct": 1,
+      "correct": 0,
       "explanation": {
-        "correct": "Správne. OZ: za škodu spôsobenú zvieraťom zodpovedá jeho vlastník bez ohľadu na zavinenie. Zodpovednosť prešla na chovateľa, ak ho mal v opatere.",
-        "wrong": "Nesprávne. Zodpovednosť za škodu spôsobenú zvieraťom je objektívna – zavinenie vlastníka sa nevyžaduje."
+        "correct": "Správne. Slovenský OZ nemá osobitný režim zodpovednosti za zvieratá – postupuje sa podľa § 420 OZ s prezumovaným zavinením: vlastník sa zbaví, len ak preukáže, že škodu nezavinil. § 431 OZ upravuje stret prevádzok, nie zvieratá.",
+        "wrong": "Nesprávne. Osobitná objektívna zodpovednosť za zvieratá je česká úprava; § 431 OZ rieši stret prevádzok dvoch prevádzateľov."
       }
     },
     {
@@ -84,8 +84,8 @@
       "definition": "Nevyhnutná vlastnosť prevádzky alebo výlučné konanie poškodeného."
     },
     {
-      "term": "Zodpovednosť za škodu spôsobenú zvieraťom (OZ)",
-      "definition": "Zodpovedá vlastník (chovateľ) bez ohľadu na zavinenie."
+      "term": "Škoda spôsobená zvieraťom (§ 420 OZ)",
+      "definition": "OZ nemá osobitný režim pre zvieratá – zodpovedá sa podľa všeobecnej zodpovednosti s prezumovaným zavinením. § 431 OZ upravuje stret prevádzok."
     },
     {
       "term": "Zodpovednosť za pád z budovy (§ 422 OZ)",
@@ -146,27 +146,27 @@
         {
           "question": "Kto zodpovedá za takto spôsobenú škodu?",
           "options": [
-            "Vlastník (chovateľ) psa bez ohľadu na svoje zavinenie",
+            "Vlastník (chovateľ) psa podľa § 420 OZ, ak nepreukáže, že škodu nezavinil",
             "Iba samotný pes, čo je právne bezpredmetné",
-            "Nikto, ak vlastník preukáže, že psa dobre vychoval"
+            "Nikto, zviera nemá v OZ vlastný režim zodpovednosti"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Za škodu spôsobenú zvieraťom zodpovedá jeho vlastník objektívne.",
-            "wrong": "Nesprávne. Zviera nie je právnym subjektom a dobrá výchova psa vlastníka zodpovednosti nezbavuje."
+            "correct": "Správne. Uplatní sa všeobecná zodpovednosť podľa § 420 OZ s prezumovaným zavinením – vlastník sa zbaví, len ak preukáže, že škodu nezavinil.",
+            "wrong": "Nesprávne. Zviera nie je právnym subjektom, no absencia osobitného režimu neznamená, že za škodu nikto nezodpovedá."
           }
         },
         {
-          "question": "Ide o zodpovednosť založenú na zavinení, alebo objektívnu?",
+          "question": "Ide o objektívnu zodpovednosť, alebo o zodpovednosť so zavinením?",
           "options": [
-            "O objektívnu zodpovednosť, zavinenie vlastníka sa nevyžaduje",
-            "O zodpovednosť založenú výlučne na preukázanom zavinení vlastníka",
+            "O zodpovednosť so zavinením, ktoré sa však prezumuje – vlastník sa zbaví, ak preukáže, že škodu nezavinil",
+            "O objektívnu zodpovednosť, zavinenie vlastníka sa vôbec neskúma",
             "Táto situácia nie je občianskoprávne upravená"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Zodpovednosť podľa § 431 OZ je objektívna.",
-            "wrong": "Nesprávne. Preukázanie zavinenia sa nevyžaduje a situácia je výslovne upravená v § 431 OZ."
+            "correct": "Správne. Ide o § 420 OZ s prezumovaným zavinením; vlastník sa vyviní preukázaním, že škodu nezavinil.",
+            "wrong": "Nesprávne. Osobitná objektívna zodpovednosť za zvieratá v slovenskom OZ nie je, no situácia upravená je – všeobecnou zodpovednosťou."
           }
         }
       ]
@@ -179,6 +179,7 @@
     "accessed": "2026-01"
   },
   "spider": {
+    "center": "Osobitné režimy zodpovednosti za škodu (objektívna zodpovednosť, posilnená ochrana poškodeného)",
     "branches": [
       {
         "label": "Prevádzková činnosť (§ 420a OZ)",
@@ -206,11 +207,12 @@
         ]
       },
       {
-        "label": "Škoda spôsobená zvieraťom (OZ)",
+        "label": "Škoda z prevádzky dopravných prostriedkov (§§ 427–431 OZ)",
         "leaves": [
-          "zodpovedá ten, kto zviera držal alebo nad ním vykonával dohľad",
-          "objektívna zodpovednosť",
-          "liberačný dôvod: preukázanie, že dohľad nezanedbal"
+          "objektívna zodpovednosť prevádzateľa dopravného prostriedku (§ 427 OZ)",
+          "liberácia len pri neodvrátiteľnej udalosti alebo konaní poškodeného",
+          "stret prevádzok (§ 431 OZ): prevádzatelia sa vyporiadajú podľa účasti na vzniku škody",
+          "zvieratá sem nepatria – OZ pre ne osobitný režim nemá, platí § 420"
         ]
       },
       {
@@ -239,7 +241,6 @@
           "dopĺňa všeobecnú zodpovednosť za škodu a preventívnu povinnosť"
         ]
       }
-    ],
-    "center": "Osobitné režimy zodpovednosti za škodu (objektívna zodpovednosť, posilnená ochrana poškodeného)"
+    ]
   }
 }

@@ -18,7 +18,7 @@
       }
     },
     {
-      "question": "Kto je oprávnený obmedziť alebo pozbavenia spôsobilosti na právne úkony?",
+      "question": "Kto je oprávnený obmedziť spôsobilosť na právne úkony?",
       "options": [
         "Notár",
         "Lekár psychiater",
@@ -27,7 +27,7 @@
       ],
       "correct": 2,
       "explanation": {
-        "correct": "Správne. § 10 OZ: obmedzenie alebo pozbavenie spôsobilosti na právne úkony je výlučne v právomoci súdu.",
+        "correct": "Správne. § 10 OZ: o obmedzení spôsobilosti na právne úkony rozhoduje výlučne súd. Od 1. 7. 2016 zákon pozná už len obmedzenie, nie úplné pozbavenie spôsobilosti.",
         "wrong": "Nesprávne. Ani lekár ani notár nemajú oprávnenie obmedziť spôsobilosť na právne úkony."
       }
     },

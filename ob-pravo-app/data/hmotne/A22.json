@@ -221,8 +221,8 @@
       {
         "label": "Formy náhrady škody (§ 442 OZ)",
         "leaves": [
-          "uvedenie do pôvodného stavu",
-          "peňažná náhrada, ak uvedenie nie je možné alebo účelné",
+          "peňažná náhrada – pravidlo, škoda sa uhrádza predovšetkým v peniazoch",
+          "uvedenie do predošlého stavu – len na žiadosť poškodeného, ak je možné a účelné",
           "cieľ: úplná reparácia škody"
         ]
       },
