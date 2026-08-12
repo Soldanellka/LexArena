@@ -142,7 +142,7 @@
           "question": "Spojené kráľovstvo napadlo právomoc agentúry ESMA prijímať zásahové opatrenia na finančných trhoch (short selling), lebo ide o delegovanie na agentúru.",
           "options": [],
           "correct": 0,
-          "source": "C‑270/12 Spojené kráľovstvo v Parlament a Rada (ESMA)"
+          "source": "ECLI:EU:C:2014:18 (C‑270/12 Spojené kráľovstvo v Parlament a Rada, ESMA)"
         },
         {
           "question": "Ako Súdny dvor posúdil delegovanie právomocí na agentúru EÚ?",
@@ -156,14 +156,14 @@
             "correct": "Súdny dvor potvrdil právomoci ESMA ako zlučiteľné s právom Únie za podmienky ohraničenia a súdnej kontroly (doktrína Meroni).",
             "wrong": "Nesprávne. Delegovanie je možné, no v jasných medziach."
           },
-          "source": "C‑270/12 Spojené kráľovstvo v Parlament a Rada (ESMA)"
+          "source": "ECLI:EU:C:2014:18 (C‑270/12 Spojené kráľovstvo v Parlament a Rada, ESMA)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:400 (Gauweiler); C‑11/00 (Komisia v ECB); C‑270/12 (ESMA); čl. 282 – 287 ZFEÚ",
+    "citation": "ECLI:EU:C:2015:400 (Gauweiler); C‑11/00 (Komisia v ECB); ECLI:EU:C:2014:18 (C‑270/12 ESMA); čl. 282 – 287 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }
