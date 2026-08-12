@@ -470,16 +470,11 @@
       <div id="modulesList" class="list" style="margin-top:10px"></div>
     </div>
 
-    <div class="card section-card" id="biflovackaCard">
-      <h3 style="margin:0">🧠 Bifľovačka</h3>
-      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
-      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
-    </div>
-
     <!-- NOČNÝ VÝCUC – audio opakovanie pred spaním (scripts/nightRecap.js).
-         Stojí na KONCI panelu, nie hneď za Bifľovačkou: judikatura.js sa
-         mountuje `afterend` za #biflovackaCard, takže Judikatúra sa vsunie
-         medzi Bifľovačku a túto kartu – to je zámer. Cena sa dopĺňa cez
+         Stojí PRED Bifľovačkou (presun z konca panelu na slovo Babu).
+         Kotvou Judikatúry ostáva #biflovackaCard (judikatura.js mountuje
+         `afterend`), takže výsledné poradie po načítaní je: Moduly →
+         Nočný výcuc → Bifľovačka → Judikatúra. Cena sa dopĺňa cez
          data-econ (fillStaticEconomyValues v init.js), telo renderuje modul. -->
     <div class="card section-card highlight-nightrecap" id="nightRecapCard">
       <h3 style="margin:0">🌙 Nočný výcuc</h3>
@@ -487,6 +482,12 @@
         Odomknutie celej oblasti na 24 h stojí <b><span data-econ="SINKS.NIGHT_RECAP_UNLOCK">—</span> §</b>.</div>
       <div id="nightRecapBody" style="margin-top:10px"></div>
       <audio id="nightRecapPlayer" playsinline preload="none"></audio>
+    </div>
+
+    <div class="card section-card" id="biflovackaCard">
+      <h3 style="margin:0">🧠 Bifľovačka</h3>
+      <div class="small">Vybifľuj si právne vety a definície naspamäť, oblasť po oblasti</div>
+      <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
     </div>
 
     </div><!-- /setStudy -->
