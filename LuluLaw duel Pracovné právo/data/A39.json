@@ -124,20 +124,20 @@
         {
           "question": "Krok 2: O koľko možno krátiť?",
           "options": [
-            "O 1/12 za každých 21 dní",
+            "O 1/12 – za prvých 100 zameškaných dní",
             "O polovicu",
-            "O 1/12 za každý mesiac"
+            "O 4/12 – za každých 21 dní od prvého dňa"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. 90 dní = 4×21 dní → krátenie o 4/12.",
+            "correct": "Správne. Za prvých 100 zameškaných dní sa kráti o 1/12 – pri 90 dňoch PN teda o 1/12, nie o 4/12.",
             "wrong": "Nesprávne. Polovica nie je zákonný výpočet."
           }
         },
         {
           "question": "Krok 3: Ako má právnik postupovať?",
           "options": [
-            "Vyčísliť zákonné krátenie (4/12) a upozorniť zamestnávateľa",
+            "Vyčísliť zákonné krátenie (1/12) a upozorniť zamestnávateľa",
             "Súhlasiť s krátením o polovicu",
             "Ignorovať nesprávny výpočet"
           ],
@@ -174,13 +174,13 @@
         {
           "question": "Krok 2: Má nárok na nejakú dovolenku?",
           "options": [
-            "Áno, za prvých 100 dní prekážok",
+            "Áno, za prvých 100 zameškaných dní sa kráti len o 1/12",
             "Nie",
             "Len ak pracovala aspoň 1 mesiac"
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Za prvých 100 dní prekážok sa dovolenka nekráti.",
+            "correct": "Správne. Za prvých 100 zameškaných dní sa dovolenka kráti o 1/12, za každých ďalších 21 dní o ďalšiu 1/12 – nárok teda nezaniká.",
             "wrong": "Nesprávne. Nárok nevzniká len pri práci."
           }
         },
@@ -207,7 +207,7 @@
     "accessed": "2026-01"
   },
   "spider": {
-    "center": "Dovolenka – výmera × nárok × krátenie × 21 dní × 100 dní × PN × rodičovská",
+    "center": "Dovolenka – výmera × nárok × krátenie (prvých 100 dní = 1/12, ďalej za každých 21 dní) × PN × rodičovská",
     "branches": [
       {
         "label": "Výmera dovolenky (§ 103 ZP)",
@@ -232,7 +232,7 @@
         "label": "Krátenie dovolenky (§ 109 ZP)",
         "leaves": [
           "Krátenie je možné len zo zákonných dôvodov: dlhodobá PN, rodičovská dovolenka, neospravedlnená absencia, iné prekážky na strane zamestnanca",
-          "Limity: prvých 100 dní prekážok sa nekráti, za každých 21 dní prekážok možno krátiť o 1/12 ročnej výmery"
+          "Mechanizmus: za prvých 100 zameškaných dní sa kráti o 1/12, za každých ďalších 21 dní o ďalšiu 1/12 ročnej výmery"
         ]
       },
       {

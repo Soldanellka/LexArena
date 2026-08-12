@@ -263,8 +263,9 @@
         "label": "Limity pracovného času",
         "leaves": [
           "DVP – 350 hodín ročne,",
-          "DPČ – 10 hodín týždenne,",
+          "DPČ – 10 hodín týždenne, najviac 520 hodín ročne,",
           "DBPŠ – 20 hodín týždenne (priemerne).",
+          "Odvody: dohodári platia poistné ako zamestnanci; DBPŠ má odvodovú odpočítateľnú položku.",
           "Limity chránia zamestnanca pred zneužívaním dohôd namiesto pracovného pomeru."
         ]
       },

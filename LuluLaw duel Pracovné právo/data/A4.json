@@ -31,10 +31,10 @@
       "correct": 1
     },
     {
-      "question": "Do koľkých dní musí zamestnávateľ informovať zamestnanca o pracovných podmienkach?",
+      "question": "V akej lehote musí zamestnávateľ informovať zamestnanca o pracovných podmienkach (§ 47a ZP)?",
       "options": [
-        "Do 7 dní",
-        "Do 30 dní",
+        "Dvojlehota – základné údaje do 7 dní, ostatné do 4 týždňov",
+        "Vždy do 7 dní pre všetky údaje",
         "Ihneď pri podpise zmluvy"
       ],
       "correct": 0
@@ -73,7 +73,7 @@
     },
     {
       "term": "Informačná povinnosť",
-      "definition": "Zamestnávateľ musí informovať zamestnanca o pracovných podmienkach do 7 dní."
+      "definition": "Zamestnávateľ informuje o pracovných podmienkach dvojlehotovo (§ 47a ZP): základné údaje do 7 dní, ostatné do 4 týždňov."
     },
     {
       "term": "Odstúpenie od pracovnej zmluvy",
@@ -207,7 +207,8 @@
       {
         "label": "Informačná povinnosť zamestnávateľa",
         "leaves": [
-          "Do 7 dní od vzniku pracovného pomeru musí zamestnávateľ informovať o: pracovnom čase, dovolenke, výpovedných dobách, odmeňovaní, kolektívnej zmluve, orgánoch sociálneho zabezpečenia",
+          "Dvojlehota (§ 47a ZP): základné údaje do 7 dní, ostatné – pracovný čas, dovolenka, výpovedné doby, odmeňovanie, kolektívna zmluva, orgány sociálneho zabezpečenia – do 4 týždňov",
+          "Informovať treba len o tom, čo už nie je uvedené priamo v pracovnej zmluve",
           "Povinnosť vychádza aj zo smernice EÚ o transparentných a predvídateľných pracovných podmienkach."
         ]
       },

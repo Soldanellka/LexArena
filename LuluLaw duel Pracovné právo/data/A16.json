@@ -96,7 +96,7 @@
     },
     {
       "term": "Prerokovanie",
-      "definition": "Povinnosť zamestnávateľa konzultovať so zástupcami zamestnancov zásadné otázky podľa § 12 ZP."
+      "definition": "Povinnosť zamestnávateľa prerokovať so zástupcami zamestnancov zásadné otázky podľa § 237 ZP."
     }
   ],
   "cases": [
@@ -118,7 +118,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Povinnosť prerokovania vyplýva z § 12 Zákonníka práce.",
+            "correct": "Správne. Povinnosť prerokovania vyplýva z § 237 Zákonníka práce.",
             "wrong": "Nesprávne. Povinnosť nie je podmienená žiadosťou rady."
           }
         },
@@ -249,7 +249,7 @@
         ]
       },
       {
-        "label": "Práva zástupcov – informovanie a prerokovanie (§ 12 ZP)",
+        "label": "Práva zástupcov – informovanie a prerokovanie (§ 237 ZP)",
         "leaves": [
           "Zamestnávateľ musí informovať a prerokovať: zásadné otázky pracovných podmienok, organizačné zmeny, hromadné prepúšťanie, BOZP, zmeny v odmeňovaní, opatrenia týkajúce sa zamestnancov",
           "Nesplnenie povinnosti je porušením zákona."

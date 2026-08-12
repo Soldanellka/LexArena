@@ -16,11 +16,11 @@
     {
       "question": "Ktorý právny predpis upravuje štrajk a výluku?",
       "options": [
-        "Zákon o kolektívnom vyjednávaní",
+        "Zákon č. 2/1991 Zb. o kolektívnom vyjednávaní",
         "Zákonník práce",
         "Občiansky zákonník"
       ],
-      "correct": 1
+      "correct": 0
     },
     {
       "question": "Kto môže vyhlásiť štrajk?",
@@ -153,7 +153,7 @@
         "label": "Právo na štrajk",
         "leaves": [
           "ústavne garantované čl. 37 ods. 4 Ústavy SR",
-          "upravené v zákonníku práce",
+          "upravené zákonom č. 2/1991 Zb. o kolektívnom vyjednávaní, nie Zákonníkom práce",
           "ide o kolektívny prostriedok riešenia sporov medzi zamestnancami a zamestnávateľom"
         ]
       },

@@ -76,7 +76,7 @@
     },
     {
       "term": "Rozšírenie záväznosti",
-      "definition": "Rozhodnutie ministerstva, ktorým sa kolektívna zmluva vyššieho stupňa rozšíri na ďalších zamestnávateľov."
+      "definition": "Rozšírenie kolektívnej zmluvy vyššieho stupňa na ďalších zamestnávateľov – dnes len s ich súhlasom."
     }
   ],
   "cases": [
@@ -139,7 +139,7 @@
         {
           "question": "Krok 2: Čo nasleduje, ak sprostredkovanie zlyhá?",
           "options": [
-            "Rozhodca",
+            "Rozhodca (len ak sa strany dohodnú), inak štrajk alebo výluka",
             "Automatické prijatie návrhu odborov",
             "Zrušenie vyjednávania"
           ],
@@ -206,15 +206,15 @@
       {
         "label": "Sprostredkovanie a rozhodca",
         "leaves": [
-          "Ak sa strany nedohodnú: Sprostredkovanie – povinný krok, nestranný sprostredkovateľ",
-          "Rozhodca – nestranná osoba, ktorá môže spor vyriešiť.",
-          "Až potom je možné vyhlásiť štrajk alebo výluku."
+          "Sprostredkovanie – jediný povinný krok pri spore o uzavretie kolektívnej zmluvy",
+          "Rozhodca – NIE je povinný medzistupeň; pri spore o uzavretie KZ len ak sa strany dohodnú",
+          "Po neúspešnom sprostredkovaní možno vyhlásiť štrajk alebo výluku – rozhodcu netreba"
         ]
       },
       {
         "label": "Rozšírenie záväznosti",
         "leaves": [
-          "Kolektívna zmluva vyššieho stupňa môže byť: rozšírená na ďalších zamestnávateľov, rozhodnutím ministerstva práce"
+          "Kolektívna zmluva vyššieho stupňa sa môže rozšíriť na ďalších zamestnávateľov len so súhlasom dotknutého zamestnávateľa (po náleze ÚS už nie rozhodnutím ministerstva)"
         ]
       }
     ]

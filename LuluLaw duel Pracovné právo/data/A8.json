@@ -140,7 +140,7 @@
         {
           "question": "Čo nasleduje, ak sprostredkovanie zlyhá?",
           "options": [
-            "Rozhodca",
+            "Rozhodca (len ak sa strany dohodnú), inak štrajk alebo výluka",
             "Automatické prijatie návrhu odborov",
             "Zrušenie kolektívneho vyjednávania"
           ],
@@ -191,9 +191,10 @@
       {
         "label": "Postup pri nedohode",
         "leaves": [
-          "Ak sa strany nedohodnú: sprostredkovanie – povinný krok, nestranný sprostredkovateľ",
-          "Ak sa strany nedohodnú: rozhodca – nestranná osoba, ktorá môže spor vyriešiť",
-          "Ak sa strany nedohodnú: až potom štrajk (zamestnanci) alebo výluka (zamestnávateľ)"
+          "Sprostredkovanie – jediný povinný krok pri spore o uzavretie kolektívnej zmluvy",
+          "Rozhodca – NIE je povinný medzistupeň; pri spore o uzavretie KZ len ak sa strany dohodnú",
+          "Po neúspešnom sprostredkovaní: štrajk (zamestnanci) alebo výluka (zamestnávateľ)",
+          "Spor o plnenie záväzkov z KZ – rieši rozhodca, štrajk sa nepripúšťa"
         ]
       },
       {
@@ -209,7 +210,7 @@
         "leaves": [
           "Štrajk – krajné opatrenie zamestnancov; kolektívne prerušenie práce.",
           "Výluka – krajné opatrenie zamestnávateľa; neprideľovanie práce.",
-          "Obe opatrenia sú možné až po neúspešnom sprostredkovaní a rozhodcovi."
+          "Obe opatrenia sú možné už po neúspešnom sprostredkovaní – rozhodcu netreba."
         ]
       }
     ]
