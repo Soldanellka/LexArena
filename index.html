@@ -476,6 +476,19 @@
       <div id="memoryTrainerTiles" class="list" style="margin-top:10px"></div>
     </div>
 
+    <!-- NOČNÝ VÝCUC – audio opakovanie pred spaním (scripts/nightRecap.js).
+         Stojí na KONCI panelu, nie hneď za Bifľovačkou: judikatura.js sa
+         mountuje `afterend` za #biflovackaCard, takže Judikatúra sa vsunie
+         medzi Bifľovačku a túto kartu – to je zámer. Cena sa dopĺňa cez
+         data-econ (fillStaticEconomyValues v init.js), telo renderuje modul. -->
+    <div class="card section-card highlight-nightrecap" id="nightRecapCard">
+      <h3 style="margin:0">🌙 Nočný výcuc</h3>
+      <div class="small">Audio zhrnutia okruhov na počúvanie pred spaním – zopakuj si, čo si sa dnes učil.
+        Odomknutie celej oblasti na 24 h stojí <b><span data-econ="SINKS.NIGHT_RECAP_UNLOCK">—</span> §</b>.</div>
+      <div id="nightRecapBody" style="margin-top:10px"></div>
+      <audio id="nightRecapPlayer" playsinline preload="none"></audio>
+    </div>
+
     </div><!-- /setStudy -->
 
     <!-- MNOŽINA – SPRÁVA: admin/garant panel na úplnom konci ľavého stĺpca.
@@ -1425,6 +1438,9 @@ console.log('✅ Reports system inline načítaný');
 
 <!-- REŠERŠ JUDIKATÚRY NS SR – plávajúci panel vpravo dole -->
 <script type="module" src="scripts/judikatura.js"></script>
+
+<!-- NOČNÝ VÝCUC – audio opakovanie pred spaním -->
+<script type="module" src="scripts/nightRecap.js"></script>
 
 <!-- QUIZ ENGINE -->
 <script type="module" src="quiz.js"></script>

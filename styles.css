@@ -3477,3 +3477,55 @@ body {
   font-size: 12px;
   padding: 6px 12px;
 }
+
+/* ============================================================
+   NOČNÝ VÝCUC (#nightRecapCard) – audio opakovanie pred spaním.
+   Karta preberá bežný vzhľad .card/.section-card; tu je len
+   akcentový okraj (vzor highlight-*) a drobné vnútro: zoznam
+   okruhov s checkboxmi a riadky ovládania prehrávača.
+   Farby cez existujúce premenné – tmavý režim funguje sám.
+============================================================ */
+
+.highlight-nightrecap {
+  border-left: 3px solid #8b5cf6;
+}
+
+.nr-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nr-okruh-list {
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+  padding-right: 4px;
+}
+
+.nr-okruh {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: .9rem;
+  padding: 4px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.nr-okruh:hover { background: var(--glass); }
+.nr-okruh input { margin-top: 3px; flex: none; }
+
+/* prepínacie „čipy“ (časovač spánku, slučka) – aktívny stav */
+.nr-chip.active {
+  background: var(--glass);
+  font-weight: 700;
+}
+
+.nr-now {
+  font-variant-numeric: tabular-nums;
+}

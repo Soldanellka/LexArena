@@ -78,7 +78,8 @@ const COLLAPSIBLE_SECTIONS = [
   { selector: '.highlight-video',       key: 'videos',      defaultCollapsed: true },
   { selector: '#leaderboardSection',    key: 'leaderboard', defaultCollapsed: false },
   { selector: '.highlight-bank',        key: 'duelbank',    defaultCollapsed: true },
-  { selector: '.highlight-senaty',      key: 'senaty',      defaultCollapsed: true }
+  { selector: '.highlight-senaty',      key: 'senaty',      defaultCollapsed: true },
+  { selector: '.highlight-nightrecap',  key: 'nightrecap',  defaultCollapsed: true }
 ];
 
 /* export: pripojí zbaľovacie správanie na ĽUBOVOĽNÝ card+header pár, nielen

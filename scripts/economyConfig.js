@@ -155,7 +155,8 @@ export const ECONOMY_CONFIG = {
     BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
     BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
     BIFLOVACKA_JOKER_REPLAY: 1,   // žolík: vypočuť definíciu znova cez TTS (v odpovedacej fáze)
-    BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
+    BIFLOVACKA_VIDEO_REPLAY: 2,   // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
+    NIGHT_RECAP_UNLOCK: 33        // Nočný výcuc: audio výcucy CELEJ oblasti na 24 h (per oblasť)
   },
 
   /* SENÁTY – skupinová súťaž. V1: spory a založenie/nábor sú V STROPE,

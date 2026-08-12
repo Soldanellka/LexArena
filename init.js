@@ -754,6 +754,9 @@ function fillGuideEconomyValues() {
    pravdy, žiadna § suma v HTML natvrdo. */
 function fillStaticEconomyValues() {
   fillEconomyValues($('gamesSection'));
+  /* Nočný výcuc – cena odomknutia na statickej karte (mimo #gamesSection,
+     preto samostatné volanie; viď komentár pri fillEconomyValues). */
+  fillEconomyValues($('nightRecapCard'));
 }
 
 /* To isté pre prahy pečatí (data-seal="bronze.min"), len zo scripts/seals.js
