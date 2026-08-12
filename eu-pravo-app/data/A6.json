@@ -109,35 +109,35 @@
       ]
     },
     {
-      "title": "Prípad 2 – Gauweiler: úloha Európskej rady pri koordinácii hospodárskych politík",
+      "title": "Prípad 2 – Pringle: revízia zmluvy Európskou radou",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Európska rada prijala politické smerovanie týkajúce sa reakcie na finančnú krízu a koordinácie hospodárskych politík.",
+          "question": "Európska rada rozhodnutím zmenila čl. 136 ZFEÚ (právny základ pre Európsky mechanizmus pre stabilitu) zjednodušeným revíznym postupom. Občan namietal, že takto meniť zmluvy nemožno.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
         },
         {
-          "question": "Ako Súdny dvor vyložil úlohu Európskej rady?",
+          "question": "Ako Súdny dvor posúdil platnosť tejto zmeny?",
           "options": [
-            "Európska rada môže prijímať záväzné právne akty",
-            "Európska rada určuje politické smerovanie, ale musí rešpektovať právomoci ostatných inštitúcií",
-            "Európska rada je nadradená ECB"
+            "Zjednodušeným postupom nemožno meniť zmluvy",
+            "Zmena bola platná, lebo nerozšírila právomoci Únie a rešpektovala hranice čl. 48 ods. 6 ZEÚ",
+            "Európska rada nemá s revíziou zmlúv nič spoločné"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že Európska rada určuje politické smerovanie, ale nesmie zasahovať do právomocí ECB ani legislatívnych právomocí Parlamentu a Rady.",
-            "wrong": "Nesprávne. Európska rada nemá právomoc prijímať záväzné právne akty."
+            "correct": "Súdny dvor potvrdil platnosť: zjednodušený revízny postup (čl. 48 ods. 6 ZEÚ) nerozšíril právomoci Únie a bol dodržaný.",
+            "wrong": "Nesprávne. Zmena bola platná, no aj akty Európskej rady musia rešpektovať hranice zmlúv."
           },
-          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2015:400; čl. 15 ZEÚ",
+    "citation": "ECLI:EU:C:2012:756; čl. 15 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },

@@ -83,61 +83,61 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Parlament v. Rada: rešpektovanie legislatívnych právomocí",
+      "title": "Prípad 1 – Rada v. Komisia: stiahnutie legislatívneho návrhu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Parlament tvrdil, že Rada prijala akt mimo legislatívneho postupu, čím obchádzala jeho právomoci.",
+          "question": "Komisia počas legislatívneho postupu stiahla návrh aktu. Rada tvrdila, že tým zasiahla do jej úlohy spoluzákonodarcu.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach Rady?",
+          "question": "Ako Súdny dvor vymedzil vzťah Komisie a Rady v legislatíve?",
           "options": [
-            "Rada môže konať bez Parlamentu",
-            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
-            "Parlament nemá legislatívne právomoci"
+            "Komisia môže konať bez ohľadu na Radu a Parlament",
+            "Inštitúcie musia v legislatívnom procese rešpektovať inštitucionálnu rovnováhu; právo Komisie stiahnuť návrh má hranice",
+            "Rada môže Komisii nariadiť predložiť návrh"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
-            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+            "correct": "Komisia môže návrh stiahnuť len v medziach inštitucionálnej rovnováhy a lojálnej spolupráce.",
+            "wrong": "Nesprávne. Ide o vzájomné rešpektovanie právomocí v legislatívnom procese."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Rada a právomoci v oblasti SZBP",
+      "title": "Prípad 2 – Spojené kráľovstvo v. Rada: voľba právneho základu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Rada prijala rozhodnutie v oblasti spoločnej zahraničnej a bezpečnostnej politiky, ktoré bolo napadnuté pre údajné prekročenie právomocí.",
+          "question": "Rada prijala rozhodnutie o pozícii Únie v oblasti sociálneho zabezpečenia (dohoda o pridružení EHS–Turecko). Spojené kráľovstvo namietalo nesprávny právny základ.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2014:244 (C‑81/13 UK v. Rada)"
+          "source": "ECLI:EU:C:2014:2449 (C‑81/13 Spojené kráľovstvo v Rada)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právomoci Rady v SZBP?",
+          "question": "Čím sa riadi voľba právneho základu aktu Rady?",
           "options": [
-            "Rada môže prijímať legislatívne akty v SZBP",
-            "Rada má široké právomoci, ale musí rešpektovať zmluvy a inštitucionálnu rovnováhu",
-            "SZBP patrí výlučne Parlamentu"
+            "Právny základ si Rada volí ľubovoľne",
+            "Právny základ musí zodpovedať cieľu a obsahu aktu a zásade zverenia právomocí",
+            "Právny základ určuje Komisia"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že Rada má široké právomoci v SZBP, ale musí konať v súlade so zmluvami.",
-            "wrong": "Nesprávne. SZBP nie je legislatívna oblasť a Parlament nemá rozhodovaciu právomoc."
+            "correct": "Voľba právneho základu sa riadi objektívnymi prvkami (cieľ a obsah aktu) a zásadou zverenia právomocí.",
+            "wrong": "Nesprávne. Právny základ nie je vecou voľnej úvahy Rady."
           },
-          "source": "ECLI:EU:C:2014:244 (C‑81/13 UK v. Rada)"
+          "source": "ECLI:EU:C:2014:2449 (C‑81/13 Spojené kráľovstvo v Rada)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2014:244; čl. 16 ZEÚ; čl. 237 – 243 ZFEÚ",
+    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2014:2449; čl. 16 ZEÚ; čl. 237 – 243 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }

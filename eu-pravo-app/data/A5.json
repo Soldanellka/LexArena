@@ -83,28 +83,28 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Parlament v. Rada: obchádzanie legislatívnych právomocí",
+      "title": "Prípad 1 – Rada v. Komisia: hranice stiahnutia legislatívneho návrhu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Parlament tvrdil, že Rada prijala rozhodnutie mimo legislatívneho postupu, čím obchádzala jeho právomoci.",
+          "question": "Komisia počas legislatívneho postupu stiahla svoj návrh. Rada namietala, že tým zasiahla do právomocí spoluzákonodarcov.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach Parlamentu?",
+          "question": "Ako Súdny dvor vymedzil právo Komisie stiahnuť návrh?",
           "options": [
-            "Rada môže konať bez Parlamentu",
-            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
-            "Parlament nemá legislatívne právomoci"
+            "Komisia môže návrh stiahnuť kedykoľvek a bez obmedzení",
+            "Komisia môže návrh stiahnuť, no musí rešpektovať inštitucionálnu rovnováhu a nezneužiť toto právo",
+            "Komisia nemôže návrh nikdy stiahnuť"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
-            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+            "correct": "Súdny dvor potvrdil, že Komisia môže návrh stiahnuť, ale v medziach inštitucionálnej rovnováhy a lojálnej spolupráce.",
+            "wrong": "Nesprávne. Právo stiahnuť návrh nie je ani absolútne, ani úplne vylúčené."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         }
       ]
     },

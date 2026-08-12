@@ -83,87 +83,87 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Parlament v. Rada: rešpektovanie legislatívneho postupu",
+      "title": "Prípad 1 – Rada v. Komisia: iniciatíva a stiahnutie návrhu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Parlament tvrdil, že Rada prijala akt mimo riadneho legislatívneho postupu.",
+          "question": "V riadnom legislatívnom postupe Komisia stiahla svoj návrh predtým, než ho Parlament a Rada prijali.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o legislatívnom postupe?",
+          "question": "Aké hranice má právo Komisie stiahnuť návrh v legislatívnom postupe?",
           "options": [
-            "Rada môže obísť Parlament",
-            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
-            "Parlament nemá úlohu v legislatívnom procese"
+            "Žiadne, Komisia rozhoduje sama",
+            "Musí rešpektovať inštitucionálnu rovnováhu a nesmie zmariť právomoci spoluzákonodarcov",
+            "Stiahnuť návrh môže len so súhlasom Parlamentu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
-            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+            "correct": "Stiahnutie návrhu je limitované inštitucionálnou rovnováhou a lojálnou spoluprácou.",
+            "wrong": "Nesprávne. Právo stiahnuť návrh nie je bezbrehé."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Komisia ako iniciátor legislatívy",
+      "title": "Prípad 2 – Parlament v. Komisia: hranice vykonávacích aktov",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Členský štát napadol návrh Komisie s tvrdením, že Komisia prekročila svoje právomoci pri legislatívnej iniciatíve.",
+          "question": "Komisia prijala vykonávací akt (sieť EURES). Parlament namietal, že Komisia prekročila svoju vykonávaciu právomoc.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:742 (C‑65/13 Parlament v. Komisia)"
+          "source": "C‑65/13 Parlament v Komisia (EURES)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právomoci Komisie?",
+          "question": "Kde je hranica vykonávacej právomoci Komisie podľa čl. 291 ZFEÚ?",
           "options": [
-            "Komisia nemá legislatívnu iniciatívu",
-            "Komisia má širokú právomoc navrhovať legislatívu",
-            "Komisia môže prijímať legislatívne akty sama"
+            "Komisia môže vykonávacím aktom meniť podstatu legislatívneho aktu",
+            "Vykonávací akt smie základný akt len vykonať, nie doplniť či zmeniť jeho podstatné prvky",
+            "Vykonávacie akty sú zakázané"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že Komisia má širokú právomoc navrhovať legislatívu podľa čl. 17 ZEÚ.",
-            "wrong": "Nesprávne. Komisia nemôže sama prijímať legislatívne akty."
+            "correct": "Vykonávací akt (čl. 291) základný akt iba vykonáva; dopĺňanie alebo zmena podstatných prvkov prislúcha delegovanému aktu (čl. 290).",
+            "wrong": "Nesprávne. Vykonávací akt nesmie meniť podstatu základného aktu."
           },
-          "source": "ECLI:EU:C:2015:742 (C‑65/13)"
+          "source": "C‑65/13 Parlament v Komisia (EURES)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Právomoci agentúr a inštitucionálna rovnováha",
-      "difficulty": "stredná",
+      "title": "Prípad 3 – SZBP: prečo nie legislatívny postup",
+      "difficulty": "ľahká",
       "steps": [
         {
-          "question": "Bola napadnutá právomoc agentúry EÚ prijímať rozhodnutia v rámci finančného dohľadu.",
+          "question": "Únia prijíma opatrenie v oblasti spoločnej zahraničnej a bezpečnostnej politiky. Poslanec tvrdí, že sa má prijať riadnym legislatívnym postupom.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2014:18 (C‑270/12 UK v. Parlament a Rada)"
+          "source": "čl. 24 ZEÚ"
         },
         {
-          "question": "Ako Súdny dvor vyložil úlohu agentúr v legislatívnom procese?",
+          "question": "Ako sa prijímajú akty v oblasti SZBP?",
           "options": [
-            "Agentúry môžu prijímať legislatívne akty",
-            "Agentúry môžu konať len v rámci právomocí určených právom EÚ",
-            "Agentúry sú nadradené Komisii"
+            "Riadnym legislatívnym postupom ako nariadenia",
+            "Osobitným postupom; prijímanie legislatívnych aktov je v SZBP vylúčené (čl. 24 ZEÚ)",
+            "Výlučne Komisiou"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že agentúry môžu konať len v rámci právomocí jasne určených právom EÚ.",
-            "wrong": "Nesprávne. Agentúry nemajú legislatívne právomoci."
+            "correct": "SZBP podlieha osobitným pravidlám; legislatívne akty sú vylúčené (čl. 24 ZEÚ), rozhoduje najmä Európska rada a Rada, spravidla jednomyseľne.",
+            "wrong": "Nesprávne. V SZBP sa legislatívne akty neprijímajú."
           },
-          "source": "ECLI:EU:C:2014:18 (C‑270/12)"
+          "source": "čl. 24 ZEÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2015:742; ECLI:EU:C:2014:18; čl. 289 – 294 ZFEÚ",
+    "citation": "ECLI:EU:C:2015:217 (C‑409/13); C‑65/13 (EURES); čl. 24 ZEÚ; čl. 289 – 294 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }

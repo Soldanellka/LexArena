@@ -83,28 +83,28 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Nezávislosť Komisie",
+      "title": "Prípad 1 – Komisia ako strážkyňa zmlúv: netransponovaná smernica",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Členský štát sa pokúsil ovplyvniť rozhodovanie komisára v oblasti hospodárskej súťaže.",
+          "question": "Členský štát v stanovenej lehote netransponoval smernicu. Ako môže zasiahnuť Komisia?",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2001:134 (C‑424/99 Komisia v. Rakúsko)"
+          "source": "čl. 258 ZFEÚ"
         },
         {
-          "question": "Ako Súdny dvor vyložil nezávislosť Komisie?",
+          "question": "Aký postup Komisia použije voči štátu, ktorý si nesplnil povinnosť?",
           "options": [
-            "Komisári môžu prijímať pokyny od vlád",
-            "Komisári musia konať úplne nezávisle",
-            "Komisári sú podriadení Rade EÚ"
+            "Priamo uloží štátu pokutu bez konania",
+            "Začne konanie o nesplnení povinnosti: formálna výzva, odôvodnené stanovisko a žaloba na Súdny dvor",
+            "Zruší smernicu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že komisári musia konať úplne nezávisle od vlád členských štátov.",
-            "wrong": "Nesprávne. Komisári nesmú prijímať pokyny od vlád."
+            "correct": "Komisia ako strážkyňa zmlúv (čl. 17 ZEÚ) vedie konanie podľa čl. 258 ZFEÚ; pri nesplnení rozsudku nasledujú sankcie (čl. 260).",
+            "wrong": "Nesprávne. Komisia najprv vedie konanie o nesplnení povinnosti, nekoná svojvoľne."
           },
-          "source": "ECLI:EU:C:2001:134 (C‑424/99 Komisia v. Rakúsko)"
+          "source": "čl. 258 ZFEÚ"
         }
       ]
     },
@@ -116,7 +116,7 @@
           "question": "Členský štát odmietol implementovať smernicu v stanovenej lehote.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v. Belgicko)"
+          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v Parlament a Rada)"
         },
         {
           "question": "Ako Súdny dvor vyložil právomoci Komisie?",
@@ -130,14 +130,14 @@
             "correct": "Súdny dvor potvrdil, že Komisia môže začať konanie o porušení povinnosti, ak členský štát neimplementuje smernicu.",
             "wrong": "Nesprávne. Komisia nemôže sama implementovať smernicu."
           },
-          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v. Belgicko)"
+          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v Parlament a Rada)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2001:134; ECLI:EU:C:2014:231; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ",
+    "citation": "ECLI:EU:C:2014:231; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ; čl. 258 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },

@@ -83,87 +83,87 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Nezávislosť ECB pri menovej politike",
+      "title": "Prípad 1 – Komisia v. ECB: dosah OLAF a nezávislosť ECB",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "ECB prijala program nákupu štátnych dlhopisov, ktorý bol napadnutý pre údajné prekročenie právomocí.",
+          "question": "ECB rozhodnutím vyňala svoje vnútorné vyšetrovania spod pôsobnosti úradu OLAF s poukazom na svoju nezávislosť.",
+          "options": [],
+          "correct": 0,
+          "source": "C‑11/00 Komisia v ECB"
+        },
+        {
+          "question": "Ako Súdny dvor vyriešil vzťah nezávislosti ECB a kontroly OLAF?",
+          "options": [
+            "ECB je pre svoju nezávislosť úplne mimo dosahu OLAF",
+            "Nariadenie o OLAF sa vzťahuje aj na ECB a nenarúša jej nezávislosť",
+            "OLAF môže riadiť menovú politiku ECB"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor zrušil rozhodnutie ECB: jej nezávislosť ju nevyníma z rámca ochrany finančných záujmov Únie.",
+            "wrong": "Nesprávne. Nezávislosť ECB neznamená úplné vyňatie z práva Únie."
+          },
+          "source": "C‑11/00 Komisia v ECB"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Gauweiler: mandát ECB a program OMT",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Namietalo sa, že program ECB na nákup štátnych dlhopisov (OMT) prekračuje jej menový mandát a je hospodárskou politikou.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
         },
         {
-          "question": "Ako Súdny dvor vyložil nezávislosť ECB?",
+          "question": "Ako Súdny dvor posúdil program OMT?",
           "options": [
-            "ECB musí žiadať súhlas členských štátov",
-            "ECB má nezávislosť pri vykonávaní menovej politiky",
-            "ECB nemôže nakupovať štátne dlhopisy"
+            "OMT je hospodárska politika mimo právomocí ECB",
+            "OMT spadá do menového mandátu ECB, ak rešpektuje proporcionalitu a zákaz menového financovania",
+            "ECB nemá žiadny mandát v menovej politike"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že ECB má nezávislosť pri vykonávaní menovej politiky a môže prijímať opatrenia potrebné na udržanie cenovej stability.",
-            "wrong": "Nesprávne. ECB nemusí žiadať súhlas členských štátov."
+            "correct": "OMT patrí do menovej politiky ECB pri dodržaní proporcionality a zákazu menového financovania štátov (čl. 123 ZFEÚ).",
+            "wrong": "Nesprávne. Súdny dvor program považoval za súčasť menového mandátu ECB."
           },
           "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Právomoci Dvora audítorov",
+      "title": "Prípad 3 – ESMA: hranice delegovania na agentúry",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dvor audítorov požadoval prístup k dokumentom členského štátu týkajúcim sa finančných operácií súvisiacich s fondmi EÚ.",
+          "question": "Spojené kráľovstvo napadlo právomoc agentúry ESMA prijímať zásahové opatrenia na finančných trhoch (short selling), lebo ide o delegovanie na agentúru.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2003:479 (C‑11/00 Komisia v. Európsky parlament a Rada)"
+          "source": "C‑270/12 Spojené kráľovstvo v Parlament a Rada (ESMA)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právomoci Dvora audítorov?",
+          "question": "Ako Súdny dvor posúdil delegovanie právomocí na agentúru EÚ?",
           "options": [
-            "Dvor audítorov nemá právo na prístup k dokumentom",
-            "Dvor audítorov má právo požadovať dokumenty potrebné na výkon kontroly",
-            "Dvor audítorov môže ukladať sankcie členským štátom"
+            "Na agentúry nemožno delegovať žiadne právomoci",
+            "Delegovanie je prípustné, ak je ohraničené jasnými kritériami a podlieha súdnemu preskúmaniu (Meroni)",
+            "Agentúra môže mať neobmedzené právomoci"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Dvor audítorov má právo požadovať dokumenty potrebné na výkon svojich kontrolných právomocí.",
-            "wrong": "Nesprávne. Dvor audítorov nemá právomoc ukladať sankcie."
+            "correct": "Súdny dvor potvrdil právomoci ESMA ako zlučiteľné s právom Únie za podmienky ohraničenia a súdnej kontroly (doktrína Meroni).",
+            "wrong": "Nesprávne. Delegovanie je možné, no v jasných medziach."
           },
-          "source": "ECLI:EU:C:2003:479 (C‑11/00)"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 3 – Právomoci agentúr EÚ",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Bola napadnutá právomoc agentúry EÚ prijímať záväzné rozhodnutia v oblasti finančného dohľadu.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:2014:18 (C‑270/12 UK v. Parlament a Rada)"
-        },
-        {
-          "question": "Ako Súdny dvor vyložil právomoci agentúr?",
-          "options": [
-            "Agentúry nemôžu prijímať žiadne rozhodnutia",
-            "Agentúry môžu prijímať rozhodnutia, ak sú jasne vymedzené zmluvami alebo sekundárnym právom",
-            "Agentúry sú nadradené Komisii"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Súdny dvor potvrdil, že agentúry môžu prijímať rozhodnutia, ak sú ich právomoci jasne vymedzené právom EÚ.",
-            "wrong": "Nesprávne. Agentúry nie sú nadradené Komisii."
-          },
-          "source": "ECLI:EU:C:2014:18 (C‑270/12)"
+          "source": "C‑270/12 Spojené kráľovstvo v Parlament a Rada (ESMA)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:400; ECLI:EU:C:2003:479; ECLI:EU:C:2014:18; čl. 282 – 287 ZFEÚ",
+    "citation": "ECLI:EU:C:2015:400 (Gauweiler); C‑11/00 (Komisia v ECB); C‑270/12 (ESMA); čl. 282 – 287 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }
