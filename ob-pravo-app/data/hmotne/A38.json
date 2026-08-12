@@ -13,8 +13,8 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Schovateľ je povinný prevziať vec, starať sa o ňu s patričnou starostlivosťou a vrátiť ju v pôvodnom stave.",
-        "wrong": "Nesprávne. Schovateľ má trojitú povinnosť: prevziať, uschovať a vrátiť."
+        "correct": "Správne. Uschovávateľ je povinný prevziať vec, starať sa o ňu s patričnou starostlivosťou a vrátiť ju v pôvodnom stave.",
+        "wrong": "Nesprávne. Uschovávateľ má trojitú povinnosť: prevziať, uschovať a vrátiť."
       }
     },
     {
@@ -27,8 +27,8 @@
       ],
       "correct": 1,
       "explanation": {
-        "correct": "Správne. Schovateľ zodpovedá za škodu na veci, ak nedodržal povinnosť starostlivosti. Ide o zodpovednosť za zavinenie.",
-        "wrong": "Nesprávne. Schovateľ zodpovedá za škodu pri porušení povinnosti starostlivosti."
+        "correct": "Správne. Uschovávateľ zodpovedá za škodu na veci, ak nedodržal povinnosť starostlivosti. Ide o zodpovednosť za zavinenie.",
+        "wrong": "Nesprávne. Uschovávateľ zodpovedá za škodu pri porušení povinnosti starostlivosti."
       }
     },
     {
@@ -77,7 +77,7 @@
   "tiles": [
     {
       "term": "Zmluva o úschove",
-      "definition": "Schovateľ prevezme vec, uschová ju a vráti v pôvodnom stave."
+      "definition": "Uschovávateľ prevezme vec, uschová ju a vráti v pôvodnom stave."
     },
     {
       "term": "Zodpovednosť uschovávateľa",
@@ -115,7 +115,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Schovateľ zodpovedá za škodu spôsobenú nedodržaním povinnej starostlivosti o zverenú vec.",
+            "correct": "Správne. Uschovávateľ zodpovedá za škodu spôsobenú nedodržaním povinnej starostlivosti o zverenú vec.",
             "wrong": "Nesprávne. Riziko nenesie automaticky vkladateľ a zodpovednosť sa neobmedzuje len na úmyselné poškodenie."
           }
         },
@@ -128,7 +128,7 @@
           ],
           "correct": 0,
           "explanation": {
-            "correct": "Správne. Schovateľ má trojitú povinnosť – prevzatie, riadnu starostlivosť a vrátenie veci.",
+            "correct": "Správne. Uschovávateľ má trojitú povinnosť – prevzatie, riadnu starostlivosť a vrátenie veci.",
             "wrong": "Nesprávne. Samotné prevzatie bez ďalšej starostlivosti nestačí a uschovávateľ vec štandardne nepredáva."
           }
         }
