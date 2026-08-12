@@ -140,5 +140,55 @@
     "citation": "ECLI:EU:C:1996:431; ECLI:EU:C:2018:117; čl. 2 – 6 ZFEÚ; čl. 4 ods. 3 ZEÚ; čl. 5 ods. 3 – 4 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Právomoci Únie a zásady ich výkonu",
+    "branches": [
+      {
+        "label": "Zverenie právomocí (čl. 5 ods. 2 ZEÚ)",
+        "leaves": [
+          "Únia koná len v medziach právomocí prenesených členskými štátmi",
+          "Právomoci, ktoré neboli prenesené, ostávajú členským štátom"
+        ]
+      },
+      {
+        "label": "Kategórie právomocí (čl. 2–6 ZFEÚ)",
+        "leaves": [
+          "Výlučné (čl. 3) – colná únia, pravidlá súťaže vnútorného trhu, menová politika eurozóny, spoločná obchodná politika",
+          "Zdieľané (čl. 4) – vnútorný trh, životné prostredie, doprava, energetika",
+          "Podporné a koordinačné (čl. 6) – kultúra, vzdelávanie, šport"
+        ]
+      },
+      {
+        "label": "Subsidiarita (čl. 5 ods. 3 ZEÚ)",
+        "leaves": [
+          "Uplatní sa len mimo výlučných právomocí Únie",
+          "Cieľ sa má lepšie dosiahnuť na úrovni Únie než na úrovni členských štátov",
+          "Kontrola národnými parlamentmi podľa Protokolu č. 2 – žltá a oranžová karta"
+        ]
+      },
+      {
+        "label": "Proporcionalita (čl. 5 ods. 4 ZEÚ)",
+        "leaves": [
+          "Obsah a forma opatrení Únie neprekročia rámec nevyhnutný na dosiahnutie cieľov zmlúv",
+          "Odpovedá na otázku AKO intenzívne konať, nie ČI konať"
+        ]
+      },
+      {
+        "label": "Lojálna spolupráca (čl. 4 ods. 3 ZEÚ)",
+        "leaves": [
+          "Vzájomná – zaväzuje Úniu aj členské štáty",
+          "Pozitívna zložka – prijať opatrenia na splnenie záväzkov zo zmlúv",
+          "Negatívna zložka – zdržať sa konania, ktoré by ohrozilo dosiahnutie cieľov Únie"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-84/94 – preskúmanie subsidiarity a proporcionality pri smernici o pracovnom čase",
+          "C-233/94 – požiadavky na odôvodnenie súladu so subsidiaritou"
+        ]
+      }
+    ]
   }
 }

@@ -140,5 +140,66 @@
     "citation": "ECLI:EU:C:2019:531; ECLI:EU:C:2022:481; čl. 49 a čl. 2 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Vývoj zmluvnej základne a členstvo v EÚ",
+    "branches": [
+      {
+        "label": "Zakladajúce zmluvy",
+        "leaves": [
+          "Paríž 1951 – Európske spoločenstvo uhlia a ocele (ESUO)",
+          "Rím 1957 – EHS a Euratom"
+        ]
+      },
+      {
+        "label": "Prehlbovanie integrácie (60.–80. roky)",
+        "leaves": [
+          "Prednosť práva Únie – Costa/ENEL",
+          "Priamy účinok – Van Gend en Loos",
+          "Jednotný európsky akt 1986 – cieľ jednotného vnútorného trhu"
+        ]
+      },
+      {
+        "label": "Maastricht 1992/1993",
+        "leaves": [
+          "Vznik Európskej únie",
+          "Zavedenie občianstva Únie",
+          "Hospodárska a menová únia",
+          "Tri piliere – ES, SZBP, justičná a policajná spolupráca"
+        ]
+      },
+      {
+        "label": "Amsterdam 1997 a Nice 2001",
+        "leaves": [
+          "Inštitucionálne úpravy",
+          "Príprava Únie na rozšírenie"
+        ]
+      },
+      {
+        "label": "Lisabon 2007/2009",
+        "leaves": [
+          "Zrušenie pilierovej štruktúry",
+          "Právna subjektivita Európskej únie",
+          "Záväznosť Charty základných práv",
+          "Rozšírenie spolurozhodovania na riadny legislatívny postup"
+        ]
+      },
+      {
+        "label": "Členstvo (čl. 49 ZEÚ)",
+        "leaves": [
+          "Podmienky – európsky štát, hodnoty čl. 2 ZEÚ, kodanské kritériá, prevzatie acquis",
+          "Rozhoduje Rada jednomyseľne po súhlase Európskeho parlamentu",
+          "Európska rada – priznanie statusu kandidáta a podmienky prípustnosti",
+          "Prístupovú zmluvu ratifikujú všetky členské štáty"
+        ]
+      },
+      {
+        "label": "Vystúpenie (čl. 50 ZEÚ)",
+        "leaves": [
+          "Brexit ako prvý prípad použitia",
+          "Oznámenie o vystúpení možno jednostranne vziať späť – Wightman"
+        ]
+      }
+    ]
   }
 }

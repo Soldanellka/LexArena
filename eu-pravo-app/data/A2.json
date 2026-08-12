@@ -39,13 +39,13 @@
     {
       "q": "Ktorý článok upravuje demokratické zásady fungovania Únie?",
       "options": [
+        "Čl. 9 – 12 ZEÚ",
         "Čl. 10 – 12 ZEÚ",
-        "Čl. 50 ZEÚ",
         "Čl. 288 ZFEÚ",
         "Čl. 7 ZEÚ"
       ],
       "correct": 0,
-      "explanation": "Demokratické zásady sú upravené v čl. 10 – 12 ZEÚ."
+      "explanation": "Hlava II ZEÚ o demokratických zásadách sa začína čl. 9 (rovnosť občanov) a pokračuje čl. 10 (zastupiteľská demokracia), čl. 11 (participatívna demokracia a EIO) a čl. 12 (národné parlamenty)."
     },
     {
       "q": "Ktoré právo patrí medzi práva občanov EÚ?",
@@ -70,7 +70,7 @@
     },
     {
       "term": "Demokratické zásady",
-      "definition": "Zastupiteľská demokracia, rovnosť občanov, participácia, transparentnosť (čl. 10 – 12 ZEÚ)."
+      "definition": "Rovnosť občanov, zastupiteľská demokracia, participácia a úloha národných parlamentov (čl. 9 – 12 ZEÚ)."
     },
     {
       "term": "Ruiz Zambrano",
@@ -137,8 +137,57 @@
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2011:124; ECLI:EU:C:2010:104; čl. 2 ZEÚ; čl. 10 – 12 ZEÚ; čl. 20 ZFEÚ",
+    "citation": "ECLI:EU:C:2011:124; ECLI:EU:C:2010:104; čl. 2 ZEÚ; čl. 9 – 12 ZEÚ; čl. 20 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Občianstvo Únie, hodnoty a demokratické zásady",
+    "branches": [
+      {
+        "label": "Občianstvo Únie (čl. 20 ZFEÚ)",
+        "leaves": [
+          "Zavedené Maastrichtskou zmluvou v roku 1992",
+          "Dopĺňa štátne občianstvo, nenahrádza ho",
+          "Je od štátneho občianstva odvodené – bez neho nevzniká"
+        ]
+      },
+      {
+        "label": "Práva občana Únie (čl. 20–24 ZFEÚ)",
+        "leaves": [
+          "Voľný pohyb a pobyt na území členských štátov",
+          "Voliť a byť volený v komunálnych voľbách a vo voľbách do Európskeho parlamentu",
+          "Diplomatická a konzulárna ochrana v tretích štátoch",
+          "Petičné právo voči Európskemu parlamentu",
+          "Obrátiť sa na európskeho ombudsmana"
+        ]
+      },
+      {
+        "label": "Hodnoty Únie (čl. 2 ZEÚ)",
+        "leaves": [
+          "Ľudská dôstojnosť, sloboda, demokracia, rovnosť",
+          "Právny štát a dodržiavanie ľudských práv vrátane práv menšín",
+          "Právne záväzné – podmienka členstva podľa čl. 49 ZEÚ",
+          "Sankčný mechanizmus podľa čl. 7 ZEÚ"
+        ]
+      },
+      {
+        "label": "Demokratické zásady (čl. 9–12 ZEÚ)",
+        "leaves": [
+          "Rovnosť občanov Únie (čl. 9)",
+          "Zastupiteľská demokracia (čl. 10)",
+          "Participatívna demokracia a európska iniciatíva občanov (čl. 11)",
+          "Úloha národných parlamentov (čl. 12)"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "Ruiz Zambrano – občianstvo Únie ako základný status občanov členských štátov",
+          "Rottmann – strata štátneho občianstva a jej limity v práve Únie",
+          "Delvigne – volebné práva občana Únie"
+        ]
+      }
+    ]
   }
 }
