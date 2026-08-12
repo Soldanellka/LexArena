@@ -4,59 +4,59 @@
   "summary": "Európska rada je najvyšším politickým orgánom Európskej únie a dáva Únii potrebné podnety na jej rozvoj a určuje jej všeobecné politické smerovanie a priority. Je upravená v čl. 15 ZEÚ a Lisabonskou zmluvou sa stala samostatnou inštitúciou EÚ. Tvoria ju hlavy štátov alebo predsedovia vlád členských štátov, predseda Európskej rady a predseda Európskej komisie; na jej práci sa zúčastňuje aj vysoký predstaviteľ Únie pre zahraničné veci a bezpečnostnú politiku. Európska rada nevykonáva legislatívnu funkciu (čl. 15 ods. 1 ZEÚ).\n\nEurópska rada zasadá dvakrát za polrok, zvoláva ju jej predseda, spravidla v Bruseli. Svoje rozhodnutia prijíma zásadne konsenzom, ak zmluvy neustanovujú inak (čl. 15 ods. 4 ZEÚ). Predseda Európskej rady je volený na dva a pol roka a môže byť raz znovuzvolený (čl. 15 ods. 5 ZEÚ). Predseda zabezpečuje prípravu a kontinuitu práce Európskej rady, podporuje súdržnosť a konsenzus a zastupuje Úniu navonok v otázkach spoločnej zahraničnej a bezpečnostnej politiky bez toho, aby boli dotknuté právomoci vysokého predstaviteľa (čl. 15 ods. 6 ZEÚ).\n\nPrávomoci Európskej rady zahŕňajú určovanie strategických smerovaní a priorít Únie a riešenie citlivých politických otázok. V personálnej oblasti navrhuje Európskemu parlamentu kandidáta na predsedu Komisie (čl. 17 ods. 7 ZEÚ), vymenúva Komisiu ako celok a vysokého predstaviteľa pre SZBP (čl. 18 ZEÚ). Má úlohu pri revízii zmlúv (čl. 48 ZEÚ). Pri vystúpení členského štátu podľa čl. 50 ZEÚ nedáva podnet na vystúpenie – ten dáva sám členský štát oznámením svojho úmyslu – ale poskytuje usmernenia na rokovanie o dohode o vystúpení. Podľa čl. 7 ZEÚ môže jednomyseľne rozhodnúť o existencii závažného a pretrvávajúceho porušenia hodnôt Únie členským štátom; o samotnom pozastavení práv (vrátane hlasovacích) potom rozhoduje Rada.\n\nEurópska rada má kľúčovú úlohu pri riešení kríz, koordinácii politík a určovaní dlhodobých priorít Únie. Judikatúra Súdneho dvora EÚ potvrdzuje, že aj akty Európskej rady musia byť v súlade so zmluvami: v rozsudku C-370/12 (Pringle) Súdny dvor preskúmal platnosť rozhodnutia Európskej rady, ktorým sa zjednodušeným revíznym postupom menil čl. 136 ZFEÚ (mechanizmus pre eurozónu), a potvrdil, že takýto postup musí rešpektovať hranice stanovené zmluvami.\n\nZapamätaj si:\n– Európska rada (čl. 15 ZEÚ): najvyšší politický orgán, dáva smerovanie a priority, NEprijíma legislatívne akty. Samostatná inštitúcia až od Lisabonu.\n– Zloženie: hlavy štátov/vlád + predseda Európskej rady + predseda Komisie; na práci sa zúčastňuje aj vysoký predstaviteľ pre SZBP.\n– Fungovanie: zasadá 2× za polrok, spravidla Brusel; rozhoduje zásadne konsenzom (čl. 15 ods. 4).\n– Predseda: volený na 2,5 roka, raz znovuzvoliteľný (čl. 15 ods. 5); zastupuje Úniu navonok v SZBP bez dotknutia právomocí vysokého predstaviteľa.\n– Právomoci: strategické smerovanie, návrh kandidáta na predsedu Komisie (čl. 17 ods. 7), vymenovanie vysokého predstaviteľa (čl. 18), revízia zmlúv (čl. 48), usmernenia pri vystúpení (čl. 50), určenie porušenia hodnôt (čl. 7 – sankcie potom ukladá Rada).\n– Judikatúra: C-370/12 (Pringle) – akty Európskej rady musia rešpektovať zmluvy. Pozor: C-62/14 (Gauweiler) je o ECB/OMT, NEpatrí sem.\n\nZdroj: Zmluva o Európskej únii, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 7, 15, 17 ods. 7, 18, 48 a 50 ZEÚ; judikatúra Súdneho dvora EÚ (C-370/12 Pringle); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje Európsku radu?",
+      "q": "Európska rada:",
       "options": [
-        "Čl. 15 ZEÚ",
-        "Čl. 14 ZEÚ",
-        "Čl. 49 ZEÚ",
-        "Čl. 288 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 15 ZEÚ upravuje zloženie a úlohy Európskej rady."
-    },
-    {
-      "q": "Kto tvorí Európsku radu?",
-      "options": [
-        "Poslanci Európskeho parlamentu",
-        "Hlavy štátov alebo predsedovia vlád členských štátov",
-        "Komisári",
-        "Sudcovia Súdneho dvora"
+        "prijíma legislatívne akty",
+        "určuje politické smerovanie Únie, nevykonáva legislatívnu funkciu",
+        "je totožná s Radou EÚ",
+        "je súčasťou Komisie"
       ],
       "correct": 1,
-      "explanation": "Európsku radu tvoria hlavy štátov alebo predsedovia vlád členských štátov."
+      "explanation": "Podľa čl. 15 ods. 1 ZEÚ dáva Európska rada Únii potrebné podnety a vymedzuje politické smerovanie a priority, legislatívnu funkciu však nevykonáva."
     },
     {
-      "q": "Má Európska rada legislatívne právomoci?",
+      "q": "Európsku radu tvoria:",
       "options": [
-        "Áno",
-        "Nie",
-        "Len v oblasti SZBP",
-        "Len pri rozpočte"
+        "ministri členských štátov",
+        "hlavy štátov alebo predsedovia vlád, predseda Európskej rady a predseda Komisie",
+        "poslanci Európskeho parlamentu",
+        "komisári"
       ],
       "correct": 1,
-      "explanation": "Európska rada neprijíma legislatívne akty."
+      "explanation": "Na jej práci sa zúčastňuje aj vysoký predstaviteľ Únie pre zahraničné veci a bezpečnostnú politiku."
     },
     {
-      "q": "Kto predsedá Európskej rade?",
+      "q": "Európska rada rozhoduje spravidla:",
       "options": [
-        "Predseda Komisie",
-        "Predseda Európskej rady",
-        "Predseda Parlamentu",
-        "Rotujúci predseda Rady EÚ"
+        "kvalifikovanou väčšinou",
+        "konsenzom",
+        "prostou väčšinou",
+        "losom"
       ],
       "correct": 1,
-      "explanation": "Európskej rade predsedá jej predseda volený na 2,5 roka."
+      "explanation": "Čl. 15 ods. 4 ZEÚ: Európska rada rozhoduje konsenzom, ak zmluvy neustanovujú inak."
     },
     {
-      "q": "Ktorý rozsudok sa týka právomocí Európskej rady?",
+      "q": "Predsedu Komisie Európska rada:",
       "options": [
-        "C‑370/12 Pringle",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑409/13 Parlament v. Rada",
-        "C‑64/16 ASJP"
+        "volí",
+        "navrhuje ako kandidáta, ktorého volí Európsky parlament",
+        "menuje bez účasti Parlamentu",
+        "neovplyvňuje"
       ],
-      "correct": 0,
-      "explanation": "V rozsudku Pringle Súdny dvor posudzoval právomoci Európskej rady pri prijímaní rozhodnutí o stabilizačných mechanizmoch."
+      "correct": 1,
+      "explanation": "Čl. 17 ods. 7 ZEÚ: Európska rada navrhne kandidáta so zreteľom na výsledky volieb do Parlamentu, Parlament ho následne volí."
+    },
+    {
+      "q": "Ktoré tvrdenie je správne?",
+      "options": [
+        "Európska rada je to isté ako Rada EÚ",
+        "Európsku radu tvoria ministri členských štátov",
+        "Európsku radu tvoria hlavy štátov alebo predsedovia vlád, Radu EÚ ministri; Rada Európy nie je orgánom EÚ",
+        "Rada Európy je inštitúciou EÚ"
+      ],
+      "correct": 2,
+      "explanation": "Tri telesá s podobným názvom: Európska rada (hlavy štátov/vlád, čl. 15 ZEÚ), Rada EÚ (ministri, čl. 16 ZEÚ) a Rada Európy – samostatná medzinárodná organizácia mimo Únie."
     }
   ],
   "tiles": [
@@ -140,5 +140,51 @@
     "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2015:400; čl. 15 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Európska rada",
+    "branches": [
+      {
+        "label": "Právna úprava a povaha",
+        "leaves": [
+          "Čl. 15 ZEÚ",
+          "Samostatná inštitúcia až od Lisabonskej zmluvy",
+          "Nevykonáva legislatívnu funkciu"
+        ]
+      },
+      {
+        "label": "Zloženie",
+        "leaves": [
+          "Hlavy štátov alebo predsedovia vlád členských štátov",
+          "Predseda Európskej rady a predseda Komisie",
+          "Na práci sa zúčastňuje vysoký predstaviteľ Únie"
+        ]
+      },
+      {
+        "label": "Fungovanie",
+        "leaves": [
+          "Zasadá dvakrát za polrok",
+          "Rozhoduje konsenzom (čl. 15 ods. 4 ZEÚ)",
+          "Predseda volený na 2,5 roka, raz obnoviteľne"
+        ]
+      },
+      {
+        "label": "Právomoci",
+        "leaves": [
+          "Určuje strategické smerovanie a priority Únie",
+          "Navrhuje kandidáta na predsedu Komisie (čl. 17 ods. 7 ZEÚ)",
+          "Vymenúva vysokého predstaviteľa (čl. 18 ZEÚ)",
+          "Úloha pri revízii zmlúv (čl. 48 ZEÚ)",
+          "Usmernenia pri vystúpení členského štátu (čl. 50 ZEÚ)",
+          "Určuje závažné a pretrvávajúce porušenie hodnôt (čl. 7 ZEÚ) – sankcie ukladá Rada"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-370/12 (Pringle) – zjednodušená revízia čl. 136 ZFEÚ a Európsky mechanizmus pre stabilitu"
+        ]
+      }
+    ]
   }
 }

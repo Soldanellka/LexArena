@@ -4,59 +4,59 @@
   "summary": "Európska komisia je výkonným (exekutívnym) orgánom Európskej únie a predstavuje „strážkyňu zmlúv\". Je upravená v čl. 17 ZEÚ a čl. 244 – 250 ZFEÚ. Komisia presadzuje všeobecný záujem Únie, dohliada na uplatňovanie práva EÚ pod kontrolou Súdneho dvora, navrhuje legislatívu, plní rozpočet, riadi programy a zabezpečuje vonkajšie zastupovanie Únie v oblastiach mimo spoločnej zahraničnej a bezpečnostnej politiky.\n\nKomisia pozostáva z jedného komisára za každý členský štát vrátane predsedu a vysokého predstaviteľa Únie pre zahraničné veci a bezpečnostnú politiku, ktorý je zároveň jedným z podpredsedov Komisie. Predsedu Komisie navrhuje Európska rada (so zreteľom na výsledky volieb do Európskeho parlamentu) a volí ho Európsky parlament; Komisiu ako celok potom po schválení Parlamentom vymenúva Európska rada. Komisári sú menovaní na päť rokov a musia byť úplne nezávislí – nesmú žiadať ani prijímať pokyny od vlád členských štátov ani iných subjektov. Komisia sa ako celok zodpovedá Európskemu parlamentu, ktorý jej môže vysloviť nedôveru (čl. 17 ods. 8 ZEÚ, čl. 234 ZFEÚ), následkom čoho musí odstúpiť.\n\nOrganizácia Komisie zahŕňa kolégium komisárov, generálne riaditeľstvá (DG) a služby, kabinet predsedu a kabinety jednotlivých komisárov. Komisia rozhoduje kolektívne podľa zásady kolegiality, pričom každý komisár má rovnaké hlasovacie právo a kolégium nesie za rozhodnutia spoločnú zodpovednosť.\n\nPrávomoci Komisie zahŕňajú takmer výlučné právo legislatívnej iniciatívy, dohľad nad uplatňovaním práva EÚ vrátane vedenia konania o nesplnení povinnosti proti členskému štátu (čl. 258 ZFEÚ), plnenie rozpočtu a správu programov, zastupovanie Únie v medzinárodných rokovaniach a vykonávanie politík EÚ. Komisia tiež prijíma delegované akty (čl. 290 ZFEÚ) a vykonávacie akty (čl. 291 ZFEÚ), ktorými dopĺňa alebo vykonáva legislatívu, a presadzuje pravidlá hospodárskej súťaže.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje postavenie a právomoci Komisie v inštitucionálnej rovnováhe. V rozsudku C-427/12 (Komisia v Parlament a Rada, „Biocídy\") Súdny dvor po prvýkrát vymedzil hranicu medzi delegovanými a vykonávacími aktmi a potvrdil, že normotvorca má pri voľbe medzi čl. 290 a čl. 291 ZFEÚ určitú mieru voľnej úvahy.\n\nZapamätaj si:\n– Úprava: čl. 17 ZEÚ + čl. 244 – 250 ZFEÚ. Exekutíva EÚ, „strážkyňa zmlúv\".\n– Zloženie: jeden komisár za každý členský štát (vrátane predsedu a vysokého predstaviteľa – ten je aj podpredsedom Komisie). Funkčné obdobie 5 rokov, úplná nezávislosť (bez pokynov od vlád).\n– Kreovanie: predsedu navrhuje Európska rada (podľa výsledkov eurovolieb), volí Parlament; celú Komisiu schvaľuje Parlament a vymenúva Európska rada. Nedôvera Parlamentu → odstúpenie celej Komisie (čl. 17 ods. 8 ZEÚ, čl. 234 ZFEÚ).\n– Organizácia: kolégium, generálne riaditeľstvá (DG), kabinety; rozhodovanie kolektívne podľa zásady kolegiality (rovnaké hlasy, spoločná zodpovednosť).\n– Právomoci: takmer výlučná legislatívna iniciatíva, dohľad + konanie o nesplnení povinnosti (čl. 258 ZFEÚ), plnenie rozpočtu, vonkajšie zastupovanie (mimo SZBP), delegované a vykonávacie akty (čl. 290 a 291 ZFEÚ), hospodárska súťaž.\n– Judikatúra: C-427/12 (Biocídy) – hranica delegované vs. vykonávacie akty. Pozor: C-270/12 je o ESMA/agentúrach (Meroni), NEpatrí sem; C-424/99 neoverené, vynechané.\n\nZdroj: Zmluva o Európskej únii a Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 17 ZEÚ, čl. 244 – 250, 258, 290 a 291 ZFEÚ; judikatúra Súdneho dvora EÚ (C-427/12 Biocídy); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje Európsku komisiu?",
+      "q": "Orgán s (takmer) výlučnou legislatívnou iniciatívou a úlohou „strážkyne zmlúv“ je:",
       "options": [
-        "Čl. 17 ZEÚ",
-        "Čl. 14 ZEÚ",
-        "Čl. 288 ZFEÚ",
-        "Čl. 49 ZEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 17 ZEÚ upravuje úlohy a zloženie Európskej komisie."
-    },
-    {
-      "q": "Kto volí predsedu Európskej komisie?",
-      "options": [
-        "Rada EÚ",
+        "Rada",
+        "Komisia",
         "Európsky parlament",
-        "Európska rada",
-        "Súdny dvor"
+        "Európska rada"
       ],
       "correct": 1,
-      "explanation": "Predsedu Komisie volí Európsky parlament na návrh Európskej rady."
+      "explanation": "Komisia podľa čl. 17 ZEÚ predkladá návrhy legislatívnych aktov a dohliada na uplatňovanie práva Únie. Iniciatíva je takmer výlučná – zmluvy poznajú niekoľko výnimiek."
     },
     {
-      "q": "Aká je hlavná úloha Komisie?",
+      "q": "Predsedu Komisie:",
       "options": [
-        "Prijímať legislatívne akty",
-        "Dohliadať na uplatňovanie práva EÚ",
-        "Zastupovať členské štáty",
-        "Riadiť Európsku centrálnu banku"
+        "menuje Európska rada bez účasti Parlamentu",
+        "navrhuje Európska rada a volí Európsky parlament",
+        "volí Rada",
+        "navrhuje Európsky parlament"
       ],
       "correct": 1,
-      "explanation": "Komisia je strážkyňou zmlúv a dohliada na uplatňovanie práva EÚ."
+      "explanation": "Čl. 17 ods. 7 ZEÚ. Celú Komisiu potom schvaľuje Parlament a menuje Európska rada."
     },
     {
-      "q": "Ako Komisia prijíma rozhodnutia?",
+      "q": "Funkčné obdobie Komisie je:",
       "options": [
-        "Predseda rozhoduje sám",
-        "Každý komisár má právo veta",
-        "Kolektívne ako kolégium",
-        "Rozhoduje Rada EÚ"
+        "4 roky",
+        "5 rokov",
+        "6 rokov",
+        "2,5 roka"
       ],
-      "correct": 2,
-      "explanation": "Komisia prijíma rozhodnutia kolektívne ako kolégium."
+      "correct": 1,
+      "explanation": "Komisia sa vymenúva na päť rokov, teda na obdobie zodpovedajúce volebnému obdobiu Parlamentu."
     },
     {
-      "q": "Ktorý rozsudok sa týka nezávislosti Komisie?",
+      "q": "Konanie o nesplnení povinnosti proti členskému štátu vedie Komisia podľa:",
       "options": [
-        "C‑424/99",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑62/14 Gauweiler",
-        "C‑157/21 Komisia/Maďarsko"
+        "čl. 263 ZFEÚ",
+        "čl. 258 ZFEÚ",
+        "čl. 267 ZFEÚ",
+        "čl. 7 ZEÚ"
       ],
-      "correct": 0,
-      "explanation": "V rozsudku C‑424/99 Súdny dvor zdôraznil nezávislosť Komisie."
+      "correct": 1,
+      "explanation": "Čl. 258 ZFEÚ. Čl. 263 je žaloba o neplatnosť, čl. 267 prejudiciálne konanie a čl. 7 ZEÚ sankčný mechanizmus pri porušení hodnôt."
+    },
+    {
+      "q": "Komisia zabezpečuje vonkajšie zastupovanie Únie:",
+      "options": [
+        "vo všetkých oblastiach",
+        "okrem spoločnej zahraničnej a bezpečnostnej politiky",
+        "len v obchodnej politike",
+        "nezastupuje Úniu navonok"
+      ],
+      "correct": 1,
+      "explanation": "V oblasti SZBP zastupuje Úniu vysoký predstaviteľ, prípadne predseda Európskej rady."
     }
   ],
   "tiles": [
@@ -140,5 +140,61 @@
     "citation": "ECLI:EU:C:2001:134; ECLI:EU:C:2014:231; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Európska komisia",
+    "branches": [
+      {
+        "label": "Právna úprava a povaha",
+        "leaves": [
+          "Čl. 17 ZEÚ a čl. 244 – 250 ZFEÚ",
+          "Exekutíva Únie",
+          "Strážkyňa zmlúv"
+        ]
+      },
+      {
+        "label": "Zloženie",
+        "leaves": [
+          "Jeden komisár za každý členský štát vrátane predsedu",
+          "Vysoký predstaviteľ je zároveň podpredsedom Komisie",
+          "Funkčné obdobie päť rokov",
+          "Úplná nezávislosť – komisári neprijímajú pokyny od vlád"
+        ]
+      },
+      {
+        "label": "Kreovanie",
+        "leaves": [
+          "Európska rada navrhne kandidáta na predsedu so zreteľom na výsledky volieb do Parlamentu",
+          "Predsedu volí Európsky parlament",
+          "Celú Komisiu schvaľuje Parlament a menuje Európska rada",
+          "Vyslovenie nedôvery znamená odstúpenie celej Komisie (čl. 17 ods. 8 ZEÚ, čl. 234 ZFEÚ)"
+        ]
+      },
+      {
+        "label": "Organizácia",
+        "leaves": [
+          "Kolégium komisárov",
+          "Generálne riaditeľstvá (DG) a kabinety",
+          "Zásada kolegiality – rovnaká váha hlasov"
+        ]
+      },
+      {
+        "label": "Právomoci",
+        "leaves": [
+          "Takmer výlučná legislatívna iniciatíva",
+          "Dohľad nad uplatňovaním práva a konanie o nesplnení povinnosti (čl. 258 ZFEÚ)",
+          "Plnenie rozpočtu Únie",
+          "Vonkajšie zastupovanie okrem spoločnej zahraničnej a bezpečnostnej politiky",
+          "Delegované (čl. 290 ZFEÚ) a vykonávacie akty (čl. 291 ZFEÚ)",
+          "Presadzovanie pravidiel hospodárskej súťaže"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-427/12 (Biocídy) – hranica medzi delegovanými a vykonávacími aktmi"
+        ]
+      }
+    ]
   }
 }

@@ -4,59 +4,59 @@
   "summary": "Európsky parlament je jednou z hlavných inštitúcií Európskej únie a predstavuje demokratický prvok jej inštitucionálnej štruktúry. Je upravený v čl. 14 ZEÚ a čl. 223 – 234 ZFEÚ. Parlament zastupuje občanov Európskej únie a je jedinou priamo volenou inštitúciou EÚ (od roku 1979). Má legislatívne, rozpočtové, kontrolné a politické právomoci.\n\nZloženie Parlamentu je založené na zásade degresívnej proporcionality (čl. 14 ods. 2 ZEÚ): väčšie štáty majú viac poslancov, menšie sú však relatívne zvýhodnené, pričom každý štát má najmenej 6 a najviac 96 poslancov. Zmluvy stanovujú strop najviac 750 poslancov plus predseda; vo volebnom období 2024 – 2029 má Parlament 720 poslancov. Poslanci sú volení na päť rokov vo všeobecných, priamych a slobodných voľbách.\n\nOrganizácia Parlamentu zahŕňa predsedu (voleného na dva a pol roka s možnosťou opätovného zvolenia), 14 podpredsedov tvoriacich spolu s predsedom Predsedníctvo, konferenciu predsedov, výbory, delegácie a politické skupiny. Poslanci sa združujú do politických skupín podľa politickej príslušnosti, nie štátnej príslušnosti. Politické skupiny sú kľúčové pre fungovanie Parlamentu, keďže organizujú prácu poslancov, určujú priority a koordinujú legislatívne procesy.\n\nPrávomoci Parlamentu zahŕňajú legislatívnu moc, ktorú vykonáva spoločne s Radou (najmä v riadnom legislatívnom postupe), rozpočtovú moc (spolu s Radou prijíma rozpočet EÚ, čl. 314 ZFEÚ), politickú kontrolu Komisie vrátane práva vysloviť jej nedôveru (čl. 234 ZFEÚ), voľbu predsedu Komisie (čl. 17 ods. 7 ZEÚ) a schválenie Komisie ako celku, dohľad nad ostatnými inštitúciami a udeľovanie súhlasu s medzinárodnými dohodami (čl. 218 ZFEÚ). Parlament tiež prijíma petície občanov (čl. 227 ZFEÚ) a volí európskeho ombudsmana, ktorý sa mu zodpovedá (čl. 228 ZFEÚ).\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam Parlamentu v inštitucionálnej rovnováhe, najmä v rozsudku C-70/88 (Parlament v Rada, „Černobyľ\"), ktorý priznal Parlamentu právo brániť svoje výsady žalobou o neplatnosť, a v rozsudku C-409/13 (Rada v Komisia), ktorý potvrdil, že inštitúcie musia v legislatívnom procese rešpektovať inštitucionálnu rovnováhu a nesmú obchádzať právomoci ostatných.\n\nZapamätaj si:\n– Úprava: čl. 14 ZEÚ + čl. 223 – 234 ZFEÚ. Jediná priamo volená inštitúcia EÚ (od 1979), volebné obdobie 5 rokov.\n– Zloženie: degresívna proporcionalita (čl. 14 ods. 2 ZEÚ); na štát min. 6, max. 96 poslancov; strop 750 + predseda; aktuálne (2024 – 2029) 720 poslancov.\n– Organizácia: predseda (2,5 roka), 14 podpredsedov (Predsedníctvo), konferencia predsedov, výbory, delegácie, politické skupiny (podľa politickej, nie štátnej príslušnosti).\n– Právomoci: legislatívna (s Radou), rozpočtová (čl. 314 ZFEÚ), kontrola Komisie + nedôvera (čl. 234 ZFEÚ), voľba predsedu Komisie (čl. 17 ods. 7 ZEÚ) a schválenie celej Komisie, súhlas s medzinárodnými dohodami (čl. 218 ZFEÚ), petície (čl. 227), voľba ombudsmana (čl. 228).\n– Judikatúra: C-70/88 (Černobyľ – Parlament bráni svoje výsady), C-409/13 (rešpektovanie inštitucionálnej rovnováhy v legislatíve).\n\nZdroj: Zmluva o Európskej únii a Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 14 a 17 ods. 7 ZEÚ, čl. 218, 227, 228, 234 a 314 ZFEÚ; rozhodnutie Európskej rady (EÚ) 2023/2061 o zložení Európskeho parlamentu (720 poslancov); judikatúra Súdneho dvora EÚ (C-70/88, C-409/13); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje Európsky parlament?",
+      "q": "Koľko poslancov má Európsky parlament vo volebnom období 2024 – 2029?",
       "options": [
-        "Čl. 14 ZEÚ",
-        "Čl. 20 ZFEÚ",
-        "Čl. 49 ZEÚ",
-        "Čl. 288 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 14 ZEÚ upravuje zloženie a úlohy Európskeho parlamentu."
-    },
-    {
-      "q": "Ako sú poslanci Európskeho parlamentu volení?",
-      "options": [
-        "Nepriamo členskými štátmi",
-        "Priamymi voľbami občanov EÚ",
-        "Menovaním Komisiou",
-        "Menovaním Európskou radou"
+        "705",
+        "720",
+        "751",
+        "750"
       ],
       "correct": 1,
-      "explanation": "Poslanci sú volení vo všeobecných priamych voľbách každých päť rokov."
+      "explanation": "Aktuálne má Parlament 720 poslancov. Zmluvný strop je 750 poslancov plus predseda (čl. 14 ods. 2 ZEÚ)."
     },
     {
-      "q": "Čo znamená degresívna proporcionalita?",
+      "q": "Európsky parlament je:",
       "options": [
-        "Každý štát má rovnaký počet poslancov",
-        "Menšie štáty majú relatívne viac poslancov na obyvateľa",
-        "Väčšie štáty majú absolútne viac poslancov",
-        "Počet poslancov sa mení každý rok"
+        "nepriamo volený členskými štátmi",
+        "jediná priamo volená inštitúcia EÚ",
+        "menovaný vládami členských štátov",
+        "volený Radou"
       ],
       "correct": 1,
-      "explanation": "Degresívna proporcionalita zvýhodňuje menšie štáty v počte poslancov."
+      "explanation": "Poslanci sú od roku 1979 volení vo všeobecných priamych voľbách na päťročné obdobie."
     },
     {
-      "q": "Ktoré právomoci má Európsky parlament?",
+      "q": "Zloženie Európskeho parlamentu sa riadi zásadou:",
       "options": [
-        "Len poradné",
-        "Legislatívne, rozpočtové a kontrolné",
-        "Len kontrolné",
-        "Len rozpočtové"
+        "rovnakého počtu poslancov na štát",
+        "degresívnej proporcionality",
+        "proporcionality podľa HDP",
+        "losovania"
       ],
       "correct": 1,
-      "explanation": "Parlament má legislatívne, rozpočtové a kontrolné právomoci."
+      "explanation": "Degresívna proporcionalita (čl. 14 ods. 2 ZEÚ): menšie štáty majú viac poslancov na obyvateľa, minimum je 6 a maximum 96 na štát."
     },
     {
-      "q": "Ktorý rozsudok sa týka legislatívnych právomocí Parlamentu?",
+      "q": "Európsky parlament môže voči Komisii:",
       "options": [
-        "C‑409/13 Parlament v. Rada",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑135/08 Rottmann",
-        "C‑64/16 ASJP"
+        "meniť jej rozhodnutia",
+        "vysloviť nedôveru, po ktorej celá Komisia odstúpi",
+        "odvolať jednotlivého komisára",
+        "nič, Komisia mu nezodpovedá"
       ],
-      "correct": 0,
-      "explanation": "V rozsudku C‑409/13 Súdny dvor potvrdil legislatívne právomoci Parlamentu."
+      "correct": 1,
+      "explanation": "Návrh na vyslovenie nedôvery podľa čl. 234 ZFEÚ smeruje proti Komisii ako celku – jednotlivého komisára Parlament odvolať nemôže."
+    },
+    {
+      "q": "Predsedu Komisie Európsky parlament:",
+      "options": [
+        "menuje",
+        "volí na návrh Európskej rady",
+        "navrhuje",
+        "neovplyvňuje"
+      ],
+      "correct": 1,
+      "explanation": "Podľa čl. 17 ods. 7 ZEÚ Európska rada navrhne kandidáta so zreteľom na výsledky volieb a Parlament ho volí."
     }
   ],
   "tiles": [
@@ -140,5 +140,55 @@
     "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:1990:153; čl. 14 ZEÚ; čl. 223 – 234 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Európsky parlament",
+    "branches": [
+      {
+        "label": "Právna úprava a povaha",
+        "leaves": [
+          "Čl. 14 ZEÚ a čl. 223 – 234 ZFEÚ",
+          "Jediná priamo volená inštitúcia Únie – od roku 1979",
+          "Funkčné obdobie päť rokov"
+        ]
+      },
+      {
+        "label": "Zloženie",
+        "leaves": [
+          "Degresívna proporcionalita (čl. 14 ods. 2 ZEÚ)",
+          "Najmenej 6 a najviac 96 poslancov na členský štát",
+          "Zmluvný strop 750 poslancov plus predseda",
+          "Vo volebnom období 2024 – 2029 má Parlament 720 poslancov"
+        ]
+      },
+      {
+        "label": "Organizácia",
+        "leaves": [
+          "Predseda volený na 2,5 roka",
+          "14 podpredsedov – spolu s predsedom tvoria Predsedníctvo",
+          "Konferencia predsedov politických skupín",
+          "Stále výbory pripravujúce legislatívu",
+          "Politické skupiny podľa politickej, nie štátnej príslušnosti"
+        ]
+      },
+      {
+        "label": "Právomoci",
+        "leaves": [
+          "Legislatívna – spoločne s Radou v riadnom legislatívnom postupe",
+          "Rozpočtová – schvaľovanie rozpočtu Únie (čl. 314 ZFEÚ)",
+          "Kontrolná – nedôvera Komisii ako celku (čl. 234 ZFEÚ)",
+          "Voľba predsedu Komisie (čl. 17 ods. 7 ZEÚ)",
+          "Súhlas s medzinárodnými dohodami (čl. 218 ZFEÚ)",
+          "Petície (čl. 227 ZFEÚ) a voľba európskeho ombudsmana (čl. 228 ZFEÚ)"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-70/88 (Černobyľ) – ochrana výsad Parlamentu žalobou o neplatnosť",
+          "C-409/13 – inštitucionálna rovnováha v legislatívnom postupe"
+        ]
+      }
+    ]
   }
 }

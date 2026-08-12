@@ -4,59 +4,59 @@
   "summary": "Inštitucionálny systém Európskej únie nie je založený na klasickej deľbe moci ako v štátoch, ale na zásade inštitucionálnej rovnováhy: inštitúcie spolupracujú pri tvorbe, vykonávaní a kontrole práva EÚ a každá koná len v medziach právomocí, ktoré jej priznávajú zmluvy. Sedem inštitúcií je vymenovaných v čl. 13 ZEÚ: Európsky parlament (čl. 14 ZEÚ), Európska rada (čl. 15 ZEÚ), Rada (čl. 16 ZEÚ), Európska komisia (čl. 17 ZEÚ), Súdny dvor Európskej únie (čl. 19 ZEÚ), Európska centrálna banka a Dvor audítorov. Každá má vlastné právomoci a úlohy presne vymedzené v zmluvách.\n\nLegislatívnu moc vykonávajú spoločne Európsky parlament a Rada, ktoré prijímajú právne akty EÚ najmä v riadnom legislatívnom postupe (čl. 289 a 294 ZFEÚ). Parlament zastupuje občanov EÚ, Rada zastupuje vlády členských štátov. Európska rada určuje všeobecné politické smerovanie a priority Únie, nevykonáva však legislatívnu funkciu (čl. 15 ods. 1 ZEÚ).\n\nExekutívnu moc vykonáva najmä Európska komisia (čl. 17 ZEÚ), ktorá má takmer výlučné právo legislatívnej iniciatívy (navrhuje právne akty), dohliada na uplatňovanie práva EÚ pod kontrolou Súdneho dvora a zabezpečuje vonkajšie zastupovanie Únie s výnimkou spoločnej zahraničnej a bezpečnostnej politiky. Komisia je „strážkyňou zmlúv\" a môže začať konanie o nesplnení povinnosti proti členskému štátu (čl. 258 ZFEÚ).\n\nSúdnu moc vykonáva Súdny dvor Európskej únie (čl. 19 ZEÚ), ktorý zabezpečuje dodržiavanie práva pri výklade a uplatňovaní zmlúv. Rozhoduje najmä o žalobách členských štátov a inštitúcií, o žalobách jednotlivcov, o prejudiciálnych otázkach vnútroštátnych súdov (čl. 267 ZFEÚ) a o nesplnení povinností členských štátov.\n\nZásada inštitucionálnej rovnováhy znamená, že žiadna inštitúcia nesmie prekročiť právomoci, ktoré jej zmluvy priznávajú, ani zasahovať do právomocí iných. Súdny dvor túto zásadu potvrdil v judikatúre, najmä v rozsudku C-70/88 (Parlament v Rada, „Černobyľ\"), kde priznal Parlamentu právo brániť svoje výsady žalobou o neplatnosť, a v rozsudku C-409/13 (Rada v Komisia), kde vymedzil hranice práva Komisie stiahnuť legislatívny návrh. Rovnováha medzi inštitúciami chráni demokratickú legitimitu rozhodovania.\n\nZapamätaj si:\n– Nie klasická deľba moci, ale inštitucionálna rovnováha: každá inštitúcia koná len v medziach zverených právomocí (čl. 13 ods. 2 ZEÚ).\n– Sedem inštitúcií (čl. 13 ZEÚ): Parlament (14), Európska rada (15), Rada (16), Komisia (17), Súdny dvor EÚ (19), ECB, Dvor audítorov.\n– Legislatíva: Parlament (občania) + Rada (členské štáty), riadny legislatívny postup (čl. 294 ZFEÚ). Európska rada = smerovanie, bez legislatívnej funkcie.\n– Exekutíva: Komisia – takmer výlučná legislatívna iniciatíva, strážkyňa zmlúv, konanie o nesplnení povinnosti (čl. 258 ZFEÚ), vonkajšie zastupovanie okrem SZBP.\n– Súdnictvo: Súdny dvor EÚ (čl. 19 ZEÚ) – jednotný výklad, žaloby, prejudiciálne otázky (čl. 267 ZFEÚ).\n– Judikatúra k rovnováhe: C-70/88 (Černobyľ – výsady Parlamentu), C-409/13 (stiahnutie návrhu Komisiou – rovnováha, zverenie, lojálna spolupráca).\n\nZdroj: Zmluva o Európskej únii a Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 13 – 17 a 19 ZEÚ, čl. 258, 267 a 294 ZFEÚ; judikatúra Súdneho dvora EÚ (C-70/88, C-409/13); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje inštitúcie Európskej únie?",
+      "q": "Sedem inštitúcií Únie vymenúva:",
       "options": [
+        "Čl. 13 ZFEÚ",
         "Čl. 13 ZEÚ",
-        "Čl. 20 ZFEÚ",
-        "Čl. 288 ZFEÚ",
-        "Čl. 49 ZEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 13 ZEÚ upravuje základné inštitúcie EÚ."
-    },
-    {
-      "q": "Ktoré inštitúcie vykonávajú legislatívnu moc?",
-      "options": [
-        "Európska rada a Komisia",
-        "Parlament a Rada",
-        "Komisia a ECB",
-        "Súdny dvor a Parlament"
+        "Čl. 1 ZEÚ",
+        "Charta základných práv"
       ],
       "correct": 1,
-      "explanation": "Legislatívnu moc vykonávajú Európsky parlament a Rada."
+      "explanation": "Sedem inštitúcií Únie vymenúva čl. 13 ZEÚ; jednotlivým z nich sa potom venujú čl. 14 – 19 ZEÚ."
     },
     {
-      "q": "Ktorá inštitúcia je strážkyňou zmlúv?",
+      "q": "Ktorá inštitúcia NEvykonáva legislatívnu funkciu?",
       "options": [
+        "Rada",
+        "Európsky parlament",
         "Európska rada",
-        "Európska komisia",
-        "Súdny dvor",
+        "Komisia"
+      ],
+      "correct": 2,
+      "explanation": "Európska rada určuje politické smerovanie Únie, no podľa čl. 15 ods. 1 ZEÚ nevykonáva legislatívnu funkciu."
+    },
+    {
+      "q": "Jednotný výklad a uplatňovanie práva EÚ zabezpečuje:",
+      "options": [
+        "Komisia",
+        "Súdny dvor EÚ (čl. 19 ZEÚ)",
+        "Európska rada",
         "Dvor audítorov"
       ],
       "correct": 1,
-      "explanation": "Komisia dohliada na uplatňovanie práva EÚ."
+      "explanation": "Podľa čl. 19 ZEÚ Súdny dvor EÚ zabezpečuje dodržiavanie práva pri výklade a uplatňovaní zmlúv."
     },
     {
-      "q": "Ktorá inštitúcia zabezpečuje jednotný výklad práva EÚ?",
+      "q": "„Strážkyňou zmlúv“ je:",
       "options": [
-        "Európska rada",
+        "Súdny dvor",
+        "Rada",
         "Komisia",
-        "Súdny dvor EÚ",
-        "ECB"
+        "Európsky parlament"
       ],
       "correct": 2,
-      "explanation": "Súdny dvor zabezpečuje jednotný výklad a uplatňovanie práva EÚ."
+      "explanation": "Komisia dohliada na uplatňovanie práva Únie a môže začať konanie o nesplnení povinnosti podľa čl. 258 ZFEÚ."
     },
     {
-      "q": "Čo znamená zásada inštitucionálnej rovnováhy?",
+      "q": "Inštitucionálny systém EÚ je založený na:",
       "options": [
-        "Inštitúcie majú rovnaké právomoci",
-        "Inštitúcie musia konať v rámci právomocí určených zmluvami",
-        "Komisia má právo veta",
-        "Parlament je nadradený Rade"
+        "klasickej trojdeľbe moci",
+        "inštitucionálnej rovnováhe (čl. 13 ods. 2 ZEÚ)",
+        "nadradenosti Rady",
+        "nadradenosti Komisie"
       ],
       "correct": 1,
-      "explanation": "Zásada rovnováhy znamená, že inštitúcie nesmú prekročiť právomoci určené zmluvami."
+      "explanation": "Únia nemá klasickú deľbu moci – každá inštitúcia koná v medziach právomocí, ktoré jej zverujú zmluvy (čl. 13 ods. 2 ZEÚ)."
     }
   ],
   "tiles": [
@@ -140,5 +140,60 @@
     "citation": "ECLI:EU:C:1990:153; ECLI:EU:C:2015:217; čl. 13 ZEÚ; čl. 2 – 6 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Inštitucionálny systém a inštitucionálna rovnováha",
+    "branches": [
+      {
+        "label": "Nie klasická deľba moci",
+        "leaves": [
+          "Únia stojí na inštitucionálnej rovnováhe (čl. 13 ods. 2 ZEÚ)",
+          "Každá inštitúcia koná len v medziach právomocí zverených zmluvami"
+        ]
+      },
+      {
+        "label": "Sedem inštitúcií (čl. 13 ZEÚ)",
+        "leaves": [
+          "Európsky parlament (čl. 14 ZEÚ)",
+          "Európska rada (čl. 15 ZEÚ)",
+          "Rada (čl. 16 ZEÚ)",
+          "Európska komisia (čl. 17 ZEÚ)",
+          "Súdny dvor Európskej únie (čl. 19 ZEÚ)",
+          "Európska centrálna banka",
+          "Dvor audítorov"
+        ]
+      },
+      {
+        "label": "Legislatívna funkcia",
+        "leaves": [
+          "Vykonávajú ju Európsky parlament a Rada",
+          "Riadny legislatívny postup (čl. 289 a 294 ZFEÚ)",
+          "Európska rada legislatívnu funkciu nevykonáva"
+        ]
+      },
+      {
+        "label": "Výkonná funkcia – Komisia",
+        "leaves": [
+          "Takmer výlučná legislatívna iniciatíva",
+          "Strážkyňa zmlúv a konanie o nesplnení povinnosti (čl. 258 ZFEÚ)",
+          "Vonkajšie zastupovanie Únie okrem spoločnej zahraničnej a bezpečnostnej politiky"
+        ]
+      },
+      {
+        "label": "Súdna funkcia – Súdny dvor EÚ",
+        "leaves": [
+          "Jednotný výklad a uplatňovanie práva Únie",
+          "Priame žaloby proti štátom aj inštitúciám",
+          "Prejudiciálne konanie (čl. 267 ZFEÚ)"
+        ]
+      },
+      {
+        "label": "Judikatúra k rovnováhe",
+        "leaves": [
+          "C-70/88 (Černobyľ) – ochrana výsad Parlamentu",
+          "C-409/13 – hranice konania inštitúcií pri stiahnutí legislatívneho návrhu"
+        ]
+      }
+    ]
   }
 }
