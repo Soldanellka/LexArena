@@ -4,59 +4,59 @@
   "summary": "Rada Európskej únie (často „Rada\" alebo „Rada ministrov\") je jednou z hlavných legislatívnych a rozhodovacích inštitúcií Európskej únie. Je upravená v čl. 16 ZEÚ a čl. 237 – 243 ZFEÚ. Rada zastupuje vlády členských štátov a spolu s Európskym parlamentom vykonáva legislatívnu a rozpočtovú funkciu, ako aj funkciu tvorby politík a koordinácie.\n\nRada sa skladá z jedného zástupcu každého členského štátu na ministerskej úrovni, ktorí zasadajú v rôznych zloženiach podľa prerokúvanej agendy (napr. ECOFIN, AGRIFISH, EPSCO, doprava). Dve zloženia sú určené priamo zmluvou: Rada pre všeobecné záležitosti a Rada pre zahraničné veci (čl. 16 ods. 6 ZEÚ). Rade pre zahraničné veci predsedá vysoký predstaviteľ Únie; ostatným zloženiam predsedá rotujúce predsedníctvo, ktoré sa medzi členskými štátmi strieda každých šesť mesiacov (v trojiciach – tzv. tímové predsedníctvo).\n\nOrganizácia Rady zahŕňa Výbor stálych zástupcov (COREPER I a COREPER II, čl. 240 ZFEÚ), pracovné skupiny, Generálny sekretariát Rady a rotujúce predsedníctvo. COREPER pripravuje prácu Rady a zabezpečuje kontinuitu rozhodovania.\n\nPrávomoci Rady zahŕňajú prijímanie legislatívnych aktov spolu s Parlamentom (najmä v riadnom legislatívnom postupe), koordináciu hospodárskych politík členských štátov, uzatváranie medzinárodných dohôd (čl. 218 ZFEÚ), prijímanie opatrení v oblasti SZBP, rozhodovanie o rozpočte EÚ spolu s Parlamentom a vykonávanie ďalších právomocí zverených zmluvami. Rada rozhoduje spravidla kvalifikovanou väčšinou (čl. 16 ods. 3 ZEÚ); kvalifikovaná väčšina je od 1. novembra 2014 definovaná ako dvojitá väčšina – najmenej 55 % členských štátov (minimálne 15) zastupujúcich aspoň 65 % obyvateľstva Únie (čl. 16 ods. 4 ZEÚ). V citlivých oblastiach (napr. SZBP, dane, rozšírenie) sa vyžaduje jednomyseľnosť.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje právomoci Rady a jej postavenie v inštitucionálnej štruktúre. V rozsudku C-409/13 (Rada v Komisia) Súdny dvor vymedzil hranice inštitucionálnej rovnováhy v legislatívnom procese (právo Komisie stiahnuť návrh), a v rozsudku C-81/13 (Spojené kráľovstvo v Rada) posudzoval správnu voľbu právneho základu rozhodnutia Rady v súlade so zásadou zverenia právomocí.\n\nZapamätaj si:\n– Úprava: čl. 16 ZEÚ + čl. 237 – 243 ZFEÚ. Zastupuje vlády členských štátov; s Parlamentom legislatíva + rozpočet.\n– Zloženie: 1 minister za štát, viac zložení podľa agendy (ECOFIN, AGRIFISH, EPSCO…). Dve zmluvné: pre všeobecné záležitosti a pre zahraničné veci (predsedá jej vysoký predstaviteľ).\n– Predsedníctvo: rotuje každých 6 mesiacov (v trojiciach). COREPER I a II (čl. 240 ZFEÚ) pripravuje prácu Rady.\n– Hlasovanie: spravidla kvalifikovaná väčšina = dvojitá väčšina (55 % štátov / min. 15 a 65 % obyvateľstva, od 1. 11. 2014); v citlivých oblastiach jednomyseľnosť.\n– Právomoci: legislatíva (s Parlamentom), koordinácia hospodárskych politík, medzinárodné dohody (čl. 218), SZBP, rozpočet.\n– Judikatúra: C-409/13 (inštitucionálna rovnováha – stiahnutie návrhu Komisiou), C-81/13 (voľba právneho základu, zásada zverenia).\n– NEZAMIEŇAŤ: Rada EÚ (ministri) ≠ Európska rada (hlavy štátov/vlád) ≠ Rada Európy (medzinárodná organizácia mimo EÚ).\n\nZdroj: Zmluva o Európskej únii a Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 16 ZEÚ, čl. 218, 237 – 243 a 240 ZFEÚ; judikatúra Súdneho dvora EÚ (C-409/13, C-81/13); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje Radu Európskej únie?",
+      "q": "Rada EÚ zastupuje:",
       "options": [
-        "Čl. 16 ZEÚ",
-        "Čl. 14 ZEÚ",
-        "Čl. 49 ZEÚ",
-        "Čl. 288 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 16 ZEÚ upravuje zloženie a právomoci Rady EÚ."
-    },
-    {
-      "q": "Kto tvorí Radu EÚ?",
-      "options": [
-        "Poslanci Európskeho parlamentu",
-        "Ministri členských štátov",
-        "Komisári",
-        "Sudcovia Súdneho dvora"
+        "občanov Únie",
+        "vlády členských štátov",
+        "Komisiu",
+        "regióny"
       ],
       "correct": 1,
-      "explanation": "Radu tvoria ministri členských štátov podľa prerokúvanej agendy."
+      "explanation": "Občanov zastupuje Európsky parlament; Radu tvoria ministri vlád členských štátov (čl. 16 ZEÚ)."
     },
     {
-      "q": "Ako Rada rozhoduje vo väčšine oblastí?",
+      "q": "Kvalifikovaná väčšina v Rade (od 1. 11. 2014) je:",
       "options": [
-        "Jednomyseľne",
-        "Kvalifikovanou väčšinou",
-        "Jednoduchou väčšinou občanov EÚ",
-        "Rozhoduje predseda Rady"
+        "50 % členských štátov",
+        "55 % členských štátov (najmenej 15) a 65 % obyvateľstva Únie",
+        "dve tretiny členských štátov",
+        "jednomyseľnosť"
       ],
       "correct": 1,
-      "explanation": "Rada rozhoduje spravidla kvalifikovanou väčšinou."
+      "explanation": "Ide o takzvanú dvojitú väčšinu – zohľadňuje počet štátov aj počet obyvateľov."
     },
     {
-      "q": "Ktorý orgán pripravuje prácu Rady?",
+      "q": "Predsedníctvo Rady rotuje:",
       "options": [
-        "COREPER",
-        "Komisia",
-        "Európska rada",
-        "ECB"
+        "ročne",
+        "každých 6 mesiacov",
+        "každé 2 roky",
+        "nerotuje, predsedu volí Rada"
       ],
-      "correct": 0,
-      "explanation": "COREPER pripravuje prácu Rady a zabezpečuje kontinuitu."
+      "correct": 1,
+      "explanation": "Predsedníctvo sa strieda po šiestich mesiacoch, pripravujú ho trojice štátov."
     },
     {
-      "q": "Ktorý rozsudok sa týka legislatívnych právomocí Rady?",
+      "q": "Rade pre zahraničné veci predsedá:",
       "options": [
-        "C‑409/13 Parlament v. Rada",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑62/14 Gauweiler",
-        "C‑157/21 Komisia/Maďarsko"
+        "rotujúce predsedníctvo",
+        "vysoký predstaviteľ Únie pre zahraničné veci a bezpečnostnú politiku",
+        "predseda Komisie",
+        "predseda Európskej rady"
       ],
-      "correct": 0,
-      "explanation": "V rozsudku C‑409/13 Súdny dvor posudzoval právomoci Rady v legislatívnom procese."
+      "correct": 1,
+      "explanation": "Je to jediné zloženie Rady, ktoré rotujúce predsedníctvo nevedie."
+    },
+    {
+      "q": "Ktoré tvrdenie je správne?",
+      "options": [
+        "Rada EÚ je to isté ako Európska rada",
+        "Radu EÚ tvoria ministri, Európsku radu hlavy štátov alebo predsedovia vlád; Rada Európy nie je orgánom EÚ",
+        "Rada Európy je orgánom EÚ",
+        "Radu EÚ tvoria hlavy štátov"
+      ],
+      "correct": 1,
+      "explanation": "Tri telesá s podobným názvom: Rada EÚ (čl. 16 ZEÚ), Európska rada (čl. 15 ZEÚ) a Rada Európy – samostatná medzinárodná organizácia mimo Únie."
     }
   ],
   "tiles": [
@@ -140,5 +140,66 @@
     "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:2014:2449; čl. 16 ZEÚ; čl. 237 – 243 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rada Európskej únie (Rada ministrov)",
+    "branches": [
+      {
+        "label": "Právna úprava a povaha",
+        "leaves": [
+          "Čl. 16 ZEÚ a čl. 237 – 243 ZFEÚ",
+          "Zastupuje vlády členských štátov",
+          "S Európskym parlamentom vykonáva legislatívnu a rozpočtovú funkciu"
+        ]
+      },
+      {
+        "label": "Zloženie",
+        "leaves": [
+          "Jeden minister za každý členský štát",
+          "Zloženia podľa agendy – ECOFIN, AGRIFISH, EPSCO a ďalšie",
+          "Dve zmluvné zloženia: pre všeobecné záležitosti a pre zahraničné veci (čl. 16 ods. 6 ZEÚ)"
+        ]
+      },
+      {
+        "label": "Predsedníctvo",
+        "leaves": [
+          "Rotuje každých šesť mesiacov, pripravuje sa v trojiciach štátov",
+          "Rade pre zahraničné veci predsedá vysoký predstaviteľ Únie"
+        ]
+      },
+      {
+        "label": "Organizácia",
+        "leaves": [
+          "COREPER I a COREPER II (čl. 240 ZFEÚ)",
+          "Pracovné skupiny",
+          "Generálny sekretariát Rady"
+        ]
+      },
+      {
+        "label": "Hlasovanie",
+        "leaves": [
+          "Spravidla kvalifikovaná väčšina – dvojitá väčšina od 1. 11. 2014",
+          "55 % členských štátov, najmenej 15, a 65 % obyvateľstva Únie",
+          "V citlivých oblastiach jednomyseľnosť"
+        ]
+      },
+      {
+        "label": "Právomoci",
+        "leaves": [
+          "Legislatíva spoločne s Európskym parlamentom",
+          "Koordinácia hospodárskych politík členských štátov",
+          "Uzatváranie medzinárodných dohôd (čl. 218 ZFEÚ)",
+          "Spoločná zahraničná a bezpečnostná politika",
+          "Rozpočet spoločne s Parlamentom"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-409/13 – inštitucionálna rovnováha pri stiahnutí legislatívneho návrhu",
+          "C-81/13 – voľba právneho základu aktu"
+        ]
+      }
+    ]
   }
 }

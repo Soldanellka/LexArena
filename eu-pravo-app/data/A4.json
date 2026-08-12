@@ -83,54 +83,54 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Inštitucionálna rovnováha a právomoci Komisie",
+      "title": "Prípad 1 – Parlament v. Rada (Černobyľ): ochrana výsad Parlamentu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Komisia prijala rozhodnutie, ktoré podľa členského štátu prekročilo právomoci zverené zmluvami.",
+          "question": "Parlament tvrdil, že Rada prijala akt na nesprávnom právnom základe, čím obišla jeho účasť v konaní, a chcel to napadnúť žalobou.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v Rada)"
         },
         {
-          "question": "Ako Súdny dvor vyložil zásadu inštitucionálnej rovnováhy?",
+          "question": "Priznal Súdny dvor Parlamentu právo brániť svoje výsady žalobou o neplatnosť?",
           "options": [
-            "Komisia môže konať bez obmedzení",
-            "Komisia musí konať v rámci právomocí určených zmluvami",
-            "Komisia je nadradená Rade"
+            "Nie, Parlament nemá procesnú spôsobilosť",
+            "Áno, Parlament môže podať žalobu o neplatnosť na ochranu svojich výsad",
+            "Len Komisia môže takúto žalobu podať"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že každá inštitúcia musí konať v rámci právomocí určených zmluvami.",
-            "wrong": "Nesprávne. Komisia nemôže prekračovať právomoci určené zmluvami."
+            "correct": "Súdny dvor priznal Parlamentu procesnú spôsobilosť brániť svoje výsady – prejav inštitucionálnej rovnováhy.",
+            "wrong": "Nesprávne. Parlament svoje výsady brániť môže."
           },
-          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v. Rada)"
+          "source": "ECLI:EU:C:1990:153 (C‑70/88 Parlament v Rada)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Rovnováha medzi Parlamentom a Radou",
+      "title": "Prípad 2 – Rada v. Komisia: inštitucionálna rovnováha v legislatíve",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Parlament napadol rozhodnutie Rady, ktoré podľa neho obchádzalo jeho legislatívne právomoci.",
+          "question": "Komisia stiahla svoj legislatívny návrh počas konania. Rada tvrdila, že tým zasiahla do právomocí spoluzákonodarcov.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o rozdelení mocí?",
+          "question": "Ako Súdny dvor vymedzil hranice konania inštitúcií v legislatíve?",
           "options": [
-            "Rada môže konať bez Parlamentu",
-            "Rada musí rešpektovať legislatívne právomoci Parlamentu",
-            "Parlament nemá legislatívne právomoci"
+            "Inštitúcie môžu konať bez ohľadu na ostatné",
+            "Každá inštitúcia musí konať v medziach zverených právomocí a rešpektovať inštitucionálnu rovnováhu",
+            "Komisia je podriadená Rade"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Rada nesmie obchádzať legislatívne právomoci Parlamentu.",
-            "wrong": "Nesprávne. Parlament má zásadnú úlohu v legislatívnom procese."
+            "correct": "Aj právo Komisie stiahnuť návrh je ohraničené inštitucionálnou rovnováhou a lojálnou spoluprácou.",
+            "wrong": "Nesprávne. Žiadna inštitúcia nekoná mimo svojich právomocí."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Parlament v. Rada)"
+          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
         }
       ]
     }

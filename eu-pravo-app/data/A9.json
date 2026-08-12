@@ -4,59 +4,59 @@
   "summary": "Dvor audítorov a Európska centrálna banka patria medzi sedem inštitúcií Únie (čl. 13 ZEÚ), zatiaľ čo poradné orgány a agentúry dopĺňajú inštitucionálny systém. Ich úlohy sú upravené v čl. 13 ZEÚ a v príslušných ustanoveniach ZFEÚ.\n\nDvor audítorov je nezávislou inštitúciou, ktorá vykonáva audit financií EÚ. Je upravený v čl. 285 – 287 ZFEÚ. Tvorí ho jeden štátny príslušník z každého členského štátu; členov vymenúva Rada na šesť rokov po porade s Európskym parlamentom a sú úplne nezávislí, konajú v záujme Únie. Dvor audítorov preveruje zákonnosť a správnosť príjmov a výdavkov a riadne finančné hospodárenie, poskytuje Európskemu parlamentu a Rade vyhlásenie o vierohodnosti účtov (DAS), vydáva výročné a osobitné správy a stanoviská a zohráva kľúčovú úlohu pri ochrane finančných záujmov EÚ.\n\nEurópska centrálna banka je inštitúciou EÚ (od Lisabonskej zmluvy) a je upravená v čl. 282 – 284 ZFEÚ a v Protokole č. 4 o štatúte ESCB a ECB. ECB je nezávislá (čl. 130 ZFEÚ) a zodpovedá za menovú politiku eurozóny; jej hlavným cieľom je udržiavanie cenovej stability (čl. 127  ZFEÚ) a má výlučné právo povoľovať vydávanie eura (čl. 128  ZFEÚ). Spolu s národnými centrálnymi bankami štátov eurozóny tvorí Eurosystém, spolu s centrálnymi bankami všetkých členských štátov tvorí Európsky systém centrálnych bánk (ESCB). ECB prijíma rozhodnutia prostredníctvom Rady guvernérov a Výkonnej rady; dovtedy, kým niektoré štáty nezaviedli euro, pôsobí aj Generálna rada.\n\nMedzi ďalšie orgány EÚ patria poradné orgány – Európsky hospodársky a sociálny výbor a Výbor regiónov – ako aj európsky ombudsman (čl. 228 ZFEÚ) a početné decentralizované agentúry (napr. Frontex, Europol, EMA, EASA). Tieto orgány podporujú činnosť inštitúcií, vykonávajú technické, regulačné alebo poradné úlohy a zabezpečujú efektívne fungovanie Únie; ich právomoci sú ohraničené zásadou inštitucionálnej rovnováhy a hranicami delegovania.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje postavenie týchto inštitúcií a orgánov. V rozsudku C-11/00 (Komisia v ECB) Súdny dvor rozhodol, že nariadenie o vyšetrovaniach úradu OLAF sa vzťahuje aj na ECB a že to nenarúša jej nezávislosť. V rozsudku C-62/14 (Gauweiler) potvrdil, že program OMT patrí do mandátu menovej politiky ECB. V rozsudku C-270/12 (Spojené kráľovstvo v Parlament a Rada, „ESMA/short selling\") vymedzil hranice delegovania právomocí na agentúry EÚ (doktrína Meroni).\n\nZapamätaj si:\n– Dvor audítorov aj ECB sú INŠTITÚCIE (čl. 13 ZEÚ); EHSV, Výbor regiónov a agentúry sú orgány, nie inštitúcie.\n– Dvor audítorov (čl. 285 – 287 ZFEÚ): audit rozpočtu EÚ; 1 člen za štát, menovaní Radou na 6 rokov; vydáva vyhlásenie o vierohodnosti (DAS) a správy.\n– ECB (čl. 282 – 284 ZFEÚ + Protokol č. 4): menová politika eurozóny, cieľ cenová stabilita (čl. 127), nezávislosť (čl. 130), výlučné právo povoliť euro (čl. 128).\n– Eurosystém = ECB + NCB eurozóny; ESCB = ECB + NCB všetkých členských štátov. Orgány ECB: Rada guvernérov, Výkonná rada, (Generálna rada).\n– Poradné orgány: Európsky hospodársky a sociálny výbor + Výbor regiónov. Ombudsman (čl. 228). Agentúry: Frontex, Europol, EMA, EASA…\n– Judikatúra: C-11/00 (OLAF sa vzťahuje aj na ECB, nenarúša jej nezávislosť), C-62/14 (OMT v mandáte ECB), C-270/12 (hranice delegovania na agentúry – Meroni).\n\nZdroj: Zmluva o Európskej únii a Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016): čl. 13 ZEÚ, čl. 127, 128, 130, 228 a 282 – 287 ZFEÚ, Protokol č. 4 o štatúte ESCB a ECB; judikatúra Súdneho dvora EÚ (C-11/00, C-62/14, C-270/12); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje Dvor audítorov?",
+      "q": "Dvor audítorov a Európska centrálna banka sú:",
       "options": [
-        "Čl. 285 – 287 ZFEÚ",
-        "Čl. 17 ZEÚ",
-        "Čl. 14 ZEÚ",
-        "Čl. 49 ZEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Dvor audítorov je upravený v čl. 285 – 287 ZFEÚ."
-    },
-    {
-      "q": "Aký je hlavný cieľ Európskej centrálnej banky?",
-      "options": [
-        "Plná zamestnanosť",
-        "Cenová stabilita",
-        "Znižovanie daní",
-        "Riadenie rozpočtu EÚ"
+        "poradné orgány",
+        "inštitúcie EÚ (čl. 13 ZEÚ)",
+        "agentúry",
+        "výbory"
       ],
       "correct": 1,
-      "explanation": "ECB má za cieľ udržiavať cenovú stabilitu v eurozóne."
+      "explanation": "Obe sú v zozname siedmich inštitúcií v čl. 13 ZEÚ; ECB sa inštitúciou stala Lisabonskou zmluvou."
     },
     {
-      "q": "Kto tvorí Dvor audítorov?",
+      "q": "Hlavným cieľom Európskej centrálnej banky je:",
       "options": [
-        "Komisári",
-        "Audítori z členských štátov",
-        "Poslanci EP",
-        "Sudcovia Súdneho dvora"
+        "rast HDP",
+        "cenová stabilita",
+        "zamestnanosť",
+        "kurz eura"
       ],
       "correct": 1,
-      "explanation": "Dvor audítorov tvoria audítori z členských štátov."
+      "explanation": "Čl. 127 ZFEÚ. Ostatné ciele Únie ECB podporuje len bez toho, aby bola dotknutá cenová stabilita."
     },
     {
-      "q": "Ktorý orgán je zodpovedný za menovú politiku eurozóny?",
+      "q": "Eurosystém tvoria:",
       "options": [
-        "Rada EÚ",
+        "ECB a národné centrálne banky všetkých členských štátov",
+        "ECB a národné centrálne banky štátov eurozóny",
+        "len ECB",
+        "ECB a Komisia"
+      ],
+      "correct": 1,
+      "explanation": "ECB spolu s centrálnymi bankami VŠETKÝCH členských štátov tvorí ESCB – to je ten druhý pojem, s ktorým sa Eurosystém zamieňa."
+    },
+    {
+      "q": "Európsky hospodársky a sociálny výbor a Výbor regiónov sú:",
+      "options": [
+        "inštitúcie",
+        "poradné orgány, nie inštitúcie",
+        "agentúry",
+        "súdy"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 13 ZEÚ ich medzi sedem inštitúcií nezaraďuje – majú poradnú funkciu."
+    },
+    {
+      "q": "Audit financií Únie vykonáva:",
+      "options": [
+        "Európska centrálna banka",
         "Komisia",
-        "ECB",
-        "Európska rada"
+        "Dvor audítorov",
+        "OLAF"
       ],
       "correct": 2,
-      "explanation": "Menovú politiku eurozóny vykonáva ECB."
-    },
-    {
-      "q": "Ktorý rozsudok sa týka nezávislosti ECB?",
-      "options": [
-        "C‑62/14 Gauweiler",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑409/13 Parlament v. Rada",
-        "C‑157/21 Komisia/Maďarsko"
-      ],
-      "correct": 0,
-      "explanation": "V rozsudku Gauweiler Súdny dvor potvrdil nezávislosť ECB pri menovej politike."
+      "explanation": "Dvor audítorov (čl. 285 – 287 ZFEÚ) vydáva aj vyhlásenie o vierohodnosti účtov (DAS). OLAF je úrad pre boj proti podvodom, nie audítor rozpočtu."
     }
   ],
   "tiles": [
@@ -90,7 +90,7 @@
           "question": "ECB rozhodnutím vyňala svoje vnútorné vyšetrovania spod pôsobnosti úradu OLAF s poukazom na svoju nezávislosť.",
           "options": [],
           "correct": 0,
-          "source": "C‑11/00 Komisia v ECB"
+          "source": "ECLI:EU:C:2003:395 (C‑11/00 Komisia v ECB)"
         },
         {
           "question": "Ako Súdny dvor vyriešil vzťah nezávislosti ECB a kontroly OLAF?",
@@ -104,7 +104,7 @@
             "correct": "Súdny dvor zrušil rozhodnutie ECB: jej nezávislosť ju nevyníma z rámca ochrany finančných záujmov Únie.",
             "wrong": "Nesprávne. Nezávislosť ECB neznamená úplné vyňatie z práva Únie."
           },
-          "source": "C‑11/00 Komisia v ECB"
+          "source": "ECLI:EU:C:2003:395 (C‑11/00 Komisia v ECB)"
         }
       ]
     },
@@ -163,8 +163,63 @@
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:400 (Gauweiler); C‑11/00 (Komisia v ECB); ECLI:EU:C:2014:18 (C‑270/12 ESMA); čl. 282 – 287 ZFEÚ",
+    "citation": "ECLI:EU:C:2015:400 (Gauweiler); ECLI:EU:C:2003:395 (C‑11/00 Komisia v ECB); ECLI:EU:C:2014:18 (C‑270/12 ESMA); čl. 282 – 287 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Dvor audítorov, ECB a ďalšie orgány",
+    "branches": [
+      {
+        "label": "Dvor audítorov (čl. 285 – 287 ZFEÚ)",
+        "leaves": [
+          "Inštitúcia podľa čl. 13 ZEÚ",
+          "Audit rozpočtu Únie",
+          "Jeden člen za každý členský štát, menuje Rada na šesť rokov",
+          "Vydáva vyhlásenie o vierohodnosti účtov (DAS)"
+        ]
+      },
+      {
+        "label": "Európska centrálna banka (čl. 282 – 284 ZFEÚ)",
+        "leaves": [
+          "Inštitúcia od Lisabonskej zmluvy; Protokol č. 4 o štatúte ESCB a ECB",
+          "Menová politika eurozóny",
+          "Prvoradý cieľ – cenová stabilita (čl. 127 ZFEÚ)",
+          "Nezávislosť (čl. 130 ZFEÚ)",
+          "Výlučné právo povoliť vydávanie eura (čl. 128 ZFEÚ)"
+        ]
+      },
+      {
+        "label": "Eurosystém × ESCB",
+        "leaves": [
+          "Eurosystém – ECB a národné centrálne banky štátov eurozóny",
+          "ESCB – ECB a národné centrálne banky všetkých členských štátov",
+          "Orgány ECB: Rada guvernérov, Výkonná rada, Generálna rada"
+        ]
+      },
+      {
+        "label": "Poradné orgány",
+        "leaves": [
+          "Európsky hospodársky a sociálny výbor",
+          "Výbor regiónov",
+          "Pozor: nie sú to inštitúcie podľa čl. 13 ZEÚ"
+        ]
+      },
+      {
+        "label": "Ďalšie orgány a agentúry",
+        "leaves": [
+          "Európsky ombudsman (čl. 228 ZFEÚ)",
+          "Agentúry – Frontex, Europol, EMA, EASA a ďalšie"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "C-11/00 – dosah OLAF na ECB a hranice jej nezávislosti",
+          "C-62/14 (Gauweiler) – program OMT a menový mandát ECB",
+          "C-270/12 (ESMA) – hranice delegovania na agentúry, doktrína Meroni"
+        ]
+      }
+    ]
   }
 }

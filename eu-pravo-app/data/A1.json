@@ -4,59 +4,59 @@
   "summary": "Vývoj zmluvnej základne Európskych spoločenstiev a Európskej únie predstavuje postupné prehlbovanie integrácie, rozširovanie právomocí a demokratizáciu fungovania európskych inštitúcií. Základ tvorili tri zakladajúce zmluvy: Parížska zmluva (1951) o založení Európskeho spoločenstva uhlia a ocele a Rímske zmluvy (1957) o založení Európskeho hospodárskeho spoločenstva a Európskeho spoločenstva pre atómovú energiu. Tieto zmluvy vytvorili spoločný trh, colnú úniu a mechanizmy nadnárodného rozhodovania.\n\nV 60. – 80. rokoch sa integrácia prehlbovala najmä judikatúrou Súdneho dvora (princíp prednosti práva Únie – Costa/ENEL; priamy účinok – Van Gend en Loos), Jednotným európskym aktom (1986) a postupným rozširovaním členských štátov. Kľúčový zlom nastal Maastrichtskou zmluvou (1992, účinnosť 1993), ktorá vytvorila Európsku úniu ako politický celok, zaviedla občianstvo Únie, menovú úniu a tri piliere (ES; Spoločná zahraničná a bezpečnostná politika; justičná a policajná spolupráca). Amsterdamská (1997) a Nicejská zmluva (2001) upravili inštitucionálnu rovnováhu a pripravili Úniu na veľké rozšírenie.\n\nLisabonská zmluva (2007, účinnosť 2009) zásadne prepracovala štruktúru Únie: zrušila pilierový systém, posilnila právnu subjektivitu EÚ, rozšírila spolurozhodovanie, zakotvila Chartu základných práv EÚ ako právne záväznú a upravila postupy prijímania nových členov. Článok 49 ZEÚ stanovuje podmienky členstva: štát musí byť európsky, rešpektovať hodnoty EÚ (čl. 2 ZEÚ) a hlásiť sa k nim, splniť politické, ekonomické a právne kritériá (kodanské kritériá) a viesť prístupové rokovania o prevzatí acquis. Žiadosť sa zasiela Rade, ktorá sa uznáša jednomyseľne po porade s Komisiou a po udelení súhlasu Európskeho parlamentu; podmienky prípustnosti (vrátane statusu kandidátskej krajiny) schvaľuje Európska rada. Samotná prístupová zmluva je dohodou medzi členskými štátmi a žiadajúcim štátom a podlieha ratifikácii všetkými štátmi.\n\nČlenstvo v EÚ prináša práva a povinnosti: účasť na vnútornom trhu, voľný pohyb osôb, tovaru, služieb a kapitálu, účasť na tvorbe práva EÚ, povinnosť implementovať a dodržiavať acquis, prispievať do rozpočtu a rešpektovať zásadu lojálnej spolupráce. Členské štáty sa podieľajú na rozhodovaní prostredníctvom Rady, Európskej rady, Európskeho parlamentu a Komisie. Článok 50 ZEÚ umožňuje vystúpenie z Únie, čo bolo prvýkrát využité Spojeným kráľovstvom (Brexit).\n\nZapamätaj si:\n– Tri zakladajúce zmluvy: Paríž 1951 (ESUO), Rím 1957 (EHS + Euratom).\n– Prehlbovanie integrácie: judikatúra Súdneho dvora (prednosť – Costa/ENEL; priamy účinok – Van Gend en Loos), Jednotný európsky akt 1986.\n– Maastricht (1992/1993): vznik EÚ, občianstvo Únie, menová únia, tri piliere (ES; SZBP; justičná a policajná spolupráca).\n– Lisabon (2007/2009): zrušenie pilierov, právna subjektivita EÚ, záväzná Charta základných práv, rozšírené spolurozhodovanie.\n– Prijatie (čl. 49 ZEÚ): európsky štát + hodnoty čl. 2 ZEÚ + kodanské kritériá + prevzatie acquis. Rozhoduje Rada jednomyseľne po porade s Komisiou a súhlase Európskeho parlamentu; status kandidáta a podmienky prípustnosti schvaľuje Európska rada; prístupovú zmluvu ratifikujú všetky členské štáty.\n– Pozor na zámenu: jednomyseľne rozhoduje Rada (ministri), nie Európska rada (hlavy štátov/vlád).\n– Vystúpenie z EÚ: čl. 50 ZEÚ (prvýkrát Brexit – Spojené kráľovstvo).\n– Štyri slobody vnútorného trhu: osoby, tovar, služby, kapitál. Povinnosti člena: implementovať acquis, prispievať do rozpočtu, lojálna spolupráca.\n\nZdroj: Zmluva o Európskej únii, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016), čl. 2, 49 a 50; EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorá zmluva vytvorila Európsku úniu ako politický celok?",
+      "q": "Ktorý orgán rozhoduje o prijatí nového členského štátu (čl. 49 ZEÚ)?",
       "options": [
-        "Lisabonská zmluva",
-        "Maastrichtská zmluva",
-        "Amsterdamská zmluva",
-        "Jednotný európsky akt"
+        "Európska rada jednomyseľne",
+        "Rada jednomyseľne po súhlase Európskeho parlamentu",
+        "Komisia",
+        "Európsky parlament dvojtretinovou väčšinou"
       ],
       "correct": 1,
-      "explanation": "Maastrichtská zmluva z roku 1992 založila Európsku úniu a zaviedla občianstvo Únie."
+      "explanation": "Rada sa uznáša jednomyseľne po porade s Komisiou a po súhlase Európskeho parlamentu. Európska rada schvaľuje podmienky prípustnosti a status kandidáta – rozhodnutie o prijatí to však nie je."
     },
     {
-      "q": "Ktorý článok upravuje postup prijatia nového členského štátu do EÚ?",
+      "q": "Ktorá zmluva vytvorila Európsku úniu a pilierovú štruktúru?",
       "options": [
-        "Čl. 2 ZEÚ",
-        "Čl. 49 ZEÚ",
-        "Čl. 50 ZEÚ",
-        "Čl. 288 ZFEÚ"
+        "Rímska (1957)",
+        "Jednotný európsky akt (1986)",
+        "Maastrichtská (1992)",
+        "Lisabonská (2007)"
+      ],
+      "correct": 2,
+      "explanation": "Maastrichtská zmluva založila Európsku úniu, zaviedla občianstvo Únie, menovú úniu a tri piliere."
+    },
+    {
+      "q": "Čo NEpriniesla Lisabonská zmluva?",
+      "options": [
+        "Zrušenie pilierovej štruktúry",
+        "Právnu subjektivitu EÚ",
+        "Záväznosť Charty základných práv",
+        "Zavedenie spoločnej meny euro"
+      ],
+      "correct": 3,
+      "explanation": "Menovú úniu zaviedol už Maastricht (1992). Lisabon zrušil piliere, dal Únii právnu subjektivitu a Charte záväznosť."
+    },
+    {
+      "q": "Vystúpenie z EÚ upravuje:",
+      "options": [
+        "čl. 7 ZEÚ",
+        "čl. 49 ZEÚ",
+        "čl. 50 ZEÚ",
+        "čl. 2 ZEÚ"
+      ],
+      "correct": 2,
+      "explanation": "Čl. 50 ZEÚ. Čl. 49 je prijatie nového štátu, čl. 7 sankčný mechanizmus a čl. 2 hodnoty Únie."
+    },
+    {
+      "q": "Rímske zmluvy (1957) založili:",
+      "options": [
+        "ESUO a EHS",
+        "EHS a Euratom",
+        "EÚ a ESUO",
+        "EHS a EÚ"
       ],
       "correct": 1,
-      "explanation": "Článok 49 ZEÚ stanovuje podmienky a postup prijatia nového členského štátu."
-    },
-    {
-      "q": "Ktoré kritériá musí splniť štát uchádzajúci sa o členstvo v EÚ?",
-      "options": [
-        "Kodaňské kritériá",
-        "Ženevské kritériá",
-        "Schengenské kritériá",
-        "Lisabonské kritériá"
-      ],
-      "correct": 0,
-      "explanation": "Kodaňské kritériá zahŕňajú politické, ekonomické a právne požiadavky na členstvo."
-    },
-    {
-      "q": "Ktorá zmluva zrušila pilierový systém EÚ?",
-      "options": [
-        "Maastrichtská zmluva",
-        "Nicejská zmluva",
-        "Lisabonská zmluva",
-        "Jednotný európsky akt"
-      ],
-      "correct": 2,
-      "explanation": "Lisabonská zmluva zrušila pilierový systém a posilnila právnu subjektivitu EÚ."
-    },
-    {
-      "q": "Ktorý orgán rozhoduje o prijatí nového členského štátu?",
-      "options": [
-        "Európsky parlament",
-        "Rada EÚ",
-        "Európska rada",
-        "Európska komisia"
-      ],
-      "correct": 2,
-      "explanation": "O prijatí rozhoduje jednomyseľne Európska rada po konzultácii s Komisiou a súhlase Parlamentu."
+      "explanation": "ESUO vzniklo skôr Parížskou zmluvou (1951); Európska únia až Maastrichtom (1992)."
     }
   ],
   "tiles": [
@@ -109,35 +109,35 @@
       ]
     },
     {
-      "title": "Prípad 2 – Nesplnenie podmienok čl. 49 ZEÚ",
+      "title": "Prípad 2 – Wightman: odvolanie oznámenia o vystúpení",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Štát uchádzajúci sa o členstvo v EÚ má vážne systémové nedostatky v ochrane základných práv.",
+          "question": "Členský štát oznámil úmysel vystúpiť z EÚ podľa čl. 50 ZEÚ, no ešte pred uplynutím lehoty chcel toto oznámenie vziať späť.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2022:481 (C‑157/21 Komisia/Maďarsko)"
+          "source": "ECLI:EU:C:2018:999 (C‑621/18 Wightman)"
         },
         {
-          "question": "Môže byť štát prijatý do EÚ, ak nespĺňa hodnoty podľa čl. 2 ZEÚ?",
+          "question": "Môže štát jednostranne odvolať oznámenie o vystúpení?",
           "options": [
-            "Áno, ak má ekonomicky stabilný trh",
-            "Nie, rešpektovanie základných práv je nevyhnutnou podmienkou členstva",
-            "Áno, ak súhlasí Európsky parlament"
+            "Nie, po oznámení musí vystúpiť",
+            "Áno, kým je ešte členom a v lehote, môže oznámenie jednostranne odvolať",
+            "Len so súhlasom všetkých ostatných štátov"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor zdôraznil, že rešpektovanie základných práv je nevyhnutnou podmienkou fungovania Únie.",
-            "wrong": "Nesprávne. Štát, ktorý nerešpektuje hodnoty čl. 2 ZEÚ, nemôže splniť podmienky čl. 49 ZEÚ."
+            "correct": "Súdny dvor potvrdil, že štát môže jednostranne odvolať oznámenie podľa čl. 50, kým je ešte členom a neuplynula lehota.",
+            "wrong": "Nesprávne. Oznámenie o vystúpení nie je nezvratné."
           },
-          "source": "ECLI:EU:C:2022:481 (C‑157/21 Komisia/Maďarsko)"
+          "source": "ECLI:EU:C:2018:999 (C‑621/18 Wightman)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2019:531; ECLI:EU:C:2022:481; čl. 49 a čl. 2 ZEÚ",
+    "citation": "ECLI:EU:C:2019:531; ECLI:EU:C:2018:999; čl. 49 a čl. 50 ZEÚ; čl. 2 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },

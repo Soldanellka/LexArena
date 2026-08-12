@@ -116,7 +116,7 @@
           "question": "Zákonodarca poveril Komisiu prijať ďalšie pravidlá k nariadeniu. Sporné bolo, či má ísť o delegovaný akt (čl. 290) alebo vykonávací akt (čl. 291 ZFEÚ).",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v Parlament a Rada)"
+          "source": "ECLI:EU:C:2014:170 (C‑427/12 Komisia v Parlament a Rada)"
         },
         {
           "question": "Ako Súdny dvor vymedzil hranicu medzi delegovaným a vykonávacím aktom?",
@@ -130,14 +130,14 @@
             "correct": "Súdny dvor po prvý raz vymedzil rozdiel: čl. 290 = dopĺňanie/menenie nepodstatných prvkov, čl. 291 = jednotné vykonanie; zákonodarca má pri voľbe určitú mieru úvahy.",
             "wrong": "Nesprávne. Delegované a vykonávacie akty nie sú to isté."
           },
-          "source": "ECLI:EU:C:2014:231 (C‑427/12 Komisia v Parlament a Rada)"
+          "source": "ECLI:EU:C:2014:170 (C‑427/12 Komisia v Parlament a Rada)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2014:231; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ; čl. 258 ZFEÚ",
+    "citation": "ECLI:EU:C:2014:170; čl. 17 ZEÚ; čl. 244 – 250 ZFEÚ; čl. 258 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },
