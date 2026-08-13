@@ -4,59 +4,34 @@
   "summary": "Všeobecné zásady práva Európskej únie sú základné právne princípy, ktoré Súdny dvor vyvodil z ústavných tradícií členských štátov, z medzinárodného práva a z povahy a cieľov práva EÚ. Patria k nim najmä právna istota, ochrana legitímnych očakávaní, proporcionalita, rovnosť a zákaz diskriminácie, účinná súdna ochrana, lojálna spolupráca a právo na dobrú správu. Tieto zásady majú rovnakú právnu silu ako primárne právo, zaväzujú inštitúcie EÚ aj členské štáty pri vykonávaní práva EÚ a Súdny dvor ich používa pri kontrole zákonnosti aktov EÚ i pri výklade práva Únie.\n\nMedzinárodné dohody Únie sú upravené v čl. 216 – 218 ZFEÚ. Únia môže uzatvárať dohody v oblastiach, v ktorých má právomoc (výslovnú alebo implicitnú); dohody uzavreté Úniou sú záväzné pre inštitúcie EÚ aj členské štáty (čl. 216 ods. 2 ZFEÚ) a v hierarchii prameňov stoja nižšie ako primárne právo, ale vyššie ako sekundárne právo, ktoré s nimi nesmie byť v rozpore. Postup uzatvárania (rokovanie, súhlas alebo konzultácia Parlamentu, uzavretie Radou) upravuje čl. 218 ZFEÚ.\n\nČlenské štáty môžu uzatvárať vlastné medzinárodné dohody, len ak sú v súlade s právom EÚ. V oblastiach výlučnej právomoci EÚ nemôžu konať samostatne; v oblastiach zdieľaných právomocí môžu, ak tým neohrozia dosiahnutie cieľov Únie (zásada lojálnej spolupráce). Staršie dohody uzavreté pred vstupom do EÚ upravuje čl. 351 ZFEÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje význam všeobecných zásad, právnu silu a hranice medzinárodných dohôd. V rozsudku C-104/16 P (Rada v Front Polisario) Súdny dvor vyložil územný rozsah dohody medzi EÚ a Marokom vo svetle medzinárodného práva vrátane zásady sebaurčenia. V stanovisku 1/91 (o Dohode o Európskom hospodárskom priestore) zdôraznil autonómiu právneho poriadku EÚ ako hranicu pri uzatváraní medzinárodných dohôd.\n\nZapamätaj si:\n– Všeobecné zásady: právna istota, legitímne očakávania, proporcionalita, rovnosť/zákaz diskriminácie, účinná súdna ochrana, lojálna spolupráca, dobrá správa. Sila ako primárne právo; slúžia na kontrolu zákonnosti + výklad.\n– Medzinárodné dohody Únie (čl. 216 – 218 ZFEÚ): Únia uzatvára v rámci svojich právomocí (aj implicitných); záväzné pre inštitúcie aj štáty; v hierarchii nad sekundárnym, pod primárnym právom. Postup: čl. 218.\n– Dohody členských štátov: len v súlade s právom EÚ; vo výlučných právomociach nesmú konať samy; v zdieľaných nesmú mariť ciele EÚ; staršie dohody čl. 351 ZFEÚ.\n– Judikatúra: C-104/16 P (Front Polisario – dohoda EÚ–Maroko, sebaurčenie, medzinárodné právo), stanovisko 1/91 (EHP – autonómia práva EÚ). Pozor: C-157/02 (Rieser) je o priamom účinku smerníc – patrí do A12.\n\nZdroj: Zmluva o fungovaní Európskej únie, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016), čl. 216 – 218 a 351; judikatúra Súdneho dvora EÚ (C-104/16 P Council v Front Polisario, stanovisko 1/91 o EHP); EUR-Lex.",
   "quiz": [
     {
-      "q": "Čo sú všeobecné zásady práva EÚ?",
-      "options": [
-        "Sekundárne právo",
-        "Základné právne princípy odvodené zo zmlúv a ústavných tradícií",
-        "Rozhodnutia Komisie",
-        "Právne akty členských štátov"
-      ],
+      "q": "Všeobecné zásady práva EÚ majú:",
+      "options": ["silu sekundárneho práva", "silu primárneho práva", "len odporúčací charakter", "žiadnu záväznosť"],
       "correct": 1,
-      "explanation": "Všeobecné zásady sú základné právne princípy odvodené zo zmlúv a ústavných tradícií."
+      "explanation": "Súdny dvor podľa nich preskúmava zákonnosť aktov Únie; sú nepísaným prameňom s rangom primárneho práva."
     },
     {
-      "q": "Ktorý článok upravuje medzinárodné dohody Únie?",
-      "options": [
-        "Čl. 216 – 218 ZFEÚ",
-        "Čl. 48 ZEÚ",
-        "Čl. 7 ZEÚ",
-        "Čl. 288 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Medzinárodné dohody sú upravené v čl. 216 – 218 ZFEÚ."
-    },
-    {
-      "q": "Môžu členské štáty uzatvárať medzinárodné dohody?",
-      "options": [
-        "Nie, nikdy",
-        "Áno, ak sú v súlade s právom EÚ",
-        "Áno, aj v oblastiach výlučných právomocí EÚ",
-        "Len so súhlasom Súdneho dvora"
-      ],
+      "q": "Medzinárodné dohody Únie stoja v hierarchii prameňov:",
+      "options": ["nad primárnym právom", "nad sekundárnym, ale pod primárnym právom", "pod sekundárnym právom", "mimo hierarchie prameňov"],
       "correct": 1,
-      "explanation": "Členské štáty môžu uzatvárať dohody, ak sú v súlade s právom EÚ."
+      "explanation": "Zaväzujú inštitúcie aj členské štáty (čl. 216 ods. 2 ZFEÚ), no nemôžu byť v rozpore so zmluvami."
     },
     {
-      "q": "Ktorá zásada chráni jednotlivca pred retroaktívnymi zásahmi?",
-      "options": [
-        "Proporcionalita",
-        "Právna istota",
-        "Lojálna spolupráca",
-        "Efektívna súdna ochrana"
-      ],
+      "q": "Uzatváranie medzinárodných dohôd Únie upravujú:",
+      "options": ["čl. 101 a 102 ZFEÚ", "čl. 216 – 218 ZFEÚ", "čl. 45 ZFEÚ", "čl. 2 ZEÚ"],
       "correct": 1,
-      "explanation": "Zásada právnej istoty chráni pred retroaktívnymi zásahmi."
+      "explanation": "Čl. 216 vymedzuje, kedy Únia dohodu uzavrieť môže, čl. 218 upravuje postup."
     },
     {
-      "q": "Ktorý rozsudok sa týka právnej sily medzinárodných dohôd?",
-      "options": [
-        "C‑104/16",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑62/14 Gauweiler",
-        "C‑106/77 Simmenthal"
-      ],
-      "correct": 0,
-      "explanation": "V rozsudku C‑104/16 Súdny dvor riešil právnu silu medzinárodných dohôd."
+      "q": "V oblasti výlučnej právomoci Únie môže členský štát medzinárodnú dohodu:",
+      "options": ["uzavrieť voľne", "uzavrieť samostatne nemôže", "uzavrieť namiesto Únie", "uzavrieť so súhlasom Komisie"],
+      "correct": 1,
+      "explanation": "V zdieľaných právomociach štát dohodu uzavrieť môže, no nesmie zmariť ciele Únie. Staršie dohody rieši čl. 351 ZFEÚ."
+    },
+    {
+      "q": "Medzi všeobecné zásady práva EÚ NEpatrí:",
+      "options": ["právna istota", "proporcionalita", "priama uplatniteľnosť smerníc", "ochrana legitímnych očakávaní"],
+      "correct": 2,
+      "explanation": "Priamo uplatniteľné sú nariadenia; smernica vyžaduje transpozíciu a horizontálny priamy účinok nemá. Nejde o všeobecnú zásadu."
     }
   ],
   "tiles": [
@@ -83,88 +58,145 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Nádasdi a Németh: zásada právnej istoty a legitímnych očakávaní",
+      "title": "Prípad 1 – Všeobecné zásady ako prameň práva",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátne orgány zmenili pravidlá registrácie vozidiel, čo ovplyvnilo daňové povinnosti občanov.",
+          "question": "Jednotlivec namieta, že akt EÚ porušil jeho legitímne očakávania a zásadu právnej istoty, hoci tie nie sú výslovne v zmluve.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2006:491 (C‑290/05 Nádasdi; C‑333/05 Németh)"
+          "source": "čl. 6 ods. 3 ZEÚ"
         },
         {
-          "question": "Ako Súdny dvor vyložil zásadu právnej istoty?",
+          "question": "Aké postavenie majú všeobecné zásady práva EÚ?",
           "options": [
-            "Vnútroštátne orgány môžu retroaktívne meniť povinnosti",
-            "Zmeny nesmú porušiť legitímne očakávania jednotlivcov",
-            "Zásada právnej istoty sa neuplatňuje v daňových veciach"
+            "Nie sú prameňom práva, lebo nie sú v zmluve",
+            "Sú prameňom so silou primárneho práva; Súdny dvor podľa nich preskúmava zákonnosť aktov EÚ",
+            "Majú len silu sekundárneho práva"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že vnútroštátne opatrenia nesmú porušiť legitímne očakávania jednotlivcov.",
-            "wrong": "Nesprávne. Zásada právnej istoty sa uplatňuje aj v daňových veciach."
+            "correct": "Všeobecné zásady, napríklad právna istota a legitímne očakávania, majú silu primárneho práva a slúžia na kontrolu zákonnosti aktov EÚ.",
+            "wrong": "Nesprávne. Nepísané všeobecné zásady sú plnohodnotným prameňom s rangom primárneho práva."
           },
-          "source": "ECLI:EU:C:2006:491"
+          "source": "čl. 6 ods. 3 ZEÚ"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Komisia v. Grécko: zásada lojálnej spolupráce",
+      "title": "Prípad 2 – Front Polisario: územný rozsah dohody",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Grécko uzatvorilo medzinárodnú dohodu v oblasti, ktorá patrila do výlučnej právomoci EÚ.",
+          "question": "Napadla sa dohoda medzi EÚ a Marokom v časti týkajúcej sa územia Západnej Sahary.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2009:624 (C‑45/07 Komisia v. Grécko)"
+          "source": "ECLI:EU:C:2016:973 (C‑104/16 P Rada v Front Polisario)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach členských štátov?",
+          "question": "Ako Súdny dvor vyložil územný rozsah dohody?",
           "options": [
-            "Členské štáty môžu uzatvárať dohody aj vo výlučných právomociach EÚ",
-            "Členské štáty nesmú konať v oblastiach výlučných právomocí EÚ",
-            "Členské štáty môžu uzatvárať dohody bez obmedzení"
+            "Dohoda sa automaticky vzťahuje na všetky územia",
+            "Dohodu treba vykladať vo svetle medzinárodného práva vrátane zásady sebaurčenia a relatívneho účinku zmlúv",
+            "Medzinárodné právo je pri výklade dohôd EÚ irelevantné"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že členské štáty nesmú uzatvárať dohody v oblastiach výlučných právomocí EÚ.",
-            "wrong": "Nesprávne. Výlučné právomoci patria výhradne EÚ."
+            "correct": "Súdny dvor vyložil dohodu v súlade s medzinárodným právom – zásadou sebaurčenia a relatívnym účinkom zmlúv.",
+            "wrong": "Nesprávne. Medzinárodné právo je pri výklade dohôd Únie relevantné."
           },
-          "source": "ECLI:EU:C:2009:624"
+          "source": "ECLI:EU:C:2016:973 (C‑104/16 P Rada v Front Polisario)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Air Transport Agreement: právna sila medzinárodných dohôd",
+      "title": "Prípad 3 – Stanovisko 1/91: autonómia práva EÚ",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Medzinárodná dohoda o leteckej doprave bola napadnutá pre údajný rozpor so sekundárnym právom EÚ.",
+          "question": "Posudzoval sa návrh Dohody o Európskom hospodárskom priestore a jej systém súdneho dohľadu.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2017:703 (C‑104/16 P Council v. Front Polisario)"
+          "source": "ECLI:EU:C:1991:490 (stanovisko 1/91)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právnu silu medzinárodných dohôd?",
+          "question": "Prečo Súdny dvor návrh v pôvodnej podobe odmietol?",
           "options": [
-            "Medzinárodné dohody majú nižšiu právnu silu ako sekundárne právo",
-            "Medzinárodné dohody majú vyššiu právnu silu ako sekundárne právo",
-            "Medzinárodné dohody nemajú právnu záväznosť"
+            "Dohoda bola v poriadku a súd ju schválil",
+            "Navrhovaný súdny systém ohrozoval autonómiu právneho poriadku Únie",
+            "Únia medzinárodné dohody uzatvárať nesmie"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že medzinárodné dohody majú vyššiu právnu silu ako sekundárne právo, ale nesmú odporovať primárnemu právu.",
-            "wrong": "Nesprávne. Medzinárodné dohody sú záväzné pre EÚ aj členské štáty."
+            "correct": "Autonómia právneho poriadku EÚ je hranicou pri uzatváraní medzinárodných dohôd; navrhovaný mechanizmus ju ohrozoval.",
+            "wrong": "Nesprávne. Dôvodom bola ochrana autonómie práva Únie, nie zákaz uzatvárať dohody."
           },
-          "source": "ECLI:EU:C:2017:703"
+          "source": "ECLI:EU:C:1991:490 (stanovisko 1/91)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2006:491; ECLI:EU:C:2009:624; ECLI:EU:C:2017:703; čl. 216 – 218 ZFEÚ",
+    "citation": "ECLI:EU:C:2016:973; ECLI:EU:C:1991:490; čl. 6 ods. 3 ZEÚ; čl. 216 – 218 a 351 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Všeobecné zásady a medzinárodné dohody Únie",
+    "branches": [
+      {
+        "label": "Pramene všeobecných zásad",
+        "leaves": [
+          "Spoločné ústavné tradície členských štátov",
+          "Medzinárodné právo a zmluvy o ochrane ľudských práv",
+          "Povaha a ciele samotného práva Únie",
+          "Základné práva ako všeobecné zásady (čl. 6 ods. 3 ZEÚ)"
+        ]
+      },
+      {
+        "label": "Katalóg zásad",
+        "leaves": [
+          "Právna istota a ochrana legitímnych očakávaní",
+          "Proporcionalita",
+          "Rovnosť a zákaz diskriminácie",
+          "Právo na účinnú súdnu ochranu",
+          "Lojálna spolupráca a dobrá správa vecí verejných"
+        ]
+      },
+      {
+        "label": "Postavenie zásad",
+        "leaves": [
+          "Sila primárneho práva",
+          "Slúžia na preskúmanie zákonnosti aktov Únie",
+          "Uplatnia sa aj pri výklade sekundárneho práva"
+        ]
+      },
+      {
+        "label": "Medzinárodné dohody Únie (čl. 216 – 218 ZFEÚ)",
+        "leaves": [
+          "Únia ich uzatvára v rámci svojich právomocí vrátane implicitných",
+          "Záväzné pre inštitúcie aj členské štáty (čl. 216 ods. 2 ZFEÚ)",
+          "Postavenie nad sekundárnym, ale pod primárnym právom",
+          "Postup uzatvárania podľa čl. 218 ZFEÚ"
+        ]
+      },
+      {
+        "label": "Dohody členských štátov",
+        "leaves": [
+          "Musia byť v súlade s právom Únie",
+          "Vo výlučných právomociach štát dohodu samostatne uzavrieť nemôže",
+          "V zdieľaných právomociach nesmie zmariť ciele Únie",
+          "Staršie dohody uzavreté pred pristúpením rieši čl. 351 ZFEÚ"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "Front Polisario – výklad dohody EÚ s Marokom vo svetle zásady sebaurčenia",
+          "Stanovisko 1/91 – autonómia právneho poriadku Únie ako hranica dohôd"
+        ]
+      }
+    ]
   }
 }

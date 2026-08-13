@@ -4,34 +4,44 @@
   "summary": "Sekundárne právo Európskej únie je súbor právnych aktov prijímaných inštitúciami EÚ na základe primárneho práva. Je upravené v čl. 288 ZFEÚ. Sekundárne právo zahŕňa nariadenia, smernice, rozhodnutia, odporúčania a stanoviská.\n\nNariadenia sú všeobecne záväzné a priamo uplatniteľné vo všetkých členských štátoch. Smernice sú záväzné pre členské štáty, pokiaľ ide o výsledok, ktorý sa má dosiahnuť, ale ponechávajú voľbu formy a prostriedkov. Rozhodnutia sú záväzné pre adresátov. Odporúčania a stanoviská nie sú právne záväzné.\n\nPrávny základ sekundárneho práva vyplýva z konkrétnych ustanovení zmlúv, ktoré splnomocňujú inštitúcie EÚ konať v určitej oblasti. Právny základ musí byť jasne uvedený v každom právnom akte.\n\nSekundárne právo sa publikuje v Úradnom vestníku Európskej únie (Ú. v. EÚ), najmä v sérii L (Legislatíva). Jazykový režim je založený na zásade viacjazyčnosti: všetky právne akty sú autentické vo všetkých úradných jazykoch EÚ. Preklad je právne záväzný.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje právnu silu sekundárneho práva, povinnosť členských štátov transponovať smernice a význam jazykového režimu, najmä v rozsudkoch C‑161/06, C‑83/14 a C‑449/21.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje sekundárne právo EÚ?",
-      "options": ["Čl. 288 ZFEÚ", "Čl. 48 ZEÚ", "Čl. 7 ZEÚ", "Čl. 20 ZFEÚ"],
+      "q": "Právne akty Únie vymenúva:",
+      "options": ["čl. 288 ZFEÚ", "čl. 13 ZEÚ", "čl. 51 Charty", "čl. 2 ZEÚ"],
       "correct": 0,
-      "explanation": "Sekundárne právo je upravené v čl. 288 ZFEÚ."
+      "explanation": "Čl. 288 ZFEÚ: nariadenia, smernice, rozhodnutia, odporúčania a stanoviská. Čl. 13 ZEÚ vymenúva inštitúcie."
     },
     {
-      "q": "Ktorý právny akt je priamo uplatniteľný?",
-      "options": ["Smernica", "Nariadenie", "Rozhodnutie", "Odporúčanie"],
-      "correct": 1,
-      "explanation": "Nariadenie je priamo uplatniteľné vo všetkých členských štátoch."
+      "q": "Ktoré akty NIE sú právne záväzné?",
+      "options": ["nariadenia", "smernice", "rozhodnutia", "odporúčania a stanoviská"],
+      "correct": 3,
+      "explanation": "Odporúčania a stanoviská záväzné nie sú; vnútroštátne súdy ich však pri výklade zohľadňujú."
     },
     {
-      "q": "Čo musí obsahovať každý právny akt EÚ?",
-      "options": ["Stanovisko členských štátov", "Právny základ", "Preklad do národného vestníka", "Podpis všetkých ministrov"],
+      "q": "Akt EÚ neuverejnený v úradnom jazyku členského štátu:",
+      "options": [
+        "platí bez obmedzení, neznalosť práva neospravedlňuje",
+        "nie je voči jednotlivcom v tomto štáte vymáhateľný",
+        "je neplatný pre celú Úniu",
+        "platí len voči orgánom štátu"
+      ],
       "correct": 1,
-      "explanation": "Každý právny akt musí obsahovať právny základ."
+      "explanation": "Skoma-Lux (C-161/06). Akt zostáva platný, chýba mu však vymáhateľnosť voči jednotlivcom v danom štáte."
     },
     {
-      "q": "Kde sa publikuje sekundárne právo?",
-      "options": ["V národných vestníkoch", "V Úradnom vestníku EÚ", "V rozhodnutiach Komisie", "V rozsudkoch Súdneho dvora"],
+      "q": "Jednotlivé jazykové verzie aktu EÚ sú:",
+      "options": [
+        "autentická je len anglická verzia",
+        "všetky rovnako autentické a pri výklade sa porovnávajú",
+        "autentická je len verzia štátu pôvodu návrhu",
+        "nezáväzné preklady"
+      ],
       "correct": 1,
-      "explanation": "Sekundárne právo sa publikuje v Úradnom vestníku EÚ."
+      "explanation": "CILFIT (283/81). Pri odlišnostiach medzi verziami sa ustanovenie vykladá jednotne podľa účelu a systematiky."
     },
     {
-      "q": "Sú všetky jazykové verzie právnych aktov autentické?",
-      "options": ["Nie", "Áno", "Len anglická verzia", "Len francúzska verzia"],
+      "q": "Sekundárne právo sa uverejňuje:",
+      "options": ["len na webe Komisie", "v Úradnom vestníku Európskej únie, séria L", "v národných zbierkach zákonov", "neuverejňuje sa"],
       "correct": 1,
-      "explanation": "Všetky jazykové verzie právnych aktov EÚ sú autentické."
+      "explanation": "Čl. 297 ZFEÚ. Elektronická verzia Úradného vestníka je autentická; akt nadobúda účinnosť až po uverejnení."
     }
   ],
   "tiles": [
@@ -43,88 +53,133 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Pfeiffer: povinnosť správnej transpozície smerníc",
+      "title": "Prípad 1 – Spojené kráľovstvo v. Rada: právny základ aktu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Členský štát transponoval smernicu o pracovnom čase neúplne.",
+          "question": "Namietalo sa, že akt Rady bol prijatý na nesprávnom právnom základe.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2004:584 (C‑161/06 Pfeiffer)"
+          "source": "ECLI:EU:C:2014:2449 (C‑81/13 Spojené kráľovstvo v Rada)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o transpozícii smerníc?",
+          "question": "Čím sa riadi voľba právneho základu aktu?",
           "options": [
-            "Členské štáty môžu transponovať smernice len čiastočne",
-            "Členské štáty musia zabezpečiť úplnú a presnú transpozíciu",
-            "Smernice nie sú záväzné"
+            "Inštitúcia si ho volí ľubovoľne",
+            "Musí zodpovedať cieľu a obsahu aktu a zásade zverenia právomocí; jeho voľba je súdne preskúmateľná",
+            "Právny základ nie je potrebný"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že členské štáty musia zabezpečiť úplnú a presnú transpozíciu smerníc.",
-            "wrong": "Nesprávne. Smernice sú záväzné pre členské štáty."
+            "correct": "Voľba právneho základu sa opiera o objektívne prvky – cieľ a obsah aktu – a podlieha preskúmaniu Súdnym dvorom.",
+            "wrong": "Nesprávne. Právny základ je povinný a jeho voľba je preskúmateľná."
           },
-          "source": "ECLI:EU:C:2004:584"
+          "source": "ECLI:EU:C:2014:2449 (C‑81/13 Spojené kráľovstvo v Rada)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Commission v. Spain: jazykový režim a autentickosť verzií",
+      "title": "Prípad 2 – Skoma-Lux: publikácia a jazykový režim",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Španielsko namietalo rozdiely medzi jazykovými verziami nariadenia.",
+          "question": "Voči podniku sa uplatňovalo nariadenie, ktoré ešte nebolo preložené a uverejnené v jazyku jeho členského štátu.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:84 (C‑83/14 Komisia v. Španielsko)"
+          "source": "ECLI:EU:C:2007:773 (C‑161/06 Skoma-Lux)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o jazykových verziách?",
+          "question": "Je taký neuverejnený akt voči jednotlivcovi vymáhateľný?",
           "options": [
-            "Len anglická verzia je autentická",
-            "Všetky jazykové verzie sú autentické a rovnocenné",
-            "Členské štáty si môžu vybrať záväznú verziu"
+            "Áno, neznalosť práva neospravedlňuje",
+            "Nie, akt neuverejnený v úradnom jazyku daného štátu nie je voči jednotlivcom v tomto štáte vymáhateľný",
+            "Platí len voči orgánom štátu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že všetky jazykové verzie právnych aktov sú autentické a rovnocenné.",
-            "wrong": "Nesprávne. EÚ nemá jedinú privilegovanú jazykovú verziu."
+            "correct": "Nariadenie neuverejnené v úradnom jazyku členského štátu nemožno uplatniť voči jednotlivcom v tomto štáte.",
+            "wrong": "Nesprávne. Chýbajúce uverejnenie v jazyku štátu bráni vymáhateľnosti voči jednotlivcom."
           },
-          "source": "ECLI:EU:C:2015:84"
+          "source": "ECLI:EU:C:2007:773 (C‑161/06 Skoma-Lux)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Xella: právny základ sekundárneho práva",
+      "title": "Prípad 3 – CILFIT: jazykové verzie pri výklade",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Právny akt EÚ bol napadnutý pre údajne nesprávny právny základ.",
+          "question": "Vnútroštátny súd zistil, že rôzne jazykové verzie ustanovenia práva EÚ znejú odlišne.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2023:123 (C‑449/21 Xella)"
+          "source": "ECLI:EU:C:1982:335 (283/81 CILFIT)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právny základ?",
+          "question": "Ako sa má postupovať pri odlišných jazykových verziách?",
           "options": [
-            "Právny základ nie je potrebné uvádzať",
-            "Právny základ musí presne zodpovedať obsahu a cieľu právneho aktu",
-            "Právny základ môže byť uvedený dodatočne po prijatí aktu"
+            "Rozhoduje verzia v jazyku štátu konajúceho súdu",
+            "Všetky úradné jazykové verzie sú rovnako autentické; treba ich porovnať a ustanovenie vyložiť jednotne",
+            "Rozhoduje anglická verzia"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že právny základ musí presne zodpovedať obsahu a cieľu právneho aktu.",
-            "wrong": "Nesprávne. Právny základ je povinnou súčasťou každého právneho aktu."
+            "correct": "Právo EÚ je vyhotovené vo viacerých rovnako autentických jazykoch; pri výklade sa verzie porovnávajú a vykladajú jednotne.",
+            "wrong": "Nesprávne. Žiadna jediná jazyková verzia nemá prednosť."
           },
-          "source": "ECLI:EU:C:2023:123"
+          "source": "ECLI:EU:C:1982:335 (283/81 CILFIT)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2004:584; ECLI:EU:C:2015:84; ECLI:EU:C:2023:123; čl. 288 ZFEÚ",
+    "citation": "ECLI:EU:C:2014:2449; ECLI:EU:C:2007:773; ECLI:EU:C:1982:335; čl. 288, 296 a 297 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Sekundárne právo EÚ",
+    "branches": [
+      {
+        "label": "Typy aktov (čl. 288 ZFEÚ)",
+        "leaves": [
+          "Záväzné: nariadenie, smernica, rozhodnutie",
+          "Nezáväzné: odporúčania a stanoviská",
+          "Nezáväzné akty sa pri výklade zohľadňujú, povinnosti však nezakladajú"
+        ]
+      },
+      {
+        "label": "Účinok jednotlivých aktov",
+        "leaves": [
+          "Nariadenie – všeobecná pôsobnosť, priamo uplatniteľné bez transpozície",
+          "Smernica – záväzná čo do výsledku, formu a prostriedky volí štát",
+          "Rozhodnutie – záväzné v celom rozsahu pre tých, ktorým je určené"
+        ]
+      },
+      {
+        "label": "Právny základ",
+        "leaves": [
+          "Každý akt sa opiera o konkrétne ustanovenie zmluvy",
+          "Musí byť v akte uvedený a odôvodnený (čl. 296 ZFEÚ)",
+          "Voľba základu vychádza z cieľa a obsahu aktu a je súdne preskúmateľná (C-81/13)"
+        ]
+      },
+      {
+        "label": "Publikácia (čl. 297 ZFEÚ)",
+        "leaves": [
+          "Úradný vestník Európskej únie, séria L",
+          "Elektronická verzia vestníka je autentická",
+          "Účinnosť nastáva až po uverejnení"
+        ]
+      },
+      {
+        "label": "Jazykový režim",
+        "leaves": [
+          "Všetky úradné jazykové verzie sú rovnako autentické",
+          "Pri odlišnostiach sa verzie porovnávajú a vykladajú jednotne (CILFIT)",
+          "Neuverejnený akt nie je voči jednotlivcom vymáhateľný (Skoma-Lux)"
+        ]
+      }
+    ]
   }
 }

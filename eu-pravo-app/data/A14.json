@@ -4,59 +4,34 @@
   "summary": "Základné práva Európskej únie sú upravené v Charte základných práv Európskej únie, ktorá bola vyhlásená v roku 2000 a Lisabonskou zmluvou (2009) sa stala právne záväznou s rovnakou právnou silou ako zmluvy (čl. 6 ods. 1 ZEÚ). Charta je členená do hláv: dôstojnosť, slobody, rovnosť, solidarita, občianstvo (práva občanov) a spravodlivosť. Popri Charte sú základné práva chránené aj ako všeobecné zásady práva EÚ (čl. 6 ods. 3 ZEÚ).\n\nCharta je určená inštitúciám Únie a členským štátom, ale len keď vykonávajú právo EÚ (čl. 51 Charty); nevzťahuje sa na čisto vnútroštátne situácie bez väzby na právo EÚ. Súdny dvor vykladá Chartu autonómne, pričom zohľadňuje judikatúru Európskeho súdu pre ľudské práva, nie je ňou však viazaný.\n\nVzťah Charty k Európskemu dohovoru o ochrane ľudských práv a základných slobôd upravuje čl. 52 ods. 3 Charty: práva zodpovedajúce právam Dohovoru majú rovnaký zmysel a rozsah ako v Dohovore, právo Únie však môže poskytnúť širšiu ochranu. Únia zatiaľ nie je zmluvnou stranou Dohovoru – hoci jej pristúpenie ukladá čl. 6 ods. 2 ZEÚ, Súdny dvor v stanovisku 2/13 (2014) označil návrh dohody o pristúpení za nezlučiteľný s právom Únie; rokovania odvtedy pokračujú.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje záväznosť a rozsah Charty. V rozsudku C-617/10 (Åkerberg Fransson) vymedzil pôsobnosť Charty podľa čl. 51 – členské štáty sú ňou viazané, keď vykonávajú právo EÚ. V stanovisku 2/13 vylúčil pristúpenie EÚ k Dohovoru za navrhnutých podmienok. V rozsudku C-131/12 (Google Spain) uplatnil práva na súkromie a ochranu osobných údajov (čl. 7 a 8 Charty) v prostredí internetu (tzv. právo byť zabudnutý).\n\nZapamätaj si:\n– Charta: vyhlásená 2000, záväzná od Lisabonu 2009, rovnaká sila ako zmluvy (čl. 6 ods. 1 ZEÚ). Hlavy: dôstojnosť, slobody, rovnosť, solidarita, občianstvo, spravodlivosť.\n– Pôsobnosť: inštitúcie + členské štáty, ale len pri vykonávaní práva EÚ (čl. 51). Nie čisto vnútroštátne situácie (Åkerberg Fransson, C-617/10).\n– Vzťah k EDĽP: čl. 52 ods. 3 – zodpovedajúce práva majú rovnaký zmysel a rozsah, právo Únie môže dať viac. EÚ zatiaľ nepristúpila (čl. 6 ods. 2 ZEÚ pristúpenie ukladá; stanovisko 2/13 návrh odmietlo).\n– Výklad: autonómny, zohľadňuje ESĽP, ale ním nie je viazaný.\n– Judikatúra: C-617/10 (rozsah, čl. 51), stanovisko 2/13 (pristúpenie k EDĽP), C-131/12 (Google Spain – čl. 7 a 8, právo byť zabudnutý).\n\nZdroj: Zmluva o Európskej únii, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016), čl. 6; Charta základných práv Európskej únie (Ú. v. EÚ C 202, 2016), čl. 51 a 52; judikatúra Súdneho dvora EÚ (C-617/10 Åkerberg Fransson, stanovisko 2/13, C-131/12 Google Spain); EUR-Lex.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje záväznosť Charty základných práv EÚ?",
-      "options": [
-        "Čl. 6 ods. 1 ZEÚ",
-        "Čl. 2 ZEÚ",
-        "Čl. 49 ZEÚ",
-        "Čl. 288 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 6 ods. 1 ZEÚ stanovuje, že Charta má rovnakú právnu silu ako zmluvy."
-    },
-    {
-      "q": "Kedy sa Charta uplatňuje?",
-      "options": [
-        "Vždy, aj pri čisto vnútroštátnych situáciách",
-        "Len keď členské štáty vykonávajú právo EÚ",
-        "Len pri rozhodovaní Súdneho dvora",
-        "Len pri legislatíve EÚ"
-      ],
+      "q": "Charta základných práv EÚ sa stala právne záväznou:",
+      "options": ["v roku 2000, keď bola vyhlásená", "Lisabonskou zmluvou v roku 2009", "Maastrichtskou zmluvou", "záväzná nie je dodnes"],
       "correct": 1,
-      "explanation": "Charta sa uplatňuje, keď členské štáty vykonávajú právo EÚ."
+      "explanation": "Vyhlásená bola v roku 2000, ale právnu záväznosť jej dala až Lisabonská zmluva (čl. 6 ods. 1 ZEÚ)."
     },
     {
-      "q": "Ktorý článok upravuje vzťah Charty k Dohovoru?",
-      "options": [
-        "Čl. 52 ods. 3 Charty",
-        "Čl. 7 ZEÚ",
-        "Čl. 10 ZEÚ",
-        "Čl. 20 ZFEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Čl. 52 ods. 3 Charty upravuje vzťah k Dohovoru."
-    },
-    {
-      "q": "Je EÚ zmluvnou stranou Dohovoru?",
-      "options": [
-        "Áno",
-        "Nie",
-        "Len čiastočne",
-        "Len v oblasti trestného práva"
-      ],
+      "q": "Charta má voči zakladajúcim zmluvám:",
+      "options": ["nižšiu právnu silu", "rovnakú právnu silu", "vyššiu právnu silu", "len odporúčací charakter"],
       "correct": 1,
-      "explanation": "EÚ zatiaľ nie je zmluvnou stranou Dohovoru."
+      "explanation": "Čl. 6 ods. 1 ZEÚ. Charta je preto súčasťou primárneho práva."
     },
     {
-      "q": "Ktorý rozsudok sa týka záväznosti Charty?",
-      "options": [
-        "C‑617/10 Åkerberg Fransson",
-        "C‑62/14 Gauweiler",
-        "C‑106/77 Simmenthal",
-        "C‑399/11 Melloni"
-      ],
-      "correct": 0,
-      "explanation": "V rozsudku Åkerberg Fransson Súdny dvor potvrdil záväznosť Charty pri vykonávaní práva EÚ."
+      "q": "Charta sa na členské štáty vzťahuje:",
+      "options": ["vždy a v každej situácii", "len keď vykonávajú právo EÚ (čl. 51 Charty)", "nikdy, viaže len inštitúcie", "len v trestných veciach"],
+      "correct": 1,
+      "explanation": "Åkerberg Fransson: rozhoduje väzba na právo Únie. Na čisto vnútroštátne situácie sa Charta nevzťahuje."
+    },
+    {
+      "q": "Vzťah medzi Chartou a Európskym dohovorom o ochrane ľudských práv upravuje:",
+      "options": ["čl. 51 Charty", "čl. 52 ods. 3 Charty", "čl. 6 ZFEÚ", "čl. 2 ZEÚ"],
+      "correct": 1,
+      "explanation": "Zodpovedajúce práva majú rovnaký zmysel a rozsah ako v Dohovore; Únia im však môže poskytnúť širšiu ochranu."
+    },
+    {
+      "q": "Európska únia k Európskemu dohovoru o ľudských právach:",
+      "options": ["pristúpila v roku 2009", "zatiaľ nepristúpila – návrh dohody odmietlo stanovisko 2/13", "pristúpiť nikdy nemôže", "pristúpila Lisabonskou zmluvou"],
+      "correct": 1,
+      "explanation": "Povinnosť pristúpiť podľa čl. 6 ods. 2 ZEÚ trvá, no Súdny dvor návrh dohody vyhlásil za nezlučiteľný s právom Únie."
     }
   ],
   "tiles": [
@@ -83,88 +58,146 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Åkerberg Fransson: záväznosť Charty",
+      "title": "Prípad 1 – Åkerberg Fransson: pôsobnosť Charty",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny orgán uložil sankcie v oblasti DPH, ktorá je upravená právom EÚ.",
+          "question": "Vnútroštátny súd sa pýtal, či sa Charta uplatní na daňové a trestné konanie, ktoré čiastočne vychádza z práva EÚ (DPH).",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2013:105 (C‑617/10 Åkerberg Fransson)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o uplatnení Charty?",
+          "question": "Kedy sú členské štáty viazané Chartou?",
           "options": [
-            "Charta sa neuplatní pri DPH",
-            "Charta sa uplatní, keď členské štáty vykonávajú právo EÚ",
-            "Charta sa uplatní len pri legislatíve EÚ"
+            "Vždy, v každej vnútroštátnej situácii",
+            "Keď konajú v rámci pôsobnosti práva EÚ, teda keď ho vykonávajú (čl. 51 Charty)",
+            "Nikdy, Charta viaže len inštitúcie EÚ"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že Charta sa uplatňuje, keď členské štáty vykonávajú právo EÚ, vrátane oblasti DPH.",
-            "wrong": "Nesprávne. Charta sa uplatňuje aj pri vnútroštátnych opatreniach vykonávajúcich právo EÚ."
+            "correct": "Charta viaže členské štáty, keď vykonávajú právo EÚ; na čisto vnútroštátne situácie sa nevzťahuje.",
+            "wrong": "Nesprávne. Rozhoduje väzba na právo EÚ (čl. 51 Charty)."
           },
-          "source": "ECLI:EU:C:2013:105"
+          "source": "ECLI:EU:C:2013:105 (C‑617/10 Åkerberg Fransson)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Google Spain: právo na ochranu osobných údajov",
+      "title": "Prípad 2 – Stanovisko 2/13: pristúpenie EÚ k EDĽP",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Jednotlivec požadoval odstránenie výsledkov vyhľadávania obsahujúcich jeho osobné údaje.",
+          "question": "Posudzoval sa návrh dohody o pristúpení Únie k Európskemu dohovoru o ochrane ľudských práv.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2014:2454 (stanovisko 2/13)"
+        },
+        {
+          "question": "Ako Súdny dvor posúdil navrhované pristúpenie?",
+          "options": [
+            "Schválil ho bez výhrad",
+            "Označil návrh dohody za nezlučiteľný s právom Únie, lebo by ohrozoval autonómiu práva EÚ",
+            "Rozhodol, že EÚ pristúpiť nesmie nikdy"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Súdny dvor vyhlásil návrh za nezlučiteľný s právom Únie; povinnosť pristúpiť podľa čl. 6 ods. 2 ZEÚ však trvá a rokovania pokračujú.",
+            "wrong": "Nesprávne. Súd návrh odmietol, nešlo o bezvýhradné schválenie ani o trvalý zákaz."
+          },
+          "source": "ECLI:EU:C:2014:2454 (stanovisko 2/13)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Google Spain: právo byť zabudnutý",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Jednotlivec žiadal odstránenie odkazov na staré osobné údaje z výsledkov vyhľadávača.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2014:317 (C‑131/12 Google Spain)"
         },
         {
-          "question": "Ako Súdny dvor vyložil právo na ochranu údajov podľa Charty?",
+          "question": "Ako Súdny dvor uplatnil práva na súkromie a ochranu údajov (čl. 7 a 8 Charty)?",
           "options": [
-            "Právo na ochranu údajov je obmedzené len na štátne orgány",
-            "Jednotlivec má právo požadovať odstránenie výsledkov vyhľadávania za určitých podmienok",
-            "Charta sa neuplatní na súkromné spoločnosti"
+            "Vyhľadávač nespracúva osobné údaje a nemá žiadne povinnosti",
+            "Prevádzkovateľ vyhľadávača spracúva osobné údaje a za určitých podmienok musí odkazy odstrániť – právo byť zabudnutý",
+            "Osobné údaje na internete chránené nie sú"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že jednotlivec má právo požadovať odstránenie výsledkov vyhľadávania, ak sú neaktuálne alebo neprimerané.",
-            "wrong": "Nesprávne. Charta sa uplatňuje aj na súkromné subjekty pri vykonávaní práva EÚ."
+            "correct": "Prevádzkovateľ vyhľadávača je zodpovedný za spracúvanie údajov; jednotlivec môže za podmienok žiadať odstránenie odkazov.",
+            "wrong": "Nesprávne. Charta (čl. 7 a 8) sa uplatní aj na spracúvanie údajov vyhľadávačom."
           },
-          "source": "ECLI:EU:C:2014:317"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 3 – Stanovisko 2/13: vzťah Charty a Dohovoru",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "EÚ pripravila návrh na pristúpenie k Dohovoru o ochrane ľudských práv.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:2014:2454 (Stanovisko 2/13)"
-        },
-        {
-          "question": "Ako Súdny dvor rozhodol o návrhu na pristúpenie?",
-          "options": [
-            "Návrh bol v súlade s právom EÚ",
-            "Návrh nebol v súlade s právom EÚ a nemohol byť prijatý",
-            "EÚ je povinná pristúpiť k Dohovoru"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Súdny dvor rozhodol, že návrh na pristúpenie EÚ k Dohovoru nebol v súlade s právom Únie, najmä kvôli zásade autonómie práva EÚ.",
-            "wrong": "Nesprávne. EÚ nie je povinná pristúpiť k Dohovoru."
-          },
-          "source": "ECLI:EU:C:2014:2454"
+          "source": "ECLI:EU:C:2014:317 (C‑131/12 Google Spain)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2013:105; ECLI:EU:C:2014:317; ECLI:EU:C:2014:2454; čl. 6 ZEÚ; čl. 51 – 52 Charty",
+    "citation": "ECLI:EU:C:2013:105; ECLI:EU:C:2014:2454; ECLI:EU:C:2014:317; čl. 6 ZEÚ; čl. 51 a 52 Charty",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Charta základných práv EÚ",
+    "branches": [
+      {
+        "label": "Záväznosť",
+        "leaves": [
+          "Vyhlásená v roku 2000",
+          "Právne záväzná od Lisabonskej zmluvy (2009)",
+          "Rovnaká právna sila ako zmluvy (čl. 6 ods. 1 ZEÚ)",
+          "Základné práva sú aj všeobecnými zásadami práva Únie (čl. 6 ods. 3 ZEÚ)"
+        ]
+      },
+      {
+        "label": "Štruktúra – šesť hláv",
+        "leaves": [
+          "Dôstojnosť",
+          "Slobody",
+          "Rovnosť",
+          "Solidarita",
+          "Občianstvo",
+          "Spravodlivosť"
+        ]
+      },
+      {
+        "label": "Pôsobnosť (čl. 51 Charty)",
+        "leaves": [
+          "Viaže inštitúcie, orgány a agentúry Únie",
+          "Členské štáty len keď vykonávajú právo EÚ",
+          "Na čisto vnútroštátne situácie sa nevzťahuje – Åkerberg Fransson",
+          "Charta nerozširuje právomoci Únie"
+        ]
+      },
+      {
+        "label": "Vzťah k EDĽP",
+        "leaves": [
+          "Čl. 52 ods. 3 Charty – zodpovedajúce práva majú rovnaký zmysel a rozsah",
+          "Únia môže poskytnúť širšiu ochranu",
+          "Čl. 6 ods. 2 ZEÚ ukladá Únii pristúpiť k Dohovoru",
+          "Zatiaľ nepristúpila – stanovisko 2/13 odmietlo návrh dohody"
+        ]
+      },
+      {
+        "label": "Výklad",
+        "leaves": [
+          "Autonómny výklad Súdneho dvora",
+          "Zohľadňuje judikatúru ESĽP, nie je ňou však viazaný"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "Åkerberg Fransson – rozsah pôsobnosti podľa čl. 51",
+          "Stanovisko 2/13 – pristúpenie k EDĽP a autonómia práva Únie",
+          "Google Spain – čl. 7 a 8 Charty, právo byť zabudnutý"
+        ]
+      }
+    ]
   }
 }
