@@ -4,59 +4,39 @@
   "summary": "Primárne právo Európskej únie tvorí základný a najvyšší právny rámec fungovania Únie. Zahŕňa zakladajúce zmluvy (Zmluvu o EÚ a Zmluvu o fungovaní EÚ), Chartu základných práv EÚ (ktorá má rovnakú právnu silu ako zmluvy), protokoly a prílohy k zmluvám, zmluvy o pristúpení a všeobecné zásady práva EÚ. Primárne právo má najvyššiu právnu silu v právnom poriadku EÚ a sekundárne právo s ním nesmie byť v rozpore.\n\nPrimárne právo sa publikuje v Úradnom vestníku Európskej únie a je dostupné na portáli EUR-Lex; zmluvy sú autentické a rovnako záväzné vo všetkých úradných jazykoch EÚ.\n\nRevízia primárneho práva sa vykonáva podľa čl. 48 ZEÚ. Riadny revízny postup zahŕňa zvolanie konventu (prípadne priamo medzivládnej konferencie), dohodu na zmenách a ich ratifikáciu všetkými členskými štátmi podľa ich ústavných požiadaviek. Zjednodušený revízny postup (čl. 48 ods. 6 ZEÚ) sa týka vnútorných politík Únie (tretia časť ZFEÚ): Európska rada o zmene rozhodne jednomyseľne, rozhodnutie však nadobudne účinnosť až po schválení všetkými členskými štátmi a nesmie rozšíriť právomoci Únie.\n\nZmluvy o pristúpení sú medzinárodné zmluvy medzi členskými štátmi a pristupujúcim štátom (čl. 49 ZEÚ). Obsahujú podmienky prijatia, prechodné obdobia, úpravu inštitucionálnych otázok a záväzok prevziať acquis; podliehajú ratifikácii všetkými zmluvnými stranami a sú súčasťou primárneho práva.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje najvyššiu právnu silu primárneho práva a rámec jeho zmien. V rozsudku C-370/12 (Pringle) Súdny dvor preskúmal platnosť rozhodnutia Európskej rady, ktorým sa zjednodušeným revíznym postupom menil čl. 136 ZFEÚ. V rozsudku C-621/18 (Wightman) potvrdil, že členský štát, ktorý oznámil úmysel vystúpiť podľa čl. 50 ZEÚ, môže toto oznámenie jednostranne odvolať, kým je ešte členom.\n\nZapamätaj si:\n– Primárne právo: zakladajúce zmluvy (ZEÚ, ZFEÚ) + Charta (rovnaká sila) + protokoly a prílohy + zmluvy o pristúpení + všeobecné zásady. Najvyššia právna sila.\n– Publikácia: Úradný vestník EÚ / EUR-Lex; autentické vo všetkých úradných jazykoch.\n– Revízia (čl. 48 ZEÚ): riadny postup (konvent/MVK + ratifikácia všetkými); zjednodušený (čl. 48 ods. 6 – vnútorné politiky, jednomyseľná Európska rada + národné schválenie, bez rozšírenia právomocí).\n– Zmluvy o pristúpení (čl. 49 ZEÚ): podmienky, prechodné obdobia, acquis; ratifikácia všetkými; súčasť primárneho práva.\n– Judikatúra: C-370/12 (Pringle – zjednodušená revízia čl. 136), C-621/18 (Wightman – jednostranné odvolanie oznámenia podľa čl. 50). Pozor: C-149/96 (Portugal v Rada) je o WTO/medzinárodných dohodách – patrí do okruhu o medzinárodných dohodách (A15).\n\nZdroj: Zmluva o Európskej únii, konsolidované znenie (Ú. v. EÚ C 202, 7. 6. 2016), čl. 48, 49 a 50; judikatúra Súdneho dvora EÚ (C-370/12 Pringle, C-621/18 Wightman); EUR-Lex.",
   "quiz": [
     {
-      "q": "Čo tvorí primárne právo EÚ?",
+      "q": "Do primárneho práva EÚ NEpatrí:",
+      "options": ["zakladajúce zmluvy", "Charta základných práv", "nariadenie", "zmluvy o pristúpení"],
+      "correct": 2,
+      "explanation": "Nariadenie je sekundárny akt podľa čl. 288 ZFEÚ. Zmluvy o pristúpení aj Charta majú silu primárneho práva."
+    },
+    {
+      "q": "Revíziu zakladajúcich zmlúv upravuje:",
+      "options": ["čl. 289 ZFEÚ", "čl. 48 ZEÚ", "čl. 50 ZEÚ", "čl. 7 ZEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 48 ZEÚ pozná riadny aj zjednodušený revízny postup. Čl. 50 je vystúpenie, čl. 7 sankčný mechanizmus."
+    },
+    {
+      "q": "Charta základných práv EÚ má:",
+      "options": ["silu sekundárneho práva", "rovnakú právnu silu ako zmluvy", "len odporúčací charakter", "silu nadradenú zmluvám"],
+      "correct": 1,
+      "explanation": "Čl. 6 ods. 1 ZEÚ – Charta má rovnakú právnu silu ako zmluvy, teda je súčasťou primárneho práva."
+    },
+    {
+      "q": "Zmluvy o pristúpení sú:",
+      "options": ["sekundárne právo", "súčasť primárneho práva", "nezáväzné dohody", "vnútroštátne akty"],
+      "correct": 1,
+      "explanation": "Obsahujú podmienky členstva, prechodné obdobia a prevzatie acquis; ratifikujú ich všetky členské štáty aj pristupujúci štát."
+    },
+    {
+      "q": "Zjednodušený revízny postup podľa čl. 48 ods. 6 ZEÚ:",
       "options": [
-        "Smernice a nariadenia",
-        "Zakladajúce zmluvy, Charta, protokoly, zmluvy o pristúpení",
-        "Rozhodnutia Komisie",
-        "Judikatúra vnútroštátnych súdov"
+        "nevyžaduje súhlas členských štátov",
+        "vyžaduje jednomyseľné rozhodnutie Európskej rady a schválenie štátmi a nesmie rozšíriť právomoci Únie",
+        "o revízii rozhoduje Komisia",
+        "o revízii rozhoduje Európsky parlament sám"
       ],
       "correct": 1,
-      "explanation": "Primárne právo zahŕňa zmluvy, Chartu, protokoly a zmluvy o pristúpení."
-    },
-    {
-      "q": "Kde sa publikuje primárne právo EÚ?",
-      "options": [
-        "V národných vestníkoch",
-        "V Úradnom vestníku EÚ",
-        "V rozhodnutiach Komisie",
-        "V rozsudkoch Súdneho dvora"
-      ],
-      "correct": 1,
-      "explanation": "Primárne právo je publikované v Úradnom vestníku EÚ."
-    },
-    {
-      "q": "Ktorý článok upravuje revíziu zmlúv?",
-      "options": [
-        "Čl. 48 ZEÚ",
-        "Čl. 7 ZEÚ",
-        "Čl. 288 ZFEÚ",
-        "Čl. 49 ZEÚ"
-      ],
-      "correct": 0,
-      "explanation": "Revízia zmlúv je upravená v čl. 48 ZEÚ."
-    },
-    {
-      "q": "Čo sú zmluvy o pristúpení?",
-      "options": [
-        "Sekundárne právo",
-        "Medzinárodné zmluvy upravujúce vstup štátu do EÚ",
-        "Rozhodnutia Komisie",
-        "Protokoly k nariadeniam"
-      ],
-      "correct": 1,
-      "explanation": "Zmluvy o pristúpení sú medzinárodné zmluvy upravujúce vstup štátu do EÚ."
-    },
-    {
-      "q": "Ktorý rozsudok potvrdil autonómiu primárneho práva?",
-      "options": [
-        "C‑370/12 Pringle",
-        "C‑34/09 Ruiz Zambrano",
-        "C‑62/14 Gauweiler",
-        "C‑106/77 Simmenthal"
-      ],
-      "correct": 0,
-      "explanation": "V rozsudku Pringle Súdny dvor potvrdil autonómiu primárneho práva."
+      "explanation": "Týka sa len vnútorných politík Únie. Súdny dvor jeho použitie potvrdil v rozsudku Pringle."
     }
   ],
   "tiles": [
@@ -83,88 +63,141 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Pringle: autonómia primárneho práva",
+      "title": "Prípad 1 – Pringle: zjednodušená revízia zmluvy",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Európska rada prijala rozhodnutie o zmene čl. 136 ZFEÚ, aby umožnila vznik ESM.",
+          "question": "Európska rada zjednodušeným postupom zmenila čl. 136 ZFEÚ (základ pre Európsky mechanizmus pre stabilitu). Namietalo sa, že takáto zmena je neplatná.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
         },
         {
-          "question": "Ako Súdny dvor vyložil autonómiu primárneho práva?",
+          "question": "Bola zmena platná?",
           "options": [
-            "Primárne právo je podriadené vnútroštátnemu právu",
-            "Primárne právo má najvyššiu právnu silu a jeho revízia musí rešpektovať zmluvy",
-            "Primárne právo možno meniť rozhodnutím Komisie"
+            "Nie, zjednodušeným postupom nemožno meniť zmluvy",
+            "Áno, ak nerozšíri právomoci Únie a rešpektuje hranice čl. 48 ods. 6 ZEÚ",
+            "Len ak ju schváli Európsky parlament"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že primárne právo má najvyššiu právnu silu a jeho revízia musí rešpektovať postupy podľa čl. 48 ZEÚ.",
-            "wrong": "Nesprávne. Primárne právo nie je podriadené vnútroštátnemu právu."
+            "correct": "Zjednodušený revízny postup je platný, ak nerozšíri právomoci Únie; Súdny dvor zmenu potvrdil.",
+            "wrong": "Nesprávne. Zjednodušeným postupom meniť možno, no v hraniciach čl. 48 ods. 6 ZEÚ."
           },
-          "source": "ECLI:EU:C:2012:756"
+          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Wightman: revízia a vystúpenie z Únie",
+      "title": "Prípad 2 – Wightman: odvolanie oznámenia o vystúpení",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Spojené kráľovstvo oznámilo úmysel vystúpiť z EÚ podľa čl. 50 ZEÚ.",
+          "question": "Členský štát po oznámení úmyslu vystúpiť podľa čl. 50 ZEÚ chcel toto oznámenie ešte pred uplynutím lehoty vziať späť.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2018:999 (C‑621/18 Wightman)"
         },
         {
-          "question": "Ako Súdny dvor vyložil čl. 50 ZEÚ?",
+          "question": "Môže štát jednostranne odvolať oznámenie o vystúpení?",
           "options": [
-            "Oznámenie o vystúpení je neodvolateľné",
-            "Členský štát môže jednostranne odvolať oznámenie o vystúpení",
-            "Vystúpenie musí schváliť Súdny dvor"
+            "Nie, po oznámení musí vystúpiť",
+            "Áno, kým je ešte členom a v lehote, môže oznámenie jednostranne odvolať",
+            "Len so súhlasom Európskej rady"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že členský štát môže jednostranne odvolať oznámenie o vystúpení, pokiaľ ešte nevstúpila do platnosti dohoda o vystúpení.",
-            "wrong": "Nesprávne. Oznámenie o vystúpení nie je neodvolateľné."
+            "correct": "Oznámenie podľa čl. 50 nie je nezvratné; štát ho môže jednostranne odvolať, kým je členom.",
+            "wrong": "Nesprávne. Oznámenie o vystúpení sa dá vziať späť."
           },
-          "source": "ECLI:EU:C:2018:999"
+          "source": "ECLI:EU:C:2018:999 (C‑621/18 Wightman)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Portugalsko v. Rada: právna sila zmlúv o pristúpení",
+      "title": "Prípad 3 – Zmluva o pristúpení ako primárne právo",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Členský štát namietal, že zmluva o pristúpení nemôže meniť primárne právo.",
+          "question": "Nový štát vstupuje do EÚ a uzatvára sa zmluva o pristúpení. Aké má postavenie v právnom poriadku EÚ?",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1999:574 (C‑149/96 Portugalsko v. Rada)"
+          "source": "čl. 49 ZEÚ"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právnej sile zmlúv o pristúpení?",
+          "question": "Čím je zmluva o pristúpení a ako sa prijíma?",
           "options": [
-            "Zmluvy o pristúpení sú sekundárnym právom",
-            "Zmluvy o pristúpení sú súčasťou primárneho práva",
-            "Zmluvy o pristúpení nemajú právnu záväznosť"
+            "Je to sekundárny akt, ktorý prijíma Komisia",
+            "Je súčasťou primárneho práva; je dohodou členských štátov a pristupujúceho štátu a ratifikujú ju všetky štáty",
+            "Je to len politické vyhlásenie bez záväznosti"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že zmluvy o pristúpení sú súčasťou primárneho práva a majú rovnakú právnu silu ako zakladajúce zmluvy.",
-            "wrong": "Nesprávne. Zmluvy o pristúpení nie sú sekundárnym právom."
+            "correct": "Zmluva o pristúpení (čl. 49 ZEÚ) je súčasťou primárneho práva; obsahuje podmienky, prechodné obdobia a prevzatie acquis a ratifikujú ju všetky štáty.",
+            "wrong": "Nesprávne. Ide o súčasť primárneho práva, nie o sekundárny akt ani nezáväzné vyhlásenie."
           },
-          "source": "ECLI:EU:C:1999:574"
+          "source": "čl. 49 ZEÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2018:999; ECLI:EU:C:1999:574; čl. 48 ZEÚ; čl. 49 ZEÚ",
+    "citation": "ECLI:EU:C:2012:756; ECLI:EU:C:2018:999; čl. 48, 49 a 50 ZEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Primárne právo EÚ",
+    "branches": [
+      {
+        "label": "Zloženie primárneho práva",
+        "leaves": [
+          "Zakladajúce zmluvy – ZEÚ a ZFEÚ",
+          "Charta základných práv – rovnaká právna sila ako zmluvy (čl. 6 ods. 1 ZEÚ)",
+          "Protokoly a prílohy k zmluvám",
+          "Zmluvy o pristúpení",
+          "Všeobecné zásady práva Únie"
+        ]
+      },
+      {
+        "label": "Najvyššia právna sila",
+        "leaves": [
+          "Sekundárne právo s primárnym nesmie byť v rozpore",
+          "Súlad preskúmava Súdny dvor, najmä žalobou o neplatnosť"
+        ]
+      },
+      {
+        "label": "Publikácia a jazyky",
+        "leaves": [
+          "Úradný vestník Európskej únie, dostupné cez EUR-Lex",
+          "Autentické znenie vo všetkých úradných jazykoch Únie"
+        ]
+      },
+      {
+        "label": "Revízia zmlúv (čl. 48 ZEÚ)",
+        "leaves": [
+          "Riadny revízny postup – konvent alebo medzivládna konferencia a ratifikácia všetkými štátmi",
+          "Zjednodušený postup (čl. 48 ods. 6) – len vnútorné politiky Únie",
+          "Zjednodušený postup: jednomyseľná Európska rada a schválenie štátmi, bez rozšírenia právomocí",
+          "Pringle – potvrdenie platnosti zjednodušenej revízie čl. 136 ZFEÚ"
+        ]
+      },
+      {
+        "label": "Zmluvy o pristúpení (čl. 49 ZEÚ)",
+        "leaves": [
+          "Podmienky členstva, prechodné obdobia a prevzatie acquis",
+          "Dohoda členských štátov a pristupujúceho štátu",
+          "Ratifikujú ich všetky štáty; sú súčasťou primárneho práva"
+        ]
+      },
+      {
+        "label": "Vystúpenie (čl. 50 ZEÚ)",
+        "leaves": [
+          "Oznámenie úmyslu vystúpiť a dohoda o podmienkach",
+          "Wightman – oznámenie možno jednostranne odvolať, kým je štát členom"
+        ]
+      }
+    ]
   }
 }
