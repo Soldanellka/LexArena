@@ -4,34 +4,44 @@
   "summary": "Judikatúra Súdneho dvora Európskej únie (SDEÚ) je základným prameňom práva EÚ. SDEÚ zabezpečuje jednotný výklad a uplatňovanie práva Únie vo všetkých členských štátoch. Rozsudky SDEÚ majú záväzný účinok a tvoria autonómny právny poriadok EÚ. Judikatúra dopĺňa, spresňuje a rozvíja primárne aj sekundárne právo.\n\nJudikatúra vytvára zásady ako prednosť práva EÚ (Costa/ENEL), priame účinky (Van Gend en Loos), zákaz horizontálneho priameho účinku smerníc (Marshall), zákaz rušiť akty EÚ vnútroštátnymi súdmi (Foto-Frost), povinnosť predkladať prejudiciálne otázky (CILFIT) či zodpovednosť štátu za škodu (Francovich).\n\nMetódy výkladu práva EÚ zahŕňajú: jazykový výklad (analýza textu vo všetkých autentických jazykových verziách), systematický výklad (kontext ustanovenia v rámci práva EÚ), teleologický výklad (výklad podľa cieľov a účelu práva EÚ), historický výklad (vývoj ustanovenia), autonómny výklad (nezávislý od vnútroštátnych právnych pojmov) a zásadu efektivity (výklad zabezpečujúci plný účinok práva EÚ).\n\nSDEÚ často kombinuje viaceré metódy výkladu, pričom teleologický a autonómny výklad sú dominantné. Cieľom je zabezpečiť efektívne fungovanie práva EÚ a jednotný výklad vo všetkých členských štátoch.",
   "quiz": [
     {
-      "q": "Je judikatúra Súdneho dvora prameňom práva EÚ?",
-      "options": ["Nie", "Áno", "Len v trestných veciach", "Len pri nariadeniach"],
+      "q": "Judikatúra Súdneho dvora EÚ:",
+      "options": [
+        "je formálne záväzná precedensom ako v common law",
+        "formálny precedens nezakladá, no súdy sa ňou fakticky riadia",
+        "nie je prameňom práva",
+        "je nadradená zmluvám"
+      ],
       "correct": 1,
-      "explanation": "Judikatúra je základným prameňom práva EÚ."
+      "explanation": "Súdny dvor sa svojimi rozhodnutiami formálne neviaže, no v praxi ich nasleduje a vnútroštátne súdy z nich vychádzajú."
     },
     {
-      "q": "Ktorý rozsudok zaviedol zásadu prednosti práva EÚ?",
-      "options": ["Costa/ENEL", "CILFIT", "Foto-Frost", "Marshall"],
+      "q": "Zásadu prednosti práva Únie vytvoril rozsudok:",
+      "options": ["Costa/ENEL", "Van Duyn", "CILFIT", "Marshall"],
       "correct": 0,
-      "explanation": "Costa/ENEL zaviedol zásadu prednosti práva EÚ."
+      "explanation": "Costa/ENEL (6/64) – ukážka toho, ako judikatúra dotvára právo Únie nad rámec výslovného textu zmlúv."
     },
     {
-      "q": "Ktorá metóda výkladu je typická pre právo EÚ?",
-      "options": ["Teleologická", "Literalistická", "Čisto historická", "Len vnútroštátna"],
-      "correct": 0,
-      "explanation": "Teleologický výklad je dominantný v práve EÚ."
+      "q": "Pri výklade práva EÚ prevažuje:",
+      "options": ["len jazykový výklad", "teleologický a systematický výklad spolu so zásadou potrebného účinku", "len historický výklad", "len autonómny výklad pojmov"],
+      "correct": 1,
+      "explanation": "Jazykový výklad je pri viacerých rovnako autentických verziách sám osebe nespoľahlivý, preto ustupuje účelu a systematike."
     },
     {
-      "q": "Ktorý rozsudok zaviedol priamy účinok práva EÚ?",
-      "options": ["Van Gend en Loos", "Costa/ENEL", "Marshall", "UPA"],
-      "correct": 0,
-      "explanation": "Van Gend en Loos zaviedol priamy účinok."
+      "q": "Zásada potrebného účinku (effet utile) znamená:",
+      "options": [
+        "doslovný výklad textu",
+        "výklad, ktorý zabezpečí plný a účinný účinok ustanovenia",
+        "výklad podľa vnútroštátneho práva",
+        "že sa ustanovenie nevykladá"
+      ],
+      "correct": 1,
+      "explanation": "Z viacerých možných výkladov sa volí ten, pri ktorom ustanovenie skutočne dosiahne svoj cieľ."
     },
     {
-      "q": "Ktorý rozsudok upravuje zákaz rušiť akty EÚ vnútroštátnymi súdmi?",
-      "options": ["Foto-Frost", "CILFIT", "Francovich", "Simmenthal"],
-      "correct": 0,
-      "explanation": "Foto-Frost zakazuje vnútroštátnym súdom rušiť akty EÚ."
+      "q": "Zodpovednosť štátu za škodu spôsobenú porušením práva EÚ zaviedol rozsudok:",
+      "options": ["Costa/ENEL", "Francovich", "Van Gend en Loos", "Marshall"],
+      "correct": 1,
+      "explanation": "Francovich (C-6/90). Zmluvy tento nárok výslovne neupravujú – vyvodil ho Súdny dvor z povahy práva Únie."
     }
   ],
   "tiles": [
@@ -43,88 +53,140 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Costa/ENEL: prednosť práva EÚ",
+      "title": "Prípad 1 – CILFIT: výklad a acte clair",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny zákon odporoval ustanoveniam práva EÚ.",
+          "question": "Súd poslednej inštancie zvažoval, či musí položiť prejudiciálnu otázku, hoci považoval výklad práva EÚ za jasný.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1964:66 (C‑6/64 Costa/ENEL)"
+          "source": "ECLI:EU:C:1982:335 (283/81 CILFIT)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o prednosti práva EÚ?",
+          "question": "Musí súd poslednej inštancie vždy položiť prejudiciálnu otázku?",
           "options": [
-            "Vnútroštátne právo má prednosť",
-            "Právo EÚ má prednosť pred vnútroštátnym právom",
-            "Prednosť závisí od ústavného súdu"
+            "Áno, vždy a bez výnimky",
+            "Nie, ak je výklad zjavný (acte clair), už vyriešený (acte éclairé) alebo pre spor irelevantný; správnosť výkladu musí byť zjavná aj pri porovnaní jazykových verzií",
+            "Nie, položiť ju nemusí nikdy"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že právo EÚ má prednosť pred vnútroštátnym právom.",
-            "wrong": "Nesprávne. Prednosť je absolútna."
+            "correct": "Povinnosť odpadá pri acte clair alebo acte éclairé, prípadne ak otázka nie je pre spor relevantná; výnimky sú však úzke.",
+            "wrong": "Nesprávne. Výnimky existujú, no sú úzko vymedzené."
           },
-          "source": "ECLI:EU:C:1964:66"
+          "source": "ECLI:EU:C:1982:335 (283/81 CILFIT)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Van Gend en Loos: priamy účinok",
+      "title": "Prípad 2 – Francovich: zodpovednosť štátu z judikatúry",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Colná správa uložila clo odporujúce ustanoveniu zmluvy EHS.",
+          "question": "Štát neprebral smernicu a jednotlivec tým utrpel škodu. Smernica pritom nemala priamy účinok voči súkromnej osobe.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1963:1 (Van Gend en Loos)"
+          "source": "ECLI:EU:C:1991:428 (C‑6/90 Francovich)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o priamom účinku?",
+          "question": "Má jednotlivec nárok voči štátu, hoci to zmluvy výslovne neupravujú?",
           "options": [
-            "Ustanovenia zmluvy nemajú priamy účinok",
-            "Ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo",
-            "Priamy účinok sa vzťahuje len na nariadenia"
+            "Nie, bez výslovného ustanovenia nárok nevzniká",
+            "Áno, Súdny dvor z povahy práva Únie vyvodil zodpovednosť štátu za škodu spôsobenú porušením práva EÚ",
+            "Nárok má len voči Únii"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že ustanovenia zmluvy môžu zakladať práva jednotlivcom priamo.",
-            "wrong": "Nesprávne. Priamy účinok sa vzťahuje aj na niektoré ustanovenia zmlúv."
+            "correct": "Zodpovednosť štátu za škodu je zásadou vytvorenou judikatúrou, hoci v zmluvách výslovne nie je.",
+            "wrong": "Nesprávne. Nárok vyplýva z judikatúry Súdneho dvora."
           },
-          "source": "ECLI:EU:C:1963:1"
+          "source": "ECLI:EU:C:1991:428 (C‑6/90 Francovich)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Foto-Frost: zákaz rušiť akty EÚ",
+      "title": "Prípad 3 – Van Gend en Loos: judikatúra ako prameň",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
+          "question": "Jednotlivec sa dovolával ustanovenia zmluvy, hoci jej text výslovne nehovoril o priamych právach jednotlivcov.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
+          "source": "ECLI:EU:C:1963:1 (26/62 Van Gend en Loos)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
+          "question": "Ako Súdny dvor dotvoril právo EÚ v tomto prípade?",
           "options": [
-            "Vnútroštátne súdy môžu rušiť akty EÚ",
-            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
-            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
+            "Odmietol tvoriť nové pravidlá",
+            "Výkladom vyvodil zásadu priameho účinku – právo Únie zakladá práva jednotlivcom priamo",
+            "Rozhodol, že právo Únie zaväzuje len štáty"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor.",
-            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
+            "correct": "Súdny dvor výkladom, nie výslovným textom, vytvoril zásadu priameho účinku – ukážka judikatúry ako prameňa práva.",
+            "wrong": "Nesprávne. Súdny dvor práve výkladom dotvoril zásadu priameho účinku."
           },
-          "source": "ECLI:EU:C:1987:452"
+          "source": "ECLI:EU:C:1963:1 (26/62 Van Gend en Loos)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1964:66; ECLI:EU:C:1963:1; ECLI:EU:C:1987:452; čl. 267 ZFEÚ",
+    "citation": "ECLI:EU:C:1982:335; ECLI:EU:C:1991:428; ECLI:EU:C:1963:1",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Judikatúra ako prameň a metódy výkladu",
+    "branches": [
+      {
+        "label": "Judikatúra ako prameň",
+        "leaves": [
+          "Dotvára a rozvíja právo Únie nad rámec výslovného textu",
+          "Formálny precedens ako v common law neexistuje",
+          "Fakticky sa však nasleduje – Súdnym dvorom aj vnútroštátnymi súdmi",
+          "Všeobecné zásady odvodené Súdnym dvorom majú silu primárneho práva"
+        ]
+      },
+      {
+        "label": "Zásady vytvorené judikatúrou",
+        "leaves": [
+          "Prednosť práva Únie – Costa/ENEL",
+          "Priamy účinok – Van Gend en Loos",
+          "Žiadny horizontálny účinok smerníc – Marshall",
+          "O neplatnosti aktu Únie rozhoduje len Súdny dvor – Foto-Frost",
+          "Hranice povinnosti predkladať prejudiciálne otázky – CILFIT",
+          "Zodpovednosť štátu za škodu – Francovich"
+        ]
+      },
+      {
+        "label": "Metódy výkladu",
+        "leaves": [
+          "Jazykový – porovnanie všetkých rovnako autentických verzií",
+          "Systematický – miesto ustanovenia v celku práva Únie",
+          "Teleologický – účel a cieľ úpravy",
+          "Historický – okolnosti prijatia",
+          "Autonómny výklad pojmov práva Únie"
+        ]
+      },
+      {
+        "label": "Čo prevažuje",
+        "leaves": [
+          "Teleologický a systematický výklad",
+          "Zásada potrebného účinku (effet utile)",
+          "Autonómny význam pojmov nezávislý od vnútroštátneho práva",
+          "Jazykový výklad sám osebe nestačí – verzie sa môžu líšiť"
+        ]
+      },
+      {
+        "label": "Judikatúra",
+        "leaves": [
+          "CILFIT – jazykové verzie, acte clair a acte éclairé",
+          "Van Gend en Loos – priamy účinok vytvorený výkladom",
+          "Francovich – zodpovednosť štátu vytvorená judikatúrou"
+        ]
+      }
+    ]
   }
 }
