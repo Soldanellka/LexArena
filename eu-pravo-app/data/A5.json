@@ -83,28 +83,28 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Rada v. Komisia: hranice stiahnutia legislatívneho návrhu",
+      "title": "Prípad 1 – Roquette Frères: povinná konzultácia Parlamentu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Komisia počas legislatívneho postupu stiahla svoj návrh. Rada namietala, že tým zasiahla do právomocí spoluzákonodarcov.",
+          "question": "Rada prijala nariadenie bez toho, aby počkala na stanovisko Európskeho parlamentu, hoci konzultácia s ním bola v danom postupe povinná.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
+          "source": "ECLI:EU:C:1980:249 (138/79 Roquette Frères v Rada)"
         },
         {
-          "question": "Ako Súdny dvor vymedzil právo Komisie stiahnuť návrh?",
+          "question": "Aký dôsledok má opomenutie povinnej konzultácie Parlamentu?",
           "options": [
-            "Komisia môže návrh stiahnuť kedykoľvek a bez obmedzení",
-            "Komisia môže návrh stiahnuť, no musí rešpektovať inštitucionálnu rovnováhu a nezneužiť toto právo",
-            "Komisia nemôže návrh nikdy stiahnuť"
+            "Žiadny, stanovisko Parlamentu je len formalita",
+            "Akt je neplatný – konzultácia je podstatná formálna náležitosť a prvok inštitucionálnej rovnováhy",
+            "Parlament musí akt dodatočne schváliť"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že Komisia môže návrh stiahnuť, ale v medziach inštitucionálnej rovnováhy a lojálnej spolupráce.",
-            "wrong": "Nesprávne. Právo stiahnuť návrh nie je ani absolútne, ani úplne vylúčené."
+            "correct": "Súdny dvor akt zrušil: povinná konzultácia umožňuje Parlamentu reálne sa zúčastniť na tvorbe práva a je podstatnou formálnou náležitosťou.",
+            "wrong": "Nesprávne. Opomenutie povinnej konzultácie spôsobuje neplatnosť aktu."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
+          "source": "ECLI:EU:C:1980:249 (138/79 Roquette Frères v Rada)"
         }
       ]
     },
@@ -137,7 +137,7 @@
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:217; ECLI:EU:C:1990:153; čl. 14 ZEÚ; čl. 223 – 234 ZFEÚ",
+    "citation": "ECLI:EU:C:1980:249; ECLI:EU:C:1990:153; čl. 14 ZEÚ; čl. 223 – 234 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },

@@ -78,5 +78,35 @@ Zlepšenie oproti stavu po dávke 6: CILFIT 6× → 3×, Foto-Frost 4× → 2×,
 
 ## Otvorené
 
-1. **C‑409/13 v A4, A5, A8, A10** — štyri už auditované okruhy s takmer identickými scenármi. Oprava si vyžiada nový obsah (dva okruhy prepísať na iný judikát), nie je súčasťou tejto dávky.
+1. ~~**C‑409/13 v A4, A5, A8, A10**~~ — **vyriešené**, viď dodatok nižšie.
 2. Zvyšné pavúky: A22–A24 (dávka 8, uzavretie K4), potom K5 (A26–A31), K6 (A32–A35), K7 (A36–A38).
+
+---
+
+# Dodatok — oprava C‑409/13 (4× → 2×)
+
+Podľa zadania Babu ponechaný v **A4** (inštitucionálna rovnováha) a **A8** (Rada v Komisia); v A5 a A10 vymenený.
+
+### A5 — Prípad 1 nahradený
+
+- Bolo: *Rada v. Komisia: hranice stiahnutia legislatívneho návrhu* (`ECLI:EU:C:2015:217`)
+- Je: **Roquette Frères: povinná konzultácia Parlamentu** (`ECLI:EU:C:1980:249`, 138/79)
+- A5 tak nesie dva rôzne parlamentné prípady: Roquette (konzultácia) + Černobyľ (výsady, Prípad 2 nezmenený).
+- Citácia → `ECLI:EU:C:1980:249; ECLI:EU:C:1990:153; čl. 14 ZEÚ; čl. 223 – 234 ZFEÚ`
+
+### A10 — Prípad 1 nahradený
+
+- Bolo: *Rada v. Komisia: iniciatíva a stiahnutie návrhu* (`ECLI:EU:C:2015:217`)
+- Je: **Riadny legislatívny postup** — článkový scenár (`čl. 294 ZFEÚ`), bez ďalšieho judikátu.
+- Citácia → `ECLI:EU:C:2014:2289 (C‑65/13 EURES); čl. 24 ZEÚ; čl. 289 – 294 ZFEÚ`
+
+### Stav po oprave
+
+- **C‑409/13 `2015:217` ako prípad: 2× (A4, A8)** ✔
+- Černobyľ `1990:153`: 2× (A4, A5) — v limite.
+- Kontrola všetkých 38 súborov po zmene: **0 chýb** (parsovanie, `source` v každom kroku, rozsah `correct`, objekt `explanation`).
+- Žiadny judikát už neprekračuje limit v auditovaných okruhoch; zostávajúce 3× (`2012:756` cez A31, `1982:335` cez A22) ťahajú **neauditované** okruhy, ktoré prepíšu dávky 8 a K5.
+
+### Poznámka
+
+Text `summary` v A5 aj A10 a jeden list pavúka v každom z nich stále spomínajú C‑409/13. Sú to tvoje texty a zadanie sa týkalo len prípadových štúdií, takže som ich nechal. V A5 tým vznikol menší nesúlad: koreňová citácia už `2015:217` nenesie, pavúk judikát ešte menuje. Ak to má padnúť, staví sa to jednou úpravou listu.

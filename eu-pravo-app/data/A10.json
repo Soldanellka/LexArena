@@ -83,28 +83,28 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Rada v. Komisia: iniciatíva a stiahnutie návrhu",
+      "title": "Prípad 1 – Riadny legislatívny postup",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "V riadnom legislatívnom postupe Komisia stiahla svoj návrh predtým, než ho Parlament a Rada prijali.",
+          "question": "Komisia predložila návrh aktu. Kto ho prijíma a akým postupom v štandardnom prípade?",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
+          "source": "čl. 294 ZFEÚ"
         },
         {
-          "question": "Aké hranice má právo Komisie stiahnuť návrh v legislatívnom postupe?",
+          "question": "Ako prebieha riadny legislatívny postup?",
           "options": [
-            "Žiadne, Komisia rozhoduje sama",
-            "Musí rešpektovať inštitucionálnu rovnováhu a nesmie zmariť právomoci spoluzákonodarcov",
-            "Stiahnuť návrh môže len so súhlasom Parlamentu"
+            "Akt prijíma sama Komisia",
+            "Akt prijímajú spoločne Európsky parlament a Rada na návrh Komisie (čítania, prípadne zmierovací výbor)",
+            "Akt prijíma Európska rada jednomyseľne"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Stiahnutie návrhu je limitované inštitucionálnou rovnováhou a lojálnou spoluprácou.",
-            "wrong": "Nesprávne. Právo stiahnuť návrh nie je bezbrehé."
+            "correct": "V riadnom legislatívnom postupe (čl. 294) sú Parlament a Rada rovnocenní spoluzákonodarcovia; rozhodujú na návrh Komisie.",
+            "wrong": "Nesprávne. Nejde o akt Komisie ani Európskej rady, ale o spoločné rozhodnutie Parlamentu a Rady."
           },
-          "source": "ECLI:EU:C:2015:217 (C‑409/13 Rada v Komisia)"
+          "source": "čl. 294 ZFEÚ"
         }
       ]
     },
@@ -163,7 +163,7 @@
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2015:217 (C‑409/13); ECLI:EU:C:2014:2289 (C‑65/13 EURES); čl. 24 ZEÚ; čl. 289 – 294 ZFEÚ",
+    "citation": "ECLI:EU:C:2014:2289 (C‑65/13 EURES); čl. 24 ZEÚ; čl. 289 – 294 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   },
