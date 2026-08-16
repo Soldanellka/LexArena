@@ -1,6 +1,13 @@
-# Protokol — Nočný výcuc, Fáza 1B, krok 1: pipeline + skúšobné A1/A2
+# Protokol — Nočný výcuc, Fáza 1B: pipeline + kompletné nahrávky A1–A50
 
-**Dátum:** 2026-08-16 · **Vykonal:** Code · **Stav: A1+A2 NAŽIVO na jsDelivr@v1, čaká sa na vypočutie Babu**
+**Dátum:** 2026-08-16 · **Vykonal:** Code · **Stav: VŠETKÝCH 50 NAŽIVO na jsDelivr@v1 (krok 2 dokončený po potvrdení hlasu Babu)**
+
+## Krok 2 — A3–A50 (doplnené po potvrdení A1/A2)
+
+- `node tools/generate.mjs pracovne vecny` — 48 stôp tým istým nastavením (A1/A2 preskočené, nemenili sa). Trvania ~1:58–2:36, spolu 52 MB.
+- **Kontrola 50/50:** fade overený meraním na všetkých (6 stôp najprv hlásilo falošný poplach — úzke meracie okno v strede trafilo pauzu medzi vetami; širšie okno potvrdilo fade: záver o 20–30 dB tichší než reč).
+- Commit `5b00ec0`, push, **tag `v1` presunutý** (`e7c7080 → 5b00ec0`), jsDelivr purge všetkých 50 URL, následne overené: **50/50 servíruje HTTP 200**.
+- Appka sa nemenila — karta ťahá z `@v1`, takže celá oblasť je odteraz prehrateľná.
 
 ## Čo je hotové
 
