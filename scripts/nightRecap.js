@@ -2,15 +2,17 @@
 
 /* ============================================================
    NOČNÝ VÝCUC – audio opakovanie oblasti pred spaním
-   Karta #nightRecapCard (koniec panelu #setStudy).
+   Karta #nightRecapCard (panel #setStudy).
 
    Princíp: jedna platba (SINKS.NIGHT_RECAP_UNLOCK) odomkne audio
-   výcucy VŠETKÝCH okruhov oblasti na 24 h. Študent si zaškrtá
-   okruhy, ktoré sa v ten deň učil (alebo všetky), a appka ich
-   zreťazí do jedného plynulého prúdu: <audio> + Media Session,
-   reťazenie cez 'ended' (overené na iOS aj pri zamknutej
-   obrazovke – Fáza 0), časovač spánku cez deadline v 'timeupdate'
-   (setTimeout v iOS pozadí nie je spoľahlivý), slučka.
+   výcucy VŠETKÝCH okruhov ZVOLENEJ oblasti na 24 h — odomknutie,
+   TTL aj výber okruhov sa kľúčujú slugom oblasti, oblasti sú na
+   sebe nezávislé. Študent si hore prepne oblasť, zaškrtá okruhy
+   a appka ich zreťazí do jedného plynulého prúdu: <audio> +
+   Media Session, reťazenie cez 'ended' (overené na iOS aj pri
+   zamknutej obrazovke – Fáza 0), časovač spánku cez deadline
+   v 'timeupdate' (setTimeout v iOS pozadí nie je spoľahlivý),
+   slučka.
 
    Fade-out: na iOS je audio.volume read-only, preto je fade
    zapečený priamo v MP3 (TTS pipeline); JS fade tu je len bonus
@@ -26,14 +28,17 @@ import { econSpend, econBalance, ECONOMY_CONFIG } from './economy.js';
 import { escapeHtml } from '../core.js';
 import { showRewardToast } from '../ui.js';
 
-/* ---------- KONFIG OBLASTI (Fáza 2 pridá 'obcianske' ako ďalší záznam) ---------- */
-const AREA_KEY = 'pracovne';
-const AREA_LABEL = 'Pracovné právo';
-/* A1–A50; A51–A53 sú v data/ nepoužívané (rovnaký limit ako statnice.js). */
-const OKRUH_COUNT = 50;
-/* Relatívna cesta (nie LIVE absolútna) – tá istá statika servíruje appku aj
-   dáta, takže titulky okruhov fungujú lokálne aj v produkcii bez CORS. */
-const DATA_PATH = 'LuluLaw duel Pracovné právo/data/';
+/* ---------- OBLASTI (jediné miesto pravdy) ----------
+   Pridať oblasť = pridať položku sem, len čo má nahrávky
+   v lexarena-audio pod {slug}/vecny/A{n}.mp3. Oblasti bez audia
+   (európske, trestné) sa sem nepridávajú, kým audio nepribudne.
+   dataPath: odkiaľ sa čítajú názvy okruhov (title v A{n}.json);
+   relatívne cesty – tá istá statika servíruje appku aj dáta. */
+const AREAS = [
+  { slug: 'pracovne',           label: 'Pracovné',           count: 50, dataPath: 'LuluLaw duel Pracovné právo/data/' },
+  { slug: 'obcianske-hmotne',   label: 'Občianske hmotné',   count: 40, dataPath: 'ob-pravo-app/data/hmotne/' },
+  { slug: 'obcianske-procesne', label: 'Občianske procesné', count: 45, dataPath: 'ob-pravo-app/data/procesne/' }
+];
 
 const UNLOCK_TTL_MS = 24 * 60 * 60 * 1000;
 const PREVIEW_SECONDS = 30;       // bezplatná ukážka pred odomknutím
@@ -41,21 +46,22 @@ const FADE_MS = 15000;            // JS fade pred zastavením časovača (len kd
 
 /* Audio žije mimo hlavného repa: repo lexarena-audio cez jsDelivr,
    verzia = git tag (@v1). Nová verzia nahrávok = nový tag = čistá cache.
-   Pre lokálny test zvuku sa dá zdroj prepnúť bez zásahu do kódu:
+   Pre lokálny test zvuku sa dá zdroj prepnúť bez zásahu do kódu
+   (override nahrádza CELÚ cestu oblasti vrátane slugu):
      localStorage.nightRecapAudioBase = 'http://localhost:8123/night-test-audio/'
      localStorage.nightRecapAudioExt  = '.wav' */
-const AUDIO_BASE_DEFAULT = 'https://cdn.jsdelivr.net/gh/Soldanellka/lexarena-audio@v1/pracovne/vecny/';
-const audioBase = () => localStorage.getItem('nightRecapAudioBase') || AUDIO_BASE_DEFAULT;
+const CDN_ROOT = 'https://cdn.jsdelivr.net/gh/Soldanellka/lexarena-audio@v1/';
+const audioBase = (slug) => localStorage.getItem('nightRecapAudioBase') || `${CDN_ROOT}${slug}/vecny/`;
 const audioExt  = () => localStorage.getItem('nightRecapAudioExt') || '.mp3';
-const trackUrl  = (n) => `${audioBase()}A${n}${audioExt()}`;
 
 /* ---------- HELPERY ---------- */
 const $id = (x) => document.getElementById(x);
 const getDb = () => window.db || null;
 const getNick = () => localStorage.getItem('playerNick') || null;
-const CACHE_KEY = `nightRecapUnlock:${AREA_KEY}`;
-const SEL_KEY = `nightRecapSel:${AREA_KEY}`;
-const TITLES_KEY = `nightRecapTitles:${AREA_KEY}`;
+const AREA_PREF_KEY = 'nightRecapArea';
+const cacheKey  = (slug) => `nightRecapUnlock:${slug}`;
+const selKey    = (slug) => `nightRecapSel:${slug}`;
+const titlesKey = (slug) => `nightRecapTitles:${slug}`;
 
 function fmtTime(s) {
   s = Math.max(0, Math.floor(s || 0));
@@ -63,36 +69,41 @@ function fmtTime(s) {
 }
 
 /* ---------- STAV ---------- */
-let unlockTs = null;              // timestamp odomknutia (null = zamknuté)
-let titles = null;                // { 1: 'Pojem…', … } – lazy load
-let selection = new Set();        // čísla vybraných okruhov
+let area = AREAS.find((a) => a.slug === localStorage.getItem(AREA_PREF_KEY)) || AREAS[0];
+let unlockTs = null;              // timestamp odomknutia AKTUÁLNEJ oblasti (null = zamknuté)
+const titlesByArea = {};          // slug -> { 1: 'Pojem…', … } – lazy load
+let selection = new Set();        // čísla vybraných okruhov aktuálnej oblasti
 let playlist = [];                // aktuálny prúd (čísla okruhov)
+let playSlug = null;              // slug oblasti bežiaceho prúdu (drží URL pri reťazení)
 let trackIdx = 0;
 let loop = false;
 let sleepDeadline = null;         // Date.now() deadline, null = bez časovača
 let sleepMinutes = 0;             // 0 = „celé“ (bez časovača)
 let previewMode = false;          // hrá bezplatná ukážka (stop po PREVIEW_SECONDS)
-let fadeWarned = false;           // iOS: volume je read-only – logni len raz
+let fadeWarned = false;           // iOS: volume je read-only – zaznamenaj len raz
 let errorStreak = 0;              // po sebe idúce nenačítateľné stopy (poistka slučky chýb)
 
 const isUnlocked = () => Boolean(unlockTs && Date.now() - unlockTs < UNLOCK_TTL_MS);
+const trackUrl = (n) => `${audioBase(playSlug || area.slug)}A${n}${audioExt()}`;
 
-/* ---------- ODOMKNUTIE (Firebase + localStorage cache) ---------- */
-/* Vzor videoRewards/dailyEarned: cache pre okamžitý render, DB je pravda.
-   users/${nick}/nightRecap/${AREA_KEY} = Date.now() – nová podvetva pod
-   users/$nick funguje bez zmeny database.rules.json. */
+/* ---------- ODOMKNUTIE (Firebase + localStorage cache, per oblasť) ----------
+   Vzor videoRewards/dailyEarned: cache pre okamžitý render, DB je pravda.
+   users/${nick}/nightRecap/${slug} = Date.now() – kľúčované slugom,
+   odomknutie jednej oblasti sa druhej netýka. Bez zmeny DB pravidiel. */
 async function loadUnlock() {
-  const cached = Number(localStorage.getItem(CACHE_KEY)) || null;
+  const forSlug = area.slug;
+  const cached = Number(localStorage.getItem(cacheKey(forSlug))) || null;
   unlockTs = cached;
   const db = getDb(), nick = getNick();
   if (!db || !nick) return;
   try {
-    const snap = await get(ref(db, `users/${nick}/nightRecap/${AREA_KEY}`));
+    const snap = await get(ref(db, `users/${nick}/nightRecap/${forSlug}`));
     const dbTs = snap.exists() ? Number(snap.val()) : null;
+    if (area.slug !== forSlug) return; // medzitým prepnutá oblasť – výsledok už neplatí
     if (dbTs !== cached) {
       unlockTs = dbTs;
-      if (dbTs) localStorage.setItem(CACHE_KEY, String(dbTs));
-      else localStorage.removeItem(CACHE_KEY);
+      if (dbTs) localStorage.setItem(cacheKey(forSlug), String(dbTs));
+      else localStorage.removeItem(cacheKey(forSlug));
       render();
     }
   } catch (e) {
@@ -116,54 +127,54 @@ async function unlock() {
     return;
   }
 
-  const ok = await econSpend(nick, price, `Nočný výcuc – ${AREA_LABEL} (24 h)`);
+  const ok = await econSpend(nick, price, `Nočný výcuc – ${area.label} (24 h)`);
   if (!ok) { if (msg) msg.textContent = 'Platba sa nepodarila, skús to ešte raz.'; return; }
 
   const ts = Date.now();
   try {
-    await set(ref(getDb(), `users/${nick}/nightRecap/${AREA_KEY}`), ts);
+    await set(ref(getDb(), `users/${nick}/nightRecap/${area.slug}`), ts);
   } catch (e) {
     console.warn('nightRecap: zápis odomknutia do DB zlyhal (cache platí)', e);
   }
   unlockTs = ts;
-  localStorage.setItem(CACHE_KEY, String(ts));
-  showRewardToast('🌙 Nočný výcuc odomknutý na 24 hodín');
+  localStorage.setItem(cacheKey(area.slug), String(ts));
+  showRewardToast(`🌙 Nočný výcuc (${area.label}) odomknutý na 24 hodín`);
   render();
 }
 
-/* ---------- TITULKY OKRUHOV (lazy, sessionStorage cache) ---------- */
+/* ---------- TITULKY OKRUHOV (lazy, sessionStorage cache, per oblasť) ---------- */
 async function loadTitles() {
-  if (titles) return titles;
+  const a = area;
+  if (titlesByArea[a.slug]) return titlesByArea[a.slug];
   try {
-    const cached = sessionStorage.getItem(TITLES_KEY);
-    if (cached) { titles = JSON.parse(cached); return titles; }
+    const cached = sessionStorage.getItem(titlesKey(a.slug));
+    if (cached) { titlesByArea[a.slug] = JSON.parse(cached); return titlesByArea[a.slug]; }
   } catch (e) { /* pokazená cache – načítame nanovo */ }
 
   const out = {};
-  await Promise.all(Array.from({ length: OKRUH_COUNT }, (_, i) => i + 1).map(async (n) => {
+  await Promise.all(Array.from({ length: a.count }, (_, i) => i + 1).map(async (n) => {
     try {
-      const r = await fetch(`${DATA_PATH}A${n}.json`);
+      const r = await fetch(`${a.dataPath}A${n}.json`);
       const j = await r.json();
-      /* id v dátach je tvaru "1. A" – pre zoznam stačí title */
       out[n] = j.title || `Okruh ${n}`;
     } catch (e) {
       out[n] = `Okruh ${n}`;
     }
   }));
-  titles = out;
-  try { sessionStorage.setItem(TITLES_KEY, JSON.stringify(out)); } catch (e) { /* plné úložisko – nevadí */ }
-  return titles;
+  titlesByArea[a.slug] = out;
+  try { sessionStorage.setItem(titlesKey(a.slug), JSON.stringify(out)); } catch (e) { /* plné úložisko – nevadí */ }
+  return out;
 }
 
-/* ---------- VÝBER OKRUHOV ---------- */
+/* ---------- VÝBER OKRUHOV (per oblasť) ---------- */
 function loadSelection() {
   try {
-    const arr = JSON.parse(localStorage.getItem(SEL_KEY) || '[]');
-    selection = new Set(arr.filter((n) => Number.isInteger(n) && n >= 1 && n <= OKRUH_COUNT));
+    const arr = JSON.parse(localStorage.getItem(selKey(area.slug)) || '[]');
+    selection = new Set(arr.filter((n) => Number.isInteger(n) && n >= 1 && n <= area.count));
   } catch (e) { selection = new Set(); }
 }
 function saveSelection() {
-  localStorage.setItem(SEL_KEY, JSON.stringify([...selection].sort((a, b) => a - b)));
+  localStorage.setItem(selKey(area.slug), JSON.stringify([...selection].sort((a, b) => a - b)));
 }
 
 /* ---------- PREHRÁVAČ ---------- */
@@ -172,10 +183,11 @@ const player = () => $id('nightRecapPlayer');
 function updateMediaSession(n) {
   if (!('mediaSession' in navigator)) return;
   try {
+    const titles = titlesByArea[playSlug || area.slug] || {};
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: (titles && titles[n]) || `Okruh ${n}`,
+      title: titles[n] || `Okruh ${n}`,
       artist: 'Nočný výcuc – LexArena',
-      album: AREA_LABEL
+      album: (AREAS.find((a) => a.slug === (playSlug || area.slug)) || area).label
     });
     navigator.mediaSession.setActionHandler('play', () => { player()?.play().catch(() => {}); });
     navigator.mediaSession.setActionHandler('pause', () => { player()?.pause(); });
@@ -211,6 +223,7 @@ function stopPlayback() {
   el.removeAttribute('src');
   try { el.load(); } catch (e) { /* niektoré prehliadače load() bez src neznesú */ }
   playlist = [];
+  playSlug = null;
   previewMode = false;
   sleepDeadline = null;
   updateNowPlaying();
@@ -224,21 +237,23 @@ function startStream() {
   if (msg) msg.textContent = '';
   previewMode = false;
   errorStreak = 0;
+  playSlug = area.slug;
   playlist = chosen;
   sleepDeadline = sleepMinutes ? Date.now() + sleepMinutes * 60000 : null;
   playTrack(0);
 }
 
 function startPreview() {
-  /* Ukážka zdarma: prvých ~30 s prvého okruhu – nech študent počuje,
-     čo kupuje, a 33 § nie je naslepo. */
+  /* Ukážka zdarma: prvých ~30 s okruhu 1 zvolenej oblasti – nech
+     študent počuje, čo kupuje, a 33 § nie je naslepo. */
   previewMode = true;
   errorStreak = 0;
+  playSlug = area.slug;
   playlist = [1];
   sleepDeadline = null;
   playTrack(0);
   const msg = $id('nrMsg');
-  if (msg) msg.textContent = `Hrá ukážka (${PREVIEW_SECONDS} s) – okruh 1.`;
+  if (msg) msg.textContent = `Hrá ukážka (${PREVIEW_SECONDS} s) – ${area.label}, okruh 1.`;
 }
 
 function updateNowPlaying() {
@@ -247,7 +262,8 @@ function updateNowPlaying() {
   const el = player();
   if (!el || !playlist.length || !el.src) { box.textContent = ''; return; }
   const n = playlist[trackIdx];
-  const name = (titles && titles[n]) || `Okruh ${n}`;
+  const titles = titlesByArea[playSlug || area.slug] || {};
+  const name = titles[n] || `Okruh ${n}`;
   let line = `▶ ${trackIdx + 1}/${playlist.length} · ${name} · ${fmtTime(el.currentTime)}/${fmtTime(el.duration)}`;
   if (sleepDeadline) line += ` · 💤 ${fmtTime((sleepDeadline - Date.now()) / 1000)}`;
   box.textContent = line;
@@ -270,7 +286,7 @@ function wirePlayer() {
        keď zlyhá celý playlist, zastav (žiadna nekonečná slučka chýb) */
     errorStreak++;
     const n = playlist[trackIdx];
-    console.warn(`nightRecap: nahrávka A${n} sa nedá načítať`);
+    console.warn(`nightRecap: nahrávka ${playSlug || area.slug}/A${n} sa nedá načítať`);
     if (previewMode || errorStreak >= playlist.length) {
       showRewardToast('Nahrávky sa nepodarilo načítať 😔');
       stopPlayback();
@@ -315,6 +331,35 @@ function wirePlayer() {
   el.addEventListener('pause', updateNowPlaying);
 }
 
+/* ---------- PREPÍNAČ OBLASTI ---------- */
+function switchArea(slug) {
+  if (slug === area.slug) return;
+  const next = AREAS.find((a) => a.slug === slug);
+  if (!next) return;
+  /* okruhy dvoch oblastí sa do jedného prúdu nemiešajú – prepnutie zastaví */
+  stopPlayback();
+  area = next;
+  localStorage.setItem(AREA_PREF_KEY, area.slug);
+  loadSelection();
+  /* loadUnlock si synchrónne (pred prvým await) prepíše unlockTs z cache
+     novej oblasti – až potom sa kreslí, inak by render ukázal stav
+     predošlej oblasti; DB dorovnanie prekreslí, len ak sa líši */
+  loadUnlock();
+  render();
+}
+
+function areaSwitcherHtml() {
+  return `<div class="nr-row" id="nrAreaRow">` + AREAS.map((a) =>
+    `<button class="btn nr-chip${a.slug === area.slug ? ' active' : ''}" data-area="${a.slug}">${escapeHtml(a.label)}</button>`
+  ).join('') + `</div>`;
+}
+
+function wireAreaSwitcher(body) {
+  body.querySelectorAll('[data-area]').forEach((b) => {
+    b.addEventListener('click', () => switchArea(b.dataset.area));
+  });
+}
+
 /* ---------- RENDER ---------- */
 function timeLeftLabel() {
   const ms = (unlockTs || 0) + UNLOCK_TTL_MS - Date.now();
@@ -326,21 +371,25 @@ function timeLeftLabel() {
 function renderLocked(body) {
   const price = ECONOMY_CONFIG.SINKS.NIGHT_RECAP_UNLOCK;
   body.innerHTML = `
+    ${areaSwitcherHtml()}
     <div class="nr-row">
       <button class="btn" id="nrPreviewBtn">🎧 Ukážka zdarma (${PREVIEW_SECONDS} s)</button>
-      <button class="btn btn-primary" id="nrUnlockBtn">🔓 Odomkni na 24 h za ${price} §</button>
+      <button class="btn btn-primary" id="nrUnlockBtn">🔓 Odomkni ${escapeHtml(area.label)} na 24 h za ${price} §</button>
     </div>
     <div class="small" id="nrMsg" style="margin-top:8px"></div>
     <div class="small nr-now" id="nrNow" style="margin-top:4px"></div>`;
+  wireAreaSwitcher(body);
   $id('nrUnlockBtn').addEventListener('click', unlock);
   $id('nrPreviewBtn').addEventListener('click', startPreview);
 }
 
 async function renderUnlocked(body) {
+  const a = area;
   body.innerHTML = `
-    <div class="small">Odomknuté ešte <b>${timeLeftLabel()}</b>. Vyber okruhy, ktoré si dnes prešiel – appka ich prehrá za sebou ako jeden prúd.</div>
+    ${areaSwitcherHtml()}
+    <div class="small">${escapeHtml(a.label)} odomknuté ešte <b>${timeLeftLabel()}</b>. Vyber okruhy, ktoré si dnes prešiel – appka ich prehrá za sebou ako jeden prúd.</div>
     <div class="nr-row">
-      <button class="btn" id="nrAllBtn">Vybrať všetkých ${OKRUH_COUNT}</button>
+      <button class="btn" id="nrAllBtn">Vybrať všetkých ${a.count}</button>
       <button class="btn" id="nrNoneBtn">Vyčistiť</button>
     </div>
     <div class="nr-okruh-list" id="nrOkruhList"><div class="small">Načítavam okruhy…</div></div>
@@ -361,6 +410,7 @@ async function renderUnlocked(body) {
     <div class="small" id="nrPlayMsg"></div>
     <div class="small nr-now" id="nrNow" style="margin-top:4px"></div>`;
 
+  wireAreaSwitcher(body);
   $id('nrPlayBtn').addEventListener('click', startStream);
   $id('nrPauseBtn').addEventListener('click', () => {
     const el = player();
@@ -385,10 +435,10 @@ async function renderUnlocked(body) {
   });
   body.querySelector('[data-sleep="0"]').classList.add('active');
 
-  await loadTitles();
+  const titles = await loadTitles();
   const list = $id('nrOkruhList');
-  if (!list) return; // medzitým prekreslené (expirácia)
-  list.innerHTML = Array.from({ length: OKRUH_COUNT }, (_, i) => i + 1).map((n) => `
+  if (!list || area.slug !== a.slug) return; // medzitým prekreslené/prepnutá oblasť
+  list.innerHTML = Array.from({ length: a.count }, (_, i) => i + 1).map((n) => `
     <label class="nr-okruh">
       <input type="checkbox" data-n="${n}" ${selection.has(n) ? 'checked' : ''}>
       <span>${n}. ${escapeHtml(titles[n])}</span>
@@ -402,7 +452,7 @@ async function renderUnlocked(body) {
     });
   });
   $id('nrAllBtn').addEventListener('click', () => {
-    for (let n = 1; n <= OKRUH_COUNT; n++) selection.add(n);
+    for (let n = 1; n <= a.count; n++) selection.add(n);
     saveSelection();
     list.querySelectorAll('input[data-n]').forEach((cb) => { cb.checked = true; });
   });
@@ -427,8 +477,10 @@ function init() {
   if (!$id('nightRecapCard')) return;
   loadSelection();
   wirePlayer();
-  render();          // okamžitý render z cache…
-  loadUnlock();      // …a DB dorovnanie (prekreslí, ak sa líši)
+  /* poradie je dôležité: loadUnlock synchrónne načíta cache odomknutia
+     (až jeho DB časť je async), takže render už kreslí správny stav */
+  loadUnlock();
+  render();
 }
 
 if (document.readyState === 'loading') {
