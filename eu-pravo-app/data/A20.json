@@ -4,34 +4,34 @@
   "summary": "Konanie pred Súdnym dvorom Európskej únie (SDEÚ) je upravené v čl. 19 ZEÚ, čl. 251 – 281 ZFEÚ a v Štatúte Súdneho dvora. SDEÚ zabezpečuje jednotný výklad a uplatňovanie práva EÚ. Konania majú písomnú aj ústnu fázu, sú kontradiktórne a založené na zásade spolupráce medzi SDEÚ a vnútroštátnymi súdmi.\n\nZákladné typy konaní zahŕňajú prejudiciálne konanie (čl. 267 ZFEÚ), žaloby o nesplnenie povinnosti (čl. 258 – 260 ZFEÚ), žaloby o neplatnosť (čl. 263 ZFEÚ), žaloby proti nečinnosti (čl. 265 ZFEÚ), odvolania a preskúmanie rozhodnutí. Prejudiciálne konanie je najčastejšie a slúži na výklad práva EÚ.\n\nPriebeh konania zahŕňa podanie návrhu, písomnú fázu (vyjadrenia účastníkov), ústnu fázu (pojednávanie), stanovisko generálneho advokáta (ak je vypracované) a rozsudok alebo uznesenie. Rozhodnutia SDEÚ sú záväzné pre všetky orgány členských štátov.\n\nRozhodnutia SDEÚ môžu byť rozsudky, uznesenia, stanoviská generálnych advokátov a príkazy. Rozsudky majú všeobecnú záväznosť v rámci práva EÚ. Uznesenia sa používajú pri menej zložitých veciach alebo pri procesných otázkach.\n\nJudikatúra SDEÚ potvrdzuje povinnosť vnútroštátnych súdov spolupracovať so SDEÚ, rešpektovať jeho rozhodnutia a zabezpečiť účinné uplatňovanie práva EÚ, najmä v rozsudkoch C‑283/81, C‑106/77 a C‑314/85.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje prejudiciálne konanie?",
-      "options": ["Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 19 ZEÚ"],
-      "correct": 0,
-      "explanation": "Prejudiciálne konanie je upravené v čl. 267 ZFEÚ."
-    },
-    {
-      "q": "Ktorý typ konania slúži na výklad práva EÚ?",
-      "options": ["Žaloba o neplatnosť", "Prejudiciálne konanie", "Žaloba o nesplnenie povinnosti", "Odvolanie"],
+      "q": "Konanie pred Súdnym dvorom EÚ má:",
+      "options": ["len písomnú fázu", "písomnú a spravidla aj ústnu fázu", "len ústnu fázu", "žiadne formálne fázy"],
       "correct": 1,
-      "explanation": "Prejudiciálne konanie slúži na výklad práva EÚ."
+      "explanation": "Ústnu časť možno vynechať, ak si súd myslí, že je dostatočne informovaný z písomných podaní."
     },
     {
-      "q": "Kto vypracúva stanovisko pred rozsudkom?",
-      "options": ["Predseda Komisie", "Generálny advokát", "Predseda Rady", "Vnútroštátny súd"],
+      "q": "Návrhy generálneho advokáta sú:",
+      "options": ["záväzným rozhodnutím súdu", "nezáväzné a nie sú rozhodnutím súdu", "rozsudkom", "uznesením"],
       "correct": 1,
-      "explanation": "Stanovisko vypracúva generálny advokát."
+      "explanation": "Súd sa nimi často riadi, no viazaný nimi nie je; rozhodnutím je až rozsudok alebo uznesenie."
     },
     {
-      "q": "Sú rozhodnutia Súdneho dvora záväzné?",
-      "options": ["Nie", "Áno", "Len pre Komisiu", "Len pre členské štáty"],
+      "q": "Súdny dvor rozhoduje:",
+      "options": ["len uzneseniami", "najmä rozsudkami a uzneseniami", "len návrhmi generálneho advokáta", "len stanoviskami"],
       "correct": 1,
-      "explanation": "Rozhodnutia SDEÚ sú záväzné pre všetky orgány členských štátov."
+      "explanation": "Uznesením rozhoduje napríklad vtedy, keď je odpoveď zrejmá z doterajšej judikatúry alebo je návrh neprípustný."
     },
     {
-      "q": "Ktorý rozsudok sa týka povinnosti najvyšších súdov predkladať prejudiciálne otázky?",
-      "options": ["CILFIT (C‑283/81)", "Simmenthal (C‑106/77)", "Foto-Frost (C‑314/85)", "Costa/ENEL (C‑6/64)"],
-      "correct": 0,
-      "explanation": "CILFIT upravuje povinnosť najvyšších súdov predkladať prejudiciálne otázky."
+      "q": "O umelom, hypotetickom spore Súdny dvor:",
+      "options": ["vždy rozhodne", "odmietne rozhodnúť", "rozhodne po roku", "postúpi vec Komisii"],
+      "correct": 1,
+      "explanation": "Foglia v Novello (104/79). Prejudiciálne konanie slúži na riešenie skutočných sporov, nie na získanie posudku."
+    },
+    {
+      "q": "Konanie pred Súdnym dvorom EÚ upravuje aj:",
+      "options": ["len ZEÚ", "Protokol č. 3 o štatúte Súdneho dvora a rokovacie poriadky", "vnútroštátne procesné právo", "Charta základných práv"],
+      "correct": 1,
+      "explanation": "Štatút je pripojený k zmluvám ako protokol, má teda silu primárneho práva."
     }
   ],
   "tiles": [
@@ -43,88 +43,143 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – CILFIT: povinnosť predkladať prejudiciálne otázky",
+      "title": "Prípad 1 – Foglia v. Novello: hypotetický spor",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Najvyšší súd členského štátu riešil otázku výkladu práva EÚ, ale nechcel ju predložiť Súdnemu dvoru.",
+          "question": "Dve strany zosúladene predložili spor len preto, aby od Súdneho dvora získali výklad – v skutočnosti sa nesporili.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1982:335 (C‑283/81 CILFIT)"
+          "source": "ECLI:EU:C:1980:73 (104/79 Foglia v Novello)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o povinnosti predkladať otázky?",
+          "question": "Rozhodne Súdny dvor v takom prípade?",
           "options": [
-            "Najvyššie súdy nemajú povinnosť predkladať otázky",
-            "Najvyššie súdy musia predložiť otázku, ak existuje problém výkladu práva EÚ",
-            "Predkladanie otázok je dobrovoľné"
+            "Áno, vždy odpovie na položenú otázku",
+            "Nie, odmietne rozhodnúť – prejudiciálne konanie slúži na riešenie skutočných sporov, nie umelo vykonštruovaných",
+            "Áno, ak s tým obe strany súhlasia"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Najvyššie súdy musia predložiť prejudiciálnu otázku, ak existuje problém výkladu práva EÚ.",
-            "wrong": "Nesprávne. Povinnosť je záväzná."
+            "correct": "Súdny dvor odmieta odpovedať na otázky z umelo vykonštruovaných sporov; konanie má slúžiť skutočnému sporu.",
+            "wrong": "Nesprávne. Umelý spor nie je dôvodom na prejudiciálne rozhodnutie."
           },
-          "source": "ECLI:EU:C:1982:335"
+          "source": "ECLI:EU:C:1980:73 (104/79 Foglia v Novello)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Simmenthal: prednosť práva EÚ",
+      "title": "Prípad 2 – Žaloba o neplatnosť: základné parametre",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny súd riešil konflikt medzi zákonom členského štátu a priamo uplatniteľným právom EÚ.",
+          "question": "Podnik chce napadnúť nariadenie, ktoré sa ho priamo týka. V akej lehote a z akých dôvodov?",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1978:49 (C‑106/77 Simmenthal)"
+          "source": "čl. 263 ZFEÚ"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o povinnostiach vnútroštátnych súdov?",
+          "question": "Ktoré tvrdenie o žalobe o neplatnosť je správne?",
           "options": [
-            "Súd musí aplikovať vnútroštátnu normu",
-            "Súd musí neuplatniť odporujúcu vnútroštátnu normu",
-            "Súd musí požiadať ústavný súd o zrušenie normy"
+            "Podáva sa bez lehoty a bez vymedzených dôvodov",
+            "Podáva sa v lehote dvoch mesiacov a len z taxatívnych dôvodov: nepríslušnosť, porušenie podstatných formálnych náležitostí, porušenie zmlúv alebo práva a zneužitie právomoci",
+            "Rozhoduje o nej Komisia"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Vnútroštátne súdy musia neuplatniť odporujúcu vnútroštátnu normu.",
-            "wrong": "Nesprávne. Prednosť práva EÚ nevyžaduje zásah ústavného súdu."
+            "correct": "Žaloba o neplatnosť podľa čl. 263 ZFEÚ sa podáva v dvojmesačnej lehote a len z taxatívne vymedzených dôvodov.",
+            "wrong": "Nesprávne. Lehota aj dôvody sú v zmluve stanovené a rozhoduje o nej súd, nie Komisia."
           },
-          "source": "ECLI:EU:C:1978:49"
+          "source": "čl. 263 ZFEÚ"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Foto-Frost: zákaz rušiť akty EÚ",
+      "title": "Prípad 3 – Rozhodnutia a návrhy generálneho advokáta",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
+          "question": "Vo veci predniesol návrhy generálny advokát. Účastník sa pýta, či sú pre súd záväzné.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
+          "source": "Protokol č. 3 o štatúte Súdneho dvora EÚ"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
+          "question": "Aké je postavenie návrhov generálneho advokáta?",
           "options": [
-            "Vnútroštátne súdy môžu rušiť akty EÚ",
-            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
-            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
+            "Sú záväzným rozhodnutím súdu",
+            "Sú nezáväzné; súd rozhoduje rozsudkom alebo uznesením a nemusí ich nasledovať",
+            "Nahrádzajú rozsudok"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor. Vnútroštátne súdy ich nesmú rušiť.",
-            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
+            "correct": "Návrhy generálneho advokáta sú nezáväzné; rozhodnutím je až rozsudok alebo uznesenie.",
+            "wrong": "Nesprávne. Návrhy generálneho advokáta nie sú rozhodnutím a nie sú záväzné."
           },
-          "source": "ECLI:EU:C:1987:452"
+          "source": "Protokol č. 3 o štatúte Súdneho dvora EÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1982:335; ECLI:EU:C:1978:49; ECLI:EU:C:1987:452; čl. 19 ZEÚ; čl. 267 ZFEÚ",
+    "citation": "ECLI:EU:C:1980:73; čl. 19 ZEÚ; čl. 251 – 281 a 263 ZFEÚ; Protokol č. 3",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Konanie pred Súdnym dvorom EÚ",
+    "branches": [
+      {
+        "label": "Právna úprava",
+        "leaves": [
+          "Čl. 19 ZEÚ a čl. 251 – 281 ZFEÚ",
+          "Protokol č. 3 o štatúte Súdneho dvora EÚ",
+          "Rokovacie poriadky Súdneho dvora a Všeobecného súdu"
+        ]
+      },
+      {
+        "label": "Fázy konania",
+        "leaves": [
+          "Písomná časť – podania a vyjadrenia účastníkov",
+          "Ústna časť – pojednávanie, možno ju vynechať",
+          "Kontradiktórnosť; v prejudiciálnych veciach ide skôr o spoluprácu než o spor strán"
+        ]
+      },
+      {
+        "label": "Typy konaní",
+        "leaves": [
+          "Prejudiciálne konanie (čl. 267 ZFEÚ)",
+          "Konanie o nesplnení povinnosti (čl. 258 – 260 ZFEÚ)",
+          "Žaloba o neplatnosť (čl. 263 ZFEÚ)",
+          "Žaloba na nečinnosť (čl. 265 ZFEÚ)",
+          "Náhrada škody a odvolania"
+        ]
+      },
+      {
+        "label": "Priebeh veci",
+        "leaves": [
+          "Návrh alebo prejudiciálna otázka",
+          "Písomná fáza a prípadné pojednávanie",
+          "Návrhy generálneho advokáta",
+          "Rozsudok alebo uznesenie"
+        ]
+      },
+      {
+        "label": "Rozhodnutia",
+        "leaves": [
+          "Rozsudky a uznesenia sú záväzné",
+          "Návrhy generálneho advokáta sú nezáväzné",
+          "Uznesením súd rozhoduje najmä pri zjavnej odpovedi alebo neprípustnosti"
+        ]
+      },
+      {
+        "label": "Prípustnosť",
+        "leaves": [
+          "Súd odmieta hypotetické a umelo vykonštruované spory (Foglia v Novello)",
+          "Otázka musí byť pre rozhodnutie sporu relevantná"
+        ]
+      }
+    ]
   }
 }

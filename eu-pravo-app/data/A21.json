@@ -4,34 +4,39 @@
   "summary": "Prejudiciálne konanie je mechanizmus spolupráce medzi vnútroštátnymi súdmi a Súdnym dvorom Európskej únie (SDEÚ). Je upravené v čl. 267 ZFEÚ. Jeho cieľom je zabezpečiť jednotný výklad a uplatňovanie práva EÚ vo všetkých členských štátoch.\n\nPredmetom prejudiciálneho konania je výklad primárneho a sekundárneho práva EÚ a posúdenie platnosti aktov inštitúcií EÚ. Vnútroštátne súdy nemôžu samy vyhlásiť akt EÚ za neplatný – musia predložiť otázku Súdnemu dvoru (Foto-Frost).\n\nPriebeh konania zahŕňa podanie prejudiciálnej otázky vnútroštátnym súdom, písomnú fázu (vyjadrenia účastníkov), ústnu fázu (pojednávanie), stanovisko generálneho advokáta (ak je vypracované) a rozsudok Súdneho dvora. Konanie je neformálne, neprebieha spor medzi stranami, ale ide o dialóg medzi súdom členského štátu a SDEÚ.\n\nRozhodnutie Súdneho dvora má záväzný účinok pre vnútroštátny súd, ktorý otázku predložil, a nepriamo aj pre ostatné súdy členských štátov. Rozhodnutie má deklaratórnu povahu – vysvetľuje, ako sa právo EÚ má chápať a uplatňovať od svojho vzniku.\n\nJudikatúra SDEÚ potvrdzuje povinnosť najvyšších súdov predkladať otázky (CILFIT), zákaz rušiť akty EÚ vnútroštátnymi súdmi (Foto-Frost) a povinnosť zabezpečiť prednosť práva EÚ (Simmenthal).",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje prejudiciálne konanie?",
-      "options": ["Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 19 ZEÚ"],
-      "correct": 0,
-      "explanation": "Prejudiciálne konanie je upravené v čl. 267 ZFEÚ."
-    },
-    {
-      "q": "Čo je predmetom prejudiciálneho konania?",
-      "options": ["Výklad a platnosť práva EÚ", "Kontrola vnútroštátnych zákonov", "Rozhodovanie o žalobách jednotlivcov", "Tvorba legislatívy EÚ"],
-      "correct": 0,
-      "explanation": "Predmetom je výklad a posúdenie platnosti práva EÚ."
-    },
-    {
-      "q": "Môže vnútroštátny súd vyhlásiť akt EÚ za neplatný?",
-      "options": ["Áno", "Nie", "Len ústavný súd", "Len najvyšší súd"],
+      "q": "Prejudiciálne konanie upravuje:",
+      "options": ["čl. 258 ZFEÚ", "čl. 267 ZFEÚ", "čl. 263 ZFEÚ", "čl. 19 ZEÚ"],
       "correct": 1,
-      "explanation": "Podľa Foto-Frost vnútroštátne súdy nesmú rušiť akty EÚ."
+      "explanation": "Čl. 258 je nesplnenie povinnosti, čl. 263 žaloba o neplatnosť a čl. 19 ZEÚ postavenie Súdneho dvora."
     },
     {
-      "q": "Majú najvyššie súdy povinnosť predkladať prejudiciálne otázky?",
-      "options": ["Nie", "Áno", "Len pri nariadeniach", "Len pri trestných veciach"],
+      "q": "Predmetom prejudiciálneho konania je:",
+      "options": ["len výklad práva EÚ", "výklad práva EÚ a posúdenie platnosti aktov inštitúcií", "len platnosť aktov", "skutkové okolnosti sporu"],
       "correct": 1,
-      "explanation": "Podľa CILFIT majú najvyššie súdy povinnosť predložiť otázku."
+      "explanation": "Výklad sa týka primárneho aj sekundárneho práva; skutkové otázky ani výklad vnútroštátneho práva do konania nepatria."
     },
     {
-      "q": "Aký účinok má rozhodnutie Súdneho dvora?",
-      "options": ["Je nezáväzné", "Je záväzné pre všetky súdy členských štátov", "Je záväzné len pre Komisiu", "Je záväzné len pre súd, ktorý otázku predložil"],
+      "q": "Neplatnosť aktu EÚ v prejudiciálnom konaní vysloví:",
+      "options": ["vnútroštátny súd", "len Súdny dvor", "Komisia", "generálny advokát"],
       "correct": 1,
-      "explanation": "Rozhodnutie má všeobecnú záväznosť pri výklade práva EÚ."
+      "explanation": "Foto-Frost (314/85). Vnútroštátny súd môže akt považovať za platný, o neplatnosti však rozhodnúť nesmie."
+    },
+    {
+      "q": "Rozsudok o výklade pôsobí:",
+      "options": [
+        "len do budúcnosti",
+        "spravidla ex tunc, teda od vzniku vykladaného ustanovenia, výnimočne s obmedzením časových účinkov",
+        "len medzi stranami sporu",
+        "nezáväzne"
+      ],
+      "correct": 1,
+      "explanation": "Výklad je deklaratórny – hovorí, ako sa ustanovenie malo chápať odjakživa. Obmedzenie účinkov je výnimočné."
+    },
+    {
+      "q": "Vo veci samej po odpovedi Súdneho dvora rozhodne:",
+      "options": ["Súdny dvor", "vnútroštátny súd, ktorý otázku položil", "Komisia", "generálny advokát"],
+      "correct": 1,
+      "explanation": "Súdny dvor spor nerozhoduje – poskytne výklad a vec sa vracia predkladajúcemu súdu."
     }
   ],
   "tiles": [
@@ -43,88 +48,136 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – CILFIT: povinnosť predkladať prejudiciálne otázky",
+      "title": "Prípad 1 – Foto-Frost: platnosť aktu vysloví len Súdny dvor",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Najvyšší súd členského štátu riešil otázku výkladu práva EÚ, ale nechcel ju predložiť Súdnemu dvoru.",
+          "question": "Vnútroštátny súd pochybuje o platnosti rozhodnutia Komisie a zvažuje, či ho môže sám vyhlásiť za neplatné.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1982:335 (C‑283/81 CILFIT)"
+          "source": "ECLI:EU:C:1987:452 (314/85 Foto-Frost)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o povinnosti predkladať otázky?",
+          "question": "Môže vnútroštátny súd sám vyhlásiť akt EÚ za neplatný?",
           "options": [
-            "Najvyššie súdy nemajú povinnosť predkladať otázky",
-            "Najvyššie súdy musia predložiť otázku, ak existuje problém výkladu práva EÚ",
-            "Predkladanie otázok je dobrovoľné"
+            "Áno, ak je o neplatnosti presvedčený",
+            "Nie, o neplatnosti aktu EÚ môže rozhodnúť len Súdny dvor; vnútroštátny súd sa musí obrátiť prejudiciálnou otázkou",
+            "Áno, so súhlasom Komisie"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Najvyššie súdy musia predložiť prejudiciálnu otázku, ak existuje problém výkladu práva EÚ.",
-            "wrong": "Nesprávne. Povinnosť je záväzná."
+            "correct": "Vnútroštátne súdy nemajú právomoc vyhlásiť akt Únie za neplatný – zabezpečuje to jednotnosť práva; musia sa obrátiť na Súdny dvor.",
+            "wrong": "Nesprávne. Neplatnosť aktu EÚ vysloví výlučne Súdny dvor."
           },
-          "source": "ECLI:EU:C:1982:335"
+          "source": "ECLI:EU:C:1987:452 (314/85 Foto-Frost)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Foto-Frost: zákaz rušiť akty EÚ vnútroštátnymi súdmi",
+      "title": "Prípad 2 – Predmet prejudiciálneho konania",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
+          "question": "Vnútroštátny súd si nie je istý, ako vyložiť smernicu, a zároveň či je platné jedno nariadenie.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
+          "source": "čl. 267 ZFEÚ"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
+          "question": "Čo môže byť predmetom prejudiciálnej otázky?",
           "options": [
-            "Vnútroštátne súdy môžu rušiť akty EÚ",
-            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
-            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
+            "Len skutkové okolnosti sporu",
+            "Výklad primárneho a sekundárneho práva EÚ a posúdenie platnosti aktov inštitúcií",
+            "Len výklad vnútroštátneho práva"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor. Vnútroštátne súdy ich nesmú rušiť.",
-            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
+            "correct": "Predmetom je výklad práva Únie a platnosť jej aktov – nie skutkové otázky ani výklad vnútroštátneho práva.",
+            "wrong": "Nesprávne. Ide o výklad práva Únie a platnosť jej aktov."
           },
-          "source": "ECLI:EU:C:1987:452"
+          "source": "čl. 267 ZFEÚ"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Simmenthal: prednosť práva EÚ v prejudiciálnom konaní",
+      "title": "Prípad 3 – Účinky prejudiciálneho rozsudku",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Vnútroštátny súd riešil konflikt medzi zákonom členského štátu a priamo uplatniteľným právom EÚ.",
+          "question": "Súdny dvor odpovedal na prejudiciálnu otázku o výklade. Ako pôsobí jeho rozsudok?",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1978:49 (C‑106/77 Simmenthal)"
+          "source": "čl. 267 ZFEÚ"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o povinnostiach vnútroštátnych súdov?",
+          "question": "Aké účinky má rozsudok o výklade?",
           "options": [
-            "Súd musí aplikovať vnútroštátnu normu",
-            "Súd musí neuplatniť odporujúcu vnútroštátnu normu",
-            "Súd musí požiadať ústavný súd o zrušenie normy"
+            "Zaväzuje len predkladajúci súd a len do budúcnosti",
+            "Zaväzuje predkladajúci súd, fakticky pôsobí voči všetkým a spravidla ex tunc, teda od vzniku ustanovenia",
+            "Je nezáväzný"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Vnútroštátne súdy musia neuplatniť odporujúcu vnútroštátnu normu.",
-            "wrong": "Nesprávne. Prednosť práva EÚ nevyžaduje zásah ústavného súdu."
+            "correct": "Rozsudok zaväzuje predkladajúci súd, fakticky pôsobí erga omnes a spravidla ex tunc; výnimočne Súdny dvor obmedzí časové účinky.",
+            "wrong": "Nesprávne. Výklad pôsobí širšie než len pre predkladajúci súd a spravidla ex tunc."
           },
-          "source": "ECLI:EU:C:1978:49"
+          "source": "čl. 267 ZFEÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1982:335; ECLI:EU:C:1987:452; ECLI:EU:C:1978:49; čl. 267 ZFEÚ",
+    "citation": "ECLI:EU:C:1987:452; čl. 267 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Prejudiciálne konanie",
+    "branches": [
+      {
+        "label": "Právna úprava a cieľ",
+        "leaves": [
+          "Čl. 267 ZFEÚ",
+          "Dialóg medzi vnútroštátnym súdom a Súdnym dvorom",
+          "Cieľom je jednotný výklad a uplatňovanie práva Únie"
+        ]
+      },
+      {
+        "label": "Predmet",
+        "leaves": [
+          "Výklad primárneho práva vrátane zmlúv a Charty",
+          "Výklad sekundárneho práva",
+          "Posúdenie platnosti aktov inštitúcií",
+          "Neplatnosť aktu vysloví len Súdny dvor (Foto-Frost)"
+        ]
+      },
+      {
+        "label": "Priebeh",
+        "leaves": [
+          "Návrh podáva vnútroštátny súd, nie účastníci",
+          "Písomná fáza a prípadné pojednávanie",
+          "Návrhy generálneho advokáta",
+          "Rozsudok Súdneho dvora; vec samu rozhodne vnútroštátny súd"
+        ]
+      },
+      {
+        "label": "Účinky rozsudku",
+        "leaves": [
+          "Záväzný pre predkladajúci súd",
+          "Fakticky pôsobí erga omnes – ostatné súdy z neho vychádzajú",
+          "Výklad je deklaratórny a pôsobí spravidla ex tunc",
+          "Výnimočne Súdny dvor obmedzí časové účinky rozsudku"
+        ]
+      },
+      {
+        "label": "Hranice",
+        "leaves": [
+          "Otázka musí byť pre spor relevantná",
+          "Umelé a hypotetické spory súd odmieta",
+          "Povinnosť súdu poslednej inštancie predložiť otázku má výnimky (CILFIT)"
+        ]
+      }
+    ]
   }
 }
