@@ -41,15 +41,13 @@ const FADE_MS = 15000;            // JS fade pred zastavením časovača (len kd
 
 /* Audio žije mimo hlavného repa: repo lexarena-audio cez jsDelivr,
    verzia = git tag (@v1). Nová verzia nahrávok = nový tag = čistá cache.
-   Pre lokálny test sa dá prepnúť bez zásahu do kódu:
+   Pre lokálny test zvuku sa dá zdroj prepnúť bez zásahu do kódu:
      localStorage.nightRecapAudioBase = 'http://localhost:8123/night-test-audio/'
-     localStorage.nightRecapAudioExt  = '.wav'
-     localStorage.nightRecapDevUnlock = '1'   (len UI test bez platby a Firebase) */
+     localStorage.nightRecapAudioExt  = '.wav' */
 const AUDIO_BASE_DEFAULT = 'https://cdn.jsdelivr.net/gh/Soldanellka/lexarena-audio@v1/pracovne/vecny/';
 const audioBase = () => localStorage.getItem('nightRecapAudioBase') || AUDIO_BASE_DEFAULT;
 const audioExt  = () => localStorage.getItem('nightRecapAudioExt') || '.mp3';
 const trackUrl  = (n) => `${audioBase()}A${n}${audioExt()}`;
-const devUnlocked = () => localStorage.getItem('nightRecapDevUnlock') === '1';
 
 /* ---------- HELPERY ---------- */
 const $id = (x) => document.getElementById(x);
@@ -77,7 +75,7 @@ let previewMode = false;          // hrá bezplatná ukážka (stop po PREVIEW_S
 let fadeWarned = false;           // iOS: volume je read-only – logni len raz
 let errorStreak = 0;              // po sebe idúce nenačítateľné stopy (poistka slučky chýb)
 
-const isUnlocked = () => devUnlocked() || (unlockTs && Date.now() - unlockTs < UNLOCK_TTL_MS);
+const isUnlocked = () => Boolean(unlockTs && Date.now() - unlockTs < UNLOCK_TTL_MS);
 
 /* ---------- ODOMKNUTIE (Firebase + localStorage cache) ---------- */
 /* Vzor videoRewards/dailyEarned: cache pre okamžitý render, DB je pravda.
@@ -320,7 +318,6 @@ function wirePlayer() {
 /* ---------- RENDER ---------- */
 function timeLeftLabel() {
   const ms = (unlockTs || 0) + UNLOCK_TTL_MS - Date.now();
-  if (devUnlocked() && !unlockTs) return 'DEV režim';
   const h = Math.floor(ms / 3600000);
   const m = Math.floor((ms % 3600000) / 60000);
   return h > 0 ? `${h} h ${m} min` : `${m} min`;
