@@ -11,9 +11,12 @@
 - Nasadené: commit `aed4aaf`, push, **tag `v1` presunutý** (`5b00ec0 → aed4aaf`), purge 40/40, **jsDelivr servíruje 40/40 HTTP 200**; kontrola, že pracovné po presune tagu ďalej beží (A1/A25/A50 = 200). Prehrateľnosť overená v prehliadači (A1 140 s, A2 108 s, hrajú).
 - ⚠️ **V karte sa občianske zatiaľ neprehrá** — karta oblasť nepozná (single-area). Audio je pripravené; sprístupnenie = Fáza 2 zmena v appke (výber oblasti na karte), samostatné zadanie.
 
-## Časť B — Občianske procesné ⛔ (nezačaté, podľa zadania)
+## Časť B — Občianske procesné ✅ (dodané dodatočne, nasadené 2026-08-16)
 
-`claude_obcianske-procesne-nocny-vycuc-skripty-KOMPLET.md` v Downloads **neexistuje** — negenerovalo sa nič, čaká sa na KOMPLET súbor.
+- Babu dodala `claude_obcianske-procesne-nocny-vycuc-skripty-KOMPLET.md`: **45 okruhov**, formát čistý. Pred rozrezaním odstránené oddeľovacie riadky `---` (do nahrávky nepatria); texty inak nedotknuté. Rozrezané do `skripty/obcianske-procesne/vecny/A1–A45.txt`.
+- Generovanie tým istým nastavením; trvania ~1:20–2:09, 35 MB. **Kontrola 45/45 fade OK** (rovno širokým meracím oknom).
+- Nasadené: commit `463c2f7`, push, **tag `v1` presunutý** (`aed4aaf → 463c2f7`), purge 45/45, **jsDelivr 45/45 HTTP 200**; staršie oblasti po presune tagu overené (pracovné + obč. hmotné = 200).
+- Slug `obcianske-procesne` — rovnaká poznámka ako pri hmotnom: karta je zatiaľ single-area, oblasť sprístupní Fáza 2.
 
 ## Časť C — Dev prepínač `nightRecapDevUnlock` odstránený ✅ (commit `4a7d402`, NEPUSHNUTÉ)
 
