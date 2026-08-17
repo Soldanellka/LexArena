@@ -4,34 +4,54 @@
   "summary": "Prejudiciálne konanie podľa čl. 267 ZFEÚ je základným mechanizmom spolupráce medzi vnútroštátnymi súdmi a Súdnym dvorom Európskej únie (SDEÚ). Vnútroštátne súdy môžu alebo musia predkladať prejudiciálne otázky v závislosti od ich postavenia a povahy právnej otázky.\n\nFakultatívne podávanie prejudiciálnych otázok znamená, že každý vnútroštátny súd môže predložiť otázku SDEÚ, ak vznikne problém výkladu alebo platnosti práva EÚ. Ide o všeobecnú možnosť, ktorá podporuje jednotný výklad práva EÚ.\n\nObligatórne podávanie prejudiciálnych otázok sa týka súdov, proti rozhodnutiam ktorých už nemožno podať opravný prostriedok podľa vnútroštátneho práva. Tieto súdy musia predložiť otázku, ak vznikne problém výkladu alebo platnosti práva EÚ. Povinnosť bola potvrdená v rozsudku CILFIT.\n\nDôsledky nepoloženia prejudiciálnej otázky môžu zahŕňať porušenie práva EÚ, zodpovednosť štátu za škodu (Köbler), porušenie zásady prednosti práva EÚ a nesprávnu aplikáciu práva EÚ. Nepredloženie otázky môže viesť k tomu, že vnútroštátny súd nesprávne vyloží právo EÚ alebo uplatní odporujúcu vnútroštátnu normu.\n\nJudikatúra SDEÚ potvrdzuje povinnosť najvyšších súdov predkladať otázky (CILFIT), zákaz rušiť akty EÚ vnútroštátnymi súdmi (Foto-Frost) a zodpovednosť štátu za porušenie práva EÚ zo strany súdu (Köbler).",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje prejudiciálne konanie?",
-      "options": ["Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 19 ZEÚ"],
-      "correct": 0,
-      "explanation": "Prejudiciálne konanie je upravené v čl. 267 ZFEÚ."
-    },
-    {
-      "q": "Kto môže fakultatívne predkladať prejudiciálne otázky?",
-      "options": ["Len najvyššie súdy", "Každý vnútroštátny súd", "Len ústavné súdy", "Len správne súdy"],
+      "q": "Prejudiciálnu otázku môže položiť:",
+      "options": [
+        "len súd poslednej inštancie",
+        "ktorýkoľvek vnútroštátny súd (fakultatívne)",
+        "len ústavný súd",
+        "len Európska komisia"
+      ],
       "correct": 1,
-      "explanation": "Každý vnútroštátny súd môže fakultatívne predložiť otázku."
+      "explanation": "Čl. 267 ods. 2 ZFEÚ dáva možnosť ktorémukoľvek vnútroštátnemu súdu. Povinnosť podľa ods. 3 má až súd poslednej inštancie."
     },
     {
-      "q": "Kto má obligatórnu povinnosť predkladať prejudiciálne otázky?",
-      "options": ["Súdy prvého stupňa", "Súdy, proti rozhodnutiam ktorých nemožno podať opravný prostriedok", "Komisia", "Vláda"],
+      "q": "Povinnosť položiť prejudiciálnu otázku má:",
+      "options": [
+        "každý vnútroštátny súd",
+        "súd, proti rozhodnutiu ktorého niet opravného prostriedku",
+        "len prvostupňový súd",
+        "nikto, ide vždy o možnosť"
+      ],
       "correct": 1,
-      "explanation": "Obligatórnu povinnosť majú najvyššie súdy podľa CILFIT."
+      "explanation": "Čl. 267 ods. 3 ZFEÚ. Povinnosť sa viaže na poslednú inštanciu v danej veci, nie na postavenie súdu v sústave."
     },
     {
-      "q": "Ktorý rozsudok upravuje povinnosť najvyšších súdov predkladať otázky?",
-      "options": ["CILFIT", "Foto-Frost", "Simmenthal", "Costa/ENEL"],
-      "correct": 0,
-      "explanation": "CILFIT upravuje povinnosť najvyšších súdov predkladať otázky."
+      "q": "Výnimkou z povinnosti položiť prejudiciálnu otázku NIE je:",
+      "options": [
+        "acte clair",
+        "acte éclairé",
+        "irelevantnosť otázky pre rozhodnutie",
+        "nesúhlas účastníka konania"
+      ],
+      "correct": 3,
+      "explanation": "Výnimky sú tri: otázka nie je relevantná, už bola zodpovedaná (acte éclairé – Da Costa) alebo je odpoveď zjavná (acte clair – CILFIT). Vôľa účastníkov medzi ne nepatrí."
     },
     {
-      "q": "Ktorý rozsudok upravuje zodpovednosť štátu za porušenie práva EÚ súdom?",
-      "options": ["Köbler", "CILFIT", "Foto-Frost", "Van Gend en Loos"],
-      "correct": 0,
-      "explanation": "Köbler upravuje zodpovednosť štátu za porušenie práva EÚ súdom."
+      "q": "Zodpovednosť štátu za porušenie práva EÚ súdom poslednej inštancie zaviedol rozsudok:",
+      "options": ["CILFIT", "Köbler", "Foto-Frost", "Plaumann"],
+      "correct": 1,
+      "explanation": "Köbler (C‑224/01) rozšíril zásadu zodpovednosti štátu aj na rozhodnutia súdu poslednej inštancie."
+    },
+    {
+      "q": "Ak chce vnútroštátny súd vyhlásiť akt EÚ za neplatný:",
+      "options": [
+        "môže tak urobiť sám",
+        "musí sa obrátiť na Súdny dvor, aj keď nie je poslednou inštanciou (Foto-Frost)",
+        "požiada o stanovisko Komisiu",
+        "počká na rozhodnutie ústavného súdu"
+      ],
+      "correct": 1,
+      "explanation": "Foto-Frost: povinnosť obrátiť sa platí pri neplatnosti pre každý súd. Považovať akt za platný a spor rozhodnúť môže súd sám."
     }
   ],
   "tiles": [
@@ -43,88 +63,127 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – CILFIT: obligatórne podanie prejudiciálnej otázky",
+      "title": "Prípad 1 – Köbler: zodpovednosť štátu za súd poslednej inštancie",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Najvyšší súd členského štátu riešil otázku výkladu práva EÚ, ale nechcel ju predložiť Súdnemu dvoru.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:1982:335 (C‑283/81 CILFIT)"
-        },
-        {
-          "question": "Ako Súdny dvor rozhodol o povinnosti predkladať otázky?",
-          "options": [
-            "Najvyššie súdy nemajú povinnosť predkladať otázky",
-            "Najvyššie súdy musia predložiť otázku, ak existuje problém výkladu práva EÚ",
-            "Predkladanie otázok je dobrovoľné"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Najvyššie súdy musia predložiť prejudiciálnu otázku, ak existuje problém výkladu práva EÚ.",
-            "wrong": "Nesprávne. Povinnosť je záväzná."
-          },
-          "source": "ECLI:EU:C:1982:335"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 2 – Foto-Frost: zákaz rušiť akty EÚ vnútroštátnymi súdmi",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Vnútroštátny súd chcel vyhlásiť akt Komisie za neplatný.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:1987:452 (C‑314/85 Foto-Frost)"
-        },
-        {
-          "question": "Ako Súdny dvor rozhodol o právomociach vnútroštátnych súdov?",
-          "options": [
-            "Vnútroštátne súdy môžu rušiť akty EÚ",
-            "Vnútroštátne súdy nesmú rušiť akty EÚ, môžu len predložiť prejudiciálnu otázku",
-            "Vnútroštátne súdy môžu rušiť akty EÚ len v trestných veciach"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Platnosť aktov EÚ môže posúdiť len Súdny dvor. Vnútroštátne súdy ich nesmú rušiť.",
-            "wrong": "Nesprávne. Vnútroštátne súdy môžu len predkladať otázky."
-          },
-          "source": "ECLI:EU:C:1987:452"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 3 – Köbler: dôsledky nepoloženia prejudiciálnej otázky",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Najvyšší súd členského štátu nesprávne vyložil právo EÚ a nepoložil prejudiciálnu otázku.",
+          "question": "Súd poslednej inštancie nepoložil prejudiciálnu otázku a zjavne nesprávne uplatnil právo EÚ; jednotlivec tým utrpel škodu.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2003:513 (C‑224/01 Köbler)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o dôsledkoch nepoloženia otázky?",
+          "question": "Môže štát zodpovedať za porušenie práva EÚ súdom?",
           "options": [
-            "Štát nenesie žiadnu zodpovednosť",
-            "Štát môže niesť zodpovednosť za škodu spôsobenú porušením práva EÚ súdom",
-            "Zodpovednosť nesie len súdca osobne"
+            "Nie, súdy sú nezávislé a štát za ne nezodpovedá",
+            "Áno, štát zodpovedá za škodu, ak súd poslednej inštancie zjavne porušil právo EÚ",
+            "Zodpovedá len samotný sudca"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že štát môže niesť zodpovednosť za škodu spôsobenú porušením práva EÚ súdom.",
-            "wrong": "Nesprávne. Zodpovednosť nesie štát, nie súdca."
+            "correct": "Zásada zodpovednosti štátu sa vzťahuje aj na rozhodnutia súdu poslednej inštancie, ak ide o zjavné porušenie práva EÚ.",
+            "wrong": "Nesprávne. Nezávislosť súdov nevylučuje zodpovednosť štátu za zjavné porušenie."
           },
-          "source": "ECLI:EU:C:2003:513"
+          "source": "ECLI:EU:C:2003:513 (C‑224/01 Köbler)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 2 – Da Costa: acte éclairé",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Pred súdom poslednej inštancie vznikla otázka výkladu, ktorú Súdny dvor už v skoršej, materiálne zhodnej veci zodpovedal.",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:1963:6 (28 – 30/62 Da Costa)"
+        },
+        {
+          "question": "Musí súd aj tak položiť otázku?",
+          "options": [
+            "Áno, vždy, bez ohľadu na skoršiu judikatúru",
+            "Nie, ak už existuje ustálená odpoveď Súdneho dvora na rovnakú otázku (acte éclairé), povinnosť odpadá",
+            "Musí počkať na stanovisko Komisie"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Ak Súdny dvor už rovnakú otázku vyriešil (acte éclairé), povinnosť súdu poslednej inštancie položiť ju odpadá.",
+            "wrong": "Nesprávne. Ustálená skoršia judikatúra zbavuje povinnosti (acte éclairé)."
+          },
+          "source": "ECLI:EU:C:1963:6 (28 – 30/62 Da Costa)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Fakultatívne či obligatórne?",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Prvostupňový súd a súd poslednej inštancie riešia tú istú otázku výkladu práva EÚ. Kto má akú povinnosť?",
+          "options": [],
+          "correct": 0,
+          "source": "čl. 267 ZFEÚ"
+        },
+        {
+          "question": "Ktoré priradenie je správne?",
+          "options": [
+            "Oba súdy musia otázku položiť",
+            "Prvostupňový súd môže (fakultatívne, ods. 2), súd poslednej inštancie musí (obligatórne, ods. 3), okrem výnimiek",
+            "Ani jeden z nich nemusí"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Čl. 267 ods. 2 = možnosť pre ktorýkoľvek súd; ods. 3 = povinnosť súdu poslednej inštancie (okrem acte clair/éclairé, irelevantnosti).",
+            "wrong": "Nesprávne. Povinnosť má súd poslednej inštancie, nie každý súd."
+          },
+          "source": "čl. 267 ZFEÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1982:335; ECLI:EU:C:1987:452; ECLI:EU:C:2003:513; čl. 267 ZFEÚ",
+    "citation": "ECLI:EU:C:2003:513; ECLI:EU:C:1963:6; čl. 267 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Fakultatívne a obligatórne prejudiciálne otázky",
+    "branches": [
+      {
+        "label": "Fakultatívne (čl. 267 ods. 2 ZFEÚ)",
+        "leaves": [
+          "Ktorýkoľvek vnútroštátny súd môže položiť otázku",
+          "Návrh podáva súd, nie účastníci",
+          "Otázka musí byť pre rozhodnutie sporu relevantná"
+        ]
+      },
+      {
+        "label": "Obligatórne (čl. 267 ods. 3 ZFEÚ)",
+        "leaves": [
+          "Súd poslednej inštancie musí otázku položiť",
+          "Výnimka – otázka nie je pre spor relevantná",
+          "Výnimka – acte éclairé, otázka už bola zodpovedaná (Da Costa)",
+          "Výnimka – acte clair, odpoveď je zjavná (CILFIT)"
+        ]
+      },
+      {
+        "label": "Neplatnosť aktu",
+        "leaves": [
+          "Aj nižší súd sa musí obrátiť na Súdny dvor (Foto-Frost)",
+          "Považovať akt za platný môže súd sám",
+          "Neplatnosť vysloví výlučne Súdny dvor"
+        ]
+      },
+      {
+        "label": "Dôsledky nepoloženia",
+        "leaves": [
+          "Nesprávna aplikácia práva Únie",
+          "Porušenie zásady prednosti",
+          "Zodpovednosť štátu za rozhodnutie súdu poslednej inštancie (Köbler)",
+          "Možné konanie o nesplnení povinnosti proti štátu"
+        ]
+      }
+    ]
   }
 }

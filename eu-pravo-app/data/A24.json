@@ -4,34 +4,49 @@
   "summary": "Konanie o neplatnosť aktu Európskej únie je upravené v čl. 263 ZFEÚ. Umožňuje preskúmať zákonnosť aktov inštitúcií, orgánov a úradov EÚ. Cieľom je zabezpečiť, aby právne akty EÚ boli v súlade so zmluvami, všeobecnými zásadami práva a základnými právami. Konanie môžu začať privilegovaní žalobcovia (členské štáty, Parlament, Rada, Komisia) a neprivilegovaní žalobcovia (jednotlivci a podniky), ak sú aktom priamo dotknutí.\n\nKonanie o nečinnosť inštitúcie Únie je upravené v čl. 265 ZFEÚ. Umožňuje žalovať inštitúciu EÚ za to, že nekonala, hoci mala právnu povinnosť konať. Konanie môžu začať privilegovaní aj neprivilegovaní žalobcovia, ak inštitúcia neodpovedala na žiadosť alebo nevykonala povinnosť vyplývajúcu zo zmlúv.\n\nPriebeh oboch konaní zahŕňa podanie žaloby, písomnú fázu, ústnu fázu, stanovisko generálneho advokáta (ak je vypracované) a rozsudok Súdneho dvora. Rozhodnutie môže viesť k zrušeniu aktu, vyhláseniu nečinnosti a povinnosti inštitúcie konať.\n\nDôsledky neplatnosti zahŕňajú zrušenie aktu, jeho retroaktívne účinky (s obmedzeniami), povinnosť inštitúcie prijať nový akt a možnosť vzniku zodpovednosti EÚ za škodu. Dôsledky nečinnosti zahŕňajú povinnosť inštitúcie konať a možnosť žaloby o náhradu škody.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje podmienky aktívnej legitimácie, rozsah preskúmania a účinky rozhodnutí, najmä v rozsudkoch C‑25/62, C‑50/00 P a C‑68/95.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje konanie o neplatnosť aktu EÚ?",
-      "options": ["Čl. 263 ZFEÚ", "Čl. 265 ZFEÚ", "Čl. 267 ZFEÚ", "Čl. 258 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Konanie o neplatnosť je upravené v čl. 263 ZFEÚ."
-    },
-    {
-      "q": "Ktorý článok upravuje konanie o nečinnosť inštitúcie?",
-      "options": ["Čl. 265 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 267 ZFEÚ", "Čl. 7 ZEÚ"],
-      "correct": 0,
-      "explanation": "Konanie o nečinnosť je upravené v čl. 265 ZFEÚ."
-    },
-    {
-      "q": "Kto môže podať žalobu o neplatnosť?",
-      "options": ["Len členské štáty", "Privilegovaní aj neprivilegovaní žalobcovia", "Len Komisia", "Len jednotlivci"],
+      "q": "Žaloba o neplatnosť sa podáva v lehote:",
+      "options": ["jedného mesiaca", "dvoch mesiacov", "šiestich mesiacov", "bez lehoty"],
       "correct": 1,
-      "explanation": "Žalobu môžu podať privilegovaní aj neprivilegovaní žalobcovia."
+      "explanation": "Dva mesiace podľa čl. 263 ZFEÚ – od uverejnenia aktu, oznámenia žalobcovi alebo odo dňa, keď sa o ňom dozvedel."
     },
     {
-      "q": "Aký je dôsledok úspešnej žaloby o nečinnosť?",
-      "options": ["Zrušenie aktu", "Povinnosť inštitúcie konať", "Pokuta pre členský štát", "Zastavenie konania"],
+      "q": "Test osobnej dotknutosti jednotlivca zaviedol rozsudok:",
+      "options": ["UPA", "Plaumann", "Francovich", "T. Port"],
       "correct": 1,
-      "explanation": "Súdny dvor môže uložiť inštitúcii povinnosť konať."
+      "explanation": "Plaumann (25/62). UPA tento prísny test neskôr potvrdil a odmietol ho zmierniť cez zásadu účinnej súdnej ochrany."
     },
     {
-      "q": "Ktorý rozsudok upravuje aktívnu legitimáciu jednotlivcov pri žalobe o neplatnosť?",
-      "options": ["Plaumann (C‑25/62)", "CILFIT", "Foto-Frost", "Costa/ENEL"],
-      "correct": 0,
-      "explanation": "Plaumann upravuje podmienky aktívnej legitimácie jednotlivcov."
+      "q": "Medzi dôvody neplatnosti aktu NEpatrí:",
+      "options": [
+        "nepríslušnosť",
+        "zneužitie právomoci",
+        "porušenie podstatných formálnych náležitostí",
+        "nevhodnosť opatrenia z pohľadu žalobcu"
+      ],
+      "correct": 3,
+      "explanation": "Čl. 263 vymenúva štyri dôvody taxatívne. Súd preskúmava zákonnosť, nie účelnosť či politickú vhodnosť aktu."
+    },
+    {
+      "q": "Konaniu o nečinnosti musí predchádzať:",
+      "options": [
+        "uloženie pokuty inštitúcii",
+        "výzva, aby inštitúcia konala",
+        "rozsudok Súdneho dvora",
+        "nič, žaloba sa podáva rovno"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 265 ZFEÚ. Ak inštitúcia do dvoch mesiacov od výzvy nezaujme stanovisko, možno v ďalších dvoch mesiacoch podať žalobu."
+    },
+    {
+      "q": "Neplatný akt sa ruší s účinkami:",
+      "options": [
+        "len do budúcnosti",
+        "ex tunc a erga omnes, pričom súd môže niektoré účinky zachovať (čl. 264)",
+        "len voči žalobcovi",
+        "nezáväzne, akt platí ďalej"
+      ],
+      "correct": 1,
+      "explanation": "Akt sa vyhlási za neplatný od začiatku a voči všetkým; čl. 264 ods. 2 umožňuje označiť účinky, ktoré zostanú zachované."
     }
   ],
   "tiles": [
@@ -43,80 +58,80 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Plaumann: aktívna legitimácia jednotlivcov",
+      "title": "Prípad 1 – Plaumann: osobná dotknutosť",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Jednotlivec napadol rozhodnutie Komisie, ale nebolo jasné, či je priamo dotknutý.",
+          "question": "Dovozca klementínok napadol rozhodnutie Komisie určené členskému štátu, tvrdiac, že sa ho osobne týka.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1963:17 (C‑25/62 Plaumann)"
+          "source": "ECLI:EU:C:1963:17 (25/62 Plaumann)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o aktívnej legitimácii?",
+          "question": "Kedy je jednotlivec „osobne dotknutý“?",
           "options": [
-            "Jednotlivec môže žalovať vždy",
-            "Jednotlivec môže žalovať, ak je dotknutý individuálne a priamo",
-            "Jednotlivec nemôže nikdy žalovať"
+            "Vždy, keď ho akt hospodársky zasiahne",
+            "Len ak sa ho akt týka pre vlastnosti jemu vlastné alebo okolnosti, ktoré ho odlišujú tak ako adresáta (prísny test)",
+            "Nikdy, jednotlivec akt EÚ napadnúť nemôže"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že jednotlivec môže žalovať, ak je dotknutý individuálne a priamo.",
-            "wrong": "Nesprávne. Aktívna legitimácia je obmedzená."
+            "correct": "Plaumannov test: osobná dotknutosť len pri vlastnostiach či okolnostiach odlišujúcich žalobcu ako adresáta – činnosť, ktorú môže vykonávať ktokoľvek, nestačí.",
+            "wrong": "Nesprávne. Samotný hospodársky dopad na neurčitú skupinu nestačí."
           },
-          "source": "ECLI:EU:C:1963:17"
+          "source": "ECLI:EU:C:1963:17 (25/62 Plaumann)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Unión de Pequeños Agricultores: neprivilegovaní žalobcovia",
+      "title": "Prípad 2 – UPA: účinná súdna ochrana a prísny test",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Organizácia poľnohospodárov napadla nariadenie, ale nebolo jasné, či je priamo dotknutá.",
+          "question": "Združenie namietalo, že prísny test osobnej dotknutosti mu bráni v prístupe k súdu, a dovolávalo sa účinnej súdnej ochrany.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2002:462 (C‑50/00 P UPA)"
+          "source": "ECLI:EU:C:2002:462 (C‑50/00 P Unión de Pequeños Agricultores)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o prístupe jednotlivcov k súdu?",
+          "question": "Zmierni zásada účinnej súdnej ochrany podmienku osobnej dotknutosti?",
           "options": [
-            "Jednotlivci majú širokú legitimáciu",
-            "Jednotlivci majú obmedzenú legitimáciu podľa Plaumann",
-            "Jednotlivci nemajú žiadnu legitimáciu"
+            "Áno, podmienku úplne ruší",
+            "Nie, podmienku osobnej dotknutosti nemožno vyložiť tak, že by sa vypustila; jej zmena patrí tvorcom zmlúv (Plaumannov test potvrdený)",
+            "Áno, jednotlivec už nemusí preukazovať nič"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil obmedzenú legitimáciu podľa Plaumann.",
-            "wrong": "Nesprávne. Legitimácia nie je široká."
+            "correct": "Súdny dvor potvrdil prísny test: účinná súdna ochrana ho nemôže odstrániť; zmena patrí tvorcom zmlúv.",
+            "wrong": "Nesprávne. Podmienka osobnej dotknutosti ostáva zachovaná."
           },
-          "source": "ECLI:EU:C:2002:462"
+          "source": "ECLI:EU:C:2002:462 (C‑50/00 P Unión de Pequeños Agricultores)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – T. Port: konanie o nečinnosť",
+      "title": "Prípad 3 – T. Port: žaloba na nečinnosť",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Inštitúcia EÚ nekonala napriek povinnosti rozhodnúť o žiadosti.",
+          "question": "Inštitúcia nekonala, hoci mala povinnosť. Dotknutý subjekt zvažuje žalobu na nečinnosť.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1996:452 (C‑68/95 T. Port)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o nečinnosti?",
+          "question": "Čo musí predchádzať žalobe na nečinnosť (čl. 265 ZFEÚ)?",
           "options": [
-            "Nečinnosť nie je žalovateľná",
-            "Inštitúcia môže byť žalovaná za nečinnosť",
-            "Nečinnosť rieši len Komisia"
+            "Nič, žaloba sa podáva rovno",
+            "Najprv výzva, aby inštitúcia konala; ak do dvoch mesiacov nezaujme stanovisko, možno podať žalobu",
+            "Uloženie pokuty inštitúcii"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že inštitúcia môže byť žalovaná za nečinnosť podľa čl. 265 ZFEÚ.",
-            "wrong": "Nesprávne. Nečinnosť je žalovateľná."
+            "correct": "Žalobe na nečinnosť predchádza výzva konať; súdy nemôžu nahradiť konanie inštitúcie.",
+            "wrong": "Nesprávne. Bez predchádzajúcej výzvy konať žaloba nie je prípustná."
           },
-          "source": "ECLI:EU:C:1996:452"
+          "source": "ECLI:EU:C:1996:452 (C‑68/95 T. Port)"
         }
       ]
     }
@@ -126,5 +141,48 @@
     "citation": "ECLI:EU:C:1963:17; ECLI:EU:C:2002:462; ECLI:EU:C:1996:452; čl. 263 – 266 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Žaloba o neplatnosť a žaloba na nečinnosť",
+    "branches": [
+      {
+        "label": "Neplatnosť (čl. 263 ZFEÚ)",
+        "leaves": [
+          "Preskúmanie zákonnosti aktu, nie jeho účelnosti",
+          "Nepríslušnosť",
+          "Porušenie podstatných formálnych náležitostí",
+          "Porušenie zmlúv alebo právneho predpisu o ich uplatňovaní",
+          "Zneužitie právomoci",
+          "Lehota dva mesiace"
+        ]
+      },
+      {
+        "label": "Žalobcovia",
+        "leaves": [
+          "Privilegovaní – členské štáty, Parlament, Rada, Komisia",
+          "Čiastočne privilegovaní – ECB, Dvor audítorov, Výbor regiónov",
+          "Neprivilegovaní – jednotlivci a podniky",
+          "Priama a osobná dotknutosť (Plaumann)",
+          "Regulačný akt bez vykonávacích opatrení – stačí priama dotknutosť",
+          "Účinná súdna ochrana test nezmierňuje (UPA)"
+        ]
+      },
+      {
+        "label": "Nečinnosť (čl. 265 ZFEÚ)",
+        "leaves": [
+          "Najprv výzva, aby inštitúcia konala",
+          "Ak do dvoch mesiacov nezaujme stanovisko, možno podať žalobu",
+          "Súd nemôže nahradiť konanie inštitúcie (T. Port)"
+        ]
+      },
+      {
+        "label": "Účinky rozsudku",
+        "leaves": [
+          "Akt sa vyhlási za neplatný ex tunc a erga omnes",
+          "Súd môže označiť účinky, ktoré zostanú zachované (čl. 264)",
+          "Inštitúcia musí prijať opatrenia na vykonanie rozsudku (čl. 266)"
+        ]
+      }
+    ]
   }
 }

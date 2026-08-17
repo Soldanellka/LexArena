@@ -4,34 +4,54 @@
   "summary": "Konanie o porušenie povinnosti členského štátu je upravené v čl. 258 – 260 ZFEÚ. Ide o mechanizmus, ktorým Európska komisia (alebo iný členský štát) zabezpečuje dodržiavanie práva EÚ. Cieľom konania je odstrániť porušenie a zabezpečiť jednotné uplatňovanie práva EÚ.\n\nKonanie má tri fázy: predbežnú (administratívnu), súdnu a sankčnú. V predbežnej fáze Komisia zasiela formálnu výzvu a odôvodnené stanovisko. Ak členský štát nesplní povinnosti, Komisia môže podať žalobu na Súdny dvor EÚ podľa čl. 258 ZFEÚ. Súdny dvor rozhodne, či členský štát porušil právo EÚ.\n\nAk členský štát nesplní rozsudok, Komisia môže podať ďalšiu žalobu podľa čl. 260 ZFEÚ, v ktorej navrhne uloženie sankcií – paušálnej pokuty alebo penále. Sankcie majú zabezpečiť účinné dodržiavanie práva EÚ.\n\nDôsledky porušenia zahŕňajú povinnosť členského štátu odstrániť porušenie, zaplatiť finančné sankcie, zodpovednosť štátu za škodu spôsobenú jednotlivcom (Francovich) a reputačné následky. Porušenie môže ovplyvniť aj čerpanie fondov EÚ.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje povinnosti členských štátov, sankcie za nesplnenie rozsudku a zodpovednosť štátu za škodu, najmä v rozsudkoch C‑304/02, C‑121/07 a C‑6/90.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje žalobu Komisie proti členskému štátu?",
-      "options": ["Čl. 258 ZFEÚ", "Čl. 267 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 7 ZEÚ"],
-      "correct": 0,
-      "explanation": "Žaloba Komisie proti členskému štátu je upravená v čl. 258 ZFEÚ."
-    },
-    {
-      "q": "Ktorý článok upravuje sankcie za nesplnenie rozsudku?",
-      "options": ["Čl. 260 ZFEÚ", "Čl. 258 ZFEÚ", "Čl. 263 ZFEÚ", "Čl. 19 ZEÚ"],
-      "correct": 0,
-      "explanation": "Sankcie sú upravené v čl. 260 ZFEÚ."
-    },
-    {
-      "q": "Kto môže začať konanie o porušenie povinnosti?",
-      "options": ["Len Komisia", "Komisia alebo členský štát", "Len Európsky parlament", "Len Súdny dvor"],
+      "q": "Konanie o nesplnení povinnosti členského štátu vedie:",
+      "options": [
+        "len iný členský štát",
+        "najmä Európska komisia (prípadne iný členský štát)",
+        "Európsky parlament",
+        "Súdny dvor z vlastného podnetu"
+      ],
       "correct": 1,
-      "explanation": "Konanie môže začať Komisia alebo členský štát."
+      "explanation": "Komisia ako strážkyňa zmlúv podľa čl. 258 ZFEÚ; čl. 259 umožňuje žalobu aj inému členskému štátu, v praxi je zriedkavá."
     },
     {
-      "q": "Aký je dôsledok nesplnenia rozsudku Súdneho dvora?",
-      "options": ["Žiadny", "Možnosť uloženia pokuty alebo penále", "Zrušenie členstva v EÚ", "Zastavenie prejudiciálnych konaní"],
+      "q": "Predbežná (administratívna) fáza konania zahŕňa:",
+      "options": [
+        "rovno podanie žaloby na Súdny dvor",
+        "formálnu výzvu a odôvodnené stanovisko",
+        "uloženie pokuty Komisiou",
+        "nič, konanie sa začína žalobou"
+      ],
       "correct": 1,
-      "explanation": "Súdny dvor môže uložiť pokutu alebo penále podľa čl. 260 ZFEÚ."
+      "explanation": "Štát dostane možnosť vyjadriť sa (formálna výzva) a napraviť stav (odôvodnené stanovisko) skôr, než vec príde na súd."
     },
     {
-      "q": "Ktorý rozsudok upravuje zodpovednosť štátu za škodu spôsobenú porušením práva EÚ?",
-      "options": ["Francovich (C‑6/90)", "CILFIT", "Foto-Frost", "Costa/ENEL"],
-      "correct": 0,
-      "explanation": "Francovich upravuje zodpovednosť štátu za škodu spôsobenú porušením práva EÚ."
+      "q": "Rozsudok podľa čl. 258 ZFEÚ:",
+      "options": [
+        "rovno ukladá finančnú pokutu",
+        "deklaruje, že štát porušil právo EÚ",
+        "je nezáväzné odporúčanie",
+        "priamo mení vnútroštátny zákon"
+      ],
+      "correct": 1,
+      "explanation": "Rozsudok je deklaratórny. Sankcie prichádzajú až v druhom kole podľa čl. 260, ak štát rozsudok nesplní."
+    },
+    {
+      "q": "Finančné sankcie (paušál alebo penále) sa ukladajú:",
+      "options": [
+        "vždy už v prvom rozsudku",
+        "pri nesplnení skoršieho rozsudku (čl. 260 ZFEÚ)",
+        "nikdy, EÚ štáty nepokutuje",
+        "Komisiou bez účasti súdu"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 260 ods. 2. Osobitný režim má čl. 260 ods. 3 – pri neoznámení transpozičných opatrení možno sankcie navrhnúť už v prvom konaní."
+    },
+    {
+      "q": "Zodpovednosť štátu za škodu spôsobenú jednotlivcom porušením práva EÚ zaviedol rozsudok:",
+      "options": ["Plaumann", "Francovich", "Köbler", "Foto-Frost"],
+      "correct": 1,
+      "explanation": "Francovich (C‑6/90). Köbler ju neskôr rozšíril aj na rozhodnutia súdu poslednej inštancie."
     }
   ],
   "tiles": [
@@ -43,54 +63,54 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Komisia v. Francúzsko: sankcie podľa čl. 260 ZFEÚ",
+      "title": "Prípad 1 – Komisia v. Francúzsko: paušál aj penále",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Francúzsko nesplnilo rozsudok Súdneho dvora týkajúci sa rybolovných kvót.",
+          "question": "Francúzsko ani po rozsudku o nesplnení povinnosti (kontrola rybolovu) nesplnilo svoje povinnosti. Komisia podala ďalšiu žalobu.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2005:444 (C‑304/02 Komisia v. Francúzsko)"
+          "source": "ECLI:EU:C:2005:444 (C‑304/02 Komisia v Francúzsko)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o sankciách?",
+          "question": "Aké sankcie môže Súdny dvor uložiť?",
           "options": [
-            "Sankcie nie je možné uložiť",
-            "Súdny dvor môže uložiť paušálnu pokutu aj penále",
-            "Súdny dvor môže uložiť len symbolickú sankciu"
+            "Len penále",
+            "Paušálnu pokutu a penále aj súčasne, ak to odôvodňuje závažnosť a trvanie porušenia",
+            "Žiadne, môže len zopakovať rozsudok"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor uložil Francúzsku paušálnu pokutu aj penále podľa čl. 260 ZFEÚ.",
-            "wrong": "Nesprávne. Sankcie sú základným nástrojom na zabezpečenie dodržiavania práva EÚ."
+            "correct": "Súdny dvor po prvý raz uložil paušálnu pokutu aj penále súčasne (čl. 260) na zabezpečenie účinného dodržania rozsudku.",
+            "wrong": "Nesprávne. Paušál a penále možno uložiť aj naraz."
           },
-          "source": "ECLI:EU:C:2005:444"
+          "source": "ECLI:EU:C:2005:444 (C‑304/02 Komisia v Francúzsko)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Komisia v. Grécko: nesplnenie povinností v oblasti životného prostredia",
+      "title": "Prípad 2 – Komisia v. Grécko (Kouroupitos): prvé penále",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Grécko neodstránilo nelegálnu skládku odpadu napriek rozsudku Súdneho dvora.",
+          "question": "Grécko ani po rozsudku o nesplnení povinnosti neodstránilo nelegálnu skládku odpadu (Kouroupitos). Komisia podala ďalšiu žalobu.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2000:356 (C‑387/97 Komisia v Grécko)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o dôsledkoch nesplnenia rozsudku?",
+          "question": "Aký nástroj Súdny dvor po prvý raz použil?",
           "options": [
-            "Bez sankcie",
-            "Uloženie penále za každý deň omeškania",
-            "Zastavenie členstva v EÚ"
+            "Len zopakoval skorší rozsudok",
+            "Po prvý raz uložil penále za každý deň omeškania až do splnenia rozsudku (čl. 260)",
+            "Vylúčil Grécko z Únie"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor uložil Grécku penále za každý deň omeškania.",
-            "wrong": "Nesprávne. Sankcie sú bežným nástrojom pri nesplnení rozsudku."
+            "correct": "Kouroupitos bol prvý prípad, v ktorom Súdny dvor uložil penále (za deň omeškania) na vynútenie splnenia skoršieho rozsudku.",
+            "wrong": "Nesprávne. Súdny dvor po prvý raz siahol po penále."
           },
-          "source": "ECLI:EU:C:2000:356"
+          "source": "ECLI:EU:C:2000:356 (C‑387/97 Komisia v Grécko)"
         }
       ]
     },
@@ -99,24 +119,24 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Členský štát netransponoval smernicu o ochrane zamestnancov pri úpadku zamestnávateľa.",
+          "question": "Štát neprebral smernicu a jednotlivec tým utrpel škodu.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1991:428 (C‑6/90 Francovich)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o zodpovednosti štátu?",
+          "question": "Má jednotlivec nárok na náhradu škody voči štátu?",
           "options": [
-            "Štát nenesie zodpovednosť",
-            "Štát nesie zodpovednosť za škodu spôsobenú jednotlivcom porušením práva EÚ",
-            "Zodpovednosť nesie len zamestnávateľ"
+            "Nie, voči štátu takýto nárok neexistuje",
+            "Áno, ak sú splnené podmienky (priznanie práv jednotlivcom, dostatočne závažné porušenie, príčinná súvislosť)",
+            "Len voči Únii, nie voči štátu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že štát nesie zodpovednosť za škodu spôsobenú jednotlivcom porušením práva EÚ.",
-            "wrong": "Nesprávne. Zodpovednosť štátu je základným prvkom účinnosti práva EÚ."
+            "correct": "Zodpovednosť štátu za škodu vzniká pri splnení podmienok stanovených v rozsudku Francovich (a nadväzujúcej judikatúre).",
+            "wrong": "Nesprávne. Pri splnení podmienok nárok voči štátu existuje."
           },
-          "source": "ECLI:EU:C:1991:428"
+          "source": "ECLI:EU:C:1991:428 (C‑6/90 Francovich)"
         }
       ]
     }
@@ -126,5 +146,51 @@
     "citation": "ECLI:EU:C:2005:444; ECLI:EU:C:2000:356; ECLI:EU:C:1991:428; čl. 258 – 260 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Konanie o nesplnení povinnosti (čl. 258 – 260 ZFEÚ)",
+    "branches": [
+      {
+        "label": "Žalobca",
+        "leaves": [
+          "Európska komisia ako strážkyňa zmlúv – čl. 258 ZFEÚ",
+          "Iný členský štát – čl. 259 ZFEÚ",
+          "Súdny dvor nekoná z vlastného podnetu"
+        ]
+      },
+      {
+        "label": "Predbežná fáza",
+        "leaves": [
+          "Formálna výzva – štát sa môže vyjadriť",
+          "Odôvodnené stanovisko s lehotou na nápravu",
+          "Bez tejto fázy je žaloba neprípustná"
+        ]
+      },
+      {
+        "label": "Súdna fáza (čl. 258)",
+        "leaves": [
+          "Žaloba Komisie na Súdny dvor",
+          "Rozsudok je deklaratórny – konštatuje porušenie",
+          "Sám neukladá finančné sankcie"
+        ]
+      },
+      {
+        "label": "Sankčná fáza (čl. 260)",
+        "leaves": [
+          "Penále a/alebo paušálna pokuta",
+          "Prvé penále – Kouroupitos (C‑387/97)",
+          "Paušál a penále súčasne po prvý raz – C‑304/02",
+          "Neoznámenie transpozície smernice – sankcie už v prvom konaní (čl. 260 ods. 3)"
+        ]
+      },
+      {
+        "label": "Dôsledky pre štát",
+        "leaves": [
+          "Povinnosť odstrániť porušenie",
+          "Finančné sankcie",
+          "Zodpovednosť za škodu spôsobenú jednotlivcom (Francovich)"
+        ]
+      }
+    ]
   }
 }
