@@ -1,37 +1,62 @@
 {
   "id": "A35",
   "title": "Rozhodné právo pre zmluvné a mimozmluvné záväzky podľa nariadení Rím I a Rím II",
-  "summary": "Nariadenie Rím I (č. 593/2008) upravuje rozhodné právo pre zmluvné záväzky. Základným pravidlom je autonómia vôle – strany si môžu zvoliť rozhodné právo (čl. 3). Ak voľba práva chýba, rozhodné právo sa určuje podľa typu zmluvy (čl. 4), napr. pri kúpe tovaru je to právo obvyklého pobytu predávajúceho, pri poskytovaní služieb právo poskytovateľa. Spotrebiteľské a pracovné zmluvy majú osobitnú ochranu – voľba práva nesmie zbaviť slabšiu stranu ochrany podľa práva jej obvyklého pobytu.\n\nNariadenie Rím II (č. 864/2007) upravuje rozhodné právo pre mimozmluvné záväzky (delikty, bezdôvodné obohatenie, nekalosúťaž, škoda na životnom prostredí). Základným pravidlom je lex loci damni – právo štátu, kde vznikla škoda (čl. 4). Existujú výnimky: spoločný obvyklý pobyt strán, zjavne užší vzťah k inému štátu, osobitné pravidlá pre nekalosúťaž, výrobkovú zodpovednosť, environmentálne škody či porušenie osobnostných práv.\n\nObe nariadenia sú univerzálne – rozhodné právo môže byť aj právo štátu mimo EÚ. Judikatúra Súdneho dvora EÚ spresňuje výklad pojmov ako „škoda“, „obvyklý pobyt“, „zmluva“, „slabšia strana“ či „zjavne užší vzťah“, najmä v rozsudkoch Intercontainer, Lazar, Kainz a Verein für Konsumenteninformation.",
+  "summary": "Nariadenie Rím I (č. 593/2008) upravuje rozhodné právo pre zmluvné záväzky. Základným pravidlom je autonómia vôle – strany si môžu zvoliť rozhodné právo (čl. 3). Ak voľba práva chýba, rozhodné právo sa určuje podľa typu zmluvy (čl. 4), napr. pri kúpe tovaru je to právo obvyklého pobytu predávajúceho, pri poskytovaní služieb právo poskytovateľa. Spotrebiteľské a pracovné zmluvy majú osobitnú ochranu – voľba práva nesmie zbaviť slabšiu stranu ochrany podľa práva jej obvyklého pobytu.\n\nNariadenie Rím II (č. 864/2007) upravuje rozhodné právo pre mimozmluvné záväzky (delikty, bezdôvodné obohatenie, nekalosúťaž, škoda na životnom prostredí). Základným pravidlom je lex loci damni – právo štátu, kde vznikla škoda (čl. 4). Existujú výnimky: spoločný obvyklý pobyt strán, zjavne užší vzťah k inému štátu, osobitné pravidlá pre nekalosúťaž, výrobkovú zodpovednosť, environmentálne škody či porušenie osobnostných práv.\n\nObe nariadenia sú univerzálne – rozhodné právo môže byť aj právo štátu mimo EÚ. Judikatúra Súdneho dvora EÚ spresňuje výklad pojmov ako „škoda“, „obvyklý pobyt“, „zmluva“, „slabšia strana“ či „zjavne užší vzťah“, najmä v rozsudkoch Intercontainer, Lazar a Verein für Konsumenteninformation.",
   "quiz": [
     {
-      "q": "Ktoré nariadenie upravuje rozhodné právo pre zmluvné záväzky?",
-      "options": ["Rím I", "Rím II", "Brusel Ia", "Haagsky protokol"],
-      "correct": 0,
-      "explanation": "Zmluvné záväzky upravuje nariadenie Rím I."
+      "q": "Rozhodné právo pre zmluvné záväzky určuje:",
+      "options": [
+        "Rím II – nariadenie (ES) č. 864/2007",
+        "Rím I – nariadenie (ES) č. 593/2008",
+        "Brusel Ia",
+        "Brusel IIb"
+      ],
+      "correct": 1,
+      "explanation": "Rím I sa týka zmluvných záväzkov, Rím II mimozmluvných. Bruselské nariadenia riešia príslušnosť a výkon, nie rozhodné právo."
     },
     {
-      "q": "Ktoré nariadenie upravuje rozhodné právo pre delikty?",
-      "options": ["Rím II", "Rím I", "Brusel Ia", "EET"],
-      "correct": 0,
-      "explanation": "Delikty upravuje nariadenie Rím II."
+      "q": "Pri zmluve bez voľby práva sa uplatní:",
+      "options": [
+        "vždy právo štátu konajúceho súdu",
+        "kolízne kritériá čl. 4, resp. právo najužšieho spojenia (ICF)",
+        "právo štátu žalobcu",
+        "žiadne, zmluva je neplatná"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 4 Rím I obsahuje kolízne kritériá podľa typu zmluvy; korekčne rozhoduje zjavne užšie spojenie s iným štátom."
     },
     {
-      "q": "Základné pravidlo Rím I je:",
-      "options": ["Autonómia vôle strán", "Lex loci damni", "Právo štátu súdu", "Právo žalovaného"],
-      "correct": 0,
-      "explanation": "Rím I vychádza z autonómie vôle."
+      "q": "Rozhodné právo pre mimozmluvné záväzky určuje:",
+      "options": [
+        "Rím I – nariadenie (ES) č. 593/2008",
+        "Rím II – nariadenie (ES) č. 864/2007",
+        "Brusel Ia",
+        "Charta základných práv EÚ"
+      ],
+      "correct": 1,
+      "explanation": "Rím II pokrýva delikty, bezdôvodné obohatenie, konanie bez príkazu a predzmluvnú zodpovednosť."
     },
     {
-      "q": "Základné pravidlo Rím II je:",
-      "options": ["Lex loci damni", "Voľba práva", "Právo žalobcu", "Právo štátu súdu"],
-      "correct": 0,
-      "explanation": "Rím II vychádza z práva štátu, kde vznikla škoda."
+      "q": "Základným kritériom nariadenia Rím II je:",
+      "options": [
+        "miesto protiprávneho konania",
+        "miesto, kde vznikla priama škoda – lex loci damni",
+        "bydlisko žalobcu",
+        "sídlo konajúceho súdu"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 4 ods. 1: rozhoduje miesto priamej škody, nie miesto konania ani miesto nepriamych následkov (Lazar)."
     },
     {
-      "q": "Ktorý rozsudok sa týka škody pri dopravných nehodách?",
-      "options": ["Lazar", "Kainz", "Intercontainer", "Verein für Konsumenteninformation"],
-      "correct": 0,
-      "explanation": "Lazar sa týka škody pri dopravných nehodách."
+      "q": "Nariadenia Rím I a Rím II majú:",
+      "options": [
+        "obmedzenú pôsobnosť len na právo členských štátov",
+        "univerzálnu povahu – uplatní sa aj právo tretích štátov",
+        "len odporúčací charakter",
+        "prednosť pred zakladajúcimi zmluvami"
+      ],
+      "correct": 1,
+      "explanation": "Určené právo sa uplatní bez ohľadu na to, či ide o právo členského štátu – preto sa hovorí o univerzálnej povahe."
     }
   ],
   "tiles": [
@@ -43,88 +68,139 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Intercontainer: voľba práva v obchodných zmluvách",
+      "title": "Prípad 1 – ICF (Intercontainer): najužšie spojenie",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Strany si zvolili právo mimo EÚ, ale vznikol spor o rozsah voľby práva.",
+          "question": "Strany si v cezhraničnej zmluve nezvolili rozhodné právo. Súd musel určiť, ktorého štátu právo sa uplatní.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2010:40 (C‑133/08 Intercontainer)"
+          "source": "ECLI:EU:C:2009:617 (C‑133/08 Intercontainer Interfrigo – ICF)"
         },
         {
-          "question": "Ako Súdny dvor vyložil voľbu práva?",
+          "question": "Ako sa určí rozhodné právo bez voľby strán?",
           "options": [
-            "Voľba práva musí byť výslovná alebo jasne vyplývať zo zmluvy",
-            "Voľba práva môže byť predpokladaná",
-            "Voľba práva nie je možná"
+            "Vždy právom štátu konajúceho súdu",
+            "Podľa kolíznych kritérií; ak z okolností vyplýva zjavne užšie spojenie s iným štátom, uplatní sa právo tohto štátu (najužšie spojenie)",
+            "Podľa práva štátu žalobcu"
           ],
-          "correct": 0,
+          "correct": 1,
           "explanation": {
-            "correct": "Voľba práva musí byť výslovná alebo jasne vyplývať zo zmluvy.",
-            "wrong": "Nesprávne. Voľba práva nemôže byť len predpokladaná."
+            "correct": "Bez voľby práva sa uplatnia kolízne kritériá; korekčne rozhoduje zásada najužšieho spojenia zmluvy.",
+            "wrong": "Nesprávne. Nerozhoduje automaticky právo súdu ani žalobcu."
           },
-          "source": "ECLI:EU:C:2010:40"
+          "source": "ECLI:EU:C:2009:617 (C‑133/08 Intercontainer Interfrigo – ICF)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Lazar: škoda pri dopravných nehodách",
+      "title": "Prípad 2 – Lazar: miesto vzniku škody (Rím II)",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Rodina obete dopravnej nehody žiadala náhradu škody v inom členskom štáte.",
+          "question": "Po dopravnej nehode v jednom štáte si nepriami poškodení (rodinní príslušníci obete) v inom štáte uplatňovali nároky; sporné bolo rozhodné právo.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2015:802 (C‑350/14 Lazar)"
         },
         {
-          "question": "Ako Súdny dvor určil rozhodné právo?",
+          "question": "Čo je „miestom vzniku škody“ podľa nariadenia Rím II?",
           "options": [
-            "Právo štátu súdu",
-            "Právo štátu, kde vznikla škoda",
-            "Právo štátu, kde má žalobca pobyt"
+            "Miesto, kde nepriami poškodení pociťujú ujmu",
+            "Miesto, kde vznikla priama škoda (napr. miesto nehody); nepriame následky u pozostalých rozhodné právo nemenia",
+            "Bydlisko žalobcu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Rozhodné právo je právo štátu, kde vznikla škoda.",
-            "wrong": "Nesprávne. Pobyt žalobcu nie je rozhodujúci."
+            "correct": "Rozhoduje miesto priamej škody; nepriame škody nepriamych poškodených miesto vzniku škody nemenia.",
+            "wrong": "Nesprávne. Nepriama ujma pozostalých nie je rozhodujúca."
           },
-          "source": "ECLI:EU:C:2015:802"
+          "source": "ECLI:EU:C:2015:802 (C‑350/14 Lazar)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Kainz: výrobková zodpovednosť",
+      "title": "Prípad 3 – VKI v. Amazon: voľba práva a nekalé podmienky",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Spotrebiteľ utrpel škodu spôsobenú vadným výrobkom zakúpeným v inom štáte.",
+          "question": "Podnikateľ v spotrebiteľských podmienkach určil ako rozhodné právo právo štátu svojho sídla. Spotrebiteľské združenie namietalo, že je to nekalá podmienka.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2013:568 (C‑45/13 Kainz)"
+          "source": "ECLI:EU:C:2016:612 (C‑191/15 Verein für Konsumenteninformation v Amazon)"
         },
         {
-          "question": "Ako Súdny dvor určil rozhodné právo?",
+          "question": "Je taká doložka voľby práva prípustná?",
           "options": [
-            "Právo štátu výrobcu",
-            "Právo štátu, kde bol výrobok zakúpený",
-            "Právo štátu, kde vznikla škoda"
+            "Áno, voľba práva je vždy platná bez obmedzení",
+            "Doložka voľby práva sídla podnikateľa môže byť nekalá, ak spotrebiteľa neinformuje, že ho chránia aj kogentné normy práva jeho obvyklého pobytu (čl. 6 Rím I)",
+            "Nie, voľba práva je v spotrebiteľských zmluvách zakázaná"
           ],
-          "correct": 2,
+          "correct": 1,
           "explanation": {
-            "correct": "Rozhodné právo je právo štátu, kde vznikla škoda.",
-            "wrong": "Nesprávne. Miesto výroby nie je rozhodujúce."
+            "correct": "Voľba práva nesmie zbaviť spotrebiteľa ochrany kogentných noriem práva jeho obvyklého pobytu; inak je doložka nekalá.",
+            "wrong": "Nesprávne. Voľba práva má pri spotrebiteľoch limity (čl. 6 Rím I)."
           },
-          "source": "ECLI:EU:C:2013:568"
+          "source": "ECLI:EU:C:2016:612 (C‑191/15 Verein für Konsumenteninformation v Amazon)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2010:40; ECLI:EU:C:2015:802; ECLI:EU:C:2013:568; nariadenia Rím I a Rím II",
+    "citation": "ECLI:EU:C:2009:617; ECLI:EU:C:2015:802; ECLI:EU:C:2016:612; nariadenie (ES) č. 593/2008 (Rím I); nariadenie (ES) č. 864/2007 (Rím II)",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Rozhodné právo v záväzkoch (Rím I a Rím II)",
+    "branches": [
+      {
+        "label": "Rím I – nariadenie (ES) č. 593/2008",
+        "leaves": [
+          "Zmluvné záväzky",
+          "Voľba práva stranami (čl. 3)",
+          "Bez voľby – kolízne kritériá podľa čl. 4",
+          "Korekcia zjavne užším spojením (ICF)",
+          "Imperatívne normy a výhrada verejného poriadku"
+        ]
+      },
+      {
+        "label": "Ochrana slabšej strany",
+        "leaves": [
+          "Spotrebiteľské zmluvy – čl. 6",
+          "Voľba práva nesmie zbaviť ochrany kogentných noriem obvyklého pobytu (VKI v Amazon)",
+          "Individuálne pracovné zmluvy",
+          "Poistné zmluvy"
+        ]
+      },
+      {
+        "label": "Rím II – nariadenie (ES) č. 864/2007",
+        "leaves": [
+          "Mimozmluvné záväzky",
+          "Základ – miesto vzniku priamej škody, lex loci damni (čl. 4 ods. 1)",
+          "Nerozhoduje miesto konania ani nepriame následky (Lazar)",
+          "Spoločný obvyklý pobyt strán",
+          "Úniková doložka zjavne užšieho spojenia"
+        ]
+      },
+      {
+        "label": "Osobitné delikty (Rím II)",
+        "leaves": [
+          "Zodpovednosť za výrobok",
+          "Nekalá súťaž a obmedzovanie hospodárskej súťaže",
+          "Škoda na životnom prostredí",
+          "Porušenie práv duševného vlastníctva"
+        ]
+      },
+      {
+        "label": "Univerzálna povaha",
+        "leaves": [
+          "Určené právo sa uplatní aj vtedy, ak ide o právo tretieho štátu",
+          "Nezávisí od členstva štátu v Únii",
+          "Nariadenia nahradili Rímsky dohovor z roku 1980"
+        ]
+      }
+    ]
   }
 }
