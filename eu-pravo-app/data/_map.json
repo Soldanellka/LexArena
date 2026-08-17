@@ -39,6 +39,7 @@
     { "from": 26, "to": 29, "note": "Vnútorný trh × voľný pohyb osôb" },
     { "from": 26, "to": 30, "note": "Vnútorný trh × sloboda usadzovania a služby" },
     { "from": 26, "to": 31, "note": "Vnútorný trh × voľný pohyb kapitálu" },
+    { "from": 27, "to": 30, "note": "Voľný pohyb tovaru × voľný pohyb služieb" },
     { "from": 28, "to": 29, "note": "Pracovníci × osoby a občianstvo Únie" },
     { "from": 32, "to": 33, "note": "Brusel Ia – príslušnosť × uznanie a výkon" },
     { "from": 32, "to": 34, "note": "Príslušnosť × európske procesné nástroje" },

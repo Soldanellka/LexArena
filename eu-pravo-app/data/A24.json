@@ -76,7 +76,7 @@
           "question": "Organizácia poľnohospodárov napadla nariadenie, ale nebolo jasné, či je priamo dotknutá.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2002:197 (C‑50/00 P UPA)"
+          "source": "ECLI:EU:C:2002:462 (C‑50/00 P UPA)"
         },
         {
           "question": "Ako Súdny dvor rozhodol o prístupe jednotlivcov k súdu?",
@@ -90,19 +90,19 @@
             "correct": "Súdny dvor potvrdil obmedzenú legitimáciu podľa Plaumann.",
             "wrong": "Nesprávne. Legitimácia nie je široká."
           },
-          "source": "ECLI:EU:C:2002:197"
+          "source": "ECLI:EU:C:2002:462"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Dorsch Consult: konanie o nečinnosť",
+      "title": "Prípad 3 – T. Port: konanie o nečinnosť",
       "difficulty": "stredná",
       "steps": [
         {
           "question": "Inštitúcia EÚ nekonala napriek povinnosti rozhodnúť o žiadosti.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1997:413 (C‑68/95 Dorsch Consult)"
+          "source": "ECLI:EU:C:1996:452 (C‑68/95 T. Port)"
         },
         {
           "question": "Ako Súdny dvor rozhodol o nečinnosti?",
@@ -116,14 +116,14 @@
             "correct": "Súdny dvor rozhodol, že inštitúcia môže byť žalovaná za nečinnosť podľa čl. 265 ZFEÚ.",
             "wrong": "Nesprávne. Nečinnosť je žalovateľná."
           },
-          "source": "ECLI:EU:C:1997:413"
+          "source": "ECLI:EU:C:1996:452"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1963:17; ECLI:EU:C:2002:197; ECLI:EU:C:1997:413; čl. 263 – 265 ZFEÚ",
+    "citation": "ECLI:EU:C:1963:17; ECLI:EU:C:2002:462; ECLI:EU:C:1996:452; čl. 263 – 266 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }

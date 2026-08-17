@@ -4,34 +4,44 @@
   "summary": "Voľný pohyb tovarov je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 28 – 37 ZFEÚ. Cieľom je odstrániť prekážky obchodu medzi členskými štátmi a zabezpečiť voľný pohyb tovarov bez colných bariér, kvantitatívnych obmedzení a opatrení s rovnocenným účinkom.\n\nTovarom je každý výrobok, ktorý má peňažnú hodnotu a môže byť predmetom obchodnej transakcie (Komisia v. Taliansko – umelecké diela). Voľný pohyb tovarov zahŕňa zákaz ciel, zákaz vývozných a dovozných obmedzení, zákaz opatrení s rovnocenným účinkom (Dassonville) a zásadu vzájomného uznávania (Cassis de Dijon).\n\nPôsobnosť voľného pohybu tovarov sa vzťahuje na všetky opatrenia členských štátov, ktoré môžu priamo alebo nepriamo, skutočne alebo potenciálne obmedziť obchod medzi členskými štátmi. Zahŕňa aj pravidlá týkajúce sa predajných modalít (Keck), ak majú diskriminačný alebo neprimeraný účinok.\n\nPrípustné obmedzenia sú taxatívne uvedené v čl. 36 ZFEÚ (verejná morálka, verejný poriadok, verejná bezpečnosť, ochrana zdravia a života ľudí, zvierat a rastlín, ochrana národných pokladov, ochrana priemyselného a obchodného vlastníctva). Okrem toho existujú tzv. naliehavé požiadavky všeobecného záujmu (rule of reason) podľa Cassis de Dijon – ochrana spotrebiteľa, spravodlivý obchod, účinný daňový dohľad.\n\nObmedzenia musia byť nediskriminačné, odôvodnené legitímnym cieľom a primerané. Súdny dvor EÚ rozvinul test proporcionality v rozsudkoch Cassis de Dijon, Keck, Komisia v. Taliansko a ďalších.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje voľný pohyb tovarov?",
-      "options": ["Čl. 28 – 37 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 56 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Voľný pohyb tovarov je upravený v čl. 28 – 37 ZFEÚ."
-    },
-    {
-      "q": "Ktorý rozsudok zaviedol zásadu vzájomného uznávania?",
-      "options": ["Cassis de Dijon", "Dassonville", "Keck", "Gebhard"],
-      "correct": 0,
-      "explanation": "Zásada vzájomného uznávania pochádza z Cassis de Dijon."
-    },
-    {
-      "q": "Čo je tovar podľa práva EÚ?",
-      "options": ["Len fyzické výrobky", "Každý výrobok s peňažnou hodnotou", "Len potraviny", "Len priemyselné výrobky"],
+      "q": "Voľný pohyb tovaru upravuje:",
+      "options": ["čl. 45 ZFEÚ", "čl. 28 – 37 ZFEÚ", "čl. 56 ZFEÚ", "čl. 63 ZFEÚ"],
       "correct": 1,
-      "explanation": "Tovar je každý výrobok s peňažnou hodnotou."
+      "explanation": "Čl. 28 – 37 ZFEÚ: colná únia (28 – 30) a zákaz množstevných obmedzení a opatrení s rovnocenným účinkom (34 – 35). Čl. 45 sú pracovníci, čl. 56 služby a čl. 63 kapitál."
     },
     {
-      "q": "Ktorý rozsudok upravuje opatrenia s rovnocenným účinkom?",
-      "options": ["Dassonville", "Keck", "Cassis de Dijon", "Simmenthal"],
-      "correct": 0,
-      "explanation": "Dassonville upravuje opatrenia s rovnocenným účinkom."
+      "q": "Opatrenie s rovnocenným účinkom definoval rozsudok:",
+      "options": ["Cassis", "Dassonville", "Keck", "Gebhard"],
+      "correct": 1,
+      "explanation": "Dassonvillova formula (8/74). Cassis priniesol vzájomné uznávanie a Keck vyňal nediskriminačné predajné modality."
     },
     {
-      "q": "Ktorý článok upravuje prípustné obmedzenia voľného pohybu tovarov?",
-      "options": ["Čl. 36 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 101 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Čl. 36 ZFEÚ upravuje prípustné obmedzenia."
+      "q": "Predajné modality (spôsob predaja) nespadajú pod čl. 34, ak:",
+      "options": [
+        "sa týkajú len dovozu",
+        "sa uplatňujú na všetkých obchodníkov a rovnako na domáce i dovezené výrobky (Keck)",
+        "sú upravené v zákone",
+        "nikdy – vždy spadajú pod čl. 34"
+      ],
+      "correct": 1,
+      "explanation": "Keck: podmienkou je uplatnenie na všetkých dotknutých obchodníkov a rovnaký dopad právne aj fakticky na domáce i dovezené výrobky."
+    },
+    {
+      "q": "Výnimky z voľného pohybu tovaru v čl. 36 ZFEÚ sú:",
+      "options": ["demonštratívne", "taxatívne", "neobmedzené", "žiadne"],
+      "correct": 1,
+      "explanation": "Čl. 36 vymenúva dôvody taxatívne: verejná morálka, poriadok, bezpečnosť, zdravie, národné poklady a priemyselné či obchodné vlastníctvo. Vykladá sa reštriktívne."
+    },
+    {
+      "q": "Tovarom je:",
+      "options": [
+        "len hmotný predmet poskytnutý zadarmo",
+        "výrobok oceniteľný v peniazoch, ktorý môže byť predmetom obchodných transakcií",
+        "len potraviny",
+        "len výrobky pochádzajúce z EÚ"
+      ],
+      "correct": 1,
+      "explanation": "Definícia z rozsudku 7/68 Komisia v Taliansko. Pod pojem patria aj umelecké a historické predmety."
     }
   ],
   "tiles": [
@@ -43,88 +53,143 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Dassonville: opatrenia s rovnocenným účinkom",
+      "title": "Prípad 1 – Komisia v. Taliansko: pojem tovaru",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Belgicko vyžadovalo certifikát pôvodu pre dovoz whisky zo zahraničia.",
+          "question": "Taliansko zdaňovalo vývoz umeleckých a historických predmetov; sporné bolo, či sú takéto predmety „tovarom“.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1974:82 (C‑8/74 Dassonville)"
+          "source": "ECLI:EU:C:1968:51 (7/68 Komisia v Taliansko)"
         },
         {
-          "question": "Ako Súdny dvor definoval opatrenia s rovnocenným účinkom?",
+          "question": "Sú umelecké predmety tovarom v zmysle práva EÚ?",
           "options": [
-            "Len priame obmedzenia obchodu",
-            "Všetky opatrenia, ktoré môžu priamo alebo nepriamo obmedziť obchod",
-            "Len colné opatrenia"
+            "Nie, umenie nie je tovar",
+            "Áno, tovarom je každý výrobok oceniteľný v peniazoch, ktorý môže byť predmetom obchodných transakcií",
+            "Len ak ich vyrobil podnik"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor definoval opatrenia veľmi široko – všetky opatrenia, ktoré môžu obmedziť obchod.",
-            "wrong": "Nesprávne. Opatrenia môžu byť aj nepriame."
+            "correct": "Tovarom je akýkoľvek výrobok oceniteľný v peniazoch spôsobilý byť predmetom obchodu – vrátane umeleckých predmetov.",
+            "wrong": "Nesprávne. Aj umelecké predmety sú tovarom."
           },
-          "source": "ECLI:EU:C:1974:82"
+          "source": "ECLI:EU:C:1968:51 (7/68 Komisia v Taliansko)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Cassis de Dijon: vzájomné uznávanie a rule of reason",
+      "title": "Prípad 2 – Dassonville: opatrenie s rovnocenným účinkom",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Nemecko odmietlo dovoz francúzskeho likéru pre nesplnenie vnútroštátnych požiadaviek.",
+          "question": "Belgické pravidlo vyžadovalo pri dovoze osvedčenie pôvodu, ktoré bolo pre paralelných dovozcov ťažko dostupné.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1979:42 (C‑120/78 Cassis de Dijon)"
+          "source": "ECLI:EU:C:1974:82 (8/74 Dassonville)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o voľnom pohybe tovarov?",
+          "question": "Čo je opatrenie s rovnocenným účinkom?",
           "options": [
-            "Členské štáty môžu odmietnuť akýkoľvek tovar",
-            "Tovar legálne vyrobený v jednom štáte musí byť uznaný v druhom",
-            "Vzájomné uznávanie neexistuje"
+            "Len úplný zákaz dovozu",
+            "Každé opatrenie štátu, ktoré môže priamo alebo nepriamo, skutočne alebo potenciálne obmedziť obchod medzi členskými štátmi",
+            "Len clo"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor zaviedol zásadu vzájomného uznávania a rule of reason.",
-            "wrong": "Nesprávne. Vnútroštátne požiadavky nesmú byť skrytými obmedzeniami."
+            "correct": "Dassonvillova formula: MEQR je každé opatrenie spôsobilé priamo/nepriamo, skutočne/potenciálne obmedziť obchod.",
+            "wrong": "Nesprávne. Pojem je široký, nie len úplný zákaz."
           },
-          "source": "ECLI:EU:C:1979:42"
+          "source": "ECLI:EU:C:1974:82 (8/74 Dassonville)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Komisia v. Taliansko: definícia tovaru",
+      "title": "Prípad 3 – Keck: predajné modality",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Taliansko zakázalo vývoz umeleckých diel ako národných pokladov.",
+          "question": "Francúzske pravidlo zakazovalo predaj so stratou. Predajcovia sa dovolávali voľného pohybu tovaru.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1968:51 (C‑7/68 Komisia v. Taliansko)"
+          "source": "ECLI:EU:C:1993:905 (C‑267/91 a C‑268/91 Keck a Mithouard)"
         },
         {
-          "question": "Ako Súdny dvor definoval tovar?",
+          "question": "Spadajú pravidlá o spôsobe predaja pod čl. 34?",
           "options": [
-            "Len priemyselné výrobky",
-            "Každý výrobok s peňažnou hodnotou",
-            "Len potraviny"
+            "Áno, vždy",
+            "Nie, ak sa „predajné modality“ uplatňujú na všetkých obchodníkov a rovnako právne aj fakticky na domáce i dovezené výrobky",
+            "Áno, ak sa týkajú ceny"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Tovar je každý výrobok, ktorý má peňažnú hodnotu a môže byť predmetom obchodnej transakcie.",
-            "wrong": "Nesprávne. Tovar zahŕňa aj umelecké diela."
+            "correct": "Keck: nediskriminačné predajné modality nespadajú pod čl. 34 (na rozdiel od pravidiel o samotnom výrobku).",
+            "wrong": "Nesprávne. Nediskriminačné predajné modality sú mimo čl. 34."
           },
-          "source": "ECLI:EU:C:1968:51"
+          "source": "ECLI:EU:C:1993:905 (C‑267/91 a C‑268/91 Keck a Mithouard)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1974:82; ECLI:EU:C:1979:42; ECLI:EU:C:1968:51; čl. 28 – 37 ZFEÚ",
+    "citation": "ECLI:EU:C:1968:51; ECLI:EU:C:1974:82; ECLI:EU:C:1993:905; čl. 28 – 37 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Voľný pohyb tovaru",
+    "branches": [
+      {
+        "label": "Právna úprava",
+        "leaves": [
+          "Čl. 28 – 37 ZFEÚ",
+          "Colná únia – čl. 28 – 30 ZFEÚ",
+          "Zákaz množstevných obmedzení a opatrení s rovnocenným účinkom – čl. 34 – 35 ZFEÚ"
+        ]
+      },
+      {
+        "label": "Pojem tovaru",
+        "leaves": [
+          "Výrobok oceniteľný v peniazoch",
+          "Spôsobilý byť predmetom obchodných transakcií",
+          "Aj umelecké a historické predmety (7/68 Komisia v Taliansko)"
+        ]
+      },
+      {
+        "label": "Opatrenie s rovnocenným účinkom",
+        "leaves": [
+          "Dassonvillova formula",
+          "Priamo alebo nepriamo",
+          "Skutočne alebo potenciálne obmedzuje obchod"
+        ]
+      },
+      {
+        "label": "Vzájomné uznávanie",
+        "leaves": [
+          "Cassis de Dijon",
+          "Tovar legálne uvedený na trh v jednom štáte je v zásade prípustný aj inde",
+          "Rule of reason – naliehavé požiadavky všeobecného záujmu"
+        ]
+      },
+      {
+        "label": "Predajné modality",
+        "leaves": [
+          "Keck a Mithouard",
+          "Mimo čl. 34, ak sa uplatňujú na všetkých obchodníkov",
+          "Rovnaký dopad právne aj fakticky na domáce i dovezené výrobky"
+        ]
+      },
+      {
+        "label": "Výnimky čl. 36 ZFEÚ (taxatívne)",
+        "leaves": [
+          "Verejná morálka, poriadok a bezpečnosť",
+          "Ochrana zdravia a života ľudí, zvierat a rastlín",
+          "Ochrana národného kultúrneho pokladu",
+          "Ochrana priemyselného a obchodného vlastníctva",
+          "Nesmú byť prostriedkom svojvoľnej diskriminácie"
+        ]
+      }
+    ]
   }
 }

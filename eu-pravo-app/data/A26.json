@@ -4,34 +4,39 @@
   "summary": "Európska integrácia prechádza viacerými stupňami: zóna voľného obchodu, colná únia, spoločný trh, vnútorný trh, hospodárska a menová únia. Vnútorný trh EÚ je najpokročilejšou formou ekonomickej integrácie pred vznikom hospodárskej a menovej únie.\n\nVnútorný trh EÚ je definovaný v čl. 26 ZFEÚ ako priestor bez vnútorných hraníc, v ktorom je zabezpečený voľný pohyb tovaru, osôb, služieb a kapitálu. Základnými zásadami sú zákaz diskriminácie, zákaz kvantitatívnych obmedzení, zákaz opatrení s rovnocenným účinkom a zásada vzájomného uznávania (Cassis de Dijon).\n\nObmedzenia vnútorného trhu sú prípustné len výnimočne – ak sú odôvodnené verejným záujmom, sú primerané, nevyhnutné a nediskriminačné. Medzi prípustné obmedzenia patria dôvody verejného poriadku, verejnej bezpečnosti, ochrany zdravia, ochrany spotrebiteľa, ochrany životného prostredia a naliehavé požiadavky všeobecného záujmu (rule of reason).\n\nJudikatúra Súdneho dvora EÚ rozvinula zásadu vzájomného uznávania, zákaz skrytých obmedzení a test proporcionality, najmä v rozsudkoch Cassis de Dijon, Keck, Gebhard a Alpine Investments.",
   "quiz": [
     {
-      "q": "Ktorý článok definuje vnútorný trh EÚ?",
-      "options": ["Čl. 26 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 45 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Vnútorný trh je definovaný v čl. 26 ZFEÚ."
+      "q": "Najpokročilejším stupňom ekonomickej integrácie pred hospodárskou a menovou úniou je:",
+      "options": ["colná únia", "vnútorný trh", "zóna voľného obchodu", "spoločný colný sadzobník"],
+      "correct": 1,
+      "explanation": "Poradie je: zóna voľného obchodu → colná únia → spoločný/vnútorný trh → HMÚ. Spoločný colný sadzobník nie je samostatný stupeň, je znakom colnej únie."
     },
     {
-      "q": "Ktorý rozsudok zaviedol zásadu vzájomného uznávania?",
-      "options": ["Cassis de Dijon", "Keck", "Gebhard", "Costa/ENEL"],
-      "correct": 0,
-      "explanation": "Zásada vzájomného uznávania pochádza z Cassis de Dijon."
+      "q": "Vnútorný trh definuje:",
+      "options": ["čl. 3 ZEÚ", "čl. 26 ZFEÚ", "čl. 45 ZFEÚ", "čl. 2 ZEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 26 ZFEÚ vymedzuje vnútorný trh ako priestor bez vnútorných hraníc so štyrmi slobodami. Čl. 45 je voľný pohyb pracovníkov, čl. 2 a 3 ZEÚ hodnoty a ciele Únie."
     },
     {
-      "q": "Ktorý stupeň integrácie je najpokročilejší pred vznikom hospodárskej a menovej únie?",
-      "options": ["Zóna voľného obchodu", "Colná únia", "Vnútorný trh", "Spoločná poľnohospodárska politika"],
-      "correct": 2,
-      "explanation": "Vnútorný trh je najpokročilejšia forma ekonomickej integrácie pred HMÚ."
+      "q": "Zásadu vzájomného uznávania zaviedol rozsudok:",
+      "options": ["Dassonville", "Cassis de Dijon", "Keck", "Gebhard"],
+      "correct": 1,
+      "explanation": "Cassis de Dijon (120/78). Dassonville definoval opatrenie s rovnocenným účinkom, Keck predajné modality a Gebhard test obmedzení."
     },
     {
-      "q": "Ktorý rozsudok rozlišuje medzi predajnými a obchodnými modalitami?",
-      "options": ["Keck", "Cassis de Dijon", "Gebhard", "Alpine Investments"],
-      "correct": 0,
-      "explanation": "Rozsudok Keck zaviedol toto rozlíšenie."
+      "q": "Naliehavé požiadavky všeobecného záujmu (rule of reason) môžu odôvodniť:",
+      "options": [
+        "aj diskriminačné opatrenia",
+        "len nediskriminačné (rovnako uplatniteľné) opatrenia",
+        "akékoľvek opatrenia",
+        "nič"
+      ],
+      "correct": 1,
+      "explanation": "Rule of reason pokrýva len rovnako uplatniteľné opatrenia. Diskriminačné opatrenie možno ospravedlniť výlučne zmluvnou výnimkou (napr. čl. 36 ZFEÚ)."
     },
     {
-      "q": "Ktorý rozsudok upravuje test proporcionality pri slobode usadiť sa?",
-      "options": ["Gebhard", "Keck", "Cassis de Dijon", "Simmenthal"],
-      "correct": 0,
-      "explanation": "Gebhard upravuje test proporcionality pri slobode usadiť sa."
+      "q": "Test podmienok pre obmedzenie slobody (nediskriminácia, naliehavý dôvod, vhodnosť, nevyhnutnosť) pochádza z rozsudku:",
+      "options": ["Cassis", "Gebhard", "Van Gend", "Plaumann"],
+      "correct": 1,
+      "explanation": "Gebhard (C‑55/94) sformuloval štyri podmienky. Van Gend je priamy účinok a Plaumann aktívna legitimácia jednotlivcov."
     }
   ],
   "tiles": [
@@ -43,88 +48,130 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Cassis de Dijon: zásada vzájomného uznávania",
+      "title": "Prípad 1 – Cassis de Dijon: vzájomné uznávanie",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Nemecko odmietlo dovoz francúzskeho likéru pre nesplnenie vnútroštátnych požiadaviek na obsah alkoholu.",
+          "question": "Nemecko zakázalo predaj francúzskeho likéru s nižším obsahom alkoholu, než vyžadovali nemecké pravidlá, hoci bol legálne vyrobený vo Francúzsku.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1979:42 (C‑120/78 Cassis de Dijon)"
+          "source": "ECLI:EU:C:1979:42 (120/78 Cassis de Dijon)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o voľnom pohybe tovaru?",
+          "question": "Ako Súdny dvor posúdil takú prekážku?",
           "options": [
-            "Členské štáty môžu odmietnuť akýkoľvek tovar",
-            "Tovar legálne vyrobený v jednom štáte musí byť uznaný v druhom",
-            "Vzájomné uznávanie neexistuje"
+            "Štát môže voľne určiť vlastné požiadavky na výrobky",
+            "Tovar legálne vyrobený a uvedený na trh v jednom štáte má byť v zásade prípustný aj v ostatných; prekážku možno odôvodniť len naliehavou požiadavkou a musí byť primeraná",
+            "Zákaz je vždy dovolený"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor zaviedol zásadu vzájomného uznávania.",
-            "wrong": "Nesprávne. Vnútroštátne požiadavky nesmú byť skrytými obmedzeniami."
+            "correct": "Zásada vzájomného uznávania: prekážku možno ospravedlniť len naliehavou požiadavkou (rule of reason) a musí byť primeraná.",
+            "wrong": "Nesprávne. Štát nemôže voľne blokovať legálne vyrobený tovar z iného štátu."
           },
-          "source": "ECLI:EU:C:1979:42"
+          "source": "ECLI:EU:C:1979:42 (120/78 Cassis de Dijon)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Keck: predajné modality",
+      "title": "Prípad 2 – Gebhard: test obmedzení, usadenie vs. služby",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Francúzsko zakázalo predaj tovaru pod nákupnú cenu.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:1993:905 (C‑267/91 a C‑268/91 Keck)"
-        },
-        {
-          "question": "Ako Súdny dvor rozlíšil obmedzenia?",
-          "options": [
-            "Všetky obmedzenia sú zakázané",
-            "Predajné modality nie sú obmedzeniami, ak sa uplatňujú rovnako na všetkých",
-            "Predajné modality sú vždy zakázané"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Predajné modality nie sú obmedzeniami, ak sa uplatňujú rovnako na všetkých obchodníkov.",
-            "wrong": "Nesprávne. Nie všetky modality sú zakázané."
-          },
-          "source": "ECLI:EU:C:1993:905"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 3 – Gebhard: test proporcionality pri slobode usadiť sa",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Talianske orgány obmedzili činnosť nemeckého právnika pôsobiaceho v Taliansku.",
+          "question": "Nemecký advokát trvalo pôsobil v Taliansku pod titulom „avvocato“; sporné bolo, či ide o usadenie alebo služby a či talianske obmedzenie obstojí.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1995:411 (C‑55/94 Gebhard)"
         },
         {
-          "question": "Ako Súdny dvor upravil test proporcionality?",
+          "question": "Aké podmienky musí spĺňať vnútroštátne obmedzenie slobody?",
           "options": [
-            "Obmedzenia sú vždy zakázané",
-            "Obmedzenia musia byť nediskriminačné, odôvodnené a primerané",
-            "Obmedzenia nemusia byť odôvodnené"
+            "Žiadne, štát rozhoduje voľne",
+            "Musí byť nediskriminačné, odôvodnené naliehavým dôvodom všeobecného záujmu, vhodné a nesmie ísť nad rámec nevyhnutného",
+            "Stačí, aby bolo v zákone"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor stanovil, že obmedzenia musia byť nediskriminačné, odôvodnené a primerané.",
-            "wrong": "Nesprávne. Obmedzenia musia byť odôvodnené verejným záujmom."
+            "correct": "Gebhardov test: obmedzenie musí byť nediskriminačné, odôvodnené naliehavým dôvodom, vhodné a primerané; trvalá činnosť = usadenie, dočasná = služby.",
+            "wrong": "Nesprávne. Obmedzenie musí prejsť testom štyroch podmienok."
           },
-          "source": "ECLI:EU:C:1995:411"
+          "source": "ECLI:EU:C:1995:411 (C‑55/94 Gebhard)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Stupne integrácie a vnútorný trh",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Skupina štátov najprv zruší clá medzi sebou, potom zavedie spoločný colný sadzobník voči tretím štátom a napokon aj voľný pohyb osôb, služieb a kapitálu.",
+          "options": [],
+          "correct": 0,
+          "source": "čl. 26 ZFEÚ"
+        },
+        {
+          "question": "Ktoré poradie stupňov integrácie je správne?",
+          "options": [
+            "Vnútorný trh → colná únia → zóna voľného obchodu",
+            "Zóna voľného obchodu → colná únia → spoločný/vnútorný trh → hospodárska a menová únia",
+            "Colná únia → zóna voľného obchodu → HMÚ"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Integrácia postupuje: zóna voľného obchodu → colná únia → spoločný/vnútorný trh (štyri slobody) → hospodárska a menová únia.",
+            "wrong": "Nesprávne. Poradie je od zóny voľného obchodu po HMÚ."
+          },
+          "source": "čl. 26 ZFEÚ"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1979:42; ECLI:EU:C:1993:905; ECLI:EU:C:1995:411; čl. 26 ZFEÚ",
+    "citation": "ECLI:EU:C:1979:42; ECLI:EU:C:1995:411; čl. 26 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Stupne integrácie a vnútorný trh",
+    "branches": [
+      {
+        "label": "Stupne integrácie",
+        "leaves": [
+          "Zóna voľného obchodu",
+          "Colná únia",
+          "Spoločný trh",
+          "Vnútorný trh",
+          "Hospodárska a menová únia"
+        ]
+      },
+      {
+        "label": "Vnútorný trh (čl. 26 ZFEÚ)",
+        "leaves": [
+          "Priestor bez vnútorných hraníc",
+          "Voľný pohyb tovaru",
+          "Voľný pohyb osôb",
+          "Voľný pohyb služieb",
+          "Voľný pohyb kapitálu"
+        ]
+      },
+      {
+        "label": "Základ",
+        "leaves": [
+          "Zákaz diskriminácie",
+          "Zákaz kvantitatívnych obmedzení a opatrení s rovnocenným účinkom",
+          "Vzájomné uznávanie (Cassis de Dijon)"
+        ]
+      },
+      {
+        "label": "Obmedzenia",
+        "leaves": [
+          "Zmluvné výnimky – aj voči diskriminačným opatreniam",
+          "Naliehavé požiadavky / rule of reason – len nediskriminačné opatrenia",
+          "Vždy vhodné a primerané",
+          "Gebhardov test štyroch podmienok"
+        ]
+      }
+    ]
   }
 }

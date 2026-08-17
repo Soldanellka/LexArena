@@ -76,7 +76,7 @@
           "question": "Grécko neodstránilo nelegálnu skládku odpadu napriek rozsudku Súdneho dvora.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2008:712 (C‑121/07 Komisia v. Grécko)"
+          "source": "ECLI:EU:C:2000:356 (C‑387/97 Komisia v Grécko)"
         },
         {
           "question": "Ako Súdny dvor rozhodol o dôsledkoch nesplnenia rozsudku?",
@@ -90,7 +90,7 @@
             "correct": "Súdny dvor uložil Grécku penále za každý deň omeškania.",
             "wrong": "Nesprávne. Sankcie sú bežným nástrojom pri nesplnení rozsudku."
           },
-          "source": "ECLI:EU:C:2008:712"
+          "source": "ECLI:EU:C:2000:356"
         }
       ]
     },
@@ -123,7 +123,7 @@
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2005:444; ECLI:EU:C:2008:712; ECLI:EU:C:1991:428; čl. 258 – 260 ZFEÚ",
+    "citation": "ECLI:EU:C:2005:444; ECLI:EU:C:2000:356; ECLI:EU:C:1991:428; čl. 258 – 260 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
   }
