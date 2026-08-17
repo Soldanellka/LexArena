@@ -4,34 +4,44 @@
   "summary": "Voľný pohyb kapitálu a platieb je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 63 – 66 ZFEÚ. Zahŕňa zákaz všetkých obmedzení pohybu kapitálu medzi členskými štátmi a tretími krajinami, ako aj zákaz obmedzení platieb. Kapitál zahŕňa investície, nákup nehnuteľností, prevody peňazí, finančné operácie, bankové služby a portfóliové investície.\n\nVoľný pohyb kapitálu má širokú pôsobnosť – vzťahuje sa na fyzické aj právnické osoby, členské štáty aj tretie krajiny. Obmedzenia sú prípustné len výnimočne: z dôvodov verejného poriadku, verejnej bezpečnosti, daňového dohľadu, boja proti praniu špinavých peňazí alebo pri makroekonomických krízach (čl. 65 – 66 ZFEÚ). Obmedzenia musia byť primerané a nediskriminačné.\n\nEurópska hospodárska a menová únia (HMÚ) je najpokročilejším stupňom ekonomickej integrácie. Je upravená v čl. 119 – 144 ZFEÚ. Zahŕňa koordináciu hospodárskych politík, jednotnú menovú politiku, nezávislosť Európskej centrálnej banky (ECB), stabilitu cien a spoločnú menu euro. Členské štáty musia spĺňať konvergenčné kritériá (Maastrichtské kritériá): cenová stabilita, verejné financie, stabilita výmenného kurzu a dlhodobé úrokové sadzby.\n\nJudikatúra Súdneho dvora EÚ potvrdzuje široký rozsah voľného pohybu kapitálu, prípustné obmedzenia a zásady HMÚ, najmä v rozsudkoch Sanz de Lera, Trummer a Mayer, Pringle a Gauweiler.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje voľný pohyb kapitálu?",
-      "options": ["Čl. 63 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 56 ZFEÚ", "Čl. 28 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Voľný pohyb kapitálu je upravený v čl. 63 ZFEÚ."
+      "q": "Voľný pohyb kapitálu je jedinou slobodou, ktorá sa vzťahuje aj na:",
+      "options": [
+        "len na eurozónu",
+        "vzťahy s tretími krajinami",
+        "len na pohyb tovaru",
+        "len na poskytovanie služieb"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 63 ZFEÚ zakazuje obmedzenia pohybu kapitálu aj medzi členskými štátmi a tretími krajinami – s výhradami podľa čl. 64 a 65."
     },
     {
-      "q": "Ktorý rozsudok upravuje zákaz obmedzení kapitálu?",
-      "options": ["Sanz de Lera", "Keck", "Gebhard", "Costa/ENEL"],
-      "correct": 0,
-      "explanation": "Sanz de Lera upravuje zákaz obmedzení kapitálu."
+      "q": "Priamy účinok voľného pohybu kapitálu potvrdil rozsudok:",
+      "options": ["Trummer a Mayer", "Sanz de Lera", "Gauweiler", "Pringle"],
+      "correct": 1,
+      "explanation": "Sanz de Lera (C‑163/94 a spol.): zákaz obmedzení je dostatočne jasný a bezpodmienečný, a to aj voči tretím krajinám."
     },
     {
-      "q": "Čo je súčasťou hospodárskej a menovej únie?",
-      "options": ["Jednotná menová politika a euro", "Len colná únia", "Len voľný pohyb osôb", "Len spoločná poľnohospodárska politika"],
-      "correct": 0,
-      "explanation": "HMÚ zahŕňa jednotnú menovú politiku a euro."
+      "q": "Hospodársku a menovú úniu upravujú:",
+      "options": ["čl. 63 – 66 ZFEÚ", "čl. 119 – 144 ZFEÚ", "čl. 45 ZFEÚ", "čl. 2 ZEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 119 – 144 ZFEÚ: koordinácia hospodárskych politík, jednotná menová politika a nezávislá ECB. Čl. 63 – 66 je kapitál."
     },
     {
-      "q": "Ktorý rozsudok potvrdil právny rámec eurozóny?",
-      "options": ["Pringle", "Dassonville", "UPA", "Simmenthal"],
-      "correct": 0,
-      "explanation": "Pringle potvrdil právny rámec eurozóny a ESM."
+      "q": "Medzi maastrichtské konvergenčné kritériá NEpatrí:",
+      "options": [
+        "cenová stabilita",
+        "deficit verejných financií do 3 % HDP",
+        "stabilita výmenného kurzu",
+        "minimálny počet obyvateľov štátu"
+      ],
+      "correct": 3,
+      "explanation": "Kritériá sú štyri: cenová stabilita, stav verejných financií (deficit do 3 % a dlh do 60 % HDP), stabilita kurzu a dlhodobé úrokové sadzby."
     },
     {
-      "q": "Ktorý článok umožňuje výnimočné obmedzenia kapitálu pri krízach?",
-      "options": ["Čl. 66 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 21 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Čl. 66 ZFEÚ umožňuje výnimočné obmedzenia kapitálu."
+      "q": "Program ECB na nákup dlhopisov (OMT) posudzoval rozsudok:",
+      "options": ["Pringle", "Gauweiler", "Sanz de Lera", "Costa v. ENEL"],
+      "correct": 1,
+      "explanation": "Gauweiler (C‑62/14). Pringle sa týkal Európskeho mechanizmu pre stabilitu a zjednodušenej revízie čl. 136 ZFEÚ."
     }
   ],
   "tiles": [
@@ -43,88 +53,130 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Sanz de Lera: zákaz obmedzení kapitálu",
+      "title": "Prípad 1 – Sanz de Lera: priamy účinok voľného pohybu kapitálu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Španielsko vyžadovalo povolenie na prevod kapitálu do zahraničia.",
+          "question": "Vnútroštátne pravidlo vyžadovalo povolenie na vývoz väčšej sumy peňazí do zahraničia vrátane tretích krajín.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1995:451 (C‑163/94, C‑165/94, C‑250/94 Sanz de Lera)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o obmedzeniach kapitálu?",
+          "question": "Má zákaz obmedzení kapitálu priamy účinok, aj voči tretím krajinám?",
           "options": [
-            "Členské štáty môžu voľne obmedzovať kapitál",
-            "Obmedzenia sú zakázané, ak nie sú odôvodnené legitímnym cieľom",
-            "Kapitál sa neuplatňuje na fyzické osoby"
+            "Nie, treba najprv vykonávacie predpisy",
+            "Áno, zákaz obmedzení pohybu kapitálu má priamy účinok a vzťahuje sa aj na pohyb voči tretím krajinám",
+            "Len medzi členskými štátmi"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že obmedzenia kapitálu sú zakázané, ak nie sú odôvodnené legitímnym cieľom.",
-            "wrong": "Nesprávne. Kapitál sa vzťahuje aj na fyzické osoby."
+            "correct": "Súdny dvor potvrdil priamy účinok zákazu obmedzení kapitálu, a to aj vo vzťahu k tretím krajinám (s výnimkami podľa zmluvy).",
+            "wrong": "Nesprávne. Priamy účinok platí a zahŕňa aj tretie krajiny."
           },
-          "source": "ECLI:EU:C:1995:451"
+          "source": "ECLI:EU:C:1995:451 (C‑163/94, C‑165/94, C‑250/94 Sanz de Lera)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Trummer a Mayer: obmedzenia pri nehnuteľnostiach",
+      "title": "Prípad 2 – Trummer a Mayer: záložné právo v cudzej mene",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Rakúsko vyžadovalo, aby hypotéky boli denominované v domácej mene.",
+          "question": "Vnútroštátne právo neumožnilo zapísať záložné právo (hypotéku) vyjadrené v cudzej mene.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1999:143 (C‑222/97 Trummer a Mayer)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o obmedzeniach kapitálu?",
+          "question": "Je také pravidlo obmedzením voľného pohybu kapitálu?",
           "options": [
-            "Obmedzenia sú prípustné bez podmienok",
-            "Obmedzenia musia byť primerané a odôvodnené",
-            "Obmedzenia sa neuplatňujú na nehnuteľnosti"
+            "Nie, ide len o vnútroštátnu formalitu",
+            "Áno, znemožnenie zabezpečenia v cudzej mene odrádza od cezhraničných investícií a je obmedzením kapitálu, ktoré treba odôvodniť",
+            "Voľný pohyb kapitálu sa hypoték netýka"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Obmedzenia musia byť primerané a odôvodnené legitímnym cieľom.",
-            "wrong": "Nesprávne. Nehnuteľnosti patria pod voľný pohyb kapitálu."
+            "correct": "Zákaz záložného práva v cudzej mene odrádza od cezhraničného pohybu kapitálu a predstavuje jeho obmedzenie.",
+            "wrong": "Nesprávne. Ide o obmedzenie voľného pohybu kapitálu."
           },
-          "source": "ECLI:EU:C:1999:143"
+          "source": "ECLI:EU:C:1999:143 (C‑222/97 Trummer a Mayer)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Pringle: právny rámec eurozóny",
+      "title": "Prípad 3 – Gauweiler: mandát ECB a program OMT",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Írsko napadlo Európsky stabilizačný mechanizmus (ESM).",
+          "question": "Namietalo sa, že program ECB na nákup štátnych dlhopisov na sekundárnom trhu (OMT) prekračuje jej menový mandát a je hospodárskou politikou.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2012:756 (C‑370/12 Pringle)"
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o ESM?",
+          "question": "Patrí program OMT do mandátu ECB?",
           "options": [
-            "ESM je v rozpore s právom EÚ",
-            "ESM je v súlade s právom EÚ a podporuje stabilitu eurozóny",
-            "Eurozóna nemá právny základ"
+            "Nie, je to hospodárska politika mimo právomocí ECB",
+            "Áno, patrí do menovej politiky ECB, ak rešpektuje proporcionalitu a zákaz menového financovania štátov (čl. 123 ZFEÚ)",
+            "ECB nemá v tejto oblasti žiadny mandát"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor potvrdil, že ESM je v súlade s právom EÚ a podporuje stabilitu eurozóny.",
-            "wrong": "Nesprávne. Eurozóna má pevný právny základ v ZFEÚ."
+            "correct": "OMT spadá do menového mandátu ECB pri dodržaní proporcionality a zákazu menového financovania.",
+            "wrong": "Nesprávne. Súdny dvor program považoval za súčasť menovej politiky ECB."
           },
-          "source": "ECLI:EU:C:2012:756"
+          "source": "ECLI:EU:C:2015:400 (C‑62/14 Gauweiler)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1995:451; ECLI:EU:C:1999:143; ECLI:EU:C:2012:756; čl. 63 – 66 ZFEÚ; čl. 119 – 144 ZFEÚ",
+    "citation": "ECLI:EU:C:1995:451; ECLI:EU:C:1999:143; ECLI:EU:C:2015:400; čl. 63 – 66 a 119 – 144 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Voľný pohyb kapitálu a platieb a hospodárska a menová únia",
+    "branches": [
+      {
+        "label": "Kapitál (čl. 63 – 66 ZFEÚ)",
+        "leaves": [
+          "Jediná sloboda pôsobiaca aj voči tretím krajinám",
+          "Zákaz obmedzení pohybu kapitálu aj platieb",
+          "Priamy účinok (Sanz de Lera)",
+          "Záložné právo v cudzej mene (Trummer a Mayer)"
+        ]
+      },
+      {
+        "label": "Obmedzenia",
+        "leaves": [
+          "Verejný poriadok a bezpečnosť",
+          "Daňový a prudenciálny dohľad",
+          "Boj proti praniu špinavých peňazí",
+          "Doložka status quo voči tretím krajinám – čl. 64 ZFEÚ"
+        ]
+      },
+      {
+        "label": "HMÚ (čl. 119 – 144 ZFEÚ)",
+        "leaves": [
+          "Koordinácia hospodárskych politík členských štátov",
+          "Jednotná menová politika pre eurozónu",
+          "Nezávislá Európska centrálna banka",
+          "Hlavný cieľ – cenová stabilita",
+          "Euro ako jednotná mena",
+          "Maastrichtské konvergenčné kritériá"
+        ]
+      },
+      {
+        "label": "Judikatúra k ECB a stabilite",
+        "leaves": [
+          "Mandát menovej politiky a program OMT (Gauweiler)",
+          "Zákaz menového financovania štátov – čl. 123 ZFEÚ",
+          "Európsky mechanizmus pre stabilitu a zjednodušená revízia (Pringle)"
+        ]
+      }
+    ]
   }
 }

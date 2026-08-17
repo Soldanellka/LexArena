@@ -4,34 +4,54 @@
   "summary": "Voľný pohyb a pobyt osôb je jednou zo štyroch základných slobôd vnútorného trhu EÚ. Je upravený v čl. 20 – 21 ZFEÚ a v smernici 2004/38/ES. Zahŕňa právo občanov EÚ voľne sa pohybovať, vstupovať na územie členských štátov, zdržiavať sa tam, pracovať, študovať, podnikať a trvalo sa usadiť.\n\nPrávo na voľný pohyb zahŕňa: vstup do členského štátu s platným občianskym preukazom alebo pasom, pobyt do 3 mesiacov bez podmienok, pobyt nad 3 mesiace pri splnení podmienok (zamestnanie, samostatná zárobková činnosť, dostatočné prostriedky a zdravotné poistenie, štúdium), právo trvalého pobytu po 5 rokoch.\n\nPôsobnosť voľného pohybu osôb sa vzťahuje na občanov EÚ, ich rodinných príslušníkov (aj z tretích krajín), študentov, dôchodcov, uchádzačov o zamestnanie a ďalšie kategórie. Rodinní príslušníci majú odvodené práva na pobyt.\n\nPrípustné obmedzenia sú taxatívne: verejný poriadok, verejná bezpečnosť a ochrana zdravia (čl. 27 smernice 2004/38/ES). Opatrenia musia byť individuálne, primerané, založené na osobnom správaní a nesmú byť ekonomicky motivované. Vyhostenie je možné len pri skutočnom, aktuálnom a dostatočne závažnom ohrození verejného záujmu.\n\nJudikatúra Súdneho dvora EÚ rozvíja práva občanov EÚ a ich rodín, najmä v rozsudkoch Baumbast, Metock, Zhu a Chen a Tsakouridis.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje právo občanov EÚ na voľný pohyb a pobyt?",
-      "options": ["Čl. 21 ZFEÚ", "Čl. 45 ZFEÚ", "Čl. 49 ZFEÚ", "Čl. 56 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Voľný pohyb a pobyt osôb je upravený v čl. 21 ZFEÚ."
-    },
-    {
-      "q": "Ktorá smernica upravuje voľný pohyb osôb?",
-      "options": ["Smernica 2004/38/ES", "Smernica 2005/36/ES", "Smernica 2006/123/ES", "Smernica 2014/24/EÚ"],
-      "correct": 0,
-      "explanation": "Voľný pohyb osôb upravuje smernica 2004/38/ES."
-    },
-    {
-      "q": "Kto má odvodené právo na pobyt?",
-      "options": ["Len občania EÚ", "Rodinní príslušníci občanov EÚ", "Len študenti", "Len zamestnanci"],
+      "q": "Voľný pohyb a pobyt osôb je naviazaný na:",
+      "options": [
+        "len na existujúce zamestnanie",
+        "občianstvo Únie (čl. 20 – 21 ZFEÚ)",
+        "trvalý pobyt v inom štáte",
+        "štátnu príslušnosť tretej krajiny"
+      ],
       "correct": 1,
-      "explanation": "Rodinní príslušníci majú odvodené právo na pobyt."
+      "explanation": "Právo sa viaže na status občana Únie, nie na ekonomickú činnosť. Podrobnosti upravuje smernica 2004/38/ES."
     },
     {
-      "q": "Ktorý rozsudok upravuje právo na pobyt bez podmienok pre deti občanov EÚ?",
-      "options": ["Zhu a Chen", "Metock", "Baumbast", "Tsakouridis"],
-      "correct": 0,
-      "explanation": "Zhu a Chen upravuje právo na pobyt pre deti občanov EÚ."
+      "q": "Pobyt občana EÚ v inom členskom štáte do troch mesiacov je:",
+      "options": [
+        "podmienený prácou alebo štúdiom",
+        "bez ďalších podmienok, stačí platný preukaz totožnosti alebo pas",
+        "zakázaný bez povolenia",
+        "možný len so súhlasom hostiteľského štátu"
+      ],
+      "correct": 1,
+      "explanation": "Do troch mesiacov nie sú stanovené ďalšie podmienky. Nad tri mesiace treba pracovať, mať dostatočné prostriedky a poistenie alebo študovať."
     },
     {
-      "q": "Ktoré obmedzenia voľného pohybu sú prípustné?",
-      "options": ["Verejný poriadok, bezpečnosť, ochrana zdravia", "Ekonomické dôvody", "Daňové dôvody", "Ochrana trhu práce"],
-      "correct": 0,
-      "explanation": "Obmedzenia sú prípustné len z dôvodov verejného poriadku, bezpečnosti a zdravia."
+      "q": "Právo trvalého pobytu vzniká po:",
+      "options": ["jednom roku", "troch rokoch", "piatich rokoch nepretržitého legálneho pobytu", "desiatich rokoch"],
+      "correct": 2,
+      "explanation": "Po piatich rokoch podľa smernice 2004/38/ES; právo trvalého pobytu už nie je viazané na podmienky ekonomickej aktivity."
+    },
+    {
+      "q": "Rodinní príslušníci občana EÚ, ktorí sú štátnymi príslušníkmi tretích krajín:",
+      "options": [
+        "nemajú z práva EÚ žiadne práva",
+        "majú odvodené právo na pobyt (Metock)",
+        "musia požiadať o azyl",
+        "môžu byť vyhostení kedykoľvek"
+      ],
+      "correct": 1,
+      "explanation": "Metock: odvodené právo pobytu nezávisí od predchádzajúceho legálneho pobytu rodinného príslušníka v niektorom štáte EÚ."
+    },
+    {
+      "q": "Vyhostenie občana EÚ musí byť:",
+      "options": [
+        "ekonomicky motivované",
+        "založené na osobnom správaní a skutočnom, aktuálnom ohrození",
+        "automatické po odsúdení za trestný čin",
+        "možné aj bez odôvodnenia"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 27 smernice 2004/38/ES: dôvody verejného poriadku, bezpečnosti a zdravia sa posudzujú individuálne a nesmú slúžiť hospodárskym cieľom."
     }
   ],
   "tiles": [
@@ -43,88 +63,129 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Baumbast: právo na pobyt občanov EÚ",
+      "title": "Prípad 1 – Metock: rodinní príslušníci z tretích krajín",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Občan EÚ žiadal o pobyt, hoci nesplnil všetky formálne podmienky zdravotného poistenia.",
-          "options": [],
-          "correct": 0,
-          "source": "ECLI:EU:C:2002:493 (C‑413/99 Baumbast)"
-        },
-        {
-          "question": "Ako Súdny dvor rozhodol o práve na pobyt?",
-          "options": [
-            "Právo na pobyt je striktne podmienené",
-            "Právo na pobyt môže existovať aj bez splnenia všetkých podmienok",
-            "Právo na pobyt neexistuje"
-          ],
-          "correct": 1,
-          "explanation": {
-            "correct": "Súdny dvor potvrdil, že právo na pobyt môže existovať aj bez splnenia všetkých formálnych podmienok.",
-            "wrong": "Nesprávne. Právo na pobyt je základným právom občanov EÚ."
-          },
-          "source": "ECLI:EU:C:2002:493"
-        }
-      ]
-    },
-    {
-      "title": "Prípad 2 – Metock: práva rodinných príslušníkov",
-      "difficulty": "stredná",
-      "steps": [
-        {
-          "question": "Rodinní príslušníci občanov EÚ z tretích krajín žiadali o pobyt, hoci predtým nelegálne pobývali v inom členskom štáte.",
+          "question": "Manžel občianky EÚ z tretej krajiny, ktorý predtým nemal legálny pobyt v žiadnom štáte EÚ, žiadal o pobyt v štáte, kde jeho manželka žila.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2008:449 (C‑127/08 Metock)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o odvodených právach?",
+          "question": "Závisí právo pobytu rodinného príslušníka z tretej krajiny od predchádzajúceho legálneho pobytu v EÚ?",
           "options": [
-            "Rodinní príslušníci nemajú právo na pobyt",
-            "Rodinní príslušníci majú právo na pobyt bez ohľadu na predchádzajúci pobyt",
-            "Právo na pobyt závisí od ekonomickej aktivity"
+            "Áno, musí najprv legálne bývať v niektorom štáte EÚ",
+            "Nie, odvodené právo pobytu rodinného príslušníka z tretej krajiny nezávisí od predchádzajúceho legálneho pobytu v EÚ",
+            "Právo má, len ak je zamestnaný"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súdny dvor rozhodol, že rodinní príslušníci majú právo na pobyt bez ohľadu na predchádzajúci pobyt.",
-            "wrong": "Nesprávne. Právo na pobyt nie je ekonomicky podmienené."
+            "correct": "Smernica 2004/38 priznáva rodinným príslušníkom z tretích krajín odvodené právo pobytu bez podmienky predchádzajúceho legálneho pobytu v EÚ.",
+            "wrong": "Nesprávne. Predchádzajúci legálny pobyt sa nevyžaduje."
           },
-          "source": "ECLI:EU:C:2008:449"
+          "source": "ECLI:EU:C:2008:449 (C‑127/08 Metock)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Zhu a Chen: právo detí občanov EÚ na pobyt",
+      "title": "Prípad 2 – Zhu a Chen: maloletý občan a rodič",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dieťa občana EÚ žiadalo o pobyt v inom členskom štáte spolu s matkou z tretieho štátu.",
+          "question": "Maloleté dieťa – občan EÚ – malo dostatočné prostriedky a poistenie; jeho matka z tretej krajiny žiadala odvodené právo pobytu, aby sa oň mohla starať.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2004:639 (C‑200/02 Zhu a Chen)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o práve na pobyt?",
+          "question": "Má rodič z tretej krajiny odvodené právo pobytu?",
           "options": [
-            "Dieťa nemá právo na pobyt",
-            "Dieťa má právo na pobyt a matka má odvodené právo",
-            "Právo na pobyt závisí od príjmu rodičov"
+            "Nie, dieťa nemôže samo zakladať práva pre rodiča",
+            "Áno, aby právo pobytu maloletého občana EÚ malo potrebný účinok, musí mať odvodené právo pobytu aj jeho rodič – primárny opatrovník",
+            "Len ak rodič pracuje"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Dieťa občana EÚ má právo na pobyt a matka má odvodené právo na pobyt.",
-            "wrong": "Nesprávne. Právo na pobyt nie je podmienené príjmom."
+            "correct": "Právo pobytu maloletého občana EÚ by bolo bez účinku, keby jeho opatrovník nemohol s ním zostať – rodič má odvodené právo.",
+            "wrong": "Nesprávne. Rodič – opatrovník má odvodené právo pobytu."
           },
-          "source": "ECLI:EU:C:2004:639"
+          "source": "ECLI:EU:C:2004:639 (C‑200/02 Zhu a Chen)"
+        }
+      ]
+    },
+    {
+      "title": "Prípad 3 – Baumbast: právo pobytu priamo z občianstva",
+      "difficulty": "stredná",
+      "steps": [
+        {
+          "question": "Občan EÚ prestal byť migrujúcim pracovníkom, no jeho rodina žiadala zachovať právo pobytu; nespĺňal všetky formálne podmienky (poistenie kryjúce všetko).",
+          "options": [],
+          "correct": 0,
+          "source": "ECLI:EU:C:2002:493 (C‑413/99 Baumbast)"
+        },
+        {
+          "question": "Môže sa občan EÚ dovolávať práva pobytu priamo z občianstva?",
+          "options": [
+            "Nie, len z postavenia pracovníka",
+            "Áno, právo pobytu vyplýva priamo z čl. 21 ZFEÚ; podmienky a obmedzenia treba uplatňovať primerane",
+            "Len s pracovným povolením"
+          ],
+          "correct": 1,
+          "explanation": {
+            "correct": "Právo pobytu vyplýva priamo z občianstva Únie (čl. 21); obmedzenia sa uplatňujú v súlade so zásadou proporcionality.",
+            "wrong": "Nesprávne. Právo pobytu má občan aj mimo postavenia pracovníka."
+          },
+          "source": "ECLI:EU:C:2002:493 (C‑413/99 Baumbast)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2002:493; ECLI:EU:C:2008:449; ECLI:EU:C:2004:639; čl. 21 ZFEÚ; smernica 2004/38/ES",
+    "citation": "ECLI:EU:C:2008:449; ECLI:EU:C:2004:639; ECLI:EU:C:2002:493; čl. 20 a 21 ZFEÚ; smernica 2004/38/ES",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Voľný pohyb a pobyt osôb",
+    "branches": [
+      {
+        "label": "Základ",
+        "leaves": [
+          "Naviazané na občianstvo Únie",
+          "Čl. 20 – 21 ZFEÚ",
+          "Smernica 2004/38/ES"
+        ]
+      },
+      {
+        "label": "Právo pohybu a pobytu",
+        "leaves": [
+          "Vstup na platný preukaz totožnosti alebo pas",
+          "Pobyt do troch mesiacov bez ďalších podmienok",
+          "Nad tri mesiace – práca, dostatočné prostriedky a poistenie alebo štúdium",
+          "Trvalý pobyt po piatich rokoch nepretržitého legálneho pobytu"
+        ]
+      },
+      {
+        "label": "Pôsobnosť",
+        "leaves": [
+          "Občania Únie",
+          "Rodinní príslušníci vrátane štátnych príslušníkov tretích krajín (Metock)",
+          "Maloletý občan a jeho rodič – opatrovník (Zhu a Chen)",
+          "Právo pobytu priamo z čl. 21 ZFEÚ (Baumbast)"
+        ]
+      },
+      {
+        "label": "Obmedzenia",
+        "leaves": [
+          "Verejný poriadok, bezpečnosť a zdravie – čl. 27 smernice",
+          "Individuálne posúdenie osobného správania",
+          "Skutočné a aktuálne ohrozenie základného záujmu spoločnosti",
+          "Nesmú sledovať hospodárske ciele",
+          "Zvýšená ochrana pri dlhšom pobyte (Tsakouridis)"
+        ]
+      }
+    ]
   }
 }
