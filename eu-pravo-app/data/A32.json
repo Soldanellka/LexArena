@@ -4,127 +4,202 @@
   "summary": "Nariadenie Brusel Ia (č. 1215/2012) upravuje medzinárodnú súdnu príslušnosť v občianskych a obchodných veciach. Základným pravidlom je príslušnosť súdov štátu, v ktorom má žalovaný domicil (čl. 4). Nariadenie obsahuje aj osobitné príslušnosti (napr. zmluvy, delikty, spotrebitelia, zamestnanci), výlučné príslušnosti (napr. nehnuteľnosti, korporácie, priemyselné práva), prorogačné dohody a pravidlá lis pendens.\n\nNariadenie Brusel IIa (č. 2201/2003) upravuje príslušnosť vo veciach manželských a vo veciach rodičovských práv a povinností. Príslušnosť sa spravidla určuje podľa obvyklého pobytu dieťaťa alebo manželov. Obsahuje pravidlá pre únosy detí, naliehavé opatrenia a koordináciu medzi členskými štátmi.\n\nJudikatúra Súdneho dvora EÚ spresňuje výklad pojmov ako „obvyklý pobyt“, „miesto plnenia zmluvy“, „škoda vzniknutá v delikte“, „spotrebiteľská zmluva“ či „prorogačná doložka“. Kľúčové rozsudky zahŕňajú Owusu, Kolassa, Shevill, Pammer/Alpenhof, A, Mercredi a Detiček.",
   "quiz": [
     {
-      "q": "Ktoré nariadenie upravuje súdnu príslušnosť v občianskych a obchodných veciach?",
-      "options": ["Brusel Ia", "Brusel IIa", "Rím I", "Rím II"],
-      "correct": 0,
-      "explanation": "Brusel Ia upravuje občianske a obchodné veci."
+      "q": "Základným pravidlom príslušnosti podľa nariadenia Brusel Ia je:",
+      "options": [
+        "miesto plnenia záväzku",
+        "bydlisko alebo sídlo žalovaného (čl. 4)",
+        "štátna príslušnosť účastníkov",
+        "sídlo súdu žalobcu"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 4 nariadenia (EÚ) č. 1215/2012 – actor sequitur forum rei. Osobitné a výlučné príslušnosti sú výnimkami z tohto pravidla."
     },
     {
-      "q": "Ktoré nariadenie upravuje veci manželské a rodičovské práva?",
-      "options": ["Brusel IIa", "Brusel Ia", "Rím III", "Haagsky protokol"],
-      "correct": 0,
-      "explanation": "Brusel IIa upravuje rodinné veci."
+      "q": "Doktrína forum non conveniens je v systéme Brusel Ia:",
+      "options": [
+        "povinná pri sporoch s tretími štátmi",
+        "vylúčená (Owusu)",
+        "ponechaná na uvážení súdu",
+        "prípustná pri deliktoch"
+      ],
+      "correct": 1,
+      "explanation": "Owusu (C‑281/02): ak má žalovaný bydlisko v členskom štáte, príslušnosť podľa nariadenia je záväzná a súd sa jej nemôže vzdať."
     },
     {
-      "q": "Základné pravidlo Brusel Ia je príslušnosť podľa:",
-      "options": ["Domicilu žalovaného", "Miesta uzavretia zmluvy", "Miesta podnikania žalobcu", "Miesta vzniku škody"],
-      "correct": 0,
-      "explanation": "Základom je domicil žalovaného."
+      "q": "Vo veciach rodičovských práv a povinností dnes (od 1. 8. 2022) platí:",
+      "options": [
+        "Brusel Ia",
+        "Brusel IIb – nariadenie (EÚ) 2019/1111",
+        "Brusel IIa – nariadenie (ES) č. 2201/2003",
+        "Rím II"
+      ],
+      "correct": 1,
+      "explanation": "Nariadenie 2019/1111 (Brusel IIb) nahradilo od 1. 8. 2022 nariadenie 2201/2003. Brusel Ia rodinné veci vylučuje zo svojej pôsobnosti."
     },
     {
-      "q": "Ktorý rozsudok upravuje obvyklý pobyt dieťaťa?",
-      "options": ["Mercredi", "Owusu", "Kolassa", "Shevill"],
-      "correct": 0,
-      "explanation": "Mercredi upravuje obvyklý pobyt dieťaťa."
+      "q": "Príslušnosť v deliktných veciach určuje:",
+      "options": [
+        "bydlisko žalobcu",
+        "miesto, kde došlo alebo hrozí škodová udalosť",
+        "sídlo konajúceho súdu",
+        "miesto uzavretia zmluvy"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 7 bod 2 Brusel Ia. Pojem zahŕňa miesto príčinnej udalosti aj miesto vzniku škody – pri zodpovednosti za výrobok je príčinnou udalosťou výroba (Kainz)."
     },
     {
-      "q": "Ktorý rozsudok upravuje výlučnú príslušnosť pri nehnuteľnostiach?",
-      "options": ["Owusu", "Kolassa", "Shevill", "Detiček"],
-      "correct": 0,
-      "explanation": "Owusu potvrdzuje výlučnú príslušnosť pri nehnuteľnostiach."
+      "q": "Výlučná príslušnosť podľa čl. 24 sa uplatňuje napríklad pri:",
+      "options": [
+        "spotrebiteľských zmluvách",
+        "právach k nehnuteľnostiam",
+        "pracovných zmluvách",
+        "deliktných nárokoch"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 24 zahŕňa práva k nehnuteľnostiam, otázky platnosti spoločností, zápisy do registrov, práva duševného vlastníctva a výkon rozhodnutí. Spotrebitelia a zamestnanci majú ochrannú, nie výlučnú príslušnosť."
     }
   ],
   "tiles": [
     { "term": "Brusel Ia", "definition": "Nariadenie o súdnej príslušnosti v občianskych a obchodných veciach." },
-    { "term": "Brusel IIa", "definition": "Nariadenie o manželských veciach a rodičovských právach." },
+    { "term": "Brusel IIb", "definition": "Nariadenie (EÚ) 2019/1111 o manželských veciach a rodičovských právach; od 1. 8. 2022 nahradilo Brusel IIa." },
     { "term": "Domicil žalovaného", "definition": "Základné kritérium príslušnosti podľa Brusel Ia." },
-    { "term": "Obvyklý pobyt", "definition": "Kľúčové kritérium v rodinných veciach podľa Brusel IIa." },
+    { "term": "Obvyklý pobyt", "definition": "Kľúčové kritérium v rodinných veciach podľa Brusel IIb." },
     { "term": "Výlučná príslušnosť", "definition": "Príslušnosť, ktorú nemožno zmeniť prorogáciou." }
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Owusu: výlučná príslušnosť a zákaz forum non conveniens",
+      "title": "Prípad 1 – Owusu: vylúčenie forum non conveniens",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Žalovaný mal domicil v členskom štáte, ale škoda vznikla mimo EÚ.",
+          "question": "Žalovaný s bydliskom v členskom štáte navrhol, aby sa súd vzdal príslušnosti v prospech súdu tretieho štátu (Jamajka), ktorý je podľa neho vhodnejší.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2005:120 (C‑281/02 Owusu)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o príslušnosti?",
+          "question": "Môže súd členského štátu odmietnuť príslušnosť pre vhodnejšie forum v treťom štáte?",
           "options": [
-            "Súd môže odmietnuť príslušnosť pre nevhodné fórum",
-            "Súd musí rozhodovať, ak má žalovaný domicil v členskom štáte",
-            "Príslušnosť závisí od miesta škody"
+            "Áno, ak je iný súd vhodnejší",
+            "Nie, ak má žalovaný bydlisko v členskom štáte, príslušnosť podľa nariadenia je záväzná; doktrína forum non conveniens sa neuplatní",
+            "Rozhodne o tom žalobca"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Súd musí rozhodovať, ak má žalovaný domicil v členskom štáte.",
-            "wrong": "Nesprávne. Forum non conveniens nie je prípustné."
+            "correct": "Ak má žalovaný bydlisko v členskom štáte, súd nemôže odmietnuť príslušnosť v prospech súdu tretieho štátu (forum non conveniens je vylúčené).",
+            "wrong": "Nesprávne. Príslušnosť podľa nariadenia je záväzná."
           },
-          "source": "ECLI:EU:C:2005:120"
+          "source": "ECLI:EU:C:2005:120 (C‑281/02 Owusu)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Kolassa: miesto vzniku škody pri deliktoch",
+      "title": "Prípad 2 – Pammer a Hotel Alpenhof: spotrebiteľské zmluvy",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Investor žaloval emitenta cenných papierov za škodu vzniknutú v jeho domovskom štáte.",
+          "question": "Spotrebiteľ uzavrel zmluvu s podnikateľom z iného štátu, ktorý prezentoval svoje služby na internete. Sporné bolo, či môže žalovať doma.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2015:37 (C‑375/13 Kolassa)"
+          "source": "ECLI:EU:C:2010:740 (C‑585/08 a C‑144/09 Pammer a Hotel Alpenhof)"
         },
         {
-          "question": "Ako Súdny dvor určil príslušnosť?",
+          "question": "Kedy má spotrebiteľ ochrannú príslušnosť (žaloba doma)?",
           "options": [
-            "Príslušnosť je vždy v štáte emitenta",
-            "Príslušnosť môže byť v štáte, kde sa prejavila škoda",
-            "Príslušnosť je v štáte burzy"
+            "Vždy, keď podnikateľ prevádzkuje webovú stránku",
+            "Ak podnikateľ smeroval svoju činnosť do štátu spotrebiteľa (napr. jazyk, mena, doména, dosah reklamy)",
+            "Nikdy pri zmluvách uzavretých online"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Príslušnosť môže byť v štáte, kde sa prejavila škoda.",
-            "wrong": "Nesprávne. Príslušnosť nezávisí od burzy."
+            "correct": "Rozhodujúce je, či podnikateľ „smeroval činnosť“ do štátu spotrebiteľa; samotná dostupnosť webu nestačí.",
+            "wrong": "Nesprávne. Kľúčové je smerovanie činnosti, nie len existencia webu."
           },
-          "source": "ECLI:EU:C:2015:37"
+          "source": "ECLI:EU:C:2010:740 (C‑585/08 a C‑144/09 Pammer a Hotel Alpenhof)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Mercredi: obvyklý pobyt dieťaťa",
+      "title": "Prípad 3 – Kainz: príslušnosť pri zodpovednosti za výrobok",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dieťa sa presťahovalo do iného štátu krátko pred začatím konania.",
+          "question": "Spotrebiteľ zranený chybným výrobkom žaloval výrobcu; sporné bolo, ktorý súd je príslušný podľa miesta škodovej udalosti.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2010:829 (C‑497/10 PPU Mercredi)"
+          "source": "ECLI:EU:C:2014:7 (C‑45/13 Kainz)"
         },
         {
-          "question": "Ako Súdny dvor určil obvyklý pobyt?",
+          "question": "Čo je pri zodpovednosti za výrobok „miestom, kde došlo k príčine škody“?",
           "options": [
-            "Podľa formálneho prihlásenia",
-            "Podľa centra života dieťaťa a integrácie",
-            "Podľa štátnej príslušnosti"
+            "Miesto, kde bol výrobok kúpený",
+            "Miesto výroby chybného výrobku (miesto príčinnej udalosti); Súdny dvor odmietol vykladať príslušnosť cez Rím II",
+            "Bydlisko poškodeného"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Obvyklý pobyt sa určuje podľa centra života dieťaťa a jeho integrácie.",
-            "wrong": "Nesprávne. Formálne prihlásenie nie je rozhodujúce."
+            "correct": "Miestom príčinnej udalosti je miesto výroby; pravidlá o príslušnosti (Brusel I) sa nevykladajú cez nariadenie Rím II.",
+            "wrong": "Nesprávne. Ide o miesto výroby, nie kúpy či bydliska."
           },
-          "source": "ECLI:EU:C:2010:829"
+          "source": "ECLI:EU:C:2014:7 (C‑45/13 Kainz)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2005:120; ECLI:EU:C:2015:37; ECLI:EU:C:2010:829; nariadenia Brusel Ia a Brusel IIa",
+    "citation": "ECLI:EU:C:2005:120; ECLI:EU:C:2010:740; ECLI:EU:C:2014:7; nariadenie (EÚ) č. 1215/2012 (Brusel Ia); nariadenie (EÚ) 2019/1111 (Brusel IIb)",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Medzinárodná súdna príslušnosť (Brusel Ia a Brusel IIb)",
+    "branches": [
+      {
+        "label": "Brusel Ia – nariadenie (EÚ) č. 1215/2012",
+        "leaves": [
+          "Občianske a obchodné veci",
+          "Základné pravidlo – bydlisko alebo sídlo žalovaného (čl. 4)",
+          "Rodinné veci, konkurz a rozhodcovské konanie sú z pôsobnosti vylúčené"
+        ]
+      },
+      {
+        "label": "Osobitné príslušnosti",
+        "leaves": [
+          "Zmluvné veci – miesto plnenia záväzku",
+          "Delikty – miesto škodovej udalosti; pri výrobku miesto výroby (Kainz)",
+          "Spotrebitelia – smerovanie činnosti do štátu spotrebiteľa (Pammer a Hotel Alpenhof)",
+          "Individuálne pracovné zmluvy"
+        ]
+      },
+      {
+        "label": "Výlučné príslušnosti (čl. 24)",
+        "leaves": [
+          "Práva k nehnuteľnostiam a nájom nehnuteľností",
+          "Platnosť a rozhodnutia orgánov spoločností",
+          "Zápisy do verejných registrov",
+          "Zápis a platnosť práv duševného vlastníctva",
+          "Výkon rozhodnutí"
+        ]
+      },
+      {
+        "label": "Dohoda strán a súbežné konania",
+        "leaves": [
+          "Prorogácia – voľba súdu (čl. 25)",
+          "Konkludentné podrobenie sa príslušnosti",
+          "Lis pendens – prekážka začatej veci (čl. 29 a nasl.)",
+          "Forum non conveniens je vylúčené (Owusu)"
+        ]
+      },
+      {
+        "label": "Rodinné veci",
+        "leaves": [
+          "Brusel IIa – nariadenie (ES) č. 2201/2003",
+          "Od 1. 8. 2022 Brusel IIb – nariadenie (EÚ) 2019/1111",
+          "Obvyklý pobyt dieťaťa alebo manželov",
+          "Neoprávnené premiestnenie a zadržanie dieťaťa"
+        ]
+      }
+    ]
   }
 }

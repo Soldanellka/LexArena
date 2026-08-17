@@ -4,127 +4,182 @@
   "summary": "Nariadenie Brusel Ia (č. 1215/2012) upravuje uznávanie a výkon rozhodnutí v občianskych a obchodných veciach. Základným pravidlom je automatické uznanie rozhodnutí bez osobitného konania (čl. 36). Výkon rozhodnutia sa uskutočňuje bez potreby vyhlásenia vykonateľnosti (exequatur), ktoré bolo zrušené. Odmietnutie uznania alebo výkonu je možné len z taxatívnych dôvodov (čl. 45), najmä rozpor s verejným poriadkom, nesúlad s právom na obhajobu alebo nezlučiteľnosť s iným rozhodnutím.\n\nNariadenie Brusel IIa (č. 2201/2003) upravuje uznávanie a výkon rozhodnutí vo veciach manželských a vo veciach rodičovských práv a povinností. Uznanie je automatické, ale výkon môže vyžadovať vyhlásenie vykonateľnosti, najmä pri rozhodnutiach o styku s dieťaťom alebo návrate dieťaťa. Nariadenie obsahuje osobitné pravidlá pre únosy detí a naliehavé opatrenia.\n\nEurópsky exekučný titul (EET) podľa nariadenia č. 805/2004 umožňuje výkon rozhodnutí vo veciach nesporných nárokov bez akéhokoľvek medzičlánku. Rozhodnutie musí spĺňať procesné záruky (riadne doručenie, právo na obhajobu). Po vydaní EET je rozhodnutie vykonateľné v celej EÚ bez exequatur.\n\nJudikatúra Súdneho dvora EÚ spresňuje výklad dôvodov odmietnutia uznania, rozsah verejného poriadku, právo na obhajobu a pravidlá výkonu, najmä v rozsudkoch Krombach, Trade Agency, Povse a Rinau.",
   "quiz": [
     {
-      "q": "Je uznanie rozhodnutí podľa Brusel Ia automatické?",
-      "options": ["Áno", "Nie", "Len pri rodinných veciach", "Len pri trestných veciach"],
-      "correct": 0,
-      "explanation": "Brusel Ia zavádza automatické uznanie bez konania."
+      "q": "Podľa nariadenia Brusel Ia sa rozhodnutie z iného členského štátu:",
+      "options": [
+        "uznáva až po vyhlásení vykonateľnosti (exequatur)",
+        "uznáva automaticky a vykonáva bez exequatur",
+        "neuznáva bez medzištátnej dohody",
+        "uznáva len so súhlasom štátu pôvodu"
+      ],
+      "correct": 1,
+      "explanation": "Čl. 36 – automatické uznanie, čl. 39 – vykonateľnosť bez vyhlásenia. Exequatur zrušilo nariadenie 1215/2012."
     },
     {
-      "q": "Ktorý článok Brusel Ia upravuje dôvody odmietnutia uznania?",
-      "options": ["Čl. 45", "Čl. 4", "Čl. 36", "Čl. 21"],
-      "correct": 0,
-      "explanation": "Čl. 45 obsahuje taxatívne dôvody odmietnutia."
+      "q": "Dôvody odmietnutia uznania rozhodnutia sú:",
+      "options": ["demonštratívne", "taxatívne (čl. 45)", "neobmedzené", "žiadne, uznanie je bezvýhradné"],
+      "correct": 1,
+      "explanation": "Čl. 45 Brusel Ia. Rozhodnutie sa nikdy nepreskúmava vo veci samej – kontroluje sa len splnenie taxatívnych dôvodov."
     },
     {
-      "q": "Čo je Európsky exekučný titul?",
-      "options": ["Mechanizmus výkonu nesporných nárokov", "Trestný rozsudok", "Rodinné rozhodnutie", "Colné povolenie"],
-      "correct": 0,
-      "explanation": "EET umožňuje výkon nesporných nárokov bez exequatur."
+      "q": "Rozpor s verejným poriadkom ako dôvod odmietnutia riešil rozsudok:",
+      "options": ["Owusu", "Krombach", "Rinau", "Bondora"],
+      "correct": 1,
+      "explanation": "Krombach (C‑7/98): zjavné porušenie práva na obhajobu je rozporom s verejným poriadkom štátu výkonu."
     },
     {
-      "q": "Ktoré nariadenie upravuje uznávanie rozhodnutí vo veciach rodičovských práv?",
-      "options": ["Brusel IIa", "Brusel Ia", "Rím I", "Haagsky protokol"],
-      "correct": 0,
-      "explanation": "Rodinné veci upravuje Brusel IIa."
+      "q": "Podľa nariadenia Brusel IIb (od 1. 8. 2022) je pre výkon rozhodnutí:",
+      "options": [
+        "potrebné exequatur",
+        "exequatur zrušené pre všetky rozhodnutia",
+        "potrebný súhlas oboch štátov",
+        "potrebné podať novú žalobu"
+      ],
+      "correct": 1,
+      "explanation": "Nariadenie 2019/1111 zrušilo exequatur plošne. Brusel IIa ho zrušilo len pre osvedčené rozhodnutia o styku a o návrate dieťaťa."
     },
     {
-      "q": "Ktorý rozsudok upravuje verejný poriadok pri odmietnutí uznania?",
-      "options": ["Krombach", "Owusu", "Kolassa", "Mercredi"],
-      "correct": 0,
-      "explanation": "Krombach upravuje verejný poriadok pri uznávaní."
+      "q": "Európsky exekučný titul (nariadenie č. 805/2004) sa týka:",
+      "options": [
+        "sporných nárokov",
+        "nesporných nárokov, s výkonom bez exequatur",
+        "rodinnoprávnych vecí",
+        "trestných vecí"
+      ],
+      "correct": 1,
+      "explanation": "EET osvedčí rozhodnutie o nespornom nároku v štáte pôvodu; podmienkou je dodržanie minimálnych procesných štandardov."
     }
   ],
   "tiles": [
     { "term": "Brusel Ia", "definition": "Automatické uznanie a výkon rozhodnutí v občianskych a obchodných veciach." },
-    { "term": "Brusel IIa", "definition": "Uznanie a výkon rozhodnutí vo veciach manželských a rodičovských práv." },
+    { "term": "Brusel IIb", "definition": "Uznanie a výkon rozhodnutí vo veciach manželských a rodičovských práv; od 1. 8. 2022 bez exequatur pre všetky rozhodnutia." },
     { "term": "Európsky exekučný titul", "definition": "Výkon nesporných nárokov bez exequatur." },
     { "term": "Verejný poriadok", "definition": "Dôvod odmietnutia uznania podľa čl. 45 Brusel Ia." },
     { "term": "Právo na obhajobu", "definition": "Kľúčová procesná záruka pri uznávaní rozhodnutí." }
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Krombach: verejný poriadok",
+      "title": "Prípad 1 – Krombach: verejný poriadok a právo na obhajobu",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Nemecko odmietlo uznať francúzsky rozsudok pre porušenie práva na obhajobu.",
+          "question": "V jednom štáte bol vydaný rozsudok proti osobe, ktorej v konaní neumožnili obhajobu advokátom. V druhom štáte sa žiadal jeho výkon.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2000:164 (C‑7/98 Krombach)"
         },
         {
-          "question": "Ako Súdny dvor vyložil verejný poriadok?",
+          "question": "Možno výkon odmietnuť pre rozpor s verejným poriadkom?",
           "options": [
-            "Široko, členské štáty môžu odmietať akékoľvek rozhodnutia",
-            "Úzko, len pri závažnom porušení základných práv",
-            "Verejný poriadok sa neuplatňuje"
+            "Nie, verejný poriadok sa v tomto systéme neuplatní",
+            "Áno, závažné porušenie základných procesných práv (právo na obhajobu) môže byť rozporom s verejným poriadkom štátu výkonu",
+            "Len ak to dovolí štát pôvodu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Verejný poriadok sa uplatňuje úzko, len pri závažnom porušení základných práv.",
-            "wrong": "Nesprávne. Verejný poriadok nie je široký dôvod."
+            "correct": "Právo na spravodlivý proces patrí do verejného poriadku; jeho zjavné porušenie odôvodňuje odmietnutie uznania alebo výkonu.",
+            "wrong": "Nesprávne. Verejný poriadok zahŕňa aj základné procesné práva."
           },
-          "source": "ECLI:EU:C:2000:164"
+          "source": "ECLI:EU:C:2000:164 (C‑7/98 Krombach)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Trade Agency: výkon rozhodnutí podľa Brusel Ia",
+      "title": "Prípad 2 – Trade Agency: rozsudok pre zmeškanie a odôvodnenie",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Súd riešil otázku, či je možné odmietnuť výkon rozhodnutia pre procesné chyby.",
+          "question": "V jednom štáte vydali rozsudok pre zmeškanie bez odôvodnenia a bez preukázaného doručenia návrhu žalovanému. V druhom štáte sa žiadal výkon.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2016:40 (C‑384/14 Trade Agency)"
+          "source": "ECLI:EU:C:2012:531 (C‑619/10 Trade Agency)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o výkone?",
+          "question": "Ako sa posúdi takýto rozsudok pre zmeškanie?",
           "options": [
-            "Výkon možno odmietnuť pre akékoľvek procesné chyby",
-            "Výkon možno odmietnuť len z dôvodov uvedených v čl. 45",
-            "Výkon je vždy automatický bez výnimiek"
+            "Vykoná sa automaticky, doručenie sa nepreskúmava",
+            "Súd štátu výkonu môže preskúmať, či bol návrh riadne doručený (právo na obhajobu); chýbajúce odôvodnenie sa hodnotí z hľadiska práva na spravodlivý proces",
+            "Nikdy sa nevykoná"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Výkon možno odmietnuť len z taxatívnych dôvodov podľa čl. 45.",
-            "wrong": "Nesprávne. Procesné chyby mimo čl. 45 nie sú dôvodom odmietnutia."
+            "correct": "Rozsudok pre zmeškanie sa vykoná, len ak bolo zabezpečené právo na obhajobu (doručenie); odôvodnenie posúdi súd cez verejný poriadok a právo na spravodlivý proces.",
+            "wrong": "Nesprávne. Ochrana práva na obhajobu sa skúma."
           },
-          "source": "ECLI:EU:C:2016:40"
+          "source": "ECLI:EU:C:2012:531 (C‑619/10 Trade Agency)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Povse: výkon rozhodnutí o návrate dieťaťa",
+      "title": "Prípad 3 – Rinau: návrat dieťaťa",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Rakúsko odmietlo vykonať talianske rozhodnutie o návrate dieťaťa.",
+          "question": "Po neoprávnenom zadržaní dieťaťa v jednom štáte súd štátu pôvodu vydal rozhodnutie nariaďujúce jeho návrat. Sporný bol jeho výkon.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2010:400 (C‑211/10 PPU Povse)"
+          "source": "ECLI:EU:C:2008:406 (C‑195/08 PPU Rinau)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o výkone?",
+          "question": "Ako sa vykoná rozhodnutie o návrate dieťaťa?",
           "options": [
-            "Členské štáty môžu odmietnuť výkon podľa vlastného uváženia",
-            "Výkon je povinný, ak rozhodnutie spĺňa podmienky Brusel IIa",
-            "Výkon nie je možný pri cezhraničných únosoch"
+            "Vyžaduje nové konanie v štáte výkonu",
+            "Osvedčené rozhodnutie o návrate je priamo vykonateľné a štát výkonu ho nemôže vecne preskúmavať",
+            "Nevykonáva sa, kým sa nedohodnú rodičia"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Výkon je povinný, ak rozhodnutie spĺňa podmienky Brusel IIa.",
-            "wrong": "Nesprávne. Brusel IIa obsahuje jasné pravidlá pre únosy detí."
+            "correct": "V systéme Brusel IIa a IIb je osvedčené rozhodnutie o návrate dieťaťa priamo vykonateľné, bez vecného preskúmania v štáte výkonu.",
+            "wrong": "Nesprávne. Štát výkonu rozhodnutie vecne nepreskúmava."
           },
-          "source": "ECLI:EU:C:2010:400"
+          "source": "ECLI:EU:C:2008:406 (C‑195/08 PPU Rinau)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:2000:164; ECLI:EU:C:2016:40; ECLI:EU:C:2010:400; nariadenia Brusel Ia, Brusel IIa, EET",
+    "citation": "ECLI:EU:C:2000:164; ECLI:EU:C:2012:531; ECLI:EU:C:2008:406; nariadenie (EÚ) č. 1215/2012; nariadenie (EÚ) 2019/1111; nariadenie (ES) č. 805/2004",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Uznanie a výkon rozhodnutí a Európsky exekučný titul",
+    "branches": [
+      {
+        "label": "Brusel Ia – nariadenie (EÚ) č. 1215/2012",
+        "leaves": [
+          "Automatické uznanie bez osobitného konania (čl. 36)",
+          "Výkon bez vyhlásenia vykonateľnosti – bez exequatur (čl. 39)",
+          "Zákaz preskúmania rozhodnutia vo veci samej"
+        ]
+      },
+      {
+        "label": "Dôvody odmietnutia (čl. 45, taxatívne)",
+        "leaves": [
+          "Zjavný rozpor s verejným poriadkom (Krombach)",
+          "Porušenie práva na obhajobu pri rozsudku pre zmeškanie (Trade Agency)",
+          "Nezlučiteľnosť s iným rozhodnutím medzi tými istými stranami",
+          "Porušenie pravidiel o výlučnej a ochrannej príslušnosti"
+        ]
+      },
+      {
+        "label": "Rodinné veci",
+        "leaves": [
+          "Brusel IIa – nariadenie (ES) č. 2201/2003",
+          "Od 1. 8. 2022 Brusel IIb – nariadenie (EÚ) 2019/1111",
+          "Exequatur zrušené pre všetky rozhodnutia",
+          "Osvedčené rozhodnutie o návrate dieťaťa je priamo vykonateľné (Rinau)"
+        ]
+      },
+      {
+        "label": "Európsky exekučný titul – nariadenie (ES) č. 805/2004",
+        "leaves": [
+          "Len nesporné nároky",
+          "Osvedčenie vydá súd štátu pôvodu",
+          "Výkon bez exequatur v ostatných štátoch",
+          "Podmienkou sú minimálne procesné štandardy vrátane riadneho doručenia"
+        ]
+      }
+    ]
   }
 }
