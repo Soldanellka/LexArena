@@ -4,34 +4,49 @@
   "summary": "Kontrola koncentrácií je upravená v nariadení o fúziách (č. 139/2004). Koncentráciou je fúzia, nadobudnutie kontroly alebo vytvorenie spoločného podniku. Koncentrácie s európskym rozmerom podliehajú povinnému oznamovaniu Európskej komisii. Komisia posudzuje, či koncentrácia významne nebráni účinnej hospodárskej súťaži (SIEC test). Môže koncentráciu povoliť, podmienečne povoliť (záväzky) alebo zakázať.\n\nŠtátna pomoc je upravená v čl. 107 – 109 ZFEÚ. Zakázaná je pomoc poskytovaná štátom alebo zo štátnych zdrojov, ktorá narúša alebo hrozí narušením súťaže tým, že zvýhodňuje určité podniky. Pomoc musí byť notifikovaná Komisii, ktorá ju môže schváliť, zakázať alebo nariadiť jej vrátenie. Existujú výnimky – regionálna pomoc, pomoc na výskum a inovácie, environmentálna pomoc, pomoc pri prírodných katastrofách.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „koncentrácia“, „kontrola“, „štátne zdroje“, „selektívnosť“, „výhoda“ a „narušenie súťaže“, najmä v rozsudkoch Airtours, Continental Can, Altmark, Leipzig‑Halle a Eventech.",
   "quiz": [
     {
-      "q": "Ktoré nariadenie upravuje kontrolu koncentrácií?",
-      "options": ["Nariadenie o fúziách (139/2004)", "Brusel Ia", "Rím I", "Smernica 2004/38/ES"],
-      "correct": 0,
-      "explanation": "Kontrola koncentrácií je upravená v nariadení č. 139/2004."
+      "q": "Kontrolu koncentrácií podnikov upravuje:",
+      "options": [
+        "čl. 101 ZFEÚ",
+        "nariadenie (ES) č. 139/2004",
+        "čl. 107 ZFEÚ",
+        "Charta základných práv EÚ"
+      ],
+      "correct": 1,
+      "explanation": "Nariadenie o kontrole koncentrácií medzi podnikmi. Koncentrácie nad prahovými hodnotami sa Komisii notifikujú vopred."
     },
     {
-      "q": "Čo je koncentrácia podľa práva EÚ?",
-      "options": ["Fúzia alebo nadobudnutie kontroly", "Kartel", "Štátna pomoc", "Zneužitie dominancie"],
-      "correct": 0,
-      "explanation": "Koncentrácia je fúzia, nadobudnutie kontroly alebo spoločný podnik."
+      "q": "Štátna pomoc je upravená v:",
+      "options": ["čl. 101 – 102 ZFEÚ", "čl. 107 – 109 ZFEÚ", "čl. 34 ZFEÚ", "čl. 45 ZFEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 107 vymedzuje pojem a výnimky, čl. 108 upravuje dohľad Komisie a notifikačnú povinnosť, čl. 109 splnomocňuje Radu."
     },
     {
-      "q": "Ktorý článok upravuje štátnu pomoc?",
-      "options": ["Čl. 107 ZFEÚ", "Čl. 102 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 45 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Štátna pomoc je upravená v čl. 107 ZFEÚ."
+      "q": "Pojem štátnej pomoci podľa čl. 107 ods. 1 ZFEÚ má:",
+      "options": [
+        "dve kritériá",
+        "tri kritériá",
+        "štyri kritériá – štátne prostriedky, výhoda, selektívnosť, narušenie súťaže a vplyv na obchod",
+        "žiadne pevné kritériá"
+      ],
+      "correct": 2,
+      "explanation": "Kritériá sú kumulatívne – ak čo i len jedno nie je splnené, o štátnu pomoc nejde."
     },
     {
-      "q": "Ktorý rozsudok upravuje kritériá štátnej pomoci?",
-      "options": ["Altmark", "Dassonville", "Gebhard", "UPA"],
-      "correct": 0,
-      "explanation": "Altmark stanovuje kritériá, kedy kompenzácia nie je štátnou pomocou."
+      "q": "Podľa rozsudku Altmark kompenzácia za služby vo verejnom záujme:",
+      "options": [
+        "je vždy štátnou pomocou",
+        "nie je štátnou pomocou, ak sú splnené štyri podmienky",
+        "je vždy zakázaná",
+        "nepodlieha kontrole Komisie"
+      ],
+      "correct": 1,
+      "explanation": "Pri splnení štyroch kumulatívnych podmienok podnik nezískava skutočnú finančnú výhodu, takže chýba jeden zo znakov pomoci."
     },
     {
-      "q": "Ktorý rozsudok sa týka posúdenia kontroly pri koncentráciách?",
-      "options": ["Airtours", "Costa/ENEL", "Keck", "Cartes Bancaires"],
-      "correct": 0,
-      "explanation": "Airtours upravuje posúdenie spoločnej kontroly."
+      "q": "Kolektívnu dominanciu pri koncentráciách a prísne kritériá jej preukázania riešil rozsudok:",
+      "options": ["Altmark", "Airtours", "United Brands", "T-Mobile Netherlands"],
+      "correct": 1,
+      "explanation": "Airtours (T‑342/99) – Všeobecný súd zrušil zákaz fúzie, lebo Komisia kolektívnu dominanciu presvedčivo nepreukázala."
     }
   ],
   "tiles": [
@@ -43,88 +58,139 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Airtours: spoločná kontrola",
+      "title": "Prípad 1 – Continental Can: posilnenie dominancie fúziou",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Komisia posudzovala, či cestovné kancelárie majú spoločnú kontrolu nad trhom.",
+          "question": "Dominantný podnik nadobudol konkurenta a tým výrazne posilnil svoje postavenie na trhu. V tom čase ešte nebolo osobitné nariadenie o fúziách.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:T:2002:146 (T‑342/99 Airtours)"
+          "source": "ECLI:EU:C:1973:22 (6/72 Continental Can)"
         },
         {
-          "question": "Ako súd vyložil spoločnú kontrolu?",
+          "question": "Bolo možné takéto posilnenie dominancie zachytiť?",
           "options": [
-            "Stačí akákoľvek spolupráca",
-            "Musí existovať stabilná koordinácia správania",
-            "Kontrola sa nehodnotí"
+            "Nie, bez nariadenia o fúziách to možné nebolo",
+            "Áno, Súdny dvor pripustil, že aj nadobudnutie, ktoré podstatne narúša súťaž posilnením dominancie, mohlo spadať pod zákaz zneužitia dominancie (čl. 102)",
+            "Len s predchádzajúcim súhlasom členského štátu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Spoločná kontrola vyžaduje stabilnú koordináciu správania.",
-            "wrong": "Nesprávne. Spolupráca sama osebe nestačí."
+            "correct": "Continental Can umožnil zachytiť posilnenie dominancie fúziou cez čl. 102 ešte pred prijatím nariadenia o koncentráciách.",
+            "wrong": "Nesprávne. Aj bez nariadenia bolo možné zasiahnuť cez čl. 102."
           },
-          "source": "ECLI:EU:T:2002:146"
+          "source": "ECLI:EU:C:1973:22 (6/72 Continental Can)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – Altmark: kritériá štátnej pomoci",
+      "title": "Prípad 2 – Altmark: kompenzácia za služby vo verejnom záujme",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Štát kompenzoval dopravcu za poskytovanie verejnej služby.",
+          "question": "Dopravca dostal od štátu kompenzáciu za prevádzku stratových autobusových liniek vo verejnom záujme. Konkurent tvrdil, že ide o nezákonnú štátnu pomoc.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:2003:415 (C‑280/00 Altmark)"
         },
         {
-          "question": "Ako Súdny dvor určil, či ide o štátnu pomoc?",
+          "question": "Je taká kompenzácia štátnou pomocou?",
           "options": [
-            "Každá kompenzácia je štátna pomoc",
-            "Kompenzácia nie je pomoc, ak spĺňa štyri Altmark kritériá",
-            "Kompenzácia je pomoc len pri súkromných podnikoch"
+            "Áno, každá platba od štátu je štátnou pomocou",
+            "Nie, ak sú splnené štyri podmienky (jasne vymedzené záväzky, vopred a objektívne stanovené parametre, primeranosť náhrady, efektívny podnik alebo verejné obstarávanie), nejde o pomoc",
+            "Áno a je vždy zakázaná"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Kompenzácia nie je štátna pomoc, ak spĺňa štyri Altmark kritériá.",
-            "wrong": "Nesprávne. Nie každá kompenzácia je pomoc."
+            "correct": "Podľa Altmark kompenzácia za skutočné záväzky služby vo verejnom záujme nie je pomocou, ak spĺňa štyri kumulatívne podmienky.",
+            "wrong": "Nesprávne. Pri splnení štyroch podmienok nejde o štátnu pomoc."
           },
-          "source": "ECLI:EU:C:2003:415"
+          "source": "ECLI:EU:C:2003:415 (C‑280/00 Altmark)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Leipzig-Halle: štátne zdroje",
+      "title": "Prípad 3 – Airtours: kolektívna dominancia pri koncentrácii",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Štát financoval výstavbu letiska, čo zvýhodnilo jeho prevádzkovateľa.",
+          "question": "Komisia zakázala fúziu s odôvodnením, že by vznikla kolektívna dominancia niekoľkých podnikov. Účastníci rozhodnutie napadli.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2011:24 (C‑288/09 Leipzig-Halle)"
+          "source": "ECLI:EU:T:2002:146 (T‑342/99 Airtours)"
         },
         {
-          "question": "Ako Súdny dvor vyložil pojem štátne zdroje?",
+          "question": "Za akých podmienok možno zakázať fúziu pre kolektívnu dominanciu?",
           "options": [
-            "Len priame dotácie",
-            "Aj financovanie infraštruktúry môže byť štátnou pomocou",
-            "Štátne zdroje sa neuplatňujú na letiská"
+            "Kedykoľvek, keď na trhu ostane málo súťažiteľov",
+            "Len pri splnení prísnych kritérií (transparentnosť trhu umožňujúca koordináciu, udržateľnosť koordinácie, absencia účinnej reakcie konkurentov a zákazníkov)",
+            "Nikdy, kolektívna dominancia nie je dôvodom"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Aj financovanie infraštruktúry môže byť štátnou pomocou.",
-            "wrong": "Nesprávne. Štátne zdroje zahŕňajú aj nepriame výhody."
+            "correct": "Všeobecný súd stanovil prísne kritériá pre kolektívnu dominanciu; Komisia ich musí presvedčivo preukázať.",
+            "wrong": "Nesprávne. Nestačí len malý počet súťažiteľov; treba splniť prísne kritériá."
           },
-          "source": "ECLI:EU:C:2011:24"
+          "source": "ECLI:EU:T:2002:146 (T‑342/99 Airtours)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:T:2002:146; ECLI:EU:C:2003:415; ECLI:EU:C:2011:24; nariadenie 139/2004; čl. 107 – 109 ZFEÚ",
+    "citation": "ECLI:EU:C:1973:22; ECLI:EU:C:2003:415; ECLI:EU:T:2002:146; nariadenie (ES) č. 139/2004; čl. 107 – 109 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Kontrola koncentrácií a štátna pomoc",
+    "branches": [
+      {
+        "label": "Koncentrácie – nariadenie (ES) č. 139/2004",
+        "leaves": [
+          "Fúzie podnikov",
+          "Nadobudnutie kontroly nad iným podnikom",
+          "Plnofunkčné spoločné podniky",
+          "Notifikácia Komisii pri prekročení prahových hodnôt",
+          "Komisia rozhoduje vopred (ex ante)"
+        ]
+      },
+      {
+        "label": "Posúdenie koncentrácie",
+        "leaves": [
+          "Test významného narušenia účinnej súťaže (SIEC)",
+          "Posilnenie dominancie fúziou (Continental Can)",
+          "Kolektívna dominancia s prísnymi kritériami (Airtours)",
+          "Možnosť schválenia s podmienkami a záväzkami"
+        ]
+      },
+      {
+        "label": "Štátna pomoc – pojem (čl. 107 ods. 1 ZFEÚ)",
+        "leaves": [
+          "Poskytnutie zo štátnych prostriedkov",
+          "Zvýhodnenie podniku",
+          "Selektívnosť opatrenia",
+          "Narušenie súťaže a vplyv na obchod medzi štátmi",
+          "Kritériá sú kumulatívne"
+        ]
+      },
+      {
+        "label": "Výnimky a Altmark",
+        "leaves": [
+          "Pomoc zlučiteľná zo zákona (čl. 107 ods. 2)",
+          "Pomoc, ktorú možno považovať za zlučiteľnú (čl. 107 ods. 3)",
+          "Kompenzácia za služby vo verejnom záujme nie je pomocou pri splnení štyroch podmienok (Altmark)"
+        ]
+      },
+      {
+        "label": "Dohľad Komisie (čl. 108 ZFEÚ)",
+        "leaves": [
+          "Notifikačná povinnosť členského štátu",
+          "Povinnosť pozastavenia – standstill",
+          "Vrátenie nezákonne poskytnutej pomoci",
+          "Priebežné preskúmavanie existujúcich schém pomoci"
+        ]
+      }
+    ]
   }
 }

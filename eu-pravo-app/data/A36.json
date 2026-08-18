@@ -4,34 +4,49 @@
   "summary": "Dohody obmedzujúce hospodársku súťaž sú upravené v čl. 101 ZFEÚ. Zakázané sú všetky dohody medzi podnikmi, rozhodnutia združení podnikov a zosúladené postupy, ktoré majú za cieľ alebo následok narušenie hospodárskej súťaže na vnútornom trhu. Typickými zakázanými praktikami sú kartely, cenové dohody, rozdelenie trhu, obmedzovanie výroby, výmeny citlivých informácií či koordinácia ponúk.\n\nČl. 101 ods. 1 ZFEÚ zakazuje dohody s cieľom alebo následkom obmedzenia súťaže. Niektoré dohody môžu byť výnimkou podľa čl. 101 ods. 3 ZFEÚ, ak prispievajú k zlepšeniu výroby alebo distribúcie, podporujú technický pokrok a umožňujú spotrebiteľom spravodlivý podiel na výhodách.\n\nKontrola dohôd obmedzujúcich súťaž je vykonávaná Európskou komisiou a vnútroštátnymi orgánmi hospodárskej súťaže. Komisia môže ukladať vysoké pokuty, vykonávať inšpekcie (tzv. dawn raids), nariaďovať ukončenie protisúťažného správania a prijímať záväzky. Podniky môžu žiadať o program zhovievavosti (leniency), ak spolupracujú pri odhaľovaní kartelu.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „dohoda“, „zosúladený postup“, „podnik“, „cieľ obmedzenia súťaže“ a „výnimka podľa čl. 101 ods. 3“, najmä v rozsudkoch Consten & Grundig, IAZ, T‑Mobile Netherlands, Allianz Hungária a Cartes Bancaires.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje dohody obmedzujúce hospodársku súťaž?",
-      "options": ["Čl. 101 ZFEÚ", "Čl. 102 ZFEÚ", "Čl. 106 ZFEÚ", "Čl. 107 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Dohody obmedzujúce súťaž sú upravené v čl. 101 ZFEÚ."
+      "q": "Zákaz dohôd obmedzujúcich súťaž je upravený v:",
+      "options": ["čl. 102 ZFEÚ", "čl. 101 ZFEÚ", "čl. 107 ZFEÚ", "čl. 34 ZFEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 101 ZFEÚ. Čl. 102 je zneužitie dominancie, čl. 107 štátna pomoc a čl. 34 voľný pohyb tovaru."
     },
     {
-      "q": "Čo je zakázané podľa čl. 101 ods. 1 ZFEÚ?",
-      "options": ["Dohody obmedzujúce súťaž", "Dominantné postavenie", "Štátna pomoc", "Zneužitie verejnej moci"],
-      "correct": 0,
-      "explanation": "Čl. 101 ods. 1 zakazuje protisúťažné dohody."
+      "q": "Dohody zakázané podľa čl. 101 ods. 1 sú:",
+      "options": [
+        "len horizontálne dohody medzi konkurentmi",
+        "horizontálne aj vertikálne dohody",
+        "len vertikálne dohody v dodávateľskom reťazci",
+        "len dohody o cenách"
+      ],
+      "correct": 1,
+      "explanation": "Zákaz sa vzťahuje aj na dohody medzi podnikmi na rôznych úrovniach trhu – potvrdil to už rozsudok Consten & Grundig."
     },
     {
-      "q": "Ktorý rozsudok upravuje zákaz rozdelenia trhu?",
-      "options": ["Consten & Grundig", "T‑Mobile Netherlands", "Cartes Bancaires", "IAZ"],
-      "correct": 0,
-      "explanation": "Consten & Grundig upravuje zákaz rozdelenia trhu."
+      "q": "Právnym následkom zakázanej dohody podľa čl. 101 ods. 2 je:",
+      "options": [
+        "pokuta bez ďalších následkov",
+        "automatická neplatnosť dohody",
+        "platnosť dohody až do jej zrušenia Komisiou",
+        "žiadny následok, ide len o deklaráciu"
+      ],
+      "correct": 1,
+      "explanation": "Neplatnosť nastáva priamo zo zákona (ex lege) a od začiatku; nevyžaduje sa rozhodnutie orgánu."
     },
     {
-      "q": "Čo je program zhovievavosti (leniency)?",
-      "options": ["Zníženie pokuty za spoluprácu pri odhalení kartelu", "Daňová úľava", "Výnimka pre malé podniky", "Zákaz vyšetrovania"],
-      "correct": 0,
-      "explanation": "Leniency umožňuje zníženie pokuty pri spolupráci."
+      "q": "Výnimka podľa čl. 101 ods. 3 vyžaduje:",
+      "options": [
+        "splnenie jednej podmienky",
+        "splnenie štyroch kumulatívnych podmienok",
+        "predchádzajúci súhlas členského štátu",
+        "žiadne podmienky, stačí oznámenie"
+      ],
+      "correct": 1,
+      "explanation": "Zlepšenie výroby alebo distribúcie, primeraný podiel výhod pre spotrebiteľov, nevyhnutnosť obmedzení a nevylúčenie súťaže pre podstatnú časť trhu."
     },
     {
-      "q": "Ktorý rozsudok upravuje zosúladený postup?",
-      "options": ["T‑Mobile Netherlands", "Costa/ENEL", "Gebhard", "UPA"],
-      "correct": 0,
-      "explanation": "T‑Mobile Netherlands upravuje zosúladený postup."
+      "q": "Absolútnu územnú ochranu ako obmedzenie súťaže riešil rozsudok:",
+      "options": ["T-Mobile Netherlands", "Consten & Grundig", "United Brands", "Altmark"],
+      "correct": 1,
+      "explanation": "Consten & Grundig (56/64 a 58/64) potvrdil, že čl. 101 dopadá aj na vertikálne dohody vytvárajúce absolútnu územnú ochranu."
     }
   ],
   "tiles": [
@@ -43,80 +58,80 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – Consten & Grundig: zákaz rozdelenia trhu",
+      "title": "Prípad 1 – Consten & Grundig: vertikálna dohoda a územná ochrana",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Podniky uzavreli exkluzívnu distribučnú dohodu rozdeľujúcu trhy medzi členské štáty.",
+          "question": "Výrobca poskytol distribútorovi výhradné právo predaja v jednom štáte a zabránil paralelným dovozom z iných štátov (absolútna územná ochrana).",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1966:41 (56/64 Consten & Grundig)"
+          "source": "ECLI:EU:C:1966:41 (56/64 a 58/64 Consten & Grundig)"
         },
         {
-          "question": "Ako Súdny dvor rozhodol o rozdelení trhu?",
+          "question": "Je aj vertikálna dohoda o absolútnej územnej ochrane zakázaná?",
           "options": [
-            "Rozdelenie trhu je prípustné",
-            "Rozdelenie trhu je zakázané ako obmedzenie súťaže",
-            "Rozdelenie trhu je prípustné pri malých podnikoch"
+            "Nie, čl. 101 sa týka len horizontálnych kartelov",
+            "Áno, aj vertikálna dohoda vytvárajúca absolútnu územnú ochranu obmedzuje súťaž (na základe cieľa) a ovplyvňuje obchod medzi štátmi",
+            "Len ak v dôsledku nej stúpnu ceny"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Rozdelenie trhu je zakázané ako obmedzenie súťaže.",
-            "wrong": "Nesprávne. Rozdelenie trhu narúša vnútorný trh."
+            "correct": "Čl. 101 sa vzťahuje aj na vertikálne dohody; absolútna územná ochrana je obmedzením súťaže z hľadiska cieľa.",
+            "wrong": "Nesprávne. Zákaz sa netýka len horizontálnych dohôd."
           },
-          "source": "ECLI:EU:C:1966:41"
+          "source": "ECLI:EU:C:1966:41 (56/64 a 58/64 Consten & Grundig)"
         }
       ]
     },
     {
-      "title": "Prípad 2 – T‑Mobile Netherlands: zosúladený postup",
+      "title": "Prípad 2 – T-Mobile: zosúladený postup",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Mobilní operátori sa stretli a vymenili si citlivé informácie o províziách.",
+          "question": "Konkurenti si na jednom stretnutí vymenili citlivé informácie o odmenách a následne konali na trhu podobne.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2009:343 (C‑8/08 T‑Mobile Netherlands)"
+          "source": "ECLI:EU:C:2009:343 (C‑8/08 T-Mobile Netherlands)"
         },
         {
-          "question": "Ako Súdny dvor definoval zosúladený postup?",
+          "question": "Stačí na „zosúladený postup“ aj jediná výmena informácií?",
           "options": [
-            "Musí ísť o formálnu dohodu",
-            "Stačí koordinácia správania alebo výmena citlivých informácií",
-            "Zosúladený postup neexistuje"
+            "Nie, vyžaduje sa dlhodobá spolupráca",
+            "Áno, aj jediné stretnutie môže stačiť; platí domnienka, že podniky zohľadnili vymenené informácie pri svojom správaní",
+            "Len ak sa výslovne dohodli na cene"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Stačí koordinácia správania alebo výmena citlivých informácií.",
-            "wrong": "Nesprávne. Nemusí ísť o formálnu dohodu."
+            "correct": "Aj jednorazová výmena citlivých informácií môže byť zosúladeným postupom s cieľom obmedziť súťaž; platí domnienka príčinnej súvislosti.",
+            "wrong": "Nesprávne. Nevyžaduje sa dlhodobá spolupráca."
           },
-          "source": "ECLI:EU:C:2009:343"
+          "source": "ECLI:EU:C:2009:343 (C‑8/08 T-Mobile Netherlands)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – Cartes Bancaires: výklad cieľa obmedzenia súťaže",
+      "title": "Prípad 3 – Cartes Bancaires: obmedzenie na základe cieľa",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Bankový systém zaviedol pravidlá zvyšujúce náklady pre konkurentov.",
+          "question": "Komisia posúdila opatrenie združenia bánk ako obmedzenie súťaže na základe cieľa bez podrobnej analýzy jeho následkov.",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:2014:2204 (C‑67/13 Cartes Bancaires)"
+          "source": "ECLI:EU:C:2014:2204 (C‑67/13 P Groupement des cartes bancaires)"
         },
         {
-          "question": "Ako Súdny dvor vyložil pojem „cieľ obmedzenia súťaže“?",
+          "question": "Ako sa má vykladať pojem obmedzenia „na základe cieľa“?",
           "options": [
-            "Cieľ sa uplatňuje široko na všetky dohody",
-            "Cieľ sa uplatňuje len na dohody, ktoré sú svojou povahou škodlivé",
-            "Cieľ sa neuplatňuje"
+            "Široko, aby sa nemuseli skúmať následky",
+            "Reštriktívne – len na dohody, ktoré samy osebe vykazujú dostatočný stupeň škodlivosti pre súťaž; inak treba skúmať následky",
+            "Vždy treba dokazovať skutočné následky na trhu"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Cieľ sa uplatňuje len na dohody, ktoré sú svojou povahou škodlivé.",
-            "wrong": "Nesprávne. Cieľ nie je automatický."
+            "correct": "Kategóriu obmedzení „na základe cieľa“ treba vykladať reštriktívne; nestačí len teoretická spôsobilosť obmedziť súťaž.",
+            "wrong": "Nesprávne. Pojem sa vykladá úzko, nie široko."
           },
-          "source": "ECLI:EU:C:2014:2204"
+          "source": "ECLI:EU:C:2014:2204 (C‑67/13 P Groupement des cartes bancaires)"
         }
       ]
     }
@@ -126,5 +141,46 @@
     "citation": "ECLI:EU:C:1966:41; ECLI:EU:C:2009:343; ECLI:EU:C:2014:2204; čl. 101 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zákaz dohôd obmedzujúcich súťaž (čl. 101 ZFEÚ)",
+    "branches": [
+      {
+        "label": "Zákaz (čl. 101 ods. 1)",
+        "leaves": [
+          "Dohody medzi podnikmi",
+          "Rozhodnutia združení podnikov",
+          "Zosúladené postupy",
+          "Ovplyvnenie obchodu medzi členskými štátmi",
+          "Cieľ alebo následok obmedziť súťaž"
+        ]
+      },
+      {
+        "label": "Formy dohôd",
+        "leaves": [
+          "Horizontálne – kartely o cenách, kvótach a rozdelení trhu",
+          "Vertikálne – vzťahy medzi rôznymi úrovňami trhu",
+          "Absolútna územná ochrana (Consten & Grundig)"
+        ]
+      },
+      {
+        "label": "Cieľ verzus následok",
+        "leaves": [
+          "Pri obmedzení na základe cieľa netreba dokazovať následok",
+          "Kategória sa vykladá reštriktívne (Cartes Bancaires)",
+          "Zosúladený postup aj po jedinom stretnutí (T-Mobile)",
+          "Domnienka, že podniky vymenené informácie zohľadnili"
+        ]
+      },
+      {
+        "label": "Následky a výnimky",
+        "leaves": [
+          "Automatická neplatnosť dohody (čl. 101 ods. 2)",
+          "Výnimka pri štyroch kumulatívnych podmienkach (čl. 101 ods. 3)",
+          "Blokové výnimky prijaté nariadeniami Komisie",
+          "De minimis – dohody bez citeľného vplyvu na súťaž"
+        ]
+      }
+    ]
   }
 }

@@ -4,34 +4,44 @@
   "summary": "Zneužitie dominantného postavenia je upravené v čl. 102 ZFEÚ. Dominantné postavenie znamená ekonomickú silu podniku, ktorá mu umožňuje správať sa nezávisle od konkurentov, zákazníkov a spotrebiteľov. Samotné dominantné postavenie nie je zakázané – zakázané je jeho zneužitie.\n\nZneužitie môže mať formu: (1) vykorisťovacie praktiky (neprimerané ceny, neprimerané obchodné podmienky), (2) vylučovacie praktiky (predátorské ceny, vernostné rabaty, odmietnutie dodávok, viazanie produktov, diskriminácia), (3) obmedzovanie inovácie alebo prístupu na trh.\n\nKontrolu vykonáva Európska komisia a vnútroštátne orgány hospodárskej súťaže. Komisia môže ukladať vysoké pokuty, nariaďovať ukončenie praktík, prijímať záväzky a vykonávať inšpekcie. Dominantné podniky majú osobitnú zodpovednosť nepoškodzovať efektívnu súťaž.\n\nJudikatúra Súdneho dvora EÚ spresňuje pojmy „dominancia“, „zneužitie“, „vernostné rabaty“, „odmietnutie dodávok“ a „predátorské ceny“, najmä v rozsudkoch United Brands, Hoffmann‑La Roche, Michelin, AKZO, Intel a Google Shopping.",
   "quiz": [
     {
-      "q": "Ktorý článok upravuje zneužitie dominantného postavenia?",
-      "options": ["Čl. 102 ZFEÚ", "Čl. 101 ZFEÚ", "Čl. 107 ZFEÚ", "Čl. 106 ZFEÚ"],
-      "correct": 0,
-      "explanation": "Zneužitie dominantného postavenia je upravené v čl. 102 ZFEÚ."
+      "q": "Zákaz zneužitia dominantného postavenia je upravený v:",
+      "options": ["čl. 101 ZFEÚ", "čl. 102 ZFEÚ", "čl. 107 ZFEÚ", "čl. 45 ZFEÚ"],
+      "correct": 1,
+      "explanation": "Čl. 102 ZFEÚ. Čl. 101 sú dohody obmedzujúce súťaž, čl. 107 štátna pomoc a čl. 45 voľný pohyb pracovníkov."
     },
     {
-      "q": "Je samotné dominantné postavenie zakázané?",
-      "options": ["Nie, zakázané je len zneužitie", "Áno, vždy", "Len pri karteloch", "Len pri štátnej pomoci"],
-      "correct": 0,
-      "explanation": "Dominancia nie je zakázaná, zakázané je jej zneužitie."
+      "q": "Podľa čl. 102 ZFEÚ je zakázané:",
+      "options": [
+        "samotné dominantné postavenie",
+        "zneužitie dominantného postavenia",
+        "akýkoľvek veľký trhový podiel",
+        "nič, ide len o programové ustanovenie"
+      ],
+      "correct": 1,
+      "explanation": "Dominancia sama osebe zakázaná nie je. Dominantný podnik však má osobitnú zodpovednosť za to, aby svojím správaním nenarušil účinnú súťaž."
     },
     {
-      "q": "Ktorý rozsudok upravuje vernostné rabaty?",
-      "options": ["Hoffmann-La Roche", "AKZO", "United Brands", "Intel"],
-      "correct": 0,
-      "explanation": "Hoffmann-La Roche upravuje vernostné rabaty."
+      "q": "Dominantné postavenie znamená schopnosť podniku:",
+      "options": [
+        "dosahovať najväčší obrat na trhu",
+        "správať sa do značnej miery nezávisle od konkurentov, odberateľov a spotrebiteľov",
+        "vlastniť kľúčové patenty",
+        "mať pobočky vo viacerých členských štátoch"
+      ],
+      "correct": 1,
+      "explanation": "Rozhodujúca je nezávislosť správania na vymedzenom relevantnom trhu, nie veľkosť podniku ako taká."
     },
     {
-      "q": "Ktorý rozsudok upravuje predátorské ceny?",
-      "options": ["AKZO", "Costa/ENEL", "Gebhard", "UPA"],
-      "correct": 0,
-      "explanation": "AKZO upravuje predátorské ceny."
+      "q": "Vymedzenie relevantného trhu (tovarového a geografického) riešil rozsudok:",
+      "options": ["T-Mobile Netherlands", "United Brands", "Altmark", "Continental Can"],
+      "correct": 1,
+      "explanation": "United Brands (27/76) – prípad banánov. Bez vymedzenia relevantného trhu nemožno posúdiť dominanciu."
     },
     {
-      "q": "Ktorý rozsudok sa týka odmietnutia dodávok?",
-      "options": ["United Brands", "Dassonville", "Keck", "Cartes Bancaires"],
-      "correct": 0,
-      "explanation": "United Brands sa týka odmietnutia dodávok."
+      "q": "Test „rovnako efektívneho konkurenta“ pri vernostných rabatoch zdôraznil rozsudok:",
+      "options": ["Consten & Grundig", "Intel", "Airtours", "Reyners"],
+      "correct": 1,
+      "explanation": "Intel (C‑413/14 P): ak podnik predloží dôkazy, treba posúdiť skutočnú spôsobilosť rabatov vylúčiť rovnako efektívneho konkurenta."
     }
   ],
   "tiles": [
@@ -43,28 +53,28 @@
   ],
   "cases": [
     {
-      "title": "Prípad 1 – United Brands: odmietnutie dodávok a neprimerané ceny",
+      "title": "Prípad 1 – United Brands: relevantný trh a dominancia",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dominantný podnik odmietol dodávať banány distribútorovi bez objektívneho dôvodu.",
+          "question": "Podnik namietal, že nemá dominantné postavenie, lebo banány súťažia s iným ovocím; sporné bolo vymedzenie relevantného trhu.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1978:22 (27/76 United Brands)"
         },
         {
-          "question": "Ako Súdny dvor posúdil odmietnutie dodávok?",
+          "question": "Ako sa určí dominancia?",
           "options": [
-            "Je vždy prípustné",
-            "Môže byť zneužitím, ak nie je objektívne odôvodnené",
-            "Nie je nikdy zneužitím"
+            "Podľa celkového obratu podniku",
+            "Najprv sa vymedzí relevantný trh (tovarový a geografický); dominancia je schopnosť správať sa nezávisle od konkurentov a spotrebiteľov",
+            "Podľa počtu zamestnancov podniku"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Odmietnutie dodávok môže byť zneužitím, ak nie je objektívne odôvodnené.",
-            "wrong": "Nesprávne. Dominantný podnik má osobitnú zodpovednosť."
+            "correct": "Dominancia sa posudzuje na vymedzenom relevantnom trhu; ide o schopnosť správať sa do značnej miery nezávisle.",
+            "wrong": "Nesprávne. Rozhoduje relevantný trh a nezávislé správanie, nie obrat či veľkosť."
           },
-          "source": "ECLI:EU:C:1978:22"
+          "source": "ECLI:EU:C:1978:22 (27/76 United Brands)"
         }
       ]
     },
@@ -73,58 +83,105 @@
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dominantný podnik poskytoval rabaty viazané na exkluzívny odber.",
+          "question": "Dominantný podnik poskytoval odberateľom rabaty podmienené tým, že budú odoberať výlučne alebo prevažne od neho.",
           "options": [],
           "correct": 0,
           "source": "ECLI:EU:C:1979:36 (85/76 Hoffmann-La Roche)"
         },
         {
-          "question": "Ako Súdny dvor posúdil vernostné rabaty?",
+          "question": "Sú vernostné (exkluzivitné) rabaty dominantného podniku problematické?",
           "options": [
-            "Sú vždy prípustné",
-            "Sú zakázané, ak motivujú zákazníkov kupovať len od dominantného podniku",
-            "Sú zakázané len pri karteloch"
+            "Nie, rabaty sú vždy dovolenou obchodnou praktikou",
+            "Áno, rabaty podmienené výhradným odberom môžu byť zneužitím, lebo vylučujú konkurentov; dominantný podnik má osobitnú zodpovednosť",
+            "Len ak presiahnu 50 % ceny"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Vernostné rabaty sú zakázané, ak motivujú zákazníkov kupovať len od dominantného podniku.",
-            "wrong": "Nesprávne. Rabaty môžu byť protisúťažné aj mimo kartelov."
+            "correct": "Vernostné rabaty viazané na výhradnosť môžu byť zneužitím dominancie; dominantný podnik má osobitnú zodpovednosť voči súťaži.",
+            "wrong": "Nesprávne. Takéto rabaty môžu byť zneužitím."
           },
-          "source": "ECLI:EU:C:1979:36"
+          "source": "ECLI:EU:C:1979:36 (85/76 Hoffmann-La Roche)"
         }
       ]
     },
     {
-      "title": "Prípad 3 – AKZO: predátorské ceny",
+      "title": "Prípad 3 – Intel: rabaty a test rovnako efektívneho konkurenta",
       "difficulty": "stredná",
       "steps": [
         {
-          "question": "Dominantný podnik predával pod nákladmi, aby vytlačil konkurenta z trhu.",
+          "question": "Komisia označila vernostné rabaty dominantného podniku za zneužitie; podnik namietal, že mala posúdiť ich skutočnú spôsobilosť vylúčiť konkurentov (AEC test).",
           "options": [],
           "correct": 0,
-          "source": "ECLI:EU:C:1991:286 (C‑62/86 AKZO)"
+          "source": "ECLI:EU:C:2017:632 (C‑413/14 P Intel)"
         },
         {
-          "question": "Ako Súdny dvor posúdil predátorské ceny?",
+          "question": "Ako treba posudzovať vernostné rabaty dominantného podniku?",
           "options": [
-            "Sú vždy prípustné",
-            "Sú zneužitím, ak sú pod nákladmi a majú vylučovací účinok",
-            "Nie sú nikdy zneužitím"
+            "Vždy sú zneužitím bez akejkoľvek analýzy",
+            "Ak podnik predloží dôkazy, treba posúdiť spôsobilosť rabatov vylúčiť rovnako efektívneho konkurenta (AEC test), nielen ich formu",
+            "Nikdy nie sú zneužitím dominancie"
           ],
           "correct": 1,
           "explanation": {
-            "correct": "Predátorské ceny sú zneužitím, ak sú pod nákladmi a majú vylučovací účinok.",
-            "wrong": "Nesprávne. Predátorské ceny sú typickým zneužitím."
+            "correct": "Súdny dvor spresnil, že pri obrane založenej na dôkazoch treba analyzovať skutočnú spôsobilosť rabatov vylúčiť rovnako efektívneho konkurenta.",
+            "wrong": "Nesprávne. Nemožno sa spoliehať len na formu; treba posúdiť účinky."
           },
-          "source": "ECLI:EU:C:1991:286"
+          "source": "ECLI:EU:C:2017:632 (C‑413/14 P Intel)"
         }
       ]
     }
   ],
   "zdroj": {
     "type": "judikat",
-    "citation": "ECLI:EU:C:1978:22; ECLI:EU:C:1979:36; ECLI:EU:C:1991:286; čl. 102 ZFEÚ",
+    "citation": "ECLI:EU:C:1978:22; ECLI:EU:C:1979:36; ECLI:EU:C:2017:632; čl. 102 ZFEÚ",
     "url": "https://eur-lex.europa.eu/",
     "accessed": "2026-01"
+  },
+  "spider": {
+    "center": "Zákaz zneužitia dominantného postavenia (čl. 102 ZFEÚ)",
+    "branches": [
+      {
+        "label": "Dominantné postavenie",
+        "leaves": [
+          "Schopnosť správať sa do značnej miery nezávisle",
+          "Nezávislosť od konkurentov, odberateľov a spotrebiteľov",
+          "Relevantný trh – tovarový a geografický (United Brands)",
+          "Samotná dominancia zakázaná nie je"
+        ]
+      },
+      {
+        "label": "Osobitná zodpovednosť",
+        "leaves": [
+          "Dominantný podnik nesmie narušiť účinnú súťaž (Michelin)",
+          "Správanie dovolené bežnému podniku môže byť dominantovi zakázané"
+        ]
+      },
+      {
+        "label": "Vylučovacie zneužitie",
+        "leaves": [
+          "Predátorské ceny",
+          "Vernostné a exkluzivitné rabaty (Hoffmann-La Roche, Intel)",
+          "Viazanie a balíčkovanie produktov",
+          "Odmietnutie dodávok a prístupu k nevyhnutnému zariadeniu"
+        ]
+      },
+      {
+        "label": "Vykorisťovateľské zneužitie",
+        "leaves": [
+          "Neprimerane vysoké ceny",
+          "Nespravodlivé obchodné podmienky",
+          "Diskriminácia medzi obchodnými partnermi"
+        ]
+      },
+      {
+        "label": "Test a následky",
+        "leaves": [
+          "Test rovnako efektívneho konkurenta (Intel)",
+          "Pri rabatoch treba posúdiť spôsobilosť vylúčiť konkurenta",
+          "Pokuty a nápravné opatrenia Komisie",
+          "Čl. 102 má priamy účinok"
+        ]
+      }
+    ]
   }
 }
