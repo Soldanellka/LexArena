@@ -16,7 +16,7 @@ from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 import { awardParagrafy, spendParagrafy, deductEnergy, canPlayDuel }
 from './avatar.js';
-import { ECONOMY_CONFIG, getRole, logTransaction } from './economyConfig.js';
+import { ECONOMY_CONFIG, getRole, logTransaction, todayKey } from './economyConfig.js';
 import { showRewardToast } from '../ui.js';
 
 export { ECONOMY_CONFIG };
@@ -24,7 +24,8 @@ export { ECONOMY_CONFIG };
 /* ---------- HELPERY ---------- */
 function getDb() { return window.db || null; }
 function getNick() { return localStorage.getItem('playerNick') || null; }
-function todayKey() { return new Date().toISOString().slice(0, 10); }
+/* todayKey() sa po novom importuje z economyConfig.js – jedna definícia „dňa“
+   pre strop §, reklamy, granty aj denný reset energie (avatar.js). */
 
 async function getBalance(db, nick) {
   const snap = await get(ref(db, `users/${nick}/paragrafy`));

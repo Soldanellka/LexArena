@@ -3,20 +3,22 @@
 import { ref, get, update, onValue }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 import { showRewardToast } from '../ui.js';
-import { ECONOMY_CONFIG, getRole, logTransaction } from './economyConfig.js';
+import { ECONOMY_CONFIG, getRole, logTransaction, todayKey } from './economyConfig.js';
 
 /* ============================================================
    KONFIGURÁCIA AVATARA
-   FEED_COST, FEED_ENERGY a STREAK_SHIELD_COST sa čítajú z
-   ECONOMY_CONFIG (scripts/economyConfig.js) – jediný zdroj pravdy.
+   Všetky energetické čísla aj ceny sa čítajú z ECONOMY_CONFIG
+   (scripts/economyConfig.js) – jediný zdroj pravdy. Tento objekt
+   je len pomenovaný alias, nie druhé miesto na ladenie hodnôt.
 ============================================================ */
 
 const AVATAR_CONFIG = {
-  // Energia
-  MAX_ENERGY: 100,
-  FEED_COST: ECONOMY_CONFIG.ENERGY.FEED_COST,     // kŕmenie stojí 12§
-  FEED_ENERGY: ECONOMY_CONFIG.ENERGY.FEED_TO,     // kŕmenie doplní na 100%
-  SLEEP_THRESHOLD: 0,        // pri 0 avatar zaspí
+  // Energia – všetko z ECONOMY_CONFIG.ENERGY, žiadne číslo natvrdo
+  MAX_ENERGY: ECONOMY_CONFIG.ENERGY.MAX,
+  DAILY_FULL: ECONOMY_CONFIG.ENERGY.DAILY_FULL,   // denná porcia po resete
+  FEED_COST: ECONOMY_CONFIG.ENERGY.FEED_COST,     // § za nakŕmenie
+  FEED_ENERGY: ECONOMY_CONFIG.ENERGY.FEED_TO,     // kŕmenie doplní na túto hodnotu
+  SLEEP_THRESHOLD: ECONOMY_CONFIG.ENERGY.SLEEP_AT, // pri tejto hodnote avatar zaspí
 
   // Denný login streak – krivka viď ECONOMY_CONFIG.STREAK v checkDailyLogin()
   STREAK_SHIELD_COST: ECONOMY_CONFIG.SINKS.STREAK_SHIELD,     // štít streaku stojí 5§
@@ -308,16 +310,56 @@ async function loadAvatarState(nick) {
 
   const snap = await get(ref(db, `users/${nick}/avatar`));
   if (!snap.exists()) {
-    // Defaultný stav pri prvom prihlásení
+    // Defaultný stav pri prvom prihlásení – rovno s dnešnou porciou
     const defaultState = {
       type: 'student-f',
-      energy: 100,
+      energy: AVATAR_CONFIG.DAILY_FULL,
+      energyDay: todayKey(),
       lastEnergyUpdate: Date.now()
     };
     await update(ref(db, `users/${nick}/avatar`), defaultState);
     return defaultState;
   }
-  return snap.val();
+  return await applyDailyEnergyReset(nick, snap.val());
+}
+
+/* ============================================================
+   DENNÝ RESET ENERGIE (model v2)
+   Lazy, bez cronu a bez servera: pri prvom čítaní stavu v novom dni
+   sa energia obnoví na dennú porciu. Deň = todayKey() z economyConfig
+   (ten istý, aký používa denný strop §).
+
+   Nikdy neznižuje: berie sa max(aktuálna, DAILY_FULL). Dnes sa to nemôže
+   prejaviť (FEED_TO === DAILY_FULL), je to poistka pre prípad, že by
+   kŕmenie/prémium raz dopĺňalo nad dennú porciu – reset by hráčovi
+   nemal nič zobrať.
+
+   Nedotýka sa § ani progresu – zapisuje výhradne do users/{nick}/avatar
+   polia energy/energyDay/lastEnergyUpdate.
+
+   Poznámka k anonymom: tí Firebase identitu nemajú, ich energia bude žiť
+   v localStorage – rieši sa v E4 spolu s anon session, nie tu.
+============================================================ */
+async function applyDailyEnergyReset(nick, state) {
+  if (!state) return state;
+
+  const today = todayKey();
+  if (state.energyDay === today) return state;
+
+  const refreshed = {
+    ...state,
+    energy: Math.max(Number(state.energy) || 0, AVATAR_CONFIG.DAILY_FULL),
+    energyDay: today,
+    lastEnergyUpdate: Date.now()
+  };
+
+  await update(ref(getDb(), `users/${nick}/avatar`), {
+    energy: refreshed.energy,
+    energyDay: refreshed.energyDay,
+    lastEnergyUpdate: refreshed.lastEnergyUpdate
+  });
+
+  return refreshed;
 }
 
 async function saveAvatarState(nick, state) {
@@ -327,20 +369,22 @@ async function saveAvatarState(nick, state) {
 }
 
 /* ============================================================
-   ENERGIA – výpočet aktuálnej energie
-   (energia sa nemíňa časom sama od seba, len hraním)
+   ENERGIA – spotreba
+   Energia sa časom sama nedopĺňa ani nemíňa; míňa ju hranie a raz
+   denne ju obnoví applyDailyEnergyReset() pri načítaní stavu.
 ============================================================ */
 export async function deductEnergy(amount) {
   const nick = getNick();
-  if (!nick) return 100;
+  if (!nick) return AVATAR_CONFIG.DAILY_FULL;
 
   const state = await loadAvatarState(nick);
-  if (!state) return 100;
+  if (!state) return AVATAR_CONFIG.DAILY_FULL;
 
-  const newEnergy = Math.max(0, (state.energy || 100) - amount);
+  const newEnergy = Math.max(0, (state.energy ?? AVATAR_CONFIG.DAILY_FULL) - amount);
   await saveAvatarState(nick, {
     ...state,
     energy: newEnergy,
+    energyDay: todayKey(),
     lastEnergyUpdate: Date.now()
   });
 
@@ -355,20 +399,30 @@ export async function feedAvatar() {
   const nick = getNick();
   if (!nick) return;
 
+  /* Kŕmiť sa dá KEDYKOĽVEK, kým energia nie je plná – nielen pri spiacom
+     avatarovi. Nick so 40 % tak doplní na plnú porciu a stihne aj drahú
+     aktivitu. Stav sa načíta PRED platbou, aby sa § nestrhli za nič. */
+  const state = await loadAvatarState(nick);
+  const current = state ? (state.energy ?? AVATAR_CONFIG.DAILY_FULL) : AVATAR_CONFIG.DAILY_FULL;
+  if (current >= AVATAR_CONFIG.FEED_ENERGY) {
+    showRewardToast('🍖 Avatar je najedený – energia je plná.');
+    return;
+  }
+
   const isAdmin = (await getRole(nick)) === 'admin';
   const spent = isAdmin ? true : await spendParagrafy(AVATAR_CONFIG.FEED_COST, 'za kŕmenie avatara');
   if (!spent) return;
 
-  const state = await loadAvatarState(nick);
   const newEnergy = AVATAR_CONFIG.FEED_ENERGY;
 
   await saveAvatarState(nick, {
     ...state,
     energy: newEnergy,
+    energyDay: todayKey(),
     lastEnergyUpdate: Date.now()
   });
 
-  updateAvatarUI(newEnergy, state.type);
+  updateAvatarUI(newEnergy, state && state.type);
   await logTransaction(nick, {
     type: 'spend',
     amount: isAdmin ? 0 : AVATAR_CONFIG.FEED_COST,
@@ -388,8 +442,8 @@ export async function canPlayDuel() {
   const state = await loadAvatarState(nick);
   if (!state) return true;
 
-  if ((state.energy || 100) <= AVATAR_CONFIG.SLEEP_THRESHOLD) {
-    showRewardToast(`😴 Avatar spí! Nakŕm ho za ${AVATAR_CONFIG.FEED_COST}§ aby sa prebudil.`);
+  if ((state.energy ?? AVATAR_CONFIG.DAILY_FULL) <= AVATAR_CONFIG.SLEEP_THRESHOLD) {
+    showRewardToast(`😴 Avatar zaspal – dnešná energia je preč. Nakŕm ho za ${AVATAR_CONFIG.FEED_COST}§, alebo sa vráť zajtra.`);
     return false;
   }
   return true;
@@ -573,7 +627,7 @@ export async function selectAvatar(avatarType) {
 
   await saveAvatarState(nick, { ...state, type: avatarType });
   preloadAvatarStates(avatarDef);
-  updateAvatarUI(state.energy || 100, avatarType);
+  updateAvatarUI(state.energy ?? AVATAR_CONFIG.DAILY_FULL, avatarType);
   showRewardToast(`Avatar zmenený na: ${avatarDef.name}`);
 }
 
@@ -768,10 +822,11 @@ export function updateAvatarUI(energy, avatarType) {
     imgEl.style.filter = (!avatarDef.base && isSleeping) ? 'saturate(0.5) brightness(0.8)' : '';
   }
 
-  // Energy bar (ak existuje)
+  // Energy bar (ak existuje) – šírka ako podiel z hornej hranice, nie „energy %“
   const energyBar = document.getElementById('avatarEnergyBar');
   if (energyBar) {
-    energyBar.style.width = `${energy}%`;
+    const pct = Math.max(0, Math.min(100, Math.round((energy / AVATAR_CONFIG.MAX_ENERGY) * 100)));
+    energyBar.style.width = `${pct}%`;
     energyBar.style.background = energy > 30
       ? 'linear-gradient(90deg, #48bb78, #38a169)'
       : energy > 10
@@ -784,10 +839,15 @@ export function updateAvatarUI(energy, avatarType) {
     energyText.textContent = isSleeping ? '😴 Spí' : `⚡ ${energy}%`;
   }
 
-  // Feed button
+  /* Feed button – po novom sa ukáže vždy, keď energia NIE JE plná (nielen pri
+     spánku). Popisok aj title berú cenu z configu, aby sa nemohli rozísť
+     s ECONOMY_CONFIG.ENERGY.FEED_COST (predtým bolo „12§“ natvrdo v HTML). */
   const feedBtn = document.getElementById('feedAvatarBtn');
   if (feedBtn) {
-    feedBtn.style.display = isSleeping ? 'inline-flex' : 'none';
+    const cost = AVATAR_CONFIG.FEED_COST;
+    feedBtn.style.display = energy < AVATAR_CONFIG.FEED_ENERGY ? 'inline-flex' : 'none';
+    feedBtn.textContent = `🍖 Nakŕmiť (${cost}§)`;
+    feedBtn.title = `Nakŕm avatara za ${cost}§`;
   }
 
   /* Duel button blokovanie. Dlaždicu Výzvy (#openDuelBankTile) sem ZÁMERNE
@@ -880,7 +940,7 @@ export async function initAvatarSystem() {
     }
 
     const avatarDef = AVATAR_CONFIG.AVATARS[state.type];
-    updateAvatarUI(state.energy || 100, state.type || 'student-f');
+    updateAvatarUI(state.energy ?? AVATAR_CONFIG.DAILY_FULL, state.type || 'student-f');
     preloadAvatarStates(avatarDef);
 
     // Nový nick (loadAvatarState ho práve defaultol) alebo starý typ pred
@@ -898,7 +958,7 @@ export async function initAvatarSystem() {
   onValue(ref(db, `users/${nick}/avatar`), (snap) => {
     if (snap.exists()) {
       const s = snap.val();
-      updateAvatarUI(s.energy || 100, s.type || 'student-f');
+      updateAvatarUI(s.energy ?? AVATAR_CONFIG.DAILY_FULL, s.type || 'student-f');
     }
   });
 

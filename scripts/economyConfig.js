@@ -60,8 +60,23 @@ from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 const PRESTIGE_TIERS = [300, 600, 1000, 2000];
 
 export const ECONOMY_CONFIG = {
-  // ENERGIA (náklady v % z max 100)
+  /* ENERGIA = DENNÁ PORCIA (model v2, 2026-08).
+     Energia sa každý deň obnoví na DAILY_FULL – pre všetkých rovnako. Aktivity
+     ju míňajú (ťažké veľa, ľahké málo); na nule avatar zaspí. Jediné doplnenie
+     navyše je KŔMENIE za § (FEED_COST → FEED_TO), ktoré má len nick.
+
+     Deň sa láme podľa todayKey() nižšie (UTC dátum) – ZÁMERNE ten istý pojem
+     „dňa“, aký používa denný strop LIMITS.DAILY_EARN_CAP a adsWatched/
+     spiderGamePlays. Streak (checkDailyLogin) má vlastné 24-hodinové okno,
+     to sa tu nepoužíva.
+
+     ⚠️ VŠETKY čísla nižšie sú NA DOLADENIE (ekonomická simulácia Babu).
+     Náklady sú záporné, hranice a ceny kladné. */
   ENERGY: {
+    MAX: 100,              // horná hranica energie (0–MAX), aj šírka energy baru v %
+    DAILY_FULL: 100,       // na doladenie – denná porcia, na ktorú sa energia ráno obnoví
+    SLEEP_AT: 0,           // pri tejto hodnote (a nižšej) avatar spí
+
     DUEL: -5,              // odohratý duel – výzva aj prijatie
     BIFLOVACKA_CARD: -1,   // za kartičku (pôvodne −2; učenie je jadro appky, netrestať –
                            //  50 kartičiek = polovica energie, nie celá)
@@ -317,6 +332,20 @@ export const ECONOMY_CONFIG = {
     }
   }
 };
+
+/* ============================================================
+   DEŇ – jediná definícia pre celú ekonomiku.
+   UTC dátum (YYYY-MM-DD). Používa ho denný strop § (dailyEarned),
+   adsWatched, dailyGrant, spiderGamePlays a po novom aj denný reset
+   energie (avatar.js). Kým je definícia jedna, nemôžu sa tieto veci
+   rozísť a resetovať sa v rôznych okamihoch.
+   ⚠️ Pre SK sa deň láme o 02:00 miestneho času (UTC+2 v lete) – je to
+   existujúca vlastnosť stropu, ponechaná zámerne. Prípadný prechod na
+   lokálny dátum je samostatné rozhodnutie a zmenil by aj strop 60§.
+============================================================ */
+export function todayKey() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 /* ============================================================
    ROLA HRÁČA – vždy zo skutočného Firebase záznamu

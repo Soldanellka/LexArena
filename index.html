@@ -33,8 +33,10 @@
         <div id="avatarEnergyBar" class="avatar-energy-bar" style="width:100%"></div>
       </div>
       <span id="avatarEnergyText" class="avatar-energy-text">⚡ 100%</span>
-      <button id="feedAvatarBtn" class="btn avatar-feed-btn" style="display:none" title="Nakŕm avatara za 12§">
-        🍖 Nakŕmiť (12§)
+      <!-- Popisok aj title dopĺňa updateAvatarUI() z ECONOMY_CONFIG.ENERGY.FEED_COST
+           (scripts/avatar.js) – cenu sem NEPÍSAŤ natvrdo, rozišla by sa s configom. -->
+      <button id="feedAvatarBtn" class="btn avatar-feed-btn" style="display:none">
+        🍖 Nakŕmiť
       </button>
       <!-- Paleta 🎨 (#changeAvatarBtn) bola samostatná druhá avatarová ikona
            v lište. Zlúčená s avatarom: "Zmeniť vzhľad" je teraz položkou
