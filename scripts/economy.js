@@ -14,7 +14,7 @@
 import { ref, get, set, update, runTransaction }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-import { awardParagrafy, spendParagrafy, deductEnergy, canPlayDuel }
+import { awardParagrafy, spendParagrafy, deductEnergy, canPlayDuel, getEnergy }
 from './avatar.js';
 import { ECONOMY_CONFIG, getRole, logTransaction, todayKey } from './economyConfig.js';
 import { showRewardToast } from '../ui.js';
@@ -175,6 +175,48 @@ export async function econEnergy(nick, delta, reason = '') {
 ============================================================ */
 export async function econCanPlay(activity = '') {
   return await canPlayDuel();
+}
+
+/* ============================================================
+   ENERGETICKÁ BRÁNA PRE DRAHÉ AKTIVITY (E2)
+   Štátnicová sieň a Nočný výcuc sa po novom neplatia §, ale energiou.
+   Na rozdiel od econCanPlay (ktoré len pýta „nespíš?“) sa tu overuje,
+   či energia POKRYJE konkrétny náklad – 60 z porcie 100 je veľa a
+   pustiť hráča do mínusu by zmazalo zmysel váh.
+
+   econEnergyLeft()  – koľko energie hráč má (bez zápisu)
+   econEnergyMissingMsg(cost, left) – jednotná hláška pre oba vstupy
+   econSpendEnergy(nick, cost, reason) – znovu overí a odpočíta;
+        true = smie ísť ďalej, false = nemá dosť (volajúci zobrazí hlášku)
+
+   Admin má energiu zadarmo – rovnako, ako mal doteraz § vstup zadarmo
+   cez econSpend. Bez toho by sa sieň nedala testovať bez čakania na
+   ďalší deň.
+============================================================ */
+export async function econEnergyLeft() {
+  return await getEnergy();
+}
+
+export function econEnergyMissingMsg(cost, left) {
+  return `😴 Nemáš dosť energie (treba ${Math.abs(cost)}, máš ${left}). ` +
+         `Nakŕm avatara za ${ECONOMY_CONFIG.ENERGY.FEED_COST}§, alebo sa vráť zajtra – energia sa obnoví.`;
+}
+
+export async function econSpendEnergy(nick, cost, reason = '') {
+  const need = Math.abs(cost);
+  if (!need) return true;
+
+  const role = await getRole(nick);
+  if (role === 'admin') {
+    await logTransaction(nick, { type: 'energy', amount: 0, reason: `${reason} (admin zadarmo)`, balanceAfter: null });
+    return true;
+  }
+
+  const left = await getEnergy();
+  if (left < need) return false;
+
+  await econEnergy(nick, -need, reason);
+  return true;
 }
 
 /* ============================================================
@@ -596,6 +638,8 @@ window.econSpend = econSpend;
 window.econBalance = econBalance;
 window.econEnergy = econEnergy;
 window.econCanPlay = econCanPlay;
+window.econEnergyLeft = econEnergyLeft;
+window.econSpendEnergy = econSpendEnergy;
 window.econVideoReward = econVideoReward;
 window.econIsVideoClaimed = econIsVideoClaimed;
 window.econWatchAd = econWatchAd;

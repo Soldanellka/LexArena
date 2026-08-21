@@ -392,6 +392,19 @@ export async function deductEnergy(amount) {
   return newEnergy;
 }
 
+/* Aktuálna energia hráča, BEZ zápisu. Pre gate-y drahých aktivít
+   (Štátnicová sieň, Nočný výcuc), ktoré potrebujú vedieť, či náklad
+   vôbec pokryje. Číta cez loadAvatarState(), takže po polnoci vráti
+   už obnovenú dennú porciu.
+   Bez nicku vracia dennú porciu = „neblokuj“ – rovnaké fail-soft
+   správanie ako canPlayDuel(); anonyma rieši E4. */
+export async function getEnergy() {
+  const nick = getNick();
+  if (!nick) return AVATAR_CONFIG.DAILY_FULL;
+  const state = await loadAvatarState(nick);
+  return state ? (state.energy ?? AVATAR_CONFIG.DAILY_FULL) : AVATAR_CONFIG.DAILY_FULL;
+}
+
 /* ============================================================
    KŔMENIE AVATARA
 ============================================================ */
@@ -659,6 +672,21 @@ export async function buyTalar(avatarId) {
   if (!paid) return { ok: false, message: `Nemáš dosť § (${avatarDef.talarPrice}§).` };
 
   await update(ref(db, `users/${nick}/ownedTalars`), { [avatarId]: true });
+
+  /* E2: kúpa talára po novom zanecháva stopu v transakčnom logu. Predtým
+     jediný § výdavok v celej appke, ktorý sa nikam nezapísal – talár za
+     1000 § v users/{nick}/transactions chýbal úplne.
+     Prečo nie econSpend: avatar.js NESMIE importovať economy.js (economy.js
+     importuje avatar.js – vznikol by cyklus, presne preto existuje
+     samostatný economyConfig.js). logTransaction je z konfiguračného
+     listu, takže je dostupný bez cyklu. Rovnaký dôvod má feedAvatar(). */
+  await logTransaction(nick, {
+    type: 'spend',
+    amount: avatarDef.talarPrice,
+    reason: `talár – ${avatarDef.name}`,
+    balanceAfter: null
+  });
+
   return { ok: true, price: avatarDef.talarPrice };
 }
 

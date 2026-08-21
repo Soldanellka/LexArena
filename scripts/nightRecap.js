@@ -4,7 +4,7 @@
    NOČNÝ VÝCUC – audio opakovanie oblasti pred spaním
    Karta #nightRecapCard (panel #setStudy).
 
-   Princíp: jedna platba (SINKS.NIGHT_RECAP_UNLOCK) odomkne audio
+   Princíp: jeden energetický náklad (ENERGY.NIGHT_RECAP) odomkne audio
    výcucy VŠETKÝCH okruhov ZVOLENEJ oblasti na 24 h — odomknutie,
    TTL aj výber okruhov sa kľúčujú slugom oblasti, oblasti sú na
    sebe nezávislé. Študent si hore prepne oblasť, zaškrtá okruhy
@@ -24,7 +24,7 @@
 ============================================================ */
 
 import { ref, get, set } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-import { econSpend, econBalance, ECONOMY_CONFIG } from './economy.js';
+import { econEnergyLeft, econEnergyMissingMsg, econSpendEnergy, ECONOMY_CONFIG } from './economy.js';
 import { escapeHtml } from '../core.js';
 import { showRewardToast } from '../ui.js';
 
@@ -116,19 +116,19 @@ async function unlock() {
   const nick = getNick();
   const msg = $id('nrMsg');
   if (!nick) { if (msg) msg.textContent = 'Najprv sa prihlás (nick), potom sa dá odomykať.'; return; }
-  const price = ECONOMY_CONFIG.SINKS.NIGHT_RECAP_UNLOCK;
 
-  /* Jemná hláška namiesto tvrdého bloku – nočné opakovanie je návyk,
+  /* E2: výcuc sa už neplatí §, stojí energiu (ENERGY.NIGHT_RECAP).
+     Jemná hláška namiesto tvrdého bloku – nočné opakovanie je návyk,
      nie trestná zóna. Tlačidlo ostáva aktívne, nič sa nezamyká. */
-  const balance = await econBalance(nick);
-  if (balance < price) {
-    if (msg) msg.textContent =
-      `Chýba ti ešte ${price - balance} § (máš ${balance} §). Nazbieraš ich v kvízoch, dueloch a Bifľovačke – výcuc tu na teba počká. 🌙`;
+  const energyCost = ECONOMY_CONFIG.ENERGY.NIGHT_RECAP;
+  const energyLeft = await econEnergyLeft();
+  if (energyLeft < Math.abs(energyCost)) {
+    if (msg) msg.textContent = econEnergyMissingMsg(energyCost, energyLeft) + ' Výcuc tu na teba počká. 🌙';
     return;
   }
 
-  const ok = await econSpend(nick, price, `Nočný výcuc – ${area.label} (24 h)`);
-  if (!ok) { if (msg) msg.textContent = 'Platba sa nepodarila, skús to ešte raz.'; return; }
+  const ok = await econSpendEnergy(nick, energyCost, `Nočný výcuc – ${area.label} (24 h)`);
+  if (!ok) { if (msg) msg.textContent = econEnergyMissingMsg(energyCost, await econEnergyLeft()); return; }
 
   const ts = Date.now();
   try {
@@ -245,7 +245,7 @@ function startStream() {
 
 function startPreview() {
   /* Ukážka zdarma: prvých ~30 s okruhu 1 zvolenej oblasti – nech
-     študent počuje, čo kupuje, a 33 § nie je naslepo. */
+     študent počuje, čo odomyká, a energiu neminie naslepo. */
   previewMode = true;
   errorStreak = 0;
   playSlug = area.slug;
@@ -369,12 +369,12 @@ function timeLeftLabel() {
 }
 
 function renderLocked(body) {
-  const price = ECONOMY_CONFIG.SINKS.NIGHT_RECAP_UNLOCK;
+  const energyCost = Math.abs(ECONOMY_CONFIG.ENERGY.NIGHT_RECAP);
   body.innerHTML = `
     ${areaSwitcherHtml()}
     <div class="nr-row">
       <button class="btn" id="nrPreviewBtn">🎧 Ukážka zdarma (${PREVIEW_SECONDS} s)</button>
-      <button class="btn btn-primary" id="nrUnlockBtn">🔓 Odomkni ${escapeHtml(area.label)} na 24 h za ${price} §</button>
+      <button class="btn btn-primary" id="nrUnlockBtn">🔓 Odomkni ${escapeHtml(area.label)} na 24 h za ⚡ ${energyCost}</button>
     </div>
     <div class="small" id="nrMsg" style="margin-top:8px"></div>
     <div class="small nr-now" id="nrNow" style="margin-top:4px"></div>`;

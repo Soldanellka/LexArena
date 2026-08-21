@@ -368,7 +368,7 @@
             <button class="game-tile" id="openStatniceBtn">
               <span class="game-tile-icon">🏛️</span>
               <span class="game-tile-name">Štátnicová sieň</span>
-              <span class="game-tile-desc">Ústna skúška pred komisiou · <span data-econ="STATNICE.EXAM_COST"></span>§</span>
+              <span class="game-tile-desc">Ústna skúška pred komisiou · ⚡ <span data-econ="ENERGY.GREMIUM"></span></span>
             </button>
             <!-- Výzvy nezávisia od výberu oblasti – register je dostupný vždy,
                  preto sa táto dlaždica nikdy nedisabluje. -->
@@ -398,7 +398,7 @@
             Kartičky sú krátka pamäťová hra; prípady sú interaktívne scenáre s okamžitou spätnou väzbou.
             <!-- Zoznam oblastí MUSÍ sedieť s AREA_CONFIG v scripts/statnice.js
                  (toast pri nedostupnej oblasti ho vypisuje priamo odtiaľ). -->
-            Štátnicová sieň (<span data-econ="STATNICE.EXAM_COST"></span>§, dostupná pre Pracovné, Trestné, Občianske a Európske právo) je nácvik ústnej
+            Štátnicová sieň (⚡ <span data-econ="ENERGY.GREMIUM"></span> energie, dostupná pre Pracovné, Trestné, Občianske a Európske právo) je nácvik ústnej
             skúšky pred komisiou – hlavná príprava na reálne štátnice.
             Môj progres a Štruktúra otázok fungujú aj bez vybranej oblasti.
           </div>
@@ -481,7 +481,7 @@
     <div class="card section-card highlight-nightrecap" id="nightRecapCard">
       <h3 style="margin:0">🌙 Nočný výcuc</h3>
       <div class="small">Audio zhrnutia okruhov na počúvanie pred spaním – zopakuj si, čo si sa dnes učil.
-        Odomknutie celej oblasti na 24 h stojí <b><span data-econ="SINKS.NIGHT_RECAP_UNLOCK">—</span> §</b>.</div>
+        Odomknutie celej oblasti na 24 h stojí <b>⚡ <span data-econ="ENERGY.NIGHT_RECAP">—</span> energie</b> – nie §.</div>
       <div id="nightRecapBody" style="margin-top:10px"></div>
       <audio id="nightRecapPlayer" playsinline preload="none"></audio>
     </div>
@@ -739,8 +739,8 @@
           doplňujúcu otázku, a na konci ohodnotí pokrytie tvojej odpovede voči zhrnutiu
           okruhu známkou 1 – 4 so spätnou väzbou.</p>
           <table class="guide-table">
-            <tr><th>Položka</th><th>§</th></tr>
-            <tr><td>Vstup do skúšky</td><td>−<span data-econ="STATNICE.EXAM_COST"></span>§</td></tr>
+            <tr><th>Položka</th><th>Cena / odmena</th></tr>
+            <tr><td>Vstup do skúšky</td><td>−<span data-econ="ENERGY.GREMIUM"></span> energie (nie §)</td></tr>
             <tr><td>Známka 1</td><td>+<span data-econ="STATNICE.EXAM_REWARD.1"></span>§</td></tr>
             <tr><td>Známka 2</td><td>+<span data-econ="STATNICE.EXAM_REWARD.2"></span>§</td></tr>
             <tr><td>Známka 3</td><td>+<span data-econ="STATNICE.EXAM_REWARD.3"></span>§</td></tr>
@@ -858,9 +858,13 @@
             <tr><td>Kartičky</td><td>−<span data-econ="ENERGY.MEMORY_SET"></span> % / sadu</td></tr>
             <tr><td>Prípady</td><td>−<span data-econ="ENERGY.CASES_SET"></span> % / sadu</td></tr>
             <tr><td>Pavúkové hry</td><td>−<span data-econ="ENERGY.SPIDER_GAME"></span> % / sedenie</td></tr>
+            <tr><td>Štátnicová sieň</td><td>−<span data-econ="ENERGY.GREMIUM"></span> % / skúšku</td></tr>
+            <tr><td>Nočný výcuc</td><td>−<span data-econ="ENERGY.NIGHT_RECAP"></span> % / oblasť na 24 h</td></tr>
           </table>
-          <p>Pri 0 % avatar zaspí a nedá sa hrať. Nakŕm ho za <strong><span data-econ="ENERGY.FEED_COST"></span>§</strong> a energia sa doplní
-          na 100 %. Avatar mení výzor podľa energie – plný elánu, unavený, spiaci.</p>
+          <p>Energia je <strong>denná porcia</strong>: každý deň sa obnoví na <span data-econ="ENERGY.DAILY_FULL"></span> %.
+          Pri 0 % avatar zaspí. Ak nechceš čakať do zajtra, nakŕm ho za <strong><span data-econ="ENERGY.FEED_COST"></span>§</strong> –
+          energia sa doplní na <span data-econ="ENERGY.FEED_TO"></span> %. Kŕmiť sa dá kedykoľvek, keď energia nie je plná.
+          Avatar mení výzor podľa energie – plný elánu, unavený, spiaci.</p>
         </div>
       </details>
 

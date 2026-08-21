@@ -37,7 +37,8 @@
    známka + dátum + oblasť do users/{nick}/examResults.
 ============================================================ */
 
-import { econSpend, econAward, ECONOMY_CONFIG } from './economy.js';
+import { econAward, econEnergyLeft, econEnergyMissingMsg, econSpendEnergy, ECONOMY_CONFIG }
+from './economy.js';
 import { escapeHtml } from '../core.js';
 import { getAvatarCatalog, getTalarAvatars, avatarStateSrc } from './avatarCatalog.js';
 import { showRewardToast } from '../ui.js';
@@ -532,10 +533,12 @@ function poolsOfArea(areaName) {
    - zdroj nemá skúškový obsah (neznámy bazén, count 0, okruh mimo rozsahu)
      → doplní sa náhradná téma,
    - bazén aj okruh sú v poriadku, ale fetchOkruh zlyhal (sieť, rozbitý JSON)
-     → vráti sa [] a volajúci refunduje ako doteraz.
+     → vráti sa [] a volajúci skúšku nespustí.
    Bez tohto rozlíšenia by hráč, ktorému pojednávanie vytiahlo napr. hmotný
-   okruh A22 (mimo skúškového rozsahu), dostal strhnutie a vrátenie § namiesto
-   skúšky – teda presne ten problém, ktorý má doplnenie riešiť.
+   okruh A22 (mimo skúškového rozsahu), dostal namiesto skúšky len hlášku –
+   teda presne ten problém, ktorý má doplnenie riešiť.
+   (E2: energia sa odpočíta až PO úspešnom zostavení tém, takže neúspech
+   tu hráča nič nestojí a refund netreba.)
 
    `count` v AREA_CONFIG je zároveň hranica SKÚŠKOVÉHO obsahu: okruh mimo
    rozsahu sa nepoužije ani zo zdieľanej dvojice, aj keby súbor existoval
@@ -1180,7 +1183,7 @@ async function saveExamResult(nick, znamka, areaName) {
 let overlayEl = null;
 
 /* Poistka proti dvojitému otvoreniu (mobil: ghost-click po touchende,
-   netrpezlivý dvojitý ťuk kým sa čaká na econSpend/pickExamTopics/
+   netrpezlivý dvojitý ťuk kým sa čaká na econSpendEnergy/pickExamTopics/
    pickCommission bez okamžitej vizuálnej odozvy). Bez nej druhé
    prekrývajúce sa volanie openStatniceHall() môže cez closeStatniceHall()
    odstrániť overlay, ktorý práve zostavilo PRVÉ volanie – na pomalšom
@@ -1367,7 +1370,7 @@ export async function openStatniceHall(areaName) {
   // zo zdieľaného výberu (window.__selectedOkruhPair, nastavuje
   // app.js:applyOkruhPairSelection pri výbere oblasti/módu na hlavnej
   // obrazovke). Bez platného výberu PRE TÚTO oblasť sa nespustí – over
-  // PRED buildPersonaOverlay aj PRED econSpend, nech sa § nikdy nestrhnú.
+  // PRED buildPersonaOverlay aj PRED odpočtom energie.
   const shared = window.__selectedOkruhPair;
   if (!shared || shared.area !== areaName || shared.empty === true) {
     showRewardToast('⚖️ Najprv si na hlavnej obrazovke vyber oblasť a mód (🎲/📗/📕) pre pojednávanie – štátnica použije tú istú dvojicu okruhov.');
@@ -1377,7 +1380,19 @@ export async function openStatniceHall(areaName) {
   const nick = getNick();
   if (!nick) { showRewardToast('Najprv si zadaj nick.'); return; }
 
-  // Výber persóny skúšajúceho + hlasu, PRED minutím § – zrušenie tu je zadarmo.
+  /* ENERGETICKÁ BRÁNA (E2) – sieň sa už neplatí §, stojí energiu.
+     Kontrola je TU, teda ešte pred výberom persóny: hráč nemá prejsť
+     výberovou obrazovkou, aby ho appka o dve kliknutia neskôr odmietla.
+     Samotný odpočet je až po zostavení tém (nižšie) – aby sa energia
+     nestrhla za skúšku, ktorá sa nikdy nespustí. */
+  const energyCost = ECONOMY_CONFIG.ENERGY.GREMIUM;
+  const energyLeft = await econEnergyLeft();
+  if (energyLeft < Math.abs(energyCost)) {
+    showRewardToast(econEnergyMissingMsg(energyCost, energyLeft));
+    return;
+  }
+
+  // Výber persóny skúšajúceho + hlasu, PRED odpočtom energie – zrušenie tu je zadarmo.
   const savedPersona = localStorage.getItem(EXAM_PERSONA_KEY) || DEFAULT_PERSONA;
   const savedVoice = localStorage.getItem(EXAM_VOICE_KEY) || 'off';
   const choice = await buildPersonaOverlay(areaName, savedPersona, savedVoice);
@@ -1388,22 +1403,25 @@ export async function openStatniceHall(areaName) {
   const persona = getPersona(personaKey);
   const examVoice = await resolveExamVoice(voicePref);
 
-  const cost = ECONOMY_CONFIG.STATNICE.EXAM_COST;
-  const paid = await econSpend(nick, cost, 'štátnicová skúška – vstup');
-  if (!paid) {
-    showRewardToast(`Nemáš dosť § (${cost}§). Získaj § v bifľovačke alebo dueloch.`);
-    return;
-  }
-
   const topics = await buildTopicsFromSharedSelection(shared, areaName);
   if (topics.length < 2) {
-    // vráť § – skúška sa nedá spustiť (nepodarilo sa načítať oba zdieľané
-    // okruhy / neznáma oblasť v lookupe) – NEZMENENÉ oproti pred 4b,
-    // rovnaká podmienka aj rovnaký refund, len iný zdroj topics.
-    await econAward(nick, cost, 'štátnicová skúška – vrátenie (nedostatok obsahu)', { skipCap: true });
+    /* Skúška sa nedá spustiť (nepodarilo sa načítať oba zdieľané okruhy /
+       neznáma oblasť v lookupe). Refund tu už NETREBA – energia sa
+       odpočítava až nižšie, takže hráč zatiaľ nič nezaplatil. Pôvodná
+       vetva vracala 15 § práve preto, že § sa strhli hneď na začiatku. */
     showRewardToast('⚖️ Komisia teraz nie je dostupná, skús neskôr.');
     return;
   }
+
+  /* Odpočet energie – posledný krok pred otvorením siene. Za týmto bodom
+     sa už NEVRACIA (ani pri zrušení skúšky): energia je spotreba ako pri
+     každej inej aktivite, nie vratná záloha. */
+  const spent = await econSpendEnergy(nick, energyCost, 'štátnicová skúška – vstup');
+  if (!spent) {
+    showRewardToast(econEnergyMissingMsg(energyCost, await econEnergyLeft()));
+    return;
+  }
+
   const commission = await pickCommission();
 
   closeStatniceHall();
@@ -1913,7 +1931,7 @@ export async function openStatniceHall(areaName) {
     clearTimeout(speechTransitionTimer);
 
     if (answered && !rewardGranted) {
-      const ok = window.confirm('Ukončiť skúšku? § sa nevráti, ak si už odpovedal/a.');
+      const ok = window.confirm('Ukončiť skúšku? Energia za vstup sa nevracia.');
       if (!ok) {
         // Návrat presne do stavu pred pokusom o zatvorenie (nie natvrdo do POCUVANIE).
         // Nahrávanie (ak bežalo) sa nerestartuje automaticky – rozpoznávač je teraz
@@ -1926,10 +1944,10 @@ export async function openStatniceHall(areaName) {
         return;
       }
     }
-    if (!answered) {
-      // nikto ešte neodpovedal – vráť §
-      await econAward(nick, cost, 'štátnicová skúška – zrušené pred odpoveďou', { skipCap: true });
-    }
+    /* E2: refund zrušený. Vstup sa už neplatí §, ale energiou, a tá sa
+       nevracia – je to spotreba ako pri kartičkách či prípadoch, nie
+       vratná záloha. Pôvodná vetva tu vracala 15 §, keď hráč zavrel sieň
+       pred prvou odpoveďou. */
     closeStatniceHall();
   };
   } catch (e) {

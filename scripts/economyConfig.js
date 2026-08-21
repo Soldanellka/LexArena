@@ -78,12 +78,23 @@ export const ECONOMY_CONFIG = {
     SLEEP_AT: 0,           // pri tejto hodnote (a nižšej) avatar spí
 
     DUEL: -5,              // odohratý duel – výzva aj prijatie
+                           //  (E5: pojednávanie sa energiou blokovať nebude → padne na 0)
     BIFLOVACKA_CARD: -1,   // za kartičku (pôvodne −2; učenie je jadro appky, netrestať –
                            //  50 kartičiek = polovica energie, nie celá)
     MEMORY_SET: -2,        // za dohranú sadu pexesa
     CASES_SET: -4,         // za dohranú sadu prípadov
     SPIDER_GAME: -2,       // za dokončené sedenie odmeňovanej pavúkovej hry (Kukučka/Rozpárovanie/Kde som?)
-    FEED_COST: 12,         // § za nakŕmenie
+
+    /* DRAHÉ AKTIVITY (E2, 2026-08) – nahradili § vstupné.
+       Predtým: Štátnicová sieň 15 §, Nočný výcuc 33 §. Po novom nestoja §
+       vôbec, len veľa energie – kto ich chce viac za deň, musí nakŕmiť
+       avatara (§ za kŕmenie), nie kúpiť si vstup. Tým sa § z nich stráca
+       ako priama „platba za obsah“ a ostáva len ako krmivo + kozmetika. */
+    GREMIUM: -60,          // na doladenie – vstup do Štátnicovej siene
+    NIGHT_RECAP: -60,      // na doladenie – odomknutie Nočného výcucu (24 h, per oblasť)
+
+    FEED_COST: 20,         // § za nakŕmenie (E2: 12 → 20; kŕmenie je po novom
+                           //  hlavný § sink, tak musí niesť váhu)
     FEED_TO: 100           // kŕmenie doplní na 100 %
   },
 
@@ -170,8 +181,12 @@ export const ECONOMY_CONFIG = {
     BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
     BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
     BIFLOVACKA_JOKER_REPLAY: 1,   // žolík: vypočuť definíciu znova cez TTS (v odpovedacej fáze)
-    BIFLOVACKA_VIDEO_REPLAY: 2,   // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
-    NIGHT_RECAP_UNLOCK: 33        // Nočný výcuc: audio výcucy CELEJ oblasti na 24 h (per oblasť)
+    BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
+    /* NIGHT_RECAP_UNLOCK (33 §) ZRUŠENÉ v E2 (2026-08). Nočný výcuc sa
+       neplatí §, gate-uje ho ENERGY.NIGHT_RECAP. Kľúč je odstránený zámerne
+       (nie ponechaný ako mŕtva hodnota ako QUIZ_ENTRY), aby ho nemohla omylom
+       oživiť žiadna data-econ cesta v index.html – tá by pri chýbajúcom kľúči
+       vypísala pomlčku a bolo by to hneď vidieť. ⛔ Nepridávať späť. */
   },
 
   /* SENÁTY – skupinová súťaž. V1: spory a založenie/nábor sú V STROPE,
@@ -194,7 +209,10 @@ export const ECONOMY_CONFIG = {
 
   // ŠTÁTNICOVÁ SIEŇ – prototyp (skipCap: true pri odmene, je to výkon, nie grind)
   STATNICE: {
-    EXAM_COST: 15,                          // econSpend pred štartom (admin zadarmo – rieši econSpend)
+    /* EXAM_COST (15 §) ZRUŠENÉ v E2 (2026-08). Vstup do siene sa neplatí §,
+       gate-uje ho ENERGY.GREMIUM. Kľúč je odstránený zámerne – viď rovnaká
+       poznámka pri NIGHT_RECAP_UNLOCK vyššie. ⛔ Nepridávať späť.
+       Odmena za známku ostáva v § a naďalej obchádza denný strop. */
     EXAM_REWARD: { 1: 25, 2: 15, 3: 8, 4: 0 }, // podľa známky zo záverečnej spätnej väzby
     // Nápoveda JE NA ŽIADOSŤ ŠTUDENTA (tlačidlo), nikdy automaticky od komisie –
     // inak by voľba persóny nepriamo ovplyvňovala známku. Každá vyžiadaná
