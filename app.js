@@ -133,21 +133,88 @@ function renderAreas() {
 }
 
 /* ============================================================
-   CHIPY OBLASTÍ BEZ OBSAHU – "pripravuje sa"
+   CHIPY OBLASTÍ BEZ OBSAHU – "načítava sa…" → "pripravuje sa"
 
    Rímske právo a Dejiny práva sú v duelAreas (areas.js), ale data.js pre
    ne nenačítava žiadne otázky, takže viedli do slepej uličky: dali sa
    vybrať, pojednávanie sa nespustilo a hry ostali prázdne. Po dobehnutí
-   načítavania sa preto chip označí a klik zablokuje. Chipy sa NEZAHADZUJÚ
-   – len čo pre oblasť pribudne obsah, označenie samo zmizne.
+   načítavania sa preto chip označí a klik zablokuje.
+
+   🔥 HOTFIX (2026-08): označenie sa PO NOVOM naozaj samo odstráni.
+   Pôvodná verzia sa po 5 s (waitAreaLoaded) vzdala a chip nechala
+   zamknutý NAVŽDY – markUnavailableAreaChips totiž beží presne raz
+   (renderAreas má jediného volajúceho, init.js) a isAreaLoaded sa už
+   nikdy nepýtala. Loader v data.js je pritom SÉRIOVÝ a na každý súbor
+   robí fetch + čítanie contentOverrides, takže 5 s nestačí: Pracovné
+   právo (50 súborov) a Občianske (hmotné 40 + procesné 45, potrebuje
+   OBA flagy) hranicu na pomalšom pripojení prekročia a zošednú, hoci
+   sa o pár sekúnd načítajú. Európske (38) a Trestné (30) prejdú –
+   presne to bolo vidieť v produkcii.
+
+   Preto sú stavy po novom dva:
+     – "načítava sa…"  = zatiaľ nedorazilo, ale ešte to skúšame (poll),
+     – "pripravuje sa" = po AREA_GIVE_UP_MS to nedorazilo (Rímske/Dejiny
+                         sem spadnú vždy – data.js pre ne loader nemá).
+   Len čo areasLoaded naskočí, chip sa odomkne a text sa vráti späť.
+
+   Timeout vo waitAreaLoaded (5 s) sa ZÁMERNE nemení – rieši sa tu len
+   to, že sa označenie neodstraňovalo. Zrýchlenie samotného loadera
+   (dávkové načítanie + jedno čítanie contentOverrides na oblasť) je
+   samostatná úloha.
 
    ⚠️ Čisto správanie + popis, ŽIADNA zmena vzhľadu: ani trieda .muted, ani
    atribút disabled nemajú v styles.css vlastné pravidlo (overené – chip
    s .muted aj s disabled je pixelovo identický s bežným chipom; appka
    nemá disabled štýl nikde, ani #startQuizBtn). Stav je preto čitateľný
-   výhradne z textu "– pripravuje sa". Vizuálne odlíšenie by si vyžiadalo
-   NOVÉ CSS pravidlo = zmena dizajnu, ktorá čaká na odsúhlasenie.
+   výhradne z textu. Vizuálne odlíšenie by si vyžiadalo NOVÉ CSS
+   pravidlo = zmena dizajnu, ktorá čaká na odsúhlasenie.
 ============================================================ */
+
+/* Ako často sa po prvom neúspechu ešte pýtame na areasLoaded. */
+const AREA_SLOW_POLL_MS = 250;
+/* Dokedy (od označenia) chip drží mierne "načítava sa…". Po uplynutí sa
+   prehlási za "pripravuje sa" a poll sa zastaví. 30 s je s rezervou nad
+   reálnym trvaním sériového loadera aj na pomalom mobile; Rímske a Dejiny
+   sem doputujú vždy, lebo pre ne loader neexistuje. */
+const AREA_GIVE_UP_MS = 30000;
+
+function markChipPending(btn, name, label, title) {
+  btn.disabled = true;
+  btn.classList.add('muted');
+  btn.title = title;
+  btn.textContent = `${name} – ${label}`;
+}
+
+/* Vráti chip presne do stavu, v akom ho vytvorilo renderAreas() – vrátane
+   odstránenia titulku (bežný chip žiadny nemá). Handler onclick sa nikdy
+   neodpájal, takže stačí povoliť tlačidlo. */
+function releaseChip(btn, name) {
+  btn.disabled = false;
+  btn.classList.remove('muted');
+  btn.removeAttribute('title');
+  btn.textContent = name;
+}
+
+function watchAreaChip(btn, name) {
+  const deadline = Date.now() + AREA_GIVE_UP_MS;
+  const timer = setInterval(() => {
+    /* Chip zmizol z DOM (re-render zoznamu) – nemá zmysel ďalej pollovať
+       ani písať do odpojeného uzla. */
+    if (!btn.isConnected) { clearInterval(timer); return; }
+
+    if (isAreaLoaded(name)) {
+      clearInterval(timer);
+      releaseChip(btn, name);
+      return;
+    }
+
+    if (Date.now() >= deadline) {
+      clearInterval(timer);
+      markChipPending(btn, name, 'pripravuje sa', 'Obsah tejto oblasti sa pripravuje');
+    }
+  }, AREA_SLOW_POLL_MS);
+}
+
 async function markUnavailableAreaChips(list) {
   const chips = Array.from(list.querySelectorAll('.area-chip'));
   await Promise.all(chips.map(async (btn) => {
@@ -155,10 +222,9 @@ async function markUnavailableAreaChips(list) {
     await waitAreaLoaded(name);      // max 5 s, existujúca helper nižšie
     if (isAreaLoaded(name)) return;  // obsah dorazil – chip ostáva bežný
 
-    btn.disabled = true;
-    btn.classList.add('muted');
-    btn.title = 'Obsah tejto oblasti sa pripravuje';
-    btn.textContent = `${name} – pripravuje sa`;
+    /* Zatiaľ NEtvrdíme, že obsah neexistuje – po 5 s to ešte nevieme. */
+    markChipPending(btn, name, 'načítava sa…', 'Obsah tejto oblasti sa ešte načítava');
+    watchAreaChip(btn, name);
   }));
 }
 
