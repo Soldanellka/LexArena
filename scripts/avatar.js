@@ -21,7 +21,7 @@ const AVATAR_CONFIG = {
   SLEEP_THRESHOLD: ECONOMY_CONFIG.ENERGY.SLEEP_AT, // pri tejto hodnote avatar zaspí
 
   // Denný login streak – krivka viď ECONOMY_CONFIG.STREAK v checkDailyLogin()
-  STREAK_SHIELD_COST: ECONOMY_CONFIG.SINKS.STREAK_SHIELD,     // štít streaku stojí 5§
+  // (STREAK_SHIELD_COST zaniklo spolu so štítom streaku, 2026-08)
 
   // Dostupné avatary (id: { name, file_awake, file_sleep, unlockCondition })
   AVATARS: {
@@ -477,7 +477,6 @@ export async function checkDailyLogin() {
   const now = Date.now();
   const lastLogin = data.lastLogin || 0;
   const streak = data.loginStreak || 0;
-  const shieldActive = data.streakShield || false;
 
   const hoursSinceLast = (now - lastLogin) / (1000 * 60 * 60);
 
@@ -491,17 +490,14 @@ export async function checkDailyLogin() {
     // Prišiel v ďalší deň — streak pokračuje (bez stropu, kvôli míľnikom napr. deň 30)
     newStreak = streak + 1;
   } else {
-    // Vynechal deň
-    if (shieldActive) {
-      // Štít zachránil streak
-      newStreak = streak + 1;
-      await update(userRef, { streakShield: false });
-      showRewardToast('🛡️ Štít streaku aktivovaný! Streak zachránený.');
-    } else {
-      // Reset streaku
-      newStreak = 1;
-      streakBroken = streak > 1;
-    }
+    /* Vynechal deň → streak sa reštartuje.
+       Štít streaku (poistka za 15 §, ktorá odpúšťala jeden vynechaný deň)
+       bol ZRUŠENÝ (2026-08) – § sa po E2/E3 dajú minúť už len na krmivo
+       a kozmetiku, aby pravidlo platilo bez výnimky. Prípadné staré
+       users/{nick}/streakShield sa už nikde nečíta ani nezapisuje;
+       osirený kľúč je neškodný, migrácia netreba. */
+    newStreak = 1;
+    streakBroken = streak > 1;
   }
 
   // Odmena – krivka so stropom: deň 1-7 podľa BASE, deň 8+ = AFTER, + prípadný míľnikový bonus
@@ -531,35 +527,12 @@ export async function checkDailyLogin() {
   updateStreakUI(newStreak);
 }
 
-/* ============================================================
-   KÚPIŤ ŠTÍT STREAKU
-============================================================ */
-export async function buyStreakShield() {
-  const db = getDb();
-  const nick = getNick();
-  if (!db || !nick) return;
-
-  const snap = await get(ref(db, `users/${nick}`));
-  const data = snap.exists() ? snap.val() : {};
-
-  if (data.streakShield) {
-    showRewardToast('Štít streaku už máš aktivovaný.');
-    return;
-  }
-
-  const isAdmin = (await getRole(nick)) === 'admin';
-  const spent = isAdmin ? true : await spendParagrafy(AVATAR_CONFIG.STREAK_SHIELD_COST, 'za štít streaku');
-  if (!spent) return;
-
-  await update(ref(db, `users/${nick}`), { streakShield: true });
-  await logTransaction(nick, {
-    type: 'spend',
-    amount: isAdmin ? 0 : AVATAR_CONFIG.STREAK_SHIELD_COST,
-    reason: isAdmin ? 'za štít streaku (admin zadarmo)' : 'za štít streaku',
-    balanceAfter: null
-  });
-  showRewardToast('🛡️ Štít streaku aktivovaný! Môžeš vynechať 1 deň.');
-}
+/* ⛔ buyStreakShield() ZRUŠENÉ (2026-08). Poistka streaku za 15 § bola
+   posledný § výdavok mimo krmiva a kozmetiky; po E2/E3 platí pravidlo
+   „§ len na kŕmenie avatara a kozmetiku“ bez výnimky. Tlačidlo
+   #buyStreakShieldBtn v HTML nikdy neexistovalo (overené grepom), takže
+   funkcia bola v praxi nedosiahnuteľná – zaniká aj s wiring-om v
+   initAvatarSystem. Nepridávať späť. */
 
 /* ============================================================
    VÝBER AVATARA
@@ -1004,12 +977,6 @@ export async function initAvatarSystem() {
   const feedBtn = document.getElementById('feedAvatarBtn');
   if (feedBtn) {
     feedBtn.addEventListener('click', feedAvatar);
-  }
-
-  // Shield button
-  const shieldBtn = document.getElementById('buyStreakShieldBtn');
-  if (shieldBtn) {
-    shieldBtn.addEventListener('click', buyStreakShield);
   }
 
   console.log('🐾 Avatar systém inicializovaný');

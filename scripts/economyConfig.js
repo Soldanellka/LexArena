@@ -39,13 +39,14 @@ from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
    1. ŽIADNE PAY-TO-WIN. Za § sa NIKDY nekupuje výhoda v súťaži –
       ani v rebríčku, ani v dueli, ani v senátnom spore.
-      Za § sa po E2+E3 dá kúpiť UŽ LEN:
+      Za § sa dá kúpiť UŽ LEN:
         – krmivo pre avatara (ENERGY.FEED_COST → doplní dennú porciu),
-        – kozmetika (taláre, prestige avatari),
-        – poistka streaku (SINKS.STREAK_SHIELD).
+        – kozmetika (taláre, prestige avatari).
+      Nič viac. Pravidlo je bez výnimky – posledná (poistka streaku za
+      15 §) zanikla spolu so štítom.
       ⛔ Nikdy sem nepridávaj: kúpu § bonusu k skóre, kúpu miesta
-      v rebríčku, kúpu druhého pokusu v dueli, platené okruhy,
-      ani platené nápovedy – tie stoja energiu, nie §.
+      v rebríčku, kúpu druhého pokusu v dueli, platené okruhy, platené
+      nápovedy ani poistky – čokoľvek, čo súvisí s hraním, stojí energiu.
 
    2. VSTUP DO HIER A POMÔCKY SA NEPLATIA §. Kvíz, kartičky, prípady,
       Štátnicová sieň, Nočný výcuc, nápoveda 50:50 aj žolíky bifľovačky
@@ -183,12 +184,11 @@ export const ECONOMY_CONFIG = {
   },
 
   /* SINKY – na čo sa dajú minúť §.
-     Po E2+E3 (2026-08) tu ostala už len KOZMETIKA a poistka streaku;
+     Po E2+E3 a zrušení štítu streaku (2026-08) tu ostala UŽ LEN KOZMETIKA;
      kŕmenie avatara má vlastný kľúč ENERGY.FEED_COST. Všetko ostatné
-     – vstupy do obsahu aj pomôcky – prešlo na energiu. */
+     – vstupy do obsahu, pomôcky aj poistky – prešlo na energiu alebo
+     zaniklo. */
   SINKS: {
-    STREAK_SHIELD: 15,        // poistka streaku (v1: 5 → 15 – pri 5§ bola lacnejšia
-                              //  než jeden deň streaku a strácala váhu rozhodnutia)
     /* Prestige avatari – rad 300/600/1000/2000§ (PRESTIGE_TIERS hore).
        PRESTIGE_AVATAR_MIN je len prvý tier, drží sa ho odkazom, aby sa čísla
        nemohli rozísť; používa ho popis dlaždice „Čoskoro – od N§“. */
@@ -196,6 +196,13 @@ export const ECONOMY_CONFIG = {
     PRESTIGE_AVATAR_MIN: PRESTIGE_TIERS[0]
 
     /* ⛔ ZRUŠENÉ KĽÚČE – nepridávať späť.
+
+       STREAK_SHIELD (15 §) – 2026-08. Poistka odpúšťajúca jeden vynechaný
+       deň streaku. Bola to posledná § platba mimo krmiva a kozmetiky, takže
+       zanikla aj s funkciou buyStreakShield() a vetvou v checkDailyLogin().
+       Tlačidlo #buyStreakShieldBtn v HTML aj tak nikdy neexistovalo.
+       Staré users/{nick}/streakShield sa už nikde nečíta – osirený kľúč
+       je neškodný, migrácia netreba.
 
        NIGHT_RECAP_UNLOCK (33 §) – E2. Nočný výcuc gate-uje ENERGY.NIGHT_RECAP.
 
