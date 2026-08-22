@@ -11,7 +11,7 @@
 
    Dve prehratia na definíciu (videoPlays 1/2, spravuje volajúci
    v memory-trainer.html – zdieľané so žolíkom "Video znova"):
-   1. zadarmo/full, 2. za § (canReplay/onRequestReplay)/tired, ku
+   1. zadarmo/full, 2. za energiu (canReplay/onRequestReplay)/tired, ku
    koncu (posledná ~1/4 textu) sa moderátor prepne na sleep a hlas
    stíchne. Po 2. prehratí je "Znova" natrvalo zamknuté.
 ============================================================ */
@@ -415,7 +415,8 @@ export async function openVideoPlayer({
     }
     replayBtn.style.display = 'inline-flex';
     replayBtn.disabled = true;
-    replayBtn.textContent = `🔁 Pozrieť znova (${ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY}§)`;
+    /* E3: stojí energiu, nie § (predtým SINKS.BIFLOVACKA_VIDEO_REPLAY, 2 §). */
+    replayBtn.textContent = `🔁 Pozrieť znova (⚡ ${Math.abs(ECONOMY_CONFIG.ENERGY.JOKER_VIDEO)})`;
     replayBtn.title = '';
     if (!canReplay) return;
     const check = await canReplay();
@@ -423,7 +424,7 @@ export async function openVideoPlayer({
       replayBtn.disabled = false;
     } else {
       replayBtn.disabled = true;
-      replayBtn.title = (check && check.reason) || 'Nedostatok §.';
+      replayBtn.title = (check && check.reason) || 'Nedostatok energie.';
     }
   }
 

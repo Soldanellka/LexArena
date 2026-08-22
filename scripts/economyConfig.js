@@ -31,26 +31,32 @@ import { ref, get, push }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 /* ============================================================
-   ZÁSADY EKONOMIKY v1 (2026-08) – ZAMKNUTÉ, nemeniť bez Babu.
+   ZÁSADY EKONOMIKY v2 (2026-08) – ZAMKNUTÉ, nemeniť bez Babu.
+
+   JEDNA BRÁNA = ENERGIA. Prístup k obsahu a k pomôckam riadi denná
+   porcia energie, ktorá sa každý deň obnoví (ENERGY.DAILY_FULL) a je
+   rovnaká pre všetkých. § riadia už len to, čo nie je súčasťou učenia.
 
    1. ŽIADNE PAY-TO-WIN. Za § sa NIKDY nekupuje výhoda v súťaži –
-      ani v rebríčku, ani v dueli, ani v senátnom spore. Za § sa dá
-      kúpiť výhradne: kozmetika (taláre, prestige avatari), poistky
-      (štít streaku), vstupy (štátnicová skúška) a nápovedy, ktoré
-      sú dostupné každému hráčovi za rovnakú cenu a v tej istej hre.
-      Nápoveda v štátnici si navyše sama zníži strop známky
-      (HINT_GRADE_FLOOR) – kupuje sa pomoc, nie lepší výsledok.
+      ani v rebríčku, ani v dueli, ani v senátnom spore.
+      Za § sa po E2+E3 dá kúpiť UŽ LEN:
+        – krmivo pre avatara (ENERGY.FEED_COST → doplní dennú porciu),
+        – kozmetika (taláre, prestige avatari),
+        – poistka streaku (SINKS.STREAK_SHIELD).
       ⛔ Nikdy sem nepridávaj: kúpu § bonusu k skóre, kúpu miesta
-      v rebríčku, kúpu druhého pokusu v dueli, platené okruhy.
+      v rebríčku, kúpu druhého pokusu v dueli, platené okruhy,
+      ani platené nápovedy – tie stoja energiu, nie §.
 
-   2. VSTUP DO BEŽNÝCH HIER JE ZADARMO. Kvíz, kartičky ani prípady sa
-      nespoplatňujú – učenie nesmie byť za peniaze. SINKS.QUIZ_ENTRY
-      je preto MŔTVA hodnota (žiadny volajúci) a mŕtva ostáva; nemazať,
-      aby sa omylom nezaviedla znova ako "chýbajúca" cena.
+   2. VSTUP DO HIER A POMÔCKY SA NEPLATIA §. Kvíz, kartičky, prípady,
+      Štátnicová sieň, Nočný výcuc, nápoveda 50:50 aj žolíky bifľovačky
+      stoja ENERGIU (ENERGY.*), nikdy §. Učenie nesmie byť za peniaze
+      a kúpená nápoveda v dueli by bola priama súťažná výhoda.
+      Nápoveda v štátnici si navyše sama zníži strop známky
+      (HINT_GRADE_FLOOR) – dostáva sa pomoc, nie lepší výsledok.
 
    3. ODMENY ZA UČENIE SA NEZNIŽUJÚ. Bifľovačka (BIFLOVACKA_*),
       dashboard míľniky (DASHBOARD.*) a modulové odmeny sú jadro
-      appky. Ekonomika sa vyvažuje sinkami a denným stropom, nikdy
+      appky. Ekonomika sa vyvažuje energiou a denným stropom §, nikdy
       orezávaním toho, za čo sa hráč učí.
 ============================================================ */
 
@@ -92,6 +98,18 @@ export const ECONOMY_CONFIG = {
        ako priama „platba za obsah“ a ostáva len ako krmivo + kozmetika. */
     GREMIUM: -60,          // na doladenie – vstup do Štátnicovej siene
     NIGHT_RECAP: -60,      // na doladenie – odomknutie Nočného výcucu (24 h, per oblasť)
+
+    /* POMÔCKY (E3, 2026-08) – nahradili § ceny.
+       Predtým: 50:50 3 §, žolíky 3/2/1 §, video znova 2 §. Pomôcka je
+       súčasť učenia, nie tovar – nesmie sa dať kúpiť za § (a v dueli by
+       kúpená nápoveda bola priama súťažná výhoda, čo zásada 1 zakazuje).
+       Náklady sú ZÁMERNE malé: pomôcka nesmie zožrať dennú porciu ako
+       celá hra. Všetko na doladenie. */
+    HINT_5050: -5,         // nápoveda 50:50 v duelovom kvíze
+    JOKER_SKELETON: -3,    // žolík: kostra definície
+    JOKER_INITIALS: -2,    // žolík: iniciály slov
+    JOKER_REPLAY: -1,      // žolík: vypočuť definíciu znova (TTS)
+    JOKER_VIDEO: -2,       // žolík / tlačidlo „Pozrieť znova“ vo video režime
 
     FEED_COST: 20,         // § za nakŕmenie (E2: 12 → 20; kŕmenie je po novom
                            //  hlavný § sink, tak musí niesť váhu)
@@ -164,29 +182,37 @@ export const ECONOMY_CONFIG = {
     DAILY_EARN_CAP: 60
   },
 
-  // SINKY – aby mal hráč na čo míňať (hodnota § rastie s možnosťami minúť)
+  /* SINKY – na čo sa dajú minúť §.
+     Po E2+E3 (2026-08) tu ostala už len KOZMETIKA a poistka streaku;
+     kŕmenie avatara má vlastný kľúč ENERGY.FEED_COST. Všetko ostatné
+     – vstupy do obsahu aj pomôcky – prešlo na energiu. */
   SINKS: {
-    /* MŔTVA HODNOTA – vstup do bežných hier sa nespoplatňuje (zásada 2 hore).
-       Žiadny volajúci ju nečíta; ostáva len ako značka, že to bolo zvážené
-       a zamietnuté. */
-    QUIZ_ENTRY: 5,
-    QUIZ_HINT_5050: 3,        // nápoveda 50:50 v duelovom kvíze
     STREAK_SHIELD: 15,        // poistka streaku (v1: 5 → 15 – pri 5§ bola lacnejšia
                               //  než jeden deň streaku a strácala váhu rozhodnutia)
     /* Prestige avatari – rad 300/600/1000/2000§ (PRESTIGE_TIERS hore).
        PRESTIGE_AVATAR_MIN je len prvý tier, drží sa ho odkazom, aby sa čísla
        nemohli rozísť; používa ho popis dlaždice „Čoskoro – od N§“. */
     PRESTIGE_AVATARS: PRESTIGE_TIERS,
-    PRESTIGE_AVATAR_MIN: PRESTIGE_TIERS[0],
-    BIFLOVACKA_JOKER_SKELETON: 3, // žolík: kostra – každé 3. slovo definície viditeľné
-    BIFLOVACKA_JOKER_INITIALS: 2, // žolík: iniciály – prvé písmeno každého slova
-    BIFLOVACKA_JOKER_REPLAY: 1,   // žolík: vypočuť definíciu znova cez TTS (v odpovedacej fáze)
-    BIFLOVACKA_VIDEO_REPLAY: 2    // "Pozrieť znova" vo video režime (prvé pozretie ostáva zadarmo)
-    /* NIGHT_RECAP_UNLOCK (33 §) ZRUŠENÉ v E2 (2026-08). Nočný výcuc sa
-       neplatí §, gate-uje ho ENERGY.NIGHT_RECAP. Kľúč je odstránený zámerne
-       (nie ponechaný ako mŕtva hodnota ako QUIZ_ENTRY), aby ho nemohla omylom
-       oživiť žiadna data-econ cesta v index.html – tá by pri chýbajúcom kľúči
-       vypísala pomlčku a bolo by to hneď vidieť. ⛔ Nepridávať späť. */
+    PRESTIGE_AVATAR_MIN: PRESTIGE_TIERS[0]
+
+    /* ⛔ ZRUŠENÉ KĽÚČE – nepridávať späť.
+
+       NIGHT_RECAP_UNLOCK (33 §) – E2. Nočný výcuc gate-uje ENERGY.NIGHT_RECAP.
+
+       QUIZ_ENTRY (5 §) – E3. Bola to „mŕtva hodnota“ so živým volajúcim:
+       quiz.js:startQuiz() ju naozaj strhával, len tú funkciu nikto
+       neimportoval (#startQuizBtn ide na startDuel). Vstup do bežných hier
+       je zadarmo (zásada 2) – volanie aj kľúč sú preč, nech sa to nedá
+       omylom zapojiť.
+
+       QUIZ_HINT_5050 (3 §), BIFLOVACKA_JOKER_SKELETON (3 §),
+       BIFLOVACKA_JOKER_INITIALS (2 §), BIFLOVACKA_JOKER_REPLAY (1 §),
+       BIFLOVACKA_VIDEO_REPLAY (2 §) – E3. Pomôcky sa neplatia §, stoja
+       energiu (ENERGY.HINT_5050 / JOKER_*).
+
+       Kľúče sú ODSTRÁNENÉ, nie ponechané ako mŕtve hodnoty: pri chýbajúcom
+       kľúči vypíše data-econ cesta pomlčku a zaloguje varovanie, takže
+       prípadné zabudnuté miesto v HTML je hneď vidieť. */
   },
 
   /* SENÁTY – skupinová súťaž. V1: spory a založenie/nábor sú V STROPE,

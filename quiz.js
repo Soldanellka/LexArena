@@ -13,7 +13,8 @@ import { showRewardToast } from './ui.js';
 import { incrementGamesPlayed } from './avatars.js';
 import { openReportModal, makeQuestionKey, getQuestionSeal } from './reports.js';
 import { playSound } from './audio.js';
-import { econEnergy, econSpend, econAward, ECONOMY_CONFIG } from './scripts/economy.js';
+import { econEnergy, econAward, econSpendEnergy, econEnergyLeft, econEnergyMissingMsg, ECONOMY_CONFIG }
+from './scripts/economy.js';
 import { renderSource } from './scripts/sourceUtil.js';
 import { AREA_SLUGS, formatEditStamp, sealMeta } from './scripts/contentOverrides.js';
 import { openContentEditModal } from './scripts/contentEditModal.js';
@@ -48,14 +49,11 @@ export async function startQuiz(){
     return;
   }
 
-  // Vstupné do kvízu ide výhradne cez Firebase bránu (econSpend). Pri nedostatku §
-  // alebo neúspechu (vrátane neprihláseného hráča) kvíz nespustíme.
-  const nick = localStorage.getItem('playerNick');
-  const ok = nick && await econSpend(nick, ECONOMY_CONFIG.SINKS.QUIZ_ENTRY, 'vstup do kvízu');
-  if (!ok) {
-    alert('Nemáš dosť paragrafov.');
-    return;
-  }
+  /* E3 (2026-08): zrušené § vstupné (SINKS.QUIZ_ENTRY, 5 §). Vstup do bežných
+     hier je zadarmo (zásada 2) – učenie sa neplatí. Config to o tejto hodnote
+     tvrdil už predtým, ale volanie tu bolo živé; nespúšťalo sa len preto, že
+     startQuiz() nikto neimportuje (#startQuizBtn ide na startDuel). Odstránené
+     aj s kľúčom v configu, nech sa to nedá omylom zapojiť späť. */
 
   const qset = Array.isArray(selectedArea.questions) ? selectedArea.questions : [];
   const shuffled = shuffleArray(JSON.parse(JSON.stringify(qset))).slice(0, 10);
@@ -200,20 +198,29 @@ export function renderQuestion(first = false){
          a uzavri ju. Musí bežať AŽ TU, keď už existuje aj box vysvetlenia. */
       applyAnsweredVisualState(q);
 
-      /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku */
+      /* 💡 Nápoveda 50:50 – len v duelovom kvíze, max 1× na otázku.
+         E3 (2026-08): stojí ENERGIU, nie § (predtým SINKS.QUIZ_HINT_5050,
+         3 §). Kúpiteľná nápoveda v dueli by bola priama súťažná výhoda za
+         §, čo zásada 1 zakazuje; energiu má každý deň rovnakú. */
+      const hintCost = ECONOMY_CONFIG.ENERGY.HINT_5050;
       const isDuelQuiz = !!(window.duelQuestions && Array.isArray(window.duelQuestions) && window.duelQuestions.length);
       if (isDuelQuiz && !q.hintUsed) {
         const hintBtn = document.createElement('button');
         hintBtn.id = 'hint5050Btn';
         hintBtn.className = 'btn';
-        hintBtn.textContent = `💡 50:50 (${ECONOMY_CONFIG.SINKS.QUIZ_HINT_5050}§)`;
+        hintBtn.textContent = `💡 50:50 (⚡ ${Math.abs(hintCost)})`;
         hintBtn.style.marginTop = '10px';
 
         hintBtn.addEventListener('click', async () => {
           const nick = localStorage.getItem('playerNick');
           if (!nick) return;
-          const ok = await econSpend(nick, ECONOMY_CONFIG.SINKS.QUIZ_HINT_5050, 'nápoveda 50:50');
-          if (!ok) return;
+          /* Fail-soft: nedostatok energie zablokuje LEN nápovedu, kvíz beží
+             ďalej (tlačidlo ostane, hráč môže odpovedať aj bez nej). */
+          const ok = await econSpendEnergy(nick, hintCost, 'nápoveda 50:50');
+          if (!ok) {
+            showRewardToast(econEnergyMissingMsg(hintCost, await econEnergyLeft()));
+            return;
+          }
 
           q.hintUsed = true;
           hintBtn.remove();

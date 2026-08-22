@@ -376,7 +376,8 @@ import {
   canPlayBiflovacka, buildSkeleton, buildInitials,
   getAllMemoryItems, saveDefinitionOverride
 } from './memoryTrainer.js';
-import { econSpend, econBalance, ECONOMY_CONFIG } from './scripts/economy.js';
+import { econSpendEnergy, econEnergyLeft, econEnergyMissingMsg, ECONOMY_CONFIG }
+from './scripts/economy.js';
 import { getRole } from './scripts/economyConfig.js';
 import { showRewardToast } from './ui.js';
 import { openVideoPlayer } from './biflovackaVideo.js';
@@ -445,20 +446,24 @@ function setupYoutubeModal() {
 }
 
 /* ============================================================
-   Žolíky – platené pomôcky vo fáze odpovede.
+   Žolíky – pomôcky vo fáze odpovede, platené ENERGIOU (nie §).
    Max 1 žolík na definíciu; nový pokus (nová položka aj retry
    tej istej) žolíky resetne. Hodnotenie odpovede a odmeny za
    okruh/oblasť sa žolíkom nemenia (rieši saveMemoryScore ako doteraz).
 ============================================================ */
+/* E3 (2026-08): žolíky stoja ENERGIU, nie § (predtým SINKS.BIFLOVACKA_JOKER_*
+   a BIFLOVACKA_VIDEO_REPLAY, 3/2/1/2 §). Pomôcka je súčasť učenia, nie tovar –
+   nesmie sa dať kúpiť. `cost` je záporné číslo z ENERGY.*, do UI ide cez
+   Math.abs. */
 const JOKER_DEFS = [
-  { id: 'jokerSkeleton', type: 'skeleton', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_SKELETON, label: '🃏 Kostra' },
-  { id: 'jokerInitials', type: 'initials', price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_INITIALS, label: '🔤 Iniciály' },
-  { id: 'jokerReplay',   type: 'replay',   price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_JOKER_REPLAY,   label: '🔊 Vypočuť' },
-  { id: 'jokerVideo',    type: 'video',    price: ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY,   label: '🔁 Video znova' }
+  { id: 'jokerSkeleton', type: 'skeleton', cost: ECONOMY_CONFIG.ENERGY.JOKER_SKELETON, label: '🃏 Kostra' },
+  { id: 'jokerInitials', type: 'initials', cost: ECONOMY_CONFIG.ENERGY.JOKER_INITIALS, label: '🔤 Iniciály' },
+  { id: 'jokerReplay',   type: 'replay',   cost: ECONOMY_CONFIG.ENERGY.JOKER_REPLAY,   label: '🔊 Vypočuť' },
+  { id: 'jokerVideo',    type: 'video',    cost: ECONOMY_CONFIG.ENERGY.JOKER_VIDEO,    label: '🔁 Video znova' }
 ];
 
 let jokerUsed = null;
-let jokerBalance = 0;
+let jokerEnergy = 0;   // zostatok ENERGIE (predtým zostatok §)
 
 function referenceText() {
   return currentItem ? (currentItem.definition || currentItem.summary || currentItem.legalSentence || '') : '';
@@ -468,7 +473,8 @@ function updateJokerButtonsUI() {
   JOKER_DEFS.forEach(def => {
     const btn = $(def.id);
     if (!btn) return;
-    btn.textContent = `${def.label} (${def.price}§)`;
+    const need = Math.abs(def.cost);
+    btn.textContent = `${def.label} (⚡ ${need})`;
 
     /* "Video znova" má VLASTNÝ limit (videoPlays, max 2, zdieľaný
        s tlačidlom v prehrávači) – nezávislý od jokerUsed zámku
@@ -477,9 +483,9 @@ function updateJokerButtonsUI() {
       if (videoPlays >= 2) {
         btn.disabled = true;
         btn.title = 'Dosiahnutý limit 2 pozretí tejto definície.';
-      } else if (jokerBalance < def.price) {
+      } else if (jokerEnergy < need) {
         btn.disabled = true;
-        btn.title = `Potrebuješ ${def.price}§, máš ${jokerBalance}§`;
+        btn.title = `Potrebuješ ⚡ ${need}, máš ⚡ ${jokerEnergy}`;
       } else {
         btn.disabled = false;
         btn.title = '';
@@ -490,21 +496,21 @@ function updateJokerButtonsUI() {
     if (jokerUsed) {
       btn.disabled = true;
       btn.title = 'Na jednu definíciu len jeden žolík';
-    } else if (jokerBalance < def.price) {
+    } else if (jokerEnergy < need) {
       btn.disabled = true;
-      btn.title = `Potrebuješ ${def.price}§, máš ${jokerBalance}§`;
+      btn.title = `Potrebuješ ⚡ ${need}, máš ⚡ ${jokerEnergy}`;
     } else {
       btn.disabled = false;
       btn.title = '';
     }
   });
   const balEl = $('mtJokerBalance');
-  if (balEl) balEl.textContent = `Máš: ${jokerBalance}§`;
+  if (balEl) balEl.textContent = `Energia: ⚡ ${jokerEnergy}`;
 }
 
 async function refreshJokerBalance() {
   const nick = localStorage.getItem('playerNick');
-  jokerBalance = nick ? await econBalance(nick) : 0;
+  jokerEnergy = nick ? await econEnergyLeft() : 0;
   updateJokerButtonsUI();
 }
 
@@ -533,8 +539,14 @@ async function handleJokerClick(def) {
   const nick = localStorage.getItem('playerNick');
   if (!nick) return;
 
-  const ok = await econSpend(nick, def.price, `žolík bifľovačka: ${def.type}`);
-  if (!ok) { refreshJokerBalance(); return; }
+  /* Fail-soft: nedostatok energie zablokuje LEN žolíka, bifľovačka beží
+     ďalej (položka sa dá zodpovedať aj bez pomôcky). */
+  const ok = await econSpendEnergy(nick, def.cost, `žolík bifľovačka: ${def.type}`);
+  if (!ok) {
+    await refreshJokerBalance();
+    showRewardToast(econEnergyMissingMsg(def.cost, jokerEnergy));
+    return;
+  }
 
   jokerUsed = def.type;
   const reference = referenceText();
@@ -721,18 +733,19 @@ function resetVideoPlays() { videoPlays = 0; }
 
 async function canReplayVideo() {
   if (videoPlays >= 2) return { allowed: false, reason: 'Dosiahnutý limit 2 pozretí tejto definície.' };
-  const price = ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY;
+  const cost = ECONOMY_CONFIG.ENERGY.JOKER_VIDEO;
+  const need = Math.abs(cost);
   const nick = localStorage.getItem('playerNick');
-  const bal = nick ? await econBalance(nick) : 0;
-  if (bal < price) return { allowed: false, reason: `Potrebuješ ${price}§, máš ${bal}§.`, price };
-  return { allowed: true, price };
+  const left = nick ? await econEnergyLeft() : 0;
+  if (left < need) return { allowed: false, reason: `Potrebuješ ⚡ ${need}, máš ⚡ ${left}.`, cost };
+  return { allowed: true, cost };
 }
 
 async function requestVideoReplay() {
   if (videoPlays >= 2) return { ok: false };
   const nick = localStorage.getItem('playerNick');
   if (!nick) return { ok: false };
-  const ok = await econSpend(nick, ECONOMY_CONFIG.SINKS.BIFLOVACKA_VIDEO_REPLAY, 'video znova v bifľovačke');
+  const ok = await econSpendEnergy(nick, ECONOMY_CONFIG.ENERGY.JOKER_VIDEO, 'video znova v bifľovačke');
   if (!ok) return { ok: false };
   videoPlays++;
   await refreshJokerBalance();
