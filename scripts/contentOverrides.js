@@ -48,7 +48,12 @@ function fbApi() {
 
 /* Načíta všetky overridy pre daný okruh (jedno čítanie, nie N-krát
    per cast). Chýbajúca Firebase alebo chýbajúci override → {} –
-   volajúci potom jednoducho zobrazí pôvodný JSON bez zmeny. */
+   volajúci potom jednoducho zobrazí pôvodný JSON bez zmeny.
+
+   ⚠️ NEMENIŤ signatúru ani správanie – používajú to študijné appky
+   (ob-pravo-app, pravo-app) a Štátnicová sieň, ktoré načítavajú
+   jednotlivé okruhy na požiadanie. Hlavná appka (data.js) prešla na
+   loadContentOverridesForApp() nižšie. */
 export async function loadContentOverrides(app, okruh) {
   try {
     const db = window.db;
@@ -58,6 +63,56 @@ export async function loadContentOverrides(app, okruh) {
     return snap.exists() ? snap.val() : {};
   } catch (e) {
     console.warn(`⚠️ contentOverrides: čítanie zlyhalo pre ${app}/${okruh}`, e);
+    return {};
+  }
+}
+
+/* ============================================================
+   OVERRIDY CELEJ OBLASTI NARAZ (pre loader v data.js)
+
+   Uzol contentOverrides/{app} má tvar { [okruh]: { [cast]: payload } },
+   takže overridesByApp[okruh] je BIT-IDENTICKÉ s tým, čo pre ten istý
+   okruh vráti loadContentOverrides(app, okruh). Sémantika sa nemení,
+   mení sa len zdroj: jeden get na oblasť namiesto jedného na okruh
+   (233 čítaní pre celú appku → 6).
+
+   ⚠️ ČAKANIE NA window.db JE NUTNÉ, nie kozmetika. firebase.js je
+   v index.html až ZA data.js, takže window.db vzniká typicky až počas
+   prvého fetchu loadera. Pri per-okruh čítaní by zlé načasovanie stálo
+   overridy JEDNÉHO okruhu; tu by stálo overridy CELEJ oblasti – tichá
+   strata obsahu, ktorú by nikto nevidel. Preto krátky bounded poll
+   a hlasné console.warn, ak sa Firebase nedočkáme.
+============================================================ */
+const DB_WAIT_MS = 3000;
+const DB_POLL_MS = 50;
+
+function waitForDb() {
+  if (window.db) return Promise.resolve(window.db);
+  return new Promise(resolve => {
+    const deadline = Date.now() + DB_WAIT_MS;
+    const timer = setInterval(() => {
+      if (window.db) { clearInterval(timer); resolve(window.db); return; }
+      if (Date.now() >= deadline) { clearInterval(timer); resolve(null); }
+    }, DB_POLL_MS);
+  });
+}
+
+export async function loadContentOverridesForApp(app) {
+  if (!app) return {};
+  try {
+    const db = await waitForDb();
+    if (!db) {
+      console.warn(
+        `⚠️ contentOverrides: Firebase sa do ${DB_WAIT_MS} ms neobjavila – ` +
+        `oblasť "${app}" sa načíta BEZ admin/garant úprav (pôvodný obsah z JSON).`
+      );
+      return {};
+    }
+    const { ref, get } = await fbApi();
+    const snap = await get(ref(db, `contentOverrides/${app}`));
+    return snap.exists() ? (snap.val() || {}) : {};
+  } catch (e) {
+    console.warn(`⚠️ contentOverrides: čítanie celej oblasti zlyhalo pre ${app}`, e);
     return {};
   }
 }
@@ -159,6 +214,20 @@ export async function applyOverridesForOkruh(json, areaTitle, okruh) {
   const app = AREA_SLUGS[areaTitle];
   if (!app || !okruh) return json;
   const overrides = await loadContentOverrides(app, okruh);
+  return applyContentOverrides(json, overrides);
+}
+
+/* Rovnaké ako applyOverridesForOkruh, ale bez siete – overridy si volajúci
+   načítal dopredu jedným loadContentOverridesForApp(app). SYNCHRÓNNE, takže
+   sa dá volať v tesnej slučke bez awaitu.
+
+   Výsledok je zhodný s applyOverridesForOkruh(): oba nakoniec volajú tú istú
+   applyContentOverrides() s objektom { [cast]: payload } pre daný okruh –
+   jeden ho má z per-okruh getu, druhý z predčítanej mapy oblasti. */
+export function applyOverridesFromMap(json, areaTitle, okruh, overridesByOkruh) {
+  const app = AREA_SLUGS[areaTitle];
+  if (!app || !okruh) return json;
+  const overrides = (overridesByOkruh && overridesByOkruh[okruh]) || {};
   return applyContentOverrides(json, overrides);
 }
 

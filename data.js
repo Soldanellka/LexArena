@@ -1,7 +1,8 @@
 'use strict';
 
 import { normalizeOkruh } from './scripts/contentNormalize.js';
-import { applyOverridesForOkruh } from './scripts/contentOverrides.js';
+import { applyOverridesFromMap, loadContentOverridesForApp, AREA_SLUGS }
+from './scripts/contentOverrides.js';
 
 console.log("DATAJS NAČÍTANÝ");
 
@@ -101,7 +102,61 @@ window.catalog = {
 
 /* =====================================================
    AUTO-LOADER JSON OTÁZOK
+
+   🚀 DÁVKOVÉ NAČÍTANIE (2026-08). Pôvodná verzia bola striktne sériová:
+   for (file of files) { await fetch(file); await <Firebase get pre okruh>; }
+   – pri ~233 súboroch naprieč appkou to znamenalo ~233 HTTP round-tripov
+   a ~233 Firebase čítaní za sebou. Na mobile to trvalo natoľko dlho, že
+   chipy oblastí stihli zošednúť na „pripravuje sa“ a potom sa odblokovať
+   (blikanie), a najväčšie oblasti (Pracovné 50 súborov, Občianske 40+45)
+   dobiehali ako posledné.
+
+   Po novom:
+   ① overridy CELEJ oblasti jedným Firebase getom PRED cyklom
+      (loadContentOverridesForApp) → 233 čítaní pre appku klesne na 6,
+   ② súbory sa sťahujú po dávkach BATCH_SIZE paralelne (Promise.all),
+      nie po jednom – dávka je zámerne malá, nech nezahltí mobilnú sieť.
+
+   ⚠️ PORADIE SA NESMIE ZMENIŤ. Promise.all vracia výsledky v poradí
+   vstupov a dávky idú za sebou, takže ploché polia questions/tiles/cases
+   vzniknú presne v takom poradí ako doteraz (A1 → A2 → … → An, vnútri
+   v poradí položiek). Kanonické indexy _ti/_ci/_quizIndex sú per-okruh,
+   takže na ne dávkovanie nemá vplyv – ale poradie otázok v rámci okruhu
+   číta groupBySource() v scripts/duels.js, preto sa drží aj to.
+
+   ⚠️ FAIL-SOFT PER SÚBOR. Každá položka dávky má vlastný try/catch a pri
+   chybe vracia null – jeden rozbitý/chýbajúci súbor nesmie zhodiť celú
+   dávku ani oblasť. Rovnaké správanie ako pôvodný `continue` v cykle.
 ===================================================== */
+
+/* Koľko súborov naraz. Pozor, NIE je to celkový počet súbežných requestov:
+   šesť oblastí sa načítava paralelne (šesť volaní loadJsonQuestions bez
+   awaitu nižšie), takže reálna súbežnosť je 6 × BATCH_SIZE. Pri 4 je to
+   24 requestov naraz – výrazne rýchlejšie než sériovo, ale ešte šetrné
+   k mobilnej sieti (pri 8 by ich bolo 48). */
+const BATCH_SIZE = 4;
+
+async function fetchOkruhJson(folderUrl, file, areaTitle, overridesByOkruh) {
+  try {
+    const res = await fetch(folderUrl + file);
+    if (!res.ok) return null;                       // chýbajúci súbor – ticho preskočiť
+
+    const raw = await res.json();
+    /* Normalizácia na jeden vnútorný tvar (summary/theory, question/q,
+       explanation v 3 tvaroch, zdroj/source) – nech engine prijme
+       všetky existujúce tvary JSON bez prepisovania súborov. */
+    const normalized = normalizeOkruh(raw);
+    /* Firebase override (admin/garant oprava) navrství sa nad pôvodný
+       JSON – chýbajúci override alebo nedostupná Firebase necháva
+       pôvodný obsah bez zmeny. Zdroj je predčítaná mapa oblasti, takže
+       tu už žiadne sieťové volanie nie je. */
+    const json = applyOverridesFromMap(normalized, areaTitle, file.replace('.json', ''), overridesByOkruh);
+    return { file, json };
+  } catch (e) {
+    console.warn("⚠️ Chyba pri načítaní:", file, e);
+    return null;
+  }
+}
 
 async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
   console.log("📥 Načítavam JSON otázky pre:", areaTitle);
@@ -111,20 +166,20 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
   const tiles = [];
   const cases = [];
 
-  for (const file of files) {
-    try {
-      const res = await fetch(folderUrl + file);
-      if (!res.ok) continue;
+  /* Jeden get na celú oblasť namiesto jedného na každý okruh. Fail-soft:
+     pri nedostupnej Firebase vráti {} a obsah sa zobrazí bez úprav. */
+  const overridesByOkruh = await loadContentOverridesForApp(AREA_SLUGS[areaTitle]);
 
-      const raw = await res.json();
-      /* Normalizácia na jeden vnútorný tvar (summary/theory, question/q,
-         explanation v 3 tvaroch, zdroj/source) – nech engine prijme
-         všetky existujúce tvary JSON bez prepisovania súborov. */
-      const normalized = normalizeOkruh(raw);
-      /* Firebase override (admin/garant oprava) navrství sa nad pôvodný
-         JSON – chýbajúci override alebo nedostupná Firebase necháva
-         pôvodný obsah bez zmeny. */
-      const json = await applyOverridesForOkruh(normalized, areaTitle, file.replace('.json', ''));
+  for (let start = 0; start < files.length; start += BATCH_SIZE) {
+    const batch = files.slice(start, start + BATCH_SIZE);
+    const loaded = await Promise.all(
+      batch.map(file => fetchOkruhJson(folderUrl, file, areaTitle, overridesByOkruh))
+    );
+
+    /* Skladanie AŽ TU a v poradí dávky – pozri poznámku o poradí vyššie. */
+    for (const item of loaded) {
+      if (!item) continue;                          // preskočený/rozbitý súbor
+      const { file, json } = item;
 
       /* 📛 Názov okruhu (title z A*.json) – doteraz sa načítal, ale nikde
          sa neukladal, takže dashboard/garant test builder mali k dispozícii
@@ -203,8 +258,6 @@ async function loadJsonQuestions(areaTitle, folderUrl, maxFiles) {
           });
         });
       }
-    } catch (e) {
-      console.warn("⚠️ Chyba pri načítaní:", file);
     }
   }
 
